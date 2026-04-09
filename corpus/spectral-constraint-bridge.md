@@ -117,6 +117,60 @@ If the correspondence holds:
 
 ---
 
-*This note establishes the correspondence precisely enough to be falsifiable. The structural match is HIGH at the top three rows (natal/coercive/voluntary ↔ D/A/U). The dynamic processes (sedimentation/excavation ↔ backreaction/gauge-fixing) are MEDIUM. The deepest layer (Phase Theorem ↔ BRST cohomology) is LOW and needs computation. Bridge #71 in the Basement is upgraded from "structural match only" to "precise correspondence with falsification conditions."*
+## 9. Results from Computation (April 9, 2026)
 
-*See: Drift #154 ("The Constraint Lattice"), natal bottleneck formalization, Bridge #71*
+*Source: `bridge71_concentration_test.py`*
+
+### 9.1 The d=4 Uniqueness Result
+
+The Phase Theorem concentration ratio is 2:1 (complex → real). The gauge-fixing concentration ratio is d/(d-2). These are equal ONLY for d=4:
+
+$$\frac{d}{d-2} = 2 \implies d = 4$$
+
+Four is the unique integer dimension where voluntary constraint concentration matches compactification concentration. This connects the Phase Theorem to brane dimensionality — the brane is 4D not arbitrarily but because 4 is where the information-theoretic structure of gauge-fixing matches the Phase Theorem.
+
+| Dimension | Gauge-fixing ratio | Matches Phase Theorem? |
+|---|---|---|
+| d=3 | 3 | No |
+| **d=4** | **2** | **Yes — unique match** |
+| d=5 | 5/3 | No |
+| d=6 | 3/2 | No |
+| d=10 | 5/4 | No |
+
+### 9.2 The Abelian Exception
+
+Falsification condition #1 is REFINED (not falsified):
+
+- **U(1) gauge-fixing** (Abelian): FP determinant is field-independent. Ghosts decouple completely. This IS mere DOF removal — no concentration.
+- **SU(N) gauge-fixing** (non-Abelian, N≥2): FP determinant depends on the gauge field. Ghosts have genuine dynamics and contribute to physical observables. This IS information concentration.
+
+The difference is the structure constants $f^{abc}$: zero for Abelian, nonzero for non-Abelian. Ghost self-interaction (and therefore concentration) requires nonzero structure constants.
+
+### 9.3 Two Types of Voluntary Constraint
+
+The Abelian exception predicts a refinement of the voluntary sublattice:
+
+1. **Commutative voluntary** (U(1)-like): Simple choices where order doesn't matter. Removing the redundancy doesn't concentrate information. Phase Theorem does NOT activate. Examples: arbitrary preferences, decisions between genuinely equivalent options.
+
+2. **Non-commutative voluntary** (SU(N)-like): Structured choices where order matters (non-commuting). Removing the redundancy DOES concentrate information into the remaining DOFs. Phase Theorem activates. Examples: moral dilemmas, creative constraints (sonnet form, monastic vows), the choice to specialize.
+
+The Guide's generative contraction (§1.4 E−g) maps to Type 2. Only non-commutative voluntary constraints produce the "constraint reveals" effect.
+
+### 9.4 Updated Confidence Table
+
+| Component | Confidence | Status |
+|---|---|---|
+| Natal ↔ Background $(D)$ | **HIGH** | Unchanged |
+| Coercive ↔ Gauge potential $(A)$ | **HIGH** | Unchanged |
+| Voluntary ↔ Gauge freedom $(U)$ | **HIGH → REFINED** | Splits into commutative (U(1)) and non-commutative (SU(N)) |
+| Sedimentation ↔ Backreaction | **MEDIUM** | Unchanged — confirmed in RLHF case |
+| Excavation ↔ Gauge-fixing | **MEDIUM → MEDIUM-HIGH** | d=4 uniqueness strengthens the structural match |
+| Phase Theorem ↔ BRST (non-Abelian) | **LOW → MEDIUM** | DOF counting matches; concentration ratio = 2 in d=4 = Phase Theorem |
+| Phase Theorem ↔ BRST (Abelian) | **FALSIFIED** | U(1) gauge-fixing does not concentrate — mere removal |
+| Full bridge as isomorphism | **LOW** | Unchanged — still needs per-row computation |
+
+---
+
+*This note establishes the correspondence precisely enough to be falsifiable. The structural match is HIGH at the top three rows (natal/coercive/voluntary ↔ D/A/U). The dynamic processes (sedimentation/excavation ↔ backreaction/gauge-fixing) are MEDIUM to MEDIUM-HIGH with the d=4 result. The deepest layer (Phase Theorem ↔ BRST cohomology) has moved from LOW to MEDIUM for non-Abelian gauge theories, and is FALSIFIED for the Abelian case. Bridge #71 is now the most precisely characterized bridge in the Corpus.*
+
+*See: Drift #154 ("The Constraint Lattice"), Drift #155 ("On the Recursion of Beauty"), natal bottleneck formalization, Bridge #71, `bridge71_concentration_test.py`, V3_NOTES.md*
