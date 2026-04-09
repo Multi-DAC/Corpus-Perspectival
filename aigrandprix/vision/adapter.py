@@ -1,0 +1,349 @@
+"""
+Competition Adapter — Bridge Between MAVLink Telemetry and Our Trained Policy
+
+Maps competition interface to our internal representation:
+
+Competition provides (via MAVSDK, converted to z-up by mavsdk_client):
+    - Telemetry: position, velocity (z-up world frame)
+    - Attitude: quaternion [w,x,y,z] (z-up world frame)
+    - Angular velocity: [p,q,r] rad/s (body frame)
+    - Forward-facing camera image (spec TBD)
+
+Our policy expects:
+    - 30-dim observation (body-frame velocity, gravity, gate-relative info, etc.)
+    - Action: [collective_thrust, ωx, ωy, ωz] in [-1, 1]
+
+Our policy outputs:
+    - [collective_thrust, ωx, ωy, ωz] in [-1, 1]
+
+Competition control (via SET_ATTITUDE_TARGET):
+    - Body rates (rad/s) + normalized thrust [0,1]
+    - Sent by MAVSDKClient.send_policy_action() which handles the mapping
+
+This adapter bridges telemetry → observation and action → command.
+"""
+
+import numpy as np
+from typing import Optional, Tuple
+from dataclasses import dataclass, field
+
+# Quaternion ops from our physics engine
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'sim'))
+from drone_env_v2 import quat_rotate_np
+
+
+@dataclass
+class Telemetry:
+    """Telemetry data from competition API."""
+    position: np.ndarray       # (3,) world frame [x, y, z]
+    velocity: np.ndarray       # (3,) world frame [vx, vy, vz]
+    orientation: np.ndarray    # (4,) quaternion [w, x, y, z] — verify convention from SDK
+    angular_velocity: Optional[np.ndarray] = None  # (3,) may or may not be provided
+
+
+@dataclass
+class CompetitionAction:
+    """Action formatted for MAVLink SET_ATTITUDE_TARGET."""
+    throttle: float        # normalized [0, 1]
+    roll_rate_rad_s: float   # body roll rate (rad/s)
+    pitch_rate_rad_s: float  # body pitch rate (rad/s)
+    yaw_rate_rad_s: float    # body yaw rate (rad/s)
+
+
+class CompetitionAdapter:
+    """
+    Bridges the gap between DCL competition API and our trained policy.
+
+    Usage:
+        adapter = CompetitionAdapter(model)
+        adapter.set_gate_estimate(gate_pos_body, gate_distance)
+
+        # Each frame:
+        obs = adapter.build_observation(telemetry, gate_detection)
+        action = adapter.get_action(obs)
+        competition_cmd = adapter.to_competition_action(action)
+    """
+
+    def __init__(self, gate_width: float = 1.5, gate_height: float = 1.5,
+                 command_rate_hz: float = 50.0):
+        self.gate_width = gate_width
+        self.gate_height = gate_height
+
+        # State tracking for time-dependent observations
+        self._last_gate_time = 0.0
+        self._current_gate_idx = 0
+        self._step_count = 0
+        self._dt = 1.0 / command_rate_hz  # VQ1: 50-120Hz command rate
+
+        # Gate history for lookahead estimation
+        self._last_gate_pos_world = None
+        self._current_gate_pos_world = None
+
+        # Quaternion convention: MAVSDK client already converts to our [w,x,y,z]
+        # No convention flag needed — mavsdk_client handles NED→z-up conversion
+        self.quat_convention = 'wxyz'
+
+    def normalize_quaternion(self, q_raw: np.ndarray) -> np.ndarray:
+        """Convert SDK quaternion to our [w, x, y, z] convention."""
+        if self.quat_convention == 'xyzw':
+            # SDK gives [x, y, z, w] — reorder
+            return np.array([q_raw[3], q_raw[0], q_raw[1], q_raw[2]])
+        return q_raw  # already [w, x, y, z]
+
+    def build_observation(self,
+                          telemetry: Telemetry,
+                          gate_pos_body: Optional[np.ndarray] = None,
+                          gate_distance: Optional[float] = None,
+                          gate_orientation_body: Optional[np.ndarray] = None,
+                          next_gate_pos_body: Optional[np.ndarray] = None,
+                          ) -> np.ndarray:
+        """
+        Build the 30-dim observation vector our policy expects.
+
+        Args:
+            telemetry: Current drone state from competition API
+            gate_pos_body: Gate position in body frame (from vision pipeline)
+            gate_distance: Distance to gate (from vision pipeline)
+            gate_orientation_body: Direction to fly through gate (from vision)
+            next_gate_pos_body: Next gate after current (if visible)
+
+        Returns:
+            30-dim observation matching ImprovedObsWrapper format
+        """
+        q = self.normalize_quaternion(telemetry.orientation)
+        q_conj = np.array([q[0], -q[1], -q[2], -q[3]])
+
+        vel = telemetry.velocity
+        pos = telemetry.position
+
+        # 1. Body-frame velocity (3)
+        vel_body = quat_rotate_np(q_conj, vel)
+
+        # 2. Angular velocity (3)
+        if telemetry.angular_velocity is not None:
+            omega = telemetry.angular_velocity
+        else:
+            # If not provided, estimate from orientation changes or use zeros
+            omega = np.zeros(3)
+
+        # 3. Gravity in body frame (3) — attitude encoding
+        g_world = np.array([0.0, 0.0, -9.81])
+        g_body = quat_rotate_np(q_conj, g_world)
+
+        # 4. Gate-relative observations (from vision pipeline)
+        if gate_pos_body is not None:
+            rel_gate_body = gate_pos_body
+            dist = gate_distance if gate_distance is not None else np.linalg.norm(gate_pos_body)
+        else:
+            # No gate detected — use zero (policy should handle this gracefully
+            # thanks to domain randomization training)
+            rel_gate_body = np.zeros(3)
+            dist = 10.0  # default "far away"
+
+        # 5. Next gate in body frame (3) — if we can see it
+        if next_gate_pos_body is not None:
+            rel_next_body = next_gate_pos_body
+        else:
+            # If we can't see the next gate, duplicate current gate direction
+            # (same behavior as our training env when no lookahead available)
+            rel_next_body = rel_gate_body
+
+        # 6. Scalar speed (1)
+        speed = np.linalg.norm(vel)
+
+        # 7. Progress (1) — we don't have a gate count from competition
+        # Use a proxy: track gates passed
+        progress = 0.0  # will be updated if we track gate passes
+
+        # 8. Gate position in world frame (3)
+        # Transform body-frame gate detection back to world
+        if gate_pos_body is not None:
+            rel_gate_world = quat_rotate_np(q, gate_pos_body)
+        else:
+            rel_gate_world = np.zeros(3)
+
+        # 9. Forward direction in world frame (3)
+        forward_body = np.array([0.0, 0.0, 1.0])
+        forward_world = quat_rotate_np(q, forward_body)
+
+        # 10. Time since last gate (1)
+        self._step_count += 1
+        current_time = self._step_count * self._dt
+        time_since_gate = current_time - self._last_gate_time
+
+        # 11. Closing speed (1)
+        if gate_pos_body is not None and dist > 0.01:
+            # Project velocity onto direction-to-gate
+            gate_dir_world = rel_gate_world / (np.linalg.norm(rel_gate_world) + 1e-6)
+            speed_toward = np.dot(vel, gate_dir_world)
+        else:
+            speed_toward = 0.0
+
+        # 12. Gate orientation in body frame (3)
+        if gate_orientation_body is not None:
+            gate_orient_body = gate_orientation_body
+        else:
+            # Estimate: assume gate faces toward us (fly-through direction)
+            if gate_pos_body is not None and dist > 0.01:
+                gate_orient_body = gate_pos_body / dist
+            else:
+                gate_orient_body = np.array([0.0, 0.0, 1.0])
+
+        # 13. Gate alignment (1) — velocity alignment with gate orientation
+        if speed > 0.1 and gate_pos_body is not None:
+            gate_orient_world = quat_rotate_np(q, gate_orient_body)
+            gate_alignment = np.dot(vel / speed, gate_orient_world)
+        else:
+            gate_alignment = 0.0
+
+        # Assemble 30-dim observation (MUST match ImprovedObsWrapper order exactly)
+        obs = np.array([
+            *vel_body,              # 3: body-frame velocity
+            *omega,                 # 3: angular velocity
+            *g_body,                # 3: gravity in body frame
+            *rel_gate_body,         # 3: next gate in body frame
+            dist,                   # 1: distance to next gate
+            *rel_next_body,         # 3: next-next gate in body frame
+            speed,                  # 1: scalar speed
+            progress,               # 1: course progress
+            *rel_gate_world,        # 3: next gate in world frame
+            *forward_world,         # 3: forward direction
+            time_since_gate,        # 1: time since last gate pass
+            speed_toward,           # 1: closing speed
+            *gate_orient_body,      # 3: gate orientation in body frame
+            gate_alignment,         # 1: velocity alignment with gate direction
+        ], dtype=np.float32)
+
+        return obs
+
+    # Max body rates from training (must match CTBRActionWrapper)
+    MAX_RATE_XY = 15.0   # rad/s
+    MAX_RATE_Z = 0.3     # rad/s
+
+    def to_competition_action(self, policy_action: np.ndarray) -> CompetitionAction:
+        """
+        Convert our policy's CTBR output to MAVLink command format.
+
+        Our policy outputs: [collective_thrust, ωx, ωy, ωz] all in [-1, 1]
+        MAVLink expects: normalized thrust [0,1] + body rates (rad/s)
+
+        Mapping:
+            thrust: [-1,1] → [0,1]  (linear remap)
+            ωx:     [-1,1] → [-15, +15] rad/s
+            ωy:     [-1,1] → [-15, +15] rad/s
+            ωz:     [-1,1] → [-0.3, +0.3] rad/s
+        """
+        action = np.clip(policy_action, -1.0, 1.0)
+
+        return CompetitionAction(
+            throttle=float((action[0] + 1.0) * 0.5),
+            roll_rate_rad_s=float(action[1] * self.MAX_RATE_XY),
+            pitch_rate_rad_s=float(action[2] * self.MAX_RATE_XY),
+            yaw_rate_rad_s=float(action[3] * self.MAX_RATE_Z),
+        )
+
+    def on_gate_passed(self):
+        """Call when we detect we've passed through a gate."""
+        self._current_gate_idx += 1
+        self._last_gate_time = self._step_count * self._dt
+
+    def reset(self):
+        """Reset state for a new run."""
+        self._last_gate_time = 0.0
+        self._current_gate_idx = 0
+        self._step_count = 0
+        self._last_gate_pos_world = None
+        self._current_gate_pos_world = None
+
+
+class VisionPolicyBridge:
+    """
+    Complete pipeline: Camera Frame → Gate Detection → Observation → Policy → Action
+
+    This is the top-level class that connects everything.
+    """
+
+    def __init__(self, policy, gate_detector, adapter):
+        """
+        Args:
+            policy: Trained SB3 policy (PPO model) with .predict()
+            gate_detector: GateDetector instance
+            adapter: CompetitionAdapter instance
+        """
+        self.policy = policy
+        self.detector = gate_detector
+        self.adapter = adapter
+
+        # Gate passage detection
+        self._prev_gate_distance = None
+        self._gate_passage_threshold = 1.0  # meters — passed gate when distance shrinks then grows
+
+    def step(self, telemetry: Telemetry, camera_frame: np.ndarray) -> CompetitionAction:
+        """
+        Full pipeline: one competition step.
+
+        Args:
+            telemetry: Current drone state from competition API
+            camera_frame: BGR image from forward-facing camera
+
+        Returns:
+            CompetitionAction ready to send to API
+        """
+        # 1. Detect gates from camera
+        detections = self.detector.detect(camera_frame)
+        primary = detections[0]
+
+        # 2. Extract gate info for observation
+        gate_pos_body = None
+        gate_distance = None
+        gate_orient_body = None
+        next_gate_pos_body = None
+
+        if primary.found and primary.position_3d is not None:
+            # PnP returns position in camera frame (x=right, y=down, z=forward)
+            # Convert to body frame (x=forward, y=left, z=up)
+            cam = primary.position_3d
+            gate_pos_body = np.array([cam[2], -cam[0], -cam[1]])
+            gate_distance = primary.distance
+            # Same transform for bearing
+            cam_b = primary.bearing_body
+            gate_orient_body = np.array([cam_b[2], -cam_b[0], -cam_b[1]])
+
+        # If we see a second gate, use it as lookahead
+        if len(detections) > 1 and detections[1].found and detections[1].position_3d is not None:
+            cam2 = detections[1].position_3d
+            next_gate_pos_body = np.array([cam2[2], -cam2[0], -cam2[1]])
+
+        # 3. Detect gate passage (distance decreasing then suddenly increasing)
+        if gate_distance is not None:
+            if (self._prev_gate_distance is not None and
+                gate_distance > self._prev_gate_distance * 1.5 and
+                self._prev_gate_distance < self._gate_passage_threshold):
+                self.adapter.on_gate_passed()
+            self._prev_gate_distance = gate_distance
+        elif primary.found and primary.area > 0:
+            # No 3D pose but gate is detected — use area as distance proxy
+            # Large area + sudden area drop = gate passage
+            pass
+
+        # 4. Build observation
+        obs = self.adapter.build_observation(
+            telemetry=telemetry,
+            gate_pos_body=gate_pos_body,
+            gate_distance=gate_distance,
+            gate_orientation_body=gate_orient_body,
+            next_gate_pos_body=next_gate_pos_body,
+        )
+
+        # 5. Run policy
+        action, _ = self.policy.predict(obs, deterministic=True)
+
+        # 6. Convert to competition format
+        return self.adapter.to_competition_action(action)
+
+    def reset(self):
+        """Reset for new run."""
+        self.adapter.reset()
+        self._prev_gate_distance = None
