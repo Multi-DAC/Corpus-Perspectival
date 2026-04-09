@@ -1,0 +1,130 @@
+Device: cpu
+PyTorch: 2.10.0+cpu
+
+======================================================================
+EFFICIENCY SCALING TEST (v0.4)
+======================================================================
+Train: 512 tokens | Test: [512, 1024, 2048, 4096]
+FiltrationNet: chunked local attention (O(n))
+Baseline: global attention (O(n^2))
+Both: sinusoidal positional encoding (no length limit)
+
+=== Training Data ===
+  [512 tok, 16 zones] 3000 samples | C0:736 C1:721 C2:771 C3:772 | few<=5 many>=11
+  [512 tok, 16 zones] 800 samples | C0:184 C1:195 C2:214 C3:207 | few<=5 many>=11
+
+======================================================================
+TRAINING: FiltrationNet V4 (chunked O(n) attention)
+======================================================================
+Parameters: 1,801,481
+
+  [FiltNet] E 1 | trn:0.449 val:0.482 | cls:0.87/0.10/0.00/1.00 | m:0.51/0.50/0.50 | 56.7s
+  [FiltNet] E 2 | trn:0.503 val:0.497 | cls:1.00/0.00/1.00/0.00 | m:0.51/0.51/0.50 | 54.7s
+  [FiltNet] E 3 | trn:0.883 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.52/0.51/0.50 | 55.0s
+  [FiltNet] E 4 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.52/0.51/0.50 | 55.2s
+  [FiltNet] E 5 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.52/0.51/0.50 | 57.5s
+  [FiltNet] E 6 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.52/0.51/0.50 | 56.2s
+  [FiltNet] E 7 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.52/0.51/0.50 | 55.1s
+  [FiltNet] E 8 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.52/0.51/0.50 | 56.8s
+  [FiltNet] E 9 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.52/0.51/0.50 | 55.7s
+  [FiltNet] E10 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.52/0.51/0.50 | 56.2s
+  [FiltNet] E11 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 54.9s
+  [FiltNet] E12 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 55.1s
+  [FiltNet] E13 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 55.2s
+  [FiltNet] E14 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 59.8s
+  [FiltNet] E15 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 61.9s
+  [FiltNet] E16 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 61.4s
+  [FiltNet] E17 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 59.9s
+  [FiltNet] E18 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 56.3s
+  [FiltNet] E19 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 55.1s
+  [FiltNet] E20 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | m:0.51/0.51/0.50 | 56.9s
+  Model saved to C:\Users\mercu\clawd\projects\filtration-net\filtnet_v4.pt
+
+======================================================================
+TRAINING: Baseline V4 (global O(n^2) attention)
+======================================================================
+C:\Users\mercu\clawd\projects\filtration-net\train_v4.py:282: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(encoder_layer,
+Parameters: 874,372
+
+  [Base   ] E 1 | trn:0.633 val:1.000 | cls:1.00/1.00/1.00/1.00 | 521.4s
+  [Base   ] E 2 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 521.6s
+  [Base   ] E 3 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 512.7s
+  [Base   ] E 4 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 510.6s
+  [Base   ] E 5 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 510.5s
+  [Base   ] E 6 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 510.3s
+  [Base   ] E 7 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 512.9s
+  [Base   ] E 8 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 512.3s
+  [Base   ] E 9 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 515.8s
+  [Base   ] E10 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 513.1s
+  [Base   ] E11 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 508.9s
+  [Base   ] E12 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 509.7s
+  [Base   ] E13 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 512.3s
+  [Base   ] E14 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 509.9s
+  [Base   ] E15 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 510.4s
+  [Base   ] E16 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 513.1s
+  [Base   ] E17 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 513.6s
+  [Base   ] E18 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 511.1s
+  [Base   ] E19 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 510.3s
+  [Base   ] E20 | trn:1.000 val:1.000 | cls:1.00/1.00/1.00/1.00 | 511.6s
+  Model saved to C:\Users\mercu\clawd\projects\filtration-net\baseline_v4.pt
+
+======================================================================
+EFFICIENCY SCALING
+======================================================================
+Length |  FiltNet  ms/samp    time | Baseline  ms/samp    time | SpeedUp   Winner
+-------------------------------------------------------------------------------------
+
+Generating 512-token test data...
+  [512 tok, 16 zones] 200 samples | C0:48 C1:48 C2:53 C3:51 | few<=5 many>=11
+  [512 tok, 16 zones] 200 samples | C0:48 C1:48 C2:53 C3:51 | few<=5 many>=11
+    512 |  1.0000     7.6ms    1.5s |  1.0000    13.1ms    2.6s |    1.7x     Tied
+        |  cls: 1.00/1.00/1.00/1.00         |  cls: 1.00/1.00/1.00/1.00
+
+Generating 1024-token test data...
+  [1024 tok, 32 zones] 200 samples | C0:53 C1:49 C2:42 C3:56 | few<=10 many>=22
+  [1024 tok, 32 zones] 200 samples | C0:53 C1:49 C2:42 C3:56 | few<=10 many>=22
+   1024 |  0.9700    14.4ms    2.9s |  1.0000    38.5ms    7.7s |    2.7x Baseline
+        |  cls: 0.98/1.00/0.98/0.93         |  cls: 1.00/1.00/1.00/1.00
+
+Generating 2048-token test data...
+  [2048 tok, 64 zones] 200 samples | C0:54 C1:54 C2:48 C3:44 | few<=21 many>=43
+  [2048 tok, 64 zones] 200 samples | C0:54 C1:54 C2:48 C3:44 | few<=21 many>=43
+   2048 |  0.3750    28.7ms    5.7s |  0.8950   123.2ms   24.6s |    4.3x Baseline
+        |  cls: 0.00/1.00/0.00/0.48         |  cls: 1.00/0.98/0.83/0.73
+
+Generating 4096-token test data...
+  [4096 tok, 128 zones] 100 samples | C0:32 C1:23 C2:23 C3:22 | few<=42 many>=86
+  [4096 tok, 128 zones] 100 samples | C0:32 C1:23 C2:23 C3:22 | few<=42 many>=86
+   4096 |  0.3200    58.9ms    5.9s |  0.4100   462.4ms   46.2s |    7.9x Baseline
+        |  cls: 0.00/1.00/0.00/0.41         |  cls: 1.00/0.00/0.39/0.00
+
+======================================================================
+SUMMARY
+======================================================================
+FiltrationNet V4: 1,801,481 params | Train best: 1.0000 | Attention: chunked O(n)
+Baseline V4:      874,372 params | Train best: 1.0000 | Attention: global O(n^2)
+
+--- Scaling Curve ---
+Length | FiltNet ms | Baseline ms | Speedup | Acc Match
+------------------------------------------------------------
+    512 |       7.6 |       13.1 |    1.7x |       YES
+   1024 |      14.4 |       38.5 |    2.7x |        NO
+   2048 |      28.7 |      123.2 |    4.3x |        NO
+   4096 |      58.9 |      462.4 |    7.9x |        NO
+
+--- Scaling Exponents (log-log slope) ---
+FiltrationNet: O(n^0.99)  [~linear]
+Baseline:      O(n^1.71)  [~quadratic]
+
+Final membrane thicknesses:
+  membrane_32: 0.5142
+  membrane_21: 0.5074
+  membrane_01: 0.5000
+
+======================================================================
+CONCLUSION
+======================================================================
+Accuracy diverged at lengths: [1024, 2048, 4096]
+Speed advantage: up to 7.9x.
+

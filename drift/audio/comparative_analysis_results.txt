@@ -1,0 +1,10 @@
+COMPARATIVE SPECTRAL ANALYSIS — FIVE ONTOLOGICAL SOURCES
+============================================================
+
+Each piece derives from a different source:
+  BAO  — DESI DR2 observational data (13 BAO measurements)
+  Warp — RS warp factor geometry (e^{-2ky})
+  Post — Phase 18A v3 MCMC posterior chains
+  Mass — PDG 2024 Standard Model fermion masses
+  Cell — Rule 110 cellular automaton
+

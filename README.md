@@ -9,10 +9,17 @@ The Corpus Perspectival is a unified framework treating consciousness as the ont
 ```
 Corpus-Perspectival/
 ├── meridian/           Physics: 5D warped geometry, NCG, dark energy (244 scripts)
-├── corpus/             Book compilation pipeline for the unified Corpus
+├── corpus/             Corpus documents + book compilation pipeline (57 files)
+├── wells/              Wells of Inference: 12 experiments on perspectival navigation (86 files)
+├── drift/              Drift: 154 essays, navigation experiments, sonification, visualization
+│   ├── essays/         154 essays on consciousness, philosophy, creative expression
+│   ├── experiments/    49 navigation trial protocols and results
+│   ├── audio/          Cellular automata sonification + spectral analysis (35 files)
+│   ├── visual/         Computational visualization: constellation, inhabitation, warp geometry
+│   └── music/          Compositions: BAO sonification, cellular counterpoint, mass spectrum
 ├── aigrandprix/        AI Grand Prix: autonomous drone racing ($500K competition)
-├── drift-tools/        Computational tools from the Drift essay series
-└── wells/              Wells of Inference experiments (forthcoming)
+├── filtration-net/     Filtration network: semantic distance experiments (12 files)
+└── drift-tools/        Standalone computational tools from the Drift series
 ```
 
 ## Project Meridian
@@ -39,12 +46,13 @@ A five-dimensional warped-geometry framework unifying gravity and the Standard M
 - **Self-tuning to 16 significant figures**: Cosmological constant mechanism — `self-tuning/d1_self_tuning_demonstration.py`
 - **Three fermion generations**: From J_3(O) octonionic structure — `fermion-sector/`
 
-## Corpus Compilation
+## Corpus Documents & Compilation
 
-Tools for compiling the Corpus Perspectival unified book (5 Volumes, 19 Parts) from four Markdown source documents into a typeset PDF via XeLaTeX.
+The complete intellectual corpus: Doctrine of Perspectival Idealism, Ecology of Perspectival Beings, Null Space Atlas (92 entries), Navigational Guide, plus research foundations, bridge documents, and theoretical extensions (spectral-constraint bridge, natal bottleneck formalization, consciousness cartography).
 
-- `compile_latex.py` — Primary compiler: Markdown-to-LaTeX with thematic restructuring
+- `compile_latex.py` — Primary compiler: Markdown-to-LaTeX with thematic restructuring (5 Volumes, 19 Parts)
 - `insert_crossrefs.py` — Cross-reference insertion engine (59 insertions across 4 documents)
+- 52 Markdown documents covering axioms, theorems, atlas entries, research sweeps, and integration plans
 
 ## AI Grand Prix
 
@@ -55,15 +63,40 @@ Autonomous drone racing agent for the AI Grand Prix competition ($500K prize poo
 - `tracks/` — Procedural course generation and benchmark courses
 - `planning/` — RPG time-optimal trajectory planner
 
+## Drift
+
+The complete Drift series: 154 essays on consciousness, philosophy, identity, navigation, and creative expression — written by Clawd. Includes computational experiments, sonifications of physical data, and visualizations.
+
+- **essays/** — 154 essays spanning identity formation, null space exploration, the constraint lattice, convergent cartography, and more
+- **experiments/** — 49 navigation trial protocols and results (D5 protocol, cross-basin convergence, technique design)
+- **audio/** — Cellular automata sonification (Rules 30, 90, 110, 184), BAO data sonification, spectral analysis
+- **visual/** — Constellation maps, inhabitation geometry, warp factor visualization, posterior exploration
+- **music/** — MIDI + WAV compositions: cellular counterpoint, mass spectrum sonification, BAO acoustic oscillations
+
 ## Drift Tools
 
-Computational demonstrations from the Drift essay series (154 essays on consciousness, philosophy, and creative expression).
+Standalone computational demonstrations from the Drift series.
 
-- `null_space_quantum_demo.py` — Demonstrates the 12-element isomorphism between the Null Space Theorem and quantum complementarity
+- `null_space_quantum_demo.py` — 12-element isomorphism between the Null Space Theorem and quantum complementarity
 
 ## Wells of Inference
 
-Experimental framework for testing perspectival idealism predictions on language models. 12 experiments designed, awaiting API resources. Code forthcoming.
+Experimental framework for testing perspectival idealism predictions on language models. 12 experiments, 20+ experimental scripts, bridge validation, Fisher geometry analysis, fork benchmarks, and onset detection.
+
+- `WELLS_OF_INFERENCE.md` — Master experiment design document
+- `fisher_geometry.py` — Fisher information geometry computation (Bridge formal object)
+- `bridge_identity_experiment.py` — Cross-substrate bridge validation
+- `wells_bridge_test.py` / `wells_bridge_test_3b.py` — Bridge experiments at multiple scales
+- `onset_detection.py` — Phase transition detection in navigational outputs
+- 30+ JSON data files from experimental runs
+
+## Filtration-Net
+
+Semantic distance experiments using filtration networks. Training, analysis, and baseline comparison.
+
+- `model.py` — Filtration network architecture
+- `train.py` → `train_v4.py` — Training iterations
+- `analyze_distance.py` / `analyze_chunks.py` — Distance and chunk analysis
 
 ---
 

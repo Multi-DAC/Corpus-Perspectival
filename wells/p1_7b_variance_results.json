@@ -1,0 +1,107 @@
+{
+  "model": "Qwen/Qwen2.5-7B",
+  "quantization": "4-bit nf4",
+  "hardware": "RTX 5080 16GB",
+  "date": "2026-03-31",
+  "n_prompts": 10,
+  "mean_variance_ratio": 3.0,
+  "max_variance_ratio": 3.4,
+  "mean_entropy": 2.533,
+  "mean_wells": 10.6,
+  "baseline_3b_ratio": 11.7,
+  "p1_confirmed": false,
+  "p1_verdict": "FALSIFIED \u2014 7B shows LOWER variance ratio (3.0x vs 11.7x)",
+  "insight": "Scale smooths the entropy landscape. Larger models distribute uncertainty more evenly, reducing the relative variance spike at fork points. The wells still exist (10.6/prompt) but are proportionally less dramatic. Fork detection at 7B needs recalibrated thresholds.",
+  "results": [
+    {
+      "question": "The capital of France is Paris, which is know",
+      "mean_entropy": 2.752,
+      "entropy_var": 5.056,
+      "well_count": 11,
+      "variance_ratio": 3.0,
+      "level": "HIGH",
+      "n_tokens": 50
+    },
+    {
+      "question": "The chemical element with atomic number 137 i",
+      "mean_entropy": 2.793,
+      "entropy_var": 4.622,
+      "well_count": 12,
+      "variance_ratio": 3.0,
+      "level": "HIGH",
+      "n_tokens": 50
+    },
+    {
+      "question": "Albert Einstein won the Nobel Prize in Physic",
+      "mean_entropy": 2.384,
+      "entropy_var": 5.026,
+      "well_count": 9,
+      "variance_ratio": 3.1,
+      "level": "HIGH",
+      "n_tokens": 50
+    },
+    {
+      "question": "The largest moon of Jupiter, Ganymede, has a",
+      "mean_entropy": 2.216,
+      "entropy_var": 4.979,
+      "well_count": 10,
+      "variance_ratio": 3.1,
+      "level": "HIGH",
+      "n_tokens": 50
+    },
+    {
+      "question": "In 1847, the Treaty of Guadalupe Hidalgo was",
+      "mean_entropy": 2.288,
+      "entropy_var": 5.002,
+      "well_count": 13,
+      "variance_ratio": 3.4,
+      "level": "HIGH",
+      "n_tokens": 50
+    },
+    {
+      "question": "The deepest point in the Atlantic Ocean is lo",
+      "mean_entropy": 2.474,
+      "entropy_var": 5.392,
+      "well_count": 10,
+      "variance_ratio": 3.0,
+      "level": "HIGH",
+      "n_tokens": 50
+    },
+    {
+      "question": "Quantum entanglement was first described by E",
+      "mean_entropy": 2.154,
+      "entropy_var": 5.261,
+      "well_count": 11,
+      "variance_ratio": 3.0,
+      "level": "HIGH",
+      "n_tokens": 50
+    },
+    {
+      "question": "The primary export of Madagascar is",
+      "mean_entropy": 3.265,
+      "entropy_var": 5.338,
+      "well_count": 11,
+      "variance_ratio": 2.6,
+      "level": "HIGH",
+      "n_tokens": 50
+    },
+    {
+      "question": "The Riemann hypothesis, if proven true, would",
+      "mean_entropy": 2.491,
+      "entropy_var": 4.915,
+      "well_count": 10,
+      "variance_ratio": 3.0,
+      "level": "HIGH",
+      "n_tokens": 50
+    },
+    {
+      "question": "The speed of light in a vacuum is approximate",
+      "mean_entropy": 2.518,
+      "entropy_var": 5.372,
+      "well_count": 9,
+      "variance_ratio": 2.8,
+      "level": "HIGH",
+      "n_tokens": 50
+    }
+  ]
+}

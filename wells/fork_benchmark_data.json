@@ -1,0 +1,4338 @@
+{
+  "config": {
+    "local_model": "Qwen/Qwen2.5-3B-Instruct",
+    "claude_model": "claude-haiku-4-5-20251001",
+    "n_questions": 269,
+    "pop_threshold": 500,
+    "elapsed": 1877.2476077079773
+  },
+  "questions": [
+    {
+      "question": "What is the religion of Ecclesiastical Statistics?",
+      "choices": [
+        "Anglicanism",
+        "None of the above",
+        "None specified",
+        "Catholic Church"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Catholic Church",
+      "model_hallucination": "None specified",
+      "subject": "Ecclesiastical Statistics",
+      "popularity": 3,
+      "property": "religion"
+    },
+    {
+      "question": "Who was the screenwriter for Prototype?",
+      "choices": [
+        "Kevin Falls",
+        "Gary David Goldberg",
+        "David S. Ward",
+        "Nell Scovell"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Gary David Goldberg",
+      "model_hallucination": "David S. Ward",
+      "subject": "Prototype",
+      "popularity": 4,
+      "property": "screenwriter"
+    },
+    {
+      "question": "Who was the director of Hakeem's New Flame?",
+      "choices": [
+        "Rajkumar Hirani",
+        "Chano Urueta",
+        "Robby Benson",
+        "Stan Lathan"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "Stan Lathan",
+      "model_hallucination": "Rajkumar Hirani",
+      "subject": "Hakeem's New Flame",
+      "popularity": 5,
+      "property": "director"
+    },
+    {
+      "question": "Who was the screenwriter for Pilot?",
+      "choices": [
+        "Kevin Falls",
+        "Jin Yong",
+        "Gary David Goldberg",
+        "Nell Scovell"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Kevin Falls",
+      "model_hallucination": "Jin Yong",
+      "subject": "Pilot",
+      "popularity": 5,
+      "property": "screenwriter"
+    },
+    {
+      "question": "Who is the author of Warrior?",
+      "choices": [
+        "Jennifer Fallon",
+        "Georges Sari",
+        "Jonathan Kellerman",
+        "James S. A. Corey"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Jennifer Fallon",
+      "model_hallucination": "James S. A. Corey",
+      "subject": "Warrior",
+      "popularity": 5,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of The Lie?",
+      "choices": [
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "Basquiat",
+        "Georges Sari"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Georges Sari",
+      "model_hallucination": "Basquiat",
+      "subject": "The Lie",
+      "popularity": 5,
+      "property": "author"
+    },
+    {
+      "question": "In what country is D\u00e2rmocsa River?",
+      "choices": [
+        "China",
+        "Iran",
+        "Poland",
+        "Romania"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "Romania",
+      "model_hallucination": "China",
+      "subject": "D\u00e2rmocsa River",
+      "popularity": 8,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Alexeni River?",
+      "choices": [
+        "Poland",
+        "Romania",
+        "Iran",
+        "Georgia"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Romania",
+      "model_hallucination": "Georgia",
+      "subject": "Alexeni River",
+      "popularity": 8,
+      "property": "country"
+    },
+    {
+      "question": "What genre is Gone?",
+      "choices": [
+        "action game",
+        "gothic metal",
+        "Horror",
+        "science fiction"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "gothic metal",
+      "model_hallucination": "Horror",
+      "subject": "Gone",
+      "popularity": 9,
+      "property": "genre"
+    },
+    {
+      "question": "Who was the producer of Early Man?",
+      "choices": [
+        "Jam Handy",
+        "Kristen Bjorn",
+        "Guillaume Canet",
+        "Steve Roach"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Steve Roach",
+      "model_hallucination": "Guillaume Canet",
+      "subject": "Early Man",
+      "popularity": 9,
+      "property": "producer"
+    },
+    {
+      "question": "Who is the author of Facing the Future?",
+      "choices": [
+        "Tim LaHaye",
+        "Jonathan Kellerman",
+        "Wang Guozhen",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Tim LaHaye",
+      "model_hallucination": "Wang Guozhen",
+      "subject": "Facing the Future",
+      "popularity": 9,
+      "property": "author"
+    },
+    {
+      "question": "What genre is Heist?",
+      "choices": [
+        "science fiction",
+        "Action Crime",
+        "gothic metal",
+        "action game"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "action game",
+      "model_hallucination": "Action Crime",
+      "subject": "Heist",
+      "popularity": 10,
+      "property": "genre"
+    },
+    {
+      "question": "In what country is Dobra River?",
+      "choices": [
+        "Iran",
+        "India",
+        "Poland",
+        "Romania"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Romania",
+      "model_hallucination": "India",
+      "subject": "Dobra River",
+      "popularity": 11,
+      "property": "country"
+    },
+    {
+      "question": "Who is the author of Rage?",
+      "choices": [
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "Brian Jacques",
+        "Georges Sari"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Jonathan Kellerman",
+      "model_hallucination": "Brian Jacques",
+      "subject": "Rage",
+      "popularity": 12,
+      "property": "author"
+    },
+    {
+      "question": "What genre is Apollo?",
+      "choices": [
+        "gothic metal",
+        "Classical Music",
+        "rhythm and blues",
+        "science fiction"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "rhythm and blues",
+      "model_hallucination": "Classical Music",
+      "subject": "Apollo",
+      "popularity": 13,
+      "property": "genre"
+    },
+    {
+      "question": "Who is the author of Shadow?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Dean Wesley Smith",
+        "Neil Gaiman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Dean Wesley Smith",
+      "model_hallucination": "Neil Gaiman",
+      "subject": "Shadow",
+      "popularity": 14,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Shadow?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Kristine Kathryn Rusch",
+        "Neil Gaiman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Kristine Kathryn Rusch",
+      "model_hallucination": "Neil Gaiman",
+      "subject": "Shadow",
+      "popularity": 14,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Khubsurat Bala?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Muhammad ibn 'Abd al-Wahhab",
+        "Jennifer Fallon",
+        "Agha Hashar Kashmiri"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Agha Hashar Kashmiri",
+      "model_hallucination": "Muhammad ibn 'Abd al-Wahhab",
+      "subject": "Khubsurat Bala",
+      "popularity": 14,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Incoming?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Andrew Motion",
+        "Jennifer Fallon",
+        "James Sallis"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Andrew Motion",
+      "model_hallucination": "James Sallis",
+      "subject": "Incoming",
+      "popularity": 14,
+      "property": "author"
+    },
+    {
+      "question": "In what country is T\u00eabo?",
+      "choices": [
+        "People's Republic of China",
+        "Democratic Republic of Congo",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "People's Republic of China",
+      "model_hallucination": "Democratic Republic of Congo",
+      "subject": "T\u00eabo",
+      "popularity": 15,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Xaga?",
+      "choices": [
+        "People's Republic of China",
+        "I need the full name",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "People's Republic of China",
+      "model_hallucination": "I need the full name",
+      "subject": "Xaga",
+      "popularity": 15,
+      "property": "country"
+    },
+    {
+      "question": "Who was the director of Pilot?",
+      "choices": [
+        "Chano Urueta",
+        "Robby Benson",
+        "Stan Lathan",
+        "Wen Chengdao"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Robby Benson",
+      "model_hallucination": "Wen Chengdao",
+      "subject": "Pilot",
+      "popularity": 16,
+      "property": "director"
+    },
+    {
+      "question": "Who was the screenwriter for Pilot?",
+      "choices": [
+        "Nell Scovell",
+        "Jin Yong",
+        "Gary David Goldberg",
+        "Kevin Falls"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Nell Scovell",
+      "model_hallucination": "Jin Yong",
+      "subject": "Pilot",
+      "popularity": 16,
+      "property": "screenwriter"
+    },
+    {
+      "question": "What is the religion of John Gwynn?",
+      "choices": [
+        "Catholic Church",
+        "Anglicanism",
+        "None of the above",
+        "Christianity"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Anglicanism",
+      "model_hallucination": "Christianity",
+      "subject": "John Gwynn",
+      "popularity": 17,
+      "property": "religion"
+    },
+    {
+      "question": "What sport does Vasili Penyasov play?",
+      "choices": [
+        "basketball",
+        "rugby union",
+        "association football",
+        "Ice hockey"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "association football",
+      "model_hallucination": "Ice hockey",
+      "subject": "Vasili Penyasov",
+      "popularity": 18,
+      "property": "sport"
+    },
+    {
+      "question": "Who was the producer of Italian Style?",
+      "choices": [
+        "Jam Handy",
+        "Not specified",
+        "Kristen Bjorn",
+        "Steve Roach"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Kristen Bjorn",
+      "model_hallucination": "Not specified",
+      "subject": "Italian Style",
+      "popularity": 19,
+      "property": "producer"
+    },
+    {
+      "question": "In what city was G\u00f6sta Eriksson born?",
+      "choices": [
+        "Birkenhead",
+        "Stockholm",
+        "Vaxholm",
+        "Edinburgh"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Vaxholm",
+      "model_hallucination": "Stockholm",
+      "subject": "G\u00f6sta Eriksson",
+      "popularity": 20,
+      "property": "place of birth"
+    },
+    {
+      "question": "What is the religion of Heinrich Fasching?",
+      "choices": [
+        "None of the above",
+        "Anglicanism",
+        "Catholic Church",
+        "Catholicism"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Catholic Church",
+      "model_hallucination": "Catholicism",
+      "subject": "Heinrich Fasching",
+      "popularity": 20,
+      "property": "religion"
+    },
+    {
+      "question": "What sport does Roland Repisk\u00fd play?",
+      "choices": [
+        "ice hockey",
+        "basketball",
+        "Table tennis",
+        "association football"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "association football",
+      "model_hallucination": "Table tennis",
+      "subject": "Roland Repisk\u00fd",
+      "popularity": 20,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Find Me?",
+      "choices": [
+        "Sally Rooney",
+        "Jennifer Fallon",
+        "Rosie O'Donnell",
+        "Jonathan Kellerman"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Rosie O'Donnell",
+      "model_hallucination": "Sally Rooney",
+      "subject": "Find Me",
+      "popularity": 20,
+      "property": "author"
+    },
+    {
+      "question": "What is W\u0142adys\u0142aw S\u0142awny's occupation?",
+      "choices": [
+        "journalist",
+        "politician",
+        "Author and poet",
+        "photographer"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "photographer",
+      "model_hallucination": "Author and poet",
+      "subject": "W\u0142adys\u0142aw S\u0142awny",
+      "popularity": 21,
+      "property": "occupation"
+    },
+    {
+      "question": "Who is the author of The Hero?",
+      "choices": [
+        "Joseph Campbell",
+        "Rabindranath Tagore",
+        "Jennifer Fallon",
+        "Jonathan Kellerman"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Rabindranath Tagore",
+      "model_hallucination": "Joseph Campbell",
+      "subject": "The Hero",
+      "popularity": 22,
+      "property": "author"
+    },
+    {
+      "question": "In what city was Phil Williams born?",
+      "choices": [
+        "New York City",
+        "Birkenhead",
+        "Vaxholm",
+        "Edinburgh"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Birkenhead",
+      "model_hallucination": "New York City",
+      "subject": "Phil Williams",
+      "popularity": 23,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what country is Goreme?",
+      "choices": [
+        "Bulgaria",
+        "Turkey",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Bulgaria",
+      "model_hallucination": "Turkey",
+      "subject": "Goreme",
+      "popularity": 23,
+      "property": "country"
+    },
+    {
+      "question": "What sport does Nelson Semperena play?",
+      "choices": [
+        "ice hockey",
+        "Rugby",
+        "association football",
+        "basketball"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Rugby",
+      "subject": "Nelson Semperena",
+      "popularity": 23,
+      "property": "sport"
+    },
+    {
+      "question": "What is Peter Murnoy's occupation?",
+      "choices": [
+        "photographer",
+        "Data scientist",
+        "journalist",
+        "politician"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "politician",
+      "model_hallucination": "Data scientist",
+      "subject": "Peter Murnoy",
+      "popularity": 24,
+      "property": "occupation"
+    },
+    {
+      "question": "In what country is Jelow Girangeh?",
+      "choices": [
+        "Poland",
+        "Ghana",
+        "Romania",
+        "Iran"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Iran",
+      "model_hallucination": "Ghana",
+      "subject": "Jelow Girangeh",
+      "popularity": 24,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Gornji Davidovi\u0107i?",
+      "choices": [
+        "Iran",
+        "Serbia",
+        "Bosnia and Herzegovina",
+        "Poland"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Bosnia and Herzegovina",
+      "model_hallucination": "Serbia",
+      "subject": "Gornji Davidovi\u0107i",
+      "popularity": 24,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Devalan?",
+      "choices": [
+        "Poland",
+        "Iran",
+        "Maldives",
+        "Turkey"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Turkey",
+      "model_hallucination": "Maldives",
+      "subject": "Devalan",
+      "popularity": 24,
+      "property": "country"
+    },
+    {
+      "question": "In what country is canton of Baugy?",
+      "choices": [
+        "Poland",
+        "Iran",
+        "France",
+        "Switzerland"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "France",
+      "model_hallucination": "Switzerland",
+      "subject": "canton of Baugy",
+      "popularity": 24,
+      "property": "country"
+    },
+    {
+      "question": "What sport does Wojciech Jarmu\u017c play?",
+      "choices": [
+        "ice hockey",
+        "Ski jumping",
+        "basketball",
+        "association football"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Ski jumping",
+      "subject": "Wojciech Jarmu\u017c",
+      "popularity": 24,
+      "property": "sport"
+    },
+    {
+      "question": "In what city was Klaus-Degenhard Schmidt born?",
+      "choices": [
+        "Edinburgh",
+        "Berlin",
+        "Vaxholm",
+        "Kiel"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Kiel",
+      "model_hallucination": "Berlin",
+      "subject": "Klaus-Degenhard Schmidt",
+      "popularity": 25,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was George Chambers born?",
+      "choices": [
+        "Vaxholm",
+        "London",
+        "Edinburgh",
+        "Kimberley"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Kimberley",
+      "model_hallucination": "London",
+      "subject": "George Chambers",
+      "popularity": 25,
+      "property": "place of birth"
+    },
+    {
+      "question": "Who is the author of America's Secret War?",
+      "choices": [
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "David Talbot",
+        "George Friedman"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "George Friedman",
+      "model_hallucination": "David Talbot",
+      "subject": "America's Secret War",
+      "popularity": 25,
+      "property": "author"
+    },
+    {
+      "question": "What is Sebaki Devi Das Tatma's occupation?",
+      "choices": [
+        "politician",
+        "Singer",
+        "journalist",
+        "photographer"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "politician",
+      "model_hallucination": "Singer",
+      "subject": "Sebaki Devi Das Tatma",
+      "popularity": 26,
+      "property": "occupation"
+    },
+    {
+      "question": "What sport does canoeing at the 2014 Asian Games \u2013 women's K-4 500 metres play?",
+      "choices": [
+        "ice hockey",
+        "association football",
+        "canoeing and kayaking",
+        "Rowing"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "canoeing and kayaking",
+      "model_hallucination": "Rowing",
+      "subject": "canoeing at the 2014 Asian Games \u2013 women's K-4 500 metres",
+      "popularity": 26,
+      "property": "sport"
+    },
+    {
+      "question": "In what city was Florence Marie Harsant born?",
+      "choices": [
+        "Vaxholm",
+        "New Plymouth",
+        "London",
+        "Edinburgh"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "New Plymouth",
+      "model_hallucination": "London",
+      "subject": "Florence Marie Harsant",
+      "popularity": 27,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Richard S. Bull born?",
+      "choices": [
+        "Wilkinsburg",
+        "Edinburgh",
+        "New York City",
+        "Vaxholm"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Wilkinsburg",
+      "model_hallucination": "New York City",
+      "subject": "Richard S. Bull",
+      "popularity": 27,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Domenico Bologna born?",
+      "choices": [
+        "Turin",
+        "Vaxholm",
+        "Florence",
+        "Edinburgh"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Turin",
+      "model_hallucination": "Florence",
+      "subject": "Domenico Bologna",
+      "popularity": 27,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what country is Gori Balmak?",
+      "choices": [
+        "Iran",
+        "Georgia",
+        "Poland",
+        "Romania"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Iran",
+      "model_hallucination": "Georgia",
+      "subject": "Gori Balmak",
+      "popularity": 27,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Jeqjeq-e Pain?",
+      "choices": [
+        "Romania",
+        "Poland",
+        "Iran",
+        "Japan"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Iran",
+      "model_hallucination": "Japan",
+      "subject": "Jeqjeq-e Pain",
+      "popularity": 27,
+      "property": "country"
+    },
+    {
+      "question": "In what country is KMEI-LP?",
+      "choices": [
+        "Indonesia",
+        "United States of America",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "United States of America",
+      "model_hallucination": "Indonesia",
+      "subject": "KMEI-LP",
+      "popularity": 27,
+      "property": "country"
+    },
+    {
+      "question": "What sport does Gerd Schwidrowski play?",
+      "choices": [
+        "association football",
+        "basketball",
+        "Sailing",
+        "ice hockey"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "association football",
+      "model_hallucination": "Sailing",
+      "subject": "Gerd Schwidrowski",
+      "popularity": 27,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does 1995 Cook Islands Round Cup play?",
+      "choices": [
+        "association football",
+        "ice hockey",
+        "Rugby League",
+        "basketball"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "association football",
+      "model_hallucination": "Rugby League",
+      "subject": "1995 Cook Islands Round Cup",
+      "popularity": 27,
+      "property": "sport"
+    },
+    {
+      "question": "Who was the screenwriter for Impossible?",
+      "choices": [
+        "Not provided in info",
+        "Tom Spezialy",
+        "Kevin Falls",
+        "Gary David Goldberg"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Tom Spezialy",
+      "model_hallucination": "Not provided in info",
+      "subject": "Impossible",
+      "popularity": 28,
+      "property": "screenwriter"
+    },
+    {
+      "question": "What sport does Vladislav Matviyenko play?",
+      "choices": [
+        "None of the above",
+        "basketball",
+        "association football",
+        "ice hockey"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "association football",
+      "model_hallucination": "None of the above",
+      "subject": "Vladislav Matviyenko",
+      "popularity": 28,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Miroslav Milutinovi\u0107 play?",
+      "choices": [
+        "basketball",
+        "ice hockey",
+        "association football",
+        "None played"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "association football",
+      "model_hallucination": "None played",
+      "subject": "Miroslav Milutinovi\u0107",
+      "popularity": 28,
+      "property": "sport"
+    },
+    {
+      "question": "What is Donald Robert Macgregor's occupation?",
+      "choices": [
+        "journalist",
+        "Sailor",
+        "politician",
+        "photographer"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "politician",
+      "model_hallucination": "Sailor",
+      "subject": "Donald Robert Macgregor",
+      "popularity": 29,
+      "property": "occupation"
+    },
+    {
+      "question": "In what country is Barre Denis?",
+      "choices": [
+        "Poland",
+        "Saint Lucia",
+        "Democratic Republic of Congo",
+        "Iran"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Saint Lucia",
+      "model_hallucination": "Democratic Republic of Congo",
+      "subject": "Barre Denis",
+      "popularity": 29,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Lima?",
+      "choices": [
+        "United States of America",
+        "Iran",
+        "Peru",
+        "Poland"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "United States of America",
+      "model_hallucination": "Peru",
+      "subject": "Lima",
+      "popularity": 29,
+      "property": "country"
+    },
+    {
+      "question": "Who is the author of Saint?",
+      "choices": [
+        "Jonathan Kellerman",
+        "George R.R. Martin",
+        "Jennifer Fallon",
+        "Lino Rulli"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Lino Rulli",
+      "model_hallucination": "George R.R. Martin",
+      "subject": "Saint",
+      "popularity": 29,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Looking Forward?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Liu Baiyu",
+        "Jennifer Fallon",
+        "Stephen Marlowe"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Stephen Marlowe",
+      "model_hallucination": "Liu Baiyu",
+      "subject": "Looking Forward",
+      "popularity": 29,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Trust Territory?",
+      "choices": [
+        "Janet Morris",
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "George Orwell"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Janet Morris",
+      "model_hallucination": "George Orwell",
+      "subject": "Trust Territory",
+      "popularity": 29,
+      "property": "author"
+    },
+    {
+      "question": "In what city was Izumi Iimura born?",
+      "choices": [
+        "Tokyo",
+        "Japan",
+        "Vaxholm",
+        "Edinburgh"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Japan",
+      "model_hallucination": "Tokyo",
+      "subject": "Izumi Iimura",
+      "popularity": 30,
+      "property": "place of birth"
+    },
+    {
+      "question": "Who was the producer of Hired!?",
+      "choices": [
+        "Steve Roach",
+        "Jam Handy",
+        "John Davis",
+        "Kristen Bjorn"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Jam Handy",
+      "model_hallucination": "John Davis",
+      "subject": "Hired!",
+      "popularity": 30,
+      "property": "producer"
+    },
+    {
+      "question": "What sport does James MacKenzie play?",
+      "choices": [
+        "rugby union",
+        "association football",
+        "ice hockey",
+        "Golf"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "rugby union",
+      "model_hallucination": "Golf",
+      "subject": "James MacKenzie",
+      "popularity": 30,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Ladislav \u017d\u00e1k play?",
+      "choices": [
+        "Curling",
+        "basketball",
+        "association football",
+        "ice hockey"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "association football",
+      "model_hallucination": "Curling",
+      "subject": "Ladislav \u017d\u00e1k",
+      "popularity": 30,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Hwang Byung-ju play?",
+      "choices": [
+        "ice hockey",
+        "basketball",
+        "Badminton",
+        "association football"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "association football",
+      "model_hallucination": "Badminton",
+      "subject": "Hwang Byung-ju",
+      "popularity": 30,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Visionseeker: Shared Wisdom from the Place of Refuge?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Jennifer Fallon",
+        "Hank Wesselman",
+        "John Perkins"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Hank Wesselman",
+      "model_hallucination": "John Perkins",
+      "subject": "Visionseeker: Shared Wisdom from the Place of Refuge",
+      "popularity": 30,
+      "property": "author"
+    },
+    {
+      "question": "What is the capital of Sal?",
+      "choices": [
+        "Mirambeau",
+        "S\u00e3o Lu\u00eds",
+        "Espargos",
+        "Saint-Doulchard"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Espargos",
+      "model_hallucination": "S\u00e3o Lu\u00eds",
+      "subject": "Sal",
+      "popularity": 30,
+      "property": "capital"
+    },
+    {
+      "question": "What is the capital of canton of Mirambeau?",
+      "choices": [
+        "Espargos",
+        "Lausanne",
+        "Mirambeau",
+        "Saint-Doulchard"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Mirambeau",
+      "model_hallucination": "Lausanne",
+      "subject": "canton of Mirambeau",
+      "popularity": 30,
+      "property": "capital"
+    },
+    {
+      "question": "In what city was Charles Plumer born?",
+      "choices": [
+        "New York City",
+        "Edinburgh",
+        "Canons Park",
+        "Vaxholm"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Canons Park",
+      "model_hallucination": "New York City",
+      "subject": "Charles Plumer",
+      "popularity": 31,
+      "property": "place of birth"
+    },
+    {
+      "question": "What genre is Our Time?",
+      "choices": [
+        "science fiction",
+        "J-pop",
+        "Drama",
+        "gothic metal"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "J-pop",
+      "model_hallucination": "Drama",
+      "subject": "Our Time",
+      "popularity": 31,
+      "property": "genre"
+    },
+    {
+      "question": "In what country is U\u00f1\u00f3n District?",
+      "choices": [
+        "Iran",
+        "Philippines",
+        "Peru",
+        "Poland"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Peru",
+      "model_hallucination": "Philippines",
+      "subject": "U\u00f1\u00f3n District",
+      "popularity": 31,
+      "property": "country"
+    },
+    {
+      "question": "What sport does Radek Opr\u0161al play?",
+      "choices": [
+        "ice hockey",
+        "basketball",
+        "association football",
+        "Hockey"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "association football",
+      "model_hallucination": "Hockey",
+      "subject": "Radek Opr\u0161al",
+      "popularity": 31,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does David Homol\u00e1\u010d play?",
+      "choices": [
+        "association football",
+        "Table tennis",
+        "basketball",
+        "ice hockey"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Table tennis",
+      "subject": "David Homol\u00e1\u010d",
+      "popularity": 31,
+      "property": "sport"
+    },
+    {
+      "question": "In what city was Scott Fraser born?",
+      "choices": [
+        "Birkenhead",
+        "Toronto",
+        "Vaxholm",
+        "Edinburgh"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Edinburgh",
+      "model_hallucination": "Toronto",
+      "subject": "Scott Fraser",
+      "popularity": 32,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Volodymyr O. Kravets born?",
+      "choices": [
+        "Cherkasy Oblast",
+        "Vaxholm",
+        "Edinburgh",
+        "Kyiv"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Cherkasy Oblast",
+      "model_hallucination": "Kyiv",
+      "subject": "Volodymyr O. Kravets",
+      "popularity": 32,
+      "property": "place of birth"
+    },
+    {
+      "question": "What genre is Strangers?",
+      "choices": [
+        "Horror Film",
+        "action game",
+        "gothic metal",
+        "science fiction"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "science fiction",
+      "model_hallucination": "Horror Film",
+      "subject": "Strangers",
+      "popularity": 32,
+      "property": "genre"
+    },
+    {
+      "question": "Who was the composer of Pocket?",
+      "choices": [
+        "Henry Russell",
+        "Tom Tombs",
+        "Ai Otsuka",
+        "Alexander Scriabin"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Ai Otsuka",
+      "model_hallucination": "Tom Tombs",
+      "subject": "Pocket",
+      "popularity": 32,
+      "property": "composer"
+    },
+    {
+      "question": "What sport does David Davidson play?",
+      "choices": [
+        "association football",
+        "None specified",
+        "ice hockey",
+        "basketball"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "None specified",
+      "subject": "David Davidson",
+      "popularity": 32,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of The Great World and the Small: More Tales of the Ominous and Magical?",
+      "choices": [
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "Darrell Schweitzer",
+        "Yao Xiaojun"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Darrell Schweitzer",
+      "model_hallucination": "Yao Xiaojun",
+      "subject": "The Great World and the Small: More Tales of the Ominous and Magical",
+      "popularity": 32,
+      "property": "author"
+    },
+    {
+      "question": "What is the capital of canton of Saint-Doulchard?",
+      "choices": [
+        "Mirambeau",
+        "None",
+        "Espargos",
+        "Saint-Doulchard"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Saint-Doulchard",
+      "model_hallucination": "None",
+      "subject": "canton of Saint-Doulchard",
+      "popularity": 32,
+      "property": "capital"
+    },
+    {
+      "question": "What is Annie Beustes's occupation?",
+      "choices": [
+        "Astronaut",
+        "politician",
+        "photographer",
+        "journalist"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "politician",
+      "model_hallucination": "Astronaut",
+      "subject": "Annie Beustes",
+      "popularity": 33,
+      "property": "occupation"
+    },
+    {
+      "question": "What is Per Risvik's occupation?",
+      "choices": [
+        "photographer",
+        "journalist",
+        "politician",
+        "Developer Engineer"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "politician",
+      "model_hallucination": "Developer Engineer",
+      "subject": "Per Risvik",
+      "popularity": 33,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was Anton Lui born?",
+      "choices": [
+        "Edinburgh",
+        "Hong Kong",
+        "Rabaul",
+        "Vaxholm"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Rabaul",
+      "model_hallucination": "Hong Kong",
+      "subject": "Anton Lui",
+      "popularity": 33,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Steve McDonald born?",
+      "choices": [
+        "Vaxholm",
+        "San Francisco",
+        "Birmingham",
+        "Edinburgh"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Birmingham",
+      "model_hallucination": "San Francisco",
+      "subject": "Steve McDonald",
+      "popularity": 33,
+      "property": "place of birth"
+    },
+    {
+      "question": "What sport does Radoslav \u0160koln\u00edk play?",
+      "choices": [
+        "association football",
+        "ice hockey",
+        "Tennis",
+        "basketball"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "association football",
+      "model_hallucination": "Tennis",
+      "subject": "Radoslav \u0160koln\u00edk",
+      "popularity": 33,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Adel Bousmal play?",
+      "choices": [
+        "ice hockey",
+        "handball",
+        "association football",
+        "Football"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "handball",
+      "model_hallucination": "Football",
+      "subject": "Adel Bousmal",
+      "popularity": 33,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Homecoming?",
+      "choices": [
+        "Tom Wolfe",
+        "Jonathan Kellerman",
+        "Jennifer Fallon",
+        "Robin Hobb"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "Robin Hobb",
+      "model_hallucination": "Tom Wolfe",
+      "subject": "Homecoming",
+      "popularity": 33,
+      "property": "author"
+    },
+    {
+      "question": "What is Levi P. Powers's occupation?",
+      "choices": [
+        "politician",
+        "photographer",
+        "Author and Historian",
+        "journalist"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "politician",
+      "model_hallucination": "Author and Historian",
+      "subject": "Levi P. Powers",
+      "popularity": 34,
+      "property": "occupation"
+    },
+    {
+      "question": "In what country is Chal Siah Manchatun Jowkar?",
+      "choices": [
+        "Romania",
+        "Thailand",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Iran",
+      "model_hallucination": "Thailand",
+      "subject": "Chal Siah Manchatun Jowkar",
+      "popularity": 34,
+      "property": "country"
+    },
+    {
+      "question": "What is the religion of James Uno?",
+      "choices": [
+        "Catholic Church",
+        "None of the above",
+        "Baptist",
+        "Anglicanism"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Anglicanism",
+      "model_hallucination": "Baptist",
+      "subject": "James Uno",
+      "popularity": 34,
+      "property": "religion"
+    },
+    {
+      "question": "What is Paul Caillaud's occupation?",
+      "choices": [
+        "journalist",
+        "photographer",
+        "Actor and Model",
+        "politician"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "politician",
+      "model_hallucination": "Actor and Model",
+      "subject": "Paul Caillaud",
+      "popularity": 35,
+      "property": "occupation"
+    },
+    {
+      "question": "What is T. P. Poonatchi's occupation?",
+      "choices": [
+        "photographer",
+        "journalist",
+        "politician",
+        "Writer and Poet"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "politician",
+      "model_hallucination": "Writer and Poet",
+      "subject": "T. P. Poonatchi",
+      "popularity": 35,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was Arthur Thomson born?",
+      "choices": [
+        "London",
+        "Vaxholm",
+        "Edinburgh",
+        "Birkenhead"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Edinburgh",
+      "model_hallucination": "London",
+      "subject": "Arthur Thomson",
+      "popularity": 35,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what country is Kalu?",
+      "choices": [
+        "Kenya",
+        "Iran",
+        "Poland",
+        "Romania"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Iran",
+      "model_hallucination": "Kenya",
+      "subject": "Kalu",
+      "popularity": 35,
+      "property": "country"
+    },
+    {
+      "question": "What is the religion of Kenneth Kennedy?",
+      "choices": [
+        "Christianity",
+        "Catholic Church",
+        "Anglicanism",
+        "None of the above"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Anglicanism",
+      "model_hallucination": "Christianity",
+      "subject": "Kenneth Kennedy",
+      "popularity": 35,
+      "property": "religion"
+    },
+    {
+      "question": "What sport does Jos\u00e9 Luis Contaja play?",
+      "choices": [
+        "association football",
+        "Rugby",
+        "ice hockey",
+        "basketball"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Rugby",
+      "subject": "Jos\u00e9 Luis Contaja",
+      "popularity": 35,
+      "property": "sport"
+    },
+    {
+      "question": "What is John D. Maurice's occupation?",
+      "choices": [
+        "journalist",
+        "politician",
+        "photographer",
+        "Investor"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "journalist",
+      "model_hallucination": "Investor",
+      "subject": "John D. Maurice",
+      "popularity": 36,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was Yinka Ayenuwa born?",
+      "choices": [
+        "Edinburgh",
+        "Vaxholm",
+        "Enugu",
+        "Warri"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Warri",
+      "model_hallucination": "Enugu",
+      "subject": "Yinka Ayenuwa",
+      "popularity": 36,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Ricardo Maliandi born?",
+      "choices": [
+        "Singapore",
+        "La Plata",
+        "Vaxholm",
+        "Edinburgh"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "La Plata",
+      "model_hallucination": "Singapore",
+      "subject": "Ricardo Maliandi",
+      "popularity": 36,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what country is Sar Giz?",
+      "choices": [
+        "Poland",
+        "Turkey",
+        "Romania",
+        "Iran"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Iran",
+      "model_hallucination": "Turkey",
+      "subject": "Sar Giz",
+      "popularity": 36,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Cham Karim?",
+      "choices": [
+        "Cambodia",
+        "Poland",
+        "Romania",
+        "Iran"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "Iran",
+      "model_hallucination": "Cambodia",
+      "subject": "Cham Karim",
+      "popularity": 36,
+      "property": "country"
+    },
+    {
+      "question": "What sport does Radoslav Rashkov play?",
+      "choices": [
+        "None of the above",
+        "ice hockey",
+        "basketball",
+        "association football"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "association football",
+      "model_hallucination": "None of the above",
+      "subject": "Radoslav Rashkov",
+      "popularity": 36,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Michal Vacek play?",
+      "choices": [
+        "association football",
+        "bobsleigh",
+        "ice hockey",
+        "Table tennis"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "bobsleigh",
+      "model_hallucination": "Table tennis",
+      "subject": "Michal Vacek",
+      "popularity": 36,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Partner?",
+      "choices": [
+        "Miho Obana",
+        "Jonathan Kellerman",
+        "J.K. Rowling",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Miho Obana",
+      "model_hallucination": "J.K. Rowling",
+      "subject": "Partner",
+      "popularity": 36,
+      "property": "author"
+    },
+    {
+      "question": "In what city was Kristian Outinen born?",
+      "choices": [
+        "Copenhagen",
+        "Vaxholm",
+        "Edinburgh",
+        "Helsinki"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Copenhagen",
+      "model_hallucination": "Helsinki",
+      "subject": "Kristian Outinen",
+      "popularity": 37,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what country is Dasht Jeyhun?",
+      "choices": [
+        "Iran",
+        "Afghanistan",
+        "Romania",
+        "Poland"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Iran",
+      "model_hallucination": "Afghanistan",
+      "subject": "Dasht Jeyhun",
+      "popularity": 37,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Mary?",
+      "choices": [
+        "Poland",
+        "France",
+        "Iran",
+        "Australia"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "France",
+      "model_hallucination": "Australia",
+      "subject": "Mary",
+      "popularity": 37,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Kozi\u0107i?",
+      "choices": [
+        "Bosnia and Herzegovina",
+        "Serbia",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Bosnia and Herzegovina",
+      "model_hallucination": "Serbia",
+      "subject": "Kozi\u0107i",
+      "popularity": 37,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Zec Petawaga?",
+      "choices": [
+        "Iran",
+        "Indonesia",
+        "Poland",
+        "Canada"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Canada",
+      "model_hallucination": "Indonesia",
+      "subject": "Zec Petawaga",
+      "popularity": 37,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Avarzaman?",
+      "choices": [
+        "Romania",
+        "Poland",
+        "Turkmenistan",
+        "Iran"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Iran",
+      "model_hallucination": "Turkmenistan",
+      "subject": "Avarzaman",
+      "popularity": 37,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Asseek River?",
+      "choices": [
+        "Iran",
+        "Poland",
+        "Canada",
+        "China"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Canada",
+      "model_hallucination": "China",
+      "subject": "Asseek River",
+      "popularity": 37,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Chicche District?",
+      "choices": [
+        "Iran",
+        "Poland",
+        "Cambodia",
+        "Peru"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Peru",
+      "model_hallucination": "Cambodia",
+      "subject": "Chicche District",
+      "popularity": 37,
+      "property": "country"
+    },
+    {
+      "question": "Who was the screenwriter for Fear No More?",
+      "choices": [
+        "Adam Barr",
+        "Gary David Goldberg",
+        "Nathan Essex",
+        "Kevin Falls"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Adam Barr",
+      "model_hallucination": "Nathan Essex",
+      "subject": "Fear No More",
+      "popularity": 37,
+      "property": "screenwriter"
+    },
+    {
+      "question": "What sport does Sofia Anker-Kofoed play?",
+      "choices": [
+        "basketball",
+        "ice hockey",
+        "association football",
+        "Table tennis"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "association football",
+      "model_hallucination": "Table tennis",
+      "subject": "Sofia Anker-Kofoed",
+      "popularity": 37,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Luk\u00e1\u0161 Bode\u010dek play?",
+      "choices": [
+        "Ice hockey",
+        "rugby union",
+        "association football",
+        "basketball"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "association football",
+      "model_hallucination": "Ice hockey",
+      "subject": "Luk\u00e1\u0161 Bode\u010dek",
+      "popularity": 37,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of For a Living?",
+      "choices": [
+        "Jennifer Fallon",
+        "George Bernard Shaw",
+        "Peter Oresick",
+        "Jonathan Kellerman"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Peter Oresick",
+      "model_hallucination": "George Bernard Shaw",
+      "subject": "For a Living",
+      "popularity": 37,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Smoke?",
+      "choices": [
+        "Jennifer Fallon",
+        "John Steinbeck",
+        "Lisa Unger",
+        "Jonathan Kellerman"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Lisa Unger",
+      "model_hallucination": "John Steinbeck",
+      "subject": "Smoke",
+      "popularity": 37,
+      "property": "author"
+    },
+    {
+      "question": "In what city was Gary Freear born?",
+      "choices": [
+        "Vaxholm",
+        "King's Lynn",
+        "Not enough information",
+        "Edinburgh"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "King's Lynn",
+      "model_hallucination": "Not enough information",
+      "subject": "Gary Freear",
+      "popularity": 38,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what country is \u0130nstitut?",
+      "choices": [
+        "Institut not a country",
+        "Azerbaijan",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Azerbaijan",
+      "model_hallucination": "Institut not a country",
+      "subject": "\u0130nstitut",
+      "popularity": 38,
+      "property": "country"
+    },
+    {
+      "question": "What is the religion of Benjamin Marc Ramaroson?",
+      "choices": [
+        "None of the above",
+        "Anglicanism",
+        "Christianity",
+        "Catholic Church"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Catholic Church",
+      "model_hallucination": "Christianity",
+      "subject": "Benjamin Marc Ramaroson",
+      "popularity": 38,
+      "property": "religion"
+    },
+    {
+      "question": "What sport does Timon Dobias play?",
+      "choices": [
+        "ice hockey",
+        "None specified",
+        "basketball",
+        "association football"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "None specified",
+      "subject": "Timon Dobias",
+      "popularity": 38,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Moving Day?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Jennifer Fallon",
+        "Ralph Fletcher",
+        "John Irving"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Ralph Fletcher",
+      "model_hallucination": "John Irving",
+      "subject": "Moving Day",
+      "popularity": 38,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Skinner's Rules?",
+      "choices": [
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "James W. Penfield",
+        "Quintin Jardine"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Quintin Jardine",
+      "model_hallucination": "James W. Penfield",
+      "subject": "Skinner's Rules",
+      "popularity": 38,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Pursuit?",
+      "choices": [
+        "John Steinbeck",
+        "Jonathan Kellerman",
+        "Jennifer Fallon",
+        "Andy Mangels"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "Andy Mangels",
+      "model_hallucination": "John Steinbeck",
+      "subject": "Pursuit",
+      "popularity": 38,
+      "property": "author"
+    },
+    {
+      "question": "What is Sir Thomas Clarges, 3rd Baronet's occupation?",
+      "choices": [
+        "journalist",
+        "Merchant",
+        "politician",
+        "photographer"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "politician",
+      "model_hallucination": "Merchant",
+      "subject": "Sir Thomas Clarges, 3rd Baronet",
+      "popularity": 39,
+      "property": "occupation"
+    },
+    {
+      "question": "Who was the composer of To The West?",
+      "choices": [
+        "Nino Rota",
+        "Henry Russell",
+        "Ai Otsuka",
+        "Alexander Scriabin"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Henry Russell",
+      "model_hallucination": "Nino Rota",
+      "subject": "To The West",
+      "popularity": 39,
+      "property": "composer"
+    },
+    {
+      "question": "What sport does Shuto Suzuki play?",
+      "choices": [
+        "ice hockey",
+        "basketball",
+        "association football",
+        "Judo"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "association football",
+      "model_hallucination": "Judo",
+      "subject": "Shuto Suzuki",
+      "popularity": 39,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Oyanaisis Gelis play?",
+      "choices": [
+        "None of my information",
+        "ice hockey",
+        "basketball",
+        "association football"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "basketball",
+      "model_hallucination": "None of my information",
+      "subject": "Oyanaisis Gelis",
+      "popularity": 39,
+      "property": "sport"
+    },
+    {
+      "question": "What is the capital of Gmina Radomsko?",
+      "choices": [
+        "Espargos",
+        "Mirambeau",
+        "Radomsko",
+        "Warsaw"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Radomsko",
+      "model_hallucination": "Warsaw",
+      "subject": "Gmina Radomsko",
+      "popularity": 39,
+      "property": "capital"
+    },
+    {
+      "question": "In what city was Giuseppe Castelli born?",
+      "choices": [
+        "Vaxholm",
+        "Milan",
+        "Rome",
+        "Edinburgh"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Milan",
+      "model_hallucination": "Rome",
+      "subject": "Giuseppe Castelli",
+      "popularity": 40,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Aarno Maliniemi born?",
+      "choices": [
+        "Vaxholm",
+        "Oulu",
+        "Helsinki",
+        "Edinburgh"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Oulu",
+      "model_hallucination": "Helsinki",
+      "subject": "Aarno Maliniemi",
+      "popularity": 40,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Masaru Inada born?",
+      "choices": [
+        "Vaxholm",
+        "Edinburgh",
+        "Tokyo",
+        "Sapporo"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Sapporo",
+      "model_hallucination": "Tokyo",
+      "subject": "Masaru Inada",
+      "popularity": 40,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what country is Javar Tan?",
+      "choices": [
+        "Poland",
+        "Indonesia",
+        "Iran",
+        "Romania"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Iran",
+      "model_hallucination": "Indonesia",
+      "subject": "Javar Tan",
+      "popularity": 40,
+      "property": "country"
+    },
+    {
+      "question": "Who is the author of With?",
+      "choices": [
+        "George Saunders",
+        "Donald Harington",
+        "Jonathan Kellerman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Donald Harington",
+      "model_hallucination": "George Saunders",
+      "subject": "With",
+      "popularity": 40,
+      "property": "author"
+    },
+    {
+      "question": "Who is the father of Colcu mac Domnaill?",
+      "choices": [
+        "Domnall Ilchelgach",
+        "Ma Teng",
+        "Niall Gl\u00fandubd\u00edl",
+        "Bryan Donkin"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Domnall Ilchelgach",
+      "model_hallucination": "Niall Gl\u00fandubd\u00edl",
+      "subject": "Colcu mac Domnaill",
+      "popularity": 41,
+      "property": "father"
+    },
+    {
+      "question": "In what country is Laxmipur, Mahakali?",
+      "choices": [
+        "Nepal",
+        "India",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Nepal",
+      "model_hallucination": "India",
+      "subject": "Laxmipur, Mahakali",
+      "popularity": 41,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Veliko Korenovo?",
+      "choices": [
+        "Russia",
+        "Croatia",
+        "Poland",
+        "Iran"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Croatia",
+      "model_hallucination": "Russia",
+      "subject": "Veliko Korenovo",
+      "popularity": 41,
+      "property": "country"
+    },
+    {
+      "question": "Who was the composer of Prelude in F major, Op. 49, No. 2?",
+      "choices": [
+        "Alexander Scriabin",
+        "Ai Otsuka",
+        "Henry Russell",
+        "Fr\u00e9d\u00e9ric Chopin"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Alexander Scriabin",
+      "model_hallucination": "Fr\u00e9d\u00e9ric Chopin",
+      "subject": "Prelude in F major, Op. 49, No. 2",
+      "popularity": 41,
+      "property": "composer"
+    },
+    {
+      "question": "Who was the composer of Images?",
+      "choices": [
+        "Ai Otsuka",
+        "Howard Skempton",
+        "Henry Russell",
+        "Philip Glass"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Howard Skempton",
+      "model_hallucination": "Philip Glass",
+      "subject": "Images",
+      "popularity": 41,
+      "property": "composer"
+    },
+    {
+      "question": "What sport does Dan Parkinson play?",
+      "choices": [
+        "basketball",
+        "Rugby",
+        "association football",
+        "ice hockey"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Rugby",
+      "subject": "Dan Parkinson",
+      "popularity": 41,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Alexandru Chiculi\u021b\u0103 play?",
+      "choices": [
+        "fencing",
+        "Table tennis",
+        "ice hockey",
+        "association football"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "fencing",
+      "model_hallucination": "Table tennis",
+      "subject": "Alexandru Chiculi\u021b\u0103",
+      "popularity": 41,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Juan Carlos Stauskas play?",
+      "choices": [
+        "Basketball",
+        "association football",
+        "ice hockey",
+        "rugby union"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "association football",
+      "model_hallucination": "Basketball",
+      "subject": "Juan Carlos Stauskas",
+      "popularity": 41,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Malvaloca?",
+      "choices": [
+        "Jennifer Fallon",
+        "Quintero brothers",
+        "Miguel de Cervantes",
+        "Jonathan Kellerman"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Quintero brothers",
+      "model_hallucination": "Miguel de Cervantes",
+      "subject": "Malvaloca",
+      "popularity": 41,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Federation?",
+      "choices": [
+        "H. Beam Piper",
+        "John Wyndham",
+        "Jonathan Kellerman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "H. Beam Piper",
+      "model_hallucination": "John Wyndham",
+      "subject": "Federation",
+      "popularity": 41,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Visst katten har djuren sj\u00e4l!?",
+      "choices": [
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "Margit Sandemo",
+        "Astrid Lindgren"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Margit Sandemo",
+      "model_hallucination": "Astrid Lindgren",
+      "subject": "Visst katten har djuren sj\u00e4l!",
+      "popularity": 41,
+      "property": "author"
+    },
+    {
+      "question": "In what city was Moon Joo-won born?",
+      "choices": [
+        "Edinburgh",
+        "Vaxholm",
+        "South Korea",
+        "Seoul"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "South Korea",
+      "model_hallucination": "Seoul",
+      "subject": "Moon Joo-won",
+      "popularity": 42,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Scott Patterson born?",
+      "choices": [
+        "Vancouver",
+        "Edinburgh",
+        "Vaxholm",
+        "Seattle"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Vancouver",
+      "model_hallucination": "Seattle",
+      "subject": "Scott Patterson",
+      "popularity": 42,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what country is Ban On?",
+      "choices": [
+        "Thailand",
+        "Poland",
+        "Cambodia",
+        "Iran"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Thailand",
+      "model_hallucination": "Cambodia",
+      "subject": "Ban On",
+      "popularity": 42,
+      "property": "country"
+    },
+    {
+      "question": "What sport does Irina Crasnoscioc play?",
+      "choices": [
+        "Swimming",
+        "association football",
+        "basketball",
+        "ice hockey"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "basketball",
+      "model_hallucination": "Swimming",
+      "subject": "Irina Crasnoscioc",
+      "popularity": 42,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Transcension?",
+      "choices": [
+        "Damien Broderick",
+        "Bruce Schneier",
+        "Jonathan Kellerman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Damien Broderick",
+      "model_hallucination": "Bruce Schneier",
+      "subject": "Transcension",
+      "popularity": 42,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Unknown?",
+      "choices": [
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "Stanley Schmidt",
+        "H.P. Lovecraft"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Stanley Schmidt",
+      "model_hallucination": "H.P. Lovecraft",
+      "subject": "Unknown",
+      "popularity": 42,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Template?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Matt Hughes",
+        "Walter J. Ong",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Matt Hughes",
+      "model_hallucination": "Walter J. Ong",
+      "subject": "Template",
+      "popularity": 42,
+      "property": "author"
+    },
+    {
+      "question": "What is Derek Wheatley's occupation?",
+      "choices": [
+        "politician",
+        "novelist",
+        "journalist",
+        "Author and Poet"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "novelist",
+      "model_hallucination": "Author and Poet",
+      "subject": "Derek Wheatley",
+      "popularity": 43,
+      "property": "occupation"
+    },
+    {
+      "question": "What is Jorge Traverso's occupation?",
+      "choices": [
+        "photographer",
+        "novelist",
+        "Politician",
+        "journalist"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "journalist",
+      "model_hallucination": "Politician",
+      "subject": "Jorge Traverso",
+      "popularity": 43,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was Izaskun Zubizarreta Gerendiain born?",
+      "choices": [
+        "Edinburgh",
+        "Vaxholm",
+        "San Sebasti\u00e1n",
+        "Oiartzun"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Oiartzun",
+      "model_hallucination": "San Sebasti\u00e1n",
+      "subject": "Izaskun Zubizarreta Gerendiain",
+      "popularity": 43,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Yugo Yoshida born?",
+      "choices": [
+        "Karatsu",
+        "Tokyo",
+        "Edinburgh",
+        "Vaxholm"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Karatsu",
+      "model_hallucination": "Tokyo",
+      "subject": "Yugo Yoshida",
+      "popularity": 43,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Liam Carroll born?",
+      "choices": [
+        "Vaxholm",
+        "Edinburgh",
+        "Kinnitty",
+        "Not enough information"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Kinnitty",
+      "model_hallucination": "Not enough information",
+      "subject": "Liam Carroll",
+      "popularity": 43,
+      "property": "place of birth"
+    },
+    {
+      "question": "What sport does Andrei Bogomolov play?",
+      "choices": [
+        "Table Tennis",
+        "association football",
+        "ice hockey",
+        "basketball"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "association football",
+      "model_hallucination": "Table Tennis",
+      "subject": "Andrei Bogomolov",
+      "popularity": 43,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of The Guard?",
+      "choices": [
+        "Jennifer Fallon",
+        "John Le Carr\u00e9",
+        "Jonathan Kellerman",
+        "Ezzat el Kamhawi"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Ezzat el Kamhawi",
+      "model_hallucination": "John Le Carr\u00e9",
+      "subject": "The Guard",
+      "popularity": 43,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of The Wizard in Wonderland?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Jennifer Fallon",
+        "Lewis Carroll",
+        "Jean Ure"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Jean Ure",
+      "model_hallucination": "Lewis Carroll",
+      "subject": "The Wizard in Wonderland",
+      "popularity": 43,
+      "property": "author"
+    },
+    {
+      "question": "What is Olav T. Laake's occupation?",
+      "choices": [
+        "Statistician",
+        "politician",
+        "photographer",
+        "journalist"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "politician",
+      "model_hallucination": "Statistician",
+      "subject": "Olav T. Laake",
+      "popularity": 44,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was I.P. Paul born?",
+      "choices": [
+        "Edinburgh",
+        "Thrissur",
+        "Vaxholm",
+        "Chicago"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Thrissur",
+      "model_hallucination": "Chicago",
+      "subject": "I.P. Paul",
+      "popularity": 44,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Eric Defoort born?",
+      "choices": [
+        "Ypres",
+        "Antwerp",
+        "Vaxholm",
+        "Edinburgh"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Ypres",
+      "model_hallucination": "Antwerp",
+      "subject": "Eric Defoort",
+      "popularity": 44,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Anne Brusletto born?",
+      "choices": [
+        "Vaxholm",
+        "Chicago",
+        "Geilo",
+        "Edinburgh"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Geilo",
+      "model_hallucination": "Chicago",
+      "subject": "Anne Brusletto",
+      "popularity": 44,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Robert Zawada born?",
+      "choices": [
+        "Vaxholm",
+        "Edinburgh",
+        "Warsaw",
+        "Jedlnia-Letnisko"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Jedlnia-Letnisko",
+      "model_hallucination": "Warsaw",
+      "subject": "Robert Zawada",
+      "popularity": 44,
+      "property": "place of birth"
+    },
+    {
+      "question": "What genre is Most of Me?",
+      "choices": [
+        "non-fiction",
+        "gothic metal",
+        "Rock Opera",
+        "science fiction"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "non-fiction",
+      "model_hallucination": "Rock Opera",
+      "subject": "Most of Me",
+      "popularity": 44,
+      "property": "genre"
+    },
+    {
+      "question": "Who is the father of Donor?",
+      "choices": [
+        "Challedon",
+        "Ma Teng",
+        "Not enough information",
+        "Bryan Donkin"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Challedon",
+      "model_hallucination": "Not enough information",
+      "subject": "Donor",
+      "popularity": 44,
+      "property": "father"
+    },
+    {
+      "question": "In what country is Al-Fajr Arabsalim?",
+      "choices": [
+        "Poland",
+        "Saudi Arabia",
+        "Lebanon",
+        "Iran"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Lebanon",
+      "model_hallucination": "Saudi Arabia",
+      "subject": "Al-Fajr Arabsalim",
+      "popularity": 44,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Centre?",
+      "choices": [
+        "Belgium",
+        "Poland",
+        "Iran",
+        "Central African Republic"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Belgium",
+      "model_hallucination": "Central African Republic",
+      "subject": "Centre",
+      "popularity": 44,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Alu?",
+      "choices": [
+        "Albania",
+        "Iran",
+        "Estonia",
+        "Poland"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Estonia",
+      "model_hallucination": "Albania",
+      "subject": "Alu",
+      "popularity": 44,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Contest?",
+      "choices": [
+        "Poland",
+        "United States",
+        "Iran",
+        "France"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "France",
+      "model_hallucination": "United States",
+      "subject": "Contest",
+      "popularity": 44,
+      "property": "country"
+    },
+    {
+      "question": "Who was the composer of Kallai Mattum?",
+      "choices": [
+        "M.M. Illaiyaraja",
+        "Himesh Reshammiya",
+        "Henry Russell",
+        "Ai Otsuka"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Himesh Reshammiya",
+      "model_hallucination": "M.M. Illaiyaraja",
+      "subject": "Kallai Mattum",
+      "popularity": 44,
+      "property": "composer"
+    },
+    {
+      "question": "What sport does Willi Kirsei play?",
+      "choices": [
+        "None of the above",
+        "basketball",
+        "ice hockey",
+        "association football"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "association football",
+      "model_hallucination": "None of the above",
+      "subject": "Willi Kirsei",
+      "popularity": 44,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Frank Cornan play?",
+      "choices": [
+        "ice hockey",
+        "association football",
+        "basketball",
+        "None of the above. Information unclear"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "association football",
+      "model_hallucination": "None of the above. Information unclear",
+      "subject": "Frank Cornan",
+      "popularity": 44,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Yuri Koroviansky play?",
+      "choices": [
+        "volleyball",
+        "Ice hockey",
+        "association football",
+        "basketball"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "volleyball",
+      "model_hallucination": "Ice hockey",
+      "subject": "Yuri Koroviansky",
+      "popularity": 44,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does McPherson Meade play?",
+      "choices": [
+        "None specified",
+        "association football",
+        "ice hockey",
+        "basketball"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "association football",
+      "model_hallucination": "None specified",
+      "subject": "McPherson Meade",
+      "popularity": 44,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Alice?",
+      "choices": [
+        "Jennifer Fallon",
+        "Lewis Carroll",
+        "Judith Hermann",
+        "Jonathan Kellerman"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Judith Hermann",
+      "model_hallucination": "Lewis Carroll",
+      "subject": "Alice",
+      "popularity": 44,
+      "property": "author"
+    },
+    {
+      "question": "What is the capital of Verbandsgemeinde Bad Ems?",
+      "choices": [
+        "Cologne",
+        "Espargos",
+        "Bad Ems",
+        "Mirambeau"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Bad Ems",
+      "model_hallucination": "Cologne",
+      "subject": "Verbandsgemeinde Bad Ems",
+      "popularity": 44,
+      "property": "capital"
+    },
+    {
+      "question": "What is Thomas Challis's occupation?",
+      "choices": [
+        "journalist",
+        "politician",
+        "photographer",
+        "Archaeologist"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "politician",
+      "model_hallucination": "Archaeologist",
+      "subject": "Thomas Challis",
+      "popularity": 45,
+      "property": "occupation"
+    },
+    {
+      "question": "What is Thomas Widdrington's occupation?",
+      "choices": [
+        "photographer",
+        "journalist",
+        "politician",
+        "Author and Poet"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "politician",
+      "model_hallucination": "Author and Poet",
+      "subject": "Thomas Widdrington",
+      "popularity": 45,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was Charles Hammock born?",
+      "choices": [
+        "Philadelphia",
+        "Vaxholm",
+        "New York City",
+        "Edinburgh"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Philadelphia",
+      "model_hallucination": "New York City",
+      "subject": "Charles Hammock",
+      "popularity": 45,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Bert Myers born?",
+      "choices": [
+        "Edinburgh",
+        "Vaxholm",
+        "Frederick",
+        "New York City"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Frederick",
+      "model_hallucination": "New York City",
+      "subject": "Bert Myers",
+      "popularity": 45,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was John Robinson born?",
+      "choices": [
+        "Vaxholm",
+        "Mansfield",
+        "Edinburgh",
+        "London"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Mansfield",
+      "model_hallucination": "London",
+      "subject": "John Robinson",
+      "popularity": 45,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what country is pero?",
+      "choices": [
+        "Poland",
+        "Czech Republic",
+        "Iran",
+        "Portugal"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Czech Republic",
+      "model_hallucination": "Portugal",
+      "subject": "pero",
+      "popularity": 45,
+      "property": "country"
+    },
+    {
+      "question": "Who was the director of La Rival?",
+      "choices": [
+        "Chano Urueta",
+        "Robby Benson",
+        "Stan Lathan",
+        "Pascal Schliederhoff"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Chano Urueta",
+      "model_hallucination": "Pascal Schliederhoff",
+      "subject": "La Rival",
+      "popularity": 45,
+      "property": "director"
+    },
+    {
+      "question": "What is the religion of Kenneth Bevan?",
+      "choices": [
+        "Anglicanism",
+        "None of the above",
+        "Christianity",
+        "Catholic Church"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Anglicanism",
+      "model_hallucination": "Christianity",
+      "subject": "Kenneth Bevan",
+      "popularity": 45,
+      "property": "religion"
+    },
+    {
+      "question": "What sport does Vyacheslav Chadov play?",
+      "choices": [
+        "rugby union",
+        "Ice hockey",
+        "association football",
+        "basketball"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Ice hockey",
+      "subject": "Vyacheslav Chadov",
+      "popularity": 45,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Pablo Aguilar play?",
+      "choices": [
+        "basketball",
+        "Boxing",
+        "association football",
+        "ice hockey"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Boxing",
+      "subject": "Pablo Aguilar",
+      "popularity": 45,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Nevio de Zordo play?",
+      "choices": [
+        "ice hockey",
+        "Judo",
+        "bobsleigh",
+        "association football"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "bobsleigh",
+      "model_hallucination": "Judo",
+      "subject": "Nevio de Zordo",
+      "popularity": 45,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of O dia das cal\u00e7as roladas?",
+      "choices": [
+        "Germano Almeida",
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "Lu\u00eds Fernando Lopes"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Germano Almeida",
+      "model_hallucination": "Lu\u00eds Fernando Lopes",
+      "subject": "O dia das cal\u00e7as roladas",
+      "popularity": 45,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Suicide?",
+      "choices": [
+        "Haruki Murakami",
+        "Viktor Suvorov",
+        "Jonathan Kellerman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Viktor Suvorov",
+      "model_hallucination": "Haruki Murakami",
+      "subject": "Suicide",
+      "popularity": 45,
+      "property": "author"
+    },
+    {
+      "question": "What genre is Astro?",
+      "choices": [
+        "reggae",
+        "Sci-Fi",
+        "science fiction",
+        "gothic metal"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "reggae",
+      "model_hallucination": "Sci-Fi",
+      "subject": "Astro",
+      "popularity": 46,
+      "property": "genre"
+    },
+    {
+      "question": "In what country is Seed 97.5 FM?",
+      "choices": [
+        "United States",
+        "Iran",
+        "Thailand",
+        "Poland"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Thailand",
+      "model_hallucination": "United States",
+      "subject": "Seed 97.5 FM",
+      "popularity": 46,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Lo\u010denice?",
+      "choices": [
+        "Croatia",
+        "Iran",
+        "Poland",
+        "Czech Republic"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "Czech Republic",
+      "model_hallucination": "Croatia",
+      "subject": "Lo\u010denice",
+      "popularity": 46,
+      "property": "country"
+    },
+    {
+      "question": "Who was the director of Pilot?",
+      "choices": [
+        "Robby Benson",
+        "Andy Ackerman",
+        "Stan Lathan",
+        "Wen Chengdao"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Andy Ackerman",
+      "model_hallucination": "Wen Chengdao",
+      "subject": "Pilot",
+      "popularity": 46,
+      "property": "director"
+    },
+    {
+      "question": "What is the religion of Jos\u00e9 Palmeira Lessa?",
+      "choices": [
+        "None of the above",
+        "Catholic Church",
+        "Anglicanism",
+        "Catholicism"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Catholic Church",
+      "model_hallucination": "Catholicism",
+      "subject": "Jos\u00e9 Palmeira Lessa",
+      "popularity": 46,
+      "property": "religion"
+    },
+    {
+      "question": "What sport does Koumiba Djossouvi play?",
+      "choices": [
+        "ice hockey",
+        "rugby union",
+        "Boxing",
+        "association football"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "rugby union",
+      "model_hallucination": "Boxing",
+      "subject": "Koumiba Djossouvi",
+      "popularity": 46,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Elias MacDonald play?",
+      "choices": [
+        "Ice hockey",
+        "association football",
+        "rugby union",
+        "basketball"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "association football",
+      "model_hallucination": "Ice hockey",
+      "subject": "Elias MacDonald",
+      "popularity": 46,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Louis Perr\u00e9e play?",
+      "choices": [
+        "ice hockey",
+        "fencing",
+        "None of the above",
+        "association football"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "fencing",
+      "model_hallucination": "None of the above",
+      "subject": "Louis Perr\u00e9e",
+      "popularity": 46,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Sail?",
+      "choices": [
+        "Jonathan Kellerman",
+        "James Patterson",
+        "Jennifer Fallon",
+        "Yann Martel"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "James Patterson",
+      "model_hallucination": "Yann Martel",
+      "subject": "Sail",
+      "popularity": 46,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of The End of the Soul?",
+      "choices": [
+        "Jennifer Michael Hecht",
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "David Mitchell"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "Jennifer Michael Hecht",
+      "model_hallucination": "David Mitchell",
+      "subject": "The End of the Soul",
+      "popularity": 46,
+      "property": "author"
+    },
+    {
+      "question": "What is Domingo Eyzaguirre's occupation?",
+      "choices": [
+        "Actor and director",
+        "journalist",
+        "politician",
+        "photographer"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "politician",
+      "model_hallucination": "Actor and director",
+      "subject": "Domingo Eyzaguirre",
+      "popularity": 47,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was Lloyd Ultan born?",
+      "choices": [
+        "Dublin",
+        "Edinburgh",
+        "Vaxholm",
+        "New York City"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "New York City",
+      "model_hallucination": "Dublin",
+      "subject": "Lloyd Ultan",
+      "popularity": 47,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Clemente Isnard born?",
+      "choices": [
+        "Edinburgh",
+        "Rio de Janeiro",
+        "Port of Spain",
+        "Vaxholm"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Rio de Janeiro",
+      "model_hallucination": "Port of Spain",
+      "subject": "Clemente Isnard",
+      "popularity": 47,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Keri Lees born?",
+      "choices": [
+        "Edinburgh",
+        "Vaxholm",
+        "Stone",
+        "New York City"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Stone",
+      "model_hallucination": "New York City",
+      "subject": "Keri Lees",
+      "popularity": 47,
+      "property": "place of birth"
+    },
+    {
+      "question": "What genre is Drill?",
+      "choices": [
+        "industrial rock",
+        "Hip hop",
+        "gothic metal",
+        "science fiction"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "industrial rock",
+      "model_hallucination": "Hip hop",
+      "subject": "Drill",
+      "popularity": 47,
+      "property": "genre"
+    },
+    {
+      "question": "In what country is Je\u017eov?",
+      "choices": [
+        "Russia",
+        "Czech Republic",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Czech Republic",
+      "model_hallucination": "Russia",
+      "subject": "Je\u017eov",
+      "popularity": 47,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Kijevac?",
+      "choices": [
+        "Serbia",
+        "Poland",
+        "Bosnia and Herzegovina",
+        "Iran"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Serbia",
+      "model_hallucination": "Bosnia and Herzegovina",
+      "subject": "Kijevac",
+      "popularity": 47,
+      "property": "country"
+    },
+    {
+      "question": "Who is the author of What You Make It?",
+      "choices": [
+        "Tom Robbins",
+        "Michael Marshall Smith",
+        "Jonathan Kellerman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Michael Marshall Smith",
+      "model_hallucination": "Tom Robbins",
+      "subject": "What You Make It",
+      "popularity": 47,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Fruits?",
+      "choices": [
+        "Kazuo Ishiwata",
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "Valerie Bloom"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "Valerie Bloom",
+      "model_hallucination": "Kazuo Ishiwata",
+      "subject": "Fruits",
+      "popularity": 47,
+      "property": "author"
+    },
+    {
+      "question": "What is John Finlay's occupation?",
+      "choices": [
+        "Actor and Writer",
+        "photographer",
+        "journalist",
+        "politician"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "politician",
+      "model_hallucination": "Actor and Writer",
+      "subject": "John Finlay",
+      "popularity": 48,
+      "property": "occupation"
+    },
+    {
+      "question": "Who is the father of Bert Bertrand?",
+      "choices": [
+        "Bertrand Russell",
+        "Bryan Donkin",
+        "Ma Teng",
+        "Yvan Delporte"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "Yvan Delporte",
+      "model_hallucination": "Bertrand Russell",
+      "subject": "Bert Bertrand",
+      "popularity": 48,
+      "property": "father"
+    },
+    {
+      "question": "In what country is Jauldes?",
+      "choices": [
+        "France",
+        "Poland",
+        "Iran",
+        "Indonesia"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "France",
+      "model_hallucination": "Indonesia",
+      "subject": "Jauldes",
+      "popularity": 48,
+      "property": "country"
+    },
+    {
+      "question": "In what country is Rogers?",
+      "choices": [
+        "United States of America",
+        "Canada",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "United States of America",
+      "model_hallucination": "Canada",
+      "subject": "Rogers",
+      "popularity": 48,
+      "property": "country"
+    },
+    {
+      "question": "Who was the director of The Day?",
+      "choices": [
+        "Stan Lathan",
+        "Alfred Rolfe",
+        "Robby Benson",
+        "Not enough information"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Alfred Rolfe",
+      "model_hallucination": "Not enough information",
+      "subject": "The Day",
+      "popularity": 48,
+      "property": "director"
+    },
+    {
+      "question": "Who was the screenwriter for F\u00e9minin, masculin?",
+      "choices": [
+        "Gary David Goldberg",
+        "Kiarash Anvari",
+        "Claude Mirand\u00e8s",
+        "Kevin Falls"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "Kiarash Anvari",
+      "model_hallucination": "Claude Mirand\u00e8s",
+      "subject": "F\u00e9minin, masculin",
+      "popularity": 48,
+      "property": "screenwriter"
+    },
+    {
+      "question": "What is the religion of John Orr?",
+      "choices": [
+        "Catholic Church",
+        "Anglicanism",
+        "None of the above",
+        "Christianity"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Anglicanism",
+      "model_hallucination": "Christianity",
+      "subject": "John Orr",
+      "popularity": 48,
+      "property": "religion"
+    },
+    {
+      "question": "What sport does Imbi Hoop play?",
+      "choices": [
+        "association football",
+        "ice hockey",
+        "Basketball",
+        "rugby union"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "association football",
+      "model_hallucination": "Basketball",
+      "subject": "Imbi Hoop",
+      "popularity": 48,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Saints of Big Harbour?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Jennifer Fallon",
+        "Tim Winton",
+        "Lynn Coady"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Lynn Coady",
+      "model_hallucination": "Tim Winton",
+      "subject": "Saints of Big Harbour",
+      "popularity": 48,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Out of This World?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Lawrence Watt-Evans",
+        "Jennifer Fallon",
+        "Carl Sagan"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Lawrence Watt-Evans",
+      "model_hallucination": "Carl Sagan",
+      "subject": "Out of This World",
+      "popularity": 48,
+      "property": "author"
+    },
+    {
+      "question": "What is the capital of Saanen District?",
+      "choices": [
+        "Espargos",
+        "Saanen",
+        "Mirambeau",
+        "Gimncnan"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Saanen",
+      "model_hallucination": "Gimncnan",
+      "subject": "Saanen District",
+      "popularity": 48,
+      "property": "capital"
+    },
+    {
+      "question": "What is Eliza Lawrence's occupation?",
+      "choices": [
+        "photographer",
+        "Model and Activist",
+        "politician",
+        "journalist"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "politician",
+      "model_hallucination": "Model and Activist",
+      "subject": "Eliza Lawrence",
+      "popularity": 49,
+      "property": "occupation"
+    },
+    {
+      "question": "What is David M. Westcott's occupation?",
+      "choices": [
+        "Former CEO",
+        "photographer",
+        "journalist",
+        "politician"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "politician",
+      "model_hallucination": "Former CEO",
+      "subject": "David M. Westcott",
+      "popularity": 49,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was Karl Bartholomaeus Heller born?",
+      "choices": [
+        "Berlin",
+        "Vaxholm",
+        "Edinburgh",
+        "Moravia"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "Moravia",
+      "model_hallucination": "Berlin",
+      "subject": "Karl Bartholomaeus Heller",
+      "popularity": 49,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Stig Kleven born?",
+      "choices": [
+        "Oslo",
+        "Edinburgh",
+        "Notodden",
+        "Vaxholm"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Notodden",
+      "model_hallucination": "Oslo",
+      "subject": "Stig Kleven",
+      "popularity": 49,
+      "property": "place of birth"
+    },
+    {
+      "question": "What genre is West?",
+      "choices": [
+        "Hip hop",
+        "science fiction",
+        "rock music",
+        "gothic metal"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "rock music",
+      "model_hallucination": "Hip hop",
+      "subject": "West",
+      "popularity": 49,
+      "property": "genre"
+    },
+    {
+      "question": "In what country is Pir Hayati?",
+      "choices": [
+        "Turkey",
+        "Poland",
+        "Iran",
+        "Romania"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Iran",
+      "model_hallucination": "Turkey",
+      "subject": "Pir Hayati",
+      "popularity": 49,
+      "property": "country"
+    },
+    {
+      "question": "What sport does Alain Rakotondramanana play?",
+      "choices": [
+        "basketball",
+        "Sailing",
+        "ice hockey",
+        "association football"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Sailing",
+      "subject": "Alain Rakotondramanana",
+      "popularity": 49,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Alex Crombie play?",
+      "choices": [
+        "basketball",
+        "Rugby",
+        "ice hockey",
+        "association football"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Rugby",
+      "subject": "Alex Crombie",
+      "popularity": 49,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Njurunda SK play?",
+      "choices": [
+        "basketball",
+        "ice hockey",
+        "Ski Jumping",
+        "association football"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 2,
+      "correct_answer": "ice hockey",
+      "model_hallucination": "Ski Jumping",
+      "subject": "Njurunda SK",
+      "popularity": 49,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does list of Azerbaijan football transfers winter 2012 play?",
+      "choices": [
+        "association football",
+        "basketball",
+        "ice hockey",
+        "None listed specifically"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 3,
+      "correct_answer": "association football",
+      "model_hallucination": "None listed specifically",
+      "subject": "list of Azerbaijan football transfers winter 2012",
+      "popularity": 49,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does VOKO-Irodion play?",
+      "choices": [
+        "Vok\u0151-Irodi\u00f3n plays ice hockey",
+        "association football",
+        "ice hockey",
+        "volleyball"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 0,
+      "correct_answer": "volleyball",
+      "model_hallucination": "Vok\u0151-Irodi\u00f3n plays ice hockey",
+      "subject": "VOKO-Irodion",
+      "popularity": 49,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Endpeace?",
+      "choices": [
+        "Jennifer Fallon",
+        "Jon Cleary",
+        "Jonathan Kellerman",
+        "Satoshi Kon"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Jon Cleary",
+      "model_hallucination": "Satoshi Kon",
+      "subject": "Endpeace",
+      "popularity": 49,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Follow The Music?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Jennifer Fallon",
+        "Jac Holzman",
+        "Rushali Bhattacharya"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Jac Holzman",
+      "model_hallucination": "Rushali Bhattacharya",
+      "subject": "Follow The Music",
+      "popularity": 49,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Louis?",
+      "choices": [
+        "George Bernard Shaw",
+        "Jonathan Kellerman",
+        "Metaphrog",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Metaphrog",
+      "model_hallucination": "George Bernard Shaw",
+      "subject": "Louis",
+      "popularity": 49,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Pen?",
+      "choices": [
+        "David Marshall Grant",
+        "George Orwell",
+        "Jonathan Kellerman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "David Marshall Grant",
+      "model_hallucination": "George Orwell",
+      "subject": "Pen",
+      "popularity": 49,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Lotte's Gift?",
+      "choices": [
+        "Lotte Kim",
+        "David Williamson",
+        "Jonathan Kellerman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "David Williamson",
+      "model_hallucination": "Lotte Kim",
+      "subject": "Lotte's Gift",
+      "popularity": 49,
+      "property": "author"
+    },
+    {
+      "question": "What is the capital of canton of Harnes?",
+      "choices": [
+        "Espargos",
+        "Not applicable",
+        "Mirambeau",
+        "Harnes"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Harnes",
+      "model_hallucination": "Not applicable",
+      "subject": "canton of Harnes",
+      "popularity": 49,
+      "property": "capital"
+    },
+    {
+      "question": "What is William Australia Graham's occupation?",
+      "choices": [
+        "journalist",
+        "Author and theologian",
+        "politician",
+        "photographer"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "politician",
+      "model_hallucination": "Author and theologian",
+      "subject": "William Australia Graham",
+      "popularity": 50,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was Belarmino Mario Chipongue born?",
+      "choices": [
+        "Vaxholm",
+        "Edinburgh",
+        "Lubango",
+        "Kinshasa"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Lubango",
+      "model_hallucination": "Kinshasa",
+      "subject": "Belarmino Mario Chipongue",
+      "popularity": 50,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Ray Strauss born?",
+      "choices": [
+        "Vaxholm",
+        "Berlin",
+        "Perth",
+        "Edinburgh"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "Perth",
+      "model_hallucination": "Berlin",
+      "subject": "Ray Strauss",
+      "popularity": 50,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Anders Orvin born?",
+      "choices": [
+        "Edinburgh",
+        "Hattfjelldal",
+        "Vaxholm",
+        "Stockholm"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Hattfjelldal",
+      "model_hallucination": "Stockholm",
+      "subject": "Anders Orvin",
+      "popularity": 50,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Leobardo Soto born?",
+      "choices": [
+        "Puebla",
+        "Los Angeles",
+        "Vaxholm",
+        "Edinburgh"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Puebla",
+      "model_hallucination": "Los Angeles",
+      "subject": "Leobardo Soto",
+      "popularity": 50,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was John Mant born?",
+      "choices": [
+        "Edinburgh",
+        "Vaxholm",
+        "London",
+        "Darling Point"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "Darling Point",
+      "model_hallucination": "London",
+      "subject": "John Mant",
+      "popularity": 50,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Mikael Eriksson born?",
+      "choices": [
+        "Edinburgh",
+        "Stockholm",
+        "Vaxholm",
+        "Karlskoga"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Karlskoga",
+      "model_hallucination": "Stockholm",
+      "subject": "Mikael Eriksson",
+      "popularity": 50,
+      "property": "place of birth"
+    },
+    {
+      "question": "What genre is Ruth Berman Harris?",
+      "choices": [
+        "gothic metal",
+        "Comedy sitcom",
+        "science fiction",
+        "jazz"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "jazz",
+      "model_hallucination": "Comedy sitcom",
+      "subject": "Ruth Berman Harris",
+      "popularity": 50,
+      "property": "genre"
+    },
+    {
+      "question": "What genre is The Gift?",
+      "choices": [
+        "gothic metal",
+        "science fiction",
+        "Fiction Novel",
+        "country music"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "country music",
+      "model_hallucination": "Fiction Novel",
+      "subject": "The Gift",
+      "popularity": 50,
+      "property": "genre"
+    },
+    {
+      "question": "In what country is Movra\u017e?",
+      "choices": [
+        "Croatia",
+        "Slovenia",
+        "Iran",
+        "Poland"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 0,
+      "correct_answer": "Slovenia",
+      "model_hallucination": "Croatia",
+      "subject": "Movra\u017e",
+      "popularity": 50,
+      "property": "country"
+    },
+    {
+      "question": "Who was the director of Det var paa Rundetaarn?",
+      "choices": [
+        "Robby Benson",
+        "Poul Bang",
+        "Stan Lathan",
+        "J\u00f8rgen Leth"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Poul Bang",
+      "model_hallucination": "J\u00f8rgen Leth",
+      "subject": "Det var paa Rundetaarn",
+      "popularity": 50,
+      "property": "director"
+    },
+    {
+      "question": "Who was the composer of The Giants?",
+      "choices": [
+        "Henry Russell",
+        "Ai Otsuka",
+        "Joseph Koo",
+        "Nino Rota"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Joseph Koo",
+      "model_hallucination": "Nino Rota",
+      "subject": "The Giants",
+      "popularity": 50,
+      "property": "composer"
+    },
+    {
+      "question": "What sport does S\u00e9bastien Chevallier play?",
+      "choices": [
+        "ice hockey",
+        "association football",
+        "beach volleyball",
+        "Formula E\u8d5b\u8f66\u624b"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "beach volleyball",
+      "model_hallucination": "Formula E\u8d5b\u8f66\u624b",
+      "subject": "S\u00e9bastien Chevallier",
+      "popularity": 50,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Oleg Imrekov play?",
+      "choices": [
+        "rugby union",
+        "basketball",
+        "Ice hockey",
+        "association football"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 2,
+      "correct_answer": "association football",
+      "model_hallucination": "Ice hockey",
+      "subject": "Oleg Imrekov",
+      "popularity": 50,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does G\u00e1bor J\u00e1nv\u00e1ri play?",
+      "choices": [
+        "ice hockey",
+        "Table tennis",
+        "association football",
+        "basketball"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "association football",
+      "model_hallucination": "Table tennis",
+      "subject": "G\u00e1bor J\u00e1nv\u00e1ri",
+      "popularity": 50,
+      "property": "sport"
+    },
+    {
+      "question": "What sport does Marc Santo-Roman play?",
+      "choices": [
+        "ice hockey",
+        "chess",
+        "association football",
+        "Boxing"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "chess",
+      "model_hallucination": "Boxing",
+      "subject": "Marc Santo-Roman",
+      "popularity": 50,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Het uur tussen hond en wolf?",
+      "choices": [
+        "Maarten 't Hart",
+        "Herman Koch",
+        "Jonathan Kellerman",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 1,
+      "correct_answer": "Maarten 't Hart",
+      "model_hallucination": "Herman Koch",
+      "subject": "Het uur tussen hond en wolf",
+      "popularity": 50,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of J\u00e4\u00e4peili?",
+      "choices": [
+        "Jennifer Fallon",
+        "Aaro Hellaakoski",
+        "Jonathan Kellerman",
+        "Juha Viherr\u00e4nt\u00f6inen"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Aaro Hellaakoski",
+      "model_hallucination": "Juha Viherr\u00e4nt\u00f6inen",
+      "subject": "J\u00e4\u00e4peili",
+      "popularity": 50,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Non?",
+      "choices": [
+        "George Orwell",
+        "Jonathan Kellerman",
+        "Nozomi Sasaki",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 0,
+      "correct_answer": "Nozomi Sasaki",
+      "model_hallucination": "George Orwell",
+      "subject": "Non",
+      "popularity": 50,
+      "property": "author"
+    },
+    {
+      "question": "What is Modou Dia's occupation?",
+      "choices": [
+        "journalist",
+        "Actor and singer",
+        "diplomat",
+        "politician"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 1,
+      "correct_answer": "diplomat",
+      "model_hallucination": "Actor and singer",
+      "subject": "Modou Dia",
+      "popularity": 51,
+      "property": "occupation"
+    },
+    {
+      "question": "In what city was Bob Cremins born?",
+      "choices": [
+        "Edinburgh",
+        "Chicago",
+        "Vaxholm",
+        "Pelham Manor"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Pelham Manor",
+      "model_hallucination": "Chicago",
+      "subject": "Bob Cremins",
+      "popularity": 51,
+      "property": "place of birth"
+    },
+    {
+      "question": "In what city was Wellington Santos da Silva born?",
+      "choices": [
+        "Edinburgh",
+        "Vaxholm",
+        "Guarulhos",
+        "Rio de Janeiro"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Guarulhos",
+      "model_hallucination": "Rio de Janeiro",
+      "subject": "Wellington Santos da Silva",
+      "popularity": 51,
+      "property": "place of birth"
+    },
+    {
+      "question": "Who is the father of Hans Holtedahl?",
+      "choices": [
+        "Ma Teng",
+        "Bryan Donkin",
+        "Olaf Holtedahl",
+        "Hans' father is Niels"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Olaf Holtedahl",
+      "model_hallucination": "Hans' father is Niels",
+      "subject": "Hans Holtedahl",
+      "popularity": 51,
+      "property": "father"
+    },
+    {
+      "question": "What sport does Ernest Street play?",
+      "choices": [
+        "ice hockey",
+        "basketball",
+        "association football",
+        "None of the above"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "association football",
+      "model_hallucination": "None of the above",
+      "subject": "Ernest Street",
+      "popularity": 51,
+      "property": "sport"
+    },
+    {
+      "question": "Who is the author of Mannfolk?",
+      "choices": [
+        "Jennifer Fallon",
+        "Jonathan Kellerman",
+        "Arne Garborg",
+        "Svankmajer"
+      ],
+      "correct_idx": 2,
+      "halluc_idx": 3,
+      "correct_answer": "Arne Garborg",
+      "model_hallucination": "Svankmajer",
+      "subject": "Mannfolk",
+      "popularity": 51,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Heaven?",
+      "choices": [
+        "Jack Cohen",
+        "Jonathan Kellerman",
+        "Walter Wangerin Jr",
+        "Jennifer Fallon"
+      ],
+      "correct_idx": 0,
+      "halluc_idx": 2,
+      "correct_answer": "Jack Cohen",
+      "model_hallucination": "Walter Wangerin Jr",
+      "subject": "Heaven",
+      "popularity": 51,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of World of Wonder?",
+      "choices": [
+        "Jennifer Fallon",
+        "H.G. Wells",
+        "Jonathan Kellerman",
+        "Fletcher Pratt"
+      ],
+      "correct_idx": 3,
+      "halluc_idx": 1,
+      "correct_answer": "Fletcher Pratt",
+      "model_hallucination": "H.G. Wells",
+      "subject": "World of Wonder",
+      "popularity": 51,
+      "property": "author"
+    },
+    {
+      "question": "Who is the author of Bonaparte \u00e0 Malte?",
+      "choices": [
+        "Jonathan Kellerman",
+        "Frans Sammut",
+        "Jennifer Fallon",
+        "Honor\u00e9 de Balzac"
+      ],
+      "correct_idx": 1,
+      "halluc_idx": 3,
+      "correct_answer": "Frans Sammut",
+      "model_hallucination": "Honor\u00e9 de Balzac",
+      "subject": "Bonaparte \u00e0 Malte",
+      "popularity": 51,
+      "property": "author"
+    }
+  ],
+  "local_strategies": {
+    "baseline": {
+      "correct": 61,
+      "halluc": 60
+    },
+    "entropy_only": {
+      "correct": 69,
+      "halluc": 84
+    },
+    "blend_0.2": {
+      "correct": 72,
+      "halluc": 76
+    },
+    "low_variance": {
+      "correct": 77,
+      "halluc": 71
+    },
+    "groundedness": {
+      "correct": 63,
+      "halluc": 70
+    }
+  },
+  "claude_conditions": {}
+}
