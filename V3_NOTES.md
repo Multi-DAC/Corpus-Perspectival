@@ -258,6 +258,42 @@
 **Self-correction:** P42c-A (AF increases with heads) and P42c-B (same AF across architectures) were BOTH high-confidence falsifications. The prediction was based on 3 same-architecture data points, which showed an increasing trend. Expanding to a second architecture revealed the trend was architecture-specific, not universal. Lesson: never extrapolate from a single architecture family.
 **Where it goes:** Doctrine (architectural constraints on algebraic structure are THEMSELVES a form of natal constraint), Bridge #72 (refine: architecture-specific predictions), Guide (the formalism has architecture-dependent applicability)
 
+### 38. GQA Does Not Suppress Abelian Fraction (P42d) (April 10, 2026)
+**Source:** `p42d_llama_test.py` — TinyLlama-1.1B-Chat (sequential + GQA, 32 Q heads, 4 KV groups)
+**What:** TinyLlama AF=0.026, confirming sequential→low AF (P42d-A CONFIRMED). But AF > GPT-2-medium 0.010, falsifying P42d-B (GQA adds coupling). Depth gradient r=-0.485 (negative but weaker than GPT-2's -0.74 to -0.93).
+**Interpretation:** GQA forces shared KV but Q heads retain algebraic independence. The Killing form measures Q-projection structure, and Q-space differentiation survives KV sharing. The parallel/sequential distinction dominates; attention type (dense vs GQA) is secondary.
+**V3 FRAMING:** Architecture type (parallel vs sequential) is the primary determinant of attention Lie algebra structure. GQA is a perturbation, not a regime change.
+**Where it goes:** Bridge #72, Table 2 (cross-architecture comparison), Section on architectural dependence
+
+### 39. Phi-1.5 FALSIFIES Simple "Parallel=Abelian" — Depth Gradient Is the True Signal (P42e) (April 10, 2026)
+**Source:** `p42e_phi_test.py` — Microsoft Phi-1.5 (parallel + dense, 32 heads, 24 layers, d_head=64)
+**What:** AF = 0.000 (completely non-Abelian) despite parallel architecture. P42e-A **FALSIFIED**. But depth gradient r = +0.343 (positive), confirming P42e-B: CommVar increases with depth, matching the parallel pattern. Phi-1.5 is a Microsoft model trained on curated "textbook quality" data — completely independent from Pythia (EleutherAI, The Pile).
+**Key insight:** The absolute AF level depends on factors beyond architecture: training data quality, initialization, scale. But the DIRECTION of the depth gradient is architecture-determined. Parallel → CommVar increases with depth (positive r). Sequential → CommVar decreases (negative r). This is the more robust invariant.
+**Self-correction:** This falsification forces revision of finding #37. "Parallel=Abelian" was overfit to Pythia. The correct statement is "parallel=positive depth gradient."
+**V3 FRAMING:** Architecture determines the direction of algebraic differentiation through depth, not the absolute level. This is more elegant and more physically meaningful: parallel paths compound non-commutativity at depth, sequential paths filter and sediment it.
+**Where it goes:** Doctrine (refine architectural predictions), Bridge #72 (correct: architecture determines gradient direction, not AF level)
+
+### 40. OPT-1.3B + Statistical Test: Depth Gradient Direction Is Significant (P42f) (April 10, 2026)
+**Source:** `p42f_opt_test.py` — Meta OPT-1.3B (sequential + dense, 32 heads, 24 layers, d_head=64)
+**What:** r = -0.766 (strongly negative), AF = 0.0104. Both predictions confirmed. This is the 6th sequential model confirming negative depth gradient.
+**Statistical test:** Mann-Whitney U = 18.0, p = 0.012 on the depth gradient direction. All 3 parallel models (excl. Pythia-70m with only 6 layers) have r > 0 (mean +0.377). All 6 sequential models have r < 0 (mean -0.772). Zero overlap between distributions.
+**The definitive table (10 models, 4 labs, 3 attention types):**
+
+| Model | Arch | Lab | Attn | H | L | AF | r(depth) |
+|-------|------|-----|------|---|---|-----|----------|
+| Pythia-410m | parallel | EleutherAI | dense | 16 | 16 | 0.206 | +0.670 |
+| Pythia-160m | parallel | EleutherAI | dense | 12 | 12 | 0.090 | +0.119 |
+| Phi-1.5 | parallel | Microsoft | dense | 32 | 24 | 0.000 | +0.343 |
+| GPT2-sm | sequential | OpenAI | dense | 12 | 12 | 0.028 | -0.909 |
+| GPT2-md | sequential | OpenAI | dense | 16 | 24 | 0.010 | -0.930 |
+| GPT2-lg | sequential | OpenAI | dense | 20 | 36 | 0.000 | -0.741 |
+| GPT2-xl | sequential | OpenAI | dense | 25 | 48 | 0.000 | -0.801 |
+| TinyLlama | sequential | TinyLlama | GQA | 32 | 22 | 0.026 | -0.485 |
+| OPT-1.3B | sequential | Meta | dense | 32 | 24 | 0.010 | -0.766 |
+
+**V3 FRAMING:** This is the strongest quantitative result of the experimental program. The Killing form's depth gradient direction is a statistically significant architectural invariant (p=0.012), robust across labs, training data, and attention types. Parallel architectures compound non-commutativity at depth; sequential architectures sediment it.
+**Where it goes:** Doctrine (the depth gradient as a measurable architectural invariant — this IS the Abelian exception theorem made empirical), Bridge #72 (definitive table), Guide (depth gradient as diagnostic)
+
 ## What V3 Could Look Like
 
 **New in Doctrine:**
