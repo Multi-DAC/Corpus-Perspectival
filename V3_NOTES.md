@@ -339,6 +339,24 @@
 - Fork benchmark results
 - Onset detection data
 
+### 17. CROSS-DOMAIN: Neural Killing Form — r = +0.4 in Third Substrate (April 10, 2026)
+**Source:** `neuro_killing_form.py`, 4 connectomes from netneurotools (Markov, C. elegans, mouse, Drosophila)
+**What:** Applied identical Killing form mathematics to real neural connectivity data. Macaque cortex (Markov 2013, 29 directed cortical areas, FLN weights): r = +0.600. C. elegans (Varshney 2011, 279 neurons): r = +0.400. Mouse cortex: r = +0.050 (ambiguous). Drosophila: r = -0.500 (sequential — centralized mushroom body).
+
+**The number +0.4:**
+- Transformer parallel: r = +0.38
+- Food webs: r = +0.41
+- C. elegans: r = +0.40
+- Macaque cortex: r = +0.60 (higher, but still positive family)
+
+**Key observations:**
+- 100% mediators in cortex (all regions both send AND receive) — consistent with mediation principle
+- Drosophila negative gradient is consistent with its centralized (sequential) architecture
+- The depth gradient correctly distinguishes parallel (cortical) from sequential (centralized) nervous systems
+
+**Where it goes:** Cross-Domain Killing Form section (NEW-D in V3 outline), Ecology chapter, universal constant argument
+**Files:** `neuro_killing_form.py`, `neuro_kf_results.json`
+
 ### 16. CROSS-DOMAIN: Mediation Principle and Human Killing Form (April 10, 2026)
 **Source:** `human_killing_form.md`, derived from ecological mutualistic network result
 **What:** The Killing form measures MEDIATION — channels that both receive AND transmit. Without mediation, the algebra is Abelian (structurally, not approximately). This principle transfers to neural systems (interneurons = mediators, sensory/motor = bipartite), individual consciousness (constraints coupling perception AND behavior = non-Abelian = natal), and social systems (democracy = food web = everyone mediates; totalitarianism = bipartite = leader transmits, workers receive).
