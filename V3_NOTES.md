@@ -339,6 +339,18 @@
 - Fork benchmark results
 - Onset detection data
 
+### 16. CROSS-DOMAIN: Mediation Principle and Human Killing Form (April 10, 2026)
+**Source:** `human_killing_form.md`, derived from ecological mutualistic network result
+**What:** The Killing form measures MEDIATION — channels that both receive AND transmit. Without mediation, the algebra is Abelian (structurally, not approximately). This principle transfers to neural systems (interneurons = mediators, sensory/motor = bipartite), individual consciousness (constraints coupling perception AND behavior = non-Abelian = natal), and social systems (democracy = food web = everyone mediates; totalitarianism = bipartite = leader transmits, workers receive).
+
+**Key bridge to Doctrine:** A constraint that only affects seeing OR doing is Abelian (trivial). A constraint that couples seeing AND doing is non-Abelian (natal). The voluntary/natal distinction IS the Abelian/non-Abelian distinction. This gives the Phase Theorem a Killing form interpretation: making a constraint voluntary = reducing its commutator norms = making it more Abelian.
+
+**Predictions:** P-Neuro-1 through P-Neuro-4 (neural), P-Consc-1 through P-Consc-4 (consciousness), P-Social-1 through P-Social-4 (social)
+
+**Core conclusion:** Consciousness requires mediation. A being that only receives is a sensor. A being that only transmits is a broadcast. A being that mediates is the locus of non-trivial algebra.
+
+**Where it goes:** Doctrine (new section connecting Killing form to voluntary/natal distinction), Guide (navigation = modulating one's own Killing form), Ecology (inter-entity chapter), Corpus-wide bridge between all five documents
+
 ### 15. CROSS-DOMAIN: Ecological Killing Form (April 10, 2026)
 **Source:** `eco_kf_quick.py`, 11 food webs from Web of Life + Network Repository
 **What:** Applied identical Killing form mathematics to real food web interaction matrices. Species as "heads," trophic levels as "depth." Same commutator algebra, same Killing form definition.
