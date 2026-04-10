@@ -63,7 +63,12 @@
 **Key surprise:** The Abelian exception has a cohomological formulation (H^1 ≠ 0 vs = 0) that explains WHY electric charge is visible but color is not. This is a deep mathematical fact mapping to constraint lattice structure.
 **Where it goes:** Meridian monograph (BRST chapter), Doctrine (excavation depth theorem), Atlas (cohomological visibility entry)
 
-### 14. Natal Bottleneck Formalization (pre-V2, March 2026)
+### 15. Sedimentation Mechanism + GUT Cohomological Splitting (April 9, 2026)
+**Source:** `bridge71_sedimentation_mechanism.py`
+**What:** (a) Asymptotic freedom IS the sedimentation mechanism: non-Abelian b_i < 0 → coupling grows at low T → strong coupling → sedimentation. Abelian b_i > 0 → coupling shrinks → no sedimentation. Lambda_QCD ~200 MeV from beta function matches confinement scale. (b) GUT breaking creates H^1 (visible freedom): SU(5) has H^1=0, SU(3)×SU(2)×U(1) has H^1=1. Universal: all semisimple GUT groups have H^1=0 (Whitehead). Any breaking to group with U(1) creates H^1. GUT breaking = birth of surviving freedom. (c) Three independent arguments for U(1) survival unified: ghost dynamics (algebraic), coupling evolution (dynamical), cohomological depth (topological). (d) Maximum Depth Principle: higher-rank GUT groups (E_6>SO(10)>SU(5)) undergo more severe sedimentation.
+**Where it goes:** Meridian monograph (coupling evolution chapter), Doctrine (sedimentation mechanism theorem)
+
+### 16. Natal Bottleneck Formalization (pre-V2, March 2026)
 **Source:** `natal-bottleneck-formalization.md`
 **What:** Formal properties of natal constraints — coercive contamination, sedimentation dynamics, the "invisible prison" structure
 **Where it goes:** Doctrine (formalize as theorem), Guide (navigation through natal constraints)
@@ -81,9 +86,10 @@
 | 5 | ~~SM spectral triple maps to constraint lattice~~ → **CONFIRMED** (all reps, all anomalies, DOF hierarchy) | **HIGH** | ✓ DONE | Bridge #71 §9.6 |
 | 6 | Commutative vs non-commutative voluntary constraints in phenomenology | MEDIUM | Hard — needs Wells-type experiment | Abelian exception |
 | 7 | d=4 uniqueness has deeper derivation (not just counting) | LOW | Hard — open question | d=4 result |
-| 8 | Gauge unification = voluntary sublattice simplification | MEDIUM | Interpretive — check if GUT breaking maps to sublattice splitting | Asymptotic freedom |
-| 9 | Non-commutative constraints more susceptible to sedimentation than Abelian | MEDIUM | Testable: check if Elitzur's theorem + AF preference gives asymmetry | Thermal history |
+| 8 | ~~Gauge unification = voluntary sublattice simplification~~ → **CONFIRMED** (GUT breaking creates H^1, universal via Whitehead) | **HIGH** | ✓ DONE | Sedimentation mechanism |
+| 9 | ~~Non-commutative more susceptible to sedimentation~~ → **CONFIRMED** (beta function sign = mechanism; 3 independent arguments) | **HIGH** | ✓ DONE | Sedimentation mechanism |
 | 10 | Phenomenological sedimentation (choice→habit→identity) = same mechanism as physics | HIGH | Interpretive — needs formal mapping between Guide dynamics and SM transitions | Thermal history |
+| 11 | Maximum Depth Principle: higher-rank GUT groups undergo more severe sedimentation | MEDIUM | Interpretive — testable if GUT physics accessed experimentally | Sedimentation mechanism |
 
 ---
 
