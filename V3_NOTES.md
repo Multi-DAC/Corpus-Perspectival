@@ -221,6 +221,27 @@
 **Constraint lattice interpretation:** The training-time depth gradient reversal IS a sedimentation cascade. Phase 1: random→structured (step1→4000). Phase 2: uniform→differentiated (4000→20000). Phase 3: gradient reversal — late layers decouple (20000→143000). Early layers stay coupled for general feature extraction (non-Abelian), late layers specialize into independent heads (Abelian). The reversal is the "symmetry breaking event."
 **Where it goes:** Doctrine (training as cosmological cooling with phase transitions), Guide (architecture determines sedimentation geometry), Bridge #72 (the training trajectory IS the cosmological history, confirmed quantitatively)
 
+### 34. Crossover Pinpointed: Step ~45,000 (31.5% Through Training) (April 10, 2026)
+**Source:** `p41b_reversal_search.py`, `p41b_fine_search.py` — coarse search (9 checkpoints) then fine search (11 checkpoints through crossover)
+**What:** The depth gradient reversal is a SMOOTH CONTINUOUS CROSSOVER, not a sharp phase transition. r(CV, depth) passes through zero at step ~45,028 (31.5% through training). Crossover width: ~20,000 steps (step35k to step55k). Rate of change: ~+0.03 per 1,000 steps. Key detail: AF stays near zero throughout the crossover — the Abelian structure emerges LATER (step70k+). The depth gradient reversal is a PRECURSOR to Abelian differentiation, not a consequence of it.
+**Constraint lattice interpretation:** This is a crossover (like the QCD crossover at T~150 MeV), not a first-order transition. The Lie algebra geometry smoothly reorganizes from "early layers lead" to "late layers lead." The continuous nature is consistent with crossover-type sedimentation (Bridge #71 tension A26-2: continuous crossovers don't fit discrete sedimentation types).
+**Where it goes:** Doctrine (crossover vs phase transition in constraint dynamics), Guide (specific quantitative example of sedimentation timeline), V3 quantitative predictions section
+
+### 35. Cross-Architecture: Pythia-160m Trajectory — CommVar Evolution Universal (April 10, 2026)
+**Source:** `p41c_pythia160m_trajectory.py` — 10 checkpoints of Pythia-160m-deduped (12 heads, 12 layers)
+**What:** CommVar increases 300x during pretraining (0.000024 → 0.007223), confirming the pretraining-builds-structure result across architectures. Final AF = 0.090 (cf. 410m: 0.206, GPT-2: 0.076). Depth gradient reversal PRESENT but not statistically significant (12 layers too few for reliable Spearman). Sign pattern matches 410m: positive → negative (step4k-20k) → positive. Abelian structure concentrates in MIDDLE layers (L5-7) for both architectures.
+**Key comparison table:**
+
+| Metric | 410m (16 heads) | 160m (12 heads) |
+|--------|-----------------|-----------------|
+| CommVar evolution | 500x | 300x |
+| Final AF | 0.206 | 0.090 |
+| Depth reversal significance | p=0.0003 | p=0.71 (n=12 layers) |
+| Abelian location | Layers 14-20 | Layers 5-7 |
+
+**AF scales with head count:** More heads → more Abelian structure. This is expected: with more generators, there are more opportunities for some to become independent. The ratio 0.206/0.090 ≈ 2.3 for a 16/12 = 1.33 head ratio is superlinear.
+**Where it goes:** Doctrine (universality of pretraining Killing form evolution), Guide (scaling predictions: more heads → more Abelian structure), Bridge #72 (cross-architecture confirmation)
+
 ## What V3 Could Look Like
 
 **New in Doctrine:**
