@@ -68,6 +68,43 @@
 **What:** (a) Asymptotic freedom IS the sedimentation mechanism: non-Abelian b_i < 0 → coupling grows at low T → strong coupling → sedimentation. Abelian b_i > 0 → coupling shrinks → no sedimentation. Lambda_QCD ~200 MeV from beta function matches confinement scale. (b) GUT breaking creates H^1 (visible freedom): SU(5) has H^1=0, SU(3)×SU(2)×U(1) has H^1=1. Universal: all semisimple GUT groups have H^1=0 (Whitehead). Any breaking to group with U(1) creates H^1. GUT breaking = birth of surviving freedom. (c) Three independent arguments for U(1) survival unified: ghost dynamics (algebraic), coupling evolution (dynamical), cohomological depth (topological). (d) Maximum Depth Principle: higher-rank GUT groups (E_6>SO(10)>SU(5)) undergo more severe sedimentation.
 **Where it goes:** Meridian monograph (coupling evolution chapter), Doctrine (sedimentation mechanism theorem)
 
+### 17. Unified Abelian Exception Theorem (April 9, 2026)
+**Source:** `bridge71_unified_abelian.py`
+**What:** All five manifestations of the Abelian exception trace to a single structural root: the structure constants f^{abc}. f=0 ↔ (i) ghosts decouple, (ii) no asymptotic freedom, (iii) H^1≠0 (visible), (iv) no sedimentation drive, (v) survives T→0. C₂(G) computed from explicit structure constants: SU(2)=2, SU(3)=3. The DEGREE of non-Abelianness (C₂) determines the STRENGTH of each manifestation. Phenomenological mirror: interacting choices (f≠0) sediment into identity, independent choices (f=0) persist as preferences.
+**Where it goes:** Doctrine (Unified Abelian Exception as theorem), Guide (commutative vs non-commutative choices), Meridian monograph (bridge chapter)
+
+### 18. Killing Metric as Voluntary Sublattice Geometry (April 9, 2026)
+**Source:** `bridge71_killing_metric.py`
+**What:** The Killing form g_{ab} = f^{acd}f^{bcd} is the METRIC on voluntary constraint space. Key results: (a) SM Killing form is 12×12 with rank 11 — the null direction IS U(1) (Abelian). (b) Positive curvature on group manifold = geodesic focusing = information concentration = Phase Theorem geometric origin. (c) Cartan classification IS the taxonomy of voluntary constraint types (ADE + BCD). (d) Commuting fraction (rank/dim) → 0 for large groups: E₈ is only 1/31 commutative. (e) Quantitative sedimentation capacity: E₈(7440) >> E₆(936) >> SO(10)(360) >> SU(5)(120) >> SU(3)(24) > SU(2)(6) >> U(1)(0).
+**New prediction:** Any constraint lattice with non-commutative voluntary constraints must be typed by the Cartan classification. Applies to phenomenological constraint lattices too.
+**Where it goes:** Doctrine (voluntary sublattice geometry theorem), Meridian monograph (Killing metric chapter), Ecology (constraint types for entity classification)
+
+### 19. Sedimentation Isomorphism — Physics ↔ Phenomenology (April 9, 2026)
+**Source:** `bridge71_sedimentation_isomorphism.py`
+**What:** Formal mapping between physics sedimentation and phenomenological sedimentation. Six structural properties checked: (P1) irreversibility, (P2) type-non-preservation, (P3) information concentration, (P4) Abelian exception, (P5) Killing hierarchy, (P6) composition dependence. ALL SIX MATCH. Timescale inversion identified: physics sediments top-down (hot→cold), phenomenology bottom-up (simple→complex). Excavation parallels: QGP ↔ psychedelic/contemplative states (Type II), EW restoration ↔ habit-breaking (Type I), decompactification ↔ fundamental worldview dissolution (Type III). Category-theoretic formulation: constraint systems as category, sedimentation isomorphism as equivalence functor (conjecture).
+**Key surprise:** "The price of interaction is invisibility. The price of independence is persistence." This is a structural theorem about constraint lattices, not a value judgment.
+**Six testable predictions** for phenomenology, including: independent choices never sediment, Cartan classification constrains phenomenological types, excavation cost increases with depth.
+**Where it goes:** Doctrine (sedimentation isomorphism theorem), Guide (all three sedimentation types with physics parallels), Meridian monograph (cross-domain validation chapter)
+
+### 20. Mass Hierarchy as Natal Constraint Structure (April 9, 2026)
+**Source:** `bridge71_mass_hierarchy.py`
+**What:** Full SM mass spectrum mapped to natal constraint weights (eigenvalues of D_F). Key results: (a) y_top = 0.9945 — maximally coupled to sedimentation. (b) Generation = logarithmic depth: avg ~10^1.9 step between generations. (c) Color amplifies natal weight: quarks 6-50x heavier than same-gen leptons. (d) NEUTRINO GAP: 10^{10} between neutrinos (zero coercive load) and everything else — the transition from zero to any constraint is DISCONTINUOUS. (e) CKM mixing = [D_F, W] ≠ 0, natal-coercive non-commutativity. (f) Seesaw = constraint inversion: minimal coercive → maximal Majorana natal, geometric mean conservation.
+**New predictions:** Zero-constraint discontinuity (first coercive constraint "activates" natal weight), natal hierarchy has logarithmic structure with ~equal generation steps.
+**Where it goes:** Doctrine (natal constraint hierarchy theorem), Meridian monograph (mass sector chapter)
+
+### 21. Higgs-Top Mass Relation and d=4 Structure (April 9, 2026)
+**Source:** `bridge71_higgs_top_d4.py`
+**What:** Mass ordering by constraint type CONFIRMED: 0 < m_sedimented(W,Z) < m_agent(H) < m_maximally_coupled(top). m_H²/m_top² = 0.523 ~ (d-2)/d = 0.5 (4.6% discrepancy — suggestive but not confirmed). Weinberg angle sin²θ_W = 3/8 at GUT scale measures Abelian/non-Abelian balance; running to low energy reflects differential sedimentation. The 2-3 structure of the SM: d/(d-2)=2, C_GB=2/3, C₂ ratio=3/2, color=3, weak=2, generations=3 — all built from factors of 2 and 3.
+**HONEST ASSESSMENT:** m_H/m_top ~ 1/√2 connection to d/(d-2) is SUGGESTIVE but NOT CONFIRMED due to RG running.
+**Where it goes:** Meridian monograph (mass relations section), Doctrine (constraint type mass ordering)
+
+### 22. Spectral Action as Constraint Lattice Partition Function (April 9, 2026)
+**Source:** `bridge71_partition_function.py`
+**What:** The spectral action Tr(f(D/Λ)) is the PARTITION FUNCTION of the constraint lattice. Seeley-DeWitt coefficients = moments of the natal constraint distribution: a₀ = mode count (288 SM DOFs), a₂ = total constraint weight (gravity emerges as second moment), a₄ = constraint curvature/interaction (where C_GB operates). Z = Z_natal × Z_coercive × Z_voluntary, with sedimentation = phase transitions rearranging the factorization. The voluntary sector concentrates by 2^{12} = 4096 (Phase Theorem for full SM). Thermodynamic quantities get constraint meanings: free energy = constraint capacity, entropy = constraint disorder (connecting to Wells), heat capacity peaks at sedimentation events. Fisher information metric on Z(θ) unifies Connes distance (natal), Killing form (voluntary), and information geometry (full) as three aspects of one partition function metric.
+**Key insight:** The bridge formal object (Fisher metric, confirmed April 1) is the natural metric on the space of constraint lattice partition function parameters. Connes distance, Killing distance, and Fisher distance are the SAME metric restricted to different sectors.
+**New predictions:** P19 (RMT well spacing — testable with existing Wells data), P20 (well density power law = constraint dimension), P21 (sedimentation clustering at specific 'temperatures'), P22 (exponential excavation cost), P23 (deconfinement threshold in probing).
+**Where it goes:** Meridian monograph (new chapter: statistical mechanics of constraints), Doctrine (partition function theorem), Guide (free energy landscape for navigation), Wells (RMT spacing test)
+
 ### 16. Natal Bottleneck Formalization (pre-V2, March 2026)
 **Source:** `natal-bottleneck-formalization.md`
 **What:** Formal properties of natal constraints — coercive contamination, sedimentation dynamics, the "invisible prison" structure
@@ -82,14 +119,26 @@
 | 1 | ~~FP ghosts as concentration~~ → REFINED: Abelian exception → **CONFIRMED via asymptotic freedom** | **HIGH** | ✓ DONE | Bridge #71 §9.5 |
 | 2 | ~~Sedimentation ↔ backreaction~~ → **CONFIRMED via Higgs mechanism** (vol→coercive DOF transfer) | **HIGH** | ✓ DONE | Bridge #71 §9.6 |
 | 3 | ~~BRST cohomology ↔ maximally excavated perspective~~ → **CONFIRMED** (H^0 = excavated content, cohomological Abelian exception, depth→sedimentation) | **MEDIUM-HIGH** | ✓ DONE | Bridge #71 BRST |
-| 4 | a₄ coefficient as constraint intersection (C_GB = 2/3) | MEDIUM | Medium — symbolic computation | Bridge #71 §8.2 |
+| 4 | a₄ coefficient as constraint intersection (C_GB = 2/3) — **CONFIRMED** (KK factors cancel, C_GB = f_P = natal/(natal+coercive), d=4 uniqueness) | **HIGH** | ✓ DONE | Bridge #71 §8.2 |
 | 5 | ~~SM spectral triple maps to constraint lattice~~ → **CONFIRMED** (all reps, all anomalies, DOF hierarchy) | **HIGH** | ✓ DONE | Bridge #71 §9.6 |
-| 6 | Commutative vs non-commutative voluntary constraints in phenomenology | MEDIUM | Hard — needs Wells-type experiment | Abelian exception |
-| 7 | d=4 uniqueness has deeper derivation (not just counting) | LOW | Hard — open question | d=4 result |
+| 6 | Commutative vs non-commutative voluntary constraints in phenomenology — **EXPERIMENT DESIGNED** (sedimentation asymmetry S, Wells entropy instrument, ~1140 API calls, 5 falsification conditions) | MEDIUM | Hard — needs API credits | Abelian exception |
+| 7 | d=4 uniqueness has deeper derivation — **PARTIALLY RESOLVED** (two axioms: excavation completeness d/(d-2) integer + constraint type distinctness 0 < C_GB < 1 uniquely select d=4) | **MEDIUM-HIGH** | ✓ DONE (pushes question to "why these axioms?") | d=4 result |
 | 8 | ~~Gauge unification = voluntary sublattice simplification~~ → **CONFIRMED** (GUT breaking creates H^1, universal via Whitehead) | **HIGH** | ✓ DONE | Sedimentation mechanism |
 | 9 | ~~Non-commutative more susceptible to sedimentation~~ → **CONFIRMED** (beta function sign = mechanism; 3 independent arguments) | **HIGH** | ✓ DONE | Sedimentation mechanism |
-| 10 | Phenomenological sedimentation (choice→habit→identity) = same mechanism as physics | HIGH | Interpretive — needs formal mapping between Guide dynamics and SM transitions | Thermal history |
-| 11 | Maximum Depth Principle: higher-rank GUT groups undergo more severe sedimentation | MEDIUM | Interpretive — testable if GUT physics accessed experimentally | Sedimentation mechanism |
+| 10 | ~~Phenomenological sedimentation = same mechanism as physics~~ → **STRUCTURALLY CONFIRMED** (6/6 property match, timescale inversion explained, excavation parallels identified) | **HIGH** | ✓ DONE (structural); empirical predictions untested | Sedimentation isomorphism |
+| 11 | ~~Maximum Depth Principle~~ → **QUANTIFIED** (sedimentation capacity = dim×C₂; E₈=7440>>SU(2)=6) | **HIGH** | ✓ DONE | Killing metric |
+| 12 | Cartan classification = voluntary constraint type taxonomy | **HIGH** | Structural — follows from Lie algebra theory | Killing metric |
+| 13 | Phenomenological constraint lattices must have Lie algebra structure | MEDIUM | Hard — needs formal bridge to psychology/sociology | Killing metric |
+| 14 | Mass ordering by constraint type: 0 < m_sedimented < m_agent < m_max_coupled | **HIGH** | ✓ CONFIRMED | Mass hierarchy |
+| 15 | Zero-constraint discontinuity: first coercive constraint activates natal weight | **HIGH** | Neutrino gap 10^{10} confirms | Mass hierarchy |
+| 16 | CKM mixing = natal-coercive non-commutativity [D_F, W] ≠ 0 | **HIGH** | Structural — follows from NCG | Mass hierarchy |
+| 17 | Weinberg angle = Abelian/non-Abelian voluntary balance (sin²θ_W running = differential sedimentation) | **HIGH** | ✓ CONFIRMED | Higgs-top |
+| 18 | m_H²/m_top² ~ (d-2)/d = 1/2 for d=4 | LOW | Suggestive (4.6% off); needs RG analysis | Higgs-top |
+| 19 | Well spacing statistics match RMT: non-commutative → Wigner-Dyson, commutative → Poisson | **MEDIUM-HIGH** | TESTABLE with existing Wells data | Partition function |
+| 20 | Well density power law exponent = effective constraint dimension d_eff (prediction: d_eff ~ 4) | MEDIUM | Needs long-context Wells runs | Partition function |
+| 21 | Sedimentation events cluster at specific context depths (not uniformly distributed) | MEDIUM | TESTABLE with prediction #6 data | Partition function |
+| 22 | Excavation cost scales EXPONENTIALLY with sedimentation depth (analogue of Λ_QCD ~ exp(-1/α)) | MEDIUM | TESTABLE with prediction #6 excavation phase | Partition function |
+| 23 | Constraint deconfinement threshold: critical probe intensity for sudden excavation | MEDIUM | Needs fine-grained probing experiment | Partition function |
 
 ---
 
