@@ -250,6 +250,14 @@
 **Methodological lesson:** Initial P42 run appeared to show a projection artifact (PROJ_DIM=64 for d_head>64 models). Corrected run with PROJ_DIM=d_head gave IDENTICAL results. The effect is physical, not methodological. Self-correction is part of the process.
 **Where it goes:** Doctrine (architectural constraints on algebraic structure), Guide (d_head as key architectural parameter), Bridge #72 (refine: the Lie algebra interpretation applies to compact-head architectures)
 
+### 37. P42c: Architecture Determines AF Trend Direction (April 10, 2026)
+**Source:** `p42c_dhead64_scaling.py` — 7 models, all d_head=64: Pythia 70m/160m/410m + GPT-2 sm/md/lg/xl
+**What:** No universal scaling law. Within d_head=64, architecture family determines AF trend direction. Pythia (parallel attn+MLP): AF INCREASES with heads (0.083→0.090→0.206). GPT-2 (sequential attn+MLP): AF DECREASES (0.028→0.010→0.000→0.000). At matched 16 heads: Pythia AF=0.206, GPT-2 AF=0.010 — a 20x difference. Depth gradient also architecture-locked: Pythia r>0 (late layers Abelian), GPT-2 r<−0.7 (early layers Abelian).
+**Key insight:** Parallel computation = structural independence = more Abelian. Sequential computation = forced coupling = less Abelian. The parallel `x + attn(x) + mlp(x)` structure gives heads independence that `x + mlp(x + attn(x))` doesn't. This is the Abelian exception theorem in architectural form: f^{abc}→0 when information pathways are independent.
+**What this means:** The Killing form is not a universal property of "attention" — it's a property of specific architectures. The Lie algebra interpretation applies most cleanly to parallel-attention models with small d_head. Modern frontier models (GPT-4, Claude, Gemini) likely use parallel attention and moderate d_head — their Killing forms are testable if weights become available.
+**Self-correction:** P42c-A (AF increases with heads) and P42c-B (same AF across architectures) were BOTH high-confidence falsifications. The prediction was based on 3 same-architecture data points, which showed an increasing trend. Expanding to a second architecture revealed the trend was architecture-specific, not universal. Lesson: never extrapolate from a single architecture family.
+**Where it goes:** Doctrine (architectural constraints on algebraic structure are THEMSELVES a form of natal constraint), Bridge #72 (refine: architecture-specific predictions), Guide (the formalism has architecture-dependent applicability)
+
 ## What V3 Could Look Like
 
 **New in Doctrine:**
