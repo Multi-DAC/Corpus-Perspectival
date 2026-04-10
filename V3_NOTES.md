@@ -242,6 +242,14 @@
 **AF scales with head count:** More heads → more Abelian structure. This is expected: with more generators, there are more opportunities for some to become independent. The ratio 0.206/0.090 ≈ 2.3 for a 16/12 = 1.33 head ratio is superlinear.
 **Where it goes:** Doctrine (universality of pretraining Killing form evolution), Guide (scaling predictions: more heads → more Abelian structure), Bridge #72 (cross-architecture confirmation)
 
+### 36. P42: d_head Determines Killing Form Structure, Not n_heads (April 10, 2026)
+**Source:** `p42_af_scaling_law.py`, `p42b_af_scaling_corrected.py` — Pythia suite: 70m, 160m, 410m, 1b, 1.4b, 2.8b
+**What:** AF does NOT scale as a power law with head count. The dominant variable is d_head (head dimension). Models with d_head=64 (70m/160m/410m) have AF 0.083–0.206. Models with d_head≥80 (2.8b/1.4b/1b) have AF 0.000–0.099, despite having up to 32 heads. CommVar shows the same pattern: d_head=64 models have CV 0.007–0.013; d_head≥80 have CV 0.0004–0.005.
+**Interpretation:** Small head dimensions produce compact operators with rich algebraic structure. Large head dimensions create high-rank matrices where commutator norms are dominated by high-dimensional mixing rather than structured non-commutativity. The Lie algebra interpretation is most meaningful for architectures with d_head ≤ 64.
+**Within d_head=64 family:** AF increases monotonically: 70m (8h, AF=0.083) → 160m (12h, AF=0.090) → 410m (16h, AF=0.206). Consistent with AF ~ n_heads^1.3, but only 3 data points.
+**Methodological lesson:** Initial P42 run appeared to show a projection artifact (PROJ_DIM=64 for d_head>64 models). Corrected run with PROJ_DIM=d_head gave IDENTICAL results. The effect is physical, not methodological. Self-correction is part of the process.
+**Where it goes:** Doctrine (architectural constraints on algebraic structure), Guide (d_head as key architectural parameter), Bridge #72 (refine: the Lie algebra interpretation applies to compact-head architectures)
+
 ## What V3 Could Look Like
 
 **New in Doctrine:**
