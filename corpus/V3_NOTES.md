@@ -57,7 +57,13 @@
 **Key surprise:** At T~0, the ONLY surviving voluntary freedom is U(1)_em — which is Abelian (non-concentrating). Non-commutative voluntary constraints are MORE susceptible to sedimentation because the Phase Theorem's concentration is thermodynamically favorable. The Abelian exception connects to the end state of cosmological cooling.
 **Where it goes:** New chapter in Meridian monograph (thermal constraint history), Doctrine (sedimentation types as theorem), Guide (excavation = deliberate heating/re-examination), Atlas (QGP as excavated state entry)
 
-### 12. Natal Bottleneck Formalization (pre-V2, March 2026)
+### 13. BRST Cohomology ↔ Maximally Excavated Perspective (April 9, 2026)
+**Source:** `bridge71_brst_cohomology.py`
+**What:** BRST H^0 = maximally excavated natal content (confirmed for SU(3)/SU(2)/U(1)). Cohomological Abelian exception discovered: H^1 ≠ 0 for Abelian (freedom persists as visible label = electric charge observable), H^1 = 0 for semisimple (freedom fully absorbed = color invisible). Cohomological depth predicts sedimentation susceptibility: u(1) depth 1 → survives, su(2) depth 3 → Type I, su(3) depth 3+5 → Type II. Q^2 = 0 ↔ constraint consistency ↔ anomaly cancellation. Ghost-for-ghost structure ↔ nested voluntary constraints (speculative).
+**Key surprise:** The Abelian exception has a cohomological formulation (H^1 ≠ 0 vs = 0) that explains WHY electric charge is visible but color is not. This is a deep mathematical fact mapping to constraint lattice structure.
+**Where it goes:** Meridian monograph (BRST chapter), Doctrine (excavation depth theorem), Atlas (cohomological visibility entry)
+
+### 14. Natal Bottleneck Formalization (pre-V2, March 2026)
 **Source:** `natal-bottleneck-formalization.md`
 **What:** Formal properties of natal constraints — coercive contamination, sedimentation dynamics, the "invisible prison" structure
 **Where it goes:** Doctrine (formalize as theorem), Guide (navigation through natal constraints)
@@ -70,7 +76,7 @@
 |---|-----------|------------|-------------|--------|
 | 1 | ~~FP ghosts as concentration~~ → REFINED: Abelian exception → **CONFIRMED via asymptotic freedom** | **HIGH** | ✓ DONE | Bridge #71 §9.5 |
 | 2 | ~~Sedimentation ↔ backreaction~~ → **CONFIRMED via Higgs mechanism** (vol→coercive DOF transfer) | **HIGH** | ✓ DONE | Bridge #71 §9.6 |
-| 3 | BRST cohomology ↔ maximally excavated perspective | LOW | Hard — needs explicit BRST comparison | Bridge #71 §7.3 |
+| 3 | ~~BRST cohomology ↔ maximally excavated perspective~~ → **CONFIRMED** (H^0 = excavated content, cohomological Abelian exception, depth→sedimentation) | **MEDIUM-HIGH** | ✓ DONE | Bridge #71 BRST |
 | 4 | a₄ coefficient as constraint intersection (C_GB = 2/3) | MEDIUM | Medium — symbolic computation | Bridge #71 §8.2 |
 | 5 | ~~SM spectral triple maps to constraint lattice~~ → **CONFIRMED** (all reps, all anomalies, DOF hierarchy) | **HIGH** | ✓ DONE | Bridge #71 §9.6 |
 | 6 | Commutative vs non-commutative voluntary constraints in phenomenology | MEDIUM | Hard — needs Wells-type experiment | Abelian exception |
