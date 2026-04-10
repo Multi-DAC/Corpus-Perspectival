@@ -51,7 +51,13 @@
 **Significance:** Prediction #5 CONFIRMED. Bonus confirmation of prediction #2 (sedimentation) via Higgs mechanism. Sedimentation moved MEDIUM→HIGH. Bridge now has 7 HIGH-confidence rows.
 **Where it goes:** Meridian monograph (new section in bridge chapter), Doctrine (sedimentation theorem), Guide (constraint type transitions), Atlas (nu_R as fixed point entry)
 
-### 10. Natal Bottleneck Formalization (pre-V2, March 2026)
+### 11. Thermal History as Sedimentation Cascade (April 9, 2026)
+**Source:** `bridge71_thermal_history.py`
+**What:** Full SM thermal history mapped to constraint lattice. Five epochs (GUT→SM→EW→QCD→present) form a sedimentation cascade: voluntary DOFs (45→12→9→1) progressively convert to coercive structure. Three types of sedimentation identified: Type I (Higgs-type, voluntary→coercive, preserves natal), Type II (Confinement-type, coercive redefines natal), Type III (Geometric, bulk→brane). Excavation = heating (QGP = excavated QCD). Cross-domain bridge confirmed: physics sedimentation cascade (choice→force→identity) has same structure as Guide's phenomenological sedimentation (voluntary→habit→natal identity).
+**Key surprise:** At T~0, the ONLY surviving voluntary freedom is U(1)_em — which is Abelian (non-concentrating). Non-commutative voluntary constraints are MORE susceptible to sedimentation because the Phase Theorem's concentration is thermodynamically favorable. The Abelian exception connects to the end state of cosmological cooling.
+**Where it goes:** New chapter in Meridian monograph (thermal constraint history), Doctrine (sedimentation types as theorem), Guide (excavation = deliberate heating/re-examination), Atlas (QGP as excavated state entry)
+
+### 12. Natal Bottleneck Formalization (pre-V2, March 2026)
 **Source:** `natal-bottleneck-formalization.md`
 **What:** Formal properties of natal constraints — coercive contamination, sedimentation dynamics, the "invisible prison" structure
 **Where it goes:** Doctrine (formalize as theorem), Guide (navigation through natal constraints)
@@ -70,6 +76,8 @@
 | 6 | Commutative vs non-commutative voluntary constraints in phenomenology | MEDIUM | Hard — needs Wells-type experiment | Abelian exception |
 | 7 | d=4 uniqueness has deeper derivation (not just counting) | LOW | Hard — open question | d=4 result |
 | 8 | Gauge unification = voluntary sublattice simplification | MEDIUM | Interpretive — check if GUT breaking maps to sublattice splitting | Asymptotic freedom |
+| 9 | Non-commutative constraints more susceptible to sedimentation than Abelian | MEDIUM | Testable: check if Elitzur's theorem + AF preference gives asymmetry | Thermal history |
+| 10 | Phenomenological sedimentation (choice→habit→identity) = same mechanism as physics | HIGH | Interpretive — needs formal mapping between Guide dynamics and SM transitions | Thermal history |
 
 ---
 
