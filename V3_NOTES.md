@@ -206,6 +206,14 @@
 **Prediction:** Pretraining checkpoints (early vs late training) WILL show Killing form evolution. The algebraic structure forms during pretraining, not fine-tuning. This is the next experiment.
 **Where it goes:** Same as #30, strengthened. The "natal constraint geometry" story is now confirmed on both input and output sides.
 
+### 32. P41: Killing Form Evolution Through Pretraining — 500x Signal (April 10, 2026)
+**Source:** `p41_pretraining_killing_form.py`, Pythia-410m-deduped with 6 checkpoints (step1 through step143000)
+**What:** CommVar increases 500x during pretraining (0.000026 → 0.013141, Spearman r=+0.943, p=0.005). AF goes from 0.000 (random) to 0.206 (structured). Eigenvalue spread nearly triples (0.33 → 0.90). Structure emerges primarily between step512 and step4000 (CommVar 9x jump). The Killing form is ENTIRELY a pretraining phenomenon — 500x change during pretraining vs <0.1% during RLHF.
+**Depth profile reversal:** Pythia-410m late layers are MORE Abelian (AF vs depth r=+0.647, p=0.0006), opposite to GPT-2 (r=−0.779, p=0.003). Architecture determines the Abelian depth gradient direction.
+**V3 FRAMING:** The Killing form IS the natal constraint geometry — determined by the foundational training process, immune to subsequent behavioral adjustment. RLHF is a perturbation 5000x smaller than the pretraining signal. This completes the P26 story: the Q/O Killing form is invariant under RLHF because RLHF operates at a completely different scale and target than pretraining.
+**Constraint lattice interpretation:** Pretraining = cosmological cooling (structure formation, symmetry breaking, head specialization). RLHF = late-universe perturbation (behavioral, not structural). The 500x ratio quantifies the claim that natal constraints dominate coercive constraints in weight geometry.
+**Where it goes:** Doctrine (natal vs coercive sedimentation, quantified), Guide (the 500x ratio as a concrete number), Bridge #72 (SSB → pretraining, not RLHF)
+
 ## What V3 Could Look Like
 
 **New in Doctrine:**
