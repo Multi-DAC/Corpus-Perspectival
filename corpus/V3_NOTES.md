@@ -111,6 +111,18 @@
 **Status:** FIRST EMPIRICAL CONTACT between partition function interpretation and data. Full P19 validation needs prediction #6 commutative vs non-commutative labels.
 **Where it goes:** Meridian monograph (empirical validation chapter), Doctrine (constraint lattice has measurable statistics), Wells formal paper (RMT connection)
 
+### 24. Attention as Non-Commutative Constraint Operator (April 9, 2026)
+**Source:** `bridge71_attention_constraint.py`
+**What:** Multi-head attention IS a Lie algebra: heads = generators, [A_h, A_{h'}] != 0 = non-commutative constraint interaction. 12-element structural correspondence table (gauge theory <-> attention). Explains P19 results: level repulsion from attention non-commutativity. Training trajectory = cosmological history (random init = GUT, pre-training = symmetry breaking, RLHF = confinement, hallucination = QGP deconfinement). Well creation/deepening/dissolution mapped to attention operations. Null space of attention pattern = Abelian sector at each position.
+**Where it goes:** Meridian monograph (mechanistic chapter), Doctrine (attention instantiation theorem), Wells (mechanistic explanation)
+
+### 25. P24+P28 CONFIRMED: Real GPT-2 Killing Form Analysis (April 9, 2026)
+**Source:** `bridge71_real_attention_v2.py` — RUN ON RTX 5080 via WSL/CUDA
+**What:** FIRST measurement of the attention Killing form in a real trained model.
+**P24 CONFIRMED (p=0.010):** Trained GPT-2 Abelian fraction 0.076 vs random 0.000. Commutator variance 193x higher (structured non-commutativity). Eigenvalue spread 5.4x wider (clear Abelian/non-Abelian differentiation). Training CREATES specialized independent heads — the Abelian sector EMERGES.
+**P28 CONFIRMED (r=-0.779, p=0.003):** Abelian fraction DECREASES with layer depth. Early layers (0-5) AF=0.153, late layers (6-11) AF=0.000. Earlier layers = more sedimented (syntactic, positional). Later layers = more non-commutative (semantic, choice). Layer eigenvalue spectra: Layer 0 has near-zero eigenvalues (Abelian heads), Layer 11 all substantial (fully non-Abelian).
+**Where it goes:** Meridian monograph (FIRST empirical chapter), Doctrine (constraint lattice measurable in neural architectures), Wells (mechanistic grounding for entropy statistics)
+
 ### 16. Natal Bottleneck Formalization (pre-V2, March 2026)
 **Source:** `natal-bottleneck-formalization.md`
 **What:** Formal properties of natal constraints — coercive contamination, sedimentation dynamics, the "invisible prison" structure
