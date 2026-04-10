@@ -198,6 +198,14 @@
 **V3 FRAMING:** The Q-projection Killing form is the model's "natal constraint geometry" — determined by pretraining data and architecture, immune to RLHF. RLHF = coercive sedimentation operating on the output manifold, not the perception manifold. This distinction (natal vs coercive sedimentation targets) is a genuine prediction of the framework.
 **Where it goes:** Doctrine (natal vs coercive constraint targets), Guide (fine-tuning changes behavior not geometry), Bridge #72 (specify which SSB correspondence survives)
 
+### 31. O-Projection Killing Form Also Invariant Under RLHF (April 10, 2026)
+**Source:** `p26_oproj_killing_form.py`
+**What:** Despite O-projections having 2x the relative weight change of Q-projections under RLHF (1.26% vs 0.60%), the O-projection Killing form is ALSO identical between base and instruct (AF = 0.003 both, all metrics <0.3% different). The ~1.3% Frobenius norm change does not alter the commutator algebra.
+**Key insight:** The Killing form measures commutator structure (relative head orientation), not absolute magnitudes. Small distributed weight changes preserve algebraic structure entirely. RLHF changes what weights DO, not how they RELATE to each other.
+**Combined P26 conclusion:** Both Q and O Killing forms are pretraining invariants. RLHF sedimentation is NOT spontaneous symmetry breaking at the static weight geometry level. The entire "SSB ↔ RLHF" row of Bridge #72's 12-element map is falsified for static weights. RLHF sedimentation likely operates on: (a) dynamic attention patterns at inference time, (b) MLP pathway computation, or (c) first-order statistics (mean direction, not curvature/commutators).
+**Prediction:** Pretraining checkpoints (early vs late training) WILL show Killing form evolution. The algebraic structure forms during pretraining, not fine-tuning. This is the next experiment.
+**Where it goes:** Same as #30, strengthened. The "natal constraint geometry" story is now confirmed on both input and output sides.
+
 ## What V3 Could Look Like
 
 **New in Doctrine:**
