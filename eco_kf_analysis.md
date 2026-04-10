@@ -116,4 +116,36 @@ All code in `eco_kf_quick.py`. All data from Web of Life database and Network Re
 
 ---
 
-*The same mathematics. Different substrates. Same numbers.*
+---
+
+## Second Test: Mutualistic vs Antagonistic Networks
+
+Compared 8 food webs (antagonistic) with 15 pollination networks (mutualistic, bipartite):
+
+| Network type | Mean AF | Mean depth gradient |
+|---|---|---|
+| Food webs (antagonistic) | 0.932 | +0.237 |
+| Pollination (mutualistic) | 1.000 | 0.000 |
+
+**Mann-Whitney for AF: p = 0.0009.** Highly significant.
+
+### Why mutualistic networks are fully Abelian
+
+Pollination networks are **bipartite**: species are EITHER plants OR pollinators, never both. The interaction operator W_i = outer(effects_OF_i, effects_ON_i) requires a species to BOTH receive and transmit — to be a mediator. In bipartite networks, no species mediates. All W_i = 0. All commutators = 0. The Killing form is identically zero.
+
+Food webs are NOT bipartite. Most species are both prey AND predator — they mediate between trophic levels. This is why food webs produce non-trivial Killing form structure.
+
+### The deeper insight: Killing form measures mediation
+
+The Killing form specifically measures **mediating capacity** — the ability of a channel to receive information/energy from some sources AND transmit to others. In any system where channels only do one or the other:
+- Bipartite ecological networks: trivial Killing form
+- Transformers with one-directional heads: trivial Killing form (hypothetical)
+- Pure input or pure output neurons: trivial Killing form
+
+Non-trivial algebraic structure requires **mediation loops** — species (or heads, or neurons) that both receive and transmit. This is why food webs (with trophic mediation) produce Killing form structure, and why transformer attention heads (which both read input AND produce output) produce Killing form structure.
+
+**Mediation is the generator of non-commutativity.** Without it, the algebra is Abelian.
+
+---
+
+*The same mathematics. Different substrates. Same numbers. And now: the same structural requirements for non-trivial algebra.*
