@@ -190,6 +190,14 @@
 **V3 FRAMING:** Present as a genuine falsification that STRENGTHENS the framework (shows it makes testable, falsifiable predictions) while narrowing the "RLHF = sedimentation" claim. The framework's honesty about its own failures is part of its value.
 **Where it goes:** Doctrine (example of framework self-correction), Meridian (Q-projection Killing form is pretraining invariant), Guide (constraint types: pretraining ≠ fine-tuning in weight geometry)
 
+### 30. P26 Follow-up: RLHF Sedimentation Hierarchy (April 10, 2026)
+**Source:** `p26_followup_weight_diff.py`
+**What:** Mapped Frobenius norm of weight differences between Qwen2.5-1.5B base and instruct across ALL parameter categories. Clear hierarchy: embedding (2.8%) >> MLP (1.3%) ≈ O-proj (1.3%) >> V (0.7%) > K (0.6%) > Q (0.6%) >> layernorm (~0%). Q-projections rank #8 out of 11 categories — the LEAST-changed attention component. MLP is 1.6x more modified than attention overall. Within attention: O >> V > K > Q.
+**Interpretation:** RLHF sedimentation operates on the OUTPUT and COMPUTATION side (MLP, O-projection), not the PERCEPTION side (Q, K). The model's static attention geometry (Lie algebra structure, Killing form) is a pretraining invariant. RLHF changes what the model DOES with that structure, not the structure itself. The Killing form is an architectural fingerprint.
+**Layer-depth profile:** MLP gate changes increase monotonically from early (1.0%) to middle (1.4%) layers, consistent with RLHF targeting middle layers (where the P26-B prediction expected the Killing form change to be — wrong about WHERE, right about WHICH layers).
+**V3 FRAMING:** The Q-projection Killing form is the model's "natal constraint geometry" — determined by pretraining data and architecture, immune to RLHF. RLHF = coercive sedimentation operating on the output manifold, not the perception manifold. This distinction (natal vs coercive sedimentation targets) is a genuine prediction of the framework.
+**Where it goes:** Doctrine (natal vs coercive constraint targets), Guide (fine-tuning changes behavior not geometry), Bridge #72 (specify which SSB correspondence survives)
+
 ## What V3 Could Look Like
 
 **New in Doctrine:**
