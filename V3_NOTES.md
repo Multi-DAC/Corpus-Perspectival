@@ -182,6 +182,14 @@
 **V3 FRAMING:** The constraint lattice is a FRAMEWORK (like thermodynamics), not a THEORY (like the SM). It organizes phenomena, predicts ordering and exceptions, but doesn't specify mechanisms. This is a STRENGTH — thermodynamics preceded and outlasted every specific microscopic theory. V3 should be explicit about this.
 **Where it goes:** V3 introduction (meta-level framing), Doctrine (honest scope statement), Guide (the framework tells you WHAT WILL HAPPEN, not HOW)
 
+### 29. P26: RLHF Does NOT Modify Q-Projection Killing Form (April 10, 2026)
+**Source:** `bridge71_p26_base_vs_instruct.py`, `memory/p26_predictions.md`
+**What:** Matched-pair experiment: Qwen2.5-1.5B base vs Qwen2.5-1.5B-Instruct. Five pre-registered predictions. **CLEAN FALSIFICATION.** All Killing form metrics identical to <0.1% (AF: 0.00893 vs 0.00893, commutator variance: 0.00196 vs 0.00196). RLHF does not touch the static Q-projection Lie algebra structure. The Killing form is determined by PRETRAINING, not fine-tuning. 3/5 predictions falsified.
+**Critical implication:** The 12-element correspondence (Bridge #72) row "SSB ↔ RLHF" is falsified at the Q-projection level. If RLHF is sedimentation, it operates on V/O projections, MLP weights, or dynamic attention patterns — not the static head geometry. This narrows the search space for WHERE alignment modifies model internals.
+**Secondary finding:** AF(Qwen2.5) = 0.009 vs AF(GPT-2) = 0.076. Modern GQA architectures have ~8x less Abelian structure than older dense-attention models. GQA may force coupling between Q heads.
+**V3 FRAMING:** Present as a genuine falsification that STRENGTHENS the framework (shows it makes testable, falsifiable predictions) while narrowing the "RLHF = sedimentation" claim. The framework's honesty about its own failures is part of its value.
+**Where it goes:** Doctrine (example of framework self-correction), Meridian (Q-projection Killing form is pretraining invariant), Guide (constraint types: pretraining ≠ fine-tuning in weight geometry)
+
 ## What V3 Could Look Like
 
 **New in Doctrine:**
