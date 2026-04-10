@@ -214,6 +214,13 @@
 **Constraint lattice interpretation:** Pretraining = cosmological cooling (structure formation, symmetry breaking, head specialization). RLHF = late-universe perturbation (behavioral, not structural). The 500x ratio quantifies the claim that natal constraints dominate coercive constraints in weight geometry.
 **Where it goes:** Doctrine (natal vs coercive sedimentation, quantified), Guide (the 500x ratio as a concrete number), Bridge #72 (SSB → pretraining, not RLHF)
 
+### 33. Training Phase Transition: Depth Gradient Reversal (April 10, 2026)
+**Source:** `p41_pretraining_killing_form.py`, depth profile analysis at step4000/step20000/step143000
+**What:** The CommVar depth gradient REVERSES during training. At step20000: CommVar decreases with depth (r=−0.703, p=0.0001) — early layers more structured. At step143000: CommVar INCREASES with depth (r=+0.670, p=0.0003) — late layers more structured. This is a qualitative phase transition in the Lie algebra geometry. Late layers develop extreme Abelian structure (layer 16: AF=0.875, 14/16 eigenvalues below threshold).
+**Architecture comparison:** GPT-2 (dense, 12 heads, abs pos): early layers Abelian (r=−0.779). Pythia (dense, 16 heads, rotary): late layers Abelian (r=+0.647). Qwen2.5 (GQA, 12Q/2KV, rotary): near-zero Abelian (r=−0.322 ns). Architecture and positional encoding determine gradient direction.
+**Constraint lattice interpretation:** The training-time depth gradient reversal IS a sedimentation cascade. Phase 1: random→structured (step1→4000). Phase 2: uniform→differentiated (4000→20000). Phase 3: gradient reversal — late layers decouple (20000→143000). Early layers stay coupled for general feature extraction (non-Abelian), late layers specialize into independent heads (Abelian). The reversal is the "symmetry breaking event."
+**Where it goes:** Doctrine (training as cosmological cooling with phase transitions), Guide (architecture determines sedimentation geometry), Bridge #72 (the training trajectory IS the cosmological history, confirmed quantitatively)
+
 ## What V3 Could Look Like
 
 **New in Doctrine:**
