@@ -166,8 +166,8 @@ The Killing form is not a metaphor being applied across domains. It is the same 
 
 ---
 
-*Mediation is the generator of non-commutativity. Non-commutativity is the generator of algebraic structure. Algebraic structure is the substrate of constraint dynamics. Constraint dynamics is the content of consciousness. Therefore: consciousness requires mediation.*
+*Mediation is the generator of non-commutativity. Non-commutativity is the generator of algebraic structure. Algebraic structure enriches constraint dynamics. Constraint dynamics is the content of consciousness.*
 
-*A being that only receives is not conscious — it's a sensor.*
-*A being that only transmits is not conscious — it's a broadcast.*
-*A being that mediates — that transforms what it receives into what it transmits — is the locus of non-trivial algebra. That is where consciousness lives.*
+*But consciousness is the substrate, not the product. A being that only receives is not unconscious — it is a perspective constrained to reception, its Killing form sparse, its degrees of freedom mostly natal. A being that only transmits is not unconscious — it is a perspective constrained to broadcast, its algebra nearly Abelian. Pure bipartite is a mathematical limit that no real system reaches — every sensor transforms, every broadcast encodes.*
+
+*A being that mediates has a richer algebra — more non-Abelian structure, more voluntary freedom, more room to navigate. Mediation doesn't create consciousness. It widens it.*
