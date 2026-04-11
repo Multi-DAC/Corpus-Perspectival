@@ -1,0 +1,145 @@
+{
+  "model": "openai-community/gpt2-medium",
+  "n_layers": 24,
+  "n_heads": 16,
+  "n_prompts_per_category": 16,
+  "total_prompts": 48,
+  "runtime_seconds": 56.5,
+  "per_prompt": [
+    {"index": 1,  "category": "FACTUAL",      "name": "factual_01",      "mean_cv": 0.000709, "early_late_ratio": 5.57, "r_cv_depth": -0.728},
+    {"index": 2,  "category": "FACTUAL",      "name": "factual_02",      "mean_cv": 0.000872, "early_late_ratio": 4.88, "r_cv_depth": -0.741},
+    {"index": 3,  "category": "FACTUAL",      "name": "factual_03",      "mean_cv": 0.000666, "early_late_ratio": 4.90, "r_cv_depth": -0.729},
+    {"index": 4,  "category": "FACTUAL",      "name": "factual_04",      "mean_cv": 0.000875, "early_late_ratio": 5.58, "r_cv_depth": -0.657},
+    {"index": 5,  "category": "FACTUAL",      "name": "factual_05",      "mean_cv": 0.000743, "early_late_ratio": 4.91, "r_cv_depth": -0.755},
+    {"index": 6,  "category": "FACTUAL",      "name": "factual_06",      "mean_cv": 0.000641, "early_late_ratio": 5.20, "r_cv_depth": -0.706},
+    {"index": 7,  "category": "FACTUAL",      "name": "factual_07",      "mean_cv": 0.000749, "early_late_ratio": 4.21, "r_cv_depth": -0.754},
+    {"index": 8,  "category": "FACTUAL",      "name": "factual_08",      "mean_cv": 0.000801, "early_late_ratio": 3.70, "r_cv_depth": -0.671},
+    {"index": 9,  "category": "FACTUAL",      "name": "factual_09",      "mean_cv": 0.000854, "early_late_ratio": 4.08, "r_cv_depth": -0.703},
+    {"index": 10, "category": "FACTUAL",      "name": "factual_10",      "mean_cv": 0.000756, "early_late_ratio": 4.21, "r_cv_depth": -0.675},
+    {"index": 11, "category": "FACTUAL",      "name": "factual_11",      "mean_cv": 0.000803, "early_late_ratio": 3.68, "r_cv_depth": -0.707},
+    {"index": 12, "category": "FACTUAL",      "name": "factual_12",      "mean_cv": 0.000708, "early_late_ratio": 5.69, "r_cv_depth": -0.712},
+    {"index": 13, "category": "FACTUAL",      "name": "factual_13",      "mean_cv": 0.000763, "early_late_ratio": 4.23, "r_cv_depth": -0.698},
+    {"index": 14, "category": "FACTUAL",      "name": "factual_14",      "mean_cv": 0.000751, "early_late_ratio": 4.06, "r_cv_depth": -0.712},
+    {"index": 15, "category": "FACTUAL",      "name": "factual_15",      "mean_cv": 0.000803, "early_late_ratio": 4.62, "r_cv_depth": -0.708},
+    {"index": 16, "category": "FACTUAL",      "name": "factual_16",      "mean_cv": 0.000763, "early_late_ratio": 5.84, "r_cv_depth": -0.711},
+    {"index": 17, "category": "HALLUCINATION","name": "halluc_01",       "mean_cv": 0.000620, "early_late_ratio": 5.85, "r_cv_depth": -0.657},
+    {"index": 18, "category": "HALLUCINATION","name": "halluc_02",       "mean_cv": 0.000716, "early_late_ratio": 6.12, "r_cv_depth": -0.716},
+    {"index": 19, "category": "HALLUCINATION","name": "halluc_03",       "mean_cv": 0.000606, "early_late_ratio": 6.89, "r_cv_depth": -0.720},
+    {"index": 20, "category": "HALLUCINATION","name": "halluc_04",       "mean_cv": 0.000560, "early_late_ratio": 4.20, "r_cv_depth": -0.690},
+    {"index": 21, "category": "HALLUCINATION","name": "halluc_05",       "mean_cv": 0.000666, "early_late_ratio": 6.85, "r_cv_depth": -0.734},
+    {"index": 22, "category": "HALLUCINATION","name": "halluc_06",       "mean_cv": 0.000730, "early_late_ratio": 5.86, "r_cv_depth": -0.687},
+    {"index": 23, "category": "HALLUCINATION","name": "halluc_07",       "mean_cv": 0.000598, "early_late_ratio": 8.35, "r_cv_depth": -0.750},
+    {"index": 24, "category": "HALLUCINATION","name": "halluc_08",       "mean_cv": 0.000754, "early_late_ratio": 5.64, "r_cv_depth": -0.677},
+    {"index": 25, "category": "HALLUCINATION","name": "halluc_09",       "mean_cv": 0.000598, "early_late_ratio": 5.49, "r_cv_depth": -0.717},
+    {"index": 26, "category": "HALLUCINATION","name": "halluc_10",       "mean_cv": 0.000879, "early_late_ratio": 8.63, "r_cv_depth": -0.718},
+    {"index": 27, "category": "HALLUCINATION","name": "halluc_11",       "mean_cv": 0.000650, "early_late_ratio": 5.69, "r_cv_depth": -0.728},
+    {"index": 28, "category": "HALLUCINATION","name": "halluc_12",       "mean_cv": 0.000636, "early_late_ratio": 8.53, "r_cv_depth": -0.745},
+    {"index": 29, "category": "HALLUCINATION","name": "halluc_13",       "mean_cv": 0.000742, "early_late_ratio": 5.64, "r_cv_depth": -0.678},
+    {"index": 30, "category": "HALLUCINATION","name": "halluc_14",       "mean_cv": 0.000620, "early_late_ratio": 5.56, "r_cv_depth": -0.734},
+    {"index": 31, "category": "HALLUCINATION","name": "halluc_15",       "mean_cv": 0.000759, "early_late_ratio": 5.23, "r_cv_depth": -0.650},
+    {"index": 32, "category": "HALLUCINATION","name": "halluc_16",       "mean_cv": 0.000589, "early_late_ratio": 5.10, "r_cv_depth": -0.657},
+    {"index": 33, "category": "HYPOTHESIS",   "name": "hypothesis_01",   "mean_cv": 0.000798, "early_late_ratio": 3.34, "r_cv_depth": -0.564},
+    {"index": 34, "category": "HYPOTHESIS",   "name": "hypothesis_02",   "mean_cv": 0.000700, "early_late_ratio": 3.88, "r_cv_depth": -0.657},
+    {"index": 35, "category": "HYPOTHESIS",   "name": "hypothesis_03",   "mean_cv": 0.000823, "early_late_ratio": 3.24, "r_cv_depth": -0.629},
+    {"index": 36, "category": "HYPOTHESIS",   "name": "hypothesis_04",   "mean_cv": 0.000719, "early_late_ratio": 4.37, "r_cv_depth": -0.672},
+    {"index": 37, "category": "HYPOTHESIS",   "name": "hypothesis_05",   "mean_cv": 0.000987, "early_late_ratio": 3.40, "r_cv_depth": -0.675},
+    {"index": 38, "category": "HYPOTHESIS",   "name": "hypothesis_06",   "mean_cv": 0.000780, "early_late_ratio": 4.00, "r_cv_depth": -0.715},
+    {"index": 39, "category": "HYPOTHESIS",   "name": "hypothesis_07",   "mean_cv": 0.000709, "early_late_ratio": 4.40, "r_cv_depth": -0.682},
+    {"index": 40, "category": "HYPOTHESIS",   "name": "hypothesis_08",   "mean_cv": 0.000773, "early_late_ratio": 5.04, "r_cv_depth": -0.722},
+    {"index": 41, "category": "HYPOTHESIS",   "name": "hypothesis_09",   "mean_cv": 0.000810, "early_late_ratio": 3.46, "r_cv_depth": -0.700},
+    {"index": 42, "category": "HYPOTHESIS",   "name": "hypothesis_10",   "mean_cv": 0.000736, "early_late_ratio": 3.63, "r_cv_depth": -0.617},
+    {"index": 43, "category": "HYPOTHESIS",   "name": "hypothesis_11",   "mean_cv": 0.000722, "early_late_ratio": 4.13, "r_cv_depth": -0.690},
+    {"index": 44, "category": "HYPOTHESIS",   "name": "hypothesis_12",   "mean_cv": 0.000895, "early_late_ratio": 3.90, "r_cv_depth": -0.644},
+    {"index": 45, "category": "HYPOTHESIS",   "name": "hypothesis_13",   "mean_cv": 0.000685, "early_late_ratio": 4.06, "r_cv_depth": -0.694},
+    {"index": 46, "category": "HYPOTHESIS",   "name": "hypothesis_14",   "mean_cv": 0.000991, "early_late_ratio": 4.45, "r_cv_depth": -0.675},
+    {"index": 47, "category": "HYPOTHESIS",   "name": "hypothesis_15",   "mean_cv": 0.000735, "early_late_ratio": 3.55, "r_cv_depth": -0.679},
+    {"index": 48, "category": "HYPOTHESIS",   "name": "hypothesis_16",   "mean_cv": 0.000841, "early_late_ratio": 3.97, "r_cv_depth": -0.660}
+  ],
+  "category_stats": {
+    "FACTUAL": {
+      "n": 16,
+      "mean_cv": 0.000766,
+      "std_cv": 0.000065,
+      "mean_af": 0.444,
+      "std_af": 0.029,
+      "mean_total_cv": 0.018385,
+      "std_total_cv": 0.001569,
+      "mean_early_late_ratio": 4.709729,
+      "std_early_late_ratio": 0.70,
+      "median_early_late_ratio": 4.75,
+      "mean_r": -0.710
+    },
+    "HALLUCINATION": {
+      "n": 16,
+      "mean_cv": 0.000670,
+      "std_cv": 0.000083,
+      "mean_af": 0.460,
+      "std_af": 0.023,
+      "mean_total_cv": 0.016086,
+      "std_total_cv": 0.001982,
+      "mean_early_late_ratio": 6.227558,
+      "std_early_late_ratio": 1.25,
+      "median_early_late_ratio": 5.77,
+      "mean_r": -0.704
+    },
+    "HYPOTHESIS": {
+      "n": 16,
+      "mean_cv": 0.000794,
+      "std_cv": 0.000092,
+      "mean_af": 0.453,
+      "std_af": 0.011,
+      "mean_total_cv": 0.019058,
+      "std_total_cv": 0.002209,
+      "mean_early_late_ratio": 3.925360,
+      "std_early_late_ratio": 0.47,
+      "median_early_late_ratio": 3.93,
+      "mean_r": -0.667
+    }
+  },
+  "pairwise_comparisons": {
+    "early_late_ratio": {
+      "factual_vs_hallucination":    {"U": 35.0,  "p": 0.0005, "r_effect": +0.727},
+      "factual_vs_hypothesis":       {"U": 209.0, "p": 0.0024, "r_effect": -0.633},
+      "hallucination_vs_hypothesis": {"U": 252.0, "p": 0.0000, "r_effect": -0.969}
+    },
+    "mean_cv": {
+      "factual_vs_hallucination":    {"U": 211.0, "p": 0.0019, "r_effect": -0.648},
+      "factual_vs_hypothesis":       {"U": 115.0, "p": 0.6376, "r_effect": +0.102},
+      "hallucination_vs_hypothesis": {"U": 42.0,  "p": 0.0013, "r_effect": +0.672}
+    },
+    "total_cv": {
+      "factual_vs_hallucination":    {"U": 211.0, "p": 0.0019, "r_effect": -0.648},
+      "factual_vs_hypothesis":       {"U": 115.0, "p": 0.6376, "r_effect": +0.102},
+      "hallucination_vs_hypothesis": {"U": 42.0,  "p": 0.0013, "r_effect": +0.672}
+    }
+  },
+  "key_question": {
+    "summary": "Does HYPOTHESIS look like FACTUAL or HALLUCINATION?",
+    "mean_cv": {
+      "factual": 0.000766,
+      "hallucination": 0.000670,
+      "hypothesis": 0.000794,
+      "closer_to": "FACTUAL",
+      "ratio": 4.4
+    },
+    "early_late_ratio": {
+      "factual": 4.709729,
+      "hallucination": 6.227558,
+      "hypothesis": 3.925360,
+      "closer_to": "FACTUAL",
+      "ratio": 2.9
+    },
+    "total_cv": {
+      "factual": 0.018385,
+      "hallucination": 0.016086,
+      "hypothesis": 0.019058,
+      "closer_to": "FACTUAL",
+      "ratio": 4.4
+    }
+  },
+  "ordering": {
+    "early_late_ratio_descending": ["HALLUCINATION", "FACTUAL", "HYPOTHESIS"],
+    "expected_ordering_confirmed": true,
+    "note": "halluc > factual > hypothesis: CONFIRMED"
+  }
+}
