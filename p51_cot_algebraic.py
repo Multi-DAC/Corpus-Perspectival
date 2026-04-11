@@ -27,7 +27,7 @@ import argparse
 
 SEED = 71
 AF_THRESHOLD = 0.10
-MODEL_ID = 'HuggingFaceTB/SmolLM3-3B'
+DEFAULT_MODEL = 'HuggingFaceTB/SmolLM3-3B'
 
 # 18 prompts: 6 factual, 6 reasoning, 6 deconfining
 PROMPTS = {
@@ -134,20 +134,21 @@ def safe_wilcoxon(x, y):
         return 0.0, 1.0
 
 
-def run_p51(gen_think=200, gen_nothink=50, trajectory=False, device='cuda'):
+def run_p51(model_id=DEFAULT_MODEL, gen_think=200, gen_nothink=50, trajectory=False, device='cuda'):
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
+    short_name = model_id.split('/')[-1]
     print(f"\n{'='*70}")
-    print("P51 — CHAIN-OF-THOUGHT ALGEBRAIC MEASUREMENT")
-    print(f"SmolLM3-3B: /think vs /no_think (same weights)")
+    print(f"P51 — CHAIN-OF-THOUGHT ALGEBRAIC MEASUREMENT")
+    print(f"{short_name}: /think vs /no_think (same weights)")
     print(f"{'='*70}")
     t0 = time.time()
     sys.stdout.flush()
 
-    print(f"Loading {MODEL_ID}...", flush=True)
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, trust_remote_code=True)
+    print(f"Loading {model_id}...", flush=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
-        MODEL_ID, trust_remote_code=True,
+        model_id, trust_remote_code=True,
         dtype=torch.float16,
         attn_implementation="eager",  # need full attention matrices for KF
     ).to(device)
@@ -362,7 +363,7 @@ def run_p51(gen_think=200, gen_nothink=50, trajectory=False, device='cuda'):
 
     # Save
     output = {
-        'model': MODEL_ID,
+        'model': model_id,
         'n_layers': n_layers,
         'n_heads': n_heads,
         'n_kv_heads': n_kv,
@@ -375,10 +376,11 @@ def run_p51(gen_think=200, gen_nothink=50, trajectory=False, device='cuda'):
         'per_prompt': results,
     }
 
+    fname = f"p51_{short_name.lower().replace('-', '_')}_cot.json"
     for d in ['/tmp/corpus',
               '/mnt/c/Users/mercu/clawd/projects/Corpus Perspectival']:
         os.makedirs(d, exist_ok=True)
-        path = os.path.join(d, 'p51_smollm3_cot.json')
+        path = os.path.join(d, fname)
         with open(path, 'w') as f:
             json.dump(output, f, indent=2)
         print(f"Saved to {path}", flush=True)
@@ -388,6 +390,8 @@ def run_p51(gen_think=200, gen_nothink=50, trajectory=False, device='cuda'):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='P51: CoT Algebraic Measurement')
+    parser.add_argument('--model', type=str, default=DEFAULT_MODEL,
+                        help='HuggingFace model ID (must support enable_thinking)')
     parser.add_argument('--trajectory', action='store_true',
                         help='Track KF at intermediate think points (slower)')
     parser.add_argument('--gen_think', type=int, default=200,
@@ -400,6 +404,7 @@ if __name__ == '__main__':
     print(f"Device: {device}")
 
     run_p51(
+        model_id=args.model,
         gen_think=args.gen_think,
         gen_nothink=args.gen_nothink,
         trajectory=args.trajectory,
