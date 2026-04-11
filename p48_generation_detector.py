@@ -423,14 +423,23 @@ if __name__ == '__main__':
     models = {
         'gpt2': 'openai-community/gpt2-medium',
         'pythia': 'EleutherAI/pythia-410m',
+        'opt': 'facebook/opt-1.3b',
+        'opt-iml': 'facebook/opt-iml-1.3b',
+        'pythia-1.4b': 'EleutherAI/pythia-1.4b',
     }
 
     t0 = time.time()
 
     if target in models:
         run_experiment(models[target], device=device)
+    elif target == 'opt-pair':
+        # Run base vs instruct matched pair sequentially
+        run_experiment(models['opt'], device=device)
+        gc.collect()
+        torch.cuda.empty_cache()
+        run_experiment(models['opt-iml'], device=device)
     else:
-        print(f"Unknown target: {target}. Use 'gpt2' or 'pythia'.")
+        print(f"Unknown target: {target}. Use: {', '.join(models.keys())}, or 'opt-pair'.")
         sys.exit(1)
 
     elapsed = time.time() - t0

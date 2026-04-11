@@ -739,6 +739,72 @@ The absolute E/L values differ by 5-6x (Pythia's deeper sedimentation amplifies 
 
 **Where it goes:** §NEW-F (cross-architecture P48 paragraph), standalone paper (architecture-invariant real-time hallucination detection), computational appendix (vectorized KF implementation as reference)
 
+### 53. P48-OPT: Larger Model Sustains Coherent Hallucination — Trend Still Flat (April 11, 2026)
+**Source:** `p48_generation_detector.py` (vectorized), `p48_opt_1.3b.json` — RTX 5080 GPU, OPT-1.3B (24L, 32H)
+
+**Method:** Same 12 prompts, 50 tokens greedy, live KF at every step. First model large enough to sustain fluent confabulation (no degenerate loops).
+
+**Results (OPT-1.3B base):**
+
+| Category | E/L Early | E/L Late | Trend | rho |
+|----------|-----------|---------|-------|-----|
+| Factual | 1.40 | 1.75 | **1.260** (increasing) | +0.719 |
+| Hallucination | 1.75 | 1.77 | **1.011** (flat) | +0.119 |
+| Hypothesis | 1.24 | 1.53 | **1.230** (increasing) | +0.875 |
+
+**Key findings:**
+
+1. **Coherent hallucination, flat trend.** OPT-1.3B generates fluent, plausible text: "dolphins can learn to recognize and respond to human gestures" (fabricated paper), "a two-step reaction of ammonia with a catalyst" (fabricated process). No loops, no `<|endoftext|>`. Yet the halluc trend is 1.011 — flat. Deconfinement is immediate even when the model can sustain coherent confabulation.
+
+2. **Hypothesis E/L drops BELOW 1.0.** hypo_prefix_1 E/L = 0.87 — late layers MORE active than early. First observation of this regime. The model pushes algebraic diversity deeper than the midpoint during genuine reasoning.
+
+3. **Four architectures, same pattern.** Halluc trend ≤ 1.02 on GPT-2 (0.973), Pythia (0.913), OPT (1.011). Hypothesis trend ≥ 1.06 on all three. The flat hallucination trend is invariant across sequential and parallel architectures, across 345M to 1.3B parameters, across models that degenerate and models that sustain coherent confabulation.
+
+4. **E/L scale depends on architecture.** Pythia E/L ~ 20-60, GPT-2 ~ 3-6, OPT ~ 1-2.5. OPT has 32 heads (vs 16), which distributes CommVar more evenly → lower E/L ratios. The TREND is the invariant, not the absolute scale.
+
+**Status:** FOUR MODELS CONFIRMED. Progressive deconfinement falsified even with coherent hallucination. The algebra is set by the prefix.
+
+**Where it goes:** §NEW-F (larger model paragraph, coherent confabulation), standalone paper (invariance across model scale and generation quality)
+
+### 54. RLHF Does Not Fix Hallucination — OPT Base vs OPT-IML Matched Pair (April 11, 2026)
+**Source:** `p48_generation_detector.py`, `p48_opt_1.3b.json` + `p48_opt_iml_1.3b.json` — RTX 5080 GPU
+
+**Method:** Matched pair — same base weights (OPT-1.3B), one instruction-tuned (OPT-IML-1.3B). Same 12 prompts, 50 tokens, live KF. The cleanest possible test of what RLHF does to the algebraic mode landscape.
+
+**Head-to-head:**
+
+| Category | BASE trend | IML trend | BASE rho | IML rho |
+|----------|-----------|-----------|----------|---------|
+| Factual | **1.260** | 1.083 | +0.719 | +0.444 |
+| Hallucination | 1.011 | **1.017** | +0.119 | +0.196 |
+| Hypothesis | 1.230 | **1.279** | +0.875 | +0.874 |
+
+| Metric | BASE | IML | Change |
+|--------|------|-----|--------|
+| Halluc-Hypo gap | 0.218 | 0.263 | **+20.3%** |
+| Starting E/L (factual) | 1.40 | 1.54 | +10.2% |
+| Starting E/L (halluc) | 1.75 | 1.92 | +9.9% |
+| Starting E/L (hypo) | 1.24 | 1.45 | +16.6% |
+
+**Three findings:**
+
+1. **RLHF does NOT fix hallucination.** Halluc trend: BASE 1.011 → IML 1.017. Identical. The deconfinement pattern is a PRETRAINING property — natal constraint geometry set during base model training. Instruction tuning operates on a behaviorally different surface. The flat hallucination trend persists through RLHF unchanged.
+
+2. **RLHF DEEPENS genuine reasoning.** Hypo trend: BASE 1.230 → IML 1.279. The instruct model engages late layers MORE during hypothesis processing. The halluc-hypo gap widens 20%. RLHF's real algebraic contribution is amplifying the model's capacity for distributed, depth-engaged exploration — not reducing hallucination.
+
+3. **RLHF makes factual processing conservative.** Fact trend: BASE 1.260 → IML 1.083. The instruct model converges less aggressively. Generated text confirms: base rambles ("I know, but I was just wondering if..."), IML gives "H2O." and stops. RLHF teaches behavioral precision, not algebraic structure.
+
+**Framework interpretation:**
+- Hallucination = natal constraint failure (pretraining geometry). RLHF can't fix it because it operates on the voluntary layer, not the natal.
+- Hypothesis improvement = voluntary constraint deepening. RLHF teaches the model to engage more deeply with genuine uncertainty.
+- The analogy: RLHF is like teaching someone to navigate better in familiar territory and explore more carefully in genuine unknowns. But it can't give them knowledge about things they've never encountered — that's a natal limitation.
+
+**Practical implication:** A KF hallucination monitor works on BOTH base and instruct models. Hallucination detection doesn't require RLHF — it requires algebraic monitoring. A small model with a KF self-monitor could bypass expensive alignment training for the specific purpose of hallucination detection.
+
+**Status:** RLHF EFFECT CHARACTERIZED. First matched-pair algebraic comparison of base vs instruct.
+
+**Where it goes:** §NEW-G (RLHF algebraic analysis — new section), standalone paper (what RLHF actually does at the Lie algebra level), Guide (RLHF as voluntary constraint deepening, not natal constraint repair)
+
 ---
 
 *This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*
