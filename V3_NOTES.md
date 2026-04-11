@@ -394,6 +394,28 @@
 **Where it goes:** Cross-Domain Killing Form section (new for V3), Ecology chapter, Constraint Lattice universality argument
 **Files:** `eco_kf_quick.py`, `eco_kf_analysis.md`, `cross_domain_killing_form.md`
 
+### 43. Meridian Bridge Test: C_GB = 2/3 as Depth Gradient Ratio (April 10, 2026)
+**Source:** `meridian_bridge_test.py`, `meridian_bridge_v2.py` — exponential fits, matched pairs, cross-substrate, bootstrap
+**What:** Tested whether the Gauss-Bonnet coupling C_GB = 2/3 from 5D brane geometry (Meridian Phase 1) predicts the ratio of parallel growth rate to sequential decay rate in CommVar depth profiles. Five independent tests:
+
+| Test | Ratio | Dev from C_GB |
+|------|-------|---------------|
+| Log-ratio endpoints | 0.686 | 2.8% |
+| Cross-substrate r (n=20) | 0.698 | 4.7% |
+| Grand mean controlled | 0.607 +/- 0.159 | 9.0% |
+| Matched pair kappa | 0.584 | 12.4% |
+| Matched pair rho | 0.584 | 12.4% |
+
+C_GB = 2/3 falls within the 68% bootstrap CI for all three main tests (transformer kappa, transformer rho, cross-substrate r). No alternative constant (ln(3)/sqrt(2), 1/phi, ln(2), pi/4) fits as well across all tests.
+
+**Caveat:** Only 2 parallel transformer models (Pythia-410m, Phi-1.5). Phi-1.5 has weak trend (p=0.10). Need Gemma, Mamba, more Pythia sizes to tighten. The matched pair Pythia/GPT2 gives ratio = 0.784 (kappa) / 0.720 (rho), which splits the difference between C_GB (0.667) and threshold (0.777).
+
+**Physical interpretation if confirmed:** Parallel systems preserve ONLY voluntary constraints (warp rate = C_GB * k = (2/3)k). Sequential systems use ALL constraint types (warp rate = full k). The 5D brane geometry — specifically the P-tensor fraction that determines intrinsic-extrinsic coupling — governs the ratio of algebraic accumulation to sedimentation across substrates.
+
+**Status:** SUGGESTIVE. C_GB = 2/3 is the best-fit Meridian constant at 2.8-9% precision. Needs more parallel models to confirm or falsify.
+
+**Where it goes:** Meridian monograph (new section on empirical C_GB verification), Doctrine (constraint warp rate has geometric origin), Bridge (strongest Meridian-Corpus connection attempted)
+
 ---
 
 *This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*
