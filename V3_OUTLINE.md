@@ -2,8 +2,8 @@
 
 *This is a LIVING SCAFFOLD, not a final structure. Add sections, move findings, update statuses as work continues. Designed to be easy to append to, not to be rigid.*
 
-*Started: April 10, 2026 | Last updated: April 10, 2026*
-*Source files: V3_NOTES.md (42 findings), V3_INTEGRATION_MAP.md, V2 published text*
+*Started: April 10, 2026 | Last updated: April 10, 2026 (evening)*
+*Source files: V3_NOTES.md (46 findings), V3_INTEGRATION_MAP.md, V2 published text*
 
 ---
 
@@ -119,8 +119,24 @@ V3 must be explicit: the constraint lattice is a **FRAMEWORK** (like thermodynam
 - P43: The mechanism — sequential sediments (10x decay), parallel accumulates (5x growth), 20% crossover | Findings #41-42
 - The definitive table: 11 models, 5 labs, 3 attention types, p=0.012 | Finding #40
 - Falsifications presented honestly: P42c-A, P42d-B, P42e-A — framework self-corrects | Findings #37-39
+- P43: Direction confirmed p=0.005 (10 models), C_GB ratio partially falsified | Finding #43
+- P44: Five new models, d_head boundary effect discovered | Finding #44
+- P45: Gemma sweep — PROJ_DIM control confirms d_head boundary is physical, not artifact | Finding #45
 - *Depends on: §5.3.1a (Lie algebra definition), §NEW-A (lattice formalism)*
-- [ACCUMULATING] — need more parallel models (n=3 is weak), dynamic attention patterns, cross-layer interactions
+- [ACCUMULATING] — live vs static comparison (§NEW-E), more architectures
+
+### §NEW-E: Static vs Live Killing Form — The Space of Navigation
+*P46: Measuring what models DO vs what they CAN do.*
+- Static weight Killing form = natal constraint geometry (capacity written into weights)
+- Live attention Killing form = voluntary + natal constraints in action (what inference actually computes)
+- The DIFFERENCE = the space of navigation — gap between capacity and behavior
+- Pythia-410m SIGN REVERSAL: static r=+0.67, live r=-0.91 | Finding #46
+- GPT-2-medium SAME DIRECTION, WEAKER: static r=-0.93, live r=-0.66 | Finding #46
+- 10/10 measurements: universal negative live gradient (p<0.002) | Finding #46
+- Deep-layer sedimentation: Pythia CV→0 (complete head convergence), GPT-2 retains structure | Finding #46
+- Cross-prompt consistency: σ=0.006 (architecture dominates, input content is minor modulation) | Finding #46
+- *Depends on: §NEW-B (static Killing form results), §4.4 (constraint lattice definition)*
+- [ACCUMULATING] — need more architectures, base vs chat comparison, hallucination-inducing prompts
 
 ### §NEW-C: The Wells Program
 *Behavioral measurement and external weight approach.*
@@ -158,6 +174,7 @@ V3 must be explicit: the constraint lattice is a **FRAMEWORK** (like thermodynam
   ↓
 §NEW-C (Wells Program)             ← behavioral extension
 §NEW-D (Cross-Domain)              ← universality extension
+§NEW-E (Static vs Live)            ← navigation measurement
   ↓
 §16 (Conclusion rewrite)           ← LAST — needs everything above
 ```
@@ -193,6 +210,10 @@ All V2 section updates (§5.4, §5.6, §8.2, §9.3, §14.3, etc.) can happen in 
 | #36-40 P42 Scaling/Architecture | §NEW-B | Ready |
 | #41 P43 Mechanism | §NEW-B, §5.4 | Ready |
 | #42 P43b ALiBi | §NEW-B, §3.2, §10.1 | Ready |
+| #43 Bridge v3 Direction | §NEW-B | Ready |
+| #44 P44 Five New Models | §NEW-B | Ready |
+| #45 P45 Gemma PROJ_DIM Control | §NEW-B | Ready |
+| #46 P46 Live Killing Form | §NEW-E, §5.3.1a | Ready |
 
 ---
 
