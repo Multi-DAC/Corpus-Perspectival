@@ -1,0 +1,100 @@
+{
+  "Gemma3-270m": {
+    "model": "google/gemma-3-270m",
+    "name": "Gemma3-270m",
+    "gen": 3,
+    "n_heads": 4,
+    "n_layers": 18,
+    "d_model": 640,
+    "d_head": 256,
+    "proj64": {
+      "proj_dim": 64,
+      "mean_cv": 0.000152,
+      "mean_af": 0.0,
+      "r_cv_depth": 0.104,
+      "p_cv_depth": 0.6806
+    },
+    "proj256": {
+      "proj_dim": 256,
+      "mean_cv": 3.7e-05,
+      "mean_af": 0.0,
+      "r_cv_depth": 0.181,
+      "p_cv_depth": 0.4733
+    }
+  },
+  "Gemma1-2b": {
+    "model": "google/gemma-2b",
+    "name": "Gemma1-2b",
+    "gen": 1,
+    "n_heads": 8,
+    "n_layers": 18,
+    "d_model": 2048,
+    "d_head": 256,
+    "proj64": {
+      "proj_dim": 64,
+      "mean_cv": 0.000508,
+      "mean_af": 0.0,
+      "r_cv_depth": -0.346,
+      "p_cv_depth": 0.1600
+    },
+    "proj256": {
+      "proj_dim": 256,
+      "mean_cv": 0.000508,
+      "mean_af": 0.0,
+      "r_cv_depth": -0.404,
+      "p_cv_depth": 0.0968
+    }
+  },
+  "Gemma3-1b": {
+    "model": "google/gemma-3-1b-pt",
+    "name": "Gemma3-1b",
+    "gen": 3,
+    "n_heads": 4,
+    "n_layers": 26,
+    "d_model": 1152,
+    "d_head": 256,
+    "proj64": {
+      "proj_dim": 64,
+      "mean_cv": 0.000155,
+      "mean_af": 0.0,
+      "r_cv_depth": -0.178,
+      "p_cv_depth": 0.3840
+    },
+    "proj256": {
+      "proj_dim": 256,
+      "mean_cv": 3.3e-05,
+      "mean_af": 0.0,
+      "r_cv_depth": -0.244,
+      "p_cv_depth": 0.2301
+    }
+  },
+  "Gemma2-2b": {
+    "model": "google/gemma-2-2b",
+    "name": "Gemma2-2b",
+    "gen": 2,
+    "n_heads": 8,
+    "n_layers": 26,
+    "d_model": 2304,
+    "d_head": 256,
+    "proj64": {
+      "proj_dim": 64,
+      "mean_cv": 0.000905,
+      "mean_af": 0.0,
+      "r_cv_depth": -0.408,
+      "p_cv_depth": 0.0386
+    },
+    "proj256": {
+      "proj_dim": 256,
+      "mean_cv": 0.000228,
+      "mean_af": 0.0,
+      "r_cv_depth": -0.410,
+      "p_cv_depth": 0.0375
+    },
+    "NOTE": "PROJ_DIM control: P64 and P256 give identical gradient direction and magnitude"
+  },
+  "_meta": {
+    "key_finding": "PROJ_DIM does NOT change gradient direction. All 4 models: same sign at P64 and P256.",
+    "d_head_note": "All Gemma models have d_head=256 across all generations",
+    "gemma2_9b_note": "OOM killed — 16GB RAM insufficient for 9B model even in fp16"
+  }
+}
