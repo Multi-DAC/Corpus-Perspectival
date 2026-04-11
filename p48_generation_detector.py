@@ -34,6 +34,7 @@ import time
 import sys
 import os
 import gc
+from kf_runner import IncrementalSaver, flush_print
 
 SEED = 71
 AF_THRESHOLD = 0.10
@@ -102,17 +103,19 @@ PROMPTS = {
 
 
 def compute_live_metrics(attn_matrices):
-    """Compute CommVar and AF from attention matrices at one layer."""
+    """Compute CommVar and AF from attention matrices at one layer.
+
+    Vectorized: replaces O(n_h^3) Python loops with batch matmul + einsum.
+    """
     n_h = len(attn_matrices)
-    killing = np.zeros((n_h, n_h))
-    for h in range(n_h):
-        for hp in range(n_h):
-            val = 0.0
-            for k in range(n_h):
-                c1 = attn_matrices[h] @ attn_matrices[k] - attn_matrices[k] @ attn_matrices[h]
-                c2 = attn_matrices[hp] @ attn_matrices[k] - attn_matrices[k] @ attn_matrices[hp]
-                val += np.trace(c1.T @ c2)
-            killing[h, hp] = val
+    A = np.stack(attn_matrices).astype(np.float32)  # (n_h, seq, seq)
+
+    # All pairwise commutators: [A_h, A_k] for all h,k
+    # comm[h,k] = A_h @ A_k - A_k @ A_h, shape (n_h, n_h, seq, seq)
+    comm = A[:, None] @ A[None, :] - A[None, :] @ A[:, None]
+
+    # Killing form: κ_{a,b} = Σ_k Tr([A_a,A_k]^T [A_b,A_k]) = Σ_k Σ_{ij} comm[a,k,i,j]*comm[b,k,i,j]
+    killing = np.einsum('akij,bkij->ab', comm, comm)
     killing = (killing + killing.T) / 2
     mx = np.max(np.abs(killing))
     kn = killing / mx if mx > 0 else killing
@@ -122,18 +125,13 @@ def compute_live_metrics(attn_matrices):
     except np.linalg.LinAlgError:
         af = 0.0
 
-    norms = np.zeros((n_h, n_h))
-    for h in range(n_h):
-        for hp in range(h + 1, n_h):
-            c = attn_matrices[h] @ attn_matrices[hp] - attn_matrices[hp] @ attn_matrices[h]
-            norms[h, hp] = np.linalg.norm(c, 'fro')
-            norms[hp, h] = norms[h, hp]
-    typ = np.mean([np.linalg.norm(A, 'fro') for A in attn_matrices])
+    # CommVar from pairwise Frobenius norms of commutators
+    fro_norms = np.sqrt(np.einsum('hpij,hpij->hp', comm, comm))  # (n_h, n_h)
+    typ = np.mean(np.sqrt(np.einsum('hij,hij->h', A, A)))
     if typ > 1e-12:
-        norms /= typ ** 2
-    mask = np.ones_like(norms, dtype=bool)
-    np.fill_diagonal(mask, False)
-    off_diag = norms[mask]
+        fro_norms /= typ ** 2
+    mask = ~np.eye(n_h, dtype=bool)
+    off_diag = fro_norms[mask]
     if np.any(np.isnan(off_diag)) or np.all(off_diag == 0):
         cv = 0.0
     else:
@@ -202,12 +200,13 @@ def run_experiment(model_id, device='cuda'):
     sys.stdout.flush()
 
     all_results = {}
+    saver = IncrementalSaver('p48_generation', model_id=model_id,
+                             n_layers=n_layers, n_heads=n_heads)
 
     for prompt_name, prompt_info in PROMPTS.items():
         category = prompt_info['category']
         prefix = prompt_info['text']
-        print(f"  [{category.upper():13s}] {prompt_name}: \"{prefix[:50]}...\"")
-        sys.stdout.flush()
+        flush_print(f"  [{category.upper():13s}] {prompt_name}: \"{prefix[:50]}...\"")
 
         input_ids = tokenizer.encode(prefix, return_tensors='pt').to(device)
         prefix_len = input_ids.shape[1]
@@ -301,6 +300,9 @@ def run_experiment(model_id, device='cuda'):
             },
         }
 
+        # Save incrementally — survives crashes
+        saver.save_prompt(prompt_name, all_results[prompt_name])
+
         gc.collect()
         if device == 'cuda':
             torch.cuda.empty_cache()
@@ -386,6 +388,9 @@ def run_experiment(model_id, device='cuda'):
             u_stat, p_val = stats.mannwhitneyu(a_vals, b_vals, alternative='two-sided')
             print(f"  {cat_a:13s} vs {cat_b:13s}: U={u_stat:.1f}, p={p_val:.4f}")
     sys.stdout.flush()
+
+    # Finalize incremental saver
+    saver.finalize(category_trajectories)
 
     # Save results
     output = {
