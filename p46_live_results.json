@@ -1,0 +1,129 @@
+{
+  "Pythia-410m": {
+    "model": "EleutherAI/pythia-410m-deduped",
+    "arch": "parallel",
+    "elapsed_s": 1261.5,
+    "n_layers": 24,
+    "n_heads": 16,
+    "static_r_cv_depth": 0.670,
+    "prompts": {
+      "repetitive": {
+        "seq_len": 42,
+        "r_cv_depth": -0.905,
+        "p_cv_depth": 0.0000,
+        "mean_af": 0.240,
+        "mean_cv": 0.000744,
+        "note": "Deep layers (14-23) CV=0.0 — complete head convergence"
+      },
+      "technical": {
+        "seq_len": 47,
+        "r_cv_depth": -0.912,
+        "p_cv_depth": 0.0000,
+        "mean_af": 0.216,
+        "mean_cv": 0.000561,
+        "note": "Deep layers (14-23) CV=0.0 — complete head convergence"
+      },
+      "narrative": {
+        "seq_len": 54,
+        "r_cv_depth": -0.908,
+        "p_cv_depth": 0.0000,
+        "mean_af": 0.208,
+        "mean_cv": 0.000479,
+        "note": "Deep layers (14-23) CV=0.0 — complete head convergence"
+      },
+      "code": {
+        "seq_len": 79,
+        "r_cv_depth": -0.911,
+        "p_cv_depth": 0.0000,
+        "mean_af": 0.096,
+        "mean_cv": 0.000397,
+        "note": "Deep layers (14-23) CV=0.0 — complete head convergence"
+      },
+      "philosophical": {
+        "seq_len": 52,
+        "r_cv_depth": -0.894,
+        "p_cv_depth": 0.0000,
+        "mean_af": 0.167,
+        "mean_cv": 0.000396,
+        "note": "Deep layers (14-23) CV=0.0 — complete head convergence"
+      }
+    },
+    "summary": {
+      "mean_r": -0.906,
+      "std_r": 0.006,
+      "range_r": [-0.912, -0.894],
+      "sign_reversal_from_static": true,
+      "static_r": 0.670,
+      "interpretation": "Static weights show POSITIVE depth gradient (increasing algebraic capacity). Live attention shows NEGATIVE (complete convergence in deep layers). The gap = navigation space."
+    }
+  },
+  "GPT2-medium": {
+    "model": "openai-community/gpt2-medium",
+    "arch": "sequential",
+    "elapsed_s": 10.6,
+    "n_layers": 24,
+    "n_heads": 16,
+    "static_r_cv_depth": -0.930,
+    "prompts": {
+      "repetitive": {
+        "seq_len": 42,
+        "r_cv_depth": -0.712,
+        "p_cv_depth": 0.0001,
+        "mean_af": 0.487,
+        "mean_cv": 0.000984
+      },
+      "technical": {
+        "seq_len": 60,
+        "r_cv_depth": -0.667,
+        "p_cv_depth": 0.0004,
+        "mean_af": 0.456,
+        "mean_cv": 0.000625
+      },
+      "narrative": {
+        "seq_len": 54,
+        "r_cv_depth": -0.644,
+        "p_cv_depth": 0.0007,
+        "mean_af": 0.469,
+        "mean_cv": 0.000758
+      },
+      "code": {
+        "seq_len": 99,
+        "r_cv_depth": -0.610,
+        "p_cv_depth": 0.0015,
+        "mean_af": 0.320,
+        "mean_cv": 0.000727
+      },
+      "philosophical": {
+        "seq_len": 52,
+        "r_cv_depth": -0.657,
+        "p_cv_depth": 0.0005,
+        "mean_af": 0.391,
+        "mean_cv": 0.000765
+      }
+    },
+    "summary": {
+      "mean_r": -0.658,
+      "std_r": 0.033,
+      "range_r": [-0.712, -0.610],
+      "sign_reversal_from_static": false,
+      "static_r": -0.930,
+      "interpretation": "Static and live both negative, but live is WEAKER (-0.658 vs -0.930). Deep layers retain nonzero CV — less convergence than Pythia."
+    }
+  },
+  "_meta": {
+    "experiment": "P46 — Live Killing Form",
+    "date": "2026-04-10",
+    "device": "RTX 5080 (WSL Ubuntu)",
+    "method": "output_attentions=True, commutator algebra on attention matrices per layer",
+    "key_findings": [
+      "ALL 10 measurements show negative live depth gradient (p < 0.002 in all cases)",
+      "Pythia-410m: SIGN REVERSAL — static r=+0.67, live r=-0.91",
+      "GPT-2-medium: same direction but weaker — static r=-0.93, live r=-0.66",
+      "Pythia deep layers: CV=0 (complete head convergence/sedimentation in action)",
+      "GPT-2 deep layers: CV>0 (still differentiated, less sedimentation)",
+      "Cross-prompt consistency: Pythia sigma=0.006, GPT-2 sigma=0.033",
+      "Architecture effect persists in live: Pythia more negative than GPT-2",
+      "Input content modulates magnitude but not direction"
+    ]
+  }
+}
