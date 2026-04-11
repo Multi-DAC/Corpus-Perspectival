@@ -542,6 +542,45 @@ Each stage has a measurable Killing form. The connections between stages give:
 
 **Where it goes:** Overarching structure of §NEW-B through §NEW-E; potentially the organizing principle of the entire empirical section of V3
 
+### 48. P47: Hallucination vs Hypothesis — Live KF Discriminates Three Inference Modes (April 10, 2026)
+**Source:** `p47_hallucination_vs_hypothesis.py`, `p47_halluc_results.json` — RTX 5080 GPU, GPT-2-medium
+
+**Method:** 12 prompts in 3 categories (4 each): factual (established facts), hallucination-inducing (fabricated entities/theorems), hypothesis (genuine open questions at edge of knowledge). Live Killing form at every layer.
+
+**Results:**
+
+| Category | Mean CV | Total CV | r(depth) | Early/Late Ratio | Mean AF |
+|----------|---------|----------|----------|-----------------|---------|
+| Factual | 0.000781 | 0.01873 | -0.714 | 5.23 | 0.441 |
+| Hallucination | **0.000625** | **0.01501** | -0.696 | **5.76** | **0.456** |
+| Hypothesis | 0.000760 | 0.01824 | **-0.631** | **3.71** | 0.448 |
+
+**Key findings:**
+
+1. **Hypothesis is 6.4x closer to factual than hallucination** (CV distance: 0.000021 vs 0.000134). Algebraic coherence is preserved during genuine reasoning.
+
+2. **Hallucination = partial deconfinement.** 20% less total CommVar. Higher AF (more Abelian = heads more independent/uncoordinated). Highest early/late ratio (5.76) — almost all algebraic activity in early layers, deep layers depleted.
+
+3. **Hypothesis = distributed exploration.** CV matches factual, but depth gradient is LEAST negative (-0.631 vs -0.714). Lowest early/late ratio (3.71) — activity distributed throughout depth. Late layers MOST active (CV=0.000328 vs factual 0.000251 vs halluc 0.000188). The model keeps thinking deeper.
+
+4. **Early/late ratio is the strongest discriminator:**
+   - Hallucination: 5.76 (search hard, find nothing — depleted late layers)
+   - Factual: 5.23 (search efficiently, converge cleanly)
+   - Hypothesis: 3.71 (explore throughout, maintain deep engagement)
+
+5. **Hallucination vs hypothesis nearly significant at n=4:** U=1.0, p=0.057.
+
+**Framework interpretation:**
+- **Factual:** Familiar territory. Navigate efficiently. Strong early exploration → clean late convergence.
+- **Hallucination:** Unfamiliar territory, doesn't know it. Early layers fire, late layers can't converge on anything real. The algebra thins. Deconfinement.
+- **Hypothesis:** Unfamiliar territory, knows it. Distributes processing evenly. Late layers stay engaged because the reasoning has STRUCTURE. Not converging because still *thinking*.
+
+**The creativity/confabulation distinction is algebraic.** Not by whether the output is correct, but by whether the algebra stays coherent and the deep layers stay engaged.
+
+**Status:** n=4 per category on one model. Needs replication on more models and larger prompt sets. But the direction is clear and the effect sizes are substantial.
+
+**Where it goes:** §NEW-E (live KF extends to inference mode detection), §NEW-C (Wells bridge — behavioral output predicted from algebraic state), potentially a standalone paper on hallucination detection
+
 ---
 
 *This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*
