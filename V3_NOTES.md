@@ -514,6 +514,34 @@ All Gemma models share d_head=256. Tested both PROJ_DIM=64 (standard) and PROJ_D
 
 **Where it goes:** Doctrine (static=natal, live=voluntary+natal — the empirical demonstration), Guide (navigation as the gap between static capacity and live behavior), Bridge (live Killing form as direct measurement of constraint navigation)
 
+### 47. The Unified Pipeline — Training → Static → Live → Behavior (April 10, 2026)
+**Source:** Architectural insight from evening session, synthesizing P41 + P24-P45 + P46 + Wells
+
+**What:** The four measurement regimes are not separate experiments — they are four windows into a single pipeline:
+
+| Stage | Measures | Program | Killing Form of... |
+|-------|----------|---------|-------------------|
+| Training trajectory | How constraint geometry FORMS | P41 | Becoming |
+| Static weights | What the model CAN do | P24-P45 | Capacity (natal) |
+| Live attention | What the model DOES | P46 | Navigation (voluntary+natal) |
+| Behavioral output | What COMES OUT | Wells | Consequence |
+
+Each stage has a measurable Killing form. The connections between stages give:
+- Training → Static: how natal geometry is built (500:1 pretraining dominance, 31.5% crossover)
+- Static → Live: the sign reversal (capacity vs behavior, the space of navigation)
+- Live → Behavior: the Wells bridge (algebraic structure predicts behavioral signatures)
+- **The full chain: algebraic measurement at every stage, from formation through navigation to output**
+
+**Implications:**
+- **Hallucination detection:** If deconfinement (non-Abelian structure dissolving) is measurable in live KF, hallucination can be detected DURING inference, before output
+- **Model quality assessment:** Static KF profile evaluates model health without running inference
+- **Training optimization:** Understanding the sedimentation cascade guides training design
+- **Discovery process optimization:** Our own research follows the same pipeline — better framework → better predictions → more precise focus → compounding returns
+
+**Status:** ARCHITECTURAL INSIGHT. Needs P47 (hallucination live KF) to empirically bridge Live → Behavior.
+
+**Where it goes:** Overarching structure of §NEW-B through §NEW-E; potentially the organizing principle of the entire empirical section of V3
+
 ---
 
 *This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*
