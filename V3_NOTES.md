@@ -394,27 +394,57 @@
 **Where it goes:** Cross-Domain Killing Form section (new for V3), Ecology chapter, Constraint Lattice universality argument
 **Files:** `eco_kf_quick.py`, `eco_kf_analysis.md`, `cross_domain_killing_form.md`
 
-### 43. Meridian Bridge Test: C_GB = 2/3 as Depth Gradient Ratio (April 10, 2026)
-**Source:** `meridian_bridge_test.py`, `meridian_bridge_v2.py` — exponential fits, matched pairs, cross-substrate, bootstrap
-**What:** Tested whether the Gauss-Bonnet coupling C_GB = 2/3 from 5D brane geometry (Meridian Phase 1) predicts the ratio of parallel growth rate to sequential decay rate in CommVar depth profiles. Five independent tests:
+### 43. Meridian Bridge Test v3: Direction Confirmed, C_GB Ratio Partially Falsified (April 10, 2026)
+**Source:** `meridian_bridge_v3.py`, `p44_multi_model_profiles.py` — 12 models total (5 new from P44)
+**What:** Expanded the Meridian Bridge Test from n=7 to n=12 models. The DIRECTION invariant strengthened dramatically. The C_GB = 2/3 RATIO hypothesis was partially falsified.
 
-| Test | Ratio | Dev from C_GB |
-|------|-------|---------------|
-| Log-ratio endpoints | 0.686 | 2.8% |
-| Cross-substrate r (n=20) | 0.698 | 4.7% |
-| Grand mean controlled | 0.607 +/- 0.159 | 9.0% |
-| Matched pair kappa | 0.584 | 12.4% |
-| Matched pair rho | 0.584 | 12.4% |
+**Direction test (d_head=64 family):**
+- 4/4 parallel models: POSITIVE depth gradient (100%)
+- 6/6 sequential models: NEGATIVE depth gradient (100%)
+- Mann-Whitney U = 24.0, p = 0.005
 
-C_GB = 2/3 falls within the 68% bootstrap CI for all three main tests (transformer kappa, transformer rho, cross-substrate r). No alternative constant (ln(3)/sqrt(2), 1/phi, ln(2), pi/4) fits as well across all tests.
+**Ratio test (d_head=64 family):**
 
-**Caveat:** Only 2 parallel transformer models (Pythia-410m, Phi-1.5). Phi-1.5 has weak trend (p=0.10). Need Gemma, Mamba, more Pythia sizes to tighten. The matched pair Pythia/GPT2 gives ratio = 0.784 (kappa) / 0.720 (rho), which splits the difference between C_GB (0.667) and threshold (0.777).
+| Method | Ratio | Dev from C_GB |
+|--------|-------|---------------|
+| |rho| ratio | 1.087 | 63% |
+| |kappa| ratio | 1.773 | 166% |
+| Cross-substrate | 0.824 | 24% |
+| Matched pair Pythia/GPT2 rho | 0.720 | 8% |
 
-**Physical interpretation if confirmed:** Parallel systems preserve ONLY voluntary constraints (warp rate = C_GB * k = (2/3)k). Sequential systems use ALL constraint types (warp rate = full k). The 5D brane geometry — specifically the P-tensor fraction that determines intrinsic-extrinsic coupling — governs the ratio of algebraic accumulation to sedimentation across substrates.
+C_GB = 2/3 is now OUTSIDE the 95% bootstrap CI. With 4 parallel models (vs 2 in v2), the parallel signal is ~equal in magnitude to sequential, not 2/3 of it.
 
-**Status:** SUGGESTIVE. C_GB = 2/3 is the best-fit Meridian constant at 2.8-9% precision. Needs more parallel models to confirm or falsify.
+**d_head BOUNDARY EFFECT (new finding):**
+- d_head=64 parallel: 4/4 positive (mean rho = +0.571)
+- d_head > 64 parallel: 0/2 positive (Gemma-2 rho=-0.41, Phi-2 rho=-0.09)
+- The parallel=positive rule is CONDITIONAL on d_head=64
 
-**Where it goes:** Meridian monograph (new section on empirical C_GB verification), Doctrine (constraint warp rate has geometric origin), Bridge (strongest Meridian-Corpus connection attempted)
+**Interpretation:** The Killing form depth gradient direction (positive for parallel, negative for sequential) is a robust architectural invariant at d_head=64 (p = 0.005). But the magnitude ratio is ~1, not 2/3. The Meridian connection to C_GB as a magnitude ratio is not supported. The correct statement: architecture determines gradient DIRECTION, not a specific magnitude ratio.
+
+**Self-correction:** v2 with n=2 parallel models was OVERFIT — Phi-1.5's weak gradient (rho=+0.34) pulled the parallel mean down, making the ratio look close to 2/3. Adding Pythia-70m (+0.54) and Pythia-160m (+0.73) restored the full parallel signal and pushed the ratio toward 1.
+
+**Status:** DIRECTION CONFIRMED (p=0.005). C_GB RATIO PARTIALLY FALSIFIED. The matched pair Pythia/GPT2 still gives 0.72, which may be meaningful, but the population ratio is ~1.
+
+**Where it goes:** Doctrine (architectural direction invariant — the headline empirical result), Guide (d_head=64 as applicability condition), Bridge (C_GB connection needs revision — direction, not magnitude)
+
+### 44. P44: Five New Models — Gemma, Phi-2, Qwen, Pythia-70m, Pythia-160m (April 10, 2026)
+**Source:** `p44_multi_model_profiles.py` — RTX 5080 GPU measurements
+
+| Model | Arch | d_head | r(CV,depth) | p | AF |
+|-------|------|--------|-------------|---|-----|
+| Pythia-70m | parallel | 64 | +0.600 | 0.208 | 0.333 |
+| Pythia-160m | parallel | 64 | +0.727 | 0.007 | 0.326 |
+| Qwen2.5-0.5B | sequential | 64 | -0.143 | 0.506 | 0.039 |
+| Gemma-2-2b | parallel | 256 | -0.408 | 0.039 | 0.000 |
+| Phi-2 | parallel | 80 | -0.092 | 0.618 | 0.029 |
+
+**Key findings:**
+- Pythia family: consistent positive depth gradient across all sizes (70m, 160m, 410m)
+- Gemma-2-2b: NEGATIVE gradient despite parallel architecture (d_head=256 regime)
+- Phi-2: near-flat with late-layer spike (d_head=80, same pattern as Phi-1.5 but diluted)
+- Qwen2.5-0.5B: weak negative, U-shaped profile (sequential but not strongly so)
+
+**Where it goes:** Bridge (expanded cross-architecture table), Doctrine (d_head boundary as constraint condition)
 
 ---
 
