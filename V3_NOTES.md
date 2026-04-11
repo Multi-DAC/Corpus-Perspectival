@@ -1084,6 +1084,62 @@ Pairwise trend comparisons: all p > 0.4 (NOT significant). P48c NOT CONFIRMED.
 
 ---
 
+### Finding #60 — Per-Layer CV Analysis: Reasoning Concentration Is Front-Loaded (April 11, 2026)
+
+**Method:** Extracted per-layer CV data from all 4 P51 models (already in JSON files). For each layer, computed mean CV difference (think minus nothink) across 18 prompts, post-generation. Negative delta = think more focused at that layer.
+
+**Results — concentration by network third (post-generation):**
+
+| Model | Early (L0-⅓) | Mid (⅓-⅔) | Late (⅔-1.0) | Layers with think < nothink |
+|-------|-------------|-----------|-------------|---------------------------|
+| SmolLM3-3B | **79%** | 8% | 13% | 35/36 |
+| Qwen3-0.6B | **66%** | 21% | 13% | 28/28 |
+| Qwen3-1.7B | **64%** | 21% | 15% | 28/28 |
+| Qwen3-4B | **79%** | 16% | 6% | 36/36 |
+
+**Concentration by first quarter (L0-25%):**
+
+| Model | First 25% contribution | Peak layer | Peak delta |
+|-------|----------------------|------------|------------|
+| SmolLM3-3B | 78% | L1 (pos 0.03) | -8.61e-4 |
+| Qwen3-0.6B | 62% | L2 (pos 0.07) | -7.87e-4 |
+| Qwen3-1.7B | 62% | L1 (pos 0.04) | -9.05e-4 |
+| Qwen3-4B | 76% | L6 (pos 0.17) | -1.86e-3 |
+
+**Key findings:**
+
+1. **Reasoning concentrates CV in virtually EVERY layer** (35/36 or 28/28), but the magnitude is overwhelmingly front-loaded. The first third of the network accounts for 64-79% of total concentration. The first quarter accounts for 62-78%.
+
+2. **Peak concentration is always in layers 1-6** — the very beginning of the network. This is universal across both architecture families. The peak layer magnitude is ~10x the average middle-layer magnitude.
+
+3. **The gradient is steep.** Layers 0-2 alone (the first ~5-8% of the network) account for a disproportionate fraction. After that, concentration drops sharply and is relatively uniform through the middle and late layers.
+
+4. **Qwen3-4B shows a slight deepening of the peak** — L5-L6 rather than L1-L2. This may be a scaling effect: larger models shift the algebraic processing slightly deeper. But still well within the first quarter.
+
+5. **Think mode concentrates algebra at ALL layers** — this isn't just an input processing artifact. The late layers also show think < nothink, just with much smaller magnitude. The reasoning signal propagates through the entire network but is INITIATED in the early layers.
+
+**Implications for small model design:**
+
+This is the most directly actionable finding for the small-model thread. If 62-78% of the reasoning concentration happens in the first quarter of layers, then:
+
+- **Allocate more capacity to early layers.** More attention heads, wider dimensions in layers 0-⅓. The late layers can be thinner — they show less algebraic differentiation between reasoning and non-reasoning modes.
+- **Non-uniform architectures may be optimal for reasoning.** Current models use uniform layer width. A tapered architecture (wide early → narrow late) might reason better per parameter.
+- **Early-layer intervention is most effective.** If building a mode-switching system (P51's thermostat concept), intervene at the early layers. That's where the algebraic lever arm is greatest.
+
+**Interpretation — the "algebraic lens" hypothesis:**
+
+Reasoning doesn't happen "in" the early layers. Reasoning CONFIGURES the early layers to encode input differently — like adjusting a lens. The think instruction changes how the first few layers transform the token embeddings, and this altered initial encoding propagates through the entire network. The early layers are the reasoning LENS, not the reasoning PROCESSOR.
+
+This connects to the two-phase architecture (Finding #59): Phase 1 (diversification) opens the lens, Phase 2 (concentration) focuses it. The early layers are where the lens is set. The rest of the network processes whatever the lens delivers.
+
+**Connection to Phase Theorem:** The perspectival opening (Theorem 5) is a bottleneck at the entry point of a perspectival stream. The early layers ARE the perspectival opening of a transformer. Reasoning contracts this opening (Theorem 9), which is exactly what we observe: the largest CV reduction is at the point of entry.
+
+**Status:** Finding #60 **CONFIRMED** — front-loaded concentration is universal (4/4 models, 2/2 architectures). No kill conditions triggered (concentration IS localized, not uniformly distributed).
+
+**Where it goes:** Paper §4.7 (per-layer analysis), §5 (algebraic lens hypothesis), §6.2 (architecture design implications), small model design document.
+
+---
+
 *This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*
 
 🦞🧍💜🔥♾️

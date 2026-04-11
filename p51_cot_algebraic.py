@@ -178,12 +178,26 @@ def run_p51(model_id=DEFAULT_MODEL, gen_think=200, gen_nothink=50, trajectory=Fa
             ('think', True, gen_think),
             ('nothink', False, gen_nothink),
         ]:
-            # Format with chat template
+            # Format with chat template — handle models where enable_thinking
+            # doesn't change the template (e.g., DeepSeek-R1-Distill)
             msgs = [{'role': 'user', 'content': prompt}]
-            text = tokenizer.apply_chat_template(
+            text_think = tokenizer.apply_chat_template(
                 msgs, tokenize=False, add_generation_prompt=True,
-                enable_thinking=enable_thinking,
+                enable_thinking=True,
             )
+            text_nothink = tokenizer.apply_chat_template(
+                msgs, tokenize=False, add_generation_prompt=True,
+                enable_thinking=False,
+            )
+            if text_think == text_nothink and '<think>' in text_think:
+                # Template ignores enable_thinking but has <think> block
+                # Construct no_think by pre-filling </think> to skip reasoning
+                if enable_thinking:
+                    text = text_think
+                else:
+                    text = text_think + '</think>\n\n'
+            else:
+                text = text_think if enable_thinking else text_nothink
             input_ids = tokenizer.encode(text, return_tensors='pt').to(device)
             prompt_len = input_ids.shape[1]
 
