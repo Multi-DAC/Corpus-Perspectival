@@ -1,0 +1,150 @@
+{
+  "C_GB": 0.6666666666666666,
+  "n_par_dh64": 4,
+  "n_seq_dh64": 6,
+  "ratio_kappa": 1.7732383257578541,
+  "ratio_rho": 1.086977349446973,
+  "ratio_log": 1.1343548303038502,
+  "ratio_cross": 0.823799843856927,
+  "bootstrap_rho_95CI": [
+    0.6746677643433293,
+    2.031289206214212
+  ],
+  "bootstrap_kappa_95CI": [
+    0.8165147005587485,
+    5.94404106275392
+  ],
+  "grand_mean": 0.8396775079680362,
+  "direction_test": {
+    "par_positive": 4,
+    "par_total": 4,
+    "seq_negative": 6,
+    "seq_total": 6
+  },
+  "dh_boundary": {
+    "dh64_par_mean_rho": 0.570793337097685,
+    "dh_large_par_mean_rho": -0.2538553024036895
+  },
+  "model_stats": {
+    "BLOOM-560m": {
+      "rho": -0.6495652173913044,
+      "p_rho": 0.0005925876293559365,
+      "kappa": -0.5993389007468495,
+      "log_ratio": -0.5974811149946573,
+      "arch": "sequential",
+      "d_head": 64,
+      "n_layers": 24,
+      "n_heads": 16
+    },
+    "Falcon-rw-1b": {
+      "rho": -0.18173913043478263,
+      "p_rho": 0.3953708419767238,
+      "kappa": -0.13740863155623784,
+      "log_ratio": -0.08400260477633398,
+      "arch": "sequential",
+      "d_head": 64,
+      "n_layers": 24,
+      "n_heads": 32
+    },
+    "GPT2-medium": {
+      "rho": -0.9304347826086956,
+      "p_rho": 4.601108418370284e-11,
+      "kappa": -4.576444560844869,
+      "log_ratio": -4.951141101821369,
+      "arch": "sequential",
+      "d_head": 64,
+      "n_layers": 24,
+      "n_heads": 16
+    },
+    "Gemma-2-2b": {
+      "rho": -0.416068376068376,
+      "p_rho": 0.03450387186690553,
+      "kappa": -0.7449813807835334,
+      "log_ratio": -0.5744686950081077,
+      "arch": "parallel",
+      "d_head": 256,
+      "n_layers": 26,
+      "n_heads": 8
+    },
+    "OPT-1.3B": {
+      "rho": -0.766086956521739,
+      "p_rho": 1.2772330677153319e-05,
+      "kappa": -2.7870073044814823,
+      "log_ratio": -2.0699216980943667,
+      "arch": "sequential",
+      "d_head": 64,
+      "n_layers": 24,
+      "n_heads": 32
+    },
+    "Phi-1.5": {
+      "rho": 0.34347826086956523,
+      "p_rho": 0.1003204906946984,
+      "kappa": 1.07127368086828,
+      "log_ratio": 0.36099097298544996,
+      "arch": "parallel",
+      "d_head": 64,
+      "n_layers": 24,
+      "n_heads": 32
+    },
+    "Phi-2": {
+      "rho": -0.09164222873900292,
+      "p_rho": 0.6178968206808657,
+      "kappa": 0.35474306820643514,
+      "log_ratio": 0.7279665662120277,
+      "arch": "parallel",
+      "d_head": 80,
+      "n_layers": 32,
+      "n_heads": 32
+    },
+    "Pythia-160m": {
+      "rho": 0.7272727272727274,
+      "p_rho": 0.0073550288578051294,
+      "kappa": 3.606165718477885,
+      "log_ratio": 2.489204604931892,
+      "arch": "parallel",
+      "d_head": 64,
+      "n_layers": 12,
+      "n_heads": 12
+    },
+    "Pythia-410m": {
+      "rho": 0.6695652173913044,
+      "p_rho": 0.0003455201283035719,
+      "kappa": 3.587635950566193,
+      "log_ratio": 2.3620896396396307,
+      "arch": "parallel",
+      "d_head": 64,
+      "n_layers": 24,
+      "n_heads": 16
+    },
+    "Pythia-70m": {
+      "rho": 0.5428571428571429,
+      "p_rho": 0.26570262390670546,
+      "kappa": 3.4376992998458498,
+      "log_ratio": 2.597329537414303,
+      "arch": "parallel",
+      "d_head": 64,
+      "n_layers": 6,
+      "n_heads": 8
+    },
+    "Qwen2.5-0.5B": {
+      "rho": -0.13785605892315994,
+      "p_rho": 0.5206267942388145,
+      "kappa": -0.3176233878437148,
+      "log_ratio": -0.39805063129665913,
+      "arch": "sequential",
+      "d_head": 64,
+      "n_layers": 24,
+      "n_heads": 14
+    },
+    "TinyLlama-1.1B": {
+      "rho": -0.4850367024280069,
+      "p_rho": 0.022136809127121137,
+      "kappa": -1.4816711063786023,
+      "log_ratio": -2.226349779122311,
+      "arch": "sequential",
+      "d_head": 64,
+      "n_layers": 22,
+      "n_heads": 32
+    }
+  }
+}
