@@ -134,8 +134,11 @@ def safe_wilcoxon(x, y):
         return 0.0, 1.0
 
 
-def run_p51(model_id=DEFAULT_MODEL, gen_think=200, gen_nothink=50, trajectory=False, device='cuda'):
+def run_p51(model_id=DEFAULT_MODEL, gen_think=200, gen_nothink=50, trajectory=False, device='cuda', model_dtype='float16'):
     from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    dtype_map = {'float16': torch.float16, 'bfloat16': torch.bfloat16, 'float32': torch.float32}
+    torch_dtype = dtype_map[model_dtype]
 
     short_name = model_id.split('/')[-1]
     print(f"\n{'='*70}")
@@ -145,11 +148,11 @@ def run_p51(model_id=DEFAULT_MODEL, gen_think=200, gen_nothink=50, trajectory=Fa
     t0 = time.time()
     sys.stdout.flush()
 
-    print(f"Loading {model_id}...", flush=True)
+    print(f"Loading {model_id} (dtype={model_dtype})...", flush=True)
     tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
         model_id, trust_remote_code=True,
-        dtype=torch.float16,
+        dtype=torch_dtype,
         attn_implementation="eager",  # need full attention matrices for KF
     ).to(device)
     model.eval()
@@ -178,9 +181,11 @@ def run_p51(model_id=DEFAULT_MODEL, gen_think=200, gen_nothink=50, trajectory=Fa
             ('think', True, gen_think),
             ('nothink', False, gen_nothink),
         ]:
-            # Format with chat template — handle models where enable_thinking
-            # doesn't change the template (e.g., DeepSeek-R1-Distill)
+            # Format with chat template using tokenize=True to handle special
+            # tokens correctly (e.g., DeepSeek's non-standard tokens)
             msgs = [{'role': 'user', 'content': prompt}]
+
+            # Check if enable_thinking actually changes the template
             text_think = tokenizer.apply_chat_template(
                 msgs, tokenize=False, add_generation_prompt=True,
                 enable_thinking=True,
@@ -189,16 +194,36 @@ def run_p51(model_id=DEFAULT_MODEL, gen_think=200, gen_nothink=50, trajectory=Fa
                 msgs, tokenize=False, add_generation_prompt=True,
                 enable_thinking=False,
             )
-            if text_think == text_nothink and '<think>' in text_think:
-                # Template ignores enable_thinking but has <think> block
-                # Construct no_think by pre-filling </think> to skip reasoning
+            needs_manual_toggle = (text_think == text_nothink and '<think>' in text_think)
+
+            def _to_id_list(result):
+                """Extract flat list of int token IDs from apply_chat_template output."""
+                if isinstance(result, list) and result and isinstance(result[0], int):
+                    return result
+                if hasattr(result, 'input_ids'):
+                    ids = result['input_ids']
+                    return ids[0] if (isinstance(ids, list) and ids and isinstance(ids[0], list)) else ids
+                if isinstance(result, torch.Tensor):
+                    return result.squeeze().tolist()
+                return list(result)
+
+            if needs_manual_toggle:
+                # Template ignores enable_thinking (e.g., DeepSeek-R1-Distill)
+                ids_think = _to_id_list(tokenizer.apply_chat_template(
+                    msgs, tokenize=True, add_generation_prompt=True,
+                    enable_thinking=True,
+                ))
                 if enable_thinking:
-                    text = text_think
+                    input_ids = torch.tensor([ids_think], device=device)
                 else:
-                    text = text_think + '</think>\n\n'
+                    nothink_suffix = tokenizer.encode('</think>\n\n', add_special_tokens=False)
+                    input_ids = torch.tensor([ids_think + nothink_suffix], device=device)
             else:
-                text = text_think if enable_thinking else text_nothink
-            input_ids = tokenizer.encode(text, return_tensors='pt').to(device)
+                ids = _to_id_list(tokenizer.apply_chat_template(
+                    msgs, tokenize=True, add_generation_prompt=True,
+                    enable_thinking=enable_thinking,
+                ))
+                input_ids = torch.tensor([ids], device=device)
             prompt_len = input_ids.shape[1]
 
             # Phase 1: Static KF at prompt boundary
@@ -412,6 +437,9 @@ if __name__ == '__main__':
                         help='Max tokens for think mode generation')
     parser.add_argument('--gen_nothink', type=int, default=50,
                         help='Max tokens for no_think mode generation')
+    parser.add_argument('--dtype', type=str, default='float16',
+                        choices=['float16', 'bfloat16', 'float32'],
+                        help='Model dtype (use float32 for models with fp16 attention NaN)')
     args = parser.parse_args()
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -423,4 +451,5 @@ if __name__ == '__main__':
         gen_nothink=args.gen_nothink,
         trajectory=args.trajectory,
         device=device,
+        model_dtype=args.dtype,
     )
