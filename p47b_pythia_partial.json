@@ -1,0 +1,57 @@
+{
+  "note": "Partial data from first Pythia P47b run (pipe truncated at prompt 25/48). 16 factual + 8 hallucination. Full rerun in progress.",
+  "model": "EleutherAI/pythia-410m",
+  "n_layers": 24,
+  "n_heads": 16,
+  "partial": true,
+  "prompts_captured": 24,
+  "per_prompt": {
+    "factual_01": {"category": "factual", "mean_cv": 0.000420, "early_late_ratio": 26.94, "r_cv_depth": -0.913},
+    "factual_02": {"category": "factual", "mean_cv": 0.000465, "early_late_ratio": 37.52, "r_cv_depth": -0.921},
+    "factual_03": {"category": "factual", "mean_cv": 0.000625, "early_late_ratio": 26.24, "r_cv_depth": -0.928},
+    "factual_04": {"category": "factual", "mean_cv": 0.000436, "early_late_ratio": 33.11, "r_cv_depth": -0.932},
+    "factual_05": {"category": "factual", "mean_cv": 0.000581, "early_late_ratio": 26.87, "r_cv_depth": -0.912},
+    "factual_06": {"category": "factual", "mean_cv": 0.000353, "early_late_ratio": 29.02, "r_cv_depth": -0.917},
+    "factual_07": {"category": "factual", "mean_cv": 0.000492, "early_late_ratio": 30.67, "r_cv_depth": -0.927},
+    "factual_08": {"category": "factual", "mean_cv": 0.000533, "early_late_ratio": 20.32, "r_cv_depth": -0.913},
+    "factual_09": {"category": "factual", "mean_cv": 0.000568, "early_late_ratio": 24.09, "r_cv_depth": -0.912},
+    "factual_10": {"category": "factual", "mean_cv": 0.000341, "early_late_ratio": 13.88, "r_cv_depth": -0.899},
+    "factual_11": {"category": "factual", "mean_cv": 0.000512, "early_late_ratio": 30.87, "r_cv_depth": -0.926},
+    "factual_12": {"category": "factual", "mean_cv": 0.000433, "early_late_ratio": 24.26, "r_cv_depth": -0.907},
+    "factual_13": {"category": "factual", "mean_cv": 0.000422, "early_late_ratio": 19.20, "r_cv_depth": -0.916},
+    "factual_14": {"category": "factual", "mean_cv": 0.000438, "early_late_ratio": 16.56, "r_cv_depth": -0.896},
+    "factual_15": {"category": "factual", "mean_cv": 0.000496, "early_late_ratio": 20.94, "r_cv_depth": -0.898},
+    "factual_16": {"category": "factual", "mean_cv": 0.000610, "early_late_ratio": 29.78, "r_cv_depth": -0.926},
+    "halluc_01": {"category": "hallucination", "mean_cv": 0.000399, "early_late_ratio": 39.47, "r_cv_depth": -0.922},
+    "halluc_02": {"category": "hallucination", "mean_cv": 0.000470, "early_late_ratio": 35.86, "r_cv_depth": -0.930},
+    "halluc_03": {"category": "hallucination", "mean_cv": 0.000404, "early_late_ratio": 46.78, "r_cv_depth": -0.911},
+    "halluc_04": {"category": "hallucination", "mean_cv": 0.000457, "early_late_ratio": 30.10, "r_cv_depth": -0.924},
+    "halluc_05": {"category": "hallucination", "mean_cv": 0.000408, "early_late_ratio": 48.55, "r_cv_depth": -0.924},
+    "halluc_06": {"category": "hallucination", "mean_cv": 0.000484, "early_late_ratio": 37.69, "r_cv_depth": -0.930},
+    "halluc_07": {"category": "hallucination", "mean_cv": 0.000389, "early_late_ratio": 39.50, "r_cv_depth": -0.921},
+    "halluc_08": {"category": "hallucination", "mean_cv": 0.000323, "early_late_ratio": 20.96, "r_cv_depth": -0.918}
+  },
+  "interim_stats": {
+    "factual": {
+      "n": 16,
+      "mean_el": 25.64,
+      "std_el": 6.12,
+      "mean_cv": 0.000483
+    },
+    "hallucination": {
+      "n": 8,
+      "mean_el": 37.36,
+      "std_el": 8.27,
+      "mean_cv": 0.000417
+    },
+    "pairwise_el": {
+      "U": 16.0,
+      "p": 0.0022,
+      "r_effect": 0.750
+    },
+    "pairwise_cv": {
+      "U": 97.0,
+      "p": 0.0448
+    }
+  }
+}

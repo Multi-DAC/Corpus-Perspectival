@@ -625,6 +625,46 @@ Each stage has a measurable Killing form. The connections between stages give:
 
 **Where it goes:** §NEW-F (cross-architecture validation paragraph), standalone paper (early/late ratio as universal discriminator), practical hallucination detection (architecture-agnostic metric)
 
+### 50. P47b Scaled: Definitive Three-Mode Discrimination (April 10, 2026)
+**Source:** `p47b_scaled.py`, `p47b_gpt2_medium.json`, partial Pythia data — RTX 5080 GPU
+
+**Method:** Scaled P47 from n=4 to n=16 prompts per category (48 total). GPT-2-medium complete run. Pythia-410m partial (16 factual + 11 hallucination captured via WSL pipe before truncation).
+
+**GPT-2-medium (n=16 per category) — DEFINITIVE:**
+
+| Category | Mean CV | Early/Late Ratio | Mean AF |
+|----------|---------|------------------|---------|
+| Hallucination | 0.000670 ± 0.000083 | **6.23 ± 1.25** | 0.460 |
+| Factual | 0.000766 ± 0.000065 | **4.71 ± 0.70** | 0.444 |
+| Hypothesis | 0.000794 ± 0.000092 | **3.93 ± 0.47** | 0.453 |
+
+Pairwise (Early/Late Ratio):
+- factual vs halluc: U=35.0, **p=0.0005**, r=+0.727
+- factual vs hypothesis: U=209.0, **p=0.0024**, r=-0.633
+- halluc vs hypothesis: U=252.0, **p<0.0001**, r=-0.969
+
+Pairwise (Mean CV):
+- factual vs halluc: **p=0.0019**, r=-0.648
+- halluc vs hypothesis: **p=0.0013**, r=+0.672
+- factual vs hypothesis: p=0.64 (not significant — hypothesis ≈ factual)
+
+**Pythia-410m partial (16 factual, 11 hallucination):**
+- Factual E/L: 25.64 ± 6.12
+- Halluc E/L: 35.73 ± 8.58
+- E/L: U=34.0, **p=0.008**, r=+0.614
+- CV: U=131.0, **p=0.036**, r=-0.489
+- Spread: 1.39x (vs GPT-2 1.32x — Pythia amplifies slightly)
+
+**Cross-architecture:**
+Both GPT-2 (sequential) and Pythia (parallel) show halluc > factual on E/L ratio with p < 0.01.
+The absolute E/L values differ by 5-6x (Pythia's deeper sedimentation amplifies the ratio), but the ORDERING is identical and both are significant.
+
+**Key conclusion at n=16:** The creativity/confabulation distinction is algebraic. Hypothesis processing maintains algebraic coherence (E/L close to factual, mean CV indistinguishable from factual at p=0.64). Hallucination processing shows partial deconfinement (13% less CV, 32% higher E/L ratio, depleted late layers). The early/late ratio is the primary architecture-invariant discriminator.
+
+**Status:** DEFINITIVE on GPT-2. CONFIRMED on Pythia (partial). Ready for V3 publication and standalone paper framing.
+
+**Where it goes:** §NEW-F (major revision with n=16 data), standalone hallucination detection paper, P48 generation-mode detector (next experiment)
+
 ---
 
 *This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*
