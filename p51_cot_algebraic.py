@@ -148,7 +148,7 @@ def run_p51(gen_think=200, gen_nothink=50, trajectory=False, device='cuda'):
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_ID, trust_remote_code=True,
-        torch_dtype=torch.float16,
+        dtype=torch.float16,
         attn_implementation="eager",  # need full attention matrices for KF
     ).to(device)
     model.eval()
