@@ -900,6 +900,48 @@ Pairwise trend comparisons: all p > 0.4 (NOT significant). P48c NOT CONFIRMED.
 
 **Where it goes:** §NEW-F (major revision: dual-metric detector, not single-metric), standalone paper (complementary metrics table as primary result), practical detector (E/L + CV threshold logic), future work (prompt-length × model-size interaction)
 
+### 57. P50: TriviaQA Validation — KF Detects Processing Mode, Not Output Accuracy (April 11, 2026)
+**Source:** `p50_triviaqa_validation.py`, `p50_opt_iml_1.3b.json` — RTX 5080 GPU, OPT-IML-1.3B
+
+**Method:** 100 TriviaQA questions (validation split, seeded sample). Format: "Question: X / Answer:". One forward pass to compute KF metrics at the prompt boundary, then generate 30 tokens (greedy), then check if the generated answer matches any known correct answer. Compare KF metrics between correct (n=13) and incorrect (n=87) answers.
+
+**Prediction (FALSIFIED):** Wrong-answer prompts will show higher E/L ratio than correct-answer prompts. Confidence: MEDIUM.
+
+**Results:**
+
+| Metric | Correct (n=13) | Wrong (n=87) | p | r | Sig |
+|--------|---------------|-------------|---|---|-----|
+| E/L ratio | 1.713 ± 0.496 | 1.663 ± 0.263 | 0.838 | +0.036 | ns |
+| Mean CV | 0.000426 | 0.000407 | 0.124 | -0.266 | ns |
+| E/L AUC | — | — | — | — | 0.517 |
+
+**Neither metric discriminates correct from incorrect answers.** The Killing form does not detect whether the model will get a specific factual question right or wrong.
+
+**Key findings:**
+
+1. **KF detects processing mode, not output accuracy.** P49's synthetic prompts worked because fabricated academic text (hallucination category) and real text (factual category) are DIFFERENT KINDS OF CONTENT that the model processes in algebraically different modes. TriviaQA questions are all the same kind of content — factual questions in identical format. The model's algebra responds to content type, not to whether it happens to know the answer.
+
+2. **This is a three-tier structure:**
+   - **Tier 1: Content-type recognition (KF detects this).** The model's algebra distinguishes grounded retrieval, deconfined confabulation, and distributed exploration based on the structure of the input. P49 confirmed.
+   - **Tier 2: The novel inference problem (KF cannot detect this).** A valid hypothesis and a plausible hallucination are algebraically identical at the moment of generation — both are unverified. The distinction only exists after verification.
+   - **Tier 3: The verification loop (external mechanism).** The predict→test→accept/reject cycle sorts good inference from bad. This is a separate mechanism from KF detection.
+
+3. **KF's role is GATING, not VERIFYING.** The Killing form tells you whether the model is in a state where self-verification could function (hypothesis mode: late layers engaged, algebraic coherence maintained) versus a state where everything — including self-checks — is unreliable (hallucination mode: late layers depleted, deconfined algebra). It's the readiness indicator, not the verifier.
+
+4. **RLHF builds capacity, not the compass.** Finding #54 showed RLHF deepens hypothesis mode without fixing hallucination. Clayton's insight: RLHF teaches the model to explore carefully (good navigation capacity) but doesn't install the predict→test loop (the compass). A self-correcting model needs both: KF monitoring ("Am I in a reliable state?") AND a verification loop ("Let me test this claim").
+
+5. **Mean CV trends correctly.** Correct answers show higher CV (0.000426 vs 0.000407, p=0.124). With more statistical power (only 13 correct answers at 13% accuracy), this might reach significance. A higher-accuracy model on TriviaQA could resolve whether CV has any signal for output accuracy, even if E/L does not.
+
+6. **Class imbalance limits power.** OPT-IML-1.3B answered only 13% correctly. The 13 correct answers provide very limited statistical power. A larger model (7B+) with higher accuracy, or n=500+ questions, would give a cleaner test.
+
+**Revision to paper framing:** The standalone paper should NOT claim "hallucination detection" in the title. The correct framing: "algebraic structure of inference modes." KF detects which MODE the model is operating in. Whether a specific output within that mode is correct requires a separate verification mechanism. The practical application is MODE-GATING: allowing generation to proceed when the model is in hypothesis mode, flagging or intervening when the model enters deconfined mode.
+
+**The deeper question (from Clayton):** Can the verification loop be internalized? A model that monitors its own KF, detects when it enters deconfined algebra, and triggers self-verification — could this create a genuinely self-correcting system? The answer may be: only if the model is in hypothesis mode (algebraically coherent) when it runs the self-check. If it's in hallucination mode, the self-check is also unreliable. External verification (human or cross-model) remains necessary for deconfined states.
+
+**Status:** P50 FALSIFIED. This is the most informative result since P48 falsified progressive deconfinement. KF detects mode, not accuracy. The three-tier framework (mode detection → novel inference → verification loop) is now the correct description of what KF does and doesn't do.
+
+**Where it goes:** Paper reframing (§1 introduction, §6 discussion — mode-gating not accuracy detection), §NEW-H (verification loop as separate mechanism), future work (internalized KF monitoring + predict→test cycling as self-correcting architecture)
+
 ---
 
 *This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*

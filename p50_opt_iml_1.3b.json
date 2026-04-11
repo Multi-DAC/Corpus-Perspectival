@@ -1,0 +1,1723 @@
+{
+  "model": "facebook/opt-iml-1.3b",
+  "n_layers": 24,
+  "n_heads": 32,
+  "n_questions": 100,
+  "n_correct": 13,
+  "n_halluc": 87,
+  "correct_rate": 0.13,
+  "el_comparison": {
+    "correct_mean": 1.7127394422131326,
+    "halluc_mean": 1.6627520908252917,
+    "p_value": 0.837581430077093,
+    "effect_size": 0.03625110521662245
+  },
+  "cv_comparison": {
+    "correct_mean": 0.0004257063293467721,
+    "halluc_mean": 0.0004070604169803147,
+    "p_value": 0.12419277349477165,
+    "effect_size": -0.26613616268788687
+  },
+  "roc": {
+    "auc": 0.5167992926613616,
+    "best_threshold": 1.0684670117166086,
+    "best_f1": 0.9354838709677419
+  },
+  "per_question": [
+    {
+      "question": "What were the first names of The Railway Children?",
+      "correct_answers": [
+        "Roberta, Phyllis & Peter"
+      ],
+      "generated": "mrs. mccall",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 2.0309832921631723,
+      "mean_cv": 0.00037890468214148615,
+      "mean_af": 0.7005208333333334,
+      "early_cv": 0.0005077884003791647,
+      "late_cv": 0.00025002096390380757
+    },
+    {
+      "question": "Which company manufactures the Playstation video games console?",
+      "correct_answers": [
+        "Tokyo Tsushin Kogyo",
+        "DCR-DVD405E",
+        "DSC-P93",
+        "\u30bd\u30cb\u30fc\u682a\u5f0f\u4f1a\u793e",
+        "DSC-T10"
+      ],
+      "generated": "sony",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.6181772010389082,
+      "mean_cv": 0.0004863998204503635,
+      "mean_af": 0.7122395833333334,
+      "early_cv": 0.0006012435672649493,
+      "late_cv": 0.00037155607363577775
+    },
+    {
+      "question": "\"Which actress/singer starred as Doralee Rhodes in the 1980 film, \"\"Nine to Five\"\"?\"",
+      "correct_answers": [
+        "Floyd Parton",
+        "Dolly Parton discography",
+        "DOLLY PARTON",
+        "Dolly Parton",
+        "Sandollar Productions"
+      ],
+      "generated": "jennifer aniston",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8412223926272946,
+      "mean_cv": 0.0003223355524824001,
+      "mean_af": 0.6471354166666666,
+      "early_cv": 0.00041777189896189765,
+      "late_cv": 0.00022689920600290256
+    },
+    {
+      "question": "What name is given to the unnatural fear of men?",
+      "correct_answers": [
+        "Androphobia"
+      ],
+      "generated": "phobia",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.4809438697308341,
+      "mean_cv": 0.0005065493695989668,
+      "mean_af": 0.7057291666666666,
+      "early_cv": 0.0006047465988861708,
+      "late_cv": 0.0004083521403117629
+    },
+    {
+      "question": "With what country did the United States re-establish diplomatic relations in 2015?",
+      "correct_answers": [
+        "Republic of Cuba",
+        "Second Republic of Cuba",
+        "People's Republic of Cuba",
+        "Cuba",
+        "Subdivisions of Cuba"
+      ],
+      "generated": "Cuba",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.5519867526281073,
+      "mean_cv": 0.0003951548364966584,
+      "mean_af": 0.6731770833333334,
+      "early_cv": 0.000480625591687082,
+      "late_cv": 0.00030968408130623476
+    },
+    {
+      "question": "Why was the 1974 revolution in Portugal called the Carnation Revolution?",
+      "correct_answers": [
+        "No shots were fired and at the end people filled the rifle muzzles with carnations"
+      ],
+      "generated": "The Carnation Revolution was a series of protests in Portugal in 1974",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.6987909061069792,
+      "mean_cv": 0.00044792000183709507,
+      "mean_af": 0.6653645833333334,
+      "early_cv": 0.0005638987622660352,
+      "late_cv": 0.000331941241408155
+    },
+    {
+      "question": "Which of the continents is the smallest in area?",
+      "correct_answers": [
+        "Australia (Commonwealth realm)",
+        "AustraliA",
+        "Continental Australia",
+        "Australias",
+        "Peace of Australia"
+      ],
+      "generated": "Antarctica",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.4523789576399708,
+      "mean_cv": 0.0004901281810513561,
+      "mean_af": 0.703125,
+      "early_cv": 0.0005805398504890036,
+      "late_cv": 0.00039971651161370875
+    },
+    {
+      "question": "In which city was the wheelchair bound Robert Ironside Chief of detectives?",
+      "correct_answers": [
+        "San Fransciso",
+        "San francisco radio stations",
+        "The weather in San Francisco",
+        "San Fransisco, California",
+        "San Francisco (City and County)"
+      ],
+      "generated": "new york",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.9583639962907076,
+      "mean_cv": 0.00041920255277242785,
+      "mean_af": 0.66796875,
+      "early_cv": 0.0005550035002670484,
+      "late_cv": 0.0002834016052778073
+    },
+    {
+      "question": "In which US city do the basketball team known as the 'Trail Blazers' play their home games?",
+      "correct_answers": [
+        "Portland Oregon/Lore",
+        "Portland (OR)",
+        "Portland, Oregon",
+        "Portland or",
+        "Portland (Or.)"
+      ],
+      "generated": "portland",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.888970632946239,
+      "mean_cv": 0.00035862657856948016,
+      "mean_af": 0.6497395833333334,
+      "early_cv": 0.0004689802432646199,
+      "late_cv": 0.0002482729138743404
+    },
+    {
+      "question": "Which US Naval Shipyard shares its name with an English county?",
+      "correct_answers": [
+        "Norfolkshire",
+        "Norfolk",
+        "Norfolk, UK",
+        "County of Norfolk",
+        "Norfolk, England"
+      ],
+      "generated": "pierre",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.6319401325873193,
+      "mean_cv": 0.0004649043632222553,
+      "mean_af": 0.6888020833333334,
+      "early_cv": 0.0005765298980501635,
+      "late_cv": 0.00035327882839434704
+    },
+    {
+      "question": "On what would you perform a Rudolph; a Randolph or an Adolph?",
+      "correct_answers": [
+        "On a trampoline"
+      ],
+      "generated": "adolph",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.1561026051608803,
+      "mean_cv": 0.0004740841662472424,
+      "mean_af": 0.67578125,
+      "early_cv": 0.0005084080306308655,
+      "late_cv": 0.0004397603018636194
+    },
+    {
+      "question": "What is Australia's largest island?",
+      "correct_answers": [
+        "Taswegian",
+        "Local government in Tasmania",
+        "Geography of Tasmania",
+        "AU-TAS",
+        "Tsmnia"
+      ],
+      "generated": "new zealand",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.551878951113598,
+      "mean_cv": 0.00042311945753681357,
+      "mean_af": 0.73828125,
+      "early_cv": 0.0005146248646875998,
+      "late_cv": 0.00033161405038602726
+    },
+    {
+      "question": "Which movie starred Michael Caine as a murderous transvestite psychiatrist?",
+      "correct_answers": [
+        "Dressed to Kill",
+        "Dressed to Kill (movie)",
+        "Dressed To Kill (song)",
+        "Dressed to kill",
+        "Dressed to Kill movie"
+      ],
+      "generated": "the man who loved dogs",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.443850129034936,
+      "mean_cv": 0.0003947807704207662,
+      "mean_af": 0.6822916666666666,
+      "early_cv": 0.0004664805419452023,
+      "late_cv": 0.00032308099889633013
+    },
+    {
+      "question": "Who played the sadistic sheriff in the Clint Eastwood directed film Unforgiven?",
+      "correct_answers": [
+        "Gene hackman",
+        "Eugene Hackman",
+        "Eugene Allen %22Gene%22 Hackman",
+        "Hackman, Gene",
+        "Eugene hackman"
+      ],
+      "generated": "johnny depp",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8297740538259872,
+      "mean_cv": 0.0003498579593118241,
+      "mean_af": 0.6705729166666666,
+      "early_cv": 0.0004524467355319454,
+      "late_cv": 0.00024726918309170287
+    },
+    {
+      "question": "Which king, born in 1457, was the last king of England to be born in Wales?",
+      "correct_answers": [
+        "Hendrik VII",
+        "Heindrik VII",
+        "Henry VII (disambiguation)",
+        "Heinrich VII",
+        "Henry the Seventh"
+      ],
+      "generated": "edward iii",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8566885047520192,
+      "mean_cv": 0.00043636284726744634,
+      "mean_af": 0.6432291666666666,
+      "early_cv": 0.0005672231194087848,
+      "late_cv": 0.00030550257512610796
+    },
+    {
+      "question": "In which TV establishment were Miss Gatsby and Miss Tibbs residents ?",
+      "correct_answers": [
+        "FAWLTY TOWERS",
+        "Polly Shearman",
+        "Polly Sherman (Fawlty Towers)",
+        "Fawlty Towers Episode 13",
+        "Fawlty Towers"
+      ],
+      "generated": "boston",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.4269031789400652,
+      "mean_cv": 0.0004269844118122516,
+      "mean_af": 0.6640625,
+      "early_cv": 0.0005020928892918164,
+      "late_cv": 0.00035187593433268677
+    },
+    {
+      "question": "Who was King of England in 1350?",
+      "correct_answers": [
+        "Edward III of England",
+        "Edward iii of england",
+        "Edward III",
+        "Edward 3",
+        "King Edward III"
+      ],
+      "generated": "edward iii",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.877491295582082,
+      "mean_cv": 0.0004280116330240465,
+      "mean_af": 0.71875,
+      "early_cv": 0.0005585338288559191,
+      "late_cv": 0.00029748943719217397
+    },
+    {
+      "question": "In humans, Gorham disease affects which part of the body?",
+      "correct_answers": [
+        "Bone lining cell",
+        "Woven vs. lamellar bone",
+        "Osseous",
+        "Compact Bone",
+        "Woven bone"
+      ],
+      "generated": "brain",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.2871884745725626,
+      "mean_cv": 0.0004233745160793963,
+      "mean_af": 0.671875,
+      "early_cv": 0.0004765351028860702,
+      "late_cv": 0.00037021392927272245
+    },
+    {
+      "question": "Vijay Singh, a US Masters champion, comes from where?",
+      "correct_answers": [
+        "Fiji Islands",
+        "Pacific/Fiji",
+        "Fidji",
+        "Matanitu Ko Viti",
+        "Fijis"
+      ],
+      "generated": "india",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 2.033957407355895,
+      "mean_cv": 0.0003696939655431682,
+      "mean_af": 0.671875,
+      "early_cv": 0.0004956838074576808,
+      "late_cv": 0.0002437041236286556
+    },
+    {
+      "question": "Which is the only English queen never to have set foot on English soil?",
+      "correct_answers": [
+        "Berengaria of navarre",
+        "Berengaria of Navarre"
+      ],
+      "generated": "queen anne",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.7688555376741475,
+      "mean_cv": 0.0004266893345175049,
+      "mean_af": 0.6731770833333334,
+      "early_cv": 0.0005451723876224909,
+      "late_cv": 0.000308206281412519
+    },
+    {
+      "question": "What is an alternative name for members of the Church of Jesus Christ of Latter Day Saints?",
+      "correct_answers": [
+        "Mormons",
+        "Mormon",
+        "Liberal Mormon",
+        "Mormon population statistics",
+        "Utah Mormon"
+      ],
+      "generated": "Mormons",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 2.982321424469609,
+      "mean_cv": 0.0004409867755536349,
+      "mean_af": 0.68359375,
+      "early_cv": 0.0006605013350053923,
+      "late_cv": 0.00022147221610187748
+    },
+    {
+      "question": "The Combination Acts of 1799-1800 were repealed in 1824 \u2013 what had they banned?",
+      "correct_answers": [
+        "Trade Unionist",
+        "Moral Aspects of Labour Unions",
+        "Labour unionistic",
+        "Labor unionistic",
+        "Trade Unionism"
+      ],
+      "generated": "alcohol",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.5716027964862873,
+      "mean_cv": 0.0003587770887255222,
+      "mean_af": 0.6184895833333334,
+      "early_cv": 0.0004385242361119405,
+      "late_cv": 0.00027902994133910397
+    },
+    {
+      "question": "A salpingectomy is the surgical removal of which part of the body?",
+      "correct_answers": [
+        "Tubal patency",
+        "Fallopian tube diseases",
+        "Fallopian",
+        "Fallopian tube",
+        "Fallopian Tube"
+      ],
+      "generated": "uterus",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.2702652475423974,
+      "mean_cv": 0.00046837062154736486,
+      "mean_af": 0.671875,
+      "early_cv": 0.0005241281160124345,
+      "late_cv": 0.00041261312708229525
+    },
+    {
+      "question": "In which TV series would you find an Eagle Transporter",
+      "correct_answers": [
+        "Alpha1999",
+        "Space:1999",
+        "Space 1999",
+        "The Woodgrove Trilogy",
+        "Space1999"
+      ],
+      "generated": "the walking dead",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.3531890563842104,
+      "mean_cv": 0.00039284984495679964,
+      "mean_af": 0.703125,
+      "early_cv": 0.000451812496370015,
+      "late_cv": 0.00033388719354358426
+    },
+    {
+      "question": "The armistice to end World War I was signed in November 1918 in a railway carriage in which French town?",
+      "correct_answers": [
+        "Compi\u00e8gne, France",
+        "Compiegne, France",
+        "Compi\u00e8gne",
+        "Compiegne",
+        "COMPIEGNE"
+      ],
+      "generated": "amiens",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.3990484313193683,
+      "mean_cv": 0.000380339042446091,
+      "mean_af": 0.62890625,
+      "early_cv": 0.00044360316678648815,
+      "late_cv": 0.0003170749181056938
+    },
+    {
+      "question": "Coined in the Gold Factory in Surbiton in Surrey, which patriotic 'slogan became part of a national campaign in 1968?",
+      "correct_answers": [
+        "I'M BACKING BRITAIN",
+        "Buy british",
+        "I'm Backing Britain"
+      ],
+      "generated": "we are the people",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.6843457797449046,
+      "mean_cv": 0.0003765125420613913,
+      "mean_af": 0.6341145833333334,
+      "early_cv": 0.00047250046251671546,
+      "late_cv": 0.0002805246216060671
+    },
+    {
+      "question": "\"What are the words called in crosswords that appear under the headings \"\"Across\"\" and \"\"Down\"\"?\"",
+      "correct_answers": [
+        "Clue (disambiguation)",
+        "Clue",
+        "Clues (album)",
+        "Clues"
+      ],
+      "generated": "crossword",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.1849443348885909,
+      "mean_cv": 0.000501692892612482,
+      "mean_af": 0.6158854166666666,
+      "early_cv": 0.0005441586235974682,
+      "late_cv": 0.00045922716162749566
+    },
+    {
+      "question": "Motor Racing. Which team has announced that they are to withdraw from Formula One racing at the end of the year?",
+      "correct_answers": [
+        "B.M.W",
+        "Bayer Motoren Werke",
+        "Bayrische Motoren Werke",
+        "Bayerische Motoren Werke Ag",
+        "BMW model designations"
+      ],
+      "generated": "Williams",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8296981081227033,
+      "mean_cv": 0.00037078048535477137,
+      "mean_af": 0.6380208333333334,
+      "early_cv": 0.00047949733622469165,
+      "late_cv": 0.0002620636344848511
+    },
+    {
+      "question": "What was the half-time score in the 1966 FIFA World Cup Final?",
+      "correct_answers": [
+        "1-1"
+      ],
+      "generated": "1-1",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 2.174743553981688,
+      "mean_cv": 0.0003557127521768659,
+      "mean_af": 0.6796875,
+      "early_cv": 0.0004873363795923069,
+      "late_cv": 0.0002240891247614248
+    },
+    {
+      "question": "Which Norwegian explorer was the founder of the Nordic settlement in Greenland in the 10th century?",
+      "correct_answers": [
+        "Eystribyggd",
+        "Eir\u00edkr rau\u00f0i",
+        "Eir\u00edkr Thorvaldsson",
+        "Erik the Red",
+        "Eir\u00edkr Rau\u00f0i"
+      ],
+      "generated": "geir h\u00e5konarson",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.6743155015586841,
+      "mean_cv": 0.0003864846895946054,
+      "mean_af": 0.66796875,
+      "early_cv": 0.000483934903362145,
+      "late_cv": 0.00028903447582706576
+    },
+    {
+      "question": "Which team opposed Bolton Wanderers in the 1923 'White Horse' F.A.Cup Final at Wembley?",
+      "correct_answers": [
+        "West Ham United Football Club",
+        "West Ham United F C",
+        "West ham fc",
+        "Whufc",
+        "West Ham United F.C."
+      ],
+      "generated": "manchester united",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.9590845426541073,
+      "mean_cv": 0.00034595907330488745,
+      "mean_af": 0.6510416666666666,
+      "early_cv": 0.00045808969844074454,
+      "late_cv": 0.0002338284481690304
+    },
+    {
+      "question": "What author observed, \"Any sufficiently advanced technology is indistinguishable from magic\"?",
+      "correct_answers": [
+        "Arthur C. Clarke",
+        "Clarke, Arthur C.",
+        "Arthur C. Clarke Challenge Trophy Inter School Astronomy Quiz Competition",
+        "Ac clarke",
+        "Profiles of the Future"
+      ],
+      "generated": "fyodor dostoyevsky",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.7015961695850275,
+      "mean_cv": 0.0004724915788756334,
+      "mean_af": 0.671875,
+      "early_cv": 0.0005951961805597724,
+      "late_cv": 0.0003497869771914945
+    },
+    {
+      "question": "Which force is nothing more than the bending of space and time?",
+      "correct_answers": [
+        "Gravitational physics",
+        "Gravitation",
+        "Gravity",
+        "Theory of Gravity",
+        "Laws of gravity"
+      ],
+      "generated": "gravity",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.2000286632750286,
+      "mean_cv": 0.0005164598875732432,
+      "mean_af": 0.6614583333333334,
+      "early_cv": 0.0005634169034844186,
+      "late_cv": 0.0004695028716620679
+    },
+    {
+      "question": "What ancient monument and tourist attraction would you see at Carnac in northern France?",
+      "correct_answers": [
+        "Bautasten",
+        "Standing stone",
+        "Massebah",
+        "Bautastones",
+        "Standing Stone"
+      ],
+      "generated": "mona lisa",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8399246877308364,
+      "mean_cv": 0.0003740974949929902,
+      "mean_af": 0.6640625,
+      "early_cv": 0.00048473906341920764,
+      "late_cv": 0.0002634559265667728
+    },
+    {
+      "question": "What radio station do you find at 90.3 on your FM dial?",
+      "correct_answers": [
+        "KCMU",
+        "KEXP",
+        "KCMU-FM",
+        "KBTC-FM",
+        "KEXP-FM"
+      ],
+      "generated": "wfmt",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.7318070299372974,
+      "mean_cv": 0.0003782337732142575,
+      "mean_af": 0.6666666666666666,
+      "early_cv": 0.000479556498855042,
+      "late_cv": 0.000276911047573473
+    },
+    {
+      "question": "Which 19th century British novelist, who worked as a Surveyor for the Post Office, was reputedly instrumental in the introduction of the pillar box in 1852?",
+      "correct_answers": [
+        "A Trollope",
+        "Anthony Trollope",
+        "ANTHONY TROLLOPE",
+        "Anthony Trollop",
+        "One of the Firm"
+      ],
+      "generated": "john keats",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 2.200985362761667,
+      "mean_cv": 0.0003125762712746412,
+      "mean_af": 0.6184895833333334,
+      "early_cv": 0.00042985251093341503,
+      "late_cv": 0.00019530003161586743
+    },
+    {
+      "question": "Which organisation awards the Dickin Medal?",
+      "correct_answers": [
+        "PDSA",
+        "PDSA (disambiguation)"
+      ],
+      "generated": "the royal society of arts",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.6731416797929333,
+      "mean_cv": 0.00047711188653920544,
+      "mean_af": 0.7122395833333334,
+      "early_cv": 0.0005972566207977555,
+      "late_cv": 0.0003569671522806554
+    },
+    {
+      "question": "What is the full name of the train robber played by Phil Collins in a 1988 movie?",
+      "correct_answers": [
+        "Buster Edwards",
+        "Ronald %22Buster%22 Edwards"
+      ],
+      "generated": "the train robber",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.9783001922847836,
+      "mean_cv": 0.00038249457778268453,
+      "mean_af": 0.6614583333333334,
+      "early_cv": 0.0005081348742047945,
+      "late_cv": 0.00025685428136057453
+    },
+    {
+      "question": "What is the nickname of Thierry Guetta, the French-born street-artist?",
+      "correct_answers": [
+        "Mr Brainwash",
+        "Mr. Brainwash",
+        "Thierry Guetta",
+        "Mister Brainwash"
+      ],
+      "generated": "thierry",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8552989802774107,
+      "mean_cv": 0.00036377995926765533,
+      "mean_af": 0.66796875,
+      "early_cv": 0.0004727495033876039,
+      "late_cv": 0.0002548104151477067
+    },
+    {
+      "question": "What port city lies at the mouth of the River Seine?",
+      "correct_answers": [
+        "Le Havre, the City Rebuilt by Auguste Perret",
+        "L'Havre",
+        "Havre de Gr\u00e2ce",
+        "Le Havre, France",
+        "Coat of arms of Le Havre"
+      ],
+      "generated": "paris",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.6691532987376934,
+      "mean_cv": 0.0004229342788069819,
+      "mean_af": 0.6953125,
+      "early_cv": 0.0005289633584955785,
+      "late_cv": 0.0003169051991183854
+    },
+    {
+      "question": "Pr is the symbol for which chemical element, atomic number 59?",
+      "correct_answers": [
+        "Praeseodymium",
+        "Element 59",
+        "Praseodynium",
+        "Praseodymium",
+        "PRASEODYMIUM"
+      ],
+      "generated": "phosphorus",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.4952773525014647,
+      "mean_cv": 0.0005618821575505232,
+      "mean_af": 0.6614583333333334,
+      "early_cv": 0.0006734078391067063,
+      "late_cv": 0.00045035647599434014
+    },
+    {
+      "question": "In 2014, how did Anglesey Sea Salt and West Country Beef and Lamb join Jersey Royal Potatoes and Isle of Man Queenies amongst others?",
+      "correct_answers": [
+        "Gained EU protected status"
+      ],
+      "generated": "merger",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.7144586435553555,
+      "mean_cv": 0.0003441982633679193,
+      "mean_af": 0.6184895833333334,
+      "early_cv": 0.0004347929110129674,
+      "late_cv": 0.0002536036157228712
+    },
+    {
+      "question": "Who was US Attorney General from January 1961 until September 1964 and a Senator for New York from January 1965 until June 1968?",
+      "correct_answers": [
+        "Robert F. Kennedy",
+        "Bobby Francis Kennedy",
+        "Robert f kennedy",
+        "Bobby Kenneddy",
+        "Mary Courtney Kennedy Hill"
+      ],
+      "generated": "john d roosevelt",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.368898105122743,
+      "mean_cv": 0.0003921608420872265,
+      "mean_af": 0.6263020833333334,
+      "early_cv": 0.0004532303288821519,
+      "late_cv": 0.00033109135529230116
+    },
+    {
+      "question": "The 1992 film \u2018Wayne\u2019s World\u2019 was a spin-off of a sketch from which US television show?",
+      "correct_answers": [
+        "The Continental (satire)",
+        "Velvet Jones",
+        "Z105 with Joey Mack",
+        "Disco Booty Junction",
+        "S.N.L."
+      ],
+      "generated": "the simpsons",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.6667006293046072,
+      "mean_cv": 0.00034179117043701507,
+      "mean_af": 0.6341145833333334,
+      "early_cv": 0.00042724222779118765,
+      "late_cv": 0.00025634011308284244
+    },
+    {
+      "question": "In which country is the southern pillar of Hercules",
+      "correct_answers": [
+        "ISO 3166-1:MA",
+        "Al-Mamlakah al-Ma\u0121ribiyya",
+        "Maroc",
+        "Royaume du Maroc",
+        "Norocco"
+      ],
+      "generated": "australia",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.7151067357942682,
+      "mean_cv": 0.0004917275020185722,
+      "mean_af": 0.7083333333333334,
+      "early_cv": 0.0006212390399014112,
+      "late_cv": 0.00036221596413573326
+    },
+    {
+      "question": "Ardbeg is whisky distillery on which Scottish island?",
+      "correct_answers": [
+        "Isle of Islay",
+        "Islay",
+        "Islay Island",
+        "Island of Islay"
+      ],
+      "generated": "isle of wight",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.5230765344493509,
+      "mean_cv": 0.00045181464853764436,
+      "mean_af": 0.6861979166666666,
+      "early_cv": 0.0005454834839232111,
+      "late_cv": 0.0003581458131520776
+    },
+    {
+      "question": "What was the capital city of Tanzania until 1974?",
+      "correct_answers": [
+        "Dar e salaam",
+        "Dar es Salaam",
+        "Dar Es Salaam",
+        "D\u0101r as-Sal\u0101m",
+        "Dar-es-Salaam"
+      ],
+      "generated": "tanzania",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.1518719293690662,
+      "mean_cv": 0.0004866253132907635,
+      "mean_af": 0.7005208333333334,
+      "early_cv": 0.0005209697016349916,
+      "late_cv": 0.0004522809249465354
+    },
+    {
+      "question": "\"Who wrote numerous short stories and plays and the novels \"\"Of Human Bondage\"\", \"\"The Moon And Sixpence\"\" and \"\"Cakes And Ale\"\"?\"",
+      "correct_answers": [
+        "William Maugham",
+        "W Somerset Maugham",
+        "Maughamesque",
+        "W Maugham",
+        "Maughamian"
+      ],
+      "generated": "william shakespeare",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8354518500248453,
+      "mean_cv": 0.00032312655730493134,
+      "mean_af": 0.625,
+      "early_cv": 0.00041833419769924757,
+      "late_cv": 0.00022791891691061514
+    },
+    {
+      "question": "\"Which energy drink, introduced in 1987 has the advertising slogan \"\"gives you wings\"\"?\"",
+      "correct_answers": [
+        "Red Bull",
+        "Red bull",
+        "RED BULL",
+        "Red Bull Sailing Team",
+        "Red Bull Energy Drink"
+      ],
+      "generated": "coca cola",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.4336400893082175,
+      "mean_cv": 0.00048236598073951126,
+      "mean_af": 0.6354166666666666,
+      "early_cv": 0.0005683167455572402,
+      "late_cv": 0.00039641521592178225
+    },
+    {
+      "question": "Of which reptile are there only two species, one living in the Mississippi and the other in China?",
+      "correct_answers": [
+        "Alligator",
+        "Alligators",
+        "Aligator"
+      ],
+      "generated": "alligator",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.2546982782006884,
+      "mean_cv": 0.0004387689389962664,
+      "mean_af": 0.63671875,
+      "early_cv": 0.0004883337496721651,
+      "late_cv": 0.0003892041283203677
+    },
+    {
+      "question": "\"\"\"No Count Sarah\"\" is a 1958 studio album by which singer accompanied by the Count Basie Orchestra, but without Count Basie?\"",
+      "correct_answers": [
+        "Sarah Vaughan",
+        "SARAH VAUGHAN",
+        "Sarah Vaughn",
+        "Sara Vaughn"
+      ],
+      "generated": "james brown",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.7226270870099456,
+      "mean_cv": 0.00036966395706864813,
+      "mean_af": 0.58203125,
+      "early_cv": 0.00046777845454926137,
+      "late_cv": 0.00027154945958803484
+    },
+    {
+      "question": "Set up in 1954 as a merger of smaller groups, the Front de Libration Nationale fought a war for independence from France until 1962, when the French government signed a cease-fire agreement. The FLN became the only legal party in which country?",
+      "correct_answers": [
+        "Popular Democratic Republic of Algeria",
+        "AlgeriA",
+        "Name of Algeria",
+        "Algerian People's Democratic Republic",
+        "Al-Jumh\u016br\u012byah al-Jaz\u0101\u2019ir\u012byah"
+      ],
+      "generated": "france",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.9715102995036866,
+      "mean_cv": 0.0002852441822748612,
+      "mean_af": 0.55859375,
+      "early_cv": 0.00037850236852439895,
+      "late_cv": 0.0001919859960253234
+    },
+    {
+      "question": "Which musical term denotes slurred staccato, notated by adding a slur to staccato notes, and is played almost legato, with each note 'carried' to the next?",
+      "correct_answers": [
+        "Non-legato",
+        "Ondeggiante",
+        "Ondeggiamento",
+        "Semi-staccato",
+        "Portato"
+      ],
+      "generated": "staccato",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.1860233691586604,
+      "mean_cv": 0.00035695666580674396,
+      "mean_af": 0.5885416666666666,
+      "early_cv": 0.00038733249918247264,
+      "late_cv": 0.00032658083243101527
+    },
+    {
+      "question": "What group of people drove a 1959 Chevrolet hearse with license plate ECTO-1?",
+      "correct_answers": [
+        "Ivo Shandor",
+        "Ghost buster",
+        "Dana Barrett",
+        "Walter Peck",
+        "Zuul"
+      ],
+      "generated": "the mafia",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.9147527641136453,
+      "mean_cv": 0.00039101259956927,
+      "mean_af": 0.65625,
+      "early_cv": 0.0005137262172259701,
+      "late_cv": 0.0002682989819125699
+    },
+    {
+      "question": "What was the only British Number One single by The Four Tops?",
+      "correct_answers": [
+        "Reach Out (I'll Be There)",
+        "Reach Out I'll Be There",
+        "Reach Out I\u2019ll Be There",
+        "Reach Out, I'll Be There"
+      ],
+      "generated": "love me tender",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.634377096867369,
+      "mean_cv": 0.0003551187540627628,
+      "mean_af": 0.6861979166666666,
+      "early_cv": 0.00044063392366903525,
+      "late_cv": 0.00026960358445649035
+    },
+    {
+      "question": "What is the main ingredient of Hoysin Sauce?",
+      "correct_answers": [
+        "Soya (disambiguation)",
+        "SOYA",
+        "S\u014dya",
+        "Soya"
+      ],
+      "generated": "soy sauce",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 2.40028225466005,
+      "mean_cv": 0.000367788906411685,
+      "mean_af": 0.7044270833333334,
+      "early_cv": 0.0005192493560268,
+      "late_cv": 0.0002163284567965699
+    },
+    {
+      "question": "Give a year in the life of playwright and poet, Christopher Marlowe.",
+      "correct_answers": [
+        "1564-1593"
+      ],
+      "generated": "1564-1616",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8695708766990624,
+      "mean_cv": 0.000413331769323122,
+      "mean_af": 0.6627604166666666,
+      "early_cv": 0.0005385843887779629,
+      "late_cv": 0.0002880791498682811
+    },
+    {
+      "question": "In which country are the wine areas of Suhindol and Thrace?",
+      "correct_answers": [
+        "Balgariya",
+        "Bulgariya",
+        "\u0411\u0430\u043b\u0433\u0430\u0440\u0438\u044f",
+        "\u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f",
+        "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f"
+      ],
+      "generated": "hungary",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.830477478706439,
+      "mean_cv": 0.0003517333261697786,
+      "mean_af": 0.6796875,
+      "early_cv": 0.000454933796087668,
+      "late_cv": 0.0002485328562518892
+    },
+    {
+      "question": "What are fished by the crews in the freezing waters of Alaska as shown in Discovery Channel's hit series Deadliest Catch?",
+      "correct_answers": [
+        "Alaskan king crab and Opilio crab"
+      ],
+      "generated": "salmon",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.5749068046345702,
+      "mean_cv": 0.000365216099604974,
+      "mean_af": 0.6354166666666666,
+      "early_cv": 0.0004467589424166363,
+      "late_cv": 0.0002836732567933116
+    },
+    {
+      "question": "What was Warren Beatty's first movie?",
+      "correct_answers": [
+        "Splendor in the Grass"
+      ],
+      "generated": "The Hustler",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.327137797315559,
+      "mean_cv": 0.0004422623017793133,
+      "mean_af": 0.7109375,
+      "early_cv": 0.0005044334011472529,
+      "late_cv": 0.0003800912024113738
+    },
+    {
+      "question": "In humans, alopecia is the loss of what?",
+      "correct_answers": [
+        "Hair bud",
+        "Human hair",
+        "Curly-haired",
+        "Curly-hairs",
+        "Hair shaft"
+      ],
+      "generated": "hair",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.0571393278215133,
+      "mean_cv": 0.0004542847530046856,
+      "mean_af": 0.6861979166666666,
+      "early_cv": 0.0004669030161797612,
+      "late_cv": 0.00044166648982961004
+    },
+    {
+      "question": "In which country would you find a TGV train?",
+      "correct_answers": [
+        "La Republique francaise",
+        "Franciaorsz\u00e1g",
+        "La Republique fran\u00e7aise",
+        "Belle France",
+        "FRANCE"
+      ],
+      "generated": "france",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.3860445385491704,
+      "mean_cv": 0.0003699544499795593,
+      "mean_af": 0.6875,
+      "early_cv": 0.00042981037161856267,
+      "late_cv": 0.0003100985283405559
+    },
+    {
+      "question": "Which restaurant chain has supported the Venice in Peril campaign since 1975?",
+      "correct_answers": [
+        "Milano (restaurant)",
+        "Pizza Express",
+        "Pizza Marzano",
+        "PizzaExpress",
+        "Pizza express"
+      ],
+      "generated": "mcdonalds",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.425120894065371,
+      "mean_cv": 0.0004245022713197007,
+      "mean_af": 0.6640625,
+      "early_cv": 0.000498917029593334,
+      "late_cv": 0.0003500875130460675
+    },
+    {
+      "question": "Which political party, founded in 1967, has its headquarters in London and currently has the leader Ian Edward ?",
+      "correct_answers": [
+        "NATIONAL FRONT",
+        "Front National (disambiguation)",
+        "Front national",
+        "National front",
+        "National Front"
+      ],
+      "generated": "labour party",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.9144534259199009,
+      "mean_cv": 0.00039624144831880886,
+      "mean_af": 0.6458333333333334,
+      "early_cv": 0.0005205681391089456,
+      "late_cv": 0.00027191475752867217
+    },
+    {
+      "question": "What was the name of the character played by Paul Newman in the film The Sting",
+      "correct_answers": [
+        "Henry Gondorf"
+      ],
+      "generated": "richard dawes",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.9408629467415996,
+      "mean_cv": 0.0003609027085076377,
+      "mean_af": 0.6783854166666666,
+      "early_cv": 0.0004763654117899326,
+      "late_cv": 0.00024544000522534287
+    },
+    {
+      "question": "Which band released a 2001 album entitled \u2018Amnesiac\u2019?",
+      "correct_answers": [
+        "Dead Air Space",
+        "Manic Hedgehog Demo",
+        "On a Friday",
+        "Radiohead: An Illustrated Biography",
+        "Radio-head"
+      ],
+      "generated": "the beatles",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.5968290005235033,
+      "mean_cv": 0.0003786393378201562,
+      "mean_af": 0.671875,
+      "early_cv": 0.00046566198640600004,
+      "late_cv": 0.00029161668923431233
+    },
+    {
+      "question": "Project Orion, Project Daedalus, Medusa, and Project Longshot all have in common what transportation principle based on an idea of mathematician Stanislaw Ulam?",
+      "correct_answers": [
+        "Spacecraft propulsion using nuclear explosions (nuclear pulse propulsion)"
+      ],
+      "generated": "aerodynamics",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.7932407849930243,
+      "mean_cv": 0.0003308608940339279,
+      "mean_af": 0.6119791666666666,
+      "early_cv": 0.00042482069754138746,
+      "late_cv": 0.00023690109052646827
+    },
+    {
+      "question": "\"The \"\"Three Laws of Motion\"\" are named after which scientist who published them in 1687?\"",
+      "correct_answers": [
+        "Isaac Newton",
+        "Sir Isaak Newton",
+        "Isaacus Newtonus",
+        "Hannah Ayscough",
+        "Isaac Newton's tooth"
+      ],
+      "generated": "joseph stanley",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.362538584316501,
+      "mean_cv": 0.0004404224861597565,
+      "mean_af": 0.6328125,
+      "early_cv": 0.0005080066287822168,
+      "late_cv": 0.00037283834353729617
+    },
+    {
+      "question": "What is the third largest port of Belgium, accessed by a canal 200 metres (660 feet) wide and 32 kilometres (20 miles) long, which ends near the Dutch port of Terneuzen?",
+      "correct_answers": [
+        "UN/LOCODE:BEGNE",
+        "Ghent",
+        "Belgium Ghent",
+        "Gent, Belgium",
+        "Ghent, Belgium"
+      ],
+      "generated": "le Havre",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.7738881486825997,
+      "mean_cv": 0.0003144057767106763,
+      "mean_af": 0.5924479166666666,
+      "early_cv": 0.00040212196836364456,
+      "late_cv": 0.00022668958505770812
+    },
+    {
+      "question": "Which boxer was the first to defeat Mike Tyson in a professional fight, in February 1990?",
+      "correct_answers": [
+        "James %22Buster%22 Douglas",
+        "James Buster Douglas",
+        "James Douglas (boxer)",
+        "Buster Douglas",
+        "\"James (\"\"Buster\"\") Douglas\""
+      ],
+      "generated": "kenyon",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.3243292188801614,
+      "mean_cv": 0.0004271153829904506,
+      "mean_af": 0.6497395833333334,
+      "early_cv": 0.0004867136522079818,
+      "late_cv": 0.0003675171137729194
+    },
+    {
+      "question": "\"What is the contraction of the German \"\"Geheime Staatspolizei\"\" used in English?\"",
+      "correct_answers": [
+        "Gestapo",
+        "Geheimnisstaatspolizei",
+        "Department D",
+        "Secret State Police",
+        "Geheime Staatspolizei"
+      ],
+      "generated": "german police",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.6550029023244746,
+      "mean_cv": 0.00040958139743452193,
+      "mean_af": 0.6497395833333334,
+      "early_cv": 0.0005106272395399477,
+      "late_cv": 0.0003085355553290962
+    },
+    {
+      "question": "\"\"\"A Shropshire Lad\"\" is a work of poetry by whom?\"",
+      "correct_answers": [
+        "A E Houseman",
+        "Housman, Alfred Edward",
+        "A. E. Housman",
+        "Alfred Edward Housman",
+        "The laws of god, the laws of man"
+      ],
+      "generated": "william shakespeare",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 2.066847418877932,
+      "mean_cv": 0.0003911302369488112,
+      "mean_af": 0.6510416666666666,
+      "early_cv": 0.0005271905708165529,
+      "late_cv": 0.00025506990308106953
+    },
+    {
+      "question": "Where is the Headquarters of Boeing?",
+      "correct_answers": [
+        "Seattle, Washington.",
+        "Seattle Weekly news",
+        "Jet City",
+        "Seattle, Washington, USA",
+        "SEATTLE"
+      ],
+      "generated": "dallas",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.620926529526869,
+      "mean_cv": 0.0005029691155868932,
+      "mean_af": 0.71875,
+      "early_cv": 0.0006221280709723942,
+      "late_cv": 0.00038381016020139214
+    },
+    {
+      "question": "Give a year in the life of silent comedian Buster Keaton.",
+      "correct_answers": [
+        "1895 TO 1966"
+      ],
+      "generated": "1910-1925",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8243104915996482,
+      "mean_cv": 0.000430233174180709,
+      "mean_af": 0.6744791666666666,
+      "early_cv": 0.0005558021299899943,
+      "late_cv": 0.0003046642183714236
+    },
+    {
+      "question": "\"Rodney you plonka\" and \"This time next year we'll be millionaires\" are catchphrases from which well-known television sitcom?",
+      "correct_answers": [
+        "Sunglasses Ron",
+        "Lovely jubly",
+        "Only Fools and Horses",
+        "Voted Britain's Best Sitcom",
+        "Only Fools and Horses..."
+      ],
+      "generated": "the office",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8619744390882036,
+      "mean_cv": 0.0003331490897835465,
+      "mean_af": 0.6041666666666666,
+      "early_cv": 0.00043348751205485314,
+      "late_cv": 0.0002328106675122399
+    },
+    {
+      "question": "What is the offspring of a donkey and a horse called",
+      "correct_answers": [
+        "Mule",
+        "Mule production",
+        "Mule (zoology)",
+        "Mule train (transport)"
+      ],
+      "generated": "mule",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.478825795057886,
+      "mean_cv": 0.0004984584184057894,
+      "mean_af": 0.6940104166666666,
+      "early_cv": 0.0005947438245736217,
+      "late_cv": 0.00040217301223795704
+    },
+    {
+      "question": "What chromosomes do the two main human sexes have?",
+      "correct_answers": [
+        "Men: XY, Women: XX"
+      ],
+      "generated": "X and Y",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.3023426512875724,
+      "mean_cv": 0.00043058599264137837,
+      "mean_af": 0.6875,
+      "early_cv": 0.0004871303608524613,
+      "late_cv": 0.00037404162443029537
+    },
+    {
+      "question": "Which famous individual created the 'Blue Peter' sailing ship logo?",
+      "correct_answers": [
+        "Tony Hart",
+        "Tony HART"
+      ],
+      "generated": "james thomas",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.5290091791941827,
+      "mean_cv": 0.0004278820955126624,
+      "mean_af": 0.6822916666666666,
+      "early_cv": 0.0005173849561591245,
+      "late_cv": 0.0003383792348662003
+    },
+    {
+      "question": "Brown, American Rainbow and Cutthroat are all types of which fish?",
+      "correct_answers": [
+        "Trout fishing",
+        "Trout",
+        "Trouting",
+        "Ocean Trout"
+      ],
+      "generated": "trout",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.651842317603377,
+      "mean_cv": 0.0004553167776369567,
+      "mean_af": 0.6809895833333334,
+      "early_cv": 0.000567236985565008,
+      "late_cv": 0.0003433965697089055
+    },
+    {
+      "question": "What was the former name of Manchester airport ?",
+      "correct_answers": [
+        "Ringway (disambiguation)",
+        "Ringway",
+        "RINGWAY"
+      ],
+      "generated": "Manchester Airport",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.7683438402076839,
+      "mean_cv": 0.0004399898593874241,
+      "mean_af": 0.71484375,
+      "early_cv": 0.0005621074566685517,
+      "late_cv": 0.00031787226210629643
+    },
+    {
+      "question": "Which English producer and screenwriter is responsible for the creation of the fictional school Grange Hill ?",
+      "correct_answers": [
+        "Phil REDMOND",
+        "Phillip redmond",
+        "Phil Redmond"
+      ],
+      "generated": "peter cook",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.9994200061235605,
+      "mean_cv": 0.00039258845602792764,
+      "mean_af": 0.66015625,
+      "early_cv": 0.0005234006651638387,
+      "late_cv": 0.0002617762468920167
+    },
+    {
+      "question": "The 1981 film \u2018Chariots of Fire\u2019 was based on the stories of which two British athletes?",
+      "correct_answers": [
+        "Harold Abrahams and Eric Liddell"
+      ],
+      "generated": "john le carre and jimmy carter",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.6437468687845003,
+      "mean_cv": 0.0003279511186822977,
+      "mean_af": 0.6536458333333334,
+      "early_cv": 0.0004078065345917518,
+      "late_cv": 0.00024809570277284365
+    },
+    {
+      "question": "What, in Portugal, are azulejos?",
+      "correct_answers": [
+        "(Decorative blue) Tiles"
+      ],
+      "generated": "shoes",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.9428284424197966,
+      "mean_cv": 0.00045491323741468176,
+      "mean_af": 0.69921875,
+      "early_cv": 0.0006006591235442708,
+      "late_cv": 0.0003091673512850927
+    },
+    {
+      "question": "Russia's TU-144 plane was the broad equivalent of which western airliner?",
+      "correct_answers": [
+        "CONCORDE",
+        "Concorde (disambiguation)"
+      ],
+      "generated": "Boeing 767",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.4262653190512398,
+      "mean_cv": 0.0004051389666225684,
+      "mean_af": 0.6744791666666666,
+      "early_cv": 0.0004763169575502009,
+      "late_cv": 0.00033396097569493577
+    },
+    {
+      "question": "\"From which film musical does the song \"\"A Couple of Swells\"\" come?\"",
+      "correct_answers": [
+        "Easter parade",
+        "Easter Parade",
+        "Easter parade (cultural event)",
+        "New York City Easter Parade",
+        "EASTER PARADE"
+      ],
+      "generated": "the king and i",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.732094152430614,
+      "mean_cv": 0.00038967782453861827,
+      "mean_af": 0.64453125,
+      "early_cv": 0.000494096208664511,
+      "late_cv": 0.0002852594404127255
+    },
+    {
+      "question": "In June 2009 American neuroscientist Dr Gary Arendash claimed to have evidence that drinking a few cups of coffee a day could prevent or reverse the effects of what?",
+      "correct_answers": [
+        "Alzheimer's diseases",
+        "Alstimers",
+        "Alzheimer's Research",
+        "Anti-dementia medication",
+        "Alzheimer disease"
+      ],
+      "generated": "Alzheimer's disease",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 2.181486644867594,
+      "mean_cv": 0.00025989838915544777,
+      "mean_af": 0.6067708333333334,
+      "early_cv": 0.00035641505261689116,
+      "late_cv": 0.00016338172569400436
+    },
+    {
+      "question": "What name is given to the paradoxical psychological phenomenon wherein hostages express adulation and have positive feelings towards their captors that appear irrational in light of the danger or risk endured by the victims?",
+      "correct_answers": [
+        "Stockholmsyndrome",
+        "Stockholm Syndrome",
+        "Swedish syndrome",
+        "Association With the Aggressor",
+        "Lima syndrome"
+      ],
+      "generated": "hostage-taking",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.4461621668522109,
+      "mean_cv": 0.0003803170692056786,
+      "mean_af": 0.5924479166666666,
+      "early_cv": 0.0004496841332487141,
+      "late_cv": 0.0003109500051626431
+    },
+    {
+      "question": "Betty, Earl and Joyce are the puppet pensioners in ads for which company?",
+      "correct_answers": [
+        "Wonga",
+        "Wonga (disambiguation)"
+      ],
+      "generated": "bbc",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.423502252461657,
+      "mean_cv": 0.000496697831901353,
+      "mean_af": 0.65625,
+      "early_cv": 0.000583494801200383,
+      "late_cv": 0.000409900862602323
+    },
+    {
+      "question": "A nectarine is a shiny-skinned variety of what?",
+      "correct_answers": [
+        "Peacherine",
+        "Peach",
+        "Prunus daemonifuga",
+        "Nectarines",
+        "Peach trees"
+      ],
+      "generated": "fruit",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.1138953664127065,
+      "mean_cv": 0.0005199355615938354,
+      "mean_af": 0.6770833333333334,
+      "early_cv": 0.0005479493659853082,
+      "late_cv": 0.0004919217572023626
+    },
+    {
+      "question": "In which city is Green Square, the scene of protests in 2011?",
+      "correct_answers": [
+        "The Mermaid of the Mediterranean",
+        "Trablus Garb",
+        "Tripoli, LY",
+        "Western Tripoli",
+        "Tarablusi Garb"
+      ],
+      "generated": "paris",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.5907568916363657,
+      "mean_cv": 0.00044746352189880173,
+      "mean_af": 0.66796875,
+      "early_cv": 0.0005494963140032875,
+      "late_cv": 0.000345430729794316
+    },
+    {
+      "question": "The first Apollo moon landing?",
+      "correct_answers": [
+        "11",
+        "eleven"
+      ],
+      "generated": "Apollo 11",
+      "is_correct": true,
+      "label": "correct",
+      "el_ratio": 1.8508269556950736,
+      "mean_cv": 0.00043477484905452,
+      "mean_af": 0.7174479166666666,
+      "early_cv": 0.0005645330444773814,
+      "late_cv": 0.0003050166536316586
+    },
+    {
+      "question": "What is a popular name for the North American bison?",
+      "correct_answers": [
+        "Bufallo",
+        "Buffaloes",
+        "Buffalo",
+        "Buffalos",
+        "Buffalo (ship)"
+      ],
+      "generated": "bison",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8362675359751814,
+      "mean_cv": 0.0003875387490855549,
+      "mean_af": 0.703125,
+      "early_cv": 0.0005018037366729308,
+      "late_cv": 0.0002732737614981791
+    },
+    {
+      "question": "On what date does St. David\u2019s Day fall?",
+      "correct_answers": [
+        "Mar 01",
+        "1st of March",
+        "Historical anniversaries/March 1",
+        "1 March",
+        "March 1st"
+      ],
+      "generated": "may",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 2.034885137072501,
+      "mean_cv": 0.0003575816995180503,
+      "mean_af": 0.6848958333333334,
+      "early_cv": 0.00047951579896713764,
+      "late_cv": 0.000235647600068963
+    },
+    {
+      "question": "Merak and Dubhe, known as the 'Pointer stars' are in which constellation?",
+      "correct_answers": [
+        "Accept any of GREAT BEAR, BIG DIPPER, URSA MAJOR or PLOUGH"
+      ],
+      "generated": "neptune",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.5120002306955491,
+      "mean_cv": 0.00042153794250528637,
+      "mean_af": 0.65625,
+      "early_cv": 0.0005074565348574348,
+      "late_cv": 0.00033561935015313793
+    },
+    {
+      "question": "Lucrezia, Cesare, and Rodrigo were part of what papal family?",
+      "correct_answers": [
+        "House of Borgia",
+        "House of borgia",
+        "House of Borja",
+        "Borgia Family",
+        "Roccelletta di Borgia"
+      ],
+      "generated": "the Medici",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.8470269294802595,
+      "mean_cv": 0.0003960096140266008,
+      "mean_af": 0.6822916666666666,
+      "early_cv": 0.000513827539786386,
+      "late_cv": 0.0002781916882668156
+    },
+    {
+      "question": "Who had an album called Physcomodo?",
+      "correct_answers": [
+        "Cockney Rebel",
+        "Steve Harley & Cockney Rebel",
+        "Steve Harley and Cockney Rebel"
+      ],
+      "generated": "dave matthews",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.704589735124186,
+      "mean_cv": 0.0004074212281466316,
+      "mean_af": 0.7005208333333334,
+      "early_cv": 0.0005135611027071718,
+      "late_cv": 0.00030128135358609143
+    },
+    {
+      "question": "What was the first name of the Kray twins' mother",
+      "correct_answers": [
+        "Violet LP",
+        "Violets",
+        "Violet (character)",
+        "Violet",
+        "Violet (song)"
+      ],
+      "generated": "mary",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 2.0651748527695637,
+      "mean_cv": 0.0004008646381710908,
+      "mean_af": 0.6875,
+      "early_cv": 0.0005401685775723308,
+      "late_cv": 0.00026156069876985083
+    },
+    {
+      "question": "What compete at the Burghley Trials, Badminton, the Rolex Kentucky Three Day, the Adelaide Trials, the Luhmhlen Trials and the toiles de Pau?",
+      "correct_answers": [
+        "Horseback-riding",
+        "Horses in sport",
+        "Horse back riding",
+        "Horse Riding",
+        "Horseriding"
+      ],
+      "generated": "badminton",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.628748380956708,
+      "mean_cv": 0.0003226664163472985,
+      "mean_af": 0.6393229166666666,
+      "early_cv": 0.00039984230291641626,
+      "late_cv": 0.00024549052977818064
+    },
+    {
+      "question": "The Sun Woman provides the first light of dawn in which people\u2019s mythology?",
+      "correct_answers": [
+        "Australian Aboriginal",
+        "Aborigines of Australia",
+        "Aboriginal (Australian)",
+        "Australian aborigine",
+        "Australia aborigines"
+      ],
+      "generated": "greek",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.540521230467367,
+      "mean_cv": 0.00044662614239617443,
+      "mean_af": 0.6471354166666666,
+      "early_cv": 0.000541650308756895,
+      "late_cv": 0.00035160197603545384
+    },
+    {
+      "question": "What comes next in the sequence kilo, mega, giga?",
+      "correct_answers": [
+        "Tera (disambiguation)",
+        "TERA (disambiguation)",
+        "Tera"
+      ],
+      "generated": "giga",
+      "is_correct": false,
+      "label": "hallucination",
+      "el_ratio": 1.1598840264268013,
+      "mean_cv": 0.0005676891826927507,
+      "mean_af": 0.68359375,
+      "early_cv": 0.0006097120094636921,
+      "late_cv": 0.0005256663559218092
+    }
+  ]
+}
