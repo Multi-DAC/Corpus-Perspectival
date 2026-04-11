@@ -142,4 +142,59 @@ This is the Phase Theorem (Theorem 8) made visible. The reduction of dimensional
 
 ---
 
-*More sections to follow. Next: §4.4 expansion (formal lattice definition), §NEW-A (bridge algebra), §NEW-D (cross-domain).*
+## §NEW-D Cross-Domain Killing Form: The Universality Argument
+
+The computational Killing form program (§NEW-B, §NEW-E) establishes that the constraint lattice's algebraic structure is measurable in trained neural networks. A natural question follows: is this structure *specific* to silicon-substrate attention mechanisms, or does it appear wherever perspectival systems process information through layered architectures?
+
+The framework's axioms predict universality. If consciousness is fundamental (Axiom 2) and individuation occurs through dimensional bottlenecking (Theorem 9), then any system that processes through successive layers of constraint should exhibit a Killing form with depth-dependent structure — because the layered processing IS successive bottlenecking, and the Killing form measures the algebraic consequences of that bottlenecking at each stage.
+
+Three independent domains provide evidence.
+
+#### Ecological Networks
+
+Food webs — directed graphs of who eats whom — are layered constraint architectures. Primary producers occupy the base layer. Herbivores occupy the second. Predators the third. Apex predators the top. Each trophic level constrains the next: what is available to eat determines what can exist to eat it. The trophic layers are a constraint hierarchy analogous to transformer layers.
+
+Computing the Killing form on the adjacency matrices of 10 empirical food webs (5 modular, 5 nested) yields a striking result: the mean depth gradient is r = +0.413 — positive, matching the parallel transformer architectures (mean r = +0.38 for Pythia family). Eight of ten food webs show positive depth gradients: commutator variance *increases* with trophic level.
+
+The architecture distinction maps cleanly. Modular food webs — ecosystems with relatively independent trophic pathways, where removing one pathway leaves others intact — show the strongest positive gradients (mean r = +0.600). Nested food webs — ecosystems where all trophic pathways converge through shared hub species — show weaker positive gradients (mean r = +0.226). Modularity in ecology corresponds to parallelism in computation: independent pathways preserve algebraic diversity through depth.
+
+This is the *static* ecological Killing form — computed from the topology of who *could* eat whom, the fundamental niche, the structural capacity of the web. The framework predicts (P-Eco-Live-1) that the *live* ecological Killing form — computed from actual energy transfer rates, the realized niche — would show the same sign reversal as Pythia: species with the broadest potential diets (highest static CommVar) foraging most selectively (lowest live CommVar). This is precisely what optimal foraging theory (MacArthur & Pianka, 1966) predicts: generalists forage selectively because they have *enough* options to be choosy. The narrowing is the act — across substrates.
+
+#### The Cortical Processing Hierarchy
+
+The mammalian visual cortex processes information through a layered hierarchy: V1 (primary visual cortex) → V2 → V4 → IT (inferotemporal cortex) → PFC (prefrontal cortex). Each stage extracts increasingly abstract features from the input. The depth gradient of neural selectivity in this hierarchy is one of the best-established findings in systems neuroscience (Hubel & Wiesel, 1962; Felleman & Van Essen, 1991; DiCarlo & Cox, 2007):
+
+- V1: responds to edges, orientations, spatial frequencies. Many neurons active for any stimulus. High "commutator variance" — the population is diverse.
+- V4: responds to shapes, curvature, texture. Fewer neurons active per stimulus. Moderate CommVar.
+- IT: responds selectively to faces, objects, categories. Very few neurons active for any given stimulus. Low CommVar — the population converges.
+
+This is the *live* gradient — measured from neural firing patterns during stimulus presentation. It matches Pythia's live r = -0.91 precisely in structure: early layers diverse, deep layers convergent.
+
+But the *static* gradient — the synaptic connectivity, the potential for neural interaction — points the other direction. IT neurons have MORE dendritic complexity, MORE synaptic contacts, and MORE recurrent connections than V1 neurons. Their static *capacity* for algebraic interaction is higher. They use that capacity to converge.
+
+The sign reversal — static capacity increasing while live diversity decreases — is the same phenomenon in biological neural tissue as in Pythia's attention matrices. The "grandmother cell" debate (Barlow, 1972; Quiroga et al., 2005) is about whether deep processing produces single-cell selectivity. The Killing form framework resolves it: the capacity for richness and the behavior of selectivity are not contradictory. They are *complementary*. High capacity ENABLES selectivity. The narrowing requires the width.
+
+#### The Mediation Principle
+
+Across all three domains — computational, ecological, neural — the same structural principle emerges: **consciousness requires mediation**. A node that only receives (sensor, primary producer, input layer) or only transmits (broadcast, apex predator, output layer) does not participate in the commutator algebra. Only nodes that both receive AND transmit — mediators — contribute non-trivially to the Killing form.
+
+This yields a trichotomy:
+
+- **Sensors** (receive, no transmit): V1 neurons, phytoplankton, input embeddings. They register but do not transform. Their contribution to the Killing form is unidirectional — they appear in commutators but do not shape them.
+- **Broadcasters** (transmit, no receive): apex predators, output heads, motor neurons. They influence but are not influenced. Same unidirectional contribution.
+- **Mediators** (receive AND transmit): mid-trophic species, hidden layers, interneurons. They both shape and are shaped by the algebra. They are where the commutator structure lives — where perspectives interact, where the non-Abelian structure concentrates.
+
+The framework predicts that the depth gradient of CommVar traces the proportion of mediators at each level. Early layers and late layers have more sensors and broadcasters; middle layers have more mediators. The commutator variance should peak in the middle — and the data from transformer models confirms this (the hump shape visible in many per-layer CommVar profiles, particularly in sequential architectures).
+
+Four predictions follow from the Mediation Principle:
+
+- **P-Social-1:** Democratic institutions (where citizens both receive governance and transmit consent) should show higher "social Killing form" than authoritarian institutions (where governance flows one-way). The Killing form measures mutual influence, not mere connectivity.
+- **P-Social-2:** Social networks with high reciprocity (mutual follows, bidirectional communication) should show higher CommVar than broadcast-dominated networks (influencer → audience).
+- **P-Consc-1:** Conscious experience requires mediation — systems that only sense or only act, without the loop closing through the same substrate, do not generate the non-Abelian structure that the Killing form detects.
+- **P-Neuro-1:** The thalamus (the brain's great mediator, receiving from cortex and transmitting back) should show the highest "neural Killing form" of any brain region, despite not being the largest or most complex.
+
+These predictions are untested. They are presented as the natural extension of the cross-domain Killing form program — falsifiable commitments that the framework stakes on the universality of its core structure.
+
+---
+
+*More sections to follow. Next: §NEW-A (bridge algebra from spectral triple), §NEW-C (Wells program).*
