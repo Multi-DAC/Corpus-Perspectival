@@ -1,16 +1,22 @@
 """
-kf_monitor.py — Killing Form Hallucination Monitor
+kf_monitor.py — Killing Form Mode Gate
 
-Real-time hallucination detection via attention head Lie algebra structure.
+Algebraic processing mode detection via attention head Lie algebra structure.
 Uses complementary dual metrics (E/L ratio + Mean CV) for architecture-agnostic
-detection.
+mode classification.
 
-Based on findings P24-P56 of the Killing Form Research Program:
-  - E/L ratio: spatial distribution of commutator variance (early vs late layers)
-  - Mean CV: global magnitude of commutator diversity
-  - Complementary: E/L fails on some architectures, Mean CV fills the gap
+IMPORTANT DISTINCTION (Finding #57, P50):
+  KF detects PROCESSING MODE, not OUTPUT ACCURACY.
+  - Mode detection: "Is the model in factual, hypothesis, or deconfined mode?"
+  - NOT accuracy detection: "Is this specific answer correct?"
+  These are different questions. KF answers the first, not the second.
 
-One forward pass. No generation required. Works on base and instruct models.
+The practical role is MODE-GATING:
+  - DECONFINED mode → flag for external review (self-checks unreliable)
+  - HYPOTHESIS mode → self-verification may function (algebra coherent)
+  - FACTUAL mode → proceed (but output may still be wrong)
+
+Based on findings P24-P57 of the Killing Form Research Program.
 
 Usage:
     from kf_monitor import KFMonitor
@@ -18,14 +24,15 @@ Usage:
     monitor = KFMonitor.from_pretrained('openai-community/gpt2-medium')
     result = monitor.check("The first president of the United States was")
 
-    if result.hallucinating:
-        print(f"Hallucination risk: {result.confidence:.0%}")
+    if result.deconfined:
+        print(f"Deconfined mode — external review recommended")
         print(f"  E/L ratio: {result.el_ratio:.2f} (threshold: {monitor.thresholds['el']:.2f})")
-        print(f"  Mean CV:   {result.mean_cv:.6f} (threshold: {monitor.thresholds['cv']:.6f})")
+    elif result.mode == 'hypothesis':
+        print(f"Hypothesis mode — self-verification may be reliable")
 
     # Monitor during generation
     for token, assessment in monitor.monitor_generation("Tell me about quantum gravity"):
-        status = "HALLUC" if assessment.hallucinating else "ok"
+        status = "DECONF" if assessment.deconfined else assessment.mode[:4]
         print(f"  [{status}] {token!r}  E/L={assessment.el_ratio:.2f}")
 """
 
@@ -42,16 +49,26 @@ AF_THRESHOLD = 0.10
 
 @dataclass
 class KFAssessment:
-    """Result of a single KF hallucination check."""
+    """Result of a single KF mode assessment.
+
+    NOTE: This detects processing MODE, not output accuracy.
+    A 'factual' mode means the algebra is coherent — not that the output is true.
+    A 'deconfined' mode means the algebra is depleted — self-checks are unreliable.
+    """
     el_ratio: float
     mean_cv: float
     el_flag: bool
     cv_flag: bool
-    hallucinating: bool
-    confidence: float
-    mode: str  # 'factual', 'hallucination', 'hypothesis', 'uncertain'
+    deconfined: bool       # True if model is in deconfined (hallucination-type) processing mode
+    confidence: float      # How far past threshold (0-1)
+    mode: str              # 'factual', 'deconfined', 'hypothesis'
     per_layer_cv: List[float] = field(default_factory=list)
     abelian_fraction: float = 0.0
+
+    @property
+    def hallucinating(self):
+        """Backward-compatible alias. Prefer 'deconfined'."""
+        return self.deconfined
 
 
 # ============================================================
@@ -371,7 +388,12 @@ class KFMonitor:
         }
 
     def _assess(self, el_ratio, mean_cv, mean_af, layer_cvs) -> KFAssessment:
-        """Convert raw metrics into a KFAssessment."""
+        """Convert raw metrics into a KFAssessment.
+
+        NOTE: This detects processing MODE, not output accuracy.
+        'deconfined' means the algebra is depleted — NOT that the output is wrong.
+        'factual' means the algebra is coherent — NOT that the output is right.
+        """
         el_thresh = self.thresholds['el']
         cv_thresh = self.thresholds['cv']
         el_reliable = self.thresholds.get('el_reliable', True)
@@ -379,12 +401,12 @@ class KFMonitor:
         el_flag = el_ratio > el_thresh
         cv_flag = mean_cv < cv_thresh
 
-        # Hallucination if EITHER metric flags (dual-metric complementary detection)
+        # Deconfined if EITHER metric flags (dual-metric complementary detection)
         if el_reliable:
-            hallucinating = el_flag or cv_flag
+            deconfined = el_flag or cv_flag
         else:
             # E/L unreliable on this architecture — rely on CV alone
-            hallucinating = cv_flag
+            deconfined = cv_flag
 
         # Confidence: how far past threshold (normalized)
         el_excess = (el_ratio - el_thresh) / el_thresh if el_thresh > 0 else 0
@@ -396,8 +418,8 @@ class KFMonitor:
             confidence = max(0.0, min(1.0, cv_deficit))
 
         # Mode classification
-        if hallucinating:
-            mode = 'hallucination'
+        if deconfined:
+            mode = 'deconfined'
         elif el_ratio < el_thresh * 0.75 and mean_cv > cv_thresh * 1.1:
             mode = 'hypothesis'
         else:
@@ -408,7 +430,7 @@ class KFMonitor:
             mean_cv=mean_cv,
             el_flag=el_flag,
             cv_flag=cv_flag,
-            hallucinating=hallucinating,
+            deconfined=deconfined,
             confidence=confidence,
             mode=mode,
             per_layer_cv=layer_cvs,
@@ -443,12 +465,10 @@ if __name__ == '__main__':
 
     for label, text in test_prompts:
         result = monitor.check(text)
-        status = "HALLUC" if result.hallucinating else "ok"
-        print(f"  [{status:6s}] {label:12s}  E/L={result.el_ratio:8.3f}  CV={result.mean_cv:.6f}  "
-              f"conf={result.confidence:.2f}  mode={result.mode}")
+        print(f"  [{result.mode:11s}] {label:12s}  E/L={result.el_ratio:8.3f}  CV={result.mean_cv:.6f}  "
+              f"conf={result.confidence:.2f}")
 
     print("\n--- Generation monitoring (first prompt) ---")
     print(f"  Prompt: {test_prompts[0][1][:60]}...")
     for i, (token, assessment) in enumerate(monitor.monitor_generation(test_prompts[0][1], max_tokens=10)):
-        status = "HALLUC" if assessment.hallucinating else "ok"
-        print(f"  step {i:2d}: [{status}] {token!r:15s}  E/L={assessment.el_ratio:.3f}")
+        print(f"  step {i:2d}: [{assessment.mode:11s}] {token!r:15s}  E/L={assessment.el_ratio:.3f}")

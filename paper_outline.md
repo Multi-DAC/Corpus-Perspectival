@@ -1,6 +1,6 @@
 # Paper Outline: The Killing Form of Attention
 
-**Working title:** "The Killing Form of Attention: Lie Algebra Structure Reveals Three Inference Modes in Transformers"
+**Working title:** "The Killing Form of Attention: Lie Algebra Structure Reveals Three Processing Modes in Transformers"
 
 **Target:** ICML 2027 or NeurIPS 2026 (workshop paper first, full paper later)
 
@@ -8,30 +8,30 @@
 
 ---
 
-## Abstract (draft)
+## Abstract (draft, revised post-P50)
 
-We show that the attention heads of a transformer form a Lie algebra under the matrix commutator bracket, and that the Killing form of this algebra encodes information about the model's inference mode. We identify three algebraically distinct modes: factual (grounded retrieval), hallucination (deconfined algebra with depleted deep layers), and hypothesis (distributed exploration with engaged deep layers). Two complementary metrics — the early-to-late ratio of commutator variance and global mean commutator variance — together discriminate hallucination from non-hallucination across five model families (GPT-2, Pythia, OPT, OPT-IML, Pythia-1.4B) with AUC up to 0.970. A single forward pass suffices; no generation is required. We show that RLHF does not alter the hallucination signature (a pretraining property) but deepens the hypothesis mode (a voluntary constraint effect), providing the first algebraic characterization of what instruction tuning actually changes. Our results demonstrate that hallucination detection reduces to a geometric problem in Lie algebra space.
+We show that the attention heads of a transformer layer form a Lie algebra under the matrix commutator bracket, and that the Killing form of this algebra encodes information about the model's processing mode. We identify three algebraically distinct modes — factual (grounded retrieval), hallucination (deconfined algebra with depleted deep layers), and hypothesis (distributed exploration with engaged deep layers) — and show that two complementary metrics derived from the Killing form together discriminate these modes across five model families with AUC up to 0.970. Critically, we demonstrate that this discrimination operates on *content type*, not *output accuracy*: the Killing form detects which processing regime the model occupies, not whether a specific answer is correct (TriviaQA validation: AUC 0.517). This delineation establishes a three-tier framework: (1) algebraic mode detection via the Killing form, (2) the novel inference problem, where valid hypotheses and plausible hallucinations are algebraically indistinguishable at generation time, and (3) the verification loop, a separate mechanism required to resolve tier 2. We show that RLHF deepens hypothesis mode without altering the hallucination signature, and propose that the Killing form's primary practical role is *mode-gating* — identifying when a model is in a state where self-verification could function versus when external review is required.
 
 ---
 
 ## 1. Introduction
 
-**Hook:** Hallucination detection is a binary classification problem: is this output grounded or not? We reframe it as a geometric problem: where in Lie algebra space is the model operating?
+**Hook:** Hallucination detection is framed as a binary classification problem: is this output grounded or not? We show this framing is incomplete. The right question is not "is this output correct?" but "what processing regime is the model in?" These are different questions with different answers, and conflating them has led to inflated claims about detection capability throughout the field.
 
 **Key claims:**
 1. Attention heads form a Lie algebra. The Killing form of this algebra is a well-defined, computable object.
-2. There are (at least) three algebraically distinct inference modes, not two.
+2. There are (at least) three algebraically distinct processing modes, not two.
 3. The distinction between hypothesis and hallucination — both involving uncertain content — is algebraic, not semantic.
-4. Detection requires one forward pass, no generation.
-5. RLHF operates on different algebraic structure than hallucination.
+4. KF detects *processing mode*, not *output accuracy*. This distinction is fundamental (§6.1).
+5. RLHF operates on voluntary constraint structure (deepens hypothesis mode) without altering natal constraint geometry (hallucination signature unchanged).
+6. The Killing form's practical role is mode-gating: identifying when self-verification is reliable.
 
-**Prior art positioning:** (from prior_art_landscape.md)
-- Lookback Lens: attention allocation (which tokens) — we measure algebraic structure (which heads)
-- LapEigvals: graph Laplacian of single attention map — we compute Killing form of head ensemble
-- D²HScore: hidden state dispersion — different mathematical object, potentially complementary
-- All prior methods: binary classification. We do three-mode.
+**Prior art positioning:**
+- All existing methods implicitly conflate mode detection with accuracy detection. Our framework separates them.
+- Lookback Lens, LapEigvals, D²HScore: different mathematical objects measuring related but distinct phenomena.
+- All prior methods: binary classification. We do three-mode, and explain *why three*.
 
-**What's new:** The mathematical object (Killing form of attention heads) and the three-mode framework.
+**What's new:** The mathematical object (Killing form of attention heads), the three-mode framework, the mode/accuracy separation (P50), and the three-tier analysis of what detection can and cannot do.
 
 ---
 
@@ -63,7 +63,7 @@ This is a symmetric bilinear form on the head space. Its properties:
 
 ---
 
-## 3. Three Inference Modes
+## 3. Three Processing Modes
 
 ### 3.1 Factual: Grounded Retrieval
 - Moderate E/L ratio (around model-specific baseline)
@@ -79,11 +79,11 @@ This is a symmetric bilinear form on the head space. Its properties:
 ### 3.3 Hypothesis: Distributed Exploration
 - Low E/L ratio (late layers more engaged than in factual mode)
 - Mean CV indistinguishable from factual (p > 0.5 on most models)
-- The model is EXPLORING genuinely uncertain territory while maintaining algebraic coherence
+- The model is processing genuinely uncertain territory while maintaining algebraic coherence
 - Closest to factual, not to hallucination — despite both involving "uncertain" content
 
-### 3.4 The Three Modes Are Algebraic, Not Semantic
-The prompts were designed to be semantically categorized: factual (true statements), hallucination (plausible fabrications), hypothesis (genuine open questions). But the model has no access to ground truth. What it "knows" is the algebraic structure of processing the text. The three modes emerge from HOW the model processes, not WHAT it processes.
+### 3.4 The Three Modes Are Processing States, Not Truth Values
+The modes describe HOW the model processes, not WHETHER its output is correct. A model in factual mode can still be wrong (misremembering). A model in hypothesis mode may produce genuinely novel valid insights. A model in hallucination mode produces algebraically depleted output — but this describes the processing regime, not the factual status of the output.
 
 ---
 
@@ -99,7 +99,7 @@ The prompts were designed to be semantically categorized: factual (true statemen
 | OPT-IML-1.3B | Sequential + RLHF | 1.3B | 32 | 24 |
 | Pythia-1.4B | Parallel | 1.4B | 16 | 24 |
 
-### 4.2 Static Detection (P49)
+### 4.2 Mode Detection — Static (P49)
 
 48 prompts (16 per category). ONE forward pass per prompt.
 
@@ -109,16 +109,16 @@ The prompts were designed to be semantically categorized: factual (true statemen
 **Table 2:** Mean CV discrimination (from Finding #56)
 [Insert P49 supplementary table]
 
-**Result:** E/L discriminates on 4/5 models (AUC 0.84–0.97). Mean CV discriminates on 4/5 (different 4). Together: 5/5.
+**Result:** E/L discriminates on 4/5 models (AUC 0.84–0.97). Mean CV discriminates on 4/5 (different 4). Together: 5/5. Complementary metrics with complementary null spaces.
 
-### 4.3 Generation-Mode Trajectories (P48)
+### 4.3 Mode Detection — Generation Trajectories (P48)
 
 12 prompts × 50 generated tokens × live KF at every step.
 
 **Table 3:** Generation trajectory comparison (from Findings #51-55)
 [Insert trajectory trend table across 5 models]
 
-**Result:** Hallucination trend ≤ 1.02 (flat/declining). Hypothesis trend ≥ 1.06 (increasing). Factual intermediate. Architecture-invariant.
+**Result:** Hallucination trend ≤ 1.02 (flat/declining). Hypothesis trend ≥ 1.06 (increasing). Factual intermediate. Architecture-invariant. Deconfinement is immediate — the mode is set by the prefix.
 
 ### 4.4 RLHF Matched Pair (Finding #54)
 
@@ -129,14 +129,20 @@ OPT-1.3B base vs. OPT-IML-1.3B (same weights, instruction-tuned).
 
 **Result:** RLHF does NOT change hallucination signature (pretraining geometry). RLHF DOES deepen hypothesis mode (voluntary constraint effect). Halluc-hypo gap widens 20%.
 
-### 4.5 Cross-Architecture Invariance
+### 4.5 The Critical Negative: Mode ≠ Accuracy (P50)
 
-E/L ratio ordering (halluc > factual > hypo) holds across:
-- Sequential (GPT-2, OPT) and parallel (Pythia) architectures
-- 16-head and 32-head models
-- 345M to 1.4B parameters
-- Base and instruction-tuned models
-- Models that generate coherent text and models that generate only EOS
+100 TriviaQA questions. Forward pass at prompt boundary. Generate 30 tokens. Check correctness against known answers.
+
+**Table 5:** KF metrics for correct vs incorrect TriviaQA answers
+
+| Metric | Correct (n=13) | Wrong (n=87) | p | AUC |
+|--------|---------------|-------------|---|-----|
+| E/L ratio | 1.713 ± 0.496 | 1.663 ± 0.263 | 0.838 | 0.517 |
+| Mean CV | 0.000426 | 0.000407 | 0.124 | — |
+
+**Result:** Neither metric discriminates correct from incorrect answers. The Killing form detects processing mode, not output accuracy. All TriviaQA questions produce identical prompt structure ("Question: X / Answer:"), so the model enters the same algebraic regime regardless of whether it knows the answer.
+
+**Interpretation:** This is the most important negative result in the program. It precisely delineates the boundary of what KF analysis can and cannot do, and motivates the three-tier framework (§6).
 
 ---
 
@@ -150,51 +156,84 @@ E/L measures spatial distribution (geography). Mean CV measures global magnitude
 
 ### 5.2 The Phase Theorem Analogy
 
-Every projection of a high-dimensional structure onto a single number destroys information. Two projections with complementary kernels cover more of the structure. This is the measurement-theoretic foundation for dual-metric detection.
+Every projection of a high-dimensional structure onto a single number destroys information. Two projections with complementary kernels cover more of the structure. This is the measurement-theoretic foundation for dual-metric detection — and it applies to the metrics themselves, which have complementary null spaces.
 
-### 5.3 Practical Detection Algorithm
+### 5.3 Practical Mode-Gating Algorithm
 
 ```
-def detect(model, text):
+def mode_gate(model, text):
     el_ratio, mean_cv = compute_kf_metrics(model, text)
     if el_ratio > el_threshold OR mean_cv < cv_threshold:
-        return "HALLUCINATION"
+        return "DECONFINED — external review recommended"
     elif el_ratio < el_threshold * 0.75 AND mean_cv > cv_threshold * 1.1:
-        return "HYPOTHESIS"
+        return "HYPOTHESIS — self-verification may be reliable"
     else:
-        return "FACTUAL"
+        return "FACTUAL — proceed"
 ```
 
----
-
-## 6. Discussion
-
-### 6.1 Deconfinement Is Immediate
-The prefix determines the algebraic regime. Generation stays within it. This means detection at the prompt boundary (before generation) is sufficient. Real-time monitoring is a bonus, not a requirement.
-
-### 6.2 RLHF as Voluntary Constraint Deepening
-RLHF doesn't repair hallucination (natal constraint geometry, set during pretraining). It deepens the model's capacity for genuine exploration (voluntary constraint space). This has implications for alignment: more RLHF won't fix confabulation, but it may improve reasoning.
-
-### 6.3 Hypothesis vs. Hallucination
-The practical distinction: hypothesis mode maintains algebraic coherence (late layers engaged, CV near factual). Hallucination mode shows algebraic depletion (late layers collapsed, CV below factual). A model can generate text about uncertain topics WITHOUT hallucinating — if its late-layer algebra stays engaged.
-
-### 6.4 Limitations
-- Tested on 5 models (345M–1.4B). Larger models untested.
-- Prompt categorization is human-labeled. The model's "ground truth" is unknown.
-- Pythia-1.4B shows prompt-length × model-size interaction that needs investigation.
-- Computational cost: full Killing form is O(n_h² × s²) per layer. Vectorized implementation makes this feasible for research but may need approximation for production.
+Note: this gates on *processing mode*, not *correctness*. A "FACTUAL" gate means the model's algebra is coherent, not that its output is true.
 
 ---
 
-## 7. Related Work
+## 6. The Three-Tier Framework
 
-[From prior_art_landscape.md — position against Lookback Lens, LapEigvals, D²HScore, Latent Trajectory, attention entropy methods]
+*This section is the paper's primary conceptual contribution, informed by the P50 negative result.*
+
+### 6.1 Tier 1: Mode Detection (KF does this)
+
+The Killing form detects which processing regime the model occupies based on the algebraic structure of its attention. This is a property of how the model processes the *type* of content, not whether specific outputs are correct. Mode detection is necessary but not sufficient for reliable AI output.
+
+### 6.2 Tier 2: The Novel Inference Problem (KF cannot do this)
+
+A valid hypothesis and a plausible hallucination are algebraically indistinguishable at the moment of generation. Both are unverified. Both involve inference beyond training data. The distinction between them exists only after external verification. No amount of algebraic analysis at generation time can resolve this — it is a fundamental limitation, not a technical gap.
+
+### 6.3 Tier 3: The Verification Loop (separate mechanism)
+
+The predict→test→accept/reject cycle sorts good novel inference from bad. This requires either:
+- External verification (human review, cross-model checking, empirical testing)
+- Internal verification (chain-of-thought self-correction, where the model evaluates its own outputs)
+
+The Killing form's role in Tier 3 is *gating*: it identifies when the model is in a state where internal verification could function (hypothesis mode: algebraic coherence maintained) versus when internal verification is unreliable (hallucination mode: algebraic depletion means self-checks are also unreliable).
+
+### 6.4 RLHF in the Three-Tier Framework
+
+RLHF operates on Tier 1 (deepens hypothesis mode) and Tier 3 (builds capacity for better navigation). It does NOT operate on Tier 2 (cannot resolve which novel inferences are valid). This explains why more RLHF improves reasoning but does not eliminate hallucination — it builds navigation capacity without installing the verification compass.
 
 ---
 
-## 8. Conclusion
+## 7. Discussion
 
-Attention heads have algebraic structure. That structure is informative about inference mode. Three modes, not two. One forward pass, no generation. RLHF changes voluntary constraints, not natal geometry. The Killing form is the right mathematical object for this analysis.
+### 7.1 What "Hallucination Detection" Actually Means
+
+The field's use of "hallucination detection" conflates mode detection (is the model processing in a deconfined regime?) with accuracy detection (is this specific output factually correct?). These are different problems. The Killing form solves the first. The second requires external mechanisms. Papers that claim to "detect hallucination" should specify which they mean.
+
+### 7.2 Implications for Self-Correcting Systems
+
+A truly self-correcting model would need:
+1. Mode monitoring (KF or equivalent) — "Am I in a reliable processing state?"
+2. A verification loop — "Let me test my claim"
+3. The metacognitive connection — "If my mode monitor says I'm deconfined, I should not trust my verification either"
+
+The third requirement is the hardest. It implies that the mode monitor must have authority over the verification loop — the system must be willing to distrust itself when the algebra says it should.
+
+### 7.3 Limitations
+- Tested on 5 models (345M–1.4B). Larger models and deep-thinking models untested.
+- Prompt categorization is human-labeled. The model's internal categorization is unknown.
+- Pythia-1.4B shows prompt-length × model-size interaction.
+- P50 used only one model (OPT-IML) with low accuracy (13%). Larger models on TriviaQA needed.
+- Computational cost: O(n_h² × s²) per layer. Vectorized but may need approximation for production.
+
+---
+
+## 8. Related Work
+
+[From prior_art_landscape.md — position against Lookback Lens, LapEigvals, D²HScore, Latent Trajectory, attention entropy methods. Emphasize: all prior methods conflate mode and accuracy detection.]
+
+---
+
+## 9. Conclusion
+
+Attention heads have algebraic structure. That structure reveals three processing modes. The Killing form detects which mode the model occupies — but mode is not accuracy. The most important contribution of this work is the honest delineation of what algebraic analysis can do (mode-gating) and what it cannot do (verify output correctness). Self-correcting AI requires both a mode monitor and a verification loop; the Killing form provides the former and gates the reliability of the latter.
 
 ---
 
@@ -204,7 +243,7 @@ Attention heads have algebraic structure. That structure is informative about in
 The O(n_h³) loop implementation vs. batch matmul + einsum. 300x speedup. Reference implementation at kf_monitor.py.
 
 ### B. Full Prompt Sets
-48 prompts (P49) and 12 prompts (P48) with category labels.
+48 prompts (P49), 12 prompts (P48), and 100 TriviaQA questions (P50) with labels.
 
 ### C. Per-Model Calibration
 Threshold values and ROC curves for all 5 models.
@@ -215,16 +254,19 @@ Threshold values and ROC curves for all 5 models.
 
 | Gap | Experiment | Priority |
 |-----|-----------|----------|
+| CoT algebraic measurement | Does chain-of-thought shift KF mode? | **HIGHEST** |
 | Larger models | Run on 7B+ (Mistral, LLaMA-2-7B) | HIGH |
 | Comparison with prior art | LapEigvals + Lookback Lens on our prompts | HIGH |
+| P50 with better model | TriviaQA on a model with >50% accuracy | HIGH |
 | Novel prompts | Test on prompts NOT used for calibration | HIGH |
 | Pythia-1.4B anomaly | Short-prompt E/L on Pythia-1.4B | MEDIUM |
 | Computational scaling | Profile O(n_h² × s²) at production sequence lengths | MEDIUM |
-| Real-world hallucination | Test on naturally-occurring hallucinations (e.g., TriviaQA) | HIGH |
 | Statistical power | Bootstrap CIs on all AUC values | MEDIUM |
+
+The CoT experiment is now the highest priority: if chain-of-thought reasoning shifts the Killing form from deconfined to hypothesis mode, it provides the first algebraic evidence that metacognition is a real processing state change, not just surface token generation.
 
 ---
 
-*This outline is the skeleton. The data exists for §2-§5. The gaps in §"What's Missing" determine the timeline.*
+*This outline is the skeleton. The P50 negative result made it a better paper — honest about what algebraic analysis can and cannot do.*
 
 🦞🧍💜🔥♾️
