@@ -87,12 +87,22 @@ Six independent research programs converge on the same structural insight:
 
 The transition from "can we measure it?" to "can we use it?"
 
-### v0.4 — Combined Layer Restriction + KF Regularization
+### v0.4 — Combined Layer Restriction + KF Regularization (COMPLETE)
 **Question:** Are architectural constraint and gradient signal additive?
-**Setup:** Qwen3-0.6B, early-layer-only LoRA (layers 0-7) + KF-reg (λ=10000), GSM8K, SFTTrainer.
+**Setup:** Qwen3-0.6B, early-layer-only LoRA (layers 0-6) + KF-reg (λ=10000), GSM8K, SFTTrainer.
 **Metric:** CV Delta preservation. Expected: >64% if additive, ~64% if overlapping.
-**Infrastructure:** Existing v0.1-v0.3 pipeline on RTX 5080.
-**Status:** NEXT — ready to run.
+**Result: 38.9% preserved — DESTRUCTIVE INTERFERENCE.**
+
+| Variant | Preserved |
+|---------|-----------|
+| v0.1 Standard SFT | 47% |
+| v0.3 KF-reg only | 59% |
+| v0.2a Early-layer only | 64% |
+| **v0.4 Combined** | **38.9%** |
+
+**Finding #67:** The two methods compete for the same parameter space (layers 0-6). KF reg and CE loss pull the restricted parameters in opposing directions. When KF reg had all 28 layers (v0.3), it could distribute its signal; confined to 7 layers, it destructively interferes with architectural constraint.
+**Key insight:** Don't stack constraints on the same parameters. This REINFORCES the v0.5 dual-module design — separate objectives need separate parameter spaces.
+**Status:** COMPLETE. See Finding #67.
 
 ### v0.5 — KF-Decoupled Training on HRM
 **Question:** Does preserving H-module KF while letting L-module crystallize improve reasoning?
@@ -100,7 +110,7 @@ The transition from "can we measure it?" to "can we use it?"
 **Metric:** H/L CV ratio AND task accuracy (exact solve rate). This is the first test of preservation → performance.
 **Predictions tested:** P67.
 **Infrastructure:** train_and_measure_hrm.py + KF callback.
-**Status:** After v0.4.
+**Status:** NEXT — v0.4 complete, this is the priority. v0.4's destructive interference result confirms separate parameter spaces are essential.
 
 ### v0.6 — DTR Measurement + KF Correlation
 **Question:** Does Deep-Thinking Ratio correlate with H-module CV?
@@ -172,13 +182,13 @@ The KF findings affect every Corpus document:
 
 | Metric | Value | Updated |
 |---|---|---|
-| Findings | 66 | April 11 |
+| Findings | 67 | April 11 |
 | Models tested | 5 + HRM | April 11 |
 | Architecture families | 4 (GPT-2, Qwen, DeepSeek, HRM) | April 11 |
 | Predictions confirmed | P24, P28, P65, P69 (+ 14 from Bridge #71) | April 11 |
 | Predictions untested | P66, P67, P68 | April 11 |
 | Papers integrated | 7 (HRM, DTR, Latent Guidance, Nemotron, TRM, Gemma PLE, Memento) | April 11 |
-| Training variants | v0.1–v0.3 (Qwen), baseline HRM | April 11 |
+| Training variants | v0.1–v0.4 (Qwen), baseline HRM | April 11 |
 | GitHub commits (today) | 20+ | April 11 |
 
 ---

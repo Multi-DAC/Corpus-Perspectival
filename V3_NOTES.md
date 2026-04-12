@@ -1478,6 +1478,46 @@ CV oscillated within 5% throughout training — the same stabilization pattern a
 
 ---
 
+### Finding #67 — Destructive Interference: Combined Layer Restriction + KF Regularization Underperforms Either Alone (April 11, 2026)
+
+**Context:** Findings #62-64 established that architectural constraint (early-layer-only LoRA, 64% preserved) outperforms gradient signal (KF regularization, 59% preserved), and both outperform standard SFT (47% preserved). The natural question: are these additive?
+
+**Setup:** v0.4 experiment. Qwen3-0.6B, GSM8K, SFTTrainer, 2 epochs. LoRA restricted to layers 0-6 (28 modules, 0.76% of parameters). KF regularization callback (λ=10000, every 50 optimizer steps). Identical pipeline to v0.1-v0.3.
+
+**Result: 38.9% preserved — WORSE than either intervention alone.**
+
+| Variant | Approach | CV Delta Preserved |
+|---------|----------|-------------------|
+| v0.1 | Standard SFT (all layers) | 47% |
+| v0.3 | KF-reg only (all layers) | 59% |
+| v0.2a | Early-layer-only LoRA | 64% |
+| **v0.4** | **Combined (early-layer + KF-reg)** | **38.9%** |
+
+**KF reg trajectory during training (CV at regularization steps):**
+| Step | CV | Notes |
+|------|-----|-------|
+| 100 | 1.777e-5 | Baseline think CV was 2.809e-6 |
+| 200 | 1.916e-5 | Rising |
+| 300 | 1.848e-5 | Slight dip |
+| 400 | 2.144e-5 | Peak |
+| 500 | ~2.1e-5 | Stable |
+| 600 | 2.129e-5 | Stable |
+| 700 | 2.119e-5 | Stable |
+| 800 | 2.088e-5 | Slight decline |
+| 900 | 2.081e-5 | Final |
+
+**Interpretation:** The two preservation methods compete rather than cooperate. When LoRA is restricted to layers 0-6, only those layers can update. The KF regularization signal must also flow through those same early layers. The CE loss (token prediction) and KF loss (algebraic preservation) are pulling the same small parameter space (0.76% of weights) in different directions simultaneously. In v0.3, the KF reg had all 28 layers to distribute its signal; in v0.4, it's confined to 7 layers already under architectural constraint.
+
+**Key insight: Don't stack constraints on the same parameters.** Architectural constraint and gradient signal are not independent — they interact through the shared parameter space. This is the "over-determined system" failure mode: too many objectives on too few degrees of freedom.
+
+**Implications for KF-HRM:** This reinforces the dual-module design principle. The H-module and L-module should have SEPARATE loss functions on SEPARATE parameters, not overlapping constraints on shared weights. The v0.5 decoupled training (KF on H-module only, CE on L-module only) is the correct architecture — it avoids the destructive interference by giving each objective its own parameter space.
+
+**Extends Principle #4:** "Architecture before gradient" now becomes "Architecture AND gradient, but on DIFFERENT parameters." The preservation hierarchy is not a menu to combine — it's a guide to which approach fits which parameter space.
+
+**Script:** `train_kf_v04.py` | **Data:** `kf_trajectory_v04.json`
+
+---
+
 *This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*
 
 🦞🧍💜🔥♾️
