@@ -135,13 +135,29 @@ Per-layer: L-module layer 2 absorbs CV=35.58 (path of least resistance). H barel
 **Architecture confound RESOLVED.** Separation of concerns is the mechanism.
 **Status:** COMPLETE. Finding #69.
 
-### v0.5a — Lambda Sweep (READY)
+### v0.5a — Lambda Sweep (COMPLETE)
 **Question:** What λ gives both meaningful H-module amplification AND competitive accuracy?
 **Setup:** v0.5 decoupled training with λ ∈ {0.001, 0.01, 0.1}. Same architecture, same schedule.
-**Metric:** H_CV amplification AND exact solve rate. Sweet spot = H_CV > 10x baseline AND accuracy within 20% of baseline.
-**Prediction:** λ=0.01 is the sweet spot.
-**Script:** `train_kf_v05a_sweep.sh` — sequential sweep, ~2 hours total.
-**Status:** Script written, not yet run.
+**Result: ACCURACY IS TASK-LIMITED, NOT KF-LIMITED. A34 CONFIRMED.**
+
+| λ | H_CV vs Baseline | Exact Accuracy |
+|---|-----------------|----------------|
+| 0 (baseline) | 1× | 2.07% |
+| 0.001 | 2.5× | 2.62% |
+| 0.01 | 1.3× | 2.26% |
+| 0.1 | 2.7× | 2.09% |
+| 1.0 (v0.5) | 38,963× | 2.04% |
+
+Accuracy varies ±0.6% across all λ — indistinguishable from baseline. Steep phase transition in amplification between λ=0.1 (2.7×) and λ=1.0 (38,963×). No tradeoff exists: λ=1.0 is optimal.
+**P44 FALSIFIED** (no sweet spot — the framing was wrong). **P49 next** (need higher-accuracy task).
+**Status:** COMPLETE. Finding #70.
+
+### P49 — Higher-Accuracy Task Validation (RUNNING)
+**Question:** Does KF-decoupled training preserve accuracy on a task where baseline is >50%?
+**Setup:** Easy sudoku (45-55 clues, ~31 blanks per puzzle vs extreme's ~64). Same HRM, same λ=1.0, same schedule. Baseline (no KF) running in parallel for matched comparison.
+**Metric:** If KF-decoupled accuracy ≈ baseline accuracy AND H_CV amplified → paper vulnerability closed.
+**Prediction:** Accuracy will be ≈ baseline (±5%). H_CV amplification will be >100× (same mechanism, easier task).
+**Status:** RUNNING (launched April 12, both baseline + KF in tmux).
 
 ### The Triad (Headline Result)
 
@@ -223,13 +239,14 @@ The KF findings affect every Corpus document:
 
 | Metric | Value | Updated |
 |---|---|---|
-| Findings | 69 | April 12 |
+| Findings | 70 | April 12 |
 | Models tested | 5 + HRM | April 11 |
 | Architecture families | 4 (GPT-2, Qwen, DeepSeek, HRM) | April 11 |
-| Predictions confirmed | P24, P28, P65, P67, P69 (+ 14 from Bridge #71) | April 12 |
+| Predictions confirmed | P24, P28, P65, P67, P69, A34 (+ 14 from Bridge #71) | April 12 |
+| Predictions falsified | P44 (no sweet spot — task-limited) | April 12 |
 | Predictions untested | P66, P68 | April 12 |
 | Papers integrated | 7 (HRM, DTR, Latent Guidance, Nemotron, TRM, Gemma PLE, Memento) | April 11 |
-| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5b HRM | April 12 |
+| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5a + v0.5b HRM | April 12 |
 
 ---
 
