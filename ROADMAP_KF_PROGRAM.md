@@ -156,13 +156,19 @@ Formal connections between the KF program and Meridian physics. These strengthen
 | **v = 20.5% ↔ dimensional bottleneck** | Phase 22 blow-up parameter as perspectival access parameter. Bridge #35: "Blowing up a singularity and gaining discriminating power are the same operation." | Noted, **not computed** |
 | **Spectral action ↔ partition function** | Finding #22: Tr(f(D/Λ)) IS the constraint lattice partition function. Seeley-DeWitt moments = constraint distribution moments. | Stated in §NEW-A, partially formalized |
 
-### 4E: Meridian Papers (can run in parallel)
+### 4E: Meridian + Corpus Version Updates (existing DOIs)
 
-| Paper | Content | Status |
+Both are already live and public:
+- **Corpus V2:** Zenodo DOI 10.5281/zenodo.19501896 (April 10). PhilArchive (April 9, 200+ downloads).
+- **Meridian Technical Summary:** Zenodo DOI 10.5281/zenodo.19519818 (April 11). 12 confirmed predictions, 6 testable.
+
+V3 release = version bump on existing Zenodo records. DOIs persist. Not a cold launch.
+
+| Update | Content | Status |
 |---|---|---|
-| Paper I: Cosmology | ΛCDM + ζ₀ = 0.038, H₀ prediction, DESI tension | Ready to submit |
-| Paper II: NCG Spectral Action | SM unification, sin²θ_W exact, zero parameters | Ready to submit |
-| Paper III: Phase 22 Gap Resolution | S₃-breaking, four zeros, v = 20.5% | Ready to submit |
+| Corpus V3 | 74 findings, 12 new sections, Fisher bridge proved | Version bump on existing DOI |
+| Meridian V2 | Bridge computations, KF-Meridian connections | Version bump on existing DOI |
+| KF Training Paper | Standalone, new submission | arXiv (new DOI) |
 
 ---
 
