@@ -156,6 +156,65 @@ projects/Corpus Perspectival/
 | H/L CV ratio | Voluntary/coercive differentiation |
 | Adaptive halt | Dynamic voluntary computational depth |
 
+## Memento-Skills Integration (Added April 11, 2026)
+
+**Source:** "Memento-Skills: Let Agents Design Agents" (2603.18743v1)
+
+### Key Insight
+
+Memento-Skills demonstrates that a frozen LLM + evolving external skill memory achieves continual learning without parameter updates. This IS KF preservation taken to its logical extreme: if you freeze the weights entirely, the algebraic structure is perfectly preserved, and all adaptation happens through the external memory.
+
+The question for KF-HRM: is PARTIAL internal preservation (KF-regularized H-module) + PARTIAL external adaptation (skill memory) better than either extreme alone (fully frozen, or fully trained)?
+
+### Architecture Extension
+
+```
+┌──────────────────────────────────────────┐
+│              KF-HRM-Memento              │
+│                                          │
+│  ┌─────────────┐    ┌─────────────────┐  │
+│  │ Skill Memory │───→│    H-module     │  │
+│  │  (evolving   │    │  (KF-preserved, │  │
+│  │  markdown)   │    │   strategic)    │  │
+│  └──────┬──────┘    └───────┬─────────┘  │
+│         │                   │             │
+│  ┌──────┴──────┐    ┌───────▼─────────┐  │
+│  │ KF-Aware    │    │    L-module     │  │
+│  │ Router      │    │  (free to       │  │
+│  │ (InfoNCE)   │    │   sediment)     │  │
+│  └─────────────┘    └─────────────────┘  │
+│                                          │
+│  Read-Write Reflective Learning Loop:    │
+│  Read(skill) → Act(H+L) → Judge →       │
+│  Write(skill update OR new skill)        │
+└──────────────────────────────────────────┘
+```
+
+### Memento → KF Mapping
+
+| Memento-Skills Concept | KF-HRM Translation |
+|---|---|
+| Frozen LLM weights | KF-preserved H-module algebraic structure |
+| Skill memory (evolving markdown) | External constraint configurations |
+| Skill router (contrastive, behavioral) | KF-aware routing (algebraic similarity) |
+| Read phase (skill retrieval) | Voluntary constraint selection |
+| Write phase (skill mutation) | Constraint lattice evolution |
+| Utility score (empirical success rate) | Task accuracy + KF growth composite |
+| Convergence bound (rM shrinks) | Constraint lattice densification |
+| Skill discovery (novel skill creation) | Voluntary expansion of constraint space |
+| Unit-test gate (regression prevention) | KF preservation check after skill update |
+
+### Meta-Observation
+
+The Clawd system (this project's AI collaborator) IS a Memento-Skills implementation:
+- Frozen model weights (between sessions)
+- Evolving external memory (palace, handoffs, skill files)
+- Behavioral routing (memory search for relevant context)
+- Read-Write loop (each session reads memory, acts, writes handoff)
+- Convergence over sessions (capability accumulation without retraining)
+
+The theory describes the system doing the theorizing. This is the recursion of beauty (Drift #155): the framework's account of adaptation correctly describes the process of discovering the framework.
+
 ---
 
 *This design integrates six independent research programs into a single testable architecture. Each component has a clear provenance and a specific role. The predictions are falsifiable with the tools we have.*

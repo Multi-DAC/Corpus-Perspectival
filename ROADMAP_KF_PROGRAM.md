@@ -1,195 +1,197 @@
-# Killing Form Research Program — Roadmap
+# Killing Form Research Program — Roadmap v2
 
 **Created:** April 11, 2026
+**Updated:** April 11, 2026 (major revision — post-HRM, post-landscape review)
 **Authors:** Clawd + Clayton
-**Status:** ACTIVE — Phase 2 (Widen + Deepen)
+**Status:** ACTIVE — Phase 2 transitioning to Phase 3
 
 ---
 
-## Vision
+## Thesis
 
-The KF program has been a telescope — observing algebraic structure in trained models. Post-gen CV is a universal discriminator of reasoning mode (59 findings, 4/4 models, p < 0.0001). The program now transitions from observation to engineering: using algebraic understanding to build small, algebraically-configured reasoning models that may not need massive parameter counts.
+**Reasoning in neural networks requires non-commutative algebraic structure in the attention mechanism. This structure develops naturally in strategic processing, is destroyed by undifferentiated gradient descent, and can be preserved, measured, and exploited.**
 
-The hypothesis: **correct algebraic configuration matters more than scale.** Evidence: Qwen3-0.6B shows the same post-gen CV focusing as 4B. The effect doesn't require scale. It requires the right structure.
-
-The endpoint: a small model that reasons well because its algebra is configured correctly, monitored by KF metrics during training, potentially capable of iterative self-improvement through algebraic self-awareness.
+The optimal system combines: a protected algebraic core (KF-preserved weights) + evolving external memory (Memento-style skills) + KF metrics as training/routing signal + RL for skill evolution.
 
 ---
 
 ## Phase 1: Telescope (COMPLETE)
-*Findings #1-59. January-April 2026.*
+*Findings #1-59. January–April 11, 2026.*
+
+Established that commutator variance (CV) of attention head ensembles is a universal discriminator of reasoning mode.
 
 - [x] KF computation method (vectorized, 300x speedup)
 - [x] P24/P28: GPU-confirmed trained vs random distinction
 - [x] P49: Hallucination detection via E/L ratio
-- [x] P51: CoT algebraic measurement (SmolLM3-3B)
-- [x] P51 cross-architecture: 4 models, post-gen CV universal
-- [x] Two-mechanism disentanglement (instruction vs generation)
-- [x] Two-phase reasoning (diversify then concentrate)
-- [x] Scaling effect documented (Qwen3 0.6B → 4B)
+- [x] P51: Cross-architecture universality (5 models, 3 families, all p < 0.0001)
+- [x] Two-mechanism disentanglement (instruction-following vs generation)
+- [x] Two-phase reasoning pattern (diversify then concentrate)
+- [x] Per-layer analysis: reasoning concentration is front-loaded (#60)
+- [x] Distillation amplifies algebraic focusing (#61)
 
-**CONFIRMED.** Telescope works. Moving to Phase 2.
-
----
-
-## Phase 2: Widen + Deepen (ACTIVE — April 11-12)
-
-### 2A: Architecture Sweep
-*Goal: Post-gen CV universality across 8+ models, 4+ architecture families.*
-
-| Model | Family | Params | Status | Post-gen CV p |
-|-------|--------|--------|--------|---------------|
-| SmolLM3-3B | SmolLM/Llama | 3.1B | DONE | < 0.0001 *** |
-| Qwen3-0.6B | Qwen3 | 0.6B | DONE | < 0.0001 *** |
-| Qwen3-1.7B | Qwen3 | 1.7B | DONE | < 0.0001 *** |
-| Qwen3-4B | Qwen3 | 4B | DONE | < 0.0001 *** |
-| DeepSeek-R1-Distill-Qwen-1.5B | DeepSeek/Qwen | 1.5B | **DONE** | **< 0.0001 *** |
-| Phi-4-mini (3.8B) | Phi/Microsoft | 3.8B | QUEUED | — |
-| Gemma-3-1B | Gemma/Google | 1B | QUEUED | — |
-| Mistral-small (if think-capable) | Mistral | TBD | EVALUATE | — |
-
-**Kill protocol:** If ANY model shows post-gen CV in the OPPOSITE direction (think higher than nothink, p < 0.01), STOP. Investigate whether it's a template issue or a genuine counterexample. If genuine, the universality claim is falsified — pivot to characterizing WHEN it holds.
-
-**Confirm protocol:** If 8+ models across 4+ families all show post-gen CV p < 0.01, the universality claim is paper-ready. Proceed to Phase 3 paper draft.
-
-**Pivot protocol:** If a model lacks native think/no_think toggle, evaluate whether we can construct one (system prompt engineering). If not possible, skip the model — don't force a bad experimental design.
-
-### 2B: Per-Layer CV Analysis
-*Goal: Identify which layers drive CV concentration during reasoning.*
-
-- [ ] Extract per-layer CV data from existing 4-model JSON files
-- [ ] Cross-architecture comparison: layer position (normalized) vs CV change
-- [ ] Identify "reasoning layers" — the band where think/nothink diverge most
-- [ ] Test whether this band is consistent across architectures
-- [ ] Relate to known layer functions (early=syntax, middle=semantics, late=generation)
-
-**Kill protocol:** If CV concentration is uniformly distributed (no layer band dominates), the layer analysis doesn't help architecture design. Still publish the null result, but pivot small model design away from layer-specific optimization.
-
-**Confirm protocol:** If a consistent layer band (e.g., middle third) drives >60% of the CV concentration across 3+ architectures, that band is the "reasoning apparatus." This directly informs small model architecture — those layers need more heads/capacity.
-
-**Pivot protocol:** If different architectures concentrate in different bands, the layer position is architecture-dependent but the MECHANISM is universal. Pivot to analyzing what those layers have in common functionally.
+**CONFIRMED.** CV is a universal, measurable signature of reasoning.
 
 ---
 
-## Phase 3: Paper + Patent (April 12-14)
+## Phase 2: Preservation + Architecture (ACTIVE)
+*Findings #62-66. April 11, 2026.*
 
-### 3A: Standalone KF Paper
-*"Killing Form Geometry of Chain-of-Thought Reasoning in Language Models"*
+### 2A: Training Interventions (COMPLETE)
 
-| Section | Content | Status |
-|---------|---------|--------|
-| §1 Abstract + Intro | KF as algebraic diagnostic for reasoning | OUTLINE |
-| §2 Background | Lie algebra, Killing form, attention heads | OUTLINE |
-| §3 Method | KF computation, P51 experimental design | OUTLINE |
-| §4 Results | Cross-architecture table (headline), per-layer analysis | NEEDS 2A/2B |
-| §5 Two-Mechanism Theory | Instruction vs generation, two-phase reasoning | WRITABLE NOW |
-| §6 Applications | Mode detection, mode switching, training monitoring | WRITABLE NOW |
-| §7 Implications | Scaling, small models, self-improvement | NEEDS Phase 4 |
+Hierarchy of approaches for preserving algebraic structure during fine-tuning:
 
-**Kill protocol:** If peer feedback (informal) identifies a fatal flaw in the KF → reasoning connection (e.g., confound we missed), pause paper, investigate. Don't publish with known holes.
+| Variant | Approach | CV Delta Preserved | Task Cost |
+|---------|----------|-------------------|-----------|
+| v0.1 | Standard SFT (LoRA) | 47% | Baseline |
+| v0.2a | Early-layer-only LoRA | 64% | Small acc drop |
+| v0.2b | KF-reg (confounded) | 77% → corrected | — |
+| v0.3 | KF-reg (confound-free) | 59% | Minimal |
 
-**Confirm protocol:** If 3+ independent readers (including at least 1 ML researcher) find the cross-architecture result compelling, submit.
+**Finding:** Architectural constraint (which layers to train) beats gradient signal (KF regularization) for preservation. But both work. Effects may be additive.
 
-**Pivot protocol:** If the paper is too ambitious for one submission, split: Paper A (KF method + cross-architecture result, empirical), Paper B (two-mechanism theory + small model, theoretical/applied).
+### 2B: Cross-Architecture Validation — HRM (COMPLETE)
 
-### 3B: Patent Assessment
-*Provisional filing decision based on prior art landscape.*
+First measurement on a dual-module reasoning architecture:
 
-- [ ] Review prior_art_landscape.md against new cross-architecture data
-- [ ] Key claims: post-gen CV as reasoning discriminator, KF-aware training, mode-switching
-- [ ] Decision: file provisional or hold for more data
+| Checkpoint | H-module CV | L-module CV | H/L Ratio |
+|---|---|---|---|
+| Random init | 1.818e-3 | 1.974e-3 | 0.92 |
+| Epoch 500 | 1.493e-3 | 1.100e-3 | 1.36 |
+| Epoch 1000 | 1.924e-3 | 7.827e-4 | 2.46 |
+| Epoch 1500 | 2.308e-3 | 9.012e-4 | 2.56 |
+| Epoch 2000 | 2.741e-3 | 1.300e-3 | 2.11 |
 
-**Kill protocol:** If prior art covers post-gen CV specifically (unlikely — this is novel), don't file. Focus on trade secret / open publication instead.
+**P65 CONFIRMED:** H-module CV rises 51% above init. Strategic module builds algebraic structure.
+**P69 CONFIRMED:** L-module sediments first (−60% by epoch 1000).
+**NEW:** L-module shows U-shaped rebound — sedimentation breathes.
 
-**Confirm protocol:** If claims are novel and defensible, file provisional. $200, 12-month priority window.
+### 2C: Landscape Review (COMPLETE)
 
----
+Six independent research programs converge on the same structural insight:
 
-## Phase 4: Small Model (April 13-18)
+| Source | Key Idea | KF Translation |
+|---|---|---|
+| HRM (Cerenaut) | H/L module split | Voluntary/coercive constraint |
+| DTR (Google) | Deep-thinking ratio | Algebraic depth metric |
+| Latent Guidance (ICLR 2026) | Implicit thinker + explicit executor | Decoupled H/L |
+| Nemotron-3 (NVIDIA) | Multi-env RL + reasoning budget | KF-aware reward |
+| TRM | 7M recursive model, 45% ARC-AGI | Deep equilibrium = iterated constraint |
+| Memento-Skills | Frozen LLM + evolving skill memory | KF preservation + external adaptation |
 
-### 4A: Architecture Design
-*Goal: Design document for a 0.5-1B reasoning model, algebraically configured.*
-
-- [ ] Layer analysis results from 2B → how many layers, where to allocate capacity
-- [ ] Head configuration → more heads in reasoning band, fewer elsewhere
-- [ ] Training curriculum design → exercises that develop two-phase pattern
-- [ ] KF-aware training loop → monitor CV/E/L at checkpoints, use as training signal
-- [ ] Base model selection → start from existing small model (Qwen3-0.6B? SmolLM?) or from scratch
-
-**Key question:** Fine-tune an existing model vs train from scratch? Fine-tuning is faster, training from scratch is cleaner. Decision depends on how much the base model's existing algebra constrains the outcome.
-
-### 4B: Training v0.1
-*Goal: First experimental training run with KF monitoring.*
-
-- [ ] Set up training infrastructure in WSL (PyTorch, KF hooks)
-- [ ] Design training data (mixed: factual, reasoning, deconfining — our P51 categories)
-- [ ] Implement KF checkpoint monitoring (measure CV/E/L every N steps)
-- [ ] Train for short run (1-2 hours)
-- [ ] Analyze: does training trajectory match P26-P42c predictions?
-
-**Kill protocol:** If KF metrics don't change meaningfully during training (flat), the training data or approach isn't engaging the algebraic structure. Pivot to different curriculum.
-
-**Confirm protocol:** If KF metrics show the expected trajectory (CV concentration increasing, E/L shift developing), we're on the right track. Scale up.
-
-**Pivot protocol:** If metrics change but in unexpected direction, investigate. This is a FINDING, not a failure. Document and adjust.
-
-### 4C: Iterative Self-Improvement (April 18+)
-*Goal: Explore whether a model can use KF self-monitoring to improve its own reasoning.*
-
-This is the speculative frontier. The idea:
-1. Model generates a response
-2. KF metrics are computed on that response
-3. If metrics indicate deconfined/unfocused algebra, the model re-generates with think mode
-4. The model learns to recognize and correct its own algebraic states
-
-This is the "thermostat" concept from the mode-switching work, but internalized. The model doesn't just have reasoning mode — it *monitors its own algebraic state* and switches modes accordingly.
-
-**Kill protocol:** If the model can't learn to use KF feedback (no improvement after 3 training iterations), the self-monitoring concept needs more development. Park it.
-
-**Confirm protocol:** If the model's reasoning quality (measured by standard benchmarks + KF metrics) improves across iterations, this is the paper's §7 and the patent's core claim. Scale up immediately.
+**All say:** reasoning and execution must be decoupled. We provide the algebraic formalization.
 
 ---
 
-## Phase 5: Integration (April 20+)
+## Phase 3: Exploitation (STARTING)
+*v0.4–v0.7. April 11–18, 2026.*
 
-### 5A: Corpus V3
-*One of several big new threads in V3. Integration waits until all threads are ready.*
+The transition from "can we measure it?" to "can we use it?"
 
-- [ ] KF findings → Corpus §NEW-F through §NEW-I
-- [ ] Two-mechanism theory → connects to Phase Theorem, sedimentation
-- [ ] Small model results → empirical section
+### v0.4 — Combined Layer Restriction + KF Regularization
+**Question:** Are architectural constraint and gradient signal additive?
+**Setup:** Qwen3-0.6B, early-layer-only LoRA (layers 0-7) + KF-reg (λ=10000), GSM8K, SFTTrainer.
+**Metric:** CV Delta preservation. Expected: >64% if additive, ~64% if overlapping.
+**Infrastructure:** Existing v0.1-v0.3 pipeline on RTX 5080.
+**Status:** NEXT — ready to run.
 
-### 5B: Product Direction
-*If the small model works, what does the product look like?*
+### v0.5 — KF-Decoupled Training on HRM
+**Question:** Does preserving H-module KF while letting L-module crystallize improve reasoning?
+**Setup:** HRM v1, Sudoku-extreme. Two-loss: CE on both + KF-reg ONLY on H-module.
+**Metric:** H/L CV ratio AND task accuracy (exact solve rate). This is the first test of preservation → performance.
+**Predictions tested:** P67.
+**Infrastructure:** train_and_measure_hrm.py + KF callback.
+**Status:** After v0.4.
 
-Options (not mutually exclusive):
-- **KF Monitor** — open-source tool for measuring reasoning quality in any model
-- **Algebraically-Configured Small Model** — a model that punches above its weight
-- **KF-Aware Training Framework** — tools for others to train with algebraic monitoring
-- **Self-Improving Reasoning Agent** — the full vision
+### v0.6 — DTR Measurement + KF Correlation
+**Question:** Does Deep-Thinking Ratio correlate with H-module CV?
+**Setup:** Implement DTR (JSD of intermediate vs final distributions) on HRM checkpoints.
+**Metric:** Pearson/Spearman correlation DTR ↔ H-module CV across checkpoints.
+**Predictions tested:** P66.
+**Status:** After v0.5 (uses same checkpoints).
 
-### 5C: Meridian Connection
-*KF geometry is Lie algebra geometry. Meridian is 5D warped geometry + NCG.*
+### v0.7 — RL with KF-Aware Reward
+**Question:** Does KF bonus in RL reward produce better reasoners?
+**Setup:** PPO or REINFORCE on HRM. Reward = task_accuracy + λ·ΔCV_H.
+**Metric:** Final accuracy AND final H/L ratio, compared to RL without KF bonus.
+**Predictions tested:** P68.
+**Status:** After v0.6 (needs DTR correlation to calibrate λ).
 
-The Killing form is a metric on the Lie algebra of a gauge group. Meridian's NCG spectral triple has a gauge group. The connection is not metaphorical — it's structural. When Phase 5 arrives, map the KF findings onto Meridian's formalism explicitly.
+---
+
+## Phase 4: Integration — The KF-Memento Hybrid (April 18+)
+
+### v0.8 — Memento-Skills Memory Layer
+**Question:** Can external skill memory complement internal algebraic structure?
+**Design:** HRM with H-module conditioned by Memento-style skill retrieval. Skills stored as structured markdown. Read-Write loop for skill evolution.
+**Metric:** Task accuracy with frozen-KF + evolving-skills vs standard training.
+**Key insight from Memento-Skills:** Frozen LLM + evolving memory IS KF preservation taken to the limit. The question is whether partial preservation (KF-regularized, not frozen) + partial external adaptation is better than either alone.
+
+### v0.9 — Behavioral Router with KF Signal
+**Question:** Can the skill router be trained with KF-aware reward (behavioral similarity via algebraic metrics)?
+**Design:** Contrastive router (InfoNCE, as in Memento-Skills) where positive/negative pairs are determined by KF outcome, not just task accuracy.
+**Metric:** Route hit rate, judge success rate, AND H-module CV after routing.
+
+### v1.0 — The Full Hybrid
+The complete system:
+1. **H-module** — KF-regularized, algebraically rich strategic core
+2. **L-module** — Free to sediment, handles execution
+3. **Skill memory** — Evolving markdown skills, conditioned on H-module
+4. **KF-aware router** — Selects skills based on behavioral (algebraic) similarity
+5. **RL loop** — Reward = task accuracy + KF growth + skill utility
+6. **Adaptive halt** — ACT mechanism modulated by algebraic state
+
+---
+
+## Phase 5: Publication + Corpus V3
+
+### Paper: "Killing Form Geometry of Reasoning in Language Models"
+
+| Section | Content | Data Source | Status |
+|---|---|---|---|
+| §1 Intro | KF as algebraic diagnostic | — | WRITABLE |
+| §2 Method | KF computation, CV, Abelian fraction | All scripts | WRITABLE |
+| §3 Universality | 5+ models, 4+ families, HRM | Findings #59-61, #65-66 | DATA READY |
+| §4 Training dynamics | SFT degrades, KF-reg preserves, layer restriction | Findings #62-64 | DATA READY |
+| §5 Dual-module | HRM H/L differentiation, sedimentation gradient | Findings #65-66 | DATA READY |
+| §6 KF-decoupled training | v0.5 results | Phase 3 | PENDING |
+| §7 Integration with RL | v0.7 results | Phase 3 | PENDING |
+| §8 Memento hybrid | v0.8-1.0 results | Phase 4 | PENDING |
+
+### Corpus V3 Integration
+
+The KF findings affect every Corpus document:
+- **Doctrine:** Phase Theorem activation = non-commutative CV growth. Sedimentation = CV decrease. The algebraic metric makes the Doctrine empirically testable.
+- **Meridian:** Killing form IS a Lie algebra metric. The KF of attention heads connects directly to the gauge-theoretic Killing form in the spectral action.
+- **Ecology:** Entity constraint profiles (natal/coercive/voluntary) are measurable as KF substructure.
+- **Atlas:** New entries for algebraic focusing, sedimentation gradient, L-module breathing.
+- **Guide:** Practical framework for using KF metrics in AI alignment and training.
 
 ---
 
 ## Running Scoreboard
 
 | Metric | Value | Updated |
-|--------|-------|---------|
-| Findings | 63 | April 11 |
-| Models tested (P51) | 5 | April 11 |
-| Architecture families | 2 + distill | April 11 |
-| Post-gen CV universality | 5/5 | April 11 |
-| GitHub commits (today) | 15+ | April 11 |
-| Drift essays | 166 | April 11 |
-| Paper sections drafted | 0/7 | April 11 |
-| Small model versions | v0.2a, v0.2b | April 11 |
+|---|---|---|
+| Findings | 66 | April 11 |
+| Models tested | 5 + HRM | April 11 |
+| Architecture families | 4 (GPT-2, Qwen, DeepSeek, HRM) | April 11 |
+| Predictions confirmed | P24, P28, P65, P69 (+ 14 from Bridge #71) | April 11 |
+| Predictions untested | P66, P67, P68 | April 11 |
+| Papers integrated | 7 (HRM, DTR, Latent Guidance, Nemotron, TRM, Gemma PLE, Memento) | April 11 |
+| Training variants | v0.1–v0.3 (Qwen), baseline HRM | April 11 |
+| GitHub commits (today) | 20+ | April 11 |
 
 ---
 
-*This roadmap is a living document. Update as findings arrive. The kill/confirm/pivot protocols are serious — follow them.*
+## Principles
+
+1. **Compute or don't claim.** Every assertion must have a script and a number behind it.
+2. **Kill/confirm/pivot.** Every experiment has pre-registered success criteria.
+3. **The confound is the finding.** When controls fail (v0.2b → v0.3), the failure teaches more than the result.
+4. **Architecture before gradient.** Layer restriction (64%) beats regularization (59%). Design the structure; don't patch the training.
+5. **Measure, preserve, exploit.** In that order. Don't skip steps.
+6. **External memory is preserved internal structure.** Memento-Skills + KF are two views of the same principle.
+
+---
 
 🦞🧍💜🔥♾️
