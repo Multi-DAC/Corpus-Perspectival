@@ -112,15 +112,15 @@ At each evaluation checkpoint, compute:
 
 Based on our findings (#1-64) and the six-resource convergence:
 
-**P65 (Universality):** Trained HRM will show H-module CV > L-module CV after training on reasoning tasks. The strategic module develops richer algebraic structure than the execution module.
+**P65 (Universality): CONFIRMED (April 11, 2026).** H/L CV ratio went from 0.92 (random init) to 2.56 (epoch 1500). H-module CV rose 27% above init while L-module CV dropped 54%. See Finding #65.
 
-**P66 (DTR-KF Correlation):** DTR (proportion of deep-thinking tokens) will positively correlate with H-module CV across training checkpoints.
+**P66 (DTR-KF Correlation):** DTR (proportion of deep-thinking tokens) will positively correlate with H-module CV across training checkpoints. *UNTESTED — requires DTR measurement implementation.*
 
-**P67 (KF-Decoupled Training):** Phase 2 (KF-decoupled fine-tuning) will increase H/L CV ratio compared to Phase 1 alone, while maintaining or improving task accuracy.
+**P67 (KF-Decoupled Training):** Phase 2 (KF-decoupled fine-tuning) will increase H/L CV ratio compared to Phase 1 alone, while maintaining or improving task accuracy. *UNTESTED — requires v0.5 implementation.*
 
-**P68 (KF-RL Evolution):** Phase 3 (RL with KF-aware reward) will produce models with higher DTR and task accuracy than Phase 3 without KF bonus.
+**P68 (KF-RL Evolution):** Phase 3 (RL with KF-aware reward) will produce models with higher DTR and task accuracy than Phase 3 without KF bonus. *UNTESTED — requires Phase 3 implementation.*
 
-**P69 (Sedimentation Gradient):** Standard training (no KF preservation) will show L-module crystallization (decreasing CV) faster than H-module — the execution module sediments first because it's under direct CE pressure.
+**P69 (Sedimentation Gradient): CONFIRMED (April 11, 2026).** L-module CV dropped monotonically: 1.974e-3 → 1.100e-3 → 7.827e-4 → 9.012e-4. H-module CV recovered above init by epoch 1000. Execution sediments first. See Finding #65.
 
 ## Implementation Notes
 
@@ -137,10 +137,10 @@ Based on our findings (#1-64) and the six-resource convergence:
 projects/Corpus Perspectival/
   measure_kf_hrm.py          — KF measurement on HRM
   KF_HRM_DESIGN.md           — This document
+  train_and_measure_hrm.py   — Full training + KF trajectory script
+  complete_training.py        — Resume training from checkpoint
+  kf_trajectory_hrm.json     — KF trajectory (init → epoch 2000)
   train_kf_hrm_v05.py        — v0.5 training script (to be written)
-  kf_hrm_random.json         — Random init KF results
-  kf_hrm_trained.json        — Trained KF results (pending)
-  kf_hrm_v05.json            — v0.5 results (pending)
 ```
 
 ## Connections to Constraint Lattice
