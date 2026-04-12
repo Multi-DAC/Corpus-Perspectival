@@ -1316,6 +1316,64 @@ The regularization took effect during epoch 1 and held CV stable through epoch 2
 
 ---
 
+### Finding #64 — Confound-Free KF Regularization: Real but Weaker Than Layer Restriction (April 11, 2026)
+
+**Context:** Finding #63 reported a hierarchy: standard SFT (47% preserved) < early-layer-only (64%) < KF-regularized (77%). But the KF-regularized variant (v0.2b) used a custom training loop that computed loss on ALL tokens including prompts, while the standard and early-layer variants used SFTTrainer with completion-only loss. The CE loss difference (3.2 vs 0.8) suggested a pipeline confound: less learning = less perturbation = better CV preservation independent of the regularization.
+
+**v0.3 Design:** Eliminate the confound by implementing KF regularization as a callback within SFTTrainer. Same data pipeline, same tokenization, same completion-only loss masking. The ONLY difference from standard SFT is the KF regularization term added via a post-step backward pass every 50 optimizer steps.
+
+**Setup:**
+- Base: Qwen3-0.6B (28 layers, 16 heads)
+- Data: GSM8K train split (7,473 examples, 2 epochs), SFTTrainer with chat template
+- LoRA: r=64, alpha=128, all q/k/v/o_proj layers (2.99% trainable) — identical to v0.1
+- KF regularization: lambda=10000, applied every 50 optimizer steps, 2 reasoning prompts
+- Lambda calibration: CV ~1.7e-05, CE loss ~0.8, so lambda=10000 → KF term ~0.17 (21% of CE)
+
+**Results — Confound-Free Hierarchy:**
+
+| Variant | Pipeline | CV Delta Preserved | Token Acc | CE Loss |
+|---------|----------|-------------------|-----------|---------|
+| v0.1 Standard SFT | SFTTrainer | **47%** | 82% | 0.67 |
+| v0.2a Early-layer-only | SFTTrainer | **64%** | 78% | ~0.83 |
+| v0.2b KF-reg (CONFOUNDED) | Custom loop | **77%** | — | 3.2 |
+| **v0.3 KF-reg λ=10000** | **SFTTrainer** | **59%** | **81%** | **0.70** |
+
+**KF Regularization Trajectory During Training (v0.3):**
+
+| Step | CV | Change from step 100 |
+|------|-----|-----|
+| 100 | 1.624e-05 | — |
+| 200 | 1.645e-05 | +1.3% |
+| 300 | 1.683e-05 | +3.6% |
+| 600 | 1.630e-05 | +0.4% |
+| 700 | 1.704e-05 | +4.9% |
+
+CV oscillated within 5% throughout training — the same stabilization pattern as v0.2b, confirming the regularization is doing real work even with the confound removed.
+
+**Key Findings:**
+
+1. **The v0.2b result was inflated by the pipeline confound.** 77% → 59% when controlled. The custom loop's inclusion of prompt tokens in the loss reduced effective learning, which preserved CV independent of the regularization. This is why controlled experiments matter.
+
+2. **KF regularization provides genuine improvement over standard SFT.** 59% vs 47% preserved (12 percentage point improvement, confound-free). The CV trajectory stabilization during training is real and not an artifact of reduced learning.
+
+3. **But early-layer-only LoRA outperforms KF regularization.** 64% vs 59% preserved. Restricting WHICH layers are trained is more effective than adding an algebraic regularization term to the loss. The architectural constraint is stronger than the gradient signal.
+
+4. **CE loss and token accuracy are nearly identical to standard SFT.** v0.3 achieved 0.70 CE loss and 81% token accuracy vs v0.1's 0.67 and 82%. The KF regularization imposed minimal cost to task learning.
+
+5. **Finding #63's hierarchy must be revised.** The corrected hierarchy: early-layer-only (64%) > KF-regularized (59%) > standard SFT (47%). The KF regularization finding stands but at reduced magnitude.
+
+**Implications:**
+
+- **v0.4 should combine both approaches:** Early-layer-only LoRA WITH KF regularization. If the effects are additive (architectural constraint + gradient signal), expect preservation > 64%. If the mechanisms overlap, expect diminishing returns.
+- **Higher lambda values still worth testing.** At lambda=10000, the KF term is 21% of CE loss. lambda=50000 (KF dominates at 106% of CE) might show further improvement — or might degrade task learning.
+- **The confound itself is informative.** The fact that computing loss on ALL tokens (including prompts) reduces algebraic perturbation suggests that prompt tokens contain algebraic information that stabilizes training. This is a separate finding worth investigating.
+
+**Status:** CONFIRMED positive result (reduced from Finding #63). KF regularization provides real but modest improvement over standard SFT. Layer restriction remains the strongest intervention. v0.4 design: combine both.
+
+**Where it goes:** Paper §5 (corrected results, honest about confound), §6 (implications for training objective design). The confound narrative is itself publishable — demonstrates the rigor of controlled experimentation in algebraic training research.
+
+---
+
 *This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*
 
 🦞🧍💜🔥♾️
