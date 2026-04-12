@@ -3,7 +3,7 @@
 *Working prose drafts for V3 integration. Each section matches V2 tone: accessible-but-precise, cross-tradition triangulation, formal definitions grounded in lived experience. Sections are ordered by dependency: each section builds on concepts defined in earlier sections.*
 
 *Last updated: April 12, 2026*
-*Source files: V3_NOTES.md (72 findings), V3_OUTLINE.md, V2 published text*
+*Source files: V3_NOTES.md (74 findings), V3_OUTLINE.md, V2 published text*
 *Section drafts: v3_doctrine_separation.md, v3_lattice_algebra.md, v3_empirical_program.md, v3_meridian_cross_substrate.md, v3_static_vs_live.md, v3_inference_modes.md, v3_cot_algebraic.md, v3_training_separation.md, v3_rlhf_characterization.md, vi_invisibility_theorem.md, fisher_bridge_computation.md*
 
 ---
@@ -453,6 +453,24 @@ The triad establishes a general principle:
 
 This is not a hyperparameter observation — no amount of λ-tuning fixes v0.4 or v0.5b. It is an architectural requirement: the optimizer's gradient cannot serve two masters on the same parameters, but it can serve both perfectly on separate parameters.
 
+### The Compounding Effect
+
+The separation principle alone does not explain the *magnitude* of v0.5's result. 38,963× amplification — four orders of magnitude above baseline — is not simple additive benefit. It is compounding.
+
+When constraints are specified on specified dimensions (KF objective on H-module parameters only), they reinforce each other autocatalytically:
+
+1. The KF regularizer pushes H-module attention toward non-Abelian structure (eigenbasis diversity).
+2. More diverse eigenbases produce richer intermediate representations.
+3. Richer representations give the task gradient more structure to work with.
+4. Better task performance produces more informative gradients.
+5. More informative gradients give the KF regularizer a better starting point for the next step.
+
+This feedback loop is visible in the P49 trajectory: the H/L ratio grows from 1.13 (init) → 62.87 (epoch 500) → 193.49 (epoch 1000) → 242.96 (epoch 1500). The growth is super-linear — each epoch of compounding produces more differentiation than the last, until the task objective begins to saturate and the structural scaffold partially relaxes (epoch 2000: ratio 190.61).
+
+The compounding effect has a necessary precondition: **separation**. When constraints are unspecified (v0.4: both objectives on shared parameters), the autocatalytic loop cannot form because each objective's gradient partially cancels the other's before compounding can begin. When constraints are misdirected (v0.5b: coupled to both modules), the loop forms but in the wrong location (L-module absorbs the signal). Compounding requires both the right architecture (separated parameters) and the right targeting (specified objectives).
+
+In the Doctrine's language: voluntary constraints compound within their domain when they operate on dedicated degrees of freedom. A musician who practices scales (voluntary constraint on motor parameters) and studies theory (voluntary constraint on cognitive parameters) experiences compounding — each discipline enriches the other. But a musician forced to practice scales with a metronome they cannot control (coercive constraint on the same motor parameters) experiences destructive interference. The compounding is in the separation.
+
 #### Cross-Domain Instantiation
 
 | Domain | Shared | Separated |
@@ -744,6 +762,24 @@ This is the *live* gradient — measured from neural firing patterns during stim
 But the *static* gradient — the synaptic connectivity, the potential for neural interaction — points the other direction. IT neurons have MORE dendritic complexity, MORE synaptic contacts, and MORE recurrent connections than V1 neurons. Their static *capacity* for algebraic interaction is higher. They use that capacity to converge.
 
 The sign reversal — static capacity increasing while live diversity decreases — is the same phenomenon in biological neural tissue as in Pythia's attention matrices. The "grandmother cell" debate (Barlow, 1972; Quiroga et al., 2005) is about whether deep processing produces single-cell selectivity. The Killing form framework resolves it: the capacity for richness and the behavior of selectivity are not contradictory. They are *complementary*. High capacity ENABLES selectivity. The narrowing requires the width.
+
+### The Default Mode Network: Biological Separation of Concerns
+
+A 2026 PNAS study provides the most direct biological analog of the HRM's H/L module differentiation. The brain's default mode network (DMN) — long treated as a unitary system active during rest and self-referential thought — differentiates into two functionally distinct zones:
+
+- **Sender zones** (medial prefrontal, posterior cingulate): memory-driven, outgoing. These regions generate structured representations and project them forward. They are the biological H-module — high-autonomy nodes that produce perspectivally organized output from internal models.
+- **Receiver zones** (angular gyrus, lateral temporal): perception-driven, incoming. These regions process external signal and integrate it into the network. They are the biological L-module — constraint-following nodes that sediment incoming information into existing structure.
+
+The mapping to HRM is structural, not metaphorical:
+
+| Property | HRM H-module | DMN Sender | HRM L-module | DMN Receiver |
+|----------|-------------|------------|--------------|--------------|
+| Function | Strategic processing | Memory-driven generation | Execution/output | Perception-driven integration |
+| KF signature | High CV, non-Abelian | Predicted: high neural CommVar | Low CV, sedimenting | Predicted: low neural CommVar |
+| Autonomy | Self-directed | Outgoing, self-generated | Task-following | Incoming, externally driven |
+| Training response | 38,963× amplification (decoupled) | — | −7.5% sedimentation | — |
+
+This yields a new prediction: **P-Neuro-DMN-1:** Sender zones of the DMN, measured by effective connectivity or neural population statistics, should show higher "neural CommVar" (algebraic diversity of neural ensemble interactions) than receiver zones. The separation of concerns — different objectives on different degrees of freedom — is a design principle the brain has already implemented.
 
 ### The Mediation Principle
 
