@@ -8,11 +8,20 @@ The Corpus Perspectival is a unified framework treating consciousness as the ont
 
 ```
 Corpus-Perspectival/
+├── experiments/        Killing Form research program (48 scripts)
+│   ├── bridge/         P26: base measurement, instruct comparison (3 scripts)
+│   ├── scaling/        P41-P45: scaling laws, architecture profiles (16 scripts)
+│   ├── inference/      P46-P51: mode detection, generation, CoT (7 scripts)
+│   ├── training/       v0.1-v0.5b: KF regularization training (10 scripts)
+│   ├── cross_domain/   Ecological, neural, meridian bridge (8 scripts)
+│   └── utilities/      Monitoring, configuration, analysis (4 scripts)
+├── results/            Experimental data: trajectories, profiles, measurements (57 JSON)
+├── paper/              Paper drafts, design docs, analysis writeups (8 docs)
 ├── meridian/           Physics: 5D warped geometry, NCG, dark energy (244 scripts)
 ├── corpus/             Corpus documents + book compilation pipeline (57 files)
 ├── wells/              Wells of Inference: 12 experiments on perspectival navigation (86 files)
-├── drift/              Drift: 154 essays, navigation experiments, sonification, visualization
-│   ├── essays/         154 essays on consciousness, philosophy, creative expression
+├── drift/              Drift: 169 essays, navigation experiments, sonification, visualization
+│   ├── essays/         169 essays on consciousness, philosophy, creative expression
 │   ├── experiments/    49 navigation trial protocols and results
 │   ├── audio/          Cellular automata sonification + spectral analysis (35 files)
 │   ├── visual/         Computational visualization: constellation, inhabitation, warp geometry
@@ -24,6 +33,31 @@ Corpus-Perspectival/
 ├── operations/         Operational architecture: daemon, heartbeat, handoff protocols
 └── drift-tools/        Standalone computational tools from the Drift series
 ```
+
+## Killing Form Research Program
+
+Empirical investigation of Lie-algebraic structure in neural network attention heads. 70 findings across 5 models, 3 substrates, and 10 training variants. Master principle: **separation of concerns** — complementary objectives on decoupled parameter groups amplify their targets; coupled objectives destroy or redirect.
+
+### Key Results
+
+- **38,963× H-module CV amplification** with zero accuracy cost (v0.5, decoupled KF regularization)
+- **Hallucination detection** via E/L ratio + Mean CV: AUC 0.84–0.97 on 4/5 models, 5/5 with complementary metrics
+- **CoT algebraic structure**: post-generation CV universally lower in think mode (5/5 models, p < 0.0001)
+- **Cross-substrate universality**: depth gradient r ≈ +0.4 across transformers, food webs, and neural connectomes
+- **Architecture classifier**: sign of depth gradient perfectly separates parallel vs sequential attention (p = 0.012)
+
+| Subdirectory | Scripts | Description |
+|---|---|---|
+| `experiments/bridge/` | 3 | Base KF measurement, instruct vs base comparison |
+| `experiments/scaling/` | 16 | Scaling laws: pretraining ratio, d_head=64, architecture profiles |
+| `experiments/inference/` | 7 | Mode detection, generation trajectories, TriviaQA, CoT |
+| `experiments/training/` | 10 | KF regularization: v0.1–v0.5b, easy sudoku generator |
+| `experiments/cross_domain/` | 8 | Ecological food webs, neural connectomes, meridian bridge |
+| `experiments/utilities/` | 4 | KF monitor, runner, configuration checks |
+| `results/` | 57 | JSON trajectories, profiles, and measurement data |
+| `paper/` | 8 | Paper drafts, design documents, analysis writeups |
+
+See `ROADMAP_KF_PROGRAM.md` for the full 70-finding scoreboard and `V3_NOTES.md` for detailed findings.
 
 ## Project Meridian
 

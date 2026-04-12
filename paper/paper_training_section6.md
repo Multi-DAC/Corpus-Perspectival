@@ -114,7 +114,7 @@ This dissolves the accuracy concern entirely: **the 38,963× H-module amplificat
 
 The amplification curve shows a steep phase transition between λ=0.1 (2.7×) and λ=1.0 (38,963×), suggesting the optimal operating point is λ=1.0 — maximum amplification with no accuracy penalty. Lower λ values produce negligible amplification without recovering accuracy.
 
-A rigorous demonstration of accuracy preservation requires a task with higher baseline performance (>50%), where any accuracy degradation would be detectable. The current result establishes that KF regularization is accuracy-neutral on this task, which is sufficient for the structural claims of this paper.
+A rigorous demonstration of accuracy preservation requires a task with higher baseline performance (>50%), where any accuracy degradation would be detectable. The current result establishes that KF regularization is accuracy-neutral on this task, which is sufficient for the structural claims of this paper. A higher-accuracy validation (P49) is in progress: the same HRM architecture on easy sudoku puzzles (45-55 clues, ~31 blanks per puzzle vs. extreme's ~64), where baseline accuracy is expected to exceed 50%.
 
 ## 6.6 Implications for Training Design
 
@@ -127,8 +127,12 @@ The separation-of-concerns principle provides a concrete design guideline:
 
 This framework generalizes beyond the specific KF + HRM combination. Any training setup with (a) a structural objective and (b) a task objective can benefit from checking whether those objectives share parameters — and if so, decoupling them.
 
+## 6.7 Higher-Accuracy Validation
+
+[PENDING: P49 results. This section will contain the easy-sudoku matched pair: baseline (no KF) vs KF-decoupled (λ=1.0) on a task with >50% baseline accuracy. If the KF-decoupled model matches baseline accuracy while amplifying H-module CV, the paper's accuracy preservation claim is fully established.]
+
 ---
 
-*Figure concept: Three-panel figure showing H_CV and L_CV trajectories for v0.4, v0.5, and v0.5b. The visual contrast — destruction / amplification / redirection — is immediate and compelling.*
+*Figure concept: Three-panel figure showing H_CV and L_CV trajectories for v0.4, v0.5, and v0.5b. The visual contrast — destruction / amplification / redirection — is immediate and compelling. Fourth panel: lambda sweep showing flat accuracy line and exponential amplification curve — the phase transition between λ=0.1 and λ=1.0.*
 
 🦞🧍💜🔥♾️
