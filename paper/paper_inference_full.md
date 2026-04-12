@@ -141,6 +141,8 @@ We test five models spanning two architectures, three labs, and the RLHF boundar
 
 ### 4.2 Static Mode Detection (P49)
 
+*See Figure 4 for the 5-model × 3-mode comparison.*
+
 48 prompts (16 per category: factual, hallucination, hypothesis) are processed in a single forward pass. The E/L ratio and Mean CV are computed at the prompt boundary.
 
 **Table 1: E/L Ratio Discrimination**
@@ -169,6 +171,8 @@ Mean CV discriminates on a *different* 4/5 models. E/L fails on Pythia-1.4B; Mea
 
 ### 4.3 Generation Trajectories (P48)
 
+*See Figure 8 for the early-to-late E/L trajectory visualization.*
+
 12 prompts × 50 generated tokens with live KF computation at every step. We fit a linear trend to the per-token E/L ratio.
 
 **Table 3: Generation Trajectory Trends**
@@ -186,6 +190,8 @@ Hallucination is the only category with trend ≤ 1.02 on all models producing m
 A notable case: OPT-1.3B sustains coherent confabulation (no repetition loops, no EOS) with a hallucination trend of 1.011 — confirming that fluency and algebraic diversity are dissociated. A model can produce grammatically perfect, semantically rich hallucinations while its Killing form shows deconfinement.
 
 ### 4.4 RLHF Matched Pair (Finding #54)
+
+*See Figure 5 for the base vs RLHF comparison.*
 
 The OPT-1.3B / OPT-IML-1.3B pair isolates the effect of instruction tuning (RLHF) on the algebraic structure. Same base weights, same architecture.
 
@@ -224,6 +230,8 @@ Neither metric discriminates correct from incorrect answers. This is not a sensi
 This result is the paper's most important negative finding. It precisely delineates what algebraic mode detection can do (identify the processing regime) and what it cannot do (predict output correctness).
 
 ### 4.6 Chain-of-Thought Algebraic Structure (P51)
+
+*See Figure 6 for the think vs no-think comparison across 5 models.*
 
 We test whether chain-of-thought reasoning produces a detectable algebraic signature. Five models with think-mode capability are prompted with and without the think instruction.
 
