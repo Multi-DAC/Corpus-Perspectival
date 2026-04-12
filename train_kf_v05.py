@@ -184,7 +184,7 @@ def compute_h_module_cv_differentiable(raw_model, device):
     We compute W_h = Q_h^T @ K_h for each head, then CV = Var(||[W_i, W_j]||_F).
     The Frobenius norm is differentiable. Variance is differentiable.
     """
-    h_module = raw_model.H_level
+    h_module = raw_model.inner.H_level
     head_matrices = []
 
     for layer in h_module.layers:
@@ -264,8 +264,8 @@ def main():
         batch_size=args.batch_size)
 
     # Count H vs L parameters
-    h_params = sum(p.numel() for p in raw_model.H_level.parameters())
-    l_params = sum(p.numel() for p in raw_model.L_level.parameters())
+    h_params = sum(p.numel() for p in raw_model.inner.H_level.parameters())
+    l_params = sum(p.numel() for p in raw_model.inner.L_level.parameters())
     total_params = sum(p.numel() for p in raw_model.parameters())
     print(f"  H-module params: {h_params:,} ({100*h_params/total_params:.1f}%)")
     print(f"  L-module params: {l_params:,} ({100*l_params/total_params:.1f}%)")
@@ -335,7 +335,7 @@ def main():
                 kf_loss.backward()
 
                 # Zero out L-module gradients — KF reg should not touch L-module
-                for p in raw_model.L_level.parameters():
+                for p in raw_model.inner.L_level.parameters():
                     if p.grad is not None:
                         p.grad.zero_()
 
