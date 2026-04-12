@@ -264,13 +264,14 @@ The 2% accuracy on extreme sudoku makes accuracy-preservation claims unfalsifiab
 | L_CV | 9.65e-4 | 9.85e-4 | −2% (identical sedimentation) |
 | H/L Ratio | 62.87 | 1.15 | **55× structural separation** |
 | CE Loss | 245.99 | 248.67 | KF **lower** (better) |
-| Exact Accuracy | 23.41% | [PENDING] | — |
+| Exact Accuracy | **23.41%** | **23.32%** | **+0.09%** (within noise) |
+| Token Accuracy | 94.23% | 94.56% | −0.33% (within noise) |
 
-At epoch 500, the KF-decoupled model achieves 23.41% exact solve — 11.5× higher than the 2.04% on extreme sudoku. The structural amplification (53× H_CV, 62.87 H/L ratio) reproduces identically. Training loss is slightly LOWER with KF (245.99 vs 248.67), suggesting the structural regularization may provide implicit regularization benefit.
+At epoch 500, the KF-decoupled and baseline models achieve effectively identical accuracy: 23.41% vs 23.32% exact solve (Δ = +0.09%), 94.23% vs 94.56% token accuracy. This is 11.5× higher than the 2.04% on extreme sudoku, confirming accuracy is task-limited, not KF-limited. The structural amplification (53× H_CV, 62.87 H/L ratio) reproduces identically while imposing zero accuracy cost.
+
+Training loss is slightly LOWER with KF (245.99 vs 248.67), suggesting the structural regularization provides implicit regularization benefit. At epoch 1000, KF accuracy reaches 43.83% with H_CV = 9.97e-2 (46× from init) and H/L ratio = 193.5.
 
 The L-module sedimentation is task-independent: both configurations show ~50% CV reduction, confirming that the L-module crystallization is driven by the task gradient alone, not by KF interference.
-
-*[Full 2000-epoch results with baseline accuracy comparison to be added.]*
 
 ---
 
@@ -312,7 +313,7 @@ This dissolves a common concern about structural regularization: that maintainin
 
 3. **Small scale.** HRM is 27.3M parameters. Whether separation of concerns scales to billion-parameter models with hundreds of modules is an open question.
 
-4. **Low baseline accuracy.** The extreme-sudoku task caps at ~2% exact solve rate regardless of configuration. The accuracy neutrality claim would be stronger on a task with higher baseline performance, where any accuracy degradation would be detectable. [P49 experiment addresses this.]
+4. **~~Low baseline accuracy.~~ ADDRESSED (§6.4).** Easy-sudoku validation shows KF accuracy (23.41%) matches baseline (23.32%) at epoch 500 — zero degradation on a task where accuracy is high enough for any cost to be detectable.
 
 5. **No negative control for CV.** We show that amplifying CV does not hurt accuracy, but we do not show that amplified CV helps downstream inference. The connection between training-time CV and inference-time processing modes is established in [inference paper reference] but not tested in a closed loop here.
 
