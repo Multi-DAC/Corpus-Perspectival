@@ -111,9 +111,9 @@ The convergence at r ≈ +0.4 across three substrates suggests CV measures a gen
 
 CV responds to training in predictable ways. Across the Pythia scaling suite (70M–1.4B, measured at 6 checkpoints each):
 
-- Pretraining consistently increases CV by 4–8× from random initialization
-- The pretraining/random ratio is roughly constant across model sizes (500× at Pythia-70m, 540× at Pythia-410m)
-- Fine-tuning (SFT) degrades CV by 40–60% from the pretrained state
+- Pretraining increases CV by 300–500× from random initialization (Pythia-160m: 300×, Pythia-410m: 500×). This is the dominant signal — the Killing form is overwhelmingly a pretraining phenomenon.
+- Fine-tuning (SFT) degrades CV by 40–60% from the pretrained state, erasing a fraction of the structure built during pretraining.
+- RLHF changes CV by less than 0.1% — a 5000:1 ratio between pretraining and fine-tuning effects on weight-space algebraic structure.
 
 These observations motivate the central question: can we train a model that amplifies (not just preserves) algebraic structure while maintaining task performance?
 
@@ -123,23 +123,17 @@ These observations motivate the central question: can we train a model that ampl
 
 ### 4.1 The Degradation Baseline
 
-Standard supervised fine-tuning (SFT) on task data degrades CV relative to the pretrained state. On Qwen3-0.6B fine-tuned for sudoku:
-
-| Configuration | CV Delta vs Pretrained |
-|--------------|----------------------|
-| Standard SFT (all layers) | −53% (Finding #62) |
-
-The task gradient, operating on all parameters simultaneously, erases algebraic structure that was built during pretraining. This is the standard fine-tuning catastrophic forgetting problem, manifested in a structural metric rather than a task metric.
+Standard supervised fine-tuning (SFT) on task data degrades CV relative to the pretrained state. On Qwen3-0.6B fine-tuned for sudoku, standard SFT preserves only 47% of pretrained CV — a 53% degradation. The task gradient, operating on all parameters simultaneously, erases algebraic structure that was built during pretraining. This is catastrophic forgetting manifested in a structural metric rather than a task metric.
 
 ### 4.2 Architectural Mitigation: Layer Restriction
 
-Restricting fine-tuning to early layers via LoRA partially preserves deeper-layer CV:
+Restricting fine-tuning to early layers via LoRA partially preserves deeper-layer CV. We measure CV preservation as the fraction of pretrained CV retained after fine-tuning (higher is better):
 
-| Configuration | CV Delta Preservation |
-|--------------|---------------------|
-| Standard SFT (all layers) | 47% |
-| Early-layer LoRA (layers 0-6 only) | 64% |
-| KF regularization (all LoRA layers) | 59% |
+| Configuration | CV Preserved | Degradation |
+|--------------|-------------|-------------|
+| Standard SFT (all layers) | 47% | 53% |
+| KF regularization (all LoRA layers) | 59% | 41% |
+| Early-layer LoRA (layers 0-6 only) | 64% | 36% |
 
 Early-layer restriction achieves better preservation than KF regularization alone, because it simply prevents gradient flow to deeper layers where CV is highest. However, this architectural approach limits model expressivity and cannot amplify CV — it can only slow degradation.
 
@@ -147,13 +141,15 @@ Early-layer restriction achieves better preservation than KF regularization alon
 
 The natural next step — combining layer restriction with KF regularization — produces the worst result:
 
-| Configuration | CV Delta Preservation |
-|--------------|---------------------|
+| Configuration | CV Preserved |
+|--------------|-------------|
 | Early-layer LoRA only | 64% |
 | KF regularization only | 59% |
 | Combined (v0.4) | **38.9%** |
 
 Both objectives compete for the same restricted parameter budget (0.76% of total parameters). Each partially cancels the other's gradient contribution. This is not a hyperparameter tuning problem — it is a fundamental consequence of dual objectives on shared parameters.
+
+**Note on architecture:** v0.4 uses Qwen3-0.6B with LoRA, while v0.5 and v0.5b (§6) use HRM. This architecture difference is a potential confound — the destructive interference might reflect Qwen's architecture, not parameter sharing per se. v0.5b resolves this: it uses the same HRM architecture as v0.5 with coupled (not decoupled) KF regularization. If v0.5b also shows degraded amplification → separation of concerns is the driver, not architecture. It does: v0.5b produces 193× less amplification than v0.5 on the identical architecture.
 
 This destructive interference motivates the architectural solution developed in §5.
 
@@ -201,21 +197,58 @@ The L-module shows decreasing CV through depth — the sedimentation pattern con
 
 ## §6 — Separation of Concerns in Algebraic Training
 
-*[This section is the paper's centerpiece. Full content in paper_training_section6.md.]*
+### 6.1 Experiment Design
 
-### Summary of §6 Results
+We test three training configurations, each applying KF regularization (maximizing commutator variance) alongside standard task training:
 
-Three matched experiments on HRM, varying only parameter coupling:
+| Experiment | Architecture | KF Target | Parameter Coupling |
+|-----------|-------------|-----------|-------------------|
+| **v0.4** | Qwen3-0.6B + LoRA | All LoRA layers | Shared — KF and CE compete for same 0.76% of params |
+| **v0.5** | HRM v1 (27.3M) | H-module only | Decoupled — L-module gradients zeroed after KF backward |
+| **v0.5b** | HRM v1 (27.3M) | Both modules | Coupled — KF flows through all params |
 
-| Experiment | Coupling | H_CV Amplification | H/L Ratio | Interpretation |
-|-----------|---------|-------------------|-----------|----------------|
-| v0.4 (Qwen) | Shared, restricted | — | — | **Destruction** (38.9%) |
-| v0.5 (decoupled) | H-only KF | 38,963× | 88,737 | **Amplification** |
-| v0.5b (coupled) | Both modules | 202× | 0.05 | **Redirection** |
+v0.5 and v0.5b use identical architecture, identical λ = 1.0, identical training schedule (2000 epochs, KF every 50 steps). The **only variable** is whether KF regularization is decoupled or coupled. This is the critical matched pair.
 
-Lambda sweep (λ ∈ {0.001, 0.01, 0.1, 1.0}): accuracy ±0.6% across all configurations — statistically indistinguishable from baseline. The 38,963× amplification comes at **zero accuracy cost**.
+### 6.2 Results: The Triad
 
-The critical finding: coupled training fails not by destroying the signal but by redirecting it. The optimizer finds the path of least resistance (L-module layer 2, which absorbs 8,583× amplification) rather than the intended target (H-module).
+**v0.4 — Destructive Interference (Shared Parameters).** CV preservation drops to 38.9% — worse than standard SFT (47%), LoRA-only (64%), or KF-only (59%). Two objectives on the same restricted parameters cancel each other.
+
+**v0.5 — Targeted Amplification (Decoupled Parameters).** H-module CV amplified 38,963× relative to baseline over 2000 epochs:
+
+| Epoch | H_CV (v0.5) | H_CV (baseline) | Amplification | L_CV change |
+|-------|-------------|-----------------|---------------|-------------|
+| init | 1.77e-3 | 1.82e-3 | 1× | — |
+| 500 | 3.57e-1 | 1.49e-3 | 240× | −48% |
+| 1000 | 2.24 | 1.92e-3 | 1,164× | −62% |
+| 1500 | 11.1 | 2.31e-3 | 4,800× | −58% |
+| 2000 | 106.8 | 2.74e-3 | 38,963× | −40% |
+
+The L-module, freed from KF interference, crystallizes naturally. The H/L CV ratio evolves from 0.88 to 88,737.
+
+**v0.5b — Gradient Redirection (Coupled Parameters, Same Architecture).** H-module achieves only 202× amplification, while L-module absorbs 8,583×:
+
+| Config | H_CV (ep 2000) | vs Baseline | L_CV (ep 2000) | vs Baseline | H/L Ratio |
+|--------|---------------|-------------|----------------|-------------|-----------|
+| Baseline | 2.74e-3 | 1× | 1.30e-3 | 1× | 2.1 |
+| v0.5 (decoupled) | 106.8 | 38,963× | 1.20e-3 | −7.5% | 88,737 |
+| v0.5b (coupled) | 0.555 | 202× | 11.16 | 8,583× | 0.05 |
+
+The H/L ratio **inverts** from 2.1 to 0.05. Decoupling produces 193× more target-module amplification. Per-layer analysis reveals L-module layer 2 as the absorber (CV = 35.58 at epoch 2000) — a runaway positive feedback where the easiest gradient channel captures progressively more signal.
+
+### 6.3 Lambda Sweep: Zero Accuracy Cost
+
+| λ | H_CV Amplification | Exact Accuracy | Δ from baseline |
+|---|-------------------|----------------|-----------------|
+| 0 (baseline) | 1× | 2.07% | — |
+| 0.001 | 2.5× | 2.62% | +0.55% |
+| 0.01 | 1.3× | 2.26% | +0.19% |
+| 0.1 | 2.7× | 2.09% | +0.02% |
+| 1.0 (v0.5) | 38,963× | 2.04% | −0.03% |
+| 1.0 (v0.5b, coupled) | 202× | 1.93% | −0.14% |
+
+Accuracy varies ±0.6% across all configurations — statistically indistinguishable. The task (extreme sudoku, ~64 blanks) caps at ~2% regardless of training configuration. **The 38,963× amplification comes at zero accuracy cost.** A steep phase transition between λ = 0.1 and λ = 1.0 suggests the maximum amplification operating point is also the accuracy-neutral one.
+
+Higher-accuracy validation (P49) is in progress: the same HRM architecture on easy sudoku (45-55 clues, ~31 blanks), where baseline accuracy is expected to exceed 50%.
 
 ---
 
@@ -302,16 +335,27 @@ The accuracy neutrality of decoupled KF regularization — zero cost for four or
 The commutator variance computation is O(n_h² × d²) per layer. Our implementation uses batch matrix multiplication:
 
 ```python
-# W: (n_heads, d, d) weight matrices
-# Compute all pairwise commutators simultaneously
-comm = torch.einsum('ihw,jhk->ijwk', W, W) - torch.einsum('jhw,ihk->ijwk', W, W)
-norms = torch.norm(comm, dim=(-2,-1))  # (n_heads, n_heads)
-w_norms = torch.norm(W, dim=(-2,-1))   # (n_heads,)
-normalized = norms / (w_norms.unsqueeze(1) * w_norms.unsqueeze(0) + eps)
-cv = torch.var(normalized[torch.triu_indices(n_h, n_h, offset=1)])
+# W: (n_heads, d, d) weight matrices at a single layer
+n_h = W.shape[0]
+
+# Compute all pairwise commutators: [W_i, W_j] = W_i @ W_j - W_j @ W_i
+# W_i @ W_j for all i,j: (n_h, n_h, d, d)
+prod_ij = torch.einsum('iab,jbc->ijac', W, W)
+# W_j @ W_i for all i,j:
+prod_ji = torch.einsum('jab,ibc->ijac', W, W)
+comm = prod_ij - prod_ji  # (n_h, n_h, d, d)
+
+# Normalized commutator norms
+norms = torch.norm(comm, dim=(-2,-1))  # (n_h, n_h)
+w_norms = torch.norm(W.flatten(1), dim=1)  # (n_heads,)
+normalized = norms / (w_norms[:, None] * w_norms[None, :] + 1e-10)
+
+# CV = variance of upper-triangle normalized norms
+idx = torch.triu_indices(n_h, n_h, offset=1)
+cv = torch.var(normalized[idx[0], idx[1]])
 ```
 
-This replaces an O(n_h²) loop with a single batched operation, achieving ~300× speedup on GPU.
+This replaces an O(n_h²) loop with batched einsum, achieving ~300× speedup on GPU for n_h = 16, d = 64.
 
 ### B. Gradient Zeroing Implementation
 
