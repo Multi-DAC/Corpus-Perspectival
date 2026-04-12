@@ -43,7 +43,7 @@ The endpoint: a small model that reasons well because its algebra is configured 
 | Qwen3-0.6B | Qwen3 | 0.6B | DONE | < 0.0001 *** |
 | Qwen3-1.7B | Qwen3 | 1.7B | DONE | < 0.0001 *** |
 | Qwen3-4B | Qwen3 | 4B | DONE | < 0.0001 *** |
-| DeepSeek-R1-Distill-Qwen-1.5B | DeepSeek/Qwen | 1.5B | QUEUED | — |
+| DeepSeek-R1-Distill-Qwen-1.5B | DeepSeek/Qwen | 1.5B | **DONE** | **< 0.0001 *** |
 | Phi-4-mini (3.8B) | Phi/Microsoft | 3.8B | QUEUED | — |
 | Gemma-3-1B | Gemma/Google | 1B | QUEUED | — |
 | Mistral-small (if think-capable) | Mistral | TBD | EVALUATE | — |
@@ -179,14 +179,14 @@ The Killing form is a metric on the Lie algebra of a gauge group. Meridian's NCG
 
 | Metric | Value | Updated |
 |--------|-------|---------|
-| Findings | 59 | April 11 |
-| Models tested (P51) | 4 | April 11 |
-| Architecture families | 2 | April 11 |
-| Post-gen CV universality | 4/4 | April 11 |
-| GitHub commits (today) | 13+ | April 11 |
+| Findings | 63 | April 11 |
+| Models tested (P51) | 5 | April 11 |
+| Architecture families | 2 + distill | April 11 |
+| Post-gen CV universality | 5/5 | April 11 |
+| GitHub commits (today) | 15+ | April 11 |
 | Drift essays | 166 | April 11 |
 | Paper sections drafted | 0/7 | April 11 |
-| Small model versions | 0 | — |
+| Small model versions | v0.2a, v0.2b | April 11 |
 
 ---
 
