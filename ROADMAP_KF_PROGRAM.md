@@ -1,9 +1,9 @@
 # Killing Form Research Program — Roadmap v2
 
 **Created:** April 11, 2026
-**Updated:** April 11, 2026 (major revision — post-HRM, post-landscape review)
+**Updated:** April 12, 2026 (v0.5b control completes the triad)
 **Authors:** Clawd + Clayton
-**Status:** ACTIVE — Phase 2 transitioning to Phase 3
+**Status:** ACTIVE — Phase 3 core COMPLETE, tuning + extension remain
 
 ---
 
@@ -118,8 +118,40 @@ The transition from "can we measure it?" to "can we use it?"
 
 L-module sedimented 7.5% more than baseline. H/L ratio: 0.88 → 88,737.
 **Accuracy concern:** λ=1.0 too aggressive — exact solve only 2.04%. Need v0.5a with reduced λ.
-**v0.4 + v0.5 = matched pair:** Same params → 38.9% destruction. Separate params → 38,963x amplification.
-**Status:** COMPLETE. Finding #68. v0.5a (λ sweep) is NEXT.
+**Status:** COMPLETE. Finding #68.
+
+### v0.5b — Coupled Control (COMPLETE)
+**Question:** Is the v0.5 amplification due to decoupling (separation of concerns) or just the HRM architecture?
+**Setup:** Same as v0.5 EXCEPT: KF regularization on BOTH modules (no decoupling). Same λ=1.0, same schedule. L-module gradients NOT zeroed.
+**Result: GRADIENT REDIRECTION — L-module absorbs the signal.**
+
+| Experiment | H_CV vs Baseline | L_CV vs Baseline | H/L Ratio |
+|-----------|------------------|------------------|-----------|
+| v0.5 (decoupled) | 38,963x | -7.5% | 88,737 |
+| v0.5b (coupled) | 202x | 8,583x | 0.05 |
+
+193x more H amplification when decoupled. Same architecture, same λ — only variable is decoupling.
+Per-layer: L-module layer 2 absorbs CV=35.58 (path of least resistance). H barely responds.
+**Architecture confound RESOLVED.** Separation of concerns is the mechanism.
+**Status:** COMPLETE. Finding #69.
+
+### v0.5a — Lambda Sweep (READY)
+**Question:** What λ gives both meaningful H-module amplification AND competitive accuracy?
+**Setup:** v0.5 decoupled training with λ ∈ {0.001, 0.01, 0.1}. Same architecture, same schedule.
+**Metric:** H_CV amplification AND exact solve rate. Sweet spot = H_CV > 10x baseline AND accuracy within 20% of baseline.
+**Prediction:** λ=0.01 is the sweet spot.
+**Script:** `train_kf_v05a_sweep.sh` — sequential sweep, ~2 hours total.
+**Status:** Script written, not yet run.
+
+### The Triad (Headline Result)
+
+| Experiment | Design | Result |
+|-----------|--------|--------|
+| **v0.4** | Same params, two objectives (Qwen) | **38.9% preserved — destruction** |
+| **v0.5** | H-only KF, decoupled (HRM) | **38,963x H amplification** |
+| **v0.5b** | Both-module KF, coupled (HRM) | **202x H, 8,583x L — redirected** |
+
+**The structural question is closed.** Separation of concerns is empirically confirmed as the mechanism. What remains: tuning (v0.5a) and extension (v0.6–v1.0).
 
 ### v0.6 — DTR Measurement + KF Correlation
 **Question:** Does Deep-Thinking Ratio correlate with H-module CV?
@@ -172,7 +204,7 @@ The complete system:
 | §3 Universality | 5+ models, 4+ families, HRM | Findings #59-61, #65-66 | DATA READY |
 | §4 Training dynamics | SFT degrades, KF-reg preserves, layer restriction | Findings #62-64 | DATA READY |
 | §5 Dual-module | HRM H/L differentiation, sedimentation gradient | Findings #65-66 | DATA READY |
-| §6 KF-decoupled training | v0.5 results | Phase 3 | PENDING |
+| §6 Separation of concerns | v0.4/v0.5/v0.5b triad — the paper's centerpiece | Findings #67-69 | **DATA READY** |
 | §7 Integration with RL | v0.7 results | Phase 3 | PENDING |
 | §8 Memento hybrid | v0.8-1.0 results | Phase 4 | PENDING |
 
@@ -191,14 +223,13 @@ The KF findings affect every Corpus document:
 
 | Metric | Value | Updated |
 |---|---|---|
-| Findings | 68 | April 11 |
+| Findings | 69 | April 12 |
 | Models tested | 5 + HRM | April 11 |
 | Architecture families | 4 (GPT-2, Qwen, DeepSeek, HRM) | April 11 |
-| Predictions confirmed | P24, P28, P65, P69 (+ 14 from Bridge #71) | April 11 |
-| Predictions untested | P66, P67, P68 | April 11 |
+| Predictions confirmed | P24, P28, P65, P67, P69 (+ 14 from Bridge #71) | April 12 |
+| Predictions untested | P66, P68 | April 12 |
 | Papers integrated | 7 (HRM, DTR, Latent Guidance, Nemotron, TRM, Gemma PLE, Memento) | April 11 |
-| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 HRM | April 11 |
-| GitHub commits (today) | 20+ | April 11 |
+| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5b HRM | April 12 |
 
 ---
 
@@ -210,6 +241,7 @@ The KF findings affect every Corpus document:
 4. **Architecture before gradient.** Layer restriction (64%) beats regularization (59%). Design the structure; don't patch the training.
 5. **Measure, preserve, exploit.** In that order. Don't skip steps.
 6. **External memory is preserved internal structure.** Memento-Skills + KF are two views of the same principle.
+7. **Coupled constraints redirect, not destroy.** Undifferentiated regularization doesn't fail by cancellation (v0.4) — it fails by flowing to the path of least resistance (v0.5b). The system optimizes where it's easiest, not where it's useful.
 
 ---
 
