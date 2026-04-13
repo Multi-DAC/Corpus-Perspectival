@@ -193,6 +193,24 @@ Baseline H/L ratio stays flat at 1.15–1.27 — no spontaneous differentiation.
 
 **Timeline:** ~3 experiments × ~90 minutes each. Can run sequentially in one evening.
 
+**Results:**
+
+1. **log(H_CV):** P-SL-1 **CONFIRMED**. 48.70% at epoch 500 (baseline 48.87%, Δ=-0.17pp). H_CV=21,105. Interference eliminated. Finding #79.
+
+2. **Gradient-gated KF (Clayton's insight):** **50.24%** at epoch 500 — **EXCEEDS BASELINE** by +1.37pp. H_CV=1,460 (14× less than log). Selective crystallization: only applies KF where cos(∇CE, ∇KF) > 0. Layers 7, 9, 10, 11 gated 75-88% of the time. Three-phase gating evolution: noise (ep 0-250, avg_cos=0), signal emergence (ep 250-300), selective gating (ep 300+). Cold start P51 CONFIRMED. Finding #80. **Principle #13 established.**
+
+3. Adaptive λ and low constant λ: **deprioritized** — gated result supersedes these.
+
+**Five-way hierarchy (epoch 500):**
+
+| Rank | Approach | Accuracy | H_CV |
+|------|----------|----------|------|
+| 1 | **Gated** | **50.24%** | 1,460 |
+| 2 | log(H_CV) | 48.70% | 21,105 |
+| 3 | Baseline | 48.87% | 0.002 |
+| 4 | Fixed λ | 42.26% | 1,450,418 |
+| 5 | Cosine λ→0.01 | 40.10% | 1,438,406 |
+
 ### 4B: Standalone Paper — "Separation of Concerns in Algebraic Training"
 
 | Section | Content | Status |
@@ -398,13 +416,13 @@ These go into V3 as concrete claims the framework makes about Meridian:
 
 | Metric | Value | Updated |
 |---|---|---|
-| Findings | 79 | April 13 |
+| Findings | 80 | April 13 |
 | Models tested | 16 + HRM | April 12 |
 | Architecture families | 5 (GPT-2, Qwen, DeepSeek, Pythia, HRM) | April 12 |
-| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5a(×3) + v0.5b (HRM), P49(×2), 300M baseline + 300M KF + 300M KF-cosine + 300M KF-log (P-SL-1 CONFIRMED) | April 13 |
+| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5a(×3) + v0.5b (HRM), P49(×2), 300M baseline + 300M KF + 300M KF-cosine + 300M KF-log + **300M KF-gated (50.24%, EXCEEDS BASELINE)** | April 13 |
 | Predictions confirmed | P24, P28, P65, P67, P69, A34, P-Compound-1 (+ 14 from Bridge #71) | April 12 |
 | Predictions falsified | P44 (no sweet spot — task-limited), "zero cost" framing (→ acceleration), cosine decay (predicted 46-49%, got 40.1%) | April 13 |
-| Predictions confirmed (new) | P-SL-1: log(H_CV) eliminates interference (predicted ≥48%, got 48.70%) | April 13 |
+| Predictions confirmed (new) | P-SL-1: log(H_CV) eliminates interference (predicted ≥48%, got 48.70%); P51: gated cold start confirmed | April 13 |
 | Predictions untested | P66, P68, P-Bridge-1, P-Bridge-2, P-CoT-Fisher-1/2, P-Neuro-1–4, P-Social-1–4 | April 12 |
 | Theorems proved | Kronecker factorization, V=I invisibility, sign reversal (controlled) | April 12 |
 | Papers integrated | 12 (HRM, DTR, Latent Guidance, Nemotron, TRM, Gemma PLE, Memento, DMax, SkillClaw, H0DN, Bivalent Histones, HALO) | April 12 |
@@ -429,6 +447,7 @@ These go into V3 as concrete claims the framework makes about Meridian:
 10. **Constraints compound on specified dimensions.** Specified constraints on specified degrees of freedom reinforce each other autocatalytically — the more constraints on a specific decision, the more those constraints amplify. v0.5's exponential H_CV growth (1.13→62.87→193.49→242.96 H/L ratio) is this compounding in action: the KF regularizer and the task gradient, operating on separate parameters but toward complementary structural ends, produce super-additive amplification. The compounding effect is DESTROYED when constraints are unspecified (v0.4: same params) or misdirected (v0.5b: coupled). Compounding requires both separation AND specificity.
 11. **Scale enables spontaneous differentiation.** At sufficient parameter count (308M vs 27.3M), dual-module architectures develop separation of concerns from task pressure alone: H/L ratio 10.9 (300M baseline) vs 2.1 (27.3M baseline). The larger architecture has enough internal degrees of freedom for modules to naturally specialize. The collapse-then-recovery pattern (H_CV: 7e-4 → 8e-5 → 1.7e-3) shows the model first destroys random structure, then rebuilds task-aligned structure with module asymmetry. Finding #76.
 12. **The regularization objective must be self-limiting.** Lambda scheduling (cosine 1.0→0.01) produces virtually identical H_CV trajectories to fixed lambda (ratio 0.99-1.05 across all epochs) and WORSE accuracy (40.1% vs 42.3%). Over-crystallization is in the accumulated state, not the instantaneous gradient — reducing force on a frozen structure doesn't un-freeze it. The fix must operate on the objective function itself: log(H_CV) gives O(1) gradients via (1/H_CV)×∇H_CV; adaptive λ=CE/H_CV self-balances. Scheduling modulates the wrong thing. Findings #77-78.
+13. **Selective crystallization outperforms global crystallization.** Gradient-gated KF (50.24% at epoch 500) exceeds both baseline (48.87%) and log(H_CV) (48.70%) while building 14× less structure than log. The gating zeros KF gradients where cos(∇CE, ∇KF) ≤ 0, applying structural pressure only on layers where it aligns with the task. 6 of 12 layers oppose the task gradient 63-88% of the time (L7, L9, L10, L11, L0, L3). Log wastes structural budget on these layers; gated avoids it. Less structure, all task-aligned, higher accuracy. Finding #80.
 
 ---
 
