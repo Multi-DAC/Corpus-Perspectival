@@ -398,12 +398,13 @@ These go into V3 as concrete claims the framework makes about Meridian:
 
 | Metric | Value | Updated |
 |---|---|---|
-| Findings | 78 | April 12 |
+| Findings | 79 | April 13 |
 | Models tested | 16 + HRM | April 12 |
 | Architecture families | 5 (GPT-2, Qwen, DeepSeek, Pythia, HRM) | April 12 |
-| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5a(×3) + v0.5b (HRM), P49(×2), 300M baseline + 300M KF + 300M KF-cosine | April 12 |
+| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5a(×3) + v0.5b (HRM), P49(×2), 300M baseline + 300M KF + 300M KF-cosine + 300M KF-log (P-SL-1 CONFIRMED) | April 13 |
 | Predictions confirmed | P24, P28, P65, P67, P69, A34, P-Compound-1 (+ 14 from Bridge #71) | April 12 |
-| Predictions falsified | P44 (no sweet spot — task-limited), "zero cost" framing (→ acceleration), cosine decay (predicted 46-49%, got 40.1%) | April 12 |
+| Predictions falsified | P44 (no sweet spot — task-limited), "zero cost" framing (→ acceleration), cosine decay (predicted 46-49%, got 40.1%) | April 13 |
+| Predictions confirmed (new) | P-SL-1: log(H_CV) eliminates interference (predicted ≥48%, got 48.70%) | April 13 |
 | Predictions untested | P66, P68, P-Bridge-1, P-Bridge-2, P-CoT-Fisher-1/2, P-Neuro-1–4, P-Social-1–4 | April 12 |
 | Theorems proved | Kronecker factorization, V=I invisibility, sign reversal (controlled) | April 12 |
 | Papers integrated | 12 (HRM, DTR, Latent Guidance, Nemotron, TRM, Gemma PLE, Memento, DMax, SkillClaw, H0DN, Bivalent Histones, HALO) | April 12 |
