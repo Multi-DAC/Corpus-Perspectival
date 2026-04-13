@@ -135,11 +135,13 @@ Baseline H/L ratio stays flat at 1.15–1.27 — no spontaneous differentiation.
 
 **Experiments (priority order):**
 
-1. **300M baseline on hard sudoku** (~1-2 days). The 27M model maxes at ~2% on hard sudoku (task beyond natal capacity). If 300M reaches substantial accuracy, hard sudoku is now within natal capacity — enabling the full acceleration test.
+1. **300M baseline on hard sudoku** — COMPLETE. 48.87% token accuracy at epoch 500. Hard sudoku is within natal capacity at 300M. P-Scale-1 CONFIRMED.
 
-2. **300M KF-decoupled on hard sudoku** (~1-2 days). Same λ=1.0, H-module only. If acceleration appears on hard sudoku at 300M where it was absent at 27M, that validates the constraint lattice prediction (B₀ ≥ E ≥ V: when B₀ is sufficient, V has room to organize and the compounding loop activates).
+2. **300M KF-decoupled on hard sudoku (fixed λ=1.0)** — COMPLETE. Three-phase behavior discovered: acceleration (+6.5pp at 300), peak (400), interference (-6.6pp at 500). KF accelerates early but over-crystallizes late. Finding #77.
 
-3. **300M lambda sweep on hard sudoku** (~3-5 days). λ ∈ {0.001, 0.01, 0.1, 1.0}. At 27M, the sweep was flat because the task was beyond capacity. At 300M within capacity, **the sweet spot should emerge** (original prediction P44, falsified at 27M, potentially confirmed at 300M). This answers Clayton's question about whether lambda matters at scale.
+3. **300M KF-decoupled (cosine λ=1.0→0.01)** — COMPLETE. Virtually identical H_CV to fixed lambda (ratio 0.99-1.05). WORSE accuracy (40.1% vs 42.3%). Over-crystallization is in the state, not the gradient. Finding #78. **→ Spawned Phase 4A-ter: self-limiting objective.**
+
+4. **300M lambda sweep on hard sudoku** (~3-5 days). λ ∈ {0.001, 0.01, 0.1, 1.0}. At 27M, the sweep was flat because the task was beyond capacity. At 300M within capacity, **the sweet spot should emerge** (original prediction P44, falsified at 27M, potentially confirmed at 300M). This answers Clayton's question about whether lambda matters at scale. **Note:** P-SL-3 (low constant λ=0.01) in Phase 4A-ter partially addresses this.
 
 4. **300M H/L ratio optimization** (optional, ~3-5 days). Current: 50/50 (equal modules). Test: 60/40, 70/30, 40/60 H/L splits. The "perfect ratio of regularization" may depend on the balance between strategic and execution capacity.
 
@@ -155,6 +157,41 @@ Baseline H/L ratio stays flat at 1.15–1.27 — no spontaneous differentiation.
 **Timeline:** ~1 week total. Architecture scaling: hours. Each experiment: 1-2 days. Can overlap.
 
 **Gate for publication:** If P-Scale-1 and P-Scale-2 confirm, the paper and patent are validated at commercially relevant scale. If either fails, we need to understand why before publishing scaling claims.
+
+### 4A-ter: Self-Limiting Objective (NEW — from Finding #78)
+
+**Rationale:** Finding #78 proved that lambda scheduling cannot fix over-crystallization because the problem is in the accumulated state, not the instantaneous gradient. Cosine decay (λ=1.0→0.01) produced virtually identical H_CV to fixed lambda (ratio 0.99-1.05 across all epochs) and WORSE accuracy (40.1% vs 42.3% vs 48.9% baseline). The fix must operate on the objective function itself.
+
+**The insight:** Linear H_CV in the loss means gradient ∝ ∇H_CV, which grows exponentially as structure compounds. The loss term kf_loss = -λ·H_CV produces gradients that scale with H_CV's magnitude — at epoch 500, this is ~1.45M× larger than at init. No schedule can compensate for exponential growth in the objective itself.
+
+**Experiments (priority order):**
+
+1. **log(H_CV) objective** — maximize log(H_CV) instead of H_CV.
+   - Loss term: `kf_loss = -λ · log(H_CV)`
+   - Gradient: `(1/H_CV) × ∇H_CV` — naturally O(1) regardless of H_CV magnitude
+   - Self-limiting: diminishing returns on further structural amplification
+   - Script modification: ~5 lines (replace `-lambda * h_cv` with `-lambda * log(h_cv)`)
+   - **Prediction P-SL-1:** Acceleration phase preserved (token_acc ≥ 44% at epoch 300), interference eliminated (token_acc ≥ 48% at epoch 500). H_CV still grows but at polynomial rate, not exponential.
+
+2. **Adaptive λ = CE_loss / H_CV** — dynamically balance the two objectives.
+   - λ drops by the same factor H_CV grows, keeping kf_loss ≈ CE_loss throughout
+   - More complex but directly addresses the balance point
+   - **Prediction P-SL-2:** Accuracy tracks baseline closely throughout, H_CV grows sub-exponentially. The "peacock tail" problem is solved by responsive coupling.
+
+3. **Low constant λ=0.01** — simple control experiment.
+   - Tests whether the magnitude alone (not the schedule shape) is the issue
+   - If λ=0.01 constant outperforms cosine (which starts at 1.0), confirms early crystallization damage
+   - **Prediction P-SL-3:** Better than cosine (>40.1%), possibly comparable to baseline (~48%) but with reduced H_CV amplification. The clean control.
+
+**Key methodological insight:** This phase exemplifies Principle #12 revised — "the objective must be self-limiting." All three experiments test different ways of making the KF objective naturally bounded, rather than trying to tame an unbounded objective through scheduling.
+
+**What to measure:**
+- Epoch-by-epoch accuracy comparison (three-phase test)
+- H_CV growth rate (exponential → polynomial/logarithmic?)
+- H_CV / fixed-lambda H_CV ratio at each epoch (should diverge, unlike cosine which stayed at 1.0)
+- Gradient magnitude of kf_loss term over training (should be O(1) for log, O(H_CV) for linear)
+
+**Timeline:** ~3 experiments × ~90 minutes each. Can run sequentially in one evening.
 
 ### 4B: Standalone Paper — "Separation of Concerns in Algebraic Training"
 
