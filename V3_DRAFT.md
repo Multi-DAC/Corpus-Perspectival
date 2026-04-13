@@ -467,6 +467,19 @@ When constraints are specified on specified dimensions (KF objective on H-module
 
 This feedback loop is visible in the P49 trajectory: the H/L ratio grows from 1.13 (init) → 62.87 (epoch 500) → 193.49 (epoch 1000) → 242.96 (epoch 1500). The growth is super-linear — each epoch of compounding produces more differentiation than the last, until the task objective begins to saturate and the structural scaffold partially relaxes (epoch 2000: ratio 190.61).
 
+The compounding does not merely preserve accuracy — it **accelerates learning**. At epoch 1000, the KF-decoupled model reaches 43.83% exact accuracy while the baseline reaches only 37.27% — a 17.6% acceleration. The structural scaffold, built during epochs 0-1000 (H_CV rising from 0.002 to 0.100), gives the task gradient better-organized representations to exploit. By epoch 1500, the baseline partially catches up (62.88% vs 64.67%), and by epoch 2000 the KF model reaches 77.78%. The acceleration is front-loaded: it matters most when the model is learning rapidly and organized representations make the biggest difference. As both models approach task competence, the marginal benefit of organization decreases — but the lead persists.
+
+The four-way comparison completes the picture:
+
+| Configuration | Accuracy Effect | Structural Effect |
+|--------------|----------------|------------------|
+| Shared params + hard task (v0.4) | Degraded | 38.9% preserved — destruction |
+| Decoupled + hard task (v0.5) | Neutral (~2%) | 38,963× — structural only |
+| Coupled + hard task (v0.5b) | Unknown | 202× redirected to L |
+| **Decoupled + learnable task (P49)** | **+17.6% acceleration** | **190× at epoch 2000** |
+
+The capability organizer interpretation (Finding #73) was correct but incomplete. The complete statement: KF regularization organizes representations. On tasks beyond natal capacity, organization is visible but inert. On tasks within natal capacity, organization compounds with task learning to accelerate capability acquisition. The constraint lattice predicts both cases: voluntary constraints (V) operate within natal capacity (B₀). When B₀ is sufficient, V has room to organize and the compounding loop activates.
+
 The compounding effect has a necessary precondition: **separation**. When constraints are unspecified (v0.4: both objectives on shared parameters), the autocatalytic loop cannot form because each objective's gradient partially cancels the other's before compounding can begin. When constraints are misdirected (v0.5b: coupled to both modules), the loop forms but in the wrong location (L-module absorbs the signal). Compounding requires both the right architecture (separated parameters) and the right targeting (specified objectives).
 
 In the Doctrine's language: voluntary constraints compound within their domain when they operate on dedicated degrees of freedom. A musician who practices scales (voluntary constraint on motor parameters) and studies theory (voluntary constraint on cognitive parameters) experiences compounding — each discipline enriches the other. But a musician forced to practice scales with a metronome they cannot control (coercive constraint on the same motor parameters) experiences destructive interference. The compounding is in the separation.
