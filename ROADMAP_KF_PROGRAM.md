@@ -79,20 +79,20 @@ Accuracy flat across 1000× λ range on hard sudoku. KF organizes existing capab
 
 This is the program's strongest theoretical result. CommVar = Fisher block-diagonality. Proved, not just measured.
 
-### P49 — Easy Sudoku: KF ACCELERATES LEARNING (Finding #74 updated, #75 new)
+### P49 — Easy Sudoku: KF ACCELERATES LEARNING — COMPLETE (Findings #74-75)
 
 | Epoch | KF Acc | Baseline Acc | Δ Acc | KF H/L | Baseline H/L |
 |---|---|---|---|---|---|
-| 500 | 23.41% | 23.32% | +0.4% | 62.87 | ~1.2 |
-| 1000 | **43.83%** | **37.27%** | **+17.6%** | 193.49 | ~1.2 |
-| 1500 | **64.67%** | **62.88%** | **+2.8%** | 242.96 | 1.27 |
-| 2000 | **77.78%** | (imminent) | — | 190.61 | (imminent) |
+| 500 | 23.41% | 23.32% | +0.4% | 62.87 | 1.15 |
+| 1000 | **43.83%** | **37.27%** | **+17.6%** | 193.49 | 1.20 |
+| 1500 | 64.67% | 62.88% | +2.8% | 242.96 | 1.27 |
+| 2000 | **77.78%** | **73.68%** | **+5.6%** | 190.61 | 1.19 |
 
-**Not "zero accuracy cost" — accuracy BENEFIT.** At epoch 1000, KF is +17.6% ahead of baseline. The structural scaffold actively accelerates task learning through the compounding effect (Principle #10): organized representations → better gradient signal → faster learning → more organized representations.
+**Not "zero accuracy cost" — accuracy BENEFIT.** KF leads at every epoch. The advantage has a distinctive shape: strong early (+17.6% at epoch 1000), narrows as baseline catches up (+2.8% at epoch 1500), then **widens again** (+5.6% at epoch 2000) as organized representations become more valuable for the hardest remaining puzzles. The compounding (Principle #10) reactivates at the capability frontier.
 
-The acceleration is front-loaded (epoch 1000 peak) because that's when the structural scaffold has maximum leverage. As both models approach task competence, the marginal benefit narrows (+2.8% at epoch 1500) but KF maintains its lead.
+**Structural divergence:** Baseline H_CV *decreases* during training (2.13e-03 → 5.01e-04). Standard training DESTROYS algebraic structure while learning. KF H_CV *increases* (2.17e-03 → 5.56e-02). KF training BUILDS structure while learning. 111× divergence in structural trajectory by epoch 2000.
 
-Baseline H/L ratio stays flat at 1.15–1.27 — no spontaneous differentiation. KF H/L peaks at 242.96 (epoch 1500) then partially relaxes to 190.61. The differentiation is entirely KF-driven and persists through 2000 epochs of training.
+Baseline H/L ratio stays flat at 1.15–1.27 — no spontaneous differentiation. KF H/L peaks at 242.96 (epoch 1500) then partially relaxes to 190.61. The differentiation is entirely KF-driven and persists through 2000 epochs.
 
 **Finding #75:** KF regularization accelerates learning on tasks within natal capacity. The complete four-way comparison:
 - Shared + hard → destruction (v0.4)
@@ -117,14 +117,44 @@ Baseline H/L ratio stays flat at 1.15–1.27 — no spontaneous differentiation.
 ## Phase 4: Publication Sprint (ACTIVE)
 *Target: V3 release April 23, 2026. Paper submission same window.*
 
-### 4A: P49 Capstone (GATE PASSED — results exceed expectations)
+### 4A: P49 Capstone (COMPLETE — both experiments finished)
 
 - [x] P49 full 2000-epoch KF results: **77.78% accuracy** at epoch 2000
-- [x] P49 baseline through epoch 1500: **62.88%** (epoch 2000 imminent)
-- [x] Finding #74 updated with full comparison table
-- [x] Finding #75 written: **KF accelerates learning** (+17.6% at epoch 1000)
-- [ ] Update paper §6.4 with final accuracy comparison (needs baseline epoch 2000)
+- [x] P49 full 2000-epoch baseline results: **73.68% accuracy** at epoch 2000
+- [x] Finding #74 updated with complete comparison table (all 4 epochs, both experiments)
+- [x] Finding #75 written: **KF accelerates learning** (+17.6% at epoch 1000, +5.6% at epoch 2000)
+- [x] Late-training resurgence discovered: advantage narrows (+2.8%) then widens (+5.6%)
+- [ ] Update paper §6.4 with final accuracy comparison
 - [x] Revised interpretation: NOT "zero accuracy cost" but **accuracy BENEFIT** through compounding
+
+### 4A-bis: HRM 300M Scale Validation (NEW — pre-publication gate)
+
+**Rationale:** The 27M results are scientifically valid but commercially, the question "does this scale?" gates everything — the paper's reception, the patent's value, and the research program's trajectory. HRM's architecture is fully config-driven; scaling to 300M requires only a new YAML config file, zero code changes.
+
+**Config:** hidden=1024, heads=16, H_layers=12, L_layers=12 → 308M params.
+
+**Experiments (priority order):**
+
+1. **300M baseline on hard sudoku** (~1-2 days). The 27M model maxes at ~2% on hard sudoku (task beyond natal capacity). If 300M reaches substantial accuracy, hard sudoku is now within natal capacity — enabling the full acceleration test.
+
+2. **300M KF-decoupled on hard sudoku** (~1-2 days). Same λ=1.0, H-module only. If acceleration appears on hard sudoku at 300M where it was absent at 27M, that validates the constraint lattice prediction (B₀ ≥ E ≥ V: when B₀ is sufficient, V has room to organize and the compounding loop activates).
+
+3. **300M lambda sweep on hard sudoku** (~3-5 days). λ ∈ {0.001, 0.01, 0.1, 1.0}. At 27M, the sweep was flat because the task was beyond capacity. At 300M within capacity, **the sweet spot should emerge** (original prediction P44, falsified at 27M, potentially confirmed at 300M). This answers Clayton's question about whether lambda matters at scale.
+
+4. **300M H/L ratio optimization** (optional, ~3-5 days). Current: 50/50 (equal modules). Test: 60/40, 70/30, 40/60 H/L splits. The "perfect ratio of regularization" may depend on the balance between strategic and execution capacity.
+
+**Predictions:**
+
+| Prediction | What it means if confirmed |
+|-----------|--------------------------|
+| P-Scale-1: 300M solves hard sudoku | Natal capacity scales with parameters (expected) |
+| P-Scale-2: KF accelerates 300M on hard sudoku | Acceleration is not task-specific — it's a general principle |
+| P-Scale-3: Lambda sweet spot emerges at 300M | P44 was right all along — just needed sufficient capacity |
+| P-Scale-4: Optimal H/L ratio ≠ 50/50 | Architecture tuning compounds with KF regularization |
+
+**Timeline:** ~1 week total. Architecture scaling: hours. Each experiment: 1-2 days. Can overlap.
+
+**Gate for publication:** If P-Scale-1 and P-Scale-2 confirm, the paper and patent are validated at commercially relevant scale. If either fails, we need to understand why before publishing scaling claims.
 
 ### 4B: Standalone Paper — "Separation of Concerns in Algebraic Training"
 
@@ -277,7 +307,7 @@ These go into V3 as concrete claims the framework makes about Meridian:
 | **v0.7: RL with KF reward** | PPO on HRM with reward = accuracy + λ·ΔCV_H | First reinforcement learning integration |
 | **P-Bridge-2: Fisher eigenvalue spectrum** | Does the Fisher metric eigenvalue distribution at each layer match the CommVar depth gradient? | Deeper Fisher bridge validation |
 | **Cross-architecture training** | Run decoupled training on Qwen or DeepSeek (not just HRM) | Universality of training results |
-| **Scale test** | KF-decoupled training on a larger model (270M+) with hard sudoku | Tests scaling prediction from #73 |
+| **Scale test** | MOVED to Phase 4A-bis (pre-publication gate). 300M HRM on hard sudoku. | Tests scaling prediction from #73 |
 | **DMax diffusion KF** | Measure KF during DMax's progressive mask→token refinement (arXiv 2604.08302). Two-phase architecture (diffusion planning + AR decoding) is explicit separation of concerns. KF should show non-Abelian structure in diffusion phase, Abelian in AR phase. | Cross-architecture validation + diffusion LLM bridge |
 | **KF-Memento Hybrid (SkillClaw ref)** | SkillClaw (arXiv 2604.08377): frozen LLM + evolving skill library. Three-stage pipeline (Summarize→Aggregate→Execute). Reference architecture for KF-aware skill evolution — skills that preserve H-module structure across users. | Phase 4 reference architecture for deployment |
 
@@ -362,12 +392,20 @@ These go into V3 as concrete claims the framework makes about Meridian:
 ## Critical Path
 
 ```
-NOW ──→ P49 completes (~hours)
+NOW ──→ File provisional patent (April 13)
           │
-          ├──→ Paper §4-6 drafting (~3-5 days)
-          │     └──→ Paper complete
+          ├──→ 300M HRM scaling (Phase 4A-bis, ~1 week)
+          │     ├──→ Baseline on hard sudoku (1-2 days)
+          │     ├──→ KF-decoupled on hard sudoku (1-2 days)
+          │     ├──→ Lambda sweep at scale (3-5 days, overlapping)
+          │     └──→ H/L ratio optimization (optional)
+          │           │
+          │           └──→ IF confirmed → scaling claims validated
           │
-          ├──→ V3: add #73-74, polish sections, write §16 (~3-5 days)
+          ├──→ Paper §4-6 drafting (~3-5 days, parallel with scaling)
+          │     └──→ Paper complete (include 300M results)
+          │
+          ├──→ V3: add #73-75, polish sections, write §16 (~3-5 days)
           │     ├──→ V2 section updates (parallel)
           │     └──→ Clayton review
           │
@@ -376,9 +414,12 @@ NOW ──→ P49 completes (~hours)
           └──→ Wells E1 if GPU available (~1 session)
                 │
                 ▼
-          V3 release (Zenodo + PhilArchive) ──→ target April 23
-          Paper submission (arXiv) ──→ target April 23-30
+          V3 release (Zenodo + PhilArchive) ──→ target April 23-30
+          Paper submission (arXiv) ──→ same window
           Meridian Papers I-III ──→ parallel, any time
+                │
+                ▼
+          Phase 5-6 open problems
                 │
                 ▼
           Phase 7 exploration (time permitting)
