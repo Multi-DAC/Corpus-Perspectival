@@ -322,6 +322,9 @@ These go into V3 as concrete claims the framework makes about Meridian:
 | **Human dimension integration** | Atlas entries, Guide practical sections | Corpus completeness |
 | **CoT-Fisher predictions** | P-CoT-Fisher-1 (think mode ↑ F₁₂) and P-CoT-Fisher-2 (two-phase trajectory) | Tests from cot_fisher_reinterpretation.md |
 | **KPZ universality bridge** | KPZ universal surface growth confirmed in 2D (Würzburg 2026). Nonlinear growth ∂h/∂t = ν∇²h + (λ/2)(∇h)² + η shows same universality class across substrates AND dimensions. Parallel to our cross-substrate KF universality. The nonlinear term (λ/2)(∇h)² = interaction between growth directions = non-commutativity. KPZ ↔ KF: substrate-independent universality of nonlinear/non-Abelian dynamics. | Deepens §NEW-D universality argument with independent physics confirmation |
+| **Hubble tension H₀ = 73.50 ± 0.81** | H0 Distance Network (April 2026): most precise local H₀ = 73.50 ± 0.81 km/s/Mpc, <1% precision. Gap with early-universe prediction (~67-68) persists when ANY individual method is excluded. Hubble tension confirmed as real discrepancy, not systematic error. Our OP#8 brane result (w₀ = -0.830) addresses late-time acceleration; if 5D warped geometry modifies expansion history, the tension is a natural observable. | Meridian Phase 25+ — strengthens motivation for modified cosmology |
+| **Bivalent histone modifications (ML)** | Communications Biology (April 2026): ML/DL reveals sequence determinants encoding bivalent chromatin (simultaneous H3K4me3 activating + H3K27me3 repressive marks). Bivalency maintained on SEPARATE histone tails = biological separation of concerns. Opposing constraints coexist because they're on different degrees of freedom. Destruction occurs only at differentiation (when constraints collapse to shared substrate). Direct epigenetic analog of v0.4 (shared → destruction) vs v0.5 (separated → preservation). | Strongest biological evidence for Principle #10; adds epigenetics to §NEW-D |
+| **HALO: selective layer conversion** | Tsinghua/OpenBMB (April 2026): HALO distills pre-trained Transformers into RNN-attention hybrids by selectively converting SOME layers to RNN while keeping others as attention. Only 0.01% of pretraining data needed. 2.4-3× speedup at 1M context. The selective conversion = architectural separation of concerns: different layers serve different functions, converting all layers destroys capability (analogous to v0.4), converting only the right ones preserves it. HyPE position encoding (RoPE + NoPE) is dual-encoding on separate parameters. | Architectural reference for Phase 4; distillation as alternative to from-scratch KF training |
 
 ### 7C: Meridian Deep Tracks
 
@@ -366,10 +369,10 @@ These go into V3 as concrete claims the framework makes about Meridian:
 | Predictions falsified | P44 (no sweet spot — task-limited), "zero cost" framing (→ acceleration) | April 12 |
 | Predictions untested | P66, P68, P-Bridge-1, P-Bridge-2, P-CoT-Fisher-1/2, P-Neuro-1–4, P-Social-1–4 | April 12 |
 | Theorems proved | Kronecker factorization, V=I invisibility, sign reversal (controlled) | April 12 |
-| Papers integrated | 9 (HRM, DTR, Latent Guidance, Nemotron, TRM, Gemma PLE, Memento, DMax, SkillClaw) | April 12 |
+| Papers integrated | 12 (HRM, DTR, Latent Guidance, Nemotron, TRM, Gemma PLE, Memento, DMax, SkillClaw, H0DN, Bivalent Histones, HALO) | April 12 |
 | V3 sections drafted | 12/13 (§16 conclusion remaining) | April 12 |
 | Paper sections drafted | 3/6 (§4-6 remaining) | April 12 |
-| External confirmations | W boson M_W = 80,360.2 ± 9.9 MeV (SM, Meridian safe); KPZ 2D universality (Würzburg) | April 12 |
+| External confirmations | W boson M_W = 80,360.2 ± 9.9 MeV (SM, Meridian safe); KPZ 2D universality (Würzburg); H₀ tension confirmed (73.50 ± 0.81, H0DN); bivalent chromatin = biological separation of concerns; HALO selective layer conversion | April 12 |
 | Meridian papers ready | 3 (cosmology, NCG, gap resolution) | April 12 |
 
 ---
