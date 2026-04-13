@@ -361,12 +361,12 @@ These go into V3 as concrete claims the framework makes about Meridian:
 
 | Metric | Value | Updated |
 |---|---|---|
-| Findings | 77 | April 12 |
+| Findings | 78 | April 12 |
 | Models tested | 16 + HRM | April 12 |
 | Architecture families | 5 (GPT-2, Qwen, DeepSeek, Pythia, HRM) | April 12 |
-| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5a(×3) + v0.5b (HRM), P49(×2), 300M baseline + 300M KF + 300M KF-cosine (running) | April 12 |
+| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5a(×3) + v0.5b (HRM), P49(×2), 300M baseline + 300M KF + 300M KF-cosine | April 12 |
 | Predictions confirmed | P24, P28, P65, P67, P69, A34, P-Compound-1 (+ 14 from Bridge #71) | April 12 |
-| Predictions falsified | P44 (no sweet spot — task-limited), "zero cost" framing (→ acceleration) | April 12 |
+| Predictions falsified | P44 (no sweet spot — task-limited), "zero cost" framing (→ acceleration), cosine decay (predicted 46-49%, got 40.1%) | April 12 |
 | Predictions untested | P66, P68, P-Bridge-1, P-Bridge-2, P-CoT-Fisher-1/2, P-Neuro-1–4, P-Social-1–4 | April 12 |
 | Theorems proved | Kronecker factorization, V=I invisibility, sign reversal (controlled) | April 12 |
 | Papers integrated | 12 (HRM, DTR, Latent Guidance, Nemotron, TRM, Gemma PLE, Memento, DMax, SkillClaw, H0DN, Bivalent Histones, HALO) | April 12 |
@@ -390,7 +390,7 @@ These go into V3 as concrete claims the framework makes about Meridian:
 9. **Perspective requires both position and lens.** The V=I invisibility theorem: eigenbasis diversity is Fisher-invisible without value projection diversity. (Finding #72)
 10. **Constraints compound on specified dimensions.** Specified constraints on specified degrees of freedom reinforce each other autocatalytically — the more constraints on a specific decision, the more those constraints amplify. v0.5's exponential H_CV growth (1.13→62.87→193.49→242.96 H/L ratio) is this compounding in action: the KF regularizer and the task gradient, operating on separate parameters but toward complementary structural ends, produce super-additive amplification. The compounding effect is DESTROYED when constraints are unspecified (v0.4: same params) or misdirected (v0.5b: coupled). Compounding requires both separation AND specificity.
 11. **Scale enables spontaneous differentiation.** At sufficient parameter count (308M vs 27.3M), dual-module architectures develop separation of concerns from task pressure alone: H/L ratio 10.9 (300M baseline) vs 2.1 (27.3M baseline). The larger architecture has enough internal degrees of freedom for modules to naturally specialize. The collapse-then-recovery pattern (H_CV: 7e-4 → 8e-5 → 1.7e-3) shows the model first destroys random structure, then rebuilds task-aligned structure with module asymmetry. Finding #76.
-12. **Regularization strength must decay as the regularized quantity grows.** Fixed-lambda KF creates exponentially growing loss that overwhelms the task signal in late training. At 300M with lambda=1.0: three phases — acceleration (+6.5pp at epoch 300), peak (epoch 350-400), interference (-6.64pp by epoch 500). Each KF application individually is gentle, but 312 compound exponentially. Solution: lambda scheduling (cosine/linear decay). The compounding filter analogy: each constraint is reasonable, but their conjunction eliminates viable configurations exponentially. Finding #77.
+12. **The regularization objective must be self-limiting.** Lambda scheduling (cosine 1.0→0.01) produces virtually identical H_CV trajectories to fixed lambda (ratio 0.99-1.05 across all epochs) and WORSE accuracy (40.1% vs 42.3%). Over-crystallization is in the accumulated state, not the instantaneous gradient — reducing force on a frozen structure doesn't un-freeze it. The fix must operate on the objective function itself: log(H_CV) gives O(1) gradients via (1/H_CV)×∇H_CV; adaptive λ=CE/H_CV self-balances. Scheduling modulates the wrong thing. Findings #77-78.
 
 ---
 
