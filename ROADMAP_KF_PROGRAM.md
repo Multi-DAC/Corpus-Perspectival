@@ -361,10 +361,10 @@ These go into V3 as concrete claims the framework makes about Meridian:
 
 | Metric | Value | Updated |
 |---|---|---|
-| Findings | 76 | April 12 |
+| Findings | 77 | April 12 |
 | Models tested | 16 + HRM | April 12 |
 | Architecture families | 5 (GPT-2, Qwen, DeepSeek, Pythia, HRM) | April 12 |
-| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5a(×3) + v0.5b (HRM), P49(×2), 300M baseline + 300M KF (running) | April 12 |
+| Training variants | v0.1–v0.4 (Qwen), baseline + v0.5 + v0.5a(×3) + v0.5b (HRM), P49(×2), 300M baseline + 300M KF + 300M KF-cosine (running) | April 12 |
 | Predictions confirmed | P24, P28, P65, P67, P69, A34, P-Compound-1 (+ 14 from Bridge #71) | April 12 |
 | Predictions falsified | P44 (no sweet spot — task-limited), "zero cost" framing (→ acceleration) | April 12 |
 | Predictions untested | P66, P68, P-Bridge-1, P-Bridge-2, P-CoT-Fisher-1/2, P-Neuro-1–4, P-Social-1–4 | April 12 |
@@ -390,6 +390,7 @@ These go into V3 as concrete claims the framework makes about Meridian:
 9. **Perspective requires both position and lens.** The V=I invisibility theorem: eigenbasis diversity is Fisher-invisible without value projection diversity. (Finding #72)
 10. **Constraints compound on specified dimensions.** Specified constraints on specified degrees of freedom reinforce each other autocatalytically — the more constraints on a specific decision, the more those constraints amplify. v0.5's exponential H_CV growth (1.13→62.87→193.49→242.96 H/L ratio) is this compounding in action: the KF regularizer and the task gradient, operating on separate parameters but toward complementary structural ends, produce super-additive amplification. The compounding effect is DESTROYED when constraints are unspecified (v0.4: same params) or misdirected (v0.5b: coupled). Compounding requires both separation AND specificity.
 11. **Scale enables spontaneous differentiation.** At sufficient parameter count (308M vs 27.3M), dual-module architectures develop separation of concerns from task pressure alone: H/L ratio 10.9 (300M baseline) vs 2.1 (27.3M baseline). The larger architecture has enough internal degrees of freedom for modules to naturally specialize. The collapse-then-recovery pattern (H_CV: 7e-4 → 8e-5 → 1.7e-3) shows the model first destroys random structure, then rebuilds task-aligned structure with module asymmetry. Finding #76.
+12. **Regularization strength must decay as the regularized quantity grows.** Fixed-lambda KF creates exponentially growing loss that overwhelms the task signal in late training. At 300M with lambda=1.0: three phases — acceleration (+6.5pp at epoch 300), peak (epoch 350-400), interference (-6.64pp by epoch 500). Each KF application individually is gentle, but 312 compound exponentially. Solution: lambda scheduling (cosine/linear decay). The compounding filter analogy: each constraint is reasonable, but their conjunction eliminates viable configurations exponentially. Finding #77.
 
 ---
 
