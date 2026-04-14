@@ -8,7 +8,7 @@
 
 ## Abstract
 
-We show that dual-objective training — simultaneously optimizing task performance and algebraic structure preservation — succeeds or fails based on whether the objectives operate on separate parameter groups. Using the commutator variance (CV) of attention head weight matrices as a differentiable structural metric, we train a dual-module neural architecture (HRM, 27.3M parameters) on sudoku puzzles with Killing Form (KF) regularization targeting the strategic processing module. Three matched experiments demonstrate three regimes: (1) **destructive interference** — when both objectives share restricted parameters, each partially cancels the other, achieving worse structural preservation than either alone (38.9% vs 47% baseline); (2) **targeted amplification** — when objectives are decoupled to separate parameter groups, KF regularization achieves 38,963× amplification of target module commutator variance with zero accuracy cost; (3) **gradient redirection** — when objectives are coupled across ample capacity, the gradient flows to the path of least resistance rather than the intended target, producing 193× less amplification of the target module. A lambda sweep across four orders of magnitude confirms that the amplification is accuracy-neutral: the task difficulty, not the regularization, is the performance bottleneck. These results establish separation of concerns as a general principle for multi-objective neural network training.
+We show that dual-objective training — simultaneously optimizing task performance and algebraic structure preservation — succeeds or fails based on two design choices: whether the objectives operate on separate parameter groups, and whether the structural objective is applied selectively. Using the commutator variance (CV) of attention head weight matrices as a differentiable structural metric, we train dual-module architectures (HRM, 27.3M and 308M parameters) on sudoku puzzles with Killing Form (KF) regularization targeting the strategic processing module. At 27.3M scale, three matched experiments establish separation of concerns: (1) **destructive interference** — shared parameters, 38.9% preservation vs 47% baseline; (2) **targeted amplification** — decoupled parameters, 38,963× CV amplification at zero accuracy cost; (3) **gradient redirection** — coupled parameters on same architecture, 193× less amplification. At 308M scale, five regularization strategies reveal a second principle: (4) **selective crystallization exceeds unconstrained training** — gradient-gated KF, which applies structural pressure only at layers where the structural and task gradients align (cosine similarity > 0), achieves 50.24% token accuracy vs 48.87% baseline (+1.37pp) while building 14× less structure than the next-best approach. Fixed-strength and cosine-scheduled objectives collapse accuracy by 6-9pp despite massive structural amplification, while the self-limiting log(H_CV) objective achieves baseline parity. A per-layer alignment map reveals that 4 of 12 layers consistently oppose the task gradient — structure in these layers is counterproductive regardless of amount. These results establish two general principles for multi-objective training: separate your objectives by parameter group, and apply structural pressure selectively by gradient alignment.
 
 ---
 
@@ -287,13 +287,23 @@ The gradient redirection result (v0.5b) reveals a general mechanism: when a stru
 
 This is not a pathology of KF regularization specifically. Any structural regularizer applied to coupled parameters will face the same issue: the optimizer does not know which parameters you *want* to modify. It modifies whichever parameters most efficiently reduce the loss. If the structural loss has a global optimum that is achievable through the "wrong" parameters, the optimizer will find it.
 
-### 7.3 Practical Implications
+### 7.3 Selectivity as the Second Principle
+
+The 300M five-way comparison (§6.5) reveals that separation of concerns is necessary but not sufficient. Even with properly decoupled parameters, the *form* of the structural objective matters enormously: fixed and cosine objectives collapse accuracy by 6-9pp, while log achieves parity and gated achieves exceedance.
+
+The gradient-gated result is especially informative because it contradicts the naive expectation that more structure should produce better results. The gated model builds 14× less structure than log and 10⁶× less than fixed — yet achieves the highest accuracy. The reason: four of twelve H-module layers (L7, L9, L10, L11) have structural gradients that consistently oppose the task gradient. Building structure in these layers is counterproductive. Fixed and cosine objectives build structure everywhere, including in these opposed layers. Gated suppresses structure where it hurts, building only where gradient alignment confirms benefit.
+
+This establishes a general principle: in multi-objective training, the structural objective should be *filtered by alignment with the task objective*. The filter is cheap — a per-layer cosine similarity between the two gradient vectors — and the benefit is dramatic: from accuracy collapse to accuracy exceedance.
+
+### 7.4 Practical Implications
 
 **For architecture design:** Models intended for multi-objective training should have identifiable, separable parameter groups. Dual-module architectures (HRM, Latent Guidance Networks, mixture-of-experts where experts have distinct roles) naturally afford this separation.
 
-**For regularization:** Structural regularizers should be accompanied by gradient masking that prevents their signal from flowing to non-target parameters. In our implementation, this is a single line: zero the L-module gradients after the KF backward pass.
+**For regularization:** Two design rules. First, structural regularizers should be accompanied by gradient masking that prevents their signal from flowing to non-target parameters. In our implementation, this is a single line: zero the L-module gradients after the KF backward pass. Second, structural regularizers should be gated by alignment with the task gradient. Apply structural pressure at layer ℓ only when cos(∇L_task, ∇L_struct) > 0 at that layer. This prevents counterproductive crystallization.
 
-**For monitoring:** The H/L CV ratio is a single-number diagnostic. If it inverts (drops below 1 when targeting H), the structural signal is being redirected. This diagnostic is cheap to compute and should be standard practice in any decoupled training setup.
+**For monitoring:** The H/L CV ratio is a single-number diagnostic. If it inverts (drops below 1 when targeting H), the structural signal is being redirected. Per-layer cosine similarity between task and structural gradients provides a second diagnostic: any layer with consistently negative cosine should have its structural regularization suppressed.
+
+**For compute efficiency:** The layer alignment map (Table 6) can potentially be extracted once and cached. If the map is seed-invariant (an architecture property, not a training-noise artifact), gated training need only run once per architecture. Subsequent training runs can apply a fixed binary mask (structure ON for aligned layers, OFF for opposed layers) with the cheaper log(H_CV) objective, recovering near-gated accuracy at near-log speed.
 
 ### 7.4 Accuracy Neutrality
 
@@ -307,13 +317,15 @@ This dissolves a common concern about structural regularization: that maintainin
 
 ### 7.5 Limitations
 
-1. **Single architecture.** The HRM results are architecture-specific. The principle (separate objectives need separate parameters) is general, but the specific amplification ratios depend on module design.
+1. **Single architecture family.** All results use HRM at 27.3M and 308M parameters. The principles (separation of concerns, selective crystallization) are general, but the specific amplification ratios and layer alignment maps depend on architecture.
 
-2. **Single task.** Sudoku provides a clean testbed but is not representative of natural language tasks. The accuracy neutrality claim is established for this task; generalization to other domains requires further experiments.
+2. **Single task.** Sudoku provides a clean testbed but is not representative of natural language tasks. The accuracy claims are established for this task; generalization requires further experiments.
 
-3. **Small scale.** HRM is 27.3M parameters. Whether separation of concerns scales to billion-parameter models with hundreds of modules is an open question.
+3. **~~Small scale.~~ PARTIALLY ADDRESSED (§6.5).** The 300M scale-up reproduces the separation-of-concerns principle and reveals the selectivity principle. Whether these scale to billion-parameter models remains open.
 
-4. **~~Low baseline accuracy.~~ ADDRESSED (§6.4).** Easy-sudoku validation shows KF accuracy (23.41%) matches baseline (23.32%) at epoch 500 — zero degradation on a task where accuracy is high enough for any cost to be detectable.
+4. **~~Low baseline accuracy.~~ ADDRESSED (§6.4).** Easy-sudoku validation shows KF accuracy (23.41%) matches baseline (23.32%) at epoch 500. The 300M extreme-sudoku baseline (48.87%) provides a second mid-range accuracy validation.
+
+5. **Seed variance.** All five-way comparison results are from a single random initialization. Seed-invariance of the layer alignment map is predicted but not yet confirmed (experiment in progress).
 
 5. **No negative control for CV.** We show that amplifying CV does not hurt accuracy, but we do not show that amplified CV helps downstream inference. The connection between training-time CV and inference-time processing modes is established in [inference paper reference] but not tested in a closed loop here.
 
@@ -343,11 +355,15 @@ The Memento approach (concurrent work) uses modular architectures with explicit 
 
 ## §9 — Conclusion
 
-Multi-objective training succeeds when objectives are decoupled. This is not a soft recommendation but a hard architectural requirement: the same regularizer that achieves 38,963× amplification on decoupled parameters produces only 202× on coupled parameters — a 193× difference from a single architectural choice. The gradient does not know your intentions; it follows the path of least resistance. If that path leads to the wrong parameter group, no amount of hyperparameter tuning will fix it.
+Multi-objective training succeeds when objectives are decoupled and selective. This paper establishes two principles:
 
-The separation of concerns principle provides a concrete design pattern: identify the structural invariant you want to preserve, assign it dedicated parameters, decouple the gradient paths, and monitor both targets independently. This framework generalizes beyond the specific KF + HRM combination to any training setup with complementary objectives.
+**Principle 1: Separation of concerns.** The same regularizer that achieves 38,963× amplification on decoupled parameters produces only 202× on coupled parameters — a 193× difference from a single architectural choice. The gradient does not know your intentions; it follows the path of least resistance.
 
-The accuracy neutrality of decoupled KF regularization — zero cost for four orders of magnitude of structural amplification — suggests that algebraic structure and task performance are not competing demands when properly separated. This opens the possibility of training models with explicitly designed algebraic properties, such as specific commutator spectra or depth gradient profiles, without sacrificing the task capabilities that make the model useful.
+**Principle 2: Selective crystallization.** Even with proper decoupling, not all structural pressure helps. Gradient-gated regularization — applying structural pressure only at layers where the structural and task gradients align — achieves 50.24% accuracy vs 48.87% unconstrained baseline (+1.37pp) while building 14× less structure than the next-best approach. Fixed and cosine objectives that apply pressure uniformly collapse accuracy by 6-9pp despite massive amplification. The amount of structure is orthogonal to the quality of structure.
+
+Together, these principles provide a concrete design pattern: identify the structural invariant you want to preserve, assign it dedicated parameters, decouple the gradient paths, and gate structural pressure by alignment with the task gradient. The result is not merely accuracy-neutral structural regularization but accuracy-*positive* structural regularization — selective constraint that improves what it regulates.
+
+This opens the possibility of training models with explicitly designed algebraic properties — specific commutator spectra, depth gradient profiles, or layer alignment maps — not as a cost to be minimized but as a benefit to be harvested.
 
 ---
 

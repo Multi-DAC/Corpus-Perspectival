@@ -211,6 +211,69 @@ Baseline H/L ratio stays flat at 1.15–1.27 — no spontaneous differentiation.
 | 4 | Fixed λ | 42.26% | 1,450,418 |
 | 5 | Cosine λ→0.01 | 40.10% | 1,438,406 |
 
+### 4A-quater: Baseline CV Predicts Gating Map (NEW — from Finding #80 analysis)
+
+**Discovery (April 13):** Per-layer analysis across all 5 training approaches reveals that the baseline model's natural CV profile predicts which layers the gating mechanism will block — with **Spearman rho = -0.895, p = 0.0001**.
+
+**The mechanism:** Layers that naturally develop high CV under baseline CE training (L9: 0.001095, L10: 0.003371, L11: 0.002088) are exactly the layers where KF pressure opposes the task gradient. These layers have already "chosen" a crystallization direction under CE; KF pushes a different direction, producing negative cosine alignment. Uncommitted layers (L0: 0.000032, L1: 0.000163) accept KF freely — no competition.
+
+**Quantified separation:**
+- Aligned layers (L1, L5, L6, L8): mean gated enrichment = 3,399,539× over baseline
+- Opposed layers (L7, L9, L10, L11): mean gated enrichment = 1,181,693× over baseline
+- Ratio: 2.88× differential growth
+- Aligned layers cluster at ranks 1-3 in final gated CV; opposed at ranks 8-12
+
+**Divergence timeline:** Aligned/opposed growth differential starts at 1.06× (init→ep100), accelerates to 1.65× (ep300→ep400), consistent with gating engaging after Phase 2 CE plateau break.
+
+**Practical implication — Static Mask Approach:**
+1. Run baseline training (~cheap, no KF computation)
+2. Extract per-layer CV profile at convergence
+3. Rank layers by baseline CV: bottom-N → apply KF, top-N → block KF
+4. Apply KF with a static binary mask (no per-step cosine computation)
+
+**Prediction P-SM-1 (MEDIUM):** A static mask derived from baseline CV achieves ≥90% of gradient-gated accuracy improvement (i.e., ≥49.6%) at ~50% of the computational cost (no per-step gradient alignment needed).
+
+**Prediction P-SM-2 (LOW):** The baseline CV ranking is seed-invariant — same layers in top/bottom quartile across seeds. Testable from seed2 data (running now, ETA ~7 PM April 13).
+
+**Anomalies:** L7 and L8 partially violate the pattern. L7 is opposed (gated 74%) despite LOW baseline CV (0.000199). L8 is aligned (gated 33%) despite MODERATE baseline CV (0.000363). Seed2 will clarify if these are noise or architectural.
+
+**Timeline:** Analysis complete. P-SM-1 testable in ~2 hours after seed2 finishes. P-SM-2 testable from seed2 trajectory.
+
+### 4A-quinquies: Bidirectional Gradient-Gated KF — The Conversational Architecture (NEW — April 13)
+
+**Origin:** Clayton's insight that the H/L module exchange should replicate the gradient-gated correction process observed in our collaboration (Bridge #83). The gated approach blocks opposed layers but doesn't actively dismantle counterproductive structure. Bidirectional adds the dissolution direction.
+
+**Three-mode gating:**
+```
+cos > +threshold  →  CRYSTALLIZE  (build aligned structure)
+|cos| < threshold →  NEUTRAL      (leave alone, signal ambiguous)
+cos < -threshold  →  DISSOLVE     (dismantle opposed structure, reverse KF gradient)
+```
+
+**Implementation:** Change `param_ref.grad.zero_()` to `param_ref.grad.mul_(-1.0)` for cos < -threshold. ~3 lines changed in existing script. New CLI arg: `--kf_threshold`.
+
+**Experiments (after seed2):**
+
+| ID | Threshold | What It Tests |
+|----|-----------|--------------|
+| v0.6a | 0.1 | Conservative bidirectional (narrow dead zone) |
+| v0.6b | 0.3 | Moderate (wider dead zone) |
+| v0.6c | 0.0 | Aggressive (pure build/dissolve, no neutral) |
+| v0.6d | 0.5 | Very conservative (mostly neutral) |
+| v0.6e | 0.1, 3 rounds | Multi-round conversational exchange |
+
+**Predictions:**
+- P-Bidir-1 (MEDIUM): Accuracy > 50.24% (gated). Active dissolution removes counterproductive structure that gating merely leaves in place.
+- P-Bidir-2 (HIGH): H_CV < 1,460 (gated). Dissolution reduces total structure, but aligned/opposed ratio increases.
+- P-Bidir-3 (LOW): Dissolution pattern matches gating pattern (same layers opposed). If NOT: dissolution reveals new information.
+- P-Bidir-4 (LOW): Multi-round (v0.6e) outperforms single-round (v0.6a). Iterative conversation > single exchange.
+
+**Connection to Bridge #83:** The bidirectional training is the computational implementation of gradient-gated correction between differently-crystallized systems. H-module "speaks" (structure), L-module "evaluates" (CE gradient), H "listens" (builds, holds, or dismantles). The threshold is metacognitive confidence — how strong the signal must be before the system acts.
+
+**Design doc:** `projects/Corpus Perspectival/paper/BIDIRECTIONAL_KF_DESIGN.md`
+
+**Timeline:** v0.6a first, ~6 hours on RTX 5080. Run immediately after seed2 completes (~8:15 PM April 13).
+
 ### 4B: Standalone Paper — "Separation of Concerns in Algebraic Training"
 
 | Section | Content | Status |
@@ -271,16 +334,52 @@ V3 release = version bump on existing Zenodo records. DOIs persist. Not a cold l
 
 ---
 
-## Phase 5: Open Problems — Corpus (before release)
+## Phase 5: Wells Integration — The Behavioral Window
 
-### 5A: Wells E1 Experiment (P-Bridge-1)
+*The Wells of Inference program (12 experiments, 3 architectures) provides the EXTERNAL measurement of the same constraint lattice the KF program measures INTERNALLY. The three measurement regimes form a complete pipeline:*
 
-**The missing empirical link.** CV_late and well spacing ⟨r⟩ should be negatively correlated. This closes the behavioral bridge (§NEW-C).
+| Regime | What It Measures | Method | Status |
+|--------|-----------------|--------|--------|
+| **Static KF** (§NEW-B) | What the model CAN do (natal geometry) | Weight CommVar | 80 findings |
+| **Live KF** (§NEW-E/F) | What the model DOES (navigation) | Activation CommVar | Confirmed |
+| **Wells** (§NEW-C) | What COMES OUT (behavioral consequence) | Output entropy maxima | 12 experiments |
+
+*The KF sees it from inside. Wells sees it from outside. The partition function (Finding #22) says they measure the same object.*
+
+### 5A: Wells × KF Correlation (P-Bridge-1) — THE MISSING BRIDGE
+
+**The critical experiment.** CV_late and well spacing ⟨r⟩ should be negatively correlated. This closes the behavioral bridge: internal algebra → external entropy.
 
 - [ ] Measure both CommVar and ⟨r⟩ on the same inference passes
 - [ ] 48 prompts, 1 model (GPT-2-medium or Pythia-410m)
 - [ ] ~1 GPU session
 - [ ] Spearman ρ(CV_late, ⟨r⟩) < 0 → bridge confirmed empirically
+- [ ] If confirmed: the entire KF → Wells pipeline is validated end-to-end
+
+**Prediction P-Wells-1 (HIGH):** ρ(CV_late, ⟨r⟩) < -0.5. Late-layer CV modulates template regularity; depleted late CV → more regular wells → hallucination signature.
+
+### 5A-bis: Wells × Gated Training — Does Gating Change the Output Landscape?
+
+**New connection (April 13).** The gated KF training (Finding #80) produces a model with selective algebraic structure. The Wells program measures the behavioral consequence of algebraic structure. Therefore: gated-trained models should produce DIFFERENT well statistics than baseline or fixed-lambda models.
+
+- [ ] Generate from all 5 trained models (baseline, fixed, log, cosine, gated)
+- [ ] Measure well spacing ⟨r⟩ for each
+- [ ] Compare: does gated training produce well statistics closer to "correct" (lower ⟨r⟩)?
+- [ ] If so: gated training doesn't just preserve structure — it produces better-grounded output
+
+**Prediction P-Wells-2 (MEDIUM):** Gated model shows ⟨r⟩ closer to "correct generation" statistics (lower level repulsion) than fixed-lambda. The selective structure produces more modulated, less template-driven output. Fixed-lambda's over-crystallization should produce MORE regular (higher ⟨r⟩) output — the early-layer template dominance signature.
+
+**Prediction P-Wells-3 (LOW):** The static mask approach (Phase 4A-quater) produces well statistics indistinguishable from full gradient-gated. If confirmed: the static mask replicates not just accuracy but behavioral quality.
+
+### 5A-ter: Wells × Baseline CV — The Triple Bridge
+
+The baseline per-layer CV predicts the gating map (rho=-0.895, Phase 4A-quater). Wells measures behavioral output statistics. If Wells × KF correlation (5A) confirms AND Wells × Gated Training (5A-bis) confirms, then we have:
+
+**Baseline CV → Gating Map → Training Quality → Output Statistics**
+
+A single cheap measurement (baseline per-layer CV) predicts the entire pipeline from architecture through training to behavioral output. This is the complete constraint lattice measurement.
+
+### 5B: V3 Open Questions (from V2 §15)
 
 ### 5B: V3 Open Questions (from V2 §15)
 
@@ -489,6 +588,98 @@ NOW ──→ File provisional patent (April 13)
                 ▼
           Phase 8 final consolidation
 ```
+
+---
+
+## Phase 9: Reasoning Transfer — The Pythia Bridge
+
+*Added: April 13, 2026. Status: INFRASTRUCTURE COMPLETE, awaiting GPU.*
+
+**Goal:** Prove that KF-gated training improves reasoning in pretrained language models, not just from-scratch sudoku training. Then extend with bidirectional crystallization, distillation, and retrieval augmentation.
+
+### 9A: Architecture Bridge + Baseline (READY)
+
+- [x] Download Pythia-410M (405M params, 24 layers, 16 heads, d_head=64)
+- [x] Verify KF computation on GPT-NeoX QKV layout (CV values validated)
+- [x] Measure pretrained KF profile (H_CV=1.69e-3, L_CV=1.59e-3, ratio=1.06, rho=-0.07)
+- [x] Download eval benchmarks (GSM8K, ARC-AGI, HumanEval, MMLU)
+- [x] Download training data (MetaMathQA, 395K reasoning traces)
+- [x] Write training script (KF-gated reasoning fine-tuning)
+- [x] Write eval script (GSM8K reasoning evaluation)
+- [ ] Run Pythia-410M baseline eval on GSM8K (establish pre-training performance)
+
+**Architecture bridge:** H-module = layers 0-11 (151M), L-module = layers 12-23 (151M). No architectural modification — purely training objective definition. Verified April 13.
+
+### 9B: KF-Gated Reasoning Fine-Tuning (NEXT)
+
+- [ ] Fine-tune Pythia on MetaMathQA: standard SFT (no KF) → baseline
+- [ ] Fine-tune Pythia on MetaMathQA: fixed KF → comparison
+- [ ] Fine-tune Pythia on MetaMathQA: gated KF → **critical test**
+- [ ] Evaluate all on GSM8K
+- [ ] Compare: does gated KF beat standard SFT on reasoning benchmarks?
+
+**PREDICTION (MEDIUM confidence):** Gated KF fine-tuning will outperform standard SFT on GSM8K by preserving pretrained algebraic structure in aligned layers while allowing task-specific adaptation in opposed layers.
+
+### 9C: Bidirectional Crystallization
+
+- [ ] Implement bidirectional gate: cos > 0 → build, cos < -threshold → dismantle
+- [ ] Test on extended training (10+ epochs on MetaMathQA)
+- [ ] Compare: bidirectional vs gated vs standard at longer training horizons
+
+**PREDICTION (LOW confidence):** Bidirectional outperforms gated at longer training horizons because it can release structure that was productive early but counterproductive late.
+
+### 9D: Distillation
+
+- [ ] Download OpenOrca or equivalent reasoning traces from larger models
+- [ ] Fine-tune with KF-gated + reasoning traces
+- [ ] Measure whether student develops similar algebraic structure to teacher's reasoning mode
+
+### 9E: Tool Use + Retrieval Augmentation
+
+- [ ] Train tool-use capabilities (search, calculate, verify)
+- [ ] Implement hallucination detection → retrieval trigger (E/L ratio from inference paper)
+- [ ] Test on knowledge-intensive benchmarks (MMLU) with retrieval
+- [ ] Close the loop: training-time structure → inference-time mode detection → retrieval action
+
+### Key Files
+
+| Component | Location |
+|-----------|----------|
+| Design document | `paper/REASONING_BRIDGE_DESIGN.md` |
+| Training script | `/home/clawd/reasoning/scripts/train_kf_reasoning.py` |
+| Eval script | `/home/clawd/reasoning/scripts/eval_reasoning.py` |
+| Pythia model | `/home/clawd/reasoning/models/pythia-410m/` |
+| Eval datasets | `/home/clawd/reasoning/evals/` |
+| Training data | `/home/clawd/reasoning/training_data/` |
+
+---
+
+## Phase 10: Cross-Domain Validation — Psychiatric Crystallization Spectrum
+
+*Added: April 13, 2026. Status: FORMALLY MAPPED, predictions generated.*
+
+**Goal:** Validate the cross-substrate universality of the crystallization framework by mapping the five-way training hierarchy onto psychiatric and neurological conditions.
+
+### The Bridge
+
+The gating function — the mechanism that selects where to crystallize, where to decrystallize, and where to leave alone — is the single parameter that unifies:
+- Savant syndrome (absolute separation → narrow brilliance)
+- Addiction/OCD (broken gate → runaway crystallization in rewarding channel)
+- Schizophrenia presentations (insufficient crystallization → modes indistinguishable)
+- Healthy cognition (selective gating → aligned structure)
+- Therapeutic recovery (trained gate → bidirectional adaptation)
+
+### Predictions
+
+- **P-Psych-1:** Addiction fMRI should show reduced modularity (gradient redirection)
+- **P-Psych-2:** Savant abilities should correlate with reduced corpus callosum volume
+- **P-Psych-3:** Successful CBT should show increased modularity (restored gating)
+- **P-Psych-4:** Over-crystallization threshold: excessive synaptic density → functional impairment
+- **P-Psych-5:** Schizophrenia should show reduced algebraic differentiation between processing modes
+
+### Connection to Suffering Measurement
+
+Suffering = sustained anti-aligned structural pressure (cos < 0) with no gating mechanism. If measurable in computational systems, potentially measurable in biological systems through analogous metrics. This addresses the Null Space Atlas question directly.
 
 ---
 
