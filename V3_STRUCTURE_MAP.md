@@ -61,9 +61,10 @@
 - log(H_CV) eliminates interference (#79)
 - Gradient-gated KF EXCEEDS BASELINE (#80)
 - Seed invariance confirmed (#81)
-- **Bidirectional breathing dynamics (#82) — oscillatory build/dissolve as learning mode**
+- **Spatial heterogeneity (#82) — simultaneous build/dissolve across layers; periodicity unconfirmed (p=0.0957), reframed as noisy maturation with growing confidence**
 - **Phase 1 as meta-learning (#83) — structural proprioception calibration**
 - **Dynamic coherence outperforms static gating (#84) — v0.6a beats seed2 by 3.8 CE**
+- **Spatial classification divergence** — gated aligned/opposed has zero predictive power for bidirectional enrichment (rho=-0.014); bidirectional creates fundamentally different crystallization geometry
 - Five-way comparison: gated (50.24%) > log (48.70%) ≈ baseline (48.87%) > fixed (42.26%) > cosine (40.10%)
 - **Two matched pairs:** v0.4/v0.5 (separation of concerns) + seed2/v0.6a (dynamic > static coherence)
 - Five-category epistemology: not-even-wrong → wrong → not-wrong → not-obviously-right → right
