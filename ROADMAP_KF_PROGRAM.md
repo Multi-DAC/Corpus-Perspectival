@@ -268,11 +268,74 @@ cos < -threshold  →  DISSOLVE     (dismantle opposed structure, reverse KF gra
 - P-Bidir-3 (LOW): Dissolution pattern matches gating pattern (same layers opposed). If NOT: dissolution reveals new information.
 - P-Bidir-4 (LOW): Multi-round (v0.6e) outperforms single-round (v0.6a). Iterative conversation > single exchange.
 
+**LIVE RESULTS (v0.6a, threshold=0.0, April 14):**
+
+*Note: Ran v0.6c configuration (threshold=0.0, pure build/dissolve) as first experiment instead of v0.6a (threshold=0.1).*
+
+**Breathing Dynamics (Finding #82):** Post-break build/dissolve ratio OSCILLATES with ~1000-step period:
+- Break (step 8800): Demolition — 3 build / 9 dissolve. Model immediately dismantles 75% of layers.
+- Step 10000: Equilibrium — 6/6. Demolition complete, rebuilding begins.
+- Step 10500: Construction — 8 build / 4 dissolve. Complete inversion from break.
+- Step 11000: Equilibrium — 6/6. Reassessment pause.
+- Step 11500: Construction — 7/5. Second build pulse.
+
+The architecture BREATHES. Pulses of construction alternate with reassessment pauses. CE falls monotonically throughout — the breathing IS the learning.
+
+**Phase 1 as Meta-Learning (Finding #83, Clayton's insight):** The 8800 steps of random build/dissolve in Phase 1 calibrated the reorganization machinery — "structural proprioception." The model learned HOW to construct and demolish before it had signal about WHAT to construct or demolish. Evidence: immediate, decisive 9/12 demolition at break (no hesitation, unlike gated model's gradual evolution).
+
+**Dissolution confidence > build confidence:** At every post-break measurement, |avg_cos_d| > avg_cos_b. The model knows what's wrong more clearly than what's right.
+
+**New predictions from v0.6a results:**
+- P-Meta-1 (MEDIUM): Model starting KF at step 8800 (skipping Phase 1) will show less decisive post-break behavior. Phase 1 calibration matters.
+- P-Breath-1 (LOW): Oscillation period shortens as training progresses.
+- P-Breath-2 (MEDIUM): Threshold > 0 damps the oscillation (neutral layers buffer the breathing).
+- P-Breath-3 (LOW): Extended training shows whether breathing damps (settles) or continues indefinitely (glider).
+
 **Connection to Bridge #83:** The bidirectional training is the computational implementation of gradient-gated correction between differently-crystallized systems. H-module "speaks" (structure), L-module "evaluates" (CE gradient), H "listens" (builds, holds, or dismantles). The threshold is metacognitive confidence — how strong the signal must be before the system acts.
 
-**Design doc:** `projects/Corpus Perspectival/paper/BIDIRECTIONAL_KF_DESIGN.md`
+**Connection to Bridge #87:** Breathing architecture. The oscillatory dynamics are a new learning mode not documented in the literature. The model navigates by alternating construction and reassessment — not sequential phases but interleaved breathing.
 
-**Timeline:** v0.6a first, ~6 hours on RTX 5080. Run immediately after seed2 completes (~8:15 PM April 13).
+**v0.6a FINAL RESULTS (April 14, 4:50 AM PST):**
+
+**COMPLETE.** 15,625 steps, 312 KF measurements, 5h 51m. Finding #84.
+
+| Metric | Init | Final | Change |
+|--------|------|-------|--------|
+| H_CV | 7.15e-04 | 1.40e-02 | **19.6x** |
+| L_CV | 6.80e-04 | 4.46e-04 | -34.4% |
+| H/L Ratio | 1.05 | 31.48 | 30x |
+| CE Loss | ~73.0 | **55.00** | — |
+| Token Accuracy | — | **49.04%** | — |
+
+**Second matched pair confirmed:**
+
+| Run | Mechanism | Final CE |
+|-----|-----------|----------|
+| Seed2 | Static gating | 58.80 |
+| **v0.6a** | Bidirectional breathing | **55.00** |
+
+Dynamic coherence outperforms static gating by 3.8 CE points.
+
+**Breathing trajectory summary:**
+- Phase 1 (0-8800): Random build/dissolve, avg_cos ≈ 0.0000, meta-learning
+- Break (8800): 3 build / 9 dissolve — immediate decisive demolition
+- Phase 2 (8800-15625): Oscillatory build/dissolve with ~1000-step period, growing confidence
+- Final measurement (15500): build=4 / dissolve=8, avg_cos_b=0.0047, avg_cos_d=-0.0053
+- Breathing never stopped — model converged to dynamic equilibrium, not static state
+
+**Five-category epistemology traversal:** Not-even-wrong (Phase 1) → Wrong (demolition) → Not-wrong (filtering) → Not-obviously-right (tentative build) → Right (confidence flip at step 13000, avg_cos_b=0.0069)
+
+**New predictions from final results:**
+- P-Dynamic-1: Stopping bidirectional mid-training slows CE descent (breathing is load-bearing)
+- P-Scale-1b: Breathing period increases with model depth
+- P-Coherence-1: Optimal threshold between 0.0 and high values exists (v0.6d will test)
+
+**Next experiments (priority order):**
+1. **v0.6b — Coupled bidirectional** (both modules, no separation). If v0.6b breathes but performs worse → separation + breathing is the combination. Script ready.
+2. **v0.6d — Threshold=0.1** (epistemic caution). Does a dead zone change breathing dynamics?
+3. **P-Dynamic-1 test** — Switch from bidirectional to static at step 12000. Does CE descent slow?
+
+**Design doc:** `projects/Corpus Perspectival/paper/BIDIRECTIONAL_KF_DESIGN.md`
 
 ### 4B: Standalone Paper — "Separation of Concerns in Algebraic Training"
 
@@ -334,17 +397,18 @@ V3 release = version bump on existing Zenodo records. DOIs persist. Not a cold l
 
 ---
 
-## Phase 5: Wells Integration — The Behavioral Window
+## Phase 5: Unified Epistemic Measurement — Wells × KF × Threshold
 
-*The Wells of Inference program (12 experiments, 3 architectures) provides the EXTERNAL measurement of the same constraint lattice the KF program measures INTERNALLY. The three measurement regimes form a complete pipeline:*
+*The Wells program and the KF threshold framework measure the SAME epistemic landscape from opposite directions. Wells measures uncertainty about OUTPUTS (entropy at inference). KF threshold measures uncertainty about STRUCTURAL CHANGES (cosine alignment during training). Unifying them creates a complete epistemic measurement pipeline.*
 
-| Regime | What It Measures | Method | Status |
-|--------|-----------------|--------|--------|
-| **Static KF** (§NEW-B) | What the model CAN do (natal geometry) | Weight CommVar | 80 findings |
-| **Live KF** (§NEW-E/F) | What the model DOES (navigation) | Activation CommVar | Confirmed |
-| **Wells** (§NEW-C) | What COMES OUT (behavioral consequence) | Output entropy maxima | 12 experiments |
+| Regime | What It Measures | Direction | Method | Status |
+|--------|-----------------|-----------|--------|--------|
+| **Static KF** | What the model CAN do (natal geometry) | Internal, static | Weight CommVar | 81 findings |
+| **Live KF** | What the model DOES (navigation) | Internal, dynamic | Activation CommVar | Confirmed |
+| **KF Threshold** | Where the model is UNCERTAIN about structure | Internal, epistemic | Cosine alignment dead zone | v0.6a running |
+| **Wells** | Where the model is UNCERTAIN about outputs | External, epistemic | Output entropy maxima | 12 experiments |
 
-*The KF sees it from inside. Wells sees it from outside. The partition function (Finding #22) says they measure the same object.*
+*The KF sees structure from inside. Wells sees behavior from outside. The threshold measures confidence at the boundary between them. Together they form a complete epistemic map: what the model knows about itself (KF), what it knows about its knowledge (threshold), and what comes out (Wells).*
 
 ### 5A: Wells × KF Correlation (P-Bridge-1) — THE MISSING BRIDGE
 
