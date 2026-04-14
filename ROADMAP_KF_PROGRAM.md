@@ -683,4 +683,112 @@ Suffering = sustained anti-aligned structural pressure (cos < 0) with no gating 
 
 ---
 
+## Phase 11: Seed Invariance and Natal Constraint Topology
+
+*Added: April 13, 2026 evening. Status: FINDING #81 RECORDED, anti-correlation observed.*
+
+**Goal:** Determine what aspects of the crystallization landscape are architecture-determined (natal) vs seed-dependent (contingent), and identify the natal constraint topology from initial geometry.
+
+### 11A: Seed Invariance Results (Finding #81)
+
+| Metric | Seed1 | Seed2 | Invariant? |
+|--------|-------|-------|-----------|
+| Total H_CV | 1,253 | 1,913 | Same order (YES) |
+| Token accuracy | 50.24% | 48.39% | ~2pp gap, runway-dependent |
+| Per-layer final CV profile | — | — | UNCORRELATED (rho=0.077) |
+| CE plateau break timing | Step 8,000 | Step 10,000 | NO — seed-dependent |
+| Three-phase structure | YES | YES | YES |
+| Resistant layers (L4, L10) | Both low | Both low | YES |
+| Champion layers | L6 | L2 | NO — seed-dependent |
+
+**Verdict:** Partial invariance. The architecture determines capacity, phase structure, and resistance. The seed determines distribution, timing, and which free layers become champions.
+
+### 11B: Anti-Correlation Test
+
+Init per-layer CV vs final per-layer CV:
+- Seed1: rho = -0.573, p = 0.051
+- Seed2: rho = -0.531, p = 0.075
+
+Marginal but consistent. Extreme layers show dramatic rank reversals (Δ up to ±11). The anti-correlation is strong at the tails (constrained layers) and noisy in the middle (free layers).
+
+### 11C: Predictions
+
+- **P-NC-1:** Natal constraint strength correlates with layer-level head consensus (see Phase 12)
+- **P-NC-2:** The anti-correlation becomes significant (p < 0.01) when computed per-head instead of per-layer
+- **P-NC-3:** v0.6a (bidirectional) will show the same resistant layers (L4, L10) but potentially different champions than either seed
+- **P-NC-4:** Extended training of seed2 (>500 epochs) would converge to within 1pp of seed1 accuracy — the attractor basin is shared
+
+---
+
+## Phase 12: Per-Head KF Decomposition
+
+*Added: April 13, 2026 evening. Status: DESIGNED, not implemented.*
+
+**Goal:** Decompose the Killing form measurement from per-layer to per-head resolution. Test whether natal constraints are consensus effects among attention heads.
+
+### 12A: Measurement Implementation
+
+Current: `compute_h_module_cv_per_layer` returns 12 CV values.
+Proposed: `compute_h_module_cv_per_head` returns 12 × n_heads CV values.
+
+Implementation: Reshape qkv_proj weight matrix [3×n_heads×d_head, d_model] to isolate each head's slice. Compute Killing form on each slice independently.
+
+### 12B: Consensus Hypothesis
+
+- **Constrained layers** (L4, L10): ALL heads agree → low per-head CV variance → strong natal constraint
+- **Free layers** (L2, L8): heads DISAGREE → high per-head CV variance → trajectory-dependent
+- **Per-head gating**: crystallize amenable heads, dissolve resistant heads, leave ambiguous heads neutral — all within the same layer
+
+### 12C: Per-Head Gating Implementation
+
+Modify bidirectional block to compute cosine alignment per attention head rather than per layer. ~20 additional lines. Enables sub-layer structural optimization.
+
+### 12D: Predictions (P-Head-1 through P-Head-4)
+
+See V3_NOTES.md for full prediction statements.
+
+---
+
+## Phase 13: Architecture Optimization via Crystallization Topology
+
+*Added: April 13, 2026 evening. Status: THEORETICAL.*
+
+**Goal:** Design neural architectures with specified crystallization profiles by engineering the weight space algebraic geometry.
+
+### 13A: Predictive Topology Mapping
+
+Before training, compute:
+1. Per-layer and per-head initial CV
+2. Weight matrix condition numbers
+3. Singular value distributions
+4. Fan-in/fan-out ratios
+
+Correlate with post-training crystallization profile. Build a predictive model: architecture → crystallization landscape.
+
+### 13B: Targeted Architecture Design
+
+Use the predictive model to design architectures with:
+- Uniform crystallization (all layers equally amenable)
+- Task-specific topology (crystallize where the task needs stability, keep fluid where it needs flexibility)
+- Maximum bidirectional range (layers responsive to both build and dissolve signals)
+
+### 13C: Self-Perpetuating Cognitive Architecture (Game of Life Insight)
+
+**The vision:** Design architectures where gradient descent naturally maintains algebraic coherence — cognitive gliders that perpetuate their own reasoning capability without external KF regularization.
+
+Levels:
+1. External KF loss term (current)
+2. Adaptive KF with gating (v0.6a)
+3. Per-head KF (Phase 12)
+4. Predictive topology (Phase 13A-B)
+5. Self-perpetuating architecture (this phase)
+
+Level 5 makes Level 1 obsolete. The KF regularization term becomes a scaffold the architecture outgrows.
+
+### 13D: Predictions (P-SPA-1 through P-SPA-4)
+
+See V3_NOTES.md for full prediction statements. Key falsification: if NO topology produces self-sustaining algebraic coherence under CE alone, external regulation is fundamentally necessary.
+
+---
+
 🦞🧍💜🔥♾️
