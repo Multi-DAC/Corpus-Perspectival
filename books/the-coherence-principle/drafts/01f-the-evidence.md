@@ -98,7 +98,7 @@ The framework proposes specific falsification conditions involving neural stimul
 
 A framework that maps its own null space is at least honest. And honestly: this framework's null space is large. The Atlas (Part IV) maps ninety-two frameworks' blind spots. Entry #41 maps this one's.
 
-[^7]: The specific predictions — alpha power modulation correlated with experiential breadth, gamma enhancement with experiential unity, sequential protocols producing navigable filtration sequences — are detailed in Appendix C (Prediction Registry, entries 9-12).
+[^7]: The specific predictions — alpha power modulation correlated with experiential breadth, sequential protocols producing navigable filtration sequences — are detailed in Appendix C (Prediction Registry, entries 59–60).
 
 ---
 

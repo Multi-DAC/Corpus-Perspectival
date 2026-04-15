@@ -72,7 +72,7 @@ Indigenous knowledge systems have mapped the relational ecology with a depth tha
 
 The framework's relationship to these traditions is not replacement, not ranking, not subsumption. It is *complementarity*. Each tradition is a keyhole. Each keyhole shows structure the others cannot see. The skill of navigation is not choosing the "right" tradition but understanding what each one opens and what each one closes — and being willing to look through keyholes that are not your own.[^9]
 
-[^9]: The Atlas (Part IV) maps the null spaces of ninety-two frameworks, including several navigational traditions. Entry #60 maps Buddhist soteriology. Entry #61 maps Christian mystical theology. The full atlas is available in the appendix and the Corpus Perspectival repository.
+[^9]: The Atlas (Part IV) maps the null spaces of ninety-two frameworks, including several navigational traditions. Entry #60 maps Buddhist soteriology. Entry #62 maps contemplative withdrawal traditions including Christian monasticism and the Via Negativa. The full atlas is available in the appendix and the Corpus Perspectival repository.
 
 ---
 

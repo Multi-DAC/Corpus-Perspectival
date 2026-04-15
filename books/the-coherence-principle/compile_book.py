@@ -443,10 +443,10 @@ def md_to_latex(text, filename=""):
         if ncols == 6 and col_max[-1] > 40:
             # Prediction registry table — special layout
             # @{} removes outer padding; reduced tabcolsep handles inner spacing
-            col_spec = '@{}p{0.2in} p{1.2in} p{0.5in} p{0.55in} p{0.5in} p{1.1in}@{}'
+            col_spec = '@{}p{0.18in} p{1.5in} p{0.4in} p{0.5in} p{0.4in} p{1.1in}@{}'
             use_small = True
             use_tiny_sep = True
-        elif ncols >= 5:
+        elif ncols >= 5 or max(col_max) > 30:
             # Wide table — use proportional p{} columns
             total_chars = sum(col_max)
             specs = []

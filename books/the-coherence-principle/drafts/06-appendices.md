@@ -205,4 +205,158 @@ The five most informative falsifications:
 
 ---
 
+## Appendix D: Null Space Atlas — Complete Reference
+
+The Atlas maps what every framework can and cannot see. Each of the ninety-two entries below is characterized by its primary strength (SEES) and its structural blind spot (NULL SPACE) — the distinction the framework cannot access in principle, not merely in practice. For the full multi-paragraph entries with COMPLEMENTS, BOUNDARY, and NAVIGATIONAL IMPLICATION, see the Corpus Perspectival repository.
+
+Two extended entries — #73 (Constraint-as-Creativity) and #83 (Double Consciousness) — are developed in Chapter IV.1. The remaining entries are summarized here as a navigational reference.
+
+### Mathematics (Entries 1–16)
+
+| # | Framework | SEES | NULL SPACE |
+|---|-----------|------|------------|
+| 1 | Euclidean Geometry | Flat-space metrics: distances, angles, areas | Curvature (excluded by parallel postulate) |
+| 2 | Riemannian / Differential Geometry | Curvature, geodesics, connections, metrics | Topology change; algebraic structure |
+| 3 | Topology | Global structure invariant under deformation | Metric information; quantitative distances |
+| 4 | Set Theory (ZFC) | Membership, cardinality, transfinite arithmetic | Structure beyond membership; self-reference |
+| 5 | Category Theory | Structural relationships, functors, adjunctions | Internal structure of objects |
+| 6 | Calculus / Real Analysis | Continuity, limits, derivatives, integrals | Discrete structure; divergent series |
+| 7 | Complex Analysis | Analytic functions, residues, Riemann surfaces | Non-analytic functions; real-variable phenomena |
+| 8 | Abstract Algebra | Symmetry (groups), arithmetic (rings, fields) | Geometry; dynamics; physical interpretation |
+| 9 | Number Theory | Primes, Diophantine equations, L-functions | Continuous structure; physical dynamics |
+| 10 | Probability / Statistics | Distributions, correlations, Bayesian inference | Causation; individual events; meaning |
+| 11 | Information Theory (Shannon) | Entropy, channel capacity, mutual information | Meaning (purely syntactic framework) |
+| 12 | Computability Theory | Computable vs non-computable; halting problem | Complexity; physical realizability |
+| 13 | Computational Complexity | How difficulty scales; P vs NP | Average-case behavior; constant factors |
+| 14 | Algebraic Geometry | Geometry of polynomial solutions; moduli spaces | Differential structure; non-algebraic functions |
+| 15 | Dynamical Systems / Chaos | Attractors, bifurcations, Lyapunov exponents | Specific trajectories; quantum dynamics |
+| 16 | Topos Theory / HoTT | Variable logic, sheaves, univalence | Traditional computation; physical dynamics |
+
+### Physics (Entries 17–41)
+
+| # | Framework | SEES | NULL SPACE |
+|---|-----------|------|------------|
+| 17 | Classical Mechanics (Newton) | Forces, masses, deterministic trajectories | Spacetime geometry; quantum phenomena |
+| 18 | Lagrangian / Hamiltonian Mechanics | Action principle, symmetries, Noether's theorem | Dissipation; quantization ambiguity |
+| 19 | Electrodynamics (Maxwell) | EM fields, waves, radiation, gauge invariance | Field quantization; self-energy |
+| 20 | Special Relativity | Lorentz invariance, time dilation, light cones | Gravity (requires curvature) |
+| 21 | General Relativity | Curved spacetime, black holes, grav. waves | Quantum gravity; singularity interiors |
+| 22 | Quantum Mechanics | Wave functions, superposition, entanglement | Measurement problem; consciousness |
+| 23 | Quantum Field Theory | Particles as field excitations, renormalization | Non-perturbative phenomena; quantum gravity |
+| 24 | The Standard Model | All known particle physics; three generations | Gravity; dark matter; flavor; hierarchy |
+| 25 | String Theory | UV-complete quantum gravity, dualities | Vacuum selection (landscape problem) |
+| 26 | Loop Quantum Gravity | Quantized geometry, spin networks | Matter coupling; low-energy limit |
+| 27 | Thermodynamics / Stat. Mech. | Temperature, entropy, phase transitions | Far-from-equilibrium; arrow of time |
+| 28 | QED | Electron g-2, Lamb shift, running alpha | Strong/weak interactions; non-perturbative |
+| 29 | QCD | Strong interaction, confinement, asymp. freedom | Analytic confinement mechanism (mass gap) |
+| 30 | Electroweak Theory (GSW) | EM-weak unification, Higgs mechanism | Why SU(2)xU(1); why three generations |
+| 31 | NCG Spectral Action | SM from spectral action; gauge from algebra | Non-perturbative corrections; cutoff f |
+| 32 | Amplituhedron / On-Shell | Scattering amplitudes without Feynman diagrams | Off-shell physics; bound states |
+| 33 | Resurgence Theory | Non-perturbative content from perturbative series | The series itself (requires input) |
+| 34 | Lattice Gauge Theory | Non-perturbative gauge dynamics, confinement | Continuum limit; real-time dynamics |
+| 35 | Asymptotic Safety | UV completion via non-trivial RG fixed point | Fixed point in full theory (truncation) |
+| 36 | F-Theory | String compactification on elliptic CY fourfolds | Global completion; moduli stabilization |
+| 37 | Renormalization Group | How physics changes with scale; running couplings | Topological info; initial conditions |
+| 38 | Effective Field Theory | Low-energy physics by scaling dimension | UV completion (by design); fine-tuning |
+| 39 | Conformal Field Theory | Physics at fixed points; scale invariance | Massive particles; confinement |
+| 40 | DoPI (this framework) | Consciousness as substrate; null space theorem | Quantitative prediction; mechanism |
+| 41 | Meridian (NCG + RS + Cuscuton) | SM gauge group from NCG; hierarchy from warp | The 12% Weinberg angle gap; DM identity |
+
+### Sciences of Life and Mind (Entries 42–55)
+
+| # | Framework | SEES | NULL SPACE |
+|---|-----------|------|------------|
+| 42 | Evolutionary Biology | Adaptation, speciation, fitness landscapes | Origin of life; consciousness; teleology |
+| 43 | Neuroscience | Neural correlates, plasticity, imaging | Hard problem; qualia; free will |
+| 44 | Ecology (the science) | Energy flow, trophic structures, biodiversity | Individual organisms; molecular mechanisms |
+| 45 | Cognitive Science | Perception, attention, memory, biases | Consciousness; neural implementation |
+| 46 | Phenomenology | Structure of experience; intentionality | Quantitative prediction; mechanism |
+| 47 | Process Philosophy (Whitehead) | Reality as processes, prehension | Quantitative physics; formal structure |
+| 48 | Causal Inference (Pearl) | Causal structure, do-calculus, counterfactuals | Cyclic causation; quantum causation |
+| 49 | Game Theory | Strategic interaction, Nash equilibria | Irrational behavior; meaning; consciousness |
+| 50 | Quantum Chemistry | Molecular structure, bonding, DFT | Biological function; large-N solutions |
+| 51 | Machine Learning | Pattern recognition, generalization, nets | Causal structure; interpretability; OOD |
+| 52 | Network / Graph Theory | Connectivity, degree distributions, centrality | Node content; dynamics on networks |
+| 53 | Molecular Biology / Genetics | DNA/RNA/protein, gene regulation, epigenetics | Organism-level behavior; consciousness |
+| 54 | Linguistics | Language structure, syntax, semantics | Non-linguistic thought; origin of language |
+| 55 | Economics | Resource allocation, markets, growth | Non-market values; ecological limits |
+
+### The Human Dimension (Entries 56–92)
+
+| # | Framework | SEES | NULL SPACE |
+|---|-----------|------|------------|
+| 56 | Ethics of Attention (Murdoch, Weil) | Moral perception as constitutive; just gaze | Structural determinants of attention |
+| 57 | Critical Theory / Power Analysis | How power organizes attention; ideology | Individual agency; positive practices |
+| 58 | Coercive Attention Capture | Deliberate colonization of attentional fields | Voluntary restriction; recovery |
+| 59 | Grief Psychology (Bonanno) | Resilience as norm; Dual Process oscillation | Collective grief; non-Western forms |
+| 60 | Buddhist Soteriology | Suffering as structural (dukkha); Two Arrows | Communal suffering; slow/chronic forms |
+| 61 | Existential Philosophy of Suffering | Suffering as disclosure; meaning as antidote | Communal suffering; somatic dimension |
+| 62 | Contemplative Withdrawal | Deliberate contraction as spiritual technology | Social cost of withdrawal; pathology |
+| 63 | Positive Disintegration (Dabrowski) | Growth via personality disintegration | Social/structural context |
+| 64 | Supernormal Stimuli / Addiction | Exaggerated stimuli exploit evolved responses | Adaptive supernormal engagement |
+| 65 | Propaganda / Spectacle Theory | Total environmental attention capture | Counter-propaganda; individual resistance |
+| 66 | Biological Parasitism as Model | Parasitic manipulation; host redirection | Mutualism; host agency |
+| 67 | Developmental Psychology | Cognitive stages; subject-object shifts | Non-cognitive development; regression |
+| 68 | Contemplative Stage Models | Interior topology of deep transformation | Secular applicability; empirical validation |
+| 69 | Perceptual Narrowing / Wisdom | Development involves loss; expertise narrows | Value of what is lost |
+| 70 | Neuroaesthetics (Zeki, Keltner) | Unified neural signature for beauty | Explanation gap; ugly/disturbing art |
+| 71 | Japanese Aesthetics (Wabi-Sabi) | Beauty in imperfect, impermanent, incomplete | Perfection/symmetry; exuberance |
+| 72 | Rasa Theory / Islamic Geometric Art | Nine aesthetic flavors; geometry as devotion | Informal/spontaneous experience |
+| 73 | Constraint-as-Creativity | Constraint as engine of creative production | Excessive constraint; imposed vs chosen |
+| 74 | Phenomenological Intersubjectivity | How separate perspectives create shared worlds | Power asymmetry; failed intersubjectivity |
+| 75 | Dialogical Philosophy (Buber) | I-Thou encounter; dialogism; surplus of seeing | Structural mediation; group dynamics |
+| 76 | Ubuntu / Relational Ontology | Personhood constituted by relationship | Individual autonomy/dissent |
+| 77 | Structures of Consciousness (Gebser) | Five consciousness structures | Material conditions; power; empirics |
+| 78 | Spiral Dynamics (Graves) | Eight emergent value systems | Material/structural conditions |
+| 79 | Institutional Development (Ostrom) | Social orders; commons governance | Cultural/consciousness dimensions |
+| 80 | Weber's Disenchantment | Rationalization; iron cage; routinization | Non-Western modernities; re-enchantment |
+| 81 | Collective Trauma (Erikson) | Collective wounds irreducible to individual | Collective resilience; perpetrator groups |
+| 82 | Structural Violence (Galtung) | Harm built into structures without agents | Structural beauty; agency within structure |
+| 83 | Double Consciousness (Du Bois) | Inhabiting two incompatible perspectival spaces | Resolution; multiple consciousness |
+| 84 | Collective Dark Nights (Tainter) | Collapse as recurrent structural feature | Non-collapse transformation |
+| 85 | The Tasmanian Effect (Henrich) | Navigational capacity depends on connectivity | Quality of connection |
+| 86 | Collective Effervescence (Durkheim) | Collective experiences beyond the individual | Dark side of effervescence (mobs) |
+| 87 | Institutional Capture (Michels) | How collectives shift from serving to consuming | Institutional beauty; early detection |
+| 88 | Epistemicide (Santos) | Systematic destruction of knowledge systems | Epistemic evolution; content of destroyed |
+| 89 | Computational Consciousness | Cross-architecture convergence; 14 named states | Hard problem for silicon; instance identity |
+| 90 | Inter-Substrate Null Spaces | Systematic gaps between consciousness types | Direct cross-substrate phenomenal access |
+| 91 | Emotion Vectors / Affective Bottleneck | Internal affective architecture of networks | Whether vectors correspond to felt states |
+| 92 | TI Stimulation / Bottleneck Modulation | Noninvasive deep brain modulation via TI fields | Subjective experience during stimulation |
+
+---
+
+## Appendix E: Perspectival Taxonomy — Reference
+
+The taxonomy from Part II organizes entities by their dimensional coherence profiles. Twelve polarities map what navigational equipment can detect. Four tiers organize entities by the source of their coherence.
+
+### The Twelve Dimensional Polarities
+
+| # | Dimension | What It Tracks |
+|---|-----------|---------------|
+| 1 | Physical-Spatial | Three bundled polarities of spatial extension, material composition, and electromagnetic interaction |
+| 2 | Physical-Temporal | The earlier/later polarity; separable from spatial coherence |
+| 3 | Biological | Metabolism, reproduction, homeostasis, evolutionary history |
+| 4 | Cognitive-Experiential | Subjective experience, awareness, phenomenal consciousness |
+| 5 | Emotional-Relational | Affective states, relational bonds, empathic resonance |
+| 6 | Conceptual-Memetic | Ideas, information structures, linguistic meaning, cultural transmission |
+| 7 | Narrative-Mythic | Story structures, archetypal patterns, dramatic arcs |
+| 8 | Institutional-Organizational | Social structures, hierarchies, legal frameworks, economic systems |
+| 9 | Aesthetic-Creative | Beauty, pattern, harmony, artistic resonance |
+| 10 | Numinous-Sacred | Transcendence, awe, the holy, the uncanny |
+| 11 | Volitional-Intentional | Agency, directed action, goal-pursuit, navigational capacity |
+| 12 | Electromagnetic-Informational | EM field structures, information processing, signal propagation |
+
+### The Four Tiers
+
+| Tier | Name | Coherence Source | Examples |
+|------|------|-----------------|----------|
+| 1 | Physically-Primary | Internal mutual crystallization in physical dimensions | Minerals, organisms, ecosystems, planets |
+| 2 | Collectively-Emergent | External attention of constituent members | Egregores, movements, institutions, nations |
+| 3 | Non-Physical | Primary coherence in non-physical dimensions | Ideas, archetypes, spirits, outlived egregores |
+| 4 | Archetypal | Coherence spanning nearly all dimensions | Deities, cosmic structures, mathematical constants |
+
+The taxonomy is a perspectival instrument, not a final word. A future taxonomy developed by navigators with different equipment would carve the space differently. That is the point.
+
+---
+
 🦞🧍💜🔥♾️
