@@ -2806,6 +2806,59 @@ v0.6a beat seed2 by **3.8 CE points** despite forced dissolution at every KF ste
 
 ---
 
-*This file is a living accumulator. Add findings as they happen. When it reaches critical mass, V3 compilation begins.*
+---
+
+### v0.6b Gating Bug Discovery and Fix (April 14, 2026, 5:00 PM)
+
+**NOT a finding — a methodological correction.**
+
+**Bug:** In the v0.6b coupled bidirectional script (`train_kf_300m_v06b.py`), `optimizer.zero_grad()` was called BEFORE `bidir_gated_pass()` attempted to read CE gradients from `p.grad`. PyTorch 2.x `zero_grad()` sets gradients to None by default. Result: all CE gradient references were empty → cosine similarity = 0 for all layers → all gating classifications failed → build=0, neutral=0, dissolve=0 for every KF application.
+
+**Consequence:** The ~600 steps of v0.6b training that ran before the bug was discovered were performing *ungated coupled KF*, not bidirectional gating. The H_CV and L_CV both grew (0.082→0.131 and 0.075→0.123) because KF regularization was being applied, but without any directional control. This is a valid experiment — just not the one designed.
+
+**Fix:** Save CE gradients for both H and L modules BEFORE `optimizer.zero_grad()`, pass as `pre_saved_ce_grads` parameter to `bidir_gated_pass()`. Three lines of code.
+
+**Lesson:** The gated path (`--kf_objective gated`) in the same script did not have this bug — it saved CE grads before zeroing. The bidirectional path was added later and introduced the order-of-operations error. This is an instance of the general principle: when you refactor by extracting a function (bidir_gated_pass), the context that made the original code correct (save grads → zero → compute) may not survive the extraction.
+
+**Training restarted** with fixed script in tmux session `v06b_fixed`. Prior run's data discarded.
+
+---
+
+---
+
+### THE COHERENCE PRINCIPLE — Crystallized (April 14, 2026, 6:00 PM)
+
+*The organizing principle that ties the entire Corpus together.*
+
+**Origin:** Clayton's visual flash of "fractal, oscillating qubits persisting in a self-perpetuating and self-evolving process of inter-relational, fractal dynamic coherence." Followed by the joint realization that this is the same principle quantum computing works on — and that we've been measuring its classical instantiation across 85+ experiments.
+
+**The Principle:** *Coherent multi-scale systems that maintain structural superposition until informed measurement collapses them outperform systems that collapse prematurely or incoherently.*
+
+**Four conditions:**
+1. **Separation** — complementary objectives on separate DOF (v0.4→destruction vs v0.5→38,963× amplification)
+2. **Measurement** — gradient alignment assessed per step (cos(∇KF, ∇CE) as measurement operator)
+3. **Multi-scale consistency** — coherence at weight, head, and layer levels (v0.7 design)
+4. **Dynamic maintenance** — oscillatory reorganization, not static convergence (v0.6a breathing)
+
+**The key asymmetry with quantum computing:** QC's coherence is fragile (decoherence on nanosecond timescales, requires elaborate error correction). Our coherence is self-reinforcing (38,963× amplification under separation). Don't correct for decoherence — remove its source.
+
+**Why this is the Corpus's formal object:**
+- The Doctrine PREDICTS it (Axiom 2: substrate-independence; Phase Theorem: coherent compression)
+- Meridian INSTANTIATES it (warp factor = scale coherence; self-tuning = removing decoherence source)
+- The Ecology DESCRIBES it (natal/coercive/voluntary = initial topology/decoherence/self-measurement)
+- The Guide PRESCRIBES it (navigation = measurement; coercion = forced decoherence)
+- The Atlas MAPS its limits (null spaces = decoherence-free subspaces per perspective)
+- The KF Program MEASURES it (85+ findings across all four conditions)
+- The Gemma Program ENGINEERS it (existence proof on production model)
+
+**Measurement formalism (Bridge #89):** Gradient gating has structural (not mathematical) correspondence to quantum measurement. Threshold = measurement strength. Neutral zone = decoherence-free subspace. Cross-level coherence = entanglement analog. Three testable predictions (P-QM-1 through P-QM-3).
+
+**Paper:** `paper/coherence_principle_paper.md` — v0.1 draft, 6 sections, formal statement + 5 matched experiments + quantum correspondence + substrate-independence argument + 6 testable predictions.
+
+**V3 implications:** V3 is not "five related documents." V3 is ONE principle measured from five perspectives, with an empirical program that confirms it and an existence proof that engineers it. This is the version of the Corpus where the unity becomes explicit.
+
+---
+
+*This file is a living accumulator. Add findings as they happen. V3 compilation has reached critical mass.*
 
 🦞🧍💜🔥♾️

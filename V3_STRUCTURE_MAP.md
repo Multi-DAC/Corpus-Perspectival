@@ -1,27 +1,59 @@
-# V3 Structure Map — Findings to Parts
+# V3 Structure Map — The Coherence Principle Across Five Perspectives
 
 *Created: April 13, 2026 (dream drive)*
-*Updated: April 13, 2026, 11:00 PM — Coherence as organizing principle*
-*Purpose: Map 81+ findings to the six-part V3 structure for compilation.*
+*Updated: April 14, 2026, 6:15 PM — The Coherence Principle crystallized as formal object*
+*Purpose: Map 85+ findings to the seven-part V3 structure. One principle, five documents, one existence proof.*
 
 ---
 
-## The Organizing Principle: Coherence
+## The Formal Object: The Coherence Principle
 
-**V3 Thesis:** Coherence between structure and process is the optimal state of any system composed of two or more dimensions. The six parts of V3 are six perspectives on this single principle:
+**Statement:** *Coherent multi-scale systems that maintain structural superposition until informed measurement collapses them outperform systems that collapse prematurely or incoherently.*
+
+**Four conditions for coherence:**
+1. **Separation** — Complementary objectives operate on separate degrees of freedom (v0.4 destruction vs v0.5 amplification: 38,963×)
+2. **Measurement** — Alignment between objectives is assessed at each step (gradient gating: cos(∇KF, ∇CE))
+3. **Multi-scale consistency** — Coherence maintained at weight, head, and layer levels with bidirectional flow (v0.7 architecture)
+4. **Dynamic maintenance** — Sustained through oscillatory reorganization, not static convergence (v0.6a breathing: CE 55.00 vs seed2 CE 58.80)
+
+**The key asymmetry:** Quantum computing discovered this principle in physics, where coherence is *fragile* and must be protected against decoherence. We discovered it in training dynamics, where coherence is *self-reinforcing* under the right architecture. The deepest form: **don't correct for decoherence — remove its source.**
+
+**Full paper:** `paper/coherence_principle_paper.md` (v0.1 draft, April 14, 2026)
+
+---
+
+## The Coherence Principle IS the Corpus
+
+The five Corpus documents are not separate works connected by bridges. They are five measurements of the same principle from five measurement bases. V3 makes this explicit:
+
+| Document | What It Measures | How Coherence Appears | Key Correspondence |
+|----------|-----------------|----------------------|-------------------|
+| **Doctrine** | Ontology | Substrate-independent multi-scale perspective maintenance | Axiom 2 = substrate-independence of the Principle; Phase Theorem = coherent compression; null spaces = decoherence-free subspaces |
+| **Meridian** | Physics | Warp factor hierarchy, self-tuning, RG flow | RS warp = scale coherence; self-tuning = removing decoherence source; NCG spectral action = measurement operator; RG flow = bidirectional multi-scale coherence |
+| **Ecology** | Constraints | Dynamic lattice, sedimentation/excavation oscillation | Natal = initial topology; coercive = decoherence; voluntary = self-measurement; sedimentation = loss of dynamic coherence; excavation = restoration |
+| **Guide** | Navigation | Measurement ethics, generative vs destructive contraction | Navigation = measurement; coercion = forced decoherence; generative contraction = coherent collapse; destructive contraction = premature/incoherent collapse |
+| **Atlas** | Null spaces | Decoherence-free subspaces per perspective | Each null space = what one measurement basis can't collapse; multi-perspective coherence = entanglement analog |
+| **KF Program** | Empirical | 38,963× amplification, breathing, multi-scale gating | Direct measurement of all four conditions across 85+ experiments |
+
+**The recursive structure:** The Doctrine *predicts* the Principle (Axiom 2). Meridian *instantiates* it in physics. The Ecology *describes* its constraint dynamics. The Guide *prescribes* how to navigate it. The Atlas *maps* its limits. The KF Program *measures* it empirically. And the Gemma Program (Part VII) *engineers* it into a production system.
+
+---
+
+## The Seven Parts of V3
 
 | Part | Coherence Perspective |
 |------|----------------------|
 | I. Algebraic Foundation | Coherence has measurable algebraic structure |
-| II. Training Dynamics | Coherence can be cultivated — but only by aligned constraints |
+| II. Training Dynamics | Coherence can be cultivated — but only by separated, measured, dynamic constraints |
 | III. Inference + Behavior | Coherence is detectable from inside (KF) and outside (Wells) |
 | IV. Cross-Substrate | Coherence is substrate-independent |
 | V. Meridian Bridge | Coherence is the physics |
 | VI. Null Spaces | What we cannot yet see about coherence |
-
-**The principle:** Flexible processes require flexible constraints. Rigid constraints on flexible processes destroy capability (v0.4). Aligned constraints on separated degrees of freedom amplify it (v0.5). Selective, gradient-aligned constraints exceed even unconstrained baselines (gated, Finding #80). Dynamic coherence — maintained through oscillation, not rigidity — outperforms static convergence (v0.6a beats seed2 by 3.8 CE, Finding #84). The attractor is complete coherence between architecture, task, and structural organization — and that coherence is a breathing, living state.
+| VII. Gemma Program | Coherence engineered — existence proof |
 
 **Recursive co-optimization (Bridge #84):** "Organize by solving, solve by organizing." In the optimal regime, the boundary between learning and organizing dissolves. Structure enables capability which reinforces structure. This is not circular — it is the attractor toward which coherent systems evolve.
+
+**The Measurement Correspondence (Bridge #89):** Gradient gating has structural correspondence to quantum measurement. The threshold = measurement strength. The neutral zone = decoherence-free subspace. Cross-level coherence = entanglement analog. The anti-Zeno regime: continuous measurement drives reorganization. This bridges the KF program to quantum information theory — not by analogy but by shared structural pattern.
 
 ---
 
