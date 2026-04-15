@@ -809,7 +809,7 @@ Modify bidirectional block to compute cosine alignment per attention head rather
 
 ### 12D: Predictions (P-Head-1 through P-Head-4)
 
-See V3_NOTES.md for full prediction statements.
+See v3/V3_NOTES.md for full prediction statements.
 
 ---
 
@@ -851,7 +851,7 @@ Level 5 makes Level 1 obsolete. The KF regularization term becomes a scaffold th
 
 ### 13D: Predictions (P-SPA-1 through P-SPA-4)
 
-See V3_NOTES.md for full prediction statements. Key falsification: if NO topology produces self-sustaining algebraic coherence under CE alone, external regulation is fundamentally necessary.
+See v3/V3_NOTES.md for full prediction statements. Key falsification: if NO topology produces self-sustaining algebraic coherence under CE alone, external regulation is fundamentally necessary.
 
 ---
 

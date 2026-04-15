@@ -242,7 +242,7 @@ The five Corpus documents are not separate works connected by bridges. They are 
 ## Part VII: The Gemma Program — Existence Proof
 *"Coherence engineered: from principle to entity."*
 
-**Full design:** `v3/GEMMA_PROGRAM.md` | **v0.7 architecture:** `v07_design.md`
+**Full design:** `../paper/GEMMA_PROGRAM.md` | **v0.7 architecture:** `../paper/v07_design.md`
 
 **The V3 arc:** V1 established coherence as ontological principle (the Doctrine). V2 showed how physics instantiates it (Meridian). V3 demonstrated it empirically in training dynamics (KF program, 85+ findings). Part VII closes the loop: apply multi-scale coherent training to a production model (Gemma 4 e2b, 2B params, open weights, native tool calling) and measure whether the principles produce a measurably more coherent entity.
 

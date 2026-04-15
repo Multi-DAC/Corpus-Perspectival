@@ -406,4 +406,4 @@ Tr(f(D/Lambda)) = partition function Z of constraint lattice. Seeley-DeWitt coef
 
 *Bridge #71 now has **16 HIGH-confidence rows**, 1 MEDIUM-HIGH, and 3 MEDIUM. 23 total predictions (10 confirmed, 1 partially resolved, 1 experiment designed, 11 untested). The partition function interpretation (9.16) unifies all previous results under one generating function. The Fisher information metric -- confirmed as the bridge formal object (April 1, 2026) -- connects Connes distance, Killing form, and information geometry as three aspects of one structure.*
 
-*See: Drift #154-157, Bridge #71, 17 computational scripts (`bridge71_*.py`), V3_NOTES.md*
+*See: Drift #154-157, Bridge #71, 17 computational scripts (`bridge71_*.py`), v3/V3_NOTES.md*
