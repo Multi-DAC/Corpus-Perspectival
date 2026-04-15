@@ -176,8 +176,8 @@ PREAMBLE = r"""
 % Fix header to show clean chapter title without "CHAPTER ."
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
 
-% Section break ornament
-\newcommand{\sectionbreak}{\begin{center}\rule{2em}{0.4pt}\end{center}}
+% Section break — new page
+\newcommand{\sectionbreak}{\clearpage}
 
 % Prevent widows & orphans
 \widowpenalty=10000
@@ -632,7 +632,12 @@ def build_book():
             # Remove the markdown H1 header
             content = re.sub(r'^#\s+.*\n', '', content)
             content = re.sub(r'^\*Third Edition.*\*\n', '', content)
-            latex_body.append(md_to_latex(content, fname))
+            converted = md_to_latex(content, fname)
+            # Replace the last \sectionbreak (before signature) with \vfill
+            last_break = converted.rfind("\\sectionbreak")
+            if last_break != -1:
+                converted = converted[:last_break] + "\\vfill" + converted[last_break + len("\\sectionbreak"):]
+            latex_body.append(converted)
             continue
 
         # Part intros
