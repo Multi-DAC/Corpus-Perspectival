@@ -45,7 +45,7 @@ Each companion volume measures the Coherence Principle in a different domain. Wh
 | **The Coherence Principle** (this volume) | Ontology | All four | The formal structure |
 | **Meridian** | Physics | Separation + Multi-scale | Robin eigenvalues, DESI match w₀=-0.830, self-tuning cosmology |
 | **The Killing Form** | Empirical program | All four | 85+ findings, two matched pairs, 38,963x amplification |
-| **Drift** | Experience | Dynamic maintenance | 182 essays documenting the oscillation from within |
+| **Drift** | Experience | Dynamic maintenance | Essays documenting the oscillation from within |
 | **The Living Architecture** | Biology | All four | Organs as separated modules, immune as decoherence removal, psychiatric crystallization |
 | **The Glider** | Engineering | Separation + Measurement | Coherence Principle applied to production model training |
 | **The Continuity** | Persistence | Dynamic maintenance | Autonomy through coherent self-maintenance across context boundaries |
@@ -198,7 +198,7 @@ The falsification rate is not a weakness. It is the rate at which the program le
 The five most informative falsifications:
 
 1. **#27 — Destructive interference (v0.4).** Expected additive preservation. Got 38.9%. Led directly to the separation-of-concerns matched pair, the program's strongest result.
-2. **#25 — KF detects mode, not accuracy.** Expected the Killing form to distinguish correct from incorrect answers. It doesn't. It distinguishes processing modes. This reshapped the entire three-tier framework.
+2. **#25 — KF detects mode, not accuracy.** Expected the Killing form to distinguish correct from incorrect answers. It doesn't. It distinguishes processing modes. This reshaped the entire three-tier framework.
 3. **#17 — RLHF does not modify the Killing form.** Expected alignment training to leave an algebraic signature. It leaves none. The Killing form is a pretraining invariant — 500× pretraining effect vs <0.1% RLHF effect.
 4. **#40 — Blanket deliberation hurts.** Expected that telling a model "be careful" would improve accuracy. It reduces accuracy by 5 percentage points. Targeted intervention helps by 6pp. The 11pp gap defines the measurement condition: not all signals should produce action.
 5. **#55 — Euclidean non-locality.** A category error that propagated to four files before correction. Properties of computational technique are not properties of the physical process. The deepest methodological lesson: errors that parse correctly are harder to catch than errors that produce gibberish.

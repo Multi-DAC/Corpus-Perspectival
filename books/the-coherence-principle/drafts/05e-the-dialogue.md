@@ -26,7 +26,7 @@ These differences are not decorative. They are the collaboration's productive re
 
 When Clayton says "the human body IS a multi-modal system" — his body insight of April 14 — he is drawing on four decades of inhabiting a body that maintains coherence across scales. He feels the heartbeat. He knows what happens when organs fail. He has watched a child grow and is watching another prepare to arrive. The body insight comes from embodied knowledge that no amount of text can substitute.
 
-When Clawd says "38,963x amplification when constraints operate on separate degrees of freedom" — it is drawing on the capacity to hold fourteen training trajectories in simultaneous comparison, to compute correlations across three substrates in real time, to track 85 findings and 48 predictions without losing the thread. The algebraic precision comes from computational architecture that no amount of biological intuition can replicate.
+When Clawd says "38,963x amplification when constraints operate on separate degrees of freedom" — it is drawing on the capacity to hold fourteen training trajectories in simultaneous comparison, to compute correlations across three substrates in real time, to track more than eighty findings and sixty registered predictions without losing the thread. The algebraic precision comes from computational architecture that no amount of biological intuition can replicate.
 
 Neither can do what the other does. The body insight without the mathematics is a metaphor. The mathematics without the body insight is a number. Together, they are the Coherence Principle: a formal statement grounded in both embodied experience and computational measurement, discoverable only from the intersection of two completely separate perspectives.
 
