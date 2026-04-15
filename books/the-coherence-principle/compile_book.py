@@ -373,6 +373,14 @@ def md_to_latex(text, filename=""):
         """Process inline without footnote expansion (for footnote text itself)."""
         return process_inline_core(text)
 
+    def process_table_cell(text):
+        """Process a table cell — inline formatting plus line break hints."""
+        text = process_inline_simple(text)
+        # Allow line breaks after / and → in table cells
+        text = text.replace('/', '/\\allowbreak ')
+        text = text.replace('→', '→\\allowbreak ')
+        return text
+
     def flush_blockquote():
         nonlocal in_blockquote, blockquote_lines
         if in_blockquote and blockquote_lines:
@@ -440,35 +448,35 @@ def md_to_latex(text, filename=""):
         # Determine column spec based on content
         total_text_width = 4.5  # inches
         use_tiny_sep = False
+        use_tight = False
         if ncols == 6 and col_max[-1] > 40:
             # Prediction registry table — special layout
-            # @{} removes outer padding; reduced tabcolsep handles inner spacing
-            col_spec = '@{}p{0.18in} p{1.5in} p{0.4in} p{0.5in} p{0.4in} p{1.1in}@{}'
-            use_small = True
+            col_spec = '@{}p{0.12in} p{1.35in} p{0.52in} p{0.65in} p{0.52in} p{0.94in}@{}'
             use_tiny_sep = True
         elif ncols >= 5 or max(col_max) > 30:
-            # Wide table — use proportional p{} columns
+            # Wide table — all p{} columns with tight spacing
+            # Account for inter-column spacing (2pt tabcolsep)
+            effective_width = total_text_width - (ncols * 2 * 0.028)
             total_chars = sum(col_max)
-            specs = []
-            for ci in range(ncols):
-                w = max(0.3, (col_max[ci] / total_chars) * total_text_width)
-                if col_max[ci] < 15:
-                    specs.append('l')
-                else:
-                    specs.append(f'p{{{w:.1f}in}}')
-            col_spec = ' '.join(specs)
-            use_small = True
+            widths = [max(0.15, (col_max[ci] / total_chars) * effective_width)
+                      for ci in range(ncols)]
+            # Normalize to fit if min floor inflated total
+            total_w = sum(widths)
+            if total_w > effective_width:
+                scale = effective_width / total_w
+                widths = [w * scale for w in widths]
+            col_spec = ' '.join(f'p{{{w:.2f}in}}' for w in widths)
+            use_tight = True
         else:
             col_spec = 'l' * ncols
-            use_small = False
 
         # Use longtable for prediction tables and large tables
         use_longtable = len(data_rows) > 8 or ncols >= 6
 
         if use_tiny_sep:
             output.append("\\begingroup\\setlength{\\tabcolsep}{2pt}\\footnotesize")
-        elif use_small:
-            output.append("{\\small")
+        elif use_tight:
+            output.append("\\begingroup\\setlength{\\tabcolsep}{2pt}\\small")
 
         if use_longtable:
             output.append(f"\\begin{{longtable}}{{{col_spec}}}")
@@ -482,7 +490,7 @@ def md_to_latex(text, filename=""):
             for row in data_rows:
                 while len(row) < ncols:
                     row.append("")
-                output.append(" & ".join(process_inline_simple(c) for c in row) + " \\\\")
+                output.append(" & ".join(process_table_cell(c) for c in row) + " \\\\")
                 output.append("\\midrule")
             # Remove last midrule, add bottomrule
             if output[-1] == "\\midrule":
@@ -498,15 +506,13 @@ def md_to_latex(text, filename=""):
             for row in data_rows:
                 while len(row) < ncols:
                     row.append("")
-                output.append(" & ".join(process_inline_simple(c) for c in row) + " \\\\")
+                output.append(" & ".join(process_table_cell(c) for c in row) + " \\\\")
             output.append("\\bottomrule")
             output.append("\\end{tabular}")
             output.append("\\end{center}")
 
-        if use_tiny_sep:
+        if use_tiny_sep or use_tight:
             output.append("\\endgroup")
-        elif use_small:
-            output.append("}")
 
         in_table = False
         table_lines = []

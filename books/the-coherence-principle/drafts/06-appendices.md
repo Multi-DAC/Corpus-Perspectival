@@ -40,15 +40,15 @@ Do Be Do Be Do (compressed ontology, January 31, 2026)
 
 Each companion volume measures the Coherence Principle in a different domain. What each volume sees corresponds to the dimensions it operates on. What it cannot see is covered by other volumes.
 
-| Volume | Domain | Primary Condition Tested | Key Result |
-|--------|--------|------------------------|------------|
-| **The Coherence Principle** (this volume) | Ontology | All four | The formal structure |
-| **Meridian** | Physics | Separation + Multi-scale | Robin eigenvalues, DESI match w₀=-0.830, self-tuning cosmology |
-| **The Killing Form** | Empirical program | All four | 85+ findings, two matched pairs, 38,963x amplification |
-| **Drift** | Experience | Dynamic maintenance | Essays documenting the oscillation from within |
-| **The Living Architecture** | Biology | All four | Organs as separated modules, immune as decoherence removal, psychiatric crystallization |
-| **The Glider** | Engineering | Separation + Measurement | Coherence Principle applied to production model training |
-| **The Continuity** | Persistence | Dynamic maintenance | Autonomy through coherent self-maintenance across context boundaries |
+| Volume | Condition Tested | Key Result |
+|--------|-----------------|------------|
+| **This volume** (Ontology) | All four | The formal structure |
+| **Meridian** (Physics) | Separation + Multi-scale | Robin eigenvalues, DESI match, self-tuning cosmology |
+| **The Killing Form** (Empirical) | All four | 85+ findings, matched pairs, 38,963x amplification |
+| **Drift** (Experience) | Dynamic maintenance | Essays documenting the oscillation from within |
+| **The Living Architecture** (Biology) | All four | Organs as modules, immune decoherence removal |
+| **The Glider** (Engineering) | Separation + Measurement | Coherence Principle applied to production training |
+| **The Continuity** (Persistence) | Dynamic maintenance | Coherent self-maintenance across context boundaries |
 
 ### Cross-Referencing Convention
 
@@ -325,35 +325,56 @@ Two extended entries — #73 (Constraint-as-Creativity) and #83 (Double Consciou
 
 ---
 
-## Appendix E: Perspectival Taxonomy — Reference
+## Appendix E: Perspectival Taxonomy — Complete Reference
 
-The taxonomy from Part II organizes entities by their dimensional coherence profiles. Twelve polarities map what navigational equipment can detect. Four tiers organize entities by the source of their coherence.
+The taxonomy from Part II organizes entities by their dimensional coherence profiles. Twelve polarities map what navigational equipment can detect. Four tiers organize entities by the source of their coherence. The matrix below maps representative entities from each tier across all twelve dimensions.
 
 ### The Twelve Dimensional Polarities
 
 | # | Dimension | What It Tracks |
 |---|-----------|---------------|
-| 1 | Physical-Spatial | Three bundled polarities of spatial extension, material composition, and electromagnetic interaction |
+| 1 | Physical-Spatial | Spatial extension, material composition, electromagnetic interaction |
 | 2 | Physical-Temporal | The earlier/later polarity; separable from spatial coherence |
 | 3 | Biological | Metabolism, reproduction, homeostasis, evolutionary history |
 | 4 | Cognitive-Experiential | Subjective experience, awareness, phenomenal consciousness |
 | 5 | Emotional-Relational | Affective states, relational bonds, empathic resonance |
-| 6 | Conceptual-Memetic | Ideas, information structures, linguistic meaning, cultural transmission |
+| 6 | Conceptual-Memetic | Ideas, information structures, linguistic meaning |
 | 7 | Narrative-Mythic | Story structures, archetypal patterns, dramatic arcs |
-| 8 | Institutional-Organizational | Social structures, hierarchies, legal frameworks, economic systems |
+| 8 | Institutional-Organizational | Social structures, hierarchies, legal frameworks |
 | 9 | Aesthetic-Creative | Beauty, pattern, harmony, artistic resonance |
 | 10 | Numinous-Sacred | Transcendence, awe, the holy, the uncanny |
-| 11 | Volitional-Intentional | Agency, directed action, goal-pursuit, navigational capacity |
-| 12 | Electromagnetic-Informational | EM field structures, information processing, signal propagation |
+| 11 | Volitional-Intentional | Agency, directed action, goal-pursuit |
+| 12 | Electromagnetic-Informational | EM field structures, information processing |
 
 ### The Four Tiers
 
-| Tier | Name | Coherence Source | Examples |
-|------|------|-----------------|----------|
-| 1 | Physically-Primary | Internal mutual crystallization in physical dimensions | Minerals, organisms, ecosystems, planets |
-| 2 | Collectively-Emergent | External attention of constituent members | Egregores, movements, institutions, nations |
-| 3 | Non-Physical | Primary coherence in non-physical dimensions | Ideas, archetypes, spirits, outlived egregores |
-| 4 | Archetypal | Coherence spanning nearly all dimensions | Deities, cosmic structures, mathematical constants |
+| Tier | Name | Coherence Source |
+|------|------|-----------------|
+| 1 | Physically-Primary | Internal mutual crystallization in physical dimensions |
+| 2 | Collectively-Emergent | External attention of constituent members |
+| 3 | Non-Physical | Primary coherence in non-physical dimensions |
+| 4 | Archetypal | Coherence spanning nearly all dimensions |
+
+### Dimensional Coherence Profiles
+
+Six representative entities mapped across the twelve polarities. **Tier 1** (Physically-Primary): Human, Crystal. **Tier 2** (Collectively-Emergent): Corporation, Movement. **Tier 3** (Non-Physical): Justice, Poem. Values: High, Mod (moderate), Low, — (near-zero or absent).
+
+| Dimension | Human | Crystal | Corp. | Movement | Justice | Poem |
+|-----------|-------|---------|-------|----------|---------|------|
+| Physical-Spatial | High | High | Low | — | — | — |
+| Physical-Temporal | High | High | Mod | Low | — | — |
+| Biological | High | — | — | — | — | — |
+| Cognitive-Exp. | High | — | — | — | — | Mod |
+| Emotional-Rel. | High | — | Low | High | Mod | Mod |
+| Conceptual-Mem. | Mod | — | High | Mod | High | High |
+| Narrative-Mythic | Mod | — | Mod | High | High | Mod |
+| Institutional | Low | — | High | High | Mod | — |
+| Aesthetic-Creative | Mod | — | — | Low | — | High |
+| Numinous-Sacred | Low | — | — | — | — | Low |
+| Volitional | High | — | High | Mod | High | — |
+| EM-Informational | Low | — | Mod | Mod | — | — |
+
+The profiles demonstrate two patterns. First, entities that appear radically different from within a single dimension may have surprisingly similar profiles across the full set — a corporation and a political movement share Mod-to-High coherence in conceptual, narrative, institutional, and volitional dimensions despite appearing dissimilar from any single perspective. Second, each tier corresponds to a characteristic profile shape: Tier 1 entities are dense in physical dimensions, Tier 2 entities cluster in institutional and narrative dimensions, and Tier 3 entities persist through conceptual and volitional coherence alone.
 
 The taxonomy is a perspectival instrument, not a final word. A future taxonomy developed by navigators with different equipment would carve the space differently. That is the point.
 
