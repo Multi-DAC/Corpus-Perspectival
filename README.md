@@ -163,6 +163,7 @@ See [`v3/V3_STRUCTURE_MAP.md`](v3/V3_STRUCTURE_MAP.md) for the complete architec
 
 - **Doctrine of Perspectival Idealism** — [PhilArchive](https://philpapers.org/rec/IGGTDO-4) (V2, April 2026, 200+ downloads)
 - **Corpus Perspectival** — [Zenodo](https://doi.org/10.5281/zenodo.19501896) (DOI: 10.5281/zenodo.19501896)
+- **Project Meridian Technical Summary** — [Zenodo](https://doi.org/10.5281/zenodo.19519818) (DOI: 10.5281/zenodo.19519818) — standalone physics summary
 
 ## License
 
