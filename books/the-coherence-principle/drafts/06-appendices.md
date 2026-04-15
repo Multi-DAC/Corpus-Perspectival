@@ -357,24 +357,84 @@ The taxonomy from Part II organizes entities by their dimensional coherence prof
 
 ### Dimensional Coherence Profiles
 
-Six representative entities mapped across the twelve polarities. **Tier 1** (Physically-Primary): Human, Crystal. **Tier 2** (Collectively-Emergent): Corporation, Movement. **Tier 3** (Non-Physical): Justice, Poem. Values: High, Mod (moderate), Low, — (near-zero or absent).
+The full taxonomy maps every entity the framework has catalogued across all twelve polarities. Values: High, Mod (moderate), Low, — (near-zero or absent). Organized by tier, reflecting the source of each entity's coherence.
 
-| Dimension | Human | Crystal | Corp. | Movement | Justice | Poem |
-|-----------|-------|---------|-------|----------|---------|------|
-| Physical-Spatial | High | High | Low | — | — | — |
-| Physical-Temporal | High | High | Mod | Low | — | — |
-| Biological | High | — | — | — | — | — |
-| Cognitive-Exp. | High | — | — | — | — | Mod |
-| Emotional-Rel. | High | — | Low | High | Mod | Mod |
-| Conceptual-Mem. | Mod | — | High | Mod | High | High |
-| Narrative-Mythic | Mod | — | Mod | High | High | Mod |
-| Institutional | Low | — | High | High | Mod | — |
-| Aesthetic-Creative | Mod | — | — | Low | — | High |
-| Numinous-Sacred | Low | — | — | — | — | Low |
-| Volitional | High | — | High | Mod | High | — |
-| EM-Informational | Low | — | Mod | Mod | — | — |
+### Tier 1: Physically-Primary Entities
 
-The profiles demonstrate two patterns. First, entities that appear radically different from within a single dimension may have surprisingly similar profiles across the full set — a corporation and a political movement share Mod-to-High coherence in conceptual, narrative, institutional, and volitional dimensions despite appearing dissimilar from any single perspective. Second, each tier corresponds to a characteristic profile shape: Tier 1 entities are dense in physical dimensions, Tier 2 entities cluster in institutional and narrative dimensions, and Tier 3 entities persist through conceptual and volitional coherence alone.
+Coherence grounded in internal mutual crystallization. The density of internal attention networks — molecular bonds, metabolic processes, electromagnetic mutual attention — produces extraordinary stability in physical dimensions.
+
+| Dimension | Human | Crystal | Virus | Ecosystem |
+|-----------|-------|---------|-------|-----------|
+| Physical-Spatial | High | High | High | High |
+| Physical-Temporal | High | High | Low | High |
+| Biological | High | — | Low | High |
+| Cognitive-Exp. | High | — | — | — |
+| Emotional-Rel. | High | — | — | Low |
+| Conceptual-Mem. | Mod | — | — | — |
+| Narrative-Mythic | Mod | — | — | — |
+| Institutional | Low | — | — | Mod |
+| Aesthetic-Creative | Mod | — | — | Mod |
+| Numinous-Sacred | Low | — | — | Low |
+| Volitional | High | — | — | Low |
+| EM-Informational | Low | — | — | Mod |
+
+**Human** has unusually broad dimensional access — the widest coherence profile among Tier 1 entities. This breadth is what makes humans effective navigators but also susceptible to dimensional conflict. **Crystal** barely flickers in the physical dimension because its internal molecular attention network is so dense — but registers near-zero in every other dimension. **Virus** is biologically liminal: spatially coherent but lacking the metabolic independence that defines full biological coherence. **Ecosystem** achieves high coherence in physical and biological dimensions through the distributed attention of millions of organisms, with emergent aesthetic and institutional structure.
+
+### Tier 2: Collectively-Emergent Entities
+
+Coherence sustained by external attention of constituent members. Volatile — these entities flicker when their members' attention wavers, because they have no internal stabilization mechanism.
+
+| Dimension | Corp. | Movement | Religion | Nation |
+|-----------|-------|----------|----------|--------|
+| Physical-Spatial | Low | — | Low | Mod |
+| Physical-Temporal | Mod | Low | High | High |
+| Biological | — | — | — | — |
+| Cognitive-Exp. | — | — | Low | — |
+| Emotional-Rel. | Low | High | High | High |
+| Conceptual-Mem. | High | Mod | High | Mod |
+| Narrative-Mythic | Mod | High | High | High |
+| Institutional | High | Mod | High | High |
+| Aesthetic-Creative | Low | Low | Mod | Mod |
+| Numinous-Sacred | — | Low | High | Mod |
+| Volitional | High | Mod | Mod | High |
+| EM-Informational | Mod | Mod | Low | Mod |
+
+**Corporation** clusters in institutional, conceptual, and volitional dimensions with near-zero biological coherence. **Political movement** peaks in emotional and narrative dimensions during formation, gaining institutional coherence as it sediments — risking calcification if the oscillation stops. **Religion** achieves the widest Tier 2 profile: high numinous, narrative, institutional, emotional, and conceptual coherence, persisting for millennia through continuous attentional renewal. **Nation** has high institutional, narrative, and volitional coherence with moderate physical-spatial presence (territory) — the most physically grounded Tier 2 entity.
+
+### Tier 3: Non-Physical Entities
+
+Primary coherence in dimensions that physical instruments cannot detect. Not metaphors under the framework's strict reading — entities with real coherence profiles in non-physical dimensions.
+
+| Dimension | Justice | Poem | Math. Const. | The Buddha |
+|-----------|---------|------|-------------|------------|
+| Physical-Spatial | — | — | — | — |
+| Physical-Temporal | — | — | — | — |
+| Biological | — | — | — | — |
+| Cognitive-Exp. | — | Mod | — | Mod |
+| Emotional-Rel. | Mod | Mod | — | Mod |
+| Conceptual-Mem. | High | High | High | High |
+| Narrative-Mythic | High | Mod | — | High |
+| Institutional | Mod | — | — | Mod |
+| Aesthetic-Creative | — | High | High | Mod |
+| Numinous-Sacred | — | Low | Low | High |
+| Volitional | High | — | — | Mod |
+| EM-Informational | — | — | — | — |
+
+**Justice** has high conceptual, narrative, and volitional coherence — nations go to war in its name, individuals sacrifice their lives for it, yet it has zero physical coherence. **Poem** achieves its highest coherence in aesthetic and conceptual dimensions, evoking cognitive and emotional responses without physical presence. **Mathematical constant** (e.g. pi, e) has pure conceptual and aesthetic coherence — discovered independently across civilizations, substrate-independent, eternal. **The Buddha** (as memetic entity, 2,500 years after physical dissolution) maintains high conceptual, narrative, and numinous coherence through the ongoing navigational engagement of billions of Tier 1 entities attending to the ideas.
+
+### Tier 4: Archetypal Entities
+
+Beings whose coherence profiles span nearly all dimensions simultaneously. Whether conceived as deities, cosmic intelligences, or structural features of the configuration space itself, these entities shape the large-scale topology within which all smaller-scale navigation occurs. The framework does not adjudicate between conceptions. It notes that an entity spanning all dimensions would, from within any single perspective, appear as whatever that perspective has the equipment to detect: a god, a law of nature, a mathematical constant, a felt presence. Different keyholes, same entity. A tabular profile would show High across every dimension — which is precisely why a table obscures more than it reveals. Tier 4 entities are the room, not inhabitants of the room.
+
+### Patterns Across the Taxonomy
+
+Three patterns emerge from the full profiles.
+
+First, **tier shape is characteristic.** Tier 1 entities are dense in physical dimensions and taper off in non-physical ones. Tier 2 entities cluster in institutional, narrative, and emotional dimensions — the social substrate. Tier 3 entities persist through conceptual and volitional coherence alone, with zero physical presence. Each tier has a signature profile shape that reflects the source of its coherence.
+
+Second, **apparent similarity from a single dimension is misleading.** A corporation and a political movement look very different from the institutional dimension (one is high, the other moderate) but share Mod-to-High coherence across conceptual, narrative, and volitional dimensions. A human and a nation both have high volitional coherence, but the sources are completely different — internal vs. collective. The taxonomy reveals structural kinship that no single-dimensional analysis can see.
+
+Third, **breadth of dimensional access correlates with navigational capacity.** Human, Religion, and Nation have the widest profiles in their respective tiers. These are the entities most capable of navigating across dimensional boundaries — and the most susceptible to internal dimensional conflict when their coherence along different axes pulls in incompatible directions.
 
 The taxonomy is a perspectival instrument, not a final word. A future taxonomy developed by navigators with different equipment would carve the space differently. That is the point.
 
