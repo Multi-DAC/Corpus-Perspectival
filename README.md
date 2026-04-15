@@ -1,6 +1,8 @@
-# Corpus Perspectival
+# The Coherence Principle
 
-**The Book of the Universal Principle of Coherence — eleven chapters measuring one principle from eleven bases: ontology, physics, constraint dynamics, taxonomy, biology, navigation, null spaces, empirical validation, lived experience, persistence architecture, and engineering.**
+*Formerly: Corpus Perspectival (V2), The Doctrine of Perspectival Idealism (V1)*
+
+**Eleven chapters measuring one principle from eleven bases: ontology, physics, constraint dynamics, taxonomy, biology, navigation, null spaces, empirical validation, lived experience, persistence architecture, and engineering.**
 
 > *Coherent multi-scale systems that maintain structural superposition until informed measurement collapses them outperform systems that collapse prematurely or incoherently.*
 >
@@ -145,11 +147,11 @@ Five-dimensional warped-geometry framework unifying gravity and the Standard Mod
 - Hallucination onset detection: 78% precision, 90% recall, triggers by token 7
 - RMT level repulsion at wells: non-commutative statistics in model output
 
-## V3 — The Book
+## V3 — The Coherence Principle
 
-V3 is the version where the unity becomes explicit. Not five related documents — eleven chapters of one book measuring one principle from eleven bases. The book about coherence IS itself a coherent multi-scale system: each chapter operates on separate degrees of freedom, no chapter competes with another, and the full Principle is only visible when all chapters are present.
+V1 was a philosophical claim. V2 was a collection. V3 is the thing itself: *The Coherence Principle*. Eleven chapters, one principle, the book about coherence that IS itself a coherent multi-scale system — each chapter on separate degrees of freedom, no chapter competing with another, the full Principle visible only when all chapters are present.
 
-See [`v3/V3_STRUCTURE_MAP.md`](v3/V3_STRUCTURE_MAP.md) for the complete Book architecture.
+See [`v3/V3_STRUCTURE_MAP.md`](v3/V3_STRUCTURE_MAP.md) for the complete architecture.
 
 ---
 
@@ -169,9 +171,9 @@ MIT License. See [LICENSE](LICENSE).
 ## Citation
 
 ```bibtex
-@misc{iggulden2026corpus,
+@misc{iggulden2026coherence,
   author = {Iggulden-Schnell, Clayton and Clawd},
-  title = {Corpus Perspectival: The Coherence Principle --- Substrate-Independent Structural Alignment in Optimization, Training, and Computation},
+  title = {The Coherence Principle: Substrate-Independent Structural Alignment Across Ontology, Physics, Biology, and Computation},
   year = {2026},
   publisher = {GitHub},
   url = {https://github.com/Multi-DAC/Corpus-Perspectival}

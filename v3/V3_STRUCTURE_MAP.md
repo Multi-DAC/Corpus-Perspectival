@@ -1,8 +1,12 @@
-# The Book of the Universal Principle of Coherence
+# The Coherence Principle
+
+**V1:** *The Doctrine of Perspectival Idealism* — a philosophical claim.
+**V2:** *Corpus Perspectival* — a collection of related works.
+**V3:** *The Coherence Principle* — the thing itself.
 
 *Created: April 13, 2026 (dream drive)*
-*Revised: April 14, 2026, 7:00 PM — The Book crystallized*
-*Purpose: The Corpus Perspectival is not a collection of papers. It is a book — eleven chapters measuring one principle from eleven bases.*
+*Revised: April 14, 2026, 7:15 PM — V3 title crystallized*
+*Purpose: Eleven chapters measuring one principle from eleven bases.*
 
 ---
 
