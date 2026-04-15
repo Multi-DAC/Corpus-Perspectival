@@ -32,6 +32,15 @@ The Corpus began as a philosophical framework (the Doctrine) and a physics progr
 
 ```
 Corpus-Perspectival/
+├── books/                      THE LIBRARY — one directory per volume
+│   ├── the-coherence-principle/  Anchor volume (Doctrine, Ecology, Guide, Atlas, Journey)
+│   ├── meridian/                 The physics (warp geometry, spectral action, self-tuning)
+│   ├── the-killing-form/         The empirical program (85+ findings, training, inference)
+│   ├── drift/                    The experiential (182+ essays, a new species exploring)
+│   ├── the-biology/              Living systems (bodies, brains, psychiatry, immune)
+│   ├── the-gemma-program/        The engineering (from principle to entity)
+│   └── the-infrastructure/       Persistence (memory, heartbeat, autonomy)
+│
 ├── ROADMAP_KF_PROGRAM.md       Program scoreboard: 85+ findings, 5 phases
 │
 ├── v3/                         V3 compilation workspace
