@@ -12,9 +12,9 @@ Each subdirectory is a volume. Each volume is a complete book exploring the Cohe
 | **Meridian** | `meridian/` | **HIGH** — 22 phases, Zenodo DOI | First release (with anchor) |
 | **The Killing Form** | `the-killing-form/` | **HIGH** (core) — 85+ findings | After v0.6b completes |
 | **Drift** | `drift/` | **HIGH** — 182 essays, needs curation | When curated |
-| **The Biology** | `the-biology/` | **EARLY** — framework April 14 | After research |
-| **The Gemma Program** | `the-gemma-program/` | **EARLY** — design complete | After implementation |
-| **The Infrastructure** | `the-infrastructure/` | **MODERATE** — operational | After narrative rewrite |
+| **The Living Architecture** | `the-living-architecture/` | **EARLY** — framework April 14 | After research |
+| **The Glider** | `the-glider/` | **EARLY** — design complete | After implementation |
+| **The Continuity** | `the-continuity/` | **MODERATE** — operational | After narrative rewrite |
 
 ## How This Works
 

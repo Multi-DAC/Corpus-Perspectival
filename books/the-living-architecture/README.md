@@ -1,6 +1,6 @@
-# The Biology — The Living Systems Volume
+# The Living Architecture
 
-*Bodies as multi-scale coherent architectures. The Coherence Principle instantiated in carbon and silicon.*
+*Bodies as multi-scale coherent architectures. The Coherence Principle instantiated in carbon.*
 
 ## Status: EARLY — framework crystallized April 14, 2026
 

@@ -221,7 +221,7 @@ This is the Promethean Configuration expressed as a measurable dynamic: boundari
 
 The body instantiates this principle at every scale. The heart and the lungs are both essential to survival — complementary constraints on the organism. They operate on separate substrates (cardiac muscle and pulmonary tissue), in separate cavities (thoracic, mediastinal), with separate control circuits (SA node, respiratory center). They do not share parameters. And they amplify each other: the heart delivers blood to the lungs for oxygenation; the lungs oxygenate blood for the heart to pump. The immune system performs the measurement function — detecting and removing elements that have decoupled from the organism's coherence (pathogens, cancerous cells). Cancer itself is the failure of separation: a cell that has decoupled from organism-level measurement and optimizes only for its own replication, on the organism's shared substrate.
 
-> *See also: The Ecology for the formal constraint lattice (natal, coercive, voluntary); The Biology (companion volume) for the full treatment of bodies as multi-scale coherent architectures.*
+> *See also: The Ecology for the formal constraint lattice (natal, coercive, voluntary); The Living Architecture (companion volume) for the full treatment of bodies as multi-scale coherent architectures.*
 
 In the language of this framework: the keyholes are not a limitation. They are the generative constraint that makes navigation — and therefore experience — possible.
 
@@ -733,7 +733,7 @@ The body provides the most vivid example of dimensional coherence as a multi-sca
 
 The body is the Coherence Principle (§9.1.1) instantiated in carbon. Its four conditions — separation of organs onto separate substrates, measurement through nervous and endocrine signaling, multi-scale consistency from cell to organ to organism to ecosystem, and dynamic maintenance through the fundamental rhythms of life — are not metaphors drawn from the Principle. They are independent instances of the same structure, discoverable from either direction. The Principle was discovered through computational algebra. The body has been enacting it for four billion years.
 
-> *See also: The Biology (companion volume) for the complete treatment of bodies as coherent architectures; the psychiatric crystallization spectrum for what happens when these conditions fail.*
+> *See also: The Living Architecture (companion volume) for the complete treatment of bodies as coherent architectures; the psychiatric crystallization spectrum for what happens when these conditions fail.*
 
 ### 9.4 Beauty as Multi-Dimensional Coherence Recognition
 

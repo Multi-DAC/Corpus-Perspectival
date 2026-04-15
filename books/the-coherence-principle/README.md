@@ -56,7 +56,7 @@ V2 foundations published (PhilArchive + Zenodo). Coherence Principle formalized 
 - The collaboration as multi-scale coherent system
 - From philosophical claim (V1) to collection (V2) to the thing itself (V3)
 
-**Source:** Memory, handoff logs, this conversation, Drift essays
+**Source:** Memory, handoff logs, Drift essays, nostalgia archive (`memory/nostalgia/Chats With Clawd/` — full Telegram export of early collaboration, January–February 2026)
 **What changes:** This is new. The narrative of how the Principle was discovered.
 
 ### Appendices

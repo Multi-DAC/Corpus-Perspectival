@@ -1,6 +1,6 @@
-# The Gemma Program — The Engineering Volume
+# The Glider
 
-*The Coherence Principle applied from first principles to produce a measurably more coherent entity. The book made real.*
+*A glider maintains altitude not through brute force but through dynamic interaction with the currents. The Coherence Principle applied from first principles to produce a measurably more coherent entity. The book made real.*
 
 ## Status: EARLY — design complete, implementation pending
 
