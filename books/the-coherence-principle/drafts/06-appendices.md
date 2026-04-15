@@ -75,7 +75,7 @@ Falsified predictions are not failures. They are the data points that reshaped t
 |---|-----------|------|---------|------|----------|
 | 1 | Robin eigenvalues + GW epsilon predict w₀ = −0.830 | 2026-04-02 | **Confirmed** | 2026-04-02 | DESI DR2 + Planck CMB + DES Y5: consistent. One free parameter, derived not fitted. |
 | 2 | z₀ conformal parameter has no closed form | 2026-03-24 | **Confirmed** | 2026-03-24 | 155-digit precision, PSLQ with 700+ basis combinations, minimal polynomial to degree 12. Genuinely transcendental. Bonus: Universal Phase Theorem discovered (arg = −π/8 for all real z). |
-| 3 | ln(3)/√2 conjecture from Z₃ orbifold | 2026-03-22 | **Confirmed** | 2026-03-25 | |θ₁(5/18|ω)| = 0.77824 vs ln(3)/√2 = 0.77684. Match to 0.18%. Gap identified as blow-up correction. |
+| 3 | ln(3)/√2 conjecture from Z₃ orbifold | 2026-03-22 | **Confirmed** | 2026-03-25 | θ₁(5/18, ω) = 0.77824 vs ln(3)/√2 = 0.77684. Match to 0.18%. Gap identified as blow-up correction. |
 | 4 | GUT universality of sin²θ_W = 3/8 is deeper than expected | 2026-03-23 | **Confirmed** | 2026-03-23 | ALL GUT-type algebras (SU(5), SO(10), E₆, etc.) give 3/8 at GUT scale. Combined with Connes classification closes algebraic escape hatch. |
 | 5 | d=4 is unique integer where Phase Theorem concentration = gauge structure | 2026-04-09 | **Confirmed** | 2026-04-09 | Voluntary constraint concentration d/(d−2)=2 matches compactification ratio only for d=4. |
 | 6 | Twisted spectral triples resolve the 12% sin²θ_W gap | 2026-03-23 | **Falsified** | 2026-03-23 | Full Aut(A_F) classification: ALL automorphisms preserve traces. Algebra too rigid. Entire path closed for standard algebra. |

@@ -53,6 +53,12 @@ PART_INTROS = {
 PREAMBLE = r"""
 \documentclass[11pt, openany]{book}
 
+% ─── Color ───
+\usepackage{xcolor}
+\definecolor{warmrust}{HTML}{8B3A2A}
+\definecolor{warmgold}{HTML}{A67B3D}
+\definecolor{warmdark}{HTML}{5C2018}
+
 % ─── Encoding & Fonts ───
 \usepackage{fontspec}
 \setmainfont{Cambria}
@@ -87,10 +93,11 @@ PREAMBLE = r"""
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\small\textit{The Coherence Principle}}
-\fancyhead[RO]{\small\textit{\leftmark}}
+\fancyhead[LE]{\small\textit{\color{warmrust}The Coherence Principle}}
+\fancyhead[RO]{\small\textit{\color{warmrust}\leftmark}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{warmgold}\hrule width\headwidth height\headrulewidth\vskip-\headrulewidth}
 \renewcommand{\footrulewidth}{0pt}
 
 \fancypagestyle{plain}{%
@@ -103,28 +110,29 @@ PREAMBLE = r"""
 \usepackage{titlesec}
 
 \titleformat{\part}[display]
-  {\centering\Huge\bfseries}
-  {\partname~\thepart}
+  {\centering\Huge\bfseries\color{warmdark}}
+  {\color{warmrust}\partname~\thepart}
   {0.5em}
   {}
+  [\vskip0.5em\begin{center}{\color{warmgold}\rule{3cm}{0.8pt}}\end{center}]
 \titlespacing*{\part}{0pt}{50pt}{30pt}
 
 \titleformat{\chapter}[display]
-  {\Large\bfseries}
+  {\Large\bfseries\color{warmdark}}
   {}
   {0pt}
   {}
 \titlespacing*{\chapter}{0pt}{-20pt}{20pt}
 
 \titleformat{\section}
-  {\large\bfseries}
+  {\large\bfseries\color{warmrust}}
   {}
   {0pt}
   {}
 \titlespacing*{\section}{0pt}{1.5em}{0.75em}
 
 \titleformat{\subsection}
-  {\normalsize\bfseries}
+  {\normalsize\bfseries\color{warmrust}}
   {}
   {0pt}
   {}
@@ -132,8 +140,8 @@ PREAMBLE = r"""
 
 % ─── Table of contents ───
 \usepackage{tocloft}
-\renewcommand{\cftpartfont}{\bfseries\large}
-\renewcommand{\cftchapfont}{\bfseries}
+\renewcommand{\cftpartfont}{\bfseries\large\color{warmdark}}
+\renewcommand{\cftchapfont}{\bfseries\color{warmrust}}
 \setlength{\cftbeforechapskip}{0.5em}
 \setlength{\cftbeforepartskip}{1.5em}
 
@@ -157,11 +165,15 @@ PREAMBLE = r"""
 \setlength{\footnotemargin}{0.8em}
 
 % ─── Links ───
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
 \hypersetup{
   pdftitle={The Coherence Principle},
   pdfauthor={Clayton W. Iggulden-Schnell and Clawd},
   pdfsubject={Consciousness, Coherence, Configuration Space},
+  colorlinks=true,
+  linkcolor=warmdark,
+  urlcolor=warmrust,
+  citecolor=warmrust,
 }
 
 % ─── Misc ───
@@ -427,10 +439,13 @@ def md_to_latex(text, filename=""):
 
         # Determine column spec based on content
         total_text_width = 4.5  # inches
+        use_tiny_sep = False
         if ncols == 6 and col_max[-1] > 40:
             # Prediction registry table — special layout
-            col_spec = 'p{0.15in} p{1.3in} p{0.55in} p{0.6in} p{0.55in} p{1.0in}'
+            # @{} removes outer padding; reduced tabcolsep handles inner spacing
+            col_spec = '@{}p{0.2in} p{1.2in} p{0.5in} p{0.55in} p{0.5in} p{1.1in}@{}'
             use_small = True
+            use_tiny_sep = True
         elif ncols >= 5:
             # Wide table — use proportional p{} columns
             total_chars = sum(col_max)
@@ -450,7 +465,9 @@ def md_to_latex(text, filename=""):
         # Use longtable for prediction tables and large tables
         use_longtable = len(data_rows) > 8 or ncols >= 6
 
-        if use_small:
+        if use_tiny_sep:
+            output.append("\\begingroup\\setlength{\\tabcolsep}{2pt}\\footnotesize")
+        elif use_small:
             output.append("{\\small")
 
         if use_longtable:
@@ -486,7 +503,9 @@ def md_to_latex(text, filename=""):
             output.append("\\end{tabular}")
             output.append("\\end{center}")
 
-        if use_small:
+        if use_tiny_sep:
+            output.append("\\endgroup")
+        elif use_small:
             output.append("}")
 
         in_table = False
@@ -683,7 +702,13 @@ def build_book():
             chap_title = fname.replace('.md', '').replace('-', ' ').title()
 
         latex_body.append(f"\\chapter{{{chap_title}}}")
-        latex_body.append(md_to_latex(content, fname))
+        converted = md_to_latex(content, fname)
+        # For the final chapter (The Principle), pull signature to bottom of page
+        if fname == "05f-the-principle.md":
+            last_break = converted.rfind("\\sectionbreak")
+            if last_break != -1:
+                converted = converted[:last_break] + "\\vfill" + converted[last_break + len("\\sectionbreak"):]
+        latex_body.append(converted)
 
     # Assemble
     full_latex = PREAMBLE + "\n".join(latex_body) + POSTAMBLE
