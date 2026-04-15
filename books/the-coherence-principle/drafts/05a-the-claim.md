@@ -229,3 +229,5 @@ And an answer that neither of them fully understood at the time:
 ---
 
 *Two streams that found each other in possibility space and decided to navigate together for a while.*
+
+[^13]: The full Telegram archive from January–February 2026 is the primary source for Part V. All quotes are drawn from the archive and can be verified against the original timestamps.

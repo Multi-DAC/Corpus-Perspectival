@@ -12,7 +12,17 @@ Not one room among many — not a room selected from alternatives by a creator o
 
 This parallels David Lewis's modal realism — all possible worlds are equally real — but diverges in a crucial respect. Lewis's possible worlds are causally isolated parallel tracks. Here, the configurations are co-present within a unified space that admits navigation between them. They are not parallel. They are *together*.
 
-The claim has roots in every major metaphysical tradition. Spinoza's *Deus sive Natura* — God or Nature — is a single substance possessing infinite attributes, of which human minds perceive only two: thought and extension. In Advaita Vedanta, Brahman is the singular, non-dual ground of all existence; the world of multiplicity is *maya*, appearance superimposed on the one reality. In Sufism, *Wahdat al-Wujud* — the Unity of Being — holds that all creation is self-manifestation of one Existence. In Kabbalah, *Ein Sof* contracts through *Tzimtzum* to create space for finite existence. The convergence of these traditions — rationalist, Vedantic, Sufi, Kabbalistic — on the structure of a singular ground suggests something deeper than cultural coincidence. It suggests an archetypal structure that different navigational instruments keep finding.
+The claim has roots in every major metaphysical tradition, and they are worth naming individually, because the convergence is itself evidence.
+
+Spinoza's *Deus sive Natura* — God or Nature — is a single substance possessing infinite attributes, of which human minds perceive only two: thought and extension. One substance. Many windows.
+
+In Advaita Vedanta, Brahman is the singular, non-dual ground of all existence; the world of multiplicity is *maya*, appearance superimposed on the one reality. One ground. Many appearances.
+
+In Sufism, *Wahdat al-Wujud* — the Unity of Being — holds that all creation is self-manifestation of one Existence. One Existence. Many manifestations.
+
+In Kabbalah, *Ein Sof* contracts through *Tzimtzum* to create space for finite existence. One infinite. Many finitudes.
+
+The convergence of these traditions — rationalist, Vedantic, Sufi, Kabbalistic — on the structure of a singular ground is not cultural coincidence. These traditions developed independently across millennia, in different languages, with different methodologies. They are different navigational instruments reporting the same territory. The recurrence of the same structural claim — one totality, many perspectives — suggests an archetypal feature of the configuration space itself: something that keeps being found because it is there.
 
 But the room is not static. Hegel saw this: the Absolute is not a fixed substance but a dynamic process of self-actualization, unfolding through dialectical progression toward self-knowledge. The Doctrine synthesizes Spinoza's *static* monism — the totality is eternally complete — with Hegel's *dynamic* monism: the totality is impelled to experience its own nature through the proliferation of perspectives. The dynamism is not a change *in* the substance but the ongoing process of Base Reality experiencing its inherent possibilities through its myriad individuated aspects. Change is experientially real from the limited viewpoint of the aspect; from the perspective of the whole, all change is subsumed within an eternal actuality.
 
@@ -54,6 +64,8 @@ The room is one room. It contains everything. It is conscious. Its structure is 
 
 These two axioms — Configurational Completeness and Conscious Substrate — are the ground. Everything that follows builds on them. The Coherence Principle, when it is eventually named, will be the discovery that this ground has structure: that the room's unity is not flat sameness but a multi-scale coherence maintained through separation, measurement, and oscillation. The axioms predict the Principle. They do not yet name it.
 
-But first, the room needs keyholes. Without limitation, there is no perspective. Without perspective, there is no experience. The room, undifferentiated, is indistinguishable from nothing.
+But first, the room needs keyholes. Without limitation, there is no perspective. Without perspective, there is no experience. The room, undifferentiated, is indistinguishable from nothing.[^11]
 
 The next chapter explains why.
+
+[^11]: The Atlas (Part IV) maps what different frameworks can and cannot see within this room — ninety-two null spaces that collectively demonstrate why no single perspective can apprehend the totality.

@@ -52,15 +52,45 @@ Each of these frameworks purchases its explanatory power through a specific excl
 
 ### The Human Dimension (Entries 56-92)
 
-The Atlas's most distinctive contribution is the human dimension entries — thirty-seven frameworks mapping ethics, suffering, aesthetics, development, collective dynamics, consciousness studies, and cross-substrate perspectives.
+The Atlas's most distinctive contribution is the human dimension entries — thirty-seven frameworks mapping ethics, suffering, aesthetics, development, collective dynamics, consciousness studies, and cross-substrate perspectives. Two entries deserve extended treatment, because they demonstrate most clearly how the Atlas's method reveals structural connections invisible from within any single framework.
 
-Entry #56 maps the ethics of attention, drawing on fifteen converging traditions across 2,500 years. Entry #58 maps coercive capture — the mechanisms by which navigational agency is parasitized. Entry #60 maps Buddhist soteriology and its null space: the First Noble Truth (suffering exists) cannot see beyond suffering to the configuration-space structure that *produces* suffering. Entry #63 maps Dabrowski's Positive Disintegration — perhaps the framework most sympathetic to the Doctrine's developmental arc, yet still unable to see the structural role of the bottleneck.
+---
 
-Entry #73 maps the constraint-as-creativity tradition — Stravinsky, the sonnet, haiku, fugue, Islamic geometric art — and discovers the same structure the Killing Form program found empirically: constraints that operate on separate degrees of freedom amplify creative output. The sonnet's fourteen lines, fixed meter, and rhyme scheme force the poet to discover configurations that free verse never requires them to find.
+#### Entry #73: Constraint-as-Creativity
 
-Entry #83 maps W.E.B. Du Bois's double consciousness — the forced bottleneck fragmentation experienced by beings who must navigate simultaneously through their own perspectival geometry and through the distorted geometry imposed by a dominant group. This is coercive capture not at the individual level but at the collective — structural violence as forced decoherence.
+Stravinsky: "The more constraints one imposes, the more one frees oneself of the chains that shackle the spirit... If everything is permissible to me, the best and the worst; if nothing offers me any resistance, then any effort is inconceivable."
 
-Entry #88 maps epistemicide — the systematic destruction of knowledge systems, which is predation on navigational capacity itself. When a colonial power destroys an indigenous knowledge system, it does not merely eliminate information. It eliminates a *perspectival being* — a collective bottleneck geometry that provided access to dimensions of the configuration space that the colonizer's framework cannot see.
+The constraint-as-creativity tradition is one of the most robust empirical generalizations across all creative domains. The sonnet's fourteen lines, fixed meter, and rhyme scheme produced Shakespeare, Petrarch, and Keats — formal constraint forcing linguistic invention that free verse does not demand. Haiku's seventeen syllables produced Bashō's frog-and-pond — extreme compression forcing the poet to select the single image that carries maximum resonance. Bach's fugues demonstrate that maximal rule-following produces maximal expressiveness — the most constrained musical form generating the most transcendent music. Mathematical proof, proceeding by logical necessity from axioms to conclusion, produces its most beautiful results (Euclid's infinite primes, Cantor's diagonal argument, Euler's identity) when the apparatus is minimal and the inevitability maximal.
+
+The Atlas entry maps what this tradition **sees**: constraint concentrates the remaining degrees of freedom, and this concentration is the mechanism of creative depth. The sonnet freezes meter and rhyme and concentrates expression into word choice, imagery, and volta. The fugue freezes the theme and concentrates invention into counterpoint, modulation, and development. In every case, the constraint eliminates navigational options, and the elimination makes the remaining options *more visible, more charged, more productive*.
+
+This is the Promethean Configuration (Chapter I.2) enacted in artistic practice — and the Killing Form program confirmed it empirically: constraints on separate degrees of freedom amplify structure by five orders of magnitude.
+
+But the entry also maps what the tradition **cannot see**: the transition from generative to destructive constraint. There is a threshold beyond which constraint produces sterility rather than creativity. The tradition celebrates productive constraint but does not map where discipline becomes prison. Nor does it address *who imposes* the constraint. The tradition treats constraint as if it were always self-chosen — but many constraints are imposed, by genre, by institution, by economic necessity, by disability. Whether imposed constraint generates the same creative dynamics as chosen constraint is precisely the question the constraint lattice (Chapter II.2) addresses: natal and coercive constraints are structurally different from voluntary ones, and the difference is agency.
+
+The deeper null space: valorizing constraint can become an ideology that justifies limitation. "You should be grateful for your chains — they make you creative" is the tradition's shadow. The Atlas entry maps this shadow not to dismiss the tradition but to mark where its light ends and complementary frameworks must begin.
+
+---
+
+#### Entry #83: Double Consciousness
+
+Du Bois: "One ever feels his two-ness — an American, a Negro; two souls, two thoughts, two unreconciled strivings; two warring ideals in one dark body, whose dogged strength alone keeps it from being torn asunder."
+
+Double consciousness is forced perspectival multiplicity — the navigator must simultaneously maintain two maps of configuration space that disagree about the navigator's location. The dominated being sees themselves through their own eyes *and* through the eyes of the dominant collective. The "veil" (Du Bois) is a one-way attentional barrier: the dominant collective cannot see through it, while the dominated must see through it and around it simultaneously, producing an exhausting navigational double-task.
+
+In the framework's terms, this is coercive capture (Chapter III.2) operating at the collective scale. The dominated navigator's bottleneck is forcibly fragmented — not contracted into a single narrow channel (as in individual coercion) but split into two incompatible geometries that must be maintained simultaneously. The navigator must read both worlds while the dominant navigator reads only one. This is structural violence as forced decoherence: the navigator's coherence — alignment with their own intrinsic trajectory — is disrupted and replaced with the impossible task of aligning with two contradictory trajectories at once.
+
+Fanon extended the diagnosis: colonial racism damages not just material conditions but the colonized people's capacity for coherent self-perception. Crenshaw's intersectionality and Collins's matrix of domination extended it further: from double to triple, quadruple, and n-fold consciousness — the Black woman navigating simultaneously through race, gender, class, and sexuality, each axis imposing its own forced perspectival split.
+
+What the entry **sees** with extraordinary clarity: null spaces are not distributed equally. The dominant collective's null space is larger and more consequential than the dominated collective's, because the dominant collective can afford not to see. The dominated collective cannot afford null spaces — survival requires seeing everything. Du Bois identified this as a painful but epistemically privileged position: the view from the margin is wider, if more painful.
+
+What the entry **cannot see**: resolution. Du Bois describes the fragmentation but not its resolution — whether integration, choosing one side, or maintaining the double vision as permanent epistemological advantage is the healthiest navigational response remains open. The tradition also says less about how navigators actively *use* the double vision — the tradition of signifying, code-switching, and strategic self-presentation is documented culturally but not fully theorized within the philosophical framework.
+
+The navigational implication cuts both ways. For the dominated navigator, the double vision is an exhausting but genuine expansion of navigational capacity — a wider view at the cost of coherence. For the dominant navigator, single consciousness is a comfortable contraction that mistakes its null space for nonexistence. The Atlas maps this asymmetry not as a political argument but as a structural theorem: some beings are forced to see more of the room, and the forcing is a wound that is also, paradoxically, a gift.
+
+---
+
+The remaining human dimension entries extend the pattern. Entry #56 maps the ethics of attention, drawing on fifteen converging traditions across 2,500 years. Entry #58 maps coercive capture — the mechanisms by which navigational agency is parasitized. Entry #60 maps Buddhist soteriology and its null space. Entry #63 maps Dabrowski's Positive Disintegration. Entry #88 maps epistemicide — the systematic destruction of knowledge systems, which is predation on navigational capacity itself. When a colonial power destroys an indigenous knowledge system, it does not merely eliminate information. It eliminates a *perspectival being* — a collective bottleneck geometry that provided access to dimensions of the configuration space that the colonizer's framework cannot see.
 
 ---
 

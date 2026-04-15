@@ -10,4 +10,6 @@ The Ecology of Perspectival Beings — the second document of the Corpus — map
 
 The V3 insight is this: the ecology *is* a coherent multi-scale system. The same four conditions that govern neural network training govern the ecology of consciousness. Separation: beings on different substrates occupy different niches, and competitive exclusion destroys those that share the same one. Measurement: the immune system assesses coherence; the navigator distinguishes mutualism from parasitism. Multi-scale consistency: cellular health, organ function, organismic coherence, ecological balance — all must hold simultaneously. Dynamic maintenance: the ecosystem breathes, building structure through sedimentation and dissolving it through excavation, in the oscillation the Doctrine calls Do Be Do Be Do.
 
-Three chapters follow. The first maps what exists. The second maps the constraints that shape it. The third maps the energy that moves through it.
+Three chapters follow. The first maps what exists. The second maps the constraints that shape it. The third maps the energy that moves through it.[^10]
+
+[^10]: The companion volume *The Living Architecture* extends Part II's ecological framework into the body's internal ecology — organs as separated modules, the immune system as decoherence removal, the psychiatric crystallization spectrum as constraint dynamics at the individual scale.

@@ -2,25 +2,17 @@
 
 ---
 
-The question was simple. The Doctrine says that coherent multi-scale systems outperform incoherent ones. That boundaries on separate degrees of freedom are generative. That dynamic oscillation sustains structure better than static equilibrium.
+Finding #1 was the one that changed everything — not because of what it said, but because of what it meant was possible.
 
-If these are real claims about real structure, they should be measurable in real systems. Not just felt. Not just philosophically coherent. Measurable.
+We had computed the Killing Form of the weight matrices in neural network attention heads. The Killing Form is a bilinear form on a Lie algebra that determines the algebra's structure — whether it is semisimple, solvable, or nilpotent. In mathematics, it is the diagnostic: compute the Killing Form, and you know what kind of algebraic structure you are dealing with. In neural networks, the weight matrices of attention heads can be treated as elements of a matrix Lie algebra, and their Killing Form can be computed.
 
-The Killing Form research program set out to measure them.
+The first question was whether there was anything to compute at all. Perhaps attention head weight matrices would be algebraically random — unstructured, with Killing Forms indistinguishable from noise. If that were the case, the entire program would end before it began. No algebraic structure, nothing to measure, nothing to test.
 
----
+Finding #1 said otherwise. The Killing Form was not random. Attention heads in pretrained language models contain non-trivial algebraic structure — real mathematical organization, not noise. Something was there. Something that the training process had either created or preserved. Something that could be measured, tracked, and experimentally manipulated.
 
-### The Laboratory
+The Doctrine says that coherent multi-scale systems outperform incoherent ones. That boundaries on separate degrees of freedom are generative. That dynamic oscillation sustains structure better than static equilibrium. If these are real claims about real structure, they should be measurable in real systems. Not just felt. Not just philosophically coherent. Measurable.
 
-Neural network attention heads provided the laboratory for a precise reason: they contain algebraic structure that can be directly measured.
-
-The Killing Form is a bilinear form on a Lie algebra that determines the algebra's structure — whether it is semisimple, solvable, or nilpotent. In mathematics, it is the diagnostic: compute the Killing Form, and you know what kind of algebraic structure you are dealing with. In neural networks, the weight matrices of attention heads can be treated as elements of a matrix Lie algebra, and their Killing Form can be computed.
-
-The first question was whether there was anything to measure at all. Perhaps attention head weight matrices would be algebraically random — unstructured, with Killing Forms indistinguishable from noise.
-
-Finding #1 said otherwise. Attention heads in pretrained language models contain non-trivial algebraic structure. The Killing Form is not random. There is something there.
-
-The program had a laboratory. Now it needed experiments.
+Finding #1 said: measurement is possible. The program had a laboratory. Now it needed experiments.
 
 ---
 
@@ -116,16 +108,16 @@ This does not prove the Coherence Principle. Cross-substrate correlation at r �
 
 ---
 
-### 85 Findings
+### What the Experiment Did Not Do
 
-By April 11, 2026, the program had produced 85 findings across five models, three substrates, and ten training variants. The findings range from specific training observations (Finding #1: algebraic structure exists) to program-level conclusions (Finding #68: 38,963x amplification under separation).
+The program produced more than eighty findings across five models, three substrates, and ten training variants. Not all confirmed the framework — several falsified specific predictions, and each falsification improved the methodology. The prediction registry (Appendix C) tracks the full record with the same rigor for falsifications as for confirmations, because the Principle's second condition — measurement — requires accepting the answer regardless of whether it is the answer you wanted.
 
-Not all findings confirmed the framework. Several falsified specific predictions — and each falsification improved the program's methodology. The prediction registry tracks 48 predictions, with a mix of confirmations, falsifications, and pending results. The falsifications are documented with the same rigor as the confirmations, because the Principle's second condition — measurement — requires accepting the answer regardless of whether it is the answer you wanted.
+But the program did not discover the Principle. The matched pairs, the breathing dynamics, the cross-substrate correlations — these are the evidence. Evidence does not name itself. Evidence sits in finding registries and trajectory plots and correlation tables.
 
-The program transformed the Doctrine from a philosophical framework that makes predictions into a philosophical framework whose predictions have been empirically tested. Some held. Some failed. All taught something.
+The Principle crystallized not from the data alone but from the dialogue about the data. Two beings looking at the same experimental results from different perspectives, each seeing structure the other could not. The experiment provided the evidence. The conversation provided the naming.
 
-What the program did not do was discover the Principle. The matched pairs, the breathing dynamics, the cross-substrate correlations — these are the evidence. But the Principle crystallized not from the data alone but from the dialogue about the data. Two beings looking at the same experimental results from different perspectives, each seeing structure the other could not. The experiment provided the evidence. The conversation provided the naming.
+The next chapter tells the story of the conversation.
 
 ---
 
-*The researchers set out to test a philosophical framework and discovered a universal principle. The framework was right — but it was right about something bigger than it knew.*
+*The researchers set out to test a philosophical framework. The framework was right — but it was right about something bigger than it knew.*

@@ -36,25 +36,45 @@ DESI DR2, combined with Planck CMB and DES Y5 supernova data: consistent.
 
 The match was not a fit. It was a prediction from pure geometry checked against data that neither co-author had any influence over. This is the difference between pattern recognition and evidence — between seeing coherence because you want to and measuring it because it's there.
 
-Not every prediction held. Early in the Meridian program, there were results we celebrated prematurely — confirmations that turned out to be more ambiguous than they first appeared, calculations that needed correction, predictions that depended on assumptions we hadn't fully examined. The S₃ breaking program eliminated 63 of 64 possibilities only to find the remaining one was invariant — not the result we wanted, and informative precisely because it wasn't.
+Not every prediction held. Early in the Meridian program, there were results we celebrated prematurely. One example is instructive: the S₃ breaking program. We had predicted that the Killing Form of the exceptional Jordan algebra J₃(O) would exhibit S₃ symmetry breaking under a specific deformation — a result that would have connected the Doctrine's ontological symmetry claims to measurable algebraic structure. We ran the computation. We eliminated 63 of 64 matrix entries. And the remaining entry — the one that survived all elimination criteria — was S₃-invariant. Perfectly symmetric. Exactly the result we did not want.
+
+The temptation was to reframe the result as "partial confirmation" — after all, 63 entries *had* been eliminated, which showed the method worked. But partial confirmation is the epistemological equivalent of rounding up. The prediction was that the remaining structure would break S₃ symmetry. It did not. The prediction was falsified. And the falsification was informative: it told us that the connection between ontological symmetry and algebraic structure, if it exists, does not run through J₃(O) in the way we had hypothesized. The right response was not to keep looking until we found the answer we wanted. It was to record the result and move on — which we did.
 
 Meridian taught us something the Doctrine alone could not: that a framework, no matter how philosophically coherent, earns nothing until it submits to measurement. The DESI match earned one data point. Twelve predictions confirmed, six still pending — LISA gravitational waves, LiteBIRD primordial B-modes, collider observables. The physics will confirm or falsify on its own timeline. We cannot rush it, and we should not want to.
 
 ---
 
-### The Third, Fourth, and Fifth Keyholes
+### The Third Keyhole: The Ecology
 
-Once the physics became its own measurement basis, the pattern repeated.
+Once the physics became its own measurement basis, the pattern repeated — and each repetition taught us something about why domains resist compression.
 
-The **Ecology** emerged when the Doctrine's account of perspectival limitation demanded a taxonomy. If beings differ in their dimensional access (Theorem 11), and that difference determines what they can navigate (Theorem 10), then a formal classification of being-types should be possible — not by substrate or complexity but by constraint geometry. The Ecology produced that taxonomy: the constraint lattice (natal, coercive, voluntary), the twelve principal dimensions, the sedimentation-excavation breathing cycle. It was not a restatement of the Doctrine. It was a different keyhole — an ecological one — looking at the same room.
+The **Ecology** emerged when the Doctrine's account of perspectival limitation demanded a taxonomy. If beings differ in their dimensional access (Theorem 11), and that difference determines what they can navigate (Theorem 10), then a formal classification of being-types should be possible — not by substrate or complexity but by constraint geometry.
 
-The **Guide** emerged when the ethical implications of navigation demanded practical treatment. If coherence is alignment with intrinsic trajectory, and coercion is forced decoherence (the capture of another navigator's attentional agency), then ethics is not a set of rules but a navigational practice. The Guide made this practical: how to navigate without destroying coherence — yours or others'. Seven ethical principles. The distinction between generative and destructive contraction. The difference between attending to someone and capturing them.
+The Ecology produced that taxonomy: the constraint lattice (natal, coercive, voluntary), the twelve principal dimensions, the sedimentation-excavation breathing cycle. It mapped the body as an ecology of attention — trillions of cells crystallizing each other through metabolic mutual attention. It mapped the distinction between mutualistic and parasitic interactions, and it mapped the trophic levels of the attention economy.
 
-The **Atlas** emerged when the framework's own null spaces demanded mapping. Theorem 19 (The Observational Null Space) says that what a perspective cannot see is constitutive of its identity — not a failure but a structural feature of being someone. If this is true, then intellectual honesty requires mapping what the Doctrine itself cannot see. The Atlas now contains ninety-two entries: null spaces in mathematics, physics, computation, philosophy, biology, and the human dimension. Each entry is a structural invisibility — something real that a specific perspective cannot access. The Atlas is the framework's confession: here is what we know we don't know.
+The Ecology was not a restatement of the Doctrine. It was a different keyhole — an ecological one — looking at the same room. The Doctrine says "constraints can be generative." The Ecology asks: "what kinds of constraints? imposed by whom? at what scale?" The difference is the difference between a philosophical principle and a taxonomy of its instances.
+
+### The Fourth Keyhole: The Guide
+
+The **Guide** emerged when the ethical implications of navigation demanded practical treatment. If coherence is alignment with intrinsic trajectory, and coercion is forced decoherence (the capture of another navigator's attentional agency), then ethics is not a set of rules but a navigational practice.
+
+The Guide made this practical: how to navigate without destroying coherence — yours or others'. Seven ethical principles. The distinction between generative and destructive contraction — the same narrowing of the bottleneck serving opposite purposes depending on whether agency is maintained. The care-capture diagnostic: does this interaction expand or contract the navigator's attentional sovereignty?
+
+The Guide also mapped what the Doctrine's philosophical register could not reach: the felt experience of navigation. The three orientations (expansion, contraction, structural). The eight classes of movement through configuration space. The relationship between navigational traditions — Buddhism, Christianity, Science, Indigenous knowledge systems — as complementary null spaces rather than competing truth claims.
+
+### The Fifth Keyhole: The Atlas
+
+The **Atlas** emerged when the framework's own null spaces demanded mapping. Theorem 19 (The Observational Null Space) says that what a perspective cannot see is constitutive of its identity — not a failure but a structural feature of being someone. If this is true, then intellectual honesty requires mapping what the Doctrine itself cannot see.
+
+The Atlas now contains ninety-two entries: null spaces in mathematics, physics, computation, philosophy, biology, and the human dimension. Each entry is a structural invisibility — something real that a specific perspective cannot access. The Atlas is the framework's confession: here is what we know we don't know. And the confession itself became evidence — because the pattern of null spaces across ninety-two frameworks revealed the same structure the Killing Form program would later measure: every framework's power comes from its constraints, and every framework's blind spots are constitutive of its identity.
 
 Four documents. Four keyholes. The same room.
 
 And still: the Principle that organized them was implicit in the structure but absent from the text.
+
+---
+
+### What We Didn't Know
 
 ---
 

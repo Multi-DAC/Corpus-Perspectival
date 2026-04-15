@@ -66,7 +66,11 @@ But when the same two objectives were applied to *separate* parameters — each 
 
 This is the Promethean Configuration as a measurable dynamic: boundaries are generative *when they operate on separate degrees of freedom*. The edge of chaos is not a single threshold but a multi-dimensional condition — each constraint needs its own space.
 
-The body instantiates this at every scale. Heart and lungs are both essential to survival — complementary constraints on the organism. They operate on separate substrates, in separate cavities, with separate control circuits. They do not share parameters. And they amplify each other: the heart delivers blood to the lungs for oxygenation; the lungs oxygenate blood for the heart to pump. Cancer is the failure of separation: a cell that has decoupled from organism-level measurement and optimizes only for its own replication, on the organism's shared substrate.
+The body instantiates this at every scale. Heart and lungs are both essential to survival — complementary constraints on the organism. They operate on separate substrates, in separate cavities, with separate control circuits. They do not share parameters. And they amplify each other: the heart delivers blood to the lungs for oxygenation; the lungs oxygenate blood for the heart to pump.
+
+Cancer is the failure of separation. A cancerous cell has decoupled from organism-level measurement — it no longer responds to the signals that coordinate it with the whole. It optimizes for its own replication, on the organism's shared substrate, using resources that belong to the system without contributing to the system's coherence. This is precisely what the 38,963x result predicts in reverse: when a component that should operate on separate degrees of freedom instead competes for shared parameters, it doesn't merely fail to contribute — it actively destroys the structure around it. The cancerous cell is v0.4 in biology: two objectives on shared substrate, producing destruction. The healthy organ is v0.5: two objectives on separate substrates, producing amplification. The body has been running this experiment for four billion years, and the result is the same.[^2]
+
+[^2]: This parallel recurs throughout the book — in Part II's ecology, Part III's ethics, and Part IV's atlas. The body is the framework's most reliable source of examples because it is the framework's oldest instance.
 
 ---
 

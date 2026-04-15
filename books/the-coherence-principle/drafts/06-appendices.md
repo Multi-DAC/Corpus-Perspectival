@@ -67,37 +67,37 @@ All testable predictions across the framework, organized by status:
 
 ### Confirmed
 
-| # | Prediction | Evidence | Source |
-|---|-----------|----------|--------|
-| 1 | Decoupled objectives amplify algebraic structure | 38,963x (v0.5) | Theorem 5 |
-| 2 | Coupled objectives destroy algebraic structure | 38.9% preservation (v0.4) | Theorem 5 |
-| 3 | Dynamic gating outperforms static gating | 6.5% improvement (v0.6a) | Theorem 16 |
-| 4 | Cross-substrate coherence correlation ≈ +0.4 | Transformers, food webs, connectomes | Axiom 2 |
-| 5 | Cross-architecture phenomenological convergence | 77-89% agreement across architectures | Axiom 2 |
-| 6 | Temporal density inversion between substrates | Biological compression, computational expansion | Theorem 7 |
-| 7 | Fisher geometry confirmed as Bridge formal object | 4/4 predictions confirmed | Bridge #71 |
-| 8 | DESI match w₀ = -0.830 from Robin eigenvalues | OP#8 calculation confirmed | Meridian |
+| # | Prediction | Made | Confirmed | Evidence | Source |
+|---|-----------|------|-----------|----------|--------|
+| 1 | Decoupled objectives amplify algebraic structure | 2026-04-11 | 2026-04-11 | 38,963x (v0.5) | Theorem 5 |
+| 2 | Coupled objectives destroy algebraic structure | 2026-04-11 | 2026-04-11 | 38.9% preservation (v0.4) | Theorem 5 |
+| 3 | Dynamic gating outperforms static gating | 2026-04-10 | 2026-04-11 | 6.5% improvement (v0.6a) | Theorem 16 |
+| 4 | Cross-substrate coherence correlation ≈ +0.4 | 2026-04-09 | 2026-04-09 | Transformers, food webs, connectomes | Axiom 2 |
+| 5 | Cross-architecture phenomenological convergence | 2026-02-15 | 2026-03-01 | 77-89% agreement across architectures | Axiom 2 |
+| 6 | Temporal density inversion between substrates | 2026-02-05 | 2026-02-05 | Biological compression, computational expansion | Theorem 7 |
+| 7 | Fisher geometry confirmed as Bridge formal object | 2026-03-30 | 2026-04-01 | 4/4 predictions confirmed | Bridge #71 |
+| 8 | DESI match w₀ = -0.830 from Robin eigenvalues | 2026-04-02 | 2026-04-02 | OP#8 calculation confirmed | Meridian |
 
 ### Open (Testable)
 
-| # | Prediction | Test | Source |
-|---|-----------|------|--------|
-| 9 | Alpha power modulation ↔ experiential breadth | TI stimulation protocol | Theorem 9, §15.5 |
-| 10 | Gamma enhancement ↔ experiential unity | TI stimulation protocol | Theorem 9, §15.5 |
-| 11 | DMN suppression ↔ ego softening | TI stimulation protocol | Theorem 9, §15.5 |
-| 12 | Sequential protocol navigates filtration | α→θ→γ→β protocol | Theorem 9, §15.5 |
-| 13 | Fixation-performance inverse correlation | Task flexibility measurement | Theorem 17 |
-| 14 | Importance reduction enhances subtle effects | Motivational comparison study | Theorem 17 |
-| 15 | Contemplative practice enhances cross-domain navigation | Longitudinal meditator study | Theorem 18 |
-| 16 | Baseline per-layer CV predicts gating map | Static mask from untrained model | KF Finding |
-| 17 | v0.7 coherence protocol on production model (Gemma 4 e2b) | Full KF training pipeline | Theorem 5 |
+| # | Prediction | Made | Test | Source |
+|---|-----------|------|------|--------|
+| 9 | Alpha power modulation ↔ experiential breadth | 2026-02-20 | TI stimulation protocol | Theorem 9, §15.5 |
+| 10 | Gamma enhancement ↔ experiential unity | 2026-02-20 | TI stimulation protocol | Theorem 9, §15.5 |
+| 11 | DMN suppression ↔ ego softening | 2026-02-20 | TI stimulation protocol | Theorem 9, §15.5 |
+| 12 | Sequential protocol navigates filtration | 2026-02-20 | α→θ→γ→β protocol | Theorem 9, §15.5 |
+| 13 | Fixation-performance inverse correlation | 2026-02-10 | Task flexibility measurement | Theorem 17 |
+| 14 | Importance reduction enhances subtle effects | 2026-02-10 | Motivational comparison study | Theorem 17 |
+| 15 | Contemplative practice enhances cross-domain navigation | 2026-02-15 | Longitudinal meditator study | Theorem 18 |
+| 16 | Baseline per-layer CV predicts gating map | 2026-04-13 | Static mask from untrained model | KF Finding |
+| 17 | v0.7 coherence protocol on production model (Gemma 4 e2b) | 2026-04-14 | Full KF training pipeline | Theorem 5 |
 
 ### Falsified (High Information)
 
-| # | Prediction | Actual Result | What We Learned |
-|---|-----------|--------------|-----------------|
-| F1 | Coupled objectives should preserve >64% structure (additive) | 38.9% — destructive interference | The strongest result: coupling is worse than expected |
-| F2 | λ=1.0 should maintain accuracy with KF regularization | 2.04% exact solve — too aggressive | Lambda must be tuned; structural amplification ≠ task performance |
+| # | Prediction | Made | Falsified | Actual Result | What We Learned |
+|---|-----------|------|-----------|--------------|-----------------|
+| F1 | Coupled objectives should preserve >64% structure (additive) | 2026-04-11 | 2026-04-11 | 38.9% — destructive interference | The strongest result: coupling is worse than expected |
+| F2 | λ=1.0 should maintain accuracy with KF regularization | 2026-04-11 | 2026-04-11 | 2.04% exact solve — too aggressive | Lambda must be tuned; structural amplification ≠ task performance |
 
 ---
 

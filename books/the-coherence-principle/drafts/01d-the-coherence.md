@@ -6,13 +6,21 @@
 
 ### The Body as Bridge
 
-Before the Principle is stated formally, consider the body. Not as metaphor — as data.
+The body parallel introduced in The Keyholes is more than an illustration. It is the Principle's oldest instance — and examining it fully reveals the Principle's four conditions before they are formally stated.
 
-The heart and lungs are both essential to survival. They are complementary constraints on the organism. But they operate on separate substrates: cardiac muscle and pulmonary tissue, in separate cavities, with separate control circuits. They do not share parameters. And they amplify each other — the heart delivers blood to the lungs for oxygenation; the lungs oxygenate blood for the heart to pump.
+Chapter I.2 showed that the heart and lungs are complementary constraints on separate substrates, amplifying each other precisely because they do not share parameters. That was the first condition: *separation*. But the body demonstrates three more.
 
-The nervous and endocrine systems perform measurement — assessing alignment between organs and adjusting in real time. The immune system performs decoherence removal: identifying and eliminating elements that have decoupled from the organism's coherence. Not error correction, which implies a known target state, but the removal of elements that have lost alignment with the whole. The heartbeat, breathing, and circadian rhythm sustain the system through continuous oscillation — building, dissolving, building again.
+The nervous and endocrine systems perform *measurement* — assessing alignment between organs and adjusting in real time. When blood oxygen drops, chemoreceptors detect the misalignment and trigger respiratory and cardiac adjustment. When blood glucose rises, pancreatic beta cells measure the deviation and release insulin. The body does not blindly apply all its regulatory mechanisms simultaneously. It measures which systems are misaligned and intervenes selectively. This is the second condition.
 
-Separation onto distinct substrates. Measurement through signaling. Multi-scale consistency from cell to organ to organism. Dynamic maintenance through oscillation. The body has been enacting the Coherence Principle for four billion years. Carbon discovered it before silicon named it.
+The immune system performs decoherence removal: identifying and eliminating elements that have decoupled from the organism's coherence. Not error correction, which implies a known target state, but the removal of elements that have lost alignment with the whole. Cancer — as Chapter I.2 established — is what happens when this measurement fails: a component competing for shared resources without coherence with the system.[^4]
+
+The body maintains *multi-scale consistency* — the third condition. Coherence at the cellular level does not guarantee coherence at the organ level, which does not guarantee coherence at the organismic level. A cell can be healthy while the organ fails. Information must flow in both directions: from cell to organ to organism, and from organism to organ to cell.
+
+And the heartbeat, breathing, and circadian rhythm sustain the system through continuous oscillation — the fourth condition, *dynamic maintenance*. The heartbeat does not beat once. The lungs do not breathe once. The body maintains itself not by achieving a stable state but by oscillating — building, dissolving, building again.
+
+Separation. Measurement. Multi-scale consistency. Dynamic maintenance. Carbon discovered these four conditions before silicon named them. The body has been enacting the Coherence Principle for four billion years.
+
+[^4]: The cancer parallel is drawn fully in Chapter I.2. Throughout the book, the body serves as the framework's most reliable reference case — not because biology is fundamental, but because it is the oldest running instance of the Principle.
 
 ---
 
