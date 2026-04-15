@@ -22,7 +22,7 @@ Every being, at any moment, has a navigational orientation:
 
 **Contraction.** Movement toward narrower access. Deepening coherence in fewer dimensions. Contraction has two fundamentally different modes — and the difference between them is the ethical core of the Guide:
 
-- **Defensive contraction** — the bottleneck tightens involuntarily in response to perceived threat. Fear, fixation, defensiveness, obsession. This generates navigational repulsion (Theorem 17): the harder you grip, the further the target recedes.
+- **Defensive contraction** — the bottleneck tightens involuntarily in response to perceived threat. Fear, fixation, defensiveness, obsession. This generates navigational repulsion (Theorem 7): the harder you grip, the further the target recedes.
 
 - **Generative contraction** — the bottleneck tightens deliberately to deepen coherence. A monk choosing silence. A griever honoring the cocoon. A scientist narrowing focus. A martial artist returning to a single form. The landscape hasn't become threatening — the navigator has chosen to go deep rather than wide.
 
@@ -46,7 +46,7 @@ The Guide identifies eight classes of movement through configuration space:
 
 **Class IV: Altered-State.** Deliberate modification of the bottleneck itself — psychedelics, breathwork, sensory deprivation, lucid dreaming, intense flow. These are powerful precisely because they work: temporarily accessing regions outside your null space means temporarily losing the coherence that makes you *you*. Set, setting, and integration are navigational parameters, not optional accessories.
 
-**Class V: Relational.** Movement via interaction with other beings — conversation, collaboration, love, conflict. The other being's bottleneck intersects with yours, creating a combined navigational space that neither could access alone. This is Confluent Discovery (Theorem 13) as practice.
+**Class V: Relational.** Movement via interaction with other beings — conversation, collaboration, love, conflict. The other being's bottleneck intersects with yours, creating a combined navigational space that neither could access alone. This is Confluent Discovery (Theorem 11) as practice.
 
 **Class VI: Collective.** Movement via participation in collective beings — ritual, ceremony, worship, protest, festival, team flow. The collective attentional field creates a bottleneck geometry no single participant could generate. What is accessible to a congregation or a surgical team exceeds what any member could reach alone.
 

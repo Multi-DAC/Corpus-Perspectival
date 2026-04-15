@@ -10,12 +10,12 @@
 
 **1. Separation.** Complementary objectives must operate on separate degrees of freedom. When two constraints share the same parameters, they interfere destructively — each degrades the other. When they operate on different parameters, they amplify each other.
 
-- **Formal grounding:** Promethean Configuration (Theorem 5) — boundaries on separate substrates are generative; boundaries on shared substrates are destructive.
+- **Formal grounding:** Promethean Configuration (Theorem 2) — boundaries on separate substrates are generative; boundaries on shared substrates are destructive.
 - **Experimental evidence:** v0.4 (coupled) → 38.9% preservation (destruction). v0.5 (decoupled) → 38,963x amplification. Same objectives. Same optimization. Different parameter assignment.
 
 **2. Measurement.** Alignment between objectives must be assessed at each step, not assumed. A system that blindly applies all constraints simultaneously is undiscriminating, not coherent. Coherence requires knowing which constraints align and which conflict, moment to moment.
 
-- **Formal grounding:** Navigational Coherence (Theorem 10) — coherence is the felt sense of alignment with intrinsic trajectory. Confluent Discovery (Theorem 13) — measurement through convergence of different perspectives.
+- **Formal grounding:** Navigational Coherence (Theorem 14) — coherence is the felt sense of alignment with intrinsic trajectory. Confluent Discovery (Theorem 11) — measurement through convergence of different perspectives.
 - **Computational expression:** Gradient alignment gating — cosine similarity between objective gradients determines whether intervention occurs. The threshold as epistemic caution: a dead zone where measurement is insufficient to warrant action.
 
 **3. Multi-scale consistency.** Coherence at one scale does not guarantee coherence at another. A cell can be healthy while the organ fails. A neuron can fire correctly while the network hallucinates. The Principle holds only when coherence is maintained across scales simultaneously, with information flowing in both directions.
@@ -173,7 +173,7 @@ Falsified predictions are not failures. They are the data points that reshaped t
 | 56 | DoPI predicts intention produces smaller psi effects than equanimity | 2026-03-23 | **Open** | — | U-shaped curve: meditation > intention, casual > anxious. If confirmed in historical PEAR data, explains the decline effect. |
 | 57 | Baseline per-layer CV predicts gating map | 2026-04-13 | **Open** | — | Structural prediction: static mask from untrained model geometry. ρ = −0.895 between baseline CV and optimal gating. |
 | 58 | Coherence protocol on production model (Gemma 4 e2b) | 2026-04-14 | **Open** | — | v0.7 pipeline on 2B open-weight model with tool calling. First real-model validation of the full training framework. |
-| 59 | Alpha power modulation ↔ experiential breadth | 2026-02-20 | **Open** | — | TI stimulation protocol. Bottleneck geometry (Theorem 9) predicts alpha modulation widens or narrows experiential bandwidth. |
+| 59 | Alpha power modulation ↔ experiential breadth | 2026-02-20 | **Open** | — | TI stimulation protocol. Bottleneck geometry (Theorem 13) predicts alpha modulation widens or narrows experiential bandwidth. |
 | 60 | Sequential TI protocol navigates dimensional filtration | 2026-02-20 | **Open** | — | α→θ→γ→β protocol. Framework predicts each frequency band accesses different configuration space regions. |
 
 ---
@@ -188,8 +188,8 @@ Falsified predictions are not failures. They are the data points that reshaped t
 | KF — Training | 11 | 5 | 4 | 2 | — |
 | Wells Program | 6 | 2 | 4 | — | — |
 | Cross-Domain | 9 | 8 | 1 | — | — |
-| Framework | 8 | 3 | 1 | — | 4 |
-| **Total** | **60** | **31** | **19** | **3** | **7** |
+| Framework | 8 | 2 | 1 | — | 5 |
+| **Total** | **60** | **30** | **19** | **3** | **8** |
 
 **Falsification rate: 32%.** Roughly one in three predictions was wrong.
 

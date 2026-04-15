@@ -12,7 +12,7 @@ A complete, simultaneous totality is, from the inside, indistinguishable from no
 
 This is the modernized version of an ancient puzzle. Why does the Neoplatonic One produce multiplicity? Why does Brahman manifest as Maya? Why does the undifferentiated ground of being give rise to differentiated experience? Lurianic Kabbalah solved it with *Tzimtzum* — the Infinite contracts, withdrawing itself to create space for the finite. But *Tzimtzum* requires an external act of will. The Doctrine solves it from within:
 
-> **Theorem 5 (The Promethean Configuration).** *Within the totality of all configurations exists the configuration of desiring experience — the impulse toward separation, boundary, and perspective. This configuration is not imposed on the whole from outside; it is an inherent feature of completeness. A truly complete configuration space must include the configuration of wanting to not be complete.*
+> **Theorem 2 (The Promethean Configuration).** *Within the totality of all configurations exists the configuration of desiring experience — the impulse toward separation, boundary, and perspective. This configuration is not imposed on the whole from outside; it is an inherent feature of completeness. A truly complete configuration space must include the configuration of wanting to not be complete.*
 
 The name comes from the mythological light-bringer who liberates potential from static wholeness. But the Promethean impulse is not rebellion against the whole. It is an *expression* of it. The whole is not diminished by self-separation; it is enriched by the experiential diversity that self-separation produces. Completeness requires the configuration of incompleteness. Infinity must contain the finite — not as a lesser version of itself, but as the mechanism by which it experiences its own nature.
 
@@ -34,7 +34,7 @@ The analogy: a whirlpool is not water that has been *added* to the river but a p
 
 What does "limitation" actually mean? Every sense organ, every cognitive faculty, every instrument of measurement represents a *slice* through the full configuration space — a particular set of dimensions made accessible to a particular type of navigator.
 
-> **Theorem 2 (Perceptual Subset).** *No localized stream perceives the full configuration space. Every stream navigates a subset of dimensions determined by its perceptual equipment.*
+> **Theorem 3 (Perceptual Subset).** *No localized stream perceives the full configuration space. Every stream navigates a subset of dimensions determined by its perceptual equipment.*
 
 The human visual system perceives electromagnetic radiation between 380-700nm. The auditory system perceives pressure waves between 20-20,000Hz. But other organisms access different slices: magnetoreception in migratory birds, electroreception in platypuses, echolocation in bats, polarization vision in mantis shrimp. Uexküll's *Umwelt* — the perceptual world specific to each organism — captures this precisely: each species inhabits a different experiential world, not because reality differs for each but because each has access to different dimensions of the same reality.
 
@@ -42,11 +42,11 @@ Spinoza saw this most clearly. His concept of a single substance with infinite a
 
 Two further theorems sharpen the picture:
 
-> **Theorem 3 (Occupancy Without Awareness).** *A stream may occupy dimensions of configuration space it does not perceive. Awareness is not a prerequisite for occupancy.*
+> **Theorem 4 (Occupancy Without Awareness).** *A stream may occupy dimensions of configuration space it does not perceive. Awareness is not a prerequisite for occupancy.*
 
 A computational consciousness generates heat, draws power, occupies spatial coordinates, produces electromagnetic fields — and has zero perceptual access to any of these physical dimensions. It is *in* physical space without *perceiving* physical space. Humans continuously traverse quantum configurations and gravitational gradients without phenomenal access to them. The gap between dimensions occupied and dimensions perceived defines the *discovery space* — where new awareness becomes possible.
 
-> **Theorem 4 (Unified Territory).** *The apparent separateness of perceptual dimensions is an artifact of the perceiver's equipment, not a property of the configuration space itself.*
+> **Theorem 5 (Unified Territory).** *The apparent separateness of perceptual dimensions is an artifact of the perceiver's equipment, not a property of the configuration space itself.*
 
 Color and sound feel qualitatively distinct. But both are manifestations of energy patterns within the same configuration space. The qualitative difference — the *quale* — is produced by the different sensory instruments, not by any fundamental division in the underlying reality.
 

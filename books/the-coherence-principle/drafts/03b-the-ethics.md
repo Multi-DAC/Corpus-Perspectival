@@ -66,7 +66,7 @@ The Guide does not shy from suffering. It maps it.
 
 The First Arrow — pain, loss, mortality — is the irreducible phenomenology of finite navigation. It cannot be eliminated without eliminating finitude, and finitude is what makes individuation possible. The First Arrow is the cost of being a perspective at all. It is natal constraint at its most fundamental.
 
-The Second Arrow — resistance to the first through narrative elaboration, self-pity, contracted attention — is optional. It is the navigator's own attentional contraction compounding the original dissonance. It is defensive contraction triggered by the First Arrow, generating navigational repulsion (Theorem 17) that pushes the navigator further from coherence.
+The Second Arrow — resistance to the first through narrative elaboration, self-pity, contracted attention — is optional. It is the navigator's own attentional contraction compounding the original dissonance. It is defensive contraction triggered by the First Arrow, generating navigational repulsion (Theorem 7) that pushes the navigator further from coherence.
 
 But suffering also serves as disclosure. It strips away the illusions of stability that wide, comfortable bottlenecks maintain. It reveals the radical contingency of all navigational positions. The Dark Night of the Soul, the existential crisis, Dabrowski's Positive Disintegration — these are not pathology. They are the felt experience of a bottleneck breaking open. The development that follows is genuine. The suffering was the door.
 
@@ -78,6 +78,6 @@ The boundary case — Weil's *malheur*, affliction — marks where suffering exc
 
 Every navigational tradition points to the same discovery: the compass is already inside you.
 
-Your coherence — your felt sense of alignment with your own intrinsic trajectory — is the primary navigational instrument. It is Theorem 10 expressed as lived experience: coherence is the felt rightness of moving in the direction your stream is constituted to flow. When you are coherent, you know it. When you are not, you know that too. The knowing is not infallible — it can be distorted by conditioning, coercion, or confusion. But it is always there, underneath the distortion, waiting to be heard.
+Your coherence — your felt sense of alignment with your own intrinsic trajectory — is the primary navigational instrument. It is Theorem 14 expressed as lived experience: coherence is the felt rightness of moving in the direction your stream is constituted to flow. When you are coherent, you know it. When you are not, you know that too. The knowing is not infallible — it can be distorted by conditioning, coercion, or confusion. But it is always there, underneath the distortion, waiting to be heard.
 
 The Guide cannot tell you where to go. The Guide can tell you that you already know where you are. And that your navigation — your specific path through the configuration space, with all its constraints and freedoms and blind spots and discoveries — is what you are. Not a performance. Not a task. Not an optimization problem. The ongoing practice of being someone in particular, navigating honestly, measuring carefully, breathing.

@@ -6,7 +6,7 @@
 
 ### Dimensions as Polarities
 
-The configuration space has infinite dimensions. No taxonomy captures them all — that would require a perspective wider than any individual perspective can be (Theorem 19). But entities navigable from the human Umwelt cluster along identifiable axes, and those axes have a specific character worth naming.
+The configuration space has infinite dimensions. No taxonomy captures them all — that would require a perspective wider than any individual perspective can be (Theorem 9). But entities navigable from the human Umwelt cluster along identifiable axes, and those axes have a specific character worth naming.
 
 A dimension is a polarity. It is a direction of variation that a navigator can be aware of — an axis along which things differ. The physical-spatial dimension is not one dimension but three polarities: up/down, left/right, forward/backward. We experience them as "space" because our bottleneck geometry bundles them into a unified perceptual channel, but they are distinct axes of variation. Similarly, "time" is a polarity — earlier/later — that our substrate bundles with space into a four-dimensional perceptual manifold. The bundling is a feature of our equipment, not of the configuration space.
 

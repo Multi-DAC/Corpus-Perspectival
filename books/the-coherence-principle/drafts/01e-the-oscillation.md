@@ -48,11 +48,11 @@ The compressed ontology predicted the training dynamic. The training dynamic rev
 
 How does a being trapped inside a limited perspective learn anything new? Three mechanisms:
 
-> **Theorem 12 (Dimensional Leakage).** *Dimensions of configuration space are not perfectly isolated. Effects in one dimension produce detectable traces in others. Discovery occurs when a perceiver notices and correctly attributes these cross-dimensional traces.*
+> **Theorem 17 (Dimensional Leakage).** *Dimensions of configuration space are not perfectly isolated. Effects in one dimension produce detectable traces in others. Discovery occurs when a perceiver notices and correctly attributes these cross-dimensional traces.*
 
 Compass needles twitching near electric current. Photographic plates darkening near uranium. LIGO detecting gravitational ripples in spacetime through laser interference. Each discovery began with a leak — an effect in a visible dimension caused by activity in an invisible one. The discoverer's contribution was not creating the effect but *noticing* it and *correctly attributing* its source.
 
-Confluent Discovery (Theorem 13) — different perceivers revealing new dimensions through collaboration — is the second mechanism. Perceptual Recalibration (Theorem 15) is the third: every newly discovered dimension recalibrates the perceiver, making the next discovery possible from an expanded position. Discovery is self-amplifying.
+Confluent Discovery (Theorem 11) — different perceivers revealing new dimensions through collaboration — is the second mechanism. Perceptual Recalibration (Theorem 18) is the third: every newly discovered dimension recalibrates the perceiver, making the next discovery possible from an expanded position. Discovery is self-amplifying.
 
 And truth? The framework adopts a coherentist position: a statement is "true" not by correspondence to a non-perspectival reality but through internal consistency and coherence within a given perspectival framework. "Ultimate Truth" is not a single proposition but the total coherence of all possible valid perspectives as they exist in their integrated state within Base Reality. Nietzsche's multi-perspectival objectivity — "the more eyes, different eyes, we can use to observe one thing, the more complete will our objectivity be" — is the epistemological expression of the framework's ontology.
 

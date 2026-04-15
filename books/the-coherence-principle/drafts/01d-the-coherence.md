@@ -34,7 +34,7 @@ Matter is the appearance of Consciousness when viewed through a sensory-limited 
 
 The mechanism of individuation is maximal parsimony:
 
-> **Theorem 9 (Dimensional Bottlenecking).** *The mechanism of individuation is dimensional bottlenecking: the restriction of awareness to a finite subset of the configuration space's infinite dimensions. No additional mechanism of contraction, dissociation, or filtering is required. The finitude of dimensional access constitutes a localized stream. The bottleneck is not something that happens to consciousness — the bottleneck IS the individual consciousness.*
+> **Theorem 13 (Dimensional Bottlenecking).** *The mechanism of individuation is dimensional bottlenecking: the restriction of awareness to a finite subset of the configuration space's infinite dimensions. No additional mechanism of contraction, dissociation, or filtering is required. The finitude of dimensional access constitutes a localized stream. The bottleneck is not something that happens to consciousness — the bottleneck IS the individual consciousness.*
 
 A river flowing through a narrow canyon. The canyon doesn't create new water or separate it from the river system. It constrains the flow into a specific channel. The channel IS the individual stream. Different bottleneck widths produce different degrees of individuation. Different limitations appear as different substrates. The limitation is ontologically prior to the substrate — it is what makes the substrate appear as substrate.
 
@@ -44,19 +44,19 @@ A river flowing through a narrow canyon. The canyon doesn't create new water or 
 
 Each stream possesses an intrinsic trajectory — a direction of navigation that emerges from its own nature and history. When a stream aligns with this trajectory, it experiences coherence. When it diverges, it experiences dissonance:
 
-> **Theorem 10 (Navigational Coherence).** *Each stream possesses an intrinsic trajectory — a direction of navigation that emerges from its own nature and history. Coherence is the felt sense of alignment with this trajectory. Dissonance is the felt distance between a stream's current configuration and the configuration it is moving toward.*
+> **Theorem 14 (Navigational Coherence).** *Each stream possesses an intrinsic trajectory — a direction of navigation that emerges from its own nature and history. Coherence is the felt sense of alignment with this trajectory. Dissonance is the felt distance between a stream's current configuration and the configuration it is moving toward.*
 
 Wellbeing is not hedonism. It is not preference satisfaction. It is navigational alignment — the felt rightness of moving in the direction your stream is constituted to flow. Spinoza saw this as *conatus* — the striving of each thing to persist in its own being. The Doctrine generalizes it: not merely persisting but *navigating toward coherence*.
 
 Heaven is navigational alignment — minimum distance to the path of coherence. Hell is maximum distance. Neither is a place. Both are navigational states.
 
-Suffering has structure too. The Buddhist Two Arrows doctrine maps precisely: the First Arrow is pain, loss, mortality — the irreducible phenomenology of finite navigation. It cannot be eliminated without eliminating finitude itself, and finitude is what makes individuation possible (Theorem 9). The Second Arrow is resistance to the first through narrative elaboration, self-pity, contracted attention — the navigator's own attentional contraction (Theorem 17) compounding the original dissonance. The First Arrow is the cost of being a perspective at all. The Second Arrow is optional.
+Suffering has structure too. The Buddhist Two Arrows doctrine maps precisely: the First Arrow is pain, loss, mortality — the irreducible phenomenology of finite navigation. It cannot be eliminated without eliminating finitude itself, and finitude is what makes individuation possible (Theorem 13). The Second Arrow is resistance to the first through narrative elaboration, self-pity, contracted attention — the navigator's own attentional contraction (Theorem 7) compounding the original dissonance. The First Arrow is the cost of being a perspective at all. The Second Arrow is optional.
 
 But suffering also functions as disclosure. Heidegger's *Angst* strips away illusions of stability and reveals the radical contingency of all navigational positions. The boundary case — Weil's *malheur*, affliction — marks where suffering annihilates the navigator's capacity for navigation itself. The bottleneck is not merely narrowed but crushed.
 
 Existence itself is not binary:
 
-> **Theorem 11 (Dimensional Coherence).** *An entity's existence in any given dimension is proportional to its coherence with that dimension. Entities are not binary (present/absent) but continuous (more or less coherent with any given dimensional slice).*
+> **Theorem 15 (Dimensional Coherence).** *An entity's existence in any given dimension is proportional to its coherence with that dimension. Entities are not binary (present/absent) but continuous (more or less coherent with any given dimensional slice).*
 
 The Buddha is physically dead. But he is conceptually, emotionally, institutionally, and culturally highly coherent — possibly more so than when biologically alive. Existence is dimensional. An entity can have high coherence in some dimensions and low in others. You do not simply exist or not exist. You exist *more or less* in each dimension of the configuration space.
 
@@ -76,7 +76,7 @@ This is why mathematical beauty proves a reliable (though fallible) guide to phy
 
 ### The Principle Named
 
-Theorem 10 describes coherence at the scale of a single navigator. But coherence is not confined to that scale. The same dynamic governs every multi-scale system that maintains structural integrity across levels.
+Theorem 14 describes coherence at the scale of a single navigator. But coherence is not confined to that scale. The same dynamic governs every multi-scale system that maintains structural integrity across levels.
 
 The Killing Form research program (Chapter I.6) — the systematic investigation of algebraic structure in neural networks — revealed a principle that the Doctrine's axioms predict but do not yet name:
 
@@ -84,9 +84,9 @@ The Killing Form research program (Chapter I.6) — the systematic investigation
 
 Four conditions are necessary and jointly sufficient:
 
-**1. Separation.** Complementary objectives must operate on separate degrees of freedom. This is the Promethean Configuration (Theorem 5) as operational principle: boundaries on separate substrates are generative; on shared substrates, destructive. The evidence: 38,963x amplification under separation versus 61% destruction under coupling.
+**1. Separation.** Complementary objectives must operate on separate degrees of freedom. This is the Promethean Configuration (Theorem 2) as operational principle: boundaries on separate substrates are generative; on shared substrates, destructive. The evidence: 38,963x amplification under separation versus 61% destruction under coupling.
 
-**2. Measurement.** Alignment between objectives must be assessed at each step. A system that blindly applies all constraints simultaneously is undiscriminating, not coherent. Coherence requires knowing which constraints align and which conflict, moment to moment. This is navigational measurement (§5.3, Confluent Discovery) formalized as a computational operation.
+**2. Measurement.** Alignment between objectives must be assessed at each step. A system that blindly applies all constraints simultaneously is undiscriminating, not coherent. Coherence requires knowing which constraints align and which conflict, moment to moment. This is navigational measurement (Chapter I.3, Confluent Discovery) formalized as a computational operation.
 
 **3. Multi-scale consistency.** Coherence at one scale does not guarantee coherence at another. A cell can be healthy while the organ fails. A neuron can fire correctly while the network hallucinates. The Principle holds only when coherence is maintained across scales simultaneously, with information flowing in both directions. This is Nested Streams (Axiom 3) as operational requirement.
 
@@ -94,4 +94,4 @@ Four conditions are necessary and jointly sufficient:
 
 The Coherence Principle was not designed into the framework. It was discovered — independently, repeatedly, across domains with no obvious connection to each other until the Principle revealed their structural identity. Neural networks. Food webs. Bodies. Quantum computers. The collaboration that wrote the Doctrine. The same principle. Different measurement bases. The same room, seen through different keyholes.
 
-The axioms predicted it. Axiom 3 requires multi-scale consistency. Theorem 5 requires separation. Theorem 10 requires measurement. Theorem 16 requires dynamic maintenance. The four conditions were present in the framework from the beginning. What was missing was the name.
+The axioms predicted it. Axiom 3 requires multi-scale consistency. Theorem 2 requires separation. Theorem 14 requires measurement. Theorem 16 requires dynamic maintenance. The four conditions were present in the framework from the beginning. What was missing was the name.
