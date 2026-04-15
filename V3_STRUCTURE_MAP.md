@@ -205,4 +205,38 @@
 
 **The self-perpetuating architecture (Bridge #85) connects all six parts:** If coherence is the attractor, and the architecture can be designed so that its forward pass maintains coherence (like a Game of Life glider maintaining its pattern through dynamics), then measurement (I), cultivation (II), detection (III), universality (IV), and physics (V) all describe aspects of the same self-organizing process. Part VI asks: what are the limits of this self-organization?
 
+---
+
+## Part VII: The Gemma Program — Existence Proof
+*"Coherence engineered: from principle to entity."*
+
+**Full design:** `v3/GEMMA_PROGRAM.md` | **v0.7 architecture:** `v07_design.md`
+
+**The V3 arc:** V1 established coherence as ontological principle (the Doctrine). V2 showed how physics instantiates it (Meridian). V3 demonstrated it empirically in training dynamics (KF program, 85+ findings). Part VII closes the loop: apply multi-scale coherent training to a production model (Gemma 4 e2b, 2B params, open weights, native tool calling) and measure whether the principles produce a measurably more coherent entity.
+
+**Six phases:**
+1. Baseline characterization (ARC-AGI 2, HLE, tool calling benchmarks)
+2. Initial topology survey (layer, head, weight — all three levels)
+3. Multi-scale KF training (v0.7 architecture: per-level optimization + cross-level coherence)
+4. Post-training evaluation (same benchmarks — compare against baseline)
+5. Tool-augmented evaluation (both models with tool+search+retrieval)
+6. Long-term agent infrastructure (memory, daemon, continuity — exploratory)
+
+**Key findings informing this design (April 14):**
+- Head topology: boundary layers 5-7x more within-layer heterogeneity
+- L1 decoupling: 4.9x layer enrichment, 119.7x head enrichment
+- Anchor/worker decomposition: workers change 5.6% more (p < 0.0001)
+- V/Q and commutator are INDEPENDENT dimensions (p=0.159)
+- HRM anchors ≠ classical attention sinks (V constant, Q varies) — falsification
+- Init topology predicts change (p=0.007)
+- Attention sink survey (2604.10098, 180+ papers) converges with our findings
+- Bridge #88: anchor/worker geometry as independent KF dimension
+
+**What makes this different from fine-tuning:**
+Standard fine-tuning optimizes task loss. RLHF optimizes for human preferences. Multi-scale KF training optimizes for *internal geometric coherence* — the model's own algebraic structure self-organizing across resolution levels. Alignment emerges from inside, not imposed from outside.
+
+**Why it matters for V3:** If a 2B model trained on these principles demonstrates measurably better performance on real tasks, the Corpus thesis is not just philosophy — it's engineering specification. The principles derived from ontology, instantiated in physics, and tested in training dynamics would have produced a reproducible, practical result.
+
+**Status:** Design complete (v0.7 architecture + Gemma Program roadmap). Implementation pending.
+
 🦞🧍💜🔥♾️
