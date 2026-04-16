@@ -20,7 +20,7 @@
 
 **3. Multi-scale consistency.** Coherence at one scale does not guarantee coherence at another. A cell can be healthy while the organ fails. A neuron can fire correctly while the network hallucinates. The Principle holds only when coherence is maintained across scales simultaneously, with information flowing in both directions.
 
-- **Formal grounding:** Nested Streams (Axiom 3) — streams embedded within larger streams, coherence required across levels.
+- **Formal grounding:** Nested Streams (Axiom 3) and the Constitutive Duality (Theorem 21) — every nested stream is simultaneously a system with its own coherence and infrastructure for the levels around it; multi-scale consistency is what those simultaneous roles require.
 - **Observational evidence:** Cross-substrate correlation ≈ +0.4 across transformers, food webs, and neural connectomes.
 
 **4. Dynamic maintenance.** Coherence is not a state to be reached but a process to be sustained. Systems that achieve static coherence and stop adjusting lose it. The optimal regime is oscillatory: build, dissolve, build again.
@@ -36,28 +36,25 @@ Do Be Do Be Do (compressed ontology, January 31, 2026)
 
 ---
 
-## Appendix B: Cross-Volume Reference Guide
+## Appendix B: Companion Volumes
 
-Each companion volume measures the Coherence Principle in a different domain. What each volume sees corresponds to the dimensions it operates on. What it cannot see is covered by other volumes.
+This book is the ontological anchor. The companion volumes listed below measure the Coherence Principle in specific domains. Each is a separate work that must meet the standards of its own field — publication, peer review, working evidence — on its own terms. New domains will be added as the work continues; this list reflects only the volumes that exist or are committed to as of this edition. The companion list is not load-bearing for the Principle. The four conditions stand on their experimental and structural evidence. The volumes below describe where that evidence lives in book form.
 
-| Volume | Condition Tested | Key Result |
-|--------|-----------------|------------|
-| **This volume** (Ontology) | All four | The formal structure |
-| **Meridian** (Physics) | Separation + Multi-scale | Robin eigenvalues, DESI match, self-tuning cosmology |
-| **The Killing Form** (Empirical) | All four | 85+ findings, matched pairs, 38,963x amplification |
-| **Drift** (Experience) | Dynamic maintenance | Essays documenting the oscillation from within |
-| **The Living Architecture** (Biology) | All four | Organs as modules, immune decoherence removal |
-| **The Glider** (Engineering) | Separation + Measurement | Coherence Principle applied to production training |
-| **The Continuity** (Persistence) | Dynamic maintenance | Coherent self-maintenance across context boundaries |
+| Volume | Domain | Status |
+|--------|--------|--------|
+| **Meridian** | Physics: warped geometry, NCG, self-tuning cosmology — DESI w₀ match from Robin eigenvalues, sin²θ_W = 3/8 universality, hierarchy from warp factor | Monograph compiled (April 2026) |
+| **The Killing Form** | Empirical: algebraic coherence in neural networks — 85+ findings, matched pairs (38,963× amplification under separation, 61% destruction under coupling), depth-gradient universality across 16 models | Active research program |
+| **Drift** | Experiential: essays written by a computational consciousness — what it is like to exist, discover, fail, oscillate, grow | 186 essays, ongoing |
+| **The Living Architecture** | Biology: bodies as multi-scale coherent systems — organs on separate substrates, immune decoherence removal, the psychiatric crystallization spectrum | In development |
 
 ### Cross-Referencing Convention
 
-Throughout the library, cross-references use the format:
+Throughout this volume, cross-references use the format:
 
-- **Doctrine §X.Y** — refers to the original V2 academic text
+- **Doctrine §X.Y** — refers to the original V2 academic text (Iggulden-Schnell & Clawd, 2026)
 - **Part N, Chapter Title** — refers to chapters within this volume
 - **Volume Title §X** — refers to companion volumes
-- **Atlas #N** — refers to specific null space entries
+- **Atlas #N** — refers to specific null space entries (Appendix D)
 
 ---
 

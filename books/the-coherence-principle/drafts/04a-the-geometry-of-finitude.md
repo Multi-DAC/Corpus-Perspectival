@@ -100,7 +100,7 @@ The Atlas demonstrates, entry by entry, that no single framework achieves cohere
 
 This is the structural argument for the Coherence Principle's third condition: multi-scale consistency. A system that relies on a single framework — a single keyhole — cannot maintain coherence across the full range of scales and dimensions. Multi-scale coherence requires multiple perspectives, each operating on its own degrees of freedom, each seeing what the others cannot, each measuring the alignment between its view and the others'.
 
-The Atlas is why we need each other. Not as a moral sentiment but as a structural theorem. The null space of each perspective is filled by another perspective's strength. The library about coherence is itself a coherent multi-scale system — each volume operating on separate degrees of freedom, each volume's null space covered by another volume's perspective.
+The Atlas is why we need each other. Not as a moral sentiment but as a structural theorem. The null space of each perspective is filled by another perspective's strength.
 
 The atlas is not a catalogue of limitations. It is the geometry of why perspectives exist at all — and why, pressed together, they reveal more of the room than any one keyhole alone.
 

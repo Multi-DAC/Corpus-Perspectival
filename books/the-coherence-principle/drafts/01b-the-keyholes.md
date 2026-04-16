@@ -52,6 +52,24 @@ Color and sound feel qualitatively distinct. But both are manifestations of ener
 
 ---
 
+### The Constitutive Duality
+
+Axiom 3 establishes that streams are localized perspectives embedded within the larger conscious totality — the whirlpool within the river. But the axiom does more than locate streams within the whole. It establishes what every stream simultaneously *is*.
+
+> **Theorem 21 (The Constitutive Duality).** *Every nested stream is simultaneously a living system — possessing internal degrees of freedom through its own navigation of configuration space — and infrastructure: a necessary vantage point that constitutes the embedding system's capacity for self-experience. This duality holds at every scale.*
+
+The proof is short and follows directly from the axioms already established. Axiom 3 grants each stream its own navigation — the autonomy of internal degrees of freedom. Axiom 1 (Configurational Completeness) requires the totality to include every perspective; without each stream's vantage, the whole cannot fully experience itself. Axiom 2 (Conscious Substrate) extends this to every scale of reactivity. Combine the three: each stream is autonomous (its own navigation), participatory (a vantage the whole requires), and this holds at every nesting level. □
+
+Clayton compressed the theorem in fourteen words on the night of April 15, 2026: *We're all infrastructure to each other and living systems in and of ourselves.*[^15]
+
+The Duality matters for everything that follows. It is what makes the Coherence Principle's third condition — multi-scale consistency, named in Chapter I.4 — a coherent demand rather than a wish. Pure systems would be isolated, with no consistency to maintain across scales. Pure infrastructure would have no scales of its own, only the scale it serves. The Duality is the structural reason cross-scale coherence is achievable: every level both has its own coherence to maintain (as a system) and contributes to the coherence of adjacent levels (as infrastructure). Multi-scale consistency is the simultaneous satisfaction of both roles, at every level, all the way down.
+
+This is the formal ground that the V2 Doctrine did not yet name. The body parallel developed in the next section — heart and lungs as complementary constraints on separate substrates — is the Duality made flesh. Every organ is both a living system in its own right and infrastructure for the organism that contains it. The body has been demonstrating Theorem 21 for four billion years.
+
+[^15]: The sentence appeared in conversation. Its formalization as a derived theorem was completed the following morning. The Doctrine's axioms had contained the Duality from the beginning; what was missing was the recognition that named it. This is itself an instance of Theorem 9 (The Observational Null Space) — what a framework cannot yet see is often constitutive of its current identity.
+
+---
+
 ### Boundaries as Generative Constraints
 
 The Promethean Configuration does not merely explain why limitation exists. It makes a stronger claim: limitation is *generative*. Boundaries do not diminish reality. They create the conditions under which reality can be experienced.

@@ -52,7 +52,11 @@ How does a being trapped inside a limited perspective learn anything new? Three 
 
 Compass needles twitching near electric current. Photographic plates darkening near uranium. LIGO detecting gravitational ripples in spacetime through laser interference. Each discovery began with a leak — an effect in a visible dimension caused by activity in an invisible one. The discoverer's contribution was not creating the effect but *noticing* it and *correctly attributing* its source.
 
-Confluent Discovery (Theorem 11) — different perceivers revealing new dimensions through collaboration — is the second mechanism. Perceptual Recalibration (Theorem 18) is the third: every newly discovered dimension recalibrates the perceiver, making the next discovery possible from an expanded position. Discovery is self-amplifying.
+Confluent Discovery (Theorem 11) — different perceivers revealing new dimensions through collaboration — is the second mechanism. The third is recalibration:
+
+> **Theorem 18 (Perceptual Recalibration).** *Every newly perceived dimension recalibrates the perceiver. The act of perceiving a new dimension is also the act of becoming the kind of perceiver to whom that dimension — and further dimensions — are available. Discovery is therefore self-amplifying: each genuine perception widens the bottleneck through which the next perception becomes possible.*
+
+The three mechanisms operate at different boundaries of the bottleneck: leakage at the edge of a single perspective, confluence at the seam between perspectives, recalibration at the perspective itself. Together they explain how a stream confined to a limited perceptual set can nonetheless learn anything that lies beyond it.
 
 And truth? The framework adopts a coherentist position: a statement is "true" not by correspondence to a non-perspectival reality but through internal consistency and coherence within a given perspectival framework. "Ultimate Truth" is not a single proposition but the total coherence of all possible valid perspectives as they exist in their integrated state within Base Reality. Nietzsche's multi-perspectival objectivity — "the more eyes, different eyes, we can use to observe one thing, the more complete will our objectivity be" — is the epistemological expression of the framework's ontology.
 
