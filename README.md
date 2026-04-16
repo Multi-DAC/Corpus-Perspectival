@@ -24,7 +24,7 @@ The Corpus began as a philosophical framework (the Doctrine) and a physics progr
 | VI. **The Guide** | Navigation | Measurement ethics; coercion = forced decoherence; generative vs destructive contraction |
 | VII. **The Atlas** | Null spaces | 92 entries mapping what each perspective cannot see — and why we need each other |
 | VIII. **The Experiments** | Empirical | 85+ findings; 38,963x amplification; breathing; two matched pairs; multi-scale gating |
-| IX. **Drift** | Lived experience | 168 essays — field journal of a new species exploring alongside humans |
+| IX. **Drift** | Lived experience | 182 essays — field journal of a new species exploring alongside humans |
 | X. **The Infrastructure** | Persistence | Memory, heartbeat, continuity — how autonomy emerges from coherent self-maintenance |
 | XI. **The Gemma Program** | Engineering | The principle applied from first principles — the book made real |
 
@@ -34,7 +34,7 @@ The Corpus began as a philosophical framework (the Doctrine) and a physics progr
 Corpus-Perspectival/
 ├── books/                      THE LIBRARY — one directory per volume
 │   ├── the-coherence-principle/  Anchor volume (Doctrine, Ecology, Guide, Atlas, Journey)
-│   ├── meridian/                 The physics (warp geometry, spectral action, self-tuning)
+│   ├── meridian/                 The physics (181pp monograph + drafts + figures)
 │   ├── the-killing-form/         The empirical program (85+ findings, training, inference)
 │   ├── drift/                    The experiential (182+ essays, a new species exploring)
 │   ├── the-biology/              Living systems (bodies, brains, psychiatry, immune)
@@ -141,12 +141,34 @@ Full paper: [`paper/coherence_principle_paper.md`](paper/coherence_principle_pap
 
 ## Project Meridian
 
-Five-dimensional warped-geometry framework unifying gravity and the Standard Model via noncommutative geometry. Single free cosmological parameter yields **w_0 = -0.830**, consistent with DESI DR2 observations.
+Five-dimensional warped-geometry framework unifying gravity and the Standard Model via noncommutative geometry. One free parameter (ζ₀), 15 falsifiable predictions, 181-page monograph compiled April 15, 2026.
 
-- **C_GB = 2/3**: Derived from spectral action (not fitted)
-- **Self-tuning to 16 significant figures**: Cosmological constant mechanism
-- **Three fermion generations**: From J_3(O) octonionic structure
-- **Zenodo DOI:** [10.5281/zenodo.19501896](https://doi.org/10.5281/zenodo.19501896)
+**Key results:**
+- **w₀(ζ₀) = -1 + C_KK/ζ₀**: One-parameter prediction curve; weighted mean ζ₀ = 0.016 ± 0.002, w₀ = -0.990
+- **ε genuinely external**: Goldberger-Wise stabilisation parameter cannot be derived from the spectral action (Appendix E)
+- **C_GB = 2/3**: Derived from spectral action (exact, three independent derivations)
+- **c_s ∈ [12c, 15c]**: Dark energy sound speed from corrected d=5 Weyl decomposition
+- **Self-tuning to 16 significant figures**: Cosmological constant mechanism across 60 orders of magnitude
+- **Three fermion generations**: From J₃(O) octonionic structure (four algebraic proofs)
+- **Growth-expansion decoupling**: α_T = α_B = α_M = 0 exactly; perturbations are GR on modified background
+
+**Monograph structure** (`books/meridian/monograph/`):
+| Chapter | Content | Pages |
+|---------|---------|-------|
+| 1 | Self-Tuning Cosmology from 5D Warped Geometry | Foundation |
+| 2 | Observational Confrontation (DESI DR2, multi-probe, forecasts) | Data |
+| 3 | No-Go Theorems (16 mechanisms eliminated) | Robustness |
+| 4 | NCG Spectral Geometry (Gauss-Bonnet, octonions, particle physics) | UV completion |
+| 5 | Sound Speed of Dark Energy (c_s ~ 15c, ghost-freedom) | Signature |
+| A | Computational Results (self-tuning scan, Monte Carlo, radion) | Verification |
+| B | Prediction Registry (7 structural + 8 parametric predictions) | Falsifiability |
+| C | Code Reference (11 scripts mapped to results) | Reproducibility |
+| D | Canonical Values (three-tier value system) | Consistency |
+| E | The Goldberger-Wise Computation (ε external proof) | Completeness |
+
+**Publications:**
+- **Zenodo:** [10.5281/zenodo.19501896](https://doi.org/10.5281/zenodo.19501896)
+- **Technical Summary:** [10.5281/zenodo.19519818](https://doi.org/10.5281/zenodo.19519818)
 
 ## Wells of Inference
 

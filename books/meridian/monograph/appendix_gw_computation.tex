@@ -1,0 +1,146 @@
+% ============================================================
+% APPENDIX E: THE GOLDBERGER--WISE COMPUTATION
+% ============================================================
+
+\chapter{The Goldberger--Wise Computation}
+\label{app:gw}
+
+This appendix documents the complete derivation chain from octonionic algebra to the dark energy equation of state, and proves that the Goldberger--Wise (GW) stabilisation parameter $\varepsilon \equiv \Delta - 2$ is \emph{genuinely external} to the spectral triple.  The Meridian framework therefore remains a one-parameter theory ($\zz$ free, determined by observation), as claimed throughout this volume.
+
+%% ====================================================================
+\section{The Derivation Chain}
+\label{app:gw-chain}
+%% ====================================================================
+
+The algebraic chain from octonions to cosmology proceeds through six steps, each computed explicitly in Chapter~\ref{ch:ncg}:
+\begin{equation}
+  \mathbb{O} \;\xrightarrow{\;M_\mathrm{oct}\;}\; \text{Yukawa}
+  \;\xrightarrow{\;b_{3/2}\;}\; \alpha_\mathrm{UV}
+  \;\xrightarrow[\text{Robin + EM}]{\text{spectral action}}\; \mu^2(\varepsilon)
+  \;\xrightarrow{\;\text{JC}\;}\; \zz
+  \;\xrightarrow{\;C_\mathrm{KK}\;}\; w_0\,.
+  \label{eq:E-chain}
+\end{equation}
+
+\paragraph{Step~1: $\mathbb{O} \to M_\mathrm{oct} \to$ Yukawa.}
+The octonionic structure of the finite spectral triple (Section~\ref{sec:4-octonionic}) determines the $3 \times 3$ democratic mass matrix $M_\mathrm{oct}$ through the three independent complex structures on $\mathbb{O}$, related by the $S_3$ subgroup of $\mathrm{Aut}(\mathbb{O}) = G_2$.  This fixes the Yukawa couplings up to overall scales.
+
+\paragraph{Step~2: Yukawa $\to b_{3/2} \to \alpha_\mathrm{UV}$.}
+The Yukawa traces enter the boundary Seeley--DeWitt coefficient $b_{3/2}$ on the UV brane of the RS orbifold.  The first computation of this coefficient on a warped RS orbifold with Standard Model fermion content gives (equation~\eqref{eq:4-b32-components}):
+\begin{equation}
+  b_{3/2} = \underbrace{-0.3125}_{\text{geometric}} + \underbrace{0.7385}_{\text{gauge}} + \underbrace{5.57 \times 10^{-5}}_{\text{Yukawa}} = 0.426\,.
+\end{equation}
+The gauge contribution dominates; the IR brane is suppressed by $e^{-4ky_c} \sim 10^{-61}$.  The resulting UV brane coupling is
+\begin{equation}
+  \alpha_\mathrm{UV} = -5.02 \times 10^{-4}\,,
+  \label{eq:E-alpha-uv}
+\end{equation}
+where the \emph{negative} sign signals a tachyonic brane mass that triggers the GW stabilisation mechanism.
+
+\paragraph{Step~3: $\alpha_\mathrm{UV} \to \mu^2(\varepsilon)$.}
+The brane scalar mass $\mu^2$ is extracted from the product spectral action via Euler--Maclaurin decomposition (equation~\eqref{eq:4-em-decomposition}).  The brane-localised contribution receives two derivative channels:
+\begin{itemize}
+  \item \textbf{Channel~1} (KK eigenvalue shift): $dM_n^2/d\Phi_0$ from the $y_c$-dependence of Robin eigenvalues through GW stabilisation.  Dominant channel.
+  \item \textbf{Channel~2} (Yukawa $y_c$-dependence): $d\lambda_i^2/d\Phi_0$ from 5D fermion profiles.  Contributes $+10.2\%$.
+\end{itemize}
+Cross-terms from the product geometry $(M_n \pm \lambda_i)^2$ cancel exactly due to $\pm\lambda_i$ pairing in $D_F$.
+
+The Robin eigenvalue equation for the GW scalar (equation~\eqref{eq:4-robin-eigenvalue}) gives an effective potential
+\begin{equation}
+  V_\mathrm{eff} = \varepsilon\,(4 + \varepsilon)\, k^2\,,
+  \label{eq:E-veff}
+\end{equation}
+where $\varepsilon \equiv \Delta - 2$ is the GW scaling dimension relative to the conformal value.  For $\Delta = 2$, $V_\mathrm{eff} = 0$ and the eigenvalues are approximately $(n\pi/y_c)^2$.  Nonzero $\varepsilon$ shifts all eigenvalues upward, reducing the number of modes below the cutoff and lowering $\mu^2$.
+
+\paragraph{Step~4: $\mu^2 \to \zz$.}
+The UV junction conditions map $(\alpha_\mathrm{UV},\, \mu^2)$ to $\zz = \xi\,\Phi_0^2/M_5^3$, with $\sigma_\mathrm{UV} = 6$ fixed by the $\mathbb{Z}_2$ orbifold.  The self-consistent solution iterates the Euler--Maclaurin decomposition and junction conditions until $\Phi_0$ converges to $10^{-13}$.
+
+\paragraph{Step~5: $\zz \to w_0$.}
+The KK reduction (Chapter~\ref{ch:foundation}) gives $w_0 = -1 + C_\mathrm{KK}/\zz$, with $C_\mathrm{KK} = (1.64 \pm 0.33) \times 10^{-4}$ at the Planck~2018 fiducial cosmology.
+
+\paragraph{Self-consistent solution.}
+Fitting $\varepsilon$ to the DESI~DR2 constant-$w$ constraint ($w_0 = -0.83 \pm 0.06$) gives $\varepsilon = 0.275\, {}^{+0.072}_{-0.106}$ (equation~\eqref{eq:4-epsilon-desi}), which yields the spectral chain benchmark:
+\begin{equation}
+  \boxed{
+    \mu^2 = 0.097\, k^2\,,\quad
+    \Phi_0 = 0.073\,,\quad
+    \zz = 8.8 \times 10^{-4}\,,\quad
+    w_0 = -0.830\,.
+  }
+  \label{eq:E-benchmark}
+\end{equation}
+
+The complete $\varepsilon$--$w_0$ mapping is reproduced in Table~\ref{tab:E-epsilon}.
+
+\begin{table}[h!]
+\caption{Self-consistent solutions along the spectral chain as a function of the GW parameter $\varepsilon$.}
+\label{tab:E-epsilon}
+\small
+\renewcommand{\arraystretch}{1.25}
+\centering
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$\varepsilon$ & $V_\mathrm{eff}/k^2$ & $\mu^2/k^2$ & $\zz$ & $w_0$ \\
+\midrule
+$0.00$  & $0.00$ & $0.175$ & $2.85 \times 10^{-3}$ & $-0.944$ \\
+$0.10$  & $0.41$ & $0.142$ & $1.89 \times 10^{-3}$ & $-0.917$ \\
+$0.20$  & $0.84$ & $0.115$ & $1.23 \times 10^{-3}$ & $-0.875$ \\
+$\mathbf{0.275}$  & $\mathbf{1.18}$ & $\mathbf{0.097}$ & $\mathbf{8.8 \times 10^{-4}}$ & $\mathbf{-0.830}$ \\
+$0.30$  & $1.29$ & $0.092$ & $7.9 \times 10^{-4}$ & $-0.811$ \\
+$0.50$  & $2.25$ & $0.057$ & $3.0 \times 10^{-4}$ & $-0.572$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ====================================================================
+\section{Why $\varepsilon$ Is Genuinely External}
+\label{app:gw-external}
+%% ====================================================================
+
+Three independent findings establish that the GW stabilisation parameter cannot be derived from the spectral action:
+
+\paragraph{Finding~1: Monotonic spectral action.}
+Direct computation of $S(y_c)$ as a function of the orbifold size across $ky_c = 20$--$55$ shows that $S(y_c)$ is \emph{monotonically increasing}.  No minimum exists.  The NCG contribution to $dS/dy_c$ is only $0.2\%$---far too small to induce a preferred compactification radius.  The spectral action provides no mechanism to stabilise the modulus.
+
+\paragraph{Finding~2: Destabilising curvature.}
+The second derivative $d^2 S/d(ky_c)^2 = -0.31$ is \emph{negative} (destabilising).  Even if a minimum were found at some special $ky_c$, the curvature at that point would need to be positive for stability.  The spectral action predicts decompactification, not stabilisation.
+
+\paragraph{Finding~3: Conformal overshoot.}
+The na\"{\i}ve spectral-action estimate of the bulk scalar mass uses the conformal coupling $\xi = 1/6$ on $\mathrm{AdS}_5$, giving $\varepsilon_\mathrm{naive} = \sqrt{2/3} \approx 0.816$.  This overshoots the DESI-fitted value $\varepsilon = 0.275$ by a factor of~$3$.  The discrepancy is not fine-tuning---it reflects the physical distinction between the NCG-derived couplings and the stabilisation-sector dynamics.
+
+\paragraph{Conclusion.}
+The GW mechanism operates \emph{external} to the NCG spectral triple.  The spectral action determines $\alpha_\mathrm{UV}$, the cuscuton kinetic structure, the conformal coupling $\xi = 1/6$, the Gauss--Bonnet coefficient $C_\mathrm{GB} = 2/3$, and the Yukawa couplings.  It does \emph{not} determine the orbifold stabilisation scale.  The parameter $\varepsilon$ is therefore genuinely free---determined by DESI, not by geometry.
+
+%% ====================================================================
+\section{Implications}
+\label{app:gw-implications}
+%% ====================================================================
+
+\paragraph{One-parameter theory confirmed.}
+The Meridian framework has exactly one free parameter: $\zz$ (equivalently $\varepsilon$, since the spectral chain maps one to the other bijectively).  Every other quantity is derived from the axioms.  This is the strongest possible structural claim for a dark energy theory: a single observable input ($w_0$ from DESI) fixes the entire phenomenology.
+
+\paragraph{Boundary between prediction and measurement.}
+The GW result identifies the precise boundary between what the NCG spectral triple predicts and what requires stabilisation-sector physics:
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Predicted by NCG} & \textbf{Requires stabilisation input} \\
+\midrule
+Cuscuton $P(X) = \mu^2\sqrt{2X}$ & Orbifold size $ky_c$ \\
+Conformal coupling $\xi = 1/6$ & GW scaling dimension $\Delta$ \\
+GB coefficient $C_\mathrm{GB} = 2/3$ & (equivalently $\varepsilon = \Delta - 2$) \\
+Gauge couplings, Yukawas & \\
+$\alpha_\mathrm{UV} = -5.02 \times 10^{-4}$ & \\
+Growth--expansion decoupling & \\
+No phantom crossing & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Data-driven vs.\ spectral-chain benchmarks.}
+The spectral chain benchmark ($\varepsilon = 0.275$, $\zz = 8.8 \times 10^{-4}$, $w_0 = -0.830$) and the data-driven weighted mean ($\zz = 0.016 \pm 0.002$, $w_0 = -0.990$) are points on the \emph{same} parametric curve $w_0(\zz)$.  The gap between them reflects the open physics of the stabilisation sector, not an inconsistency.  See Appendix~\ref{app:values} for the complete value table.
+
+\paragraph{The factor-of-3 gap as open physics.}
+The ratio $\varepsilon_\mathrm{naive}/\varepsilon_\mathrm{fitted} = 0.816/0.275 \approx 3$ is the single most significant open question in the spectral chain.  Resolving it---either through a more careful treatment of the bulk scalar mass on $\mathrm{AdS}_5$, or through a non-perturbative stabilisation mechanism---would close the chain entirely, upgrading the theory from one-parameter to zero-parameter.

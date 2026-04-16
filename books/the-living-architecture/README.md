@@ -55,6 +55,15 @@ This volume formalizes the connection between the Principle and biology at every
 | Ecological KF | `experiments/cross_domain/` |
 | Body insight notes | `v3/V3_STRUCTURE_MAP.md` (April 14 entry) |
 
+## Research Sources
+
+### Part II: Neural Dimension
+
+- **Interhemispheric hippocampal bridge (April 2026)** — CSIC/Miguel Hernandez team identified a right CA1 → left subiculum neural pathway essential for spatial memory. Optogenetic blockade impairs spatial cognition while leaving anxiety and object recognition intact. Mice with 22q11.2 deletion (schizophrenia-linked) show reduced bridge connectivity and spatial memory deficits, more pronounced in males. Direct biological example of separation (two hemispheres) requiring a bridge (interhemispheric projection) for coherent measurement (spatial localization). Connects to psychiatric crystallization spectrum: schizophrenia-linked genetic alteration degrades the bridge, producing under-crystallization in spatial cognition. Also connects to Kim Peek case (no corpus callosum = absolute separation). Source: [Neurosciencenews](https://neurosciencenews.com/hippocampus-hemisphere-bridge-spatial-memory-30518/), Institute for Neurosciences (CSIC/UMH), Spain.
+
+- **Luppi et al. (Nature Neuroscience)** — Competitive-cooperative circuits as basis of mammalian intelligence. DMN sender/receiver maps onto H/L module framework.
+- **Barrett & Miller (Nature Reviews Neuroscience)** — Predictive brain: 90% feedback, 10% feedforward. Beta (goals) constrains gamma (sensory). Maps onto crystallization framework.
+
 ## What Remains
 
 - **Significant new research** — literature review of multi-scale biological coherence

@@ -1,0 +1,68 @@
+% ============================================================
+% APPENDIX C: CODE REFERENCE
+% ============================================================
+
+\chapter{Code Reference}
+\label{app:code-reference}
+
+All computations in this monograph are reproducible from scripts deposited at \url{https://github.com/Multi-DAC/Corpus-Perspectival} (MIT licence). Table~\ref{tab:code-ref} maps each major result to its implementation.
+
+\begin{table}[h!]
+\caption{Code reference for major computations.}
+\label{tab:code-ref}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{4.5cm}p{5.5cm}p{5cm}@{}}
+\toprule
+\textbf{Result} & \textbf{Script} & \textbf{Chapter / Section} \\
+\midrule
+
+Self-tuning verification (60-order scan) &
+\texttt{meridian/cosmology/self\_tuning\_scan.py} &
+Appendix~\ref{app:selftuning} \\
+
+$w_0(\zz)$ curve with uncertainty bands &
+\texttt{meridian/cosmology/w0\_zeta0\_curve.py} &
+Ch.~\ref{ch:foundation}, \S\ref{sec:1-predictions} \\
+
+Monte Carlo $\chi^2$ analysis &
+\texttt{meridian/cosmology/chi2\_monte\_carlo.py} &
+Appendix~\ref{app:chi2} \\
+
+$H(z)$ compilation fit &
+\texttt{meridian/cosmology/hz\_compilation\_fit.py} &
+Ch.~\ref{ch:observational} \\
+
+DESI CPL mock-data test &
+\texttt{meridian/cosmology/desi\_mock\_test.py} &
+Ch.~\ref{ch:observational}, \S\ref{sec:2-decoupled-test} \\
+
+Boundary heat kernel $b_{3/2}$ &
+\texttt{meridian/spectral-action/17H\_b32\_evaluation.py} &
+Ch.~\ref{ch:ncg}, \S\ref{sec:4-brane-parameter} \\
+
+Spectral chain: $\mathbb{O} \to w_0$ &
+\texttt{meridian/spectral-action/17\_b32\_prediction\_chain.py} &
+Ch.~\ref{ch:ncg}, \S\ref{sec:4-brane-parameter} \\
+
+LISA SNR computation &
+\texttt{meridian/cosmology/lisa\_snr.py} &
+Ch.~\ref{ch:sound-speed}, Table~\ref{tab:5-LISA} \\
+
+$\eps_1$ from full KK reduction &
+\texttt{meridian/spectral-action/epsilon1\_kk.py} &
+Appendix~\ref{app:c1-gb-kk} \\
+
+Fisher matrix forecasts &
+\texttt{meridian/cosmology/fisher\_forecasts.py} &
+Ch.~\ref{ch:observational} \\
+
+Radion stabilisation potential &
+\texttt{meridian/cosmology/15E\_radion\_inflation.py} &
+Appendix~\ref{app:radion} \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+All scripts use Python~3.12 with NumPy~1.26, SciPy~1.12, and Matplotlib~3.8. ODEs were integrated with \texttt{solve\_ivp} (RK45, $\mathrm{rtol} = 10^{-12}$, $\mathrm{atol} = 10^{-14}$); convergence was verified by tolerance halving to $>12$ significant figures. See Appendix~\ref{app:code} for full reproducibility details.

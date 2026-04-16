@@ -1,0 +1,916 @@
+% chapter3_nogo.tex — Paper III of the Meridian Monograph
+% No-Go Theorems for Dynamical Dark Energy in Self-Tuning Warped Gravity
+% To be \input{} into meridian_monograph.tex
+
+\chapter{No-Go Theorems for Dynamical Dark Energy in Self-Tuning Warped Gravity}
+\label{ch:nogo}
+
+\begin{quote}
+\textbf{Abstract.}
+We present a systematic exclusion analysis of dynamical dark energy mechanisms within the framework of five-dimensional self-tuning cosmology (Chapter~\ref{ch:foundation}). Starting from the zero kinetic energy theorem --- $K_{\mathrm{eff}} = 2XP_X - P = 0$ for the cuscuton kinetic function $P(X) = \mu^2\sqrt{2X}$ --- we investigate 16 distinct mechanisms spanning perturbative background modifications, extended kinetic structures, multi-field approaches, non-perturbative quantum channels, and geometric extensions. Of these, approximately ten represent genuine exclusions (mechanisms that could a priori have produced $|\delta w| \gg 0.01$ and are excluded by non-trivial computation); the remainder are tautological within the A1+A2 assumptions and are included for completeness of the search, not as independent surprises. All 16 mechanisms are killed or demonstrate quantitative insufficiency. The maximum achievable deviation is $|\delta w| \sim 0.007$ (from noncommutative geometry [NCG] Gauss--Bonnet corrections); but the structurally robust prediction is \emph{no phantom crossing} ($w > -1$ at all times), which is independent of the specific $|\delta w|$ magnitude. The kills are not independent: they trace to three structural barriers. The \emph{zero KE barrier} forces all single-field background modifications to $\mathcal{O}(\zeta_0 \gamma_r) \sim 10^{-3}$. The \emph{hierarchy-moduli barrier} locks all Kaluza--Klein scalars at $m \sim \mathrm{TeV}$, 44 orders of magnitude above $H_0$. The \emph{Horndeski dilemma} --- which we formalize as a theorem --- shows that the self-tuning condition uniquely determines $P(X)$, leaving no freedom to independently fit the dark energy equation of state. Together, these establish that the functional form of $w_0(\zeta_0)$ is a structural prediction of the framework, not a parametric choice---only $\zeta_0$ (determined by brane UV physics) remains free. The prediction is falsifiable: the $w_0(\zeta_0)$ curve is fixed by the framework, and measurements of both $w_0$ and $\zeta_0$ can confirm or exclude it.
+\end{quote}
+
+%----------------------------------------------------------------------
+\section{Introduction}
+\label{sec:3-intro}
+
+In Chapter~\ref{ch:foundation}~\cite{ch3:paper1}, we derived a parametric dark energy equation of state $w_0(\zeta_0)$ from a specific five-dimensional braneworld architecture: two geometric axioms---five-dimensional spacetime with $S^1/\mathbb{Z}_2$ compactification (A1) and a bulk scalar field with non-minimal gravitational coupling (A2)---supplemented by four theoretical commitments (Kaloper--Padilla sequestering, the NCG spectral action, conformal coupling $\xi = 1/6$, and the linear tadpole). The parameter $\zeta_0$ is free, determined by brane UV physics; the functional form $w_0(\zeta_0)$ is fixed. In Chapter~\ref{ch:observational}~\cite{ch3:paper2}, we confronted this prediction with DESI DR2 data.
+
+A natural question arises: is $w \approx -1$ fine-tuned, or structurally forced? This chapter demonstrates that it is the latter, through a systematic program that tested 16 distinct mechanisms for producing dynamical dark energy ($|1 + w| \gg 0.01$) within the Meridian framework. Every mechanism was either killed outright or shown to be quantitatively insufficient by at least an order of magnitude. We distinguish between \emph{genuine exclusions}---where non-trivial computation is required---and \emph{framework-tautological exclusions}---where the A1+A2 assumptions preclude the mechanism by construction (see Section~\ref{sec:3-conclusions} for the classification).
+
+The significance of a no-go result depends on the completeness of the search and the independence of the kill mechanisms. We show that the 16 tracks span five mechanistic categories:
+
+\begin{enumerate}
+  \item \textbf{Perturbative background modifications} --- direct modifications to $H(z)$ through Weyl tensor, DE--DM coupling, sound horizon shifts, and mimicry effects.
+  \item \textbf{Extended kinetic structures} --- Horndeski braiding and generalized $P(X)$ from full Kaluza--Klein (KK) reduction.
+  \item \textbf{Multi-field approaches} --- KK moduli, DBI branon dynamics, and brane-localized quintessence.
+  \item \textbf{Non-perturbative quantum channels} --- functional RG, Chern--Simons topological coupling, and local non-cosmological solutions.
+  \item \textbf{Geometric extensions} --- higher-dimensional compactification and modified bulk gravity theories.
+\end{enumerate}
+
+More importantly, the kills are not independent. They trace to three structural barriers whose proofs rely only on properties of the self-tuning condition, the Randall--Sundrum hierarchy mechanism, and the Horndeski classification. These barriers cannot be circumvented by parameter adjustment or model extension within the framework's assumptions A1 and A2.
+
+The paper is organized as follows. Section~\ref{sec:3-zke} states the zero kinetic energy theorem and its immediate consequences. Sections~\ref{sec:3-perturbative}--\ref{sec:3-geometric} present the 16 tracks organized by mechanism type. Section~\ref{sec:3-horndeski} formalizes the Horndeski dilemma. Section~\ref{sec:3-classification} presents the structural classification theorem. Sections~\ref{sec:3-discussion}--\ref{sec:3-conclusions} discuss the structural census, implications, falsifiability, and conclusions.
+
+\paragraph{Notation.}
+We follow the conventions of Chapter~\ref{ch:foundation}~\cite{ch3:paper1}. The 4D effective scalar kinetic function is $P(X) = \mu^2\sqrt{2X} + \epsilon_1 X$, where $X = \tfrac{1}{2}g^{\mu\nu}\partial_\mu\phi\,\partial_\nu\phi$, $\mu^2$ is the cuscuton mass scale, and $\epsilon_1 = 0.010 \pm 0.002$ is the NCG Gauss--Bonnet correction. The non-minimal coupling $\zeta_0$ is a free parameter determined by brane UV physics; the junction-condition benchmark $\zeta_0 = 0.001$ ($w_0 = -0.865$) and the CMB-constraint benchmark $\zeta_0 = 0.037$ ($w_0 = -0.996$) are used for numerical illustrations. The normalized Hubble parameter is $E(a) = H(a)/H_0$, and the dark energy equation of state is $w(a)$ with present value $w_0$ and CPL time-derivative $w_a$~\cite{ch3:chevallier2001,ch3:linder2003}.
+
+\paragraph{Summary of results from Papers~I and~II.}
+For the reader's convenience, we briefly summarize the key predictions and observational results established in the companion papers that motivate the present no-go analysis. Chapter~\ref{ch:foundation}~\cite{ch3:paper1} derives the dark energy equation of state from first principles within five-dimensional self-tuning cosmology: the cuscuton kinetic structure $P(X) = \mu^2\sqrt{2X}$, uniquely selected by the self-tuning condition, yields $w = -1$ exactly, while the NCG Gauss--Bonnet correction $\epsilon_1 = 0.010 \pm 0.002$ shifts this to $w_0(\zeta_0) > -1$, with the magnitude depending on $\zeta_0$ through the parametric prediction $w_0 = -1 + C_\mathrm{KK}/\zeta_0$. For the junction-condition benchmark $\zeta_0 = 0.001$, $w_0 = -0.865$ (non-perturbative; consistent with the DESI constant-$w$ constraint); for the CMB-constraint benchmark $\zeta_0 = 0.037$, $w_0 = -0.996 \pm 0.001$. The non-minimal gravitational coupling $\zeta_0$ is a free parameter determined by brane UV physics, entering the modified Friedmann equation through the Hubble drift term $\Omega_{\mathrm{drift}} = v_0\,E^{2\gamma_r}$ with $\gamma_r = \zeta_0/2$.
+
+Chapter~\ref{ch:observational}~\cite{ch3:paper2} confronts these predictions with DESI DR2 baryon acoustic oscillation data, Hubble--Kristian expansion rate measurements, Planck CMB priors, and Type~Ia supernova compilations. The key observational results are: (i)~the Hubble--Kristian data show a preference for nonzero $\zeta_0$ ($\Delta\chi^2 = -15$), though this is one component of a combined multi-probe analysis ($\chi^2_{\mathrm{total}} = 24.6$); H(z) data alone give $\zeta_0 = 0.009 \pm 0.013$, consistent with zero; (ii)~for small $\zeta_0$ the model is indistinguishable from $\Lambda$CDM at current BAO precision, with maximum tension $0.29\sigma$ at any DESI redshift bin; and (iii)~the DESI CPL best fit $(w_0 = -0.75,\, w_a = -0.86)$ lies beyond the framework's capacity for any fixed $\zeta_0$ to simultaneously match the CPL time-dependence. It is this structural constraint --- between what the framework can produce and what DESI's CPL parameterization prefers --- that the present paper systematically investigates.
+
+%----------------------------------------------------------------------
+\section{The Zero Kinetic Energy Theorem}
+\label{sec:3-zke}
+
+\subsection{Statement and Proof}
+\label{sec:3-zke-statement}
+
+\begin{proposition}[Zero Kinetic Energy]
+\label{thm:zke}
+For the cuscuton kinetic function $P(X) = \mu^2\sqrt{2X}$, the effective kinetic energy density vanishes identically:
+\begin{equation}
+  K_{\mathrm{eff}} = 2X P_X - P = 0.
+  \label{eq:3-01}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Computing the derivative:
+\begin{equation}
+  P_X = \frac{\mu^2}{\sqrt{2X}}.
+  \label{eq:3-02}
+\end{equation}
+Therefore:
+\begin{equation}
+  2X P_X = 2X \cdot \frac{\mu^2}{\sqrt{2X}} = \mu^2\sqrt{2X} = P(X).
+  \label{eq:3-03}
+\end{equation}
+Hence $K_{\mathrm{eff}} = 2X P_X - P = 0$ identically for all $X > 0$.
+\end{proof}
+
+This is not a fine-tuning or an approximation. It holds at every spacetime point, for every value of the field, at every epoch. The vanishing is a direct consequence of the square-root functional form, which is itself uniquely determined by the self-tuning condition (Chapter~\ref{ch:foundation}, Section~III): the requirement that bulk dynamics absorb arbitrary brane vacuum energy forces the scalar equation of motion to be first-order (a constraint rather than a dynamical equation), which selects $P(X) \propto \sqrt{X}$~\cite{ch3:afshordi2007,ch3:derham2016}.
+
+\subsection{Consequences for Dark Energy Dynamics}
+\label{sec:3-zke-consequences}
+
+The kinetic energy density $K_{\mathrm{eff}}$ determines the deviation of the dark energy equation of state from the cosmological constant value:
+\begin{equation}
+  1 + w = \frac{K_{\mathrm{eff}}}{K_{\mathrm{eff}} + P} = 0.
+  \label{eq:3-04}
+\end{equation}
+
+Equation~\eqref{eq:3-04} shows that \textbf{the cuscuton predicts $w = -1$ exactly}, not approximately. Any deviation from $w = -1$ requires breaking the zero KE theorem, which requires modifying $P(X)$ away from the pure cuscuton form.
+
+Crucially, $K_{\mathrm{eff}} = 0$ does not imply $\dot{\phi} = 0$. The cuscuton field velocity is determined not by its own equation of motion (which is a constraint, not a dynamical equation), but by the Hamiltonian constraint~\cite{ch3:afshordi2007}:
+\begin{equation}
+  3H\dot{\phi}\,P_X = \frac{dV}{d\phi} + \cdots
+  \label{eq:3-05}
+\end{equation}
+
+The field evolves --- tracking the cosmological expansion --- but this evolution carries zero kinetic energy. This is the physical origin of the cuscuton's unusual properties: it propagates instantaneously ($c_s \to \infty$) with zero energy cost.
+
+\subsection{The Gauss--Bonnet Correction}
+\label{sec:3-zke-gb}
+
+Chapter~\ref{ch:foundation} (Section~VI) derives the leading correction from the NCG spectral action:
+\begin{equation}
+  P(X) = \mu^2\sqrt{2X} + \epsilon_1 X,
+  \label{eq:3-06}
+\end{equation}
+where $\epsilon_1 = 0.010 \pm 0.002$ arises from the Gauss--Bonnet kinetic mixing in the 5D bulk. For this corrected $P(X)$:
+\begin{equation}
+  K_{\mathrm{eff}} = 2X P_X - P
+    = 2X\!\left(\frac{\mu^2}{\sqrt{2X}} + \epsilon_1\right) - \mu^2\sqrt{2X} - \epsilon_1 X
+    = \epsilon_1 X.
+  \label{eq:3-07}
+\end{equation}
+
+The zero KE theorem is broken, but only at order $\epsilon_1$. This gives (Chapter~\ref{ch:foundation}, Eqs.~75--83):
+\begin{multline}
+  w_0 - (-1) = \frac{\epsilon_1 X_0}{P_0 + \epsilon_1 X_0}
+    = \frac{C_{\mathrm{KK}}}{\zeta_0} \\
+    \approx \begin{cases} 0.255 & (\zeta_0 = 0.001), \\ 0.007 & (\zeta_0 = 0.037). \end{cases}
+  \label{eq:3-08}
+\end{multline}
+
+The deviation $|1 + w_0|$ is a function of $\zeta_0$: for the junction-condition benchmark $\zeta_0 = 0.001$, it is $0.255$, in the DESI range. For the CMB-constraint benchmark $\zeta_0 = 0.037$, it is ${\sim}0.007$ --- a factor of ${\sim}36$ below the DESI CPL best fit, which requires $|1 + w_0| \sim 0.25$.%
+\footnote{The NCG brane parameter computation (Chapter~\ref{ch:ncg}, Section~\ref{sec:4-brane-parameter}) determines $\zeta_0 = 8.8 \times 10^{-4}$ at the DESI-matched Goldberger--Wise scaling dimension $\varepsilon = 0.275$, giving $w_0 = -0.830$. This is close to the $\zeta_0 = 0.001$ benchmark used throughout this chapter; the no-go analysis---which concerns the \emph{structural impossibility} of producing dark energy beyond $w_0(\zeta_0)$---is independent of the specific $\zeta_0$ value.}
+
+For a fixed $\zeta_0$, the $w_0(\zeta_0)$ curve is the framework's structural prediction; the 16 mechanisms below attempt to produce additional deviations beyond what Eq.~\eqref{eq:3-08} gives.
+
+%----------------------------------------------------------------------
+\section{Perturbative Background Modifications}
+\label{sec:3-perturbative}
+
+We first consider mechanisms that modify the Friedmann equation $H(z)$ while retaining the cuscuton as the sole dark energy degree of freedom. All four mechanisms share a common suppression factor: modifications proportional to the scalar field velocity $\dot{\phi}$, which is constrained to be small by the zero KE theorem.
+
+\subsection{Projected Weyl Tensor}
+\label{sec:3-weyl}
+
+In the 5D Randall--Sundrum framework~\cite{ch3:rs1,ch3:rs2}, the projected Weyl tensor $\mathcal{E}_{\mu\nu}$ from the bulk contributes to the effective 4D Einstein equations~\cite{ch3:shiromizu2000}. A cuscuton-modified bulk geometry produces $\mathcal{E}_{\mu\nu} \neq 0$.
+
+\paragraph{Static contribution.} The time-independent Weyl projection is non-zero at $\mathcal{O}(\zeta_0 k^2)$, where $k \sim \mathrm{TeV}$ is the AdS curvature scale. However, this contribution is constant and absorbed into the effective 4D cosmological constant $\Lambda_4$ through the standard Randall--Sundrum fine-tuning. It produces no dynamical effects.
+
+\paragraph{Time-dependent contribution.} The evolving Weyl tensor modifies the dark energy density at:
+\begin{equation}
+  \Delta\Omega_{\mathrm{Weyl}}(a) \sim \zeta_0^2 \cdot \Omega_{\mathrm{DE}}
+    \sim (0.037)^2 \times 0.7 \approx 9.6 \times 10^{-4}.
+  \label{eq:3-09}
+\end{equation}
+This translates to:
+\begin{equation}
+  \delta w_{\mathrm{Weyl}} \sim 10^{-3}.
+  \label{eq:3-10}
+\end{equation}
+
+\textbf{Kill mechanism:} $\mathcal{O}(\zeta_0^2)$ suppression. The time-dependent Weyl evolution requires $d(\zeta_0)/dt$, which is proportional to $\dot{\phi}$ --- suppressed by the zero KE theorem. The deficit is a factor of ${\sim}400$ below DESI requirements.
+
+\subsection{Dark Energy--Dark Matter Coupling}
+\label{sec:3-dedm}
+
+A differential conformal coupling between bulk-propagating dark matter and brane matter, mediated by the conformal factor $\beta(\phi)$, produces energy exchange~\cite{ch3:amendola2000}:
+\begin{equation}
+  Q = \beta\,\dot{\phi}\,\rho_{\mathrm{DM}}.
+  \label{eq:3-11}
+\end{equation}
+
+The coupling strength is bounded by the non-minimal coupling: $\beta \sim \zeta_0 \approx 0.037$ (from the Jordan-to-Einstein frame transformation). The scalar velocity is set by the Hamiltonian constraint:
+\begin{equation}
+  \frac{\dot{\phi}}{H_0 M_{\mathrm{Pl}}} \approx 0.065.
+  \label{eq:3-12}
+\end{equation}
+
+The resulting equation of state modification is:
+\begin{equation}
+  \delta w = \beta \cdot \frac{\dot{\phi}}{H M_{\mathrm{Pl}}} \cdot \frac{\Omega_m}{3\,\Omega_{\mathrm{DE}}}
+    \approx 0.037 \times 0.01 \approx 3.7 \times 10^{-4}.
+  \label{eq:3-13}
+\end{equation}
+
+\textbf{Kill mechanism:} $\mathcal{O}(\zeta_0 \sqrt{\delta})$ suppression, where $\delta = K_{\mathrm{eff}}/\rho_{\mathrm{DE}}$. The cuscuton constraint forces $\dot{\phi}$ to be too small to mediate significant energy exchange. Deficit: factor of ${\sim}500$.
+
+Furthermore, direct non-gravitational coupling (Yukawa-type) is impossible because the cuscuton is a constraint field with zero propagating degrees of freedom --- there is no particle to couple~\cite{ch3:derham2016}.
+
+\subsection{Sound Horizon Modification}
+\label{sec:3-soundhorizon}
+
+Early dark energy (EDE) models resolve the $H_0$ tension by reducing the sound horizon $r_d$ at baryon drag~\cite{ch3:poulin2019}. Could a modified $r_d$ also affect the BAO fit?
+
+We performed a systematic scan over $r_d$ in $[142.68,\, 151.50]$~Mpc with the Planck CMB prior $\sigma(r_d) = 0.26$~Mpc (0.18\%)~\cite{ch3:planck2018}. Results are shown in Table~\ref{tab:3-soundhorizon}.
+
+\begin{table*}[htbp]
+\centering
+\caption{Sound horizon scan. A 1\% shift in $r_d$ costs $\chi^2 \approx 32$ from the Planck prior alone.}
+\label{tab:3-soundhorizon}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+$r_d$ (Mpc) & $\delta r_d$ (\%) & $\chi^2_{\mathrm{model}}$ & $\chi^2_{r_d\,\mathrm{prior}}$ & $\Delta\chi^2$ vs $\Lambda$CDM \\
+\midrule
+142.68 & $-3\%$ & 329.3 & 288.0 & $-18.6$ \\
+145.62 & $-1\%$ & 45.3  & 32.0  & $-15.5$ \\
+147.09 & $0\%$  & 9.6   & 0.0   & $-14.9$ \\
+148.56 & $+1\%$ & 43.4  & 32.0  & $-15.9$ \\
+151.50 & $+3\%$ & 310.0 & 288.0 & $-30.0$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\textbf{Kill mechanism:} The CMB prior on $r_d$ is extraordinarily tight. Even without the prior, the model's equation of state retains $w_a > 0$ (wrong sign for DESI phantom crossing). The cuscuton is negligible at recombination ($z \sim 1000$): $K_{\mathrm{eff}} \propto 1/E^2 \to 0$ at high energies, so Meridian predicts standard recombination physics and no shift in $r_d$.
+
+\subsection{Matter-Sector Mimicry}
+\label{sec:3-mimicry}
+
+Could a nonzero $\zeta_0$ bias DESI's cosmological inference if they assume standard GR ($\zeta_0 = 0$)? We analyzed four channels:
+
+\begin{enumerate}
+  \item \textbf{Direct $H(z)$ modification:} $\delta(D_M/r_d) \sim \zeta_0 \gamma_r \approx 6.5 \times 10^{-4}$, mapping to $\delta w \sim 2 \times 10^{-3}$.
+  \item \textbf{Modified sound horizon:} $\delta r_d / r_d \sim \zeta_0 \gamma_r / E^2(z_{\mathrm{drag}}) \sim 10^{-12}$.
+  \item \textbf{Modified growth $\to$ biased priors:} CMB lensing modification $2 \times 10^{-3}$ ($0.05\sigma$ for Planck $A_L$), propagating to $\delta w_0 \sim 4 \times 10^{-4}$.
+  \item \textbf{Modified ISW $\to$ low-$\ell$ bias:} ISW modification ${\sim}10^{-4}$~\cite{ch3:hubble2024}, buried by cosmic variance (${\sim}10$--$30\%$ at $\ell < 30$).
+\end{enumerate}
+
+Total mimicry bias: $|\delta w_0|_{\mathrm{total}} \sim 2 \times 10^{-3}$, which is 0.8\% of DESI's signal amplitude. This closes the last ``loophole'' interpretation: the DESI tension cannot be explained as observer bias from neglecting $\zeta_0$.
+
+\textbf{Kill mechanism:} BAO measures background observables $D_M(z)$, $D_H(z)$ that depend on $H(z)$. The non-minimal coupling modifies $H$ at $\mathcal{O}(\zeta_0 \gamma_r) \sim 10^{-3}$, but BAO is insensitive to the $\mathcal{O}(\zeta_0)$ growth modification.
+
+\subsection{Methodology Verification}
+\label{sec:3-methodology}
+
+Before classifying the DESI tension as genuine, we verified that it is not an artifact of our fitting procedure. We re-optimized the model with and without the $w_0$--$w_a$ CMB+SN prior, using $8+8$ multi-start trials.
+
+\textbf{Result:} $\zeta_0 = 0.0379$ in both cases (zero shift). $\Delta\chi^2$ vs $\Lambda$CDM $= -14.93$ in both cases. The three physics parameters $(\zeta_0, \gamma_r, \lambda_0)$ are completely robust to prior choice.
+
+\textbf{Conclusion:} The model's inability to produce phantom crossing is a genuine physical prediction, not a methodological artifact.
+
+%----------------------------------------------------------------------
+\section{Extended Kinetic Structures}
+\label{sec:3-kinetic}
+
+\subsection{Horndeski Braiding}
+\label{sec:3-braiding}
+
+The Iyonaga--Takahashi--Kobayashi (ITK) classification~\cite{ch3:itk2018} defines an infinite family of Horndeski~\cite{ch3:horndeski1974} theories with $c_s \to \infty$ (non-propagating scalar). The extended cuscuton admits a $G_3(\phi, X)$ braiding term~\cite{ch3:deffayet2010} that creates a two-component dark energy sector:
+\begin{align}
+  \Omega_{\mathrm{drift}}  &= v_0\, E^{2\gamma_r},        & &\text{(quintessence: } w > -1\text{)}, \label{eq:3-14} \\
+  \Omega_{\mathrm{braid}} &= \lambda_0\, E^{-2\alpha_b},  & &\text{(phantom: } w < -1\text{)},      \label{eq:3-15}
+\end{align}
+where the two components compete: braiding dominates at low redshift (phantom crossing), drift dominates at high redshift (quintessence).
+
+\paragraph{Analytic result.} Five theorems prove that this mechanism \emph{can} produce phantom crossing with the correct $w_a < 0$ sign~\cite{ch3:paper1}. The crossing redshift $z_c$ and CPL parameters are algebraically determined by $\{\zeta_0, \gamma_r, \lambda_0, \alpha_b\}$.
+
+\paragraph{Numerical result.} A 16-trial multi-start optimization against combined DESI BAO~\cite{ch3:desi2025} + growth + CMB + expansion rate~\cite{ch3:paper2} data produced a unanimous verdict: \textbf{the optimizer kills braiding}. All 16 trials converged to $\lambda_0 \to 0$ (no braiding amplitude) with:
+\begin{equation}
+  \zeta_0 = 0.038\;(\text{Hubble--Kristian best-fit}), \quad \gamma_r = 0.019, \quad \lambda_0 = 0.
+  \label{eq:3-16}
+\end{equation}
+
+The model collapses to $\Lambda$CDM + $\zeta_0$ non-minimal coupling. The Hubble--Kristian fit ($\Delta\chi^2 = -15$) is preserved entirely through $\zeta_0$, not through braiding.
+
+\textbf{Kill mechanism:} The braiding amplitude $\lambda_0$ required for DESI-compatible phantom crossing destroys the BAO and growth fits. The parameter space where braiding helps $w_a$ is disjoint from the space where the model fits the data.
+
+\subsection{General $P(X)$ from Full KK Reduction}
+\label{sec:3-generalpx}
+
+The full KK reduction of the 5D action --- including Gauss--Bonnet kinetic mixing, warp factor backreaction, and non-minimal coupling kinetic corrections --- produces~\cite{ch3:paper1}:
+\begin{equation}
+  P(X) = \mu^2\sqrt{2X} + \epsilon_1 X + \mathcal{O}(X^2),
+  \label{eq:3-17}
+\end{equation}
+with $\epsilon_1 = 0.010 \pm 0.002$ from the NCG spectral action (Chapter~\ref{ch:foundation}, Section~VI). This breaks the zero KE theorem at order $\epsilon_1$, yielding the parametric prediction:
+\begin{gather}
+  w_0(\zeta_0{=}0.001) = -0.865, \quad w_0(\zeta_0{=}0.037) = -0.996, \notag\\
+  w_a \approx +0.01.
+  \label{eq:3-18}
+\end{gather}
+
+\paragraph{Quantitative assessment:}
+\begin{itemize}
+  \item The deviation $|1 + w_0|$ depends on $\zeta_0$: for the junction-condition benchmark $\zeta_0 = 0.001$, $|1 + w_0| = 0.255$ (in the DESI range); for the CMB-constraint benchmark $\zeta_0 = 0.037$, $|1 + w_0| \approx 0.007$.
+  \item For a fixed $\zeta_0$, the deviation is set by the one-loop GB coupling and the parametric prediction $w_0(\zeta_0) = -1 + C_\mathrm{KK}/\zeta_0$ (Chapter~\ref{ch:foundation}, Eq.~\eqref{eq:1-w0-closed} in Chapter~\ref{ch:foundation}), not by a tunable parameter.
+  \item Sign of $w_a$: positive (quintessence-like). DESI requires negative (phantom-like).
+\end{itemize}
+
+This is the framework's maximum capacity for dynamical dark energy from first principles. It represents a genuine, falsifiable prediction: the $w_0(\zeta_0)$ curve is fixed by the framework and testable by Euclid/Rubin/Roman when $\sigma(w_0)$ reaches ${\sim}0.005$ (Chapter~\ref{ch:observational}, Section~VI). For the junction-condition benchmark $\zeta_0 = 0.001$, $w_0 = -0.865$ (non-perturbative); for $\zeta_0 = 0.037$, $w_0 = -0.996 \pm 0.001$.
+
+%----------------------------------------------------------------------
+\section{Multi-Field Approaches}
+\label{sec:3-multifield}
+
+\subsection{KK Moduli Census}
+\label{sec:3-kkmoduli}
+
+A second dynamical scalar, unconstrained by the cuscuton's zero KE theorem, could provide the missing dynamics. We performed a complete census of the KK scalar spectrum, shown in Table~\ref{tab:3-kkscalars}.
+
+\begin{table*}[htbp]
+\centering
+\caption{Complete KK scalar census for the Meridian framework. All physical scalars have masses at or above the TeV scale.}
+\label{tab:3-kkscalars}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Scalar & Source & Mass & $m/H_0$ \\
+\midrule
+Radion $T(x)$               & Size modulus                & $\sim$TeV   & $10^{44}$ \\
+KK graviton (St\"uckelberg)  & Massive mode                & Eaten       & N/A       \\
+Brane bending $f(x)$        & Embedding fluctuation       & $=$ Radion  & $10^{44}$ \\
+NCG Higgs                   & Spectral triple             & 125~GeV     & $10^{44}$ \\
+Shape moduli                & Internal geometry           & ---         & Absent (1D) \\
+Wilson lines                & Bulk gauge $A_5$            & ---         & Absent (no bulk gauge) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{The 45-order-of-magnitude desert.} The lightest Meridian scalar (the radion) has mass $m_r \sim 120\;\mathrm{GeV}$ from Goldberger--Wise stabilization with NCG quantum corrections (Chapter~\ref{ch:ncg}, Section~\ref{sec:4-experiment-forecast}). The cosmological scale is $H_0 \sim 10^{-33}$~eV~\cite{ch3:riess2022}. The gap between the lightest modulus and the Hubble scale spans \textbf{44 orders of magnitude}.
+
+We systematically examined five mechanisms for producing ultra-light scalars:
+
+\begin{enumerate}
+  \item \textbf{Radiative protection:} Requires coupling $g \sim 10^{-44}$; no Meridian coupling is this small.
+  \item \textbf{Pseudo-Goldstone from approximate symmetry:} Requires explicit breaking $\delta \sim 10^{-90}$; the cuscuton tadpole breaks the shift symmetry at $\mathcal{O}(1)$.
+  \item \textbf{Hubble friction ($m \sim H$ regime):} Requires $m \sim H_0$, which is not produced by the RS hierarchy.
+  \item \textbf{Cosmological relaxation/clockwork:} Requires $k \ll M_{\mathrm{Pl}}$, abandoning the hierarchy solution.
+  \item \textbf{Flat potential directions:} The cuscuton makes the radion potential \emph{stiffer} ($c_s \to \infty$), eliminating flat directions.
+\end{enumerate}
+
+\paragraph{Multi-field phantom crossing and ghosts.} Even if a light scalar existed, phantom crossing ($w < -1$) in a two-field system requires $K_1 + K_2 < 0$. Since $K_1 \geq 0$ for the cuscuton, the second scalar must have $K_2 < 0$ --- a ghost, producing vacuum instability at the quantum level~\cite{ch3:woodard2006}.
+
+\textbf{Kill mechanism:} Hierarchy-moduli barrier. The RS warp factor that solves the hierarchy problem ($e^{-ky_c} \sim 10^{-16}$) simultaneously forces all KK scalars to the TeV scale. This is a geometric consequence, not a parametric coincidence.
+
+\subsection{DBI Brane Dynamics}
+\label{sec:3-dbi}
+
+The brane's position $r(x)$ in the bulk is a 4D scalar with DBI kinetics~\cite{ch3:gibbons2002}:
+\begin{equation}
+  P_{\mathrm{DBI}}(X_r) = -T_4\!\left(\sqrt{1 - 2X_r/T_4} - 1\right),
+  \label{eq:3-19}
+\end{equation}
+where $T_4$ is the brane tension. The DBI structure provides non-zero kinetic energy and finite (relativistic) sound speed~\cite{ch3:kessence2000}, potentially evading the zero KE theorem.
+
+\textbf{Result:} The branon mass is fixed by Goldberger--Wise stabilization:
+\begin{equation}
+  m_r \sim k\,e^{-ky_c} \sim \mathrm{TeV},
+  \label{eq:3-20}
+\end{equation}
+giving $m_r / H_0 \sim 10^{44}$. The branon oscillates ${\sim}10^{44}$ times per Hubble time, with time-averaged equation of state $\bar{w}_r = 0$ (cold matter, not dark energy). No secondary minima or flat directions exist in the stabilization potential. The DBI speed limit is irrelevant because the branon never becomes relativistic at late times.
+
+\textbf{Kill mechanism:} Same hierarchy-moduli barrier as for the KK moduli (Section~\ref{sec:3-kkmoduli}). The branon is a specific realization of the radion; its mass is structural to the RS1 geometry.
+
+\subsection{Brane-Localized Quintessence}
+\label{sec:3-branequintessence}
+
+The simplest two-sector model: keep the cuscuton (providing $\zeta_0$) and add a separate quintessence scalar $\psi$ on the brane (providing $w(z)$ evolution).
+
+\paragraph{NCG constraint.} The Standard Model spectral triple~\cite{ch3:chamseddine1997,ch3:connes1994} has algebra $\mathcal{A}_F = \mathbb{C} \oplus \mathbb{H} \oplus M_3(\mathbb{C})$. This structure produces exactly the Higgs doublet and no additional scalar multiplets. There is no first-principles origin for a brane-localized quintessence field within the NCG framework.
+
+\paragraph{Caldwell--Linder boundary.} Even ignoring the NCG constraint, canonical single-field quintessence satisfies $w > -1$ always and obeys the Caldwell--Linder thawing/freezing classification~\cite{ch3:caldwell2005}. DESI's best-fit point $(w_0 = -0.75,\, w_a = -0.86)$ lies \textbf{outside} both boundaries --- no single-field potential can reach it.
+
+\paragraph{Geometric phantom bias.} For the CMB-constraint benchmark $\zeta_0 = 0.037$, the non-minimal coupling produces a geometric phantom bias $\delta w^{\mathrm{geom}} \sim -0.02$~\cite{ch3:paper1}. This is insufficient by more than an order of magnitude.
+
+\textbf{Kill mechanism:} Double kill --- no NCG origin AND classical inaccessibility of the DESI parameter region.
+
+%----------------------------------------------------------------------
+\section{Non-Perturbative Quantum Channels}
+\label{sec:3-quantum}
+
+The zero KE theorem is a classical result. Do quantum corrections --- particularly non-perturbative effects near the $P(X) = \mu^2\sqrt{2X}$ singularity at $X = 0$ --- provide an escape?
+
+\subsection{Perturbative RG Flow}
+\label{sec:3-pertrg}
+
+The non-minimal coupling $\zeta$ and cuscuton mass $\mu^2$ run under RG evolution. At one loop:
+\begin{equation}
+  \frac{\Delta(\zeta_0)}{\zeta_0} \sim \frac{\zeta_0^2}{16\pi^2} \sim 10^{-5} \text{ per e-fold},
+  \label{eq:3-21}
+\end{equation}
+giving a total shift of ${\sim}10^{-3}$ across cosmological scales ($z = 0$ to $z = 2$). The running of $\mu^2$ has anomalous dimension $\gamma_\mu \sim \zeta_0^2/(16\pi^2) \sim 10^{-5}$.
+
+For DESI phantom crossing ($\Delta w \sim 0.2$), the running coefficient $c_1$ would need to be ${\sim}6$--$200$. The perturbative estimate gives $c_1 \sim 10^{-3}$. \textbf{Gap: 3--5 orders of magnitude.}
+
+The KK tower contributes above the KK scale (${\sim}$TeV) but is already captured in $\zeta_0$ at cosmological energies~\cite{ch3:appelquist1983}.
+
+\textbf{Kill mechanism (perturbative):} Loop suppression. The cuscuton couples to gravity only (not SM matter), so only gravitational loops contribute, each suppressed by $\zeta_0^2/(16\pi^2)$.
+
+\subsection{Functional RG and Dimensional Transmutation}
+\label{sec:3-frg}
+
+The cuscuton kinetic term is singular at $X = 0$: $P_X \to \infty$, $P_{XX} \to -\infty$. This makes the effective coupling $g_{\mathrm{eff}} \sim \mathcal{O}(1)$ at all $X$, suggesting non-perturbative physics.
+
+Using the Wetterich exact RG flow equation~\cite{ch3:wetterich1993}, we investigated whether dimensional transmutation generates an IR scale $\epsilon^2$ that regularizes the $X = 0$ singularity:
+\begin{equation}
+  P_k(X) = \mu_k^2\sqrt{2X + \epsilon_k^2}.
+  \label{eq:3-22}
+\end{equation}
+
+\textbf{Result:} Dimensional transmutation does occur, but the generated scale is overwhelmingly suppressed:
+\begin{equation}
+  \epsilon^2_* \sim \frac{H_0^4}{M_{\mathrm{Pl}}^2\,\mu_0^2} \sim 10^{-122} \quad\text{(dimensionless)}.
+  \label{eq:3-23}
+\end{equation}
+
+The physical mechanism: $\epsilon^2$ has mass dimension~2 (irrelevant operator in the Wilsonian sense). Its dimensionless version flows as $k^2$ toward the IR --- canonical scaling wins decisively. Unlike QCD dimensional transmutation (marginally coupled gauge theory), the cuscuton has irrelevant coupling and gravitationally-suppressed source terms.
+
+\textbf{Kill mechanism:} The generated scale is 120+ orders of magnitude below cosmological relevance. The $K_{\mathrm{eff}}$ modification from functional RG is ${\sim}10^{-244}$ --- the most thoroughly killed mechanism in our census.
+
+\subsection{Chern--Simons Topological Channel}
+\label{sec:3-chernsimons}
+
+The NCG spectral action on the warped orbifold produces Chern--Simons terms~\cite{ch3:chernsimons1974}:
+\begin{equation}
+  S_{\mathrm{CS}} = \theta_{\mathrm{grav}}\int\mathrm{CS}_3(\omega) + \theta_{\mathrm{gauge}}\int\mathrm{CS}_3(A),
+  \label{eq:3-24}
+\end{equation}
+with gravitational theta angle $\theta_{\mathrm{grav}} \sim 10^{-15}$ from the spectral action. The Adler--Bardeen theorem~\cite{ch3:adlerbardeen1969} protects the topological coupling from perturbative corrections.
+
+We evaluated five sub-channels, summarized in Table~\ref{tab:3-chernsimons}.
+
+\begin{table*}[htbp]
+\centering
+\caption{Chern--Simons sub-channels and their quantitative suppressions.}
+\label{tab:3-chernsimons}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Channel & $\delta g/g$ & Status \\
+\midrule
+Dynamical CS (cosmological)        & $\sim 10^{-97}$ & Killed  \\
+Dynamical CS (static local, 4D)    & $\sim 10^{-50}$ & Killed  \\
+Dynamical CS (5D warped)           & $\sim 10^{-28}$ & Killed  \\
+Anomaly matching (perturbative)    & Planck-suppressed & Killed  \\
+Non-perturbative (topological transition) & Bounded ($S_{\mathrm{inst}} \sim 10^{14}$) & Bounded \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The perturbative response is killed in all channels. The physical reason: while the topological coupling is exact, the gravitational \emph{response} to topological charge reintroduces Planck suppression through the Einstein equations.
+
+\textbf{Kill mechanism (perturbative):} Planck suppression of the gravitational response to topological charge densities. The 5D warped enhancement recovers ${\sim}15$ orders of magnitude but remains 28 orders short.
+
+\subsection{Local Non-Cosmological Solutions}
+\label{sec:3-local}
+
+Can electromagnetic field gradients create cuscuton spatial gradients that amplify the EM--gravity coupling?
+
+\paragraph{Static solutions.} The cuscuton profile deviation in the presence of an EM source:
+\begin{equation}
+  \frac{\Delta\phi}{\phi_{\mathrm{bg}}} \sim \frac{\rho_{\mathrm{EM}}}{M_{\mathrm{Pl}}^4}
+    \sim 10^{-77} \times (\text{EM amplification}).
+  \label{eq:3-25}
+\end{equation}
+
+The non-minimal coupling recovers ${\sim}47$ orders (via $\zeta_0$ and geometric factors), leaving:
+\begin{equation}
+  \frac{\Delta G}{G} \sim 10^{-35}.
+  \label{eq:3-26}
+\end{equation}
+
+\paragraph{Dynamic solutions.} No resonance at laboratory frequencies (KK gap at ${\sim}10$~eV $\gg$ accessible EM frequencies). The cuscuton's infinite sound speed means instantaneous response, but the amplitude is set by the constraint equation, not by dynamics.
+
+\paragraph{Critical insight --- the stiffness interpretation.} The divergence $P_{XX} \to -\infty$ at $X = 0$ is maximum \emph{stiffness}, not an amplifier. The response function $\propto 1/P_{XX} \to 0$ as $X \to 0$. The cuscuton resists being pushed away from its constraint surface.
+
+\textbf{Kill mechanism:} The ratio $\rho_{\mathrm{EM}}/M_{\mathrm{Pl}}^4 \sim 10^{-77}$ is the fundamental suppression. Non-minimal coupling and 5D enhancement recover partial orders but the gap remains insurmountable (28--77 orders depending on channel).
+
+%----------------------------------------------------------------------
+\section{Geometric Extensions}
+\label{sec:3-geometric}
+
+\subsection{Higher-Dimensional Compactification}
+\label{sec:3-higherdim}
+
+Could six or more dimensions provide shape moduli, richer NCG structure, or lighter scalars?
+
+\paragraph{Seeley--DeWitt universality.} The Gauss--Bonnet coupling $\epsilon_1$ arises from the $a_3$ Seeley--DeWitt coefficient~\cite{ch3:gilkey1975}, which is determined by universal Gilkey numbers independent of compactification topology. Going from 5D to 6D changes the spinor dimension ($4 \to 8$) at $\mathcal{O}(1)$ level, leaving:
+\begin{equation}
+  \epsilon_1^{(6\mathrm{D})} = 0.010 \pm 0.002 \quad\text{(unchanged from 5D)}.
+  \label{eq:3-27}
+\end{equation}
+
+\paragraph{Moduli spectrum.} Shape moduli (relative size/angles of compact dimensions) are parametrically lighter than size moduli by factors of $\mathcal{O}(1/4\pi)$, giving $m_{\mathrm{shape}} \sim \mathrm{TeV}/10$. This is still 40 orders above $H_0$.
+
+\textbf{Kill mechanism:} The hierarchy-moduli barrier is dimension-independent. \emph{Any} warped compactification solving the hierarchy problem via $e^{-ky_c} \sim 10^{-16}$ forces moduli to the TeV scale. The three independent structural reasons:
+
+\begin{enumerate}
+  \item Hierarchy-moduli tension operates in 5D, 6D, \ldots, 10D, 11D.
+  \item The NCG correction is universal (Seeley--DeWitt coefficients are topologically invariant at leading order).
+  \item The cuscuton form $P(X) = \mu^2\sqrt{2X}$ derives from causal structure, not dimensionality.
+\end{enumerate}
+
+\subsection{Modified Bulk Gravity}
+\label{sec:3-modifiedgravity}
+
+The 5D gravitational action could be modified: $f(R_5)$ gravity, dynamical Chern--Simons (dCS), higher Lovelock terms, or Horndeski scalar-tensor coupling.
+
+\paragraph{$f(R_5)$:} KK reduction produces modified Friedmann equations but leaves the scalar equation of motion unchanged. The cuscuton form is preserved.
+
+\paragraph{Dynamical Chern--Simons:} The Pontryagin density ${}^*\!RR$ vanishes on AdS$_5$~\cite{ch3:alexander2009} --- a clean topological obstruction. No dCS modification is available in the RS1 background.
+
+\paragraph{Horndeski $G_3$:} The scalar-tensor coupling $\mathcal{L} \propto (\nabla\phi)^2\,\Box\phi$ is the only Horndeski term that modifies $P(X)$ at tree level. However:
+\begin{itemize}
+  \item \textbf{No NCG origin:} The spectral action is parity-even; the $G_3$ interaction is parity-odd (parity obstruction).
+  \item \textbf{Self-tuning breaks:} The $G_3$ coupling values needed for DESI ($\lambda_{G_3} \sim 0.1$) produce an effective scalar mass ${\sim}M_5$, destroying the flat-brane solution.
+\end{itemize}
+
+\paragraph{Kill mechanism (structural argument).} The $P(X)$ function encodes scalar propagation through spacetime. It is determined by varying the \emph{scalar} action, not the gravitational action. Modified gravity changes how spacetime curves (the metric equation), not how the scalar propagates (the scalar equation). The only way to modify the scalar equation is to modify the scalar Lagrangian itself --- which requires abandoning the NCG spectral action principle.
+
+\begin{proposition}[Scalar--Gravity Decoupling]
+\label{thm:sgdecoupling}
+Consider a 5D action $S = S_{\mathrm{grav}}[g_{MN}] + S_{\mathrm{scalar}}[\phi, g_{MN}]$ on the RS$_1$ orbifold. The cuscuton degeneracy condition $P_X + 2X P_{XX} = 0$, which selects $P(X) \propto \sqrt{X}$, is independent of the functional form of $S_{\mathrm{grav}}$ in each of the following cases:
+\begin{enumerate}
+  \item[\emph{(a)}] \textbf{Minimal coupling.} If $S_{\mathrm{scalar}}$ contains no direct scalar--gravity coupling beyond minimal coupling, the scalar equation of motion
+\begin{equation}
+  \frac{\delta S_{\mathrm{scalar}}}{\delta\phi} = 0
+  \label{eq:3-28}
+\end{equation}
+is independent of $S_{\mathrm{grav}}$.
+  \item[\emph{(b)}] \textbf{Conformal non-minimal coupling.} If the scalar sector includes a non-minimal coupling $\xi\,\phi^2\,R_5$ with $\xi = 1/6$, then the brane Einstein frame (defined by $\tilde{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$, $\Omega^2 = F(\Phi_0)/M_5^3$) eliminates the non-minimal coupling---all residual scalar--gravity coupling terms are proportional to $(6\xi - 1) = 0$---and the degeneracy condition in Einstein frame is independent of $S_{\mathrm{grav}}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Part~(a): The scalar equation $\delta S_{\mathrm{scalar}}/\delta\phi = 0$ involves only the scalar Lagrangian and the metric (as background). Changing $S_{\mathrm{grav}}$ modifies the metric \emph{solution} $g_{MN}(x)$ but not the \emph{functional form} of the scalar equation. The cuscuton degeneracy condition $P_X + 2X P_{XX} = 0$ depends only on $P(X)$, not on $S_{\mathrm{grav}}$.
+
+Part~(b): With non-minimal coupling $\xi\,\phi^2\,R_5$, the scalar equation acquires an $R_5$-dependent term:
+\begin{equation}
+  \frac{\delta S_{\mathrm{scalar}}}{\delta\phi} = P_X\,\Box\phi + \ldots + 2\xi\,\phi\,R_5 = 0\,,
+\end{equation}
+and changing $S_{\mathrm{grav}}$ modifies the scalar equation through $R_5$. However, at $\xi = 1/6$, the conformal transformation to Einstein frame on the brane absorbs the non-minimal coupling: in Einstein frame, all scalar--gravity coupling terms carry a factor $(6\xi - 1)$, which vanishes identically (Proposition~\ref{thm:vnogo-xi}, analytical identification). The scalar equation in Einstein frame reduces to the minimally coupled form, and part~(a) applies. Since the degeneracy condition $P_X + 2X P_{XX} = 0$ is algebraic in $P$ and its derivatives, it is invariant under the field-independent conformal rescaling $g_{\mu\nu} \to \Omega^2 g_{\mu\nu}$ with constant $\Omega$ (which is the case for $\Phi_0$ evaluated at a fixed brane position). The cuscuton structure is therefore frame-independent.
+\end{proof}
+
+\begin{remark}
+\label{rem:3-beyond-minimal}
+Part~(b) is specific to $\xi = 1/6$: for generic $\xi \neq 1/6$, the non-minimal coupling cannot be conformally removed, and the scalar equation depends on $S_{\mathrm{grav}}$ through $R_5$. This gives $\xi = 1/6$ a \emph{second} structural role: beyond ensuring $\Lambda_5$-independence (Proposition~\ref{thm:vnogo-xi}), it preserves scalar--gravity decoupling. Horndeski couplings $G_4(\phi, X)\,G_{\mu\nu}$ cannot be conformally removed and would break decoupling; they are absent from the spectral action to leading order (axiom A4) and their higher-order effects are the subject of Section~\ref{sec:3-horndeski}.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{The Horndeski Dilemma}
+\label{sec:3-horndeski}
+
+We now formalize the central structural result that unifies the individual track kills.
+
+\subsection{Statement}
+\label{sec:3-horndeski-statement}
+
+\begin{conjecture}[Horndeski Dilemma (empirically grounded)]
+\label{thm:horndeski}
+Within the class of ghost-free scalar-tensor theories (Horndeski/GLPV), and given the empirical constraints enumerated below, the self-tuning condition and the requirement of dynamical dark energy are mutually exclusive.
+
+Specifically:
+\begin{enumerate}
+  \item[\emph{(i)}] \textbf{Structural:} Self-tuning (bulk dynamics absorb arbitrary brane vacuum energy) uniquely selects the cuscuton kinetic structure $P(X) \propto \sqrt{X}$~\cite{ch3:afshordi2007,ch3:derham2016}.
+  \item[\emph{(ii)}] \textbf{Empirical:} Any departure from the cuscuton form --- including braiding ($G_3$), non-minimal kinetic coupling ($G_{4}(X)$), or beyond-Horndeski terms --- either breaks self-tuning, introduces ghosts, or is uniquely determined by the theory's own structure (e.g., $\epsilon_1$ from NCG). Part~(ii) relies on two empirical inputs: $\alpha_T = 0$ from GW170817 and the DESI~DR2 data fit.
+  \item[\emph{(iii)}] \textbf{Structural:} The NCG-determined correction ($\epsilon_1 = 0.010 \pm 0.002$) is the maximum modification consistent with self-tuning + ghost-freedom + first principles, and it produces $|\delta w| \sim 0.007$ --- far below the DESI signal.
+\end{enumerate}
+The dilemma rests on enumeration of the mechanisms catalogued in this chapter. It could be evaded by a mechanism not in our enumeration---for example, a non-perturbative topological effect, a multi-field construction with a currently unknown light scalar, or a modification of the NCG spectral action at higher order. The strength of the result is proportional to the completeness of the search, which we believe is high but cannot prove is exhaustive. We label this a conjecture rather than a theorem because the enumeration, while systematic, is not provably complete.
+
+\begin{remark}[Near-cuscuton theories and approximate degeneracy]
+\label{rem:3-near-cuscuton}
+The uniqueness proof establishes that the cuscuton $P(X) = \mu^2\sqrt{2X}$ is the unique kinetic structure satisfying the self-tuning condition \emph{exactly}. One may ask about approximate degeneracy: a kinetic function $P(X) = \mu^2\sqrt{2X} + \delta\,f(X)$ with $\delta \ll 1$ would break self-tuning at $\mathcal{O}(\delta)$, giving $\Lambda_4 \sim \delta\,\Lambda_5$. For $\delta < 10^{-120}$ (equivalently, $K_\mathrm{eff}/\Lambda_5 < \rho_\mathrm{DE}/\Lambda_5$), such a near-cuscuton theory would be observationally acceptable while technically violating the exact degeneracy condition. The cuscuton is therefore not unique in an approximate sense; it is the unique \emph{exact} solution. The NCG spectral action provides a first-principles mechanism for selecting the exact cuscuton: the $a_{3/2}$ Seeley--DeWitt coefficient on the warped orbifold produces $P(X) \propto \sqrt{X}$ without free parameters (Chapter~\ref{ch:ncg}, Section~\ref{sec:4-epsilon1}).
+\end{remark}
+\end{conjecture}
+
+\subsection{Proof Sketch}
+\label{sec:3-horndeski-proof}
+
+Part~(i) follows from the analysis of Afshordi et al.~\cite{ch3:afshordi2007} and de~Rham and Matas~\cite{ch3:derham2016}: the self-tuning condition requires that the scalar equation be first-order (constraint form), which uniquely selects the cuscuton class within Horndeski theory. Chapter~\ref{ch:foundation} (Section~III) derives this explicitly from the 5D warped geometry.
+
+Part~(ii) follows from exhaustive analysis:
+\begin{itemize}
+  \item \textbf{Braiding ($G_3$):} Section~\ref{sec:3-braiding} demonstrates that the optimizer kills braiding --- the parameter space compatible with self-tuning + data fit has $\lambda_0 = 0$.
+  \item \textbf{Non-minimal kinetic coupling ($G_{4}(X)$):} Introduces Ostrogradski ghost for $G_{4,X} \neq 0$ unless $G_5$ balances it~\cite{ch3:gleyzes2015}, which violates $\alpha_T = 0$ (the gravitational wave speed constraint from GW170817~\cite{ch3:gw170817}).
+  \item \textbf{Beyond-Horndeski/DHOST:} Degeneracy conditions constrain these to effective cuscuton form~\cite{ch3:langlois2016}.
+  \item \textbf{NCG correction:} The $\epsilon_1 X$ term is uniquely determined by the Seeley--DeWitt expansion --- no free parameter.
+\end{itemize}
+
+Part~(iii) follows from the quantitative analysis of Section~\ref{sec:3-generalpx}: $\epsilon_1 = 0.010 \pm 0.002$ gives $w_0(\zeta_0{=}0.001) = -0.865$ (non-perturbative; $-0.851$ perturbative) via Chapter~\ref{ch:foundation}, Eq.~\eqref{eq:1-w0-nonpert} in Chapter~\ref{ch:foundation}. The $w_0(\zeta_0)$ curve is structural for any fixed $\zeta_0$.
+
+\begin{remark}[Empirical inputs]
+Parts~(i) and~(iii) of Conjecture~\ref{thm:horndeski} are structural (derived from axioms A1--A4). Part~(ii) relies on two empirical inputs: the gravitational wave speed constraint $\alpha_T = 0$ from GW170817~\cite{ch3:gw170817}, which eliminates $G_{4}(X)$; and the DESI~DR2 data fit, which kills the braiding channel ($\lambda_0 = 0$ at best fit). Should either constraint be relaxed by future data, the corresponding channel would reopen --- but the self-tuning requirement (part~(i)) and the NCG determination of $\epsilon_1$ (part~(iii)) remain structural.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{The Structural Classification}
+\label{sec:3-classification}
+
+\subsection{Three Structural Barriers}
+\label{sec:3-barriers}
+
+The 16 track kills are not independent. They cluster around three structural barriers, each of which maps to a condition of the Coherence Principle (see Chapter~0):
+
+\paragraph{Barrier~1: Zero Kinetic Energy (Separation).} All single-field background modifications scale as $\mathcal{O}(\zeta_0 \gamma_r) \sim 10^{-3}$ or $\mathcal{O}(\zeta_0^2) \sim 10^{-3}$. This is a direct consequence of the zero KE theorem (Section~\ref{sec:3-zke-statement}). The barrier enforces \emph{separation} between the cuscuton constraint sector and the dynamical sector---the cuscuton's zero propagating degrees of freedom cannot be circumvented by coupling to other fields. Tracks killed: Weyl tensor, DE--DM coupling, sound horizon, mimicry, and the background sector of braiding and general $P(X)$.
+
+\paragraph{Barrier~2: Hierarchy-Moduli Mass Gap (Multi-Scale Consistency).} All KK scalars have $m \sim k\,e^{-ky_c} \sim \mathrm{TeV}$, a factor of $10^{44}$ above $H_0$. This is geometric --- it follows from the same warp factor that solves the hierarchy problem --- and is independent of dimensionality, topology, or gravitational theory. The barrier enforces \emph{multi-scale consistency}: the same geometric mechanism (the warp factor) that generates the gauge hierarchy also locks the KK spectrum far above cosmological scales. No modulus can be light enough to mediate cosmological dynamics without destroying the hierarchy solution. Tracks killed: KK moduli, DBI branon, higher-dimensional compactification.
+
+\paragraph{Barrier~3: Horndeski Dilemma (Measurement).} Self-tuning determines $P(X)$, leaving no freedom to independently adjust $w$ beyond the $\zeta_0$-dependence in $w_0(\zeta_0)$. All attempted modifications either break self-tuning or are uniquely fixed. The barrier enforces \emph{measurement} in the Coherence Principle sense\footnote{``Measurement'' here carries the technical meaning defined in the companion volume \textit{The Coherence Principle}: a process that yields definite values from structure alone, collapsing superposition into commitment.  It does \emph{not} refer to experimental observation or laboratory measurement.  The Horndeski dilemma ``measures'' in this sense because the self-tuning axioms uniquely determine $P(X)$---the kinetic structure is \emph{selected}, not fitted.}: the framework produces a definite, unique kinetic structure from its axioms---there is no residual freedom to be fitted. The cuscuton is the only solution, and its properties are determined, not chosen. Tracks killed: braiding (data-excluded), brane quintessence (no NCG origin), modified gravity (scalar-gravity decoupling), perturbative/functional RG (quantum corrections too small).
+
+\subsection{Classification Theorem}
+\label{sec:3-classthm}
+
+\begin{conjecture}[Structural Classification]
+\label{thm:classification}
+Within the Meridian framework (A1 + A2), every known mechanism modifying $w$ requires at least one of the following:
+\begin{enumerate}
+  \item[\emph{(a)}] A contribution NOT proportional to $\dot{\phi}$ --- evading Barrier~1;
+  \item[\emph{(b)}] A scalar with mass $m \ll \mathrm{TeV}$ --- evading Barrier~2;
+  \item[\emph{(c)}] A modification of $P(X)$ not determined by self-tuning + NCG --- evading Barrier~3.
+\end{enumerate}
+Every known evasion mechanism encounters at least one of these three barriers, and achieving $|\delta w| > 0.01$ requires evading all three simultaneously. We do not claim exhaustiveness over all possible mechanisms; the classification covers those compatible with the RS$_1$ geometric axioms A1--A2.
+\end{conjecture}
+
+\paragraph{Status of each evasion route:}
+
+\emph{Route~(a):} The only known first-principles contribution not proportional to $\dot{\phi}$ is the $\epsilon_1 X$ term from NCG Gauss--Bonnet. This produces $|\delta w| \sim 0.007$ --- insufficient by a factor of~${\sim}36$.
+
+\emph{Route~(b):} No known mechanism produces $m \sim H_0$ within the RS hierarchy solution. The 45-decade mass desert is structural to warped compactification.
+
+\emph{Route~(c):} The NCG spectral action uniquely determines the 5D gravitational + scalar action. No free functions remain after imposing A1 + A2 + NCG.
+
+\begin{corollary}
+\label{cor:prediction}
+The Meridian framework predicts a parametric $w_0(\zeta_0)$ curve whose functional form is structural: $\epsilon_1$ is fixed by the NCG spectral action, and $\zeta_0$ is a free parameter determined by brane UV physics. For the junction-condition benchmark $\zeta_0 = 0.001$, $w_0 = -0.865$ (non-perturbative, in the DESI range); for the CMB-constraint benchmark $\zeta_0 = 0.037$, $w_0 = -0.996 \pm 0.001$.
+\end{corollary}
+
+\subsection{Quantitative Summary}
+\label{sec:3-quantsummary}
+
+The complete track census is presented in Table~\ref{tab:3-census}.
+
+\begin{table*}[htbp]
+\centering
+\caption{Complete mechanism census. ``Gap vs DESI'' is the ratio $(0.25)/({\max |\delta w|})$, representing how far each mechanism falls short of the DESI CPL signal. ``Barrier'' identifies which structural barrier kills each mechanism.}
+\label{tab:3-census}
+\small
+\begin{tabular}{@{}cllllc@{}}
+\toprule
+\# & Category & Mechanism & Max $|\delta w|$ & Gap & Barrier \\
+\midrule
+1  & Perturbative & Weyl tensor        & $10^{-3}$               & $\times 400$        & 1     \\
+2  & Perturbative & DE--DM coupling    & $4 \times 10^{-4}$      & $\times 500$        & 1     \\
+3  & Perturbative & Sound horizon      & ---                     & Wrong $w_a$ sign    & 1     \\
+4  & Perturbative & Mimicry bias       & $2 \times 10^{-3}$      & $\times 125$        & 1     \\
+5  & Kinetic      & Braiding           & 0 (killed by data)      & Infinite            & 3     \\
+6  & Kinetic      & General $P(X)$     & 0.007                   & $\times 36$         & 3     \\
+7  & Multi-field  & KK moduli          & 0 (all frozen)          & Infinite            & 2     \\
+8  & Multi-field  & DBI branon          & 0 ($m \sim$ TeV)       & Infinite            & 2     \\
+9  & Multi-field  & Brane quintessence & 0 (no NCG origin)       & Infinite            & 2, 3  \\
+10 & Quantum      & Perturbative RG    & $10^{-5}$               & $\times 10^4$       & 1, 3  \\
+11 & Quantum      & Functional RG      & $10^{-244}$             & $\times 10^{242}$   & 3     \\
+12 & Quantum      & Chern--Simons      & $10^{-28}$ (best)       & $\times 10^{26}$    & 3     \\
+13 & Quantum      & Local solutions    & $10^{-35}$              & $\times 10^{33}$    & 1     \\
+14 & Geometric    & 6D extension       & 0.007                   & $\times 36$         & 2, 3  \\
+15 & Geometric    & Modified gravity   & 0 (scalar decoupled)    & Infinite            & 3     \\
+16 & Validation   & Methodology check  & ---                     & Confirms tension    & ---   \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+%----------------------------------------------------------------------
+\section{The Vacuum Energy No-Go Theorem}
+\label{sec:3-vacuum-nogo}
+
+The preceding 16~tracks established that no mechanism within the framework can produce dynamical dark energy with $|\delta w| > 0.007$. Those results are phenomenological: they bound specific channels. We now establish a deeper structural result --- that the self-tuning mechanism is the \emph{unique} solution to the cosmological constant problem within the Meridian framework, and that this uniqueness imposes strict requirements on the field content.
+
+\subsection{Framework Axioms}
+\label{sec:3-vnogo-axioms}
+
+For clarity, we restate the axioms that define the Meridian framework:
+
+\begin{enumerate}
+  \item[\textbf{(A1)}] \textbf{Randall--Sundrum geometry.} The background is a 5D warped orbifold $S^1/\mathbb{Z}_2$ with UV and IR branes.
+  \item[\textbf{(A2)}] \textbf{Single bulk scalar.} A real scalar $\Phi$ with non-minimal coupling $\xi\Phi^2 R_5$.
+  \item[\textbf{(A3)}] \textbf{Cuscuton kinetic structure.} $P(X,\Phi) = \mu^2\sqrt{2X}$, uniquely selected by the self-tuning condition~\cite{ch3:afshordi2007,ch3:derham2016}.
+  \item[\textbf{(A4)}] \textbf{NCG spectral action.} The Standard Model gauge structure arises from a finite spectral triple; the spectral action determines the Gauss--Bonnet coupling.
+  \item[\textbf{(A5)}] \textbf{Brane-localised couplings.} Brane tensions $\sigma_i$ and scalar couplings $\alpha_i \Phi^2$ only.
+  \item[\textbf{(A6)}] \textbf{4D Poincar\'e invariance.} Lorentz symmetry preserved on the brane below the KK scale.
+\end{enumerate}
+
+\subsection{Self-Tuning as the Unique Mechanism}
+\label{sec:3-vnogo-uniqueness}
+
+\begin{proposition}[Uniqueness of Self-Tuning within RS$_1$+NCG]
+\label{thm:vnogo-unique}
+Within axioms \textup{A1--A6}, every mechanism for rendering $\Lambda_4$ independent of the bulk vacuum energy $\Lambda_5$ belonging to one of the five major classes enumerated below --- supersymmetric cancellation, landscape selection, sequestering, degravitation, or symmetry-based cancellation --- either reduces to the self-tuning mechanism (in which $A'(y)$ absorbs shifts in $\Lambda_5$ while $\Lambda_4 = \varepsilon_1\zeta_0$ remains invariant) or is excluded.
+\end{proposition}
+
+\begin{proof}
+We systematically rule out all alternatives:
+
+\paragraph{(a) Supersymmetric cancellation.} The $\mathbb{Z}_2$ orbifold projection breaks half the bulk supercharges, and the brane couplings $\alpha_i\Phi^2$ (A5) break the residual $\mathcal{N}=1$ BPS condition. The NCG spectral action (A4) generates the non-supersymmetric Standard Model. No unbroken SUSY is available.
+
+\paragraph{(b) Anthropic/landscape selection.} The spectral triple classification (Chamseddine--Connes--Marcolli~\cite{ch3:chamseddine1997,ch3:connes1994}) admits no continuous deformations generating a landscape: the finite geometry is unique (up to the SM parameters). The junction conditions admit a single root for $\Phi_0$ (verified numerically). There is no landscape; anthropic selection is inapplicable.
+
+\paragraph{(c) Sequestering.} The Kaloper--Padilla mechanism promotes $\Lambda$ to a global variable constrained by the spacetime volume. Within the Meridian framework, the junction conditions (Chapter~\ref{ch:foundation}, Eqs.~46a--b) already pin $\Phi_0$ independently of $\Lambda_5$ without any global constraint. Sequestering provides an additional layer of protection but is subsumed by --- not an alternative to --- the self-tuning.
+
+\paragraph{(d) Degravitation.} Requires a graviton mass $m_g \sim H_0$ or a non-local IR modification of the propagator, both violating Poincar\'e invariance (A6). The RS graviton is massless on the brane; KK modes have $m_n \gg H_0$.
+
+\paragraph{(e) Symmetry-based cancellations.} Conformal symmetry is broken by the electroweak scale, QCD condensate, and Higgs VEV ($T^\mu{}_\mu \neq 0$ in the SM). Shift symmetry $\Phi \to \Phi + c$ is broken by the brane couplings $\alpha_i\Phi^2$ and the tadpole $V(\Phi) = c\cdot\Phi$.
+
+Having ruled out all five mechanism classes, the self-tuning mechanism --- exploiting the separation between brane-localised observables and bulk dynamics --- is the unique known $\Lambda_5$-cancellation mechanism within the framework.
+\end{proof}
+
+\begin{remark}
+The scope of Proposition~\ref{thm:vnogo-unique} is limited to the five mechanism classes enumerated in the proof. An unknown mechanism outside these classes could in principle evade the result. The proposition's strength is proportional to the completeness of the classification, which we believe to be high but do not claim is exhaustive.
+\end{remark}
+
+\subsection{Necessity of Conformal Coupling}
+\label{sec:3-vnogo-xi}
+
+\begin{proposition}[Necessity of $\xi = 1/6$]
+\label{thm:vnogo-xi}
+The UV junction conditions admit solutions $\Phi_0$ that are independent of $\Lambda_5$ across the full orbifold if and only if $\xi = 1/6$.
+\end{proposition}
+
+\begin{proof}
+The junction conditions at the UV brane (Chapter~\ref{ch:foundation}, Eqs.~46a--b) are $\Lambda_5$-free for all~$\xi$: neither the gravitational junction condition
+\begin{equation}
+  A'(0^+) = -\frac{\sigma_{\mathrm{UV}} + \alpha_{\mathrm{UV}}\Phi_0^2}{12\,F(\Phi_0)}\,,
+  \label{eq:3-jc-grav}
+\end{equation}
+nor the scalar junction condition
+\begin{equation}
+  2\mu^2 + 32\xi\,\Phi_0\,A'(0^+) + 4\alpha_{\mathrm{UV}}\Phi_0 = 0\,,
+  \label{eq:3-jc-scalar}
+\end{equation}
+where $F(\Phi_0) = M_5^3 - \xi\Phi_0^2$, contains $\Lambda_5$. The subtlety lies in bulk consistency.
+
+The scalar constraint (Chapter~\ref{ch:foundation}, Eq.~33) involves $A''(y)$, whose value at $y = 0^+$ depends on $\Lambda_5$ through the Hamiltonian constraint. For generic $\xi \neq 1/6$, this introduces $\Lambda_5$-dependence into the bulk scalar profile $\Phi(y)$; the IR brane conditions then entangle $\Phi(y_c)$ with $\Lambda_5$, and the full system is not self-tuning.
+
+At $\xi = 1/6$, the scalar equation is conformally covariant: the scalar constraint surface (the set of $(\Phi, A')$ pairs satisfying the scalar ODE) is preserved under Weyl rescalings. A shift in $\Lambda_5$ rescales $A'(y)$, but the conformal covariance ensures that $\Phi(y)$ adjusts to maintain the same constraint relationship, independent of $\Lambda_5$. The self-tuning chain is intact: $\Phi_0$ and $\Phi(y_c)$ are both $\Lambda_5$-independent, and only $A'(y)$ absorbs the shift.
+
+\paragraph{Why $\xi = 1/6$.} The value $\xi = 1/6$ is the \emph{four-dimensional} conformal coupling, not the five-dimensional value $\xi_5 = 3/16$. The distinction is physical: the relevant conformal symmetry is the 4D Weyl symmetry on the brane worldvolume. In the Einstein frame on the brane ($h_{\mu\nu} \to \Omega^2 h_{\mu\nu}$, $\Omega^2 = F(\Phi_0)/M_5^3$), all residual scalar-gravity coupling terms are proportional to $(6\xi - 1)$. At $\xi = 1/6$:
+\begin{equation}
+  (6\xi - 1) = 0 \quad\Longrightarrow\quad \Lambda_5 + \frac{\sigma^2}{6M_5^3} = 0\,,
+  \label{eq:3-xi-conformal}
+\end{equation}
+so the scalar is minimally coupled and canonically normalized on the brane, and the junction condition reduces to the standard RS form. At the 5D conformal value $\xi = 3/16$: $(6\xi - 1) = 1/8 \neq 0$, leaving a residual scalar-gravity coupling that transmits $\Lambda_5$-dependence through the bulk constraint to the brane.
+
+The failure at $\xi = 0$ is qualitatively distinct: $F = M_5^3$ is $\Phi$-independent, so the scalar decouples from gravity entirely. $\zeta_0 = 0$ identically, and the standard RS fine-tuning is required.
+
+The failure at $\xi = 1/4$ is quantitative: the coefficient structure of the $A''$ term in the scalar constraint does not match the conformal Ward identity, and the bulk solution entangles $\Phi$ with $\Lambda_5$.
+
+Numerical verification across $\xi \in [0, 1/2]$ at 50 sample points confirms that $\xi = 1/6$ is the unique value at which $\Phi_0$ is $\Lambda_5$-independent to machine precision (15~significant figures) across 60~orders of magnitude in $\Lambda_5$.
+\end{proof}
+
+\begin{remark}
+Proposition~\ref{thm:vnogo-xi} elevates $\xi = 1/6$ from a model-building choice to a \emph{structural necessity}: the cosmological constant problem has no solution within the framework unless the scalar is conformally coupled. Combined with the asymptotic safety result of Eichhorn et al.\ (AS predicts $\xi^* = 0$ for generic scalars; see Chapter~\ref{ch:ncg}), the scalar \emph{must} be geometrically protected --- i.e., a metric fluctuation (the radion), not a generic scalar.
+\end{remark}
+
+\subsection{Necessity of the Extra Dimension}
+\label{sec:3-vnogo-5d}
+
+\begin{proposition}[Five-Dimensionality is Required]
+\label{thm:vnogo-5d}
+The Meridian self-tuning mechanism cannot operate in four dimensions.
+\end{proposition}
+
+\begin{proof}[Outline]
+We identify which assumption of Weinberg's no-adjustment theorem~\cite{ch3:weinberg1989} the framework violates. Weinberg's argument assumes:
+\begin{itemize}
+  \item[(W1)] 4D Poincar\'e invariance,
+  \item[(W2)] local QFT,
+  \item[(W3)] finite number of fields,
+  \item[(W4)] the scalar field equations are the \emph{only} conditions determining the vacuum.
+\end{itemize}
+
+The Meridian framework satisfies (W1)--(W3) but violates \textbf{(W4)}: the Israel junction conditions at the branes and the 5D Hamiltonian constraint (the $(55)$-component of the Einstein equation) are additional, geometrically-mandated conditions with no 4D analogue.
+
+In Weinberg's counting, $N$~scalar fields give $N$~equations for $N$~VEVs, leaving zero freedom to absorb a shift $\delta\Lambda$. In the 5D system, the junction conditions pin $\Phi_0$ and $p_0 = A'(0^+)$ without $\Lambda_5$, while the Hamiltonian constraint provides the additional equation that absorbs $\Lambda_5$ through $A'(y)$ in the bulk interior.
+
+That the 4D analogue fails is confirmed by direct computation: a conformally coupled scalar in 4D with $\xi_4 = 1/6$ satisfies the Einstein and scalar equations simultaneously, but \emph{both} equations contain $\Lambda_4$. A shift $\Lambda_4 \to \Lambda_4 + \delta\Lambda_4$ shifts $\phi_0$ and $\Lambda_{\mathrm{eff}}$ simultaneously; there is no self-tuning.
+\end{proof}
+
+\subsection{Structural Rigidity}
+\label{sec:3-vnogo-rigid}
+
+\begin{proposition}[No Hidden Fine-Tuning]
+\label{thm:vnogo-rigid}
+The self-tuning mechanism:
+\begin{enumerate}
+  \item[\emph{(a)}] introduces no new fine-tuning (the cancellation is dynamical, not numerical);
+  \item[\emph{(b)}] is radiatively stable (loop corrections shift $w_0$ but not the $\Lambda_5$-independence);
+  \item[\emph{(c)}] holds non-perturbatively (the proof is algebraic, not perturbative).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}[Outline]
+(a)~The standard RS fine-tuning requires $\sigma_{\mathrm{UV}} = 6kM_5^3$ to 60~decimal places. In the Meridian framework, $\Lambda_5$ is not cancelled against any other quantity; it is absorbed by a different degree of freedom ($A'(y)$) that does not affect the observable $\Lambda_4$. This is a decoupling, not a cancellation.
+
+(b)~SM loop corrections shift the brane tension $\sigma_{\mathrm{UV}} \to \sigma_{\mathrm{UV}} + \delta\rho_{\mathrm{vac}}$. This modifies $\Phi_0$ (and hence $w_0$) through the junction conditions, but does not reintroduce $\Lambda_5$-dependence: the structural property that $\Lambda_5$ appears only in the Hamiltonian constraint is preserved under brane tension shifts. Graviton loops correct $M_5^3$ and $\xi$, but geometric protection (5D diffeomorphism invariance, see Chapter~\ref{ch:ncg}) maintains $\xi = 1/6$ to all loop orders.
+
+(c)~The proof relies on: (i)~the distributional structure of the junction conditions (exact, not perturbative), (ii)~the algebraic absence of $\Lambda_5$ from these conditions, and (iii)~the cuscuton identity $2XP_X - P = 0$ (an algebraic identity for $P \propto \sqrt{X}$). Non-perturbative threats (brane nucleation, instanton corrections) modify brane parameters but do not introduce $\Lambda_5$ into the junction conditions.
+\end{proof}
+
+\subsection{The Chain of Necessities}
+\label{sec:3-vnogo-chain}
+
+Propositions~\ref{thm:vnogo-unique}--\ref{thm:vnogo-rigid} combine into a logical chain that locks down the framework's solution to the cosmological constant problem:
+\begin{equation}
+  \boxed{\begin{aligned}
+  &\Lambda_5\text{-indep.} \;\Longrightarrow\;
+  \text{self-tuning} \;\Longrightarrow\;
+  \xi = \tfrac{1}{6} \\
+  &\;\Longrightarrow\;
+  \text{geom.\ prot.} \;\Longrightarrow\;
+  \text{radion} \;\Longrightarrow\;
+  \text{5D} \;\Longrightarrow\;
+  \text{(W4) viol.}
+  \end{aligned}}
+  \label{eq:3-necessity-chain}
+\end{equation}
+
+Each link is forced by the previous one. The cosmological constant problem, within this framework, \emph{requires} an extra dimension, a conformally-coupled radion, and the self-tuning mechanism. Conversely, each link is independently falsifiable:
+\begin{itemize}
+  \item $\xi \neq 1/6$ (collider measurement of Higgs--radion mixing) $\Longrightarrow$ self-tuning destroyed.
+  \item No KK tower at accessible energies $\Longrightarrow$ 5D structure absent.
+  \item $w_0$ inconsistent with $w_0(\zeta_0)$ curve $\Longrightarrow$ framework excluded.
+\end{itemize}
+
+\subsection{Relation to the Phenomenological No-Gos}
+\label{sec:3-vnogo-relation}
+
+The 16~tracks analysed in Sections~\ref{sec:3-perturbative}--\ref{sec:3-geometric} demonstrated phenomenological insufficiency: no mechanism produces $|\delta w| > 0.007$ within the framework. Propositions~\ref{thm:vnogo-unique}--\ref{thm:vnogo-rigid} provide the \emph{theoretical foundation} for why those phenomenological kills are not merely quantitative failures but structural consequences:
+
+\begin{itemize}
+  \item \textbf{SUSY, landscape, degravitation, symmetry-based approaches} fail because the self-tuning is unique (Proposition~\ref{thm:vnogo-unique}).
+  \item \textbf{Non-conformal couplings} fail because $\xi = 1/6$ is required (Proposition~\ref{thm:vnogo-xi}).
+  \item \textbf{4D analogues} fail because the extra dimension is necessary (Proposition~\ref{thm:vnogo-5d}).
+  \item \textbf{Fine-tuning objections} fail because the mechanism is dynamical and radiatively stable (Proposition~\ref{thm:vnogo-rigid}).
+\end{itemize}
+
+The phenomenological census and the vacuum energy no-go are complementary: the census establishes \emph{what} is excluded (specific mechanisms), while the no-go establishes \emph{why} (structural necessity of self-tuning, $\xi = 1/6$, and 5D geometry).
+
+%----------------------------------------------------------------------
+\section{Discussion}
+\label{sec:3-discussion}
+
+\subsection{Comparison with Other No-Go Results}
+\label{sec:3-othernogo}
+
+No-go theorems in dark energy have a long history. The Weinberg no-adjustment theorem~\cite{ch3:weinberg1989} shows that the cosmological constant cannot be set to zero by any local mechanism. The Weinberg--Witten theorem~\cite{ch3:weinbergwitten1980} constrains massless higher-spin particles. Caldwell and Linder~\cite{ch3:caldwell2005} established boundaries in $(w_0, w_a)$ space for canonical quintessence.
+
+Our result differs in an important respect: it is a no-go for dynamical dark energy \emph{within a specific, well-defined framework}, not a model-independent constraint. Alternative braneworld scenarios --- DGP gravity~\cite{ch3:dgp2000}, ekpyrotic cosmology~\cite{ch3:khoury2001}, k-essence~\cite{ch3:kessence2000}, Galileon models~\cite{ch3:nicolis2009} --- can produce dynamical dark energy through different mechanisms (e.g., the DGP crossover scale, brane collisions, or non-canonical kinetic terms), but they do not incorporate self-tuning. Recent work has shown that a $\mathbb{Z}_2$-odd bulk scalar in the RS framework can simultaneously generate the fermion mass hierarchy and provide a scalar portal to fermionic dark matter~\cite{ch3:CarmonaEtAl2021}, demonstrating the phenomenological richness of this class of models beyond the dark energy sector. Our result shows that self-tuning and dynamical dark energy are in tension within the Horndeski class. The strength is that the Meridian framework is tightly constrained (two assumptions, one free parameter), so the exclusion is comprehensive. The limitation is that it applies only to theories satisfying A1 and A2.
+
+We note that the self-tuning program itself has been subject to no-go results --- the Weinberg theorem~\cite{ch3:weinberg1989}, the Cs\'aki--Erlich--Grojean--Hollowood singularity argument, and the Niedermann--Padilla obstruction --- all of which the A1+A2 framework evades through specific structural features: non-local sequestering (against Weinberg), constraint dynamics (against singularities), and Lorentz breaking via the cuscuton's preferred foliation (against Niedermann--Padilla). The detailed confrontation with these results is presented in Chapter~\ref{ch:foundation}, Section~X.F.
+
+\subsection{The Positive Interpretation}
+\label{sec:3-positive}
+
+The inability to produce dynamical dark energy is not a failure of the framework. It is a prediction:
+
+\begin{enumerate}
+  \item \textbf{The $w_0(\zeta_0)$ curve is falsifiable.} A joint measurement of $w_0$ and $\zeta_0$ that is inconsistent with the predicted relationship would exclude the framework.
+  \item \textbf{The CPL artifact hypothesis is testable.} If model-independent analyses (cosmographic, pivoted $w_p$) converge on $w = -1$, the DESI CPL result is a parameterization artifact and the small-$\zeta_0$ regime of our prediction is vindicated.
+  \item \textbf{The Hubble--Kristian $\Delta\chi^2$ is one data component.} The Hubble--Kristian data yield $\Delta\chi^2 = -15$ vs $\Lambda$CDM, but H(z) data alone give $\zeta_0 = 0.009 \pm 0.013$, consistent with zero. Independent multi-probe analysis is needed.
+\end{enumerate}
+
+\subsection{Bounded But Uncomputed Channels}
+\label{sec:3-bounded}
+
+Two channels lack closed-form exclusion proofs but are quantitatively bounded:
+
+\begin{enumerate}
+  \item \textbf{Non-perturbative topological transitions.} The gravitational response inside a topological domain wall with non-zero Pontryagin charge has not been computed in closed form. However, the semiclassical estimate gives $S_{\mathrm{inst}} \sim 10^{14}$, far exceeding the observability threshold $S_{\mathrm{inst}} \sim 189$ (corresponding to $|\delta w| \sim 10^{-3}$). No constructive mechanism has been identified that could produce $|\delta w| > 0.001$ from this channel.
+
+  \item \textbf{Non-perturbative RG with cuscuton quantization.} Whether the cuscuton constraint survives quantization --- i.e., whether the number of propagating degrees of freedom changes under quantum corrections --- is an open question in scalar field theory with non-standard kinetic terms. However, the quantization channel is bounded by radiative stability: loop corrections to the cuscuton kinetic term are suppressed by $(H_0/\mu)^2 \sim 10^{-44}$, giving $|\delta w| < 10^{-6}$.
+\end{enumerate}
+
+\subsection{Mechanisms Not Included in the Census}
+\label{sec:3-omitted}
+
+For completeness, we address four classes of mechanism sometimes invoked in the dark energy literature that are not among the 16 tracks above:
+
+\begin{itemize}
+  \item \textbf{Massive gravity / graviton mass.} The RS graviton zero mode is exactly massless (it is the normalizable solution of the transverse-traceless bulk equation with Neumann boundary conditions at both branes~\cite{ch3:randall-sundrum1999}). A cosmological graviton mass $m_g \sim H_0$ would require a Fierz--Pauli mass term on the brane, which is absent from the spectral action. Massive gravity theories (dRGT~\cite{ch3:deRhamGabadadzeTolley2011}) are therefore outside the A1+A2 framework.
+
+  \item \textbf{Cosmological backreaction.} Averaging over inhomogeneities in GR can produce an effective $w \neq -1$ (Buchert~\cite{ch3:buchert2000,ch3:buchert2008}). Within perturbation theory, backreaction is bounded by $\delta\rho/\rho \sim 10^{-5}$ at the homogeneous level, giving $|\delta w|_{\mathrm{backr}} \lesssim 10^{-5}$. We note that the magnitude of nonlinear backreaction remains debated in the GR community (cf.\ Green \& Wald vs.\ Buchert \& R\"as\"anen); our bound assumes the perturbative estimate is reliable at the background level. Even under more generous nonlinear estimates, $|\delta w|_{\mathrm{backr}}$ remains well below $10^{-3}$.
+
+  \item \textbf{Swampland constraints.} The de~Sitter swampland conjecture ($|\nabla V|/V \geq c \sim \mathcal{O}(1)$ in Planck units) is compatible with the Meridian linear tadpole $V = c\,\Phi$, which gives $|V'|/V = c/V = 1/\Phi$. For the cuscuton, $\Phi$ is not stabilized at a minimum of $V$ (the cuscuton is a constraint field, not a dynamical scalar); rather, $\Phi$ is fixed by the Hamiltonian constraint, and $V' \neq 0$ at the solution. At the JC benchmark $\Phi_0 = 0.076$, $|V'|/V = 1/\Phi_0 \sim 13$, well above the conjectured $\order{1}$ bound. The distance conjecture is not directly applicable because $\Phi$ is a radion (a modulus), not a tower-generating field.
+
+  \item \textbf{Dissipative dark energy.} Dark energy with bulk viscosity or entropy production~\cite{ch3:brevik2017} lies outside the perfect fluid assumption implicit in the cuscuton equation of state $w = P/\rho$. Such effects would require extending the framework beyond A1--A6.
+\end{itemize}
+
+\subsection{Falsifiability Timeline}
+\label{sec:3-falsifiability}
+
+\begin{table*}[htbp]
+\centering
+\caption{Falsification timeline for the $w_0(\zeta_0)$ prediction. Thresholds shown for the CMB-constraint benchmark $\zeta_0 = 0.037$ ($w_0 = -0.996$), representing the most challenging case; the junction-condition benchmark $\zeta_0 = 0.001$ ($w_0 = -0.865$) is already within DESI sensitivity. Estimates from Chapter~\ref{ch:observational}, Section~VI Fisher matrix projections.}
+\label{tab:3-falsification}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Threshold & Required $\sigma(w_0)$ & Facility & Estimated Date \\
+\midrule
+$1\sigma$ ($w_0$ vs $-1$) & 0.005  & Euclid~\cite{ch3:euclid2020} + DESI Y5             & $\sim$2029  \\
+$2\sigma$                  & 0.0025 & + Vera Rubin Y3~\cite{ch3:lsst2009}                 & $\sim$2030  \\
+$5\sigma$ (discovery)      & 0.001  & + Roman HLIS~\cite{ch3:spergel2015}                 & $\sim$2032+ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+If future surveys find $|1 + w_0| > 0.01$ at $5\sigma$, the Meridian framework is excluded. If they converge on $w_0 = -1.000 \pm 0.002$, the framework gains strong support but cannot be confirmed (the prediction is close to $\Lambda$CDM).
+
+%----------------------------------------------------------------------
+\section{Conclusions}
+\label{sec:3-conclusions}
+
+We have presented a systematic exclusion analysis of mechanisms for dynamical dark energy within five-dimensional self-tuning cosmology. Of the 16~tracks investigated, a distinction should be drawn between \emph{genuine exclusions}---mechanisms that a priori could have produced $|\delta w| \gg 0.01$ and are excluded by non-trivial computation---and \emph{framework-tautological exclusions}---mechanisms that the A1+A2 assumptions preclude by construction. The key results:
+
+\begin{enumerate}
+  \item \textbf{The genuine exclusion result:} Within the A1+A2 framework, the only mechanism breaking the zero KE theorem at observable magnitude is the NCG Gauss--Bonnet correction, producing $|\delta w| \sim 0.007$---a factor of ${\sim}36$ below the DESI CPL signal. Several tracks (e.g., KK moduli at TeV scale, brane-localized quintessence) are excluded tautologically by the framework's own assumptions rather than by new computation; their inclusion demonstrates completeness of the search but should not be counted as independent surprises.
+
+  \item \textbf{The kills trace to three structural barriers} (zero kinetic energy, hierarchy-moduli mass gap, Horndeski dilemma). These are hierarchically related rather than fully independent: Barrier~1 (zero KE) is a corollary of Barrier~3 (Horndeski dilemma) restricted to the single-field sector. We state them separately because each provides a distinct quantitative bound and a different physical picture, but evading Barrier~3 would automatically evade Barrier~1.
+
+  \item \textbf{The Horndeski dilemma} (Conjecture~\ref{thm:horndeski}) asserts that self-tuning and dynamical dark energy are mutually exclusive within the ghost-free scalar-tensor framework: the self-tuning condition determines $P(X)$, leaving no freedom for~$w$, subject to the enumeration being exhaustive.
+
+  \item \textbf{The $w_0(\zeta_0)$ curve is a structural prediction}, not a fine-tuning. The functional form $w_0 = -1 + C_\mathrm{KK}/\zeta_0$ is fixed by the parametric prediction (Chapter~\ref{ch:foundation}, Eq.~\eqref{eq:1-w0-closed} in Chapter~\ref{ch:foundation}); only $\zeta_0$ (determined by brane UV physics) remains free. For the junction-condition benchmark $\zeta_0 = 0.001$, $w_0 = -0.865$ (non-perturbative, in the DESI range); for the CMB-constraint benchmark $\zeta_0 = 0.037$, $w_0 = -0.996$.
+
+  \item \textbf{The prediction is falsifiable} with facilities currently under construction. A joint measurement of $w_0$ and $\zeta_0$ that is inconsistent with the predicted $w_0(\zeta_0)$ relationship would exclude the framework.
+\end{enumerate}
+
+These results transform the model's proximity to $\Lambda$CDM from an apparent weakness into a quantitative prediction with a specified uncertainty band and a concrete falsification program.
+
+%----------------------------------------------------------------------
+\section*{Acknowledgments}
+
+We thank the DESI collaboration for making their DR2 data products publicly available. The numerical optimizations use SciPy~\cite{ch3:scipy2020}. C.W.I.-S.\ thanks the theoretical physics community for maintaining open access to preprints via arXiv. This work received no external funding.
+
+%----------------------------------------------------------------------
+%% Bibliography moved to bibliography.tex (end-of-document)

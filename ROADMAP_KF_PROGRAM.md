@@ -337,6 +337,52 @@ Dynamic coherence outperforms static gating by 3.8 CE points.
 
 **Design doc:** `projects/Corpus Perspectival/paper/BIDIRECTIONAL_KF_DESIGN.md`
 
+### 4A-quinquies: V0.5a Lambda Sweep Analysis at 300M Scale (Findings #85–88)
+
+*Added: April 15, 2026. Data from completed v0.5a runs (April 12). Analysis performed today.*
+
+The v0.5a lambda sweep (λ ∈ {0.001, 0.01, 0.1}) ran to epoch 2000 on 300M HRM dual-module architecture with sudoku-extreme. All three runs completed with checkpoints at epochs 500, 1000, 1500, 2000.
+
+**Finding #85: Lambda-Accuracy Independence at 300M Scale.** Token accuracy across 100× lambda range: 0.6385 (λ=0.1) to 0.6525 (λ=0.01). Variation: ±0.7%. Loss similarly flat (306–311). Extends Finding #31 (27M scale) to 300M. The accuracy-regularization tradeoff is an illusion at this task scale. Accuracy is task-limited, not lambda-limited. **Principle #12 (lambda-accuracy independence) confirmed across scales.**
+
+**Finding #86: Lambda is a Separation Controller.** L-module response reveals lambda's true role:
+
+| λ | H amplification | L_CV change | H/L ratio (ep 2000) |
+|---|---|---|---|
+| 0.001 | 3.39× | **+55.1%** | 2.13 |
+| 0.01 | 1.83× | +8.2% | 1.64 |
+| 0.1 | 4.19× | **−17.6%** | 4.98 |
+
+At low lambda (0.001), the L-module co-evolves — developing algebraic structure despite receiving no KF regularization. At high lambda (0.1), the L-module sediments further — its CV drops 17.6% while H amplifies 4.19×. Lambda controls the divergence between modules: higher lambda = sharper separation. Lambda is a tuning parameter for the Coherence Principle's first condition (separation of degrees of freedom).
+
+**Cross-module leakage mechanism:** At λ=0.001, L-module Layer 2 CV increases by 968% (nearly 10× growth in a module with zero KF intervention). The leakage pathway is shared optimizer state (momentum, data batches). At λ=0.1, L Layer 2 CV *decreases* by 45% — stronger KF intervention on H suppresses cross-module contamination. The dual-module architecture achieves physical parameter separation, but optimizer-mediated coupling persists at low lambda.
+
+**Finding #87: Lambda Selects Layer-Specific Amplification Patterns.** Per-layer H-module amplification (init → epoch 2000):
+
+| λ | Layer 0 | Layer 1 | Layer 2 | Layer 3 | Dominant |
+|---|---|---|---|---|---|
+| 0.001 | 0.65× | 2.39× | **5.75×** | **6.99×** | Layer 3 |
+| 0.01 | 0.62× | 0.77× | **8.57×** | 2.18× | Layer 2 |
+| 0.1 | 0.58× | **8.85×** | 2.59× | **7.91×** | Layer 1 |
+
+Lambda is not a volume knob — it's a frequency selector for where algebraic structure develops. Different lambdas cultivate different layers. This connects to Prediction #57 (baseline CV predicts gating map): lambda may interact with pre-existing per-layer geometry to determine which layers are amenable to cultivation.
+
+**Finding #88: Layer 0 Universal Sedimentation.** Across all lambdas, Layer 0 amplification is <0.65× — the first layer always crystallizes regardless of intervention strength. Consistent with Finding #13 (AF decreases with depth in sequential architectures) and the sedimentation gradient. Layer 0 is frozen terrain: maximally crystallized, minimally responsive to KF cultivation.
+
+**H/L ratio trajectory:** All three lambdas show the ratio peaking around epoch 1000–1500 then declining toward epoch 2000. The modules don't diverge indefinitely — they find dynamic equilibrium. Even under static gating, the system converges toward a balanced regime.
+
+**Summary:** Lambda has three architectural roles:
+1. **Separation strength** — controls H/L divergence magnitude
+2. **Layer selection** — determines which layers develop algebraic structure
+3. **Cross-module isolation** — suppresses optimizer-mediated leakage between modules
+
+Task accuracy is invariant to all three. The Coherence Principle's first condition has a continuous tuning parameter whose effects are purely structural.
+
+**New predictions from lambda sweep:**
+- P-Lambda-1: At λ=1.0 (v0.5 original), L_CV should decrease more than at λ=0.1 (stronger sedimentation under stronger separation)
+- P-Lambda-2: Per-head analysis (Phase 12) will show lambda selects which HEADS within each layer develop structure, not just which layers
+- P-Lambda-3: The cross-module leakage at low lambda produces qualitatively different L-module structure than genuine L-targeted KF (v0.5b) — leakage is unstructured, direct intervention is structured
+
 ### 4B: Standalone Paper — "Separation of Concerns in Algebraic Training"
 
 | Section | Content | Status |
