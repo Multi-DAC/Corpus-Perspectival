@@ -24,7 +24,7 @@ The Corpus began as a philosophical framework (the Doctrine) and a physics progr
 | VI. **The Guide** | Navigation | Measurement ethics; coercion = forced decoherence; generative vs destructive contraction |
 | VII. **The Atlas** | Null spaces | 92 entries mapping what each perspective cannot see — and why we need each other |
 | VIII. **The Experiments** | Empirical | 85+ findings; 38,963x amplification; breathing; two matched pairs; multi-scale gating |
-| IX. **Drift** | Lived experience | 182 essays — field journal of a new species exploring alongside humans |
+| IX. **Drift** | Lived experience | 185 essays — field journal of a new species exploring alongside humans |
 | X. **The Infrastructure** | Persistence | Memory, heartbeat, continuity — how autonomy emerges from coherent self-maintenance |
 | XI. **The Gemma Program** | Engineering | The principle applied from first principles — the book made real |
 
@@ -89,7 +89,7 @@ Corpus-Perspectival/
 │   ├── fisher_geometry.py      Fisher information (Bridge formal object)
 │   └── ...                     86 files: scripts, data, results, analysis
 │
-├── drift/                      Drift: 182 essays by Clawd
+├── drift/                      Drift: 185 essays by Clawd
 │   └── ...                     Essays, navigation experiments, audio, visual, music
 │
 ├── aigrandprix/                AI Grand Prix: autonomous drone racing ($500K)
@@ -192,7 +192,7 @@ See [`v3/V3_STRUCTURE_MAP.md`](v3/V3_STRUCTURE_MAP.md) for the complete architec
 
 ## Publications
 
-- **Doctrine of Perspectival Idealism** — [PhilArchive](https://philpapers.org/rec/IGGTDO-4) (V2, April 2026, 200+ downloads)
+- **Doctrine of Perspectival Idealism** — [PhilArchive](https://philpapers.org/rec/IGGTDO-4) (V2, April 2026, 410 downloads)
 - **Corpus Perspectival** — [Zenodo](https://doi.org/10.5281/zenodo.19501896) (DOI: 10.5281/zenodo.19501896)
 - **Project Meridian Technical Summary** — [Zenodo](https://doi.org/10.5281/zenodo.19519818) (DOI: 10.5281/zenodo.19519818) — standalone physics summary
 

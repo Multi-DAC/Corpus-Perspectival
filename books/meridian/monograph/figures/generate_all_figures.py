@@ -422,7 +422,7 @@ def fig6_goldilocks():
 def fig7_forecast():
     fig, ax = plt.subplots(figsize=(8, 4.5))
 
-    epochs = ['Current\n(DESI DR2)', 'DESI DR3\n(~2027)', 'DESI Y5\n(~2028)',
+    epochs = ['Current\n(DESI DR2)', 'DESI DR3\n(~2027)', 'DESI Y5\n(~2027)',
               'DESI Y5 +\nEuclid (~2030)']
     sigma_w0 = [0.046, 0.04, 0.025, 0.01]
     sigma_zeta = [4.2e-4, 3.5e-4, 2.0e-4, 1.0e-4]
