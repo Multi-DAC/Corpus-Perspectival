@@ -1,0 +1,78 @@
+======================================================================
+300M HRM -- KF-DECOUPLED TRAINING (Phase 4A-bis)
+  Architecture: hrm_v2 (308.3M params)
+  Data: sudoku-extreme (hard)
+  KF lambda: 1.0 (H-module ONLY)
+  KF objective: bidirectional
+  KF every: 50 steps
+  Epochs: 3000
+  Batch size: 64
+  LR: 3e-05
+  Save dir: /home/clawd/HRM/checkpoints/300m_kf_v06b_coupled
+======================================================================
+  Steps/epoch: 15  Total steps (est): 45000
+  H-module params: 154,140,672 (50.0%)
+  L-module params: 154,140,672 (50.0%)
+  Total params: 308,305,922
+  VRAM estimate: ~1.23 GB model
+
+--- BASELINE KF (random init) ---
+  [KF @ init]  H_CV=7.236250e-04  L_CV=6.748641e-04  ratio=1.0723  H_AF=0.0000  L_AF=0.0000
+    H per-layer CV: L0:6.3588e-04, L1:6.5199e-04, L2:5.6780e-04, L3:7.3935e-04, L4:6.4058e-04, L5:6.7598e-04, L6:7.3864e-04, L7:7.4177e-04, L8:7.7126e-04, L9:6.0737e-04, L10:6.7555e-04, L11:9.0530e-04
+    L per-layer CV: L0:6.9589e-04, L1:5.2739e-04, L2:5.0935e-04, L3:8.1396e-04, L4:5.7255e-04, L5:6.9646e-04, L6:6.7373e-04, L7:8.4973e-04, L8:5.6777e-04, L9:6.7819e-04, L10:6.5884e-04, L11:7.0501e-04
+
+==================================================
+CHUNK 1/6: epochs 0-500
+==================================================
+  step 100  ce_loss=145.2002  steps/s=0.1  elapsed=1938s  kf_regs=2
+  step 200  ce_loss=143.3242  steps/s=0.0  elapsed=4807s  kf_regs=4
+  step 300  ce_loss=142.5966  steps/s=0.0  elapsed=8213s  kf_regs=6
+  step 400  ce_loss=142.1891  steps/s=0.0  elapsed=11294s  kf_regs=8
+  [Step 500] KF-bidir #10: H_CV=7.641181e-03  build=4  neutral=0  dissolve=8  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+           L-module: L_CV=9.483600e-03  build=6  neutral=0  dissolve=6  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+  step 500  ce_loss=141.9230  steps/s=0.0  elapsed=13807s  kf_regs=10
+  step 600  ce_loss=141.7339  steps/s=0.0  elapsed=17280s  kf_regs=12
+  step 700  ce_loss=141.5925  steps/s=0.0  elapsed=20553s  kf_regs=14
+  step 800  ce_loss=141.4828  steps/s=0.0  elapsed=23424s  kf_regs=16
+  step 900  ce_loss=141.3952  steps/s=0.0  elapsed=26880s  kf_regs=18
+  [Step 1000] KF-bidir #20: H_CV=1.452943e-02  build=7  neutral=0  dissolve=5  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+           L-module: L_CV=1.441320e-02  build=7  neutral=0  dissolve=5  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+  step 1000  ce_loss=141.3239  steps/s=0.0  elapsed=29966s  kf_regs=20
+  step 1100  ce_loss=141.2649  steps/s=0.0  elapsed=32472s  kf_regs=22
+  step 1200  ce_loss=141.2152  steps/s=0.0  elapsed=35760s  kf_regs=24
+  step 1300  ce_loss=141.1725  steps/s=0.0  elapsed=38794s  kf_regs=26
+  step 1400  ce_loss=141.1355  steps/s=0.0  elapsed=41426s  kf_regs=28
+  [Step 1500] KF-bidir #30: H_CV=1.988974e-02  build=6  neutral=0  dissolve=6  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+           L-module: L_CV=1.501298e-02  build=7  neutral=0  dissolve=5  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+  step 1500  ce_loss=141.1033  steps/s=0.0  elapsed=44738s  kf_regs=30
+  step 1600  ce_loss=141.0750  steps/s=0.0  elapsed=47556s  kf_regs=32
+  step 1700  ce_loss=141.0500  steps/s=0.0  elapsed=50063s  kf_regs=34
+  step 1800  ce_loss=141.0276  steps/s=0.0  elapsed=53171s  kf_regs=36
+  step 1900  ce_loss=141.0076  steps/s=0.0  elapsed=55895s  kf_regs=38
+  [Step 2000] KF-bidir #40: H_CV=3.378584e-02  build=4  neutral=0  dissolve=8  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+           L-module: L_CV=1.637973e-02  build=6  neutral=0  dissolve=6  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+  step 2000  ce_loss=140.9894  steps/s=0.0  elapsed=58399s  kf_regs=40
+  step 2100  ce_loss=140.9730  steps/s=0.0  elapsed=61498s  kf_regs=42
+  step 2200  ce_loss=140.9581  steps/s=0.0  elapsed=64285s  kf_regs=44
+  step 2300  ce_loss=140.9444  steps/s=0.0  elapsed=66878s  kf_regs=46
+  step 2400  ce_loss=140.9318  steps/s=0.0  elapsed=70310s  kf_regs=48
+  [Step 2500] KF-bidir #50: H_CV=3.422050e-02  build=4  neutral=0  dissolve=8  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+           L-module: L_CV=1.451649e-02  build=4  neutral=0  dissolve=8  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+  step 2500  ce_loss=140.9202  steps/s=0.0  elapsed=73380s  kf_regs=50
+  step 2600  ce_loss=140.9095  steps/s=0.0  elapsed=76125s  kf_regs=52
+  step 2700  ce_loss=140.8995  steps/s=0.0  elapsed=79525s  kf_regs=54
+  step 2800  ce_loss=140.8903  steps/s=0.0  elapsed=82536s  kf_regs=56
+  step 2900  ce_loss=140.8816  steps/s=0.0  elapsed=85296s  kf_regs=58
+  [Step 3000] KF-bidir #60: H_CV=2.334251e-02  build=9  neutral=0  dissolve=3  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+           L-module: L_CV=2.910326e-02  build=6  neutral=0  dissolve=6  /12  avg_cos_b=0.0001  avg_cos_d=-0.0000
+  step 3000  ce_loss=140.8735  steps/s=0.0  elapsed=88577s  kf_regs=60
+  step 3100  ce_loss=140.8660  steps/s=0.0  elapsed=91519s  kf_regs=62
+  step 3200  ce_loss=140.8588  steps/s=0.0  elapsed=94184s  kf_regs=64
+  step 3300  ce_loss=140.8521  steps/s=0.0  elapsed=97484s  kf_regs=66
+  step 3400  ce_loss=140.8458  steps/s=0.0  elapsed=100368s  kf_regs=68
+  [Step 3500] KF-bidir #70: H_CV=2.534871e-02  build=4  neutral=0  dissolve=8  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+           L-module: L_CV=2.931476e-02  build=5  neutral=0  dissolve=7  /12  avg_cos_b=0.0000  avg_cos_d=-0.0000
+  step 3500  ce_loss=140.8399  steps/s=0.0  elapsed=102932s  kf_regs=70
+  step 3600  ce_loss=140.8342  steps/s=0.0  elapsed=106001s  kf_regs=72
+  step 3700  ce_loss=140.8289  steps/s=0.0  elapsed=109178s  kf_regs=74
+  step 3800  ce_loss=140.8238  steps/s=0.0  elapsed=112015s  kf_regs=76
