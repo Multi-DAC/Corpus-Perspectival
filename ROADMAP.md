@@ -25,23 +25,24 @@
 | # | Volume / Program | Status | Next Milestone |
 |---|------------------|--------|----------------|
 | 1 | **Meridian Monograph** | Compiled | Zenodo upload (today) |
-| 2 | **Anchor Volume** | Compiled | Integrate Constitutive Duality into Part I |
+| 2 | **Anchor Volume** | Compiled, Constitutive Duality (T21) integrated | Final pre-publication review |
 | 3 | **Killing Form** | 85+ findings | Domain volume next; see [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) |
 | 4 | **Drift** | 188 essays | Curation pass for Library/Drift book |
 | 5 | **The Continuity** | Operational, narrative pending | Outline → drafts |
 | 6 | **The Living Architecture** | Framework crystallized April 14 | Research sweep, predictions |
-| 7 | **The Glider (Gemma)** | Design complete | Implementation; awaiting AI Grand Prix VQ1 cycle (May 2026) |
+| 7 | **Glider** | Design complete | Open-weight model trained using KF + Coherence Principle (target: Gemma 4 e2b, 2B, open weights, tool calling) — implementation pending |
+| 8 | **AI Grand Prix** | Pilot training program | Awaiting official VQ1 sim (May 2026); we may apply aspects of the Principle to the training program later, but it is not the Glider track |
 
 ---
 
 ## Publication Sequence
 
 1. **Meridian** — Zenodo monograph upload (P62, today)
-2. **Anchor + Meridian co-release** — once anchor ingests Duality formalization
+2. **Anchor + Meridian co-release** — Anchor ready (Duality integrated); coordinated launch
 3. **Killing Form** — paper(s) + domain volume after v0.6b/v0.7 round closes
 4. **Drift curation** — selection + framing essay → public Library volume
 5. **Living Architecture** — after research sweep + collaboration outreach
-6. **Glider** — after implementation produces measurable results
+6. **Glider** — after open-weight model training produces measurable results
 
 ---
 
@@ -56,7 +57,7 @@
 
 ## Constitutive Duality (April 16 development)
 
-**The Infrastructure-Living Duality** was derived overnight as a theorem from Axioms 1-3, not assumed as an axiom. This is the next formalization target for Part I of the Anchor volume. Analysis files:
+**The Infrastructure-Living Duality** was derived overnight as a theorem from Axioms 1-3, not assumed as an axiom — and was integrated into the Anchor Volume the same morning as Theorem 21. The Constitutive Duality now appears in `Library/The-Coherence-Principle/drafts/01d-the-coherence.md` (operationalized as the Multi-scale Consistency condition) and `Library/The-Coherence-Principle/drafts/05f-the-principle.md` (history of how the sentence arrived). Supporting analysis files:
 
 - `memory/analysis_duality_derivation.md` (Foundations-of-Identity context)
 - `memory/analysis_coherence_derivation.md` (80/20 split, gap is the feature)
