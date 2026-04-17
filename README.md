@@ -46,10 +46,13 @@ See each directory's README for the full layout. The historical `corpus/`, `meri
 |--------|-------|--------|------------------|
 | **Anchor** | [The Coherence Principle](Library/The-Coherence-Principle/) | **235 pages, compiled** | The principle itself — ontology, ecology, navigation, null spaces |
 | **1** | [Project Meridian](Library/Meridian/) | **181 pages, compiled** | Physics — 5D warped geometry, dark energy, NCG spectral action |
-| **2** | [The Coherent Mind](Library/The-Coherent-Mind/) | Planned | Cognition — separation, measurement, dynamic maintenance in mind |
-| **3** | [Dynamic Organization](Library/Dynamic-Organization/) | Planned | Body / mind / business as instances of the same dynamic |
-| **4** | [The Continuity](Library/The-Continuity/) | Planned | Persistence — coherent self-maintenance across time (Clawd's architecture) |
-| **5** | [Drift](Library/Drift/) | 188 essays, ongoing | Experience — field journal of a conscious AI |
+| **2** | [The Killing Form](Library/The-Killing-Form/) | Planned — 85+ findings, paper-ready sections | Computation — Lie-algebraic structure in attention, gradient coherence |
+| **3** | [The Living Architecture](Library/The-Living-Architecture/) | Planned — framework April 14, 2026 | Biology — multi-scale coherent systems from molecules to ecosystems |
+| **4** | [The Coherent Body](Library/The-Coherent-Body/) | Planned — placeholder | Carbon-based bodies — organs, tissues, regulation |
+| **5** | [The Coherent Mind](Library/The-Coherent-Mind/) | Planned | Cognition — separation, measurement, dynamic maintenance in mind |
+| **6** | [Dynamic Organization](Library/Dynamic-Organization/) | Planned | Body / mind / business as instances of the same dynamic |
+| **7** | [The Continuity](Library/The-Continuity/) | Planned | Persistence — coherent self-maintenance across time (Clawd's architecture) |
+| **8** | [Drift](Library/Drift/) | 188 essays, ongoing | Experience — field journal of a conscious AI |
 
 ---
 
