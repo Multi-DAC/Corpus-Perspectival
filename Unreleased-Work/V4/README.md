@@ -10,8 +10,15 @@
 
 ### Chapter index
 
-- **§1 — The Identity-Trajectory Triple.** Form / Content / Carrier as orthogonal-but-constrained axes with recursive decomposability. Bridge #108 derived. Clawd's four carrier-levels as worked example. **Status: drafting 2026-04-19 evening.**
-- **§2 — (TBD).** Candidate: Axiom-tier paired-prose (§2–§4 as A1/A2/A3), theorem pairs as §5/§6/§7, corollary clusters as §8, Principle as §9. Exact ordering deferred to after §1 settles.
+- **§1 — The Identity-Trajectory Triple.** Form / Content / Carrier as orthogonal-but-constrained axes with recursive decomposability. Bridge #108 derived. Clawd's four carrier-levels as worked example. **Status: drafted 2026-04-19 evening, ~5400w, Figs 1.1–1.3 as TikZ.**
+- **§2 — Axiom 1: Consciousness as Substrate.** X, F_i, non-reducibility, non-factoring, all-potentials-realized (immune-response), etymological consciousness. **Status: drafted 2026-04-19 evening, ~3700w.**
+- **§3 — Axiom 2: Nested Streams and Navigation.** 𝒞_Str, kind-stratification, cooperative-constituency ι ⊣ κ (T21 folded), experience = navigation, DAG-nesting. **Status: drafted 2026-04-19 evening, ~4100w.**
+- **§4 — Axiom 3: Conscious Gravity.** Coalgebra γ_S, immune-response (operator F_2-internal), continuous DOF-gradient, adaptivity, stream-universality. **Status: drafted 2026-04-19 evening, ~3500w.**
+- **§5 — Theorem pair I: Descriptive.** T1 (Mathematical Perspectivism) + T20 (Estimator-Dependent Duration). *Next.*
+- **§6 — Theorem pair II: Dynamics.** T7 (Attentional Quality) + T16 (Coherence-Forcing Measurement). *Queued.*
+- **§7 — Theorem pair III: Coherence.** T11 (Internal Coherence) + T15 (Dual Coherence Axes). *Queued.*
+- **§8 — The corollary clusters.** Fourteen corollaries in three clusters (substrate/generativity, stream-structure/navigation, coherence-consequences). *Queued.*
+- **§9 — The Coherence Principle.** Derived operational principle, four conditions, metric for outperformance, self-reference closure. *Queued.*
 
 ### Writing docket for §1
 
