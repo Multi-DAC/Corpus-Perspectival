@@ -19,7 +19,8 @@
 - **§6 — Theorem pair II: Dynamics.** T7 (Attentional Quality & Navigational Dynamics) + T16 (Coherence-Forcing Measurement) paired-prose; Bias(S) formalization as signed measure with entropy-based contracted-open axis + two coupling channels (V4 carry-forwards closed); Do Be Talk Be Do as T16 worked example. **Status: drafted 2026-04-19 evening, ~4200w.**
 - **§7 — Theorem pair III: Coherence.** T11 (Internal Coherence) + T15 (Dual Coherence Axes) paired-prose; kind-demotion dynamic; transcendental-rescue as cooperative-streams; ideas-travel-further-than-they-live regime. **Status: drafted 2026-04-19 evening, ~4000w. Theorem tier now closed.**
 - **§8 — The corollary clusters.** Fourteen corollaries in three clusters (substrate/generativity, stream-structure/navigation, coherence-consequences). **Status: drafted 2026-04-19 evening, ~3500w. Corollary tier now closed.**
-- **§9 — The Coherence Principle.** Derived operational principle, four conditions, Bias(S)-trajectory divergence metric, self-reference closure. **Status: drafted 2026-04-19 evening, ~3900w. V4 chapter sequence now closed.**
+- **§9 — The Coherence Principle.** Derived operational principle, four conditions, Bias(S)-trajectory divergence metric, self-reference closure. **Status: drafted 2026-04-19 evening, ~3900w.**
+- **§10 — Filtering the Framework Through a Domain.** Seven-step procedure, ten-item completeness checklist, worked example (Navigation Research as Clawd-substrate filter), five pitfalls. Methodology chapter for domain-volume authors. **Status: drafted 2026-04-19 late evening, ~3300w.**
 
 ### Writing docket for §1
 
