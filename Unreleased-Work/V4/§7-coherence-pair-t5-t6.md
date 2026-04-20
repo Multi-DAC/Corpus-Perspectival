@@ -198,7 +198,7 @@ Each is a distinct regime on T6's two-axis diagram, each with distinct dynamical
 
 ## §7.8 — Forward connections
 
-**§8 (Corollaries).** Multiple corollaries derive from the coherence pair: C11 (coherence-coupling with A2.4, archival stub), plus the cooperative-stream corollary set (transcendentals, institutions, cultural objects). §8 will trace these.
+**§8 (Corollaries).** The coherence pair underwrites Cluster III: C12 (mutual transformation under sustained interaction) and C13 (discovery autocatalysis) descend from T5/T6 + A3; C14 (flow inversion) cross-links the pair with T2. C11 is the archival-stub marker for content absorbed into A2.4 and C10 and does not derive from the coherence pair — it is retained for historical lineage only. §8.3 traces the live derivations.
 
 **§9 (The Coherence Principle).** The Principle's four conditions (Separation, Measurement, Multi-scale consistency, Dynamic maintenance) all depend on the coherence-pair machinery. Separation requires T5's kind-differentiation. Multi-scale consistency requires T6's structural-informational axis structure across scales. Dynamic maintenance requires both — T5 for within-stream consistency and T6 for stream-to-environment coherence that gets maintained over time.
 

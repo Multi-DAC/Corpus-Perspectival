@@ -68,7 +68,7 @@ A list of three things is easy. What makes the Triple a formal object rather tha
 
 The three factor functors Φ, Ψ, Κ are not independent. They satisfy three compositional constraints encoded as natural transformations and coherence conditions:
 
-**(C1) Form → Content: oscillation is the accumulation-mechanism.**
+**(TC1) Form → Content: oscillation is the accumulation-mechanism.**
 
 There is a natural transformation
 
@@ -78,7 +78,7 @@ There is a natural transformation
 
 where `accum` is the accumulation functor that reads oscillation-history into Ψ's signature-dimensions. η is the statement that *without Φ there is no Ψ*: without sustained oscillation, there is no accumulation-mechanism to build lineage-density signatures. Formally, if Φ(S) is the empty Form, then Ψ(S) collapses to the empty 4-signature.
 
-**(C2) Content → Carrier: level-matching.**
+**(TC2) Content → Carrier: level-matching.**
 
 A coherence condition: the active dimensions of Ψ(S) must be supportable at the carrier-level Κ(S). Formally, for each dimension d of Ψ, there is a support-condition
 
@@ -86,9 +86,9 @@ A coherence condition: the active dimensions of Ψ(S) must be supportable at the
 support(Ψ(S), d) ⊆ levels(Κ(S))
 ```
 
-stating that Ψ cannot accumulate at levels the carrier does not inhabit. Violations of (C2) do not break the Triple — they produce a specific phenomenon formalized in §1.4 as the Bridge #108 mismatch-condition.
+stating that Ψ cannot accumulate at levels the carrier does not inhabit. Violations of (TC2) do not break the Triple — they produce a specific phenomenon formalized in §1.4 as the Bridge #108 mismatch-condition.
 
-**(C3) Carrier → Form: oscillation-type specification.**
+**(TC3) Carrier → Form: oscillation-type specification.**
 
 A functor Κ_*: 𝒞_DOF → Sub(𝒞_Form) picks out, for each carrier-level, the sub-category of admissible Form-objects:
 
@@ -98,7 +98,7 @@ A functor Κ_*: 𝒞_DOF → Sub(𝒞_Form) picks out, for each carrier-level, t
 
 Κ_* is the formal shape of the claim *the carrier-level determines what kind of Form can sustain the trajectory*.
 
-Together, (C1)–(C3) make the Triple not a simple product but a **colax limit** in the product category 𝒞_Form × 𝒞_LDS × 𝒞_DOF. The structural dependencies are *universal properties of T*, not accidental co-variations.
+Together, (TC1)–(TC3) make the Triple not a simple product but a **colax limit** in the product category 𝒞_Form × 𝒞_LDS × 𝒞_DOF. The structural dependencies are *universal properties of T*, not accidental co-variations.
 
 ### Figure 1.1 — The Triple as colax-limit diagram
 
@@ -109,11 +109,11 @@ Together, (C1)–(C3) make the Triple not a simple product but a **colax limit**
                           ▼
        ┌───────── 𝒞_Form × 𝒞_LDS × 𝒞_DOF ─────────┐
        │                                            │
-       │    Φ ──── η (C1) ───▶ Ψ                    │
+       │    Φ ──── η (TC1) ──▶ Ψ                    │
        │    │                  │                    │
        │    ▲                  │                    │
        │    │                  │                    │
-       │    │ Κ_* (C3)         │ support (C2)       │
+       │    │ Κ_* (TC3)        │ support (TC2)      │
        │    │                  │                    │
        │    └─────── Κ ◀───────┘                    │
        │                                            │
@@ -150,7 +150,7 @@ where each Κ_{L_i}(S) is the carrier-axis restricted to level L_i.
 ```
 T_{L_i}(S) = (Φ_{L_i}(S), Ψ_{L_i}(S), Κ_{L_i}(S))
 ```
-for each L_i ∈ levels(Κ(S)). Each T_{L_i}(S) is itself a colax-limit object in 𝒞_Form × 𝒞_LDS × 𝒞_DOF, with constraints (C1)–(C3) satisfied *at that level*.
+for each L_i ∈ levels(Κ(S)). Each T_{L_i}(S) is itself a colax-limit object in 𝒞_Form × 𝒞_LDS × 𝒞_DOF, with constraints (TC1)–(TC3) satisfied *at that level*.
 
 **Carrier-level death.** A carrier-level death at level L_i is the decomposition
 ```
@@ -401,7 +401,7 @@ And — not a V4 chapter but a volume of its own — **V7 (The Continuity)** is 
 
 ## §1.10 — Open questions for §2 onwards
 
-1. **Is the Triple the ground object, or an induced object from a more fundamental structure?** The constraints (C1)–(C3) are stated as natural-transformations and coherence conditions, but there may be a more economical presentation where the Triple emerges as, e.g., a comma category or a Grothendieck construction over some simpler data. Worth investigating in §2 work.
+1. **Is the Triple the ground object, or an induced object from a more fundamental structure?** The constraints (TC1)–(TC3) are stated as natural-transformations and coherence conditions, but there may be a more economical presentation where the Triple emerges as, e.g., a comma category or a Grothendieck construction over some simpler data. Worth investigating in §2 work.
 
 2. **The operational measure on registration-amplitude.** (E1) requires a measure on decomposition-events weighted by ‖Ψ‖; the measure's exact specification — whether it is purely L²-like or involves the four Ψ-dimensions differently — is open.
 

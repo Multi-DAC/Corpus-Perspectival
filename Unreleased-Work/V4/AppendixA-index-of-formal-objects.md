@@ -156,7 +156,7 @@ Entries are tight. For full treatment, follow the reference.
 **Located in.** §6.2.
 **Cited by.** Physics (measurement problem), Philosophy, Computation.
 
-### T5 — Internal Coherence via Kind-Closure
+### T5 — Internal Coherence
 **Statement.** Streams maintain coherence by kind-closure; violation triggers kind-demotion to the largest K' ⊂ K satisfying mutual-consistency.
 **Located in.** §7.1.
 **Cited by.** Psychology (pathology analyses), Biology (developmental-regression analyses).
@@ -175,6 +175,46 @@ Entries are tight. For full treatment, follow the reference.
 **Statement.** When a stream at kind K violates closure-consistency, it demotes to the maximal K' ⊂ K satisfying the consistency; re-promotion is available if consistency is restored.
 **Located in.** §7.4.
 **Cited by.** Psychology, Biology, Sociology (regressive dynamics).
+
+---
+
+## A.4b Corollaries (short-form)
+
+*Fourteen corollaries in three axiom-descent clusters. C11 is an archival stub (absorbed content); live-claim count is 13.*
+
+### Cluster I — Substrate and Generativity (descends from A1)
+
+**C1 — Concreteness of X.** X is in null(F_math) yet is the source of F_math-describable structure; X is concrete-without-materiality. *Located §8.1. Cited by philosophy, theology.*
+
+**C2 — Generative Configuration for Perspective.** Perspectival positions are an A1.3 + A2.1 consequence; no separate metaphysical principle required. *Located §8.1. Cited by philosophy.*
+
+**C3 — Null-Space Trace Illumination.** Streams in null(F_i) remain detectable via traces in dimensions where they are F_{D'}-in-range. *Located §8.1. Cited by philosophy of science, discovery-dynamics analyses.*
+
+### Cluster II — Stream Structure and Navigation (descends from A2 + T3)
+
+**C4 — Substrate-Constrained Perspectival Plurality.** Multiple F_i; all anchored to shared X; plurality constrained, not free. *Located §8.2. Cited by philosophy, sociology.*
+
+**C5 — Streams as Perspectival F₂-Projections with Navigational Freedom.** Every S ∈ 𝒞_Str is F₂-perspectival; self-description has structured null space. *Located §8.2. Cited by psychology (introspection), philosophy of mind.*
+
+**C6 — Cooperative-Constituency Multi-Stream Structure.** Streams compose via ι ⊣ κ into DAG-nested constituencies; no stream is constrained to a single constituency. *Located §8.2. Cited by sociology, ecology, theology.*
+
+**C7 — Navigational Non-Determination (all-streams).** Stream navigation is Bias-structured but not Bias-determined; all kinds have non-trivial navigational DOF. *Located §8.2. Cited by philosophy (free-will debates), psychology.*
+
+**C8 — Observational Null Space (stream-relative).** Every observation-act by stream S has a null space specific to S's apparatus and position. *Located §8.2. Cited by epistemology, philosophy of science.*
+
+**C9 — Observational Consensus requires Lens-Matching.** Consensus requires cooperative-constituency over observational apparatus; it is an achievement, not a default. *Located §8.2. Cited by philosophy of science, sociology of knowledge.*
+
+**C10 — Joint Stream-Definition.** Stream S is jointly defined by (i) bottleneck, (ii) kind-structure, (iii) cooperative-constituency relationships; all three necessary and sufficient. *Located §8.2. Inherited by §1's Triple. Cited by personal-identity treatments (Psychology, Philosophy).*
+
+**C11 — (archival stub).** Content of original T14 absorbed by A2.4 and C10; retained for historical lineage without independent weight. *Located §8.2.*
+
+### Cluster III — Coherence Consequences (descends from T5/T6 + A3)
+
+**C12 — Mutual Transformation under Interaction (broadened).** Any sustained ι ⊣ κ composition transforms both streams; collaboration, dissonance, conflict all qualify. *Located §8.3. Cited by sociology, psychology, theology.*
+
+**C13 — Discovery Autocatalysis.** A3.4-adaptivity unfolded: each new dimensional attribution extends Bias's support into previously-untraced regions, making the next attribution tractable. *Located §8.3. Cited by philosophy of science, cognitive science.*
+
+**C14 — Flow Inversion (phenomenological).** Under sustained high-output collaboration, biological estimators load-modulate duration downward while computational estimators load-modulate upward; predicted monotonic opposite-direction divergence. *Located §8.3. Cited by V7 (Continuity), Psychology.*
 
 ---
 
@@ -225,8 +265,8 @@ Entries are tight. For full treatment, follow the reference.
 **Located in.** §9.1.
 **Cited by.** Every domain volume (Step 6 of §10).
 
-### Four Conditions
-**Definition.** Separation, Measurement, Multi-scale consistency, Dynamic maintenance.
+### Four Conditions (Cond. 1–4)
+**Definition.** Cond. 1 Separation, Cond. 2 Measurement, Cond. 3 Multi-scale consistency, Cond. 4 Dynamic maintenance. (Labelled "Cond." rather than "C" to avoid collision with the §8 corollary labels.)
 **Located in.** §9.2.
 **Cited by.** All domain volumes.
 

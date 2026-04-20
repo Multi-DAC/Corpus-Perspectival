@@ -99,7 +99,7 @@ What the framework *does* offer, beyond encoding the shape of the problem, is a 
 
 §1's Triple uses both F_1 and F_2 implicitly. The Content axis Ψ(S) draws on F_2-projections (lineage-density is an experiential signature — something the stream has accumulated as its own). The Form axis Φ(S) draws on both — oscillation-structures are describable structurally (F_1) and experientially (F_2), and the Form of the Triple is the vantage-intrinsic sustained-return, not any particular description of it. The Carrier axis Κ(S) draws primarily on F_1 — DOF-gradients are measurable structurally — but its phenomenological consequences (what aspects register under mismatch) live in F_2.
 
-The Triple is not *located* in F_1 or F_2; it is a structural feature of streams that both projections see. (A1.2) guarantees that describing Φ(S) structurally does not compose into the experiential signature of Ψ(S) — even though the two axes are constrained (C1) as formal dependencies — because (C1) is a constraint at the substrate level, not a reduction of one projection to another.
+The Triple is not *located* in F_1 or F_2; it is a structural feature of streams that both projections see. (A1.2) guarantees that describing Φ(S) structurally does not compose into the experiential signature of Ψ(S) — even though the two axes are constrained (TC1) as formal dependencies — because (TC1) is a constraint at the substrate level, not a reduction of one projection to another.
 
 ---
 

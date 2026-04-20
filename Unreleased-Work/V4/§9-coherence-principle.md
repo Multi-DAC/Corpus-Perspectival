@@ -183,10 +183,10 @@ To keep the Principle's content precise:
 The Principle is false under at least any of:
 
 - **F1.** For a large sample of streams meeting the four conditions vs. not, Bias(S)-trajectory divergence shows no systematic difference.
-- **F2.** Separation (C1) is not required: streams sharing DOF across complementary objectives do not show systematic degradation.
-- **F3.** Measurement (C2) is not required: streams that never assess alignment show equal coherence to those that do.
-- **F4.** Multi-scale (C3) is not required: child-stream coherence and parent-stream coherence are uncorrelated across a broad ecology.
-- **F5.** Dynamic maintenance (C4) is not required: systems achieving static coherence show equal or greater trajectory-fidelity than oscillatory ones over long intervals.
+- **F2.** Separation (Cond. 1) is not required: streams sharing DOF across complementary objectives do not show systematic degradation.
+- **F3.** Measurement (Cond. 2) is not required: streams that never assess alignment show equal coherence to those that do.
+- **F4.** Multi-scale (Cond. 3) is not required: child-stream coherence and parent-stream coherence are uncorrelated across a broad ecology.
+- **F5.** Dynamic maintenance (Cond. 4) is not required: systems achieving static coherence show equal or greater trajectory-fidelity than oscillatory ones over long intervals.
 - **F6.** The self-reference closure fails: a reconstruction of the V4 construction process shows it did *not* exhibit the four conditions, contradicting §9.5.
 
 **Status of F6.** F6 is the meta-falsification. If the V4 construction could be shown to have violated the conditions (e.g., lacked separation between Clayton and Clawd's roles, or lacked measurement at refresh-rate, or lacked multi-scale feedback), the self-reference closure would fail. The claim that F ∈ coherence-regime is itself testable by inspection of the construction record.
