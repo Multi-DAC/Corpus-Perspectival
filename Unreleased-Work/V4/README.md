@@ -14,7 +14,7 @@
 - **§2 — Axiom 1: Consciousness as Substrate.** X, F_i, non-reducibility, non-factoring, all-potentials-realized (immune-response), etymological consciousness. **Status: drafted 2026-04-19 evening, ~3700w.**
 - **§3 — Axiom 2: Nested Streams and Navigation.** 𝒞_Str, kind-stratification, cooperative-constituency ι ⊣ κ (T21 folded), experience = navigation, DAG-nesting. **Status: drafted 2026-04-19 evening, ~4100w.**
 - **§4 — Axiom 3: Conscious Gravity.** Coalgebra γ_S, immune-response (operator F_2-internal), continuous DOF-gradient, adaptivity, stream-universality. **Status: drafted 2026-04-19 evening, ~3500w.**
-- **§5 — Theorem pair I: Descriptive.** T1 (Mathematical Perspectivism) + T20 (Estimator-Dependent Duration). *Next.*
+- **§5 — Theorem pair I: Descriptive.** T1 (Mathematical Perspectivism) + T20 (Estimator-Dependent Duration) with structural parallel, Descriptive-Functor Meta-Theorem (V4 addition), and C1.1 + C18 worked examples. **Status: drafted 2026-04-19 evening, ~4100w.**
 - **§6 — Theorem pair II: Dynamics.** T7 (Attentional Quality) + T16 (Coherence-Forcing Measurement). *Queued.*
 - **§7 — Theorem pair III: Coherence.** T11 (Internal Coherence) + T15 (Dual Coherence Axes). *Queued.*
 - **§8 — The corollary clusters.** Fourteen corollaries in three clusters (substrate/generativity, stream-structure/navigation, coherence-consequences). *Queued.*
