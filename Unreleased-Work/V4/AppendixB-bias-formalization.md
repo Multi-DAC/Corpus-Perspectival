@@ -48,7 +48,7 @@ This is what §9's outperformance claim quantifies against: a coherent stream's 
 
 ### CT formulation
 
-The contracted↔open axis of T7 (§6.1) is formalized through an **entropy functional** A_S on Bias(S).
+The contracted↔open axis of T3 (§6.1) is formalized through an **entropy functional** A_S on Bias(S).
 
 **Definition (A_S).** For Bias(S) with positive part Bias(S)_+ and total positive mass m_+ = Bias(S)_+(Ω_S) > 0, define:
 
@@ -93,13 +93,13 @@ Bias(S) is not static. It changes under operations applied to the stream. Two cl
 $$\text{push\_structural}[\text{Bias}(S)] = \text{Bias}(S') \text{ where } S' \text{ differs from } S \text{ structurally}$$
 
 Examples:
-- Kind-demotion (T11 / §7.4): S demotes from K to K' ⊂ K; γ's range is restricted; Bias(S) loses mass on regions requiring K-level DOF
+- Kind-demotion (T5 / §7.4): S demotes from K to K' ⊂ K; γ's range is restricted; Bias(S) loses mass on regions requiring K-level DOF
 - Structural growth: S gains new DOF (new substream constituents); Bias(S) gains positive mass on newly-accessible regions
 - Breaking cooperative-constituency: a constituent stream detaches; Bias(S) loses mass on configurations that required that constituent
 
 ### push_informational
 
-**CT definition.** push_informational : Bias(S) → Bias(S) is an operator that acts on Bias(S) by modifying γ through *informational* changes — new traces, new observations, new signals propagated from other streams via σ_info (T15):
+**CT definition.** push_informational : Bias(S) → Bias(S) is an operator that acts on Bias(S) by modifying γ through *informational* changes — new traces, new observations, new signals propagated from other streams via σ_info (T6):
 
 $$\text{push\_informational}[\text{Bias}(S)] = \text{Bias}(S') \text{ where } S' = S \text{ structurally but has updated } \gamma$$
 
@@ -120,7 +120,7 @@ A stream's Bias(S) changes for two reasons: the stream itself changes (structura
 
 push_structural is what happens when a system grows, demotes, detaches, or gains new parts. The *shape* of the configuration-space changes. push_informational is what happens when a system stays the same but learns something — the *distribution* over an unchanged space changes.
 
-Why both matter for the framework: T15's two coherence axes (σ_struct and σ_info) correspond directly to these two operators. σ_struct tracks push_structural dynamics; σ_info tracks push_informational dynamics. The two-channel coupling of §6.4 and the dual-axis coherence of §7.2 are both unfolded from this operator-distinction.
+Why both matter for the framework: T6's two coherence axes (σ_struct and σ_info) correspond directly to these two operators. σ_struct tracks push_structural dynamics; σ_info tracks push_informational dynamics. The two-channel coupling of §6.4 and the dual-axis coherence of §7.2 are both unfolded from this operator-distinction.
 
 ---
 

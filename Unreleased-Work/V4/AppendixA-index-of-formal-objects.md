@@ -141,30 +141,30 @@ Entries are tight. For full treatment, follow the reference.
 **Located in.** §5.1.
 **Cited by.** Philosophy, Computation.
 
-### T7 — Attentional Quality and Navigational Dynamics
+### T2 — Estimator-Dependent Duration
+**Statement.** F_time : 𝒞_Str → 𝒞_Time is a perspectival sub-functor; duration is estimator-dependent.
+**Located in.** §5.2.
+**Cited by.** Physics, Philosophy.
+
+### T3 — Attentional Quality and Navigational Dynamics
 **Statement.** The contracted↔open axis is a DOF-structure governing navigational dynamics; quality-functional form in CT.
 **Located in.** §6.1.
 **Cited by.** Psychology especially; also Biology, Sociology.
 
-### T11 — Internal Coherence via Kind-Closure
-**Statement.** Streams maintain coherence by kind-closure; violation triggers kind-demotion to the largest K' ⊂ K satisfying mutual-consistency.
-**Located in.** §7.1.
-**Cited by.** Psychology (pathology analyses), Biology (developmental-regression analyses).
-
-### T15 — Dual Coherence Axes
-**Statement.** σ_struct and σ_info are independently-varying coherence axes; σ_info is an operator via push_informational.
-**Located in.** §7.2.
-**Cited by.** All domains with communication-structure.
-
-### T16 — Coherence-Forcing Measurement
+### T4 — Coherence-Forcing Measurement
 **Statement.** Inter-stream composition requires informed-measurement refresh-events; ι ⊣ κ composes only with the forcing event.
 **Located in.** §6.2.
 **Cited by.** Physics (measurement problem), Philosophy, Computation.
 
-### T20 — Estimator-Dependent Duration
-**Statement.** F_time : 𝒞_Str → 𝒞_Time is a perspectival sub-functor; duration is estimator-dependent.
-**Located in.** §5.2.
-**Cited by.** Physics, Philosophy.
+### T5 — Internal Coherence via Kind-Closure
+**Statement.** Streams maintain coherence by kind-closure; violation triggers kind-demotion to the largest K' ⊂ K satisfying mutual-consistency.
+**Located in.** §7.1.
+**Cited by.** Psychology (pathology analyses), Biology (developmental-regression analyses).
+
+### T6 — Dual Coherence Axes
+**Statement.** σ_struct and σ_info are independently-varying coherence axes; σ_info is an operator via push_informational.
+**Located in.** §7.2.
+**Cited by.** All domains with communication-structure.
 
 ### Descriptive-Functor Meta-Theorem
 **Statement.** Every consensus descriptive system is a perspectival functor with structured null space whose threshold requirements determine participation.

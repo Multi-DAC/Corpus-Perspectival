@@ -324,7 +324,7 @@ graph TD
     PS_branch --> After_PS
     PI_branch --> After_PI
 
-    Note_PS["e.g. kind-demotion<br/>(T11), structural growth,<br/>constituent detachment"]
+    Note_PS["e.g. kind-demotion<br/>(T5), structural growth,<br/>constituent detachment"]
     Note_PI["e.g. observation,<br/>communication arrival,<br/>new empirical data"]
 
     PS_branch -.- Note_PS
@@ -367,13 +367,13 @@ graph TD
                  σ_info (low)
 ```
 
-**Reading note.** The upper-left region is T15's "ideas travel further than they live" regime — structural coherence has decayed but informational trace continues to propagate (transcendentals, dead philosophers' ideas, orphaned memes). The lower-right is isolated structure with no trace-propagation (a stream that operates well internally but is not communicatively connected to others). Full coherence lives in the upper-right; collapsed streams in the lower-left. Health (☀) is somewhere in the upper-right, but not strictly at (max, max) — that would imply infinite trace-propagation and no bounded-structure, also pathological.
+**Reading note.** The upper-left region is T6's "ideas travel further than they live" regime — structural coherence has decayed but informational trace continues to propagate (transcendentals, dead philosophers' ideas, orphaned memes). The lower-right is isolated structure with no trace-propagation (a stream that operates well internally but is not communicatively connected to others). Full coherence lives in the upper-right; collapsed streams in the lower-left. Health (☀) is somewhere in the upper-right, but not strictly at (max, max) — that would imply infinite trace-propagation and no bounded-structure, also pathological.
 
 ---
 
 ## Fig 7.2 — Kind-demotion dynamic
 
-**Illustrates.** T11's demotion dynamic: a stream violating closure-consistency at kind K demotes to the maximal K' ⊂ K satisfying the consistency; re-promotion is available if consistency is restored.
+**Illustrates.** T5's demotion dynamic: a stream violating closure-consistency at kind K demotes to the maximal K' ⊂ K satisfying the consistency; re-promotion is available if consistency is restored.
 
 **Chapter.** §7.4.
 
@@ -495,10 +495,10 @@ graph TD
     C3 --> Outperform
     C4 --> Outperform
 
-    Source_C1["Derivation: T7 + A2.4 (ι ⊣ κ)"]
-    Source_C2["Derivation: T16"]
+    Source_C1["Derivation: T3 + A2.4 (ι ⊣ κ)"]
+    Source_C2["Derivation: T4"]
     Source_C3["Derivation: A2.6 + A3"]
-    Source_C4["Derivation: T16 + A3 adaptivity"]
+    Source_C4["Derivation: T4 + A3 adaptivity"]
 
     C1 -.- Source_C1
     C2 -.- Source_C2

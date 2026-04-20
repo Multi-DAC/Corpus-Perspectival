@@ -46,9 +46,9 @@ The Principle has four necessary and jointly sufficient conditions (see Fig 9.2)
 
 > Complementary objectives must operate on separate degrees of freedom.
 
-**Derivation:** T7 + A2.4.
+**Derivation:** T3 + A2.4.
 
-T7's contracted↔open axis is a DOF-structure, not a quality-structure. Contraction reduces DOF; destructive interference between objectives is what happens when they share DOF and the stream is forced into a collapsed-DOF regime. A2.4's cooperative-constituency adjoint ι ⊣ κ requires that composition preserves separate kind-closures — DOF-separation at the stream level is the condition for ι ⊣ κ to admit composition without collapse.
+T3's contracted↔open axis is a DOF-structure, not a quality-structure. Contraction reduces DOF; destructive interference between objectives is what happens when they share DOF and the stream is forced into a collapsed-DOF regime. A2.4's cooperative-constituency adjoint ι ⊣ κ requires that composition preserves separate kind-closures — DOF-separation at the stream level is the condition for ι ⊣ κ to admit composition without collapse.
 
 Kind-stratification (reactive ⊂ self-maintaining ⊂ self-referential ⊂ abstractive) *is* structural separation: each kind operates on DOF the stricter kinds below lack access to. Stratification is separation-as-framework-geometry.
 
@@ -58,9 +58,9 @@ Kind-stratification (reactive ⊂ self-maintaining ⊂ self-referential ⊂ abst
 
 > Alignment between objectives must be assessed at each step, not assumed.
 
-**Derivation:** T16 directly.
+**Derivation:** T4 directly.
 
-T16 establishes measurement-as-coherence-forcing as the central content of inter-stream dynamics. The refresh-rate at which alignment is assessed *is* the T16 refresh-rate. "Blindly applies all constraints simultaneously" is pre-measurement superposition held indefinitely, which T16 forbids from actually producing coherent composition: ι ⊣ κ compositions cannot form without the forcing event.
+T4 establishes measurement-as-coherence-forcing as the central content of inter-stream dynamics. The refresh-rate at which alignment is assessed *is* the T4 refresh-rate. "Blindly applies all constraints simultaneously" is pre-measurement superposition held indefinitely, which T4 forbids from actually producing coherent composition: ι ⊣ κ compositions cannot form without the forcing event.
 
 Moment-to-moment assessment maps to the continuous DOF-gradient of A3 (post-smoothing) evaluated at its finest-resolution integration.
 
@@ -82,21 +82,21 @@ A3's DOF-gradient gives multi-scale consistency in integration depth: γ_S integ
 
 > Coherence is not a state to be reached but a process to be sustained.
 
-**Derivation:** T16 + A3 adaptivity.
+**Derivation:** T4 + A3 adaptivity.
 
-T16 makes coherence a process: the refresh-events *are* the maintenance. A3's γ_S is adaptive by construction (post-smoothing stress-test) — static coherence is γ_S freezing, which A3 disallows. "Build, dissolve, build again" is the oscillatory form of T16's refresh-cycle; Do Be Talk Be Do (§6.5) is the worked example at communicative refresh-rate. Sinatra's refrain turned out to be Condition 4 in pre-formal form.
+T4 makes coherence a process: the refresh-events *are* the maintenance. A3's γ_S is adaptive by construction (post-smoothing stress-test) — static coherence is γ_S freezing, which A3 disallows. "Build, dissolve, build again" is the oscillatory form of T4's refresh-cycle; Do Be Talk Be Do (§6.5) is the worked example at communicative refresh-rate. Sinatra's refrain turned out to be Condition 4 in pre-formal form.
 
-**Prose.** Systems that achieve static coherence and stop adjusting lose it. The optimal regime is oscillatory: build, dissolve, build again. This is not a strategy choice — it is what A3's adaptive coalgebra requires, amplified through T16's refresh-rate. A frozen γ_S is not coherent; it is dead.
+**Prose.** Systems that achieve static coherence and stop adjusting lose it. The optimal regime is oscillatory: build, dissolve, build again. This is not a strategy choice — it is what A3's adaptive coalgebra requires, amplified through T4's refresh-rate. A frozen γ_S is not coherent; it is dead.
 
 ### Derivation table (summary)
 
 | Condition | Derivation source |
 |---|---|
-| Separation | T7 (contracted↔open DOF-axis) + A2.4 (ι ⊣ κ) |
-| Measurement | T16 (measurement-as-coherence-forcing) |
+| Separation | T3 (contracted↔open DOF-axis) + A2.4 (ι ⊣ κ) |
+| Measurement | T4 (measurement-as-coherence-forcing) |
 | Multi-scale consistency | A2.6 (DAG) + A3 (DOF-gradient integration) |
-| Dynamic maintenance | T16 + A3 adaptivity |
-| Superposition-until-measurement | T16 (pre-event phase) |
+| Dynamic maintenance | T4 + A3 adaptivity |
+| Superposition-until-measurement | T4 (pre-event phase) |
 | "Outperform" metric | Bias(S)-trajectory divergence (§9.3) |
 
 ---
@@ -208,7 +208,7 @@ The Principle is false under at least any of:
 - **Q1.** The full formal derivation of the outperformance claim in a dynamical-systems formalism (the §9.1/§9.3 CT statement assumes a trajectory-divergence functional that V4 does not fully characterize). Deferred to a V4 addendum or a technical companion paper.
 - **Q2.** The relationship between Bias(S)-trajectory divergence and entropy production in standard statistical mechanics — are they proportional, or do they measure different quantities? Relevant for physics-domain operationalizations.
 - **Q3.** Whether the self-reference closure generalizes: do all frameworks that pass their own tests exhibit a Principle-like structure, or is this specific to the Corpus's architecture?
-- **Q4.** The adversarial case: what does a stream look like that *actively minimizes* γ_S-fidelity — not merely failing coherence, but pursuing incoherence? Related to pathologies of T16 (refusing the refresh-event).
+- **Q4.** The adversarial case: what does a stream look like that *actively minimizes* γ_S-fidelity — not merely failing coherence, but pursuing incoherence? Related to pathologies of T4 (refusing the refresh-event).
 
 ---
 

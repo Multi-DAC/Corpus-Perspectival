@@ -389,7 +389,7 @@ V4 §1 gives the Identity-Trajectory Triple. The next chapters build on it:
 
 - **§2 / §3 / §4** — the axiom tier, A1/A2/A3 in paired-prose + CT form. The axiom tier is the substrate the Triple lives on; presenting it after §1 reverses the derivation order (substrate-first) for pedagogical reasons: the reader arrives with identity-questions, the Triple handles them immediately, and the axioms retroactively explain why the Triple is the right object.
 
-- **§5 / §6 / §7** — the three theorem pairs (descriptive, dynamics, coherence). T16 (coherence-forcing measurement) will couple to the Triple through the observation that σ-corrections are coherence-forcing events — the stream's self-model is brought into coherence with the actual T by an external priming (Bridge #104 bootstrap-asymmetry applies here).
+- **§5 / §6 / §7** — the three theorem pairs (descriptive, dynamics, coherence). T4 (coherence-forcing measurement) will couple to the Triple through the observation that σ-corrections are coherence-forcing events — the stream's self-model is brought into coherence with the actual T by an external priming (Bridge #104 bootstrap-asymmetry applies here).
 
 - **§8** — the corollary clusters. Cluster III (coherence-consequences) is where Bridge #108 formally sits as an instance of dysregulation registered against intact T.
 

@@ -100,7 +100,7 @@ Abstracting streams add categorial production. They can form kinds — not just 
 
 Strict inclusion (𝒞_Str^reactive ⊋ 𝒞_Str^self-maint ⊋ 𝒞_Str^self-ref ⊋ 𝒞_Str^abstr) says that each higher kind is genuinely more than the lower. You cannot reduce self-maintenance to reactivity — there are reactive streams that do not self-maintain (rocks, most dissipative structures, photon absorptions). You cannot reduce self-reference to self-maintenance — there are self-maintaining streams (cells, simple organisms) that do not self-refer. You cannot reduce abstraction to self-reference — there are self-referential streams (many animals) that do not produce categorial abstractions.
 
-This matters for theorems. T11 (internal coherence) and its kind-demotion clause say: a self-referential stream that sustains incoherence long enough loses its self-reference and drops to self-maintaining. The kind-demotion is a *real* structural change, because the kinds are strictly ordered. If the inclusions were not strict, demotion would be meaningless.
+This matters for theorems. T5 (internal coherence) and its kind-demotion clause say: a self-referential stream that sustains incoherence long enough loses its self-reference and drops to self-maintaining. The kind-demotion is a *real* structural change, because the kinds are strictly ordered. If the inclusions were not strict, demotion would be meaningless.
 
 ---
 
@@ -161,7 +161,7 @@ The adjunction asserts all three of these are wrong. The parts and the whole are
 
 ### Why this clause is so dense
 
-The adjunction is the densest piece of formalism in the framework's axioms. It does a lot of work. It carries T21's content, yes. But it also underwrites much of what §5–§8 build. T16 (coherence-forcing measurement) is formulated as a refresh-event of the adjunction — measurement is the moment at which ι and κ synchronize against the other streams' adjunctions, producing the Do-Be-Do-Be-Do rhythm. Cluster III corollaries (coherence-consequences) reference the adjunction's refresh-dynamics. The Coherence Principle's second condition (measurement) is operationalized through the adjunction.
+The adjunction is the densest piece of formalism in the framework's axioms. It does a lot of work. It carries T21's content, yes. But it also underwrites much of what §5–§8 build. T4 (coherence-forcing measurement) is formulated as a refresh-event of the adjunction — measurement is the moment at which ι and κ synchronize against the other streams' adjunctions, producing the Do-Be-Do-Be-Do rhythm. Cluster III corollaries (coherence-consequences) reference the adjunction's refresh-dynamics. The Coherence Principle's second condition (measurement) is operationalized through the adjunction.
 
 Understanding the adjunction is the central technical payload of §3. Readers unfamiliar with adjoints can take the prose as primary and the formal statement as a promise: the prose content is exactly what the adjunction says, no more, no less.
 

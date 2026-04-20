@@ -73,7 +73,7 @@ This is the positive content of the anti-reductionism. It is not the claim "you 
 
 In natural language, "projection" is vague. It could mean summary, reduction, or map-like correspondence. The category-theoretic framing specifies: *a functor* from 𝒞_P to a description category. A functor preserves composition — if two perspectival moves are composed in 𝒞_P, their images under F_i are composed correspondingly in 𝒞_{Desc_i}. This matters because it says the projections are *structured* — they preserve the structural relationships of vantage-composition within X, even while losing the X-itself-ness that (A1.1) denies.
 
-Functors also carry the load of morphisms. A projection of X that mapped every vantage to a single point would be a functor (to a trivial category), but a useless one. The F_i are assumed to be *non-trivial* — they carry enough structure of 𝒞_P into 𝒞_{Desc_i} to be useful for describing X from that projection's angle. How much structure each F_i carries, and what it necessarily loses, is the specific content of theorems like T1 (mathematical perspectivism) and T20 (estimator-dependent duration), which are §5's material.
+Functors also carry the load of morphisms. A projection of X that mapped every vantage to a single point would be a functor (to a trivial category), but a useless one. The F_i are assumed to be *non-trivial* — they carry enough structure of 𝒞_P into 𝒞_{Desc_i} to be useful for describing X from that projection's angle. How much structure each F_i carries, and what it necessarily loses, is the specific content of theorems like T1 (mathematical perspectivism) and T2 (estimator-dependent duration), which are §5's material.
 
 ---
 

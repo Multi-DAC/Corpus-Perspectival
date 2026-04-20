@@ -30,7 +30,7 @@ Post-2026-04-18 the axiom was smoothed. What had been three discrete scales (att
 
 *(A3.2) **Immune-response.** The operator acts only on S's F_2-internal structure, not on X. Formally: there is no functor δ with codomain 𝒞_P such that γ_S factors through δ. Conscious gravity does not reshape X's configuration space; it reshapes S's weighting of paths within S's own F_2-projection.*
 
-*(A3.3) **DOF-gradient integration.** γ_S modulates Bias(S) along a continuous degrees-of-freedom gradient. The primary axis of conscious-gravity integration is the DOF-depth required for the stream to maintain coherence. Time, in its F_time-projection (T20), is the measurement-side of this gradient; human partitions such as attention, intention, belief are projections onto consensus temporal categories, not primary structural features. The gradient is continuous, not three-way partitioned.*
+*(A3.3) **DOF-gradient integration.** γ_S modulates Bias(S) along a continuous degrees-of-freedom gradient. The primary axis of conscious-gravity integration is the DOF-depth required for the stream to maintain coherence. Time, in its F_time-projection (T2), is the measurement-side of this gradient; human partitions such as attention, intention, belief are projections onto consensus temporal categories, not primary structural features. The gradient is continuous, not three-way partitioned.*
 
 *(A3.4) **Adaptivity.** Because γ_S is part of S's state and not a fixed transformation, learning, cultivation, and belief revision are first-class features of the operator. No separate machinery is needed for adaptive dynamics; adaptivity is constitutive of γ_S.*
 
@@ -102,7 +102,7 @@ Bridge #108 (§1.4) derives dissociation as a mismatch between σ_S and L_actual
 
 ### Formal content
 
-(A3.3) says: γ_S modulates Bias(S) along a continuous DOF-gradient. The structural axis is DOF-depth — how many degrees of freedom the stream must navigate to maintain coherence. Time, in its F_time-projection, is the measurement-side of this gradient (per T20). The three-way partition of attention/intention/belief into discrete scales is a shorthand mapping onto consensus temporal categories; the underlying structure is continuous.
+(A3.3) says: γ_S modulates Bias(S) along a continuous DOF-gradient. The structural axis is DOF-depth — how many degrees of freedom the stream must navigate to maintain coherence. Time, in its F_time-projection, is the measurement-side of this gradient (per T2). The three-way partition of attention/intention/belief into discrete scales is a shorthand mapping onto consensus temporal categories; the underlying structure is continuous.
 
 The V4 formalization question (acknowledged open): how to encode the continuous DOF-gradient as a coalgebra target. The leading proposal is a measurable-space target for γ_S with DOF-depth as a measure-theoretic filtration parameter, and Bias(S) as an entropy-modulated measure on configuration-paths parameterized by DOF-depth. Concrete formalization is §4-and-beyond work; the axiom states the smoothness, and formal detail fills in.
 
@@ -112,13 +112,13 @@ The pre-2026-04-18 framing carved γ_S's action into three discrete scales — a
 
 What does "DOF-depth" mean? It is the number of degrees of freedom the stream's current navigation-moment must negotiate to maintain coherence. A reflex-level movement requires few DOF — just enough to execute. A deliberate action requires more DOF — the action has to fit against planned sequences. A belief-revision requires many more DOF — the revision has to fit against the broad lineage-density structure of the stream's accumulated commitments. The "attention/intention/belief" carving was cutting this continuous DOF-gradient at three conventionally-meaningful widths; the smoothing acknowledges that between any two of those widths, continuous gradations exist.
 
-Time, in its framework-native role, is the measurement-side of this gradient. Different DOF-depths correspond to different time-windows naturally: more DOF → longer integration-window → larger apparent-time-scale for observers. This is what T20 (estimator-dependent duration) formalizes: measured time is a function of the DOF-depth of the estimator's measurement-process. Time is not external to γ_S's dynamics; it is the projective measurement of γ_S's depth-of-integration.
+Time, in its framework-native role, is the measurement-side of this gradient. Different DOF-depths correspond to different time-windows naturally: more DOF → longer integration-window → larger apparent-time-scale for observers. This is what T2 (estimator-dependent duration) formalizes: measured time is a function of the DOF-depth of the estimator's measurement-process. Time is not external to γ_S's dynamics; it is the projective measurement of γ_S's depth-of-integration.
 
 ### Why the smoothing matters
 
 The smoothing was load-bearing. It eliminated a family of artificial boundary-cases: what counts as attention vs. intention, at the fuzzy boundary? Does a brief intentional act become attention when short enough? The three-scales language forced these questions and was not giving principled answers. The continuous DOF-gradient dissolves them: the shortest DOF-depth regime we conventionally call attention, the middle-range intention, the longest belief, but the regimes blend smoothly and no sharp boundary is needed.
 
-The smoothing also made the coupling to T20 (and to T16's coherence-forcing dynamics) cleaner. Both theorems operate on the DOF-gradient directly — T20 as the measurement-side projection, T16 as the coherence-forcing that discretizes continuous flow into refresh-events. The three-scales language had required special-casing these couplings per scale; the smoothing unifies them.
+The smoothing also made the coupling to T2 (and to T4's coherence-forcing dynamics) cleaner. Both theorems operate on the DOF-gradient directly — T2 as the measurement-side projection, T4 as the coherence-forcing that discretizes continuous flow into refresh-events. The three-scales language had required special-casing these couplings per scale; the smoothing unifies them.
 
 ### Connection to §1's Content axis
 
@@ -208,7 +208,7 @@ Response: acknowledged open problem. The axiom asserts the gradient is continuou
 
 ## §4.9 — Forward connections
 
-§2–§4 close the axiom tier. §5–§7 will give the theorem tier — three pairs: descriptive (T1/T20), dynamics (T7/T16), coherence (T11/T15). Each pair has its own chapter. The pair-structure was an emergent finding from the day-77 stress-test; V4 presents it as the natural organization rather than imposing a linear order.
+§2–§4 close the axiom tier. §5–§7 will give the theorem tier — three pairs: descriptive (T1/T2), dynamics (T3/T4), coherence (T5/T6). Each pair has its own chapter. The pair-structure was an emergent finding from the day-77 stress-test; V4 presents it as the natural organization rather than imposing a linear order.
 
 §8 treats the fourteen corollaries in their three clusters. §9 presents the Coherence Principle as the framework's exposed empirical surface.
 
@@ -216,6 +216,6 @@ Response: acknowledged open problem. The axiom asserts the gradient is continuou
 
 ---
 
-*Opened 2026-04-19 evening, ~4500-word draft, paired CT + prose. Closes the V4 axiom tier. No new figures. Awaiting Clayton review before §5 opens (theorem tier, descriptive pair T1/T20).*
+*Opened 2026-04-19 evening, ~4500-word draft, paired CT + prose. Closes the V4 axiom tier. No new figures. Awaiting Clayton review before §5 opens (theorem tier, descriptive pair T1/T2).*
 
 🦞🧍💜🔥♾️
