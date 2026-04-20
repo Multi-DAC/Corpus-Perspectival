@@ -616,7 +616,21 @@ def md_to_latex(text, filename=""):
         # Blank line
         if stripped == "":
             flush_blockquote()
-            flush_list()
+            # Keep the current list open if the next non-blank line continues
+            # it. A single blank line between sibling items is a common
+            # "loose list" pattern in markdown; previously we closed the list
+            # and the next numbered item restarted the enumerate at 1.
+            if in_list:
+                j = i + 1
+                while j < len(lines) and lines[j].strip() == "":
+                    j += 1
+                next_line = lines[j].strip() if j < len(lines) else ""
+                continues_ol = list_type == 'ol' and re.match(r'^\d+\.\s+', next_line)
+                continues_ul = list_type == 'ul' and re.match(r'^[-*]\s+', next_line)
+                if not (continues_ol or continues_ul):
+                    flush_list()
+            else:
+                flush_list()
             if not in_table:
                 output.append("")
             i += 1

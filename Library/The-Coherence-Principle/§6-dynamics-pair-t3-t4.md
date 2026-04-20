@@ -144,6 +144,60 @@ push_informational : Traces × 𝒞_Str → Bias(S) → Bias(S)'
 
 where `push_structural` modulates both biases when two streams are in cooperative-constituency relation (T6's structural coherence channel), and `push_informational` modulates a single stream's Bias when information traces from elsewhere reach it (T6's informational coherence channel). The two operators are independent channels (see Fig 6.2).
 
+### Figure 6.1 — Bias(S) as signed measure over Ω_S
+
+```
+Configuration-space Ω_S (1D slice shown)
+
+Bias(S) mass ^
+        +m_+ | ●●●●
+             | ●●●●●●●
+             | ●●●●●●●●●
+           0 |----●----●●●●●----●----●---→ σ
+             |             ○○○
+             |           ○○○○○
+        -m_- |           ○○○○○
+                          ^
+                          |
+                        σ*(t) (attractor)
+
+  ● positive Bias mass (γ pulls toward)
+  ○ negative Bias mass (γ pulls away)
+
+  A_S = entropy of Bias(S)_+  → low here (concentrated)
+
+  Contracted-coherent:  σ(t) ∈ support(Bias(S)_+)  → Align > 0
+  Contracted-failed:    σ(t) ∉ support(Bias(S)_+)  → Align ≤ 0
+```
+
+*Reading note.* The positive lobe (●) is where γ attracts; its peak is at σ*. The negative lobe (○) is where γ repels. A_S measures how concentrated vs. spread the positive part is — low A_S here because mass is concentrated near σ*. Align(S, t) is positive when σ(t) is in the positive lobe; negative when σ(t) is in the negative lobe. Contracted-coherent vs contracted-failed depends on *where the actual trajectory is*, not on A_S alone.
+
+### Figure 6.2 — push_structural vs push_informational
+
+```
+                       Bias(S) at t₀
+                           over Ω_S
+                              │
+                  ┌───────────┴───────────┐
+                  │                       │
+                  ▼                       ▼
+         push_structural          push_informational
+         (S changes               (γ updates from
+          structurally)            information arrival)
+                  │                       │
+                  ▼                       ▼
+         Bias(S') at t₁            Bias(S) at t₁
+         over Ω_S'  ◀── new shape  over Ω_S  ◀── same shape
+                  │                       │
+      ┌───────────┘                       └───────────┐
+      ▼                                               ▼
+  e.g. kind-demotion (T5),               e.g. observation,
+  structural growth,                     communication arrival,
+  constituent detachment                 new empirical data
+```
+
+*Reading note.* push_structural changes the *shape* of Ω_S itself (new dimensions, lost dimensions, reconfigured topology). push_informational keeps Ω_S fixed and redistributes Bias *mass* over it. Operating them in different orders yields different results — the commutator [push_structural, push_informational] ≠ 0 (Appendix B.3).
+
 ### Prose translation
 
 Bias(S) is a map from regions of S's possible-configuration space to positive-or-negative weight. It tells you, for each region, how strongly γ_S is pulling S into or away from that region. The contracted-open axis A_S is the *entropy* of this Bias distribution: when Bias is sharp (concentrated on few configurations), entropy is low and we call the state contracted; when Bias is broad (spread across many configurations), entropy is high and we call the state open. The entropy-based reading makes T3's contracted-open axis a calculable quantity rather than a qualitative descriptor.

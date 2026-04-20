@@ -76,6 +76,29 @@ Two kinds of coherence, two axes, operating on every stream-and-dimension pair. 
 
 The two axes do not collapse into each other (see Fig 7.1). Structural engagement is presence-of-engagement — it requires the stream to be actively coupled with the dimension. Informational propagation is persistence-of-trace — it requires information derived from the stream to have spread across the dimension's positions. These can come apart. A retired expert has low structural but possibly high informational. A novice in active training has high structural but possibly low informational. The two can trend together but are not the same thing.
 
+### Figure 7.1 — The dual coherence plane σ_struct × σ_info
+
+```
+                      σ_info (high)
+                          │
+                          │
+   Disembodied ideas      │     Full coherence
+   (σ_struct low,         │     (both high)
+    σ_info high)          │
+                          │
+                          │   ☀ ← healthy stream
+   ───────────────────────┼───────────────→ σ_struct (high)
+                          │
+                          │
+   Collapsed stream       │     Isolated structure
+   (both low)             │     (σ_struct high,
+                          │      σ_info low)
+                          │
+                      σ_info (low)
+```
+
+*Reading note.* The upper-left region is T6's "ideas travel further than they live" regime — structural coherence has decayed but informational trace continues to propagate (transcendentals, dead philosophers' ideas, orphaned memes). The lower-right is isolated structure with no trace-propagation (a stream that operates well internally but is not communicatively connected). Full coherence lives in the upper-right; collapsed streams in the lower-left. Health (☀) sits in the upper-right but not at (max, max) — that would imply infinite trace-propagation and unbounded structure, also pathological.
+
 ### Informational coherence as operator
 
 T6.b's operator-claim is the substantive step beyond what earlier framework drafts said. In the stress-test, Clayton's caveat was that informational coherence is not a passive measure — it actively modulates the navigation of other streams. When a trace from S sits in a position of D that S' is navigating, σ_info(S, D) is not merely describing the ambient; it is *pushing* Bias(S') per §6.4's push_informational. High informational coherence means active influence on other streams, even when S itself is not present.
@@ -140,6 +163,34 @@ T5 is not a theory of mental health, institutional health, or process management
 ### The re-promotion claim
 
 The hardest part of T5.d is the claim that re-promotion is possible but not automatic. Recovery from acute demotion happens sometimes, not always; restoration of institutional coherence is possible but requires real work on the specific violated operations. The framework does not prescribe a recovery protocol; it specifies the structural conditions under which recovery is coherent. This is *non-despairing* but *non-triumphalist* — re-promotion is real, not guaranteed, and requires restoration of actual structural capacities.
+
+### Figure 7.2 — Kind-demotion dynamic
+
+```
+  K = Abstractive         ┌────────────────────┐
+  (framework-level        │  Demotion examples │
+   closure)               │  • acute stress:   │
+         │ ▲              │    self-ref → SM   │
+  demote │ │ restore      │  • dementia:       │
+         ▼ │              │    abstr → self-ref│
+  K = Self-referential    │    → SM            │
+  (self-modeling)         │  • institutional   │
+         │ ▲              │    collapse: all   │
+  demote │ │ restore      │    the way down    │
+         ▼ │              └────────────────────┘
+  K = Self-maintaining
+  (homeostatic)           ┌────────────────────┐
+         │ ▲              │ Re-promotion ex.:  │
+  demote │ │ restore      │  • recovery from   │
+         ▼ │              │    illness         │
+  K = Reactive            │  • institutional   │
+  (stimulus-response)     │    reconstitution  │
+                          │  • learning regains│
+                          │    abstraction     │
+                          └────────────────────┘
+```
+
+*Reading note.* Down-arrows mark demotion on closure violation at the current kind; up-arrows mark re-promotion when closure is restored. The dynamic need not be monotonic — streams can cycle through demotion and re-promotion multiple times. Chronic demotion without re-promotion is how pathology becomes durable.
 
 ---
 

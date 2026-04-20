@@ -27,6 +27,69 @@ Without a recipe, every domain author would need to reconstruct the filtering me
 
 *The end-to-end flow of the procedure is summarized in Fig 10.1.*
 
+### Figure 10.1 — The seven-step filtering procedure
+
+```
+              ┌───────────────────┐
+              │ Begin domain filter│
+              └─────────┬─────────┘
+                        │
+  ┌──────────────────────────────────────────────┐
+  │ Step 1 — Identify streams (σ, K, Ω, γ)        │
+  │   Test: does it satisfy A1–A3?                │
+  └─────────────────────┬────────────────────────┘
+                        │
+  ┌──────────────────────────────────────────────┐
+  │ Step 2 — Fix kinds (populate stratification)  │
+  │   Test: kinds fit the domain?                 │
+  └─────────────────────┬────────────────────────┘
+                        │
+  ┌──────────────────────────────────────────────┐
+  │ Step 3 — Specify constituency (draw DAG)      │
+  │   Test: no cycles?                            │
+  └─────────────────────┬────────────────────────┘
+                        │
+  ┌──────────────────────────────────────────────┐
+  │ Step 4 — Project Triple (Form, Content,       │
+  │          Carrier)                             │
+  │   Test: orthogonal-but-constrained?           │
+  └─────────────────────┬────────────────────────┘
+                        │
+  ┌──────────────────────────────────────────────┐
+  │ Step 5 — Locate Bias(S) on Ω_S +              │
+  │          push-operators                       │
+  │   Test: measurable?                           │
+  └─────────────────────┬────────────────────────┘
+                        │
+  ┌──────────────────────────────────────────────┐
+  │ Step 6 — Instantiate Principle                │
+  │          (four conditions in domain terms)    │
+  │   Test: novel predictions or frames?          │
+  └─────────────────────┬────────────────────────┘
+                        │
+  ┌──────────────────────────────────────────────┐
+  │ Step 7 — Specify falsification                │
+  │          (≥3 operationally testable)          │
+  │   Test: actually testable?                    │
+  └─────────────────────┬────────────────────────┘
+                        │
+                        ▼
+              ┌───────────────────┐
+              │  Complete filter  │
+              │ ready for domain  │
+              │       volume      │
+              └───────────────────┘
+
+  Watch for pitfalls (§10.4):
+    1. Claiming without operationalizing
+    2. Over-fitting
+    3. Borrowing without building
+    4. Forgetting the DAG
+    5. Universalizing prematurely
+```
+
+*Reading note.* Each step has a test; failing the test sends the author back to the previous step or flags honest open work. The completeness checklist (§10.2) is the end-audit. Pitfalls (§10.4) hover over the whole procedure.
+
 ### Step 1 — Identify the streams
 
 **CT step.** Specify the set of streams the domain studies. For each stream S, give its tuple (σ, K, Ω, γ):

@@ -84,6 +84,40 @@ Without A2.1 the Triple (§1) loses coverage. The Triple treats any stream — a
 
 The inclusions are strict: each adds structural capacity, and the capacities compose (see Fig 3.1).
 
+### Figure 3.1 — Kind stratification
+
+```
+  Abstractive
+  ┌─────────────────────────────────────────────┐
+  │  generates kind-invariants, frameworks      │
+  │  e.g. mathematician, philosopher, community │
+  │                                             │
+  │  Self-referential                           │
+  │  ┌───────────────────────────────────────┐  │
+  │  │  models itself and its own states     │  │
+  │  │  e.g. human, primate, some AI         │  │
+  │  │                                       │  │
+  │  │  Self-maintaining                     │  │
+  │  │  ┌─────────────────────────────────┐  │  │
+  │  │  │  sustains state against         │  │  │
+  │  │  │  perturbation                   │  │  │
+  │  │  │  e.g. cell, organism, firm      │  │  │
+  │  │  │                                 │  │  │
+  │  │  │  Reactive                       │  │  │
+  │  │  │  ┌───────────────────────────┐  │  │  │
+  │  │  │  │  responds to input        │  │  │  │
+  │  │  │  │  e.g. rock-under-impact,  │  │  │  │
+  │  │  │  │       thermostat, reflex  │  │  │  │
+  │  │  │  └───────────────────────────┘  │  │  │
+  │  │  └─────────────────────────────────┘  │  │
+  │  └───────────────────────────────────────┘  │
+  └─────────────────────────────────────────────┘
+
+  Reactive ⊊ Self-maintaining ⊊ Self-ref ⊊ Abstractive
+```
+
+*Reading note.* Containment is strict: every self-maintaining stream is reactive, every self-referential is self-maintaining, every abstractive is self-referential. Kinds are cumulative, not exclusive. A human flinching from a spider is still an abstractive stream operating momentarily in its reactive sub-layer.
+
 ### Prose translation
 
 Streams come in kinds, graded by what they can do. The simplest kind — reactive — is any vantage that responds to environment. A photon being absorbed is reactive. A rock eroding is reactive. A thermostat is reactive. These are all streams; they all have vantages; each has its own F_2-projection; none of them self-maintain, self-refer, or abstract.
@@ -162,6 +196,29 @@ The adjunction asserts all three of these are wrong. The parts and the whole are
 The adjunction is the densest piece of formalism in the framework's axioms. It does a lot of work. It carries the content of constitutive duality. It also underwrites much of what §5–§8 build. T4 (coherence-forcing measurement) is formulated as a refresh-event of the adjunction — measurement is the moment at which ι and κ synchronize against the other streams' adjunctions, producing the Do-Be-Do-Be-Do rhythm. Cluster III corollaries (coherence-consequences) reference the adjunction's refresh-dynamics. The Coherence Principle's second condition (measurement) is operationalized through the adjunction.
 
 Understanding the adjunction is the central technical payload of §3. Readers unfamiliar with adjoints can take the prose as primary and the formal statement as a promise: the prose content is exactly what the adjunction says, no more, no less.
+
+### Figure 3.2 — The cooperative-constituency adjunction ι ⊣ κ
+
+```
+        ι  (lift: embed part into whole)
+      ─────────────────────────▶
+  S₁ ◀─────────────────────────  S₂
+        κ  (restrict: whole's structure
+            reaches down to part)
+
+  Natural transformations of the adjunction:
+                η
+     id_{S₁} ──────▶ κ ∘ ι (S₁)       (unit)
+
+                ε
+     ι ∘ κ (S₂) ──────▶ id_{S₂}       (counit)
+
+  Triangle identities (defining the adjunction):
+     (ε * ι) ∘ (ι * η)  = id_ι
+     (κ * ε) ∘ (η * κ)  = id_κ
+```
+
+*Reading note.* The unit η measures context-sensitivity: how much a sub-stream changes when viewed as a component of its super-stream. When η = id_{S₁}, there is no context-effect (rare). When η ≠ id, the cooperative-constituency has real content — stream-in-context is not identical to stream-in-isolation. The counit ε is the dual measure on the super-stream side. Together they encode constitutive duality formally.
 
 ### Connection to §1's Carrier axis
 
