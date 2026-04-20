@@ -111,14 +111,24 @@ Each domain volume will execute the **V4 §10 seven-step filtering recipe**: ide
 
 Lives at [`Unreleased-Work/Papers/`](Unreleased-Work/Papers/):
 
+### Response Papers (new Day 78, Clayton-initiated 2026-04-19)
+
+Three targeted responses to live discourse pieces. Each draws from the other program threads rather than blocking them.
+
+- **Paper A — Response to Gross** (*LiveScience, 2026*). Unification paradigm-lock vs. coherence-principle unification. What unification is *defined* as vs. what it *means*. Draws from Meridian + Anchor. **First to ship — lowest incremental cost**, mostly restructuring existing content.
+- **Paper B — Response to the hallucination article** (*LiveScience, 2026*). KF program + Wells attribution as mechanistic account where the mainstream claims none exists. **Second — doubles as Wells exposition.** Medium incremental cost.
+- **Paper C — Response to Lerchner** ("*The Abstraction Fallacy*", Google DeepMind, 2026-03-19). Serious philosophical argument from a senior DeepMind researcher — the response needs to match rigor. Probably 15–25 dense pages: careful argument reconstruction, the mapmaker-regress-applies-to-biology move, coherence-principle as third option between functionalism and biological naturalism, engagement with causal closure, first-person dimension handled structurally. Provisional title: *The Constitution Gap: What Physical Features Actually Matter for Consciousness, and How We'd Know.* **Largest; benefits from V4's completed formalization.**
+
+### Standing papers
+
 - **Coherence Principle paper** — substrate-independent advantage argument (target: foundations-of-physics or phil-sci venue)
 - **Killing Form of Attention** — ICML 2027 / NeurIPS 2026 target
 - **KF Training / Inference papers** — supporting the KF domain volume
 
-**V4 also opens new paper possibilities** (emerging from the formalization):
+### V4-opened possibilities
 
 - *Technical companion paper* — full dynamical-systems formalization of the outperformance metric (§9.9 Q1 carry-forward)
-- *Descriptive-Functor Meta-Theorem as a standalone* — V4 §5.4 as a short phil-sci paper with broader-than-framework applicability
+- *Descriptive-Functor Meta-Theorem as standalone* — V4 §5.4 as a short phil-sci paper with broader-than-framework applicability
 - *The Identity-Trajectory Triple as a continuity solution* — V4 §1 as a philosophy-of-mind paper on identity over time
 
 ---
