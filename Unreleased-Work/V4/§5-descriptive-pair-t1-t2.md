@@ -1,6 +1,6 @@
-# V4 §5 — Theorem Pair I (Descriptive): T1 Mathematical Perspectivism + T2 Estimator-Dependent Duration
+# §5 — Theorem Pair I (Descriptive): T1 Mathematical Perspectivism + T2 Estimator-Dependent Duration
 
-*Draft opened 2026-04-19 evening. Paired-prose on Option B. Target ~4000 words. Opens the theorem tier by pairing T1 (mathematics) and T2 (time) as two instances of a single structural move; proposes the V4 meta-theorem as the explicit statement of that move.*
+*Opens the theorem tier by pairing T1 (mathematics) and T2 (time) as two instances of a single structural move; proposes the Descriptive-Functor Meta-Theorem as the explicit statement of that move.*
 
 ---
 
@@ -96,7 +96,7 @@ Read the other direction: T1 says "mathematics is a perspectival lens with a str
 
 ---
 
-## §5.4 — The Descriptive-Functor Meta-Theorem (V4 addition)
+## §5.4 — The Descriptive-Functor Meta-Theorem
 
 ### Formal statement
 

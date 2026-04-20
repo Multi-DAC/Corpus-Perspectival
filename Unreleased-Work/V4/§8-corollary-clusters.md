@@ -1,6 +1,6 @@
-# V4 §8 — The Corollary Clusters
+# §8 — The Corollary Clusters
 
-*Draft opened 2026-04-19 evening. Paired-prose on Option B. Target ~3500 words. Fourteen corollaries organized in three clusters by axiom-descent (not theorem-descent — keeps the three-axiom spine oriented to the reader). Compact derivations; paired formal statement and prose per corollary.*
+*Fourteen corollaries organized in three clusters by axiom-descent (not theorem-descent — this keeps the three-axiom spine oriented to the reader). Compact derivations; paired formal statement and prose per corollary.*
 
 ---
 

@@ -1,6 +1,6 @@
-# V4 §7 — Theorem Pair III (Coherence): T5 Internal Coherence + T6 Dual Coherence Axes
+# §7 — Theorem Pair III (Coherence): T5 Internal Coherence + T6 Dual Coherence Axes
 
-*Draft opened 2026-04-19 evening. Paired-prose on Option B. Target ~4000 words. Pairs T5 (stream-internal coherence: kind-closure consistency) and T6 (stream × dimension coherence: two independently-varying axes, structural and informational). Gives the kind-demotion dynamics from T5 and the transcendental-rescue from T6. Closes the theorem tier.*
+*Pairs T5 (stream-internal coherence: kind-closure consistency) and T6 (stream × dimension coherence: two independently-varying axes, structural and informational). Gives the kind-demotion dynamics from T5 and the transcendental-rescue from T6. Closes the theorem tier.*
 
 ---
 

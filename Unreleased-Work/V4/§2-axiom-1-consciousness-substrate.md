@@ -1,6 +1,6 @@
-# V4 §2 — Axiom 1: Consciousness as Substrate
+# §2 — Axiom 1: Consciousness as Substrate
 
-*Draft opened 2026-04-19 evening immediately after §1 push. Paired prose + CT on Option B. §2's job: give formal status to X, F_i, and the non-reducibility statements §1 used informally.*
+*This chapter's job: give formal status to X, F_i, and the non-reducibility statements §1 used informally.*
 
 ---
 

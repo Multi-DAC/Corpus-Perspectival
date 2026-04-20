@@ -1,6 +1,6 @@
-# V4 §3 — Axiom 2: Nested Streams and Navigation
+# §3 — Axiom 2: Nested Streams and Navigation
 
-*Draft opened 2026-04-19 evening after §2 push. Paired prose + CT on Option B. §3's job: populate 𝒞_Str, give the kind-hierarchy formal shape, present the cooperative-constituency adjoint (T21 folded in), and identify experience with navigation.*
+*This chapter's job: populate 𝒞_Str, give the kind-hierarchy formal shape, present the cooperative-constituency adjoint, and identify experience with navigation.*
 
 ---
 

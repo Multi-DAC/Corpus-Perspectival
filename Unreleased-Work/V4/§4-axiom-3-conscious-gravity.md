@@ -1,6 +1,6 @@
-# V4 §4 — Axiom 3: Conscious Gravity
+# §4 — Axiom 3: Conscious Gravity
 
-*Draft opened 2026-04-19 evening after §3 push. Paired prose + CT on Option B. §4's job: give streams their dynamics. Present the coalgebra γ_S : S → Bias(S) × S, the continuous DOF-gradient integration (post-2026-04-18 smoothing), the immune-response clause (operator acts only on F_2-internal structure, not on X), adaptivity, and stream-universality across 𝒞_Str.*
+*This chapter's job: give streams their dynamics. Present the coalgebra γ_S : S → Bias(S) × S, the continuous DOF-gradient integration, the immune-response clause (the operator acts only on F_2-internal structure, not on X), adaptivity, and stream-universality across 𝒞_Str.*
 
 ---
 

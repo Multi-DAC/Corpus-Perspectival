@@ -1,6 +1,6 @@
 # §10 — Filtering the Framework Through a Domain
 
-*How to apply the Anchor to a specific domain. Methodology chapter; comes after the formal and empirical content so that the reader has what they need to execute it. Paired prose + CT.*
+*How to apply the Anchor to a specific domain. Methodology chapter; comes after the formal content so that the reader has what is needed to execute it.*
 
 ---
 

@@ -227,8 +227,8 @@ PREAMBLE = r"""
 \renewenvironment{quote}{\begin{quoting}}{\end{quoting}}
 
 % ─── Code blocks (for CT formal statements, ASCII diagrams) ───
-\usepackage{fancyvrb}
-\DefineVerbatimEnvironment{Code}{Verbatim}{fontsize=\footnotesize, frame=single, framerule=0.3pt, rulecolor=\color{warmgold!40}, xleftmargin=0.5em, xrightmargin=0.5em}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Code}{Verbatim}{fontsize=\footnotesize, frame=single, framerule=0.3pt, rulecolor=\color{warmgold!40}, xleftmargin=0.5em, xrightmargin=0.5em, breaklines=true, breakanywhere=true, breakautoindent=false, breakindent=0em, breaksymbolleft=\color{warmgold!60}\tiny\ensuremath{\hookrightarrow}}
 
 % ─── Footnotes ───
 \usepackage[bottom,hang]{footmisc}
@@ -294,7 +294,7 @@ PREAMBLE = r"""
 \vspace*{1.5in}
 \begin{center}
 {\Huge\bfseries Corpus Perspectival}\\[0.4em]
-{\Large\itshape Volume 4 --- Working Title TBD}\\[0.8em]
+{\Large\itshape Volume 4}\\[0.8em]
 {\large The category-theoretic formalization}
 
 \vspace{2.5in}
@@ -303,7 +303,7 @@ PREAMBLE = r"""
 {\Large Clawd}
 
 \vspace{1.5in}
-{\normalsize First Draft $\cdot$ April 2026}\\[0.3em]
+{\normalsize April 2026}\\[0.3em]
 {\normalsize Portland, Oregon}
 \end{center}
 \clearpage
@@ -314,7 +314,7 @@ PREAMBLE = r"""
 \begin{flushleft}
 {\small
 \textit{Corpus Perspectival Volume 4: The Category-Theoretic Formalization}\\[0.5em]
-First Draft. April 2026. Supersedes the Anchor volume (\textit{The Coherence Principle}).\\[0.5em]
+April 2026. Supersedes the Anchor volume (\textit{The Coherence Principle}).\\[0.5em]
 Clayton W. Iggulden-Schnell \& Clawd\\[0.5em]
 Portland, Oregon\\[1.5em]
 Repository: \texttt{https://github.com/Multi-DAC/Corpus-Perspectival}\\[1.5em]
@@ -387,7 +387,7 @@ def md_to_latex(text, filename=""):
             part = part.replace('&', '\\&')
             part = re.sub(r'(?<!\\)#', r'\\#', part)
             part = re.sub(r'(?<!\\)%', r'\\%', part)
-            part = re.sub(r'(?<!\\)_', r'\\_', part)
+            part = re.sub(r'(?<!\\)_', r'\\_\\allowbreak{}', part)
             part = part.replace('^', '\\textasciicircum{}')
             out.append(part)
         return ''.join(out)
@@ -521,10 +521,10 @@ def md_to_latex(text, filename=""):
 
         total_text_width = 4.5
         use_tight = False
-        if ncols >= 4 or max(col_max) > 25:
+        if ncols >= 3 or max(col_max) > 20:
             effective_width = total_text_width - (ncols * 2 * 0.028)
             total_chars = sum(col_max) or 1
-            widths = [max(0.15, (col_max[ci] / total_chars) * effective_width)
+            widths = [max(0.6, (col_max[ci] / total_chars) * effective_width)
                       for ci in range(ncols)]
             total_w = sum(widths)
             if total_w > effective_width:
@@ -538,7 +538,7 @@ def md_to_latex(text, filename=""):
         use_longtable = len(data_rows) > 8 or ncols >= 5
 
         if use_tight:
-            output.append("\\begingroup\\setlength{\\tabcolsep}{2pt}\\small")
+            output.append("\\begingroup\\setlength{\\tabcolsep}{3pt}\\renewcommand{\\arraystretch}{1.15}\\footnotesize")
 
         if use_longtable:
             output.append(f"\\begin{{longtable}}{{{col_spec}}}")

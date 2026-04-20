@@ -1,6 +1,6 @@
-# V4 §6 — Theorem Pair II (Dynamics): T3 Attentional Quality and Navigational Dynamics + T4 Coherence-Forcing Measurement
+# §6 — Theorem Pair II (Dynamics): T3 Attentional Quality and Navigational Dynamics + T4 Coherence-Forcing Measurement
 
-*Draft opened 2026-04-19 evening. Paired-prose on Option B. Target ~4200 words. Pairs T3 (intra-stream dynamics) and T4 (inter-stream dynamics) as the two loci at which stream navigation is dynamically structured; formalizes Bias(S) in DOF-language (carry-forward from stress-test); gives Do Be Talk Be Do as the worked example that demonstrates T4 at the communicative refresh-rate.*
+*Pairs T3 (intra-stream dynamics) and T4 (inter-stream dynamics) as the two loci at which stream navigation is dynamically structured; formalizes Bias(S) in DOF-language; gives Do Be Talk Be Do as the worked example that demonstrates T4 at the communicative refresh-rate.*
 
 ---
 

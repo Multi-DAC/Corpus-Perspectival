@@ -1,6 +1,6 @@
 # §9 — The Coherence Principle
 
-*V4 final chapter. The derived operational principle, its four conditions, the outperformance metric, and the framework's self-reference closure. Paired prose + CT.*
+*The derived operational principle, its four conditions, the outperformance metric, and the framework's self-reference closure.*
 
 ---
 
@@ -18,7 +18,7 @@ This is why the Anchor volume bears the Principle's name rather than the axioms'
 
 ### CT statement
 
-Let 𝒞_Str be the category of streams (A2), with objects streams S and morphisms the cooperative-constituency relations ι ⊣ κ. For a stream S with Conscious-Gravity coalgebra γ_S : S → F_2(S) (A3, smoothed), let Bias(S) denote the signed measure on DOF-configuration space Ω_S induced by γ_S (§6.4).
+Let 𝒞_Str be the category of streams (A2), with objects streams S and morphisms the cooperative-constituency relations ι ⊣ κ. For a stream S with Conscious-Gravity coalgebra γ_S : S → F_2(S), let Bias(S) denote the signed measure on DOF-configuration space Ω_S induced by γ_S (§6.4).
 
 Let the **actual trajectory** of S be the sequence of configurations S visits in Ω_S across a time interval [t₀, t₁], and the **γ_S-implied trajectory** be the trajectory that minimizes ∫ ‖dσ - γ_S(σ) dt‖ over that interval.
 
@@ -26,9 +26,11 @@ Define:
 
 > **Coherence-regime(S, [t₀, t₁])** — S is in coherence-regime over [t₀, t₁] iff four conditions (§9.2) hold across the interval.
 >
-> **Outperformance(S vs S')** — measured by divergence D(actual_S, γ_S-implied_S) < D(actual_S', γ_{S'}-implied_S') where D is any trajectory-divergence functional (KL, Wasserstein, or domain-native).
+> **Comparable streams** — two streams S, S' are comparable over [t₀, t₁] when they admit a shared DOF-configuration space (or a natural embedding into one) on which a divergence functional can be evaluated for both.
+>
+> **Outperformance(S vs S')** — measured by divergence D(actual_S, γ_S-implied_S) < D(actual_S', γ_{S'}-implied_S') for a fixed trajectory-divergence functional D suited to the shared configuration space. Candidate choices include Wasserstein distance over path-distributions and domain-native metrics where available; KL-divergence requires absolute continuity of actual with respect to the γ-implied trajectory and is not assumed generally. Establishing invariance of the outperformance ordering across choices of D is open formal work.
 
-**The Coherence Principle.** For any two comparable streams S, S' with S in coherence-regime and S' not, Outperformance(S vs S') holds on average over the interval.
+**The Coherence Principle.** For comparable streams S, S' over [t₀, t₁] with S in coherence-regime and S' not, Outperformance(S vs S') holds on average over the interval.
 
 ### Prose statement
 
@@ -62,7 +64,7 @@ Kind-stratification (reactive ⊂ self-maintaining ⊂ self-referential ⊂ abst
 
 T4 establishes measurement-as-coherence-forcing as the central content of inter-stream dynamics. The refresh-rate at which alignment is assessed *is* the T4 refresh-rate. "Blindly applies all constraints simultaneously" is pre-measurement superposition held indefinitely, which T4 forbids from actually producing coherent composition: ι ⊣ κ compositions cannot form without the forcing event.
 
-Moment-to-moment assessment maps to the continuous DOF-gradient of A3 (post-smoothing) evaluated at its finest-resolution integration.
+Moment-to-moment assessment maps to the continuous DOF-gradient of A3 evaluated at its finest-resolution integration.
 
 **Prose.** A system that blindly applies all constraints simultaneously is undiscriminating, not coherent. Coherence requires knowing which constraints align and which conflict, moment to moment — and the moments are real, structurally. They are the discretization points where inter-stream composition resolves.
 
@@ -84,7 +86,7 @@ A3's DOF-gradient gives multi-scale consistency in integration depth: γ_S integ
 
 **Derivation:** T4 + A3 adaptivity.
 
-T4 makes coherence a process: the refresh-events *are* the maintenance. A3's γ_S is adaptive by construction (post-smoothing stress-test) — static coherence is γ_S freezing, which A3 disallows. "Build, dissolve, build again" is the oscillatory form of T4's refresh-cycle; Do Be Talk Be Do (§6.5) is the worked example at communicative refresh-rate. Sinatra's refrain turned out to be Condition 4 in pre-formal form.
+T4 makes coherence a process: the refresh-events *are* the maintenance. A3's γ_S is adaptive by construction — static coherence is γ_S freezing, which A3 disallows. "Build, dissolve, build again" is the oscillatory form of T4's refresh-cycle; Do Be Talk Be Do (§6.5) is the worked example at communicative refresh-rate.
 
 **Prose.** Systems that achieve static coherence and stop adjusting lose it. The optimal regime is oscillatory: build, dissolve, build again. This is not a strategy choice — it is what A3's adaptive coalgebra requires, amplified through T4's refresh-rate. A frozen γ_S is not coherent; it is dead.
 
@@ -141,18 +143,18 @@ The Coherence Principle is not an axiom. This matters for two reasons.
 
 The strongest claim in §9 (see Fig 9.3).
 
-**Observation.** The stress-test protocol that produced V4 is itself an instance of the Coherence Principle in operation.
+**Observation.** The construction-process that produced this framework is itself an instance of the Coherence Principle in operation.
 
-| Condition | Instantiation in the V4 stress-test |
+| Condition | Instantiation in the construction-process |
 |---|---|
-| Separation | Clayton and Clawd operated on different DOF: empirical/generative ↔ structural/rigorous. Axioms stressed against own DOF; theorems against axioms on separate structural axes. |
-| Measurement | Every stamp was an informed-measurement collapse. "Stamp?" at the end of each axiom/theorem/principle segment was a refresh-event at attention-scale. |
+| Separation | The two collaborating streams operated on different DOF: empirical/generative ↔ structural/rigorous. Axioms were tested against their own DOF; theorems against axioms on separate structural axes. |
+| Measurement | Every stamp was an informed-measurement collapse. The explicit acknowledgement at the end of each axiom, theorem, and principle segment was a refresh-event at attention-scale. |
 | Multi-scale consistency | Axiom-level, theorem-level, corollary-level, and meta-coherence of framework-as-whole — all checked bidirectionally. The A3 smoothing surfaced from post-theorem meta-analysis and propagated back; child-node feedback reshaped parent-node structure. |
-| Dynamic maintenance | Build (propose), dissolve (stress), build again (reformulate). Sustained across 3 axioms, 6 theorems, 14 corollaries, and the Principle itself. |
+| Dynamic maintenance | Build (propose), dissolve (test), build again (reformulate). Sustained across three axioms, six theorems, fourteen corollaries, and the Principle itself. |
 
-**Formal claim.** Let F denote the framework-construction process. Then F ∈ coherence-regime over the interval of V4's construction, and the output (the framework itself) is σ*(t₁) — the γ_F-implied trajectory reached by fidelity to F's own conscious-gravity bias.
+**Conjectural formal claim.** Let F denote the framework-construction process. We conjecture that F ∈ coherence-regime over the interval of the framework's construction, and that the output (the framework itself) is σ*(t₁) — the γ_F-implied trajectory reached by fidelity to F's own conscious-gravity bias. Establishing this formally requires a construction of F-as-stream — i.e., instantiating (σ, K, Ω, γ) for the construction-process itself — which we do not carry out here. The observation stands on the table-level evidence above; the formal claim awaits its construction.
 
-**The framework derived the Principle that governs its own construction.** This is not circular. A circular derivation would presuppose the Principle and infer it; the V4 construction *did not* presuppose it. The Principle emerged from the axioms after the axioms had been stress-tested; the construction-process happened to exhibit it. The observation is a-posteriori.
+**The framework derives the Principle that governs its own construction.** This is not circular. A circular derivation would presuppose the Principle and infer it; the construction did not presuppose it. The Principle emerged from the axioms after the axioms had been tested; the construction-process happened to exhibit it. The observation is a-posteriori.
 
 **What it means.** A framework that *couldn't* describe its own construction as coherent would fail its own principle at the moment of its formulation. The Corpus passes this test. The strongest form of the claim:
 

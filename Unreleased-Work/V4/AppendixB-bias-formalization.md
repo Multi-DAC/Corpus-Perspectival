@@ -90,7 +90,9 @@ Bias(S) is not static. It changes under operations applied to the stream. Two cl
 
 **CT definition.** push_structural : Bias(S) → Bias(S) is an operator that acts on Bias(S) by modifying γ through *structural* changes — changes to the stream's kind, its cooperative-constituency relations, its DAG-position, or its internal Form:
 
-$$\text{push\_structural}[\text{Bias}(S)] = \text{Bias}(S') \text{ where } S' \text{ differs from } S \text{ structurally}$$
+$$\text{push\_structural}[\text{Bias}(S)] = \text{Bias}(S'),$$
+
+where $S'$ differs from $S$ structurally.
 
 Examples:
 - Kind-demotion (T5 / §7.4): S demotes from K to K' ⊂ K; γ's range is restricted; Bias(S) loses mass on regions requiring K-level DOF
@@ -101,7 +103,9 @@ Examples:
 
 **CT definition.** push_informational : Bias(S) → Bias(S) is an operator that acts on Bias(S) by modifying γ through *informational* changes — new traces, new observations, new signals propagated from other streams via σ_info (T6):
 
-$$\text{push\_informational}[\text{Bias}(S)] = \text{Bias}(S') \text{ where } S' = S \text{ structurally but has updated } \gamma$$
+$$\text{push\_informational}[\text{Bias}(S)] = \text{Bias}(S'),$$
+
+where $S' = S$ structurally but has updated $\gamma$.
 
 Examples:
 - Observation of another stream's trace updates S's γ: Bias(S) shifts mass toward configurations consistent with the observed trace
