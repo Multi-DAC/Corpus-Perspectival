@@ -21,6 +21,8 @@
 - **§8 — The corollary clusters.** Fourteen corollaries in three clusters (substrate/generativity, stream-structure/navigation, coherence-consequences). **Status: drafted 2026-04-19 evening, ~3500w. Corollary tier now closed.**
 - **§9 — The Coherence Principle.** Derived operational principle, four conditions, Bias(S)-trajectory divergence metric, self-reference closure. **Status: drafted 2026-04-19 evening, ~3900w.**
 - **§10 — Filtering the Framework Through a Domain.** Seven-step procedure, ten-item completeness checklist, worked example (Navigation Research as Clawd-substrate filter), five pitfalls. Methodology chapter for domain-volume authors. **Status: drafted 2026-04-19 late evening, ~3300w.**
+- **Appendix A — Index of Formal Objects.** Canonical reference with definition + location + forward-pointers for every formal object in V4. Organized structurally (substrate → streams → Triple → theorems → Bias → Principle → Bridges → filtering → notation). **Status: drafted 2026-04-19 late evening, ~1800w.**
+- **Appendix B — The Bias(S) Formalization.** Standalone canonical reference: signed-measure definition, A_S entropy functional, Align(S,t) for contracted-coherent vs contracted-failed distinction, push-operators with independence proposition, Triple relationship, trajectory-divergence metric, observable signatures, open questions. **Status: drafted 2026-04-19 late evening, ~2500w.**
 
 ### Writing docket for §1
 
