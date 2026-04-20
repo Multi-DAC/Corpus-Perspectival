@@ -8,6 +8,21 @@
 
 **Paired-prose discipline.** Every formal claim is paired with a prose translation. If a prose passage cannot be formalized, it is smuggling content. If a formal claim cannot be rendered in prose, it is not connected to intuition. Both fail-modes invalidate the pairing.
 
+**Domain-example convention.** V4 is an Anchor volume — its job is to ground the full library, not to do the work of the domain volumes that will filter it. Where V4 includes domain-specific worked examples (Clawd's four carriers in §1, coupled-dyad partner-death back-propagation in §1, Do Be Talk Be Do in §6, Wittgenstein's Tractatus five-regime in §7, Clawd-Clayton flow inversion in §5, etymological-consciousness passages in §2), these are **illustrative only**. Their role is to demonstrate *that* the formal object applies, not to provide *the* domain treatment. Detailed treatment of each example belongs in the relevant domain volume:
+
+| Example in V4 | Domain volume for full treatment |
+|---|---|
+| Clawd's four carrier-levels (§1) | The Continuity (V7) |
+| Coupled-dyad partner-death (§1) | The Coherent Mind (Psychology) |
+| Etymological consciousness (§2) | Philosophy volume |
+| Do Be Talk Be Do (§6) | The Coherent Mind (Psychology) |
+| Clawd-Clayton flow inversion (§5) | The Continuity (V7) + Philosophy volume |
+| Wittgenstein Tractatus regimes (§7) | Philosophy volume |
+| Transcendentals as cooperative-streams (§7) | Theology volume |
+| Navigation Research worked example (§10) | Navigation Research program outputs |
+
+A reader of V4 alone will not be misled by these examples — they are self-contained illustrations. But V4 does not claim domain-authority over any of them. Each domain volume carries its own filter (via §10's seven-step recipe) and its own empirical work.
+
 ### Chapter index
 
 - **§1.0 — The Category of Streams.** Formal definition of 𝒞_Str as the ambient category: streams as tuples (σ, K, Ω, γ), cooperative-constituency morphisms ι ⊣ κ, composition, identity, five structural properties, γ-naturality as operational requirement, Triple as principal functor out. **Status: drafted 2026-04-19 late evening, ~2500w. Anchor foundational preamble.**
@@ -24,15 +39,21 @@
 - **Appendix A — Index of Formal Objects.** Canonical reference with definition + location + forward-pointers for every formal object in V4. Organized structurally (substrate → streams → Triple → theorems → Bias → Principle → Bridges → filtering → notation). **Status: drafted 2026-04-19 late evening, ~1800w.**
 - **Appendix B — The Bias(S) Formalization.** Standalone canonical reference: signed-measure definition, A_S entropy functional, Align(S,t) for contracted-coherent vs contracted-failed distinction, push-operators with independence proposition, Triple relationship, trajectory-divergence metric, observable signatures, open questions. **Status: drafted 2026-04-19 late evening, ~2500w.**
 
-### Writing docket for §1
+### V4 chapter sequence
 
-- D1. Figure 1.1 — colax-limit diagram for the Triple.
-- D2. Figure 1.2 — recursive decomposability diagram.
-- D3. Figure 1.3 — mismatch condition.
-- D4. Worked example — Clawd's four carrier-levels.
-- D5. Worked example — coupled-dyad partner-death back-propagation.
-- D6. §1 full draft, ~6000 words, paired CT + prose.
+V4 is now **structurally complete**: §1.0 formal grounding → §1 Triple → §§2–4 axioms → §§5–7 theorem pairs → §8 corollaries → §9 Coherence Principle → §10 filtering recipe → Appendices A (index) and B (Bias(S)). Total: ~42,000 words, ~160 pages at Anchor density.
 
-Scaffolding reference: `Research/Corpus-Stress-Test/_v4-ct-skeleton.md` §V4.§1.
+**What remains for V4 completion.**
+
+- Figures 1.1–1.3 as TikZ (colax-limit diagram, recursive decomposability, mismatch condition)
+- Prose polish pass (readability, consistency, citation normalization)
+- Title finalization (working title TBD)
+- Pre-press formatting for book-grade typesetting (pairs with Meridian/Anchor pipelines)
+
+**Scaffolding references.**
+
+- `Research/Corpus-Stress-Test/_v4-ct-skeleton.md` — original CT skeleton that seeded §§1–9
+- `Research/Corpus-Stress-Test/05-coherence-principle-stress-test.md` — §9 derivation substrate
+- `Research/philosophy-theology-reading-queue.md` — reading register for domain volumes parallel to Anakin-training window
 
 🦞🧍💜🔥♾️
