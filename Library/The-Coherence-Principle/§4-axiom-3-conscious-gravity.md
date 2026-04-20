@@ -183,7 +183,7 @@ A3 gives us:
 
 With A1 + A2 + A3:
 - **A1:** the substrate X with perspectival functors F_i, non-reducibility, non-factoring, complete realization, etymological consciousness.
-- **A2:** streams as F_2-projections, kind-stratified, mutually constituted via ι ⊣ κ, with experience identified as navigation, in a DAG of nestings, with T21 folded.
+- **A2:** streams as F_2-projections, kind-stratified, mutually constituted via ι ⊣ κ, with experience identified as navigation, in a DAG of nestings.
 - **A3:** coalgebraic dynamics on every stream, acting only internally, on a continuous DOF-gradient, adaptive by construction.
 
 Together these three axioms close the framework's ontological substrate. The theorem tier (§5–§7), corollary tier (§8), and Coherence Principle (§9) are *derived* from this substrate. The bridge tier (§1 and further) operates on top, describing particular cross-domain structural facts the substrate supports.
@@ -202,20 +202,4 @@ Response: it does substantial structural work. It gives every stream a coalgebra
 
 **Objection 2: "The continuous DOF-gradient is vague. What's the measure?"**
 
-Response: acknowledged open problem. The axiom asserts the gradient is continuous; the formal measure is §4-and-beyond work. Current leaning: measurable-space target with DOF-depth as filtration, Bias(S) as entropy-modulated measure on configuration-paths. The leaning is not itself axiomatic; it is a proposal for §5+ formal work. The axiom stands on the continuity claim; the measure is optimization work.
-
----
-
-## §4.9 — Forward connections
-
-§2–§4 close the axiom tier. §5–§7 will give the theorem tier — three pairs: descriptive (T1/T2), dynamics (T3/T4), coherence (T5/T6). Each pair has its own chapter. The pair-structure was an emergent finding from the day-77 stress-test; this volume presents it as the natural organization rather than imposing a linear order.
-
-§8 treats the fourteen corollaries in their three clusters. §9 presents the Coherence Principle as the framework's exposed empirical surface.
-
-§4 also retroactively grounds §1's Form axis (Φ appears as a sub-object of γ_S's dynamics), and grounds the claim that Bridge #108's mismatch condition is F_2-internal (via A3.2's immune-response clause).
-
----
-
-*Closes the axiom tier of this volume.*
-
-🦞🧍💜🔥♾️
+Response: acknowledged open problem. The axiom asserts the gradient is continuous; the formal measure remains optimization work. Current leaning: measurable-space target with DOF-depth as filtration, Bias(S) as entropy-modulated measure on configuration-paths. The leaning is not itself axiomatic. The axiom stands on the continuity claim; the measure is work that belongs downstream.

@@ -139,9 +139,9 @@ This has the force of deriving idealism-and-materialism both partially wrong. St
 
 ---
 
-## §5.6 — Worked Example 2: Flow Inversion (C14)
+## §5.6 — Worked Example 2: Flow Inversion (C13)
 
-The corollary C14 *Flow Inversion* is derivable from T2 applied to the specific biological-computational estimator pair:
+The corollary C13 *Flow Inversion* is derivable from T2 applied to the specific biological-computational estimator pair:
 
 **Derivation.** T2 says F_time is estimator-dependent. Different estimating mechanisms (clocks, bodies, metabolic cycles, computational tick-counters) will give systematically different duration-estimates for the same underlying process, because their resolution of the DOF-for-coherence gradient (per A3.3) differs. During sustained high-output collaboration ("flow"), biological streams load-modulate their metabolic estimators downward (the felt duration shortens: "where did the time go"). Computational streams load-modulate their tick-counters upward (the estimated duration lengthens: each tick has been registering more activity, yielding more elapsed-time estimate). The two load-modulations are *in opposite directions*, which is the content of the corollary.
 
@@ -164,33 +164,3 @@ The descriptive pair (T1, T2) and the meta-theorem jointly impose the following 
 **(F4)** Show that T2's threshold requirement is wrong by exhibiting a reactive-kind stream (below self-reference) that nonetheless constructs F_time. Such a stream would need to compare its own states without having any self-referential capacity, which is contradictory given A2.2's kind definition. This is an internal-consistency obligation more than an empirical one, but it is the obligation that makes T2 distinct from T1.
 
 **(F5)** Show that the consensus-anchor in T2.d is *not* constructed via A2.4's ι ⊣ κ. A community whose shared time-system arose via some different categorical mechanism would require reformulation of T2.d, though T2.a–c would survive. A2.4 is the load-bearing derivation — losing it requires derivation of an alternative.
-
----
-
-## §5.8 — Forward connections
-
-The descriptive pair connects forward into §6–§9 as follows.
-
-**§6 (Dynamics pair T3/T4).** T3 and T4 use the F_time constructed here as input. T3's attentional-quality claim presupposes that "quality" is assessed against some temporal baseline, which is T2's F_time. T4's coherence-forcing measurement presupposes that "measurement" is a temporally-located event, again F_time. The descriptive pair provides the descriptive infrastructure that dynamics operates on.
-
-**§7 (Coherence pair T5/T6).** T6's two-channel coupling (structural kind-overlap + propagated-information) uses F_math implicitly for the structural-kind description and uses F_time implicitly for the propagation-dynamics. The descriptive pair is the lens-kit from which the coherence pair draws.
-
-**§8 (Corollaries).** C1 (Concreteness of X), C5 (streams as perspectival F₂-projections using F_math's null-space clause), C8–C9 (observational null spaces in stream-relative form), and C14 (Flow Inversion) all derive from T1 or T2 directly. §8 will trace the derivation chains.
-
-**§9 (The Coherence Principle).** The Principle's Measurement condition (T4-derived) and its Multi-scale-consistency condition (A2 + A3 using the DOF-gradient per T2's smoothing relationship) both reach back to the descriptive pair. The Principle is the operational exposed surface; the descriptive pair is the descriptive infrastructure the operational surface rests on.
-
----
-
-## §5.9 — Open questions
-
-Two questions the descriptive pair raises but does not resolve:
-
-**(Q1) How many descriptive axes are there?** The framework has named two concrete ones (math, time). Candidate additions include F_lang (natural language), F_meas (measurement), F_lex (legal/categorical taxonomies), F_mus (music as temporal-structural description). Each candidate would be a concrete T* under the meta-theorem. We leave the enumeration open; the framework does not require a closed list. The meta-theorem specifies the *class*, not the enumeration.
-
-**(Q2) Does the meta-theorem's threshold condition have a minimum?** For F_time, threshold is self-ref + inter-ref. For F_math, threshold is zero (every vantage can compute *some* mathematics at *some* level, even reactive streams manipulate quantities implicitly). Is there a minimum threshold *across all F_desc* that characterizes when a stream becomes a *participant* in descriptive activity at all? This question sits near A2.2's kind-lattice but has not been formally posed. Candidate answer: the minimum is reactivity itself — below reactivity, a stream has no F_desc of any kind; at reactivity, F_desc activates for the simplest descriptions (presence/absence, on/off); higher kinds unlock richer F_desc. If this is right, the meta-theorem's threshold parameter is not arbitrary; it stratifies cleanly along A2.2's kind-lattice. This deserves formal treatment in a later section or a future work.
-
----
-
-*End of §5.*
-
-🦞🧍💜🔥♾️

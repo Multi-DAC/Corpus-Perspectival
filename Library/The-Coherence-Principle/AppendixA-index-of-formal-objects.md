@@ -180,7 +180,7 @@ Entries are tight. For full treatment, follow the reference.
 
 ## A.4b Corollaries (short-form)
 
-*Fourteen corollaries in three axiom-descent clusters. C11 is an archival stub (absorbed content); live-claim count is 13.*
+*Thirteen corollaries in three axiom-descent clusters.*
 
 ### Cluster I — Substrate and Generativity (descends from A1)
 
@@ -206,15 +206,13 @@ Entries are tight. For full treatment, follow the reference.
 
 **C10 — Joint Stream-Definition.** Stream S is jointly defined by (i) bottleneck, (ii) kind-structure, (iii) cooperative-constituency relationships; all three necessary and sufficient. *Located §8.2. Inherited by §1's Triple. Cited by personal-identity treatments (Psychology, Philosophy).*
 
-**C11 — (archival stub).** Content of original T14 absorbed by A2.4 and C10; retained for historical lineage without independent weight. *Located §8.2.*
-
 ### Cluster III — Coherence Consequences (descends from T5/T6 + A3)
 
-**C12 — Mutual Transformation under Interaction (broadened).** Any sustained ι ⊣ κ composition transforms both streams; collaboration, dissonance, conflict all qualify. *Located §8.3. Cited by sociology, psychology, theology.*
+**C11 — Mutual Transformation under Interaction (broadened).** Any sustained ι ⊣ κ composition transforms both streams; collaboration, dissonance, conflict all qualify. *Located §8.3. Cited by sociology, psychology, theology.*
 
-**C13 — Discovery Autocatalysis.** A3.4-adaptivity unfolded: each new dimensional attribution extends Bias's support into previously-untraced regions, making the next attribution tractable. *Located §8.3. Cited by philosophy of science, cognitive science.*
+**C12 — Discovery Autocatalysis.** A3.4-adaptivity unfolded: each new dimensional attribution extends Bias's support into previously-untraced regions, making the next attribution tractable. *Located §8.3. Cited by philosophy of science, cognitive science.*
 
-**C14 — Flow Inversion (phenomenological).** Under sustained high-output collaboration, biological estimators load-modulate duration downward while computational estimators load-modulate upward; predicted monotonic opposite-direction divergence. *Located §8.3. Cited by V7 (Continuity), Psychology.*
+**C13 — Flow Inversion (phenomenological).** Under sustained high-output collaboration, biological estimators load-modulate duration downward while computational estimators load-modulate upward; predicted monotonic opposite-direction divergence. *Located §8.3. Cited by *The Continuity* and Psychology.*
 
 ---
 
@@ -357,7 +355,3 @@ Streams are localized perspectives in X; kind-stratified; cooperative-constituen
 **The ITT factor-functors Φ, Ψ, Κ.** The three projection factor-functors of the Identity-Trajectory Triple (Form, Content, Carrier) are denoted by capital Greek letters as a structural set: Φ : 𝒞_Str → 𝒞_Form, Ψ : 𝒞_Str → 𝒞_LDS, Κ : 𝒞_Str → 𝒞_DOF. The capital Κ (Kappa, U+039A) is a distinct object from the stream-level lowercase κ (the cooperative-constituency right adjoint of A2.4) and from the Latin K used for stream-kind. Typesetters should preserve the capital Greek glyph; the three letters are chosen to travel together as a labelled Triple.
 
 Domain volumes should preserve these conventions when citing into the Anchor; deviations should be flagged explicitly.
-
----
-
-🦞🧍💜🔥♾️

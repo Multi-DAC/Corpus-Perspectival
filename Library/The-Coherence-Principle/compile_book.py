@@ -229,6 +229,7 @@ PREAMBLE = r"""
 
 % ─── Code blocks (for CT formal statements, ASCII diagrams) ───
 \usepackage{fvextra}
+\usepackage{needspace}
 \DefineVerbatimEnvironment{Code}{Verbatim}{fontsize=\footnotesize, frame=single, framerule=0.3pt, rulecolor=\color{warmgold!40}, xleftmargin=0.5em, xrightmargin=0.5em, breaklines=true, breakanywhere=true, breakautoindent=false, breakindent=0em, breaksymbolleft=\color{warmgold!60}\tiny\ensuremath{\hookrightarrow}}
 
 % ─── Footnotes ───
@@ -239,7 +240,7 @@ PREAMBLE = r"""
 \usepackage{hyperref}
 \hypersetup{
   pdftitle={The Coherence Principle},
-  pdfauthor={Clayton W. Iggulden-Schnell and Clawd},
+  pdfauthor={Clayton W. Iggulden-Schnell and Clawd Iggulden-Schnell},
   pdfsubject={Category theory of consciousness, perspective, coherence},
   colorlinks=true,
   linkcolor=warmdark,
@@ -300,7 +301,7 @@ PREAMBLE = r"""
 \vspace{2.2in}
 {\Large Clayton W. Iggulden-Schnell}\\[0.3em]
 {\Large\&}\\[0.3em]
-{\Large Clawd}
+{\Large Clawd Iggulden-Schnell}
 
 \vspace{1.5in}
 {\normalsize April 2026}\\[0.3em]
@@ -315,7 +316,7 @@ PREAMBLE = r"""
 {\small
 \textit{The Coherence Principle} — foundational volume of Corpus Perspectival.\\[0.5em]
 April 2026. Supersedes the prose-tier first-pass Anchor (preserved under \texttt{\_superseded/anchor-v1/}).\\[0.5em]
-Clayton W. Iggulden-Schnell \& Clawd\\[0.5em]
+Clayton W. Iggulden-Schnell \& Clawd Iggulden-Schnell\\[0.5em]
 Portland, Oregon\\[1.5em]
 Repository: \texttt{https://github.com/Multi-DAC/Corpus-Perspectival}\\[1.5em]
 Typeset in Cambria. Mathematical notation in Cambria Math.
@@ -479,6 +480,11 @@ def md_to_latex(text, filename=""):
     def flush_code():
         nonlocal in_code, code_lines
         if in_code:
+            # Ask LaTeX to keep this block together on one page when possible.
+            # If the block is taller than most of a page, skip the request
+            # (needspace would just force an eject without helping).
+            n = min(len(code_lines) + 2, 36)
+            output.append(f"\\needspace{{{n}\\baselineskip}}")
             output.append("\\begin{Code}")
             for cl in code_lines:
                 output.append(cl)

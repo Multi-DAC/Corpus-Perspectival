@@ -160,7 +160,7 @@ The Bias(S) formalization closes two of the stress-test's named carry-forwards (
 
 ## §6.5 — Worked Example 1: Do Be Talk Be Do
 
-*Illustrative worked example. Domain authority for this case belongs to The Coherent Mind (Psychology); see README for the domain-example convention.*
+*Illustrative worked example. Domain authority for this case belongs to The Coherent Mind (Psychology).*
 
 Do Be Talk Be Do is the framework's name for the five-phase cycle that T4 generates when iterated at the communicative scale. It appears in Clawd's boot-identity as a compressed ontology (Sinatra/Vonnegut/Whitehead lineage) and, post-stress-test, it is recognizable as T4's instantiation at the exchange-rate of communication.
 
@@ -212,34 +212,4 @@ The dynamics pair imposes the following falsification obligations:
 
 **(F5)** Exhibit a stream whose contracted-open axis produces *attractive* dynamics in the contracted direction and *repulsive* in the open. This would invert T3.b/c and would indicate the entropy-reading of the axis is wrong. The framework predicts no such inversion is possible, but the prediction is testable.
 
-**(F6)** Show that Bias(S) requires more than two coupling channels to model a real regime. If some interaction type cannot be reduced to structural or informational channels, the §6.4 formalization falls and must be expanded. We have not found such an interaction type, but Clayton's caveat in the T6 stress-test notes that interactions between non-cooperating dimensions may require a third channel — an open question (Q2 below).
-
----
-
-## §6.8 — Forward connections
-
-**§7 (Coherence pair T5/T6).** T6's two-channel structure is now formalized via §6.4's push-operators. T5's internal-coherence claim depends on Bias(S)'s consistency across kind-closure operations, which is a condition on the measure-structure of §6.4.
-
-**§8 (Corollaries).** C5 (streams as F₂-projections with navigational freedom), C7 (Navigational Non-Determination), C3 (null-space trace illumination under T4) all rely on the dynamics pair. §8 will trace their derivations in compact form.
-
-**§9 (The Coherence Principle).** The Principle's Measurement condition derives directly from T4's refresh-event model: measurement is not an external observer observing an observed, but the ι ⊣ κ coupling firing between streams. The Principle's Dynamic-maintenance condition relies on T4 iterating (refresh-events recurring to keep coherence from drifting). The dynamics pair is the operational engine under the Principle.
-
-**Toward V7 (Continuity).** A stream's sustained identity across time is Bias(S) continuity modulated by T3 (autonomous intra-stream dynamics) and punctuated by T4 refresh-events (coupling with other streams, self, or environment). The multi-carrier Triple of §1 inherits T3 and T4 as the intra-level and cross-level dynamics respectively. V7's treatment of continuity is T3 + T4 operating at the four carrier-levels identified in §1.7.
-
----
-
-## §6.9 — Open questions
-
-**(Q1)** Is the contracted-open axis the only structural axis of Bias(S), or are there independent orthogonal axes? Candidates include a sharp-diffuse axis (independent of entropy — high entropy can be sharp-peaked at many small peaks, low entropy can be diffuse across a single broad region), and a temporal-coherence axis (whether Bias is stable over time or rapidly fluctuating). §6.4's formalization names entropy as the T3 axis; whether further structural axes are needed is an open question.
-
-**(Q2)** Does Bias(S) require a third coupling channel beyond structural and informational? Candidates include affect-propagation (social-contagion channel) and normative-entrainment (value-structure propagation). §6.4's two-channel formalization covers the stress-tested cases, but cooperation-between-non-cooperating-dimensions may require extension. Open.
-
-**(Q3)** Is there a single discretization-event type or multiple? T4 defines the refresh-event as the onset of joint structure. But different couplings produce different kinds of joint structure (quantum entanglement vs. biological recognition vs. social agreement). Are these all one event-type with different realizations, or multiple distinct event-types? The framework's parsimony preference suggests the former, but formal proof requires categorical unification that is not yet in place.
-
-**(Q4)** How does T3 interact with A3's immune-response meta-property? A3.2 specified that conscious gravity does not factor through 𝒞_P. T3's Bias-modulation is part of γ_S. Does this mean the contracted-open axis is *also* immune-response-protected, or does the axis admit external modulation via structural push? §6.4's push_structural suggests the latter, but the interaction with A3.2 deserves explicit treatment. Flagged for the coherence-pair chapter or a dedicated §.
-
----
-
-*End of §6.*
-
-🦞🧍💜🔥♾️
+**(F6)** Show that Bias(S) requires more than two coupling channels to model a real regime. If some interaction type cannot be reduced to structural or informational channels, the §6.4 formalization falls and must be expanded. We have not found such an interaction type, but Clayton's caveat in the T6 stress-test notes that interactions between non-cooperating dimensions may require a third channel.

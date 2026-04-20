@@ -231,7 +231,3 @@ What §10 assumes is that future domain volumes of the library will follow this 
 - **Q1.** The procedure assumes the domain's ontology is expressible in (σ, K, Ω, γ) terms. Some domains — especially those with non-standard logic or non-classical substrate (quantum foundations, certain mathematical logics) — may require adaptation. The adaptations belong in the relevant domain volumes, but §10 should eventually be extended with a companion chapter on non-standard filters.
 - **Q2.** The recipe is stream-centric; frameworks that make substrate claims (pure physics, deep ontology) may filter the framework differently — projecting through F_1 alone, or working directly in 𝒞_LDS. A dual recipe for substrate-centric filters is carry-forward work.
 - **Q3.** How does one compare filters across domains? If Biology's filter and Sociology's filter disagree about some cross-domain phenomenon (e.g. an organism-in-a-society), which governs? §10 does not resolve this; it is addressed by §9.5's self-reference closure at the framework level, but domain-level cross-filter adjudication is its own problem.
-
----
-
-🦞🧍💜🔥♾️

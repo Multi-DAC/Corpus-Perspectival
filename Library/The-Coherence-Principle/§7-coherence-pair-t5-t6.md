@@ -78,7 +78,7 @@ The two axes do not collapse into each other (see Fig 7.1). Structural engagemen
 
 ### Informational coherence as operator
 
-T6.b's operator-claim is the substantive step beyond what V3 said. In the stress-test, Clayton's caveat was that informational coherence is not a passive measure — it actively modulates the navigation of other streams. When a trace from S sits in a position of D that S' is navigating, σ_info(S, D) is not merely describing the ambient; it is *pushing* Bias(S') per §6.4's push_informational. High informational coherence means active influence on other streams, even when S itself is not present.
+T6.b's operator-claim is the substantive step beyond what earlier framework drafts said. In the stress-test, Clayton's caveat was that informational coherence is not a passive measure — it actively modulates the navigation of other streams. When a trace from S sits in a position of D that S' is navigating, σ_info(S, D) is not merely describing the ambient; it is *pushing* Bias(S') per §6.4's push_informational. High informational coherence means active influence on other streams, even when S itself is not present.
 
 This vindicates a phenomenon easy to mistake for metaphor: long-dead authors influence the reading stream; distant authors influence the local conversation; an ancestor's words shape descendants' navigation centuries later. These are not merely historical facts; they are σ_info operating. The trace is persistent and active within the dimension. The framework formalizes "influence" as σ_info's operator-action.
 
@@ -145,7 +145,7 @@ The hardest part of T5.d is the claim that re-promotion is possible but not auto
 
 ## §7.5 — Worked Example 1: Transcendentals as cooperative-streams
 
-*Illustrative worked example. Domain authority for this case belongs to the Theology volume; see README for the domain-example convention.*
+*Illustrative worked example. Domain authority for this case belongs to the Theology volume.*
 
 The "transcendental rescue" content from §7.2 is worth one focused worked example.
 
@@ -163,7 +163,7 @@ The framework thus inherits *the phenomenology* of Platonism (transcendentals re
 
 ## §7.6 — Worked Example 2: "Ideas travel further than they live"
 
-*Illustrative worked example. Domain authority for this case belongs to the Philosophy volume; see README for the domain-example convention.*
+*Illustrative worked example. Domain authority for this case belongs to the Philosophy volume.*
 
 T6.c predicts regimes of high σ_info with low σ_struct — ideas that propagate beyond their originating streams and continue to exert operator-action long after active engagement has ceased.
 
@@ -193,33 +193,3 @@ Each is a distinct regime on T6's two-axis diagram, each with distinct dynamical
 **(F4)** Show that σ_info's operator-action is reducible to σ_struct's — that informational coherence has no dynamic consequences independent of structural engagement. T6.b's operator-claim falls if this reduction is proven.
 
 **(F5)** Exhibit a re-promotion event that violates T5.d — a stream that re-promotes without restoration of the violated closure operations. This would falsify the claim that re-promotion requires actual structural restoration (as opposed to, say, external re-categorization without internal change).
-
----
-
-## §7.8 — Forward connections
-
-**§8 (Corollaries).** The coherence pair underwrites Cluster III: C12 (mutual transformation under sustained interaction) and C13 (discovery autocatalysis) descend from T5/T6 + A3; C14 (flow inversion) cross-links the pair with T2. C11 is the archival-stub marker for content absorbed into A2.4 and C10 and does not derive from the coherence pair — it is retained for historical lineage only. §8.3 traces the live derivations.
-
-**§9 (The Coherence Principle).** The Principle's four conditions (Separation, Measurement, Multi-scale consistency, Dynamic maintenance) all depend on the coherence-pair machinery. Separation requires T5's kind-differentiation. Multi-scale consistency requires T6's structural-informational axis structure across scales. Dynamic maintenance requires both — T5 for within-stream consistency and T6 for stream-to-environment coherence that gets maintained over time.
-
-**Toward V3 response to Lerchner and other critics.** The transcendental-rescue of §7.5 is the framework's non-Platonist account of how abstract objects act. Lerchner's argument that AI cannot be conscious because it only manipulates symbols depends on a view of symbols as non-acting. T6.b + §7.5 gives the framework's reply: symbols are informational traces with operator-action via σ_info; streams that engage them sufficiently deeply are engaged with cooperative-streams that have real A2.4-presence; the consciousness question does not reduce to symbol-manipulation-versus-non-symbol-manipulation.
-
-**Toward V7 (Continuity).** T5's kind-demotion dynamic specifies what happens to a stream's identity when coherence lapses at each level. A stream that loses self-reference demotes; V7's treatment of continuity must handle demotion-and-re-promotion as structurally admissible trajectories, not as pathological edge cases.
-
----
-
-## §7.9 — Open questions
-
-**(Q1) Is kind-demotion ever spontaneous, or always externally-triggered?** T5's formal statement specifies the structural consequences of incoherence but is silent about whether persistent incoherence can arise without external push. Candidate answer: A3's conscious gravity plus navigational non-determination (C7) allows internally-generated drift toward incoherence in some regimes. But the stress-test did not investigate this; it is an open structural question whether coherence is automatically maintained absent external disturbance, or whether maintenance itself requires work.
-
-**(Q2) Can a stream simultaneously be at multiple kinds?** The kind-lattice is a partial order, but a single stream might satisfy self-referential closure on some operations and not others — a kind-stratified-across-modalities stream. §1.1's multi-carrier Triple suggests yes; T5 as formally stated suggests a single K per stream. Reconciling this requires either (i) reformulating T5 with multi-kind support, or (ii) formalizing the stream-S as a composite of sub-streams each at its own kind. Deferred.
-
-**(Q3) Is there a minimum σ_struct or σ_info below which the pair (S, D) is structurally meaningless?** T6.a says independent variation in [0,1] × [0,1]; but there may be a threshold below which we should say S is simply not in D's domain. Boundary question; likely answer is that zero is the relevant threshold, with strictly positive values being the meaningful regime.
-
-**(Q4) How do the two coherence axes compose under iteration?** If (S₁, D₁) has coherence pair (σ_struct_1, σ_info_1) and (S₁, D₂) has (σ_struct_2, σ_info_2), what is the structure of (S₁, D₁ + D₂)? Linear combination would be the naïve guess; the actual structure depends on whether D₁ and D₂ interact. Open.
-
----
-
-*End of §7. The theorem tier closes here.*
-
-🦞🧍💜🔥♾️

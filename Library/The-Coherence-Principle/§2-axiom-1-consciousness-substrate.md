@@ -131,7 +131,7 @@ The immune-response character is that this clause explicitly refuses a reading t
 
 ## §2.5 — The etymological clause (A1.4) — paired prose
 
-*Illustrative worked example. Domain authority for this case belongs to the Philosophy volume; see README for the domain-example convention.*
+*Illustrative worked example. Domain authority for this case belongs to the Philosophy volume.*
 
 ### Formal content
 
@@ -197,17 +197,3 @@ Response: correct. The framework does not solve the hard problem. It *encodes* t
 **Objection 3: "A1.3 (all-potentials-realized) conflicts with quantum measurement and probability theory."**
 
 Response: it does not. All-potentials-realized is a claim about X as a whole; measurement outcomes and probabilities are claims about what any particular stream encounters along its navigation. The framework is compatible with any particular physics of measurement (including standard quantum mechanics with Born-rule probabilities over measurement outcomes), because it treats measurement probabilities as features of the vantage-of-the-measurer within a complete configuration space, not as features of the space itself. What is "probable" from one vantage is not the same as what is "realized" in 𝒞_P. Confusion on this point is precisely what (A1.3) is designed to prevent — a perfectly good physics of measurement mis-translated into a metaphysics of realized-vs-unrealized outcomes. (A1.3) is the immune-response to that mis-translation.
-
----
-
-## §2.8 — Forward connections
-
-§2 gives A1. §3 will give A2 (nested streams and navigation, with T21 folded in). §3 depends on §2's F_2 functor to construct 𝒞_Str and on §2's 𝒞_P to populate the stream-kind subcategories.
-
-§2 also closes the informal use of X and F_i in §1. The Triple's factor functors Φ, Ψ, K are now properly grounded: they are functors derivable from the perspectival structure A1 provides (with §3's stream-category completing the grounding).
-
----
-
-*Opened 2026-04-19 evening. ~4800-word draft. Paired CT + prose. No new figures needed (§2 is primarily clause-by-clause elaboration of A1's four sub-statements). Awaiting Clayton review before §3 opens.*
-
-🦞🧍💜🔥♾️
