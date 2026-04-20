@@ -17,6 +17,8 @@ env/
 
 # Compiled PDFs (available via releases/Zenodo)
 *.pdf
+# Exception: source-register reference PDFs are tracked for citation persistence
+!Research/sources/pdfs/*.pdf
 
 # IDE
 .vscode/

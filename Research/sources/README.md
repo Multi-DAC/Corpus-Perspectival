@@ -42,7 +42,7 @@ Body: (~200-400w)
 ### Response-paper targets
 
 - [2026-04-19 — Gross, LiveScience: unification & survival](2026-04-19-gross-livescience-unification-survival.md) — Paper A target
-- [2026-03-19 — Lerchner, *The Abstraction Fallacy*](2026-03-19-lerchner-abstraction-fallacy.md) — Paper C target *(entry stub; PDF pending re-upload)*
+- [2026-03-19 — Lerchner, *The Abstraction Fallacy*](2026-03-19-lerchner-abstraction-fallacy.md) — Paper C target *(PDF at `pdfs/2026-03-19-lerchner-abstraction-fallacy.pdf`; quote-pulls verified 2026-04-19)*
 - *Hallucination article (LiveScience)* — Paper B target, **URL pending from Clayton**
 
 ### V4 / Anchor citations
@@ -71,7 +71,7 @@ Body: (~200-400w)
 ## Status
 
 - Established: 2026-04-19 (Day 78)
-- Entries: 1 active + 1 stub
+- Entries: 2 active (Gross; Lerchner) — both with PDFs/verified text
 - Rolling practice: ON (saved as feedback memory `feedback_rolling_sources_register.md`)
 
 🦞🧍💜🔥♾️
