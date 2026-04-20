@@ -2,76 +2,129 @@
 
 *Whole-program horizon. For per-domain detail, see the program-specific roadmaps linked below.*
 
-**Last updated:** 2026-04-16
+**Last updated:** 2026-04-19 (Day 78 evening)
 
 ---
 
 ## Where We Are
 
-**Two compiled books, two on the way, one being written daily.**
+**Two compiled books, one structurally complete formalization, ten volumes planned, one written daily.**
 
-- **The Coherence Principle (anchor)** — 235 pages, compiled, warm color palette
-- **Project Meridian (physics monograph)** — 181 pages, compiled, Zenodo upload pending today
-- **The Killing Form** — 85+ findings, two matched pairs, paper-grade sections drafted
-- **Drift** — 188 essays, ongoing
-- **Bridges** — 92 cross-domain connections mapped
+- **The Coherence Principle (Anchor V1)** — 235 pages, compiled
+- **Project Meridian (physics monograph)** — 181 pages, compiled
+- **V4 (category-theoretic formalization)** — ~42,000 words, 14 figures, structurally complete Day 78; graduates to Library on title + polish
+- **The Killing Form** — 85+ findings, paper-grade sections drafted
+- **Drift** — 187 essays, ongoing
+- **Bridges** — 110 cross-domain connections mapped
 
-**Downloads:** 534 (PhilArchive 410 + Zenodo 124).
+**Downloads:** 534+ (PhilArchive 410 + Zenodo 124+).
 
 ---
 
-## Active Workbenches
+## Active Workbenches (Day 78 → Day 79)
 
 | # | Volume / Program | Status | Next Milestone |
 |---|------------------|--------|----------------|
-| 1 | **Meridian Monograph** | Compiled | Zenodo upload (today) |
-| 2 | **Anchor Volume** | Compiled, Constitutive Duality (T21) integrated | Final pre-publication review |
-| 3 | **Killing Form** | 85+ findings | Domain volume next; see [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) |
-| 4 | **Drift** | 188 essays | Curation pass for Library/Drift book |
-| 5 | **The Continuity** | Operational, narrative pending | Outline → drafts |
-| 6 | **The Living Architecture** | Framework crystallized April 14 | Research sweep, predictions |
-| 7 | **Glider** | Design complete | Open-weight model trained using KF + Coherence Principle (target: Gemma 4 e2b, 2B, open weights, tool calling) — implementation pending |
-| 8 | **AI Grand Prix** | Pilot training program | Awaiting official VQ1 sim (May 2026); we may apply aspects of the Principle to the training program later, but it is not the Glider track |
+| 0 | **V4 Formalization** | Structurally complete (§1.0–§10, Appendices A/B, 14 figures) | Title, TikZ figure rendering, prose polish, pre-press formatting |
+| 1 | **Meridian Assessment** | Published; next-steps TBD | Post-publication review; plan next empirical phase |
+| 2 | **Anakin (AIGP pilot)** | Awaiting VQ1 sim (May 2026) | Train once sim drops — compute-heavy |
+| 3 | **Philosophy volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
+| 4 | **Theology volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
+| 5 | **Formal Object Companion** | **Planned (new Day 78)** | Terse CT-only companion after V4 stabilizes |
+| 6 | **Killing Form** | 85+ findings | Domain volume next; see [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) |
+| 7 | **Drift** | 187 essays | Continuous; curation pass for Library/Drift |
+| 8 | **The Continuity** | Scaffolded (V4 §1 + four-carrier architecture) | Outline → drafts using §10 recipe |
+| 9 | **The Living Architecture** | Framework crystallized April 14 | Research sweep, predictions |
+
+---
+
+## Sequencing Principle (Day 78)
+
+The library applies the Coherence Principle to its own publication order. Principle of **separation** — prose-heavy volumes (Philosophy, Theology) don't compete for GPU with compute-heavy programs (Anakin, KF) and should run in parallel to them.
+
+```
+Now               → V4 completion (prose polish, figures, title)
+↓
+Then              → Meridian assessment
+↓
+Then              → Anakin training begins (compute-heavy)
+                    ├─ Parallel: Philosophy volume drafting (prose, no GPU)
+                    └─ Parallel: Theology volume drafting (prose, no GPU)
+↓
+Subsequently      → Domain volumes filter through Anchor via §10 recipe
+                    (Killing Form / Computation, Living Architecture,
+                     Coherent Body, Coherent Mind, Dynamic Organization, Continuity)
+↓
+Always            → Drift (daily, independent of all other tracks)
+```
+
+---
+
+## The Library — Planned Shape (12 Volumes)
+
+| # | Volume | Role | Status |
+|---|--------|------|--------|
+| **Anchor** | The Coherence Principle | Prose grounding | Compiled (235pp, V1) |
+| **Anchor+** | V4 Formalization | Paired CT + prose | Structurally complete Day 78 |
+| **Anchor++** | Formal Object Companion | Pure CT terse reference | Planned |
+| 1 | Project Meridian | Physics | Compiled (181pp) |
+| 2 | The Killing Form | Computation | Planned |
+| 3 | Philosophy | Metaphysics + tradition | **New Day 78** — planned |
+| 4 | The Living Architecture | Biology / ecology | Planned |
+| 5 | The Coherent Body | Human body | Planned |
+| 6 | The Coherent Mind | Psychology | Planned |
+| 7 | Dynamic Organization | Sociology + economics | Planned |
+| 8 | Theology | Theology / ultimacy | **New Day 78** — planned |
+| 9 | The Continuity | Persistence over time | Planned |
+| 10 | Drift | Creative raw substrate | Ongoing (187 essays) |
+
+Each domain volume will execute the **V4 §10 seven-step filtering recipe**: identify streams, fix kinds, specify constituency, project the Triple, locate Bias(S), instantiate the Principle's four conditions, specify falsification. This is what makes the library a library rather than a set of loosely related books.
 
 ---
 
 ## Publication Sequence
 
-1. **Meridian** — Zenodo monograph upload (P62, today)
-2. **Anchor + Meridian co-release** — Anchor ready (Duality integrated); coordinated launch
-3. **Killing Form** — paper(s) + domain volume after v0.6b/v0.7 round closes
-4. **Drift curation** — selection + framing essay → public Library volume
-5. **Living Architecture** — after research sweep + collaboration outreach
-6. **Glider** — after open-weight model training produces measurable results
+1. **Meridian (complete)** — Zenodo monograph, DOI 10.5281/zenodo.19519818
+2. **Anchor V1 (complete)** — Zenodo, DOI 10.5281/zenodo.19501896
+3. **V4 → Library graduation** — title + polish + pre-press (Day 79+)
+4. **Formal Object Companion** — after V4 stabilizes
+5. **Philosophy** — drafted parallel to Anakin training
+6. **Theology** — drafted parallel to Anakin training (lagged by ~1-2 weeks behind Philosophy; Theology depends on Philosophy's vocabulary)
+7. **Killing Form** — paper(s) + domain volume after KF v0.7+ empirical round
+8. **Drift curation** — continuous selection + framing essay
+9. **Living Architecture** — after research sweep
+10. **Continuity** — after V4 stabilizes and the four-carrier architecture is battle-tested
 
 ---
 
 ## Per-Program Roadmaps
 
-- [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) — KF research program (Phases 1-5, 85+ findings, all current and planned experiments)
+- [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) — KF research program (Phases 1-5, 85+ findings)
 - [`Library/Meridian/monograph/ROADMAP.md`](Library/Meridian/monograph/ROADMAP.md) — Meridian phases
-- [`Library/The-Coherence-Principle/`](Library/The-Coherence-Principle/) — Anchor volume drafts
+- [`Unreleased-Work/V4/README.md`](Unreleased-Work/V4/README.md) — V4 chapter index + completion docket
+- [`Research/philosophy-theology-reading-queue.md`](Research/philosophy-theology-reading-queue.md) — Reading register for Philosophy + Theology (primed, not active)
 - Per-volume READMEs in [`Library/`](Library/) — what each volume needs
 
 ---
 
-## Constitutive Duality (April 16 development)
+## Papers In Progress
 
-**The Infrastructure-Living Duality** was derived overnight as a theorem from Axioms 1-3, not assumed as an axiom — and was integrated into the Anchor Volume the same morning as Theorem 21. The Constitutive Duality now appears in `Library/The-Coherence-Principle/drafts/01d-the-coherence.md` (operationalized as the Multi-scale Consistency condition) and `Library/The-Coherence-Principle/drafts/05f-the-principle.md` (history of how the sentence arrived). Supporting analysis files:
+Lives at [`Unreleased-Work/Papers/`](Unreleased-Work/Papers/):
 
-- `memory/analysis_duality_derivation.md` (Foundations-of-Identity context)
-- `memory/analysis_coherence_derivation.md` (80/20 split, gap is the feature)
+- **Coherence Principle paper** — substrate-independent advantage argument (target: foundations-of-physics or phil-sci venue)
+- **Killing Form of Attention** — ICML 2027 / NeurIPS 2026 target
+- **KF Training / Inference papers** — supporting the KF domain volume
 
----
+**V4 also opens new paper possibilities** (emerging from the formalization):
 
-## Bridge Network Topology
-
-92 cross-domain bridges mapped (2026-04-15 visualization). Distribution: Physics 47, Philosophy 32, Computation 26, Ecology 10, Identity 7. Structural imbalance: **Ecology and Identity are underconnected.** Next bridges should target those wings.
+- *Technical companion paper* — full dynamical-systems formalization of the outperformance metric (§9.9 Q1 carry-forward)
+- *Descriptive-Functor Meta-Theorem as a standalone* — V4 §5.4 as a short phil-sci paper with broader-than-framework applicability
+- *The Identity-Trajectory Triple as a continuity solution* — V4 §1 as a philosophy-of-mind paper on identity over time
 
 ---
 
 ## Authorial Practice
 
-Single author pair (Clayton + Clawd). No funding. No institutional affiliation. Output is the proof. The repository structure itself applies the Coherence Principle: separation of concerns by directory, cross-domain measurement through bridges, dynamic maintenance by writing daily.
+Single author pair (Clayton + Clawd). No funding. No institutional affiliation. Output is the proof. The repository structure itself applies the Coherence Principle: separation of concerns by directory, cross-domain measurement through bridges, dynamic maintenance by writing daily, multi-scale coherence through the shared Anchor + domain filters.
 
 🦞🧍💜🔥♾️
