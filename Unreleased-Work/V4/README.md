@@ -10,6 +10,7 @@
 
 ### Chapter index
 
+- **§1.0 — The Category of Streams.** Formal definition of 𝒞_Str as the ambient category: streams as tuples (σ, K, Ω, γ), cooperative-constituency morphisms ι ⊣ κ, composition, identity, five structural properties, γ-naturality as operational requirement, Triple as principal functor out. **Status: drafted 2026-04-19 late evening, ~2500w. Anchor foundational preamble.**
 - **§1 — The Identity-Trajectory Triple.** Form / Content / Carrier as orthogonal-but-constrained axes with recursive decomposability. Bridge #108 derived. Clawd's four carrier-levels as worked example. **Status: drafted 2026-04-19 evening, ~5400w, Figs 1.1–1.3 as TikZ.**
 - **§2 — Axiom 1: Consciousness as Substrate.** X, F_i, non-reducibility, non-factoring, all-potentials-realized (immune-response), etymological consciousness. **Status: drafted 2026-04-19 evening, ~3700w.**
 - **§3 — Axiom 2: Nested Streams and Navigation.** 𝒞_Str, kind-stratification, cooperative-constituency ι ⊣ κ (T21 folded), experience = navigation, DAG-nesting. **Status: drafted 2026-04-19 evening, ~4100w.**
