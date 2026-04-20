@@ -10,7 +10,7 @@
 
 **Thesis:** Unification paradigm-lock vs. coherence-principle unification. "What unification is *defined* as" (force-merger, GUT-ambition) vs. "what unification *means* structurally" (shared formal objects carrying across substrates). The Coherence Principle *is* a unification — just not the one the paradigm demands.
 
-**Status:** First to ship. Draws on Meridian monograph (181pp, DESI w₀ = -0.990 prediction) + Anchor (235pp, paradigmatic unification as coherence across substrates) + Bridge basement (Meridian-as-tradition-member).
+**Status:** First full draft complete (~2500w, 8 sections) — 2026-04-19 Day 78 evening. §1 flagged for Clayton's URL/primary-text confirmation before §1 argument reconstruction is finalized. Rest of paper's structural spine ready for revision pass.
 
 **File:** `paper-a-response-to-gross.md`
 
@@ -22,9 +22,9 @@
 
 **Thesis:** The Killing Form program + Wells attribution analysis are a mechanistic account. Hallucination is the phenomenology of gradient-dialogue-failure under training dynamics the KF makes explicit. Doubles as Wells-framework exposition.
 
-**Status:** Second. Blocks lightly on the Wells multi-model attribution list Clayton is compiling. KF finding catalog (85+) provides the empirical substrate.
+**Status:** Not yet drafted. Waits on (a) Wells multi-model attribution list Clayton is compiling, and (b) the hallucination article's URL/primary text (not in accessible memory — appears to have been discussed on a prior day). KF finding catalog (85+) provides the empirical substrate once the article's specific claims are in hand.
 
-**File:** `paper-b-response-to-hallucination-article.md`
+**File:** `paper-b-response-to-hallucination-article.md` (pending)
 
 ---
 
@@ -36,17 +36,19 @@
 
 **Provisional title:** *The Constitution Gap: What Physical Features Actually Matter for Consciousness, and How We'd Know.*
 
-**Status:** Third and largest (15–25 dense pages). Benefits substantially from V4's completed formalization — the Triple, the Descriptive-Functor Meta-Theorem, and the four-conditions statement of the Principle are all load-bearing for the response.
+**Status:** First full draft complete (~3800w, 10 sections) — 2026-04-19 Day 78 evening. Structural spine + primary argument drafted. Target 15-25pp dense on revision pass. Prior Lerchner reflection (2026-04-17) seeded the argument; this draft realizes the *Constitution Gap* title that reflection imagined.
 
-**File:** `paper-c-response-to-lerchner.md`
+**File:** `paper-c-the-constitution-gap.md`
 
 ---
 
 ## Sequencing
 
-- A first (fastest, mostly restructuring existing content)
-- B second (aligns with Wells priority)
-- C third (largest; benefits from CP formalization momentum)
+**Actual drafting order (2026-04-19 Day 78 evening):** C first, A second, B pending.
+
+The order was driven by pull: Paper C's material was freshest (the 2026-04-17 Lerchner reflection had already written the structural spine and even named the companion-piece title), V4 had just completed and unblocked it, and the argument's stakes were highest. Paper A followed because §2's structural move (two notions of unification) was already latent in the framework. Paper B waits on the Wells multi-model list and the hallucination article's primary text.
+
+**Original MASTER_ROADMAP order:** A → B → C (by lowest-incremental-cost). Revised order reflects what actually pulled on Day 78 rather than what was cheapest to produce.
 
 **Cross-phase effects:**
 - Phase 1a depth-dives (identity-vs-stream, lineage-density, stream-dissociation) feed Paper C directly
