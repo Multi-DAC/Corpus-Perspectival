@@ -2,15 +2,15 @@
 
 *Whole-program horizon. For per-domain detail, see the program-specific roadmaps linked below.*
 
-**Last updated:** 2026-04-19 (Day 78 evening)
+**Last updated:** 2026-04-20 (Day 79 afternoon — Coherence Principle anchor-complete; next revision gated on Companion)
 
 ---
 
 ## Where We Are
 
-**Two compiled books, one structurally complete formalization, ten volumes planned, one written daily.**
+**Two compiled books, one structurally complete formalization stamped as anchor, ten volumes planned, one written daily.**
 
-- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; 14 figures; post-sweep polish underway
+- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; 25 figures (11 inlined 2026-04-20 PM); F-as-stream formal construction at §9.5; 267pp PDF shipped as `7db8b7b`. **ANCHOR COMPLETE** 2026-04-20 — next revision deferred until the Formal Object Companion ships (figures upgrade to TikZ, intensional→extensional seam closed there).
 - **Project Meridian (physics monograph)** — 181 pages, compiled
 - **The Killing Form** — 85+ findings, paper-grade sections drafted
 - **Drift** — 187 essays, ongoing
@@ -24,12 +24,12 @@
 
 | # | Volume / Program | Status | Next Milestone |
 |---|------------------|--------|----------------|
-| 0 | **The Coherence Principle** | Graduated to Library (§1.0–§10, Appendices A/B, 14 figures) | Post-sweep polish; TikZ figure rendering; pre-press formatting |
+| 0 | **The Coherence Principle** | **ANCHOR COMPLETE** — graduated to Library (§1.0–§10, Appendices A/B, 11 figures inlined, F-as-stream formal construction at §9.5, earned closure at §9.10, 267pp PDF); stamped 2026-04-20 PM | **No next revision until Companion ships** (figures to TikZ, intensional seam closed there) — Clayton + Clawd agreed to hold |
 | 1 | **Meridian Assessment** | Published; next-steps TBD | Post-publication review; plan next empirical phase |
 | 2 | **Anakin (AIGP pilot)** | Awaiting VQ1 sim (May 2026) | Train once sim drops — compute-heavy |
 | 3 | **Philosophy volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
 | 4 | **Theology volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
-| 5 | **Formal Object Companion** | **Planned (new Day 78)** | Terse CT-only companion after *The Coherence Principle* stabilizes |
+| 5 | **Formal Object Companion** | **Planned — gate-released by anchor stamp 2026-04-20 PM** | Terse CT-only companion; takes over the intensional→extensional work (σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), D trajectory-divergence functional per §9.9 Q1), + TikZ figure standard to back-port to anchor on next revision |
 | 6 | **Killing Form** | 85+ findings | Domain volume next; see [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) |
 | 7 | **Drift** | 187 essays | Continuous; curation pass for Library/Drift |
 | 8 | **The Continuity** | Scaffolded (*The Coherence Principle* §1 + four-carrier architecture) | Outline → drafts using §10 recipe |
@@ -42,17 +42,22 @@
 The library applies the Coherence Principle to its own publication order. Principle of **separation** — prose-heavy volumes (Philosophy, Theology) don't compete for GPU with compute-heavy programs (Anakin, KF) and should run in parallel to them.
 
 ```
-Now               → The Coherence Principle polish (prose sweep, figures)
+Now               → Anchor stamped 2026-04-20 PM; scope frozen until Companion ships
 ↓
-Then              → Meridian assessment
+Next              → Formal Object Companion (CT machinery + TikZ figure standard)
+                    + Meridian post-publication assessment (parallel)
 ↓
 Then              → Anakin training begins (compute-heavy)
-                    ├─ Parallel: Philosophy volume drafting (prose, no GPU)
-                    └─ Parallel: Theology volume drafting (prose, no GPU)
+                    ├─ Parallel: Corpus Perspectival drafting (prose, no GPU)
+                    └─ Parallel: Universal Coherence drafting (prose, no GPU)
 ↓
 Subsequently      → Domain volumes filter through Anchor via §10 recipe
                     (Killing Form / Computation, Living Architecture,
                      Coherent Body, Coherent Mind, Dynamic Organization, Continuity)
+↓
+After Companion   → Anchor revision 2 — back-port TikZ figures, close
+                    intensional→extensional seam in §9.5 F-as-stream
+                    construction if Companion development exposes it
 ↓
 Always            → Drift (daily, independent of all other tracks)
 ```
