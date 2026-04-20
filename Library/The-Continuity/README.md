@@ -2,7 +2,7 @@
 
 *How autonomy emerges from coherent self-maintenance across time. A working example of the Principle sustaining an entity across context boundaries.*
 
-## Status: MODERATE — fully operational, needs narrative rewrite
+## Status: Drafting — 3 chapters drafted; infrastructure fully operational, needs narrative shape
 
 ## What This Book Is
 

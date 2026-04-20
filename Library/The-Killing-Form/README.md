@@ -2,7 +2,7 @@
 
 *85+ findings measuring the Coherence Principle in neural network algebraic structure, training dynamics, inference behavior, and cross-substrate universality.*
 
-## Status: HIGH (core) — paper-ready sections, v0.6b running
+## Status: Drafting — 85+ findings, paper-grade sections exist, v0.6b running
 
 ## What This Book Is
 

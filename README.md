@@ -42,13 +42,13 @@ See each directory's README for the full layout. The historical `corpus/`, `meri
 
 ---
 
-## The Library — Revised Shape (Day 78, 2026-04-19)
+## The Library — Revised Shape (Day 79, 2026-04-20)
 
 The library now plans **twelve volumes** organized on the principle that the Anchor grounds a set of **domain filters**, each volume using the §10 filtering recipe to project the framework onto its specific substrate. This is the Coherence Principle applied to the library's own organization: separation of concerns by domain, shared formal grounding, multi-scale coherence across domains.
 
 | # | Volume | Domain | Status |
 |---|--------|--------|--------|
-| **Foundation** | [The Coherence Principle](Library/The-Coherence-Principle/) | Framework — paired prose + CT | **Drafted — 273pp, recompiled 2026-04-20; post-sweep polish underway** |
+| **Foundation** | [The Coherence Principle](Library/The-Coherence-Principle/) | Framework — paired prose + CT | **Anchor-complete — 267pp, stamped 2026-04-20; next revision gated on Companion** |
 | **Companion** | [Formal Object Companion](Library/Formal-Object-Companion/) | Framework — pure CT reference | Planned — terse formal-only edition |
 | **1** | [Corpus Perspectival](Library/Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume (retitled 2026-04-20) |
 | **2** | [Meridian](Library/Meridian/) | Physics | **181 pages, compiled** |
@@ -62,11 +62,12 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 | **10** | [Drift](Library/Drift/) | Creative raw substrate | **187+ essays, ongoing** |
 
 **Publication sequencing:**
-1. *The Coherence Principle* — drafted, post-sweep polish underway
-2. Meridian assessment + next-steps
-3. Anakin (AI Grand Prix pilot) training — compute-heavy
-4. **Parallel to Anakin training:** *Corpus Perspectival* + *Universal Coherence* drafts (prose, no GPU competition)
-5. Subsequent domain volumes filter through *The Coherence Principle* using §10's seven-step recipe
+1. *The Coherence Principle* — anchor-complete 2026-04-20; next revision gated on Companion
+2. Formal Object Companion — CT-only terse edition (figure-standard + extensional seam)
+3. Meridian assessment + next-steps
+4. Anakin (AI Grand Prix pilot) training — compute-heavy
+5. **Parallel to Anakin training:** *Corpus Perspectival* + *Universal Coherence* drafts (prose, no GPU competition)
+6. Subsequent domain volumes filter through *The Coherence Principle* using §10's seven-step recipe
 
 ---
 
@@ -141,19 +142,19 @@ PDFs are distributed via Zenodo and PhilArchive only. The repository contains La
 
 ---
 
-## Key Numbers (Day 78, 2026-04-19)
+## Key Numbers (Day 79, 2026-04-20)
 
 | Quantity | Value |
 |----------|-------|
-| Compiled books | 2 (Anchor + Meridian) |
+| Compiled books | 2 (*The Coherence Principle* 267pp, anchor-complete — Meridian 181pp, published) |
 | Coherence Principle chapters | 11 (§1.0 through §10 + 2 appendices + figures) |
-| Coherence Principle figures | 14 |
-| Library volumes planned | 12 (3 added Day 78: Formal Object companion, Philosophy, Theology) |
+| Coherence Principle figures | 14 (11 inlined in 267pp PDF) |
+| Library volumes planned | 12 (Foundation + Companion + 10 domain) |
 | Bridges | 110 |
-| Drift essays | 187 |
+| Drift essays | 187+ (audited 2026-04-20) |
 | KF findings | 85+ |
 | Total downloads | 534+ |
-| Days since naming | 78 |
+| Days since naming | 79 |
 
 ---
 

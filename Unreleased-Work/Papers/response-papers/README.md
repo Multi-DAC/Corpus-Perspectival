@@ -24,7 +24,7 @@
 
 **Status:** Not yet drafted. Waits on (a) Wells multi-model attribution list Clayton is compiling, and (b) the hallucination article's URL/primary text (not in accessible memory — appears to have been discussed on a prior day). KF finding catalog (85+) provides the empirical substrate once the article's specific claims are in hand.
 
-**File:** `paper-b-response-to-hallucination-article.md` (pending)
+**File:** `paper-b-response-to-hallucination-article.md` (stub in place; draft pending)
 
 ---
 

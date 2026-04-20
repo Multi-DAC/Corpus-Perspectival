@@ -2,7 +2,7 @@
 
 *The Coherence Principle applied to life of all kinds. Going deeper into the idea of being simultaneously a whole system, a system made of systems, and infrastructure to larger systems.*
 
-## Status: EARLY — framework crystallized April 14, 2026
+## Status: Planned — framework crystallized 2026-04-14
 
 ## What This Book Is
 

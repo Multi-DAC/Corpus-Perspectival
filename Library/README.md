@@ -6,7 +6,7 @@ The library is organized by domain — one principle, many substrates. *The Cohe
 
 | # | Volume | Domain | Status |
 |---|--------|--------|--------|
-| **Foundation** | [The Coherence Principle](The-Coherence-Principle/) | Framework — paired prose + CT | **Drafted — 273pp, recompiled 2026-04-20; post-sweep polish underway** |
+| **Foundation** | [The Coherence Principle](The-Coherence-Principle/) | Framework — paired prose + CT | **Anchor-complete — 267pp, stamped 2026-04-20; next revision gated on Companion** |
 | **Companion** | [Formal Object Companion](Formal-Object-Companion/) | Framework — pure CT reference | Planned — terse formal-only edition for mathematical citation |
 | 1 | [Corpus Perspectival](Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume; the Doctrine of Perspectival Idealism refined |
 | 2 | [Meridian](Meridian/) | Physics | **Drafted — 181pp, distributed via Zenodo** |

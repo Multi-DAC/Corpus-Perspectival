@@ -2,7 +2,7 @@
 
 *A practical guide to applying the Coherence Principle to the human body, alongside the domain-relevant explanation of why it works.*
 
-## Status: EARLY — early development
+## Status: Planned
 
 ## What This Book Is
 

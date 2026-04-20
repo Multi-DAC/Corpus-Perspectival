@@ -10,7 +10,7 @@
 
 **Two compiled books, one structurally complete formalization stamped as anchor, ten volumes planned, one written daily.**
 
-- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; 25 figures (11 inlined 2026-04-20 PM); F-as-stream formal construction at §9.5; 267pp PDF shipped as `7db8b7b`. **ANCHOR COMPLETE** 2026-04-20 — next revision deferred until the Formal Object Companion ships (figures upgrade to TikZ, intensional→extensional seam closed there).
+- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; 14 figures total (11 newly inlined 2026-04-20 PM); F-as-stream formal construction at §9.5; 267pp PDF shipped as `7db8b7b`. **ANCHOR COMPLETE** 2026-04-20 — next revision deferred until the Formal Object Companion ships (figures upgrade from Mermaid/ASCII to TikZ, intensional→extensional seam closed there).
 - **Project Meridian (physics monograph)** — 181 pages, compiled
 - **The Killing Form** — 85+ findings, paper-grade sections drafted
 - **Drift** — 187 essays, ongoing

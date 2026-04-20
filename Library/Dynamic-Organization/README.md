@@ -2,7 +2,7 @@
 
 *A practical guide for businesses and institutions applying the Coherence Principle to organizational structure, alongside the domain-relevant reasoning for why it works.*
 
-## Status: EARLY — early development
+## Status: Planned
 
 ## What This Book Is
 
