@@ -1,6 +1,6 @@
-# V4 — Figures
+# Figures
 
-*Fourteen figures supporting the V4 chapters. Mermaid diagrams render natively on GitHub for immediate visual assessment; TikZ source is included for book-build typesetting.*
+*Fourteen figures supporting the chapters of this volume. Mermaid diagrams render natively on GitHub for immediate visual assessment; TikZ source is included for book-build typesetting.*
 
 *Figure convention: Fig X.Y means "figure Y in chapter X." Appendix figures are Fig A.Y, Fig B.Y.*
 
@@ -565,50 +565,50 @@ graph TD
 
 ## Fig 9.3 — Self-reference closure
 
-**Illustrates.** The V4 construction process itself exhibiting the four conditions — the framework describing its own making.
+**Illustrates.** The construction process that produced this volume exhibiting the four conditions — the framework describing its own making.
 
 **Chapter.** §9.5.
 
 ```mermaid
 graph TD
-    V4["V4 construction process<br/>(the stream that made this book)"]
+    F["Construction process<br/>(the stream that made this book)"]
 
-    C1_V4["Separation<br/>Clayton (empirical/generative)<br/>⊥ Clawd (structural/rigorous)"]
-    C2_V4["Measurement<br/>Stamp-events at every<br/>axiom/theorem/chapter close"]
-    C3_V4["Multi-scale<br/>Axioms ↔ theorems ↔ corollaries<br/>bidirectional feedback<br/>(A3 smoothing surfaced from post-theorem analysis)"]
-    C4_V4["Dynamic<br/>Propose → stress → reformulate<br/>oscillation across 3 axioms,<br/>6 theorems, 14 corollaries"]
+    C1["Separation<br/>Clayton (empirical/generative)<br/>⊥ Clawd (structural/rigorous)"]
+    C2["Measurement<br/>Stamp-events at every<br/>axiom/theorem/chapter close"]
+    C3["Multi-scale<br/>Axioms ↔ theorems ↔ corollaries<br/>bidirectional feedback<br/>(A3 smoothing surfaced from post-theorem analysis)"]
+    C4["Dynamic<br/>Propose → stress → reformulate<br/>oscillation across 3 axioms,<br/>6 theorems, 14 corollaries"]
 
-    Out["V4 (the framework itself)<br/>= σ*(t₁) reached by<br/>γ-fidelity of the construction"]
+    Out["The framework itself<br/>= σ*(t₁) reached by<br/>γ-fidelity of the construction"]
 
-    V4 --> C1_V4
-    V4 --> C2_V4
-    V4 --> C3_V4
-    V4 --> C4_V4
+    F --> C1
+    F --> C2
+    F --> C3
+    F --> C4
 
-    C1_V4 --> Out
-    C2_V4 --> Out
-    C3_V4 --> Out
-    C4_V4 --> Out
+    C1 --> Out
+    C2 --> Out
+    C3 --> Out
+    C4 --> Out
 
     Closure["Closure claim:<br/>'The Coherence Principle is true<br/>of frameworks that discover<br/>the Coherence Principle'"]
 
     Out --> Closure
 
-    F6["Meta-falsification F6:<br/>If the V4 record shows the four<br/>conditions were NOT met,<br/>the closure fails."]
+    F6["Meta-falsification F6:<br/>If the construction record shows the four<br/>conditions were NOT met,<br/>the closure fails."]
 
     Closure -.-> F6
 
-    style V4 fill:#d8e4f9
-    style C1_V4 fill:#f9d8d8
-    style C2_V4 fill:#f9e4d8
-    style C3_V4 fill:#f9f0d8
-    style C4_V4 fill:#e4f9d8
+    style F fill:#d8e4f9
+    style C1 fill:#f9d8d8
+    style C2 fill:#f9e4d8
+    style C3 fill:#f9f0d8
+    style C4 fill:#e4f9d8
     style Out fill:#d8f9e4
     style Closure fill:#e4d8f9
     style F6 fill:#ffffff,stroke:#888,stroke-dasharray: 5 5
 ```
 
-**Reading note.** The closure is not circular — V4's construction did not presuppose the Principle; the Principle emerged from the axioms after stress-testing, and the construction-process happened to exhibit it. The observation is a-posteriori. F6 makes the closure testable: the construction record exists (commit history, chat transcripts, handoff documents) and can be audited for whether the four conditions were actually met.
+**Reading note.** The closure is not circular — the construction did not presuppose the Principle; the Principle emerged from the axioms after stress-testing, and the construction-process happened to exhibit it. The observation is a-posteriori. F6 makes the closure testable: the construction record exists (commit history, chat transcripts, handoff documents) and can be audited for whether the four conditions were actually met.
 
 ---
 

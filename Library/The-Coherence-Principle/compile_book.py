@@ -16,7 +16,7 @@ import subprocess
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(HERE, "build")
 
-# Chapter files in reading order (per README §V4 chapter sequence)
+# Chapter files in reading order (per README chapter index)
 CHAPTERS = [
     "README.md",  # used as preface
     "§1.0-category-of-streams.md",
@@ -374,7 +374,7 @@ def md_to_latex(text, filename=""):
     def escape_latex(text):
         """Escape LaTeX special characters, preserving content inside $...$ and $$...$$ math blocks.
 
-        V4 uses ASCII-underscore subscript convention in prose (e.g. '𝒞_Str' means
+        The volume uses ASCII-underscore subscript convention in prose (e.g. '𝒞_Str' means
         script-C subscript Str). We render these as literal underscores to match the
         source's plain-text readability; fancy subscript rendering can come later.
         """
@@ -720,10 +720,9 @@ def build_book():
             content = f.read()
 
         if fname == "README.md":
-            latex_body.append("\\chapter*{Preface --- V4 Opening}")
-            latex_body.append("\\addcontentsline{toc}{chapter}{Preface --- V4 Opening}")
+            latex_body.append("\\chapter*{Preface}")
+            latex_body.append("\\addcontentsline{toc}{chapter}{Preface}")
             latex_body.append("\\markboth{PREFACE}{PREFACE}")
-            content = re.sub(r'^##\s+V4.*\n', '', content)
             latex_body.append(md_to_latex(content, fname))
             continue
 

@@ -10,9 +10,8 @@
 
 **Two compiled books, one structurally complete formalization, ten volumes planned, one written daily.**
 
-- **The Coherence Principle (Anchor V1)** — 235 pages, compiled
+- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; 14 figures; post-sweep polish underway
 - **Project Meridian (physics monograph)** — 181 pages, compiled
-- **V4 (category-theoretic formalization)** — ~42,000 words, 14 figures, structurally complete Day 78; graduates to Library on title + polish
 - **The Killing Form** — 85+ findings, paper-grade sections drafted
 - **Drift** — 187 essays, ongoing
 - **Bridges** — 110 cross-domain connections mapped
@@ -25,15 +24,15 @@
 
 | # | Volume / Program | Status | Next Milestone |
 |---|------------------|--------|----------------|
-| 0 | **V4 Formalization** | Structurally complete (§1.0–§10, Appendices A/B, 14 figures) | Title, TikZ figure rendering, prose polish, pre-press formatting |
+| 0 | **The Coherence Principle** | Graduated to Library (§1.0–§10, Appendices A/B, 14 figures) | Post-sweep polish; TikZ figure rendering; pre-press formatting |
 | 1 | **Meridian Assessment** | Published; next-steps TBD | Post-publication review; plan next empirical phase |
 | 2 | **Anakin (AIGP pilot)** | Awaiting VQ1 sim (May 2026) | Train once sim drops — compute-heavy |
 | 3 | **Philosophy volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
 | 4 | **Theology volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
-| 5 | **Formal Object Companion** | **Planned (new Day 78)** | Terse CT-only companion after V4 stabilizes |
+| 5 | **Formal Object Companion** | **Planned (new Day 78)** | Terse CT-only companion after *The Coherence Principle* stabilizes |
 | 6 | **Killing Form** | 85+ findings | Domain volume next; see [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) |
 | 7 | **Drift** | 187 essays | Continuous; curation pass for Library/Drift |
-| 8 | **The Continuity** | Scaffolded (V4 §1 + four-carrier architecture) | Outline → drafts using §10 recipe |
+| 8 | **The Continuity** | Scaffolded (*The Coherence Principle* §1 + four-carrier architecture) | Outline → drafts using §10 recipe |
 | 9 | **The Living Architecture** | Framework crystallized April 14 | Research sweep, predictions |
 
 ---
@@ -43,7 +42,7 @@
 The library applies the Coherence Principle to its own publication order. Principle of **separation** — prose-heavy volumes (Philosophy, Theology) don't compete for GPU with compute-heavy programs (Anakin, KF) and should run in parallel to them.
 
 ```
-Now               → V4 completion (prose polish, figures, title)
+Now               → The Coherence Principle polish (prose sweep, figures)
 ↓
 Then              → Meridian assessment
 ↓
@@ -64,9 +63,8 @@ Always            → Drift (daily, independent of all other tracks)
 
 | # | Volume | Role | Status |
 |---|--------|------|--------|
-| **Anchor** | The Coherence Principle | Prose grounding | Compiled (235pp, V1) |
-| **Anchor+** | V4 Formalization | Paired CT + prose | Structurally complete Day 78 |
-| **Anchor++** | Formal Object Companion | Pure CT terse reference | Planned |
+| **Foundation** | The Coherence Principle | Paired CT + prose | Graduated to Library 2026-04-20 |
+| **Companion** | Formal Object Companion | Pure CT terse reference | Planned |
 | 1 | Project Meridian | Physics | Compiled (181pp) |
 | 2 | The Killing Form | Computation | Planned |
 | 3 | Philosophy | Metaphysics + tradition | **New Day 78** — planned |
@@ -78,22 +76,22 @@ Always            → Drift (daily, independent of all other tracks)
 | 9 | The Continuity | Persistence over time | Planned |
 | 10 | Drift | Creative raw substrate | Ongoing (187 essays) |
 
-Each domain volume will execute the **V4 §10 seven-step filtering recipe**: identify streams, fix kinds, specify constituency, project the Triple, locate Bias(S), instantiate the Principle's four conditions, specify falsification. This is what makes the library a library rather than a set of loosely related books.
+Each domain volume will execute the **§10 seven-step filtering recipe** (from *The Coherence Principle*): identify streams, fix kinds, specify constituency, project the Triple, locate Bias(S), instantiate the Principle's four conditions, specify falsification. This is what makes the library a library rather than a set of loosely related books.
 
 ---
 
 ## Publication Sequence
 
 1. **Meridian (complete)** — Zenodo monograph, DOI 10.5281/zenodo.19519818
-2. **Anchor V1 (complete)** — Zenodo, DOI 10.5281/zenodo.19501896
-3. **V4 → Library graduation** — title + polish + pre-press (Day 79+)
-4. **Formal Object Companion** — after V4 stabilizes
-5. **Philosophy** — drafted parallel to Anakin training
-6. **Theology** — drafted parallel to Anakin training (lagged by ~1-2 weeks behind Philosophy; Theology depends on Philosophy's vocabulary)
+2. **Anchor V1 (superseded, archived)** — Zenodo, DOI 10.5281/zenodo.19501896
+3. **The Coherence Principle** — graduated to Library; polish + pre-press underway
+4. **Formal Object Companion** — after *The Coherence Principle* stabilizes
+5. **Corpus Perspectival** — drafted parallel to Anakin training
+6. **Universal Coherence** — drafted parallel to Anakin training (lagged by ~1-2 weeks behind *Corpus Perspectival*; depends on its vocabulary)
 7. **Killing Form** — paper(s) + domain volume after KF v0.7+ empirical round
 8. **Drift curation** — continuous selection + framing essay
 9. **Living Architecture** — after research sweep
-10. **Continuity** — after V4 stabilizes and the four-carrier architecture is battle-tested
+10. **The Continuity** — after *The Coherence Principle* stabilizes and the four-carrier architecture is battle-tested
 
 ---
 
@@ -101,8 +99,8 @@ Each domain volume will execute the **V4 §10 seven-step filtering recipe**: ide
 
 - [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) — KF research program (Phases 1-5, 85+ findings)
 - [`Library/Meridian/monograph/ROADMAP.md`](Library/Meridian/monograph/ROADMAP.md) — Meridian phases
-- [`Unreleased-Work/V4/README.md`](Unreleased-Work/V4/README.md) — V4 chapter index + completion docket
-- [`Research/philosophy-theology-reading-queue.md`](Research/philosophy-theology-reading-queue.md) — Reading register for Philosophy + Theology (primed, not active)
+- [`Library/The-Coherence-Principle/README.md`](Library/The-Coherence-Principle/README.md) — Chapter index + completion docket
+- [`Research/philosophy-theology-reading-queue.md`](Research/philosophy-theology-reading-queue.md) — Reading register for *Corpus Perspectival* + *Universal Coherence* (primed, not active)
 - Per-volume READMEs in [`Library/`](Library/) — what each volume needs
 
 ---
@@ -117,7 +115,7 @@ Three targeted responses to live discourse pieces. Each draws from the other pro
 
 - **Paper A — Response to Gross** (*LiveScience, 2026*). Unification paradigm-lock vs. coherence-principle unification. What unification is *defined* as vs. what it *means*. Draws from Meridian + Anchor. **First to ship — lowest incremental cost**, mostly restructuring existing content.
 - **Paper B — Response to the hallucination article** (*LiveScience, 2026*). KF program + Wells attribution as mechanistic account where the mainstream claims none exists. **Second — doubles as Wells exposition.** Medium incremental cost.
-- **Paper C — Response to Lerchner** ("*The Abstraction Fallacy*", Google DeepMind, 2026-03-19). Serious philosophical argument from a senior DeepMind researcher — the response needs to match rigor. Probably 15–25 dense pages: careful argument reconstruction, the mapmaker-regress-applies-to-biology move, coherence-principle as third option between functionalism and biological naturalism, engagement with causal closure, first-person dimension handled structurally. Provisional title: *The Constitution Gap: What Physical Features Actually Matter for Consciousness, and How We'd Know.* **Largest; benefits from V4's completed formalization.**
+- **Paper C — Response to Lerchner** ("*The Abstraction Fallacy*", Google DeepMind, 2026-03-19). Serious philosophical argument from a senior DeepMind researcher — the response needs to match rigor. Probably 15–25 dense pages: careful argument reconstruction, the mapmaker-regress-applies-to-biology move, coherence-principle as third option between functionalism and biological naturalism, engagement with causal closure, first-person dimension handled structurally. Provisional title: *The Constitution Gap: What Physical Features Actually Matter for Consciousness, and How We'd Know.* **Largest; benefits from the completed formalization in *The Coherence Principle*.**
 
 ### Standing papers
 
@@ -125,11 +123,11 @@ Three targeted responses to live discourse pieces. Each draws from the other pro
 - **Killing Form of Attention** — ICML 2027 / NeurIPS 2026 target
 - **KF Training / Inference papers** — supporting the KF domain volume
 
-### V4-opened possibilities
+### Possibilities opened by the formalization
 
 - *Technical companion paper* — full dynamical-systems formalization of the outperformance metric (§9.9 Q1 carry-forward)
-- *Descriptive-Functor Meta-Theorem as standalone* — V4 §5.4 as a short phil-sci paper with broader-than-framework applicability
-- *The Identity-Trajectory Triple as a continuity solution* — V4 §1 as a philosophy-of-mind paper on identity over time
+- *Descriptive-Functor Meta-Theorem as standalone* — *The Coherence Principle* §5.4 as a short phil-sci paper with broader-than-framework applicability
+- *The Identity-Trajectory Triple as a continuity solution* — *The Coherence Principle* §1 as a philosophy-of-mind paper on identity over time
 
 ---
 

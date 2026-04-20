@@ -605,7 +605,7 @@ These go into V3 as concrete claims the framework makes about Meridian:
 |---|---|---|
 | **Killing form identification theorem** | Full proof that computational KF = gauge-theoretic KF | Unifies Corpus and Meridian at the mathematical level |
 | **Constraint lattice as category** | Category-theoretic formalization of B₀, E, V with functors for sedimentation/excavation | Mathematical depth |
-| **Information geometry of consciousness** | Fisher metric as the geometry of perspectival access across substrates | The V4 seed |
+| **Information geometry of consciousness** | Fisher metric as the geometry of perspectival access across substrates | Seed for the next formalization layer |
 
 ---
 

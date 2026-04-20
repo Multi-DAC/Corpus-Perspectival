@@ -6,7 +6,7 @@
 
 ## §2.0 — Why §2 follows §1
 
-§1 gave the Identity-Trajectory Triple — a vocabulary for describing any identity-trajectory in the framework. But §1's formal statements invoked X (the self-interactive process), the perspectival functors F_i, and the category 𝒞_Str (streams) without grounding them axiomatically. §1 could afford that informality because the Triple makes sense at the bridge tier even to a reader who takes X and the functors as black boxes. V4's job is to remove the black boxes. §2–§4 present the three axioms formally and ground the objects §1 relied on.
+§1 gave the Identity-Trajectory Triple — a vocabulary for describing any identity-trajectory in the framework. But §1's formal statements invoked X (the self-interactive process), the perspectival functors F_i, and the category 𝒞_Str (streams) without grounding them axiomatically. §1 could afford that informality because the Triple makes sense at the bridge tier even to a reader who takes X and the functors as black boxes. The axiom tier's job is to remove the black boxes. §2–§4 present the three axioms formally and ground the objects §1 relied on.
 
 The order — bridges before axioms — inverts derivation. It is pedagogical, not logical. The reader arrives with identity-questions, the Triple handles them, and only then do we peel back to what X is and why the functor-structure has to be the way it is. Readers interested in foundations-first can read §2–§4 before §1 and lose nothing.
 

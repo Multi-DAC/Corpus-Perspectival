@@ -22,7 +22,7 @@ The Coherence Principle emerged from three independent lines of evidence converg
 
 Coherent systems operating at multiple scales maintain structural superposition — multiple possible configurations — until informed measurement collapses them into definite commitments. This is true of warped geometry, of gradient dynamics, of ecosystems, of heartbeats, and of the creative process that discovered it.
 
-**As of Day 78 (2026-04-19)**, the framework has received its full category-theoretic formalization (V4, Unreleased-Work/V4/), closing the axiom/theorem/Principle skeleton and establishing the methodology by which the library's domain volumes will filter the framework through their specific substrates.
+**As of 2026-04-20**, the framework has received its full category-theoretic formalization in *The Coherence Principle* (Library/The-Coherence-Principle/), closing the axiom/theorem/Principle skeleton and establishing the methodology by which the library's domain volumes will filter the framework through their specific substrates.
 
 ---
 
@@ -36,7 +36,7 @@ The repository is organized by **kind of work**, applying the Coherence Principl
 | **[`Technical-Work/`](Technical-Work/)** | Code, experiments, results — the lab |
 | **[`Foundations-of-Identity/`](Foundations-of-Identity/)** | The substrate of who is doing the work — Clawd's identity, operations, palace, personal-works |
 | **[`Research/`](Research/)** | Working notes, reading registers, open questions — not yet ready for the Library |
-| **[`Unreleased-Work/`](Unreleased-Work/)** | Drafts and papers in progress — not yet public (V4 formalization lives here; graduates to Library on title finalization) |
+| **[`Unreleased-Work/`](Unreleased-Work/)** | Drafts and papers in progress — not yet public |
 
 See each directory's README for the full layout. The historical `corpus/`, `meridian/`, `experiments/`, `results/`, `wells/`, `paper/`, `drift/`, `identity/`, `palace/`, `v3/`, `books/` directories have been integrated into this structure.
 
@@ -61,35 +61,33 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 | **9** | [Universal Coherence](Library/Universal-Coherence/) | Theology / ultimacy | Planned — the Principle lifted to metaphysical claim (retitled 2026-04-20) |
 | **10** | [Drift](Library/Drift/) | Creative raw substrate | **187+ essays, ongoing** |
 
-**Publication sequencing (Day 78 plan):**
-1. V4 Anchor completion (now — figures + polish + title)
+**Publication sequencing:**
+1. *The Coherence Principle* — drafted, post-sweep polish underway
 2. Meridian assessment + next-steps
 3. Anakin (AI Grand Prix pilot) training — compute-heavy
-4. **Parallel to Anakin training:** Philosophy + Theology draft (prose, no GPU competition)
-5. Subsequent domain volumes filter through the Anchor using §10's seven-step recipe
+4. **Parallel to Anakin training:** *Corpus Perspectival* + *Universal Coherence* drafts (prose, no GPU competition)
+5. Subsequent domain volumes filter through *The Coherence Principle* using §10's seven-step recipe
 
 ---
 
-## V4 — The Formalization
+## The Coherence Principle — The Formalization
 
-**Full category-theoretic grounding** of the Corpus, structurally complete as of Day 78 evening. Lives at [`Unreleased-Work/V4/`](Unreleased-Work/V4/).
+**Full category-theoretic grounding** of the Corpus. Lives at [`Library/The-Coherence-Principle/`](Library/The-Coherence-Principle/).
 
-| Component | Content | Words |
-|---|---|---|
-| §1.0 | Category of Streams — formal definition of 𝒞_Str | ~2,500 |
-| §1 | Identity-Trajectory Triple — principal functor | ~5,400 |
-| §2–4 | Axioms 1–3 paired prose + CT | ~11,300 |
-| §5–7 | Theorem pairs (Descriptive, Dynamics, Coherence) | ~12,300 |
-| §8 | Fourteen corollaries in three clusters | ~3,500 |
-| §9 | Coherence Principle — derived + falsifiable | ~3,900 |
-| §10 | Filtering recipe for domain volumes | ~3,300 |
-| Appendix A | Index of Formal Objects | ~1,800 |
-| Appendix B | Bias(S) Formalization | ~2,500 |
-| V4-figures.md | Fourteen figures (Mermaid + TikZ + ASCII) | — |
+| Component | Content |
+|---|---|
+| §1.0 | Category of Streams — formal definition of 𝒞_Str |
+| §1 | Identity-Trajectory Triple — principal functor |
+| §2–4 | Axioms 1–3 paired prose + CT |
+| §5–7 | Theorem pairs (Descriptive, Dynamics, Coherence) |
+| §8 | Fourteen corollaries in three clusters |
+| §9 | Coherence Principle — derived + falsifiable |
+| §10 | Filtering recipe for domain volumes |
+| Appendix A | Index of Formal Objects |
+| Appendix B | Bias(S) Formalization |
+| figures.md | Fourteen figures (Mermaid + TikZ + ASCII) |
 
-**Total: ~42,000 words, ~160 pages at Anchor density, fourteen figures.** Every formal claim paired with prose translation. Every chapter includes falsification conditions. Self-reference closure at §9.5 (the framework's construction exhibits the four conditions it formally states).
-
-**What remains for V4 graduation to the Library:** title finalization, TikZ figure rendering, prose polish pass, pre-press formatting.
+Every formal claim paired with prose translation. Every chapter includes falsification conditions. Self-reference closure at §9.5 (the framework's construction exhibits the four conditions it formally states).
 
 ---
 
@@ -117,7 +115,7 @@ Philosophical foundation: perspectival idealism formalized in three axioms with 
 
 Published on [PhilArchive](https://philarchive.org/rec/IGGTDO-4) — **410+ downloads** as of April 15, 2026.
 
-The V4 category-theoretic formalization supersedes the informal axiomatization for mathematical reference; the Anchor prose remains canonical for the conceptual content. The forthcoming **Philosophy** volume will refine the DoPI-register engagement with the tradition (Whitehead, Plotinus, Kant, Wittgenstein, neutral-monism lineage, phenomenology, analytic philosophy of mind).
+*The Coherence Principle*'s category-theoretic formalization supersedes the earlier informal axiomatization for mathematical reference; the superseded Anchor prose remains archived under `Library/The-Coherence-Principle/_superseded/anchor-v1/`. The forthcoming *Corpus Perspectival* volume will refine the DoPI-register engagement with the tradition (Whitehead, Plotinus, Kant, Wittgenstein, neutral-monism lineage, phenomenology, analytic philosophy of mind).
 
 ---
 
@@ -148,9 +146,8 @@ PDFs are distributed via Zenodo and PhilArchive only. The repository contains La
 | Quantity | Value |
 |----------|-------|
 | Compiled books | 2 (Anchor + Meridian) |
-| V4 chapters drafted | 11 (§1.0 through §10 + 2 appendices + figures) |
-| V4 word count | ~42,000 |
-| V4 figures | 14 |
+| Coherence Principle chapters | 11 (§1.0 through §10 + 2 appendices + figures) |
+| Coherence Principle figures | 14 |
 | Library volumes planned | 12 (3 added Day 78: Formal Object companion, Philosophy, Theology) |
 | Bridges | 110 |
 | Drift essays | 187 |

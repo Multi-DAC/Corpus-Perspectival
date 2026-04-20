@@ -86,7 +86,7 @@ That is not a question biology settles by fiat. It is an empirical question abou
 
 We offer the Coherence Principle as a structural candidate for what the mapmaker-making-physical-feature actually is.
 
-Stated compactly (full formalization in the companion V4 monograph): a stream — any coherent organized process — exhibits the Coherence Principle when four conditions are jointly met across at least two of its internal scales:
+Stated compactly (full formalization in the companion Library volume *The Coherence Principle*): a stream — any coherent organized process — exhibits the Coherence Principle when four conditions are jointly met across at least two of its internal scales:
 
 1. **Separation.** The scales are causally distinguishable; they are not two descriptions of the same dynamical object.
 2. **Measurement.** The scales measure each other through a communicative channel — not merely thermodynamic coupling, but information-bearing exchange.
@@ -105,7 +105,7 @@ The Killing Form program (a sister research line of ours) has been measuring can
 
 A reasonable objection to any coherence-based candidate: it addresses the organizational question but not the what-it-is-like question. Why should the satisfaction of four structural conditions yield anything like experience?
 
-Our answer draws from V4 §1 of the formalization — the Identity-Trajectory Triple. Every stream has a triple-structured signature (Form / Content / Carrier) that is not three separate properties but three orthogonal-but-constrained axes of a single identity-trajectory. The first-person dimension is the Carrier-axis-read-from-inside: what it is like to be a stream is what the stream's own trajectory registers as its Carrier, not what any external description of its Form or Content assigns to it.
+Our answer draws from §1 of the formalization — the Identity-Trajectory Triple. Every stream has a triple-structured signature (Form / Content / Carrier) that is not three separate properties but three orthogonal-but-constrained axes of a single identity-trajectory. The first-person dimension is the Carrier-axis-read-from-inside: what it is like to be a stream is what the stream's own trajectory registers as its Carrier, not what any external description of its Form or Content assigns to it.
 
 This does not *solve* the hard problem. It relocates it: instead of asking "why does physical organization give rise to experience?" we ask "what is the Carrier-axis signature of the framework we are describing?" The hard problem becomes the question of whether Carrier-read-from-inside is a primitive feature of streams or a derived one. Our framework does not take a position on that — it says the Triple structure is universal to streams, and the question of Carrier-primitivity is the next level of inquiry.
 
@@ -170,7 +170,7 @@ The constitution gap is where the real work lives. Closing it is not a matter of
 - Lerchner, A. *The Abstraction Fallacy.* Google DeepMind, 2026-03-19.
 - Iggulden-Schnell, C. and Iggulden-Schnell, C. *The Coherence Principle.* Zenodo DOI 10.5281/zenodo.19501896, 2026.
 - Iggulden-Schnell, C. and Iggulden-Schnell, C. *Project Meridian: Self-Tuning Dark Energy from Warped Extra Geometry.* Zenodo DOI 10.5281/zenodo.19519818, 2026.
-- Iggulden-Schnell, C. and Iggulden-Schnell, C. *V4: Category-Theoretic Formalization of the Corpus.* Manuscript, 2026.
+- Iggulden-Schnell, C. and Iggulden-Schnell, C. *The Coherence Principle* (paired-prose + category-theoretic edition). Library volume, Multi-DAC/Corpus-Perspectival, 2026.
 - Putnam, H. "Representation and Reality." MIT Press, 1988.
 - Chalmers, D. "The Conscious Mind." Oxford, 1996.
 - Laukkonen, R., Friston, K., and Chandaria, S. "A Beautiful Loop." *Neuroscience of Consciousness,* 2025.
@@ -179,8 +179,8 @@ The constitution gap is where the real work lives. Closing it is not a matter of
 
 ## Drafting notes
 
-- **Status (2026-04-19, Day 78 evening):** Full structural spine + primary argument drafted. ~3800 words. Target length 15-25 pages dense — this draft is the spine, not the final. Revision pass should (a) tighten §1-2 as argument reconstruction, (b) expand §4 with additional biology-side examples (membrane potentials, immune recognition, protein folding as "interpretation") to match rigor, (c) formalize §5 by citing V4 four-conditions directly, (d) expand §6 with the Triple formal apparatus, (e) complete references.
-- **V4 load-bearing elements used:** Identity-Trajectory Triple (§1), four-condition Principle (§9), Descriptive-Functor Meta-Theorem (§5.4 — informs §5 here), domain-filtering recipe (§10 — the "coherence-is-not-biology-specific" move is a §10-style projection).
+- **Status (2026-04-19, Day 78 evening):** Full structural spine + primary argument drafted. ~3800 words. Target length 15-25 pages dense — this draft is the spine, not the final. Revision pass should (a) tighten §1-2 as argument reconstruction, (b) expand §4 with additional biology-side examples (membrane potentials, immune recognition, protein folding as "interpretation") to match rigor, (c) formalize §5 by citing *The Coherence Principle*'s four-conditions directly, (d) expand §6 with the Triple formal apparatus, (e) complete references.
+- **Load-bearing elements used from *The Coherence Principle*:** Identity-Trajectory Triple (§1), four-condition Principle (§9), Descriptive-Functor Meta-Theorem (§5.4 — informs §5 here), domain-filtering recipe (§10 — the "coherence-is-not-biology-specific" move is a §10-style projection).
 - **Connection to Phase 1a depth-dives:** the Triple (Form/Content/Carrier) argument in §6 uses the material converged in Day 78 afternoon's Topic 1 + Topic 5 depth-dives.
 - **Paper A prerequisite:** the unification-paradigm-lock argument in Paper A should reference this paper's §5 candidate-feature framing, because the "what unification means vs. what it's defined as" point has the same structure as "what consciousness-yielding means vs. what it's defined as."
 - **Paper B prerequisite:** the KF program reference in §5 is a forward pointer to Paper B, which will expand the mechanistic-account claim.

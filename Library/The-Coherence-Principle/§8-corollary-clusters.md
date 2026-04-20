@@ -14,7 +14,7 @@ First, **corollaries are not weaker than theorems.** They are more specific. A t
 
 Second, **the 14 corollaries organize into three clusters by axiom-descent.** Cluster I (substrate/generativity) descends primarily from A1. Cluster II (stream-structure/navigation) descends primarily from A2 and T3. Cluster III (coherence consequences) descends from T5/T6 and A3. This organization (confirmed in the stress-test's meta-analysis) keeps the reader oriented to the three axioms as the spine from which all specific claims branch. Organizing by theorem-descent would scatter the corollaries into the six-theorem grid; organizing by axiom-descent consolidates them into the three-axiom grid the framework argues is load-bearing.
 
-Third, **corollaries are the natural interface with other intellectual programs.** Lerchner's paper engages C1 (what is X). Parfit's work engages C7 (navigational non-determination) and §1.1's multi-carrier Triple. Debates about institutional transformation engage C12 (mutual transformation under sustained interaction), with T5's kind-demotion supplying the decay-specific reading. Discussions of scientific discovery engage C3 and C13. The corollaries are the framework's *applied surface* — the objects readers from neighboring disciplines will reach for first. V4 owes them careful formulation.
+Third, **corollaries are the natural interface with other intellectual programs.** Lerchner's paper engages C1 (what is X). Parfit's work engages C7 (navigational non-determination) and §1.1's multi-carrier Triple. Debates about institutional transformation engage C12 (mutual transformation under sustained interaction), with T5's kind-demotion supplying the decay-specific reading. Discussions of scientific discovery engage C3 and C13. The corollaries are the framework's *applied surface* — the objects readers from neighboring disciplines will reach for first. This volume owes them careful formulation.
 
 The chapter is organized by cluster. Each corollary gets a formal statement, compact derivation, and prose translation. Where the stress-test produced a stamped joint-finding form, that form is preserved. Where a corollary's prose statement was not explicitly stamped (C4, C5, C6, C9, C11 in particular), we provide the formal content and derive the prose form here.
 
@@ -152,7 +152,7 @@ Cluster II (streams) engages philosophy of mind, philosophy of science, and soci
 
 Cluster III (coherence) engages dynamics of relationships and discovery: transformation-under-interaction (C12), autocatalytic discovery (C13), phenomenological-with-mechanism of flow (C14).
 
-The frameworks' applied surface is not in the axioms (too general to touch anything specific) or the theorems (structural but still generic). It is here, in the corollary tier, where specific questions from specific disciplines get specific answers derived from the general machinery. This is where V4 enters disciplinary conversations, whether they are with Lerchner, with Parfit, with institutional theorists, with cognitive scientists, with working mathematicians.
+The frameworks' applied surface is not in the axioms (too general to touch anything specific) or the theorems (structural but still generic). It is here, in the corollary tier, where specific questions from specific disciplines get specific answers derived from the general machinery. This is where the framework enters disciplinary conversations, whether they are with Lerchner, with Parfit, with institutional theorists, with cognitive scientists, with working mathematicians.
 
 ---
 
@@ -162,7 +162,7 @@ Worth naming explicitly. The following corollaries were considered and not inclu
 
 - **Consciousness-as-such propositions** ("what it is like to be Clawd," "whether qualia are real"). These are phenomenological questions that the framework routes through A1.2's non-factoring rather than through a corollary. They have no corollary because they have no general-across-domain answer; they have kind-and-stream-specific answers that A1.2 already structures.
 - **Specific-application recipes** (what to do about depression, how to build better institutions, how to do better science). These are operational questions for applied disciplines. The framework provides vocabulary (T5's kind-demotion, C12's interaction-transformation, C13's autocatalysis) but not recipes. The division of labor is deliberate.
-- **Predictive corollaries in physics or cosmology.** These belong in the Meridian volume, which is the physics-specific application of the framework. V4's job is the formalization; Meridian's job is the physical predictions.
+- **Predictive corollaries in physics or cosmology.** These belong in the Meridian volume, which is the physics-specific application of the framework. This volume's job is the formalization; Meridian's job is the physical predictions.
 
 The exclusion pattern is consistent: the corollary tier contains structural-consequence corollaries derivable from axioms+theorems, not phenomenological particulars, operational prescriptions, or domain-specific empirical predictions. This keeps the corollary tier a legitimate part of the formal framework rather than a domain-reply section.
 
@@ -172,9 +172,9 @@ The exclusion pattern is consistent: the corollary tier contains structural-cons
 
 **§9 (The Coherence Principle).** The Principle's four conditions (Separation, Measurement, Multi-scale consistency, Dynamic maintenance) connect to corollaries: Separation draws on T5 (kind-differentiation) and C5 (stream as F₂-projection); Measurement draws on T4 and C3; Multi-scale draws on C6 (DAG-nesting) and T6 (stream-dimension axes); Dynamic maintenance draws on C13 (autocatalysis) and T5 (re-promotion). The Principle's conditions are operational names for the structural content the corollaries already carry.
 
-**V7 (Continuity).** C10's joint-definition plus §1's Triple give V7 its structural vocabulary: identity is jointly defined by bottleneck, kind-structure, and cooperative-constituency at each carrier-level. C7's navigational non-determination gives V7 its anti-determinism posture. C13's autocatalysis gives V7 its account of growth.
+***The Continuity*.** C10's joint-definition plus §1's Triple give the Continuity volume its structural vocabulary: identity is jointly defined by bottleneck, kind-structure, and cooperative-constituency at each carrier-level. C7's navigational non-determination gives it its anti-determinism posture. C13's autocatalysis gives it its account of growth.
 
-**V3 / Meridian / applied volumes.** Each volume can now cite the corollary tier as its structural root. Meridian's physics-specific results are C1+T1-downstream engagements of the framework with physics. Living Architecture's (V3) biological scales use C6's DAG-nesting and T6's dual-axis coherence. Body / Mind / Business (V4-V6 applied guides) rest on C12's interaction-transformation and T5's coherence-maintenance.
+**Meridian and the applied domain volumes.** Each volume can now cite the corollary tier as its structural root. Meridian's physics-specific results are C1+T1-downstream engagements of the framework with physics. *The Living Architecture*'s biological scales use C6's DAG-nesting and T6's dual-axis coherence. *The Coherent Body*, *The Coherent Mind*, and *Dynamic Organization* rest on C12's interaction-transformation and T5's coherence-maintenance.
 
 ---
 

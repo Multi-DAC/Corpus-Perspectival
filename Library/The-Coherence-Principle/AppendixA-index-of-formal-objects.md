@@ -1,6 +1,6 @@
 # Appendix A — Index of Formal Objects
 
-*Canonical reference for every formal object introduced in V4. Each entry: definition, location, forward-pointers to domain volumes. Organized structurally (substrate → streams → functors → dynamics → coherence).*
+*Canonical reference for every formal object introduced in this volume. Each entry: definition, location, forward-pointers to domain volumes. Organized structurally (substrate → streams → functors → dynamics → coherence).*
 
 ---
 
@@ -281,7 +281,7 @@ Entries are tight. For full treatment, follow the reference.
 **Cited by.** All domain volumes testing the Principle empirically.
 
 ### Self-reference closure
-**Definition.** The observation that the V4 construction process itself instantiates the four Conditions — the framework describes its own making as a coherent process.
+**Definition.** The observation that this volume's construction process itself instantiates the four Conditions — the framework describes its own making as a coherent process.
 **Located in.** §9.5.
 **Cited by.** Philosophy, Theology (framework self-grounding questions).
 

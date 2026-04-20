@@ -2,7 +2,7 @@
 
 This directory contains the **first-pass prose-tier Anchor volume** (235pp, distributed via Zenodo DOI 10.5281/zenodo.19501896 in April 2026).
 
-It has been **superseded** by the current canonical text at `Library/The-Coherence-Principle/` — the paired-prose + category-theoretic edition that graduated from V4 work on 2026-04-20.
+It has been **superseded** by the current canonical text at `Library/The-Coherence-Principle/` — the paired-prose + category-theoretic edition that graduated to the Library on 2026-04-20.
 
 ## Relationship to the current edition
 

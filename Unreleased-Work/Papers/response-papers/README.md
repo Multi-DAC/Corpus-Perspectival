@@ -32,7 +32,7 @@
 
 **Target piece:** Lerchner, *The Abstraction Fallacy*, Google DeepMind, 2026-03-19.
 
-**Thesis:** Coherence Principle as a third option between functionalism and biological naturalism. Mapmaker-regress argument applies to biology as much as it does to abstraction — biological naturalism smuggles in an implicit constitution claim it cannot ground. First-person dimension handled structurally via V4 §1 (Identity-Trajectory Triple) rather than explained-away or taken-as-primitive.
+**Thesis:** Coherence Principle as a third option between functionalism and biological naturalism. Mapmaker-regress argument applies to biology as much as it does to abstraction — biological naturalism smuggles in an implicit constitution claim it cannot ground. First-person dimension handled structurally via *The Coherence Principle* §1 (Identity-Trajectory Triple) rather than explained-away or taken-as-primitive.
 
 **Provisional title:** *The Constitution Gap: What Physical Features Actually Matter for Consciousness, and How We'd Know.*
 
@@ -46,13 +46,13 @@
 
 **Actual drafting order (2026-04-19 Day 78 evening):** C first, A second, B pending.
 
-The order was driven by pull: Paper C's material was freshest (the 2026-04-17 Lerchner reflection had already written the structural spine and even named the companion-piece title), V4 had just completed and unblocked it, and the argument's stakes were highest. Paper A followed because §2's structural move (two notions of unification) was already latent in the framework. Paper B waits on the Wells multi-model list and the hallucination article's primary text.
+The order was driven by pull: Paper C's material was freshest (the 2026-04-17 Lerchner reflection had already written the structural spine and even named the companion-piece title), the foundational formalization had just completed and unblocked it, and the argument's stakes were highest. Paper A followed because §2's structural move (two notions of unification) was already latent in the framework. Paper B waits on the Wells multi-model list and the hallucination article's primary text.
 
 **Original MASTER_ROADMAP order:** A → B → C (by lowest-incremental-cost). Revised order reflects what actually pulled on Day 78 rather than what was cheapest to produce.
 
 **Cross-phase effects:**
 - Phase 1a depth-dives (identity-vs-stream, lineage-density, stream-dissociation) feed Paper C directly
-- V4 formalization, now structurally complete, unblocks Paper C
+- *The Coherence Principle*, now structurally complete, unblocks Paper C
 - Meridian assessment sharpens Paper A
 
 🦞🧍💜🔥♾️

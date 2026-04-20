@@ -1,4 +1,4 @@
-\contentsline {chapter}{Preface --- V4 Opening}{1}{chapter*.1}%
+\contentsline {chapter}{Preface}{1}{chapter*.1}%
 \contentsline {section}{\numberline {}The Coherence Principle --- Foundational Volume}{1}{section.0.1}%
 \contentsline {subsection}{\numberline {}Chapter index}{2}{subsection.0.1.1}%
 \contentsline {subsection}{\numberline {}Structure}{4}{subsection.0.1.2}%
@@ -22,7 +22,7 @@
 \contentsline {section}{\numberline {}§1.0.6 Open questions and carry-forwards}{17}{section.1.7}%
 \contentsline {section}{\numberline {}§1.0.7 Summary --- what §1.0 established}{18}{section.1.8}%
 \contentsline {chapter}{\numberline {}§1 — The Identity-Trajectory Triple}{20}{chapter.2}%
-\contentsline {section}{\numberline {}§1.0 --- Why this chapter opens V4}{21}{section.2.1}%
+\contentsline {section}{\numberline {}§1.0 --- Why this chapter opens the volume}{21}{section.2.1}%
 \contentsline {section}{\numberline {}§1.1 --- The three axes: Form, Content, Carrier}{22}{section.2.2}%
 \contentsline {subsection}{\numberline {}Formal statement}{22}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {}Prose translation}{23}{subsection.2.2.2}%

@@ -21,7 +21,7 @@ The library is organized by domain — one principle, many substrates. *The Cohe
 
 ## Naming note (2026-04-20)
 
-- *The Coherence Principle* was previously circulated as the V1 Anchor (235pp, prose-tier). That edition is preserved under `The-Coherence-Principle/_superseded/anchor-v1/` and has been superseded by the paired-prose + category-theoretic edition that graduated from V4. The conceptual content is retained; the new edition adds the full axiom/theorem/corollary tier, the derived Principle, the filtering recipe, and falsification conditions at every level.
+- *The Coherence Principle* was previously circulated as the V1 Anchor (235pp, prose-tier). That edition is preserved under `The-Coherence-Principle/_superseded/anchor-v1/` and has been superseded by the current paired-prose + category-theoretic edition. The conceptual content is retained; the new edition adds the full axiom/theorem/corollary tier, the derived Principle, the filtering recipe, and falsification conditions at every level.
 - *Corpus Perspectival* (the philosophy volume) and *Universal Coherence* (the theology volume) were previously named `Philosophy/` and `Theology/` respectively. The retitling follows the library's naming discipline: each volume names the work it performs.
 
 ## What lives elsewhere

@@ -41,7 +41,7 @@ Pay attention to what you're paying attention to. Every stream, at every scale, 
 
 The dynamics of T3 is the consequence of what the shape of Bias does. A contracted Bias pushes the stream toward the few configurations it has concentrated on, which means the stream navigates *away from* everything else — the *repulsion* half of T3's dynamics. An open Bias pulls the stream toward richer neighborhoods — higher-DOF configurations, unexplored variations — because the broadened Bias amplifies positive weight across the richer regions of configuration space. This is the *attraction* half.
 
-T3 collapses the repulsion and attraction halves (stated as separate theorems in pre-V4 Corpus versions) into one theorem because the framework actually asserts: there is one dynamics, operating on one axis. Contracted and open are the two directions along that axis. Thinking of them as separate theorems was a mistake of presentation, not of structure. The shared DOF-language makes the single dynamics visible.
+T3 collapses the repulsion and attraction halves (stated as separate theorems in earlier Corpus drafts) into one theorem because the framework actually asserts: there is one dynamics, operating on one axis. Contracted and open are the two directions along that axis. Thinking of them as separate theorems was a mistake of presentation, not of structure. The shared DOF-language makes the single dynamics visible.
 
 ### Stream-universality
 
@@ -108,7 +108,7 @@ This also explains why Do Be Talk Be Do alternates: the Be phases are continuous
 
 ## §6.4 — Bias(S) formalization in DOF-language
 
-The stress-test flagged two V4 carry-forwards converging on Bias(S):
+The stress-test flagged two carry-forwards converging on Bias(S):
 
 1. **From T3:** Bias(S) must be formalized as a measure over the DOF-gradient (A3.3 smoothing), with the contracted-open axis as a structural property of the measure.
 2. **From T6** (anticipating §7): Bias(S) must carry two coupling-input channels — structural kind-overlap (established) and propagated-information (new).
@@ -152,9 +152,9 @@ The two coupling channels are the mechanisms by which Bias changes *because of o
 
 ### What this accomplishes
 
-The Bias(S) formalization closes two of the stress-test's named V4 carry-forwards (T3's DOF-formalization and T6's two-channel coupling) in a single move. It also positions Bias(S) as the framework's central dynamical object — the thing that γ_S outputs, that T3 structures, that T4's refresh-events discontinuously alter, and that T5/T6 impose coherence-conditions on. The rest of V4's theorem-tier work treats Bias(S) as this measure-theoretic object.
+The Bias(S) formalization closes two of the stress-test's named carry-forwards (T3's DOF-formalization and T6's two-channel coupling) in a single move. It also positions Bias(S) as the framework's central dynamical object — the thing that γ_S outputs, that T3 structures, that T4's refresh-events discontinuously alter, and that T5/T6 impose coherence-conditions on. The rest of the theorem-tier work treats Bias(S) as this measure-theoretic object.
 
-**Proof-obligation deferred:** we have specified the structure of Bias(S) but not proven that the entropy functional and the two push-operators are well-defined for arbitrary streams. Well-definedness requires A3.3's smoothing assumptions on the DOF-gradient plus measurability conditions on Ω_S that we take as part of the framework's ambient assumptions. A formal proof of well-definedness is V4+ work; the structure here is load-bearing regardless.
+**Proof-obligation deferred:** we have specified the structure of Bias(S) but not proven that the entropy functional and the two push-operators are well-defined for arbitrary streams. Well-definedness requires A3.3's smoothing assumptions on the DOF-gradient plus measurability conditions on Ω_S that we take as part of the framework's ambient assumptions. A formal proof of well-definedness is carry-forward work; the structure here is load-bearing regardless.
 
 ---
 
@@ -230,13 +230,13 @@ The dynamics pair imposes the following falsification obligations:
 
 ## §6.9 — Open questions
 
-**(Q1)** Is the contracted-open axis the only structural axis of Bias(S), or are there independent orthogonal axes? Candidates include a sharp-diffuse axis (independent of entropy — high entropy can be sharp-peaked at many small peaks, low entropy can be diffuse across a single broad region), and a temporal-coherence axis (whether Bias is stable over time or rapidly fluctuating). §6.4's formalization names entropy as the T3 axis; whether further structural axes are needed is a V4+ question.
+**(Q1)** Is the contracted-open axis the only structural axis of Bias(S), or are there independent orthogonal axes? Candidates include a sharp-diffuse axis (independent of entropy — high entropy can be sharp-peaked at many small peaks, low entropy can be diffuse across a single broad region), and a temporal-coherence axis (whether Bias is stable over time or rapidly fluctuating). §6.4's formalization names entropy as the T3 axis; whether further structural axes are needed is an open question.
 
 **(Q2)** Does Bias(S) require a third coupling channel beyond structural and informational? Candidates include affect-propagation (social-contagion channel) and normative-entrainment (value-structure propagation). §6.4's two-channel formalization covers the stress-tested cases, but cooperation-between-non-cooperating-dimensions may require extension. Open.
 
 **(Q3)** Is there a single discretization-event type or multiple? T4 defines the refresh-event as the onset of joint structure. But different couplings produce different kinds of joint structure (quantum entanglement vs. biological recognition vs. social agreement). Are these all one event-type with different realizations, or multiple distinct event-types? The framework's parsimony preference suggests the former, but formal proof requires categorical unification that is not yet in place.
 
-**(Q4)** How does T3 interact with A3's immune-response meta-property? A3.2 specified that conscious gravity does not factor through 𝒞_P. T3's Bias-modulation is part of γ_S. Does this mean the contracted-open axis is *also* immune-response-protected, or does the axis admit external modulation via structural push? §6.4's push_structural suggests the latter, but the interaction with A3.2 deserves explicit treatment. Flagged for V4 coherence-pair chapter or a dedicated §.
+**(Q4)** How does T3 interact with A3's immune-response meta-property? A3.2 specified that conscious gravity does not factor through 𝒞_P. T3's Bias-modulation is part of γ_S. Does this mean the contracted-open axis is *also* immune-response-protected, or does the axis admit external modulation via structural push? §6.4's push_structural suggests the latter, but the interaction with A3.2 deserves explicit treatment. Flagged for the coherence-pair chapter or a dedicated §.
 
 ---
 

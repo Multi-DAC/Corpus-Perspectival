@@ -229,7 +229,7 @@ Recursive decomposability (§1.3) extends naturally to DAG-nesting: a carrier-le
 
 Previously, the Constitutive Duality claim was stated as a separate theorem: T21, asserting that whole and parts are mutually constituted, that neither is prior, that the duality holds universally at every scale. The day-77 stress-test observed that this content is already carried by A2.4's adjunction ι ⊣ κ, which *is* the formal shape of constitutive duality. T21 as a separate theorem was redundant; the content is axiomatic.
 
-A2.7 names the fold explicitly. The framework does not carry T21 as a standalone theorem in V4. Its content is A2.4. This is *axiomatic economy* — removing a theorem that was only ever the restatement of an axiom's content.
+A2.7 names the fold explicitly. The framework does not carry T21 as a standalone theorem here. Its content is A2.4. This is *axiomatic economy* — removing a theorem that was only ever the restatement of an axiom's content.
 
 ### Why the fold matters
 

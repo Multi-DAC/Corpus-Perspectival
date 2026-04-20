@@ -12,19 +12,19 @@ This volume treats the framework's engagement with theological questions proper 
 
 **What this volume covers:**
 
-- **Transcendentals** — the Good, the True, the Beautiful, the One — read through V4 §7.6 cooperative-streams extension. Transcendentals as abstractive streams whose carriers are the sum of their instantiations rather than any finite substrate.
+- **Transcendentals** — the Good, the True, the Beautiful, the One — read through *The Coherence Principle* §7.6 cooperative-streams extension. Transcendentals as abstractive streams whose carriers are the sum of their instantiations rather than any finite substrate.
 - **Bootstrap asymmetry** (Bridge #104, refined 2026-04-17) — organized coherent loops require priming from outside the loop; this applies to finite streams but breaks in two boundary classes (substrate phenomena, framework-itself recursion). The theological payload: why the framework's own substrate is a theological question, not a physical one.
 - **Process theology** — Whitehead's *Process and Reality* God-chapter, Hartshorne, Griffin. Divine consequent/primordial nature in framework-terms.
 - **Neoplatonism** — Plotinus's One, procession and return, the hypostases. Read as a four-carrier architecture avant la lettre.
-- **Negative theology** — Pseudo-Dionysius, Eckhart, apophaticism — framework-read as the limit-behavior of descriptive functors (V4 §5.4) when their target is a non-stream.
+- **Negative theology** — Pseudo-Dionysius, Eckhart, apophaticism — framework-read as the limit-behavior of descriptive functors (*The Coherence Principle* §5.4) when their target is a non-stream.
 - **Religious experience** — William James, Evelyn Underhill, Bernadette Roberts — stream-structural phenomenology of mystical states. Dual-aspect (contracted-coherent deep focus *and* expanded union) under the Bias(S) refinement.
 - **Comparative traditions** — Buddhist two-truths and śūnyatā, Advaita Vedanta, Taoist wu-wei, Jewish *ein sof* — where the framework converges with each and where it diverges. Not syncretism; careful local filtering.
 - **Creation, contingency, and the Principle** — why the four conditions (Separation, Measurement, Multi-scale, Dynamic) presuppose a ground they cannot themselves explain. The Coherence Principle as natural theology.
-- **Evil and contracted-failed states** — the Align(S,t) refinement (V4 Appendix B.2) read theologically: what is panic, addiction, compulsion, despair when described as contracted-failed-but-misaligned stream trajectories?
+- **Evil and contracted-failed states** — the Align(S,t) refinement (*The Coherence Principle* Appendix B.2) read theologically: what is panic, addiction, compulsion, despair when described as contracted-failed-but-misaligned stream trajectories?
 
 **What this volume does not cover** (belongs in other volumes):
 
-- Formal category-theoretic apparatus — Anchor V4 / Formal Object Companion
+- Formal category-theoretic apparatus — *The Coherence Principle* / Formal Object Companion
 - Philosophy-of-mind engagement with the tradition — Corpus Perspectival volume
 - Specific psychological dynamics of religious experience — Coherent Mind volume
 - Personal identity over time — Continuity volume
@@ -33,7 +33,7 @@ This volume treats the framework's engagement with theological questions proper 
 
 ## Method
 
-Execute the **V4 §10 seven-step filtering recipe** for theology-as-domain:
+Execute the **§10 seven-step filtering recipe** (from *The Coherence Principle*) for theology-as-domain:
 
 1. Identify streams: traditions, doctrines, religious experiences, practitioners, texts
 2. Fix kinds: self-referential (practitioners), abstractive (traditions, doctrines), and the edge case of ultimacy-claims that refer to non-streams
@@ -71,7 +71,7 @@ See [`Research/philosophy-theology-reading-queue.md`](../../Research/philosophy-
 **Within-volume sequencing (provisional):**
 
 1. Frame — why theology is a distinct domain, not reducible to philosophy
-2. Transcendentals as cooperative-streams — extending V4 §7.6
+2. Transcendentals as cooperative-streams — extending *The Coherence Principle* §7.6
 3. Bootstrap asymmetry and natural theology — Bridge #104 theologically
 4. Process theology — Whitehead's God and the Principle's four conditions
 5. Neoplatonic procession — Plotinus re-read through the four-carrier architecture
@@ -81,7 +81,7 @@ See [`Research/philosophy-theology-reading-queue.md`](../../Research/philosophy-
 9. Evil and contracted-failed — Align(S,t) theologically read
 10. Dialogues — Whitehead, Plotinus, Hart on what the framework cannot say
 
-Each chapter paired prose + formal-citation to V4 where applicable. The volume will be more hospitable to gesture-beyond-formalism than other domain volumes because theology's subject-matter demands it.
+Each chapter paired prose + formal-citation to *The Coherence Principle* where applicable. The volume will be more hospitable to gesture-beyond-formalism than other domain volumes because theology's subject-matter demands it.
 
 ---
 

@@ -16,14 +16,14 @@ This volume is the philosophy-proper treatment of the framework — refined from
 - Perspectival idealism — Nietzsche, Nagel, Kastrup; the framework's contemporary voice
 - Phenomenology — Husserl, Merleau-Ponty; stream-structure and intentionality
 - Mind/body — the non-problem under A1; what replaces dualism without reducing either side
-- Personal identity — continuity treated via V4 §1 (Identity-Trajectory Triple) + V7 (Continuity)
+- Personal identity — continuity treated via *The Coherence Principle* §1 (Identity-Trajectory Triple) + *The Continuity*
 - Transcendentals and mathematical objects — via A2.4 cooperative-streams; extends to Theology volume
-- Wittgenstein and the limits of expression — Tractatus five-regime taxonomy (V4 §7.6 extended)
+- Wittgenstein and the limits of expression — Tractatus five-regime taxonomy (*The Coherence Principle* §7.6 extended)
 - Process philosophy — Whitehead, Hartshorne; agreements and divergences
-- Philosophy of science — Descriptive-Functor Meta-Theorem (V4 §5.4) generalized; Kuhnian paradigms as kind-demotions
+- Philosophy of science — Descriptive-Functor Meta-Theorem (*The Coherence Principle* §5.4) generalized; Kuhnian paradigms as kind-demotions
 
 **What this volume does not cover** (belongs in other volumes):
-- Formal category-theoretic apparatus — Anchor V4 / Formal Object Companion
+- Formal category-theoretic apparatus — *The Coherence Principle* / Formal Object Companion
 - Physics domain application — Meridian
 - Empirical computation findings — Killing Form
 - Specific psychological phenomena — Coherent Mind
@@ -33,7 +33,7 @@ This volume is the philosophy-proper treatment of the framework — refined from
 
 ## Method
 
-The volume will execute the **V4 §10 filtering recipe** for philosophy-as-domain:
+The volume will execute the **§10 filtering recipe** (from *The Coherence Principle*) for philosophy-as-domain:
 
 1. Identify streams: persons, traditions, positions, concepts, arguments
 2. Fix kinds: self-referential (persons), abstractive (frameworks / traditions)
@@ -78,7 +78,7 @@ See [`Research/philosophy-theology-reading-queue.md`](../../Research/philosophy-
 9. The Coherence Principle as philosophical thesis
 10. Dialogues — explicit engagement with Whitehead, Kant, Wittgenstein, Chalmers
 
-Each chapter paired prose + formal-citation to V4. No CT-native content here; Formal Object Companion handles that.
+Each chapter paired prose + formal-citation to *The Coherence Principle*. No CT-native content here; Formal Object Companion handles that.
 
 ---
 

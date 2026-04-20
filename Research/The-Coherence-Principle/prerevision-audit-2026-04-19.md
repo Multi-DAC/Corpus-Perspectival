@@ -1,6 +1,6 @@
-# V4 Pre-Revision Audit — Day 78 evening (2026-04-19)
+# *The Coherence Principle* — Pre-Revision Audit (2026-04-19)
 
-*Structural audit ahead of Clayton's revision + compile pass. Findings are file:line-keyed, not editorial advice. Clean checks are reported as clean. No edits have been made to V4 chapter files — this document is the punch-list.*
+*Historical record. Structural audit run before the 2026-04-20 revision + compile pass that graduated the volume to the Library. Findings are file:line-keyed against the then-current chapter files (which used the "V4" working label and pre-renumbering theorem labels T7/T11/T15/T16/T20). Most findings were resolved during the subsequent revision pass; this file is kept in Research/ for lineage.*
 
 ---
 

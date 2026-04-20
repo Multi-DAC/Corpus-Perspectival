@@ -45,9 +45,9 @@ Body: (~200-400w)
 - [2026-03-19 — Lerchner, *The Abstraction Fallacy*](2026-03-19-lerchner-abstraction-fallacy.md) — Paper C target *(PDF at `pdfs/2026-03-19-lerchner-abstraction-fallacy.pdf`; quote-pulls verified 2026-04-19)*
 - *Hallucination article (LiveScience)* — Paper B target, **URL pending from Clayton**
 
-### V4 / Anchor citations
+### *The Coherence Principle* citations
 
-*(To be populated as V4 revision pass pulls citations forward from Anchor.)*
+*(To be populated as the revision pass pulls citations forward.)*
 
 ### Meridian citations
 

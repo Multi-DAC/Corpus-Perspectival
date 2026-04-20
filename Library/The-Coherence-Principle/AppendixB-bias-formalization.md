@@ -215,7 +215,7 @@ Each signature is domain-specific in its operationalization; the signatures them
 | σ*(t) | γ-implied trajectory |
 | D(S, [t_0, t_1]) | Trajectory divergence (Principle's outperformance metric) |
 
-All of V4's Bias-related claims reduce to these eight quantities and their relationships. Appendix B is the reference each domain volume cites.
+All of this volume's Bias-related claims reduce to these eight quantities and their relationships. Appendix B is the reference each domain volume cites.
 
 ---
 

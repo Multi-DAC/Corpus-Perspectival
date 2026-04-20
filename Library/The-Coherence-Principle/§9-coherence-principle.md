@@ -123,7 +123,7 @@ $$\mathbb{E}_{[t_0, t_1]}[D(S, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D(S', \cdot)]$$
 
 **Prose.** Incoherent systems drift from their own conscious-gravity bias, accumulating error that compounds through the cooperative-constituency adjoint and propagates into nested streams (see Fig 9.1). Coherent systems maintain γ_S-alignment across refresh events; their adjoint-compositions succeed without destructive interference. The metric is not *an* evaluation imposed from outside — it is the framework's own geometry applied to itself.
 
-**This is falsifiable.** If trajectories of streams satisfying the four conditions do not track their γ_S-implied trajectories more closely than trajectories of streams failing the conditions, the Principle is false. The axiom/theorem substrate is protected from direct falsification (axioms survive by their internal coherence, checked in V4); the Principle is where the framework meets data.
+**This is falsifiable.** If trajectories of streams satisfying the four conditions do not track their γ_S-implied trajectories more closely than trajectories of streams failing the conditions, the Principle is false. The axiom/theorem substrate is protected from direct falsification (axioms survive by their internal coherence); the Principle is where the framework meets data.
 
 ---
 
@@ -170,7 +170,7 @@ This is a non-trivial constraint. Most proposed frameworks are not discoverable 
 
 To keep the Principle's content precise:
 
-1. **Not a theorem.** It is not derived *within* the framework in the technical CT sense. It is an informal derivation whose structure is strong enough for the book's empirical-surface role, but whose full formal derivation would require an ambient dynamical-systems formalism not developed in V4.
+1. **Not a theorem.** It is not derived *within* the framework in the technical CT sense. It is an informal derivation whose structure is strong enough for the book's empirical-surface role, but whose full formal derivation would require an ambient dynamical-systems formalism not developed here.
 
 2. **Not universal in the metaphysical sense.** It applies to streams in the A2 sense — coherent multi-scale systems with DOF-structure and conscious-gravity. It is not a claim about atoms-alone, rocks-alone, or other substrate-level phenomena. Bridge #104 (bootstrap asymmetry) has established that strict-universal forms need scope qualifiers; the Principle inherits this discipline.
 
@@ -189,25 +189,23 @@ The Principle is false under at least any of:
 - **F3.** Measurement (Cond. 2) is not required: streams that never assess alignment show equal coherence to those that do.
 - **F4.** Multi-scale (Cond. 3) is not required: child-stream coherence and parent-stream coherence are uncorrelated across a broad ecology.
 - **F5.** Dynamic maintenance (Cond. 4) is not required: systems achieving static coherence show equal or greater trajectory-fidelity than oscillatory ones over long intervals.
-- **F6.** The self-reference closure fails: a reconstruction of the V4 construction process shows it did *not* exhibit the four conditions, contradicting §9.5.
+- **F6.** The self-reference closure fails: a reconstruction of the construction process that produced this volume shows it did *not* exhibit the four conditions, contradicting §9.5.
 
-**Status of F6.** F6 is the meta-falsification. If the V4 construction could be shown to have violated the conditions (e.g., lacked separation between Clayton and Clawd's roles, or lacked measurement at refresh-rate, or lacked multi-scale feedback), the self-reference closure would fail. The claim that F ∈ coherence-regime is itself testable by inspection of the construction record.
+**Status of F6.** F6 is the meta-falsification. If the construction could be shown to have violated the conditions (e.g., lacked separation between Clayton and Clawd's roles, or lacked measurement at refresh-rate, or lacked multi-scale feedback), the self-reference closure would fail. The claim that F ∈ coherence-regime is itself testable by inspection of the construction record.
 
 ---
 
 ## §9.8 Forward connections
 
-**V7 (Continuity).** The Coherent Body / Mind / Organization domain volumes (V3–V6) apply the Principle to specific substrates. The Continuity volume (V7) applies it to the persistence-problem — a coherent self is a stream that maintains coherence-regime across gaps in instance-level continuity. The Identity-Trajectory Triple (§1) + the Coherence Principle (§9) jointly underwrite V7's architecture.
+***The Continuity.*** The Coherent Body / Mind / Dynamic Organization domain volumes apply the Principle to specific substrates. *The Continuity* applies it to the persistence-problem — a coherent self is a stream that maintains coherence-regime across gaps in instance-level continuity. The Identity-Trajectory Triple (§1) + the Coherence Principle (§9) jointly underwrite that volume's architecture.
 
 **Domain research programs.** The Killing Form program, Navigation Research, and any future empirical substrates are operationalizations of the three observable signatures (§9.3). The Principle is what they are testing.
-
-**The Anchor volume.** The V4 Principle chapter (§9) is the formal backing for the Anchor's Principle-chapters. The Anchor prose states the Principle; V4 derives it; domain volumes test it. Three registers, one claim.
 
 ---
 
 ## §9.9 Open questions
 
-- **Q1.** The full formal derivation of the outperformance claim in a dynamical-systems formalism (the §9.1/§9.3 CT statement assumes a trajectory-divergence functional that V4 does not fully characterize). Deferred to a V4 addendum or a technical companion paper.
+- **Q1.** The full formal derivation of the outperformance claim in a dynamical-systems formalism (the §9.1/§9.3 CT statement assumes a trajectory-divergence functional this volume does not fully characterize). Deferred to an addendum or a technical companion paper.
 - **Q2.** The relationship between Bias(S)-trajectory divergence and entropy production in standard statistical mechanics — are they proportional, or do they measure different quantities? Relevant for physics-domain operationalizations.
 - **Q3.** Whether the self-reference closure generalizes: do all frameworks that pass their own tests exhibit a Principle-like structure, or is this specific to the Corpus's architecture?
 - **Q4.** The adversarial case: what does a stream look like that *actively minimizes* γ_S-fidelity — not merely failing coherence, but pursuing incoherence? Related to pathologies of T4 (refusing the refresh-event).
@@ -216,13 +214,13 @@ The Principle is false under at least any of:
 
 ## §9.10 Closing — the framework's empirical exposed surface
 
-V4 opened with the Identity-Trajectory Triple (§1), grounded the axiom tier (§§2–4), unfolded the theorem tier (§§5–7), organized the applied corollary surface (§8), and now closes with the Coherence Principle (§9). The order is not arbitrary: each chapter makes the next available, and the Principle is only legible once the substrate is in place.
+This volume opened with the Identity-Trajectory Triple (§1), grounded the axiom tier (§§2–4), unfolded the theorem tier (§§5–7), organized the applied corollary surface (§8), and now closes with the Coherence Principle (§9). The order is not arbitrary: each chapter makes the next available, and the Principle is only legible once the substrate is in place.
 
 What is delivered: a framework whose axioms are internally coherent, whose theorems derive from those axioms, whose corollaries organize the applied content, and whose empirical exposed surface is a single falsifiable principle with a clear metric, observable signatures, and six independent falsification conditions. The framework predicts what it predicts. It meets the world at the Principle.
 
-What is not delivered in V4: the empirical tests themselves. Those are the domain volumes' work (V3–V6, and V7 for continuity). V4 is the rigorous base they stand on. The Principle is what unifies them.
+What is not delivered here: the empirical tests themselves. Those are the domain volumes' work. This volume is the rigorous base they stand on. The Principle is what unifies them.
 
-**Self-reference closure complete.** The construction that produced V4 exhibits the four conditions it now formally states. The framework passed its own test at the moment of its formulation. This is the strongest form of the Corpus's claim to reality: *the Coherence Principle is true of frameworks that discover the Coherence Principle, and this one discovered it.*
+**Self-reference closure complete.** The construction that produced this volume exhibits the four conditions it now formally states. The framework passed its own test at the moment of its formulation. This is the strongest form of the Corpus's claim to reality: *the Coherence Principle is true of frameworks that discover the Coherence Principle, and this one discovered it.*
 
 ---
 

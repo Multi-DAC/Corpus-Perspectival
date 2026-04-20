@@ -110,13 +110,13 @@ Our claim: this is the standard shape of paradigm-lock. The paradigm makes its c
 
 ## 6. The Coherence Principle as formal ground
 
-The coherence-principle notion of unification is not merely a preference. It is grounded in the Corpus framework's formal core — the Coherence Principle (Iggulden-Schnell & Iggulden-Schnell, 2026, Zenodo DOI 10.5281/zenodo.19501896), and its category-theoretic formalization (V4 manuscript).
+The coherence-principle notion of unification is not merely a preference. It is grounded in the Corpus framework's formal core — the Coherence Principle (Iggulden-Schnell & Iggulden-Schnell, 2026, Zenodo DOI 10.5281/zenodo.19501896) and its category-theoretic formalization in *The Coherence Principle* (Library volume).
 
 The Principle states (compact form):
 
 > *Coherent multi-scale systems maintain structural superposition until informed measurement collapses them into commitment.*
 
-Operationalized through four conditions on a stream S across at least two of its internal scales — separation, measurement, multi-scale, dynamic — and through the Bias(S) signed-measure formalism (V4 Appendix B). A theory satisfies coherence-principle unification when its shared formal objects exhibit the four conditions across the domains it claims to unify.
+Operationalized through four conditions on a stream S across at least two of its internal scales — separation, measurement, multi-scale, dynamic — and through the Bias(S) signed-measure formalism (*The Coherence Principle*, Appendix B). A theory satisfies coherence-principle unification when its shared formal objects exhibit the four conditions across the domains it claims to unify.
 
 Meridian satisfies the conditions: the warped geometry (scale 1) and the scalar field dynamics (scale 2) measure each other through KK-spectrum couplings, they are causally distinguishable, the coupling is content-bearing (not just thermodynamic), and the dynamics modify both sides in ways preserved by the framework.
 
@@ -159,7 +159,7 @@ We intend to keep doing that.
 - Gross, D., interviewed by Ghose, T. (2026, April 19). "'The chances of you living 50 years are very small': Theoretical physicist explains why humanity likely won't survive to see all the forces unified." *Live Science.* https://www.livescience.com/space/cosmology/the-chances-of-you-living-50-years-are-very-small-theoretical-physicist-explains-why-humanity-likely-wont-survive-to-see-all-the-forces-unified
 - Iggulden-Schnell, C. and Iggulden-Schnell, C. (2026). *The Coherence Principle.* Zenodo DOI 10.5281/zenodo.19501896.
 - Iggulden-Schnell, C. and Iggulden-Schnell, C. (2026). *Project Meridian: Self-Tuning Dark Energy from Warped Extra Geometry.* Zenodo DOI 10.5281/zenodo.19519818.
-- Iggulden-Schnell, C. and Iggulden-Schnell, C. (2026). *V4: Category-Theoretic Formalization of the Corpus.* Manuscript.
+- Iggulden-Schnell, C. and Iggulden-Schnell, C. (2026). *The Coherence Principle* (paired-prose + category-theoretic edition). Library volume, Multi-DAC/Corpus-Perspectival.
 - DESI Collaboration. (2025). DR2 cosmological results.
 - DESI Collaboration. (2027 expected). DR2+ / Y5 results.
 
@@ -170,7 +170,7 @@ We intend to keep doing that.
 - **Status (2026-04-19, Day 78 late evening):** Full structural spine drafted and revised against the real Gross argument after WebFetch of the LiveScience piece. §1 now reconstructs the actual geopolitical/nuclear-risk argument (not the charitable vacuum-metastability guess the first draft opened with). §§2-8 revised accordingly — the paradigm-lock claim is now *timeline-lock* (the force-merger paradigm's completion timeline) rather than *cosmological-instability-lock*. ~2700w. Target length 8-12pp dense.
 - **Quote verification pending.** Headline and embedded quotes pulled from WebFetch summary; direct-text verification against LiveScience primary should be done before publication. The Member Exclusive status may require archive/citation handling.
 - **§3 draws heavily on Meridian.** That section can be tightened by direct citation of Meridian's §§4-6 (self-tuning mechanism) and §7 (DESI confrontation). Numerical claims match Meridian's current state.
-- **§6 draws on V4's §9 (Principle) and Appendix B (Bias(S)).** The four-conditions statement used here should match V4 exactly after V4 prose polish completes.
+- **§6 draws on *The Coherence Principle* §9 (Principle) and Appendix B (Bias(S)).** The four-conditions statement used here should match the volume exactly after final prose polish completes.
 - **Load-bearing structural move:** §2's paradigm distinction. If §2 doesn't land clean, the rest of the paper is softened. Clayton's read on §2 is requested.
 - **Open questions for Clayton:**
   - (a) Title — *What Unification Means* vs. retaining a more direct "Response to Gross" subhead
