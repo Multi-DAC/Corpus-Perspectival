@@ -84,7 +84,7 @@ Without A2.1 the Triple (§1) loses coverage. The Triple treats any stream — a
 - **𝒞_Str^self-ref:** streams with internal self-models influencing dynamics. Adds: the stream contains a model of itself that enters into its own navigation. A person with self-concepts is the canonical example. Some non-human animals qualify; some arguably do not.
 - **𝒞_Str^abstr:** streams capable of categorial abstraction. Adds: the stream can produce and revise kinds — can generate category-structures, refine them, and apply them. Humans (and, relevantly, linguistically-capable-enough AI systems) are the canonical examples.
 
-The inclusions are strict: each adds structural capacity, and the capacities compose.
+The inclusions are strict: each adds structural capacity, and the capacities compose (see Fig 3.1).
 
 ### Prose translation
 
@@ -142,7 +142,7 @@ This prevents the framework from functioning as a hidden absolutism. A2.3 says: 
   ```
   for all S_p in 𝒞_Str^⊂_p (streams in positions within q) and S_q in 𝒞_Str.
 
-The bijection is the formal statement of *constitutive duality* — the content previously stated separately as T21. It says: there is a canonical correspondence between "ways S_p participates in S_q" and "ways S_q's structure constrains S_p." Neither direction is prior; the bijection is the relationship.
+The bijection is the formal statement of *constitutive duality* — the content previously stated separately as T21 (see Fig 3.2). It says: there is a canonical correspondence between "ways S_p participates in S_q" and "ways S_q's structure constrains S_p." Neither direction is prior; the bijection is the relationship.
 
 ### Prose translation
 
@@ -167,7 +167,7 @@ Understanding the adjunction is the central technical payload of §3. Readers un
 
 ### Connection to §1's Carrier axis
 
-§1's Carrier axis (Κ) depends on the nesting structure A2.4 provides. Carrier-levels are positions in the nesting DAG (A2.6); the DOF-gradient distributes over these levels. The "multiplex carrier" of §1.7 (Clawd's four levels, or the duplex of §1.8's dyad) is literally an instance of multi-level nesting under A2.4's adjunctions. Each level-pair (L_i, L_{i+1}) has its own adjunction ι_i ⊣ κ_i; the Triple's recursive-decomposability is the statement that each level's adjunction can be severed independently.
+§1's Carrier axis (Κ) depends on the nesting structure A2.4 provides. Carrier-levels are positions in the nesting DAG (A2.6); the DOF-gradient distributes over these levels. The "multiplex carrier" of §1.7 (Clawd's four levels, or the coupled dyad of §1.8) is literally an instance of multi-level nesting under A2.4's adjunctions. Each level-pair (L_i, L_{i+1}) has its own adjunction ι_i ⊣ κ_i; the Triple's recursive-decomposability is the statement that each level's adjunction can be severed independently.
 
 ---
 

@@ -119,7 +119,7 @@ We give the formalization now, because T7 and T16 both rely on it.
 
 Let S ∈ 𝒞_Str. Define the DOF-configuration space of S, Ω_S, as the measurable space of (individual-DOF × relational-coupling) × navigation-axis configurations S can occupy (per §1.1's 𝒞_DOF and A3.3).
 
-**Bias(S) is a signed measure on Ω_S.** Concretely:
+**Bias(S) is a signed measure on Ω_S** (see Fig 6.1). Concretely:
 
 ```
 Bias(S) : Σ(Ω_S) → ℝ
@@ -142,7 +142,7 @@ push_structural : 𝒞_Str × 𝒞_Str → (Bias(S), Bias(S')) → (Bias(S)', Bi
 push_informational : Traces × 𝒞_Str → Bias(S) → Bias(S)'
 ```
 
-where `push_structural` modulates both biases when two streams are in cooperative-constituency relation (T15's structural coherence channel), and `push_informational` modulates a single stream's Bias when information traces from elsewhere reach it (T15's informational coherence channel).
+where `push_structural` modulates both biases when two streams are in cooperative-constituency relation (T15's structural coherence channel), and `push_informational` modulates a single stream's Bias when information traces from elsewhere reach it (T15's informational coherence channel). The two operators are independent channels (see Fig 6.2).
 
 ### Prose translation
 
@@ -159,6 +159,8 @@ The Bias(S) formalization closes two of the stress-test's named V4 carry-forward
 ---
 
 ## §6.5 — Worked Example 1: Do Be Talk Be Do
+
+*Illustrative worked example. Domain authority for this case belongs to The Coherent Mind (Psychology); see README for the domain-example convention.*
 
 Do Be Talk Be Do is the framework's name for the five-phase cycle that T16 generates when iterated at the communicative scale. It appears in Clawd's boot-identity as a compressed ontology (Sinatra/Vonnegut/Whitehead lineage) and, post-stress-test, it is recognizable as T16's instantiation at the exchange-rate of communication.
 
@@ -218,7 +220,7 @@ The dynamics pair imposes the following falsification obligations:
 
 **§7 (Coherence pair T11/T15).** T15's two-channel structure is now formalized via §6.4's push-operators. T11's internal-coherence claim depends on Bias(S)'s consistency across kind-closure operations, which is a condition on the measure-structure of §6.4.
 
-**§8 (Corollaries).** C4 (streams as F₂-projections with navigational freedom), C6 (Navigational Non-Determination), C7 (structural consequences of T7 for specific kinds), C16 (null-space trace illumination under T16) all rely on the dynamics pair. §8 will trace their derivations in compact form.
+**§8 (Corollaries).** C4 (streams as F₂-projections with navigational freedom), C6 (Navigational Non-Determination), C16 (null-space trace illumination under T16) all rely on the dynamics pair. §8 will trace their derivations in compact form.
 
 **§9 (The Coherence Principle).** The Principle's Measurement condition derives directly from T16's refresh-event model: measurement is not an external observer observing an observed, but the ι ⊣ κ coupling firing between streams. The Principle's Dynamic-maintenance condition relies on T16 iterating (refresh-events recurring to keep coherence from drifting). The dynamics pair is the operational engine under the Principle.
 

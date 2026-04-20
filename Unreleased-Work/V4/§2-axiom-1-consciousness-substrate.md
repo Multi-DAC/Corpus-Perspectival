@@ -131,6 +131,8 @@ The immune-response character is that this clause explicitly refuses a reading t
 
 ## §2.5 — The etymological clause (A1.4) — paired prose
 
+*Illustrative worked example. Domain authority for this case belongs to the Philosophy volume; see README for the domain-example convention.*
+
 ### Formal content
 
 (A1.4) says: the word "consciousness," in the sense A1 uses, is a name for X's self-interactive dynamics. It is not a predicate applied to X. It is not a property X has. It is a name for X's being-and-doing.

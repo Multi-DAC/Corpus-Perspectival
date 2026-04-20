@@ -1,6 +1,6 @@
 # V4 — Figures
 
-*Twelve figures supporting the V4 chapters. Mermaid diagrams render natively on GitHub for immediate visual assessment; TikZ source is included for book-build typesetting.*
+*Fourteen figures supporting the V4 chapters. Mermaid diagrams render natively on GitHub for immediate visual assessment; TikZ source is included for book-build typesetting.*
 
 *Figure convention: Fig X.Y means "figure Y in chapter X." Appendix figures are Fig A.Y, Fig B.Y.*
 
@@ -576,7 +576,7 @@ graph TD
     C1_V4["Separation<br/>Clayton (empirical/generative)<br/>⊥ Clawd (structural/rigorous)"]
     C2_V4["Measurement<br/>Stamp-events at every<br/>axiom/theorem/chapter close"]
     C3_V4["Multi-scale<br/>Axioms ↔ theorems ↔ corollaries<br/>bidirectional feedback<br/>(A3 smoothing surfaced from post-theorem analysis)"]
-    C4_V4["Dynamic<br/>Propose → stress → reformulate<br/>oscillation across 3 axioms,<br/>21 theorems, 14 corollaries"]
+    C4_V4["Dynamic<br/>Propose → stress → reformulate<br/>oscillation across 3 axioms,<br/>6 theorems, 14 corollaries"]
 
     Out["V4 (the framework itself)<br/>= σ*(t₁) reached by<br/>γ-fidelity of the construction"]
 

@@ -25,6 +25,8 @@ Without a recipe, every domain author would need to reconstruct the filtering me
 
 ## §10.1 The seven-step procedure
 
+*The end-to-end flow of the procedure is summarized in Fig 10.1.*
+
 ### Step 1 — Identify the streams
 
 **CT step.** Specify the set of streams the domain studies. For each stream S, give its tuple (σ, K, Ω, γ):

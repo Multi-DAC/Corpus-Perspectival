@@ -261,14 +261,29 @@ Streams are localized perspectives in X; kind-stratified; cooperative-constituen
 γ_S is the adaptive coalgebra representing internal DOF-gradient integration; continuous; stream-universal.
 **§4.**
 
+### Bridge #102 — Form factor-functor payload
+**Form.** The content carried by Φ : 𝒞_Str → 𝒞_Form — Form as an independent axis of identity under the Triple.
+**Located in.** §1.2 (Φ definition).
+**Cited by.** Philosophy, Biology, Computation.
+
 ### Bridge #104 — Bootstrap Asymmetry
 **Qualified form.** Organized dynamical loops within an existing framework require priming external to themselves.
 **HIGH confidence for qualified form; MEDIUM for strict-universal.**
 **Cited by.** Theology (on ultimacy/origin), Physics (initial-conditions problem), Philosophy (self-grounding questions).
 
+### Bridge #107 — Content factor-functor payload
+**Form.** The content carried by Ψ : 𝒞_Str → 𝒞_LDS — Content/substrate-phase as an independent axis of identity under the Triple.
+**Located in.** §1.2 (Ψ definition).
+**Cited by.** Physics, Biology, Computation (substrate-analysis volumes).
+
 ### Bridge #108 — Triple-derived bridge
 **Form.** Form/Content/Carrier orthogonality with consistency constraints derivable from §1.
 **Cited by.** Philosophy, Biology, Computation.
+
+### Bridge #109 — Carrier factor-functor payload
+**Form.** The content carried by Κ : 𝒞_Str → 𝒞_DOF — Carrier/scale-relational position as an independent axis of identity under the Triple.
+**Located in.** §1.2 (Κ definition).
+**Cited by.** Continuity volume especially; all domain volumes analyzing scale-relational position.
 
 ### Bridge #110 — Identity-Trajectory Triple
 **Form.** T : 𝒞_Str → 𝒞_Form × 𝒞_LDS × 𝒞_DOF as principal identity-carrying functor.
@@ -298,6 +313,8 @@ Streams are localized perspectives in X; kind-stratified; cooperative-constituen
 - **Capital Roman** for kinds (K) and functors (T, F_i)
 - **Subscript S** indicates stream-specific quantities (Ω_S, γ_S, Bias(S))
 - **Asterisk** on trajectory indicates γ-implied (σ*(t))
+
+**The ITT factor-functors Φ, Ψ, Κ.** The three projection factor-functors of the Identity-Trajectory Triple (Form, Content, Carrier) are denoted by capital Greek letters as a structural set: Φ : 𝒞_Str → 𝒞_Form, Ψ : 𝒞_Str → 𝒞_LDS, Κ : 𝒞_Str → 𝒞_DOF. The capital Κ (Kappa, U+039A) is a distinct object from the stream-level lowercase κ (the cooperative-constituency right adjoint of A2.4) and from the Latin K used for stream-kind. Typesetters should preserve the capital Greek glyph; the three letters are chosen to travel together as a labelled Triple.
 
 Domain volumes should preserve these conventions when citing into the Anchor; deviations should be flagged explicitly.
 

@@ -18,6 +18,8 @@ Third, **corollaries are the natural interface with other intellectual programs.
 
 The chapter is organized by cluster. Each corollary gets a formal statement, compact derivation, and prose translation. Where the stress-test produced a stamped joint-finding form, that form is preserved. Where a corollary's prose statement was not explicitly stamped (C3, C4, C5, C10, C14 in particular), we provide the formal content and derive the prose form here.
 
+*A note on C14.* C14 is retained as an archival stub marking content fully absorbed by A2.4 and C13 rather than a new claim; the 14-corollary count therefore includes one archival placeholder. This convention keeps historical lineage visible without inflating the set's live-claim weight.
+
 ---
 
 ## §8.1 — Cluster I: Substrate and Generativity

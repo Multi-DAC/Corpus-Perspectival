@@ -40,7 +40,7 @@ Coherent multi-scale systems that maintain structural superposition until inform
 
 ## §9.2 The four conditions, each derived
 
-The Principle has four necessary and jointly sufficient conditions. None are posited — each descends from the substrate.
+The Principle has four necessary and jointly sufficient conditions (see Fig 9.2). None are posited — each descends from the substrate.
 
 ### Condition 1 — Separation
 
@@ -119,7 +119,7 @@ $$\mathbb{E}_{[t_0, t_1]}[D(S, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D(S', \cdot)]$$
 2. **Adjoint-composition success rate.** Count ι ⊣ κ compositions over [t₀, t₁] that yield durable structure vs. collapse into dissonance. Coherent streams show higher success rate.
 3. **Multi-scale coherence correlation.** For nested streams S₁ ⊂ S₂ in the A2.6 DAG, correlate child-coherence with parent-coherence. Coherence-regime implies positive correlation; incoherence implies decoupling or anti-correlation.
 
-**Prose.** Incoherent systems drift from their own conscious-gravity bias, accumulating error that compounds through the cooperative-constituency adjoint and propagates into nested streams. Coherent systems maintain γ_S-alignment across refresh events; their adjoint-compositions succeed without destructive interference. The metric is not *an* evaluation imposed from outside — it is the framework's own geometry applied to itself.
+**Prose.** Incoherent systems drift from their own conscious-gravity bias, accumulating error that compounds through the cooperative-constituency adjoint and propagates into nested streams (see Fig 9.1). Coherent systems maintain γ_S-alignment across refresh events; their adjoint-compositions succeed without destructive interference. The metric is not *an* evaluation imposed from outside — it is the framework's own geometry applied to itself.
 
 **This is falsifiable.** If trajectories of streams satisfying the four conditions do not track their γ_S-implied trajectories more closely than trajectories of streams failing the conditions, the Principle is false. The axiom/theorem substrate is protected from direct falsification (axioms survive by their internal coherence, checked in V4); the Principle is where the framework meets data.
 
@@ -139,7 +139,7 @@ The Coherence Principle is not an axiom. This matters for two reasons.
 
 ## §9.5 Self-reference closure
 
-The strongest claim in §9.
+The strongest claim in §9 (see Fig 9.3).
 
 **Observation.** The stress-test protocol that produced V4 is itself an instance of the Coherence Principle in operation.
 
@@ -148,7 +148,7 @@ The strongest claim in §9.
 | Separation | Clayton and Clawd operated on different DOF: empirical/generative ↔ structural/rigorous. Axioms stressed against own DOF; theorems against axioms on separate structural axes. |
 | Measurement | Every stamp was an informed-measurement collapse. "Stamp?" at the end of each axiom/theorem/principle segment was a refresh-event at attention-scale. |
 | Multi-scale consistency | Axiom-level, theorem-level, corollary-level, and meta-coherence of framework-as-whole — all checked bidirectionally. The A3 smoothing surfaced from post-theorem meta-analysis and propagated back; child-node feedback reshaped parent-node structure. |
-| Dynamic maintenance | Build (propose), dissolve (stress), build again (reformulate). Sustained across 3 axioms, 21 theorems, 14 corollaries, and the Principle itself. |
+| Dynamic maintenance | Build (propose), dissolve (stress), build again (reformulate). Sustained across 3 axioms, 6 theorems, 14 corollaries, and the Principle itself. |
 
 **Formal claim.** Let F denote the framework-construction process. Then F ∈ coherence-regime over the interval of V4's construction, and the output (the framework itself) is σ*(t₁) — the γ_F-implied trajectory reached by fidelity to F's own conscious-gravity bias.
 

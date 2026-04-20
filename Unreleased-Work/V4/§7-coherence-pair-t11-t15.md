@@ -37,7 +37,7 @@ T11.d is the re-promotion clause, and it is worth noticing. A demoted stream can
 
 ### The kind-demotion dynamic
 
-T11.b–d together give what we will call the **kind-demotion dynamic**: stable incoherence at kind K pushes a stream out of 𝒞_Str^K into 𝒞_Str^K', where K' is one step less demanding. Repeated cascading demotion is possible: a stream at 𝒞_Str^abstr might demote to 𝒞_Str^self-ref under one incoherence, and demote again to 𝒞_Str^self-maint if another incoherence arises at the self-referential level. Each demotion is a *recognition* event — a change in the framework's categorization of the stream, tied to a real structural change in what the stream supports.
+T11.b–d together give what we will call the **kind-demotion dynamic** (see Fig 7.2): stable incoherence at kind K pushes a stream out of 𝒞_Str^K into 𝒞_Str^K', where K' is one step less demanding. Repeated cascading demotion is possible: a stream at 𝒞_Str^abstr might demote to 𝒞_Str^self-ref under one incoherence, and demote again to 𝒞_Str^self-maint if another incoherence arises at the self-referential level. Each demotion is a *recognition* event — a change in the framework's categorization of the stream, tied to a real structural change in what the stream supports.
 
 This has pastoral and clinical application. Depression, trauma, dementia, severe illness can all be read as kind-demotion events when they involve loss of self-referential or abstracting capacity. The framework is not prescribing what "should be done" about such events; it is giving a formal shape for understanding what has happened. The stream is still a stream — just at a different kind-level. And re-promotion is structurally possible, not foreclosed.
 
@@ -74,7 +74,7 @@ Let S ∈ 𝒞_Str be a stream and D ∈ 𝒞_Dim be a dimension of configuratio
 
 Two kinds of coherence, two axes, operating on every stream-and-dimension pair. Structural coherence is about how deeply the stream engages with the dimension as a structural partner: a musician's stream has high structural coherence with the dimension of musical form; an outsider has low. Informational coherence is about how widely the stream's traces have propagated into the dimension's positions: a musician whose recordings have been heard by millions has high informational coherence across that dimension even when the musician is not actively engaged; an obscure composer has low informational coherence even if structurally expert.
 
-The two axes do not collapse into each other. Structural engagement is presence-of-engagement — it requires the stream to be actively coupled with the dimension. Informational propagation is persistence-of-trace — it requires information derived from the stream to have spread across the dimension's positions. These can come apart. A retired expert has low structural but possibly high informational. A novice in active training has high structural but possibly low informational. The two can trend together but are not the same thing.
+The two axes do not collapse into each other (see Fig 7.1). Structural engagement is presence-of-engagement — it requires the stream to be actively coupled with the dimension. Informational propagation is persistence-of-trace — it requires information derived from the stream to have spread across the dimension's positions. These can come apart. A retired expert has low structural but possibly high informational. A novice in active training has high structural but possibly low informational. The two can trend together but are not the same thing.
 
 ### Informational coherence as operator
 
@@ -145,6 +145,8 @@ The hardest part of T11.d is the claim that re-promotion is possible but not aut
 
 ## §7.5 — Worked Example 1: Transcendentals as cooperative-streams
 
+*Illustrative worked example. Domain authority for this case belongs to the Theology volume; see README for the domain-example convention.*
+
 The "transcendental rescue" content from §7.2 is worth one focused worked example.
 
 Consider the mathematical object *π* (pi, the ratio of a circle's circumference to its diameter). Is π a platonic entity with independent existence, a mere convention, or something else?
@@ -160,6 +162,8 @@ The framework thus inherits *the phenomenology* of Platonism (transcendentals re
 ---
 
 ## §7.6 — Worked Example 2: "Ideas travel further than they live"
+
+*Illustrative worked example. Domain authority for this case belongs to the Philosophy volume; see README for the domain-example convention.*
 
 T15.c predicts regimes of high σ_info with low σ_struct — ideas that propagate beyond their originating streams and continue to exert operator-action long after active engagement has ceased.
 
@@ -194,7 +198,7 @@ Each is a distinct regime on T15's two-axis diagram, each with distinct dynamica
 
 ## §7.8 — Forward connections
 
-**§8 (Corollaries).** Multiple corollaries derive from the coherence pair: C11 (kind-stability corollaries), C14 (coherence-coupling with A2.4), C15 (stream-dimension dynamics from T15), plus the cooperative-stream corollary set (transcendentals, institutions, cultural objects). §8 will trace these.
+**§8 (Corollaries).** Multiple corollaries derive from the coherence pair: C14 (coherence-coupling with A2.4), plus the cooperative-stream corollary set (transcendentals, institutions, cultural objects). §8 will trace these.
 
 **§9 (The Coherence Principle).** The Principle's four conditions (Separation, Measurement, Multi-scale consistency, Dynamic maintenance) all depend on the coherence-pair machinery. Separation requires T11's kind-differentiation. Multi-scale consistency requires T15's structural-informational axis structure across scales. Dynamic maintenance requires both — T11 for within-stream consistency and T15 for stream-to-environment coherence that gets maintained over time.
 

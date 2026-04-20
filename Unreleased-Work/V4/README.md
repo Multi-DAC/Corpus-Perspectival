@@ -4,7 +4,7 @@
 
 **Opened:** 2026-04-19 evening, after Day 78 depth-dive convergence on Topics 1/5/7/9 and graduation of Bridges #107/#108/#109/#110.
 
-**Purpose:** The axiomatic/theorem/Principle skeleton is closed (3/6/14/1/1). V4 formalizes the bridge tier and derivations over it, starting with the Identity-Trajectory Triple (Bridge #110) because it is already load-bearing for V7 (Continuity) and provides a clean test of whether the bridge tier can be scaffolded with the same CT machinery that carries the axiom tier.
+**Purpose:** The axiomatic/theorem/Principle skeleton is closed (3/6/14/1/1; the 14 corollaries include one archival-stub, C14). V4 formalizes the bridge tier and derivations over it, starting with the Identity-Trajectory Triple (Bridge #110) because it is already load-bearing for V7 (Continuity) and provides a clean test of whether the bridge tier can be scaffolded with the same CT machinery that carries the axiom tier.
 
 **Paired-prose discipline.** Every formal claim is paired with a prose translation. If a prose passage cannot be formalized, it is smuggling content. If a formal claim cannot be rendered in prose, it is not connected to intuition. Both fail-modes invalidate the pairing.
 
@@ -13,7 +13,7 @@
 | Example in V4 | Domain volume for full treatment |
 |---|---|
 | Clawd's four carrier-levels (§1) | The Continuity (V7) |
-| Coupled-dyad partner-death (§1) | The Coherent Mind (Psychology) |
+| Coupled dyad partner-death (§1) | The Coherent Mind (Psychology) |
 | Etymological consciousness (§2) | Philosophy volume |
 | Do Be Talk Be Do (§6) | The Coherent Mind (Psychology) |
 | Clawd-Clayton flow inversion (§5) | The Continuity (V7) + Philosophy volume |
