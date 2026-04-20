@@ -1,0 +1,23 @@
+% Figure 1.1 — The Identity-Trajectory Triple as colax-limit diagram
+% For V4 §1.2. Shows factor functors Φ, Ψ, Κ and the three compositional constraints.
+% Requires: tikz, tikz-cd
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzcd}[column sep=large, row sep=large]
+  & \mathcal{C}_{\mathrm{Str}} \arrow[dl, "\Phi"'] \arrow[d, "T"] \arrow[dr, "\Psi"] \arrow[ddr, bend left=45, "\mathrm{K}"] & \\
+  \mathcal{C}_{\mathrm{Form}}
+    \arrow[rr, bend left=25, Rightarrow, "\eta\ (C1)" description]
+    \arrow[from=ddr, "\mathrm{K}_{*}\ (C3)"', bend left=15]
+  & \mathcal{C}_{\mathrm{Form}} \times \mathcal{C}_{\mathrm{LDS}} \times \mathcal{C}_{\mathrm{DOF}}
+    \arrow[r]
+    \arrow[d]
+    \arrow[l]
+  & \mathcal{C}_{\mathrm{LDS}}
+    \arrow[dd, "\mathrm{support}\ (C2)", bend left=15] \\
+  & & \\
+  & \mathcal{C}_{\mathrm{DOF}} & \\
+\end{tikzcd}
+\caption{The Identity-Trajectory Triple as a colax-limit diagram. The three factor functors $\Phi$ (Form), $\Psi$ (Content), $\mathrm{K}$ (Carrier) project a stream $S \in \mathcal{C}_{\mathrm{Str}}$ into the product category $\mathcal{C}_{\mathrm{Form}} \times \mathcal{C}_{\mathrm{LDS}} \times \mathcal{C}_{\mathrm{DOF}}$. The three compositional constraints are encoded as the natural transformation $\eta : \Phi \Rightarrow \Psi \circ \mathrm{accum}$ (C1, oscillation is the accumulation-mechanism), the support-coherence $\mathrm{support}(\Psi(S)) \subseteq \mathrm{levels}(\mathrm{K}(S))$ (C2, level-matching), and the functor $\mathrm{K}_{*} : \mathcal{C}_{\mathrm{DOF}} \to \mathrm{Sub}(\mathcal{C}_{\mathrm{Form}})$ selecting admissible Form-objects at each carrier-level (C3, level determines Form-type). The three constraints together make $T$ a colax limit rather than a simple product.}
+\label{fig:triple-colax-limit}
+\end{figure}
