@@ -17,7 +17,7 @@
 - **§5 — Theorem pair I: Descriptive.** T1 (Mathematical Perspectivism) + T20 (Estimator-Dependent Duration) with structural parallel, Descriptive-Functor Meta-Theorem (V4 addition), and C1.1 + C18 worked examples. **Status: drafted 2026-04-19 evening, ~4100w.**
 - **§6 — Theorem pair II: Dynamics.** T7 (Attentional Quality & Navigational Dynamics) + T16 (Coherence-Forcing Measurement) paired-prose; Bias(S) formalization as signed measure with entropy-based contracted-open axis + two coupling channels (V4 carry-forwards closed); Do Be Talk Be Do as T16 worked example. **Status: drafted 2026-04-19 evening, ~4200w.**
 - **§7 — Theorem pair III: Coherence.** T11 (Internal Coherence) + T15 (Dual Coherence Axes) paired-prose; kind-demotion dynamic; transcendental-rescue as cooperative-streams; ideas-travel-further-than-they-live regime. **Status: drafted 2026-04-19 evening, ~4000w. Theorem tier now closed.**
-- **§8 — The corollary clusters.** Fourteen corollaries in three clusters (substrate/generativity, stream-structure/navigation, coherence-consequences). *Queued.*
+- **§8 — The corollary clusters.** Fourteen corollaries in three clusters (substrate/generativity, stream-structure/navigation, coherence-consequences). **Status: drafted 2026-04-19 evening, ~3500w. Corollary tier now closed.**
 - **§9 — The Coherence Principle.** Derived operational principle, four conditions, metric for outperformance, self-reference closure. *Queued.*
 
 ### Writing docket for §1
