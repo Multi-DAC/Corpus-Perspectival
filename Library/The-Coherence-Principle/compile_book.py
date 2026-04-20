@@ -361,6 +361,7 @@ def md_to_latex(text, filename=""):
     list_type = None
     in_code = False
     code_lines = []
+    next_code_is_figure = False
 
     # First pass: extract footnote definitions
     cleaned_lines = []
@@ -478,19 +479,23 @@ def md_to_latex(text, filename=""):
             list_type = None
 
     def flush_code():
-        nonlocal in_code, code_lines
+        nonlocal in_code, code_lines, next_code_is_figure
         if in_code:
             # Ask LaTeX to keep this block together on one page when possible.
             # If the block is taller than most of a page, skip the request
             # (needspace would just force an eject without helping).
-            n = min(len(code_lines) + 2, 36)
-            output.append(f"\\needspace{{{n}\\baselineskip}}")
+            # If the preceding heading was a figure caption, the needspace was
+            # already emitted before the caption to keep caption+body together.
+            if not next_code_is_figure:
+                n = min(len(code_lines) + 2, 36)
+                output.append(f"\\needspace{{{n}\\baselineskip}}")
             output.append("\\begin{Code}")
             for cl in code_lines:
                 output.append(cl)
             output.append("\\end{Code}")
             code_lines = []
             in_code = False
+            next_code_is_figure = False
 
     def flush_table():
         nonlocal in_table, table_lines
@@ -644,8 +649,22 @@ def md_to_latex(text, filename=""):
             flush_blockquote()
             flush_list()
             level = len(h_match.group(1))
-            title = h_match.group(2)
-            title = process_inline(title)
+            raw_title = h_match.group(2)
+            title = process_inline(raw_title)
+            # Figure captions: keep caption + following code block together.
+            # Peek forward to size needspace for heading + code body.
+            if level == 3 and re.match(r'^Figure\s+\d', raw_title):
+                code_len = 0
+                for j in range(i + 1, min(i + 4, len(lines))):
+                    if lines[j].strip().startswith('```'):
+                        for k in range(j + 1, len(lines)):
+                            if lines[k].strip().startswith('```'):
+                                break
+                            code_len += 1
+                        break
+                n = min(code_len + 6, 40)
+                output.append(f"\\needspace{{{n}\\baselineskip}}")
+                next_code_is_figure = True
             if level == 1:
                 output.append(f"\\chapter{{{title}}}")
             elif level == 2:
