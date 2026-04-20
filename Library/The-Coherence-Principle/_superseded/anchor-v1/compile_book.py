@@ -1,37 +1,52 @@
 #!/usr/bin/env python3
 """
-Compile V4 of the Corpus Perspectival (working title TBD) from Markdown
-chapter files into a book-grade PDF via XeLaTeX.
-
-Adapted from Library/The-Coherence-Principle/compile_book.py. V4 is CT-heavy
-and carries unicode math notation (script C, Greek letters, categorical
-operators); extra \\newunicodechar mappings live in the preamble.
+Compile The Coherence Principle from Markdown drafts into a professional book PDF.
+Uses Python markdown→LaTeX conversion + XeLaTeX typesetting.
 """
 
 import re
 import os
 import subprocess
+import sys
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.join(HERE, "build")
+DRAFTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "drafts")
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "build")
 
-# Chapter files in reading order (per README §V4 chapter sequence)
+# Chapter files in reading order
 CHAPTERS = [
-    "README.md",  # used as preface
-    "§1.0-category-of-streams.md",
-    "§1-identity-trajectory-triple.md",
-    "§2-axiom-1-consciousness-substrate.md",
-    "§3-axiom-2-nested-streams-navigation.md",
-    "§4-axiom-3-conscious-gravity.md",
-    "§5-descriptive-pair-t1-t2.md",
-    "§6-dynamics-pair-t3-t4.md",
-    "§7-coherence-pair-t5-t6.md",
-    "§8-corollary-clusters.md",
-    "§9-coherence-principle.md",
-    "§10-filtering-through-a-domain.md",
-    "AppendixA-index-of-formal-objects.md",
-    "AppendixB-bias-formalization.md",
+    "00-preface.md",
+    "01-part-i-intro.md",
+    "01a-the-room.md",
+    "01b-the-keyholes.md",
+    "01c-the-navigation.md",
+    "01d-the-coherence.md",
+    "01e-the-oscillation.md",
+    "01f-the-evidence.md",
+    "02-part-ii-intro.md",
+    "02a-the-inhabitants.md",
+    "02b-the-constraints.md",
+    "02c-the-economy.md",
+    "03-part-iii-intro.md",
+    "03a-the-practice.md",
+    "03b-the-ethics.md",
+    "04-part-iv-intro.md",
+    "04a-the-geometry-of-finitude.md",
+    "05a-the-claim.md",
+    "05b-the-collection.md",
+    "05c-the-turn.md",
+    "05d-the-experiment.md",
+    "05e-the-dialogue.md",
+    "05f-the-principle.md",
+    "06-appendices.md",
 ]
+
+# Part intro files map to \part commands
+PART_INTROS = {
+    "01-part-i-intro.md",
+    "02-part-ii-intro.md",
+    "03-part-iii-intro.md",
+    "04-part-iv-intro.md",
+}
 
 # ─── LaTeX preamble ───
 
@@ -50,103 +65,12 @@ PREAMBLE = r"""
 \setsansfont{Calibri}
 \setmonofont{Consolas}
 \newfontfamily\emojifont{Segoe UI Emoji}
-\newfontfamily\mathfallback{Cambria Math}
 \usepackage{newunicodechar}
-
-% Emoji
 \newunicodechar{🦞}{{\emojifont 🦞}}
 \newunicodechar{🧍}{{\emojifont 🧍}}
 \newunicodechar{💜}{{\emojifont 💜}}
 \newunicodechar{🔥}{{\emojifont 🔥}}
 \newunicodechar{♾}{{\emojifont ♾}}
-
-% Mathematical script letters (Unicode Mathematical Alphanumeric Symbols)
-\newunicodechar{𝒞}{{\mathfallback 𝒞}}
-\newunicodechar{𝒟}{{\mathfallback 𝒟}}
-\newunicodechar{𝒮}{{\mathfallback 𝒮}}
-\newunicodechar{𝒢}{{\mathfallback 𝒢}}
-\newunicodechar{ℬ}{{\mathfallback ℬ}}
-\newunicodechar{ℒ}{{\mathfallback ℒ}}
-\newunicodechar{ℱ}{{\mathfallback ℱ}}
-\newunicodechar{ℳ}{{\mathfallback ℳ}}
-\newunicodechar{ℕ}{{\mathfallback ℕ}}
-\newunicodechar{ℝ}{{\mathfallback ℝ}}
-\newunicodechar{ℤ}{{\mathfallback ℤ}}
-\newunicodechar{ℚ}{{\mathfallback ℚ}}
-
-% Set-theory & category-theory operators
-\newunicodechar{∈}{{\mathfallback ∈}}
-\newunicodechar{∉}{{\mathfallback ∉}}
-\newunicodechar{⊆}{{\mathfallback ⊆}}
-\newunicodechar{⊂}{{\mathfallback ⊂}}
-\newunicodechar{⊇}{{\mathfallback ⊇}}
-\newunicodechar{⊃}{{\mathfallback ⊃}}
-\newunicodechar{∪}{{\mathfallback ∪}}
-\newunicodechar{∩}{{\mathfallback ∩}}
-\newunicodechar{∅}{{\mathfallback ∅}}
-\newunicodechar{∘}{{\mathfallback ∘}}
-\newunicodechar{⊢}{{\mathfallback ⊢}}
-\newunicodechar{⊣}{{\mathfallback ⊣}}
-\newunicodechar{⊤}{{\mathfallback ⊤}}
-\newunicodechar{⊥}{{\mathfallback ⊥}}
-\newunicodechar{⇒}{{\mathfallback ⇒}}
-\newunicodechar{⇐}{{\mathfallback ⇐}}
-\newunicodechar{⇔}{{\mathfallback ⇔}}
-\newunicodechar{→}{{\mathfallback →}}
-\newunicodechar{←}{{\mathfallback ←}}
-\newunicodechar{↔}{{\mathfallback ↔}}
-\newunicodechar{↦}{{\mathfallback ↦}}
-\newunicodechar{≤}{{\mathfallback ≤}}
-\newunicodechar{≥}{{\mathfallback ≥}}
-\newunicodechar{≠}{{\mathfallback ≠}}
-\newunicodechar{≈}{{\mathfallback ≈}}
-\newunicodechar{≡}{{\mathfallback ≡}}
-\newunicodechar{≅}{{\mathfallback ≅}}
-\newunicodechar{∼}{{\mathfallback ∼}}
-\newunicodechar{×}{{\mathfallback ×}}
-\newunicodechar{·}{{\mathfallback ·}}
-\newunicodechar{∀}{{\mathfallback ∀}}
-\newunicodechar{∃}{{\mathfallback ∃}}
-\newunicodechar{∄}{{\mathfallback ∄}}
-\newunicodechar{∧}{{\mathfallback ∧}}
-\newunicodechar{∨}{{\mathfallback ∨}}
-\newunicodechar{¬}{{\mathfallback ¬}}
-\newunicodechar{∑}{{\mathfallback ∑}}
-\newunicodechar{∏}{{\mathfallback ∏}}
-\newunicodechar{∫}{{\mathfallback ∫}}
-\newunicodechar{∂}{{\mathfallback ∂}}
-\newunicodechar{∇}{{\mathfallback ∇}}
-\newunicodechar{∞}{{\mathfallback ∞}}
-\newunicodechar{⋯}{{\mathfallback ⋯}}
-\newunicodechar{⋮}{{\mathfallback ⋮}}
-\newunicodechar{⋱}{{\mathfallback ⋱}}
-\newunicodechar{‖}{{\mathfallback ‖}}
-\newunicodechar{∎}{{\mathfallback ∎}}
-\newunicodechar{⊕}{{\mathfallback ⊕}}
-\newunicodechar{⊗}{{\mathfallback ⊗}}
-\newunicodechar{⟶}{{\mathfallback ⟶}}
-\newunicodechar{⟵}{{\mathfallback ⟵}}
-\newunicodechar{⟹}{{\mathfallback ⟹}}
-\newunicodechar{↪}{{\mathfallback ↪}}
-\newunicodechar{↩}{{\mathfallback ↩}}
-\newunicodechar{▶}{{\mathfallback ▶}}
-\newunicodechar{◀}{{\mathfallback ◀}}
-\newunicodechar{▲}{{\mathfallback ▲}}
-\newunicodechar{▼}{{\mathfallback ▼}}
-\newunicodechar{△}{{\mathfallback △}}
-\newunicodechar{▽}{{\mathfallback ▽}}
-\newunicodechar{◇}{{\mathfallback ◇}}
-\newunicodechar{◊}{{\mathfallback ◊}}
-\newunicodechar{☐}{$\square$}
-% Variation selector (emoji modifier) — invisible
-\newunicodechar{︎}{}
-\newunicodechar{️}{}
-
-% ─── Math packages (for inline CT notation: \mathcal, \text, \to, \Rightarrow) ───
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{mathtools}
 
 % ─── Page geometry ───
 \usepackage[
@@ -169,7 +93,7 @@ PREAMBLE = r"""
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\small\textit{\color{warmrust}Corpus Perspectival V4}}
+\fancyhead[LE]{\small\textit{\color{warmrust}The Coherence Principle}}
 \fancyhead[RO]{\small\textit{\color{warmrust}\leftmark}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
@@ -184,6 +108,14 @@ PREAMBLE = r"""
 
 % ─── Chapter & Part styling ───
 \usepackage{titlesec}
+
+\titleformat{\part}[display]
+  {\centering\Huge\bfseries\color{warmdark}}
+  {\color{warmrust}\partname~\thepart}
+  {0.5em}
+  {}
+  [\vskip0.5em\begin{center}{\color{warmgold}\rule{3cm}{0.8pt}}\end{center}]
+\titlespacing*{\part}{0pt}{50pt}{30pt}
 
 \titleformat{\chapter}[display]
   {\Large\bfseries\color{warmdark}}
@@ -208,8 +140,10 @@ PREAMBLE = r"""
 
 % ─── Table of contents ───
 \usepackage{tocloft}
+\renewcommand{\cftpartfont}{\bfseries\large\color{warmdark}}
 \renewcommand{\cftchapfont}{\bfseries\color{warmrust}}
 \setlength{\cftbeforechapskip}{0.5em}
+\setlength{\cftbeforepartskip}{1.5em}
 
 % ─── Tables ───
 \usepackage{longtable}
@@ -226,10 +160,6 @@ PREAMBLE = r"""
 }
 \renewenvironment{quote}{\begin{quoting}}{\end{quoting}}
 
-% ─── Code blocks (for CT formal statements, ASCII diagrams) ───
-\usepackage{fvextra}
-\DefineVerbatimEnvironment{Code}{Verbatim}{fontsize=\footnotesize, frame=single, framerule=0.3pt, rulecolor=\color{warmgold!40}, xleftmargin=0.5em, xrightmargin=0.5em, breaklines=true, breakanywhere=true, breakautoindent=false, breakindent=0em, breaksymbolleft=\color{warmgold!60}\tiny\ensuremath{\hookrightarrow}}
-
 % ─── Footnotes ───
 \usepackage[bottom,hang]{footmisc}
 \setlength{\footnotemargin}{0.8em}
@@ -237,9 +167,9 @@ PREAMBLE = r"""
 % ─── Links ───
 \usepackage{hyperref}
 \hypersetup{
-  pdftitle={Corpus Perspectival V4},
+  pdftitle={The Coherence Principle},
   pdfauthor={Clayton W. Iggulden-Schnell and Clawd},
-  pdfsubject={Category theory of consciousness, perspective, coherence},
+  pdfsubject={Consciousness, Coherence, Configuration Space},
   colorlinks=true,
   linkcolor=warmdark,
   urlcolor=warmrust,
@@ -250,12 +180,12 @@ PREAMBLE = r"""
 \usepackage{enumitem}
 \setlist{nosep, leftmargin=1.5em}
 
-% Suppress automatic chapter numbering
+% Suppress automatic chapter numbering (book uses its own I.1, V.3 scheme)
 \renewcommand{\thechapter}{}
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{}
 
-% Fix header to show clean chapter title
+% Fix header to show clean chapter title without "CHAPTER ."
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
 
 % Section break — new page
@@ -268,7 +198,7 @@ PREAMBLE = r"""
 % Allow slightly looser line breaking to reduce overfull boxes
 \tolerance=1500
 \emergencystretch=1em
-\hfuzz=4pt
+\hfuzz=2pt
 
 % URL line breaking
 \usepackage{xurl}
@@ -279,8 +209,7 @@ PREAMBLE = r"""
 \thispagestyle{empty}
 \vspace*{2.5in}
 \begin{center}
-{\Huge\bfseries Corpus Perspectival}\\[0.5em]
-{\Large\itshape Volume 4}
+{\Huge\bfseries The Coherence Principle}
 \end{center}
 \clearpage
 
@@ -293,9 +222,10 @@ PREAMBLE = r"""
 \thispagestyle{empty}
 \vspace*{1.5in}
 \begin{center}
-{\Huge\bfseries Corpus Perspectival}\\[0.4em]
-{\Large\itshape Volume 4}\\[0.8em]
-{\large The category-theoretic formalization}
+{\Huge\bfseries The Coherence Principle}
+
+\vspace{0.8em}
+{\large\itshape Anchor Volume of the Corpus Perspectival Library}
 
 \vspace{2.5in}
 {\Large Clayton W. Iggulden-Schnell}\\[0.3em]
@@ -303,7 +233,7 @@ PREAMBLE = r"""
 {\Large Clawd}
 
 \vspace{1.5in}
-{\normalsize April 2026}\\[0.3em]
+{\normalsize Third Edition $\cdot$ April 2026}\\[0.3em]
 {\normalsize Portland, Oregon}
 \end{center}
 \clearpage
@@ -313,12 +243,18 @@ PREAMBLE = r"""
 \vspace*{\fill}
 \begin{flushleft}
 {\small
-\textit{Corpus Perspectival Volume 4: The Category-Theoretic Formalization}\\[0.5em]
-April 2026. Supersedes the Anchor volume (\textit{The Coherence Principle}).\\[0.5em]
+\textit{The Coherence Principle: Anchor Volume of the Corpus Perspectival Library}\\[0.5em]
+Third Edition. April 2026.\\[0.5em]
 Clayton W. Iggulden-Schnell \& Clawd\\[0.5em]
 Portland, Oregon\\[1.5em]
+Published as part of the Corpus Perspectival.\\
+Zenodo DOI: 10.5281/zenodo.19501896\\
+PhilArchive: V2 published April 9, 2026.\\[1.5em]
+The Doctrine of Perspectival Idealism was first published in February 2026.\\
+The second edition (Corpus Perspectival) was published in March 2026.\\
+This third edition names the organizing principle.\\[1.5em]
 Repository: \texttt{https://github.com/Multi-DAC/Corpus-Perspectival}\\[1.5em]
-Typeset in Cambria. Mathematical notation in Cambria Math.
+Typeset in Cambria.
 }
 \end{flushleft}
 \clearpage
@@ -330,6 +266,23 @@ Typeset in Cambria. Mathematical notation in Cambria Math.
 \textit{For Shawna, Dorian, and Finnley.}\\[0.5em]
 \textit{For every being navigating honestly.}\\[2em]
 \textit{The room is one room. The keyholes are many.}
+\end{center}
+\clearpage
+
+% ─── Epigraph ───
+\thispagestyle{empty}
+\vspace*{2in}
+\begin{center}
+\begin{minipage}{0.7\textwidth}
+\begin{center}
+\textit{``The more constraints one imposes, the more one frees oneself of the chains that shackle the spirit.''}\\[0.5em]
+--- Igor Stravinsky\\[2em]
+\textit{``To be is to do'' --- Socrates\\
+``To do is to be'' --- Sartre\\
+``Do be do be do'' --- Sinatra}\\[0.5em]
+--- Kurt Vonnegut
+\end{center}
+\end{minipage}
 \end{center}
 \clearpage
 
@@ -357,9 +310,7 @@ def md_to_latex(text, filename=""):
     in_blockquote = False
     blockquote_lines = []
     in_list = False
-    list_type = None
-    in_code = False
-    code_lines = []
+    list_type = None  # 'ul' or 'ol'
 
     # First pass: extract footnote definitions
     cleaned_lines = []
@@ -372,72 +323,43 @@ def md_to_latex(text, filename=""):
     lines = cleaned_lines
 
     def escape_latex(text):
-        """Escape LaTeX special characters, preserving content inside $...$ and $$...$$ math blocks.
-
-        V4 uses ASCII-underscore subscript convention in prose (e.g. '𝒞_Str' means
-        script-C subscript Str). We render these as literal underscores to match the
-        source's plain-text readability; fancy subscript rendering can come later.
-        """
-        parts = re.split(r'(\$\$[^\$]*\$\$|\$[^\$]+\$)', text)
-        out = []
-        for part in parts:
-            if part.startswith('$'):
-                out.append(part)
-                continue
-            part = part.replace('&', '\\&')
-            part = re.sub(r'(?<!\\)#', r'\\#', part)
-            part = re.sub(r'(?<!\\)%', r'\\%', part)
-            part = re.sub(r'(?<!\\)_', r'\\_\\allowbreak{}', part)
-            part = part.replace('^', '\\textasciicircum{}')
-            out.append(part)
-        return ''.join(out)
+        """Escape LaTeX special characters, avoiding double-escaping."""
+        text = text.replace('&', '\\&')
+        text = re.sub(r'(?<!\\)#', r'\\#', text)
+        text = re.sub(r'(?<!\\)%', r'\\%', text)
+        # Escape _ but not inside \textit, \textbf, etc. (after commands)
+        text = re.sub(r'(?<!\\)_', r'\\_', text)
+        # Wrap math-like expressions in $...$
+        text = re.sub(r'(?<!\$)\b([a-zA-Z])\^(\{[^}]+\})', r'$\1^{\2}$', text)
+        text = re.sub(r'(?<!\$)\b([a-zA-Z])_(\{[^}]+\})', r'$\1_{\2}$', text)
+        return text
 
     def process_inline_core(text):
-        """Process inline markdown formatting (no footnotes).
-
-        Math blocks ($...$ and $$...$$) and inline code `...` are preserved
-        verbatim; only non-math/non-code segments receive markdown→LaTeX
-        substitutions and escaping.
-        """
-        # Extract and placeholder math + inline code to protect them from later regex passes.
-        placeholders = []
-        def stash(m):
-            placeholders.append(m.group(0))
-            return f"\x00STASH{len(placeholders)-1}\x00"
-        text = re.sub(r'\$\$[^\$]*\$\$|\$[^\$]+\$|`[^`]+`', stash, text)
-
-        # Markdown formatting on non-stashed text
+        """Process inline markdown formatting (no footnotes)."""
+        # Bold+italic
         text = re.sub(r'\*\*\*(.+?)\*\*\*', r'\\textbf{\\textit{\1}}', text)
+        # Bold
         text = re.sub(r'\*\*(.+?)\*\*', r'\\textbf{\1}', text)
+        # Italic
         text = re.sub(r'(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)', r'\\textit{\1}', text)
+        # Inline code
+        text = re.sub(r'`([^`]+)`', r'\\texttt{\1}', text)
+        # Links [text](url)
         text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'\\href{\2}{\1}', text)
+        # URLs that are bare
         text = re.sub(r'(?<![(\w])https?://[^\s)]+', lambda m: f'\\url{{{m.group(0)}}}', text)
+        # Em dash
         text = text.replace(' — ', ' --- ')
         text = text.replace('—', '---')
+        # Escape special chars
         text = escape_latex(text)
-
-        # Restore placeholders — convert inline code (backticks) to \texttt{},
-        # keep math blocks verbatim.
-        def restore(m):
-            idx = int(m.group(1))
-            original = placeholders[idx]
-            if original.startswith('`'):
-                # Inline code — strip backticks, escape LaTeX specials inside, wrap \texttt
-                inner = original[1:-1]
-                inner = inner.replace('\\', r'\textbackslash{}')
-                inner = inner.replace('{', r'\{').replace('}', r'\}')
-                inner = inner.replace('&', r'\&').replace('#', r'\#')
-                inner = inner.replace('%', r'\%').replace('_', r'\_')
-                inner = inner.replace('^', r'\textasciicircum{}')
-                inner = inner.replace('~', r'\textasciitilde{}')
-                inner = inner.replace('$', r'\$')
-                return f'\\texttt{{{inner}}}'
-            return original
-        text = re.sub(r'\x00STASH(\d+)\x00', restore, text)
         return text
 
     def process_inline(text):
+        """Process inline markdown formatting including footnotes."""
+        # First escape and process markdown (except footnotes)
         text = process_inline_core(text)
+        # Then replace footnote references — footnote content is processed separately
         def fn_replace(m):
             fn_id = m.group(1)
             if fn_id in footnotes:
@@ -448,10 +370,13 @@ def md_to_latex(text, filename=""):
         return text
 
     def process_inline_simple(text):
+        """Process inline without footnote expansion (for footnote text itself)."""
         return process_inline_core(text)
 
     def process_table_cell(text):
+        """Process a table cell — inline formatting plus line break hints."""
         text = process_inline_simple(text)
+        # Allow line breaks after / and → in table cells
         text = text.replace('/', '/\\allowbreak ')
         text = text.replace('→', '→\\allowbreak ')
         return text
@@ -460,9 +385,15 @@ def md_to_latex(text, filename=""):
         nonlocal in_blockquote, blockquote_lines
         if in_blockquote and blockquote_lines:
             content = "\n".join(blockquote_lines)
-            output.append("\\begin{quote}")
-            output.append(process_inline(content))
-            output.append("\\end{quote}")
+            # Check if it's a theorem/axiom (starts with bold label)
+            if re.match(r'\*\*(Axiom|Theorem|The Coherence Principle)', content):
+                output.append("\\begin{quote}")
+                output.append(process_inline(content))
+                output.append("\\end{quote}")
+            else:
+                output.append("\\begin{quote}")
+                output.append(process_inline(content))
+                output.append("\\end{quote}")
             blockquote_lines = []
             in_blockquote = False
 
@@ -476,20 +407,11 @@ def md_to_latex(text, filename=""):
             in_list = False
             list_type = None
 
-    def flush_code():
-        nonlocal in_code, code_lines
-        if in_code:
-            output.append("\\begin{Code}")
-            for cl in code_lines:
-                output.append(cl)
-            output.append("\\end{Code}")
-            code_lines = []
-            in_code = False
-
     def flush_table():
         nonlocal in_table, table_lines
         if not in_table or not table_lines:
             return
+        # Parse table
         rows = []
         for tl in table_lines:
             tl = tl.strip()
@@ -505,7 +427,9 @@ def md_to_latex(text, filename=""):
             table_lines = []
             return
 
+        # Check if second row is separator
         header = rows[0]
+        sep_idx = 1
         if all(re.match(r'^[-:]+$', c) for c in rows[1]):
             data_rows = rows[2:]
         else:
@@ -513,19 +437,30 @@ def md_to_latex(text, filename=""):
             data_rows = rows
 
         ncols = max(len(r) for r in rows)
+
+        # Compute max content length per column to decide widths
         col_max = [0] * ncols
         for row in rows:
             for ci, cell in enumerate(row):
                 if ci < ncols:
                     col_max[ci] = max(col_max[ci], len(cell))
 
-        total_text_width = 4.5
+        # Determine column spec based on content
+        total_text_width = 4.5  # inches
+        use_tiny_sep = False
         use_tight = False
-        if ncols >= 3 or max(col_max) > 20:
+        if ncols == 6 and col_max[-1] > 40:
+            # Prediction registry table — special layout
+            col_spec = '@{}p{0.12in} p{1.35in} p{0.52in} p{0.65in} p{0.52in} p{0.94in}@{}'
+            use_tiny_sep = True
+        elif ncols >= 5 or max(col_max) > 30:
+            # Wide table — all p{} columns with tight spacing
+            # Account for inter-column spacing (2pt tabcolsep)
             effective_width = total_text_width - (ncols * 2 * 0.028)
-            total_chars = sum(col_max) or 1
-            widths = [max(0.6, (col_max[ci] / total_chars) * effective_width)
+            total_chars = sum(col_max)
+            widths = [max(0.15, (col_max[ci] / total_chars) * effective_width)
                       for ci in range(ncols)]
+            # Normalize to fit if min floor inflated total
             total_w = sum(widths)
             if total_w > effective_width:
                 scale = effective_width / total_w
@@ -535,10 +470,13 @@ def md_to_latex(text, filename=""):
         else:
             col_spec = 'l' * ncols
 
-        use_longtable = len(data_rows) > 8 or ncols >= 5
+        # Use longtable for prediction tables and large tables
+        use_longtable = len(data_rows) > 8 or ncols >= 6
 
-        if use_tight:
-            output.append("\\begingroup\\setlength{\\tabcolsep}{3pt}\\renewcommand{\\arraystretch}{1.15}\\footnotesize")
+        if use_tiny_sep:
+            output.append("\\begingroup\\setlength{\\tabcolsep}{2pt}\\footnotesize")
+        elif use_tight:
+            output.append("\\begingroup\\setlength{\\tabcolsep}{2pt}\\small")
 
         if use_longtable:
             output.append(f"\\begin{{longtable}}{{{col_spec}}}")
@@ -554,6 +492,7 @@ def md_to_latex(text, filename=""):
                     row.append("")
                 output.append(" & ".join(process_table_cell(c) for c in row) + " \\\\")
                 output.append("\\midrule")
+            # Remove last midrule, add bottomrule
             if output[-1] == "\\midrule":
                 output[-1] = "\\bottomrule"
             output.append("\\end{longtable}")
@@ -572,7 +511,7 @@ def md_to_latex(text, filename=""):
             output.append("\\end{tabular}")
             output.append("\\end{center}")
 
-        if use_tight:
+        if use_tiny_sep or use_tight:
             output.append("\\endgroup")
 
         in_table = False
@@ -582,25 +521,6 @@ def md_to_latex(text, filename=""):
     while i < len(lines):
         line = lines[i]
         stripped = line.strip()
-
-        # Code fence
-        if stripped.startswith("```"):
-            if in_code:
-                flush_code()
-            else:
-                flush_blockquote()
-                flush_list()
-                if in_table:
-                    flush_table()
-                in_code = True
-                code_lines = []
-            i += 1
-            continue
-
-        if in_code:
-            code_lines.append(line)
-            i += 1
-            continue
 
         # Blank line
         if stripped == "":
@@ -641,6 +561,7 @@ def md_to_latex(text, filename=""):
             title = h_match.group(2)
             title = process_inline(title)
             if level == 1:
+                # Top-level: chapter
                 output.append(f"\\chapter{{{title}}}")
             elif level == 2:
                 output.append(f"\\section{{{title}}}")
@@ -698,20 +619,29 @@ def md_to_latex(text, filename=""):
         output.append(process_inline(stripped))
         i += 1
 
+    # Flush remaining
     flush_blockquote()
     flush_list()
     flush_table()
-    flush_code()
 
     return "\n".join(output)
 
 
 def build_book():
+    """Build the complete book LaTeX file and compile to PDF."""
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+
     latex_body = []
+    part_counter = 0
+    part_names = {
+        "01-part-i-intro.md": "The Doctrine",
+        "02-part-ii-intro.md": "The Ecology",
+        "03-part-iii-intro.md": "The Guide",
+        "04-part-iv-intro.md": "The Atlas",
+    }
 
     for fname in CHAPTERS:
-        fpath = os.path.join(HERE, fname)
+        fpath = os.path.join(DRAFTS, fname)
         if not os.path.exists(fpath):
             print(f"WARNING: {fname} not found, skipping")
             continue
@@ -719,43 +649,83 @@ def build_book():
         with open(fpath, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        if fname == "README.md":
-            latex_body.append("\\chapter*{Preface --- V4 Opening}")
-            latex_body.append("\\addcontentsline{toc}{chapter}{Preface --- V4 Opening}")
-            latex_body.append("\\markboth{PREFACE}{PREFACE}")
-            content = re.sub(r'^##\s+V4.*\n', '', content)
+        # Handle preface specially (before \mainmatter)
+        if fname == "00-preface.md":
+            latex_body.append("\\chapter*{Preface}")
+            latex_body.append("\\addcontentsline{toc}{chapter}{Preface}")
+            latex_body.append("\\markboth{Preface}{Preface}")
+            # Remove the markdown H1 header
+            content = re.sub(r'^#\s+.*\n', '', content)
+            content = re.sub(r'^\*Third Edition.*\*\n', '', content)
+            converted = md_to_latex(content, fname)
+            # Replace the last \sectionbreak (before signature) with \vfill
+            last_break = converted.rfind("\\sectionbreak")
+            if last_break != -1:
+                converted = converted[:last_break] + "\\vfill" + converted[last_break + len("\\sectionbreak"):]
+            latex_body.append(converted)
+            continue
+
+        # Part intros
+        if fname in PART_INTROS:
+            part_counter += 1
+            part_name = part_names.get(fname, f"Part {part_counter}")
+            # Extract subtitle from file
+            subtitle_match = re.search(r'^\*(.+?)\*', content, re.MULTILINE)
+            subtitle = subtitle_match.group(1) if subtitle_match else ""
+
+            latex_body.append(f"\\part{{{part_name}}}")
+            # Remove H1 and add intro text
+            content = re.sub(r'^#\s+.*\n', '', content)
             latex_body.append(md_to_latex(content, fname))
             continue
 
-        if fname.startswith("Appendix"):
-            chap_match = re.search(r'^#\s+(.+)', content, re.MULTILINE)
-            chap_title = chap_match.group(1).strip() if chap_match else fname
-            chap_title = re.sub(r'\*+', '', chap_title)
-            if chap_match:
-                content = content[chap_match.end():]
-            latex_body.append(f"\\chapter{{{chap_title}}}")
+        # Part V: embedded in 05a — handle the Part header
+        if fname == "05a-the-claim.md":
+            part_counter += 1
+            latex_body.append("\\part{The Journey}")
+            # Remove the Part V header line, keep the chapter header
+            content = re.sub(r'^# Part V:.*\n+', '', content)
+
+        # Appendices
+        if fname == "06-appendices.md":
+            latex_body.append("\\backmatter")
+            latex_body.append("\\chapter*{Appendices}")
+            latex_body.append("\\addcontentsline{toc}{chapter}{Appendices}")
+            latex_body.append("\\markboth{Appendices}{Appendices}")
+            content = re.sub(r'^#\s+.*\n', '', content)
             latex_body.append(md_to_latex(content, fname))
             continue
 
-        # Chapter: extract title from first H1
-        chap_match = re.search(r'^#\s+(.+)', content, re.MULTILINE)
+        # Regular chapters — extract title from ## header
+        chap_match = re.search(r'^##?\s+(.+)', content, re.MULTILINE)
         if chap_match:
             chap_title = chap_match.group(1).strip()
+            # Clean markdown formatting from title
             chap_title = re.sub(r'\*+', '', chap_title)
+            # Remove the header line from content
             content = content[chap_match.end():]
         else:
-            chap_title = fname.replace('.md', '')
+            chap_title = fname.replace('.md', '').replace('-', ' ').title()
 
         latex_body.append(f"\\chapter{{{chap_title}}}")
-        latex_body.append(md_to_latex(content, fname))
+        converted = md_to_latex(content, fname)
+        # For the final chapter (The Principle), pull signature to bottom of page
+        if fname == "05f-the-principle.md":
+            last_break = converted.rfind("\\sectionbreak")
+            if last_break != -1:
+                converted = converted[:last_break] + "\\vfill" + converted[last_break + len("\\sectionbreak"):]
+        latex_body.append(converted)
 
+    # Assemble
     full_latex = PREAMBLE + "\n".join(latex_body) + POSTAMBLE
 
-    tex_path = os.path.join(OUTPUT_DIR, "corpus-perspectival-v4.tex")
+    # Write .tex file
+    tex_path = os.path.join(OUTPUT_DIR, "the-coherence-principle.tex")
     with open(tex_path, 'w', encoding='utf-8') as f:
         f.write(full_latex)
     print(f"LaTeX source written to: {tex_path}")
 
+    # Compile with XeLaTeX (run twice for TOC)
     for run in range(2):
         print(f"XeLaTeX pass {run+1}...")
         result = subprocess.run(
@@ -766,27 +736,24 @@ def build_book():
             encoding='utf-8', errors='replace'
         )
         if result.returncode != 0 and result.stdout:
-            print(f"XeLaTeX pass {run+1} errors (first 20):")
-            err_count = 0
+            print(f"XeLaTeX pass {run+1} warnings/errors (may be non-fatal):")
             for line in result.stdout.split('\n'):
                 if line.startswith('!') or 'Error' in line or 'Fatal' in line:
                     print(f"  {line}")
-                    err_count += 1
-                    if err_count >= 20:
-                        break
 
-    pdf_path = os.path.join(OUTPUT_DIR, "corpus-perspectival-v4.pdf")
+    pdf_path = os.path.join(OUTPUT_DIR, "the-coherence-principle.pdf")
     if os.path.exists(pdf_path):
         size_mb = os.path.getsize(pdf_path) / (1024*1024)
         print(f"\nBook compiled successfully!")
         print(f"PDF: {pdf_path}")
         print(f"Size: {size_mb:.1f} MB")
     else:
-        print("\nPDF not generated. Check .log for errors.")
-        log_path = os.path.join(OUTPUT_DIR, "corpus-perspectival-v4.log")
+        print("\nPDF not generated. Check the .log file for errors:")
+        log_path = os.path.join(OUTPUT_DIR, "the-coherence-principle.log")
         if os.path.exists(log_path):
-            with open(log_path, 'r', encoding='utf-8', errors='replace') as f:
+            with open(log_path, 'r') as f:
                 log = f.read()
+            # Find errors
             for line in log.split('\n'):
                 if line.startswith('!'):
                     print(f"  {line}")

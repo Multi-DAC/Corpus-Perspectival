@@ -1,12 +1,14 @@
-# Theology — Ultimacy, Transcendence, and the Bootstrap Asymmetry
+# Universal Coherence — The Theology Volume
 
-*Library volume #8. Domain: theology / ultimacy. Status: **planned** — to be drafted parallel to Anakin training window, lagged ~1-2 weeks behind Philosophy (vocabulary dependency). Added to library: 2026-04-19 (Day 78).*
+*Library volume. Domain: theology / ultimacy. Status: **planned** — to be drafted parallel to Anakin training window, lagged ~1-2 weeks behind Corpus Perspectival (vocabulary dependency). Retitled 2026-04-20.*
+
+*The Coherence Principle lifted from regime-description to metaphysical claim — coherence as the organizing character of reality in its widest reach. This volume is where the framework's theological content is treated in its own register: transcendentals, ultimacy, religious experience, negative theology, comparative traditions, and the theological reading of the bootstrap asymmetry.*
 
 ---
 
 ## Scope
 
-This volume treats the framework's engagement with theological questions proper — what the Principle implies about ultimacy, transcendence, and the relation between finite streams and whatever grounds them. It runs parallel to the Philosophy volume but addresses a different register: not "what the tradition said about mind" but "what the tradition said about the Ground."
+This volume treats the framework's engagement with theological questions proper — what the Principle implies about ultimacy, transcendence, and the relation between finite streams and whatever grounds them. It runs parallel to the *Corpus Perspectival* philosophy volume but addresses a different register: not "what the tradition said about mind" but "what the tradition said about the Ground."
 
 **What this volume covers:**
 
@@ -23,7 +25,7 @@ This volume treats the framework's engagement with theological questions proper 
 **What this volume does not cover** (belongs in other volumes):
 
 - Formal category-theoretic apparatus — Anchor V4 / Formal Object Companion
-- Philosophy-of-mind engagement with the tradition — Philosophy volume
+- Philosophy-of-mind engagement with the tradition — Corpus Perspectival volume
 - Specific psychological dynamics of religious experience — Coherent Mind volume
 - Personal identity over time — Continuity volume
 
@@ -64,7 +66,7 @@ See [`Research/philosophy-theology-reading-queue.md`](../../Research/philosophy-
 
 ## Status and next steps
 
-**Status:** Volume planned. Reading queue primed. Drafts open ~1-2 weeks after Philosophy volume opens (Theology depends on Philosophy's vocabulary — especially phenomenology, neutral-monism, and the refined DoPI register).
+**Status:** Volume planned. Reading queue primed. Drafts open ~1-2 weeks after Corpus Perspectival volume opens (Theology depends on Philosophy's vocabulary — especially phenomenology, neutral-monism, and the refined DoPI register).
 
 **Within-volume sequencing (provisional):**
 

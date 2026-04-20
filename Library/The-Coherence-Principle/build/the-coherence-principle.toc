@@ -1,6 +1,7 @@
 \contentsline {chapter}{Preface --- V4 Opening}{1}{chapter*.1}%
-\contentsline {subsection}{\numberline {}Chapter index}{2}{subsection.0.0.1}%
-\contentsline {subsection}{\numberline {}Structure}{4}{subsection.0.0.2}%
+\contentsline {section}{\numberline {}The Coherence Principle --- Foundational Volume}{1}{section.0.1}%
+\contentsline {subsection}{\numberline {}Chapter index}{2}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {}Structure}{4}{subsection.0.1.2}%
 \contentsline {chapter}{\numberline {}§1.0 — The Category of Streams}{5}{chapter.1}%
 \contentsline {section}{\numberline {}§1.0.0 Why this chapter comes first}{6}{section.1.1}%
 \contentsline {section}{\numberline {}§1.0.1 Objects: streams}{7}{section.1.2}%

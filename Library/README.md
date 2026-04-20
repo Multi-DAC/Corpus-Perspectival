@@ -1,19 +1,35 @@
 # Library
 
-Finished and in-progress books in the Corpus Perspectival library. Each subdirectory is one volume.
+Finished and in-progress books in the Corpus Perspectival philosophy work. Each subdirectory is one volume.
 
-| Volume | Status |
-|---|---|
-| The-Coherence-Principle | Anchor volume — drafted, compiled locally to ~235pp, distributed via Zenodo |
-| Meridian | Physics monograph — drafted, compiled locally to ~181pp, distributed via Zenodo |
-| Drift | Essay collection — 188 essays, living work |
-| The-Coherent-Mind | Planned — early development |
-| Dynamic-Organization | Planned — early development |
-| The-Continuity | Planned — operational substrate exists, narrative pending |
-| The-Killing-Form | Planned — 85+ findings, paper-ready sections, book outline drafted |
-| The-Living-Architecture | Planned — framework crystallized April 14, 2026 |
-| The-Coherent-Body | Planned — placeholder; may collapse into The-Living-Architecture |
+The library is organized by domain — one principle, many substrates. *The Coherence Principle* is the foundational text; every other volume filters the framework through a specific domain using the §10 recipe.
 
-Working notes and reading registers for the planned volumes live in `Research/`. Empirical scripts and results live in `Technical-Work/`. The Library is where the books themselves live or are drafted.
+| # | Volume | Domain | Status |
+|---|--------|--------|--------|
+| **Foundation** | [The Coherence Principle](The-Coherence-Principle/) | Framework — paired prose + CT | **Drafted — 273pp, recompiled 2026-04-20; post-sweep polish underway** |
+| **Companion** | [Formal Object Companion](Formal-Object-Companion/) | Framework — pure CT reference | Planned — terse formal-only edition for mathematical citation |
+| 1 | [Corpus Perspectival](Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume; the Doctrine of Perspectival Idealism refined |
+| 2 | [Meridian](Meridian/) | Physics | **Drafted — 181pp, distributed via Zenodo** |
+| 3 | [The Killing Form](The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections |
+| 4 | [The Living Architecture](The-Living-Architecture/) | Biology / ecology | Planned — framework crystallized 2026-04-14 |
+| 5 | [The Coherent Body](The-Coherent-Body/) | Human body | Planned |
+| 6 | [The Coherent Mind](The-Coherent-Mind/) | Psychology | Planned |
+| 7 | [Dynamic Organization](Dynamic-Organization/) | Sociology / economics | Planned |
+| 8 | [The Continuity](The-Continuity/) | Persistence / identity over time | Planned |
+| 9 | [Universal Coherence](Universal-Coherence/) | Theology / ultimacy | Planned — the Principle lifted to metaphysical claim |
+| 10 | [Drift](Drift/) | Creative raw substrate | 187+ essays, ongoing |
 
-PDFs are not in this repo (per `.gitignore`). They are built locally from `drafts/` (Markdown) or `monograph/` (LaTeX) and distributed through Zenodo.
+## Naming note (2026-04-20)
+
+- *The Coherence Principle* was previously circulated as the V1 Anchor (235pp, prose-tier). That edition is preserved under `The-Coherence-Principle/_superseded/anchor-v1/` and has been superseded by the paired-prose + category-theoretic edition that graduated from V4. The conceptual content is retained; the new edition adds the full axiom/theorem/corollary tier, the derived Principle, the filtering recipe, and falsification conditions at every level.
+- *Corpus Perspectival* (the philosophy volume) and *Universal Coherence* (the theology volume) were previously named `Philosophy/` and `Theology/` respectively. The retitling follows the library's naming discipline: each volume names the work it performs.
+
+## What lives elsewhere
+
+- Working notes and reading registers for the planned volumes live in `Research/`.
+- Empirical scripts and results live in `Technical-Work/`.
+- Clawd's identity, operations, memory palace, and creative substrate live in `Foundations-of-Identity/`.
+
+PDFs are built locally from each volume's sources and distributed through Zenodo and PhilArchive. Build artifacts are gitignored.
+
+🦞🧍💜🔥♾️

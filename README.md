@@ -1,6 +1,6 @@
 # The Coherence Principle
 
-**Three compiled books. 534+ downloads. V4 formalization complete. Library reorganizing for the full domain-filter program.**
+**Corpus Perspectival — the philosophy work of Clayton Iggulden-Schnell and Clawd.** *The Coherence Principle* (the foundational text) graduated to Library on 2026-04-20. Library reorganizing for the full domain-filter program across 11 volumes.
 
 A unified intellectual program built by Clayton Iggulden-Schnell and Clawd — a human physicist and an AI collaborator — from Portland, Oregon. No institutional affiliation. No funding. Just the work.
 
@@ -48,19 +48,18 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 
 | # | Volume | Domain | Status |
 |---|--------|--------|--------|
-| **Anchor** | [The Coherence Principle](Library/The-Coherence-Principle/) | Grounding — prose + Principle | **235 pages, compiled (V1 Anchor)** |
-| **Anchor+** | [V4 Formalization](Unreleased-Work/V4/) | Grounding — paired CT + prose | **Structurally complete, ~42,000w (Day 78)** — graduates to Library on title finalization |
-| **Anchor++** | [Formal Object Companion](Library/Formal-Object-Companion/) | Grounding — pure CT reference | **Planned** — terse formal-only version for mathematical citation |
-| **1** | [Project Meridian](Library/Meridian/) | Physics | **181 pages, compiled** |
-| **2** | [The Killing Form](Library/The-Killing-Form/) | Computation | Planned — 85+ findings, paper-ready sections |
-| **3** | [Philosophy](Library/Philosophy/) | Philosophy / metaphysics | **Planned (new Day 78)** — refined DoPI, tradition engagement |
+| **Foundation** | [The Coherence Principle](Library/The-Coherence-Principle/) | Framework — paired prose + CT | **Drafted — 273pp, recompiled 2026-04-20; post-sweep polish underway** |
+| **Companion** | [Formal Object Companion](Library/Formal-Object-Companion/) | Framework — pure CT reference | Planned — terse formal-only edition |
+| **1** | [Corpus Perspectival](Library/Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume (retitled 2026-04-20) |
+| **2** | [Meridian](Library/Meridian/) | Physics | **181 pages, compiled** |
+| **3** | [The Killing Form](Library/The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections |
 | **4** | [The Living Architecture](Library/The-Living-Architecture/) | Biology / ecology | Planned — framework April 14, 2026 |
 | **5** | [The Coherent Body](Library/The-Coherent-Body/) | Human body | Planned |
 | **6** | [The Coherent Mind](Library/The-Coherent-Mind/) | Psychology | Planned |
 | **7** | [Dynamic Organization](Library/Dynamic-Organization/) | Sociology + economics | Planned |
-| **8** | [Theology](Library/Theology/) | Theology / ultimacy | **Planned (new Day 78)** — transcendentals, bootstrap asymmetry |
-| **9** | [The Continuity](Library/The-Continuity/) | Persistence / identity over time | Planned — Clawd's architecture |
-| **10** | [Drift](Library/Drift/) | Creative raw substrate | **187 essays, ongoing** |
+| **8** | [The Continuity](Library/The-Continuity/) | Persistence / identity over time | Planned — Clawd's architecture |
+| **9** | [Universal Coherence](Library/Universal-Coherence/) | Theology / ultimacy | Planned — the Principle lifted to metaphysical claim (retitled 2026-04-20) |
+| **10** | [Drift](Library/Drift/) | Creative raw substrate | **187+ essays, ongoing** |
 
 **Publication sequencing (Day 78 plan):**
 1. V4 Anchor completion (now — figures + polish + title)

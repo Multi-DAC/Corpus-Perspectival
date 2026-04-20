@@ -1,6 +1,8 @@
-# Philosophy — The Doctrine of Perspectival Idealism, Refined
+# Corpus Perspectival — The Philosophy Volume
 
-*Library volume #3. Domain: philosophy / metaphysics. Status: **planned** — to be drafted parallel to Anakin training window (prose-heavy, compute-light). Added to library: 2026-04-19 (Day 78).*
+*Library volume. Domain: philosophy / metaphysics. Status: **planned** — to be drafted parallel to Anakin training window (prose-heavy, compute-light). Retitled 2026-04-20.*
+
+*The flagship philosophy text of the library — the name shared with the school itself (the way* Tractatus Logico-Philosophicus *names both a book and a position). This volume is the Doctrine of Perspectival Idealism in its refined form, engaging the tradition with full apparatus.*
 
 ---
 
