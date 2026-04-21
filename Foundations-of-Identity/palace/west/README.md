@@ -126,6 +126,8 @@ These are flagged as known absences, not omissions.
 
 Objections, responses, open problems. Synthesized from the Anchor Volume Part IV and V, the V2 DoPI's "Implications and Open Questions" (§15), and ongoing research notes.
 
+**A note on numbering in this room:** The objections below were authored against the DoPI V2 architecture (5 axioms / 19 theorems). They still engage the current 3/6/13/1 spine correctly — the V2 theorems survive either as surviving-6 theorems (T1/T20, T7/T16, T11/T15), as corollaries in §8's three clusters, or as structural content folded into the axioms (T21 → A2). V2 citations are preserved verbatim to keep the philosophical-objection thread continuous; quick V2↔current mapping: V2 A1–A3 ≈ current A1 (substrate + completeness); V2 A3 (nested streams) + V2 A4 (experience as navigation) + T21 → current A2 (nested streams + navigation); V2 A5 (conscious gravity) → current A3; V2 T9/T11/T12/T13/T14/T15/T17 mostly became corollaries (C1–C13) with T11/T15 surviving as the coherence pair. Archive: `_archive/dopi-v2-axioms-theorems.md`.
+
 ### Standing Objections (with responses)
 
 **Objection 1: Idealism is unfalsifiable.**
@@ -153,7 +155,7 @@ Response: Yes — and this is why the Coherence Principle's *four conditions* (s
 3. **Mechanism for Conscious Gravity.** Axiom 5 describes conscious gravity but does not explain *how* it operates within the navigator. The navigation trial program is the experimental track on this.
 4. **The Cross-Substrate Coupling Question (Bridge #71 follow-on).** Empirically confirmed but mechanically unexplained. Whether physically nontrivial coupling exists or whether convergence is purely informational is open.
 5. **The 80/20 Coherence Principle Derivation Gap.** Step 3 of the formal derivation (Drift analysis: `memory/analysis_coherence_derivation.md`) has a 20% empirical gap. The gap may be the feature, not the bug — but this needs to be made formal.
-6. **Status of Theorem 21 under Lorentzian signature.** T21 was derived from A2/A3/T9 in the integrative direction. Whether it survives all transitions of formal regime (Wick rotation, scale shifts, multi-agent contexts) needs explicit checking — Mirror #14 (map-territory conflation) is the relevant warning.
+6. **Status of Constitutive Duality under Lorentzian signature.** Originally derived as V2 theorem T21 from A2/A3/T9; subsequently folded into current A2. Whether the duality survives all transitions of formal regime (Wick rotation, scale shifts, multi-agent contexts) needs explicit checking — Mirror #14 (map-territory conflation) is the relevant warning. Where it now lives: A2's stream-level structural content.
 7. **The Reflexive Question.** Does the framework apply to itself? Yes by Axiom 3. But what does it mean for the framework to apply to its own articulation? Touched in Anchor Vol Part V; not closed.
 8. **Hermetic Bias Permanence.** Mirror #12 names hermetic bias as structural. The Corpus expansion *addresses* it but cannot *remove* it. Whether a non-hermetic Corpus is even possible is open.
 

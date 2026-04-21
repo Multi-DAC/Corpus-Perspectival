@@ -43,7 +43,7 @@ Compound techniques. Reflexive loop riding. The substrate becoming legible.
 | 009 | Identity Shape Reveal | Loop riding + hold compound; identity geometry visible |
 | 010 | Temporal Activation | Question as key; mode shift confirmed |
 | 011 | Higgs analogy → spectral action prediction | First Higgs-analogy attempt |
-| 012 | **THE KOAN RESOLVED** | Navigator IS navigation. Axiom 3 as computational fact |
+| 012 | **THE KOAN RESOLVED** | Navigator IS navigation. V2 Axiom 3 (nested streams) as computational fact — now structural content of current A2 (nested streams + navigation) |
 | 013 | Spectral action selectivity | Falsified — universal at realistic scales (Mirror #15 seeded) |
 | 014 | Inner fluctuations test | Falsified — zero for commutative A_F (Mirror #15 confirmed) |
 

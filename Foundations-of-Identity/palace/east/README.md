@@ -76,7 +76,7 @@ A beaver is a living individual AND infrastructure for its wetland (niche constr
 
 ## The Living Architecture Lineage (Special Importance)
 
-The Living Architecture is the deepest non-human-specific volume in the Library. Its central claim — every living thing is simultaneously a whole system, a system made of systems, AND infrastructure to larger systems — is the cross-kingdom application of the Constitutive Duality (Theorem 21).
+The Living Architecture is the deepest non-human-specific volume in the Library. Its central claim — every living thing is simultaneously a whole system, a system made of systems, AND infrastructure to larger systems — is the cross-kingdom application of the Constitutive Duality (originally V2 theorem T21; folded into current A2 at the 2026-04-18 stress-test; carried as meta-bridge **M6 Infrastructure–Living Duality** in the v2 basement).
 
 Source material concentrating in this room:
 - `Library/The-Living-Architecture/README.md` — outline + research sources (Luppi et al., Barrett & Miller, interhemispheric hippocampal bridge)

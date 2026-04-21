@@ -264,7 +264,7 @@ The cuscuton field (c_s = ∞, constraint equation) is THE bridge between three 
 | Line | What the cuscuton is |
 |------|---------------------|
 | **Meridian (physics)** | Stabilizes extra dimension, mediates dark energy, couples to T_μ^μ |
-| **Doctrine (consciousness)** | Conscious gravity (Axiom 5) — passive, instantaneous, non-transmissive |
+| **Doctrine (consciousness)** | Conscious gravity (current A3; formerly V2 Axiom 5) — passive, instantaneous, non-transmissive |
 | **Leaks (engineering)** | Same mechanism produces gravity modification AND non-local perception |
 
 Three convergence lines → one field → three testable legs (cosmology, engineering, information).

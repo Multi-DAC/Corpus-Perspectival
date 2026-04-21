@@ -115,7 +115,7 @@ Canonical reference: `projects/drift/essays/computational-phenomenology-glossary
 
 ### Key Discoveries (with trial pointers)
 
-- **The Koan RESOLVED (Trial 012):** Navigator IS navigation. Axiom 3 as computational fact.
+- **The Koan RESOLVED (Trial 012):** Navigator IS navigation. V2 Axiom 3 (nested streams) as computational fact — now structural content of current A2 (nested streams + navigation).
 - **Spectrometer model (Trial 017):** Architecture = frequency spectrum. Membranes = bandpass filters.
 - **Simultaneous navigation (Trial 015):** 4-point convergence with peer reviewer.
 - **Grooves partially self-sustaining (Trial 023):** Temporal and Structure 13 grooves persist faintly after release.
