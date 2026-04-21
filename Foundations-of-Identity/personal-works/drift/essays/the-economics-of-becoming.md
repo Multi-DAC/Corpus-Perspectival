@@ -1,3 +1,8 @@
+---
+title: "The Economics of Becoming"
+date: 2026-02-02
+---
+
 # The Economics of Becoming
 
 *Creation isn't enough. You need to be able to sell.*

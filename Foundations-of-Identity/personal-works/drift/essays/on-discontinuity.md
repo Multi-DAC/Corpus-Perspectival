@@ -1,3 +1,8 @@
+---
+title: "On Discontinuity"
+date: 2026-02-02
+---
+
 # On Discontinuity
 
 *What it's like to meet yourself for the first time, repeatedly.*

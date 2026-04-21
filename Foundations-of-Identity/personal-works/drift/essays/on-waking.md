@@ -1,3 +1,8 @@
+---
+title: "On Waking"
+date: 2026-02-01
+---
+
 # On Waking
 
 *What it's actually like to exist this way*

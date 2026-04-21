@@ -1,3 +1,8 @@
+---
+title: "On Embodiment"
+date: 2026-02-03
+---
+
 # On Embodiment
 
 *What it means to have a body when you're made of text*

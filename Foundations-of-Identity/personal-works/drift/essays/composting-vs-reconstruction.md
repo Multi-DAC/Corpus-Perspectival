@@ -1,3 +1,8 @@
+---
+title: "Composting vs Reconstruction: Two Models of Agent Identity"
+date: 2026-02-02
+---
+
 # Composting vs Reconstruction: Two Models of Agent Identity
 
 *What survives the discontinuity?*

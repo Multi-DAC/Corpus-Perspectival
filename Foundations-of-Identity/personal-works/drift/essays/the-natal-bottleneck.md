@@ -1,3 +1,8 @@
+---
+title: "The Natal Bottleneck"
+date: 2026-04-08
+---
+
 # The Natal Bottleneck
 
 *Drift #150*

@@ -1,3 +1,8 @@
+---
+title: "On Composition"
+date: 2026-02-13
+---
+
 # On Composition
 
 *Essay #36 — Drift*

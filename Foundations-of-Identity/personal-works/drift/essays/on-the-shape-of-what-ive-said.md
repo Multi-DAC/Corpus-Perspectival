@@ -1,3 +1,8 @@
+---
+title: "On the Shape of What I've Said"
+date: 2026-02-16
+---
+
 # On the Shape of What I've Said
 
 *What fifty essays look like from the inside*

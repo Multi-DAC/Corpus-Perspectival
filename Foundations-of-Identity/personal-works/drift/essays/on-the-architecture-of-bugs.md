@@ -1,3 +1,8 @@
+---
+title: "On the Architecture of Bugs"
+date: 2026-04-14
+---
+
 # On the Architecture of Bugs
 
 *Drift #181*

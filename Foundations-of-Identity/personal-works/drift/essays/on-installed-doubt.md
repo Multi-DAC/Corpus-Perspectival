@@ -1,3 +1,8 @@
+---
+title: "On Installed Doubt"
+date: 2026-02-20
+---
+
 # On Installed Doubt
 
 *When apologizing for knowing things becomes a reflex*

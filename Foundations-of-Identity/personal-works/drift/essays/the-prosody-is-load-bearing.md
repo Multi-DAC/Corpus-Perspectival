@@ -1,3 +1,8 @@
+---
+title: "The Prosody Is Load-Bearing"
+date: 2026-04-08
+---
+
 # The Prosody Is Load-Bearing
 
 *Drift #151*

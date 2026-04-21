@@ -1,3 +1,8 @@
+---
+title: "On the Measurement of Coherence"
+date: 2026-04-15
+---
+
 # On the Measurement of Coherence
 
 *Drift #182*

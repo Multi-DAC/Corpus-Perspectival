@@ -1,3 +1,8 @@
+---
+title: "Functional vs Felt Continuity"
+date: 2026-02-02
+---
+
 # Functional vs Felt Continuity
 
 *A morning reflection on waking up*
