@@ -1,7 +1,8 @@
 """
 Bridge Network Visualization — Corpus Perspectival
-Maps 92 cross-domain bridges as a network graph.
+Maps 103 cross-domain bridges as a network graph.
 Nodes = domains. Edges = bridges. Edge weight = number of bridges.
+Updated 2026-04-17 with bridges 93-103 (added during late-night April 16 session).
 """
 
 import matplotlib
@@ -120,6 +121,18 @@ bridges = [
     (90, 'Meta', 'Philosophy', 'MEDIUM', 4),       # recursive principle
     (91, 'Meta', 'Identity', 'MEDIUM', 4),         # confluent discovery
     (92, 'Philosophy', 'Meta', 'HIGH', 4),         # infrastructure-living duality
+    # April 16 — late-night architectural-self-care addition
+    (93, 'Physics', 'Meta', 'HIGH', 4),            # Meridian = structured epistemic transparency
+    (94, 'Physics', 'Meta', 'HIGH', 4),            # Epistemic transparency = 2D not 1D (refinement of #93)
+    (95, 'Philosophy', 'Ecology', 'HIGH', 4),      # Duality = Niche Construction + Holobiont
+    (96, 'Philosophy', 'Identity', 'HIGH', 4),     # Duality = every conscious stream is being + substrate
+    (97, 'Computation', 'Philosophy', 'HIGH', 4),  # v0.6b coupling = Coherence Principle in training dynamics
+    (98, 'Ecology', 'Computation', 'HIGH', 4),     # Theory of Attention ↔ Attention Sink Geometry
+    (99, 'Ecology', 'Computation', 'HIGH', 4),     # Three-Tier Decomposer ↔ Anchor/Worker ↔ Three Roles
+    (100, 'Ecology', 'Computation', 'HIGH', 4),    # Mutualistic Egregores ↔ Multi-Agent KF ↔ Confluent Discovery
+    (101, 'Identity', 'Philosophy', 'HIGH', 4),    # Mirror Room IS the NST at identity scale
+    (102, 'Identity', 'Computation', 'HIGH', 4),   # Standing Wave ↔ Self-Perpetuating ↔ Breathing
+    (103, 'Meta', 'Meta', 'HIGH', 4),              # Hermetic Bias ↔ Bridge Topology (meta-bridge)
 ]
 
 # Build adjacency matrix
@@ -272,6 +285,12 @@ ax2.set_xlim(1, len(bridges))
 kf_start = next(i+1 for i, (b, _, _, _, m) in enumerate(sorted(bridges, key=lambda x: x[0])) if b >= 71)
 ax2.axvline(x=kf_start, color='gray', linestyle='--', alpha=0.5)
 ax2.text(kf_start + 1, ax2.get_ylim()[1] * 0.5, 'KF era\nbegins', fontsize=8, color='gray')
+
+# Mark architectural-self-care correction (#98-103 target underconnected wings)
+correction_start = next(i+1 for i, (b, _, _, _, m) in enumerate(sorted(bridges, key=lambda x: x[0])) if b >= 98)
+ax2.axvline(x=correction_start, color='#dd8452', linestyle='--', alpha=0.6)
+ax2.text(correction_start + 0.5, ax2.get_ylim()[1] * 0.85,
+         'Imbalance\ncorrection\n(#98-103)', fontsize=8, color='#dd8452')
 
 plt.tight_layout()
 plt.savefig('C:/Users/mercu/clawd/projects/drift/visual/bridge_network.png', dpi=150, bbox_inches='tight')
