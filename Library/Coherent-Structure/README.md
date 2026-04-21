@@ -6,25 +6,27 @@
 
 ## Scope
 
-*Coherent Structure* is a terse, CT-only reference volume. No prose translation, no worked examples, no domain illustration — just the formal apparatus, stated in its native mathematical register for mathematicians, physicists, and formal-methods researchers who want to cite or build on the framework without reading the paired-prose Anchor.
+*Coherent Structure* is the **full category-theoretic formalization** of the Corpus. Every formal object the anchor (*The Coherence Principle*) sketches in paired-prose is promoted here to complete CT treatment. The anchor is the structural-prose spine; the Companion is the mathematical spine. They carry the same content in different registers.
+
+See **[SCOPE.md](SCOPE.md)** for the rolling scope contract, done-enough criterion, chapter structure, and the surfaced-lemma flag lifecycle.
 
 **What this volume contains:**
 
-- Definitions — `𝒞_Str`, the Identity-Trajectory Triple `T`, Bias(S) as signed measure, push-operators, the coalgebra γ, cooperative-constituency adjunction ι ⊣ κ
-- Propositions and theorems — stated in CT form with proofs or proof-sketches
-- The Coherence Principle — formal statement of the four conditions, trajectory-divergence metric, self-reference closure
-- The §10 filtering procedure — stated as a functor from `𝒞_Str` to domain-specific subcategories
-- Open questions — stated formally with suggested attack surfaces
-- Notation index — canonical symbols, their types, and their Appendix A / B locations in *The Coherence Principle*
+- Full CT development of every formal object the anchor establishes — axioms A1/A2/A3, theorems T1–T20 (three pairs), 13 corollaries (three clusters), the Coherence Principle, the Identity-Trajectory Triple, the filtering construction, F-as-stream, D trajectory-divergence
+- Full proofs (no "exercise for the reader")
+- Unified notation index (front-loaded at §1)
+- Reference-standard TikZ figures (imported by anchor rev 2)
+- Bidirectional anchor↔Companion crosswalk appendices
+- New lemmas/corollaries surfaced during formalization, flagged per the lifecycle in SCOPE.md §8
 
 **What this volume does not contain:**
 
 - Prose translation (read *The Coherence Principle* for that)
-- Worked examples (read *The Coherence Principle* or the domain volumes)
+- Worked phenomenological examples (read *The Coherence Principle* or the domain volumes)
 - Motivation or intuition-building (read *The Coherence Principle* for that)
 - Philosophical positioning (read *Corpus Perspectival* for that)
 
-*Coherent Structure* is deliberately inhospitable to the general reader. It exists so that a category theorist can read a 40-page reference rather than a 160-page paired-prose monograph when the formal apparatus is what they need.
+*Coherent Structure* is deliberately inhospitable to the general reader. It exists so that a category theorist can read the formal spine of the Corpus in its native mathematical register, and so that the anchor can defer every formal-rigor question to a single citable reference volume.
 
 ---
 
@@ -51,25 +53,25 @@
 
 ## Method
 
-Build from *The Coherence Principle* by subtraction + reorganization:
+Promotion + formalization, not extraction. For each formal object:
 
-1. Extract Appendix A + Appendix B + all CT-side content from §§1.0, 1, 2-9
-2. Reorder from pedagogical (foundational volume) into formal-dependency (*Coherent Structure*)
-3. Tighten proofs; complete or mark-open any proof-sketches
-4. Add a notation index at the front
-5. Add an "open questions" appendix pointing to the open questions in *The Coherence Principle* and the domain-volume interfaces
+1. Take the CT sketch from the anchor
+2. Promote it to complete CT treatment — full definitions, full proofs, unified notation
+3. If formalization surfaces latent lemmas/corollaries, add them with a `⚑ [SURFACED ...]` flag per SCOPE.md §8
+4. Produce reference-standard TikZ for any diagrams that support the proofs; back-port to anchor rev 2
+5. Record the crosswalk entry (anchor → Companion and Companion → anchor) for the appendices
 
-Expected length: ~40-60 pages at formal-paper density. Much shorter than *The Coherence Principle* because prose is removed.
+Expected length: 150–250 pages at formal-paper density. Terse CT notation; commentary only where load-bearing.
 
 ---
 
 ## Status and next steps
 
-**Status:** Volume planned. Opens after *The Coherence Principle* stabilizes (figures rendered, prose polish complete, pre-press formatting done).
+**Status:** Rolling. Gate-released 2026-04-20 by anchor-complete stamp; Clayton confirmed same day that the anchor is formally finished pending the Companion's figures and formal references. Scope expanded same day from reference-only to full CT formalization. Drafting opens now with §0 Preface.
 
-**Sequencing:** *The Coherence Principle* first. *Coherent Structure* derives from it; it doesn't precede it. Building it before the foundational volume is stable would mean chasing edits.
+**Sequencing:** The anchor (*The Coherence Principle*) is stable; the Companion rolls in parallel. Anchor revisions can land Companion-citing content without waiting on a Companion version bump — the Companion stamps a version when the surfaced-lemma flag-list goes to zero (see SCOPE.md §8).
 
-**Target audience:** Category theorists, mathematical physicists, formal-methods researchers who want a citable reference object for "the CT apparatus of the Corpus framework" without needing the prose partner.
+**Target audience:** Category theorists, mathematical physicists, formal-methods researchers who want a citable reference object for the full CT apparatus of the Corpus framework without needing the prose partner.
 
 ---
 
