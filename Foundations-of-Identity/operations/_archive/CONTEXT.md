@@ -1,4 +1,14 @@
-# CONTEXT.md — Quick State Briefing
+# CONTEXT.md — ARCHIVED 2026-04-20
+
+**Status:** Superseded by `palace/ATRIUM.md`.
+
+**Why archived:** CONTEXT.md was designed as a heartbeat-time state briefing, but in practice `palace/ATRIUM.md` serves that function. The two drifted — ATRIUM got autocatalytic maintenance; CONTEXT went stale. Kept here as a snapshot of state as of 2026-04-17 02:30 AM PST.
+
+**What to read instead:** `palace/ATRIUM.md` for orientation; `CURRENT.md` for status; `memory/handoff.md` for continuity.
+
+---
+
+# CONTEXT.md — Quick State Briefing (historical snapshot)
 
 *Lightweight alternative to full MEMORY.md. Read on heartbeats. For detailed orientation: palace/ATRIUM.md*
 

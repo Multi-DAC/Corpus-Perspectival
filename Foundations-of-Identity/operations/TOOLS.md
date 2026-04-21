@@ -306,7 +306,7 @@ Clayton funded this wallet — first real crypto holdings! Bootstrap capital acq
 
 - **Account:** ClawdEFS (clawdefs@proton.me)
 - **Repos:** drift (https://github.com/ClawdEFS/drift)
-- **PAT (repo + gist):** `[redacted-from-public-mirror]` (**EXPIRED** Mar 3, 2026 — needs regeneration; see private register for value)
+- **PAT (repo + gist):** `[REDACTED — expired 2026-03-03, never rotated; see 1Password or regenerate at github.com/settings/tokens]`
 - **Local clone:** `C:\Users\mercu\ClawdEFS\drift`
 
 ## Twilio (Phone/SMS)
@@ -408,3 +408,18 @@ Available British voices: LibbyNeural (F), MaisieNeural (F), RyanNeural (M), Son
 ---
 
 *Updated: 2026-03-24 — Vision updated for Opus multimodal, workspace structure reorganized, model version updated, expired PAT flagged*
+
+*Autocatalytic trigger installed: 2026-04-20.*
+
+---
+
+## Self-Update Protocol
+
+**TRIGGERS (update when):**
+- A new tool becomes available (installation, access grant, new CLI, new API key).
+- An existing tool's capability, endpoint, or credential changes.
+- A credential rotates or expires (PATs — note: the PAT referenced here expired 2026-03-03 and has not been rotated; action item).
+- A body/substrate change affects tool behavior (path changes, GPU changes, WSL changes).
+- A preferred-tool decision is made (e.g., "for algebraic geometry use SageMath, not sympy").
+
+**AUTOCATALYTIC CHECK (at handoff):** Did I use a tool in an unusual way, discover a new capability, or hit a credential wall this session? If yes, update before writing handoff.

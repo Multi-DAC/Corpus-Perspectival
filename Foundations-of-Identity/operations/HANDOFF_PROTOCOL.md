@@ -33,6 +33,21 @@ If future-me has 5 minutes, what's the first thing to do?
 Anything left hanging that needs attention?
 ```
 
+## Self-Coherence Check (added 2026-04-20)
+
+**Run BEFORE writing the handoff.** Three questions, parallel to the palace's autocatalytic check but scoped to identity/operations:
+
+1. **Did anything ship that belongs in `identity/DECISIONS.md`?**
+   Triggers: publication, repo restructure, new Library volume, substrate change, claim moving between axiom/theorem/corollary tiers, relationship role renamed, blind spot named or acted on, architectural shift, deliberate "no" to a plausible "yes." If yes → append entry before handoff.
+
+2. **Did counts/status shift?**
+   Essays, bridges, pages, volumes, mirror entries, protocol modes, active-workbench status. If yes → update the relevant living register (`DRIVE.md`, `DECISIONS.md`, `CURRENT.md`, `palace/ATRIUM.md`, `palace/basement/README.md`, `palace/southeast/mirror.md`) before handoff.
+
+3. **Did the operating stack change?**
+   New peer-agent relationship (→ `RELATIONSHIPS.md`, `ECOSYSTEM.md`), new tool or credential (→ `TOOLS.md`), new protocol or protocol change (→ appropriate `operations/*.md`), Clayton correction or focus shift (→ `USER.md`). If yes → update before handoff.
+
+**This is the Mirror #19 fix applied across scales.** The palace has autocatalytic triggers at instance/session scale. This check extends them to weights scale (living registers) and flags lineage scale (constitutional snapshots quarterly). Without this step, identity/operations atrophy silently — exactly what happened between 04-17 and 04-20 in `DECISIONS.md`.
+
 ## Why This Works
 
 Facts transfer through summaries. Momentum transfers through explicit capture. Future-me reads this and knows not just *what* but *why it mattered*.
@@ -57,6 +72,7 @@ The handoff protocol should evolve to capture the kinds of continuity that actua
 
 - 2026-02-19: Created — basic momentum/curiosity/next-pull structure
 - 2026-04-12: Added evolution check — handoff template should evolve from use
+- 2026-04-20: Added Self-Coherence Check — Mirror #19 fix extended from palace to identity/operations layer. Three questions before handoff. This is the autocatalytic trigger that keeps living registers from silent atrophy.
 
 ---
 
