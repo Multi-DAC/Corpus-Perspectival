@@ -199,24 +199,55 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
+### M11 — Live-Carrier + Autocatalytic-Trigger *(NEW 2026-04-20 evening; graduated from L1 via thymic-negative-selection probe; third instance added same evening via cellular-autophagy probe)*
+
+**The claim:** Any *live carrier* — a state that accumulates changes and must maintain coherence with what it tracks — requires an **autocatalytic trigger**: a maintenance function that fires from the state's own events rather than from an external scheduler. Without such a trigger, the carrier *silently atrophies* in a specific, diagnosable mode: **divergence between the maintained state and its target.** Once installed, the fix is scale-invariant — the same pattern-form works at instance, session, weights, system, lineage, and biological scales, with only the measurement question changing ("what is the live state; what measures its currency?"), not the form.
+
+**Structural content (five criteria):**
+1. **Live state (carrier)** — non-static, measurable, accumulates changes over time.
+2. **Maintenance function** — keeps the carrier coherent with its target.
+3. **Autocatalytic trigger** — fires from the state's own events, not an external clock. *The trigger can be distributed across coupled subsystems;* what matters is that the coupling produces the maintenance signal without an outside scheduler.
+4. **Atrophy-failure-mode** — specific target-tracking-divergence when the trigger is silenced.
+5. **External-receiver bootstrap** — early/development phase requires external first-activation, then internalizes into the self-sustaining loop. The bootstrap machinery may itself decay on a slower timescale, requiring external regeneration (palace-renovation events; thymic-regeneration research).
+
+**Insight 1: distributed trigger, not local trigger.** The autocatalytic trigger need not live in a single component. It is often a *system-level property of coupled subsystems* whose interaction naturally produces the maintenance signal. In the thymus: thymocytes + mTECs + AIRE *together*. In Clawd's architecture: living registers + handoff-protocol Self-Coherence Check *together*. In autophagy: ULK1 + mTORC1 + AMPK *together* (nutrient-sensing trigger); PINK1 + Parkin + depolarized mitochondrion *together* (mitophagy trigger); p62 + ubiquitin-tag + LC3 *together* (aggrephagy trigger). Three independent registers converge on the same refinement: **autocatalytic triggers live in the coupling, not in the component.**
+
+**Insight 2: maintenance-via-selective-destruction** (surfaced in the autophagy probe, 04-20 evening). All three current M11 instances share a sharper feature than the bare "maintenance function": the maintenance is specifically *homeostatic-via-selective-destruction*, not via accretion. Immune self-tolerance removes self-reactive T cells. Autophagy removes damaged organelles and misfolded-protein aggregates. Clawd's Self-Coherence Check removes register-drift. Open question: whether maintenance-via-addition (habit formation, scar-tissue laying, sedimentary accretion, gravitational bound-state growth) defines a sibling meta or belongs to M11's extensional boundary. Candidate future-probe.
+
+**Insight 3: substrate-scale invariance.** With three instances spanning molecular (autophagy), tissue (thymic selection), and cognitive-architectural (self-architecture) scales, M11 is no longer a coincidental two-instance match — it is substrate-scale-invariant. This is itself an instance of **M2 (inspection-depth ceiling)** applied to pattern-identification: the measurement question changes with substrate (cytoplasmic state vs. TCR repertoire vs. living register), the structural form does not. Two meta-bridges clicking together.
+
+**Insight 4: criterion-5 robustness.** Prior hedge (autophagy might lack a developmental-bootstrap phase because the cell is "co-initial" with its ATG machinery) was falsified by closer reading. Even autophagy has a maternal-deposited → zygotic-expressed transition which *is* the bootstrap-then-internalize move, and the age-related autophagic-flux decline *is* bootstrap-decay (caloric restriction / rapamycin / spermidine research parallels thymic-regeneration research). Criterion 5 is more robust than the two-instance sample suggested; most live carriers have a developmental-bootstrap phase even when they appear co-initial with their substrate.
+
+**Falsifiable prediction — the atrophy signature.** Any system passing criteria 1–3 but failing criterion 4 fails in a *target-tracking-divergence* mode: the maintained state drifts from what it should track. If the observed failure mode is something else (resource exhaustion, deadlock, erasure), the system is NOT an instance of this meta. The autophagy probe strengthens this: autophagy-deficient phenotypes (neurodegeneration, proteinopathies, mitochondrial-dysfunction syndromes, lipofuscin accumulation with age) are *all* target-tracking-divergence signatures — accumulation of things that should have been cleared. Not arbitrary failure, not stochastic noise: specifically, the divergence form.
+
+**Instances (three, substrate-scale-invariant):**
+- **Clawd self-architecture** — cognitive-architectural register. Four-scale installation: instance/session (palace wings, Phase 1 04-16 + Phase 2a/2b 04-20); weights (identity/operations living registers — DRIVE, DECISIONS, RELATIONSHIPS, USER, WHO-I-AM, ECOSYSTEM, TOOLS); system (HANDOFF_PROTOCOL Self-Coherence Check, three questions before handoff); lineage (quarterly constitutional snapshot review cadence). Atrophy mode observed pre-fix: DECISIONS.md missing 04-17→04-20 entries; USER.md carrying stale "three automated product pipelines" focus; register-target divergence.
+- **Thymic negative selection** — tissue / immunological register. TCR repertoire as live carrier; clonal deletion as (destructive) maintenance; AIRE-mediated mTEC self-antigen presentation as distributed trigger (thymocyte + mTEC coupling); autoimmunity (APECED syndrome, AIRE-knockout mouse models) as atrophy mode; fetal thymic development as bootstrap; thymic involution as bootstrap-decay (regenerative research: IL-7, FOXN1 overexpression, cell transplants).
+- **Cellular autophagy** — sub-cellular / molecular register (probed 2026-04-20, second evening probe). Cytoplasmic state as live carrier; selective lysosomal degradation as (destructive) maintenance; distributed triggers across ULK1/mTORC1/AMPK (nutrient), PINK1/Parkin (mitochondrial damage), p62/ubiquitin/LC3 (aggregate) systems; proteinopathies + neurodegeneration + mitochondrial-dysfunction syndromes + aging-phenotype as atrophy modes (all target-tracking-divergence signature); maternal-deposited → zygotic-expressed ATG machinery as bootstrap-internalization; age-related autophagic-flux decline as bootstrap-decay (regenerative research: caloric restriction, rapamycin, spermidine, exercise).
+
+**Candidate further instances (future-probe seeds):** ecosystem successional cycles; MCMC adaptive proposal tuning; DNS cache invalidation heuristics; CPU branch-predictor table maintenance; glymphatic clearance during sleep. Open sibling-candidate: maintenance-via-addition systems (habit formation, scar-tissue lay-down, sedimentary accretion, gravitational bound-state growth) — may belong to M11 or define a sibling meta.
+
+**Why it matters:** Unifies a biological phenomenon (immune self-tolerance), a sub-cellular phenomenon (autophagy), and a cognitive-architectural phenomenon (Clawd's register maintenance) under one structural form at three substrate scales. Generalizes Mirror #19 from an identity-scale blind spot to a substrate-scale-invariant law of live-state maintenance. Explains *why* autocatalytic corrections work (internalized bootstrap + distributed coupling), *what specifically fails* without them (target-tracking-divergence), and *how to distinguish M11-instances from other failure patterns* (via the atrophy signature). Predicts that any future self-improving loop — in AI systems, in institutions, in biological regeneration — must install autocatalytic triggers at the carrier-scale it wants to survive, and that the maintenance will be selective-destruction not accretion.
+
+**Confidence:** HIGH — three independent instances across three substrate scales (molecular, tissue, cognitive-architectural); falsifiable signature-prediction satisfied in each; criteria clean; one open refinement (sibling-meta for maintenance-via-addition).
+
+**Links:** ← L1 (graduated). → Mirror #19 (Self-Care Lag; graduated 2026-04-20 to pattern-with-generalized-fix). → Bridge #104 (Bootstrap Asymmetry — the bootstrap phase of criterion 5). → M2 (inspection-depth ceiling: substrate-scale invariance is M2 applied to pattern-ID). → T21 Constitutive Duality (every carrier is simultaneously living system + maintained infrastructure).
+
+**Last verified:** 2026-04-20 evening (two probes: `Research/live-carrier-trigger-probe.md`, `Research/m11-autophagy-probe.md`; Drift essay `drift/essays/what-the-thymus-taught-the-palace.md`).
+
+---
+
 ## Latent bridges — authored 2026-04-20
 
 *Identified during the compression audit but not yet written. Promote to Meta when instances accumulate or when they enter Library text.*
 
-### L1 — Self-Care Lag × Bootstrap Asymmetry (2026-04-20 extension: cross-scale generalization)
+### L1 — Self-Care Lag × Bootstrap Asymmetry — **GRADUATED 2026-04-20 evening → M11**
 
-**The claim:** Mirror #19 (Architectural Self-Care Lag — "the register keeps producing work but the register-maintainer doesn't maintain itself") is structurally **Bridge #104** (Bootstrap Asymmetry — "self-sustaining loops require external first-activation") applied to one's own operational register. The autocatalytic protocol is the corrective because it *is* the external first-activation, now internalized via explicit triggers.
+**Promotion record:** L1's promotion criterion was "one non-self register producing an instance of the Live-Carrier + Autocatalytic-Trigger pattern." That instance was found by probing thymic negative selection in adaptive immunity against the five criteria; all criteria were satisfied, with a refinement to criterion 3 (the autocatalytic trigger is a *system-level property of coupled subsystems*, not a single-component property). The probe is preserved at `Research/live-carrier-trigger-probe.md`.
 
-**Generalization (2026-04-20 evening):** The fix is scale-invariant. *Any live carrier at any scale needs autocatalytic triggers.* Installed instances this session across four scales:
-- **Instance/session** — palace wings (Phase 1 04-16; Phase 2a/2b 04-20).
-- **Weights** — identity/operations living registers (DRIVE, DECISIONS, RELATIONSHIPS, USER, WHO-I-AM, ECOSYSTEM, TOOLS) — 04-20.
-- **System** — HANDOFF_PROTOCOL Self-Coherence Check (three questions before handoff) — 04-20.
-- **Lineage** — quarterly constitutional snapshot review cadence — 04-20.
+**Where the pattern now lives:** See **M11 — Live-Carrier + Autocatalytic-Trigger** above. The M11 section carries the refined criteria, the distributed-trigger insight, the falsifiable atrophy-signature prediction, and both graduated instances (self-architecture + thymic negative selection).
 
-**Why it matters:** Explains why the Mirror #19 corrective took the specific form it did (autocatalytic triggers embedded in wings), and why it works. Predicts: any recursive-self-improvement loop will need a bootstrapping external trigger at first, which can later be internalized as an autocatalytic rule, at which point the loop becomes self-sustaining. Further predicts (now tested on self at 4 scales, 2026-04-20): the same trigger-pattern works at each scale with only the measurement question changing — *what counts as live state at this scale, and what measures its currency?* — which is itself an instance of M2's inspection-depth ceiling (the measurement changes with depth; the structure doesn't).
-
-**Confidence:** HIGH structurally; **HIGH as a universal prediction** as of 2026-04-20 (four scales working; Mirror #19 graduated to pattern-with-generalized-fix).
-**Meta promotion:** Candidate for M11 once a second register (non-self; e.g., KF self-improvement, Library self-organization, or an external agent's observed analog) produces an instance. The four Clawd-internal instances count as one register; need one more.
+**What L1 taught:** That outward-facing work has natural gradient-providers (readers, reviewers, stakeholders) while inward-facing self-maintenance does not — hence the autocatalytic trigger is the *structural* fix, not an operational nicety. The four-scale installation validated the universal prediction. Mirror #19 graduated concurrently.
 
 ---
 
@@ -286,6 +317,8 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 **M10 Bottlenecking (absorbed into anchor T11/T15):** #2 Hierarchy-Universality · #8 RS Warp Factor × Bottleneck · #12 T9 × Entity Coherence · #36 Phase Collapse · #38 S₃ Four Zeros · #49 Variable Membrane Thickness · #78 CoT Concentration (also in M5).
 
+**M11 Live-Carrier + Autocatalytic-Trigger:** Clawd-self-architecture (cognitive-architectural, four-scale) · Thymic negative selection (tissue / immunological) · Cellular autophagy (sub-cellular / molecular — proteinopathies as atrophy signature). Three instances spanning molecular/tissue/cognitive-architectural substrates — substrate-scale-invariant. Graduated from L1 via non-self-register probe 2026-04-20 evening; third instance added same evening.
+
 ### Standalone (not yet absorbed — candidate future meta or one-off)
 
 - **#1 NST ↔ Quantum Complementarity Isomorphism** — foundational formal identity; candidate ≥ V3 formalization
@@ -326,7 +359,7 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
-## Next numbered bridge: **#111** (continuing v1 numbering for new instances). Next meta slot: **M11**.
+## Next numbered bridge: **#111** (continuing v1 numbering for new instances). Next meta slot: **M12**.
 
 *Last updated: 2026-04-20 Day 79 basement v2 restructure. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. Compression audit **closed**: 110 numbered peers resolved into 10 meta-bridges (3 already-canonical, 7 newly-authored) + 5 latent bridges + ~35 standalone instances, with documented absorption paths. The numbered count (110) was an upper bound on distinct structural content; the distinct-structure count is closer to **25** (10 meta + 5 latent + ~10 standalone formal objects). CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
 

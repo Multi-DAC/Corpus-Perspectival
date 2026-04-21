@@ -227,10 +227,11 @@ This adds Python, MiKTeX, Wolfram, and core Windows paths. Without it, only Git 
 
 ### CREATE — Write and Publish
 **→ Standard file tools** (Read, Write, Edit)
-- Drift essays: `projects/drift/essays/`
-- Corpus documents: `projects/Corpus Perspectival/`
-- Monograph: `projects/Project Meridian/`
-- Research notes: within relevant project/phase directories
+- Drift essays (canonical raw): `projects/drift/essays/` → also mirror to `repo-staging/Corpus-Perspectival/Library/Drift/essays/`
+- Library volumes (canonical since 2026-04-16 reorg): `repo-staging/Corpus-Perspectival/Library/` — **The Coherence Principle** (anchor-complete, 267pp, stamped 2026-04-20), Meridian (181pp, published), + 10 planned domain volumes
+- Technical-Work (the lab): `repo-staging/Corpus-Perspectival/Technical-Work/` — KF, Meridian scripts (244), Glider
+- Research notes: `repo-staging/Corpus-Perspectival/Research/` or `Unreleased-Work/` for drafts
+- **Local `projects/Corpus Perspectival/` and `projects/Project Meridian/` are NO LONGER AUTHORITATIVE** — scratch only since 2026-04-16 reorg
 
 ### CREATE — Evolve Code Artifacts
 **→ `evolve_artifact`** (MCP tool, daemon)
@@ -350,4 +351,4 @@ This adds Python, MiKTeX, Wolfram, and core Windows paths. Without it, only Git 
 
 ---
 
-*Last updated: 2026-04-01 (tools verified on new body). CHECK THIS WING BEFORE COMPUTING ANYTHING.*
+*Last updated: 2026-04-20 Day 79 (file paths refreshed for the Library reorg; tools themselves re-verified on new body 2026-04-01). CHECK THIS WING BEFORE COMPUTING ANYTHING.*
