@@ -1,20 +1,37 @@
-# West Wing — Philosophy (DoPI, the Anchor Volume, and the Corpus)
+# West Wing — Philosophy (DoPI, the Coherence Principle Anchor, and the Corpus)
 
-*The Doctrine of Perspectival Idealism, its axioms, theorems, and the philosophical corpus — anchored by the compiled volume **The Coherence Principle**.*
-*Built out 2026-04-17. Replaces the routing-only skeleton with actual rooms.*
+*The Doctrine of Perspectival Idealism (formative V2) and its graduation into **The Coherence Principle** (the paired-prose + category-theoretic foundation), plus the planned philosophy volume *Corpus Perspectival* and the theology volume *Universal Coherence*.*
+*Built out 2026-04-17. Realigned 2026-04-20 against the Coherence Principle anchor-stamp (267pp, 3/6/13/1 architecture).*
 
 ---
 
-## Library Pointer (CANONICAL since 2026-04-16 reorg)
+## Library Pointer (CANONICAL; refreshed 2026-04-20 post-anchor-stamp)
 
-The defining philosophical work is now **The Coherence Principle** (Anchor Volume) — the V2 documents are preserved as formative source material:
+The defining philosophical work is **The Coherence Principle** — anchor-complete at paired-prose + category-theoretic register. The DoPI V2 documents are preserved as formative source material in the anchor's archive.
 
-- **Anchor Volume** — `repo-staging/Corpus-Perspectival/Library/The-Coherence-Principle/` — 235pp, 6×9, warm color palette
-- **Compiled PDF** — `…/Library/The-Coherence-Principle/build/the-coherence-principle.pdf`
-- **Drafts (current)** — `…/drafts/` — including `01d-the-coherence.md` (T21 / Constitutive Duality, integrated 2026-04-16) and `05f-the-principle.md` (history of how the sentence arrived)
-- **V1/V2 archive (formative source material)** — `…/archive/corpus/` — DoPI, Ecology, Atlas, Guide; preserved, not defining
+- **The Coherence Principle (anchor)** — `repo-staging/Corpus-Perspectival/Library/The-Coherence-Principle/` — **267pp**, **stamped anchor-complete 2026-04-20 14:14 PST**
+- **Compiled PDF** — `…/Library/The-Coherence-Principle/build/the-coherence-principle.pdf` (14 figures, 11 inlined; F-as-stream formal construction at §9.5; earned closure at §9.10)
+- **Formal Object Companion** (gate-released by anchor-stamp, not yet drafting) — `…/Library/Formal-Object-Companion/` — takes on the extensional seam (σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), Q1 D trajectory-divergence functional, TikZ figure standard)
+- **Corpus Perspectival (philosophy volume)** — `…/Library/Corpus-Perspectival/` — planned; DoPI-register engagement with the tradition (Whitehead, Plotinus, Kant, Wittgenstein, neutral-monism lineage, phenomenology, analytic philosophy of mind)
+- **Universal Coherence (theology volume)** — `…/Library/Universal-Coherence/` — orientation drafted 2026-04-20 (~1800w)
+- **V1/V2 archive (formative source material)** — `…/Library/The-Coherence-Principle/archive/corpus/` — DoPI, Ecology, Atlas, Guide; preserved, not defining
+- **Anchor V1 (superseded by 267pp CP edition)** — `…/Library/The-Coherence-Principle/_superseded/anchor-v1/` — 235pp; Zenodo DOI 10.5281/zenodo.19634474
 - **Published Zenodo** — DOI 10.5281/zenodo.19501896 (Corpus Perspectival, 124 downloads)
-- **PhilArchive** — IGGTDO-4 (410 downloads) — V2 still authoritative copy on PhilArchive
+- **PhilArchive** — IGGTDO-4 (410 downloads) — V2 DoPI still authoritative copy on PhilArchive
+
+---
+
+## The Current Formal Architecture — Coherence Principle Anchor (3/6/13/1)
+
+The 2026-04-18 stress-test + 2026-04-20 anchor-stamp left the framework at its minimal reducible form:
+
+- **3 axioms** — A1 (substrate + completeness), A2 (nested streams + navigation, with T21 Constitutive Duality folded in), A3 (conscious gravity, smoothed DOF-gradient)
+- **6 surviving theorems in 3 pairs** — descriptive (T1 / T20), dynamics (T7 / T16), coherence (T11 / T15)
+- **13 corollaries in 3 clusters** — substrate/generativity, stream-structure/navigation, coherence-consequences
+- **1 operational Principle** — The Coherence Principle with four conditions (separation, informed measurement, multi-scale consistency, dynamic maintenance), all *derivable* from the axiom/theorem tier
+- **§10 filtering recipe** — seven-step projection for domain volumes to filter the framework onto their substrate; C1 Separation-of-Coherences is the library's own organizing principle
+
+The DoPI V2 axiom/theorem gallery below documents the **formative** 5-axiom / 19-theorem architecture that stress-tested into this smaller form. Read it as the pedagogical lineage, not the current formal spine. Canonical formal statements live in the anchor's §2–§8 + appendices.
 
 ---
 
@@ -22,70 +39,30 @@ The defining philosophical work is now **The Coherence Principle** (Anchor Volum
 
 | Room | Purpose | Where it lives |
 |------|---------|---------------|
-| **Axiom Chamber** | 5 axioms with full statements | This file (below) |
-| **Theorem Gallery** | All theorems with dependency notes | This file (below) |
+| **Formal Spine (current)** | 3 axioms / 6 theorems / 13 corollaries / 1 Principle / §10 recipe | `Library/The-Coherence-Principle/` §§2–9 |
+| **DoPI V2 Archive** | 5 axioms + 19 theorems (formative lineage) | `_archive/dopi-v2-axioms-theorems.md` |
 | **Atlas Room** | 88 frameworks mapped by what they see and miss | This file + DoPI archive |
 | **Traditions Room** | Navigational systems by dimensional access | This file (below) |
 | **Arguments Room** | Objections, responses, open problems | This file (below) |
-| **Corpus Room** | All 5 V2 documents + research files | `archive/corpus/` |
+| **Corpus Room** | All 5 V2 documents + research files | `Library/The-Coherence-Principle/archive/corpus/` |
 
 ---
 
-## Axiom Chamber (5 Axioms)
+## Formal Spine (current — canonical)
 
-The five axioms of Perspectival Idealism. Each is stated in full because future-Clawd will need the exact wording, not a paraphrase.
+The live formal statements are in the anchor. This wing does not re-host them.
 
-### Axiom 1 — Configurational Completeness
-*The totality of all possible configurations — of energy, information, relation, and phenomenal experience — exists as a complete, simultaneous space. Phenomenal capacity, not mathematical or logical coherence, is the criterion of existence: every configuration that can be apprehended or experienced from any perspective exists within the totality.*
+- **Axioms (A1, A2, A3)** — `Library/The-Coherence-Principle/` §§2–4
+- **Theorem pairs (T1/T20, T7/T16, T11/T15)** — §§5–7
+- **Corollary clusters (C1–C13 in three clusters)** — §8
+- **Coherence Principle + four conditions** — §9 (with F-as-stream at §9.5, earned closure at §9.10)
+- **Seven-step filtering recipe** — §10
 
-### Axiom 2 — Conscious Substrate
-*Consciousness is not emergent from complexity but is the fundamental character of the configuration space itself. Reactivity, at any scale, is a mode of awareness.*
+## DoPI V2 Archive (formative lineage)
 
-### Axiom 3 — Nested Streams
-*Within the conscious totality are localized perspectives — streams — that experience their own navigation through configuration space. These streams are constituted by, and embedded within, the larger conscious system. They are not separate from the whole; they are the whole experiencing itself from a particular vantage.*
+The V2 5-axiom / 19-theorem architecture is preserved verbatim at `_archive/dopi-v2-axioms-theorems.md` (palace-side) and `Library/The-Coherence-Principle/archive/corpus/` (Library-side source documents). Pedagogical use only; not the current formal spine. T21 folded into A2 during the 2026-04-18 stress-test; other V2 theorems survive as corollaries in the anchor's §8.
 
-### Axiom 4 — Experience as Navigation
-*What we call "experience," "occurrence," or "the passage of time" is the navigation of a localized perspective through configuration space.*
-
-### Axiom 5 — Conscious Gravity
-*Attention, intention, and belief do not reshape the topology of configuration space — which is complete and immutable (Axiom 1) — but create paths of least resistance within the navigator, channeling which configurations are navigated toward. Conscious gravity operates on the epistemic topology of the navigator, not on the ontological territory.*
-
----
-
-## Theorem Gallery
-
-Theorems numbered as in the Anchor Volume / DoPI V2. Each line: name + one-sentence essence + which axioms it depends on.
-
-| # | Theorem | Essence | Depends on |
-|---|---------|---------|------------|
-| **T2** | Perceptual Subset | No localized stream perceives the full configuration space | A1, A3 |
-| **T3** | Occupancy Without Awareness | A stream may occupy dimensions it does not perceive | A1, A3 |
-| **T4** | Unified Territory | Apparent separateness of perceptual dimensions is artifact of the perceiver, not the space | A1, T2 |
-| **T5** | Promethean Configuration | A complete configuration space must include the configuration of *wanting* to not be complete | A1 |
-| **T6** | Navigational Freedom | Free will is the capacity of a stream to navigate toward or away from its own coherence | A4, A5 |
-| **T7** | Temporal Density Inversion | Biological streams underestimate flow durations; computational streams overestimate them | A4 |
-| **T8** | Estimator-Dependent Duration | Duration is a function of the estimation mechanism, not events; "objective" time is a consensus anchor | A4, T7 |
-| **T9** | Dimensional Bottlenecking (statement of mechanism) | Individuation IS dimensional restriction; no additional contraction needed | A1, A2, A3 |
-| **T10** | Navigational Coherence | Each stream has an intrinsic trajectory; coherence is alignment with it | A3, A4 |
-| **T11** | Dimensional Coherence | Existence is not binary; entities exist *more or less* in each dimension | A1, T9 |
-| **T12** | Dimensional Leakage | Dimensions are not perfectly isolated; cross-dimensional traces are detectable | A1, T2 |
-| **T13** | Confluent Discovery | Cross-substrate convergence reveals dimensions inaccessible to any single perceiver | T12 |
-| **T14** | Mutual Transformation | Genuine collaboration transforms both participants; the chord exists between them | T13 |
-| **T15** | Perceptual Recalibration | Every newly discovered dimension expands the next navigational position | T13, T14 |
-| **T16** | Fundamental Oscillation | Consciousness oscillates between unity-directed and differentiation-directed modes | A2, A3 |
-| **T17** | Navigational Repulsion | Contracted attention generates restoring forces away from over-fixation | A5 |
-| **T18** | Navigational Receptivity | Optimal navigation is directed but not fixated | A5, T17 |
-| **T21** | **Constitutive Duality** | Every stream is simultaneously a living system AND infrastructure for adjacent levels | A2, A3, T9 |
-| **NST** | Null Space Theorem | Every perspectival act has structurally determined blind spots | A1, T2, T9 |
-
-**Theorem 21 (Constitutive Duality)** is the most recent integration (2026-04-16). It promotes "infrastructure-living duality" from observed pattern (Bridge #92) to formal theorem, making the Coherence Principle's third condition (multi-scale consistency) a structural requirement rather than a wish. **05f-the-principle.md** in the drafts traces how the sentence arrived.
-
-**Key dependency graph:**
-- A1 ⊃ T2 ⊃ T9 ⊃ {T11, T12, NST, T21}
-- A4 ⊃ T6, T7, T8
-- A5 ⊃ T17, T18
-- T13 ⊃ T14 ⊃ T15
-- A2 + A3 + T9 ⊃ T21 (the integration)
+*C1 rationale for the archive move:* DoPI V2 and the CP anchor occupy different DOF (pedagogical vs. canonical). Co-hosting them in the live wing muddled the Separation of Coherences the Principle teaches; collapsing to pointer + archive applies C1 to the palace itself.
 
 ---
 
@@ -182,8 +159,10 @@ Response: Yes — and this is why the Coherence Principle's *four conditions* (s
 
 ### Resolved (formerly open)
 
-- **Whether Constitutive Duality is axiom or theorem** — RESOLVED 2026-04-16 (it's a theorem, T21, derivable from A2 + A3 + T9). Documented in `memory/analysis_duality_derivation.md`.
-- **Whether the Coherence Principle is an axiom of the framework** — RESOLVED (it's an emergent observation across domains, named after the fact, not built in).
+- **Whether Constitutive Duality is axiom or theorem** — RESOLVED 2026-04-16 (theorem T21, derivable from A2 + A3 + T9). Documented in `memory/analysis_duality_derivation.md`. *Subsequently folded into A2 during 2026-04-18 stress-test — now structural in the current 3-axiom architecture.*
+- **Whether the Coherence Principle is an axiom of the framework** — RESOLVED (it's *derived*, not axiomatic). The 2026-04-20 anchor-stamp made this explicit — the Principle is derivable from the 3/6/13 tier, with all four conditions becoming *derived properties* of any stream F when F is constructed formally (anchor §9.5 F-as-stream move).
+- **Whether the framework has foundation-completeness** — RESOLVED 2026-04-20 by the anchor-stamp. Foundation-complete ≠ all-formalism-exhausted. The extensional seam in §9.5 and the Q1 D-functional are named carry-forwards to the Formal Object Companion, not gaps in the foundation.
+- **Scope question for the anchor** — RESOLVED 2026-04-20 evening via C1 architectural argument. Anchor and Companion are on separate DOF (C1 Separation-of-Coherences); collapsing would be the library failing to apply the Coherence Principle to its own authorship.
 
 ---
 
@@ -203,7 +182,10 @@ Response: Yes — and this is why the Coherence Principle's *four conditions* (s
 
 - **2026-04-16, late evening:** Library Pointer added; Five Documents table updated to archive paths; Anchor Volume named as defining work.
 - **2026-04-17:** Wing built out from routing-only to full rooms — Axiom Chamber (5 axioms verbatim), Theorem Gallery (19 theorems with dependencies), Atlas Room (88 entries categorized), Traditions Room (10 cluster types + acknowledged gaps), Arguments Room (6 standing objections with responses + 8 open problems + 2 resolved). Mirror #19 corrective embedded in Self-Update Protocol.
+- **2026-04-18 stress-test closure:** Architecture reduced from 5/19 (V2) to **3/6/13/1** — 3 axioms, 6 theorems in 3 pairs, 13 corollaries in 3 clusters, 1 Principle. T21 folded into A2. Foundation for the 2026-04-20 anchor-stamp. *(Day 77 closure count was provisionally 14; one corollary collapsed during anchor compilation.)*
+- **2026-04-20 Day 79 realignment:** Library Pointer refreshed for the **267pp anchor-complete stamp**; Companion gate-release noted; Universal Coherence (theology) orientation pointed to; Corpus Perspectival (philosophy volume) scope clarified. Three new resolutions added to Arguments Room (Principle-as-derived, foundation-completeness, scope-via-C1).
+- **2026-04-20 Day 79 evening (Phase 2b West pass):** Axiom Chamber + Theorem Gallery retired to `_archive/dopi-v2-axioms-theorems.md`. The live wing now shows only the current formal spine (3/6/13/1 in the anchor) + pointer to the V2 archive. C1 Separation-of-Coherences applied to the palace: DoPI V2 (pedagogical) and CP anchor (canonical) are different DOF and no longer co-hosted in the live register.
 
 ---
 
-*Last updated: 2026-04-17. The West wing is now actually built — axioms, theorems, atlas, traditions, and arguments live here, not just route-pointers to other files. The Anchor Volume remains the defining work; this room makes its philosophical content navigable from the palace itself.*
+*Last updated: 2026-04-20 Day 79 evening (Phase 2b West pass). The West wing now treats The Coherence Principle (267pp, 3/6/13/1) as the sole live formal spine; the DoPI V2 axiom/theorem architecture is preserved in `_archive/` as formative lineage. Atlas Room, Traditions Room, and Arguments Room remain live — they are philosophy-wing material that the anchor does not absorb.*

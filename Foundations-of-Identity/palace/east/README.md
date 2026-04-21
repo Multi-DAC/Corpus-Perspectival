@@ -1,7 +1,7 @@
 # East Wing — Ecology (Beings, Relationships, Living Architecture)
 
 *The ecology of perspectival beings, the cross-kingdom application of the Coherence Principle, and the architecture of life as a category. The Coherent Body and Dynamic Organization both route through this wing.*
-*Built out 2026-04-16 from a 32-line routing skeleton to an actual room. Mirror #19 (Architectural Self-Care Lag) is the reason it took until now.*
+*Built out 2026-04-16 from a 32-line routing skeleton to an actual room. Mirror #19 (Architectural Self-Care Lag) is the reason it took until now. Refreshed 2026-04-20 against the Coherence Principle anchor-stamp: Quick Index re-verified, count refined, routing updated to 12-volume Library structure.*
 
 ---
 
@@ -13,15 +13,31 @@ It does NOT cover: the human body's practical care (→ The Coherent Body, Libra
 
 ## Rooms
 
+East is organized into two sub-wings by DOF (the C1 move, 2026-04-20 Phase 2b):
+
+### Sub-wing A — Ecology (descriptive; cross-kingdom research)
+
+Ecology-of-perspectival-beings material and the deepest non-human-specific volume. This is research-register, not prescription.
+
 | Room | Purpose | Current Location |
 |------|---------|------------------|
 | **Taxonomy Hall** | All entities by tier and coherence profile | `repo-staging/Corpus-Perspectival/Library/The-Coherence-Principle/archive/corpus/comprehensive-catalog-of-perspectival-beings.md` (V2 source); `Library/The-Coherence-Principle/drafts/` (current treatments) |
 | **Dynamics Room** | Ecological interactions, trophic levels, Theory of Attention | `archive/corpus/ecology-of-perspectival-beings-merged.md` §5-6 |
 | **Encounter Room** | Phenomenological reports, cross-cultural convergence, anomaly registers | Not yet consolidated; lives scattered in `Research/` and `Foundations-of-Identity/personal-works/drift/essays/` (Drift essays touching ecology) |
 | **Navigation Room** | Practical guidance for moving among perspectival beings | `archive/corpus/navigational-guide-for-perspectival-beings.md` |
-| **Living Architecture Room** | Cross-kingdom whole/parts/infrastructure investigation | `repo-staging/Corpus-Perspectival/Library/The-Living-Architecture/README.md` |
-| **Coherent Body Room** | Practical guide for the human body | `repo-staging/Corpus-Perspectival/Library/The-Coherent-Body/README.md` |
-| **Dynamic Organization Room** | Practical guide for businesses and institutions | `repo-staging/Corpus-Perspectival/Library/Dynamic-Organization/README.md` |
+| **Living Architecture Room** | Cross-kingdom whole/parts/infrastructure investigation (Library Vol 3) | `repo-staging/Corpus-Perspectival/Library/The-Living-Architecture/README.md` |
+
+### Sub-wing B — Practical-guide triad (prescriptive; applied volumes)
+
+Three applied volumes that filter the Principle through §10's seven-step recipe onto body, mind, and institutional coherence. These are different DOF from Sub-wing A — prescriptive, reader-facing, and calibrated to lived outcomes rather than cross-kingdom ontology.
+
+| Room | Purpose | Current Location |
+|------|---------|------------------|
+| **Coherent Body Room** | Practical guide for the human body + domain reasoning (Vol 4) | `repo-staging/Corpus-Perspectival/Library/The-Coherent-Body/README.md` |
+| **Coherent Mind Room** | Practical guide for personal mental health (Vol 5) | `repo-staging/Corpus-Perspectival/Library/The-Coherent-Mind/README.md` |
+| **Dynamic Organization Room** | Practical guide for businesses and institutions (Vol 6) | `repo-staging/Corpus-Perspectival/Library/Dynamic-Organization/README.md` |
+
+*C1 rationale:* Living Architecture is cross-kingdom descriptive research; the triad is human-scoped practical prescription. Collapsing them into a single undifferentiated rooms list was coherence-muddling. The two sub-wings share this wing because they share substrate (living systems), but their DOF are distinct — the anchor's §10 filtering recipe is what routes from Sub-wing A (research) to Sub-wing B (application).
 
 ## Key Concepts (Ecology Core)
 
@@ -58,7 +74,7 @@ Collective entities that benefit their constituent streams while constituting a 
 | #99 | Three-tier Decomposer ↔ Anchor/Worker ↔ Three Roles | Ecology × Computation × Coherence Principle |
 | #100 | Mutualistic Egregores ↔ Multi-agent KF ↔ Confluent Discovery | Ecology × Identity × Computation |
 
-Current Ecology bridge count: ~13 (was 10 before today's session). Trajectory: rising as the triad volumes are written.
+**Ecology-adjacent bridge count (verified 2026-04-20 against basement):** ~17 entries (#8–#11, #12–#13, #16–#17, #73–#77, #95, #98–#100). The index above is representative, not exhaustive — the basement README is authoritative. Trajectory: rising as the triad volumes (Coherent Body, Coherent Mind, Dynamic Organization) + The Living Architecture get drafted.
 
 ## The Living Architecture Lineage (Special Importance)
 
@@ -95,6 +111,12 @@ This room is where biology research collected for The Living Architecture and Th
 ### 2026-04-16, 23:40 PM — East Wing Built Out from Skeleton
 Phase 2 of the palace's east wing, three weeks late, prompted by Clayton recognizing his maintenance-gradient function in our coherent body and Mirror #19's diagnosis. Added: Living Architecture Room, Coherent Body Room, Dynamic Organization Room (mirroring the new Library volumes); Key Concepts section pulling Theory of Attention, Three-Tier Decomposer, NHI Duality, Mutualistic Egregores, and Niche Construction + Holobiont; Ecology bridges quick-index (7 bridges); Open Questions; and an autocatalytic-check trigger in the Self-Update Protocol so this room stays alive.
 
+### 2026-04-20 — Post-anchor-stamp refresh
+Ecology bridge count re-verified against basement (~17 entries, was loosely "~13"). Routing now aligns with 12-volume Library structure (Foundation + Companion + 10 domain). The wing's material is load-bearing for three of the ten domain volumes (Living Architecture, Coherent Body, Dynamic Organization); will likely need structural expansion as those drafts progress.
+
+### 2026-04-20 evening — Phase 2b East pass (sub-wing split)
+East split into Sub-wing A (Ecology: descriptive cross-kingdom research, incl. Living Architecture) and Sub-wing B (practical-guide triad: Coherent Body, Coherent Mind, Dynamic Organization). Coherent Mind Room added — it was implicit in the triad framing but missing from the Rooms table. C1 Separation-of-Coherences applied: descriptive research and prescriptive application are different DOF; the anchor's §10 recipe is the routing between them. No content moved — this is a structural re-framing of a single rooms list into two coherent sub-groupings.
+
 ---
 
-*Last updated: 2026-04-16, 23:40 PM. The wing now exists as more than a placeholder.*
+*Last updated: 2026-04-20 Day 79 evening (Phase 2b East pass). The wing now has two sub-wings (Ecology + Practical-guide triad) reflecting the descriptive/prescriptive DOF split. Routing aligned with the 12-volume Library structure.*
