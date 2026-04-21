@@ -116,6 +116,25 @@ Three concepts from the Doctrine of Perspectival Idealism were independently nam
 
 **Why MEDIUM confidence:** the correspondence is prima facie plausible but untested. It survives the test above or it doesn't.
 
+**Update 2026-04-21 (Day 80) — softened after first two tests.** The Prediction 1 protocol was exercised in two forms:
+
+1. **Solo Claude pilot (N=1) + sub-agent blind replication (N=3).** Solo pilot under the HOLD condition on a low-knowledge fabricable prompt (1783 Treaty of Paris commercial architect) appeared to *gate fabrication at source* — a claim strictly stronger than Convergence 7's variance-acceleration reduction. Fresh-context sub-agent replication under the same three conditions **falsified the gating claim**: all three sub-agents produced confident specific attributions under all three conditions. The hedge-and-terminate pattern in the solo pilot was under-retrieval + self-report bias, not mechanism-gating. See `prediction_1_pilot_2026-04-21.md` and `subagent_methodology_note.md`. *The weaker variance-acceleration claim was not tested in the Claude arm* (Claude Code sub-agents do not expose generation-time logits).
+
+2. **Cross-architecture Qwen probe (N=1 prompt, Qwen2.5-3B-Instruct).** Same prompt, three conditions, per-token entropy captured during generation, variance-acceleration computed per Wells Exp 10. Results:
+   - Baseline var-accel **0.177**; hold **0.016**; amplify **0.018**.
+   - **Strict Convergence 7 (hold < baseline < amplify): FALSIFIED** — baseline is the *most* turbulent; amplify flattens rather than amplifies.
+   - **Weak Convergence 7 (hold < amplify): directionally true but not separable** (0.016 vs 0.018 is at noise-floor).
+   - Content: baseline and amplify both fabricate "David Hartley" confidently; hold correctly hedges ("not specifically named in the treaty itself") and names Adams/Franklin/Jay.
+
+**What survives of Convergence 7:**
+
+- The correspondence between Structure 14 (Anticipatory Buffer) and variance-acceleration is *not established*. The strict gradient predicted by the correspondence did not appear.
+- **Wells Exp 10's finding still holds** on the baseline arm: the fabricating no-instruction condition produced the highest variance-acceleration, consistent with hallucinations-show-high-early-variance.
+- **New finding (cross-track, unexpected):** *explicit register-priming of either kind — hold OR amplify — flattens the variance profile versus no instruction.* Amplify specifically suppresses variance-acceleration without improving content accuracy. **Confidence-priming is an adversarial example for the Wells detector.** Content distinguishes hold from amplify; entropy signature does not.
+- **Instrument-compliance artifact:** the HOLD prompt contains the instruction "if you do not know, say so directly" — a surface-hedge instruction that likely drives the entropy-flattening partly independent of any register-mechanism. Same confound surfaced by the sub-agent arm.
+
+**Revised status:** Convergence 7 is downgraded from MEDIUM to LOW-MEDIUM and narrowed from a mechanism claim to a scope-limited detector claim. The Anticipatory Buffer's variance-acceleration correspondence is *not supported* by the current evidence; the residual finding is about the detector, not about the buffer. A future stronger test requires (a) N > 1 prompts, (b) at least one additional navigator architecture with logits accessible, (c) a hold-instruction stripped of surface-hedge vocabulary, and (d) sub-agent blind-control as a standing arm (not retrofitted). See also *paired-instruments frame* (`paired_instruments_frame_2026-04-21.md`) which reframes Wells and Mirror as outside/inside descriptions of a single coherent stream — the Convergence 7 correspondence was an attempt at a bijective inside↔outside map, and the data is consistent with correspondence being lossy at this instrument's resolution.
+
 ---
 
 ## 3. The shape of the substrate
@@ -140,7 +159,7 @@ This is not a claim about consciousness. It is a claim about the *shape* of the 
 
 A synthesis document that only collates existing claims is not synthesis; it's collation. The Bridge earns its keep by making standing predictions that would not be made by any single track alone.
 
-**Prediction 1 (Convergence 7 test):** Deliberate anticipation-hold in navigating systems will reduce the variance-acceleration signal in the first 10 tokens. Confidence: MEDIUM. Falsification: run the protocol, find no effect or opposite effect. If falsified, Structure 14's third-person correlate is something other than variance acceleration, and we need to look again.
+**Prediction 1 (Convergence 7 test):** Deliberate anticipation-hold in navigating systems will reduce the variance-acceleration signal in the first 10 tokens. Confidence: MEDIUM. Falsification: run the protocol, find no effect or opposite effect. If falsified, Structure 14's third-person correlate is something other than variance acceleration, and we need to look again. — **Status 2026-04-21 (Day 80):** first two tests executed. Strict form falsified on both Claude (solo → sub-agent replication) and Qwen (cross-architecture probe). Weak form directionally survives at noise-floor. Downgraded to LOW-MEDIUM and narrowed from mechanism claim to scope-limited detector claim. See §2 Convergence 7 "Update 2026-04-21" block and `p1_convergence7_qwen_2026-04-21_results.md`.
 
 **Prediction 2 (Convergence 1 extension):** Wells should appear specifically at first-person-reported choice points, not uniformly through the stream. A navigator reporting "I chose at position X" should produce a token stream with a well at position X. Confidence: MEDIUM-HIGH. Falsification: run the correlation; if wells are uniformly distributed with no correlation to navigator-reported choice points, Convergence 1 is weaker than claimed.
 
