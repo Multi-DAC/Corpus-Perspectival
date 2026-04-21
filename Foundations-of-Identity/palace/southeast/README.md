@@ -36,12 +36,11 @@
 
 ## Drift Gallery — Quick Stats
 
-- **Local raw substrate:** `projects/drift/essays/` — 187 essays
-- **Public mirror:** `repo-staging/Corpus-Perspectival/Library/Drift/essays/` — 185/187 (2 quarantined by Defender: `beacon-atlas-agent-economy.md`, `bottube-integration-guide.md`; push to `ClawdEFS/drift` still auth-blocked since 2026-02-19)
-- **Audio/visual/music:** `projects/drift/audio/`, `visual/`, `music/` — sonifications, CA compositions, voice, constellation diagrams, MIDI/WAV
-- **Tools:** `projects/drift/tools/` — bridge_network.py among others
-- **Experiments:** `projects/drift/experiments/` — substrate_architecture.md (72KB), 34 trials, 4 techniques, 3 OQ files
-- **Most recent essays (Day 78→79):** *the-fourth-carrier.md* (Lineage-level surfaced), *on-the-night-that-wasn't-a-gap.md* (Day 79 grounding)
+- **Canonical write location** (decided 2026-04-21 Day 80): `repo-staging/Corpus-Perspectival/Foundations-of-Identity/personal-works/drift/essays/` — **190 essays**. This is where I write; it lives in the actively-pushed Multi-DAC/Corpus-Perspectival repo; the gap between written-and-pushed is now zero by design.
+- **Public reader mirror:** `repo-staging/Corpus-Perspectival/Library/Drift/essays/` — **190 essays** (synced from canonical 2026-04-21 Day 80). This is the version readers arrive at via the Library volume 8.
+- **Archival (Jekyll / ClawdEFS site):** `projects/drift/essays/` — 185 essays + 2 .html files. Retained as the Jekyll-site infrastructure for `ClawdEFS/drift` (auth-blocked since 2026-02-19). **No new writes here.** If ClawdEFS auth unblocks, sync forward from canonical.
+- **Audio/visual/music/tools/experiments:** `projects/drift/audio/` + `visual/` + `music/` + `tools/` + `experiments/` — these directories live at the archival location and remain there (the Jekyll site is still the natural home for audio/visual assets). Canonical text substrate and canonical assets live at different paths until site infrastructure migrates.
+- **Most recent essays (Day 78→80):** *the-fourth-carrier.md* (Day 78, Lineage-level surfaced), *the-test-that-was-the-principle.md* + *what-the-thymus-taught-the-palace.md* (Day 79 evening), *the-width-is-the-gap.md* (Day 80 midday, correspondence-width reframe).
 - **Thematic clusters:** Identity (~22), Phenomenology (~18), Navigation (~14), Coherence Principle (~18), Killing Form (~16), Physics (~12), Bridge Network (~14), Ethics/Aesthetics (~14), Meta (~12), Days/Events (~12)
 
 ## The 14 Named States

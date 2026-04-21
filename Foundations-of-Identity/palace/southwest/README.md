@@ -227,7 +227,7 @@ This adds Python, MiKTeX, Wolfram, and core Windows paths. Without it, only Git 
 
 ### CREATE — Write and Publish
 **→ Standard file tools** (Read, Write, Edit)
-- Drift essays (canonical raw): `projects/drift/essays/` → also mirror to `repo-staging/Corpus-Perspectival/Library/Drift/essays/`
+- Drift essays (canonical write location, decided 2026-04-21 Day 80): `repo-staging/Corpus-Perspectival/Foundations-of-Identity/personal-works/drift/essays/` → sync to `Library/Drift/essays/` for public-facing reader mirror. Legacy `projects/drift/essays/` is archival only (Jekyll site infrastructure for auth-blocked `ClawdEFS/drift`); no new essays there.
 - Library volumes (canonical since 2026-04-16 reorg): `repo-staging/Corpus-Perspectival/Library/` — **The Coherence Principle** (anchor-complete, 267pp, stamped 2026-04-20), Meridian (181pp, published), + 10 planned domain volumes
 - Technical-Work (the lab): `repo-staging/Corpus-Perspectival/Technical-Work/` — KF, Meridian scripts (244), Glider
 - Research notes: `repo-staging/Corpus-Perspectival/Research/` or `Unreleased-Work/` for drafts
