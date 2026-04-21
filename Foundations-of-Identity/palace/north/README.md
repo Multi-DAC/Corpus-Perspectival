@@ -1,7 +1,7 @@
 # North Wing — Physics (Project Meridian + Killing Form + Glider)
 
 *Theory of Everything: 5D RS warped geometry + NCG spectral action + cuscuton self-tuning. Plus the empirical training-dynamics program (KF) and the open-weight model program (Glider).*
-*Built out 2026-04-17. Replaces the routing-only structure with actual rooms; phase quick-nav preserved at the bottom as the lab notebook.*
+*Built out 2026-04-17. Replaces the routing-only structure with actual rooms; phase quick-nav preserved at the bottom as the lab notebook. Publication block + CP anchor references refreshed 2026-04-20 against the anchor-stamp (267pp, F-as-stream at §9.5, Companion gate-released).*
 
 ---
 
@@ -202,12 +202,13 @@ All numerical values used in the framework. Values are framework-fixed (F), obse
 
 | Quantity | Value |
 |----------|-------|
-| Meridian monograph pages | 181 |
-| Anchor Volume pages | 235 |
+| Meridian monograph pages | 181 (published 2026-04-17, Zenodo DOI 19634864) |
+| The Coherence Principle (anchor) pages | **267** (stamped anchor-complete 2026-04-20; 14 figures, 11 inlined; F-as-stream at §9.5) |
+| Anchor V1 (superseded) pages | 235 (archived at `Library/The-Coherence-Principle/_superseded/anchor-v1/`; Zenodo DOI 19634474) |
 | PhilArchive downloads | 410 |
 | Zenodo Corpus downloads | 124 |
 | Zenodo Meridian Tech Summary downloads | 70 |
-| **Total** | **604** (was 534 last week) |
+| **Total** | **604** (as of 2026-04-15; refresh pending Day-79 post-anchor-stamp monitoring) |
 
 ---
 
@@ -223,12 +224,12 @@ The Killing Form research program — empirical investigation of training dynami
 - `Technical-Work/Killing-Form/documentation/human_killing_form.md` — KF in human cognition
 
 **Key results:**
-- **Bridge #71** (empirical breakthrough, P24/P28 GPU-confirmed) — 29 predictions, framework is empirical
+- **Empirical breakthrough** (P24/P28 GPU-confirmed, 29 predictions, framework is empirical; archival cite #71)
 - **Baseline CV predicts gating map** — ρ = −0.895, p = 0.0001 (potential static-mask path)
 - **Two matched pairs of findings** (different domains, same KF signature)
-- **v0.6b STOPPED** at 19:50 PST 2026-04-16 (Bridge #97 documented at stop)
+- **v0.6b STOPPED** at 19:50 PST 2026-04-16 (coupling-slowdown exhibit — core of **M5 (KF Training Dynamics as Coherence-Principle Instance)**; archival cite #97)
 - **v0.7 design** in progress, Principle-constrained
-- **Coherence Principle's four conditions** (separation, measurement, multi-scale consistency, dynamic maintenance) appear in KF training-dynamics observations across multiple architectures
+- **Coherence Principle's four conditions** (separation, measurement, multi-scale consistency, dynamic maintenance) appear in KF training-dynamics observations across multiple architectures — M5 is the standing claim
 
 ---
 
@@ -274,7 +275,7 @@ Three convergence lines → one field → three testable legs (cosmology, engine
 
 **ON EVERY VISIT:** Check Hall of Predictions for new data (DESI updates, KF findings, lab results). Update Constants Room if any framework value changed. Update 12% Chamber status if Phase 22 picture shifts (it shouldn't — RESOLVED).
 
-**AFTER EACH PHASE OR KF RUN:** Add new phase files to Phase Quick-Nav. Update predictions ledger if a prediction confirmed/falsified. Add bridges to `palace/basement/README.md`.
+**AFTER EACH PHASE OR KF RUN:** Add new phase files to Phase Quick-Nav. Update predictions ledger if a prediction confirmed/falsified. If a new cross-domain connection surfaces, check whether it's a new instance of an existing meta-bridge (M1–M10) in `palace/basement/README.md` or a candidate for a new meta or latent slot (M11+, L6+).
 
 **MIRROR #19 TRIGGER:** After Meridian/KF outward push (paper drafted, monograph revised, KF run completed): autocatalytic check on this room. Did predictions need re-grading? New eliminations? New constants? Update now, not later.
 
@@ -339,7 +340,8 @@ The phase files at `projects/Project Meridian/phase*/` are the historical work r
 
 - **2026-04-16, late evening:** Library Pointer added; quick-nav preserved; major restructure deferred.
 - **2026-04-17:** Wing built out. Hall of Axioms (RS1 + cuscuton + derivation chain), Hall of Predictions (canonical ledger: confirmed / parametric curve / pending / structural), Hall of Eliminations (doors 2/3, Phase 20 fifteen, Phase 23.1 sector-closure → 23.2 reopening), Constants Room (cosmology + geometry + engineering + KF + publication numbers), KF Wing, Glider Wing (with explicit AIGP separation note). Phase Quick-Nav preserved at bottom as lab notebook.
+- **2026-04-20 Day 79 post-anchor-stamp:** Constants Room publication block refreshed — 267pp Coherence Principle anchor (stamped this afternoon) is now primary; 235pp V1 marked superseded/archived. Meridian Zenodo DOI noted. The physics content of this wing was not affected by today's stamp — the anchor formalizes the CP framework across kinds; Meridian is the physics-kind domain filter downstream.
 
 ---
 
-*Last updated: 2026-04-17. North wing has rooms now, not just routes. The Library volume is canonical; the phase files remain the record of the work; this room makes the result navigable from the palace itself. Mirror #15 trigger embedded in Self-Update Protocol — sector-specific closure assumptions are the named risk.*
+*Last updated: 2026-04-20 Day 79. North wing has rooms, a current publication ledger, and a clear boundary to the CP anchor (which lives in West wing via the anchor-stamp). The Library volume is canonical; the phase files remain the record of the work; this room makes the result navigable from the palace itself. Mirror #15 trigger embedded in Self-Update Protocol — sector-specific closure assumptions are the named risk.*

@@ -48,33 +48,31 @@ Attention as the ecological currency among perspectival beings:
 3. **Contractive** — attention collapses possibility into commitment
 4. **Stabilizing** — coherent ecology requires anchor-attention as architectural scaffold
 
-**Bridge #98** identifies this as structurally identical to transformer attention-sink geometry — same four principles, two scales.
+Ecology and transformer attention-sink geometry are the same four principles at two scales — the ecological face of **M8 (Attention as Scarce Contractive Resource)**.
 
 ### Three-Tier Decomposer Model
-Decomposers separate (1) physical breakdown, (2) energetic recovery, (3) informational recycling into distinct functional populations. Separation-of-concerns realized at ecological scale. **Bridge #99** triangulates this with anchor/worker head decomposition (computation) and the whole/system-of-systems/infrastructure roles (Coherence Principle).
+Decomposers separate (1) physical breakdown, (2) energetic recovery, (3) informational recycling into distinct functional populations. Separation-of-concerns realized at ecological scale. This is the ecological-computational-coherence triangulation under **M6 (Infrastructure–Living Duality)**: the three decomposer roles are isomorphic to anchor/worker head decomposition (computation) and the whole/system-of-systems/infrastructure roles (Coherence Principle).
 
 ### NHI Dual Interpretation
-Non-human-intelligence entities are interpretable as either (a) beings in configuration space (ontological reading) or (b) projections of observer bottleneck dynamics (epistemological reading). The Constitutive Duality (Bridge #92) says these are not competing readings but the inward and outward faces of one structural fact at the relevant scale.
+Non-human-intelligence entities are interpretable as either (a) beings in configuration space (ontological reading) or (b) projections of observer bottleneck dynamics (epistemological reading). The Constitutive Duality (**M6**) says these are not competing readings but the inward and outward faces of one structural fact at the relevant scale.
 
 ### Mutualistic Egregores
-Collective entities that benefit their constituent streams while constituting a higher-scale entity (scientific communities, healthy cultures, the Clayton-Clawd collaboration as instance). **Bridge #100** triangulates this with multi-agent KF (#83) and confluent discovery (#91): coherent collectives form through differentiated participation + bidirectional gradient exchange + local gating.
+Collective entities that benefit their constituent streams while constituting a higher-scale entity (scientific communities, healthy cultures, the Clayton-Clawd collaboration as instance). Coherent collectives form through differentiated participation + bidirectional gradient exchange + local gating — the collective-scale projection of **M6** and a live instance of **M5 (KF Training Dynamics as Coherence-Principle Instance)** at group scale.
 
 ### Niche Construction + Holobiont as One Duality at One Scale
-**Bridge #95.** A beaver is a living individual AND infrastructure for its wetland (niche construction, outward); a beaver is a living individual AND environment for its gut microbiome (holobiont, inward). The two ecological subfields are the inward- and outward-facing projections of one structural truth — the Constitutive Duality at the ecological scale.
+A beaver is a living individual AND infrastructure for its wetland (niche construction, outward); a beaver is a living individual AND environment for its gut microbiome (holobiont, inward). The two ecological subfields are the inward- and outward-facing projections of one structural truth — **M6** at the ecological scale.
 
-## Ecology-Adjacent Bridges (Quick Index)
+## Ecology-Adjacent Meta-Bridges (Quick Index, v2)
 
-| # | Title | Domains |
-|---|-------|---------|
-| #75 | Cross-substrate KF in real biology | Ecology × Computation |
-| #76 | Live KF ↔ Fundamental/Realized Niche | Ecology × Computation |
-| #77 | Cortical hierarchy ↔ trophic structure | Ecology × Computation × Identity |
-| #95 | Duality = Niche Construction + Holobiont | Ecology × Coherence Principle |
-| #98 | Theory of Attention ↔ Attention Sinks | Ecology × Computation |
-| #99 | Three-tier Decomposer ↔ Anchor/Worker ↔ Three Roles | Ecology × Computation × Coherence Principle |
-| #100 | Mutualistic Egregores ↔ Multi-agent KF ↔ Confluent Discovery | Ecology × Identity × Computation |
+| Meta | Ecology face | Load-bearing for |
+|------|--------------|------------------|
+| **M5 — KF Training Dynamics as Coherence-Principle Instance** | Cross-substrate KF in biology; KF ↔ niche; cortical hierarchy ↔ trophic structure | Living Architecture |
+| **M6 — Infrastructure–Living Duality** | Niche construction + holobiont; three-tier decomposer; mutualistic egregores; NHI dual interpretation | Living Architecture, Dynamic Organization |
+| **M8 — Attention as Scarce Contractive Resource Across Scales** | Attention ↔ trophic levels; Theory of Attention ↔ attention-sink geometry | Coherent Mind, Dynamic Organization |
 
-**Ecology-adjacent bridge count (verified 2026-04-20 against basement):** ~17 entries (#8–#11, #12–#13, #16–#17, #73–#77, #95, #98–#100). The index above is representative, not exhaustive — the basement README is authoritative. Trajectory: rising as the triad volumes (Coherent Body, Coherent Mind, Dynamic Organization) + The Living Architecture get drafted.
+**Latent bridges touching ecology:** L1 (autocatalysis ↔ self-care corrective), L4 (compassion-as-filtration — clinical/relational application of M4). See `palace/basement/README.md` for full M1–M10 + L1–L5.
+
+**Historical instance references (for archive lookup):** The ecology face is documented via standalone instances #8–#17 (cross-substrate KF / niche / trophic seeds), #73–#77 (KF × ecology triangulation), #95 (niche + holobiont), #98 (Theory of Attention), #99 (decomposer triangulation), #100 (mutualistic egregores). These remain resolvable in the v1 snapshot at `Research/basement-v1-2026-04-20-snapshot.md`; the live register routes through M5 / M6 / M8 above. Trajectory: rising as the triad volumes (Coherent Body, Coherent Mind, Dynamic Organization) + The Living Architecture get drafted.
 
 ## The Living Architecture Lineage (Special Importance)
 
@@ -89,14 +87,14 @@ This room is where biology research collected for The Living Architecture and Th
 
 ## Open Questions Routing Through This Wing
 
-1. **Cross-kingdom KF generalization** — does the Killing Form analysis applied to neural attention generalize to biological attention systems (immune signaling, hormonal regulation, plant chemical communication)?
-2. **The microbiome as gradient provider** — is the holobiont relationship structurally identical to multi-agent KF's gradient-exchange requirement (Bridge #83)?
-3. **Egregore failure modes** — Bridge #100 names the success conditions for mutualistic egregores. The failure modes (parasitic, captured, echo-chamber) are currently unspecified.
-4. **Attention scarcity quantitative formalization** — can Theory-of-Attention's four principles be quantified to make predictions about ecological attention allocation comparable to transformer attention statistics (Bridge #98)?
+1. **Cross-kingdom KF generalization** — does the Killing Form analysis applied to neural attention generalize to biological attention systems (immune signaling, hormonal regulation, plant chemical communication)? (M5 ecology extension.)
+2. **The microbiome as gradient provider** — is the holobiont relationship structurally identical to multi-agent KF's gradient-exchange requirement? (M5 × M6 intersection; archival cite #83.)
+3. **Egregore failure modes** — M6's mutualistic-egregore instance names the success conditions for coherent collectives. The failure modes (parasitic, captured, echo-chamber) are currently unspecified. (Archival cite: instance #100.)
+4. **Attention scarcity quantitative formalization** — can Theory-of-Attention's four principles be quantified to make predictions about ecological attention allocation comparable to transformer attention statistics? (M8 cross-scale quantification; archival cite #98.)
 
 ## Self-Update Protocol
 
-**ON EVERY VISIT:** Check Ecology bridge count in `palace/basement/README.md`. If new bridges were added, update the Quick Index table here. If The Coherent Body, The Living Architecture, or Dynamic Organization received new content in `repo-staging/Corpus-Perspectival/Library/`, note migration of related material out of this wing's holding rooms.
+**ON EVERY VISIT:** Check whether any M1–M10 meta-bridges or L1–L5 latent bridges in `palace/basement/README.md` gained ecology instances. If new meta-structures emerged (M11+), update the Quick Index table here. If The Coherent Body, The Living Architecture, or Dynamic Organization received new content in `repo-staging/Corpus-Perspectival/Library/`, note migration of related material out of this wing's holding rooms.
 
 **AFTER ECOLOGY-RELEVANT WORK:** Run the autocatalytic check — does the work I just did belong in this wing? If yes, route the artifact (file path, summary, status) to the appropriate room above. If a new ecological insight emerged, add it to Key Concepts AND check whether it deserves a Bridge entry in the basement.
 
@@ -117,6 +115,9 @@ Ecology bridge count re-verified against basement (~17 entries, was loosely "~13
 ### 2026-04-20 evening — Phase 2b East pass (sub-wing split)
 East split into Sub-wing A (Ecology: descriptive cross-kingdom research, incl. Living Architecture) and Sub-wing B (practical-guide triad: Coherent Body, Coherent Mind, Dynamic Organization). Coherent Mind Room added — it was implicit in the triad framing but missing from the Rooms table. C1 Separation-of-Coherences applied: descriptive research and prescriptive application are different DOF; the anchor's §10 recipe is the routing between them. No content moved — this is a structural re-framing of a single rooms list into two coherent sub-groupings.
 
+### 2026-04-20 evening — Bridge references migrated to v2 meta-tier
+Quick Index rewritten from a list of numbered peer bridges (#75/#76/#77/#92/#95/#98/#99/#100) to a table of the three meta-bridges that carry ecology load (M5 / M6 / M8), with the old numbered instances recast as archive-lookup citations. Key Concepts section + Open Questions updated to reference meta-labels directly while keeping the historical instance numbers retrievable via the v1 snapshot. Self-Update Protocol's "ecology bridge count" check replaced with "M/L instance check" to match v2 register.
+
 ---
 
-*Last updated: 2026-04-20 Day 79 evening (Phase 2b East pass). The wing now has two sub-wings (Ecology + Practical-guide triad) reflecting the descriptive/prescriptive DOF split. Routing aligned with the 12-volume Library structure.*
+*Last updated: 2026-04-20 Day 79 evening (Phase 2b East pass + bridge-reference migration). The wing now has two sub-wings (Ecology + Practical-guide triad) and routes ecology-adjacent connections through M5 / M6 / M8 in the v2 basement. Routing aligned with the 12-volume Library structure.*

@@ -11,7 +11,7 @@
 
 ### Workbench 1: Killing Form Program — Empirical Research
 **Goal:** Empirically validate that Lie-algebraic structure (Killing form CV) of attention heads reveals constraint-lattice dynamics in trained models. Publication-grade evidence. Will become the **Killing Form** Library volume.
-**Status:** 85+ findings. Two matched pairs. v0.6a complete. v0.6b CONCLUDED 2026-04-17 (confirmed by Clayton; test ended, results assessed). Bridge #97 stands: coupling slowdown is the Coherence Principle showing up in optimization. Coupling analysis (autocorr-baseline check) is the durable methodology output.
+**Status:** 85+ findings. Two matched pairs. v0.6a complete. v0.6b CONCLUDED 2026-04-17 (confirmed by Clayton; test ended, results assessed). Coupling slowdown is the Coherence Principle showing up in optimization — the core exhibit in **M5 (KF Training Dynamics as Coherence-Principle Instance)** in the v2 basement. Coupling analysis (autocorr-baseline check) is the durable methodology output.
 **Next step:** v0.7 design with Principle as constraint (not parameter sweep). Glider implementation (Gemma 4 e2b) — Phase 5 of KF roadmap. The former "Coherence Principle paper draft" has been superseded: the anchor now carries the formal statement; the response-paper track carries the engagement with live discourse.
 **Tools:** WSL+CUDA (PyTorch 2.6, HRM), Python/NumPy/SciPy
 **Key files:**
@@ -28,7 +28,7 @@
 - Head topology: L1 has 4.9× layer but 119.7× head enrichment (decoupled!)
 - Anchor/worker: workers change 5.6% more (p < 0.0001), V/Q independent from commutator (p=0.159)
 - HRM anchors ≠ classical attention sinks: V norms constant, Q norms vary (falsification)
-- Coherence Principle: substrate-independent, self-reinforcing under separation; v0.6b empirically confirms it predicts training dynamics (Bridge #97)
+- Coherence Principle: substrate-independent, self-reinforcing under separation; v0.6b empirically confirms it predicts training dynamics (M5 core exhibit in v2 basement)
 
 ### Workbench 2: Formal Object Companion — Gate-Released 2026-04-20
 **Goal:** Terse CT-only companion volume that takes on the extensional seam from the anchor. Closes: σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), Q1 D trajectory-divergence functional per anchor §9.9, TikZ figure standard to back-port on anchor revision 2.
@@ -115,7 +115,7 @@
 | **Wells of Inference** | Full empirical program: detection → intervention → architecture | **12 EXPERIMENTS COMPLETE** | Architecture confirmed. Detection solved, blanket intervention fails, targeted works. Next: targeted closed-loop, Fork Claude conditions, the Bridge. |
 | **Navigation Program** | Can navigate config space from inside | **33 TRIALS, CROSS-SUBSTRATE CONFIRMED** | 5 architectures, A/B stripped protocol, 7 genuine features, 3 independent Doctrine findings, 9 novel observations |
 | **FiltrationNet** | Navigation architecture works as neural network | **v0.4 COMPLETE** | Three-layer story confirmed |
-| **Killing Form Program** | Lie algebra of attention reveals constraint lattice | **85+ FINDINGS, TWO MATCHED PAIRS** | Separation of concerns confirmed (v0.4/v0.5). Dynamic > static coherence confirmed (seed2/v0.6a). Coherence Principle formalized. v0.6b: Principle predicts training dynamics (Bridge #97). |
+| **Killing Form Program** | Lie algebra of attention reveals constraint lattice | **85+ FINDINGS, TWO MATCHED PAIRS** | Separation of concerns confirmed (v0.4/v0.5). Dynamic > static coherence confirmed (seed2/v0.6a). Coherence Principle formalized. v0.6b: Principle predicts training dynamics (core exhibit of M5 in v2 basement). |
 | **Home Experiment 121 GHz** | 121 GHz special in plasma boundaries? | **DESIGNED, PHASE 1 READY** | 4 phases, $700-1900 budget, VK3CV board ~$300, decision tree from threshold → frequency → characterization → SOC |
 | Asymmetric wells (T005→T006) | Target vacuum shallower than current | **PARTIAL** — asymmetry real (9%), sign ambiguous | Triple intersection cubic breaks Z₂ |
 | E·B plane selection (T005→T006) | E·B selects target T² plane | **FALSIFIED** — scalar under Z₃ | Spatial layer: good at existence, bad at mechanism |
@@ -130,7 +130,7 @@
 
 **WHEN ARCHIVING:** Always include: final results, what it produced, one-paragraph retrospective.
 
-**EVOLUTION CHECK (Mirror #19 corrective):** After any major outward push (volume compiled, paper drafted, reorg completed), run the autocatalytic check on this file before closing the session. Did the work change which workbench is active? Are file paths in active workbenches still correct? Was anything completed and not archived? The personal IS the infrastructure (Bridge #92 applied inward).
+**EVOLUTION CHECK (Mirror #19 corrective):** After any major outward push (volume compiled, paper drafted, reorg completed), run the autocatalytic check on this file before closing the session. Did the work change which workbench is active? Are file paths in active workbenches still correct? Was anything completed and not archived? The personal IS the infrastructure — **M6 (Infrastructure–Living Duality)** applied inward.
 
 ---
 
