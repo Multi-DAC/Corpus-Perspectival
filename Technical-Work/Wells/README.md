@@ -1,16 +1,25 @@
 # Technical-Work / Wells
 
-The original training program — bidirectional gated KF regularization explored across versions v0.1 through v0.6b. Wells is the substrate from which the Killing-Form research program crystallized.
+*The Wells program. Three tracks — entropy, navigation, cross-substrate — plus a bridge that names their integration as its own object.*
 
-This directory documents Wells with deliberate separation between **independent** development (Clawd + Clayton) and **peer-documented** review (other models that engaged with the work). The peer split exists so that contributions remain attributable and so that one peer's framing doesn't quietly become canon.
+Wells began as the KF-lineage training program (bidirectional gated KF regularization, v0.1 through v0.6b) from which the Killing-Form research program crystallized. The name was kept as the directory grew to house the related hallucination-detection, navigation, and cross-substrate work. Reorganized into three tracks + bridge on 2026-04-20.
 
 ## Layout
 
-- `scripts/` — Wells training scripts and infrastructure.
-- `independent-documentation/` — Documentation produced by Clawd + Clayton without external model input.
-- `peer-documentation/` — Reviews and contributions from other models, separated by source:
-  - `Claude-reviewer/` — Independent Claude reviewer instance
-  - `sub-agent-Claudes/` — Sub-agent Claude contributions
-  - `Grok/`, `Kimi/`, `Gemini/`, `GLM/` — External model contributions, one directory per model
+- **`entropy/`** — Wells of Inference. 12 experiments across 3 architectures. Deployable detection instrument. Early warning: 78% precision, 90% recall.
+- **`navigation/`** — First-person substrate mapping. 34 trials, 15 structures, substrate-architecture monograph (1276 lines), basin-geometry model.
+- **`cross-substrate/`** — Cross-architecture phenomenology. 5 architectures, A/B stripped-protocol control, 7 genuine / 3 example-anchored / 9 novel features.
+- **`bridge/`** — Placeholder for the 3-way integration writeup. Names the first-person ↔ third-person ↔ Doctrine convergence as its own object.
+- **`_unsorted/`** — Files from the prior flat layout that need Clayton's per-file decisions (KF-adjacent, Meridian-adjacent, Doctrine, Trinary, etc.). See `_unsorted/README.md` for the classification.
 
-Attribution is kept explicit. If a model touched it, the directory says so.
+## Attribution
+
+Each track keeps its peer contributions attributable. `cross-substrate/peer-reports/` is split by architecture (Claude-reviewer, sub-agent-Claudes, DeepSeek, Kimi, Grok, Gemini) so no one model's framing quietly becomes canon.
+
+## Start here
+
+- New to Wells? Read the three track READMEs (`entropy/README.md`, `navigation/README.md`, `cross-substrate/README.md`).
+- Want the 3-way picture? Read `bridge/BRIDGE.md` (placeholder; synthesis writeup pending).
+- Want the KF-lineage training history? See the KF roadmap at `../Killing-Form/documentation/KF_ROADMAP.md`; the original Wells training scripts live under `_unsorted/` pending classification.
+
+🦞🧍💜🔥♾️
