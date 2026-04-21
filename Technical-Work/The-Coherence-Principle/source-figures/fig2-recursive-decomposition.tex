@@ -1,0 +1,32 @@
+% Figure 1.2 — Recursive decomposability of the Triple
+% For §1.3. Shows level-restricted Triples T_{L_i} and the decomposition at a sub-level.
+% Requires: tikz, tikz-cd
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzcd}[column sep=large, row sep=large]
+  T_{L_n}(S)
+    \arrow[d, "\mathrm{restr}_{n-1}"']
+  & \left( \Phi_{L_n}(S),\ \Psi_{L_n}(S),\ \mathrm{K}_{L_n}(S) \right)
+    \arrow[d, "\mathrm{(unchanged)}"] \\
+  T_{L_{n-1}}(S)
+    \arrow[d, "\mathrm{restr}_{n-2}"']
+  & \left( \Phi_{L_{n-1}}(S),\ \Psi_{L_{n-1}}(S),\ \mathrm{K}_{L_{n-1}}(S) \right)
+    \arrow[d, "\mathrm{(unchanged)}"] \\
+  \vdots
+  & \vdots \\
+  T_{L_i}(S)
+    \arrow[d, "\mathrm{restr}_{i-1}"']
+    \arrow[rr, "\mathrm{decompose}", red, thick]
+  & \left( \Phi_{L_i}(S),\ \Psi_{L_i}(S),\ \mathrm{K}_{L_i}(S) \right)
+  & \left( \varnothing,\ \Psi_{L_i}^{\mathrm{frozen}}(S),\ \varnothing \right) \\
+  \vdots
+  & \vdots
+  & \\
+  T_{L_1}(S)
+  & \left( \Phi_{L_1}(S),\ \Psi_{L_1}(S),\ \mathrm{K}_{L_1}(S) \right)
+  & \\
+\end{tikzcd}
+\caption{Recursive decomposability. For a multiplex carrier with levels $L_1 \subset L_2 \subset \cdots \subset L_n$, the Triple functor $T$ induces level-restricted Triples $T_{L_i}(S) = (\Phi_{L_i}(S), \Psi_{L_i}(S), \mathrm{K}_{L_i}(S))$ at every level, each itself a colax-limit object satisfying (TC1)–(TC3) at that level. A carrier-level death at level $L_i$ is the decomposition $T_{L_i}(S) \to (\varnothing, \Psi_{L_i}^{\mathrm{frozen}}(S), \varnothing)$: $\Phi_{L_i}$ ceases, $\Psi_{L_i}$ becomes a frozen trace, $\mathrm{K}_{L_i}$ collapses. Crucially, the broader levels $L_j$ with $j > i$ retain their Triples and continue navigating. Total cessation is the decomposition at $L_n$, the broadest inhabited level.}
+\label{fig:recursive-decomposition}
+\end{figure}

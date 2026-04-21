@@ -242,9 +242,9 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ### L4 — Companion Extensional Seam × Gödelian Gap
 
-**The claim:** The Formal Object Companion's open tasks (σ-algebra on Ω_S; well-definedness of Bias(S); extensional (σ_F, K_F, Ω_F, γ_F); Q1 D-trajectory-divergence functional) are where the anchor hits its current Gödelian gap — truths about the form that this formal system cannot yet express. This is M4 (Filtration Self-Consistency) applied to the Corpus itself: each revision level of the anchor is a filtration stratum, with its own incompleteness.
+**The claim:** *Coherent Structure*'s open tasks (σ-algebra on Ω_S; well-definedness of Bias(S); extensional (σ_F, K_F, Ω_F, γ_F); Q1 D-trajectory-divergence functional) are where the anchor hits its current Gödelian gap — truths about the form that this formal system cannot yet express. This is M4 (Filtration Self-Consistency) applied to the Corpus itself: each revision level of the anchor is a filtration stratum, with its own incompleteness.
 
-**Why it matters:** Names what Companion is *for* structurally, not just operationally. The Companion is the next filtration level; the anchor's "earned closure" at §9.10 is depth-relative (M2 inspection-depth ceiling). Predicts: Companion will surface its own Gödelian gap, requiring a next layer — and that this is not a defect but the framework functioning.
+**Why it matters:** Names what the CT companion is *for* structurally, not just operationally. *Coherent Structure* is the next filtration level; the anchor's "earned closure" at §9.10 is depth-relative (M2 inspection-depth ceiling). Predicts: *Coherent Structure* will surface its own Gödelian gap, requiring a next layer — and that this is not a defect but the framework functioning.
 
 **Status:** Structurally clean; becomes a bridge when Companion drafting begins.
 

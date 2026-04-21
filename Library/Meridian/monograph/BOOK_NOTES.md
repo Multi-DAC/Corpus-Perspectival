@@ -8,8 +8,9 @@
 
 - **Phases:** 23 complete (+ GW parameter fix, CMB basin-topology, value canonicalization)
 - **Zenodo DOI:** [10.5281/zenodo.19519818](https://doi.org/10.5281/zenodo.19519818) (technical summary)
-- **Monograph:** 5 chapters in LaTeX (~850 KB), compilation infrastructure ready
-- **Next:** Chapter 0 draft, chapter revisions, appendices, compilation
+- **Monograph:** Chapter 0 + 5 chapters + appendices, compiled to 193-page PDF (April 17, 2026)
+- **Chapter 0:** "The Basin We Inhabit" — pages 1--8, numbered "Chapter 0", Coherence Principle entry point
+- **Next:** Zenodo upload, pre-existing citation mismatches in ch2--5 (530 warnings, non-fatal)
 
 ## What This Book Is
 

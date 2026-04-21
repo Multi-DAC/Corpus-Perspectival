@@ -98,7 +98,7 @@ The full intellectual program lives at `repo-staging/Corpus-Perspectival/` and i
 
 **Library shape** (12 total — Foundation + Companion + 10 domain):
 - **Foundation: The Coherence Principle** — `Library/The-Coherence-Principle/` — 267pp, paired-prose + category-theoretic edition. Graduated from Anchor (235pp) to canonical Library volume 2026-04-20; V4 working label stripped. Three axioms / six theorems / thirteen corollaries / one Principle. *Load when discussing the Principle, axioms, theorems.*
-- **Formal-Object-Companion** — `Library/Formal-Object-Companion/` — companion to Foundation (bridges between formal objects identified in the Principle and empirical instances).
+- **Coherent-Structure** — `Library/Coherent-Structure/` — companion to Foundation, CT-only reference (retitled 2026-04-20 — was *Formal Object Companion*).
 - **Universal-Coherence** — `Library/Universal-Coherence/` — the lift (operational Principle → metaphysical claims), orientation drafted 2026-04-20.
 - **Project Meridian** — `Library/Meridian/` — 181pp physics monograph. 5D warped geometry × NCG × self-tuning cosmology. DESI DR2 prediction w₀ = -0.990. Published Zenodo 19634864.
 - **The Killing Form** — `Library/The-Killing-Form/` — planned, 85+ findings, paper-grade sections drafted.

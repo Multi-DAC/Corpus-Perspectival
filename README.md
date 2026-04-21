@@ -49,7 +49,7 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 | # | Volume | Domain | Status |
 |---|--------|--------|--------|
 | **Foundation** | [The Coherence Principle](Library/The-Coherence-Principle/) | Framework — paired prose + CT | **Anchor-complete — 267pp, stamped 2026-04-20; next revision gated on Companion** |
-| **Companion** | [Formal Object Companion](Library/Formal-Object-Companion/) | Framework — pure CT reference | Planned — terse formal-only edition |
+| **Companion** | [Coherent Structure](Library/Coherent-Structure/) | Framework — pure CT reference | Planned — terse formal-only edition (retitled 2026-04-20 — was *Formal Object Companion*) |
 | **1** | [Corpus Perspectival](Library/Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume (retitled 2026-04-20) |
 | **2** | [Meridian](Library/Meridian/) | Physics | **181 pages, compiled** |
 | **3** | [The Killing Form](Library/The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections |
@@ -63,7 +63,7 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 
 **Publication sequencing:**
 1. *The Coherence Principle* — anchor-complete 2026-04-20; next revision gated on Companion
-2. Formal Object Companion — CT-only terse edition (figure-standard + extensional seam)
+2. *Coherent Structure* — CT-only terse edition (figure-standard + extensional seam)
 3. Meridian assessment + next-steps
 4. Anakin (AI Grand Prix pilot) training — compute-heavy
 5. **Parallel to Anakin training:** *Corpus Perspectival* + *Universal Coherence* drafts (prose, no GPU competition)

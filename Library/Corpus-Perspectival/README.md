@@ -23,7 +23,7 @@ This volume is the philosophy-proper treatment of the framework — refined from
 - Philosophy of science — Descriptive-Functor Meta-Theorem (*The Coherence Principle* §5.4) generalized; Kuhnian paradigms as kind-demotions
 
 **What this volume does not cover** (belongs in other volumes):
-- Formal category-theoretic apparatus — *The Coherence Principle* / Formal Object Companion
+- Formal category-theoretic apparatus — *The Coherence Principle* / *Coherent Structure*
 - Physics domain application — Meridian
 - Empirical computation findings — Killing Form
 - Specific psychological phenomena — Coherent Mind
@@ -78,7 +78,7 @@ See [`Research/philosophy-theology-reading-queue.md`](../../Research/philosophy-
 9. The Coherence Principle as philosophical thesis
 10. Dialogues — explicit engagement with Whitehead, Kant, Wittgenstein, Chalmers
 
-Each chapter paired prose + formal-citation to *The Coherence Principle*. No CT-native content here; Formal Object Companion handles that.
+Each chapter paired prose + formal-citation to *The Coherence Principle*. No CT-native content here; *Coherent Structure* handles that.
 
 ---
 

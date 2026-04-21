@@ -1,0 +1,690 @@
+\chapter{The Sound Speed of Dark Energy}
+\label{ch:sound-speed}
+
+\begin{quote}
+\textbf{Abstract.}
+We derive a first-principles prediction for the sound speed of dark energy perturbations within the framework of five-dimensional self-tuning cosmology. The cuscuton kinetic function $P(X) = \mu^2 \sqrt{2X}$, uniquely selected by the self-tuning condition, has infinite sound speed (zero propagating degrees of freedom). The noncommutative geometry (NCG) Gauss--Bonnet (GB) correction $P(X) \to \mu^2 \sqrt{2X} + \epsilon_1 X$, with $\epsilon_1 = 0.010 \pm 0.002$ determined by the $d = 5$ Seeley--DeWitt expansion on the warped orbifold, reintroduces a propagating mode with sound speed $c_s^2 = P_X / (P_X + 2X P_{XX}) \approx 2.16/\epsilon_1 \approx 216$, giving $c_s \in [12c,\; 15c]$ depending on the dark energy benchmark. This is a distinctive signature: canonical quintessence predicts $c_s = c$, clustering dark energy predicts $c_s \ll c$, and $\Lambda$CDM has no perturbation degree of freedom. The superluminal phase velocity does not violate causality---the effective metric for perturbations is hyperbolic and well-posed. The resulting Jeans length $\lambda_J \sim 50{,}000$--$65{,}000$~Mpc far exceeds the observable universe, predicting zero dark energy clustering at all observable scales. We identify four observational channels: (i)~gravitational wave dispersion in the dark energy medium ($\delta v/c \sim 10^{-32}$ at mHz), (ii)~integrated Sachs--Wolfe (ISW)-lensing cross-correlation suppression, (iii)~absence of dark energy clustering in galaxy surveys, and (iv)~modified perturbation growth at horizon scales. The most feasible detection path is indirect: establishing $w_0 \neq -1$ with zero dark energy clustering via Euclid + Rubin + Roman by ${\sim}2032$.
+\end{quote}
+
+%% ====================================================================
+\section{Introduction}
+\label{sec:5-introduction}
+
+The dark energy equation of state $w$ is not the only observable that distinguishes dark energy models from the cosmological constant. The \emph{sound speed} $c_s$---the propagation speed of dark energy perturbations---provides an orthogonal discriminant that directly probes the kinetic structure of the dark energy field~\cite{ch5:BeanDore2004,ch5:Hu2005}.
+
+For a general k-essence Lagrangian $\mathcal{L} = P(X) - V(\phi)$~\cite{ch5:ArmendarizPicon2000}, where $X = \tfrac{1}{2}(\partial\phi)^2$, the sound speed within the Horndeski~\cite{ch5:Horndeski1974} scalar-tensor framework is:
+\begin{equation}
+  c_s^2 = \frac{P_X}{P_X + 2X\,P_{XX}}\,.
+  \label{eq:5-1}
+\end{equation}
+
+Different dark energy models predict qualitatively different sound speeds:
+
+\begin{table*}[ht]
+\centering
+\caption{Sound speed predictions across dark energy model classes. Meridian predicts a unique superluminal regime.}
+\label{tab:5-1}
+\begin{tabular}{lcc}
+\toprule
+Model & $c_s^2$ & Clustering? \\
+\midrule
+$\Lambda$CDM & N/A (no DOF) & No \\
+Canonical quintessence & 1 & Negligible \\
+k-essence & $< 1$ (subluminal) & Moderate \\
+Clustering DE & $\ll 1$ & Significant \\
+\textbf{Meridian (this work)} & $\mathbf{\sim 216}$ & \textbf{None} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Our model (Chapter~\ref{ch:foundation}~\cite{ch5:PaperI}) derives the kinetic function from a specific five-dimensional braneworld architecture: two geometric axioms---five-dimensional spacetime with Randall--Sundrum warping~\cite{ch5:RandallSundrum1999} (A1) and a bulk scalar with non-minimal coupling (A2)---supplemented by four theoretical commitments (Kaloper--Padilla sequestering, the NCG spectral action, conformal coupling $\xi = 1/6$, and the linear tadpole). The self-tuning condition forces $P(X) = \mu^2\sqrt{2X}$ (the cuscuton~\cite{ch5:Afshordi2007}), the unique non-singular self-tuning solution in braneworld settings with bulk $P(X,\phi)$~\cite{ch5:LacombeMukohyama2022}, which has $c_s = \infty$---zero propagating degrees of freedom. The NCG Gauss--Bonnet correction (Chapter~\ref{ch:ncg}~\cite{ch5:PaperIV}) adds $\epsilon_1 X$ with $\epsilon_1 = 0.010 \pm 0.002$ (from the corrected $d = 5$ Weyl decomposition), yielding $c_s \sim 15c$. The extended cuscuton framework~\cite{ch5:Kobayashi2011,ch5:Deffayet2010} provides the theoretical context for these corrections within the generalized Horndeski class.
+
+This chapter derives $c_s$ from first principles, interprets the superluminal result, catalogs its observational signatures, and assesses detection prospects.
+
+\subsection*{Key Results from Companion Papers}
+
+This chapter draws on several results established elsewhere in the monograph; we summarize them here for self-containedness. The corrected kinetic function $P(X) = \mu^2\sqrt{2X} + \epsilon_1 X$ is derived in Chapter~\ref{ch:foundation}, which establishes the cuscuton as the unique self-tuning kinetic structure via Kaluza--Klein (KK) reduction of the five-dimensional warped action. The Gauss--Bonnet correction parameter $\epsilon_1 = 0.010 \pm 0.002$ is computed from the $a_3$ Seeley--DeWitt coefficient on the warped orbifold in Chapter~\ref{ch:ncg} (using the correct $d = 5$ Weyl decomposition); it is this parameter that sets $c_s^2 \sim 1/\epsilon_1$. The zero kinetic energy theorem and its breaking (Section~\ref{sec:5-sound-speed-computation}, Eq.~\ref{eq:5-5}) are the kinetic analog of the results formalized in Chapter~\ref{ch:nogo}, which proves that no mechanism within the framework can produce larger deviations from the cuscuton limit.
+
+The parametric equation of state prediction $w_0(\zeta_0)$ from Chapter~\ref{ch:foundation} and the observational confrontation of Chapter~\ref{ch:observational} provide the context for the combined fingerprint $\{w_0(\zeta_0),\; c_s \sim 15c\}$ that distinguishes this framework from all alternatives. The reader unfamiliar with these earlier results may consult the relevant chapters, but the derivation below is presented in a self-contained manner: only Eq.~\ref{eq:5-2} and the value of $\epsilon_1$ are taken as inputs.
+
+%% ====================================================================
+\section{Derivation}
+\label{sec:5-derivation}
+
+\subsection{The Corrected Kinetic Function}
+\label{sec:5-corrected-kinetic}
+
+The full effective kinetic function after KK reduction including the Gauss--Bonnet correction is (Chapter~\ref{ch:foundation}, Section~VI):
+\begin{equation}
+  P(X) = \mu^2\sqrt{2X} + \epsilon_1\,X + \mathcal{O}(X^2)\,,
+  \label{eq:5-2}
+\end{equation}
+where $\epsilon_1 = 0.010 \pm 0.002$, with $\hat{\alpha}$ the dimensionless GB coupling from the $a_3$ Seeley--DeWitt coefficient (Chapter~\ref{ch:ncg}, corrected Eq.~\eqref{eq:4-24d} using the $d = 5$ Weyl decomposition), $C_\mathrm{GB}$ an $\mathcal{O}(1)$ geometric coefficient from the KK reduction, and the quoted uncertainty ($\pm 20\%$) propagated from the spread of four cutoff functions in the spectral action (Appendix~\ref{app:computations}).
+
+The derivatives are:
+\begin{align}
+  P_X    &= \frac{\mu^2}{\sqrt{2X}} + \epsilon_1\,,   \label{eq:5-3} \\[6pt]
+  P_{XX} &= -\frac{\mu^2}{(2X)^{3/2}}\,.              \label{eq:5-4}
+\end{align}
+
+\subsection{Sound Speed Computation}
+\label{sec:5-sound-speed-computation}
+
+Substituting into~\eqref{eq:5-1}:
+\begin{align}
+  P_X + 2X\,P_{XX}
+    &= \left[\frac{\mu^2}{\sqrt{2X}} + \epsilon_1\right]
+       + 2X\left[-\frac{\mu^2}{(2X)^{3/2}}\right] \notag \\
+    &= \left[\frac{\mu^2}{\sqrt{2X}} - \frac{\mu^2}{\sqrt{2X}}\right] + \epsilon_1 \notag \\
+    &= \epsilon_1\,.
+  \label{eq:5-5}
+\end{align}
+The cuscuton terms cancel exactly by the degeneracy condition $P_X + 2X\,P_{XX} = 0$ of the leading-order $P(X) = \mu^2\sqrt{2X}$. This cancellation is the kinetic analog of the zero KE theorem (Chapter~\ref{ch:nogo}, Theorem~1~\cite{ch5:PaperIII}).
+
+Therefore:
+\begin{equation}
+  c_s^2 = \frac{P_X}{\epsilon_1}
+        = \frac{\mu^2/\sqrt{2X} + \epsilon_1}{\epsilon_1}\,.
+  \label{eq:5-6}
+\end{equation}
+
+At cosmological backgrounds, the first term dominates ($\mu^2/\sqrt{2X} \gg \epsilon_1$):
+\begin{equation}
+  c_s^2 \approx \frac{\mu^2}{\epsilon_1\,\sqrt{2X}}\,.
+  \label{eq:5-7}
+\end{equation}
+
+\subsection{Evaluating on the Friedmann--Robertson--Walker (FRW) Background}
+\label{sec:5-frw}
+
+The cuscuton constraint (Chapter~\ref{ch:foundation}, Eq.~78) determines the field velocity:
+\begin{equation}
+  |\dot{\phi}| = \frac{3|\dot{H}|\,\mu^2}{|V''|}\,,
+  \label{eq:5-8}
+\end{equation}
+giving $X = \dot{\phi}^2/2$. On the FRW background at the present epoch, with $\dot{H} = -H_0^2(1+q_0)$ where $q_0 \in [-0.53,\, -0.39]$ (benchmark-dependent; see Eq.~\eqref{eq:5-13}):
+\begin{equation}
+  \sqrt{2X_0} = |\dot{\phi}_0|
+              = \frac{3H_0^2\,|1+q_0|\,\mu^2}{|V''|}\,.
+  \label{eq:5-9}
+\end{equation}
+
+Substituting into~\eqref{eq:5-7}:
+\begin{align}
+  c_s^2 &= \frac{\mu^2}{\epsilon_1 \cdot 3H_0^2\,|1+q_0|\,\mu^2\,/\,|V''|}
+         = \frac{|V''|}{3\,\epsilon_1\,H_0^2\,|1+q_0|}\,.
+  \label{eq:5-10}
+\end{align}
+
+The NMC effective mass $V''_\mathrm{eff} = R_4/3 = 2(1-q_0)\,H_0^2$ is determined exactly (Chapter~\ref{ch:foundation}, Eq.~83a). Substituting:
+\begin{equation}
+  |V''_\mathrm{eff}| = 2(1 - q_0)\,H_0^2\,,
+  \label{eq:5-11}
+\end{equation}
+\begin{equation}
+  c_s^2 = \frac{2(1-q_0)\,H_0^2}{3\,\epsilon_1\,H_0^2\,|1+q_0|}
+        = \frac{2(1-q_0)}{3\,\epsilon_1\,|1+q_0|}\,.
+  \label{eq:5-12}
+\end{equation}
+
+The coefficient $C_q \equiv 2(1-q_0)/[3|1+q_0|]$ depends on the deceleration parameter, which is itself benchmark-dependent through $q_0 = \Omega_m/2 + (1-\Omega_m)(1+3w_0)/2$:
+\begin{equation}
+  c_s^2 = \frac{C_q}{\epsilon_1}\,.
+  \label{eq:5-13}
+\end{equation}
+At the CMB-constraint benchmark ($w_0 = -0.996$, $q_0 = -0.529$): $C_q = 2.16$, giving $c_s \approx 14.7c$. At the junction-condition benchmark ($w_0 = -0.865$, $q_0 = -0.39$): $C_q = 1.53$, giving $c_s \approx 12.4c$. The scaling $c_s^2 \sim 1/\epsilon_1$ is robust across benchmarks; the coefficient varies by $\sim 30\%$. For $\epsilon_1 = 0.010 \pm 0.002$:
+\begin{equation}
+  \boxed{c_s \in [12c,\; 15c]}
+  \label{eq:5-14}
+\end{equation}
+combining the $\epsilon_1$ uncertainty ($\pm 20\%$) and the benchmark dependence of~$q_0$. The qualitative result---superluminal, with Jeans length far exceeding the observable universe---is independent of the benchmark choice.
+
+\paragraph{Bound on higher-order corrections.} The effective kinetic function (Chapter~\ref{ch:foundation}, Eq.~\eqref{eq:1-corrected-P}) includes a next-order term $\epsilon_2\, X^2$, where $\epsilon_2$ originates from the $a_4$ Seeley--DeWitt coefficient---one order higher in the spectral action expansion than the $a_3$ (Gauss--Bonnet) coefficient that produces $\epsilon_1$. Each successive Seeley--DeWitt coefficient carries an additional power of the expansion parameter $\hat{a} \approx 0.015$ (Chapter~\ref{ch:foundation}, Eq.~\eqref{eq:1-alpha-hat}):
+\begin{equation}
+\label{eq:5-eps2-bound}
+\frac{\epsilon_2}{\epsilon_1} \sim \hat{a} \sim 0.015\,, \qquad \epsilon_2 \sim 1.5 \times 10^{-4}\,.
+\end{equation}
+The $\epsilon_2$ correction enters the sound speed through the denominator: $P_X + 2XP_{XX} = \epsilon_1 + 6\epsilon_2\, X_0$, where $X_0$ is the background kinetic variable fixed by the cuscuton constraint and FRW kinematics. The resulting fractional shift $|\delta c_s^2 / c_s^2| = 6\epsilon_2\, X_0/\epsilon_1$ is well within the $\pm 20\%$ uncertainty from $\epsilon_1$ itself (Table~\ref{tab:5-2}). The truncation at $\mathcal{O}(X)$ in the kinetic function is self-consistent.
+
+\subsection{Uncertainty Budget}
+\label{sec:5-uncertainty}
+
+\begin{table*}[ht]
+\centering
+\caption{Sources of uncertainty in the sound speed prediction. The dominant uncertainty is $\epsilon_1$ itself.}
+\label{tab:5-2}
+\begin{tabular}{lll}
+\toprule
+Source & Effect on $c_s$ & Range \\
+\midrule
+$\epsilon_1 = 0.010 \pm 0.002$ & Dominant ($1/\sqrt{\epsilon_1}$) & $\pm 20\%$ \\
+Benchmark dependence ($q_0$) & Subleading ($\sim 30\%$ across benchmarks) & $C_q \in [1.53,\; 2.16]$ \\
+Higher-order $\epsilon_2\,X^2$ & Subdominant ($< 5\%$) & Negligible \\
+Redshift dependence & $c_s(z)$ decreases at higher $z$ & See Eq.~\eqref{eq:5-cs-z} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The prediction is $c_s \in [12c,\; 15c]$, combining $\epsilon_1$ uncertainty and $q_0$ benchmark dependence.
+
+\paragraph{Redshift evolution.} The sound speed formula $c_s^2 = 2(1-q)/[3\epsilon_1(1+q)]$ depends on the deceleration parameter $q(a)$, which evolves with the expansion. In the matter + dark energy era (neglecting radiation), $q \approx 3\Omega_m(a)/2 - 1$, where $\Omega_m(a) = \Omega_m\,a^{-3}/E^2(a)$ is the time-dependent matter fraction. The sound speed at redshift~$z$ relative to today is:
+\begin{equation}
+\label{eq:5-cs-z}
+\frac{c_s^2(z)}{c_s^2(0)} = \frac{[4 - 3\Omega_m(z)]\;\Omega_{m,0}}{[4 - 3\Omega_{m,0}]\;\Omega_m(z)}\,.
+\end{equation}
+Since $\Omega_m(z)$ increases toward unity at high redshift (matter domination), the numerator shrinks and the denominator grows, so $c_s(z) < c_s(0)$: the scalar becomes \emph{more propagating} at higher redshift, when the kinetic correction contributes a larger fraction of the total energy density. Representative values: $c_s(z{=}1) \approx 7c$, $c_s(z{=}2) \approx 5.5c$, with a matter-dominated floor $c_s \to c_s(0)\sqrt{\Omega_{m,0}/(4-3\Omega_{m,0})} \approx 4.8c$. This evolution is mild for $z < 2$ (within a factor of 3 of the present value) and enters the CAMB Boltzmann analysis (Chapter~\ref{ch:observational}) through the time-dependent equation of state.
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig6_goldilocks.pdf}
+\caption{The $\epsilon_1$ Goldilocks window. The deviation $|1+w_0|$ at the JC benchmark
+scales linearly with the Gauss--Bonnet coupling $\epsilon_1$. At the NCG-derived value
+$\epsilon_1 = 0.010$ (blue circle), $|1+w_0| = 0.149$, well within DESI sensitivity. Ten times
+smaller: below observational sensitivity. Ten times larger: perturbative breakdown
+($|1+w_0| > 1$). The NCG spectral action places the coupling in the narrow window where the
+dark energy deviation is both physical and detectable.}
+\label{fig:6-goldilocks}
+\end{figure*}
+
+%% ====================================================================
+\section{Physical Interpretation}
+\label{sec:5-interpretation}
+
+\subsection{From Infinite to Finite Sound Speed}
+\label{sec:5-infinite-to-finite}
+
+The pure cuscuton $P(X) = \mu^2\sqrt{2X}$ has~\cite{ch5:Afshordi2007}:
+\begin{equation}
+  P_X + 2X\,P_{XX} = 0 \qquad\text{(exact)}\,,
+  \label{eq:5-15}
+\end{equation}
+making the denominator of $c_s^2$ vanish. The sound speed is formally infinite, and the scalar field has \emph{zero propagating degrees of freedom}---it is a constraint, not a dynamical field.
+
+The Gauss--Bonnet correction changes this qualitatively: it introduces $\epsilon_1$ in the denominator~\eqref{eq:5-5}, converting the constraint into a propagating field with large but finite sound speed. The physical picture:
+
+\begin{itemize}
+\item \textbf{Uncorrected ($\epsilon_1 = 0$):} The cuscuton responds instantaneously to metric changes. Perturbations propagate at infinite speed. The field tracks the geometry exactly---it has no independent dynamics.
+
+\item \textbf{Corrected ($\epsilon_1 = 0.010 \pm 0.002$):} The scalar acquires a finite response time $\sim 1/(c_s\,H_0) \sim 1/(15\,H_0)$. Perturbations propagate at $c_s \sim 15c$. The field nearly tracks the geometry, but with a small phase lag.
+\end{itemize}
+
+The infinite sound speed was the \emph{approximation}; the physical theory has $c_s \sim 15c$.
+
+\paragraph{Dynamic maintenance.}
+The sound speed evolution~\eqref{eq:5-cs-z}---from $c_s \approx 15c$ today through $c_s \approx 5.5c$ at $z = 2$ to a matter-dominated floor near $4.8c$---is an instance of the Coherence Principle's fourth condition: the framework \emph{dynamically maintains} its own structure as cosmological conditions change. The cuscuton constraint field adjusts algebraically to changes in the deceleration parameter $q(a)$: at early times ($q > 0$, matter-dominated), the kinetic correction is relatively larger and $c_s$ drops; at late times ($q \to -1$, dark-energy-dominated), the correction becomes relatively smaller and $c_s$ rises. The field breathes with the expansion---not passively, but as an active response to the evolving geometry. The finite response time $\sim 1/(c_s\,H_0)$ is always shorter than cosmological timescales, so the dark energy sector never falls out of equilibrium with the gravitational background. This distinguishes the cuscuton from quintessence models where the scalar can freeze or overshoot, and from $\Lambda$CDM where no dynamics exists at all.
+
+\subsection{UV Completion and the Adams et al.\ Obstruction}
+\label{sec:5-adams}
+
+Adams et al.~\cite{ch5:Adams2006} showed that effective field theories with superluminal propagating modes face obstructions from S-matrix analyticity and unitarity. For a general $P(X)$ theory, the positivity of the forward $2 \to 2$ scattering amplitude (from unitarity and analyticity of the dispersion relation) requires
+\begin{equation}
+  P_{XX}(X_0) \geq 0\,,
+  \label{eq:5-positivity}
+\end{equation}
+which is equivalent to $c_s \leq c$ when $P_X > 0$ (no ghost). This result assumes: (A1)~a well-defined S-matrix (propagating asymptotic states), (A2)~Lorentz invariance of the UV completion, (A3)~unitarity, and (A4)~analyticity of the amplitude in the cut $s$-plane.
+
+For the Meridian kinetic function $P(X) = \mu^2\sqrt{2X} + \epsilon_1 X$, the second derivative is $P_{XX} = -\mu^2/(2X)^{3/2} < 0$, apparently violating~\eqref{eq:5-positivity}. We now show that the framework evades this bound through three independent mechanisms, any one of which is sufficient. Each mechanism targets a specific assumption in the Adams et al.\ argument: Evasion~1 invalidates assumption~(A1) (well-defined S-matrix; their \S2.1), Evasion~2 invalidates assumption~(A2) (Lorentz-invariant UV completion; their \S3), and the FRW refinement invalidates the flat-space setting (their \S2, which assumes Minkowski asymptotics).
+
+\subsubsection{Evasion 1: Near-Cuscuton Kinetic Degeneracy}
+
+The pure cuscuton ($\epsilon_1 = 0$) has $Q_s = P_X + 2X\,P_{XX} = 0$ identically---zero propagating degrees of freedom, no asymptotic scattering states, and no S-matrix. Assumption~(A1) fails, and the bound does not apply~\cite{ch5:Afshordi2007,ch5:Iyonaga2018}.
+
+The GB correction restores a propagating mode with $Q_s = \epsilon_1 = 0.010$. Technically an S-matrix exists, but the $2 \to 2$ amplitude is perturbatively small: after canonical normalization $\chi = \sqrt{\epsilon_1}\,\delta\phi$, the tree-level amplitude scales as
+\begin{equation}
+  \mathcal{A}(s, 0;\, \epsilon_1) = \epsilon_1\, f\!\left(\frac{s}{\Lambda^2},\, \frac{\mu^2}{\Lambda^2}\right) + \mathcal{O}(\epsilon_1^2)\,,
+  \label{eq:5-amplitude-scaling}
+\end{equation}
+where $f$ is an $\mathcal{O}(1)$ function. The positivity constraint $\mathcal{A}''(0, 0) \geq 0$ constrains the sign of~$f''(0)$, not of~$P_{XX}$ directly. In the limit $\epsilon_1 \to 0$, the amplitude vanishes and the bound is formally saturated. However, at finite $\epsilon_1 = 0.010$, the sign of $f''(0)$ must be explicitly computed to determine whether the positivity bound is satisfied; this computation has not been performed. \emph{Evasion~1 alone is therefore suggestive but not conclusive.} The weight of the positivity argument rests on Evasion~2 (broken Lorentz invariance from the extra dimension), which invalidates the Adams et al.\ assumptions independently of the amplitude sign. Evasion~1 provides additional motivation by showing the theory is a small perturbation of a system outside the Adams et al.\ domain.
+
+\subsubsection{Evasion 2: 5D UV Completion with Broken Lorentz Invariance}
+
+The Adams et al.\ dispersion relation (assumption~A2) requires 4D boost invariance of the UV completion. The Meridian UV completion is the 5D Randall--Sundrum geometry, which breaks 4D boosts: the compact orbifold selects a preferred frame (the brane rest frame), and the KK tower explicitly violates boost invariance above the KK scale $m_{\mathrm{KK}} \sim \pi\, k\, e^{-ky_c}$.
+
+The 5D bulk scalar obeys a standard Klein--Gordon equation with $c_s^{(\mathrm{5D})} = c$ (subluminal). The apparent 4D superluminality arises from the ``bulk shortcut'' mechanism~\cite{ch5:ChungFreese2000}: signals propagating through the warped 5D bulk traverse a shorter proper distance than signals confined to the brane, producing an effective 4D propagation speed $c_s^{(\mathrm{4D})} > c$. This is a geometric artifact of KK reduction---analogous to how the electromagnetic scalar potential in Coulomb gauge propagates ``instantaneously'' without violating causality.
+
+De~Rham, Melville, Tolley, and Zhou~\cite{ch5:deRhamMTZ2018} showed that when the UV completion breaks 4D boosts (as in KK compactification), the positivity bound is modified:
+\begin{equation}
+  c_s^2 \leq \frac{c_{\mathrm{UV}}^2}{f(m_{\mathrm{KK}}/E)}\,,
+  \label{eq:5-modified-bound}
+\end{equation}
+where $c_{\mathrm{UV}}$ is the propagation speed in the full theory and $f$ encodes the KK scale relative to the scattering energy. For our case, $c_{\mathrm{UV}} = c$ in 5D. The function $f(m_{\mathrm{KK}}/E) \to 0$ in the deep infrared $E \ll m_{\mathrm{KK}}$, loosening the bound: at cosmological energies $E \sim H_0 \sim 10^{-33}$~eV against a KK scale $m_{\mathrm{KK}} \sim \mathrm{TeV}$, the modified bound is parametrically weaker than the flat-space result by a factor $f \sim (H_0/m_{\mathrm{KK}})^2$. In the UV ($E \sim m_{\mathrm{KK}}$), the full KK tower becomes dynamical; summing over the Randall--Sundrum KK spectrum $m_n = x_n\, k\, e^{-k\pi R_c}$ restores positivity of the forward amplitude, because the 5D theory is subluminal by construction ($c_s^{(\mathrm{5D})} = c$).
+
+\subsubsection{Background: FRW Positivity Bounds}
+
+Grall and Melville~\cite{ch5:GrallMelville2022} derived refined positivity bounds on cosmological (FRW) backgrounds. This observation is not specific to Meridian---it applies to any EFT on a cosmological background. The flat-space positivity bounds, where the Adams et al.\ argument has genuine constraining power, require Evasions~1 and~2. On FRW, the standard bounds are weakened by a factor of $(H/\Lambda)^2$, where $\Lambda$ is the effective field theory (EFT) cutoff. For the Meridian framework with $\Lambda \sim m_{\mathrm{KK}} \sim \mathrm{TeV}$ and $H \sim H_0 \sim 10^{-33}$~eV:
+\begin{equation}
+  \text{Weakening factor} \sim \left(\frac{H_0}{m_{\mathrm{KK}}}\right)^{\!2} \sim \left(\frac{10^{-33}\;\mathrm{eV}}{\mathrm{TeV}}\right)^{\!2} \sim 10^{-90}\,.
+  \label{eq:5-frw-weakening}
+\end{equation}
+The positivity bounds are effectively \emph{non-constraining} at cosmological energies. The $c_s > c$ regime is unconstrained by any known bound on FRW backgrounds.
+
+\subsubsection{Summary of Positivity Status}
+
+\begin{center}
+\footnotesize
+\begin{tabular}{l c c c}
+\toprule
+Criterion & Adams '06 & Refined '17--22 & Meridian \\
+\midrule
+$P_{XX} \geq 0$ & Required & Lorentz-inv.\ UV & Violated \\
+Lor.-inv.\ UV & Assumed & Relaxable & Broken (5D) \\
+S-matrix & Required & Modified on FRW & Marginal \\
+$c_s \leq c$ & Concluded & $(H/\Lambda)^2$ & Not req'd \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Independence of the evasion mechanisms from $c_s$ magnitude.} The corrected $\epsilon_1 = 0.010$ (from the $d = 5$ Weyl decomposition, Chapter~\ref{ch:ncg}) raises $c_s$ from ${\sim}\,11c$ (pre-correction, $\epsilon_1 = 0.018$) to ${\sim}\,15c$. None of the three evasion mechanisms depend on the numerical value of $c_s$:
+\begin{itemize}
+  \item \textbf{Evasion~1} (near-cuscuton degeneracy) depends on $\epsilon_1 = 0.010$, which controls the amplitude suppression~\eqref{eq:5-amplitude-scaling}. The amplitude scales as $\epsilon_1$, not as $c_s$.
+  \item \textbf{Evasion~2} (5D UV completion) depends on the Randall--Sundrum geometry and the KK scale, not on the 4D effective sound speed. The de~Rham et al.\ modified bound~\eqref{eq:5-modified-bound} constrains $c_s^2$ relative to $c_\mathrm{UV}^2/f(m_\mathrm{KK}/E)$; the KK tower structure is a geometric property of the warped orbifold, independent of $\epsilon_1$.
+  \item \textbf{Evasion~3} (FRW weakening) depends on $(H/\Lambda)^2 \sim 10^{-90}$, which is independent of both $\epsilon_1$ and $c_s$.
+\end{itemize}
+The increase from $c_s \sim 11c$ to $c_s \sim 15c$ does not weaken any evasion mechanism. The positivity violation $P_{XX} < 0$ is a property of the kinetic function $P(X) = \mu^2\sqrt{2X} + \epsilon_1 X$, which is unchanged by the Weyl correction; only the \emph{consequence} of the violation (the numerical value of $c_s^2 = C_q/\epsilon_1$) is affected.
+
+\paragraph{Independent confirmation: Freezing Gravity.}
+Yao and Gao~\cite{ch5:YaoGao2025} recently constructed a class of spatially covariant gravity theories (``Freezing Gravity'') in which the scalar degree of freedom freezes out in the IR, reproducing cuscuton-like behavior from a different starting point. Their framework achieves phantom crossing of the background equation of state with separate control of perturbation stability---precisely the mechanism at work in the Meridian framework. This provides independent confirmation that the cuscuton limit is a robust attractor for self-tuning modified gravity.
+
+\paragraph{UV completion prospects.}
+Liu, Quintin, and Afshordi~\cite{ch5:LiuQuintinAfshordi2026} have constructed a UV completion of the Big Bang in quadratic gravity, predicting a minimum tensor-to-scalar ratio $r \geq 0.01$ (testable by LiteBIRD). That Afshordi---the originator of the cuscuton framework---is actively constructing UV completions of modified gravity with cuscuton-type behavior reinforces the viability of the Meridian approach to the Adams et al.\ obstruction.
+
+\subsection{Causality and Superluminal Propagation}
+\label{sec:5-causality}
+
+A superluminal \emph{phase velocity} $c_s > c$ does not imply superluminal signal propagation or causality violation~\cite{ch5:Babichev2008,ch5:Ellis2007}. In k-essence and Horndeski theories, the causal structure is determined by the \emph{effective metric} experienced by perturbations~\cite{ch5:Bekenstein1993}:
+\begin{equation}
+  G^{\mu\nu}_\mathrm{eff} = c_s^2\,g^{\mu\nu} + (c_s^2 - 1)\,u^\mu\,u^\nu\,,
+  \label{eq:5-16}
+\end{equation}
+where $u^\mu$ is the background fluid 4-velocity. For $c_s^2 > 0$, the effective metric is Lorentzian with well-defined causal cones. The initial value problem for the coupled Einstein-scalar system is well-posed~\cite{ch5:Faraoni2009}.
+
+\subsubsection{Characteristic Surface Analysis}
+
+The characteristics of the scalar perturbation equation are the null surfaces of the effective metric~\eqref{eq:5-16}. For a characteristic surface $\Sigma: \varphi(x) = \mathrm{const}$, the eikonal condition is:
+\begin{equation}
+  G^{\mu\nu}_\mathrm{eff}\,\partial_\mu\varphi\,\partial_\nu\varphi = 0\,.
+  \label{eq:5-char-eikonal}
+\end{equation}
+On the FRW background ($u^\mu = \delta^\mu_0$, $g_{\mu\nu} = \mathrm{diag}(-1, a^2, a^2, a^2)$), this yields the characteristic speeds:
+\begin{equation}
+  \left(\frac{dx}{dt}\right)_{\!\mathrm{char}}^2 = \frac{c_s^2}{a^2}\,.
+  \label{eq:5-char-speed}
+\end{equation}
+The characteristic equation has \emph{two real, distinct solutions} $dx/dt = \pm c_s/a$ for any $c_s^2 > 0$. This establishes:
+\begin{enumerate}
+  \item \textbf{Hyperbolicity:} The perturbation equation is strictly hyperbolic (real characteristics), ensuring a well-posed initial value problem with finite-speed propagation~\cite{ch5:Faraoni2009}.
+  \item \textbf{Determinism:} The domain of dependence is a cone of opening angle $\theta = \arctan(c_s/a)$ in $(t, x)$ coordinates. No closed timelike curves exist in the effective geometry because the FRW background is globally hyperbolic and the widened cone preserves global hyperbolicity.
+  \item \textbf{No causal paradoxes:} The scalar sector's causal cone is wider than the gravitational cone ($c_T = c$), but both are future-directed. In any Lorentz frame, effects follow causes within the scalar's causal cone.
+\end{enumerate}
+
+The key distinction is:
+\begin{itemize}
+\item \textbf{Phase velocity} ($c_s$): speed of monochromatic wave fronts. Can exceed $c$.
+\item \textbf{Front velocity} (signal speed): speed of sharp wave fronts (discontinuities). Bounded by the characteristics~\eqref{eq:5-char-speed}---equal to $c_s$ for our non-dispersive system.
+\item \textbf{Group velocity}: speed of wave packets. Equals $c_s$ in the non-dispersive limit.
+\end{itemize}
+
+For our corrected cuscuton, the characteristic speed $c_s > c$ defines the causal cone for scalar perturbations. The front velocity (signal speed) is genuinely $c_s \sim 15c$ in the 4D effective theory---this is a real physical feature, not a coordinate artifact. However, the 4D effective theory inherits a preferred frame from the extra dimension: the brane rest frame. The causal structure of the scalar sector is set by the wider cone (opening at $c_s$), while the gravitational sector retains the standard light cone ($c_T = c$). No closed timelike curves form because: (i)~both cones are future-directed, (ii)~the preferred frame prevents the Babichev--Mukhanov--Vikman construction (see below), and (iii)~the 5D geometry remains globally hyperbolic~\cite{ch5:Babichev2008}. The 4D superluminality originates from the ``bulk shortcut'' mechanism~\cite{ch5:ChungFreese2000}: signals propagating through the warped bulk traverse shorter proper distances than brane-confined signals, producing $c_s^{(4\mathrm{D})} > c$ while $c_s^{(5\mathrm{D})} = c$.
+
+\subsubsection{The Babichev--Mukhanov--Vikman Construction and the RS Preferred Frame}
+
+Babichev, Mukhanov, and Vikman~\cite{ch5:Babichev2008} showed that in a Lorentz-invariant theory with superluminal propagation, one can construct closed signal curves by boosting to a frame in which the background fluid moves faster than the scalar perturbation speed. Specifically, if the fluid 4-velocity is $u^\mu$ and the perturbation cone has opening speed $c_s > c$ relative to $u^\mu$, then a Lorentz boost with $v > c^2/c_s$ tilts the causal cones until forward and backward cones overlap, creating closed causal curves. This is often cited as the fundamental obstruction to superluminal propagation in effective field theories.
+
+The Meridian framework evades this construction because the RS geometry provides a \emph{physically preferred frame}---the brane rest frame---that cannot be boosted away. The BMV construction requires that the boosted-fluid background (with 4-velocity $\tilde{u}^\mu$ related to $u^\mu$ by a Lorentz boost with $v > c^2/c_s$) be a valid solution of the same theory. In the RS geometry, the brane embedding and $\mathbb{Z}_2$ orbifold symmetry restrict the allowed background configurations: the Israel junction conditions at the branes are satisfied only for the brane rest-frame cosmology. A boosted-fluid state with $v > c^2/c_s$ is not a solution of the RS junction conditions for the same brane tension and warp factor. The BMV argument therefore cannot be carried out because its premise---that the boosted configuration is physically equivalent to the rest configuration---fails. This is not a kinematical statement about observers but a dynamical statement about the solution space: 4D Lorentz invariance of the solution space is broken by the extra dimension above the KK scale.
+
+This is the same structural feature that invalidates assumption (A2) of the Adams et al.\ positivity bounds (Section~\ref{sec:5-adams}, Evasion~2): the extra dimension selects a preferred foliation, and the effective 4D superluminality is a projection artifact of the ``bulk shortcut'' mechanism~\cite{ch5:ChungFreese2000}, not a fundamental violation of 5D causality.
+
+\textbf{Observational constraint.} The gravitational wave speed is $c_T = c$ exactly ($\alpha_T = 0$ from the Horndeski classification, confirmed by GW170817~\cite{ch5:GW170817}). The sound speed $c_s$ applies only to \emph{scalar} perturbations (dark energy fluctuations), not to tensor perturbations (gravitational waves). There is no observational tension with $c_s > c$.
+
+\subsection{Ghost-Freedom}
+\label{sec:5-ghost-freedom}
+
+The no-ghost condition requires the kinetic coefficient for perturbations to be positive:
+\begin{equation}
+  Q_s = P_X + 2X\,P_{XX} = \epsilon_1 > 0\,.
+  \label{eq:5-17}
+\end{equation}
+Since $\epsilon_1 > 0$ (from $\alpha_\mathrm{GB} > 0$ in the spectral action), the theory is ghost-free in the scalar perturbation sector on FRW backgrounds. The positive-definite kinetic term ensures that scalar perturbations have positive-norm quantum states and the vacuum is stable against scalar mode excitations.
+
+This argument establishes ghost-freedom in the scalar perturbation sector on FRW backgrounds at linear order. Dehghani, Geshnizjani, and Quintin~\cite{ch5:DehghaniGQ2025} have extended ghost-freedom analysis to third order in perturbation theory for extended cuscuton gravity, proving that the kinetic matrix remains positive-definite through third order. Their analysis covers the extended cuscuton class $P(X) = \mu^2\sqrt{2X} + \epsilon_1 X + \cdots$, which includes our kinetic function; their result was established in the context of phantom-crossing models ($w$ crossing $-1$), while our framework has $w > -1$ for all $\zeta_0 > 0$. The non-phantom case is a subset of their analysis (the kinetic positivity conditions are less restrictive when $w > -1$), so the third-order ghost-freedom result applies a fortiori.
+
+This is a nontrivial result: our model has $w_0 > -1$ for all $\zeta_0 > 0$ (quintessence-like) with a stable kinetic structure. Phantom dark energy ($w < -1$) requires a wrong-sign kinetic term---our framework cannot produce phantom crossing in the CPL parameterization~\cite{ch5:Linder2003}, which is precisely the falsifiable prediction confronting DESI (Chapter~\ref{ch:observational}~\cite{ch5:PaperII}).
+
+%% ====================================================================
+\section{Observational Signatures}
+\label{sec:5-signatures}
+
+\subsection{Dark Energy Clustering: Absence as Signal}
+\label{sec:5-clustering}
+
+The Jeans length for dark energy perturbations is:
+\begin{equation}
+  \lambda_J = c_s\,\sqrt{\frac{\pi}{G\,\rho_\mathrm{DE}}}
+            \sim \frac{c_s}{H_0}
+            \sim \frac{12\text{--}15 \times 3000}{h}\;\mathrm{Mpc}
+            \sim 50{,}000\text{--}65{,}000\;\mathrm{Mpc}\,.
+  \label{eq:5-18}
+\end{equation}
+This exceeds the radius of the observable universe (${\sim}14{,}000$~Mpc). Dark energy perturbations are effectively frozen at all observable scales. The Jeans mass is:
+\begin{equation}
+  M_J \sim \frac{4\pi}{3}\left(\frac{\lambda_J}{2}\right)^3 \rho_\mathrm{DE}
+       \sim 10^{23}\,M_\odot\,.
+  \label{eq:5-19}
+\end{equation}
+
+\textbf{Prediction:} Zero dark energy clustering signal in any galaxy survey, cluster catalog, or void analysis. This distinguishes our model from clustering dark energy scenarios ($c_s \ll c$) which predict detectable perturbation effects at scales below ${\sim}100$~Mpc~\cite{ch5:Takada2006}.
+
+The quasi-static approximation (QSA)---standard in modified gravity analyses---is \emph{exact} for our model because all observationally relevant scales are far below the Jeans length~\cite{ch5:Baker2013}. Three independent arguments establish this: the structural argument (cuscuton gravity has $\alpha_T = \alpha_B = \alpha_M = 0$, so QSA introduces no error at any scale~\cite{ch5:SawickiBellini2015}), the sound-horizon argument (the DE sound horizon exceeds the observable universe, guaranteeing no sub-horizon DE clustering~\cite{ch5:BoruahHudsonLuben2017}), and the implementation argument (cuscuton gravity reduces the modified Poisson equation to the GR form with no time-derivative corrections~\cite{ch5:HiramatsuKobayashi2022}).
+
+\subsection{ISW-Lensing Cross-Correlation}
+\label{sec:5-isw}
+
+The integrated Sachs--Wolfe (ISW) effect probes the time derivative of the gravitational potential, which is sensitive to dark energy perturbations at large scales. For our model:
+\begin{equation}
+  \Phi - \Psi = 0 \qquad\text{(at all scales)}\,,
+  \label{eq:5-20}
+\end{equation}
+where $\Phi$ and $\Psi$ are the Bardeen potentials. The vanishing gravitational slip ($\eta \equiv \Phi/\Psi = 1$) follows from $\alpha_T = 0$ (Chapter~\ref{ch:foundation}): there is no dark energy anisotropic stress. The ISW signal, driven by $\dot{\Phi}$, is determined by the expansion history alone (no dark energy clustering contribution at scales $\ll \lambda_J$) and is identical to a constant-$w$ model at the same $w_0$. A deviation from $\Lambda$CDM arises only through the modified background expansion.
+
+\textbf{Prediction:} ISW-lensing cross-correlation consistent with $\Lambda$CDM. This is a null prediction but distinguishes our model from k-essence models with $c_s < c$, which predict enhanced ISW at large scales~\cite{ch5:DeDeo2003}.
+
+\subsection{Perturbation Growth at Horizon Scales}
+\label{sec:5-perturbation-growth}
+
+The dark energy perturbation $\delta_\mathrm{DE}$ obeys:
+\begin{equation}
+  \delta_\mathrm{DE}''
+  + \left(2 + \frac{H'}{H}\right)\delta_\mathrm{DE}'
+  + \left(\frac{c_s^2\,k^2}{a^2\,H^2} - \frac{3(1+w)}{2}\right)\delta_\mathrm{DE}
+  = -\frac{3(1+w)}{2}\,\delta_m'\,,
+  \label{eq:5-21}
+\end{equation}
+where primes are $\mathrm{d}/\mathrm{d}(\ln a)$, $k$ is the wavenumber, and $\delta_m$ is the matter perturbation. For $c_s^2\,k^2 \gg a^2\,H^2$ (which holds for all $k > k_J = aH/c_s$):
+\begin{equation}
+  \delta_\mathrm{DE}
+    \approx -\frac{3(1+w)}{2\,c_s^2\,k^2/(aH)^2}\;\delta_m\,.
+  \label{eq:5-22}
+\end{equation}
+
+The dark energy perturbation is suppressed by a factor $1/c_s^2 \sim 0.01$ relative to the matter perturbation. For comparison, $c_s = c$ gives suppression ${\sim}1$, and $c_s = 0$ gives Jeans instability (the perturbation equation changes character and dark energy clusters gravitationally).
+
+At scales near the Jeans scale ($k \sim k_J$), the dark energy perturbation can affect matter growth. But $k_J = aH/c_s \sim H/(15c)$ corresponds to ${\sim}65$~Gpc wavelengths---unobservable.
+
+\textbf{Prediction:} Matter perturbation growth indistinguishable from the smooth dark energy ($c_s = \infty$) limit at all observable scales.
+
+\subsection{Gravitational Wave Dispersion}
+\label{sec:5-gw-dispersion}
+
+A gravitational wave propagating through a dark energy medium experiences a dispersive interaction at the level of the dark energy density. The phase velocity shift for GW at frequency $f$ is~\cite{ch5:Finn2002}:
+\begin{equation}
+  \frac{\delta v_\mathrm{GW}}{c}
+    \sim \frac{\Omega_\mathrm{DE}}{2}\left(\frac{H_0}{f}\right)^2 \frac{1}{c_s^2}
+    \sim \frac{0.7}{2}\left(\frac{H_0}{f}\right)^2 \frac{1}{100}\,.
+  \label{eq:5-23}
+\end{equation}
+
+For LISA frequencies ($f \sim 10^{-3}$~Hz) with $H_0 \sim 2.3 \times 10^{-18}$~Hz:
+\begin{equation}
+  \frac{\delta v_\mathrm{GW}}{c}
+    \sim 0.35 \times \frac{(2.3 \times 10^{-15})^2}{100}
+    \sim 2 \times 10^{-32}\,.
+  \label{eq:5-24}
+\end{equation}
+
+For pulsar timing array frequencies ($f \sim 10^{-8}$~Hz):
+\begin{equation}
+  \frac{\delta v_\mathrm{GW}}{c}
+    \sim 0.35 \times \frac{(2.3 \times 10^{-10})^2}{100}
+    \sim 2 \times 10^{-22}\,.
+  \label{eq:5-25}
+\end{equation}
+
+Both are far below current sensitivities ($\delta v/c < 10^{-15}$ from GW170817~\cite{ch5:GW170817} at $f \sim 100$~Hz). The signal scales as $f^{-2}$, favoring low-frequency detection.
+
+\textbf{Prediction:} GW dispersion at the level of $10^{-32}$ at mHz (LISA) to $10^{-22}$ at nHz (PTA). Undetectable with current technology but in principle accessible to future space-based GW detectors at extreme precision.
+
+%% ====================================================================
+\section{Comparison to Other Dark Energy Models}
+\label{sec:5-comparison}
+
+\subsection{Sound Speed Landscape}
+\label{sec:5-landscape}
+
+We compare $c_s$ predictions across the major dark energy model classes:
+
+\begin{table*}[ht]
+\centering
+\caption{Sound speed across dark energy model classes.}
+\label{tab:5-3}
+\begin{tabular}{llll}
+\toprule
+Model & $c_s^2$ & Derivation & Free parameter? \\
+\midrule
+$\Lambda$CDM & N/A & No DOF & N/A \\
+Quintessence ($V(\phi)$) & 1 & Canonical kinetic & No (fixed) \\
+k-essence (DBI) & $1 - 2X/T$ & DBI kinetics & Yes ($T$) \\
+k-essence (power-law) & $s/(2s-1)$ & $P = X^s$ & Yes ($s$) \\
+Phantom ($w < -1$) & 1 & Wrong-sign kinetic & No (fixed) \\
+Clustering DE & $\ll 1$ & Phenomenological & Yes \\
+$f(R)$ gravity & $1$ & Scalaron (canonical) & No \\
+\textbf{Meridian} & $\mathbf{\sim 216}$ & \textbf{NCG Gauss--Bonnet} & \textbf{No ($\epsilon_1$ fixed)} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The Meridian prediction occupies a unique region:
+\begin{itemize}
+\item Not infinite (unlike the pure cuscuton)
+\item Not unity (unlike quintessence, phantom, and $f(R)$)
+\item Not subluminal (unlike k-essence and clustering DE)
+\item Not a free parameter (unlike phenomenological models)
+\end{itemize}
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig8_sound_speed.pdf}
+\caption{Dark energy sound speed predictions across model classes. Meridian ($c_s = 14.7c$,
+bottom) occupies a unique regime: superluminal but finite, derived from first principles
+rather than free. The pure cuscuton ($c_s \to \infty$, dark blue) is the uncorrected limit.
+``Free'' indicates $c_s$ is a model parameter; ``Tuned'' indicates fine-tuning required;
+``Derived'' indicates the value follows from the spectral action.}
+\label{fig:8-sound-speed}
+\end{figure*}
+
+\subsection{Comparison with Other Superluminal Dark Energy Models}
+\label{sec:5-superluminal-comparison}
+
+Several models in the literature produce superluminal dark energy sound speeds. We compare them to our prediction:
+
+\paragraph{k-essence with DBI-type kinetics.}
+DBI k-essence~\cite{ch5:ArmendarizPicon2000} has $c_s^2 = 1 - 2Xf(\phi)$, which can formally exceed unity for certain field configurations. However, these regimes are typically excluded by the Adams et al.~\cite{ch5:Adams2006} positivity bounds, since DBI models have propagating degrees of freedom with a well-defined S-matrix. The DBI superluminal regime is also a tuned outcome (requiring specific $f(\phi)$ choices), not a derived prediction.
+
+\paragraph{Cuscuton cosmology (exact).}
+The pure cuscuton~\cite{ch5:Afshordi2007} has $c_s = \infty$---formally superluminal but physically distinct: zero propagating DOF means no sound wave exists. Our model is the \emph{first-order correction} to this limit, producing a finite and computable~$c_s$.
+
+\paragraph{Extended cuscuton / Cuscuton gravity.}
+Iyonaga, Kobayashi, and Takahashi~\cite{ch5:Iyonaga2018} and Gao~\cite{ch5:Gao2014} constructed extended cuscuton theories within the Horndeski class that preserve the zero-DOF property while modifying gravitational dynamics. These frameworks share our starting point (cuscuton kinetics) but do not include the NCG Gauss--Bonnet correction that determines $\epsilon_1$---they leave the correction structure unspecified. Our prediction $c_s \sim 15c$ is the specific realization within a UV-motivated completion.
+
+\paragraph{Galileon models.}
+Certain cubic and quartic Galileon theories~\cite{ch5:Nicolis2009} admit superluminal propagation with $c_s > c$. Nicolis, Rattazzi, and Trincherini showed that the Galileon symmetry permits superluminal phase velocities while maintaining causal propagation within the Vainshtein radius. However, quartic and quintic Galileon models are excluded by GW170817 ($\alpha_T \neq 0$)~\cite{ch5:GW170817}, and the cubic Galileon predicts $c_s$ of order a few times~$c$, not $c_s \sim 15c$, with the value depending on free parameters rather than being derived.
+
+\paragraph{Ghost condensate.}
+Arkani-Hamed et al.~\cite{ch5:ArkaniHamed2004} showed that the ghost condensate admits superluminal signal propagation at low energies. However, the ghost condensate has $w = -1$ exactly (no deviation from $\Lambda$CDM in the equation of state), and the superluminal speed is an IR artifact of the effective theory with unknown UV behavior.
+
+\medskip
+
+The key distinction of our prediction is that $c_s \in [12c,\; 15c]$ is \emph{derived} from computable spectral-geometric quantities ($\epsilon_1$ from the Seeley--DeWitt expansion on the warped orbifold), not a free parameter or a tuned choice. No other model in the literature produces a specific numerical value for the superluminal sound speed from first principles.
+
+\subsection{Implications for Scalar Response Channels}
+\label{sec:5-engineering}
+
+\noindent\textbf{Caveat.} The following discussion is purely speculative and included for completeness; the coupling suppression of $\sim 10^{-77}$ places this channel far beyond any foreseeable measurement capability.
+
+\medskip
+
+The superluminal sound speed $c_s \sim 15c$ defines a scalar response channel whose bandwidth, dispersion relation, and coupling strength are computable from the parameters derived in this chapter ($c_s$, $k_J$, $Q_s = \epsilon_1$). Laboratory applications of this channel are speculative at present---the coupling to laboratory-scale electromagnetic fields is suppressed by factors of order $\rho_{\mathrm{EM}}/M_{\mathrm{Pl}}^4 \sim 10^{-77}$ (Chapter~\ref{ch:ncg}, Section~4.6)---but the parameters are fixed by the framework rather than adjustable. The same $\epsilon_1$ that determines $w_0(\zeta_0)$ and $c_s \sim 15c$ also determines the scalar channel's bandwidth and coupling strength.
+
+\subsection{The Discriminating Power of \texorpdfstring{$c_s$}{cs}}
+\label{sec:5-discriminating}
+
+The sound speed is particularly valuable as a discriminant because it probes the \emph{second derivative} of $P(X)$, whereas $w$ probes only the \emph{first derivative}. Models that are degenerate in $w$ can be distinguished by $c_s$.
+
+For example, for small $\zeta_0$ our model predicts $w_0 \approx -1$, nearly identical to $\Lambda$CDM. Any observation of $w$ alone cannot distinguish the two. But the sound speed is qualitatively different: $\Lambda$CDM has no perturbation DOF, while our model has $c_s \sim 15c$.
+
+The combination $\{w_0(\zeta_0),\; c_s \approx 15c\}$ is a unique fingerprint that cannot be mimicked by any model in Table~\ref{tab:5-3}.
+
+%% ====================================================================
+\section{Detection Prospects}
+\label{sec:5-detection}
+
+\subsection{Direct \texorpdfstring{$c_s$}{cs} Measurement Requirements}
+\label{sec:5-direct}
+
+A direct measurement of $c_s^2 \sim 216$ requires detecting the suppression of dark energy perturbations relative to the $c_s = 0$ case. The perturbation ratio~\eqref{eq:5-22} gives:
+\begin{equation}
+  \frac{\delta_\mathrm{DE}}{\delta_m}
+    \sim \frac{1+w}{\bigl(c_s\,k/(aH)\bigr)^2}
+    \sim \frac{0.005}{\bigl(10\,k/(aH)\bigr)^2}\,.
+  \label{eq:5-26}
+\end{equation}
+
+For the observable range $k \sim 0.01$--$0.1\;h/\mathrm{Mpc}$ (BAO to cluster scales):
+\begin{equation}
+  \frac{\delta_\mathrm{DE}}{\delta_m} \sim 10^{-7}\;\text{to}\;10^{-9}\,.
+  \label{eq:5-27}
+\end{equation}
+
+This is far below the cosmic variance limit for any galaxy survey. \textbf{Direct detection of dark energy perturbations at $c_s = 15c$ is not feasible with any planned experiment.}
+
+\subsection{Indirect Constraints}
+\label{sec:5-indirect}
+
+Current constraints on $c_s$ come from:
+
+\begin{enumerate}
+\item \textbf{CMB ISW:} Consistent with $c_s \geq 1$ at 95\% CL~\cite{ch5:Hanson2013}. Our prediction ($c_s = 15c$) is compatible.
+\item \textbf{Galaxy clustering:} Consistent with $c_s \geq 0.1c$ at 95\% CL~\cite{ch5:Alam2017}. Our prediction is compatible.
+\item \textbf{Cluster abundance:} Consistent with $c_s \geq 0.01c$ at 95\% CL~\cite{ch5:Planck2018}. Our prediction is compatible.
+\end{enumerate}
+
+None of these constrain the $c_s > 1$ regime. The current observational situation is that $c_s \gg 1$ and $c_s = 1$ are both consistent with all data.
+
+\subsection{Future Discriminating Observations}
+\label{sec:5-future}
+
+The most promising channels for testing $c_s \sim 15c$ are:
+
+\paragraph{Channel 1: Euclid + Rubin combined survey.}
+
+The combination of Euclid spectroscopic galaxy clustering and Rubin photometric weak lensing can constrain the effective dark energy perturbation parameter $c_\mathrm{eff}^2 = c_s^2\,(1+w)$:
+\begin{equation}
+  \sigma(c_\mathrm{eff}^2) \sim 5 \qquad\text{(Euclid + Rubin Y10)}~\cite{ch5:EuclidForecast}\,.
+  \label{eq:5-28}
+\end{equation}
+The prediction depends on the benchmark. For the JC benchmark ($w_0 \approx -0.865$, $1+w_0 \approx 0.135$): $c_\mathrm{eff}^2 \approx 216 \times 0.135 \approx 29$, giving detection at ${\sim}4.4\,\sigma$---a significant signal. For the CMB benchmark ($w_0 \approx -0.996$, $1+w_0 \approx 0.004$): $c_\mathrm{eff}^2 \approx 216 \times 0.004 \approx 0.9$, giving detection at ${\sim}0.1\,\sigma$---insufficient. The JC benchmark thus predicts a detectable signal in $c_\mathrm{eff}^2$, while the CMB benchmark does not.
+
+\paragraph{Channel 2: 21cm intensity mapping at $z > 2$.}
+
+SKA-era 21cm surveys probe the matter power spectrum at ultra-large scales approaching the Jeans length. For $c_s \approx 12$--$15c$:
+\begin{equation}
+  k_J = \frac{aH}{c_s} \sim \frac{H_0}{15c} \sim 1.5 \times 10^{-5}\;h/\mathrm{Mpc}\,.
+  \label{eq:5-29}
+\end{equation}
+This corresponds to angular scales of ${\sim}30$ degrees at $z = 2$. The 21cm power spectrum would show a characteristic suppression at $k < k_J$ relative to the $c_s = \infty$ prediction. However, the suppression is at the $1\%$ level ($(1+w)/c_s^2 \sim 7 \times 10^{-5}$), likely buried by foreground contamination.
+
+\paragraph{Channel 3: Multi-messenger GW cosmology.}
+
+Future space-based GW detectors (LISA~\cite{ch5:LISA}, DECIGO~\cite{ch5:DECIGO}, BBO~\cite{ch5:BBO}) combined with EM counterpart identification can constrain the dark energy medium's dispersive effect on GW propagation. The signal~\eqref{eq:5-24} is $10^{-32}$ at mHz---well beyond current technology but potentially accessible to post-LISA missions.
+
+\paragraph{Channel 4: Model-independent reconstruction.}
+
+The most realistic path is \emph{not} to measure $c_s$ directly, but to establish that dark energy perturbations are undetectably small---consistent with $c_s \gg 1$---while simultaneously measuring $w_0 \neq -1$. The combination $\{w_0 \neq -1,\;\text{no DE clustering}\}$ would be powerful circumstantial evidence for a superluminal sound speed.
+
+\paragraph{Channel 5: LISA stochastic gravitational wave background from the RS phase transition.}
+
+The Randall--Sundrum stabilisation phase transition---during which the radion settles at its equilibrium value $y_c$ (Section~\ref{app:radion})---produces a stochastic gravitational wave background in the millihertz band~\cite{ch5:Caprini2016,ch5:Caprini2020}. This signal is \emph{independent} of the dark energy sound speed: it probes the geometry of the extra dimension directly.
+
+\noindent\fbox{\parbox{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}{%
+\textbf{Conditional prediction.} All LISA SNR and detection-probability estimates below assume a \emph{first-order} RS stabilisation transition, following the standard Creminelli--Nardini framework~\cite{ch5:Caprini2016}. A dedicated bounce-action computation for the cuscuton stabilisation mechanism has not been performed. If the transition is a smooth crossover, the stochastic GW background is absent and Channel~5 yields a null result. See Appendix~\ref{app:first-order-debate} for discussion.%
+}}
+
+Two regimes were computed, corresponding to moderate and strong supercooling of the phase transition:
+
+\begin{table*}[ht]
+\centering
+\caption{LISA gravitational wave predictions from the RS stabilisation phase transition (conditional on first-order transition; see Appendix~\ref{app:first-order-debate}). Sound waves dominate the signal ($51\times$ over bubble collisions). SNR computed with the LISA SciRD noise model including galactic foreground; detection probabilities from Monte Carlo over 1000 parameter samples.}
+\label{tab:5-LISA}
+\small
+\begin{tabular}{lcc}
+\toprule
+Parameter & Regime~1 (moderate) & Regime~2 (strong) \\
+\midrule
+$T_*$ (nucleation temperature) & 667~GeV & 190~GeV \\
+$\alpha$ (PT strength) & 0.09 & 1.0 \\
+$\beta/H_*$ (inverse duration) & 50 & 50 \\
+$f_\mathrm{peak}$ & 8.3~mHz & 1.9~mHz \\
+$h^2\,\Omega_\mathrm{GW}^\mathrm{peak}$ & $2.9 \times 10^{-13}$ & $6.6 \times 10^{-12}$ \\
+SNR (3~yr, with foreground) & 18.1 & 642.5 \\
+Detection probability (MC) & 65\% & 99\% \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The spectral shape follows a broken power law characteristic of sound-wave--dominated sources~\cite{ch5:Hindmarsh2015}: $\Omega_\mathrm{GW}(f) \propto f^3$ below the peak and $\Omega_\mathrm{GW}(f) \propto f^{-4}$ above it. The cuscuton constraint on the Goldberger--Wise potential favours Regime~1 (moderate supercooling); Regime~2 represents the boundary case where stabilisation is marginally delayed.
+
+\textbf{Note:} this signal is \emph{not} detectable by the Einstein Telescope ($f \sim 1$--$10^4$~Hz), DECIGO ($f \sim 0.1$--$10$~Hz), or pulsar timing arrays ($f \sim \mathrm{nHz}$). LISA ($f \sim 0.1$--$100$~mHz, launch ${\sim}2037$) is the unique instrument. The peak frequency is set by $T_* \sim \mathcal{O}(100\;\mathrm{GeV})$, placing it firmly in the millihertz band. Detection or non-detection by LISA constrains the RS geometry independently of dark energy measurements.
+
+\subsection{Summary of Detection Feasibility}
+\label{sec:5-detection-summary}
+
+\begin{table*}[ht]
+\centering
+\caption{Detection prospects for $c_s \sim 15c$ and the RS phase transition.}
+\label{tab:5-4}
+\small
+\begin{tabular}{@{}llllc@{}}
+\toprule
+Channel & Observable & Signal & Instrument & Feasible? \\
+\midrule
+DE clustering & $\delta_\mathrm{DE}/\delta_m$ & $10^{-7}$--$10^{-9}$ & Far future & No \\
+ISW cross-corr.\ & Null dev.\ & $\Lambda$CDM-like & Euclid/Rubin & Null test \\
+GW dispersion & $\delta v/c$ & $10^{-32}$ & Post-LISA & No \\
+21cm ultra-large & $P(k)$ supp.\ & ${\sim}1\%$ & SKA Ph.\ 2+ & Unlikely \\
+$w_0$ + no clust.\ & Combined & $\sigma(w_0)\!\sim\!0.005$ & Euclid+Rubin+Roman & \textbf{Yes} \\
+RS phase trans.\ & Stoch.\ GW bkg.\ & SNR $18$--$643$ & LISA (${\sim}2037$) & \textbf{Yes (65--99\%)}$^*$ \\
+\bottomrule
+\multicolumn{5}{@{}l}{\footnotesize $^*$Conditional on first-order transition; see Appendix~\ref{app:first-order-debate}.}
+\end{tabular}
+\end{table*}
+
+The most realistic detection paths are: (i)~\emph{indirect}, by establishing $w_0 \neq -1$ at high significance while confirming the absence of dark energy clustering, then constraining the allowed $c_s$ range from below; and (ii)~\emph{direct}, via the stochastic gravitational wave background from the RS phase transition detectable by LISA with 65--99\% probability (conditional on the RS stabilisation transition being first-order; see Appendix~\ref{app:first-order-debate}). The wide range reflects genuine uncertainty in the RS phase-transition parameters ($\alpha$, $\beta/H$); the prediction is that LISA \emph{may} detect a signal if the transition is first-order, with probability depending sensitively on the transition strength.
+
+%% ====================================================================
+\section{Conclusions}
+\label{sec:5-conclusions}
+
+We have derived the sound speed of dark energy perturbations from first principles within five-dimensional self-tuning cosmology:
+\begin{equation}
+  \boxed{c_s^2 = C_q/\epsilon_1\,,\qquad c_s \in [12c,\; 15c]\,,}
+  \label{eq:5-30}
+\end{equation}
+
+This prediction has three notable features:
+
+\begin{enumerate}
+\item \textbf{The sound speed is structurally determined.} The value $c_s \sim 1/\sqrt{\epsilon_1}$ is determined by the NCG Gauss--Bonnet coupling, which is a computable spectral-geometric quantity (Chapter~\ref{ch:ncg}, Theorem~1). It does not depend on $\zeta_0$ and is therefore fixed by the framework.
+
+\item \textbf{It occupies a unique phenomenological regime.} No other dark energy model predicts $c_s^2 \sim 216$ from first principles. The value is qualitatively distinct from $\Lambda$CDM (no DOF), quintessence ($c_s = c$), and clustering DE ($c_s \ll c$).
+
+\item \textbf{It is falsifiable.} Any detection of dark energy clustering at scales below ${\sim}65{,}000$~Mpc would exclude $c_s > 1$ and hence the Meridian framework. Conversely, establishing $w_0 \neq -1$ with no dark energy clustering would support the prediction.
+\end{enumerate}
+
+The combination of predictions from Chapters~\ref{ch:foundation}--\ref{ch:sound-speed}---$w_0(\zeta_0)$ (parametric curve), $w_a \sim +0.01$ (from the cuscuton structure; Chapter~\ref{ch:foundation}), $c_s \sim 15c$, $\zeta_0$ (free, from brane UV physics), and no phantom crossing---forms a unique observational fingerprint for the five-dimensional self-tuning framework. Each prediction is individually testable; together they constitute a comprehensive falsification program for the framework as a whole. The RS stabilisation phase transition provides an independent detection channel: a stochastic gravitational wave background at $1$--$10$~mHz detectable by LISA with $65$--$99\%$ probability (Table~\ref{tab:5-LISA}), probing the extra-dimensional geometry directly and independently of the dark energy equation of state.
+
+%% ====================================================================
+\section*{Acknowledgments}
+
+This work received no external funding.
+
+%% ====================================================================
+%% Bibliography moved to bibliography.tex (end-of-document)

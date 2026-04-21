@@ -24,7 +24,7 @@ This volume treats the framework's engagement with theological questions proper 
 
 **What this volume does not cover** (belongs in other volumes):
 
-- Formal category-theoretic apparatus — *The Coherence Principle* / Formal Object Companion
+- Formal category-theoretic apparatus — *The Coherence Principle* / *Coherent Structure*
 - Philosophy-of-mind engagement with the tradition — Corpus Perspectival volume
 - Specific psychological dynamics of religious experience — Coherent Mind volume
 - Personal identity over time — Continuity volume

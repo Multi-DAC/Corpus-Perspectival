@@ -313,8 +313,15 @@ $\gamma$ & Growth index; $f \approx \Omega_m(z)^\gamma$ \\
 \end{longtable}
 
 % --- Main matter ---
-\twocolumn  % Switch to two-column for main text
 \mainmatter
+
+% --- Chapter 0: The Basin We Inhabit (single-column overview) ---
+\setcounter{chapter}{-1}
+\input{chapter0_basin}
+
+% --- Switch to two-column for the technical chapters ---
+\cleardoublepage
+\twocolumn
 
 % --- Chapter 1: Foundation (Paper I) ---
 \input{chapter1_foundation}

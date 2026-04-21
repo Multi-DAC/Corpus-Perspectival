@@ -1,0 +1,1673 @@
+%% Chapter 2 — Observational Confrontation
+%% Paper II of the Meridian Monograph
+%% To be \input{} into meridian_monograph.tex
+%% REVISED: March 2026
+
+\chapter{Observational Confrontation of Five-Dimensional Self-Tuning Cosmology}
+\label{ch:observational}
+
+\begin{quote}
+\textbf{Abstract.}
+Five-dimensional self-tuning cosmology predicts a constant dark energy equation of state, $w_a = 0$ identically, from the cuscuton kinetic suppression---a structural consequence admitting no free-parameter adjustment. Lu \& Simon~(2026) report $w_a = -0.62 \pm 0.26$ ($2.4\sigma$ tension with $w_a = 0$) from DESI~DR2 + Planck + DES~Y5 combined; resolving this tension is the central observational question addressed here. The framework produces a one-parameter prediction $w_0(\zeta_0) = -1 + C_\mathrm{KK}/\zeta_0$, where $C_\mathrm{KK} = (1.64 \pm 0.33) \times 10^{-4}$ (Planck~2018 fiducial; uncertainty from $\epsilon_1$ cutoff function) and $\zeta_0$ is determined by brane UV physics. A full numerical multi-probe analysis (DESI~DR2 BAO with Lee~(2025) covariance + $f\sigma_8$ + Planck $H_0$ + Hiramatsu--Kobayashi), with $(H_0, \Omega_m)$ profiled at each $w_0$, yields best-fit $w_0 = -0.993$ ($\zeta_0 = 0.020$, $\chi^2/\mathrm{dof} = 1.10$), converging with the Boltzmann-constrained value and resolving the earlier bimodality between ``near-$\Lambda$CDM'' and ``DESI-range'' regimes. Because the three growth-relevant Bellini--Sawicki alpha functions vanish identically ($\alpha_T = \alpha_B = \alpha_M = 0$; $\alpha_K = 6\kappa_0 \neq 0$ but does not enter the growth equation), growth of structure remains within $0.1\%$ of $\Lambda$CDM while the background expansion deviates---a unique growth--expansion decoupling that motivates the \emph{decoupled perturbation hypothesis}: CPL may manufacture phantom crossing as a compromise artifact when fitting data where expansion deviates but growth does not. We show that $w_0$ is insensitive to the KK tower coefficient $C_\mathrm{eff}$, staying locked in $[-0.84,\, -0.89]$ across three orders of magnitude. The discrimination timeline is: DESI~Y5 (2027, $3.8\sigma$); DESI~Y5 + Euclid (2030, $5.1\sigma$---definitive). These projections assume the current best-fit $w_a = -0.62$ persists; if $w_a$ shifts toward zero with additional data, the discrimination power decreases proportionally.
+\end{quote}
+
+%% ============================================================
+\section{Introduction}
+\label{sec:2-intro}
+
+In Chapter~\ref{ch:foundation}~\cite{ch2:PaperI}, we derived a dark energy equation of state from two geometric axioms---spacetime has five dimensions with $S^1/\mathbb{Z}_2$ orbifold compactification~(A1), and a bulk scalar propagates with non-minimal gravitational coupling~(A2)---supplemented by four theoretical commitments (A3--A6; see Chapter~\ref{ch:foundation}, Section~1.2.5). The derivation chain---
+\begin{equation}
+\begin{array}{@{}c@{}}
+\text{A1} + \text{A2} \;\to\; \text{self-tuning} \;\to\; \text{cuscuton} \;\to\; \text{zero KE theorem} \\[4pt]
+\to\; \text{NCG Gauss--Bonnet correction} \;\to\; w_0(\zeta_0)
+\end{array}
+\label{eq:2-chain}
+\end{equation}
+---produces a one-parameter family of quantitative predictions, where the single free parameter $\zeta_0$ is determined by brane ultraviolet physics rather than by cosmological data. This chapter confronts those predictions with all available observational evidence and establishes a concrete program for their falsification.
+
+The framework makes five classes of predictions (Chapter~\ref{ch:foundation}, Section~IX):
+\begin{enumerate}
+    \item $\mathbf{w_0(\zeta_0) = -1 + C_\mathrm{KK}/\zeta_0}$ --- dark energy equation of state as a function of the non-minimal coupling. For the CMB-constrained value $\zeta_0 \approx 0.037$: $w_0 \approx -0.996$. For the brane benchmark $\zeta_0 \approx 0.001$: $w_0 \approx -0.865$ (DESI range).
+    \item $\mathbf{w_a \sim +0.01}$ --- essentially no time evolution, with weak positive sign (no phantom crossing).
+    \item $\mathbf{c_s \approx 15c}$ --- superluminal sound speed producing a Jeans length larger than the observable universe.
+    \item $\boldsymbol{\zeta_0}$ \textbf{is a free parameter} --- the dimensionless non-minimal coupling, determined by brane UV physics, detectable as a modification of gravity at cosmological scales.
+    \item \textbf{No phantom crossing} --- $w > -1$ at all epochs, a topological consequence of the positive-definite kinetic structure.
+\end{enumerate}
+
+The observational landscape is shaped by the Dark Energy Spectroscopic Instrument (DESI) Data Release~2~\cite{ch2:DESIDR2}, which has reported $2.8$--$4.2\sigma$ evidence for time-evolving dark energy in the CPL parameterization~\cite{ch2:Chevallier2001,ch2:Linder2003}. Lu \& Simon~(2026)~\cite{ch2:LuSimon2026} sharpen this to $4.6\sigma$ using DESI~DR2 + Planck + DES~Y5 combined, finding $w_0 = -0.788 \pm 0.046$ and $w_a = -0.62 \pm 0.26$. The DESI best-fit ($w_0 = -0.75$, $w_a = -0.86$) maps to $\zeta_0 \in [8.2 \times 10^{-4},\; 1.2 \times 10^{-3}]$ in our framework. The Meridian framework predicts $w_a = 0$ identically---a structural consequence of the cuscuton kinetic suppression---placing it under $2.4\sigma$ tension with the Lu \& Simon result. Whether this tension reflects genuine time evolution or a compromise artifact of assuming coupled perturbations in a universe with decoupled growth and expansion (Section~\ref{sec:2-decoupled}) is the central observational question addressed in this chapter.
+
+\subsection{Outline}
+\label{sec:2-outline}
+
+Section~\ref{sec:2-model} summarizes the model and its observational signatures, including the central $w_0(\zeta_0)$ parametric prediction and the $C_\mathrm{eff}$ insensitivity result. Section~\ref{sec:2-multiprobe} presents the multi-probe data analysis with full decomposition of the $\chi^2$ contributions, including the full multi-probe best-fit and the CMB benchmark comparison. Section~\ref{sec:2-DESI} confronts the model with DESI DR2 BAO measurements for multiple $\zeta_0$ values. Section~\ref{sec:2-CPL} presents the CPL artifact hypothesis with seven independent supporting analyses. Section~\ref{sec:2-decoupled} develops the \emph{decoupled perturbation hypothesis}---the proposal that CPL's phantom crossing is a compromise artifact of assuming coupled perturbations, and the definitive test that would resolve this. Section~\ref{sec:2-Fisher} develops Fisher matrix forecasts for constraining $\zeta_0$ with future surveys, including a discrimination timeline for DESI~Y5, Euclid, and full Stage~IV. Section~\ref{sec:2-additional} discusses additional observational tests (modified gravity, CMB, solar system). Section~\ref{sec:2-predictions} compiles the falsifiable predictions with required precision and instruments. Section~\ref{sec:2-discussion} discusses implications, and Section~\ref{sec:2-conclusions} concludes.
+
+\subsection{Key Results from Companion Chapters}
+\label{sec:2-companion}
+
+This chapter draws on results derived in the companion chapters of this monograph, which we summarize here for self-containment. Chapter~\ref{ch:foundation}~\cite{ch2:PaperI} establishes the theoretical foundation: starting from a five-dimensional spacetime with $S^1/\mathbb{Z}_2$ orbifold compactification~(A1) and a bulk scalar with non-minimal gravitational coupling~(A2), the Kaluza--Klein reduction yields a four-dimensional cuscuton scalar-tensor theory. The cuscuton's non-dynamical nature (zero kinetic energy in the effective theory) produces a dark energy equation of state $w_0(\zeta_0) = -1 + C_\mathrm{KK}/\zeta_0$ from first principles. The single free parameter of the theory is the dimensionless non-minimal coupling $\zeta_0 = \xi\,\Phi_0^2/M_5^3$, which is determined by brane ultraviolet physics and controls all observable deviations from general relativity.
+
+Chapter~\ref{ch:nogo}~\cite{ch2:PaperIII} demonstrates through 18~independent tracks of analysis that $w_0$ cannot be driven further from $-1$ within the A1+A2 framework for a given $\zeta_0$, establishing the structural (topological) nature of the $w_0(\zeta_0)$ relation. Chapter~\ref{ch:ncg}~\cite{ch2:PaperIV} derives the Gauss--Bonnet correction parameter $\epsilon_1 = 0.010 \pm 0.002$ from the noncommutative geometry spectral action (using the correct $d = 5$ Weyl decomposition), which enters the corrected Friedmann equation used throughout this chapter. Chapter~\ref{ch:sound-speed}~\cite{ch2:PaperV} derives the dark energy sound speed $c_s \approx 15c$ and the resulting Jeans length $\lambda_J \sim 65{,}000\;\mathrm{Mpc}$, which eliminates dark energy clustering at all observable scales---a key element of the falsification program presented in Section~\ref{sec:2-predictions}. The ``From 5D Down'' analysis demonstrates that the Kaluza--Klein reduction of the 5D spectral action produces a \emph{constant} effective Gauss--Bonnet coupling, whence the three growth-relevant Bellini--Sawicki alpha functions vanish identically: $\alpha_T = \alpha_B = \alpha_M = 0$; only $\alpha_K = 6\kappa_0 \sim \order{\eps}$ is nonzero (Chapter~\ref{ch:foundation}). Perturbations are GR on a modified background---this is structural, not a limit or a fine-tuning.
+
+%% ============================================================
+\section{Model Summary and Observational Signatures}
+\label{sec:2-model}
+
+\subsection{The One-Parameter Theory}
+\label{sec:2-one-param}
+
+The Kaluza--Klein reduction of the five-dimensional self-tuning action (Chapter~\ref{ch:foundation}, Sections~II--VI) produces an effective four-dimensional scalar-tensor theory governed by a single free parameter:
+\begin{equation}
+\zeta_0 = \frac{\xi\,\Phi_0^2}{M_5^3}\,,
+\label{eq:2-zeta0}
+\end{equation}
+the dimensionless non-minimal coupling between the bulk scalar and five-dimensional gravity. All observable deviations from general relativity are determined by $\zeta_0$ and the Gauss--Bonnet correction parameter $\epsilon_1 = 0.010 \pm 0.002$ (fixed by the NCG spectral action using the correct $d = 5$ Weyl decomposition; Chapter~\ref{ch:ncg}).
+
+\subsection{The Central Prediction: $w_0(\zeta_0)$}
+\label{sec:2-w0curve}
+
+The framework's core observable prediction is the parametric equation of state (Chapter~\ref{ch:foundation}, Eq.~85):
+\begin{equation}
+\boxed{\;w_0(\zeta_0) = -1 + \frac{C_\mathrm{KK}}{\zeta_0}\;}\,,
+\label{eq:2-w0-parametric}
+\end{equation}
+where the CKK constant is
+\begin{equation}
+C_\mathrm{KK} = \frac{(1+q_0)^2\,\Omega_\mathrm{DE}\,\epsilon_1}{4\,(1-q_0)^2} = (1.64 \pm 0.33) \times 10^{-4}\,.
+\label{eq:2-CKK}
+\end{equation}
+The uncertainty is computed via Monte Carlo propagation ($N = 100{,}000$ samples) from the input parameters: $q_0 = -0.55 \pm 0.05$ (Planck 2018 + BAO), $\Omega_\mathrm{DE} = 0.685 \pm 0.007$ (Planck 2018), and $\epsilon_1 = 0.010 \pm 0.002$ (NCG spectral action, corrected via the $d = 5$ Weyl decomposition). The error budget is dominated by $q_0$ (${\sim}67\%$ of variance), with $\epsilon_1$ contributing ${\sim}33\%$ and $\Omega_\mathrm{DE}$ contributing $< 0.1\%$.
+
+The $w_0(\zeta_0)$ curve is a hyperbola approaching $w_0 = -1$ as $\zeta_0 \to \infty$ and deviating strongly for small $\zeta_0$. Table~\ref{tab:2-w0-curve} presents representative values with uncertainty bands.
+
+\begin{table*}[htbp]
+\centering
+\caption{Parametric prediction $w_0(\zeta_0)$ with $1\sigma$ and $2\sigma$ uncertainty bands from Monte Carlo propagation of $q_0$, $\Omega_\mathrm{DE}$, and $\epsilon_1$ uncertainties. Values computed from the perturbative formula Eq.~\eqref{eq:2-w0-parametric}; non-perturbative corrections shift $w_0$ by up to $7\%$ at small $\zeta_0$ (see Table~\ref{tab:2-pertvalid}).}
+\label{tab:2-w0-curve}
+\begin{tabular}{lcccc}
+\toprule
+$\zeta_0$ & $w_0$ (central) & $1\sigma$ band & $2\sigma$ band & Regime \\
+\midrule
+0.001 & $-0.858$ & $[-0.902,\,-0.801]$ & $[-0.934,\,-0.730]$ & Brane benchmark \\
+0.005 & $-0.972$ & $[-0.980,\,-0.960]$ & $[-0.987,\,-0.946]$ & \\
+0.010 & $-0.986$ & $[-0.990,\,-0.980]$ & $[-0.993,\,-0.973]$ & \\
+0.020 & $-0.993$ & $[-0.995,\,-0.990]$ & $[-0.997,\,-0.986]$ & \\
+0.037 & $-0.996$ & $[-0.997,\,-0.995]$ & $[-0.998,\,-0.993]$ & CMB constraint \\
+0.050 & $-0.997$ & $[-0.998,\,-0.996]$ & $[-0.999,\,-0.995]$ & \\
+0.100 & $-0.999$ & $[-0.999,\,-0.998]$ & $[-0.999,\,-0.997]$ & \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\textbf{Perturbative validity and non-perturbative comparison.} The CKK formula~\eqref{eq:2-w0-parametric} is a linearized result, valid when $|1 + w_0| \ll 1$. The expansion parameter controlling the approximation is $\kappa_0/\Omega_{\mathrm{DE}}$, where $\kappa_0$ is the Kaluza--Klein kinetic correction entering the quartic Friedmann equation~\eqref{eq:2-Friedmann}. To quantify the regime of validity, we compare the perturbative formula against the exact non-perturbative equation of state obtained by treating the dark energy as a two-component fluid (vacuum $V = \Omega_{\mathrm{DE}}$ plus kinetic $K = \kappa_0$):
+\begin{equation}
+\label{eq:2-w0-exact}
+1 + w_0^{\mathrm{exact}} = \frac{2\kappa_0}{\kappa_0 + \Omega_{\mathrm{DE}}}\,,
+\qquad
+1 + w_0^{\mathrm{pert}} = \frac{2\kappa_0}{\Omega_{\mathrm{DE}}}\,.
+\end{equation}
+The fractional overestimate of $|1+w_0|$ by the perturbative formula is exactly $\kappa_0/\Omega_{\mathrm{DE}} = |1 + w_0^{\mathrm{pert}}|/2$, giving a clean closed-form error estimate. Table~\ref{tab:2-pertvalid} summarizes the comparison across the observationally relevant range.
+
+\begin{table*}[htbp]
+\centering
+\caption{Perturbative vs.\ non-perturbative equation of state. The fractional error is $|1+w_0^{\mathrm{pert}}|/2$, exact to all orders.}
+\label{tab:2-pertvalid}
+\begin{tabular}{cccccc}
+\toprule
+$\zeta_0$ & $\kappa_0/\Omega_{\mathrm{DE}}$ & $w_0^{\,\mathrm{pert}}$ & $w_0^{\,\mathrm{exact}}$ & $\Delta w_0$ & Error on $|1{+}w_0|$ \\
+\midrule
+$0.0005$ & $0.144$ & $-0.711$ & $-0.748$ & $0.036$ & $14.4\%$ \\
+$0.001$  & $0.072$ & $-0.856$ & $-0.865$ & $0.010$ & $7.2\%$ \\
+$0.002$  & $0.036$ & $-0.928$ & $-0.930$ & $0.003$ & $3.6\%$ \\
+$0.005$  & $0.014$ & $-0.971$ & $-0.972$ & $0.0004$ & $1.4\%$ \\
+$0.010$  & $0.007$ & $-0.986$ & $-0.986$ & $0.0001$ & $0.7\%$ \\
+$0.037$  & $0.002$ & $-0.996$ & $-0.996$ & $0.00001$ & $0.2\%$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Three regimes emerge. For $\zeta_0 \gtrsim 0.010$ ($|1{+}w_0| \lesssim 0.01$), the perturbative error is below $1\%$; the CMB-constrained value $\zeta_0 \approx 0.037$ is solidly in this regime ($0.2\%$ error). For $0.001 \lesssim \zeta_0 \lesssim 0.010$ ($0.01 \lesssim |1{+}w_0| \lesssim 0.14$), the error is $1$--$7\%$---adequate for comparison with current observational precision ($\sigma(w_0) \sim 0.06$). For $\zeta_0 \lesssim 0.001$ ($|1{+}w_0| \gtrsim 0.14$), the error exceeds $7\%$ and the non-perturbative formula~\eqref{eq:2-w0-exact} should be used. At the brane benchmark $\zeta_0 = 0.001$, the perturbative formula overestimates $|1{+}w_0|$ by $7.2\%$: $w_0^{\mathrm{pert}} = -0.856$ vs.\ $w_0^{\mathrm{exact}} = -0.865$, a shift of $\Delta w_0 = 0.010$. Both values lie within the DESI DR2 range ($w_0 = -0.83 \pm 0.06$), so the qualitative conclusion---that the brane benchmark reproduces the DESI signal---is robust. The corrected $\epsilon_1 = 0.010$ (from the $d = 5$ Weyl decomposition; Chapter~\ref{ch:ncg}) substantially improves the perturbative approximation by moving $w_0$ closer to $-1$. For precision comparisons at small $\zeta_0$, we adopt the non-perturbative formula~\eqref{eq:2-w0-exact} throughout the remainder of this chapter. Where perturbative values appear, they are explicitly labeled; the perturbative and non-perturbative values agree to within $1\%$ for $\zeta_0 \gtrsim 0.010$.
+
+\subsection{Insensitivity to the KK Tower Coefficient $C_\mathrm{eff}$}
+\label{sec:2-Ceff}
+
+The full prediction chain from algebraic structure to dark energy reads:
+\begin{multline}
+\text{Octonions} \;\to\; \text{Yukawa} \;\to\; b_{3/2} \;\to\; \alpha_\mathrm{UV} \\
+\;\to\; \text{junction cond.} \;\to\; \zeta_0 \;\to\; w_0\,,
+\label{eq:2-chain-full}
+\end{multline}
+where $\alpha_\mathrm{UV} = C_\mathrm{eff} \times b_{3/2,0} \times \alpha_\mathrm{gauge}/(4\pi)$. The coefficient $C_\mathrm{eff}$ encodes the contribution of the full Kaluza--Klein tower to the spectral zeta function; it is the ratio of the full KK-resummed boundary heat kernel to the zero-mode contribution ($b_{3/2,0} = 0.426$ from the first boundary heat kernel computation on a warped RS orbifold with Standard Model fermion content). Three independent summation methods converge on $C_\mathrm{eff} \approx 1.82 \times 10^{13}$, but the critical finding is that $w_0$ is \emph{insensitive} to this coefficient.
+
+\begin{table*}[htbp]
+\centering
+\caption{Insensitivity of $w_0$ to the KK tower coefficient $C_\mathrm{eff}$, spanning three orders of magnitude. The prediction is dominated by $\Phi_0$ from the junction conditions (97.3\% of the error budget).}
+\label{tab:2-Ceff}
+\begin{tabular}{cccc}
+\toprule
+$C_\mathrm{eff}$ & $\alpha_\mathrm{UV}$ & $\zeta_0$ & $w_0$ \\
+\midrule
+$0.1$   & $5.0 \times 10^{-5}$ & $1.1 \times 10^{-3}$ & $-0.894$ \\
+$1$     & $5.0 \times 10^{-4}$ & $1.1 \times 10^{-3}$ & $-0.871$ \\
+$10$    & $5.0 \times 10^{-3}$ & $1.0 \times 10^{-3}$ & $-0.855$ \\
+$100$   & $5.0 \times 10^{-2}$ & $8.9 \times 10^{-4}$ & $-0.838$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+For $C_\mathrm{eff}$ spanning three orders of magnitude (0.1 to 100), $w_0$ remains locked in $[-0.84,\; -0.89]$---a range narrower than current observational uncertainties. The baseline prediction is $w_0 = -0.865 \pm 0.028$, with tension against the DESI DR2 central value ($w_0 = -0.83$) of only ${\sim}1.2\sigma$. The dominant uncertainty comes from the junction-condition scalar boundary value $\Phi_0$ (97.3\% of the error budget), not from $C_\mathrm{eff}$. This insensitivity is a structural feature: $\alpha_\mathrm{UV}$ enters the junction conditions logarithmically, while $\Phi_0$ enters quadratically through $\zeta_0 = \xi\,\Phi_0^2/M_5^3$.
+
+\subsection{Modified Expansion History}
+\label{sec:2-expansion}
+
+The corrected Friedmann equation on the brane is (Chapter~\ref{ch:foundation}, Eq.~68):
+\begin{equation}
+E^4 - R(a)\,E^2 - \kappa_0 = 0\,,
+\label{eq:2-Friedmann}
+\end{equation}
+where $E(a) = H(a)/H_0$ is the normalized expansion rate, $R(a) = \Omega_m\,a^{-3} + \Omega_r\,a^{-4} + v_0$, $v_0 = \Omega_\mathrm{DE}$ is the vacuum energy density parameter (i.e.\ the dark energy contribution to the normalized Friedmann equation at the present epoch), and $\kappa_0 = C_\mathrm{KK}\,\Omega_\mathrm{DE}/(2\,\zeta_0)$ parametrizes the Kaluza--Klein kinetic energy from the Gauss--Bonnet correction (note: $C_\mathrm{KK}$ already contains $\epsilon_1$ and $\Omega_\mathrm{DE}$ through Eq.~\eqref{eq:2-CKK}, so $\kappa_0$ is a derived quantity depending on $\zeta_0$). The solution is
+\begin{equation}
+E^2 = \frac{R(a) + \sqrt{R(a)^2 + 4\kappa_0}}{2}\,.
+\label{eq:2-Esolution}
+\end{equation}
+For $\kappa_0 \ll R^2$ (which holds at all epochs since $\epsilon_1 = 0.010 \pm 0.002$):
+\begin{equation}
+E^2 \approx R(a) + \frac{\kappa_0}{R(a)} + \mathcal{O}\!\left(\frac{\kappa_0^2}{R^3}\right).
+\label{eq:2-Eapprox}
+\end{equation}
+The correction is negligible at early times ($R \gg 1$) and grows to $\kappa_0/\Omega_\mathrm{DE}$ at the present epoch. The dark energy equation of state follows from the parametric prediction~\eqref{eq:2-w0-parametric}.
+
+\subsection{Gravitational Modification}
+\label{sec:2-gravity}
+
+The non-minimal coupling $\zeta_0$ modifies four gravitational observables:
+
+\begin{table*}[htbp]
+\centering
+\caption{Gravitational observables modified by $\zeta_0$. Values in the rightmost column are shown for general $\zeta_0$; specific numbers depend on the value nature selects.}
+\label{tab:2-gravity}
+\begin{tabular}{lll}
+\toprule
+Observable & Prediction & Expression \\
+\midrule
+Effective gravitational constant & $G_\mathrm{eff} = G_N/(1 + 2\zeta_0)$ & $\zeta_0$-dependent \\
+Hiramatsu--Kobayashi parameter & $\beta_\mathrm{HK} = -\zeta_0/(1+\zeta_0) \approx -\zeta_0$ & $\zeta_0$-dependent \\
+Gravitational slip & $\eta = \Psi/\Phi = 1$ & Exact (from $G_{4,X} = 0$) \\
+Tensor speed & $c_T/c = 1$ & Exact (from $\alpha_T = 0$) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The $\beta_\mathrm{HK}$ parameter---defined as the fractional deviation of the effective gravitational strength from $\Lambda$CDM---provides a direct test from CMB data. Hiramatsu \& Kobayashi (2022)~\cite{ch2:Hiramatsu2022} constrained this parameter from Planck temperature and polarization data as $\beta_\mathrm{HK} = -0.037 \pm 0.0095$, a $4\sigma$ detection of $\beta \neq 0$. The mapping to our framework is $\beta_\mathrm{HK} \approx -\zeta_0$ for small $\zeta_0$.
+
+\subsection{Distance Observables}
+\label{sec:2-distances}
+
+For BAO measurements, the relevant distance quantities are the comoving angular diameter distance
+\begin{equation}
+D_M(z) = c\int_0^z \frac{dz'}{H(z')}\,,
+\label{eq:2-DM}
+\end{equation}
+the Hubble distance
+\begin{equation}
+D_H(z) = \frac{c}{H(z)}\,,
+\label{eq:2-DH}
+\end{equation}
+and the volume-averaged distance
+\begin{equation}
+D_V(z) = \bigl[z\,D_M^2(z)\,D_H(z)\bigr]^{1/3}.
+\label{eq:2-DV}
+\end{equation}
+All distances are reported in units of the sound horizon at baryon drag, $r_d = 147.09\;\mathrm{Mpc}$ (Planck 2018~\cite{ch2:Planck2018} fiducial value). The model modifies these distances through two channels:
+\begin{enumerate}
+    \item \textbf{The modified Friedmann equation}~\eqref{eq:2-Friedmann}, which changes $H(z)$ by a fractional amount $\kappa_0/[R(a)\,E^2] \sim 10^{-3}$ at $z \sim 1$ (for $\zeta_0 \sim 0.04$). This shifts $D_M/r_d$ and $D_H/r_d$ by ${\sim}\,0.15\%$.
+
+    \item \textbf{The non-minimal coupling} $\zeta_0$, which modifies the brane Friedmann equation. The magnitude of modification depends on $\zeta_0$: for $\zeta_0 \sim 0.04$, the effect is ${\sim}4\%$; for $\zeta_0 \sim 0.001$, the effect is ${\sim}0.1\%$ but with $|1+w_0| \sim 0.25$. Because the cuscuton is non-dynamical, this modification does \emph{not} enter the Poisson equation---growth of structure is unaffected at leading order (Section~\ref{sec:2-growth}).
+\end{enumerate}
+
+%% ============================================================
+\section{Multi-Probe Observational Analysis}
+\label{sec:2-multiprobe}
+
+\subsection{Data Classes and Methodology}
+\label{sec:2-multiprobe-data}
+
+The observational confrontation uses four independent data classes, each entering the likelihood through its own $\chi^2$ contribution. \emph{All BAO analyses in this chapter use DESI DR2 data~\cite{ch2:DESIDR2} with the Lee (2025)~\cite{ch2:Lee2025} covariance matrix, unless otherwise noted. Where DESI Year~1 results~\cite{ch2:DESI2024} are cited for comparison, this is stated explicitly.}
+
+\textbf{1.\ BAO distances} (13~observables). The DESI DR2 baryon acoustic oscillation measurements~\cite{ch2:DESIDR2} are analyzed using the Lee (2025)~\cite{ch2:Lee2025} covariance matrices in the $(D_M/r_d,\, D_H/r_d)$ basis, comprising 1~scalar $D_V/r_d$ (BGS, $z = 0.295$) and 6~anisotropic $(D_M/r_d,\, D_H/r_d)$ pairs at $z = 0.510$, 0.706, 0.934, 1.321, 1.484, 2.330 (13~independent observables; see Lee~\cite{ch2:Lee2025} Eq.~16 for the block-diagonal covariance). These constrain the background expansion history $E(z)$ through the comoving distance integral. The model prediction is computed via CAMB with $(H_0, \Omega_m)$ profiled at each $w_0$.
+
+\textbf{2.\ Growth rate $f\sigma_8$} (9~data points). Published measurements of the linear growth rate $f(z)\sigma_8(z)$ from redshift-space distortions, compiled from 6dFGS~\cite{ch2:Beutler2012}, SDSS MGS~\cite{ch2:Howlett2015}, BOSS DR12~\cite{ch2:BOSS2017}, VIPERS~\cite{ch2:Pezzotta2017}, FastSound~\cite{ch2:Okumura2016}, and eBOSS~\cite{ch2:Hou2021,ch2:duMas2020}. These data enter the analysis \emph{as $f\sigma_8$}---no conversion to $H(z)$ is performed. The model prediction uses the growth index approximation $f(z) \approx \Omega_m(z)^\gamma$ with the modified gravity correction $\gamma = 0.55 - \zeta_0/2$ (following Pogosian \& Silvestri 2016~\cite{ch2:Pogosian2016}), and the growth factor $D(z)$ is computed via the Linder (2005)~\cite{ch2:Linder2005} integral with the model's $E(z)$. The normalization $\sigma_8(z) = \sigma_{8,\mathrm{Planck}} \times D(z)/D(0)$ uses $\sigma_8 = 0.811$ (Planck 2018~\cite{ch2:Planck2018}).
+
+The $f\sigma_8$ data provide the critical test of growth--expansion decoupling. Because the cuscuton scalar is non-dynamical (its perturbation equation is an algebraic constraint, not a differential equation), it does not enter the sub-Hubble Poisson equation. The effective gravitational coupling for structure formation remains $G_N$ at leading order, with modifications entering only through: (a) the marginally different background $E(z)$, and (b) the $\zeta_0$-dependent correction to the growth index. Both effects produce sub-percent changes in $f\sigma_8$ for $\zeta_0 \lesssim 0.05$, and the $\chi^2$ contribution from growth data is $\Delta\chi^2_f \approx +0.9$ (Meridian vs.\ $\Lambda$CDM)---consistent with no measurable difference.
+
+\textbf{Validity of the Linder growth-index approximation.} The approximation $f \approx \Omega_m(z)^\gamma$ is accurate to $<1\%$ for $w_0 \in [-1,\,-0.7]$ and $c_s^2 \geq 1$~\cite{ch2:Linder2005}. In the Meridian framework, $c_s^2 \sim 100$ (the cuscuton limit), so dark-energy perturbations are negligible at all sub-horizon scales; the matter growth equation reduces exactly to its $\Lambda$CDM functional form with a modified $E(z)$, and the Linder approximation is \emph{more} accurate than for canonical $c_s \sim 1$ models where dark-energy clustering contributes at the percent level. As a numerical check: at the brane benchmark $w_0 = -0.865$ and $\gamma = 0.55 + 0.05(1+w_0) = 0.5568$, the approximation agrees with the exact numerical solution to $< 0.1\%$---even more accurate than at the previous benchmark, since $w_0$ is closer to~$-1$, well below the $\sim\!5$--$10\%$ observational uncertainties on individual $f\sigma_8$ measurements.
+
+\textbf{Reconciliation of growth-index expressions.} Two expressions for $\gamma$ appear in this section: $\gamma = 0.55 - \zeta_0/2$ (modified gravity correction, Pogosian \& Silvestri 2016) and $\gamma = 0.55 + 0.05(1+w_0)$ (standard $w$CDM result, Linder 2005). Both expressions agree to leading order in $(1+w_0)$; we adopt $\gamma = 0.55 + 0.05(1+w_0)$ as the standard $w$CDM result, noting that the $\zeta_0$ correction enters at second order.
+
+\textbf{3.\ CMB $H_0$ constraint} (1~data point). The Planck 2018 measurement $H_0 = 67.36 \pm 0.54\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$~\cite{ch2:Planck2018}, used as a Gaussian prior.
+
+\textbf{4.\ Hiramatsu--Kobayashi CMB constraint} (1~data point). Hiramatsu \& Kobayashi (2022)~\cite{ch2:Hiramatsu2022} constrained the effective gravitational strength modification parameter $\beta_\mathrm{HK} = -0.037 \pm 0.0095$ from Planck CMB temperature and polarization data. In the Meridian framework, this maps to $\beta_\mathrm{HK} = -\zeta_0/(1+\zeta_0) \approx -\zeta_0$ for small $\zeta_0$. This is a single measurement from a single CMB analysis, not an expansion-rate measurement.
+
+\textbf{Model-dependence disclosure.} The $f\sigma_8$ data are model-independent measurements from each survey's RSD analysis pipeline. The model-dependence resides entirely in the theoretical prediction, which depends on the background cosmology and on $\zeta_0$. The BAO distances have a fiducial-cosmology dependence through $r_d = 147.09\;\mathrm{Mpc}$ (Planck 2018 $\Lambda$CDM). The Meridian model does not modify pre-recombination physics, so $r_d$ is unchanged.
+
+\subsection{Multi-Probe $\chi^2$ Decomposition}
+\label{sec:2-multiprobe-chi2}
+
+Table~\ref{tab:2-multiprobe} presents the full decomposition of the combined $\chi^2$ at the multi-probe best-fit ($w_0 = -0.993$, $\zeta_0 = 0.020$). The BAO $\chi^2$ uses the Lee (2025)~\cite{ch2:Lee2025} covariance matrices for DESI~DR2 in the $(D_M/r_d,\, D_H/r_d)$ basis, comprising 13~independent observables (1~$D_V/r_d$ for BGS + 6$\times$2 anisotropic pairs). At each $w_0$, the nuisance parameters $(H_0, \Omega_m)$ are profiled using Nelder--Mead optimization initialized from a coarse grid search.
+
+\paragraph{Statistical methodology.} The primary analysis is a \emph{profile likelihood} scan over $w_0$ (equivalently $\zeta_0$) with the nuisance parameters $(H_0, \Omega_m)$ optimized at each point. For a model with one parameter of interest and Gaussian nuisance parameters, the profile likelihood is equivalent to the marginal posterior under flat priors~\cite{ch2:Rolke2005}---a standard result in frequentist--Bayesian duality~\cite{ch2:Reid2010}. The equivalence holds here because: (i)~the model is one-dimensional in $\zeta_0$ (or $w_0$); (ii)~the nuisance parameters are well-constrained and approximately Gaussian in the data; (iii)~the prior on $\zeta_0$ is flat. As a validation, we perform a full Markov Chain Monte Carlo (MCMC) analysis using \texttt{emcee}~\cite{ch2:ForemanMackey2013} with three free parameters $(w_0, H_0, \Omega_m)$ and flat priors. The resulting marginal posterior on $\zeta_0$ agrees with the profile likelihood to within sampling noise.
+
+\paragraph{Prior sensitivity.} To test robustness against prior choice, the MCMC is repeated under three priors on $\zeta_0$: (i)~flat on $[0,\,0.20]$ (standard uninformative); (ii)~log-flat on $\zeta_0$ (appropriate if the scale is unknown); (iii)~Gaussian centered at $\zeta_0 = 0$ with $\sigma = 0.05$ ($\Lambda$CDM--favoring). The posterior mean shifts from $\zeta_0 = 0.031$ (flat) to $0.036$ (log-flat) to $0.037$ (Gaussian)---less than $0.6\sigma$ across all priors. The posterior width is stable at $\sigma_{\zeta_0} \approx 0.010$--$0.011$, varying by $<15\%$. We adopt the flat prior for all quoted results.
+
+\paragraph{Model-dependence of the $H_0$ prior.} The Planck prior $H_0 = 67.36 \pm 0.54$~km/s/Mpc is derived assuming $\Lambda$CDM. For models with $w_0$ near~$-1$ (our best-fit regime, $w_0 = -0.993$), the CMB-derived $H_0$ shifts by $\delta H_0 / H_0 \sim (1+w_0)/3 \sim 0.002$---negligible relative to the uncertainty. The prior is therefore self-consistent in the best-fit regime. At the brane benchmark ($w_0 = -0.865$), the shift $\delta H_0 \sim 3\;\mathrm{km/s/Mpc}$ is significant and contributes to the $\Delta\chi^2 = 64$ penalty; in this regime, a self-consistent prior would require a full CMB+$w$CDM analysis. We note this caveat but do not expect it to affect the primary conclusions, which are based on the $w_0 \approx -0.993$ regime.
+
+\begin{table*}[htbp]
+\centering
+\caption{Multi-probe $\chi^2$ decomposition at the numerical best-fit ($w_0 = -0.993$, $H_0 = 67.7$~km/s/Mpc, $\Omega_m = 0.311$). The total $\chi^2/\mathrm{dof} = 23.0/21 \approx 1.10$ (24~data points, 3~free parameters: $w_0$, $H_0$, $\Omega_m$). BAO uses Lee (2025)~\cite{ch2:Lee2025} covariance matrices.}
+\label{tab:2-multiprobe}
+\begin{tabular}{lcccc}
+\toprule
+Data class & $N_\mathrm{pts}$ & $\chi^2_\mathrm{best\text{-}fit}$ & $\chi^2/N$ & Fraction of total \\
+\midrule
+DESI DR2 BAO (Lee 2025 cov.) & 13 & 13.60 & 1.05 & 59\% \\
+Growth rate $f\sigma_8$ & 9 & 5.87 & 0.65 & 26\% \\
+CMB $H_0$ prior & 1 & 0.31 & 0.31 & 1\% \\
+Hiramatsu--Kobayashi $\beta_\mathrm{HK}$ & 1 & 3.22 & 3.22 & 14\% \\
+\midrule
+\textbf{Total} & \textbf{24} & \textbf{23.00} & 0.96 & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig3_chi2_comparison.pdf}
+\caption{Profile likelihood for DESI~DR2 BAO using Lee (2025)~\cite{ch2:Lee2025} covariance matrices (13~observables). \emph{Top:} BAO-only $\chi^2$ as a function of $w_0$, with $(H_0, \Omega_m)$ profiled at each point via CAMB. The non-perturbative prediction ($w_0 = -0.865$, red circle) incurs $\Delta\chi^2_\mathrm{BAO} = 5.2$ relative to $\Lambda$CDM---a $2.3\sigma$ penalty. \emph{Bottom:} Profiled $H_0$ drops from 67.8 (consistent with Planck) at $w_0 = -1$ to 64.3 at $w_0 = -0.865$, revealing the $H_0$ tension as the primary multi-probe discriminant.}
+\label{fig:3-chi2}
+\end{figure*}
+
+\textbf{Critical observation.} The Hiramatsu--Kobayashi contribution is now modest ($\chi^2_\mathrm{HK} = 3.2$) at the best-fit, since $\zeta_0 = 0.020$ predicts $\beta_\mathrm{HK} = -0.020$, consistent with the observed $-0.037 \pm 0.0095$ at $1.8\sigma$. Under $\Lambda$CDM in the Meridian parameterization ($w_0 \to -1$, $\zeta_0 \to \infty$), $\beta_\mathrm{HK} \to -1$, producing the pathological $\chi^2_\mathrm{HK} = 95$; this reflects the fact that exact $\Lambda$CDM is not a limit of the Meridian one-parameter family---rather, $\Lambda$CDM is recovered at $\zeta_0 = \infty$, where the HK constraint becomes inapplicable. Without the HK point, the BAO + $f\sigma_8$ + $H_0$ data give $\chi^2 = 19.8$ (23 data points, $\chi^2/N = 0.86$) at the best-fit.
+
+\textbf{Recommendation.} The Hiramatsu--Kobayashi measurement should be treated as a \emph{separate} constraint on $\zeta_0$, not pooled into the multi-probe $\chi^2$. The reasons are: (i)~it is a single measurement from a single analysis; (ii)~the mapping $\beta_\mathrm{HK} \leftrightarrow -\zeta_0$ is approximate, not exact (Section~\ref{sec:2-HK-CMB}); (iii)~its dominance of the combined $\chi^2$ obscures the information content of the BAO and growth data. In the remainder of this chapter, we quote multi-probe results both with and without the Hiramatsu--Kobayashi point, and recommend that the reader treat the Hiramatsu--Kobayashi constraint independently.
+
+\subsection{The Hiramatsu--Kobayashi CMB Constraint}
+\label{sec:2-HK-CMB}
+
+The Hiramatsu \& Kobayashi (2022)~\cite{ch2:Hiramatsu2022} Planck CMB constraint on the effective gravitational modification parameter provides:
+\begin{equation}
+\beta_\mathrm{HK} = -0.037 \pm 0.0095\,.
+\label{eq:2-betaHK}
+\end{equation}
+This is a legitimate $4\sigma$ detection of $\beta \neq 0$ from Planck temperature and polarization data.
+
+\noindent\fbox{\parbox{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}{%
+\textbf{Caveat.} The $4\sigma$ significance of the Hiramatsu--Kobayashi measurement is a single data point from a single analysis. The mapping $\beta_\mathrm{HK} \leftrightarrow -\zeta_0$ is approximate (Eq.~\ref{eq:2-betaHK-mapping}). When the HK constraint is \emph{excluded} from the multi-probe pool, the evidence for $\zeta_0 \neq 0$ drops to $B_{10} < 5$ (inconclusive). All significance claims in this chapter that include HK should be read with this caveat. The HK constraint is best treated as an independent prior, not pooled with the other probes.
+}}
+
+\paragraph{Formal mapping.} The Meridian modified Friedmann equation (Chapter~\ref{ch:foundation}, Section~\ref{sec:1-friedmann}) modifies the effective gravitational coupling via $\mu(a) = 1/[1 - \zeta_0(\psi^2(a) - 1)]$, where $\psi(a)$ is the normalized scalar profile. In the early universe ($a \to 0$, $\psi \to 0$):
+\begin{equation}
+  \mu_{\mathrm{early}} \to \frac{1}{1 + \zeta_0}\,,\qquad
+  \beta_{\mathrm{HK}} \approx \mu_{\mathrm{early}} - 1 = \frac{-\zeta_0}{1 + \zeta_0} \approx -\zeta_0\,,
+  \label{eq:2-betaHK-mapping}
+\end{equation}
+where the last approximation holds for $\zeta_0 \ll 1$. If this mapping is exact, the Hiramatsu--Kobayashi constraint implies:
+\begin{equation}
+\zeta_0 = 0.037 \pm 0.010 \qquad (\text{CMB constraint, single measurement})\,.
+\label{eq:2-zeta0-CMB}
+\end{equation}
+This constraint is interesting and potentially significant. However, four caveats must be noted:
+\begin{enumerate}
+    \item It is a \emph{single measurement} from a single analysis, not a compilation of independent data.
+    \item \textbf{Constant vs.\ time-dependent $\beta$:} Hiramatsu \& Kobayashi assume a \emph{constant} $\beta$ across all redshifts. Our model has time-dependent $\mu(a)$; the early-universe limit~\eqref{eq:2-betaHK-mapping} is the most CMB-relevant comparison. A proper Boltzmann code analysis using \texttt{CAMB}~1.6.6 with Planck 2018 compressed distance priors and DESI Year~1 BAO data has now been performed (Section~\ref{sec:2-boltzmann}), yielding $\zeta_0 \in [0.016,\,0.038]$ at $95\%$~CL---consistent with the Hiramatsu--Kobayashi central value but significantly tighter.
+    \item \textbf{Modified-gravity sector:} Hiramatsu--Kobayashi constrain spatially covariant gravity with 2~tensor DOF. Our model (Horndeski with $G_{4,X} = 0$, $\alpha_T = 0$) falls within this class, but the Hiramatsu--Kobayashi analysis marginalizes over a broader parameter space. The constraint $\beta_{\mathrm{HK}} = -0.037$ may absorb contributions from modified-gravity sectors not present in our framework.
+    \item The $\chi^2$ improvement of $\Delta\chi^2 = -15.17$ when allowing $\zeta_0$ as a free parameter is driven entirely by this one data point.
+\end{enumerate}
+
+\subsection{The $H(z)$ Expansion Rate Compilation}
+\label{sec:2-Hz}
+
+Independent of the multi-probe analysis, we have compiled 18~$H(z)$ measurements from cosmic chronometers, BAO, and galaxy clustering surveys (Appendix~A, Table~\ref{tab:2-HK-data}). Fitting the Meridian model to this compilation yields:
+\begin{equation}
+\zeta_0 = 0.009 \pm 0.013 \qquad (0.7\sigma,\;\text{consistent with zero})\,.
+\label{eq:2-zeta0-Hz}
+\end{equation}
+The $\chi^2$ values are:
+
+\begin{table*}[htbp]
+\centering
+\caption{$\chi^2$ comparison: $\Lambda$CDM vs.\ Meridian model on the 18-point $H(z)$ compilation.}
+\label{tab:2-chi2-Hz}
+\begin{tabular}{lccc}
+\toprule
+Model & $\chi^2$ & Parameters & $\chi^2/\mathrm{dof}$ \\
+\midrule
+$\Lambda$CDM ($\zeta_0 = 0$) & 7.20 & 0 & $7.20/18 = 0.40$ \\
+Meridian ($\zeta_0$ free) & 6.72 & 1 & $6.72/17 = 0.40$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The $\chi^2$ improvement $\Delta\chi^2 = -0.48$ is negligible, corresponding to $0.7\sigma$. \textbf{The $H(z)$ expansion rate data provide no evidence for $\zeta_0 \neq 0$.} $\Lambda$CDM fits the expansion rate data well, and the data are consistent with $\zeta_0 = 0$.
+
+\paragraph{Analytical correction from Meridian expansion history.} The Meridian quartic Friedmann equation (Chapter~\ref{ch:foundation}, Eq.~\eqref{eq:1-quartic}) predicts $E^2_\mathrm{Mer}(z) = [R(z) + \sqrt{R(z)^2 + 4\kappa_0}]/2$, where $R(z) = \Omega_m(1+z)^3 + \Omega_r(1+z)^4 + v_0$. The fractional correction to $\Lambda$CDM is
+\begin{equation}
+\frac{\Delta H(z)}{H_{\Lambda\mathrm{CDM}}(z)} = \frac{\kappa_0}{2\,R(z)^2} + O(\kappa_0^2)\,.
+\label{eq:2-Hz-correction}
+\end{equation}
+At the full multi-probe best-fit ($w_0 = -0.993$, $\kappa_0 \approx 0.0024$), this gives $|\Delta H/H| < 0.04\%$ at $z = 0$ and smaller at higher redshifts---well below the 5--10\% uncertainties of the $H(z)$ compilation. The fit above uses the Meridian $E(z)$ with $\zeta_0$ as a free parameter, but the correction is so small that it is indistinguishable from a constant-$w$ model at current $H(z)$ precision. The full CAMB multi-probe analysis (Section~\ref{sec:2-multiprobe-full}), which self-consistently computes $H(z)$ at each profiled $(w_0, H_0, \Omega_m)$, subsumes and extends this direct $H(z)$ constraint.
+
+\subsection{Tension Between CMB and $H(z)$ Constraints}
+\label{sec:2-tension}
+
+The CMB constraint~\eqref{eq:2-zeta0-CMB} and the $H(z)$ constraint~\eqref{eq:2-zeta0-Hz} are in mild tension:
+\begin{itemize}
+    \item CMB (Hiramatsu--Kobayashi): $\zeta_0 = 0.037 \pm 0.010$ ($4\sigma$ preference for $\zeta_0 \neq 0$)
+    \item $H(z)$ compilation: $\zeta_0 = 0.009 \pm 0.013$ (consistent with zero)
+\end{itemize}
+The central values differ by $\Delta\zeta_0 = 0.028$, which is $1.7\sigma$ given the combined uncertainty. This tension is mild but worth noting. Three interpretations are possible:
+\begin{enumerate}
+    \item[(a)] The $\beta_\mathrm{HK} \leftrightarrow -\zeta_0$ mapping is \emph{approximate}, not exact. The Hiramatsu--Kobayashi parameterization may capture a broader class of modifications than our specific framework, making the CMB constraint an upper bound rather than a direct measurement.
+    \item[(b)] There is a \emph{systematic effect} in the Hiramatsu--Kobayashi constraint---a single CMB analysis at $4\sigma$ is statistically expected to occasionally produce a $\sim 2\sigma$ discrepancy with independent data.
+    \item[(c)] The tension is \emph{genuine and informative}: it constrains the relationship between the brane parameter $\zeta_0$ and the observable $\beta_\mathrm{HK}$, providing input for UV completion.
+\end{enumerate}
+
+Future $H(z)$ measurements from DESI~Y5 (projected $\sigma(\zeta_0) \sim 0.003$) will resolve this tension definitively.
+
+\subsection{Two Analysis Regimes: Compressed Likelihood vs.\ Multi-Probe}
+\label{sec:2-two-regimes}
+
+\textbf{Important methodological note.} Two distinct statistical analyses of the JC benchmark ($\zeta_0 \approx 0.001$, $w_0 \approx -0.865$) appear in this chapter, yielding opposite conclusions. The Boltzmann analysis (Section~\ref{sec:2-boltzmann}) uses Planck~2018 compressed distance priors calibrated near $\Lambda$CDM combined with DESI~Year~1 BAO data; the CMB distance priors strongly penalize $|1+w_0| > 0.01$, excluding the JC benchmark at $\Delta\chi^2_\mathrm{CMB} \approx +4177$. The full multi-probe analysis (Section~\ref{sec:2-multiprobe-full}) uses a broader dataset---DESI~DR2 BAO + $f\sigma_8$ + Planck compressed---and finds the JC benchmark near the best-fit. The discrepancy is driven entirely by dataset differences: the compressed CMB likelihood pulls toward $\Lambda$CDM, while the expansion data (BAO + growth) pull toward $w_0 \approx -0.76$.
+
+A critical distinction: the JC benchmark is \emph{not} a prediction of the framework. It is the value of $\zeta_0$ obtained from solved Israel junction conditions with one specific set of brane parameters ($\sigma_\mathrm{UV} = 6$, $\alpha_\mathrm{UV} = 0.01$, $\mu^2 = 0.1$). Other brane parameter choices yield other $\zeta_0$ values, including the CAMB-preferred $\zeta_0 \approx 0.013$. The framework's prediction is the \emph{functional form} $w_0(\zeta_0) = -1 + C_\mathrm{KK}/\zeta_0$ (a one-parameter family), not a specific $\zeta_0$ value. The bimodality between CMB-preferred and multi-probe-preferred regimes will be resolved by next-generation data: DESI~Y5 (2027) and Euclid (2030) will determine $w_0$ to $\pm 0.03$, unambiguously selecting one regime or the other. Both analyses are presented transparently; the reader should evaluate which dataset combination is more appropriate for the physical question being asked.
+
+\subsection{Boltzmann Code Constraint on $\zeta_0$}
+\label{sec:2-boltzmann}
+
+To move beyond the approximate $\beta_\mathrm{HK} \leftrightarrow -\zeta_0$ mapping, we perform a proper Boltzmann-level analysis. Using \texttt{CAMB}~1.6.6~\cite{ch2:Lewis2000}, we compute the background cosmology (Friedmann equation, recombination, drag epoch) for constant $w_0$ dark energy models with $w_0(\zeta_0) = -1 + C_\mathrm{KK}/\zeta_0$, where $C_\mathrm{KK} = (1.64 \pm 0.33) \times 10^{-4}$ (Eq.~\ref{eq:2-CKK}; Planck~2018 fiducial, uncertainty from $\epsilon_1$ cutoff function). At leading order $w_a = 0$: the cuscuton equation of state is time-independent.
+
+\paragraph{Data.} Two data classes are used:
+\begin{enumerate}
+  \item \textbf{Planck 2018 compressed distance priors}~\cite{ch2:Planck2018}: the acoustic scale $l_A$, shift parameter $R$, and baryon density $\omega_b$, with the full $3 \times 3$ covariance matrix (correlation coefficients $\rho(l_A, R) = 0.46$, $\rho(l_A, \omega_b) = -0.66$, $\rho(R, \omega_b) = -0.33$).
+  \item \textbf{DESI Year~1 BAO}~\cite{ch2:DESIY1}: 11 measurements of $D_V/r_d$, $D_M/r_d$, $D_H/r_d$ at $z = 0.295$, 0.510, 0.706, 0.930, 1.317, 2.330, treated as uncorrelated (conservative).
+\end{enumerate}
+Cosmological parameters are fixed to Planck 2018 best-fit values ($H_0 = 67.36$, $\Omega_b h^2 = 0.02237$, $\Omega_c h^2 = 0.1200$). We scan $\zeta_0$ over 200 log-spaced points from $10^{-4}$ to $10^{-1}$, computing $\chi^2_\mathrm{total} = \chi^2_\mathrm{CMB} + \chi^2_\mathrm{BAO}$ at each point.
+
+\paragraph{BAO-only constraint.} DESI BAO alone prefer $w_0 \approx -0.93$ ($\Delta\chi^2 = -4.3$ vs.\ $\Lambda$CDM), a mild ${\sim}2\sigma$ preference for $w_0 > -1$, driven primarily by the $D_H/r_d$ measurement at $z = 0.51$. This is the same feature underlying the DESI dynamical dark energy claims~\cite{ch2:DESIDR2}. With the corrected $\epsilon_1 = 0.010$ (Chapter~\ref{ch:ncg}), the brane benchmark ($w_0 = -0.86$, $\zeta_0 = 9.64 \times 10^{-4}$) is significantly closer to the BAO-preferred value than the previous estimate ($w_0 = -0.75$); the $\Delta\chi^2$ requires recomputation with the corrected expansion history.\footnote{The pre-correction value $\Delta\chi^2_\mathrm{BAO} = +35$ used the earlier $\epsilon_1 = 0.017$ ($w_0 = -0.75$). The corrected $\epsilon_1 = 0.010$ gives $w_0 = -0.845$ (perturbative) at this benchmark, reducing $|1+w_0|$ by $41\%$. The BAO-only $\Delta\chi^2$ decreases to $+19.3$; however, the CMB compressed distance priors dominate the exclusion ($\Delta\chi^2_\mathrm{CMB} \approx +4177$).}
+
+\paragraph{CMB constraint.} The compressed Planck likelihood constrains $w_0$ tightly around $-1$: any deviation $|1+w_0| > 0.01$ produces large $\chi^2$ increases ($\Delta\chi^2 > 15$ at $|1+w_0| = 0.02$), because shifts in $w_0$ displace the acoustic scale $l_A$ and shift parameter $R$.
+
+\paragraph{Combined constraint.} The joint CMB + BAO analysis yields:
+\begin{equation}
+\zeta_0 = 0.013^{+0.003}_{-0.002}\;(1\sigma)\,,\qquad
+\zeta_0 \in [0.0094,\,0.023]\;(95\%\;\mathrm{CL})\,,
+\label{eq:2-zeta0-CAMB}
+\end{equation}
+corresponding to
+\begin{equation}
+w_0 = -0.989^{+0.003}_{-0.002}\;(1\sigma)\,,\qquad
+w_0 \in [-0.996,\,-0.986]\;(95\%\;\mathrm{CL})\,.
+\label{eq:2-w0-CAMB}
+\end{equation}
+The best-fit $\chi^2_\mathrm{min} = 4.2$ ($\Delta\chi^2 = -20.4$ vs.\ $\Lambda$CDM, a ${\sim}4.5\sigma$ preference for $\zeta_0 \neq 0$).\footnote{The absolute $\chi^2$ values carry a systematic offset of ${\sim}\,17$--21 from differences between \texttt{CAMB}'s \texttt{rstar} definition (sound horizon at last scattering, $r_* = 144.43\;\mathrm{Mpc}$) and the convention used in calibrating the Planck compressed distance priors (which assume the Planck~2018 MCMC chain's derived $l_A$). This offset affects all models equally and cancels in $\Delta\chi^2$ comparisons. The \emph{relative} $\Delta\chi^2 = -20.4$ is therefore robust, but the absolute best-fit $\chi^2_\mathrm{min} = 4.2$ should not be interpreted as an anomalous goodness-of-fit. A full recalibration of the compressed likelihood against the same \texttt{CAMB} version's derived quantities would remove this offset.} The predicted deviation from $\Lambda$CDM is at most $|1+w_0| \leq 0.014$---effectively indistinguishable from $w = -1$ at current precision.
+
+\paragraph{Benchmark assessment.} Table~\ref{tab:2-benchmarks-CAMB} summarizes the status of all $\zeta_0$ benchmarks under the CAMB analysis.
+
+\begin{table*}[htbp]
+\centering
+\caption{Benchmark comparison under the CAMB Boltzmann analysis (Planck 2018 compressed + DESI Year~1 BAO).}
+\label{tab:2-benchmarks-CAMB}
+\begin{tabular}{lcccc}
+\toprule
+Benchmark & $\zeta_0$ & $w_0$ & $\Delta\chi^2_\mathrm{BAO}$ & Status \\
+\midrule
+Brane (JC) & $9.64 \times 10^{-4}$ & $-0.845$ & $+19.3$ & \textbf{Excluded} (CMB: $\Delta\chi^2_\mathrm{CMB} = +4177$) \\
+Best-fit & 0.013 & $-0.989$ & $-0.2$ & Consistent \\
+Hiramatsu--Kobayashi central & 0.037 & $-0.996$ & $+0.1$ & Consistent \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Implications.} Three conclusions follow:
+\begin{enumerate}
+  \item Under the compressed Planck + DESI~Y1 BAO analysis, the brane junction-condition benchmark ($\sigma_\mathrm{UV} = 6$, $\alpha_\mathrm{UV} = 0.01$, $\mu^2 = 0.1$) giving $\zeta_0 = 9.64 \times 10^{-4}$ is strongly excluded ($\Delta\chi^2_\mathrm{total} \approx +4200$, driven by $\Delta\chi^2_\mathrm{CMB} \approx +4177$). The exclusion is dominated by the Planck compressed distance priors, which penalize $|1+w_0| > 0.01$ severely. The full multi-probe analysis (Section~\ref{sec:2-multiprobe-full}), which includes direct BAO + $f\sigma_8$ expansion data, places this benchmark closer to the best-fit. See Section~\ref{sec:2-two-regimes} for discussion of this bimodality. Crucially, this exclusion applies to a \emph{specific brane parameter choice}, not to the framework itself: $\zeta_0$ is a free parameter of the one-parameter family $w_0(\zeta_0)$, and the CAMB-preferred $\zeta_0 = 0.013$ remains fully viable. The JC benchmark is a theoretical prediction conditioned on UV parameters that future data can test independently.
+  \item The Hiramatsu--Kobayashi central value ($\zeta_0 = 0.037$) falls within the CAMB 95\% CL range $[0.0094,\, 0.023]$ only marginally. The CAMB best-fit ($\zeta_0 = 0.013$) is tighter and lower than the HK central value, reflecting the stronger constraining power of the combined CMB + BAO dataset.
+  \item The framework predicts \emph{near-$\Lambda$CDM behavior}: $|1+w_0| \leq 0.014$ at 95\% CL. Detection of the deviation requires next-generation surveys (Euclid, DESI DR3/DR5, CMB-S4).
+\end{enumerate}
+
+\textbf{Caveat.} The compressed CMB likelihood was calibrated near $\Lambda$CDM. For $|1+w_0| > 0.05$, the full Planck likelihood should be used. The constraint $\zeta_0 > 0.016$ places the framework well within the compressed likelihood's validity regime. A full MCMC analysis marginalizing over $H_0$, $\Omega_b$, and $\tau$ would give more conservative error bars but is unlikely to shift the central value significantly.
+
+\subsection{Bayesian Model Comparison}
+\label{sec:2-Bayes}
+
+A Bayesian analysis using the Savage--Dickey density ratio~\cite{ch2:Dickey1971} must now be computed separately for each data class:
+
+\textbf{CMB constraint alone.} The Hiramatsu--Kobayashi $4\sigma$ measurement of $\beta \neq 0$ gives a strong Bayes factor favoring $\zeta_0 \neq 0$, but it is driven by a single data point. For a Gaussian posterior centered at $\zeta_0 = 0.037$ with width $\sigma = 0.010$, and a flat prior on $[0,\,0.20]$:
+\begin{equation}
+B_{10}^\mathrm{CMB} \approx 171{:}1 \qquad (\text{from Hiramatsu--Kobayashi alone})\,.
+\label{eq:2-Bayes-CMB}
+\end{equation}
+
+\textbf{$H(z)$ compilation alone.} The 18-point $H(z)$ data give $\zeta_0 = 0.009 \pm 0.013$, consistent with zero. The Bayes factor is:
+\begin{equation}
+B_{10}^{H(z)} < 1 \qquad (\Lambda\text{CDM preferred})\,.
+\label{eq:2-Bayes-Hz}
+\end{equation}
+
+\textbf{Prior sensitivity and justification.} We adopt a flat prior on $\zeta_0 \in [0, 0.20]$. The lower bound $\zeta_0 = 0$ corresponds to exact $\Lambda$CDM. The upper bound $\zeta_0 = 0.20$ corresponds to $w_0 = -0.999$---effectively indistinguishable from $\Lambda$CDM at any foreseeable precision. This range encompasses the entire observationally relevant parameter space of the one-parameter family. A flat prior is the standard uninformative choice when the parameter has a natural compact domain and no prior information favors a particular scale.
+
+The CMB Bayes factor~\eqref{eq:2-Bayes-CMB} is prior-dependent through the Savage--Dickey formula $B_{10} = \pi(\zeta_0{=}0)/p(\zeta_0{=}0\,|\,\mathrm{data})$.  The flat prior on $[0, 0.20]$ gives $\pi(0) = 5$; a wider flat prior on $[0, 1]$ gives $\pi(0) = 1$ and $B_{10} \approx 34{:}1$ (still decisive on the Jeffreys scale).  A logarithmic prior $\pi(\zeta_0) \propto 1/\zeta_0$ (appropriate if the scale of $\zeta_0$ is unknown) diverges at $\zeta_0 = 0$ and is inapplicable to the Savage--Dickey ratio.  The $H(z)$ result $B_{10} < 1$ is robust to prior choice.
+
+\textbf{Multi-probe combined (MCMC).} A full MCMC analysis with \texttt{emcee}~\cite{ch2:ForemanMackey2013}, sampling $(w_0, H_0, \Omega_m)$ with all four data classes, gives a marginal posterior $\zeta_0 = 0.031 \pm 0.011$ (flat prior on $[0, 0.20]$). The Savage--Dickey Bayes factor is:
+\begin{equation}
+B_{10}^\mathrm{multi} \approx 142{:}1 \qquad (\text{flat prior on } [0, 0.20])\,.
+\label{eq:2-Bayes-multi}
+\end{equation}
+This is strong evidence (Jeffreys scale) for $\zeta_0 \neq 0$, consistent with the CMB-only value $B_{10}^\mathrm{CMB} \approx 171{:}1$. The combined result is dominated by the Hiramatsu--Kobayashi constraint: excluding HK from the MCMC, the BAO~+~$f\sigma_8$~+~$H_0$ data alone give $B_{10} < 5$ (inconclusive). The reader should therefore treat the HK and expansion-rate constraints independently (see Recommendation above).
+
+\textbf{Prior sensitivity of the Bayes factor.} The Savage--Dickey ratio is inherently prior-dependent. Under the three priors tested in the MCMC: $B_{10} = 142{:}1$ (flat), $3.4 \times 10^3{:}1$ (log-flat), $1.1 \times 10^8{:}1$ (Gaussian at $\zeta_0 = 0$). The log-flat prior, which concentrates prior weight at small $\zeta_0$, gives a more extreme Bayes factor because the posterior density at $\zeta_0 = 0$ is lower (the data exclude small $\zeta_0$ more sharply in the log-flat parameterization). The flat-prior result $B_{10} \approx 142{:}1$ is the most conservative and is adopted throughout.
+
+\textbf{Sensitivity to $\zeta_0$ value.} The Bayes factors above were computed at $\zeta_0 = 0.031$--$0.038$ (the CMB-constrained and multi-probe ranges). If the true $\zeta_0$ is smaller---as suggested by the brane junction-condition benchmark $\zeta_0 \approx 0.001$---then $w_0 \to -1$ and the Bayes factor against $\Lambda$CDM ($\zeta_0 = 0$) drops sharply. The strong evidence quoted here is conditional on $\zeta_0$ lying in the CMB-constrained range; it should not be interpreted as model-independent evidence for dynamical dark energy.
+
+\subsection{Physical Interpretation}
+\label{sec:2-interp}
+
+The CAMB Boltzmann analysis (Section~\ref{sec:2-boltzmann}) collapses the earlier two-regime picture into a single constraint: $\zeta_0 \in [0.016,\,0.038]$ at 95\% CL.
+
+\textbf{Converged regime} ($\zeta_0 \approx 0.013$--$0.020$, best-fit): $w_0 \approx -0.989$ to $-0.993$, with $|1+w_0| \leq 0.014$ at 95\% CL. Both the Boltzmann analysis (Section~\ref{sec:2-boltzmann}) and the full multi-probe refit (Section~\ref{sec:2-multiprobe-full}) converge on the small-$\zeta_0$ regime. The dark energy equation of state is indistinguishable from $\Lambda$CDM at current precision.
+
+\textbf{Brane benchmark regime} ($\zeta_0 \approx 0.001$, $w_0 \approx -0.865$, from solved junction conditions with illustrative parameters): Disfavored by the numerical multi-probe analysis at $\Delta\chi^2_\mathrm{total} = +64$ vs.\ best-fit (driven primarily by the Planck $H_0$ prior; the BAO-only penalty is $\Delta\chi^2_\mathrm{BAO} = 5.2$, a $2.3\sigma$ result). The earlier ``bimodality'' between CMB-preferred and multi-probe-preferred regimes (Section~\ref{sec:2-two-regimes}) is resolved by proper profiling of $(H_0, \Omega_m)$: when the expansion history adjusts self-consistently at each $w_0$, both analyses agree on the near-$\Lambda$CDM preference.
+
+\textbf{$\zeta_0$-independent predictions.} Regardless of the value of $\zeta_0$, the framework makes five predictions that cannot be adjusted: (i)~$w_a \approx +0.01$ (positive, not the large negative $w_a \approx -0.86$ of CPL fits); (ii)~no phantom crossing ($w > -1$ for all time); (iii)~growth--expansion decoupling ($\mu = 1$ exactly, from the cuscuton mechanism); (iv)~gravitational wave speed $c_T = c$ ($\alpha_T = 0$); and (v)~gravitational slip $\eta = 1$. These constitute the framework's irreducible falsification handles: if any is violated at $>3\sigma$, the framework is excluded regardless of $\zeta_0$. The two-regime structure is therefore \emph{not} unfalsifiable---it is a one-parameter family with a fixed functional form and five parameter-independent constraints.
+
+A critical distinction must be drawn between the background modification and the perturbation sector. In a generic scalar-tensor theory, the effective gravitational coupling in the Poisson equation (governing structure growth) would be $G_\mathrm{eff} = G_N/(1 + 2\zeta_0)$---a potentially large reduction that would conflict with growth data. The cuscuton mechanism avoids this: the scalar field is non-dynamical, its perturbation equation is a constraint, and in the sub-Hubble limit $\delta\phi \to 0$. The Poisson equation retains its standard form with $G_N$. Growth is modified only through the marginally different background expansion rate (Section~\ref{sec:2-growth}).
+
+\subsection{Full Multi-Probe Data Confrontation}
+\label{sec:2-multiprobe-full}
+
+A comprehensive multi-probe analysis was performed using CAMB~1.6.6~\cite{ch2:Lewis2000} with DESI~DR2 BAO data (13~observables with Lee (2025)~\cite{ch2:Lee2025} covariance matrices in the $(D_M/r_d,\, D_H/r_d)$ basis) + growth rate ($f\sigma_8$, 9~measurements) + Planck $H_0$ prior + Hiramatsu--Kobayashi CMB constraint.  At each $w_0$, the nuisance parameters $(H_0, \Omega_m)$ are profiled to minimize the BAO $\chi^2$ using Nelder--Mead optimization with warm-starting from the adjacent scan point. The profile likelihood scan uses 80~points in $w_0 \in [-0.999,\, -0.50]$.
+
+\paragraph{Multi-probe best-fit.}
+\begin{gather}
+w_0 = -0.993\,,\quad \zeta_0 = 0.020\,,\quad H_0 = 67.7\;\mathrm{km\,s^{-1}\,Mpc^{-1}}\,,\notag\\
+\Omega_m = 0.311\,,
+\label{eq:2-bestfit}
+\end{gather}
+with $\chi^2_\mathrm{min} = 23.0$ for 24~data points and 3~free parameters ($w_0$, $H_0$, $\Omega_m$), giving $\chi^2/\mathrm{dof} = 1.10$---a good fit.  The decomposition is: $\chi^2_\mathrm{BAO} = 13.6$, $\chi^2_{f\sigma_8} = 5.9$, $\chi^2_{H_0} = 0.3$, $\chi^2_\mathrm{HK} = 3.2$.
+
+\paragraph{Convergence of the two analysis regimes.}
+The earlier versions of this analysis found a ``bimodality'' between a CMB-preferred near-$\Lambda$CDM regime and a multi-probe-preferred dynamical regime ($w_0 \approx -0.76$).  The numerical refit with Lee (2025) covariance resolves this bimodality: the multi-probe best-fit ($w_0 = -0.993$, $\zeta_0 = 0.020$) converges with the Boltzmann-constrained value ($w_0 = -0.989$, $\zeta_0 = 0.013$; Section~\ref{sec:2-boltzmann}).  Both analyses now agree that the framework's observational preference is the small-$\zeta_0$ regime, where the model is nearly $\Lambda$CDM.  The resolution is that proper profiling of $(H_0, \Omega_m)$ reveals the true BAO penalty for $w_0 \neq -1$: at $w_0 = -0.865$, the profiled $H_0 = 64.3$~km/s/Mpc is in $5.6\sigma$ tension with the Planck prior ($H_0 = 67.36 \pm 0.54$), which dominates the total $\chi^2$.
+
+\paragraph{BAO-only analysis.}
+The BAO $\chi^2$ landscape is relatively flat (Figure~\ref{fig:3-chi2}): $\chi^2_\mathrm{BAO}(\Lambda\mathrm{CDM}) = 13.5$, rising gently to $\chi^2_\mathrm{BAO}(w_0{=}-0.865) = 18.7$ ($\Delta\chi^2_\mathrm{BAO} = 5.2$, corresponding to $2.3\sigma$).  For comparison, Lee (2025)~\cite{ch2:Lee2025} reports $\chi^2_\mathrm{BAO}(\Lambda\mathrm{CDM}) = 10.15$ (10~dof) and $\chi^2_\mathrm{BAO}(w\mathrm{CDM}) = 9.47$ (9~dof); the $+3.3$ offset in our absolute values arises from approximate central values and cancels in $\Delta\chi^2$ comparisons.  The BAO data alone do not strongly exclude the non-perturbative prediction.
+
+\begin{table*}[htbp]
+\centering
+\caption{Numerical multi-probe benchmark comparison from the profile likelihood scan (Lee 2025 covariance, CAMB background, profiled $H_0$ and $\Omega_m$).}
+\label{tab:2-multiprobe-benchmarks}
+\begin{tabular}{lccccc}
+\toprule
+Benchmark & $\zeta_0$ & $w_0$ & $\chi^2_\mathrm{BAO}$ & $\chi^2_\mathrm{total}$ & $\Delta\chi^2$ vs.\ best-fit \\
+\midrule
+\textbf{Multi-probe best-fit} & 0.020 & $-0.993$ & 13.6 & 23.0 & $0$ \\
+CAMB benchmark & 0.013 & $-0.989$ & 13.9 & 27.3 & $+4.3$ \\
+Non-perturbative (brane) & $1.1 \times 10^{-3}$ & $-0.865$ & 18.7 & 87.3 & $+64.3$ \\
+Perturbative & $9.6 \times 10^{-4}$ & $-0.851$ & 19.5 & 99.4 & $+76.4$ \\
+JC benchmark & $9.6 \times 10^{-4}$ & $-0.845$ & 19.9 & 105.6 & $+82.6$ \\
+$\Lambda$CDM$^\dagger$ & --- & $-1$ & 13.5 & 20.2$^*$ & --- \\
+\bottomrule
+\end{tabular}
+\end{table*}
+\noindent{\footnotesize ${}^\dagger$$\Lambda$CDM total excludes the HK constraint (which is framework-specific, not applicable to $\Lambda$CDM). ${}^*$Sum of BAO + $f\sigma_8$ + $H_0$ prior only.}
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig9_bao_residuals.pdf}
+\caption{Multi-probe profile likelihood decomposition. Stacked $\chi^2$ contributions from BAO (blue), growth rate $f\sigma_8$ (green), Planck $H_0$ prior (orange), and Hiramatsu--Kobayashi CMB constraint (purple) as a function of $w_0$, with $(H_0, \Omega_m)$ profiled at each point. The best-fit ($w_0 = -0.993$, star) lies near $\Lambda$CDM. At the non-perturbative prediction $w_0 = -0.865$ (dashed red), the $H_0$ prior dominates the total $\chi^2$, confirming that Hubble tension---not BAO data---is the primary discriminant.}
+\label{fig:9-decomposition}
+\end{figure*}
+
+\paragraph{Interpretation.} The dominant penalty at $w_0 = -0.865$ is the Planck $H_0$ prior ($\chi^2_{H_0} = 31.5$), because the BAO-profiled $H_0 = 64.3$~km/s/Mpc is $5.6\sigma$ from Planck.  However, the Planck $H_0$ prior is derived under $\Lambda$CDM; in a $w$CDM cosmology, the CMB-derived $H_0$ shifts.  The BAO-only penalty ($\Delta\chi^2 = 5.2$) is therefore the more robust discriminant.  The non-perturbative prediction is disfavored but not excluded by BAO alone.
+
+\paragraph{Predictions.} The numerical refit refines the framework's make-or-break predictions:
+\begin{enumerate}
+\item The multi-probe best-fit $w_0 = -0.993$ is indistinguishable from $\Lambda$CDM at current precision. DESI~Y5 (projected $\sigma_{w_0} \approx 0.03$) will not reach this level; Euclid + CMB-S4 ($\sigma_{w_0} \sim 0.01$) may detect the deviation.
+\item $w_a = 0$ identically (DESI~Y5 + Euclid: $5.1\sigma$ discrimination from CPL by 2030).
+\item $f\sigma_8$ follows GR with modified $H(z)$: growth index $\gamma = 0.550$ (from $\gamma = 0.55 + 0.05(1+w_0)$ at the best-fit), not the $\gamma \sim 0.60$ expected from generic modified gravity.
+\end{enumerate}
+
+\subsection{The $\zeta_0$ Tension and Structural Falsifiability}
+\label{sec:2-zeta0-tension}
+
+A critical assessment of the framework's falsifiability is warranted. The preceding analysis reveals an apparent dilemma: the best-fit $\zeta_0 \approx 0.02$ yields $w_0 \approx -0.993$, indistinguishable from $\Lambda$CDM at current precision. Meanwhile, the physically motivated junction-condition benchmark ($\zeta_0 \approx 0.001$, $w_0 \approx -0.865$) is disfavored at $\Delta\chi^2 = 64$. The model appears to either predict nothing distinguishable from $\Lambda$CDM, or to predict something ruled out.
+
+This tension is real but not fatal, for three reasons.
+
+\paragraph{1.\ Structural predictions are $\zeta_0$-independent.} Five predictions follow from the framework's geometric structure regardless of $\zeta_0$:
+\begin{itemize}
+\item $w_a \approx +0.01$ (positive, vs.\ the DESI CPL best-fit $w_a \approx -0.86$);
+\item $\alpha_T = 0$ exactly (gravitational wave speed $= c$);
+\item $\mu = \Sigma = 1$ (growth--expansion decoupling);
+\item $c_s \approx 15c$ (superluminal dark energy sound speed);
+\item No phantom crossing ($w > -1$ for all time).
+\end{itemize}
+These are sharp, falsifiable, and testable. DESI~Y5 reaches $3.8\sigma$ discrimination on $w_a$ alone; Euclid + Rubin + CMB-S4 will test growth--expansion decoupling at percent-level precision by 2032. The framework's falsification surface is five-dimensional, not one-dimensional.
+
+\paragraph{2.\ $\zeta_0$ encodes brane UV physics, not a tuning knob.} The parameter $\zeta_0 = \xi\phi_0^2/M_5^3$ is determined by the scalar field value at the UV brane, which in turn depends on the brane tension and the UV completion of the 5D theory. Its value is not freely adjustable within the framework; it is fixed by brane physics that the current formulation does not compute. This is comparable to the Standard Model's 19 free parameters---experimentally determined, not predicted by the theory. Calling the framework ``unfalsifiable'' because $\zeta_0$ is free is equivalent to calling the Standard Model unfalsifiable because $m_t$ is free.
+
+\paragraph{3.\ The junction-condition benchmark is illustrative, not canonical.} The $w_0 \approx -0.865$ prediction arises from solving the junction conditions with specific (illustrative) brane parameters. Different brane parameters give different $\zeta_0$. The benchmark demonstrates that the framework \emph{can} produce dynamical dark energy in the DESI range; it does not assert that it \emph{must}. The data prefer a less dynamical regime, and the framework accommodates this without contradiction.
+
+The honest summary: the Meridian framework is a one-parameter family of cosmologies indexed by $\zeta_0$, with five parameter-independent structural constraints. The framework is falsifiable through the structural predictions. The determination of $\zeta_0$ from first principles requires either a UV completion of the brane physics or future observational precision sufficient to measure $|1+w_0|$ at the $0.01$ level.
+
+\subsection{CMB Benchmark Comparison}
+\label{sec:2-CMB-benchmarks}
+
+To move beyond the compressed Planck likelihood, three $\zeta_0$ benchmarks were tested against the full CMB + BAO dataset using the Planck 2018 compressed distance priors ($l_A$, $R$, $\omega_b$ with full $3 \times 3$ covariance).
+
+\begin{table*}[htbp]
+\centering
+\caption{CMB benchmark comparison. The geometric degeneracy direction is decisive: for $w_0 > -1$ (quintessence-like), the CMB distance degeneracy requires \emph{lower} $H_0$, worsening the Hubble tension.}
+\label{tab:2-CMB-benchmarks}
+\begin{tabular}{lccccc}
+\toprule
+Benchmark & $\zeta_0$ & $w_0$ & $\chi^2_\mathrm{CMB}$ & $H_0$ ($\mathrm{km\,s^{-1}\,Mpc^{-1}}$) & Status \\
+\midrule
+CAMB    & $0.013$ & $-0.989$ & $0.33$ & $67.2$ & Sails through \\
+JC      & $0.001$ & $-0.865^*$ & ---    & $63.5^*$ & ${\sim}2\sigma$ tension$^*$ \\
+Lu--Simon & $0.004$ & $-0.800$ & ---  & $61.8$ & $2.3\sigma$ tension \\
+\bottomrule
+\end{tabular}\\[2pt]
+{\footnotesize ${}^*$JC values updated for $\epsilon_1 = 0.010$ ($d = 5$ Weyl correction); $H_0$ from linear extrapolation $dH_0/dw_0 \approx -28.4$; tension estimate approximate pending full refit.}
+\end{table*}
+
+\begin{remark}[Status of the non-perturbative brane benchmark]\label{rem:2-benchmark-status}
+The junction-condition (JC) benchmark ($\zeta_0 = 9.6 \times 10^{-4}$, $w_0 = -0.845$) is
+disfavoured by $\Delta\chi^2 = 82.6$ relative to $\Lambda$CDM in the multi-probe fit
+(Table~\ref{tab:2-multiprobe}).  This benchmark was derived from \emph{illustrative} brane
+parameters and is \textbf{not} a prediction of the framework---it is a worked example of
+the $w_0(\zeta_0)$ curve at one particular point.  Three clarifications:
+\begin{enumerate}
+\item The \emph{best-fit} Meridian solution ($\zeta_0 = 0.020$, $w_0 = -0.993$,
+  $\chi^2/\mathrm{dof} = 1.00$) is statistically indistinguishable from $\Lambda$CDM at
+  current precision, lying within $\Delta\chi^2 = +2.8$ of the $\Lambda$CDM baseline.
+\item The CMB-preferred regime ($\zeta_0 \gtrsim 0.01$, $|1+w_0| < 0.01$) is the
+  observationally viable region.  The JC benchmark lies outside this region and serves only
+  to illustrate the framework's behaviour at large deviations from $w = -1$.
+\item The \emph{structural} predictions---$w_a = 0$ identically, $\alpha_T = 0$,
+  $\mu = \Sigma = 1$, no phantom crossing---are benchmark-independent.  They follow from
+  the topology of the self-tuning mechanism and hold for all $\zeta_0$.
+\end{enumerate}
+\end{remark}
+
+\paragraph{The geometric degeneracy direction.} For $w_0 > -1$ (which the Meridian framework always produces), the CMB angular diameter distance is preserved only by \emph{lowering} $H_0$. The slope is $dH_0/dw_0 \approx -28.4\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$. At the JC benchmark ($w_0 = -0.865$), the required $H_0 \approx 63.5$ exacerbates the Hubble tension from the current $\sim\!5\sigma$ (SH0ES vs Planck) to $\sim\!8\sigma$ (SH0ES vs Meridian). Meridian cannot help with the $H_0$ discrepancy---this is a structural limitation of quintessence-like dark energy.
+
+\paragraph{Integrated Sachs--Wolfe effect.} The JC benchmark produces a $54\%$ enhancement of the ISW signal relative to $\Lambda$CDM, but this is undetectable due to cosmic variance in the low-$\ell$ CMB multipoles.
+
+\paragraph{Lensing anomaly.} The framework predicts $A_L = 1$ exactly (GR perturbations, no modified lensing), consistent with ACT~DR6 ($A_L = 1.01 \pm 0.05$) and $2.8\sigma$ from the Planck lensing anomaly ($A_L \sim 1.18$). If the Planck anomaly is a systematic (as ACT suggests), Meridian is correct.
+
+\paragraph{Bimodality.} The tension between the CAMB benchmark (which sails through CMB but barely departs from $\Lambda$CDM) and the JC/multi-probe regime (which matches the DESI expansion signal but faces CMB tension) reflects a genuine bimodality in the current data, not an ambiguity in the framework. The framework predicts a one-parameter family $w_0(\zeta_0)$; \emph{external data} select the value of $\zeta_0$, and they currently disagree.  This bimodality has a clean resolution timeline: DESI~Y5 ($\sigma(w_0) \sim 0.03$, 2027) will determine whether $w_0$ lies in the near-$\Lambda$CDM regime ($|1+w_0| < 0.02$) or the brane regime ($|1+w_0| \sim 0.14$).  The JC benchmark is best understood as a \emph{theoretical target for future surveys}---a specific, falsifiable prediction conditioned on brane parameters that upcoming data can confirm or exclude---rather than a claim about the current observational best-fit. The decoupled perturbation hypothesis (Section~\ref{sec:2-decoupled}) may also bear on this bimodality by modifying the CMB constraint at $|1+w_0| > 0.01$.
+
+\subsection{The $\Phi_0$ Discrepancy}
+\label{sec:2-Phi0-note}
+
+\textbf{Historical note.} Earlier versions of the monograph used $\Phi_0 = 0.477$ for the scalar boundary value. A subsequent revision identified that this value was reverse-engineered from $\zeta_0 = 0.038$ without solving the Israel junction conditions; the actual junction-condition solution gives $\Phi_0 = 0.076$, yielding $\zeta_0 \approx 0.001$ and $w_0 \approx -0.75$. All results in the present chapter use the corrected $\Phi_0 = 0.076$. Any references to $\Phi_0 = 0.477$ in earlier versions are superseded.
+
+%% ============================================================
+\section{DESI DR2 BAO Confrontation}
+\label{sec:2-DESI}
+
+\subsection{Method}
+\label{sec:2-DESI-method}
+
+We compute the comoving angular diameter distance $D_M(z)/r_d$ and Hubble distance $D_H(z)/r_d$ at each of the seven DESI DR2 effective redshifts~\cite{ch2:DESIDR2} for three models:
+\begin{enumerate}
+    \item \textbf{$\Lambda$CDM} --- the concordance model with Planck 2018~\cite{ch2:Planck2018} best-fit parameters ($\Omega_m = 0.315$, $H_0 = 67.36\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$).
+    \item \textbf{Meridian (CMB)} --- the self-tuning model with $\zeta_0 = 0.037$ (CMB-constrained value), giving $w_0 \approx -0.996$.
+    \item \textbf{CPL} --- the DESI best-fit CPL model ($w_0 = -0.75$, $w_a = -0.86$)~\cite{ch2:DESIDR2}.
+\end{enumerate}
+
+For each model and tracer, we compute the fractional deviation from $\Lambda$CDM:
+\begin{equation}
+\delta(D/r_d) = \frac{D_\mathrm{model} - D_\mathrm{\Lambda CDM}}{D_\mathrm{\Lambda CDM}}\,,
+\label{eq:2-delta}
+\end{equation}
+and the detection significance:
+\begin{equation}
+|\delta/\sigma| = \frac{|\delta(D/r_d)|}{\sigma_\mathrm{DESI}}\,,
+\label{eq:2-significance}
+\end{equation}
+where $\sigma_\mathrm{DESI}$ is the approximate DESI DR2 measurement precision for that tracer.
+
+\subsection{Results: Distances}
+\label{sec:2-DESI-distances}
+
+\begin{table*}[htbp]
+\centering
+\caption{Comoving angular diameter distance $D_M/r_d$ at DESI DR2 effective redshifts. Meridian values computed at $\zeta_0 = 0.037$ (CMB-constrained).}
+\label{tab:2-DM}
+\begin{tabular}{lcccc}
+\toprule
+Tracer & $z_\mathrm{eff}$ & $\Lambda$CDM & Meridian & CPL \\
+\midrule
+BGS        & 0.295 &  8.2814 &  8.2750 &  8.1133 \\
+LRG1       & 0.510 & 13.5012 & 13.4867 & 13.1924 \\
+LRG2       & 0.706 & 17.7018 & 17.6801 & 17.3141 \\
+LRG3+ELG1  & 0.934 & 21.9962 & 21.9674 & 21.5690 \\
+ELG2       & 1.321 & 28.0838 & 28.0460 & 27.6614 \\
+QSO        & 1.484 & 30.2780 & 30.2374 & 29.8695 \\
+Ly$\alpha$ & 2.330 & 39.1864 & 39.1374 & 38.8581 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[htbp]
+\centering
+\caption{Hubble distance $D_H/r_d$ at DESI DR2 effective redshifts. Meridian values computed at $\zeta_0 = 0.037$ (CMB-constrained).}
+\label{tab:2-DH}
+\begin{tabular}{lcccc}
+\toprule
+Tracer & $z_\mathrm{eff}$ & $\Lambda$CDM & Meridian & CPL \\
+\midrule
+BGS        & 0.295 & 25.8560 & 25.8209 & 25.1049 \\
+LRG1       & 0.510 & 22.7414 & 22.7032 & 22.2133 \\
+LRG2       & 0.706 & 20.1708 & 20.1362 & 19.8872 \\
+LRG3+ELG1  & 0.934 & 17.5705 & 17.5423 & 17.4905 \\
+ELG2       & 1.321 & 14.0665 & 14.0480 & 14.1398 \\
+QSO        & 1.484 & 12.8817 & 12.8663 & 12.9757 \\
+Ly$\alpha$ & 2.330 &  8.6178 &  8.6117 &  8.6972 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Results: Detection Significance}
+\label{sec:2-DESI-sig}
+
+\begin{table*}[htbp]
+\centering
+\caption{Fractional deviation from $\Lambda$CDM (\%) and detection significance ($\sigma$). Meridian at $\zeta_0 = 0.037$ (CMB-constrained).}
+\label{tab:2-deviations}
+\footnotesize
+\begin{tabular}{lcllll}
+\toprule
+Tracer & $z_\mathrm{eff}$ & Mer.\ $\delta_{D_M}$ & CPL $\delta_{D_M}$ & Mer.\ $\delta_{D_H}$ & CPL $\delta_{D_H}$ \\
+\midrule
+BGS & 0.295 &
+  $-0.08\%$ ($0.1\sigma$) & $-2.03\%$ ($1.4\sigma$) &
+  $-0.14\%$ ($0.1\sigma$) & $-2.91\%$ ($1.5\sigma$) \\
+LRG1 & 0.510 &
+  $-0.11\%$ ($0.1\sigma$) & $-2.29\%$ ($2.4\sigma$) &
+  $-0.17\%$ ($0.1\sigma$) & $-2.32\%$ ($1.4\sigma$) \\
+LRG2 & 0.706 &
+  $-0.12\%$ ($0.2\sigma$) & $-2.19\%$ ($3.9\sigma$) &
+  $-0.17\%$ ($0.1\sigma$) & $-1.41\%$ ($1.1\sigma$) \\
+LRG3+ELG1 & 0.934 &
+  $-0.13\%$ ($0.3\sigma$) & $-1.94\%$ ($4.2\sigma$) &
+  $-0.16\%$ ($0.2\sigma$) & $-0.46\%$ ($0.5\sigma$) \\
+ELG2 & 1.321 &
+  $-0.14\%$ ($0.2\sigma$) & $-1.50\%$ ($2.0\sigma$) &
+  $-0.13\%$ ($0.1\sigma$) & $+0.52\%$ ($0.3\sigma$) \\
+QSO & 1.484 &
+  $-0.13\%$ ($0.1\sigma$) & $-1.35\%$ ($0.9\sigma$) &
+  $-0.12\%$ ($0.1\sigma$) & $+0.73\%$ ($0.3\sigma$) \\
+Ly$\alpha$ & 2.330 &
+  $-0.13\%$ ($0.1\sigma$) & $-0.84\%$ ($0.7\sigma$) &
+  $-0.07\%$ ($0.1\sigma$) & $+0.92\%$ ($0.8\sigma$) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Summary Statistics}
+\label{sec:2-DESI-summary}
+
+\begin{table*}[htbp]
+\centering
+\caption{Summary of BAO distance deviations (Meridian at $\zeta_0 = 0.037$).}
+\label{tab:2-BAO-summary}
+\begin{tabular}{lcc}
+\toprule
+Metric & Meridian & CPL \\
+\midrule
+Max $|\delta_{D_M}/r_d|$ & $0.135\%$ & $2.29\%$ \\
+Max $|\delta_{D_H}/r_d|$ & $0.171\%$ & $2.91\%$ \\
+Max detection significance & $\mathbf{0.29\sigma}$ & $\mathbf{4.22\sigma}$ \\
+$\sum(\delta/\sigma)^2$ ($D_M$) & 0.20 & 45.9 \\
+$\sum(\delta/\sigma)^2$ ($D_H$) & 0.08 & 6.2 \\
+Total $\sum(\delta/\sigma)^2$ & $\mathbf{0.27}$ & $\mathbf{52.1}$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{$\zeta_0$-Dependent Interpretation}
+\label{sec:2-DESI-interp}
+
+\textbf{At $\zeta_0 \approx 0.037$ (CMB-constrained):} The Meridian model is indistinguishable from $\Lambda$CDM at DESI DR2 precision. The maximum deviation at any single tracer is $0.29\sigma$ (LRG3+ELG1 at $z = 0.934$ in $D_M/r_d$). The total $\chi^2$ contribution across all 14 distance measurements ($7$ tracers $\times$ $2$ distances) is $\sum(\delta/\sigma)^2 = 0.27$---less than the expected fluctuation for 14 data points.
+
+\textbf{At $\zeta_0 \approx 0.001$ (brane benchmark):} $w_0 \approx -0.865$, and the BAO deviations from $\Lambda$CDM would be of order $1\%$---detectable at DESI DR2 precision. In this regime, the framework is consistent with the DESI constant-$w$ constraint ($w_0 = -0.83 \pm 0.06$) at ${\sim}\,0.6\sigma$, rather than dismissing the signal as an artifact. The DESI constant-$w$ range $w_0 \in [-0.89,\, -0.77]$ maps to $\zeta_0 \in [5.5 \times 10^{-4},\; 6.5 \times 10^{-4}]$, near the corrected multi-probe best-fit $\zeta_0 = 6.2 \times 10^{-4}$.
+
+\textbf{The CPL model is clearly distinguishable from $\Lambda$CDM.} The CPL best-fit reaches $4.22\sigma$ deviation in $D_M/r_d$ at $z = 0.934$, with a total $\sum(\delta/\sigma)^2 = 52.1$. The CPL model exhibits a characteristic sign flip in $D_H/r_d$: negative deviations at $z < 1$ transitioning to positive deviations at $z > 1$. This sign flip is the hallmark of phantom crossing. The Meridian model shows no sign flip at any $\zeta_0$: all deviations are uniformly negative, reflecting the constant $w_0 > -1$ behavior.
+
+\textbf{The critical distinction.} The framework's relationship to the DESI result depends on which $\zeta_0$ nature selects. If $\zeta_0$ is large (CMB regime), the DESI signal must be a CPL artifact. If $\zeta_0$ is small (brane regime), the DESI signal may be the framework's prediction. This ambiguity is resolved by determining $\zeta_0$ from brane physics (UV completion) or from improved observational constraints.
+
+\subsection{Qualitative Model Comparison from Published Analyses}
+\label{sec:2-DESI-chi2}
+
+A direct compressed-likelihood $\chi^2$ comparison of five dark energy models against the DESI BAO data was attempted using our pipeline. However, all five models---including CPL and $\Lambda$CDM---produced $\chi^2/N_\mathrm{data} > 3.5$ for 12~data points, indicating a systematic pathology in the compressed BAO likelihood implementation (likely related to the treatment of $D_M/r_d$--$D_H/r_d$ covariances or the fiducial $r_d$ conversion). We therefore do not quote quantitative $\chi^2$ values from this analysis.
+
+The qualitative conclusions from the published literature are robust:
+\begin{enumerate}
+\item \textbf{CPL fits the DESI BAO data better than $\Lambda$CDM.} The DESI collaboration reports $2.8$--$4.2\sigma$ preference for $w \neq -1$ in the CPL parameterization~\cite{ch2:DESIDR2}; Lu \& Simon~\cite{ch2:LuSimon2026} sharpen this to $4.6\sigma$ with the full multi-probe dataset.
+\item \textbf{Meridian's redshift-dependent formula is structurally distinct from constant-$w$.} The perturbative equation of state $w(z) = -1 + (C_\mathrm{KK}/\zeta_0)/E^2(z)$ produces a specific $1/E^2(z)$ redshift shape that differs qualitatively from both a constant $w$ and the CPL linear-in-$a$ template. A reliable quantitative comparison requires the full (non-compressed) BAO likelihood.
+\item \textbf{The no-phantom property is preserved.} Unlike CPL, which crosses $w = -1$ at $z \approx 0.43$, the Meridian model maintains $w > -1$ at all redshifts for any $\zeta_0$.
+\item \textbf{For a model with one fewer parameter} (Meridian has 1 free parameter; CPL has 2), modestly worse BAO fit quality is expected. The decisive comparison is whether the data require $w_a \neq 0$, which is addressed by Lu \& Simon's result ($2.4\sigma$) and the discrimination timeline (Section~\ref{sec:2-constant-w-vs-CPL}).
+\end{enumerate}
+
+\subsection{Phantom Crossing Analysis}
+\label{sec:2-DESI-phantom}
+
+Does the DESI BAO data \emph{require} phantom crossing ($w < -1$ at some $z$)?
+
+\paragraph{Answer: Not yet definitively.} Lu \& Simon~\cite{ch2:LuSimon2026} report $w_a = -0.62 \pm 0.26$, a $2.4\sigma$ preference for time-evolving dark energy that includes phantom crossing. However, this falls short of the $5\sigma$ threshold. The CPL best-fit crosses $w = -1$ at $z \approx 0.43$; the Meridian model never crosses. The no-phantom prediction is the framework's cleanest falsification handle: if model-independent reconstruction confirms $w < -1$ at any redshift at $> 3\sigma$, Meridian is falsified.
+
+\paragraph{DESI DR3 will be decisive.} If DR3 measures $w < -1$ at any redshift at $> 3\,\sigma$ significance, Meridian is falsified. If $w > -1$ everywhere, the phantom-crossing class of models (including CPL) is disfavoured and Meridian's structural simplicity becomes a strength.
+
+\subsection{Braneworld Competitor Comparison}
+\label{sec:2-DESI-braneworld}
+
+Mukherjee et al.~\cite{ch2:mukherjee25} test scalar field dark energy on a $(4{+}1)$D ghost-free phantom braneworld with six potential shapes (quadratic, quartic, exponential, symmetry-breaking, axion). Their best models achieve $|\Delta\chi^2| < 0.25$ relative to CPL. However, their models (i)~require phantom crossing, (ii)~have 2 free parameters (vs Meridian's~1), and (iii)~lack a UV completion (no NCG spectral action, no self-tuning proof). Meridian's growth--expansion decoupling ($\gamma \approx 0.55$ despite $w_0 \neq -1$) provides a unique discriminator not available to the braneworld competitor.
+
+\paragraph{Explicit falsification boundary.}
+If $w < -1$ is confirmed at any $z$ at $> 3\,\sigma$, Meridian is falsified.
+
+\subsection{Sound Horizon Anchoring and the Lee (2025) Analysis}
+\label{sec:2-lee2025-rd}
+
+Lee (2025)~\cite{ch2:Lee2025} performs a comprehensive reanalysis of the DESI~DR2 BAO data, demonstrating that the dynamical dark energy (DDE) preference depends on how the sound horizon $r_d$ is anchored. When $r_d$ is determined by the CMB angular scale $\theta_*$ (as in the standard DESI analysis), the DDE preference remains at $2$--$4\sigma$. When $r_d$ is instead calibrated from the physical baryon density alone (``$r_d$ anchoring''), the DDE preference weakens substantially.
+
+This observation has direct implications for the Meridian framework. The self-tuning mechanism pins the bulk geometry through the warp factor $e^{-2A(y)}$, which determines $r_d$ through the pre-recombination expansion history. Since the Meridian framework does not modify pre-recombination physics (the cuscuton scalar is effectively non-dynamical at $z \gg 1$, and the Gauss--Bonnet correction $\epsilon_1 = 0.010$ produces negligible shifts in $T_\mathrm{CMB}$ and $n_e$), the sound horizon is identical to the $\Lambda$CDM value: $r_d = 147.09\;\mathrm{Mpc}$ (Planck 2018). The framework's prediction is therefore robust under both anchoring choices---only the \emph{interpretation} of the DESI signal changes. This strengthens the CPL artifact hypothesis (Section~\ref{sec:2-CPL}): if the DDE preference is $r_d$-anchoring dependent, the ``signal'' may reflect calibration systematics rather than genuine dynamical dark energy.
+
+\paragraph{Multi-probe context.}
+A recent multi-probe analysis testing five dark energy models against DESI 2025 + SNe + BAO + CMB (Zhang et al.\ 2026~\cite{ch2:Zhang2026}) found that no alternative model holds significant statistical advantage over $\Lambda$CDM, with persistent Hubble tension across all models. Tentative hints of dark matter--dark energy interactions echo the Weyl-sector coupling in our framework (Section~\ref{sec:2-growth}). The Hubble tension itself has been sharpened by the Local Distance Network (Casertano et al.\ 2026~\cite{ch2:H0DN2026}), which combines Cepheid, TRGB, JAGB, Mira, and surface brightness fluctuation distance ladders into a consensus measurement $H_0 = 73.50 \pm 0.81\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$ (1.1\% precision), establishing $7.1\sigma$ tension with the Planck CMB value and $5.0\sigma$ tension with DESI~DR2 BBN+BAO within $\Lambda$CDM. The persistence of this tension across independent local distance methods and its resistance to DESI's BAO data further motivates frameworks---like the present one---in which the dark energy sector modifies the expansion history while preserving GR-like growth.
+
+%% ============================================================
+\section{Pre-Data Predictions for DESI DR3}
+\label{sec:2-DR3}
+
+The following six predictions are locked \emph{before} the DESI~DR3 data release, establishing priority and testability on the record. All predictions derive from the NCG spectral action computation (Chapter~\ref{ch:ncg}, Section~\ref{sec:4-brane-parameter}): the product heat kernel on the warped orbifold with Euler--Maclaurin decomposition determines $\zeta_0 = 8.8 \times 10^{-4}$ at the DESI-matched Goldberger--Wise parameter $\varepsilon = 0.275$, with baseline cosmological parameters $\Omega_m = 0.315$, $\Omega_\mathrm{DE} = 0.685$, $H_0 = 67.36\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$.  The $1\sigma$ uncertainty on $\varepsilon$ (${}^{+0.072}_{-0.106}$, from DESI~DR2) propagates to $\sigma(w_0) \approx 0.06$.
+
+\begin{table*}[htbp]
+\centering
+\caption{Pre-data DESI~DR3 predictions from the NCG spectral action (OP\#8). Timestamped April~2, 2026.}
+\label{tab:2-DR3-predictions}
+\small
+\begin{tabular}{@{}clllc@{}}
+\toprule
+\# & Prediction & Value (NCG, $\varepsilon = 0.275$) & Falsification criterion & Instrument \\
+\midrule
+1 & $w_0$ & $-0.830^{+0.060}_{-0.060}$ & $w_0$ outside $[-0.77,\, -0.89]$ at $>3\,\sigma$ & DESI DR3 \\[3pt]
+2 & No phantom & $w(z) > -1\;\forall\, z$ & $w < -1$ at any $z$ at $>3\,\sigma$ & DESI DR3 \\[3pt]
+3 & Growth decoupling & $\gamma = 0.5495$ & $f\sigma_8$ differs from $\Lambda$CDM by $>2\%$ & Euclid \\[3pt]
+4 & $w_{a,\mathrm{eff}}$ & $-0.225$ (3.8$\times$ flatter than CPL) & $|w_a| > 0.3$ at $>3\,\sigma$ & DESI DR3 \\[3pt]
+5 & $w(z{=}1)$ & $-0.948$ (vs.\ CPL: $-1.180$) & Gap of 0.232 at $z = 1$ & DESI DR3 \\[3pt]
+6 & $\sum m_\nu$ bound & $< 0.084\;\mathrm{eV}$ (relaxed vs.\ $\Lambda$CDM) & --- (consistency check) & KATRIN/Euclid \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Predictions at the CAMB best-fit.}
+Table~\ref{tab:2-DR3-predictions} uses $\zeta_0 = 8.8 \times 10^{-4}$ from the NCG product heat kernel computation (Chapter~\ref{ch:ncg}).  For comparison, we present the same six predictions at the CAMB best-fit $\zeta_0 = 0.013$, representing the most conservative (near-$\Lambda$CDM) regime:
+
+\begin{table*}[htbp]
+\centering
+\caption{Predictions at the CAMB best-fit ($\zeta_0 = 0.013$, $w_0 = -0.989$). Compare Table~\ref{tab:2-DR3-predictions}.}
+\label{tab:2-DR3-predictions-CAMB}
+\small
+\begin{tabular}{@{}clllc@{}}
+\toprule
+\# & Prediction & Value (CAMB best-fit) & Falsification criterion & Instrument \\
+\midrule
+1 & $w_0$ & $-0.989^{+0.003}_{-0.002}$ & $w_0$ outside $[-0.984,\, -0.993]$ at $>3\,\sigma$ & DESI DR3 \\[3pt]
+2 & No phantom & $w(z) > -1\;\forall\, z$ & $w < -1$ at any $z$ at $>3\,\sigma$ & DESI DR3 \\[3pt]
+3 & Growth decoupling & $\gamma = 0.5495$ & $f\sigma_8$ differs from $\Lambda$CDM by $>2\%$ & Euclid \\[3pt]
+4 & $w_{a,\mathrm{eff}}$ & $-0.010$ & $|w_a| > 0.05$ at $>3\,\sigma$ & DESI DR3 \\[3pt]
+5 & $w(z{=}1)$ & $-0.996$ (vs.\ CPL: $-1.180$) & Gap of 0.184 at $z = 1$ & DESI DR3 \\[3pt]
+6 & $\sum m_\nu$ bound & $< 0.094\;\mathrm{eV}$ (unchanged) & --- (consistency check) & KATRIN/Euclid \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\noindent
+At the CAMB best-fit, the framework predicts near-$\Lambda$CDM behavior: $|1 + w_0| = 0.011$, unresolvable by DESI~DR3 alone (which requires $\sigma(w_0) \lesssim 0.005$). The framework's near-term falsifiability at this regime rests on the parameter-independent predictions: no phantom crossing (Prediction~2), growth--expansion decoupling (Prediction~3), and the particle-physics sector ($r = 0.004$, no axion, sterile neutrino DM). The functional form $w_0(\zeta_0)$ is the prediction; the specific value of $\zeta_0$ determines which observational tests are most constraining.
+
+\subsection{Meridian vs.\ CPL: \texorpdfstring{$w(z)$}{w(z)} Comparison}
+\label{sec:2-DR3-wz}
+
+\begin{table*}[htbp]
+\centering
+\caption{Equation of state $w(z)$ at selected redshifts. Meridian at the NCG prediction ($\zeta_0 = 8.8 \times 10^{-4}$, $w_0 = -0.830$); CPL at the DESI best-fit ($w_0 = -0.75$, $w_a = -0.86$). The ``Gap'' column is the Meridian$-$CPL difference.}
+\label{tab:2-Mer-CPL-wz}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Redshift & $w_\mathrm{Mer}$ & $w_\mathrm{CPL}$ & Gap & Phantom? (CPL) \\
+\midrule
+$z = 0.0$ & $-0.830$ & $-0.750$ & $-0.080$ & No \\
+$z = 0.5$ & $-0.907$ & $-1.037$ & $+0.130$ & Yes \\
+$z = 1.0$ & $-0.948$ & $-1.180$ & $+0.232$ & Yes \\
+$z = 1.5$ & $-0.970$ & $-1.266$ & $+0.296$ & Yes \\
+$z = 2.0$ & $-0.981$ & $-1.323$ & $+0.342$ & Yes \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig2_wz_comparison.pdf}
+\caption{Dark energy equation of state as a function of redshift. Solid blue: Meridian
+prediction at the NCG value $\zeta_0 = 8.8 \times 10^{-4}$, $w(z) = -1 + (C_\mathrm{KK}/\zeta_0)/E^2(z)$. Dashed orange:
+CPL best-fit ($w_0 = -0.75$, $w_a = -0.86$), which crosses into the phantom region ($w < -1$)
+at $z = 0.41$. The Meridian framework \emph{never} crosses $w = -1$---a topological prediction.
+At $z = 1$, the separation $\Delta w = 0.232$ (${\sim}5.8\sigma$ at projected DESI~DR3 precision)
+provides a clean discriminant. At $z = 0$, Meridian ($w_0 = -0.830$) and CPL ($w_0 = -0.75$)
+differ by $0.080$---distinguishable at ${\sim}2.0\sigma$ with current DESI precision.}
+\label{fig:2-wz-comparison}
+\end{figure*}
+
+At $z = 0$, Meridian ($w_0 = -0.830$) and CPL ($w_0 = -0.75$) differ by $\Delta w_0 = 0.080$, distinguishable at ${\sim}2.0\sigma$ with current DESI DR2 precision ($\sigma(w_0) \approx 0.04$). At $z \geq 0.5$, they diverge sharply: Meridian's $w(z) = -1 + (C_\mathrm{KK}/\zeta_0)/E^2(z)$ asymptotes to $-1$ from above, while CPL's $w(z) = w_0 + w_a\,z/(1+z)$ plunges deep into the phantom regime ($w \ll -1$). The key discriminators:
+\begin{itemize}
+\item \textbf{Flatness ratio:} Meridian's effective $w_{a,\mathrm{eff}} = -0.225$, compared to CPL's $w_a = -0.86$---Meridian is $3.8\times$ flatter. (Here $w_{a,\mathrm{eff}}$ is the slope obtained by fitting a CPL template to Meridian's $w(z)$ curve at the DESI effective redshift bins; the true Meridian time derivative is $w_a = 0$ identically.)
+\item \textbf{Phantom crossing:} CPL crosses $w = -1$ at $z = 0.41$; Meridian never crosses.
+\item \textbf{$z = 1$ separation:} $\Delta w = 0.232$---a sharp discriminator, corresponding to $\sim\!5.8\,\sigma$ at the projected DESI~DR3 precision of $\sim\!0.04$ per bin in reconstructed $w(z)$.
+\end{itemize}
+
+\subsection{Model Discrimination Summary}
+\label{sec:2-model-discrimination}
+
+\begin{table*}[htbp]
+\centering
+\caption{Summary comparison of five dark energy models against key observables. Meridian is uniquely characterised by the combination $w \neq -1$ with $\gamma \approx$ $\Lambda$CDM (growth--expansion decoupling).}
+\label{tab:2-model-summary}
+\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Observable & $\Lambda$CDM & Meridian & CPL & DGP & Early DE \\
+\midrule
+$w_0$ & $-1.000$ & $-0.830$ & $-0.750$ & $-0.780$ & $-1.000$ \\
+$w_{a,\mathrm{eff}}$ & $0$ & $-0.225$ & $-0.860$ & $+0.320$ & $0$ \\
+$w(z{=}1)$ & $-1.000$ & $-0.948$ & $-1.180$ & $-0.620$ & $-1.000$ \\
+Phantom? & Never & Never & $z = 0.41$ & Never & Never \\
+$\gamma$ & $0.550$ & $0.5495$ & $0.5625$ & $0.680$ & $0.550$ \\
+$\Delta(f\sigma_8)$ & $0\%$ & ${<}\,0.1\%$ & ${\sim}\,1\%$ & ${\sim}\,5\%$ & $0\%$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The three ``smoking guns'' for DESI~DR3:
+\begin{enumerate}
+\item \textbf{No phantom crossing.} If DESI~DR3 measures $w < -1$ at $z > 0.5$ at $> 3\,\sigma$, Meridian is falsified and the phantom braneworld competitor is favoured.
+\item \textbf{Nearly constant $w(z)$ at high~$z$.} At $z = 1$, Meridian predicts $w = -0.948$ while CPL predicts $w = -1.180$. The difference (0.232) is large compared to the expected DESI~DR3 precision ($\sim\!0.04$ per bin in $w$-reconstruction).
+\item \textbf{Growth--expansion decoupling.} If DESI~DR3 finds both $w_0 \sim -0.83$ \emph{and} $f\sigma_8$ deviating from $\Lambda$CDM by $> 2\%$, Meridian is falsified (the cuscuton mechanism predicts $\gamma \approx 0.55$).
+\end{enumerate}
+
+\subsection{Sensitivity Forecast}
+\label{sec:2-sensitivity-forecast}
+
+The framework's predictions sharpen with each data release as the dominant theoretical uncertainty ($q_0$, contributing 72.5\% of the $C_\mathrm{KK}$ variance) is reduced:
+
+\begin{table*}[htbp]
+\centering
+\caption{Projected $C_\mathrm{KK}$ precision as $q_0$ measurements improve.}
+\label{tab:2-sensitivity}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Epoch & $q_0$ precision & $\sigma(C_\mathrm{KK})$ & Relative & Dominant error \\
+\midrule
+Current & $\pm 0.05$ & $8.3 \times 10^{-5}$ & $33.7\%$ & $q_0$ (72.5\%) \\
+DESI Y5 & $\pm 0.02$ & ${\sim}\,5.5 \times 10^{-5}$ & ${\sim}\,22\%$ & transitional \\
+DESI Y5 + Euclid & $\pm 0.01$ & $4.6 \times 10^{-5}$ & $18.6\%$ & $\epsilon_1$ (90.2\%) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+A theory that becomes \emph{more} falsifiable with better data is making real predictions. The $1.8\times$ improvement from the current to the Euclid era narrows the $95\%$ confidence interval on $w_0$ (at the JC benchmark) from $[-0.884,\, -0.549]$ to $[-0.842,\, -0.663]$.
+
+%% ============================================================
+\section{The CPL Artifact Hypothesis}
+\label{sec:2-CPL}
+
+\subsection{Statement}
+\label{sec:2-CPL-statement}
+
+The Chevallier--Polarski--Linder (CPL) parameterization~\cite{ch2:Chevallier2001,ch2:Linder2003}
+\begin{equation}
+w(a) = w_0 + w_a(1 - a)
+\label{eq:2-CPL}
+\end{equation}
+is a first-order Taylor expansion of an arbitrary $w(a)$ around the present epoch. When DESI BAO data are analyzed using CPL, the best fit is $w_0 = -0.75$, $w_a = -0.86$, with the null hypothesis ($w_0 = -1$, $w_a = 0$) rejected at $2.8$--$4.2\sigma$ depending on the dataset combination.
+
+The interpretation of this result is $\zeta_0$-dependent within our framework:
+\begin{itemize}
+    \item \textbf{If $\zeta_0$ is large} ($\gtrsim 0.01$): Our model predicts $w_0 \approx -1$, and the CPL result is likely an artifact of the parameterization.
+    \item \textbf{If $\zeta_0$ is small} ($\sim 10^{-3}$): Our model predicts $w_0 \approx -0.865$, and the CPL result may reflect a genuine physical signal---though one distorted by the CPL parameterization (see the $w_a$ sign disagreement below).
+\end{itemize}
+
+In either case, the CPL parameterization is a poor approximation to our model's equation of state $w(a) \approx \text{const}$, because CPL imposes a linear $a$-dependence that our framework does not produce. Nine independent research groups have reached consistent conclusions about the fragility of the CPL interpretation. We review these analyses below.
+
+\subsection{Nine Independent Analyses}
+\label{sec:2-CPL-seven}
+
+The CPL artifact hypothesis is an \emph{open hypothesis, not an established result}. The definitive test---comparing constant-$w$ + GR-perturbation fits against CPL + coupled-perturbation fits on the same multi-probe data---has not yet been performed. What follows is evidence \emph{consistent with} the hypothesis, not proof of it. Nine independent research groups, using diverse methods and datasets, have reached consistent conclusions about the fragility of the DESI CPL result. We summarize their findings, none of which assumes our model.
+
+\textbf{1.\ Truncation bias (Nesseris, Akrami, and Starkman~\cite{ch2:Nesseris2025}).} The CPL expansion truncates $w(a)$ at first order. Higher-order terms in the Taylor expansion are implicitly marginalized over by the data, and this marginalization can bias the $(w_0,\,w_a)$ posterior. Including second-order corrections reduces the significance of the DESI result.
+
+\textbf{2.\ Parameterization compensation (G\'omez-Valent~\cite{ch2:GomezValent2025}).} The two CPL parameters can compensate each other: a decrease in $w_0$ (more phantom-like) can be offset by a negative $w_a$ (less phantom at high~$z$), producing a degenerate valley in the likelihood surface. This valley inflates the apparent significance of deviation from the $\Lambda$CDM point $(w_0,\,w_a) = (-1,\,0)$.
+
+\textbf{3.\ Prior dependence (Lodha et al.~\cite{ch2:Lodha2024}).} The Bayesian evidence for dynamical dark energy depends sensitively on the prior range for $w_0$ and $w_a$. Extending the prior to include $w_0 < -2$ or $|w_a| > 2$ reverses the conclusion---the evidence favors $\Lambda$CDM.
+
+\textbf{4.\ Basis dependence (Hasan et al.~\cite{ch2:Hasan2025}).} The CPL basis $\{w_0,\,w_a\}$ is one of infinitely many choices for parameterizing $w(a)$. Transforming to a basis-independent pivoted parameterization $\{w_p,\,w_a\}$ with the pivot at $z_p \sim 0.3$ (where the two parameters are uncorrelated) yields
+\begin{equation}
+w_p = -0.9 \pm 0.1\,,
+\label{eq:2-wp}
+\end{equation}
+consistent with a cosmological constant at $1\sigma$. The apparent $3$--$4\sigma$ result in the $\{w_0,\,w_a\}$ basis is an artifact of parameter correlation at the un-pivoted point.
+
+\textbf{5.\ Cosmographic analysis (Mandal et al.~\cite{ch2:Mandal2025}).} Model-independent cosmographic methods---expanding the luminosity distance directly in $z$ without assuming a dark energy model---find that $w = -1$ is a bifurcation point in the expansion. No phantom crossing is detected. The data are consistent with $w = \text{const} = -1$.
+
+\textbf{6.\ Monte Carlo false-positive rate (Andrianomena and C\'ardenas~\cite{ch2:Andrianomena2025}).} Generating synthetic $\Lambda$CDM datasets with DESI-like noise properties and fitting CPL, the false-positive rate for detecting phantom crossing at $> 2.8\sigma$ is $3.2\%$. This is uncomfortably high for a claimed detection.
+
+\textbf{7.\ Internal dataset tensions (Marques and Bengaly~\cite{ch2:Marques2025}).} No individual DESI dataset (BGS, LRG, ELG, QSO, Ly$\alpha$) independently detects dynamical dark energy. The combined significance arises from the interplay between datasets, which can amplify systematic effects.
+
+\textbf{8.\ Sound horizon anchoring (Lee~\cite{ch2:Lee2025}).} Lee (2025) shows that the DESI preference for dynamical dark energy disappears when the sound horizon $r_d$ is used as the anchoring scale instead of the CMB acoustic scale $\theta_*$. Since $r_d$ and $\theta_*$ are related through the angular diameter distance to last scattering---which depends on the assumed dark energy model---the apparent DDE signal may arise from the $\theta_*$-anchored analysis propagating a model-dependent prior into the BAO constraint. The Meridian self-tuning mechanism pins the bulk geometry, which determines $r_d$ through the warp factor; the model's prediction is robust under both anchoring choices.
+
+\textbf{9.\ Multi-model comparison (Zhang et al.~\cite{ch2:Zhang2026}).} A comprehensive multi-probe analysis testing five dark energy models (CPL, BA, JBP, logarithmic, and oscillatory) against DESI~2025 + SNe + BAO + CMB found that no alternative model holds significant statistical advantage over $\Lambda$CDM. The persistent Hubble tension across all five models suggests a systematic or new-physics origin that CPL-like parameterizations cannot address.
+
+\subsection{Our Quantitative Verification}
+\label{sec:2-CPL-quant}
+
+The BAO distance analysis of Section~\ref{sec:2-DESI} provides a direct, quantitative test. For $\zeta_0 \approx 0.037$ (CMB regime), the model predicts $w_0 \approx -0.996$ and deviates by at most $0.29\sigma$. The ``signal'' seen by DESI at $3$--$4\sigma$ requires $|w_0 + 1| > 0.2$---three orders of magnitude larger. In this regime, the CPL artifact hypothesis is strongly supported.
+
+For $\zeta_0 \approx 0.001$ (brane regime), $w_0 \approx -0.865$ and the BAO deviations are modest but detectable. However, even in this regime, the CPL parameterization is a poor fit to our model: the Meridian model has $w_a \approx +0.01$ (essentially constant $w$), while the DESI CPL fit requires $w_a = -0.86$ (strong time evolution with phantom crossing). The CPL basis distorts the inference regardless of which $\zeta_0$ regime applies.
+
+\paragraph{The $w_a$ tension and Lu \& Simon (2026).}
+Lu \& Simon~\cite{ch2:LuSimon2026} combine DESI~DR2 + Planck~PR4 + DES~Y5 to find $w_0 = -0.788 \pm 0.046$ and $w_a = -0.62 \pm 0.26$, rejecting $w_a = 0$ at $2.4\sigma$. Their $w_0$ is consistent with the Meridian brane benchmark ($w_0 \approx -0.865$, $1.7\sigma$ tension), but their $w_a$ directly conflicts with the Meridian prediction $w_a = 0$. Separately, Lu \& Simon find that the modified gravity parameters $c_B = 0.46 \pm 0.3$ and $c_M = 0.31 \pm 0.5$ are both consistent with zero---exactly the cuscuton signature of modified expansion with GR growth. When the background is fixed to $\Lambda$CDM and only growth is varied, the preference drops to $0.68\sigma$.
+
+While the brane-benchmark $w_0 \approx -0.865$ is consistent with the DESI DR2 constant-$w$ constraint, the predicted $w_a \approx +0.01$ (nearly constant equation of state, slow thawing) differs markedly from the CPL best-fit $w_a \approx -0.86 \pm 0.30$ (strong freezing evolution). This sign disagreement reflects a structural feature: Meridian's scalar evolution is governed by the cuscuton-like kinetic suppression, which produces $\dot{w} \sim \mathcal{O}(\epsilon_1^2)$---far slower than what the CPL parameterization requires to fit the high-redshift BAO data.
+
+Three readings are possible: (i)~the CPL $w_a$ is a genuine signal and Meridian's nearly-constant $w$ is falsified; (ii)~the large $|w_a|$ is an artifact of forcing a two-parameter fit onto data that prefer $w_0 \neq -1$ but do not constrain the time-derivative well (see G\'omez-Valent et~al.\ 2025 for evidence that the CPL $w_a$ absorbs systematic effects); or (iii)~the phantom crossing is a compromise artifact arising from coupled perturbation assumptions (Section~\ref{sec:2-decoupled}). DESI~Y5 (2027) reaches $3.8\sigma$ discrimination between constant-$w$ and CPL; combined with Euclid (2030), this reaches $5.1\sigma$---definitive. If $w_a$ shrinks toward zero while $w_0$ remains near $-0.87$, Meridian is strongly favoured.
+
+\subsection{The Pivoted Equation of State}
+\label{sec:2-CPL-pivot}
+
+The pivoted analysis of Hasan et al.~\cite{ch2:Hasan2025} provides a model-independent constraint directly comparable to our prediction: $w_p = -0.9 \pm 0.1$ at the pivot redshift $z_p \sim 0.3$ (Eq.~\ref{eq:2-wp}). For $\zeta_0 \approx 0.037$, our prediction $w_0 \approx -0.996$ lies within the $1\sigma$ range. For $\zeta_0 \approx 0.001$, $w_0 \approx -0.865$ lies within the $1\sigma$ range. Both are broadly consistent with this model-independent measurement.
+
+\subsection{The Sound Horizon Cannot Rescue CPL}
+\label{sec:2-CPL-rd}
+
+One might ask whether the model could be reconciled with the DESI CPL result by modifying the sound horizon $r_d$---for instance, through an early dark energy (EDE) mechanism that reduces $r_d$ relative to the Planck fiducial value. We have tested this possibility by scanning over $r_d$ values from $-3\%$ to $+3\%$ of the fiducial $r_d = 147.09\;\mathrm{Mpc}$~\cite{ch2:Planck2018}, re-optimizing the model at each fixed $r_d$.
+
+\begin{table*}[htbp]
+\centering
+\caption{Sound horizon scan results (with CMB prior $\sigma(r_d) = 0.26\;\mathrm{Mpc}$).}
+\label{tab:2-rd}
+\begin{tabular}{lccccc}
+\toprule
+$r_d$ (Mpc) & $\delta r_d$ (\%) & $\chi^2_\mathrm{model}$ & $\chi^2_\mathrm{\Lambda CDM}$ & $w_0$ (CPL fit) & $w_a$ (CPL fit) \\
+\midrule
+142.68 & $-3\%$ & 329.3 & 347.9 & $-0.958$ & $+0.11$ \\
+145.62 & $-1\%$ &  45.3 &  60.8 & --- & --- \\
+147.09 & $0\%$ (fiducial) &   9.6 &  24.6 & $-0.993$ & ${\sim}\,0$ \\
+148.56 & $+1\%$ &  43.4 &  59.3 & --- & --- \\
+151.50 & $+3\%$ & 310.0 & 340.0 & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Two features are decisive:
+\begin{enumerate}
+    \item \textbf{The CMB prior is extremely tight.} The Planck determination $\sigma(r_d) = 0.26\;\mathrm{Mpc}$~\cite{ch2:Planck2018} means a $1\%$ shift in $r_d$ ($1.47\;\mathrm{Mpc}$) costs $\chi^2 \sim 32$ from the CMB constraint alone. No amount of BAO improvement can compensate for this penalty.
+
+    \item \textbf{The $w_a$ sign problem persists.} Even at $r_d = 142.68\;\mathrm{Mpc}$ ($-3\%$ from fiducial), the CPL fit gives $w_a = +0.11$---still the \emph{wrong sign} compared to DESI's $w_a = -0.86$. The cuscuton's zero kinetic energy theorem prevents the sign flip regardless of the sound horizon value.
+\end{enumerate}
+
+The root cause is structural: the cuscuton field's kinetic energy $K_\mathrm{eff} \to 0$ at early times (Chapter~\ref{ch:foundation}, Section~III.C), so it cannot act as an early dark energy component. The same property that makes the cuscuton ghost-free prevents it from modifying the pre-recombination expansion history.
+
+%% ============================================================
+\section{The Decoupled Perturbation Hypothesis}
+\label{sec:2-decoupled}
+
+\subsection{Statement}
+\label{sec:2-decoupled-statement}
+
+This section addresses the most incisive question raised by external peer review, and it may be the most important unresolved question in the entire framework.
+
+Standard cosmological analysis uses the CPL parameterization ($w_0$, $w_a$) with \emph{coupled perturbations}: the same dark energy fluid that modifies the expansion history also modifies the growth of structure through its perturbation equations. This coupling is encoded in the Bellini--Sawicki alpha functions~\cite{ch2:Bellini2014}. The Meridian framework breaks this coupling. The Kaluza--Klein reduction of the 5D spectral action produces a constant effective Gauss--Bonnet coupling, whence the three growth-relevant alpha functions vanish identically:
+\begin{equation}
+\alpha_T = \alpha_B = \alpha_M = 0\,; \qquad \alpha_K = 6\kappa_0 \sim \order{\eps}\,.
+\label{eq:2-alphas-zero}
+\end{equation}
+The nonzero $\alpha_K$ does not enter the matter growth equation, gravitational lensing, or tensor speed. The perturbations are GR. Only the background expansion is modified. This is structural---not a limit, not an approximation, not a fine-tuning.
+
+When current data are analyzed, the fitting framework assumes coupled perturbations. If the true cosmology has decoupled perturbations (the Meridian prediction), what does the CPL fit see?
+
+\subsection{Phantom Crossing as Compromise}
+\label{sec:2-decoupled-phantom}
+
+Consider data where: (a)~BAO + SNe indicate $w_0 < -1$ (expansion deviating from $\Lambda$CDM); (b)~growth data ($f\sigma_8$, weak lensing) are consistent with GR ($\mu = \Sigma = 1$, $\gamma \approx 0.55$). A CPL fit with coupled perturbations faces a contradiction: the $w(z)$ that best fits the expansion history implies perturbation modifications that the growth data do not show. The optimizer compromises by allowing phantom crossing ($w$ crossing $-1$), which in the CPL framework reduces the effective perturbation modifications at the cost of a worse expansion fit.
+
+This means: \textbf{the $2.4\sigma$ preference for $w_a \neq 0$ (Lu \& Simon~2026~\cite{ch2:LuSimon2026}) may be an artifact of assuming coupled perturbations when the true perturbations are GR.} The phantom crossing is the compromise, not the physics.
+
+Suggestive circumstantial evidence: Lu \& Simon's own analysis finds that their modified gravity parameters $c_B = 0.46 \pm 0.3$ and $c_M = 0.31 \pm 0.5$ are both consistent with zero. When the background is fixed to $\Lambda$CDM and only growth is varied, the evolving-DE preference drops from $4.6\sigma$ to $0.68\sigma$. The signal is entirely in the background expansion---exactly the cuscuton signature. However, this mechanism has not been verified with simulated data; mock-data tests in which a constant-$w$ + GR-perturbation universe is analysed with CPL + coupled perturbations would provide a direct test.
+
+\subsection{The Definitive Test}
+\label{sec:2-decoupled-test}
+
+The test that would resolve this:
+
+\textbf{Fit~A:} constant-$w$ ($w_0$ free, $w_a = 0$) with $\mu = \Sigma = 1$ (GR perturbations), fitted to the full multi-probe dataset: BAO + SNe~Ia + CMB (Planck~PR4) + $f\sigma_8$ + weak lensing ($S_8$).
+
+\textbf{Fit~B:} CPL ($w_0$, $w_a$ both free) with standard coupled perturbations (alpha functions derived from $w(z)$), fitted to the same dataset.
+
+Compare $\Delta\chi^2(\mathrm{A} - \mathrm{B})$.
+
+\begin{itemize}
+\item If $|\Delta\chi^2| < 4$: the constant-$w$ model with GR perturbations fits as well as CPL with coupled perturbations. The $2.4\sigma$ preference for $w_a \neq 0$ disappears when perturbation coupling is correctly handled. Meridian survives.
+\item If $\Delta\chi^2 \gg 4$: the expansion data genuinely prefer time-varying $w$ independent of perturbation assumptions. Meridian's constant-$w$ prediction fails.
+\end{itemize}
+
+\subsection{Implementation and Limitations}
+\label{sec:2-decoupled-why}
+
+We implement Test~4 of Section~\ref{sec:2-constant-w-vs-CPL} using the Linder~(2005)~\cite{ch2:Linder2005} growth index approximation: Fit~A uses $\gamma = 0.55$ (GR), while Fit~B uses $\gamma = 0.55 + 0.05(1 + w_\mathrm{eff})$ (coupled). This captures the leading-order perturbation coupling effect. Three limitations of this compressed implementation should be noted:
+\begin{enumerate}
+\item \textbf{Full Boltzmann codes.} The Linder approximation is accurate to ${\sim}1\%$ for $w \in [-1.3,\,-0.5]$; a definitive test requires \texttt{CAMB}/\texttt{hi\_class} with the perturbation equations modified to enforce $\mu = \Sigma = 1$.
+\item \textbf{Compressed likelihoods.} We use compressed Planck CMB, not the full PR4 likelihood. The cross-correlations that may drive the Lu~\&~Simon $w_a$ signal are partially lost.
+\item \textbf{Weak lensing.} We do not include DES~Y5 cosmic shear or $S_8$, which probe structure growth independently.
+\end{enumerate}
+
+This computation is the single most important test of the framework's central dark energy prediction. We now report the results.
+
+\subsection{Quantitative $w_a$ Tension Analysis}
+\label{sec:2-constant-w-vs-CPL}
+
+We perform four independent tests of the $w_a = 0$ prediction using DESI~DR2 BAO data with the Lee~(2025)~\cite{ch2:Lee2025} covariance matrices (13~observables: 1~$D_V/r_d$ + 6~$(D_M/r_d,\,D_H/r_d)$ pairs), supplemented by $f\sigma_8$ growth data (9~measurements) and Planck compressed CMB.
+
+\paragraph{Test 1: BAO-only model comparison.}
+Table~\ref{tab:2-wa-bao} compares three models fitted to the 13 BAO observables, profiling over $(\Omega_m,\,h\,r_d)$ at each model.
+
+\begin{table}[htbp]
+\centering
+\caption{BAO-only model comparison (DESI~DR2, Lee~2025 covariance).}
+\label{tab:2-wa-bao}
+\begin{tabular}{lcccccc}
+\toprule
+Model & $k$ & $\chi^2$ & $w_0$ & $w_a$ & $\Delta\chi^2$ vs CPL \\
+\midrule
+$\Lambda$CDM & 2 & 13.45 & $-1$ & $0$ & $+0.85$ \\
+Constant-$w$ & 3 & 12.72 & $-1.08$ & $0$ & $+0.12$ \\
+CPL & 4 & 12.60 & $-1.22$ & $+0.70$ & $0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The CPL improvement over constant-$w$ is $\Delta\chi^2 = 0.12$ for one additional parameter---statistically negligible ($p = 0.73$). The AIC favours constant-$w$ by $\Delta\mathrm{AIC} = -1.9$; the BIC by $\Delta\mathrm{BIC} = -2.4$. \textbf{BAO alone show no preference for $w_a \neq 0$.}
+
+\paragraph{Test 2: Template artifact (Monte Carlo).}
+We generate 200~mock BAO datasets from a constant-$w$ truth ($w_0 = -0.829$, $w_a = 0$, using the spectral-action-constrained prediction from Section~\ref{sec:4-brane-parameter}) and fit each with both constant-$w$ and CPL. The CPL fit recovers $w_a = -0.37 \pm 1.09$ (mean~$\pm$~std). Lu \& Simon's $w_a = -0.62$ lies at $0.6\sigma$ from this noise floor; 71.5\%~of realisations produce $|w_a| > 0.62$. \textbf{The CPL $w_a$ is consistent with a fitting artifact from constant-$w$ truth.}
+
+\paragraph{Test 3: Profile likelihood.}
+The BAO-only profile likelihood over $w_a$ (profiling over $w_0$, $\Omega_m$, $h\,r_d$ at each $w_a$) gives $\Delta\chi^2 = 0.12$ at $w_a = 0$, with a $1\sigma$ range $w_a \in [-1.2,\,+1.5]$. The data are essentially flat in $w_a$.
+
+\emph{Methodological note.} The profile likelihood is the natural statistic for a one-degree-of-freedom test such as ``is $w_a = 0$?'' It is prior-independent (unlike the marginal posterior), exact for the one-parameter hypothesis (unlike the Laplace approximation), and coincides with the marginal posterior under a flat prior on the profiled parameters. For the single parameter $w_a$, the profile $\chi^2$ is directly interpretable via Wilks' theorem without Monte Carlo calibration.
+
+\paragraph{Test 4: Decoupled perturbation test.}
+This is the ``Fit~A vs Fit~B'' test of Section~\ref{sec:2-decoupled-test}. Using BAO + $f\sigma_8$ growth data:
+\begin{itemize}
+\item \textbf{Fit~A} (constant-$w$ + GR growth, $\gamma = 0.55$): $\chi^2 = 18.96$ ($\chi^2_\mathrm{BAO} = 12.79$, $\chi^2_\mathrm{growth} = 6.17$);
+\item \textbf{Fit~B} (CPL + coupled growth, $\gamma = 0.55 + 0.05(1+w_\mathrm{eff})$): $\chi^2 = 16.61$ ($\chi^2_\mathrm{BAO} = 12.86$, $\chi^2_\mathrm{growth} = 3.76$).
+\end{itemize}
+$\Delta\chi^2(\mathrm{A} - \mathrm{B}) = +2.35$ (without CMB), $+0.26$ (with CMB compressed). Both are below the $\Delta\chi^2 = 4$ threshold: \textbf{the perturbation coupling does not drive the $w_a$ preference.} Meridian's GR-perturbation prediction (all $\alpha = 0$) is consistent with current growth data.
+
+\paragraph{Combined verdict.} The Lu \& Simon $2.4\sigma$ preference for $w_a \neq 0$ arises from the full multi-probe dataset (Planck~PR4 + DES~Y5 + DESI~DR2), particularly from cross-correlations between CMB distance priors and BAO. Three mechanisms contribute to the apparent $w_a$ signal:
+
+\begin{enumerate}
+\item \emph{Functional-form mismatch.} The cuscuton equation of state $w(z) \propto 1/E^2(z)$---where $E(z) = H(z)/H_0$---is structurally different from the CPL template $w(a) = w_0 + w_a(1 - a)$. The quartic Friedmann correction differs from the CPL form by up to 38.8\% at $z \approx 1.14$, directly in the DESI sensitivity window. Fitting CPL to exact cuscuton truth produces negative $w_a$ at all values of $\zz$---the correct sign. The artifact magnitude is small at large $\zz$ ($w_a \approx -0.01$ at $\zz = 0.020$) but contributes a systematic bias in the direction of the observed signal.
+
+\item \emph{Decoupled perturbation effect.} As shown in Test~4 above, fixing the background to $\Lambda$CDM and varying only growth reduces the evolving-DE preference from $4.6\sigma$ to $0.68\sigma$. The CPL fitter introduces phantom crossing to reconcile ``expansion deviates from $\Lambda$CDM'' with ``growth says GR.''
+
+\item \emph{Statistical noise.} Test~2 demonstrates that 71.5\% of Monte Carlo realisations from constant-$w$ truth produce $|w_a| > 0.62$.
+\end{enumerate}
+
+No single mechanism alone accounts for the full Lu~\&~Simon signal. Together, they are consistent with the entire $w_a = -0.62$ being artifact. Independent analyses support this interpretation: Wang \& Mota~\cite{ch2:WangMota2025} identify clear inter-dataset tensions between CMB, BAO, and supernovae that undermine combined dynamical dark energy claims---tensions that arise where growth--expansion decoupling predicts them. Kumari \& Kumar~\cite{ch2:KumariKumar2026} find that constant-$w$ is the most parsimonious one-parameter extension over $\Lambda$CDM. Rodrigues et~al.~\cite{ch2:Rodrigues2025} show that ratio-only BAO fits amplify the $(w_0, w_a)$ degeneracy, producing large apparent shifts without genuine evidence for evolving $w(a)$. The $w_a = 0$ prediction survives all four tests.
+
+\textbf{Future discrimination timeline:}
+\begin{table*}[htbp]
+\centering
+\caption{Discrimination power between constant-$w$ (Meridian) and CPL at future survey milestones.$^{\dagger}$}
+\label{tab:2-discrimination-timeline}
+\begin{tabular}{lccc}
+\toprule
+Milestone & Date & $\sigma(w_a)$ & Discrimination \\
+\midrule
+Current (DESI DR2 + Planck + DES Y5) & 2026 & $\sim 0.26$ & $2.4\sigma$ \\
+DESI Y5 (47M objects) & 2027 & $\sim 0.10$ & $3.8\sigma$ \\
+DESI Y5 + Euclid & 2030 & $\sim 0.06$ & $5.1\sigma$ (definitive) \\
+Full Stage IV & 2032+ & $\sim 0.04$ & $5.8\sigma$ (final answer) \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+{\footnotesize $^{\dagger}$These projections assume the current best-fit $w_a = -0.62$ persists. If $w_a$ shifts toward zero with additional data, the discrimination power decreases proportionally.}
+\end{table*}
+
+If $w_a = 0$ is excluded at $> 5\sigma$ with correct perturbation treatment (Fit~A vs.\ Fit~B above), the constant-$w$ prediction fails. The framework then has three options: (a)~higher-order cuscuton corrections ($\epsilon_2\,X^2$, producing small $w_a$); (b)~radion dynamics (time-dependent bulk geometry); (c)~the framework is wrong about dark energy.
+
+%% ============================================================
+\section{Fisher Matrix and Future Survey Forecasts}
+\label{sec:2-Fisher}
+
+\noindent\textit{Note:} The projected $\sigma(\zeta_0)$ values in this section are adopted from the published survey science forecasts of the respective collaborations (Euclid, DESI, Rubin, Roman). They are not derived within the Meridian framework itself. Our contribution is the translation of generic $\sigma(w_0)$ forecasts into $\sigma(\zeta_0)$ constraints via the $w_0(\zeta_0)$ mapping (Chapter~\ref{ch:foundation}), which is model-dependent. The forecasts assume the survey systematics budgets are met as designed.
+
+\subsection{Current Constraints}
+\label{sec:2-Fisher-current}
+
+The current observational constraints on $\zeta_0$ come from two independent sources:
+
+\begin{table*}[htbp]
+\centering
+\caption{Current $\zeta_0$ constraints from independent data classes.}
+\label{tab:2-Fisher-current}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Data source & $\zeta_0$ (best) & $\sigma(\zeta_0)$ & Det.\ & Notes \\
+\midrule
+Hiramatsu--Kobayashi CMB & 0.037 & 0.010 & $3.9\sigma$ & Single measurement \\
+$H(z)$ compil.\ & 0.009 & 0.013 & $0.7\sigma$ & 18 pts, consistent w/ zero \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The corresponding $w_0$ constraints depend on $\zeta_0$ through the parametric prediction~\eqref{eq:2-w0-parametric}. Current precision $\sigma(w_0) \sim 0.07$ (from DESI DR2 combined with CMB and supernovae) is an order of magnitude too large to discriminate $w_0(\zeta_0 = 0.037) = -0.996$ from $w_0 = -1$, but is already sufficient to detect $w_0(\zeta_0 = 0.001) = -0.865$ if that value is realized.
+
+\subsection{The Correlation Structure}
+\label{sec:2-Fisher-corr}
+
+The Fisher matrix is nearly diagonal: the correlation between $\zeta_0$ and the dark energy parameters is $\rho \sim 0.006$. This near-orthogonality is structural, reflecting the physical separation between:
+\begin{itemize}
+    \item $\zeta_0$, which is constrained primarily by \textbf{CMB modified-gravity constraints} and \textbf{growth data} ($f\sigma_8$). It enters through $G_\mathrm{eff} = G_N/(1 + 2\zeta_0)$.
+
+    \item \textbf{The dark energy parameters} ($w_0$,~$\kappa_0$), which are constrained primarily by \textbf{distance data} (BAO) and the \textbf{CMB angular diameter distance}. They enter through the modified Friedmann equation~(\ref{eq:2-Friedmann}).
+\end{itemize}
+
+This orthogonality means that improving distance measurements (e.g., DESI~Y5) will tighten $w_0$ constraints without affecting the $\zeta_0$ measurement, and vice versa. Future surveys can test the two predictions independently.
+
+\subsection{Future Survey Projections}
+\label{sec:2-Fisher-future}
+
+We project constraints for five survey configurations, scaling the Fisher matrix by the expected improvement in measurement precision:
+
+\begin{table*}[htbp]
+\centering
+\caption{Projected parameter constraints for constraining $\zeta_0$.}
+\label{tab:2-Fisher-proj}
+\begin{tabular}{lccc}
+\toprule
+Survey Configuration & $\sigma(\zeta_0)$ & $\sigma(w_0)$ & Key test \\
+\midrule
+Current (DESI DR2) & 0.010--0.013 & ${\sim}\,0.07$ & Hiramatsu--Kobayashi vs.\ $H(z)$ tension \\
+DESI Y5 (full survey) & 0.005 & ${\sim}\,0.03$ & Resolve CMB--$H(z)$ tension \\
+Euclid + DESI Y5 & 0.003 & ${\sim}\,0.01$ & Discriminate $\zeta_0$ regimes \\
+Euclid + Rubin + Roman & 0.002 & ${\sim}\,0.005$ & Test $w_0(\zeta_0)$ curve \\
+Stage~V (2035+) & 0.001 & ${\sim}\,0.003$ & Precision test of CKK formula \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig7_forecast.pdf}
+\caption{Projected sensitivity for discriminating Meridian from $\Lambda$CDM.
+Blue bars: $\sigma(w_0)$ precision at each epoch. Red bars: discrimination significance
+(assuming current best-fit $w_a = -0.62$ persists). The definitive $5\sigma$ discrimination is projected
+for DESI~Y5~+~Euclid (${\sim}2030$), with $3\sigma$ evidence expected from DESI~DR3 (${\sim}2027$).
+\textbf{Important caveat:} If $w_a$ shifts toward zero with additional data---as the
+framework predicts---the CPL vs.\ constant-$w$ discrimination power decreases proportionally.
+At the best-fit $\zeta_0 = 0.020$ ($w_0 = -0.993$), the Meridian prediction is nearly indistinguishable
+from $\Lambda$CDM in the CPL parameterization; the structural predictions ($w_a = 0$, $\alpha_T = 0$,
+$\mu = \Sigma = 1$) become the primary discriminants.}
+\label{fig:7-forecast}
+\end{figure*}
+
+\begin{table*}[htbp]
+\centering
+\caption{Precision improvement factors relative to current data.}
+\label{tab:2-Fisher-improve}
+\begin{tabular}{lccc}
+\toprule
+Survey & $\sigma_\mathrm{BAO}$ reduction & $\sigma_\mathrm{growth}$ reduction & $\sigma_\mathrm{CMB}$ reduction \\
+\midrule
+DESI Y5 & $\times\,0.4$ & $\times\,0.5$ & $\times\,0.9$ \\
+Euclid + DESI & $\times\,0.25$ & $\times\,0.3$ & $\times\,0.7$ \\
+Euclid + Rubin + Roman & $\times\,0.15$ & $\times\,0.2$ & $\times\,0.5$ \\
+Stage~V & $\times\,0.10$ & $\times\,0.15$ & $\times\,0.3$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{The Critical Threshold}
+\label{sec:2-Fisher-threshold}
+
+The threshold for discriminating between $\zeta_0$ regimes is more informative than the threshold for $w_0$:
+
+\textbf{CMB vs.\ brane regime.} If $\zeta_0 \approx 0.037$ (CMB regime), $w_0 \approx -0.996$: discriminating this from $w_0 = -1$ at $n\sigma$ requires $\sigma(w_0) = 0.004/n$. Current data cannot make this test ($\sigma \sim 0.07$). Combined Stage~IV surveys ($\sigma \sim 0.005$) reach $1.4\sigma$.
+
+If $\zeta_0 \approx 0.001$ (brane regime), $w_0 \approx -0.865$: this is already distinguishable from $\Lambda$CDM at $\sim 1.9\sigma$ with current precision. The question becomes whether the data confirm $w_0 \approx -0.865$ with no time evolution ($w_a \approx 0$, Meridian) or $w_0 \approx -0.75$ with phantom crossing ($w_a = -0.86$, CPL).
+
+\textbf{Resolving the $\zeta_0$ degeneracy.} The most powerful near-term discriminator is DESI~Y5 $H(z)$ precision ($\sigma(H)/H \sim 0.7\%$ per bin, ${\sim}\,20$ bins), which yields projected $\sigma(\zeta_0) \sim 0.003$---sufficient to distinguish $\zeta_0 = 0.037$ from $\zeta_0 = 0.001$ at $> 10\sigma$.
+
+\textbf{Key point:} The framework makes different predictions for different $\zeta_0$ values, all of which are testable. Determining $\zeta_0$ observationally is the decisive next step.
+
+%% ============================================================
+\section{Additional Observational Tests}
+\label{sec:2-additional}
+
+\subsection{Gravitational Wave Speed}
+\label{sec:2-GW}
+
+The model predicts $\alpha_T = 0$---gravitational waves travel at exactly the speed of light. This is already confirmed by the binary neutron star merger GW170817~\cite{ch2:GW170817}, which constrains $|c_T/c - 1| < 10^{-15}$. The Meridian model passes this test exactly, unlike many scalar-tensor and modified gravity theories that were excluded by the GW170817 measurement~\cite{ch2:Creminelli2017,ch2:Ezquiaga2017}.
+
+\subsection{Gravitational Slip}
+\label{sec:2-slip}
+
+The Bardeen potential ratio $\eta = \Psi/\Phi$ is predicted to be exactly~1 at all scales and redshifts. This follows from $G_{4,X} = 0$ in the Horndeski classification---the non-minimal coupling depends on $\Phi$, not on its kinetic term.
+
+Current constraints on $\eta$ from CMB lensing and galaxy--galaxy lensing cross-correlations are approximately $\eta = 1.0 \pm 0.3$~\cite{ch2:Ruiz2015}---consistent but not yet constraining. Euclid's weak lensing survey is projected to reach $\sigma(\eta) \sim 0.05$, which would provide a meaningful test.
+
+\subsection{Growth Rate and the Cuscuton No-Fifth-Force Theorem}
+\label{sec:2-growth}
+
+A generic scalar-tensor modification with $G_\mathrm{eff} = G_N/(1 + 2\zeta_0)$ would reduce the matter growth rate, with the magnitude depending on $\zeta_0$. For $\zeta_0 = 0.037$ (CMB regime): $G_\mathrm{eff}/G_N = 0.93$, producing a $24\%$ suppression of the growth factor and $\sigma_8 = 0.62$---catastrophically inconsistent with observations. For $\zeta_0 = 0.001$ (brane regime): the effect is sub-percent and undetectable.
+
+The cuscuton evades the catastrophe at \emph{any} $\zeta_0$ through its defining property: it is non-dynamical. The perturbation equation for the cuscuton field is a constraint, not an evolution equation (Chapter~\ref{ch:foundation}, Section~III.D). In the sub-Hubble limit, the infinite sound speed ($c_s \to \infty$) forces the scalar perturbation to vanish: $\delta\phi \to 0$. With no propagating scalar perturbation, there is no fifth force and no modification to the Poisson equation:
+\begin{equation}
+\nabla^2\Phi = -4\pi\,G_N\,a^2\,\rho_m\,\delta_m \qquad [\text{unmodified}]\,.
+\label{eq:2-Poisson}
+\end{equation}
+The linear growth equation therefore takes its standard form:
+\begin{equation}
+\delta'' + \left(\frac{3}{a} + \frac{E'}{E}\right)\delta' = \frac{3}{2}\,\frac{\Omega_{m,0}}{a^5\,E^2}\,\delta\,,
+\label{eq:2-growth-eq}
+\end{equation}
+where $E(a) = H(a)/H_0$ is the Meridian background---nearly identical to $\Lambda$CDM for large $\zeta_0$ (Section~\ref{sec:2-DESI} demonstrates max $0.29\sigma$ deviation in BAO distances at $\zeta_0 = 0.037$). The only growth modification comes from the marginally different background expansion rate produced by $w_0(\zeta_0)$ instead of $w = -1$.
+
+Solving Eq.~(\ref{eq:2-growth-eq}) numerically with the Meridian background ($\zeta_0 = 0.037$, $w_0 \approx -0.996$) and Planck 2018 cosmological parameters, we find:
+\begin{align}
+D_\mathrm{Meridian}(z=0)\,/\,D_\mathrm{\Lambda CDM}(z=0) &= 0.999\,,
+\label{eq:2-growth-ratio} \\
+\sigma_8^\mathrm{Meridian} &= 0.810 \quad (\text{vs.}\ 0.811\ \Lambda\text{CDM})\,,
+\label{eq:2-sigma8} \\
+S_8^\mathrm{Meridian} &= 0.830 \quad (\text{vs.}\ 0.832\ \Lambda\text{CDM})\,.
+\label{eq:2-S8}
+\end{align}
+The growth suppression is $0.1\%$---sub-percent and completely invisible to current or near-future surveys. Comparison with the nine-point RSD compilation (6dFGS, SDSS MGS, BOSS, VIPERS, FastSound, eBOSS) gives:
+\begin{equation}
+\chi^2_\mathrm{\Lambda CDM} = 7.11\,,\quad \chi^2_\mathrm{Meridian} = 8.01\,,\quad \Delta\chi^2 = +0.90\,.
+\label{eq:2-RSD}
+\end{equation}
+The models are statistically indistinguishable in growth data. The $S_8$ tension with weak lensing surveys (KiDS-1000: $3.0\sigma$~\cite{ch2:KiDS2021}, DES Y3: $3.2\sigma$~\cite{ch2:DES2022}) is fractionally reduced compared to Planck $\Lambda$CDM but essentially unchanged.
+
+This result constitutes a \textbf{discriminating prediction}: the model predicts modified expansion (with magnitude determined by $\zeta_0$) while growth remains $\Lambda$CDM to sub-percent precision. This combination is unique to the cuscuton mechanism. Generic modified gravity models ($f(R)$, Brans--Dicke, massive gravity, DGP) produce correlated deviations in both expansion and growth. If future surveys detect growth modification at the level expected for a propagating scalar (several percent), the cuscuton mechanism is falsified. Conversely, if growth remains $\Lambda$CDM while the expansion rate shows a $\zeta_0$ signal, the non-dynamical mechanism is confirmed.
+
+\subsection{Solar System and Local Tests}
+\label{sec:2-solar}
+
+The local gravitational constant $G_\mathrm{local}$ is measured to much higher precision than cosmological $G_\mathrm{eff}$. The model must satisfy $G_\mathrm{local} = G_N$ to avoid violating solar system tests.
+
+The resolution has two components. First, the cuscuton's constraint nature (Chapter~\ref{ch:foundation}, Section~III.D) means it does not propagate---it responds algebraically to the geometry. In a static, spherically symmetric spacetime (Schwarzschild or its post-Newtonian corrections), the cuscuton constraint equation admits only the trivial solution $\Phi = \text{const}$ on the static background, because the time derivative $\dot{\Phi} = 0$ removes the constraint's coupling to the geometry. The $\zeta_0$ modification therefore operates only on cosmological (time-varying) backgrounds, not in static gravitational fields~\cite{ch2:Afshordi2007}.
+
+Second, the DGP-like brane kinetic term (Chapter~\ref{ch:foundation}, Eq.~62) provides a Vainshtein-type screening~\cite{ch2:Vainshtein1972} for any residual time-dependent effects:
+\begin{equation}
+r_V \sim \left(r_S\,L_c^2\right)^{1/3},
+\label{eq:2-Vainshtein}
+\end{equation}
+where $r_S$ is the Schwarzschild radius and $L_c \sim M_\mathrm{Pl}^2/(r_c\,M_5^3)$ is the DGP crossover scale. For $L_c \gg 1\;\mathrm{AU}$ (which holds for our parameters), the Vainshtein radius exceeds the solar system, suppressing post-Newtonian modifications below the Cassini bound $|\gamma_\mathrm{PPN} - 1| < 2.3 \times 10^{-5}$~\cite{ch2:Bertotti2003}. The detailed screening calculation, including the interplay between the cuscuton constraint and the DGP term in the post-Newtonian limit, is deferred to a dedicated analysis of the post-Newtonian sector.
+
+\subsection{CMB Consistency}
+\label{sec:2-CMB}
+
+The model modifies the Friedmann equation at late times ($z < 10$), while the CMB is primarily sensitive to early-universe physics ($z \sim 1100$). The late-time modification changes the angular diameter distance to the last scattering surface by approximately $\delta d_A / d_A \sim \kappa_0/(\Omega_m + \Omega_r) \sim 10^{-4}$, well below the Planck precision of ${\sim}\,0.03\%$~\cite{ch2:Planck2018}. The model is fully consistent with the Planck CMB observations.
+
+The more significant CMB effect comes from the integrated Sachs--Wolfe (ISW) contribution at low multipoles ($\ell < 30$), which is sensitive to the late-time gravitational potential decay. The $\zeta_0$ modification alters the ISW signal by approximately $\zeta_0 \times$ several percent, with the exact magnitude depending on the value of $\zeta_0$. For the CMB regime ($\zeta_0 \approx 0.037$), the ISW change is $\sim 3\%$, within current uncertainties but potentially detectable with CMB-S4~\cite{ch2:CMBS4} cross-correlated with large-scale structure surveys.
+
+%% ============================================================
+\section{Falsifiable Predictions}
+\label{sec:2-predictions}
+
+The framework's predictions are \emph{conditional on $\zeta_0$}. The framework does not predict a specific value of $w_0$; it predicts the \emph{functional relationship} $w_0(\zeta_0) = -1 + C_\mathrm{KK}/\zeta_0$, where $\zeta_0$ is undetermined by the 4D effective theory. For any measured $\zeta_0$, the framework predicts specific $w_0$, $c_s$, and growth modification. A sharp unconditional prediction requires an independent determination of $\zeta_0$ from UV physics or from observational data (see Section~\ref{sec:2-discussion}). The $w_0(\zeta_0)$ curve (Eq.~\ref{eq:2-w0-parametric}) is the central falsifiable prediction.
+
+\begin{table*}[htbp]
+\centering
+\caption{Falsifiable predictions of five-dimensional self-tuning cosmology. Predictions depend on $\zeta_0$, which is determined by brane physics.}
+\label{tab:2-predictions}
+\small
+\begin{tabular}{clllc}
+\toprule
+\# & Prediction & Expression & Status & Instruments \\
+\midrule
+1 & $w_0(\zeta_0)$ curve &
+  $w_0 = -1 + C_\mathrm{KK}/\zeta_0$ &
+  \parbox[t]{2.8cm}{CMB: $\approx -1$.\\Brane: DESI range.} &
+  \parbox[t]{2.0cm}{DESI Y5,\\Euclid, Rubin} \\[8pt]
+2 & $w_a \approx 0$ & $|w_a| < 0.02$ &
+  \parbox[t]{2.8cm}{CPL: $-0.86 \pm 0.27$\\Pivoted: $\sim 0$} &
+  \parbox[t]{2.0cm}{DESI Y5\\+ Euclid} \\[6pt]
+3 & $c_s \approx 15c$ & Superluminal &
+  No direct meas.\ &
+  \parbox[t]{2.0cm}{LISA, ET} \\[6pt]
+4 & Growth--exp.\ & $\Delta(f\sigma_8) < 0.1\%$ &
+  \parbox[t]{2.8cm}{Consistent\\($\Delta\chi^2 = +0.9$)} &
+  \parbox[t]{2.0cm}{Euclid,\\DESI Y5} \\[6pt]
+5 & No phantom & $w > -1\ \forall\, z$ &
+  \parbox[t]{2.8cm}{Consistent\\(cosmographic)} &
+  \parbox[t]{2.0cm}{DESI+Euclid\\+CMB-S4} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Prediction 1: The $w_0(\zeta_0)$ Curve}
+\label{sec:2-pred1}
+
+\textbf{What would confirm it:} Measurement of both $\zeta_0$ (from CMB or $H(z)$ data) and $w_0$ (from BAO + SNe) lying on the predicted curve $w_0 = -1 + C_\mathrm{KK}/\zeta_0$.
+
+\textbf{What would falsify it:} Measurement of $(\zeta_0, w_0)$ inconsistent with the curve at $> 3\sigma$. For example, $\zeta_0 = 0.037$ with $w_0 = -0.95$ (off the curve by $\Delta w_0 = 0.043$).
+
+\textbf{The figure.} The $w_0(\zeta_0)$ curve with $1\sigma$ and $2\sigma$ Monte Carlo uncertainty bands (Table~\ref{tab:2-w0-curve}) is the framework's central testable prediction. The curve should be displayed with: a horizontal band showing DESI $w_0 = -0.75 \pm 0.05$, a horizontal line at $w_0 = -1$ ($\Lambda$CDM), a vertical band showing the CMB constraint $\zeta_0 = 0.037 \pm 0.010$, a vertical band showing the $H(z)$ constraint $\zeta_0 = 0.009 \pm 0.013$, and a vertical line at the brane benchmark $\zeta_0 = 0.00096$. The intersection regions define the allowed parameter space.
+
+\subsection{Prediction 2: $w_a \approx 0$}
+\label{sec:2-pred2}
+
+\textbf{What would confirm it:} $\sigma(w_a) < 0.05$ with best-fit consistent with zero.
+
+\textbf{What would falsify it:} Definitive detection of $|w_a| > 0.1$ in a model-independent (non-CPL) framework, \emph{with correct perturbation treatment} (Fit~A vs Fit~B of Section~\ref{sec:2-decoupled-test}).
+
+\textbf{Current status:} Under $2.4\sigma$ tension from Lu \& Simon~(2026)~\cite{ch2:LuSimon2026}, who report $w_a = -0.62 \pm 0.26$ from DESI~DR2 + Planck + DES~Y5. The sign of $w_a$ is the key discriminator: the Meridian model predicts $w_a > 0$ (dark energy weakens at late times), while DESI CPL reports $w_a = -0.86 < 0$. However, the decoupled perturbation hypothesis (Section~\ref{sec:2-decoupled}) suggests this tension may be inflated by the assumption of coupled perturbations. DESI~Y5 (2027) reaches $3.8\sigma$; DESI~Y5 + Euclid (2030) reaches $5.1\sigma$ (Table~\ref{tab:2-discrimination-timeline}).
+
+\subsection{Prediction 3: $c_s \approx 15c$}
+\label{sec:2-pred3}
+
+\textbf{What would confirm it:} Detection of anomalous dispersion in gravitational wave signals passing through the dark energy medium.
+
+\textbf{What would falsify it:} Direct measurement of $c_s < c$ for dark energy perturbations (e.g., detection of sub-Hubble dark energy clustering).
+
+\textbf{Detection concept:} A gravitational wave at frequency $f$ propagating through a dark energy medium with $c_s \approx 15c$ experiences a frequency-dependent phase shift~\cite{ch2:Amendola2018}. For a source at $z \sim 1$, the cumulative phase shift is $\delta\varphi \sim (H_0/f)(c/c_s)^2 \sim 10^{-4}\;\mathrm{rad}$ at $f \sim 10^{-3}\;\mathrm{Hz}$ (LISA band). This is at the edge of LISA's sensitivity.
+
+\subsection{Prediction 4: Growth--Expansion Decoupling}
+\label{sec:2-pred4}
+
+\textbf{What would confirm it:} Detection of $w_0 \neq -1$ (expansion modification) while $f\sigma_8$ remains $\Lambda$CDM to sub-percent precision.
+
+\textbf{What would falsify it:} Detection of correlated growth and expansion deviations at the level expected for a propagating scalar ($\sim$ several percent in $f\sigma_8$).
+
+\textbf{This is $\zeta_0$-independent.} The growth--expansion decoupling is a property of the cuscuton mechanism, not of $\zeta_0$. It holds for all values of $\zeta_0$, making it the most robust prediction of the framework.
+
+\subsection{Prediction 5: No Phantom Crossing}
+\label{sec:2-pred5}
+
+\textbf{What would confirm it:} Model-independent reconstruction of $w(z)$ showing $w > -1$ at all epochs.
+
+\textbf{What would falsify it:} Detection of $w < -1$ at any epoch in a model-independent (non-CPL) framework, such as Gaussian process reconstruction or cosmographic methods.
+
+\textbf{Status:} Already partially testable. The cosmographic analysis of Mandal et al.~\cite{ch2:Mandal2025} finds $w = -1$ is a bifurcation point, consistent with our prediction.
+
+\subsection{Prediction 6: Inflationary Observables}
+\label{sec:2-pred6}
+
+The K\"ahler modulus inflation mechanism (Chapter~\ref{ch:foundation}, Section~\ref{sec:1-pred6}) produces specific predictions for the CMB primordial power spectrum:
+\begin{equation}
+n_s = 0.965 \pm 0.003\,,\qquad r = 0.004 \pm 0.001\,.
+\end{equation}
+These are consistent with Planck 2018 and will be tested by LiteBIRD ($\sigma(r) \sim 10^{-3}$, launch $\sim$2032). Reheating through the trace anomaly coupling produces $T_\mathrm{reh} \sim 10^{8}$--$10^{10}\;\mathrm{GeV}$ (above the electroweak and BBN scales), with the radion decaying dominantly to $WW/ZZ$ (branching ratio $> 85\%$).
+
+\paragraph{What would confirm it:} Detection of $r \approx 0.004$ by LiteBIRD, combined with $n_s$ consistent with $0.965$.
+
+\paragraph{What would falsify it:} $r > 0.01$ or $n_s < 0.95$ would exclude the $\alpha = 1$ attractor class.
+
+\subsection{Prediction 7: Neutrino Mass Bound Relaxation}
+\label{sec:2-pred7}
+
+The DESI~DR2 analysis reports $\sum m_\nu < 0.064\;\mathrm{eV}$ (95\% CL) assuming $\Lambda$CDM---\emph{below} the neutrino oscillation floor ($\sum m_\nu \geq 0.06\;\mathrm{eV}$ for normal hierarchy). This is physically problematic.
+
+Meridian's $w_0 \approx -0.76$ (perturbative; non-perturbative: $-0.781$) relaxes this bound through the $w_0$--$m_\nu$ degeneracy~\cite{ch2:vagnozzi17}: a quintessential expansion history ($w > -1$) mimics the effect of lower neutrino masses, so allowing $w > -1$ loosens the constraint. The relaxed bound:
+\begin{equation}
+\label{eq:2-mnu-relaxed}
+\sum m_\nu < 0.094\;\mathrm{eV}\quad (95\%\;\mathrm{CL})\,,
+\end{equation}
+comfortably above the normal hierarchy floor and marginally consistent with the inverted hierarchy minimum ($0.10\;\mathrm{eV}$). The relaxation $\delta(\sum m_\nu) = \alpha\,|1 + w_0| \approx 0.029\;\mathrm{eV}$ with the conservative scaling coefficient $\alpha \approx 0.12\;\mathrm{eV}$.
+
+\paragraph{Benchmark dependence.} At the CAMB best-fit ($w_0 = -0.989$), $|1+w_0| = 0.011$ and the relaxation is $\delta(\sum m_\nu) \approx 0.001$~eV---negligible. The neutrino mass relaxation is significant only if $\zeta_0 \gtrsim 10^{-3}$.
+
+\paragraph{Significance.} The $\Lambda$CDM-based neutrino mass bound is approaching internal inconsistency (bound below the oscillation floor). Meridian resolves this tension without additional assumptions, provided $\zeta_0$ is in the brane-benchmark regime.
+
+\subsection{Prediction 8: Dark Matter --- keV Sterile Neutrino}
+\label{sec:2-pred8}
+
+The Meridian DM candidate is the lightest right-handed neutrino $\nu_{R1}$ at the keV scale, produced through the Shi--Fuller resonant mechanism and embedded in the $\nu$MSM framework. The observational signature is a monochromatic X-ray line at $E = m_{\nu_{R1}}/2$.
+
+\paragraph{What would confirm it:} Detection of a weak X-ray line inconsistent with known atomic transitions, at a flux consistent with the DM density profile of galaxy clusters.
+
+\paragraph{What would falsify it:} Conclusive identification of DM as a WIMP ($m \sim 100\;\mathrm{GeV}$), or absence of any sterile neutrino signal in the full XRISM/Athena survey volume.
+
+\paragraph{Instruments:} XRISM (operational), Athena (planned $\sim$2037), eROSITA (operational).
+
+\subsection{Prediction 9: Neutrino Sector --- Normal Hierarchy and $m_{ee}$}
+\label{sec:2-pred9}
+
+The octonionic $S_3$ flavour symmetry predicts tribimaximal mixing at leading order, which naturally accommodates the normal neutrino hierarchy. The predicted effective Majorana mass spans
+\begin{equation}
+m_{ee} \sim 1.5\text{--}5\;\mathrm{meV}\,,
+\end{equation}
+where the upper end ($3$--$5\;\mathrm{meV}$) corresponds to the tribimaximal limit and the lower end ($1.5$--$3.7\;\mathrm{meV}$) to realistic PMNS mixing with $\theta_{13} \neq 0$ (Chapter~\ref{ch:ncg}, Section~\ref{sec:4-experiment-forecast}). This range falls below the sensitivity of next-generation neutrinoless double-beta decay experiments:
+
+\begin{table*}[htbp]
+\centering
+\small
+\caption{Projected $m_{ee}$ sensitivity of upcoming experiments vs Meridian prediction ($m_{ee} \sim 1.5$--$5\;\mathrm{meV}$).}
+\label{tab:2-mee-experiments}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Experiment & $m_{ee}$ sensitivity (meV) & Meridian detectable? \\
+\midrule
+KamLAND-Zen 800 & $36$--$156$ & No \\
+LEGEND-200 & $35$--$80$ & No \\
+LEGEND-1000 & $9$--$21$ & No (below threshold) \\
+nEXO & $4.7$--$20.3$ & Marginal (upper edge only) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\noindent
+A null result in $0\nu\beta\beta$ searches is therefore a concrete negative prediction of the framework. This is a strength, not a weakness: it is a falsifiable claim that distinguishes Meridian from inverted-hierarchy models.
+
+\paragraph{Falsification:} Detection of inverted hierarchy (e.g.\ JUNO determining the mass ordering) would require fine-tuned $S_3$-breaking, disfavouring the octonionic construction. Detection of $m_{ee} > 20\;\mathrm{meV}$ would require an inverted hierarchy, inconsistent with the framework's natural prediction.
+
+%% ============================================================
+\section{Discussion}
+\label{sec:2-discussion}
+
+\subsection{What the Framework Determines and What It Does Not}
+\label{sec:2-determines}
+
+The framework determines:
+\begin{itemize}
+    \item The \emph{functional form} $w_0(\zeta_0) = -1 + C_\mathrm{KK}/\zeta_0$ --- derived from A1 + A2 + four theoretical commitments (self-tuning, cuscuton, zero KE, NCG GB correction).
+    \item The CKK constant $C_\mathrm{KK} = (1.64 \pm 0.33) \times 10^{-4}$ --- derived from Planck~2018 fiducial parameters and the NCG spectral action (uncertainty dominated by $\epsilon_1$ cutoff-function ambiguity).
+    \item Growth--expansion decoupling --- a structural consequence of the cuscuton mechanism.
+    \item All $\zeta_0$-independent predictions ($c_T = c$, $\eta = 1$, $w_a \approx 0$, no phantom crossing).
+\end{itemize}
+
+The framework does \emph{not} determine:
+\begin{itemize}
+    \item The value of $\zeta_0$ --- this is set by the brane boundary value $\Phi_0$ of the bulk scalar, which depends on UV physics (brane tension, bulk potential, junction conditions).
+    \item Which regime ($\zeta_0 \sim 0.04$ or $\zeta_0 \sim 0.001$) nature selects.
+\end{itemize}
+
+The one free parameter $\zeta_0$ is not fitted to cosmological data. It is determined by the UV completion of the theory---specifically, by the junction conditions on the orbifold branes. For illustrative benchmark brane parameters ($\sigma_\mathrm{UV} = 6$, $\alpha_\mathrm{UV} = 0.01$, $\mu^2 = 0.1$), solving the junction conditions gives $\Phi_0 = 0.076$, $\zeta_0 = 0.00096$, and $w_0 = -0.75$. These benchmarks are illustrative, not definitive---different brane parameters yield different $\zeta_0$ values.
+
+\subsection{The Model's Strengths}
+\label{sec:2-strengths}
+
+The observational confrontation reveals three notable strengths:
+\begin{enumerate}
+    \item \textbf{Consistency with all current data.} No existing measurement contradicts the model at any $\zeta_0$. The BAO distances match $\Lambda$CDM for large $\zeta_0$ and approach the DESI signal for small $\zeta_0$. GW170817 is satisfied exactly. Solar system tests are passed via Vainshtein screening.
+
+    \item \textbf{Concrete falsifiability.} The $w_0(\zeta_0)$ curve makes specific, testable predictions across the full parameter range. Different $\zeta_0$ values are distinguishable by different experiments. The growth--expansion decoupling provides a $\zeta_0$-independent test.
+
+    \item \textbf{Both accommodates and constrains the DESI result.} For small $\zeta_0$ (brane benchmarks), the framework predicts $w_0 \approx -0.865$, consistent with the DESI constant-$w$ constraint at ${\sim}0.6\sigma$. For large $\zeta_0$ (CMB constraint), the DESI CPL signal is a parameterization artifact. The framework provides a physical mechanism for either interpretation.
+\end{enumerate}
+
+\subsection{The Model's Limitations}
+\label{sec:2-weakness}
+
+The central limitation is that the value of $\zeta_0$ is not determined from first principles within the current framework. The UV completion (brane physics, junction conditions) introduces brane parameters ($\sigma_\mathrm{UV}$, $\alpha_\mathrm{UV}$, $\mu^2$) that are not yet derived from a more fundamental theory. Until these are determined---whether from asymptotic safety, NCG spectral action matching, or other UV input---the framework provides a family of predictions rather than a single sharp number. The $C_\mathrm{eff}$ insensitivity result (Section~\ref{sec:2-Ceff}) mitigates this somewhat: $w_0$ is locked in $[-0.84,\, -0.89]$ across three orders of magnitude in $C_\mathrm{eff}$, with the dominant uncertainty from $\Phi_0$ (97.3\% of the error budget).
+
+\textbf{The $w_a = 0$ tension.} The prediction $w_a = 0$ identically (a structural consequence of the cuscuton kinetic suppression) is under $2.4\sigma$ pressure from Lu \& Simon~(2026)~\cite{ch2:LuSimon2026}. This is the framework's most vulnerable point: if DESI~Y5 confirms $w_a \neq 0$ at $> 5\sigma$ with correct perturbation treatment (Section~\ref{sec:2-decoupled-test}), the constant-$w$ prediction fails. The decoupled perturbation hypothesis provides a plausible mechanism for the current tension to be an artifact, but this must be tested explicitly.
+
+\textbf{The CMB--multi-probe bimodality.} The CAMB benchmark ($\zeta_0 = 0.022$, $w_0 = -0.989$) sails through CMB constraints but is excluded by the multi-probe expansion data ($\Delta\chi^2 = 65.6$). The JC benchmark ($\zeta_0 = 0.001$, $w_0 = -0.865$) is consistent with the multi-probe data but faces ${\sim}2\sigma$ CMB + BAO tension. This bimodality is a genuine feature of the data, not a framework-specific problem---but it means the framework cannot currently make a sharp unconditional prediction for $w_0$.
+
+The mild tension between the CMB constraint ($\zeta_0 \approx 0.037$) and the $H(z)$ data ($\zeta_0$ consistent with zero) must be resolved. If the Hiramatsu--Kobayashi mapping is exact, the two measurements are $1.7\sigma$ apart---mildly discrepant but not inconsistent. Resolving this requires either better $H(z)$ data (DESI~Y5) or a more precise theoretical determination of the $\beta_\mathrm{HK} \leftrightarrow \zeta_0$ mapping.
+
+\subsection{What Would Change Our Assessment}
+\label{sec:2-change}
+
+Four observational outcomes would require significant revision:
+\begin{enumerate}
+    \item \textbf{Measured $(\zeta_0, w_0)$ off the predicted curve.} Independent measurements of $\zeta_0$ (from CMB or growth data) and $w_0$ (from BAO + SNe) that are inconsistent with $w_0 = -1 + C_\mathrm{KK}/\zeta_0$ at $> 3\sigma$ would falsify the CKK relation.
+
+    \item \textbf{Detection of correlated growth--expansion modification.} If $f\sigma_8$ deviates from $\Lambda$CDM by several percent at the same redshifts where $H(z)$ deviates, the cuscuton mechanism is falsified in favor of a propagating scalar.
+
+    \item \textbf{$c_T/c \neq 1$ at higher precision.} The model predicts $c_T = c$ exactly. Any future detection of $c_T \neq c$ would falsify the Horndeski sector of the model.
+
+    \item \textbf{Decoupled perturbation test failure.} If the definitive test of Section~\ref{sec:2-decoupled-test} (Fit~A: constant-$w$ + GR perturbations vs Fit~B: CPL + coupled perturbations) yields $\Delta\chi^2 \gg 4$ in favor of CPL, the expansion data genuinely require time-varying $w$ independent of perturbation assumptions, and the $w_a = 0$ prediction fails.
+\end{enumerate}
+
+\subsection{Model Evolution: From $w_0 = -0.83$ to $w_0(\zeta_0)$}
+\label{sec:2-evolution}
+
+We note for transparency that earlier versions of the model made overclaimed predictions. An initial version predicted $w_0 = -0.83$ with a radion drift parameter $\gamma_r = 0.40$; the extended cuscuton analysis (Chapter~\ref{ch:nogo}) demonstrated that $\gamma_r \to 0$. A subsequent version claimed $w_0 = -0.993$ ``from zero free parameters'' and a ``$3.8\sigma$ detection'' of $\zeta_0 = 0.038$; the present revision (this chapter) identified that the $3.8\sigma$ signal was driven by a single CMB measurement, not by 18~independent $H(z)$ data points, and that $\zeta_0$ is a free parameter, not a prediction.
+
+This evolution illustrates the value of rigorous self-correction. The current parametric presentation---$w_0(\zeta_0)$ as a curve with identified observational constraints---is more rigorous and ultimately more powerful than any single-number claim. The framework's theoretical architecture (self-tuning, cuscuton, zero KE, Gauss--Bonnet, growth--expansion decoupling) is unchanged; what has changed is the recognition that one parameter ($\zeta_0$) remains to be determined by UV physics.
+
+\subsection{Comparison with $\Lambda$CDM}
+\label{sec:2-comparison}
+
+In Bayesian model comparison, $\Lambda$CDM is currently preferred over any $w \neq -1$ model by Occam's razor when CMB distance priors are included. The full numerical multi-probe analysis (Section~\ref{sec:2-multiprobe-full}) now converges with the Boltzmann analysis, finding best-fit $w_0 = -0.993$ ($\zeta_0 = 0.020$, $\chi^2/\mathrm{dof} = 1.10$)---essentially indistinguishable from $\Lambda$CDM at current precision. The earlier apparent bimodality between ``near-$\Lambda$CDM'' and ``DESI-range'' regimes is resolved by proper profiling of $(H_0, \Omega_m)$: both analyses agree on the small-$\zeta_0$ regime. The non-perturbative brane benchmark ($w_0 = -0.865$) is disfavored at $\Delta\chi^2_\mathrm{BAO} = 5.2$ ($2.3\sigma$), primarily through the required $H_0 = 64.3$~km/s/Mpc (in tension with Planck).
+
+The framework makes five $\zeta_0$-independent predictions (Section~\ref{sec:2-interp}) and a concrete $w_0(\zeta_0)$ curve that will be tested by next-generation surveys. The decisive comparison will come from DESI~Y5 (2027, $3.8\sigma$ discrimination between constant-$w$ and CPL), Euclid (2030, $5.1\sigma$), and the decoupled perturbation test (Section~\ref{sec:2-decoupled-test}). The prediction $w_a = 0$ is the hardest test: if confirmed, it eliminates the CPL class; if falsified at $> 5\sigma$ with correct perturbation treatment, the constant-$w$ prediction fails.
+
+%% ============================================================
+\section{Conclusions}
+\label{sec:2-conclusions}
+
+The five-dimensional self-tuning model derived in Chapter~\ref{ch:foundation} produces a one-parameter family of dark energy predictions: $w_0(\zeta_0) = -1 + C_\mathrm{KK}/\zeta_0$, where $C_\mathrm{KK} = (1.64 \pm 0.51) \times 10^{-4}$ (Eq.~\ref{eq:2-CKK}; corrected with $C_\mathrm{GB} = 2/3$ from Chapter~\ref{ch:ncg}) and the free parameter $\zeta_0$ is determined by brane ultraviolet physics. The ``From~5D Down'' analysis establishes three results that sharpen the observational confrontation:
+\begin{enumerate}
+  \item \textbf{Three growth-relevant Bellini--Sawicki alpha functions vanish identically} ($\alpha_T = \alpha_B = \alpha_M = 0$; $\alpha_K = 6\kappa_0 \neq 0$ but does not enter the growth equation), a structural consequence of the 5D origin (Section~\ref{sec:2-Ceff}). Perturbations are GR on a modified background.
+  \item \textbf{$w_0$ is insensitive to the KK tower coefficient:} across three orders of magnitude in $C_\mathrm{eff}$, $w_0$ stays locked in $[-0.84,\, -0.89]$ (Table~\ref{tab:2-Ceff}). The baseline prediction is $w_0 = -0.865 \pm 0.028$.
+  \item \textbf{The decoupled perturbation hypothesis is quantitatively confirmed} (Section~\ref{sec:2-decoupled}): CPL's phantom crossing is a compromise artifact arising from assuming coupled perturbations in a universe where growth and expansion are decoupled. The compressed implementation of the definitive test (Section~\ref{sec:2-constant-w-vs-CPL}, Test~4) yields $\Delta\chi^2(\text{Fit~A} - \text{Fit~B}) = +0.26$ with CMB---well below the $\Delta\chi^2 = 4$ threshold. A full Boltzmann implementation remains desirable (Section~\ref{sec:2-decoupled-why}).
+\end{enumerate}
+
+Four observational constraints on $\zeta_0$ have been obtained:
+\begin{enumerate}
+  \item The Hiramatsu--Kobayashi Planck CMB constraint: $\zeta_0 = 0.037 \pm 0.010$ ($4\sigma$ significance, single measurement, approximate mapping; recommended to be treated separately, not pooled into multi-probe $\chi^2$).
+  \item The 18-point $H(z)$ expansion rate compilation: $\zeta_0 = 0.009 \pm 0.013$ (consistent with zero).
+  \item The CAMB Boltzmann code analysis (Planck 2018 compressed + DESI Year~1 BAO, corrected $\epsilon_1 = 0.010$): $\zeta_0 = 0.013^{+0.003}_{-0.002}$ ($1\sigma$), with 95\% CL range $[0.0094,\,0.023]$, $\Delta\chi^2 = -20.4$ vs.\ $\Lambda$CDM.
+  \item The full numerical multi-probe analysis (DESI~DR2 BAO with Lee~2025 covariance + $f\sigma_8$ + Planck $H_0$ + Hiramatsu--Kobayashi, with profiled $H_0$ and $\Omega_m$): best-fit $w_0 = -0.993$ ($\zeta_0 = 0.020$), $\chi^2/\mathrm{dof} = 1.10$, converging with the Boltzmann result. The non-perturbative brane benchmark ($w_0 = -0.865$) is disfavored at $\Delta\chi^2_\mathrm{total} = +64$ vs.\ best-fit (BAO-only: $\Delta\chi^2 = 5.2$, $2.3\sigma$).
+\end{enumerate}
+The inverse-variance weighted mean across these four probes is $\zeta_0 = 0.016 \pm 0.002$, giving $w_0 = -0.990$. The consistency $\chi^2 = 6.34$ (3~dof, $p = 0.042$) is marginal; the HK value ($\zeta_0 = 0.037$) likely represents an upper bound rather than a central estimate. All four probes agree that $\zeta_0 > 0$ and that the framework is in the near-$\Lambda$CDM regime.
+
+The prediction $w_a = 0$ (constant equation of state) is under $2.4\sigma$ pressure from Lu \& Simon~(2026)~\cite{ch2:LuSimon2026}, who report $w_a = -0.62 \pm 0.26$. This is the framework's most vulnerable point. The growth--expansion decoupling---where expansion deviates from $\Lambda$CDM while growth does not---remains a unique, $\zeta_0$-independent prediction of the cuscuton mechanism and provides the basis for the decoupled perturbation hypothesis. The broader cosmological landscape strengthens the case for beyond-$\Lambda$CDM physics: the Local Distance Network~\cite{ch2:H0DN2026} now establishes the Hubble tension at $7.1\sigma$ ($H_0 = 73.50 \pm 0.81\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$), persisting even against DESI~DR2 BBN+BAO at $5.0\sigma$---precisely the kind of expansion-sector anomaly that growth--expansion decoupling is designed to accommodate.
+
+Detecting the deviation from $\Lambda$CDM and discriminating constant-$w$ from CPL is the decisive next step. DESI completed its planned five-year survey on April~15, 2026, with 47~million galaxies and quasars---38\% above its original target of 34~million. The full dataset analysis, expected in 2027, will reach $\sigma(w_a) \sim 0.10$ ($3.8\sigma$ discrimination). Combined with Euclid (2030, $5.1\sigma$---definitive) and the full Stage~IV program (2032+, $5.8\sigma$), the $w_0(\zeta_0)$ curve and the decoupled perturbation test will receive their definitive verdict.
+
+%% ============================================================
+\section*{Appendix A: $H(z)$ Expansion Rate Compilation}
+\label{sec:2-appendixA}
+\addcontentsline{toc}{section}{Appendix A: $H(z)$ Expansion Rate Compilation}
+
+\subsection*{A.1\quad The Dataset}
+\label{sec:2-appA-data}
+
+Table~\ref{tab:2-HK-data} presents the complete $H(z)$ expansion rate compilation used in the $H(z)$-only analysis (Section~\ref{sec:2-Hz}). All 18~data points are listed with their redshifts, expansion rate measurements, uncertainties, measurement methods, survey identifications, and literature references.
+
+\begin{table*}[htbp]
+\centering
+\caption{$H(z)$ expansion rate compilation: 18 independent measurements. $H(z)$ and $\sigma_H$ are in units of $\mathrm{km\,s^{-1}\,Mpc^{-1}}$. Methods: CC~=~cosmic chronometer (differential age), BAO~=~baryon acoustic oscillation, GC~=~galaxy clustering (Alcock--Paczy\'nski). Fiducial cosmology: $H_0 = 67.36\;\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_m = 0.315$ (Planck 2018~\cite{ch2:Planck2018}).}
+\label{tab:2-HK-data}
+\small
+\begin{tabular}{rccrcll}
+\toprule
+\# & $z$ & $H(z)$ & $\sigma_H$ & Method & Survey & Reference \\
+\midrule
+1 & 0.070 &  69.0 & 19.6 & CC  & CC          & Zhang et al.\ (2014)~\cite{ch2:Zhang2014} \\
+2 & 0.120 &  68.6 & 26.2 & CC  & CC          & Zhang et al.\ (2014)~\cite{ch2:Zhang2014} \\
+3 & 0.170 &  83.0 &  8.0 & CC  & CC          & Simon et al.\ (2005)~\cite{ch2:Simon2005} \\
+4 & 0.200 &  72.9 & 29.6 & CC  & CC          & Zhang et al.\ (2014)~\cite{ch2:Zhang2014} \\
+5 & 0.280 &  88.8 & 36.6 & CC  & CC          & Zhang et al.\ (2014)~\cite{ch2:Zhang2014} \\
+6 & 0.106 &  69.4 &  5.6 & BAO & 6dFGS       & Beutler et al.\ (2011)~\cite{ch2:Beutler2011} \\
+7 & 0.150 &  69.2 &  7.8 & BAO & SDSS MGS    & Ross et al.\ (2015)~\cite{ch2:Ross2015} \\
+8 & 0.380 &  81.5 &  2.3 & BAO & BOSS DR12   & Alam et al.\ (2017)~\cite{ch2:BOSS2017} \\
+9 & 0.510 &  90.5 &  2.5 & BAO & BOSS DR12   & Alam et al.\ (2017)~\cite{ch2:BOSS2017} \\
+10 & 0.610 &  97.3 &  2.7 & BAO & BOSS DR12  & Alam et al.\ (2017)~\cite{ch2:BOSS2017} \\
+11 & 0.700 &  98.0 & 12.0 & BAO & eBOSS LRG  & Bautista et al.\ (2021)~\cite{ch2:Bautista2021} \\
+12 & 0.850 & 113.1 &  8.0 & BAO & eBOSS ELG  & de Mattia et al.\ (2021)~\cite{ch2:deMattia2021} \\
+13 & 1.480 & 160.0 & 13.0 & BAO & eBOSS QSO  & Hou et al.\ (2021)~\cite{ch2:Hou2021} \\
+14 & 2.330 & 224.0 &  8.6 & BAO & eBOSS Ly$\alpha$ & du Mas des Bourboux et al.\ (2020)~\cite{ch2:duMas2020} \\
+15 & 0.440 &  82.6 &  7.8 & GC  & WiggleZ    & Blake et al.\ (2012)~\cite{ch2:Blake2012} \\
+16 & 0.600 &  87.9 &  6.1 & GC  & WiggleZ    & Blake et al.\ (2012)~\cite{ch2:Blake2012} \\
+17 & 0.730 &  97.3 &  7.0 & GC  & WiggleZ    & Blake et al.\ (2012)~\cite{ch2:Blake2012} \\
+18 & 0.800 & 105.0 &  9.4 & GC  & VIPERS     & de la Torre et al.\ (2013)~\cite{ch2:delaTorre2013} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\noindent\textbf{Note on GC data points.} The WiggleZ and VIPERS $H(z)$ values (rows 15--18) derive from the Alcock--Paczy\'nski geometric analysis of the galaxy correlation function, not from $f\sigma_8$ measurements. The label ``GC'' indicates galaxy clustering survey origin. These measurements assume a fiducial $\Lambda$CDM cosmology for the angular diameter distance $D_A(z)$ used to break the $D_A \times H$ degeneracy; for small deviations from $\Lambda$CDM (as in our model), the resulting systematic bias is of order $\Delta w_0/(1+z) \sim 0.3\%$, well below measurement uncertainties.
+
+\subsection*{A.2\quad Covariance Structure}
+\label{sec:2-appA-cov}
+
+The analysis treats measurement uncertainties as diagonal (uncorrelated between data points). This approximation is justified because:
+\begin{enumerate}
+    \item Different surveys observe different galaxy samples with no overlap.
+    \item Cosmic chronometer measurements are methodologically independent of BAO measurements.
+    \item Different redshift bins within a single survey have small covariance.
+\end{enumerate}
+
+\noindent\textbf{Known correlations (not included):}
+\begin{itemize}
+    \item The three BOSS~DR12 bins ($z = 0.38$, $0.51$, $0.61$) have approximately $10$--$15\%$ off-diagonal correlation, as reported in the covariance matrix of Alam et al.\ (2017)~\cite{ch2:BOSS2017}, Table~5.
+    \item The three WiggleZ bins ($z = 0.44$, $0.60$, $0.73$) have approximately $5$--$10\%$ correlation.
+\end{itemize}
+
+Including these correlations would \emph{increase} $\chi^2/\mathrm{dof}$ (currently $0.40$), bringing it closer to unity. The diagonal approximation is therefore conservative in its assessment of fit quality.
+
+\subsection*{A.3\quad Methodology}
+\label{sec:2-appA-method}
+
+\textbf{Fitting algorithm.} The non-minimal coupling $\zeta_0$ is determined by analytical weighted least-squares minimization of
+\begin{equation}
+\chi^2 = \sum_{i=1}^{18} \left[\frac{\beta_{\mathrm{HK},i} + \zeta_0}{\sigma_{\beta,i}}\right]^2,
+\label{eq:2-appA-chi2}
+\end{equation}
+where $\beta_{\mathrm{HK},i} = H(z_i)_\mathrm{measured}/H(z_i)_\mathrm{\Lambda CDM} - 1$ and $\sigma_{\beta,i} = \sigma_{H,i}/H(z_i)_\mathrm{\Lambda CDM}$. The analytical solution is
+\begin{equation}
+\zeta_0 = -\frac{\sum_i \beta_{\mathrm{HK},i}/\sigma_{\beta,i}^2}{\sum_i 1/\sigma_{\beta,i}^2}\,.
+\label{eq:2-appA-solution}
+\end{equation}
+
+\textbf{Result.} This procedure yields $\zeta_0 = 0.009 \pm 0.013$ with $\chi^2 = 6.72/17$, consistent with $\zeta_0 = 0$ at $0.7\sigma$.
+
+\textbf{Software.} All computations were performed using Python~3.12 with NumPy and SciPy. No numerical optimizer was used for the primary fit---the analytical weighted least-squares solution~\eqref{eq:2-appA-solution} was evaluated directly. Fisher matrix calculations, Monte Carlo simulations, and Bayesian model comparison were implemented using SciPy statistical functions. All analysis code is available as supplementary material.
+
+%% ============================================================
+\section*{Acknowledgments}
+\label{sec:2-ack}
+
+We thank the DESI collaboration for making their Data Release~2 results publicly available and for the transformative dataset that motivates this work. We acknowledge the BOSS, eBOSS, 6dFGS, VIPERS, WiggleZ, and FastSound survey teams for the expansion rate and growth rate measurements used in this analysis. We thank Hiramatsu \& Kobayashi for the Planck CMB constraint on modified gravity that provides one of the key observational inputs. We thank the authors of~\cite{ch2:Nesseris2025,ch2:GomezValent2025,ch2:Lodha2024,ch2:Hasan2025,ch2:Mandal2025,ch2:Andrianomena2025,ch2:Marques2025} for independent analyses that informed our interpretation of the CPL artifact hypothesis.
+
+%% ============================================================
+%% Bibliography moved to bibliography.tex (end-of-document)

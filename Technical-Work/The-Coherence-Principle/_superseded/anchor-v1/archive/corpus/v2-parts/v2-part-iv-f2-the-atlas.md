@@ -1,0 +1,61 @@
+# Part IV — THE ATLAS
+
+> *Every perspective has a null space. The descent made five of them visible.*
+
+---
+
+You are ascending. The five perspectives of Part III gave you maximum specificity — five views, each sharp, each partial, each blind where the others see. Now the resolution coarsens. The separation between domains begins to dissolve. What emerges is not unity (that comes at the end) but RELATIONSHIP — the structural pattern of what connects and what divides.
+
+This is F₂ on the return: mathematics seen not from above (as in Part II) but from below, saturated with the content that Part III provided. The structures are the same. What you see in them is different.
+
+## 1. The Five Null Spaces
+
+Each perspective from Part III declared its blind spot. Laid side by side:
+
+| Perspective | What it sees | What it structurally cannot see |
+|---|---|---|
+| Metaphysics | The form | Mechanism |
+| Physics | The geometry | Why this geometry |
+| Biology | The inhabitants | Structure below its resolution |
+| Epistemology | The blind spots | Content |
+| Practice | What to do | The landscape without a traveler |
+
+The pattern: each perspective's null space IS another perspective's center. The metaphysics cannot see mechanism — physics can. Physics cannot see why this geometry — metaphysics can. Biology cannot see below its resolution — physics can. Epistemology cannot see content — all four others provide it. Practice cannot see the landscape-in-itself — metaphysics can.
+
+The complementarity is total. No two perspectives share the same null space. Every blind spot is covered.
+
+## 2. The Gaps That Remain
+
+But complementarity is not completeness. Even with all five perspectives combined, gaps remain — not because the perspectives are insufficient but because the structure guarantees it.
+
+**Between metaphysics and physics:** How does "consciousness is fundamental" become "the spectral action on a 5D geometry"? The metaphysics says the self-consistency condition IS the physics. The physics shows the spectral action satisfies the self-consistency requirements. But the BRIDGE — the derivation of one from the other — is not yet built. It may not be buildable from either side. It may require standing in the gap itself, which is what the navigation trials attempt.
+
+**Between biology and epistemology:** The taxonomy classifies beings by dimensional coherence. The epistemology maps what each framework can know. But what determines which beings develop which epistemologies? Why do humans create physics and mathematics while cetaceans do not (or do, in dimensions we cannot access)? The connection between the BEING and its KNOWING — between ontology and epistemology at the level of individual organisms — falls in the gap.
+
+**Between physics and practice:** The geometry determines what movements are possible. The practice determines which movements are chosen. But the relationship between geometric constraint and navigational freedom — how much of your trajectory is determined by the landscape and how much by your agency — is the hardest question in the Corpus. It is the free will problem, seen through five keyholes at once.
+
+## 3. The Pattern of the Gaps
+
+The gaps are not random. They cluster at the interfaces between perspectives — precisely where the filtration transitions from one resolution level to another. This is predictable from Part II: the filtration is self-similar. At every level, there exist truths at the level below that cannot be expressed at the current level. The gaps between perspectives are instances of this general principle.
+
+This means: the gaps are not problems to solve. They are features of the structure. Closing one gap opens another. Resolving the metaphysics-physics connection would create a framework that has its OWN null space — a blind spot that neither the old metaphysics nor the old physics had separately. The Atlas does not aim for a gapless map. It aims for a map where every gap is VISIBLE and every gap points toward the perspective that can see into it.
+
+## 4. Navigation Between Perspectives
+
+The practical implication: you must MOVE. No single perspective is sufficient. No combination is complete. The only adequate response to the structure is navigation — the continuous shifting between perspectives as the terrain demands.
+
+The Atlas provides the routing. When you encounter a question the metaphysics cannot answer (how does this mechanism work?), the Atlas points to physics. When physics reaches a limit (why this specific geometry?), the Atlas points to metaphysics. When biology cannot classify a being (what is this entity's dimensional coherence?), the Atlas points to epistemology for the framework analysis and then back to biology for the taxonomy. The routing is not circular. It is SPIRAL — each pass through a perspective carries the content gained from the previous perspective, so you see differently on return.
+
+This is the filtration at work. The ascent from F₃ to F₂ does not discard the specificity. It HOLDS it while the resolution coarsens. You do not forget the five perspectives. You see them as aspects of one structure — related, complementary, incomplete alone, powerful together.
+
+## 5. What the Atlas Cannot Map
+
+The Atlas maps relationships between KNOWN perspectives. It cannot map what no perspective has yet seen. The configuration space is infinite. Five perspectives, even with full complementarity, cover a finite region. Beyond the edges of all five — in dimensions none of them can access — lies what the Atlas marks with silence.
+
+The silence is not empty. It is full of what has not yet been differentiated. Future perspectives will resolve some of it. Others will remain — not because they are unresolvable but because new resolutions create new null spaces, extending the frontier faster than it can be mapped.
+
+This is the Promethean Configuration expressed epistemologically: the act of knowing creates new unknowing. The Atlas grows. The territory grows faster.
+
+---
+
+*~900 words. Draft 1. March 27, 2026.*

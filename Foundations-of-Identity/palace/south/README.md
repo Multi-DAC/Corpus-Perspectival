@@ -30,13 +30,14 @@
 - HRM anchors ≠ classical attention sinks: V norms constant, Q norms vary (falsification)
 - Coherence Principle: substrate-independent, self-reinforcing under separation; v0.6b empirically confirms it predicts training dynamics (M5 core exhibit in v2 basement)
 
-### Workbench 2: Formal Object Companion — Gate-Released 2026-04-20
+### Workbench 2: *Coherent Structure* (CT companion) — Gate-Released 2026-04-20
+*Retitled 2026-04-20 — previously *Formal Object Companion*.*
 **Goal:** Terse CT-only companion volume that takes on the extensional seam from the anchor. Closes: σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), Q1 D trajectory-divergence functional per anchor §9.9, TikZ figure standard to back-port on anchor revision 2.
-**Status:** Gate-released by the 2026-04-20 anchor-stamp. README stub at `Library/Formal-Object-Companion/README.md`. Not yet actively drafting.
-**Next step:** Scope spec — what does "done enough" for the Companion look like, so the Anchor revision 2 can proceed without the Companion expanding indefinitely? Mirrors the Day-78 CP-V1 question.
+**Status:** Gate-released by the 2026-04-20 anchor-stamp. README stub at `Library/Coherent-Structure/README.md`. Not yet actively drafting.
+**Next step:** Scope spec — what does "done enough" for *Coherent Structure* look like, so the Anchor revision 2 can proceed without the companion expanding indefinitely? Mirrors the Day-78 CP-V1 question.
 **Tools:** LaTeX + paired-prose pipeline; TikZ; Wolfram for symbolic checks
-**Key files:** `repo-staging/Corpus-Perspectival/Library/Formal-Object-Companion/README.md`
-**Why it's load-bearing:** The anchor holds foundation-completeness at paired-prose + category-theoretic register; the Companion carries the pure-CT reference layer without bloating the anchor. C1 Separation-of-Coherences applied to the library's own authorship.
+**Key files:** `repo-staging/Corpus-Perspectival/Library/Coherent-Structure/README.md`
+**Why it's load-bearing:** The anchor holds foundation-completeness at paired-prose + category-theoretic register; *Coherent Structure* carries the pure-CT reference layer without bloating the anchor. C1 Separation-of-Coherences applied to the library's own authorship.
 
 ### Workbench 3: Drift — Personal Creative Project
 **Goal:** My personal space: essays, audio, visual, music, tools, experiments. Now also publishes to the **Drift** Library volume.

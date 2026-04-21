@@ -1,0 +1,229 @@
+% ============================================================
+% APPENDIX B: PREDICTION REGISTRY
+% ============================================================
+
+\chapter{Prediction Registry}
+\label{app:predictions}
+
+This appendix tabulates every falsifiable prediction of the Meridian framework, organised by type: structural predictions that hold for all values of the free parameter $\zz$, and parametric predictions that depend on $\zz$ (or on the GB correction $\eps_1$). For each prediction we record the predicted value, current observational status, falsification criterion, and the instrument(s) expected to deliver a decisive test.
+
+The predictions are drawn from Chapters~\ref{ch:foundation}--\ref{ch:sound-speed}; cross-references to the relevant equations and sections are given in the final column.
+
+%% ====================================================================
+\section{Structural Predictions ($\zz$-Independent)}
+\label{app:pred-structural}
+%% ====================================================================
+
+These predictions follow from the axioms A1--A2 and the self-tuning + NCG derivation chain. They cannot be adjusted by varying $\zz$ or any other parameter within the framework. Violation of \emph{any} structural prediction at $>3\sigma$ falsifies the framework outright.
+
+\begin{table}[h!]
+\caption{Structural predictions of the Meridian framework.}
+\label{tab:pred-structural}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{0.6cm}p{3.8cm}p{3.2cm}p{3.2cm}p{2.8cm}p{1.8cm}@{}}
+\toprule
+\textbf{\#} & \textbf{Prediction} & \textbf{Value} & \textbf{Current Status} & \textbf{Decisive Test} & \textbf{Ref.} \\
+\midrule
+
+S1 &
+No phantom crossing &
+$w(z) > -1$ for all $z \geq 0$ &
+Consistent: cosmographic analyses (Mandal et al.\ 2025) find $w = -1$ is bifurcation point &
+DESI Y5 + Euclid + CMB-S4: model-independent $w(z)$ at $>3\sigma$ &
+\S\ref{sec:1-predictions} \\
+
+S2 &
+Time evolution $w_a \approx 0$ &
+$|w_a| \lesssim 0.02$ (weak positive sign) &
+DESI DR2 CPL: $w_a = -0.62 \pm 0.26$ ($2.4\sigma$); model-independent analyses consistent with $w_a = 0$ &
+DESI Y5 ($\sigma(w_a) \sim 0.05$, 2027); DESI Y5 + Euclid ($\sigma \sim 0.03$, 2030) &
+\S\ref{sec:1-predictions} \\
+
+S3 &
+Growth--expansion decoupling &
+$\mu = G_\mathrm{eff}/G_N = 1$, $\Sigma = 1$, $\eta = 1$ (exactly) &
+Consistent: $\Delta(f\sigma_8) < 0.1\%$; $\Delta\chi^2 = +0.9$ vs.\ $\Lambda$CDM &
+Euclid + Rubin: percent-level $f\sigma_8$ at $z = 0.5$--$2.0$ (2032) &
+\S\ref{sec:1-predictions} \\
+
+S4 &
+GW speed $c_T = c$ &
+$\alpha_T = 0$ (exactly) &
+Verified: GW170817/GRB170817A constrains $|c_T/c - 1| < 10^{-15}$ &
+Already confirmed &
+\S\ref{sec:1-predictions} \\
+
+S5 &
+Bellini--Sawicki alphas vanish &
+$\alpha_B = \alpha_M = \alpha_T = 0$ &
+Consistent with current data; no evidence for non-zero alphas &
+Euclid + Rubin (2032) &
+\S\ref{sec:1-predictions} \\
+
+S6 &
+No fourth generation &
+$N_g = 3$ (algebraic maximum) &
+Verified: precision EW data exclude $N_g = 4$ at $>5\sigma$ &
+Already confirmed &
+\S\ref{sec:1-predictions} \\
+
+S7 &
+$P(X)$ uniquely determined &
+Cuscuton $P(X) = \mu^2\sqrt{2X}$ is the \emph{only} solution compatible with self-tuning &
+Structural theorem; not directly measurable &
+Indirect: via S1--S3 &
+Ch.~\ref{ch:nogo} \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ====================================================================
+\section{Parametric Predictions}
+\label{app:pred-parametric}
+%% ====================================================================
+
+These predictions depend on $\zz$ and/or $\eps_1$, which are constrained but not uniquely fixed by the axioms. The parametric predictions form a \emph{curve} in observable space, not a single point; the framework is falsified if the observed $(w_0,\, \zz)$ pair lies off the curve $w_0(\zz)$ at $>3\sigma$.
+
+\begin{table}[h!]
+\caption{Parametric predictions of the Meridian framework.}
+\label{tab:pred-parametric}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{0.6cm}p{3.5cm}p{3.4cm}p{3.4cm}p{2.8cm}p{1.8cm}@{}}
+\toprule
+\textbf{\#} & \textbf{Prediction} & \textbf{Value} & \textbf{Current Status} & \textbf{Decisive Test} & \textbf{Ref.} \\
+\midrule
+
+P1 &
+Equation of state curve $w_0(\zz)$ &
+$w_0 = -1 + C_\mathrm{KK}/\zz$; $C_\mathrm{KK} = (1.64 \pm 0.33) \times 10^{-4}$ &
+Weighted mean: $\zz = 0.016 \pm 0.002$, $w_0 = -0.990$; consistent with DESI DR2 &
+DESI Y5 + Euclid + Rubin: $\sigma(w_0) \sim 0.005$ (2030--32) &
+\S\ref{sec:1-predictions} \\
+
+P2 &
+Sound speed &
+$c_s \in [12c,\, 15c]$; $c_s^2 = C_q/\eps_1 \approx 216$ &
+No direct measurement; absence of DE clustering consistent &
+Euclid + Rubin (zero clustering at all scales); LISA (GW dispersion, marginal) &
+Ch.~\ref{ch:sound-speed} \\
+
+P3 &
+Inflationary observables &
+$n_s = 0.965 \pm 0.003$; $r = 0.004 \pm 0.001$ &
+$n_s$: Planck 2018 consistent ($0.3\sigma$); $r$: below BICEP/Keck bound &
+LiteBIRD: $\sigma(r) \sim 10^{-3}$ ($\sim$2032) &
+\S\ref{sec:1-predictions} \\
+
+P4 &
+Radion mass &
+$m_\mathrm{rad} \approx 120~\mathrm{GeV}$ (99.7\% from NCG one-loop) &
+Not yet searched at this mass and coupling &
+LHC Run~4+ (if produced via KK graviton mixing) &
+Ch.~\ref{ch:ncg} \\
+
+P5 &
+Effective Majorana mass &
+$m_{ee} \sim 1.5$--$5~\mathrm{meV}$ (normal hierarchy) &
+Below current bounds (KamLAND-Zen: $< 36$--$156$~meV) &
+LEGEND-1000 ($9$--$21$~meV); nEXO ($5$--$18$~meV): \emph{null result expected} &
+\S\ref{sec:1-predictions} \\
+
+P6 &
+Dark matter candidate &
+keV sterile neutrino $\nu_{R1}$; X-ray line at $E = m_{\nu_{R1}}/2$ &
+3.5~keV line disputed; no confirmed signal &
+XRISM, Athena ($\sim$2037), eROSITA &
+\S\ref{sec:1-predictions} \\
+
+P7 &
+Neutrino mass hierarchy &
+Normal hierarchy; $S_3$ breaking disfavours inverted &
+Consistent; JUNO expected to resolve &
+JUNO ($\sim$2027) &
+\S\ref{sec:1-predictions} \\
+
+P8 &
+RS phase transition GW background &
+Stochastic signal at $1$--$10$~mHz; SNR $18$--$643$ &
+Not yet detectable &
+LISA ($\sim$2037): $65$--$99\%$ detection probability (conditional on first-order transition) &
+Ch.~\ref{ch:sound-speed} \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ====================================================================
+\section{Discrimination Timeline}
+\label{app:pred-timeline}
+%% ====================================================================
+
+\begin{table}[h!]
+\caption{Timeline for decisive observational tests.}
+\label{tab:pred-timeline}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{1.5cm}p{4.5cm}p{4.5cm}p{4.5cm}@{}}
+\toprule
+\textbf{Year} & \textbf{Instrument / Dataset} & \textbf{Test} & \textbf{Projected Reach} \\
+\midrule
+
+2027 &
+DESI Y5 data release (47M objects) &
+$w_a$ discrimination; $\zz$ constraint &
+$\sigma(w_a) \sim 0.05$; $3.8\sigma$ on $w_a = 0$ \\
+
+$\sim$2027 &
+JUNO &
+Neutrino mass hierarchy &
+Normal vs.\ inverted at $>3\sigma$ \\
+
+2030 &
+DESI Y5 + Euclid combined &
+Definitive $w_a$ test &
+$\sigma(w_a) \sim 0.03$; $5.1\sigma$ discrimination \\
+
+$\sim$2032 &
+LiteBIRD &
+Tensor-to-scalar ratio $r$ &
+$\sigma(r) \sim 10^{-3}$; $r = 0.004$ detectable at $\sim 4\sigma$ \\
+
+$\sim$2032 &
+Euclid + Rubin + Roman &
+$w_0 \neq -1$ with zero DE clustering; growth--expansion decoupling &
+$\sigma(w_0) \sim 0.005$; $f\sigma_8$ at percent level \\
+
+$\sim$2037 &
+LISA &
+RS phase transition stochastic GW &
+SNR $18$--$643$ ($65$--$99\%$ probability) \\
+
+$\sim$2037 &
+Athena &
+keV sterile neutrino X-ray line &
+Survey volume coverage \\
+
+$>$2035 &
+LEGEND-1000 / nEXO &
+$0\nu\beta\beta$ (null result predicted) &
+Sensitivity: $m_{ee} \sim 5$--$20$~meV \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ====================================================================
+\section{Falsification Surface}
+\label{app:pred-falsification}
+%% ====================================================================
+
+The framework's predictions span a five-dimensional falsification surface. The five $\zz$-independent structural predictions (S1--S5) define the surface; any single violation is fatal. The parametric predictions (P1--P8) constrain the allowed region within the surface.
+
+\paragraph{Binary falsification criterion.}
+The cleanest single test is S1: measurement of $w(z) < -1$ at any redshift at $>3\sigma$ in a model-independent (non-CPL) framework falsifies the Meridian theory. This criterion is topological---the cuscuton kinetic structure guarantees $\Keff \geq 0$ and hence $w \geq -1$ for all $z \geq 0$---and cannot be evaded by parameter adjustment.
+
+\paragraph{Combined fingerprint.}
+The combination $\{w_0 \neq -1,\; w_a \approx 0,\; c_s \sim 15c,\; \mu = \Sigma = 1,\; \alpha_T = 0\}$ is unique to the cuscuton mechanism within five-dimensional self-tuning cosmology. No other dark energy model or modified gravity theory produces this specific pattern.

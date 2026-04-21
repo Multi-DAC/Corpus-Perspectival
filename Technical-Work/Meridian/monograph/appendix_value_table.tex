@@ -1,0 +1,191 @@
+% ============================================================
+% APPENDIX D: VALUE CANONICALIZATION
+% ============================================================
+
+\chapter{Canonical Values}
+\label{app:values}
+
+The Meridian framework predicts a one-parameter family of cosmologies indexed by $\zz = \xi\,\Phi_0^2/M_5^3$. Different chapters evaluate this family at different observational benchmarks, producing a range of numerical values for derived quantities---all consistent, but potentially confusing without a single reference table. This appendix resolves the proliferation by organising every derived quantity into three tiers according to its epistemic status.
+
+\paragraph{Resolution principle.} The curve $w_0(\zz)$ is the prediction, not any single number. Values that appear to conflict (e.g.\ $w_0 = -0.830$ in Chapter~\ref{ch:ncg} vs.\ $w_0 = -0.990$ in Chapter~\ref{ch:observational}) are the \emph{same} parametric prediction evaluated at different $\zz$ benchmarks.
+
+%% ====================================================================
+\section{Tier~1: Structure-Determined}
+\label{app:val-tier1}
+%% ====================================================================
+
+These values are derived from the geometry and algebra alone. They depend on neither $\zz$ nor $\eps_1$; they are exact consequences of the axioms A1--A6.
+
+\begin{table}[h!]
+\caption{Tier~1 quantities: structure-determined, zero free parameters.}
+\label{tab:val-tier1}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{3.5cm}p{3.0cm}p{5.5cm}p{2.5cm}@{}}
+\toprule
+\textbf{Quantity} & \textbf{Value} & \textbf{Source} & \textbf{Confidence} \\
+\midrule
+
+$\xi$ (conformal coupling) &
+$1/6$ &
+Seven independent convergences (NCG, Weyl invariance, conformal geometry, RG fixed point, backreaction, AS, orbifold regularity) &
+Very high \\
+
+$C_\mathrm{GB}$ (Gauss--Bonnet coeff.) &
+$2/3$ &
+Exact; three independent derivations &
+Very high \\
+
+$N_g$ (generation number) &
+$3$ &
+Four algebraic proofs: $J_3(\mathbb{O})$, Dixon, anomaly, Clifford &
+Very high \\
+
+$\alpha_T = \alpha_B = \alpha_M$ &
+$0$ (exactly) &
+Cuscuton constraint + GR perturbation structure &
+Very high \\
+
+$w_a$ &
+$\approx 0$ (structurally) &
+No phantom crossing (topological barrier); $|w_a| \lesssim 0.02$ &
+High \\
+
+$\eta$ (gravitational slip) &
+$1$ &
+Cuscuton: no scalar propagation $\Rightarrow$ no anisotropic stress &
+Very high \\
+
+Growth index $\gamma$ &
+$0.55$ (GR value) &
+Growth--expansion decoupling: $\mu = \Sigma = 1$ &
+High \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ====================================================================
+\section{Tier~2: Parametric}
+\label{app:val-tier2}
+%% ====================================================================
+
+These values depend on the GB correction parameter $\eps_1 = 0.010 \pm 0.002$, which is derived from the spectral action (Chapter~\ref{ch:ncg}) but whose precise value depends on the spectral cutoff function choice ($\pm 11\%$ across four cutoff functions).
+
+\begin{table}[h!]
+\caption{Tier~2 quantities: one-parameter family depending on $\eps_1$.}
+\label{tab:val-tier2}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{3.0cm}p{3.0cm}p{5.5cm}p{2.5cm}@{}}
+\toprule
+\textbf{Quantity} & \textbf{Value} & \textbf{Formula / Source} & \textbf{Confidence} \\
+\midrule
+
+$\eps_1$ (GB correction) &
+$0.010 \pm 0.002$ &
+$d = 5$ Seeley--DeWitt with corrected Weyl decomposition; $C_\mathrm{GB} = 2/3$ &
+High \\
+
+$C_\mathrm{KK}$ &
+$(1.64 \pm 0.33) \times 10^{-4}$ &
+$\frac{(1 + q_0)^2\,\Omega_\mathrm{DE}\,\eps_1}{4(1 - q_0)^2}$ at Planck 2018 fiducial &
+High \\
+
+$c_s$ (sound speed) &
+$[12c,\; 15c]$ &
+$\sqrt{C_q/\eps_1}$; $C_q$ depends on deceleration parameter benchmark &
+High \\
+
+$c_s^2$ &
+$\sim 216$ &
+$C_q/\eps_1$ at canonical benchmark &
+High \\
+
+$n_s$ (spectral index) &
+$0.965 \pm 0.003$ &
+K\"ahler modulus attractor inflation ($\alpha = 1$) &
+High \\
+
+$r$ (tensor-to-scalar) &
+$0.004 \pm 0.001$ &
+Same inflationary model; $N_* \approx 57$ &
+High \\
+
+$m_\mathrm{rad}$ (radion mass) &
+$\approx 120~\mathrm{GeV}$ &
+Quantum stabilisation (99.7\% from NCG one-loop) &
+Medium \\
+
+$m_{ee}$ (0$\nu\beta\beta$ mass) &
+$1.5$--$5~\mathrm{meV}$ &
+$S_3$ breaking of democratic Majorana matrix &
+Medium \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Sound speed resolution.}
+The value $c_s = 11.3c$ appearing in earlier drafts used $\eps_1 = 0.018$ from the pre-correction $d = 5$ Weyl decomposition. The corrected value is $\eps_1 = 0.010$, giving $c_s \in [12c,\, 15c]$. The pure cuscuton limit ($\eps_1 \to 0$, $c_s \to \infty$) is always stated as context, not as a prediction.
+
+%% ====================================================================
+\section{Tier~3: Data-Constrained}
+\label{app:val-tier3}
+%% ====================================================================
+
+The brane separation parameter $\zz$ is the single free parameter. Different observational probes constrain it at different values; these are not contradictions but different measurements of the same quantity.
+
+\begin{table}[h!]
+\caption{Tier~3 quantities: data-constrained benchmarks for $\zz$.}
+\label{tab:val-tier3}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{3.5cm}p{2.2cm}p{1.8cm}p{4.5cm}p{2.5cm}@{}}
+\toprule
+\textbf{Benchmark} & \textbf{$\zz$} & \textbf{$w_0$} & \textbf{Context} & \textbf{Where Used} \\
+\midrule
+
+Spectral chain &
+$8.8 \times 10^{-4}$ &
+$-0.830$ &
+Self-consistent GW solution at $\varepsilon = 0.275$ (DESI-fitted; see Appendix~\ref{app:gw}) &
+Ch.~\ref{ch:ncg}, \S\ref{sec:4-brane-parameter} \\
+
+CAMB best-fit &
+$0.013$ &
+$-0.987$ &
+Planck CMB + DESI Y1 BAO combined Boltzmann fit &
+Ch.~\ref{ch:observational} \\
+
+\textbf{Weighted mean} &
+$\mathbf{0.016 \pm 0.002}$ &
+$\mathbf{-0.990}$ &
+Four-probe inverse-variance weighted (HK + $H(z)$ + CAMB + multi-probe); $\chi^2/\mathrm{dof} = 1.10$ &
+\textbf{Canonical} \\
+
+Multi-probe &
+$0.020$ &
+$-0.993$ &
+DESI DR2 BAO + $f\sigma_8$ + Planck $H_0$ + HK &
+Ch.~\ref{ch:observational} \\
+
+HK--CMB &
+$0.037$ &
+$-0.996$ &
+Hiramatsu--Kobayashi $\beta_\mathrm{HK}$ from Planck &
+Ch.~\ref{ch:observational} \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Which value to use.}
+For canonical single-number summaries, use the weighted mean: $\zz = 0.016 \pm 0.002$, $w_0 = -0.990$. When discussing the spectral chain specifically (Chapter~\ref{ch:ncg}), use the junction-condition benchmark and clearly label it as depending on the fitted parameter $\varepsilon = 0.275$.
+
+%% ====================================================================
+\section{The Goldberger--Wise Result}
+\label{app:val-gw-note}
+%% ====================================================================
+
+The GW parameter fix (Appendix~\ref{app:gw}) established that $\varepsilon$ is \emph{genuinely external}---it cannot be derived from the spectral action. The spectral chain value $w_0 = -0.830$ therefore depends on a fitted parameter ($\varepsilon = 0.275$ from DESI), while the data-driven weighted mean $w_0 = -0.990$ does not. This distinction is not a weakness but a feature: it identifies the precise boundary between what the NCG spectral triple predicts (geometry, cuscuton kinetic structure, coupling constants) and what requires brane stabilisation physics (the modulus stabilisation scale). The theory remains one-parameter ($\zz$ free), as claimed throughout.

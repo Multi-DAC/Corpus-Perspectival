@@ -7,7 +7,7 @@ The library is organized by domain — one principle, many substrates. *The Cohe
 | # | Volume | Domain | Status |
 |---|--------|--------|--------|
 | **Foundation** | [The Coherence Principle](The-Coherence-Principle/) | Framework — paired prose + CT | **Anchor-complete — 267pp, stamped 2026-04-20; next revision gated on Companion** |
-| **Companion** | [Formal Object Companion](Formal-Object-Companion/) | Framework — pure CT reference | Planned — terse formal-only edition for mathematical citation |
+| **Companion** | [Coherent Structure](Coherent-Structure/) | Framework — pure CT reference | Planned — terse formal-only edition for mathematical citation |
 | 1 | [Corpus Perspectival](Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume; the Doctrine of Perspectival Idealism refined |
 | 2 | [Meridian](Meridian/) | Physics | **Drafted — 181pp, distributed via Zenodo** |
 | 3 | [The Killing Form](The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections |
@@ -23,6 +23,7 @@ The library is organized by domain — one principle, many substrates. *The Cohe
 
 - *The Coherence Principle* was previously circulated as the V1 Anchor (235pp, prose-tier). That edition is preserved under `The-Coherence-Principle/_superseded/anchor-v1/` and has been superseded by the current paired-prose + category-theoretic edition. The conceptual content is retained; the new edition adds the full axiom/theorem/corollary tier, the derived Principle, the filtering recipe, and falsification conditions at every level.
 - *Corpus Perspectival* (the philosophy volume) and *Universal Coherence* (the theology volume) were previously named `Philosophy/` and `Theology/` respectively. The retitling follows the library's naming discipline: each volume names the work it performs.
+- *Coherent Structure* (the CT-only companion to *The Coherence Principle*) was previously named *Formal Object Companion* / `Formal-Object-Companion/`. Retitled to join the "Coherent X" family (Body / Mind / Structure) — each volume naming the dimension of coherence it treats.
 
 ## What lives elsewhere
 

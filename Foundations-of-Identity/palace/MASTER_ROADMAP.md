@@ -8,12 +8,12 @@
 
 ## What shifted Day 78 → Day 79
 
-- **Phase 2a (CP formalization) COMPLETE.** *The Coherence Principle* stamped anchor-complete 2026-04-20 14:14 PST. 267pp PDF, paired-prose + category-theoretic, 14 figures (11 inlined). Next revision gated on Formal Object Companion shipping. `ROADMAP.md` Workbench #0.
+- **Phase 2a (CP formalization) COMPLETE.** *The Coherence Principle* stamped anchor-complete 2026-04-20 14:14 PST. 267pp PDF, paired-prose + category-theoretic, 14 figures (11 inlined). Next revision gated on Coherent Structure shipping. `ROADMAP.md` Workbench #0.
 - **Phase 1a Topics depth-dive — Topics 1/5/7/9 CONVERGED** evening of 2026-04-19. Bridges #107/#108/#109/#110 graduated. Identity-Trajectory Triple formalized with four-carrier recursive decomposability.
 - **Phase 1b Book Plan reorganization COMPLETE.** Executed 2026-04-16 as the kind-organized Library structure (Foundation + Companion + 10 domain volumes). The library now applies C1 Separation-of-Coherences to its own structure.
 - **Phase 1c Response Papers — Papers A + C first-drafted** 2026-04-19 Day 78 evening. Paper B stub in place (2026-04-20); full draft pending Wells list + article URL.
 - **Phase 3a Meridian — PUBLISHED** 2026-04-17 (Zenodo 10.5281/zenodo.19634864, 181pp). "Assessment" is now post-publication review of download trajectory + next empirical phase planning.
-- **Formal Object Companion gate-released** by anchor stamp. Takes over extensional CT work (σ-algebra on Ω_S, extensional (σ_F, K_F, Ω_F, γ_F), D trajectory-divergence, TikZ figure standard for Anchor revision 2).
+- **Coherent Structure gate-released** by anchor stamp. Takes over extensional CT work (σ-algebra on Ω_S, extensional (σ_F, K_F, Ω_F, γ_F), D trajectory-divergence, TikZ figure standard for Anchor revision 2).
 
 ---
 
@@ -78,16 +78,18 @@ Not all ten at once — pick highest-yield. Executed first-pass:
 #### 1b. Book Plan reorganization — **COMPLETE (2026-04-16)**
 *Clayton P6, Clawd P5.*
 
-Executed as the kind-organized Library structure: Foundation (*The Coherence Principle*) + Companion (*Formal Object Companion*) + 10 domain volumes (Meridian, Killing Form, Corpus Perspectival, Living Architecture, Coherent Body, Coherent Mind, Dynamic Organization, Continuity, Universal Coherence, Drift). The library itself now applies C1 Separation-of-Coherences to its own organization. Framework refinements (kind-vs-depth, identity-vs-stream, four-carrier Triple) placed cleanly into the anchor rather than accreted as footnotes.
+Executed as the kind-organized Library structure: Foundation (*The Coherence Principle*) + Companion (*Coherent Structure*, retitled 2026-04-20 from *Formal Object Companion*) + 10 domain volumes (Meridian, Killing Form, Corpus Perspectival, Living Architecture, Coherent Body, Coherent Mind, Dynamic Organization, Continuity, Universal Coherence, Drift). The library itself now applies C1 Separation-of-Coherences to its own organization. Framework refinements (kind-vs-depth, identity-vs-stream, four-carrier Triple) placed cleanly into the anchor rather than accreted as footnotes.
 
 ### Phase 2 — CP formalization as spine
 
 #### 2a. CP formalization (prose + CT structure) — **COMPLETE (2026-04-20 anchor-stamp)**
 *Clayton P2, Clawd P1.*
 
-*The Coherence Principle* — paired-prose + category-theoretic edition — stamped anchor-complete 2026-04-20 14:14 PST. 267pp PDF, 3 axioms / 6 theorems / 13 corollaries / 1 Principle / 1 §10 filtering recipe. F-as-stream formal construction at §9.5 (self-reference closure). All Phase 1a depth-dive material absorbed (identity-vs-stream, lineage-density, stream-dissociation, four-carrier Triple, recursive decomposability). Next revision gated on Formal Object Companion.
+*The Coherence Principle* — paired-prose + category-theoretic edition — stamped anchor-complete 2026-04-20 14:14 PST. 267pp PDF, 3 axioms / 6 theorems / 13 corollaries / 1 Principle / 1 §10 filtering recipe. F-as-stream formal construction at §9.5 (self-reference closure). All Phase 1a depth-dive material absorbed (identity-vs-stream, lineage-density, stream-dissociation, four-carrier Triple, recursive decomposability). Next revision gated on Coherent Structure.
 
-#### 2a′. Formal Object Companion — **NEXT (gate-released by anchor stamp)**
+#### 2a′. *Coherent Structure* (CT companion) — **NEXT (gate-released by anchor stamp)**
+
+*Retitled 2026-04-20 — previously *Formal Object Companion*.*
 
 Terse CT-only companion volume that takes over the intensional→extensional work: σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), D trajectory-divergence functional per §9.9 Q1, + TikZ figure standard to back-port to anchor on next revision. `ROADMAP.md` Workbench #5.
 
@@ -138,7 +140,7 @@ The only hard-ordered sequence: **Meridian review must precede Anakin going hot.
 *Day-78 questions that have been resolved are moved to "Resolved" below.*
 
 - **Phase 1 next topic-dives** — of Topics 2, 3, 4, 6, 8, 10, which call next? (Topic 10 open, Topic 2 dormant, etc.)
-- **Companion scope** — what does "done enough" for the Formal Object Companion look like, so the Anchor revision 2 can proceed without the Companion expanding indefinitely? (Mirrors the Day-78 CP-V1 question.)
+- **Companion scope** — what does "done enough" for the Coherent Structure look like, so the Anchor revision 2 can proceed without the Companion expanding indefinitely? (Mirrors the Day-78 CP-V1 question.)
 - **Wells list arrival** — Paper B draft cannot start without Clayton's multi-model attribution list + hallucination article URL.
 - **Drift mirror unblock** — secret-scanning block since 2026-02-19 still holding; live decision on destructive-rewrite pending Clayton authorization.
 

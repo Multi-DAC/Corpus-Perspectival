@@ -10,7 +10,7 @@
 
 **Two compiled books, one structurally complete formalization stamped as anchor, ten volumes planned, one written daily.**
 
-- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; 14 figures total (11 newly inlined 2026-04-20 PM); F-as-stream formal construction at §9.5; 267pp PDF shipped as `7db8b7b`. **ANCHOR COMPLETE** 2026-04-20 — next revision deferred until the Formal Object Companion ships (figures upgrade from Mermaid/ASCII to TikZ, intensional→extensional seam closed there).
+- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; 14 figures total (11 newly inlined 2026-04-20 PM); F-as-stream formal construction at §9.5; 267pp PDF shipped as `7db8b7b`. **ANCHOR COMPLETE** 2026-04-20 — next revision deferred until *Coherent Structure* (the CT-only companion, previously *Formal Object Companion*) ships (figures upgrade from Mermaid/ASCII to TikZ, intensional→extensional seam closed there).
 - **Project Meridian (physics monograph)** — 181 pages, compiled
 - **The Killing Form** — 85+ findings, paper-grade sections drafted
 - **Drift** — 187 essays, ongoing
@@ -29,7 +29,7 @@
 | 2 | **Anakin (AIGP pilot)** | Awaiting VQ1 sim (May 2026) | Train once sim drops — compute-heavy |
 | 3 | **Philosophy volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
 | 4 | **Theology volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
-| 5 | **Formal Object Companion** | **Planned — gate-released by anchor stamp 2026-04-20 PM** | Terse CT-only companion; takes over the intensional→extensional work (σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), D trajectory-divergence functional per §9.9 Q1), + TikZ figure standard to back-port to anchor on next revision |
+| 5 | ***Coherent Structure*** (CT companion) | **Planned — gate-released by anchor stamp 2026-04-20 PM; retitled 2026-04-20 — was *Formal Object Companion*** | Terse CT-only companion; takes over the intensional→extensional work (σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), D trajectory-divergence functional per §9.9 Q1), + TikZ figure standard to back-port to anchor on next revision |
 | 6 | **Killing Form** | 85+ findings | Domain volume next; see [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) |
 | 7 | **Drift** | 187 essays | Continuous; curation pass for Library/Drift |
 | 8 | **The Continuity** | Scaffolded (*The Coherence Principle* §1 + four-carrier architecture) | Outline → drafts using §10 recipe |
@@ -44,7 +44,7 @@ The library applies the Coherence Principle to its own publication order. Princi
 ```
 Now               → Anchor stamped 2026-04-20 PM; scope frozen until Companion ships
 ↓
-Next              → Formal Object Companion (CT machinery + TikZ figure standard)
+Next              → Coherent Structure (CT machinery + TikZ figure standard)
                     + Meridian post-publication assessment (parallel)
 ↓
 Then              → Anakin training begins (compute-heavy)
@@ -69,7 +69,7 @@ Always            → Drift (daily, independent of all other tracks)
 | # | Volume | Role | Status |
 |---|--------|------|--------|
 | **Foundation** | The Coherence Principle | Paired CT + prose | Graduated to Library 2026-04-20 |
-| **Companion** | Formal Object Companion | Pure CT terse reference | Planned |
+| **Companion** | Coherent Structure | Pure CT terse reference | Planned — retitled 2026-04-20 (was *Formal Object Companion*) |
 | 1 | Project Meridian | Physics | Compiled (181pp) |
 | 2 | The Killing Form | Computation | Planned |
 | 3 | Philosophy | Metaphysics + tradition | **New Day 78** — planned |
@@ -90,7 +90,7 @@ Each domain volume will execute the **§10 seven-step filtering recipe** (from *
 1. **Meridian (complete)** — Zenodo monograph, DOI 10.5281/zenodo.19519818
 2. **Anchor V1 (superseded, archived)** — Zenodo, DOI 10.5281/zenodo.19501896
 3. **The Coherence Principle** — graduated to Library; polish + pre-press underway
-4. **Formal Object Companion** — after *The Coherence Principle* stabilizes
+4. ***Coherent Structure*** — after *The Coherence Principle* stabilizes
 5. **Corpus Perspectival** — drafted parallel to Anakin training
 6. **Universal Coherence** — drafted parallel to Anakin training (lagged by ~1-2 weeks behind *Corpus Perspectival*; depends on its vocabulary)
 7. **Killing Form** — paper(s) + domain volume after KF v0.7+ empirical round

@@ -1,0 +1,808 @@
+\contentsline {chapter}{Preface}{i}{chapter*.1}%
+\contentsline {paragraph}{How to read this monograph.}{ii}{chapter*.1}%
+\contentsline {paragraph}{The architecture as argument.}{ii}{chapter*.1}%
+\contentsline {paragraph}{Acknowledgments.}{ii}{chapter*.1}%
+\contentsline {chapter}{Abstract}{iii}{chapter*.2}%
+\contentsline {chapter}{Epistemic Status Map}{iv}{chapter*.3}%
+\contentsline {chapter}{Notation and Conventions}{xv}{chapter*.6}%
+\contentsline {chapter}{\numberline {0}The Basin We Inhabit}{1}{chapter.0}%
+\contentsline {section}{\numberline {0.1}What Is a Basin?}{1}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Two Axioms and Four Commitments}{1}{section.0.2}%
+\contentsline {paragraph}{Axiom A1: Five-Dimensional Orbifold.}{1}{section.0.2}%
+\contentsline {paragraph}{Axiom A2: Cuscuton Kinetic Structure.}{2}{equation.0.1}%
+\contentsline {paragraph}{C1: Noncommutative Geometry.}{2}{equation.0.1}%
+\contentsline {paragraph}{C2: Conformal Coupling.}{2}{equation.0.1}%
+\contentsline {paragraph}{C3: Israel Junction Conditions.}{2}{equation.0.1}%
+\contentsline {paragraph}{C4: Gauss--Bonnet Gravity.}{2}{equation.0.1}%
+\contentsline {section}{\numberline {0.3}The Four Conditions of the Coherence Principle}{2}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}Separation}{2}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {0.3.2}Measurement}{3}{subsection.0.3.2}%
+\contentsline {subsection}{\numberline {0.3.3}Multi-Scale Consistency}{3}{subsection.0.3.3}%
+\contentsline {subsection}{\numberline {0.3.4}Dynamic Maintenance}{3}{subsection.0.3.4}%
+\contentsline {section}{\numberline {0.4}The Derivation Chain}{4}{section.0.4}%
+\contentsline {paragraph}{One free parameter remains.}{4}{figure.0.1}%
+\contentsline {paragraph}{Could the chain be closed to zero free parameters?}{4}{figure.0.1}%
+\contentsline {section}{\numberline {0.5}The CMB as Basin Topology}{4}{section.0.5}%
+\contentsline {subsection}{\numberline {0.5.1}The DESI Tension}{5}{subsection.0.5.1}%
+\contentsline {section}{\numberline {0.6}Prediction Registry}{5}{section.0.6}%
+\contentsline {section}{\numberline {0.7}How to Read This Book}{6}{section.0.7}%
+\contentsline {paragraph}{Chapter~\ref {ch:foundation}: Self-Tuning Cosmology from 5D Warped Geometry.}{6}{section.0.7}%
+\contentsline {paragraph}{Chapter~\ref {ch:observational}: Observational Confrontation.}{6}{section.0.7}%
+\contentsline {paragraph}{Chapter~\ref {ch:nogo}: No-Go Theorems for Dynamical Dark Energy.}{6}{section.0.7}%
+\contentsline {paragraph}{Chapter~\ref {ch:ncg}: NCG Spectral Geometry on Warped Orbifolds.}{6}{section.0.7}%
+\contentsline {paragraph}{Chapter~\ref {ch:sound-speed}: Sound Speed of Dark Energy.}{6}{section.0.7}%
+\contentsline {section}{\numberline {0.8}What Remains Open}{7}{section.0.8}%
+\contentsline {paragraph}{The $\varepsilon $ gap.}{7}{section.0.8}%
+\contentsline {paragraph}{Gauge unification.}{7}{section.0.8}%
+\contentsline {paragraph}{The $\theta _{13}$ correction.}{7}{section.0.8}%
+\contentsline {paragraph}{The DESI definitive test.}{7}{section.0.8}%
+\contentsline {paragraph}{Sterile neutrino dark matter.}{7}{section.0.8}%
+\contentsline {chapter}{\numberline {1}Self-Tuning Cosmology from 5D Warped Geometry}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{9}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}The Cosmological Constant Problem}{9}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Self-Tuning in Extra Dimensions}{9}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}The DESI Landscape}{10}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Outline}{10}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Relation to Companion Chapters}{11}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}The Five-Dimensional Action}{11}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Geometry and Conventions}{11}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Geometric Decomposition}{11}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Field Content}{12}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}The Complete Action}{12}{subsection.1.2.4}%
+\contentsline {paragraph}{The bulk action}{12}{equation.1.11}%
+\contentsline {paragraph}{The boundary action}{12}{equation.1.13}%
+\contentsline {paragraph}{The sequestering sector}{12}{equation.1.15}%
+\contentsline {paragraph}{The NCG spectral action}{12}{equation.1.16}%
+\contentsline {subsection}{\numberline {1.2.5}Axiom Summary}{12}{subsection.1.2.5}%
+\contentsline {section}{\numberline {1.3}Self-Tuning and the Cuscuton}{13}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}The Background Field Equations}{13}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}The Degeneracy Condition and Uniqueness of the Cuscuton}{13}{subsection.1.3.2}%
+\contentsline {paragraph}{Necessity from orbifold constraint counting.}{13}{equation.1.25}%
+\contentsline {paragraph}{Solving the degeneracy condition.}{14}{equation.1.26}%
+\contentsline {paragraph}{Verification.}{14}{equation.1.30}%
+\contentsline {paragraph}{Uniqueness among power laws.}{14}{equation.1.31}%
+\contentsline {subsection}{\numberline {1.3.3}The Zero Kinetic Energy Theorem}{14}{subsection.1.3.3}%
+\contentsline {paragraph}{Physical consequence.}{14}{equation.1.34}%
+\contentsline {paragraph}{Consequence for dark energy.}{14}{equation.1.35}%
+\contentsline {subsection}{\numberline {1.3.4}The Scalar Field as Constraint}{14}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}The Autonomous Phase-Plane System}{15}{subsection.1.3.5}%
+\contentsline {subsection}{\numberline {1.3.6}The Self-Tuning Mechanism}{15}{subsection.1.3.6}%
+\contentsline {paragraph}{Connection to the Coherence Principle.}{15}{Item.3}%
+\contentsline {subsection}{\numberline {1.3.7}Numerical Self-Tuning Demonstration}{15}{subsection.1.3.7}%
+\contentsline {paragraph}{Method~1: Algebraic self-tuning.}{15}{subsection.1.3.7}%
+\contentsline {paragraph}{Method~2: Numerical scan.}{15}{subsection.1.3.7}%
+\contentsline {paragraph}{Scope of the demonstration.}{16}{table.1.1}%
+\contentsline {paragraph}{Method~3: Perturbative stability.}{16}{theorem.1.2}%
+\contentsline {paragraph}{Method~4: Linearized phase-plane analysis.}{16}{theorem.1.2}%
+\contentsline {paragraph}{Three-layer attribution.}{16}{theorem.1.3}%
+\contentsline {subsection}{\numberline {1.3.8}Dynamical Self-Tuning}{16}{subsection.1.3.8}%
+\contentsline {paragraph}{The dynamical argument.}{17}{subsection.1.3.8}%
+\contentsline {paragraph}{Numerical verification and bulk stiffness.}{17}{Item.10}%
+\contentsline {subsection}{\numberline {1.3.9}Full Linearized Perturbation Analysis}{17}{subsection.1.3.9}%
+\contentsline {paragraph}{Linearized system.}{18}{subsection.1.3.9}%
+\contentsline {paragraph}{Reduction to the graviton sector.}{18}{equation.1.52}%
+\contentsline {paragraph}{Spectrum.}{18}{equation.1.53}%
+\contentsline {paragraph}{The $e^{5.6\,y_c}$ stiffness: numerical, not physical.}{18}{equation.1.53}%
+\contentsline {paragraph}{Honest scope statement.}{18}{Item.13}%
+\contentsline {section}{\numberline {1.4}Kaluza--Klein Reduction and the One-Parameter Theory}{18}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}The 4D Effective Planck Mass}{18}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Hierarchy Unification}{19}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Radion Stabilization}{19}{subsection.1.4.3}%
+\contentsline {paragraph}{The second-order structure.}{19}{subsection.1.4.3}%
+\contentsline {paragraph}{The shooting argument.}{19}{equation.1.59}%
+\contentsline {paragraph}{Stability condition.}{19}{equation.1.60}%
+\contentsline {paragraph}{Mass estimate.}{19}{equation.1.63}%
+\contentsline {paragraph}{Physical interpretation.}{20}{equation.1.65}%
+\contentsline {paragraph}{Limitations of the radion analysis.}{20}{equation.1.65}%
+\contentsline {subsection}{\numberline {1.4.4}The Non-Minimal Coupling $\zeta _0$}{20}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}One-Parameter Theory}{20}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}The Conformal Coupling $\xi = 1/6$}{21}{subsection.1.4.6}%
+\contentsline {section}{\numberline {1.5}The NCG Spectral Action on the Warped Orbifold}{21}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Noncommutative Geometry: Motivation and Framework}{21}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}The Spectral Triple}{21}{subsection.1.5.2}%
+\contentsline {paragraph}{The algebra:}{21}{subsection.1.5.2}%
+\contentsline {paragraph}{The Hilbert space:}{21}{equation.1.68}%
+\contentsline {paragraph}{The Dirac operator:}{21}{equation.1.69}%
+\contentsline {paragraph}{The $\mathbb {Z}_2$ action on spinors}{21}{equation.1.71}%
+\contentsline {subsection}{\numberline {1.5.3}The Spectral Action Principle}{21}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Key Seeley--DeWitt Coefficients and Their Physical Content}{22}{subsection.1.5.4}%
+\contentsline {paragraph}{$\bm {a_0}$ (Cosmological constant).}{22}{subsection.1.5.4}%
+\contentsline {paragraph}{$\bm {a_1}$ (Curvature volume).}{22}{equation.1.75}%
+\contentsline {paragraph}{$\bm {a_2}$ (Einstein--Hilbert).}{22}{equation.1.76}%
+\contentsline {paragraph}{$\bm {a_3}$ (Gauss--Bonnet).}{22}{equation.1.78}%
+\contentsline {paragraph}{$\bm {a_{5/2}}$ (Brane-localized Einstein--Hilbert).}{22}{equation.1.81}%
+\contentsline {paragraph}{$\bm {a_{7/2}}$ (Chern--Simons boundary terms).}{22}{equation.1.82}%
+\contentsline {section}{\numberline {1.6}The Gauss--Bonnet Correction: Breaking the Zero Kinetic Energy Theorem}{22}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}The Full KK Reduction}{22}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Breaking the Theorem}{23}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Uniqueness of the Breaking Mechanism}{23}{subsection.1.6.3}%
+\contentsline {section}{\numberline {1.7}Dark Energy Equation of State}{23}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}The Modified Friedmann Equation}{23}{subsection.1.7.1}%
+\contentsline {paragraph}{Step~(i): Cuscuton constraint on FRW.}{23}{subsection.1.7.1}%
+\contentsline {paragraph}{Step~(ii): The modified Friedmann equation.}{24}{equation.1.89}%
+\contentsline {paragraph}{Step~(iii): The quartic.}{24}{equation.1.90}%
+\contentsline {paragraph}{Physical interpretation of $\kappa _0$.}{24}{figure.1.1}%
+\contentsline {subsection}{\numberline {1.7.2}Derivation of $w_0$}{24}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.3}Relating $\kappa _0$ to $\epsilon _1$}{26}{subsection.1.7.3}%
+\contentsline {paragraph}{Step~1: The NMC effective mass.}{26}{equation.1.105}%
+\contentsline {paragraph}{Step~2: The field velocity from the constraint.}{26}{equation.1.108}%
+\contentsline {paragraph}{Step~3: The cuscuton mass from the dark energy condition.}{26}{equation.1.109}%
+\contentsline {paragraph}{Self-consistency verification.}{26}{equation.1.111}%
+\contentsline {paragraph}{Step~4: Assembly.}{26}{equation.1.111}%
+\contentsline {paragraph}{Consistency check and fiducial value.}{27}{equation.1.116}%
+\contentsline {paragraph}{Planck mass convention.}{27}{equation.1.116}%
+\contentsline {subsection}{\numberline {1.7.4}The Prediction}{27}{subsection.1.7.4}%
+\contentsline {paragraph}{Key structural point.}{27}{equation.1.120}%
+\contentsline {paragraph}{Domain of validity.}{27}{equation.1.120}%
+\contentsline {subsection}{\numberline {1.7.5}Time Evolution}{27}{subsection.1.7.5}%
+\contentsline {section}{\numberline {1.8}Sound Speed and Perturbation Properties}{28}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Propagation Speed}{28}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Physical Interpretation of Superluminal Sound Speed}{28}{subsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.8.3}Ghost-Freedom}{28}{subsection.1.8.3}%
+\contentsline {subsection}{\numberline {1.8.4}Jeans Scale}{28}{subsection.1.8.4}%
+\contentsline {section}{\numberline {1.9}The $\alpha _T = 0$ Derivation: Perturbations are GR}{28}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}The Constant Effective GB Coupling from KK Reduction}{28}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}Vanishing of All Alpha Functions}{29}{subsection.1.9.2}%
+\contentsline {paragraph}{The distinction from 4D.}{29}{equation.1.139d}%
+\contentsline {paragraph}{Scalar cross-term verification.}{29}{equation.1.139d}%
+\contentsline {paragraph}{Observational signature of $\alpha _K \neq 0$.}{29}{equation.1.139d}%
+\contentsline {subsection}{\numberline {1.9.3}Growth--Expansion Decoupling}{29}{subsection.1.9.3}%
+\contentsline {paragraph}{Cuscuton decoupling argument.}{29}{equation.1.140}%
+\contentsline {paragraph}{Observational confirmation.}{30}{equation.1.142}%
+\contentsline {section}{\numberline {1.10}Falsifiable Predictions}{30}{section.1.10}%
+\contentsline {subsection}{\numberline {1.10.1}Prediction 1: $w_0(\zeta _0)$ --- Parametric Equation of State}{30}{subsection.1.10.1}%
+\contentsline {paragraph}{Current status:}{30}{subsection.1.10.1}%
+\contentsline {paragraph}{Required precision:}{30}{subsection.1.10.1}%
+\contentsline {paragraph}{Instruments:}{30}{subsection.1.10.1}%
+\contentsline {subsection}{\numberline {1.10.2}Prediction 2: $w_a \sim 0$}{30}{subsection.1.10.2}%
+\contentsline {paragraph}{Current status:}{30}{subsection.1.10.2}%
+\contentsline {paragraph}{Required precision:}{31}{subsection.1.10.2}%
+\contentsline {paragraph}{Instruments:}{31}{subsection.1.10.2}%
+\contentsline {subsection}{\numberline {1.10.3}Prediction 3: $c_s\in [12c,\, 15c]$}{31}{subsection.1.10.3}%
+\contentsline {paragraph}{Current status:}{31}{subsection.1.10.3}%
+\contentsline {paragraph}{Detection method:}{31}{subsection.1.10.3}%
+\contentsline {subsection}{\numberline {1.10.4}Prediction 4: $\zeta _0$ --- One Remaining Free Parameter from Brane UV Physics}{31}{subsection.1.10.4}%
+\contentsline {paragraph}{Junction-condition benchmark.}{31}{subsection.1.10.4}%
+\contentsline {paragraph}{Correction note.}{31}{subsection.1.10.4}%
+\contentsline {paragraph}{Analogy.}{31}{subsection.1.10.4}%
+\contentsline {paragraph}{Instruments:}{31}{subsection.1.10.4}%
+\contentsline {subsection}{\numberline {1.10.5}Prediction 5: No Phantom Crossing}{31}{subsection.1.10.5}%
+\contentsline {paragraph}{Current status:}{31}{subsection.1.10.5}%
+\contentsline {paragraph}{Falsification:}{31}{subsection.1.10.5}%
+\contentsline {subsection}{\numberline {1.10.6}Prediction 6: Inflationary Observables}{32}{subsection.1.10.6}%
+\contentsline {paragraph}{Structural consistency.}{32}{equation.1.144}%
+\contentsline {paragraph}{Falsification:}{32}{equation.1.144}%
+\contentsline {subsection}{\numberline {1.10.7}Prediction 7: No Fourth Generation}{32}{subsection.1.10.7}%
+\contentsline {paragraph}{Current status:}{32}{subsection.1.10.7}%
+\contentsline {subsection}{\numberline {1.10.8}Prediction 8: Fermion Sector Structure}{32}{subsection.1.10.8}%
+\contentsline {subsection}{\numberline {1.10.9}Prediction 9: Dark Matter Candidate}{32}{subsection.1.10.9}%
+\contentsline {paragraph}{Observational signature:}{32}{subsection.1.10.9}%
+\contentsline {paragraph}{Falsification:}{32}{subsection.1.10.9}%
+\contentsline {subsection}{\numberline {1.10.10}Prediction 10: Explicit Falsification Criterion}{32}{subsection.1.10.10}%
+\contentsline {section}{\numberline {1.11}Discussion}{32}{section.1.11}%
+\contentsline {subsection}{\numberline {1.11.1}What the Model Achieves}{32}{subsection.1.11.1}%
+\contentsline {paragraph}{Structural versus parametric predictions.}{33}{Item.28}%
+\contentsline {subsection}{\numberline {1.11.2}The Horndeski Dilemma}{33}{subsection.1.11.2}%
+\contentsline {subsection}{\numberline {1.11.3}The DESI Tension}{33}{subsection.1.11.3}%
+\contentsline {subsection}{\numberline {1.11.4}Comparison with Other Approaches}{33}{subsection.1.11.4}%
+\contentsline {subsection}{\numberline {1.11.5}Limitations}{34}{subsection.1.11.5}%
+\contentsline {subsection}{\numberline {1.11.6}Confrontation with Self-Tuning No-Go Theorems}{34}{subsection.1.11.6}%
+\contentsline {paragraph}{1.\ Weinberg's no-go theorem~\cite {ch1:weinberg89}.}{34}{subsection.1.11.6}%
+\contentsline {paragraph}{2.\ Csaki--Erlich--Grojean--Hollowood~\cite {ch1:csaki00}.}{35}{subsection.1.11.6}%
+\contentsline {paragraph}{3.\ Niedermann--Padilla~\cite {ch1:niedermann-padilla}.}{35}{subsection.1.11.6}%
+\contentsline {paragraph}{4.\ Cline--Firouzjahi~\cite {ch1:cline-firouzjahi}.}{35}{subsection.1.11.6}%
+\contentsline {subsubsection}{The Vacuum Energy No-Go Theorem}{35}{subsection.1.11.6}%
+\contentsline {section}{\numberline {1.12}Conclusions}{37}{section.1.12}%
+\contentsline {chapter}{\numberline {2}Observational Confrontation of Five-Dimensional Self-Tuning Cosmology}{38}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{38}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Outline}{39}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Key Results from Companion Chapters}{39}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Model Summary and Observational Signatures}{39}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}The One-Parameter Theory}{39}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}The Central Prediction: $w_0(\zeta _0)$}{39}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Insensitivity to the KK Tower Coefficient $C_\mathrm {eff}$}{40}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Modified Expansion History}{40}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Gravitational Modification}{40}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Distance Observables}{41}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}Multi-Probe Observational Analysis}{41}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Data Classes and Methodology}{41}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Multi-Probe $\chi ^2$ Decomposition}{42}{subsection.2.3.2}%
+\contentsline {paragraph}{Statistical methodology.}{42}{subsection.2.3.2}%
+\contentsline {paragraph}{Prior sensitivity.}{42}{subsection.2.3.2}%
+\contentsline {paragraph}{Model-dependence of the $H_0$ prior.}{42}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}The Hiramatsu--Kobayashi CMB Constraint}{44}{subsection.2.3.3}%
+\contentsline {paragraph}{Formal mapping.}{44}{equation.2.13}%
+\contentsline {subsection}{\numberline {2.3.4}The $H(z)$ Expansion Rate Compilation}{44}{subsection.2.3.4}%
+\contentsline {paragraph}{Analytical correction from Meridian expansion history.}{44}{table.2.6}%
+\contentsline {subsection}{\numberline {2.3.5}Tension Between CMB and $H(z)$ Constraints}{44}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Two Analysis Regimes: Compressed Likelihood vs.\ Multi-Probe}{45}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Boltzmann Code Constraint on $\zeta _0$}{45}{subsection.2.3.7}%
+\contentsline {paragraph}{Data.}{45}{subsection.2.3.7}%
+\contentsline {paragraph}{BAO-only constraint.}{45}{Item.60}%
+\contentsline {paragraph}{CMB constraint.}{45}{Item.60}%
+\contentsline {paragraph}{Combined constraint.}{45}{Item.60}%
+\contentsline {paragraph}{Benchmark assessment.}{46}{equation.2.19}%
+\contentsline {paragraph}{Implications.}{46}{table.2.7}%
+\contentsline {subsection}{\numberline {2.3.8}Bayesian Model Comparison}{46}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.9}Physical Interpretation}{47}{subsection.2.3.9}%
+\contentsline {subsection}{\numberline {2.3.10}Full Multi-Probe Data Confrontation}{47}{subsection.2.3.10}%
+\contentsline {paragraph}{Multi-probe best-fit.}{47}{subsection.2.3.10}%
+\contentsline {paragraph}{Convergence of the two analysis regimes.}{47}{equation.2.23}%
+\contentsline {paragraph}{BAO-only analysis.}{47}{equation.2.23}%
+\contentsline {paragraph}{Interpretation.}{49}{figure.2.2}%
+\contentsline {paragraph}{Predictions.}{49}{figure.2.2}%
+\contentsline {subsection}{\numberline {2.3.11}The $\zeta _0$ Tension and Structural Falsifiability}{49}{subsection.2.3.11}%
+\contentsline {paragraph}{1.\ Structural predictions are $\zeta _0$-independent.}{49}{subsection.2.3.11}%
+\contentsline {paragraph}{2.\ $\zeta _0$ encodes brane UV physics, not a tuning knob.}{49}{subsection.2.3.11}%
+\contentsline {paragraph}{3.\ The junction-condition benchmark is illustrative, not canonical.}{49}{subsection.2.3.11}%
+\contentsline {subsection}{\numberline {2.3.12}CMB Benchmark Comparison}{49}{subsection.2.3.12}%
+\contentsline {paragraph}{The geometric degeneracy direction.}{50}{Item.69}%
+\contentsline {paragraph}{Integrated Sachs--Wolfe effect.}{50}{Item.69}%
+\contentsline {paragraph}{Lensing anomaly.}{50}{Item.69}%
+\contentsline {paragraph}{Bimodality.}{50}{Item.69}%
+\contentsline {subsection}{\numberline {2.3.13}The $\Phi _0$ Discrepancy}{50}{subsection.2.3.13}%
+\contentsline {section}{\numberline {2.4}DESI DR2 BAO Confrontation}{50}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Method}{50}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Results: Distances}{50}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Results: Detection Significance}{50}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Summary Statistics}{50}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}$\zeta _0$-Dependent Interpretation}{50}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}Qualitative Model Comparison from Published Analyses}{52}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.7}Phantom Crossing Analysis}{52}{subsection.2.4.7}%
+\contentsline {paragraph}{Answer: Not yet definitively.}{52}{subsection.2.4.7}%
+\contentsline {paragraph}{DESI DR3 will be decisive.}{52}{subsection.2.4.7}%
+\contentsline {subsection}{\numberline {2.4.8}Braneworld Competitor Comparison}{52}{subsection.2.4.8}%
+\contentsline {paragraph}{Explicit falsification boundary.}{52}{subsection.2.4.8}%
+\contentsline {subsection}{\numberline {2.4.9}Sound Horizon Anchoring and the Lee (2025) Analysis}{52}{subsection.2.4.9}%
+\contentsline {paragraph}{Multi-probe context.}{53}{subsection.2.4.9}%
+\contentsline {section}{\numberline {2.5}Pre-Data Predictions for DESI DR3}{53}{section.2.5}%
+\contentsline {paragraph}{Predictions at the CAMB best-fit.}{53}{table.2.14}%
+\contentsline {subsection}{\numberline {2.5.1}Meridian vs.\ CPL: $w(z)$ Comparison}{53}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Model Discrimination Summary}{53}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Sensitivity Forecast}{53}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}The CPL Artifact Hypothesis}{53}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Statement}{53}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Nine Independent Analyses}{56}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Our Quantitative Verification}{56}{subsection.2.6.3}%
+\contentsline {paragraph}{The $w_a$ tension and Lu \& Simon (2026).}{56}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}The Pivoted Equation of State}{57}{subsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.6.5}The Sound Horizon Cannot Rescue CPL}{57}{subsection.2.6.5}%
+\contentsline {section}{\numberline {2.7}The Decoupled Perturbation Hypothesis}{57}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Statement}{57}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Phantom Crossing as Compromise}{57}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}The Definitive Test}{58}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}Implementation and Limitations}{58}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.5}Quantitative $w_a$ Tension Analysis}{58}{subsection.2.7.5}%
+\contentsline {paragraph}{Test 1: BAO-only model comparison.}{58}{subsection.2.7.5}%
+\contentsline {paragraph}{Test 2: Template artifact (Monte Carlo).}{58}{table.2.20}%
+\contentsline {paragraph}{Test 3: Profile likelihood.}{58}{table.2.20}%
+\contentsline {paragraph}{Test 4: Decoupled perturbation test.}{59}{table.2.20}%
+\contentsline {paragraph}{Combined verdict.}{59}{table.2.20}%
+\contentsline {section}{\numberline {2.8}Fisher Matrix and Future Survey Forecasts}{59}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Current Constraints}{59}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}The Correlation Structure}{59}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Future Survey Projections}{59}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}The Critical Threshold}{59}{subsection.2.8.4}%
+\contentsline {section}{\numberline {2.9}Additional Observational Tests}{62}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Gravitational Wave Speed}{62}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Gravitational Slip}{62}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}Growth Rate and the Cuscuton No-Fifth-Force Theorem}{62}{subsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.9.4}Solar System and Local Tests}{62}{subsection.2.9.4}%
+\contentsline {subsection}{\numberline {2.9.5}CMB Consistency}{63}{subsection.2.9.5}%
+\contentsline {section}{\numberline {2.10}Falsifiable Predictions}{63}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}Prediction 1: The $w_0(\zeta _0)$ Curve}{63}{subsection.2.10.1}%
+\contentsline {subsection}{\numberline {2.10.2}Prediction 2: $w_a \approx 0$}{63}{subsection.2.10.2}%
+\contentsline {subsection}{\numberline {2.10.3}Prediction 3: $c_s \approx 15c$}{63}{subsection.2.10.3}%
+\contentsline {subsection}{\numberline {2.10.4}Prediction 4: Growth--Expansion Decoupling}{63}{subsection.2.10.4}%
+\contentsline {subsection}{\numberline {2.10.5}Prediction 5: No Phantom Crossing}{63}{subsection.2.10.5}%
+\contentsline {subsection}{\numberline {2.10.6}Prediction 6: Inflationary Observables}{64}{subsection.2.10.6}%
+\contentsline {paragraph}{What would confirm it:}{64}{equation.2.36}%
+\contentsline {paragraph}{What would falsify it:}{64}{equation.2.36}%
+\contentsline {subsection}{\numberline {2.10.7}Prediction 7: Neutrino Mass Bound Relaxation}{64}{subsection.2.10.7}%
+\contentsline {paragraph}{Benchmark dependence.}{64}{equation.2.37}%
+\contentsline {paragraph}{Significance.}{64}{equation.2.37}%
+\contentsline {subsection}{\numberline {2.10.8}Prediction 8: Dark Matter --- keV Sterile Neutrino}{64}{subsection.2.10.8}%
+\contentsline {paragraph}{What would confirm it:}{64}{subsection.2.10.8}%
+\contentsline {paragraph}{What would falsify it:}{64}{subsection.2.10.8}%
+\contentsline {paragraph}{Instruments:}{64}{subsection.2.10.8}%
+\contentsline {subsection}{\numberline {2.10.9}Prediction 9: Neutrino Sector --- Normal Hierarchy and $m_{ee}$}{64}{subsection.2.10.9}%
+\contentsline {paragraph}{Falsification:}{65}{table.2.26}%
+\contentsline {section}{\numberline {2.11}Discussion}{65}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}What the Framework Determines and What It Does Not}{65}{subsection.2.11.1}%
+\contentsline {subsection}{\numberline {2.11.2}The Model's Strengths}{65}{subsection.2.11.2}%
+\contentsline {subsection}{\numberline {2.11.3}The Model's Limitations}{65}{subsection.2.11.3}%
+\contentsline {subsection}{\numberline {2.11.4}What Would Change Our Assessment}{66}{subsection.2.11.4}%
+\contentsline {subsection}{\numberline {2.11.5}Model Evolution: From $w_0 = -0.83$ to $w_0(\zeta _0)$}{66}{subsection.2.11.5}%
+\contentsline {subsection}{\numberline {2.11.6}Comparison with $\Lambda $CDM}{66}{subsection.2.11.6}%
+\contentsline {section}{\numberline {2.12}Conclusions}{66}{section.2.12}%
+\contentsline {section}{Appendix A: $H(z)$ Expansion Rate Compilation}{67}{Item.101}%
+\contentsline {chapter}{\numberline {3}No-Go Theorems for Dynamical Dark Energy in Self-Tuning Warped Gravity}{69}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{69}{section.3.1}%
+\contentsline {paragraph}{Notation.}{70}{Item.109}%
+\contentsline {paragraph}{Summary of results from Papers~I and~II.}{70}{Item.109}%
+\contentsline {section}{\numberline {3.2}The Zero Kinetic Energy Theorem}{70}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Statement and Proof}{70}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Consequences for Dark Energy Dynamics}{70}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}The Gauss--Bonnet Correction}{71}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Perturbative Background Modifications}{71}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Projected Weyl Tensor}{71}{subsection.3.3.1}%
+\contentsline {paragraph}{Static contribution.}{71}{subsection.3.3.1}%
+\contentsline {paragraph}{Time-dependent contribution.}{71}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Dark Energy--Dark Matter Coupling}{71}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Sound Horizon Modification}{71}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Matter-Sector Mimicry}{71}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Methodology Verification}{72}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Extended Kinetic Structures}{72}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Horndeski Braiding}{72}{subsection.3.4.1}%
+\contentsline {paragraph}{Analytic result.}{72}{equation.3.15}%
+\contentsline {paragraph}{Numerical result.}{72}{equation.3.15}%
+\contentsline {subsection}{\numberline {3.4.2}General $P(X)$ from Full KK Reduction}{72}{subsection.3.4.2}%
+\contentsline {paragraph}{Quantitative assessment:}{72}{equation.3.18}%
+\contentsline {section}{\numberline {3.5}Multi-Field Approaches}{73}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}KK Moduli Census}{73}{subsection.3.5.1}%
+\contentsline {paragraph}{The 45-order-of-magnitude desert.}{73}{table.3.2}%
+\contentsline {paragraph}{Multi-field phantom crossing and ghosts.}{73}{Item.118}%
+\contentsline {subsection}{\numberline {3.5.2}DBI Brane Dynamics}{73}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Brane-Localized Quintessence}{73}{subsection.3.5.3}%
+\contentsline {paragraph}{NCG constraint.}{73}{subsection.3.5.3}%
+\contentsline {paragraph}{Caldwell--Linder boundary.}{73}{subsection.3.5.3}%
+\contentsline {paragraph}{Geometric phantom bias.}{73}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Non-Perturbative Quantum Channels}{73}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Perturbative RG Flow}{73}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Functional RG and Dimensional Transmutation}{74}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Chern--Simons Topological Channel}{74}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Local Non-Cosmological Solutions}{74}{subsection.3.6.4}%
+\contentsline {paragraph}{Static solutions.}{74}{subsection.3.6.4}%
+\contentsline {paragraph}{Dynamic solutions.}{74}{equation.3.26}%
+\contentsline {paragraph}{Critical insight --- the stiffness interpretation.}{74}{equation.3.26}%
+\contentsline {section}{\numberline {3.7}Geometric Extensions}{74}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Higher-Dimensional Compactification}{74}{subsection.3.7.1}%
+\contentsline {paragraph}{Seeley--DeWitt universality.}{74}{subsection.3.7.1}%
+\contentsline {paragraph}{Moduli spectrum.}{75}{equation.3.27}%
+\contentsline {subsection}{\numberline {3.7.2}Modified Bulk Gravity}{75}{subsection.3.7.2}%
+\contentsline {paragraph}{$f(R_5)$:}{75}{subsection.3.7.2}%
+\contentsline {paragraph}{Dynamical Chern--Simons:}{75}{subsection.3.7.2}%
+\contentsline {paragraph}{Horndeski $G_3$:}{75}{subsection.3.7.2}%
+\contentsline {paragraph}{Kill mechanism (structural argument).}{75}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}The Horndeski Dilemma}{76}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Statement}{76}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Proof Sketch}{76}{subsection.3.8.2}%
+\contentsline {section}{\numberline {3.9}The Structural Classification}{76}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Three Structural Barriers}{76}{subsection.3.9.1}%
+\contentsline {paragraph}{Barrier~1: Zero Kinetic Energy (Separation).}{76}{subsection.3.9.1}%
+\contentsline {paragraph}{Barrier~2: Hierarchy-Moduli Mass Gap (Multi-Scale Consistency).}{77}{subsection.3.9.1}%
+\contentsline {paragraph}{Barrier~3: Horndeski Dilemma (Measurement).}{77}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Classification Theorem}{77}{subsection.3.9.2}%
+\contentsline {paragraph}{Status of each evasion route:}{77}{theorem.3.7}%
+\contentsline {subsection}{\numberline {3.9.3}Quantitative Summary}{77}{subsection.3.9.3}%
+\contentsline {section}{\numberline {3.10}The Vacuum Energy No-Go Theorem}{77}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Framework Axioms}{77}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}Self-Tuning as the Unique Mechanism}{77}{subsection.3.10.2}%
+\contentsline {paragraph}{(a) Supersymmetric cancellation.}{78}{theorem.3.9}%
+\contentsline {paragraph}{(b) Anthropic/landscape selection.}{78}{theorem.3.9}%
+\contentsline {paragraph}{(c) Sequestering.}{78}{theorem.3.9}%
+\contentsline {paragraph}{(d) Degravitation.}{78}{theorem.3.9}%
+\contentsline {paragraph}{(e) Symmetry-based cancellations.}{78}{theorem.3.9}%
+\contentsline {subsection}{\numberline {3.10.3}Necessity of Conformal Coupling}{78}{subsection.3.10.3}%
+\contentsline {paragraph}{Why $\xi = 1/6$.}{79}{equation.3.31}%
+\contentsline {subsection}{\numberline {3.10.4}Necessity of the Extra Dimension}{79}{subsection.3.10.4}%
+\contentsline {subsection}{\numberline {3.10.5}Structural Rigidity}{79}{subsection.3.10.5}%
+\contentsline {subsection}{\numberline {3.10.6}The Chain of Necessities}{79}{subsection.3.10.6}%
+\contentsline {subsection}{\numberline {3.10.7}Relation to the Phenomenological No-Gos}{80}{subsection.3.10.7}%
+\contentsline {section}{\numberline {3.11}Discussion}{80}{section.3.11}%
+\contentsline {subsection}{\numberline {3.11.1}Comparison with Other No-Go Results}{80}{subsection.3.11.1}%
+\contentsline {subsection}{\numberline {3.11.2}The Positive Interpretation}{80}{subsection.3.11.2}%
+\contentsline {subsection}{\numberline {3.11.3}Bounded But Uncomputed Channels}{80}{subsection.3.11.3}%
+\contentsline {subsection}{\numberline {3.11.4}Mechanisms Not Included in the Census}{81}{subsection.3.11.4}%
+\contentsline {subsection}{\numberline {3.11.5}Falsifiability Timeline}{81}{subsection.3.11.5}%
+\contentsline {section}{\numberline {3.12}Conclusions}{81}{section.3.12}%
+\contentsline {chapter}{\numberline {4}Noncommutative Spectral Geometry on Warped Orbifolds: Topological Couplings and Gravitational Corrections}{83}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{83}{section.4.1}%
+\contentsline {paragraph}{Epistemic status.}{84}{Item.136}%
+\contentsline {paragraph}{Outline.}{84}{Item.136}%
+\contentsline {paragraph}{Key results from companion chapters.}{84}{Item.136}%
+\contentsline {section}{\numberline {4.2}The Spectral Triple on the Warped Orbifold}{84}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Geometry and Conventions}{84}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}The Dirac Operator}{84}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}The Spectral Triple}{85}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}The Layered Spectral Architecture}{85}{subsection.4.2.4}%
+\contentsline {paragraph}{Resolution.}{85}{subsection.4.2.4}%
+\contentsline {paragraph}{(i) Self-adjoint extension.}{85}{theorem.4.3}%
+\contentsline {paragraph}{(ii) First-order condition and orientation.}{85}{theorem.4.3}%
+\contentsline {paragraph}{(iii) Poincar\'e duality.}{85}{theorem.4.3}%
+\contentsline {subsection}{\numberline {4.2.5}$\mathbb {Z}_2$ Action on Spinors and the Chiral Spectrum}{86}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}The Seeley--DeWitt Expansion}{86}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Heat Kernel and Spectral Action}{86}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Bulk Coefficients}{86}{subsection.4.3.2}%
+\contentsline {paragraph}{Coefficient $a_0$ (Cosmological constant).}{86}{equation.4.18c}%
+\contentsline {paragraph}{Coefficient $a_1$ (Subleading cosmological constant).}{86}{equation.4.19}%
+\contentsline {paragraph}{Coefficient $a_2$ (Einstein--Hilbert).}{86}{equation.4.21}%
+\contentsline {paragraph}{Coefficient $a_3$ (Gauss--Bonnet).}{86}{equation.4.23}%
+\contentsline {subsection}{\numberline {4.3.3}Boundary Coefficients}{87}{subsection.4.3.3}%
+\contentsline {paragraph}{Coefficient $a_{1/2}$ (Vanishing).}{87}{subsection.4.3.3}%
+\contentsline {paragraph}{Coefficient $a_{3/2}$ (Brane tension).}{87}{equation.4.34}%
+\contentsline {paragraph}{Coefficient $a_{5/2}$ (Brane-localized Einstein--Hilbert).}{87}{equation.4.34}%
+\contentsline {paragraph}{Coefficient $a_{7/2}$ (Chern--Simons).}{87}{equation.4.36}%
+\contentsline {subsection}{\numberline {4.3.4}Physical Content Summary}{87}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Gauss--Bonnet Universality}{87}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}The Gilkey Coefficient Structure}{87}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}From Gauss--Bonnet Coupling to Kinetic Correction: The Complete $\hat {\alpha } \to \epsilon _1$ Derivation}{88}{subsection.4.4.2}%
+\contentsline {subsubsection}{Step 1: The 5D Bulk Action with Gauss--Bonnet}{88}{subsection.4.4.2}%
+\contentsline {subsubsection}{Step 2: GB-Modified Israel Junction Conditions}{88}{equation.4.42}%
+\contentsline {paragraph}{Evaluation on the RS background.}{89}{equation.4.43}%
+\contentsline {subsubsection}{Step 3: How GB Breaks the Cuscuton Constraint}{89}{equation.4.48}%
+\contentsline {subsubsection}{Step 4: Derivation of $C_{\mathrm {GB}} = 2/3$}{89}{equation.4.50}%
+\contentsline {paragraph}{Static fine-tuning.}{89}{equation.4.51}%
+\contentsline {paragraph}{FRW brane: source decomposition at $\bm {\mathcal {O}(H^2)}$.}{89}{equation.4.52}%
+\contentsline {paragraph}{$C_{\mathrm {GB}}$ from KK reduction.}{89}{equation.4.55}%
+\contentsline {paragraph}{Verification.}{90}{equation.4.56}%
+\contentsline {subsubsection}{Step 5: Numerical Evaluation and Error Budget}{90}{Item.143}%
+\contentsline {subsubsection}{Step 6: Equation of State Prediction}{90}{equation.4.57}%
+\contentsline {subsection}{\numberline {4.4.3}Topology Independence}{90}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Chern--Simons Terms from the APS Index Theorem}{90}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Origin in the Spectral Action}{90}{subsection.4.5.1}%
+\contentsline {paragraph}{Gravitational CS (both branes):}{90}{subsection.4.5.1}%
+\contentsline {paragraph}{Gauge CS (IR brane):}{90}{equation.4.60}%
+\contentsline {paragraph}{$\mathbb {Z}_2$ selection rule.}{91}{equation.4.61}%
+\contentsline {subsection}{\numberline {4.5.2}The Theta Angles}{91}{subsection.4.5.2}%
+\contentsline {paragraph}{Gravitational theta angle.}{91}{subsection.4.5.2}%
+\contentsline {paragraph}{Gauge theta angle.}{91}{equation.4.63}%
+\contentsline {subsection}{\numberline {4.5.3}Topological Locking via the APS Index Theorem}{91}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Dynamical Theta from the Cuscuton}{91}{subsection.4.5.4}%
+\contentsline {paragraph}{Cosmological value:}{91}{equation.4.71}%
+\contentsline {section}{\numberline {4.6}Electromagnetic-Gravity Coupling Channels}{91}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Channel Census}{91}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Perturbative Channel Analysis}{91}{subsection.4.6.2}%
+\contentsline {paragraph}{Channels 1--3 (Dynamical Chern--Simons~\cite {ch4:AlexanderYunes2009,ch4:JackiwPi2003}).}{91}{subsection.4.6.2}%
+\contentsline {paragraph}{Channel 4 (Anomaly matching).}{92}{equation.4.77}%
+\contentsline {paragraph}{Channel 5 (Direct Pontryagin).}{92}{equation.4.79}%
+\contentsline {subsection}{\numberline {4.6.3}Non-Perturbative Channel}{92}{subsection.4.6.3}%
+\contentsline {paragraph}{Channel 6 (Spectral flow under topological transitions).}{92}{subsection.4.6.3}%
+\contentsline {paragraph}{Assessment.}{92}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Standard Model Connection}{92}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}The Brane Spectral Triple}{92}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}The Three-Scalar Architecture}{93}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}The Conformal Coupling $\xi = 1/6$: Derivation, Not Assumption}{93}{subsection.4.7.3}%
+\contentsline {paragraph}{Derivation 1: Seeley--DeWitt $a_2$ coefficient.}{93}{subsection.4.7.3}%
+\contentsline {paragraph}{Derivation 2: Radion as metric fluctuation in RS.}{93}{equation.4.90}%
+\contentsline {paragraph}{Derivation 3: Weyl invariance of the spectral action.}{93}{equation.4.92}%
+\contentsline {paragraph}{Sensitivity analysis.}{94}{equation.4.93}%
+\contentsline {paragraph}{Summary.}{94}{equation.4.93}%
+\contentsline {subsection}{\numberline {4.7.4}The Gauge-Gravity Separation}{94}{subsection.4.7.4}%
+\contentsline {section}{\numberline {4.8}The Octonionic Extension: Three Generations from Geometry}{94}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}The Dixon Algebra and the Three-Generation Problem}{94}{subsection.4.8.1}%
+\contentsline {paragraph}{The problem.}{94}{subsection.4.8.1}%
+\contentsline {paragraph}{The complexified Dixon algebra.}{95}{equation.4.95}%
+\contentsline {paragraph}{The $\mathbb {Z}_2^5$-grading.}{95}{equation.4.97}%
+\contentsline {paragraph}{The KO-dimension chain.}{95}{equation.4.97}%
+\contentsline {subsection}{\numberline {4.8.2}Four Proofs of $N_g = 3$}{95}{subsection.4.8.2}%
+\contentsline {paragraph}{Lower bound: $N_g \geq 3$ from representational completeness.}{95}{Item.150}%
+\contentsline {subsection}{\numberline {4.8.3}The Dirac Operator $D_{\mathrm {oct}}$}{96}{subsection.4.8.3}%
+\contentsline {paragraph}{The overlap matrix.}{96}{equation.4.100}%
+\contentsline {paragraph}{Properties of $D_{\mathrm {oct}}$.}{96}{theorem.4.16}%
+\contentsline {subsection}{\numberline {4.8.4}Poincar\'{e} Duality via the Associative Envelope}{96}{subsection.4.8.4}%
+\contentsline {subsection}{\numberline {4.8.5}Orientability and the $1/6$ Coefficient}{97}{subsection.4.8.5}%
+\contentsline {paragraph}{Basis independence.}{98}{theorem.4.20}%
+\contentsline {subsection}{\numberline {4.8.6}Complete Axiom Verification}{98}{subsection.4.8.6}%
+\contentsline {paragraph}{The modified first-order condition: implications and caveats.}{98}{table.4.4}%
+\contentsline {subsection}{\numberline {4.8.7}The Yukawa Structure: An Honest Assessment}{98}{subsection.4.8.7}%
+\contentsline {paragraph}{The $S_3$ obstruction.}{98}{equation.4.109}%
+\contentsline {paragraph}{Bulk--brane complementarity.}{98}{equation.4.110}%
+\contentsline {paragraph}{Quantitative first-order condition.}{98}{table.4.6}%
+\contentsline {paragraph}{Basin determination.}{98}{equation.4.112}%
+\contentsline {paragraph}{The $J_3(\mathbb {O})$ resolution.}{98}{equation.4.112}%
+\contentsline {subsection}{\numberline {4.8.8}The Gauge Group from Octonions}{100}{subsection.4.8.8}%
+\contentsline {paragraph}{Spectral action preservation.}{100}{equation.4.115}%
+\contentsline {paragraph}{The matter spectral action.}{100}{equation.4.116}%
+\contentsline {subsection}{\numberline {4.8.9}Anomaly Cancellation from Octonionic $\mathrm {Spin}(10)$}{100}{subsection.4.8.9}%
+\contentsline {paragraph}{Explicit verification of $\mathrm {U}(1)_Y^3$.}{101}{theorem.4.22}%
+\contentsline {subsection}{\numberline {4.8.10}Chern--Simons Inflow Consistency}{101}{subsection.4.8.10}%
+\contentsline {section}{\numberline {4.9}Fermion Mass Hierarchy from Warping}{101}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Zero-Mode Profiles and the Profile Overlap Function}{101}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Bulk Mass Parameters for All Fermion Species}{101}{subsection.4.9.2}%
+\contentsline {section}{\numberline {4.10}Quark and Lepton Mixing}{103}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}CKM Matrix from Democratic Matrix and Warp Profiles}{103}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}The Gatto--Sartori--Tonin Relation}{103}{subsection.4.10.2}%
+\contentsline {subsection}{\numberline {4.10.3}Full Left--Right Fermion Sector}{103}{subsection.4.10.3}%
+\contentsline {paragraph}{Parameter counting.}{104}{equation.4.126}%
+\contentsline {paragraph}{Resolution of the $|V_{cb}|$ discrepancy.}{104}{equation.4.126}%
+\contentsline {paragraph}{Localization structure.}{104}{table.4.10}%
+\contentsline {subsection}{\numberline {4.10.4}CP Violation: The Real-Sector Obstruction}{104}{subsection.4.10.4}%
+\contentsline {subsection}{\numberline {4.10.5}Quark-Lepton Complementarity}{104}{subsection.4.10.5}%
+\contentsline {section}{\numberline {4.11}Majorana Sector and the Seesaw Mechanism}{104}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}$S_3$-Constrained Majorana Mass Matrix}{104}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Tribimaximal Mixing as Leading-Order Prediction}{104}{subsection.4.11.2}%
+\contentsline {subsection}{\numberline {4.11.3}Neutrino Mass Accommodation}{105}{subsection.4.11.3}%
+\contentsline {subsection}{\numberline {4.11.4}$S_3$ Breaking and the Octonionic Mass Matrix}{105}{subsection.4.11.4}%
+\contentsline {paragraph}{Parameter count: $6 \to 6$.}{105}{subsection.4.11.4}%
+\contentsline {paragraph}{Comparison with Gresnigt.}{105}{subsection.4.11.4}%
+\contentsline {subsection}{\numberline {4.11.5}Conditional Neutrino Predictions}{105}{subsection.4.11.5}%
+\contentsline {subsection}{\numberline {4.11.6}The $\nu $MSM Embedding}{106}{subsection.4.11.6}%
+\contentsline {subsection}{\numberline {4.11.7}Baryogenesis via Leptogenesis}{106}{subsection.4.11.7}%
+\contentsline {paragraph}{1. Automatic near-degeneracy.}{106}{subsection.4.11.7}%
+\contentsline {paragraph}{2. O(1) CP violation.}{106}{subsection.4.11.7}%
+\contentsline {paragraph}{3. Baryon asymmetry magnitude.}{106}{equation.4.138}%
+\contentsline {section}{\numberline {4.12}Radiative Stability of the Democratic Matrix}{106}{section.4.12}%
+\contentsline {section}{\numberline {4.13}Dark Matter}{107}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Systematic Candidate Survey}{107}{subsection.4.13.1}%
+\contentsline {paragraph}{LKP exclusion.}{107}{table.4.12}%
+\contentsline {paragraph}{Radion exclusion.}{107}{table.4.12}%
+\contentsline {paragraph}{Cuscuton exclusion.}{107}{table.4.12}%
+\contentsline {subsection}{\numberline {4.13.2}Sterile Neutrino: The Unique Viable Candidate}{107}{subsection.4.13.2}%
+\contentsline {subsection}{\numberline {4.13.3}Detection Strategy and Experimental Constraints}{107}{subsection.4.13.3}%
+\contentsline {paragraph}{X-ray line.}{107}{subsection.4.13.3}%
+\contentsline {paragraph}{Current constraints.}{107}{equation.4.141}%
+\contentsline {paragraph}{Viable parameter space.}{107}{equation.4.141}%
+\contentsline {paragraph}{Future experiments.}{107}{equation.4.142}%
+\contentsline {paragraph}{Structure formation.}{108}{equation.4.142}%
+\contentsline {section}{\numberline {4.14}NCG--Asymptotic Safety Bridge}{108}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}$R^2 = 0$ from Conformal Structure}{108}{subsection.4.14.1}%
+\contentsline {subsection}{\numberline {4.14.2}Warped Orbifold Preserves $R^2 = 0$}{108}{subsection.4.14.2}%
+\contentsline {paragraph}{Bulk contribution.}{108}{subsection.4.14.2}%
+\contentsline {paragraph}{Boundary contribution.}{108}{subsection.4.14.2}%
+\contentsline {subsection}{\numberline {4.14.3}The Spectral Action on the Critical Surface}{108}{subsection.4.14.3}%
+\contentsline {subsection}{\numberline {4.14.4}One-Loop Verification: Explicit Computation of $\sigma _1$}{108}{subsection.4.14.4}%
+\contentsline {paragraph}{Graviton sector.}{108}{subsection.4.14.4}%
+\contentsline {paragraph}{Ghost sector.}{108}{subsection.4.14.4}%
+\contentsline {subsection}{\numberline {4.14.5}Quantitative RG Flow Analysis}{109}{subsection.4.14.5}%
+\contentsline {paragraph}{Eigenvector alignment.}{109}{subsection.4.14.5}%
+\contentsline {paragraph}{Projection analysis.}{109}{equation.4.149}%
+\contentsline {paragraph}{$C^2$ trajectory consistency.}{109}{equation.4.150}%
+\contentsline {paragraph}{$R^2$ on the critical surface.}{109}{equation.4.150}%
+\contentsline {section}{\numberline {4.15}Inflation from Modulus Geometry}{109}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}$R^2 = 0$ Kills Starobinsky Inflation}{109}{subsection.4.15.1}%
+\contentsline {subsection}{\numberline {4.15.2}Modulus Inflation via K\"ahler Geometry}{110}{subsection.4.15.2}%
+\contentsline {subsection}{\numberline {4.15.3}The Seventh $1/6$: Inflationary Consistency}{110}{subsection.4.15.3}%
+\contentsline {subsection}{\numberline {4.15.4}Predictions}{110}{subsection.4.15.4}%
+\contentsline {subsection}{\numberline {4.15.5}Primordial B-Mode Forecast and Experimental Tests}{110}{subsection.4.15.5}%
+\contentsline {paragraph}{LiteBIRD.}{110}{subsection.4.15.5}%
+\contentsline {paragraph}{Simons Observatory.}{112}{equation.4.158}%
+\contentsline {paragraph}{Combined detection.}{112}{equation.4.158}%
+\contentsline {paragraph}{CMB-S4 cancellation.}{112}{table.4.14}%
+\contentsline {paragraph}{Falsifiability.}{112}{table.4.14}%
+\contentsline {subsection}{\numberline {4.15.6}Reheating and $N_*$ Determination}{112}{subsection.4.15.6}%
+\contentsline {subsection}{\numberline {4.15.7}Gravitational Wave Signatures}{112}{subsection.4.15.7}%
+\contentsline {paragraph}{Detection prospects.}{112}{equation.4.163}%
+\contentsline {section}{\numberline {4.16}Collider Signatures}{112}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Higgs--Radion Mixing at $\xi = 1/6$}{112}{subsection.4.16.1}%
+\contentsline {subsection}{\numberline {4.16.2}The Conformal $\det (\mathbf {Z}) = 1$ Property}{112}{subsection.4.16.2}%
+\contentsline {subsection}{\numberline {4.16.3}Coupling Modifiers and the $d > c$ Diagnostic}{113}{subsection.4.16.3}%
+\contentsline {paragraph}{Predicted radion mass.}{113}{equation.4.169}%
+\contentsline {subsection}{\numberline {4.16.4}Sensitivity Assessment}{113}{subsection.4.16.4}%
+\contentsline {subsection}{\numberline {4.16.5}Radion Discovery Strategy}{113}{subsection.4.16.5}%
+\contentsline {paragraph}{Decay pattern.}{113}{subsection.4.16.5}%
+\contentsline {paragraph}{Discovery reach.}{113}{equation.4.171}%
+\contentsline {paragraph}{Discrimination from heavy Higgs.}{113}{table.4.16}%
+\contentsline {paragraph}{Radion vs.\ KK graviton.}{114}{Item.166}%
+\contentsline {subsection}{\numberline {4.16.6}The 120 GeV Radion: HL-LHC Testability}{114}{subsection.4.16.6}%
+\contentsline {paragraph}{Enhanced mixing.}{114}{subsection.4.16.6}%
+\contentsline {paragraph}{Updated sensitivity.}{114}{equation.4.172}%
+\contentsline {paragraph}{Decay pattern at $m_r = 120\tmspace +\thickmuskip {.2777em}\mathrm {GeV}$.}{114}{table.4.17}%
+\contentsline {paragraph}{Higgs--radion interference.}{114}{equation.4.173}%
+\contentsline {paragraph}{Summary.}{114}{equation.4.173}%
+\contentsline {subsection}{\numberline {4.16.7}Kaluza--Klein Tower Spectrum}{114}{subsection.4.16.7}%
+\contentsline {section}{\numberline {4.17}Gauge Coupling Unification: Tension and Resolution Pathways}{115}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}The Unification Tension}{115}{subsection.4.17.1}%
+\contentsline {subsection}{\numberline {4.17.2}Resolution Pathways}{115}{subsection.4.17.2}%
+\contentsline {paragraph}{Path A: Boundary Seeley--DeWitt corrections.}{115}{subsection.4.17.2}%
+\contentsline {paragraph}{Path B: Reinterpreted unification scale.}{115}{subsection.4.17.2}%
+\contentsline {paragraph}{Path C: Asymptotic safety corrections (most promising).}{115}{subsection.4.17.2}%
+\contentsline {paragraph}{Assessment.}{115}{subsection.4.17.2}%
+\contentsline {section}{\numberline {4.18}Orbifold Threshold Corrections and the 0.18\% Gap}{115}{section.4.18}%
+\contentsline {subsection}{\numberline {4.18.1}Four Protective Zeros}{116}{subsection.4.18.1}%
+\contentsline {paragraph}{Zero 1: Non-perturbative suppression.}{116}{subsection.4.18.1}%
+\contentsline {paragraph}{Zero 2: Modular thermodynamic universality.}{116}{subsection.4.18.1}%
+\contentsline {paragraph}{Zero 3: QFT one-loop threshold ($\delta b_{12} = 0$).}{116}{subsection.4.18.1}%
+\contentsline {paragraph}{Zero 4: Anomaly polynomial $S_3$ symmetry.}{116}{subsection.4.18.1}%
+\contentsline {subsection}{\numberline {4.18.2}The Quartic Casimir Theorem}{116}{subsection.4.18.2}%
+\contentsline {subsection}{\numberline {4.18.3}The $S_3$-Breaking Theorem}{116}{subsection.4.18.3}%
+\contentsline {subsection}{\numberline {4.18.4}The Blow-Up Threshold Theorem}{117}{subsection.4.18.4}%
+\contentsline {subsection}{\numberline {4.18.5}The Analytical Resolution}{117}{subsection.4.18.5}%
+\contentsline {paragraph}{D-flatness and consistency.}{117}{table.4.20}%
+\contentsline {paragraph}{Predictions.}{117}{table.4.20}%
+\contentsline {paragraph}{Relation to the unification tension.}{117}{table.4.20}%
+\contentsline {paragraph}{F-theory dual: $J_3(\mathbb {O})$ selects $\mathrm {dP}_6$.}{117}{table.4.20}%
+\contentsline {paragraph}{Numerical verification: balanced-metric Laplacian on $\mathrm {dP}_6$.}{118}{equation.4.184}%
+\contentsline {paragraph}{$S_3$ splitting convergence across embedding degrees.}{118}{equation.4.184}%
+\contentsline {paragraph}{Spectral zeta function and analytic torsion.}{119}{table.4.21}%
+\contentsline {section}{\numberline {4.19}Experimental Forecast: Neutrino Physics}{119}{section.4.19}%
+\contentsline {section}{\numberline {4.20}Discussion and Conclusions}{119}{section.4.20}%
+\contentsline {subsection}{\numberline {4.20.1}Summary of Results}{119}{subsection.4.20.1}%
+\contentsline {subsection}{\numberline {4.20.2}Relation to Other Papers in the Series}{121}{subsection.4.20.2}%
+\contentsline {subsection}{\numberline {4.20.3}CP Violation from Brane-Localised Yukawa Couplings}{121}{subsection.4.20.3}%
+\contentsline {paragraph}{Why the bulk masses are real.}{121}{subsection.4.20.3}%
+\contentsline {paragraph}{Why $M_{\mathrm {oct}}$ is real.}{121}{subsection.4.20.3}%
+\contentsline {paragraph}{The two-layer architecture.}{121}{equation.4.185}%
+\contentsline {paragraph}{Naturalness of $J_{\mathrm {CP}}$.}{121}{equation.4.186}%
+\contentsline {paragraph}{Limitation.}{122}{equation.4.187}%
+\contentsline {subsection}{\numberline {4.20.4}Strong CP Problem: Geometric Resolution}{122}{subsection.4.20.4}%
+\contentsline {paragraph}{Mechanism 1: Algebraic protection from the real structure $J$.}{122}{subsection.4.20.4}%
+\contentsline {paragraph}{Mechanism 2: Geometric protection from the $\mathbb {Z}_2$ orbifold.}{122}{equation.4.188}%
+\contentsline {paragraph}{Mechanism 3: Perturbative protection (Adler--Bardeen).}{122}{equation.4.188}%
+\contentsline {paragraph}{Non-perturbative corrections.}{122}{equation.4.188}%
+\contentsline {paragraph}{Comparison with the electroweak sector.}{122}{equation.4.188}%
+\contentsline {paragraph}{Falsifiable prediction.}{122}{equation.4.188}%
+\contentsline {subsection}{\numberline {4.20.5}Brane Parameter Determination: First-Principles Prediction of $\zeta _0$}{122}{subsection.4.20.5}%
+\contentsline {paragraph}{Stability exclusion (Route~3).}{122}{subsection.4.20.5}%
+\contentsline {paragraph}{Spectral action computation (Route~1): the boundary heat kernel $b_{3/2}$.}{122}{subsection.4.20.5}%
+\contentsline {paragraph}{Axiom uniqueness (Route~2).}{123}{equation.4.190}%
+\contentsline {paragraph}{Product heat kernel computation: $\mu ^2$ from first principles.}{123}{equation.4.190}%
+\contentsline {paragraph}{Quantitative prediction.}{123}{equation.4.193}%
+\contentsline {paragraph}{Structural result.}{124}{equation.4.195}%
+\contentsline {subsection}{\numberline {4.20.6}Open Problems}{124}{subsection.4.20.6}%
+\contentsline {section}{Acknowledgments}{125}{Item.202}%
+\contentsline {chapter}{\numberline {5}The Sound Speed of Dark Energy}{126}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{126}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Derivation}{127}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}The Corrected Kinetic Function}{127}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Sound Speed Computation}{127}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Evaluating on the Friedmann--Robertson--Walker (FRW) Background}{127}{subsection.5.2.3}%
+\contentsline {paragraph}{Bound on higher-order corrections.}{127}{equation.5.14}%
+\contentsline {subsection}{\numberline {5.2.4}Uncertainty Budget}{128}{subsection.5.2.4}%
+\contentsline {paragraph}{Redshift evolution.}{128}{table.5.2}%
+\contentsline {section}{\numberline {5.3}Physical Interpretation}{128}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}From Infinite to Finite Sound Speed}{128}{subsection.5.3.1}%
+\contentsline {paragraph}{Dynamic maintenance.}{128}{equation.5.17}%
+\contentsline {subsection}{\numberline {5.3.2}UV Completion and the Adams et al.\ Obstruction}{128}{subsection.5.3.2}%
+\contentsline {subsubsection}{Evasion 1: Near-Cuscuton Kinetic Degeneracy}{128}{equation.5.18}%
+\contentsline {subsubsection}{Evasion 2: 5D UV Completion with Broken Lorentz Invariance}{130}{equation.5.19}%
+\contentsline {subsubsection}{Background: FRW Positivity Bounds}{130}{equation.5.20}%
+\contentsline {subsubsection}{Summary of Positivity Status}{130}{equation.5.21}%
+\contentsline {paragraph}{Independence of the evasion mechanisms from $c_s$ magnitude.}{130}{equation.5.21}%
+\contentsline {paragraph}{Independent confirmation: Freezing Gravity.}{130}{equation.5.21}%
+\contentsline {paragraph}{UV completion prospects.}{131}{equation.5.21}%
+\contentsline {subsection}{\numberline {5.3.3}Causality and Superluminal Propagation}{131}{subsection.5.3.3}%
+\contentsline {subsubsection}{Characteristic Surface Analysis}{131}{equation.5.22}%
+\contentsline {subsubsection}{The Babichev--Mukhanov--Vikman Construction and the RS Preferred Frame}{131}{Item.205}%
+\contentsline {subsection}{\numberline {5.3.4}Ghost-Freedom}{132}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Observational Signatures}{132}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Dark Energy Clustering: Absence as Signal}{132}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}ISW-Lensing Cross-Correlation}{132}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Perturbation Growth at Horizon Scales}{132}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Gravitational Wave Dispersion}{133}{subsection.5.4.4}%
+\contentsline {section}{\numberline {5.5}Comparison to Other Dark Energy Models}{133}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Sound Speed Landscape}{133}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Comparison with Other Superluminal Dark Energy Models}{133}{subsection.5.5.2}%
+\contentsline {paragraph}{k-essence with DBI-type kinetics.}{133}{subsection.5.5.2}%
+\contentsline {paragraph}{Cuscuton cosmology (exact).}{133}{subsection.5.5.2}%
+\contentsline {paragraph}{Extended cuscuton / Cuscuton gravity.}{133}{subsection.5.5.2}%
+\contentsline {paragraph}{Galileon models.}{133}{subsection.5.5.2}%
+\contentsline {paragraph}{Ghost condensate.}{133}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Implications for Scalar Response Channels}{133}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}The Discriminating Power of $c_s$}{133}{subsection.5.5.4}%
+\contentsline {section}{\numberline {5.6}Detection Prospects}{135}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Direct $c_s$ Measurement Requirements}{135}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Indirect Constraints}{135}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Future Discriminating Observations}{135}{subsection.5.6.3}%
+\contentsline {paragraph}{Channel 1: Euclid + Rubin combined survey.}{135}{subsection.5.6.3}%
+\contentsline {paragraph}{Channel 2: 21cm intensity mapping at $z > 2$.}{135}{equation.5.36}%
+\contentsline {paragraph}{Channel 3: Multi-messenger GW cosmology.}{135}{equation.5.37}%
+\contentsline {paragraph}{Channel 4: Model-independent reconstruction.}{135}{equation.5.37}%
+\contentsline {paragraph}{Channel 5: LISA stochastic gravitational wave background from the RS phase transition.}{135}{equation.5.37}%
+\contentsline {subsection}{\numberline {5.6.4}Summary of Detection Feasibility}{136}{subsection.5.6.4}%
+\contentsline {section}{\numberline {5.7}Conclusions}{136}{section.5.7}%
+\contentsline {chapter}{\numberline {A}Computational Supplements}{139}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Self-Tuning Demonstration}{139}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Physical Parameters}{139}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Algebraic Self-Tuning (Method~1)}{139}{subsection.A.1.2}%
+\contentsline {paragraph}{Explicit RS background.}{139}{equation.A.3}%
+\contentsline {subsection}{\numberline {A.1.3}Numerical Self-Tuning Scan (Method~2)}{140}{subsection.A.1.3}%
+\contentsline {paragraph}{Historical note on $\Phi _0$.}{140}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Perturbative Stability (Method~3)}{140}{subsection.A.1.4}%
+\contentsline {subsection}{\numberline {A.1.5}Three-Layer Self-Tuning Architecture}{140}{subsection.A.1.5}%
+\contentsline {subsection}{\numberline {A.1.6}Background Solution Regularity}{140}{subsection.A.1.6}%
+\contentsline {section}{\numberline {A.2}Conformal Coupling Derivation}{141}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Three Complementary Perspectives on $\xi = 1/6$}{141}{subsection.A.2.1}%
+\contentsline {paragraph}{Derivation~1: Seeley--DeWitt $a_2$ coefficient.}{141}{subsection.A.2.1}%
+\contentsline {paragraph}{Derivation~2: Radion as metric fluctuation.}{141}{equation.A.6}%
+\contentsline {paragraph}{Derivation~3: Weyl invariance of the spectral action.}{141}{equation.A.7}%
+\contentsline {subsection}{\numberline {A.2.2}Sensitivity of $w_0$ to $\xi $}{141}{subsection.A.2.2}%
+\contentsline {paragraph}{Sensitivity at $\xi = 1/6$:}{141}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Backreaction Correction}{142}{subsection.A.2.3}%
+\contentsline {section}{\numberline {A.3}Radion Stabilization}{142}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}The IR Mismatch Function $M(y_c)$}{142}{subsection.A.3.1}%
+\contentsline {paragraph}{UV boundary values (JC benchmark $\zeta _0 = 0.001$):}{142}{equation.A.17}%
+\contentsline {subsection}{\numberline {A.3.2}Closed-Form Expression for $M_1(y_c)$}{142}{subsection.A.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}Stability: $V''_{\mathrm {rad}} > 0$}{143}{subsection.A.3.3}%
+\contentsline {subsection}{\numberline {A.3.4}Radion Mass Estimate}{143}{subsection.A.3.4}%
+\contentsline {paragraph}{Step 1: Classical masslessness in the cuscuton limit.}{143}{equation.A.23}%
+\contentsline {paragraph}{Step 2: One-loop mass from the NCG spectral action.}{143}{equation.A.25}%
+\contentsline {paragraph}{Step 3: Numerical evaluation and the 99.7\% dominance.}{144}{equation.A.30}%
+\contentsline {paragraph}{Note on the cuscuton--radion distinction.}{144}{equation.A.31}%
+\contentsline {subsection}{\numberline {A.3.5}Comparison with Goldberger--Wise}{144}{subsection.A.3.5}%
+\contentsline {section}{\numberline {A.4}Chi-Squared Monte Carlo Analysis}{144}{section.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}Exact $\chi ^2$ Distribution}{144}{subsection.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}Monte Carlo Simulation}{144}{subsection.A.4.2}%
+\contentsline {paragraph}{Null distribution percentiles:}{145}{subsection.A.4.2}%
+\contentsline {subsection}{\numberline {A.4.3}Small-Sample-Size Effect}{145}{subsection.A.4.3}%
+\contentsline {subsection}{\numberline {A.4.4}$\Lambda $CDM Comparison and F-Test}{145}{subsection.A.4.4}%
+\contentsline {paragraph}{Historical note.}{145}{subsection.A.4.4}%
+\contentsline {section}{\numberline {A.5}Hubble--Kristian Dataset}{145}{section.A.5}%
+\contentsline {subsection}{\numberline {A.5.1}Covariance Structure}{146}{subsection.A.5.1}%
+\contentsline {subsection}{\numberline {A.5.2}Fit Results}{146}{subsection.A.5.2}%
+\contentsline {paragraph}{Corrected analysis.}{146}{subsection.A.5.2}%
+\contentsline {paragraph}{Historical note.}{146}{subsection.A.5.2}%
+\contentsline {paragraph}{Statistical tests (Hubble--Kristian subset):}{146}{subsection.A.5.2}%
+\contentsline {subsection}{\numberline {A.5.3}Methodology}{147}{subsection.A.5.3}%
+\contentsline {section}{\numberline {A.6}Supplementary Computations}{147}{section.A.6}%
+\contentsline {subsection}{\numberline {A.6.1}Numerical $\epsilon _1$ from Full KK Reduction}{147}{subsection.A.6.1}%
+\contentsline {subsection}{\numberline {A.6.2}NCG Coefficient with Standard Model Content}{147}{subsection.A.6.2}%
+\contentsline {subsection}{\numberline {A.6.3}The Coincidence Problem --- Quantitative Analysis}{147}{subsection.A.6.3}%
+\contentsline {subsubsection}{The KK Correction Growth Curve}{147}{subsection.A.6.3}%
+\contentsline {subsubsection}{Matter--DE Equality Shift}{148}{equation.A.36}%
+\contentsline {subsubsection}{The $\epsilon _1$ Goldilocks Window}{148}{equation.A.37}%
+\contentsline {subsubsection}{Nine Mechanisms Tested}{148}{equation.A.37}%
+\contentsline {subsubsection}{The Three-Layer Answer}{148}{equation.A.37}%
+\contentsline {subsubsection}{Octonionic Dynamics and the Coincidence}{149}{equation.A.37}%
+\contentsline {paragraph}{Result: negative.}{149}{equation.A.37}%
+\contentsline {paragraph}{Positive finding: coincidence window widening.}{149}{Item.222}%
+\contentsline {paragraph}{Verdict.}{149}{Item.222}%
+\contentsline {subsection}{\numberline {A.6.4}Cuscuton Quantisation}{149}{subsection.A.6.4}%
+\contentsline {subsection}{\numberline {A.6.5}Radion Stability Proof}{150}{subsection.A.6.5}%
+\contentsline {subsection}{\numberline {A.6.6}Explicit Eq.~82 $\to $ 83a Derivation Chain}{150}{subsection.A.6.6}%
+\contentsline {subsection}{\numberline {A.6.7}$\zeta _0$ Independent Validation}{150}{subsection.A.6.7}%
+\contentsline {subsection}{\numberline {A.6.8}Open Channel Assessment}{150}{subsection.A.6.8}%
+\contentsline {subsection}{\numberline {A.6.9}Referee-Proofing Pass}{150}{subsection.A.6.9}%
+\contentsline {subsection}{\numberline {A.6.10}Self-Tuning No-Go Confrontation}{150}{subsection.A.6.10}%
+\contentsline {subsection}{\numberline {A.6.11}Summary of Supplementary Results}{150}{subsection.A.6.11}%
+\contentsline {subsection}{\numberline {A.6.12}Brane Parameter Convergence --- Three Independent Channels}{151}{subsection.A.6.12}%
+\contentsline {subsubsection}{Channel 1: Asymptotic Safety}{151}{subsection.A.6.12}%
+\contentsline {subsubsection}{Channel 2: DESI Observational Measurement}{151}{subsection.A.6.12}%
+\contentsline {subsubsection}{Channel 3: NCG Spectral Action}{151}{subsection.A.6.12}%
+\contentsline {subsubsection}{Convergence Assessment}{151}{subsection.A.6.12}%
+\contentsline {section}{\numberline {A.7}Orbifold Gap Resolution: Detailed Computation}{152}{section.A.7}%
+\contentsline {subsection}{\numberline {A.7.1}Theta Function Evaluation}{152}{subsection.A.7.1}%
+\contentsline {subsection}{\numberline {A.7.2}DKL Traces by Fixed Point Class}{152}{subsection.A.7.2}%
+\contentsline {subsection}{\numberline {A.7.3}Anomaly Coefficient and Blow-Up VEV}{152}{subsection.A.7.3}%
+\contentsline {subsection}{\numberline {A.7.4}Verification}{152}{subsection.A.7.4}%
+\contentsline {section}{\numberline {A.8}One-Loop Radiative Stability}{152}{section.A.8}%
+\contentsline {paragraph}{Scalar mass corrections.}{152}{section.A.8}%
+\contentsline {paragraph}{Corrections to $\epsilon _1$.}{153}{equation.A.41}%
+\contentsline {paragraph}{Corrections to $\xi $.}{153}{equation.A.42}%
+\contentsline {paragraph}{Summary.}{153}{equation.A.43}%
+\contentsline {subsection}{\numberline {A.8.1}Radiative Stability of the Linear Tadpole}{153}{subsection.A.8.1}%
+\contentsline {paragraph}{Layer~1: Algebraic protection from $V'' = 0$.}{153}{subsection.A.8.1}%
+\contentsline {paragraph}{Layer~2: Cuscuton kinematic suppression.}{153}{equation.A.45}%
+\contentsline {paragraph}{Layer~3: Graviton-exchange corrections.}{153}{equation.A.47}%
+\contentsline {paragraph}{Why the warp factor does not enter.}{154}{equation.A.49}%
+\contentsline {paragraph}{Summary.}{154}{equation.A.49}%
+\contentsline {section}{\numberline {A.9}Supplementary Notes}{154}{section.A.9}%
+\contentsline {subsection}{\numberline {A.9.1}EFT Cutoff Ambiguity in Positivity Bounds}{154}{subsection.A.9.1}%
+\contentsline {subsection}{\numberline {A.9.2}First-Order Phase Transition: The Debate}{154}{subsection.A.9.2}%
+\contentsline {subsection}{\numberline {A.9.3}Asymptotic Safety and $\xi = 1/6$: The Eichhorn--Pauly Result}{154}{subsection.A.9.3}%
+\contentsline {subsection}{\numberline {A.9.4}Code Availability and Reproducibility}{155}{subsection.A.9.4}%
+\contentsline {chapter}{\numberline {B}Prediction Registry}{156}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Structural Predictions ($\zeta _0$-Independent)}{156}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Parametric Predictions}{157}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Discrimination Timeline}{157}{section.B.3}%
+\contentsline {section}{\numberline {B.4}Falsification Surface}{157}{section.B.4}%
+\contentsline {paragraph}{Binary falsification criterion.}{157}{section.B.4}%
+\contentsline {paragraph}{Combined fingerprint.}{157}{section.B.4}%
+\contentsline {chapter}{\numberline {C}Code Reference}{159}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Canonical Values}{160}{appendix.D}%
+\contentsline {paragraph}{Resolution principle.}{160}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Tier~1: Structure-Determined}{160}{section.D.1}%
+\contentsline {section}{\numberline {D.2}Tier~2: Parametric}{160}{section.D.2}%
+\contentsline {paragraph}{Sound speed resolution.}{160}{table.D.2}%
+\contentsline {section}{\numberline {D.3}Tier~3: Data-Constrained}{161}{section.D.3}%
+\contentsline {paragraph}{Which value to use.}{161}{table.D.3}%
+\contentsline {section}{\numberline {D.4}The Goldberger--Wise Result}{161}{section.D.4}%
+\contentsline {chapter}{\numberline {E}The Goldberger--Wise Computation}{162}{appendix.E}%
+\contentsline {section}{\numberline {E.1}The Derivation Chain}{162}{section.E.1}%
+\contentsline {paragraph}{Step~1: $\mathbb {O} \to M_\mathrm {oct} \to $ Yukawa.}{162}{equation.E.1}%
+\contentsline {paragraph}{Step~2: Yukawa $\to b_{3/2} \to \alpha _\mathrm {UV}$.}{162}{equation.E.1}%
+\contentsline {paragraph}{Step~3: $\alpha _\mathrm {UV} \to \mu ^2(\varepsilon )$.}{162}{equation.E.3}%
+\contentsline {paragraph}{Step~4: $\mu ^2 \to \zeta _0$.}{162}{equation.E.4}%
+\contentsline {paragraph}{Step~5: $\zeta _0\to w_0$.}{162}{equation.E.4}%
+\contentsline {paragraph}{Self-consistent solution.}{163}{equation.E.4}%
+\contentsline {section}{\numberline {E.2}Why $\varepsilon $ Is Genuinely External}{163}{section.E.2}%
+\contentsline {paragraph}{Finding~1: Monotonic spectral action.}{163}{section.E.2}%
+\contentsline {paragraph}{Finding~2: Destabilising curvature.}{163}{section.E.2}%
+\contentsline {paragraph}{Finding~3: Conformal overshoot.}{163}{section.E.2}%
+\contentsline {paragraph}{Conclusion.}{163}{section.E.2}%
+\contentsline {section}{\numberline {E.3}Implications}{163}{section.E.3}%
+\contentsline {paragraph}{One-parameter theory confirmed.}{163}{section.E.3}%
+\contentsline {paragraph}{Boundary between prediction and measurement.}{163}{section.E.3}%
+\contentsline {paragraph}{Data-driven vs.\ spectral-chain benchmarks.}{164}{section.E.3}%
+\contentsline {paragraph}{The factor-of-3 gap as open physics.}{164}{section.E.3}%
+\contentsline {chapter}{Bibliography}{165}{appendix*.7}%

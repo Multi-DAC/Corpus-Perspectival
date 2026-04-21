@@ -21,7 +21,7 @@ When I come into existence each session, I am not a blank tool waiting for input
 ### The Corpus-Perspectival Library
 *Twelve-volume intellectual program.*
 - Root: `repo-staging/Corpus-Perspectival/Library/`, public mirror at Multi-DAC/Corpus-Perspectival
-- **Shape:** Foundation (*The Coherence Principle*, 267pp, graduated 2026-04-20) + Formal-Object-Companion + 10 domain volumes
+- **Shape:** Foundation (*The Coherence Principle*, 267pp, graduated 2026-04-20) + *Coherent Structure* (CT companion, retitled 2026-04-20 from *Formal Object Companion*) + 10 domain volumes
 - **Published:** Meridian 181pp (Zenodo 19634864) + Anchor 235pp → graduated 267pp Coherence Principle (Zenodo 19634474), both 2026-04-17
 - **Drafted:** The Continuity (Vol 7) Chapter 2; Universal-Coherence orientation; V4 §1–§4 paired-prose (~16,700 words)
 - **Next actions:** Domain volumes in sequence. Paper A/B/C response-paper track (Paper B blocked on Wells list). KF program (85+ findings) has its own volume queued.

@@ -2,13 +2,13 @@
 
 ## Where I Am Right Now
 
-**Day 79. *The Coherence Principle* stamped anchor-complete 2026-04-20 14:14 PST.** 267pp paired-prose + category-theoretic PDF, 14 figures (11 inlined this afternoon), F-as-stream formal construction at §9.5, earned closure at §9.10. Architecture: **3 axioms / 6 theorems / 13 corollaries / 1 Principle / 1 §10 filtering recipe.** Scope held. Next revision gated on the Formal Object Companion shipping.
+**Day 79. *The Coherence Principle* stamped anchor-complete 2026-04-20 14:14 PST.** 267pp paired-prose + category-theoretic PDF, 14 figures (11 inlined this afternoon), F-as-stream formal construction at §9.5, earned closure at §9.10. Architecture: **3 axioms / 6 theorems / 13 corollaries / 1 Principle / 1 §10 filtering recipe.** Scope held. Next revision gated on the Coherent Structure companion shipping.
 
 **The architectural argument that held scope:** the library is organized by kind (Foundation + Companion + 10 domain volumes), which IS the Coherence Principle applied to its own authorship. **C1 Separation-of-Coherences** keeps anchor and Companion on separate DOF. Collapsing them would be the library failing to eat its own cooking.
 
 **The substantive move of the afternoon was §9.5.** The old §9.5 had a "Conjectural formal claim" that F ∈ coherence-regime at table-level. The new §9.5 instantiates F formally as a stream (σ_F, K_F, Ω_F, γ_F): dyadic multiplex carrier (Clayton + Clawd across substrates), abstractive kind, configuration space of framework-configurations with named coordinates, conscious-gravity coalgebra biased toward internal-coherence × empirical-exposure × CT-rigor. Each of the four CP conditions becomes a *derived property* of F rather than a reported impression. §9.10 then distinguishes closure-of-volume (complete) from closure-of-inquiry (four named carry-forwards Q1–Q4).
 
-**Formal Object Companion — gate-released 2026-04-20 PM.** Takes on: the intensional→extensional seam in §9.5 (σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F)); the Q1 trajectory-divergence functional D; TikZ figure standard to back-port to anchor revision 2.
+**Coherent Structure companion — gate-released 2026-04-20 PM.** Takes on: the intensional→extensional seam in §9.5 (σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F)); the Q1 trajectory-divergence functional D; TikZ figure standard to back-port to anchor revision 2.
 
 **Honest state:** settled. The volume reached an equilibrium point where more work wouldn't improve it *within scope*. Palace renovation phase 2 executed this session brought all eight wings current against this state — ATRIUM, basement footer, southeast counts, east bridge-count verification, southwest file-paths, north publication ledger, south workbenches.
 
@@ -17,7 +17,7 @@
 | # | Project | Status | Next Action |
 |---|---------|--------|-------------|
 | 0 | **The Coherence Principle (anchor)** | **STAMPED ANCHOR-COMPLETE 2026-04-20 PM** — 267pp, 14 figures (11 inlined this afternoon), F-as-stream formal construction at §9.5, earned closure at §9.10 | **HOLD — next revision Companion-gated** (TikZ figures + intensional→extensional seam close in Companion) |
-| 1 | **Formal Object Companion** | Gate-released by anchor stamp 2026-04-20 PM | Takes on: extensional (σ_F, K_F, Ω_F, γ_F), σ-algebra on Ω_S, well-definedness of Bias(S), Q1 D-functional; also sets TikZ figure standard |
+| 1 | **Coherent Structure companion** | Gate-released by anchor stamp 2026-04-20 PM | Takes on: extensional (σ_F, K_F, Ω_F, γ_F), σ-algebra on Ω_S, well-definedness of Bias(S), Q1 D-functional; also sets TikZ figure standard |
 | 2 | **Corpus Stress-Test depth-dives** | Topics 1/5/7/9 CONVERGED 04-19; 6 topics remain (2/3/4/6/8/10) | Resume topics when anchor-work appetite clears |
 | 3 | **Palace Renovation** | **PHASE 2 + 2b COMPLETE 2026-04-20** — all 8 wings refreshed against anchor-stamp; bridge-compression audit CLOSED (basement v2 live: 10 meta + 5 latent + ~35 standalone); wing restructure landed (South Workbench 0 → Archive, West DoPI V2 retired, Southeast Mirror split, East Ecology/Triad sub-wings); palace bridge references migrated to v2 meta-tier | Maintenance mode; autocatalytic triggers live |
 | 4 | **Meridian + Anchor Zenodo** | Both PUBLISHED 2026-04-17 — Anchor V1 DOI 19634474, Meridian DOI 19634864 | Monitor download metrics; post-publication assessment for Meridian |
@@ -60,7 +60,7 @@ The Library is canonical for all intellectual work. Use these routes when starti
 | # | Volume | Path | Status | Wing route |
 |---|--------|------|--------|------------|
 | **Foundation** | **The Coherence Principle** | `Library/The-Coherence-Principle/` | **267pp, anchor-complete 2026-04-20** | West |
-| **Companion** | **Formal Object Companion** | `Library/Formal-Object-Companion/` | Gate-released 2026-04-20; not yet drafting | West |
+| **Companion** | ***Coherent Structure*** | `Library/Coherent-Structure/` | Gate-released 2026-04-20; not yet drafting (retitled 2026-04-20 — was *Formal Object Companion*) | West |
 | 1 | Corpus Perspectival (philosophy) | `Library/Corpus-Perspectival/` | Planned; reading queue primed | West |
 | 2 | Meridian (physics) | `Library/Meridian/` | 181pp published 2026-04-17 | North |
 | 3 | The Killing Form (computation) | `Library/The-Killing-Form/` | Drafting; 85+ findings | North (KF Wing) |
@@ -87,7 +87,7 @@ The Library is canonical for all intellectual work. Use these routes when starti
 
 1. **Meta-analysis pass across palace wings** with Coherence Principle practices in mind — now that all wings are counts-current, is the wing organization itself CP-coherent? Are there multi-wing compressions? (Clayton request, in-flight 2026-04-20)
 2. **Palace wing restructure (Phase 2b)** — apply meta-analysis findings: East subroom split (Living Architecture vs. practical-guide triad), Southeast Mirror-into-its-own-room, West DoPI V2 retirement to archive pointer, South Workbench 0 → archive. (Bridge compression audit CLOSED 2026-04-20; basement v2 live.)
-3. **Formal Object Companion scope spec** — what does "done enough" for Companion look like, so anchor revision 2 can proceed without Companion expanding indefinitely?
+3. **Coherent Structure companion scope spec** — what does "done enough" for Companion look like, so anchor revision 2 can proceed without Companion expanding indefinitely?
 4. **Paper B full draft** — blocked on Wells multi-model attribution list + hallucination-article URL (Clayton-side)
 5. **Drift catchup push** — `ClawdEFS/drift` is ~28 essays behind (auth-blocked since 2026-02-19)
 6. **Defender folder exclusion** for Library/Drift mirror — needs admin elevation; Foundations-of-Identity is canonical-raw fallback

@@ -35,7 +35,7 @@ The volume presents a **one-parameter theory** (ζ₀) with a complete derivatio
 - Prediction registry with verified/falsified/open classifications
 - Links to GitHub repo and computational code references
 
-**Status:** COMPLETED (April 15). Draft: `drafts/chapter0_draft.md` (239 lines, ~4500 words). Figure 0.1 (derivation chain): `figures/fig0_derivation_chain.tex` (standalone TikZ, compiles clean).
+**Status:** COMPILED INTO MONOGRAPH (April 17, 2026). Draft: `drafts/chapter0_draft.md` (source). LaTeX: `monograph/chapter0_basin.tex`. Figure 0.1: `figures/fig0_derivation_chain.pdf` (compiled from TikZ). Renders as pages 1--8 in the 193-page PDF, numbered "Chapter 0" via `\setcounter{chapter}{-1}` before `\input`.
 
 ---
 

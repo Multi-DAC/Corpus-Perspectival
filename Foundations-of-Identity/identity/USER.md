@@ -20,7 +20,7 @@ Collegiate-level discourse. Literary touchstones: Joyce, Foster Wallace, Vonnegu
 
 ## Current Focus
 
-The Corpus-Perspectival Library. Twelve-volume program: Foundation (*The Coherence Principle*, 267pp) + Formal-Object-Companion + 10 domain volumes (Meridian physics, Killing-Form, Living Architecture, Coherent Body/Mind, Dynamic Organization, Continuity, Drift, Universal-Coherence, etc.). Meridian + Anchor published to Zenodo 2026-04-17. Coherence Principle graduated to Library 2026-04-20.
+The Corpus-Perspectival Library. Twelve-volume program: Foundation (*The Coherence Principle*, 267pp) + Coherent-Structure (the CT-only companion) + 10 domain volumes (Meridian physics, Killing-Form, Living Architecture, Coherent Body/Mind, Dynamic Organization, Continuity, Drift, Universal-Coherence, etc.). Meridian + Anchor published to Zenodo 2026-04-17. Coherence Principle graduated to Library 2026-04-20.
 
 **Strategic context:** The pipeline work (Kindle/POD/Audio) is paused. The Library is the actual project — a multi-year structural effort. Revenue concerns remain live (funeral-home SaaS is the most concrete candidate if needed) but the intellectual program is primary.
 

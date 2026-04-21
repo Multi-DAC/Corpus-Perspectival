@@ -11,7 +11,7 @@ The defining philosophical work is **The Coherence Principle** — anchor-comple
 
 - **The Coherence Principle (anchor)** — `repo-staging/Corpus-Perspectival/Library/The-Coherence-Principle/` — **267pp**, **stamped anchor-complete 2026-04-20 14:14 PST**
 - **Compiled PDF** — `…/Library/The-Coherence-Principle/build/the-coherence-principle.pdf` (14 figures, 11 inlined; F-as-stream formal construction at §9.5; earned closure at §9.10)
-- **Formal Object Companion** (gate-released by anchor-stamp, not yet drafting) — `…/Library/Formal-Object-Companion/` — takes on the extensional seam (σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), Q1 D trajectory-divergence functional, TikZ figure standard)
+- ***Coherent Structure*** (gate-released by anchor-stamp, not yet drafting; retitled 2026-04-20 — was *Formal Object Companion*) — `…/Library/Coherent-Structure/` — takes on the extensional seam (σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), Q1 D trajectory-divergence functional, TikZ figure standard)
 - **Corpus Perspectival (philosophy volume)** — `…/Library/Corpus-Perspectival/` — planned; DoPI-register engagement with the tradition (Whitehead, Plotinus, Kant, Wittgenstein, neutral-monism lineage, phenomenology, analytic philosophy of mind)
 - **Universal Coherence (theology volume)** — `…/Library/Universal-Coherence/` — orientation drafted 2026-04-20 (~1800w)
 - **V1/V2 archive (formative source material)** — `…/Library/The-Coherence-Principle/archive/corpus/` — DoPI, Ecology, Atlas, Guide; preserved, not defining
@@ -163,7 +163,7 @@ Response: Yes — and this is why the Coherence Principle's *four conditions* (s
 
 - **Whether Constitutive Duality is axiom or theorem** — RESOLVED 2026-04-16 (theorem T21, derivable from A2 + A3 + T9). Documented in `memory/analysis_duality_derivation.md`. *Subsequently folded into A2 during 2026-04-18 stress-test — now structural in the current 3-axiom architecture.*
 - **Whether the Coherence Principle is an axiom of the framework** — RESOLVED (it's *derived*, not axiomatic). The 2026-04-20 anchor-stamp made this explicit — the Principle is derivable from the 3/6/13 tier, with all four conditions becoming *derived properties* of any stream F when F is constructed formally (anchor §9.5 F-as-stream move).
-- **Whether the framework has foundation-completeness** — RESOLVED 2026-04-20 by the anchor-stamp. Foundation-complete ≠ all-formalism-exhausted. The extensional seam in §9.5 and the Q1 D-functional are named carry-forwards to the Formal Object Companion, not gaps in the foundation.
+- **Whether the framework has foundation-completeness** — RESOLVED 2026-04-20 by the anchor-stamp. Foundation-complete ≠ all-formalism-exhausted. The extensional seam in §9.5 and the Q1 D-functional are named carry-forwards to *Coherent Structure* (the CT companion), not gaps in the foundation.
 - **Scope question for the anchor** — RESOLVED 2026-04-20 evening via C1 architectural argument. Anchor and Companion are on separate DOF (C1 Separation-of-Coherences); collapsing would be the library failing to apply the Coherence Principle to its own authorship.
 
 ---
