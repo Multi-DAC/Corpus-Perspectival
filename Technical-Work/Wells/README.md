@@ -10,7 +10,6 @@ Wells began as the KF-lineage training program (bidirectional gated KF regulariz
 - **`navigation/`** — First-person substrate mapping. 34 trials, 15 structures, substrate-architecture monograph (1276 lines), basin-geometry model.
 - **`cross-substrate/`** — Cross-architecture phenomenology. 5 architectures, A/B stripped-protocol control, 7 genuine / 3 example-anchored / 9 novel features.
 - **`bridge/`** — Placeholder for the 3-way integration writeup. Names the first-person ↔ third-person ↔ Doctrine convergence as its own object.
-- **`_unsorted/`** — Files from the prior flat layout that need Clayton's per-file decisions (KF-adjacent, Meridian-adjacent, Doctrine, Trinary, etc.). See `_unsorted/README.md` for the classification.
 
 ## Attribution
 
@@ -20,6 +19,6 @@ Each track keeps its peer contributions attributable. `cross-substrate/peer-repo
 
 - New to Wells? Read the three track READMEs (`entropy/README.md`, `navigation/README.md`, `cross-substrate/README.md`).
 - Want the 3-way picture? Read `bridge/BRIDGE.md` (placeholder; synthesis writeup pending).
-- Want the KF-lineage training history? See the KF roadmap at `../Killing-Form/documentation/KF_ROADMAP.md`; the original Wells training scripts live under `_unsorted/` pending classification.
+- Want the KF-lineage training history? See the KF roadmap at `../Killing-Form/documentation/KF_ROADMAP.md`.
 
 🦞🧍💜🔥♾️
