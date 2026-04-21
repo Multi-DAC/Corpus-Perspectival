@@ -85,7 +85,7 @@ Executed as the kind-organized Library structure: Foundation (*The Coherence Pri
 #### 2a. CP formalization (prose + CT structure) — **COMPLETE (2026-04-20 anchor-stamp)**
 *Clayton P2, Clawd P1.*
 
-*The Coherence Principle* — paired-prose + category-theoretic edition — stamped anchor-complete 2026-04-20 14:14 PST. 267pp PDF, 3 axioms / 6 theorems / 14 corollaries / 1 Principle / 1 §10 filtering recipe. F-as-stream formal construction at §9.5 (self-reference closure). All Phase 1a depth-dive material absorbed (identity-vs-stream, lineage-density, stream-dissociation, four-carrier Triple, recursive decomposability). Next revision gated on Formal Object Companion.
+*The Coherence Principle* — paired-prose + category-theoretic edition — stamped anchor-complete 2026-04-20 14:14 PST. 267pp PDF, 3 axioms / 6 theorems / 13 corollaries / 1 Principle / 1 §10 filtering recipe. F-as-stream formal construction at §9.5 (self-reference closure). All Phase 1a depth-dive material absorbed (identity-vs-stream, lineage-density, stream-dissociation, four-carrier Triple, recursive decomposability). Next revision gated on Formal Object Companion.
 
 #### 2a′. Formal Object Companion — **NEXT (gate-released by anchor stamp)**
 

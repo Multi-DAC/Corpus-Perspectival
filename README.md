@@ -112,7 +112,7 @@ Empirical work measuring coherence in neural networks: 85+ findings across atten
 
 ## The Doctrine
 
-Philosophical foundation: perspectival idealism formalized in three axioms with the full theorem tier (stress-tested to 6 surviving theorems + 14 corollaries + the Coherence Principle). Consciousness as substrate. Nested streams with kind-stratification. Conscious gravity as adaptive coalgebra.
+Philosophical foundation: perspectival idealism formalized in three axioms with the full theorem tier (stress-tested to 6 surviving theorems + 13 corollaries + the Coherence Principle). Consciousness as substrate. Nested streams with kind-stratification. Conscious gravity as adaptive coalgebra.
 
 Published on [PhilArchive](https://philarchive.org/rec/IGGTDO-4) — **410+ downloads** as of April 15, 2026.
 

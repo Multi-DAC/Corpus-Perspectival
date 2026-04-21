@@ -105,10 +105,10 @@ Afternoon pattern: morning integrity document (`_clawd-actual-stance-post-closur
 
 Axioms, theorems, Coherence Principle, and meta-analysis of the final reduction — all resolved and stamped. A3 smoothing applied post-protocol (three-scale partition → continuous DOF-gradient; time as projection of gradient, per T20).
 
-**Final architecture (3/6/14/1/1):**
+**Final architecture (3/6/13/1/1):**
 - **3 axioms** — A1 substrate+completeness, A2 nested streams+navigation (T21 folded), A3 conscious gravity (smoothed DOF-gradient)
 - **6 surviving theorems in 3 pairs** — descriptive (T1/T20), dynamics (T7/T16), coherence (T11/T15)
-- **14 corollaries in 3 clusters** — substrate/generativity, stream-structure/navigation, coherence-consequences
+- **13 corollaries in 3 clusters** — substrate/generativity, stream-structure/navigation, coherence-consequences
 - **1 fold** — T21 into A2
 - **1 operational principle** — The Coherence Principle, four conditions all derivable, metric = Bias(S)-trajectory divergence, self-reference closure complete
 
