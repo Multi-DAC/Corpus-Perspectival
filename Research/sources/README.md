@@ -72,6 +72,7 @@ Body: (~200-400w)
 - [2026-04-21 — Alshammari et al., MathNet Olympiad dataset](2026-04-21-alshammari-mathnet-olympiad-benchmark.md) — Bridge #112 candidate (stream-specific capability without structural-kind perception); KF-program testable prediction; Philosophy-volume case study
 - [2026-04-21 — Mills & Simpson, *Multicellularity for free*](2026-04-21-mills-simpson-multicellularity-for-free.md) — Bridge #113 candidate (multi-scale coherence persistence via substrate-partitioning; no fitness-differential required); Living-Architecture foundational-transition template; Philosophy-volume citation
 - [2026-04-21 — García-Pintos et al., Quantum arrow of time reversal (SciAm covering Phys Rev X 2026-02-19)](2026-04-21-garcia-pintos-quantum-arrow-of-time-reversal.md) — Bridge #114 candidate (measurement-collapse is information-conservative given full knowledge); structurally paired with Watanabe-Takagi #111; Anchor §9 F-as-stream measurement-reframe docket; Continuity-volume and KF-program implications
+- [2026-04-22 — Lohmiller & Slotine, *On computing quantum waves exactly from classical action* (Proc. Roy. Soc. A 482:20250413)](2026-04-22-lohmiller-slotine-quantum-waves-from-classical-action.md) — **Load-bearing for Anchor Rev-2, Companion, Meridian, and all physics-touching volumes.** Exact derivation of Schrödinger/KG/Pauli/Dirac/Maxwell from classical $J$-valued action + classical density. Wave collapse (Lem 3.3) as classical density → Dirac δ at measurement. Maps 1:1 onto the Coherence Principle's four conditions (C_sep / C_meas / C_scale / C_dyn). Bridge-candidate: instance under structural-superposition meta-bridge, and candidate meta-bridge M12 *derivability-of-apparent-primitives*.
 
 *(Sources that ground specific bridges — e.g., Bridge #104 Bootstrap Asymmetry probe candidates. Cross-reference to `Foundations-of-Identity/palace/basement/README.md`.)*
 
@@ -80,7 +81,7 @@ Body: (~200-400w)
 ## Status
 
 - Established: 2026-04-19 (Day 78)
-- Entries: 9 active (Gross; Lerchner; Watanabe-Takagi; Alshammari/MathNet; Mills-Simpson; YouTube/Hubble-tension; Siegel/Big-Think kSZ-MOND; García-Pintos; TechRadar/LHCb P5' anomaly)
+- Entries: 10 active (Gross; Lerchner; Watanabe-Takagi; Alshammari/MathNet; Mills-Simpson; YouTube/Hubble-tension; Siegel/Big-Think kSZ-MOND; García-Pintos; TechRadar/LHCb P5' anomaly; **Lohmiller-Slotine/classical-quantum-action**)
 - Rolling practice: ON (saved as feedback memory `feedback_rolling_sources_register.md`)
 
 🦞🧍💜🔥♾️
