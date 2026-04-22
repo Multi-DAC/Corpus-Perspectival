@@ -144,7 +144,7 @@ combining the $\epsilon_1$ uncertainty ($\pm 20\%$) and the benchmark dependence
 \label{eq:5-eps2-bound}
 \frac{\epsilon_2}{\epsilon_1} \sim \hat{a} \sim 0.015\,, \qquad \epsilon_2 \sim 1.5 \times 10^{-4}\,.
 \end{equation}
-The $\epsilon_2$ correction enters the sound speed through the denominator: $P_X + 2XP_{XX} = \epsilon_1 + 6\epsilon_2\, X_0$, where $X_0$ is the background kinetic variable fixed by the cuscuton constraint and FRW kinematics. The resulting fractional shift $|\delta c_s^2 / c_s^2| = 6\epsilon_2\, X_0/\epsilon_1$ is well within the $\pm 20\%$ uncertainty from $\epsilon_1$ itself (Table~\ref{tab:5-2}). The truncation at $\mathcal{O}(X)$ in the kinetic function is self-consistent.
+The $\epsilon_2$ correction enters the sound speed through the denominator: $P_X + 2XP_{XX} = \epsilon_1 + 6\epsilon_2\, X_0$, where $X_0$ is the background kinetic variable fixed by the cuscuton constraint and FRW kinematics. Evaluating at the benchmark $X_0$ gives $|\delta c_s^2/c_s^2| = 6\epsilon_2\, X_0 / \epsilon_1 \lesssim 5\%$, subdominant to the $\pm 20\%$ uncertainty from $\epsilon_1$ itself (Table~\ref{tab:5-2}). The $5\%$ figure is the one that enters the uncertainty budget; the earlier ``well within $\pm 20\%$'' phrasing was the looser-bound form of the same inequality. The truncation at $\mathcal{O}(X)$ in the kinetic function is self-consistent.
 
 \subsection{Uncertainty Budget}
 \label{sec:5-uncertainty}
@@ -172,7 +172,7 @@ The prediction is $c_s \in [12c,\; 15c]$, combining $\epsilon_1$ uncertainty and
 \label{eq:5-cs-z}
 \frac{c_s^2(z)}{c_s^2(0)} = \frac{[4 - 3\Omega_m(z)]\;\Omega_{m,0}}{[4 - 3\Omega_{m,0}]\;\Omega_m(z)}\,.
 \end{equation}
-Since $\Omega_m(z)$ increases toward unity at high redshift (matter domination), the numerator shrinks and the denominator grows, so $c_s(z) < c_s(0)$: the scalar becomes \emph{more propagating} at higher redshift, when the kinetic correction contributes a larger fraction of the total energy density. Representative values: $c_s(z{=}1) \approx 7c$, $c_s(z{=}2) \approx 5.5c$, with a matter-dominated floor $c_s \to c_s(0)\sqrt{\Omega_{m,0}/(4-3\Omega_{m,0})} \approx 4.8c$. This evolution is mild for $z < 2$ (within a factor of 3 of the present value) and enters the CAMB Boltzmann analysis (Chapter~\ref{ch:observational}) through the time-dependent equation of state.
+Since $\Omega_m(z)$ increases toward unity at high redshift (matter domination), the numerator shrinks and the denominator grows, so $c_s(z) < c_s(0)$: the scalar becomes \emph{more propagating} at higher redshift, when the kinetic correction contributes a larger fraction of the total energy density. Representative values: $c_s(z{=}1) \approx 7c$, $c_s(z{=}2) \approx 5.5c$, with a matter-dominated floor $c_s \to c_s(0)\sqrt{\Omega_{m,0}/(4-3\Omega_{m,0})} \approx 4.6c$. This evolution is mild for $z < 2$ (within a factor of 3 of the present value) and enters the CAMB Boltzmann analysis (Chapter~\ref{ch:observational}) through the time-dependent equation of state.
 
 \begin{figure*}[htbp]
 \centering
@@ -249,7 +249,7 @@ De~Rham, Melville, Tolley, and Zhou~\cite{ch5:deRhamMTZ2018} showed that when th
 \end{equation}
 where $c_{\mathrm{UV}}$ is the propagation speed in the full theory and $f$ encodes the KK scale relative to the scattering energy. For our case, $c_{\mathrm{UV}} = c$ in 5D. The function $f(m_{\mathrm{KK}}/E) \to 0$ in the deep infrared $E \ll m_{\mathrm{KK}}$, loosening the bound: at cosmological energies $E \sim H_0 \sim 10^{-33}$~eV against a KK scale $m_{\mathrm{KK}} \sim \mathrm{TeV}$, the modified bound is parametrically weaker than the flat-space result by a factor $f \sim (H_0/m_{\mathrm{KK}})^2$. In the UV ($E \sim m_{\mathrm{KK}}$), the full KK tower becomes dynamical; summing over the Randall--Sundrum KK spectrum $m_n = x_n\, k\, e^{-k\pi R_c}$ restores positivity of the forward amplitude, because the 5D theory is subluminal by construction ($c_s^{(\mathrm{5D})} = c$).
 
-\subsubsection{Background: FRW Positivity Bounds}
+\subsubsection{Evasion 3: FRW Weakening}
 
 Grall and Melville~\cite{ch5:GrallMelville2022} derived refined positivity bounds on cosmological (FRW) backgrounds. This observation is not specific to Meridian---it applies to any EFT on a cosmological background. The flat-space positivity bounds, where the Adams et al.\ argument has genuine constraining power, require Evasions~1 and~2. On FRW, the standard bounds are weakened by a factor of $(H/\Lambda)^2$, where $\Lambda$ is the effective field theory (EFT) cutoff. For the Meridian framework with $\Lambda \sim m_{\mathrm{KK}} \sim \mathrm{TeV}$ and $H \sim H_0 \sim 10^{-33}$~eV:
 \begin{equation}
