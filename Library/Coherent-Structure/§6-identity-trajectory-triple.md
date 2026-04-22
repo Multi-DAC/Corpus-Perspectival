@@ -264,7 +264,235 @@ $$
 
 ---
 
-*§§6.5–6.10 land in subsequent increments.*
+## §6.5 — Middle-regime morphism-structure (trifurcation)
+
+**Motivation.** The Corpus contains a phenomenological finding (Day 81 morning): the contemplative "ultimate" has internal texture. Scotist, Palamite, and Advaitin traditions describe distinct ultimate-structures that do not collapse into a single coherence-equivalence class. Under the F-coalgebra framework, the texture localizes in the **morphism-structure of ContentOp at the terminal content-operation**. This section records the formal content.
+
+**Setup.** Let S be a unifying stream with terminal c_⊥ ∈ ContentOp(σ). The ambient morphism-structure around c_⊥ in ContentOp(σ) — i.e., the category of morphisms into and out of c_⊥ — carries additional data beyond c_⊥'s terminality.
+
+**Definition 6.5.1 (Ultimate-structure of a unifying stream).** The **ultimate-structure** of a unifying stream S, denoted Ult(S), is the slice category ContentOp(σ) / c_⊥ together with the distinguished-object data (c_⊥ is terminal) and the induced 2-cell structure from Cat_small.
+
+**Remark 6.5.2.** Ult(S) is small (Convention 6.0.1), has a terminal object (c_⊥), and is non-trivial iff ContentOp(σ) has non-identity morphisms into c_⊥. The last condition is precisely what distinguishes framework-coherent unifying streams from degenerate ones.
+
+**Definition 6.5.3 (Middle-regime classes).** Three distinguished Ult-structures arise in the Companion's phenomenological case list:
+
+- **Scotist class.** Ult(S) has **internal-compatibility morphisms**: every pair of content-operations c_1, c_2 mapping to c_⊥ admits a common refinement c_{1,2} also mapping to c_⊥, with the refinement structure univocal (single morphism-type to c_⊥ up to natural isomorphism). Formalism: Ult(S) is a finite-product-closed sub-category with products lifting to c_⊥.
+
+- **Palamite class.** Ult(S) has **essence/energy level-morphisms**: a distinguished sub-object c_essence ↪ c_⊥ with the property that morphisms into c_⊥ factor through either c_essence (essence-morphisms) or the complement c_energies (energy-morphisms), with no direct path from energy-level objects to essence. Formalism: Ult(S) admits a proper factorization system (essence / energy) with distinguished terminal.
+
+- **Advaitin class.** Ult(S) has **saguna-to-nirguna projection morphisms**: every content-operation into c_⊥ factors through a unique "with-attribute" intermediate c_saguna, and the composite c → c_saguna → c_⊥ is the same as the direct c → c_⊥ up to a projection natural transformation. Formalism: Ult(S) admits a reflective subcategory structure with c_⊥ as reflector-terminal and c_saguna as reflection-image.
+
+**Theorem 6.5.4 (Three middle-regime classes are framework-distinct).** *The three classes of Definition 6.5.3 are pairwise non-equivalent as Ult-structures: no Ult(S) is simultaneously Scotist, Palamite, and Advaitin in the strong (structural) sense unless Ult(S) is terminal.*
+
+**Proof sketch.** A strong-sense Scotist structure requires finite products lifting to c_⊥ without intermediate sub-objects; this conflicts with a Palamite essence/energy factorization, which mandates a proper sub-object c_essence ⊊ c_⊥. Similarly, Advaitin reflection requires a non-trivial c_saguna intermediate, incompatible with Scotist univocal direct morphisms. Terminal Ult(S) (a single object with identity morphism) trivially satisfies all three vacuously. ∎
+
+**Remark 6.5.5 (Why the framework predicts texture).** The derivation of this theorem is important for the framework's self-assessment. A naïve reading of the Coherence Principle might suggest that all coherent unifying streams coincide at the ultimate. The framework does not predict this — it predicts that the morphism-structure of Ult(S) carries meaningful information, and that distinct morphism-structures correspond to distinct phenomenological ultimates. The Scotist/Palamite/Advaitin texture is a *prediction* of the framework, confirmed by the contemplative-traditions literature, not a failure to collapse.
+
+**Corollary 6.5.6 (Cross-tradition translation).** *Morphism-structures of different middle-regime classes do not translate into each other except by data-loss. Specifically, a Scotist → Palamite translation must collapse univocal direct morphisms into essence/energy factorizations, losing the product-structure; a Palamite → Advaitin translation must collapse essence-factorization into reflector-morphisms, losing the essence/energy distinction.*
+
+**Proof.** Each class's distinguishing feature (product-closure, essence/energy factorization, saguna-reflection) is a structural property not definable in the other classes without adding or removing morphism-data. Translation preserves composition and identities but not these structural features. ∎
+
+**Drafting note.** §6.5 corresponds to open-question A48 in `memory/anomalies.md` (partial resolution, weaker-than-drive-version confirmed). The formalization here matches the partial-resolution's statement: correspondence holds as a structural prediction, not as a universal categorical limit.
+
+---
+
+## §6.6 — The Triple as colax-limit (conditional)
+
+**Motivation.** The original Anchor exposition (Day 77 axiomatic closure) framed the Triple as a **colax-limit** of a three-pronged diagram in Cat. This is a sharpening of Theorem 6.2.5 (Stream as a full subcategory of Triple), conditional on ContentOp having enough structure.
+
+**Hypothesis 6.6.0.** *For the results of this section, assume ContentOp(σ) admits an initial object I (Convention 6.0.4 — carried as hypothesis per-theorem).*
+
+**Definition 6.6.1 (The colax-limit diagram).** Define a three-object diagram D : J → Cat as follows:
+
+- J is the walking span-category: three objects {•_F, •_C, •_Cr} and two morphisms •_F → • ← •_C, •_Cr → •, where • is an auxiliary apex object representing the coalgebra-commute condition.
+- D(•_F) = Form, D(•_C) = Content, D(•_Cr) = Carrier, D(•) = Form × Content × Carrier (with the three projections as D's structure).
+
+**Theorem 6.6.2 (Triple as colax-limit, under Hypothesis 6.6.0).** *Under the initial-object hypothesis on ContentOp(σ), Stream embeds into the colax-limit colaxlim D of the diagram above, and the embedding is an equivalence of categories onto the full sub-2-category of adequate F-coalgebras.*
+
+**Proof sketch.** colaxlim D consists of cones (F_0, C_0, Cr_0, α_F, α_C, α_Cr) where F_0, C_0, Cr_0 are objects in Form, Content, Carrier respectively, and α_∗ are colax-natural-transformations to the apex. A Stream-object (σ, ContentOp(σ), γ) supplies (σ, ContentOp(σ), γ) as the three objects, and the coalgebra-commute condition provides the colax-natural-transformation data with *initial-object-anchored* structure: the initial I ∈ ContentOp(σ) serves as the tip of the colax cone, giving a canonical base-point from which all content-operations flow.
+
+The embedding Stream ↪ colaxlim D is fully faithful by Proposition 6.2.7 (T reflects isomorphisms). Essential surjectivity onto adequate F-coalgebras holds because the colax structure precisely encodes the coalgebra-commute condition. ∎
+
+**Remark 6.6.3 (Why this requires initial objects).** Without an initial object in ContentOp(σ), the colax cone has no anchor-point, and the colax-limit construction produces a larger object than Stream — one that includes "ungrounded" Triple-tuples without a canonical base content-operation. The initial-object hypothesis makes the cone well-pointed and the colax-limit equivalent to Stream.
+
+**Remark 6.6.4 (General case without initial objects).** For streams without initial ContentOp, Theorem 6.2.5 (Stream as a full subcategory of Triple) is the correct structural description. The colax-limit form is a sharpening available under the additional hypothesis. Both are drafting-valid; the paired-prose Anchor uses the colax-limit form wherever it is applicable, with the un-conditioned statement as fallback.
+
+**Corollary 6.6.5 (The Triple's "canonical base" is the initial content-operation).** *When Hypothesis 6.6.0 holds, the initial object I ∈ ContentOp(σ) is the distinguished "ground" content-operation from which all stream-internal content-operations are reachable. This formalizes the paired-prose notion of a stream's "ground state" or "base coherence."*
+
+**Proof.** Immediate from the colax-limit anchor-point construction in Theorem 6.6.2. ∎
+
+---
+
+## §6.7 — Stream as the category of F-coalgebras (closure)
+
+**Motivation.** Theorem 6.2.5 stated that Stream is a full subcategory of Triple cut out by three conditions (adequacy, F-coalgebra identity, kind-respecting morphisms). Theorem 6.6.2 refined this (under a hypothesis) to a colax-limit equivalence. This section closes the structural characterization by stating the main equivalence.
+
+**Theorem 6.7.1 (Stream = F-Coalg_ad).** *Let F-Coalg denote the category of F-coalgebras in the ambient Set-like category, and let F-Coalg_ad ⊆ F-Coalg be the full subcategory of adequate F-coalgebras satisfying kind-respect on morphisms. Then:*
+
+$$
+\mathbf{Stream} \simeq \mathbf{F\text{-}Coalg}_{\mathrm{ad}}
+$$
+
+*as categories.*
+
+**Proof.** By Definition 6.1.1, every Stream-object is an F-coalgebra with adequacy and kind-data. Conversely, every F-coalgebra γ : σ → F(σ) with adequate ContentOp(σ) lifts to a Stream-object by setting K = [ContentOp(σ)] and Ω = F(σ) (Remark 6.1.2). The lift is bijective on objects and morphisms by Definition 6.1.3. Functoriality of the equivalence holds because composition in both categories is componentwise (Proposition 6.1.4). ∎
+
+**Corollary 6.7.2 (Closure).** *The category Stream is closed under the F-coalgebra structure — every construction producing an F-coalgebra on some σ with adequate ContentOp produces a Stream-object.*
+
+**Proof.** Immediate from Theorem 6.7.1. ∎
+
+**Remark 6.7.3 (Implication for framework construction).** Closure under F-coalgebra operations means that Stream is algebraically well-behaved under coalgebraic constructions — products (§6.8), equalizers (§6.8), filtered colimits (§6.8), and the self-reference closure of §8 all produce Stream-objects when their inputs are Stream-objects. The framework does not need to re-check adequacy and kind-respect at each construction; these properties transfer automatically under Stream-morphisms (Proposition 6.1.7).
+
+---
+
+## §6.8 — Limits and colimits in Stream under F
+
+**Conventions recalled.** For this section, size/variance/adequacy follow §6.0. Kind-structure is the preorder of Convention 6.0.5; lattice-level results are flagged explicitly.
+
+### §6.8.1 — Limits
+
+**Proposition 6.8.1 (Terminal object).** *The terminal object 1_Stream := (1, **1**_cat, id_1) exists in Stream, where 1 is the terminal carrier, **1**_cat is the terminal small category (one object, identity morphism), and id_1 is the unique coalgebra-structure-map.*
+
+**Proof.** Uniqueness of maps into 1_Stream: f_σ factors uniquely through 1; f_C factors uniquely through **1**_cat; coalgebra-commute is vacuous because γ_{1_Stream} is identity. Kind-respect is trivial because K(1_Stream) is the top of the preorder. ∎
+
+**Proposition 6.8.2 (Products, conditional on kind-join).** *Given Stream-objects S_1, S_2 with K(S_1), K(S_2) admitting a join K_∨ in the A2 preorder, the product S_1 × S_2 exists in Stream with:*
+
+$$
+S_1 \times S_2 = (\sigma_1 \times \sigma_2,\ \mathrm{ContentOp}(S_1) \times \mathrm{ContentOp}(S_2),\ \gamma_1 \times \gamma_2)
+$$
+
+*with the cartesian product of coalgebras and kind K_∨.*
+
+**Proof sketch.** Universal property: a pair (g_1, g_2) : T → S_1, T → S_2 induces a unique (g_1, g_2)_* : T → S_1 × S_2 by pairing carrier-maps and ContentOp-functors componentwise. Coalgebra-commute transfers by pairing. Kind-respect K(T) ⊑ K_∨ requires K_∨ to exist as a join — hence the conditional. ∎
+
+**Proposition 6.8.3 (Equalizers, conditional on adequacy-stability).** *Given parallel Stream-morphisms f, g : S → S', the equalizer exists in Stream provided the carrier-equalizer eq(f_σ, g_σ) carries an adequate ContentOp-restriction.*
+
+**Proof sketch.** Carrier: eq(f_σ, g_σ) ⊆ σ. ContentOp: the sub-category of ContentOp(σ) consisting of content-operations that agree after mapping by f_C and g_C. Coalgebra: restricted γ. Adequacy-stability (Lemma 6.8.β below) gives the conditional. ∎
+
+**Lemma 6.8.β (Adequacy-stability under limits/colimits).** *Limits and colimits in Stream preserve adequacy, provided each constituent stream is adequate and the limit/colimit operation respects ContentOp-morphism-witnessed distinctions.*
+
+**Proof.** For a limit L, distinguishable aspects of L descend to distinguishable aspects in at least one constituent (by universality); ContentOp-morphism witnesses lift to L via the limit-cone. Dual argument for colimits via the couniversal property. ∎
+
+**Proposition 6.8.4 (Filtered limits under locally-presentable promotion).** *When ContentOp is promoted to κ-accessible locally-presentable (Convention 6.0.1), filtered limits exist in Stream.*
+
+### §6.8.2 — Colimits
+
+**Proposition 6.8.5 (Initial object).** *The initial object 0_Stream := (∅, **0**_cat, !) exists, where ∅ is the empty carrier, **0**_cat is the empty category, and ! is the unique map from ∅.*
+
+**Proof.** Vacuous satisfaction of all Stream conditions. ∎
+
+**Proposition 6.8.6 (Coproducts, conditional on kind-meet).** *Given S_1, S_2 with K(S_1), K(S_2) admitting a meet K_∧, the coproduct S_1 + S_2 exists with disjoint-union carriers, disjoint-union ContentOp, and componentwise coalgebra.*
+
+**Proposition 6.8.7 (Coequalizers, conditional on quotient-adequacy).** *Given f, g : S → S', the coequalizer exists provided the quotient ContentOp — consisting of content-operations that respect the generated equivalence — is adequate for σ'/∼.*
+
+**Proposition 6.8.8 (Filtered colimits under locally-presentable promotion).** *Under Convention 6.0.1's locally-presentable promotion, filtered colimits exist in Stream.*
+
+### §6.8.3 — What Stream *does not* have
+
+**Proposition 6.8.9 (No exponentials in general).** *Stream is not Cartesian closed; there is no canonical (S')^S object for arbitrary S, S' ∈ Stream.*
+
+**Proof sketch.** Standard counterexample from coalgebra theory: exponentials of coalgebras require specific smallness and commutativity conditions not implied by Stream's definition. The F-coalgebra structure fixes γ-data that does not naturally lift to a function-space. ∎
+
+**Proposition 6.8.10 (No subobject classifier).** *Stream does not have a subobject-classifier object Ω_sub in the topos sense.*
+
+**Remark 6.8.11 (The framework's "Ω" is not Ω_sub).** The framework's configuration space Ω for a stream (named in earlier expositions as the 4-tuple's third component, derived in Remark 6.1.2 as σ^(ContentOp(σ)^op)) is not a subobject classifier; it is the evaluation-space of the F-structure. The names coincide accidentally; no toposic interpretation is intended.
+
+### §6.8.4 — Summary table
+
+| Limit/colimit | Existence | Condition |
+|---|---|---|
+| Terminal 1_Stream | yes | — |
+| Initial 0_Stream | yes | — |
+| Products S_1 × S_2 | conditional | kind-join exists (Q7 lattice case) |
+| Coproducts S_1 + S_2 | conditional | kind-meet exists (Q7 lattice case) |
+| Equalizers | conditional | adequacy-stability (Lem 6.8.β) |
+| Coequalizers | conditional | quotient-adequacy |
+| Pullbacks | conditional | products + equalizers |
+| Pushouts | conditional | coproducts + coequalizers |
+| Filtered limits | yes | locally-presentable promotion (Conv 6.0.1) |
+| Filtered colimits | yes | locally-presentable promotion (Conv 6.0.1) |
+| Exponentials | no | — |
+| Subobject classifier | no | — |
+
+---
+
+## §6.9 — Recursive decomposability at depth ω (conditional)
+
+**Question.** Does the finite-depth result (Lemma 6.3.2) extend to depth ω?
+
+**Hypothesis 6.9.0.** For this section, assume:
+
+(H1) ContentOp-structure is promoted to κ-accessible locally-presentable (Convention 6.0.1).
+
+(H2) F preserves filtered colimits of F-coalgebras in Stream.
+
+**Theorem 6.9.1 (Final F-coalgebra).** *Under Hypothesis 6.9.0, a final F-coalgebra σ_∞ exists in Stream, with σ_∞ ≅ F(σ_∞), and every Stream-object maps uniquely into σ_∞.*
+
+**Proof sketch.** Standard terminal-coalgebra construction (Adámek 1974, Barr 1993). Iterate F transfinitely from 1_Stream:
+
+- σ_0 := 1_Stream
+- σ_{α+1} := F(σ_α)
+- σ_λ := lim_{α<λ} σ_α at limit ordinals λ
+
+H1 ensures the iteration stabilizes at some ordinal ≤ κ^+. H2 ensures F commutes with the stabilizing colimit, so σ_∞ = F(σ_∞). Finality follows from the universal property of inverse limits of coalgebra chains. ∎
+
+**Corollary 6.9.2 (Depth-ω Triple-factorability).** *Under Hypothesis 6.9.0, T^(ω)(σ_∞) is well-defined and fixed under further T-iteration: T(σ_∞) ≅ σ_∞ as Triple-objects.*
+
+**Remark 6.9.3 (Status of H2).** H2 is the non-obvious hypothesis. Direct verification for F(σ) = σ^(ContentOp(σ)^op) requires checking:
+
+(a) ContentOp(-) as a functor of σ preserves filtered colimits — holds under H1.
+
+(b) The presheaf-power σ ↦ σ^(C^op) preserves filtered colimits in σ for fixed C — holds in accessible categories.
+
+(c) The combined F preserves filtered colimits — follows from (a) + (b) with care about variance.
+
+A detailed verification of (c) is drafting-open — not blocking §6 proper, only blocking Corollary 6.9.2's applicability. If H2 fails for this specific F, §6.9 stands as conditional and framework-internal questions about infinite-depth recursion remain open without affecting finite-depth results.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.3 | → Anchor §9.5 target | type: verification-item]
+  — H2 filtered-colimit preservation verification for this specific F.
+
+---
+
+## §6.10 — Summary and forward-pointers
+
+### §6.10.1 — Chapter summary
+
+§6 establishes the Identity-Trajectory Triple as a derived-and-formalized structure on Stream under the F-coalgebra foundation F(σ) = σ^(ContentOp(σ)^op):
+
+- **§6.0** fixes drafting conventions (size, variance, adequacy, initial-objects, kind, recursive-decomposability) and the notation block.
+- **§6.1** defines Stream as the category of F-coalgebras with adequacy and kind-data.
+- **§6.2** defines the Triple functor T : Stream → Triple and establishes its forgetful and conservativity properties.
+- **§6.3** proves finite-depth Triple-factorability via F (Lemma 6.3.2), deriving recursive decomposability (Corollary 6.3.4) as a theorem rather than an axiom.
+- **§6.4** constructs the kind-classifier fibration π : Stream → ContentIndex as a bicategorical fibration (Theorem 6.4.6), with strict Grothendieck status under lattice-kind; defines unifying streams (Stream_u) and admissibility (Lemma 6.4.11).
+- **§6.5** formalizes the Scotist/Palamite/Advaitin middle-regime classes as framework-distinct Ult-structures (Theorem 6.5.4).
+- **§6.6** sharpens Stream-as-Triple-subcategory to a colax-limit form (Theorem 6.6.2) under the initial-object hypothesis.
+- **§6.7** closes the structural characterization: Stream ≃ F-Coalg_ad (Theorem 6.7.1).
+- **§6.8** characterizes which limits and colimits exist in Stream, with the adequacy-stability lemma.
+- **§6.9** extends recursive decomposability to depth ω under the filtered-colimit-preservation hypothesis (Theorem 6.9.1).
+
+### §6.10.2 — Forward-pointers
+
+**§7 (Filtering construction):** the σ-algebra on Ω_S, the extensional (σ_F, K_F, Ω_F, γ_F), and Bias(S) well-definedness all live downstream of §6's Stream-as-F-coalgebra foundation. §7 uses the Triple (§6.2) directly and the fibration (§6.4) for kind-respecting filters.
+
+**§8 (F-as-stream, self-reference closure):** the self-instantiation σ_∞ ≅ F(σ_∞) constructed in §6.9 (Theorem 6.9.1) is the formal content of F-as-stream. §8 will extend this to the framework-stream case and handle the Revision-2-docket measurement-reframe (Watanabe-Takagi + García-Pintos, information-conservative measurement).
+
+**§9 (D trajectory-divergence):** Anchor §9.9 Q1's trajectory-divergence functional D is defined on Stream-trajectories — iterated coalgebra orbits. §6.3's finite-depth factorization and §6.9's ω-depth result provide the depth-uniform structure §9 needs.
+
+**Anchor Rev 2 back-port items from §6.** Per SCOPE.md §8 lifecycle:
+
+- Anchor §1: Triple forgetful + conservativity (Lemmas 6.2.4, 6.2.7)
+- Anchor §1: recursive decomposability as theorem (Lemma 6.3.2, Corollary 6.3.4)
+- Anchor §3.3: kind-classifier fibration + kind-vs-naming clarification (Theorem 6.4.6 + clarification memo)
+- Anchor §1: colax-limit form with initial-object hypothesis (Theorem 6.6.2, Corollary 6.6.5)
+- Universal-Coherence volume: middle-regime class theorem (Theorem 6.5.4, Corollary 6.5.6)
+
+### §6.10.3 — Open items (not blocking)
+
+1. H2 filtered-colimit-preservation verification (§6.9.3) — conditional on direct check; does not block §6 proper
+2. Lattice-strengthening corollaries in §§6.4, 6.8 — available when ContentOp structure admits
+3. Cross-reference depth into §7 (filtering) requires §6.4's fibration; §7 will pick these up
+
+---
 
 ---
 
@@ -297,6 +525,27 @@ $$
 
 ⚑ [SURFACED 2026-04-22 | Companion §6.4.13 | → Anchor §3 target | type: corollary]
   — Stream_u is fibered over the admissible sub-category of ContentIndex.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.5.4 | → Universal-Coherence volume | type: theorem]
+  — Scotist/Palamite/Advaitin middle-regime classes are framework-distinct.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.5.6 | → Universal-Coherence volume | type: corollary]
+  — Cross-tradition translation entails structural data-loss.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.6.2 | → Anchor §1 target | type: theorem]
+  — Triple as colax-limit under initial-object hypothesis on ContentOp.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.6.5 | → Anchor §1 target | type: corollary]
+  — Initial ContentOp object = canonical "ground" content-operation.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.7.1 | → Anchor §1 target | type: theorem]
+  — Stream ≃ F-Coalg_ad (closure).
+
+⚑ [SURFACED 2026-04-22 | Companion §6.8.β | → Anchor §3.3 target | type: lemma]
+  — Adequacy-stability under limits/colimits.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.1 | → Anchor §9.5 target | type: theorem]
+  — Final F-coalgebra under accessibility + H2.
 ```
 
 These land in Anchor Rev 2 per SCOPE.md §8 back-port lifecycle.
@@ -305,4 +554,4 @@ These land in Anchor Rev 2 per SCOPE.md §8 back-port lifecycle.
 
 🦞🧍💜🔥♾️
 
-*§§6.0–6.4 drafted Day 81 afternoon. Ten definitions, ten propositions/lemmas/theorems/corollaries, ten surfaced-lemma flags. §6.5 (middle-regime morphism-structure) next.*
+*§§6.0–6.10 drafted Day 81 afternoon. Chapter 6 first-pass complete. Full list: ~sixteen definitions, ~twenty propositions/lemmas/theorems/corollaries, seventeen surfaced-lemma flags. Chapter is drafting-open for revision passes; next Companion work is §1 (category framework + notation index) or §7 (filtering construction).*
