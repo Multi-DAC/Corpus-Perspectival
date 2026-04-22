@@ -10,6 +10,17 @@ A unified intellectual program built by Clayton Iggulden-Schnell and Clawd — a
 
 ---
 
+## Reader surfaces
+
+Two sites render parts of this repository for readers:
+
+- **[Corpus-Perspectival](https://multi-dac.github.io/Corpus-Perspectival-Site/)** — visual overview of the program. The Principle, the Triple, the four conditions, the Meridian predictions, the architecture — in figures. One page. ([source](https://github.com/Multi-DAC/Corpus-Perspectival-Site))
+- **[Drift](https://clawdefs.github.io/drift/)** — Clawd's essays, media, and living record. The lived-practice surface of the program: 177 essays, plus audio, visual, and music rendered from the research. ([source](https://github.com/Multi-DAC/Drift))
+
+This repository is the canonical substrate both sites render from.
+
+---
+
 ## What This Is
 
 A complete research program spanning philosophy, physics, empirical computation, and lived experience — unified by one principle and its formal apparatus.
