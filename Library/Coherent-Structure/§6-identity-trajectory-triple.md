@@ -1,6 +1,6 @@
 # §6 — The Identity-Trajectory Triple
 
-*Rolling draft. First increment (§§6.0–6.2) written 2026-04-22 (Day 81). Subsections §§6.3–6.10 land in subsequent passes. Surfaced lemmas flagged per SCOPE.md §8 lifecycle.*
+*Written 2026-04-22 (Day 81). Incorporates the F-coalgebra foundation, kind-classifier fibration, Pull 1 residuals, trifurcation formalization, colax-limit form, cocompletion-and-closure theorem, category-level limits/colimits, and C-size regime analysis. Surfaced lemmas flagged per SCOPE.md §8 lifecycle.*
 
 ---
 
@@ -8,7 +8,7 @@
 
 This section fixes the drafting stances established in `drafts/2026-04-22-foundation-decisions.md`. These are reference conventions used throughout §6 and inherited by §§7–9.
 
-**Convention 6.0.1 (Size).** Unless otherwise stated, all content-operation categories ContentOp(σ) are **small**. For theorems in §6.8 (limits/colimits) and §§3.3–3.4 (dynamics pair T3/T4) that invoke filtered colimits, ContentOp(σ) is promoted to **κ-accessible locally-presentable** for a regular cardinal κ fixed per-theorem. Grothendieck universes are not used.
+**Convention 6.0.1 (Size).** Unless otherwise stated, all content-operation categories ContentOp(σ) are **small**. For theorems in §6.8 (limits/colimits) and §3.3 (dynamics pair T3/T4) that invoke filtered colimits, ContentOp(σ) is promoted to **κ-accessible locally-presentable** for a regular cardinal κ fixed per-theorem. Grothendieck universes are not used.
 
 **Convention 6.0.2 (Variance).** The F-endofunctor is defined with the op-exponent:
 
@@ -91,7 +91,7 @@ $$
 F(\sigma, \mathrm{ContentOp}(\sigma), \gamma) = (\sigma^{\mathrm{ContentOp}(\sigma)^{\mathrm{op}}},\ \mathrm{ContentOp}(\sigma^{\mathrm{ContentOp}(\sigma)^{\mathrm{op}}}),\ F(\gamma))
 $$
 
-The new carrier is σ^(ContentOp(σ)^op) itself; the new ContentOp is derived as the category of content-operations on this presheaf-power (see §6.5 for the structural result that this is well-defined as a small category under Convention 6.0.1); the new γ is the induced coalgebra F(γ) : F(σ) → F(F(σ)).
+The new carrier is σ^(ContentOp(σ)^op) itself; the new ContentOp is derived as the category of content-operations on this presheaf-power (see §6.7 for the structural result that this is well-defined as a small category under Convention 6.0.1); the new γ is the induced coalgebra F(γ) : F(σ) → F(F(σ)).
 
 On morphisms, F acts by F(f)_σ = F(f_σ, f_C) (the induced presheaf-power morphism), F(f)_C = the lifted content-operation functor, and coalgebra-commute by naturality.
 
@@ -189,7 +189,7 @@ Assembling the three branches gives T^(n+1)(S) as F-reconstructible. ∎
 
 **Remark 6.3.3 (The Cat-valued promotion earns its keep here).** The Content-branch is the load-bearing step. If ContentOp were set-valued (as in the foundation-doc pre-M12 proposal), the Content-branch would terminate at n = 1 — Content(S) would be a bare set with no further ContentOp to apply T to. Category-valued ContentOp provides the recursion substrate. This is a structural — not merely technical — fact about the framework.
 
-**Corollary 6.3.4 (Recursive decomposability is a theorem, not an axiom).** *The recursive-decomposability content of the Identity-Trajectory Triple (named in the Anchor as a property of streams, and captured as meta-bridge #110 in the framework's bridge list) is derived from the F-coalgebra definition of Stream. It is not an independent axiom.*
+**Corollary 6.3.4 (Recursive decomposability is a theorem, not an axiom).** *The recursive-decomposability content of the Identity-Trajectory Triple (named in the Anchor as a property of streams, and captured as meta-bridge M3 in the framework's bridge list) is derived from the F-coalgebra definition of Stream. It is not an independent axiom.*
 
 **Proof.** Immediate from Lemma 6.3.2: at every finite depth, T^(n) is defined and F-reconstructible. The framework's original axiom-posture for recursive decomposability was pedagogical; the formal content is Lemma 6.3.2. ∎
 
@@ -443,9 +443,9 @@ For a stream S = (σ, C, γ), the **size regime** of S is determined by the card
 
 **Proof.**
 
-*(H1):* 𝒞_Streams^{fin} consists of pairs (σ, C, γ) with C finite. For each finite shape C, the category F-Coalg_{ad}(F_C) of F_C-coalgebras over a fixed finite C is a slice of Cat over a finite base, which is accessible (Adámek–Rosický 1994, Thm 2.78). The coproduct over isomorphism-classes of finite C is countable, and a countable coproduct of accessible categories is accessible. Hence 𝒞_Streams^{fin} = ∐_{[C] finite} F-Coalg_{ad}(F_C) is accessible. Local presentability: 𝒞_Streams^{fin} is cocomplete (Lemma 6.8.α specialized to finite C) and every object is a filtered colimit of ℵ_0-presentable ones (every finite-C stream is itself ℵ_0-presentable). ∎
+*(H1):* 𝒞_Streams^{fin} consists of pairs (σ, C, γ) with C finite. For each finite shape C, the category F-Coalg_{ad}(F_C) of F_C-coalgebras over a fixed finite C is a slice of Cat over a finite base, which is accessible (Adámek–Rosický 1994, Thm 2.78). The coproduct over isomorphism-classes of finite C is countable, and a countable coproduct of accessible categories is accessible. Hence 𝒞_Streams^{fin} = ∐_{[C] finite} F-Coalg_{ad}(F_C) is accessible. Local presentability: 𝒞_Streams^{fin} is cocomplete (Propositions 6.8.5–6.8.7 specialized to finite C) and every object is a filtered colimit of ℵ_0-presentable ones (every finite-C stream is itself ℵ_0-presentable). ∎
 
-*(H2):* For fixed finite C, F_C(σ) = σ^(C^op) is a finite product of copies of σ indexed by objects of C^op. Finite products preserve filtered colimits in any category that has them (standard; e.g., Borceux 1994, Prop 2.13.4). Hence F_C preserves filtered colimits in σ. For varying C, the functor F = (σ, C) ↦ σ^(C^op) has the component F_C preserving filtered colimits pointwise; combined with (H1)'s slicewise accessibility and the fact that filtered colimits in 𝒞_Streams^{fin} are computed component-wise in each C-slice (Lemma 6.8.α), F on 𝒞_Streams^{fin} preserves filtered colimits. ∎
+*(H2):* For fixed finite C, F_C(σ) = σ^(C^op) is a finite product of copies of σ indexed by objects of C^op. Finite products preserve filtered colimits in any category that has them (standard; e.g., Borceux 1994, Prop 2.13.4). Hence F_C preserves filtered colimits in σ. For varying C, the functor F = (σ, C) ↦ σ^(C^op) has the component F_C preserving filtered colimits pointwise; combined with (H1)'s slicewise accessibility and the fact that filtered colimits in 𝒞_Streams^{fin} are computed component-wise in each C-slice (Proposition 6.8.8 specialized to finite C), F on 𝒞_Streams^{fin} preserves filtered colimits. ∎
 
 **Remark 6.9.1'.** The proof of H2 in Regime A is the *content* of the claim. Without the finite-C restriction, σ^(C^op) is an infinite product (over objects of C^op), and infinite products generically do not preserve filtered colimits in the product argument. The shift from "finite product ⇒ preserves filtered colimits" to "infinite product ⇒ does not in general" is exactly the Regime A ↔ Regime B boundary.
 
