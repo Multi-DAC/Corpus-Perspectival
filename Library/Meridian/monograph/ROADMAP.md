@@ -26,7 +26,7 @@ The volume presents a **one-parameter theory** (ζ₀) with a complete derivatio
 - Meridian as physics instantiation of the Coherence Principle
 - The four conditions mapped onto the model's architecture:
   - **Separation:** Bulk/brane, gauge/gravity, cuscuton/radion, growth/expansion
-  - **Measurement:** Junction conditions, C_GB = 2/3, ξ = 1/6 seven-fold convergence
+  - **Measurement:** Junction conditions, C_GB = 2/3, ξ = 1/6 from three complementary perspectives (App A §app:xi)
   - **Multi-scale consistency:** Self-tuning across 122 orders, warp factor unification
   - **Dynamic maintenance:** RG flow, radion quantum stabilization, cosmological evolution
 - The basin hypothesis: not a TOE, but a map of this specific attractor
@@ -51,7 +51,7 @@ The volume presents a **one-parameter theory** (ζ₀) with a complete derivatio
 - w₀(ζ₀) = -1 + C_KK/ζ₀ parametric prediction
 - α_T = 0 exactly → GR perturbations + modified expansion
 - Growth-expansion decoupling (unique falsifiable signature)
-- ξ = 1/6 seven-fold convergence
+- ξ = 1/6 from three complementary perspectives (three derivations + four consistency checks; Ch 1 Rem. 1.11)
 - 10 falsifiable predictions (5 structural, 5 parametric)
 
 **Revisions completed (April 15):**
@@ -133,7 +133,7 @@ The volume presents a **one-parameter theory** (ζ₀) with a complete derivatio
   - ε₁ = 0.010 ± 0.002 from corrected d=5 Weyl decomposition
 
 - **4.II — Particle Physics from the Spectral Triple**
-  - Octonionic extension: N_g = 3 from algebra (four proofs)
+  - Octonionic extension: N_g = 3 as algebraic maximum saturated (J₃(O) ceiling + three independent perspectives confirming)
   - Democratic inter-generation mixing → CKM from warp factor
   - Fermion mass hierarchy from Gherghetta-Pomarol localization
   - Neutrino sector: tribimaximal → S₃ breaking, m_ee = 1.5–5 meV
@@ -318,10 +318,10 @@ The anchor volume established a working markdown→LaTeX→XeLaTeX pipeline (`bo
 
 | Quantity | Value | Confidence |
 |----------|-------|-----------|
-| ξ | 1/6 (seven convergences) | VERY HIGH |
+| ξ | 1/6 (three complementary perspectives; App A §app:xi) | VERY HIGH |
 | C_GB | 2/3 (exact) | VERY HIGH |
 | ε₁ | 0.010 ± 0.002 | HIGH |
-| N_g | 3 (four algebraic proofs) | VERY HIGH |
+| N_g | 3 (algebraic maximum, saturated; App B S6) | VERY HIGH |
 | α_T = α_B = α_M | 0 (exactly) | VERY HIGH |
 | w_a | ≈ 0 (structural) | HIGH |
 | C_KK | (1.64 ± 0.51) × 10⁻⁴ | HIGH |

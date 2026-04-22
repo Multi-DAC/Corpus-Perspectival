@@ -35,9 +35,9 @@ These values are derived from the geometry and algebra alone. They do not depend
 
 | Quantity | Value | Source | Confidence |
 |----------|-------|--------|------------|
-| ξ (conformal coupling) | 1/6 | Seven independent convergences | VERY HIGH |
+| ξ (conformal coupling) | 1/6 | Three complementary perspectives on a single geometric fact (Seeley-DeWitt a₂, Weyl conformal-invariance, radion-as-metric-fluctuation); see App A §app:xi | VERY HIGH |
 | C_GB (Gauss-Bonnet coefficient) | 2/3 | Exact, three independent derivations | VERY HIGH |
-| N_g (generation number) | 3 | Four algebraic proofs (J₃(O), Dixon, anomaly, Cliff) | VERY HIGH |
+| N_g (generation number) | 3 | Algebraic maximum: J₃(O) pins N_g ≤ 3; three independent perspectives (Dixon, anomaly, Clifford) confirm the maximum is saturated; see App B S6 | VERY HIGH |
 | α_T = α_B = α_M | 0 (exactly) | Cuscuton constraint + GR perturbation structure | VERY HIGH |
 | w_a | ≈ 0 (structurally) | No phantom crossing (topological barrier) | HIGH |
 | η (gravitational slip) | 1 | Cuscuton: no scalar propagation → no anisotropic stress | VERY HIGH |

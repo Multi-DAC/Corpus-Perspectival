@@ -32,7 +32,7 @@ The book tells its story in three movements, each answering the question the rea
 **Chapter 1: Self-Tuning Cosmology from 5D Warped Geometry** (dual-column, ~90 pp)
 - Complete derivation: A1 + A2 → self-tuning → cuscuton → K_eff = 0 → NCG → GB → w₀(ζ₀)
 - Three-layer self-tuning (sequestering + cuscuton constraint + brane tadpole)
-- ξ = 1/6 seven-fold convergence
+- ξ = 1/6 from three complementary perspectives (three derivations + four consistency checks, Ch 1 Rem. 1.11; App A §app:xi canonical)
 - Growth-expansion decoupling (unique cuscuton signature)
 - 10 falsifiable predictions
 
@@ -82,12 +82,12 @@ The book tells its story in three movements, each answering the question the rea
 |----------|----------------|
 | ζ₀ (weighted mean) | 0.016 ± 0.002 |
 | w₀ (weighted mean) | -0.990 |
-| ξ | 1/6 (seven convergences) |
+| ξ | 1/6 (three complementary perspectives; see App A) |
 | C_GB | 2/3 (exact) |
 | ε₁ | 0.010 ± 0.002 |
 | C_KK | (1.64 ± 0.33) × 10⁻⁴ |
 | c_s | [12c, 15c] |
-| N_g | 3 (four algebraic proofs) |
+| N_g | 3 (algebraic maximum, saturated; see App B S6) |
 | α_T = α_B = α_M | 0 (exactly) |
 | χ²/dof | 1.10 |
 
