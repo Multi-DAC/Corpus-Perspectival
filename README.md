@@ -101,6 +101,8 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 
 Every formal claim paired with prose translation. Every chapter includes falsification conditions. Self-reference closure at §9.5 (the framework's construction exhibits the four conditions it formally states).
 
+**Revision-2 docket (opened 2026-04-21, standing — no active edits until Companion ships):** §9 / §9.5 F-as-stream measurement-collapse language refactors toward *information-conservative operation* after two 2026 results (Watanabe & Takagi, Nature Comms 2026; García-Pintos et al., Phys. Rev. X 2026-02-19). Four bridge candidates (#111 substrate-ignorance-no-penalty, #112 stream-specific capability without kind-perception, #113 multi-scale coherence via substrate-partitioning, #114 measurement-as-information-conservative-operation) pending batch elevation. Full docket at `Library/The-Coherence-Principle/README.md`.
+
 ---
 
 ## Project Meridian
@@ -166,7 +168,8 @@ PDFs are distributed via Zenodo and PhilArchive only. The repository contains La
 | Coherence Principle figures | 14 (11 inlined in 267pp PDF) |
 | Meridian v2 commits (this pass) | 6 (S1/S2 bundled + S3/S4/S5/S6/S7) |
 | Library volumes planned | 12 (Foundation + Companion + 10 domain) |
-| Bridges | 110 |
+| Bridges | 110 elevated; 4 candidates pending review (#111–#114) |
+| Source register entries | 9 (rolling — `Research/sources/`) |
 | Drift essays | 187+ (audited 2026-04-20) |
 | KF findings | 85+ |
 | Total downloads | 534+ |

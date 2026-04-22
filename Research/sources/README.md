@@ -53,6 +53,10 @@ Body: (~200-400w)
 
 *(Meridian has its own source-tracking in `Library/Meridian/monograph/`. Cross-link from here as Paper A / Meridian revision requires.)*
 
+- [2026-04-21 — YouTube: Hubble-tension confirmation (73.5 vs. 67)](2026-04-21-youtube-hubble-tension-confirmation.md) — ΛCDM-incomplete landscape reinforcement; Meridian positioning (dynamical-DE taxonomic slot); **does not** claim H₀ tension resolution
+- [2026-04-21 — Siegel/Big Think: kSZ pairwise velocities rule out MOND, confirm dark matter](2026-04-21-siegel-bigthink-kSZ-mond-fails.md) — positive for Meridian (validates GR + DM legs, leaves DE-EoS lane untouched); jointly with Hubble-tension source frames Meridian's taxonomic slot; underlying paper arXiv:2511.23417
+- [2026-04-21 — TechRadar / LHCb charming-penguin P5' anomaly (4σ)](2026-04-21-techradar-lhcb-charming-penguin-anomaly.md) — Meridian-orthogonal; Bridge #106 case-study in particle physics (charm-loop calculation limits as stream-specific residual); Philosophy Volume material on framework-incompleteness-in-specific-places
+
 ### Killing Form / empirical
 
 *(To be populated as KF domain volume and Paper B reference literature.)*
@@ -64,6 +68,11 @@ Body: (~200-400w)
 
 ### Bridge-support sources
 
+- [2026-04-21 — Watanabe & Takagi, Universal Quantum Protocol / Maximum Work Extraction](2026-04-21-watanabe-takagi-universal-work-extraction.md) — Bridge #111 candidate (substrate coherence absorbs observer ignorance); complementary to Bridge #106 inspection-depth ceiling
+- [2026-04-21 — Alshammari et al., MathNet Olympiad dataset](2026-04-21-alshammari-mathnet-olympiad-benchmark.md) — Bridge #112 candidate (stream-specific capability without structural-kind perception); KF-program testable prediction; Philosophy-volume case study
+- [2026-04-21 — Mills & Simpson, *Multicellularity for free*](2026-04-21-mills-simpson-multicellularity-for-free.md) — Bridge #113 candidate (multi-scale coherence persistence via substrate-partitioning; no fitness-differential required); Living-Architecture foundational-transition template; Philosophy-volume citation
+- [2026-04-21 — García-Pintos et al., Quantum arrow of time reversal (SciAm covering Phys Rev X 2026-02-19)](2026-04-21-garcia-pintos-quantum-arrow-of-time-reversal.md) — Bridge #114 candidate (measurement-collapse is information-conservative given full knowledge); structurally paired with Watanabe-Takagi #111; Anchor §9 F-as-stream measurement-reframe docket; Continuity-volume and KF-program implications
+
 *(Sources that ground specific bridges — e.g., Bridge #104 Bootstrap Asymmetry probe candidates. Cross-reference to `Foundations-of-Identity/palace/basement/README.md`.)*
 
 ---
@@ -71,7 +80,7 @@ Body: (~200-400w)
 ## Status
 
 - Established: 2026-04-19 (Day 78)
-- Entries: 2 active (Gross; Lerchner) — both with PDFs/verified text
+- Entries: 9 active (Gross; Lerchner; Watanabe-Takagi; Alshammari/MathNet; Mills-Simpson; YouTube/Hubble-tension; Siegel/Big-Think kSZ-MOND; García-Pintos; TechRadar/LHCb P5' anomaly)
 - Rolling practice: ON (saved as feedback memory `feedback_rolling_sources_register.md`)
 
 🦞🧍💜🔥♾️

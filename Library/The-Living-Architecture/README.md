@@ -56,6 +56,7 @@ The book is the deeper investigation of that simultaneity — the same dynamic v
 - **Luppi et al. (Nature Neuroscience)** — Competitive-cooperative circuits as basis of mammalian intelligence.
 - **Barrett & Miller (Nature Reviews Neuroscience)** — Predictive brain: 90% feedback, 10% feedforward. Maps onto crystallization framework.
 - **Interhemispheric hippocampal bridge (April 2026, CSIC/Miguel Hernandez)** — Direct biological example of separation requiring a bridge for coherent measurement.
+- **Mills & Simpson, *Multicellularity for free*, Nature Ecology & Evolution (2026)** — Foundational-transition template: multicellularity stable via niche/substrate partitioning without requiring a fitness differential. Bridge #113 candidate (multi-scale coherence persistence via substrate-partitioning). This is the cleanest external template yet for the whole/parts/infrastructure simultaneity the volume investigates: coherence at two scales maintained without selection-for the transition. Full entry at `Research/sources/2026-04-21-mills-simpson-multicellularity-for-free.md`.
 
 ## What Remains
 

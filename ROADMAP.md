@@ -14,7 +14,7 @@
 - **Project Meridian (physics monograph)** — v2 compiled 198pp on 2026-04-21 (v1 193pp on Zenodo 19634864); tagged `meridian-v2-release`; v2 Zenodo deposit forthcoming
 - **The Killing Form** — 85+ findings, paper-grade sections drafted
 - **Drift** — 187 essays, ongoing
-- **Bridges** — 110 cross-domain connections mapped
+- **Bridges** — 110 elevated cross-domain connections; **4 candidates pending batch review** (#111 Watanabe-Takagi asymptotic-ignorance; #112 MathNet stream-specificity without kind-perception; #113 Mills-Simpson multi-scale coherence via substrate-partitioning; #114 García-Pintos measurement-as-information-conservative-operation) — Mirror #19 holds elevations overnight
 
 **Downloads:** 534+ (PhilArchive 410 + Zenodo 124+).
 
@@ -24,7 +24,7 @@
 
 | # | Volume / Program | Status | Next Milestone |
 |---|------------------|--------|----------------|
-| 0 | **The Coherence Principle** | **ANCHOR COMPLETE** — graduated to Library (§1.0–§10, Appendices A/B, 11 figures inlined, F-as-stream formal construction at §9.5, earned closure at §9.10, 267pp PDF); stamped 2026-04-20 PM | **No next revision until Companion ships** (figures to TikZ, intensional seam closed there) — Clayton + Clawd agreed to hold |
+| 0 | **The Coherence Principle** | **ANCHOR COMPLETE** — graduated to Library (§1.0–§10, Appendices A/B, 11 figures inlined, F-as-stream formal construction at §9.5, earned closure at §9.10, 267pp PDF); stamped 2026-04-20 PM; **Revision-2 docket opened 2026-04-21** (§9/§9.5 measurement-reframe driven by Watanabe-Takagi + García-Pintos; TikZ back-port; bridge-candidate batch #111–#114) | **No revision pass until Companion ships** — docket entries are standing instructions, not active edits |
 | 1 | **Meridian v2** | **SYNCHRONIZATION PASS COMPLETE 2026-04-21** — 198pp recompile, tagged `meridian-v2-release`; post-publication review (Research/Meridian/post-publication-review-2026-04-21.md) Tier A–C + Coherence-Principle integration all shipped across S1–S7 commits; Clayton visual assessment in progress | Zenodo v2 deposit citing v1 (19634864) as `supersedes`; post-visual-review polish if needed |
 | 2 | **Anakin (AIGP pilot)** | Awaiting VQ1 sim (May 2026) | Train once sim drops — compute-heavy |
 | 3 | **Philosophy volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
@@ -108,6 +108,7 @@ Each domain volume will execute the **§10 seven-step filtering recipe** (from *
 - [`Library/The-Coherence-Principle/README.md`](Library/The-Coherence-Principle/README.md) — Chapter index + completion docket
 - [`Research/philosophy-theology-reading-queue.md`](Research/philosophy-theology-reading-queue.md) — Reading register for *Corpus Perspectival* + *Universal Coherence* (primed, not active)
 - Per-volume READMEs in [`Library/`](Library/) — what each volume needs
+- [`Research/sources/README.md`](Research/sources/README.md) — Rolling source register (9 entries as of 2026-04-21); 4 new Day-80 entries supply bridge candidates #111–#114
 
 ---
 

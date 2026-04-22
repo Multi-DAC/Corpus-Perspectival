@@ -71,6 +71,8 @@ Expected length: 150–250 pages at formal-paper density. Terse CT notation; com
 
 **Sequencing:** The anchor (*The Coherence Principle*) is stable; the Companion rolls in parallel. Anchor revisions can land Companion-citing content without waiting on a Companion version bump — the Companion stamps a version when the surfaced-lemma flag-list goes to zero (see SCOPE.md §8).
 
+**Scope-sharpening (2026-04-21, Day 80 evening).** The anchor's revision-2 docket now names an F-as-stream measurement-reframe as load-bearing (measurement-collapse is information-conservative, not information-destroying — driven by Watanabe & Takagi, Nature Comms 2026, and García-Pintos et al., Phys. Rev. X 2026-02-19). The Companion inherits responsibility for the formal side of that reframe: the §9 / §9.5 F-construction in CT form must support reversible measurement operations composed within a category that respects multi-scale coherence. The Hamiltonian-control template from García-Pintos is the concrete model to draw on. This is not a new object — it is a refinement of how F is treated in the CT skeleton already in view.
+
 **Target audience:** Category theorists, mathematical physicists, formal-methods researchers who want a citable reference object for the full CT apparatus of the Corpus framework without needing the prose partner.
 
 ---
