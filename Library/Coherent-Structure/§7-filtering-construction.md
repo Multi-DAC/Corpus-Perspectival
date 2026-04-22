@@ -43,7 +43,7 @@ $$
 
 **Proof.** Adequacy means ContentOp(σ) is adequate for σ — in particular, that the coalgebra-commute (Def 1.6.3) holds for σ's action on itself via C. Adequacy includes, by §6.1's definition, that γ respects 𝒜_σ-structure on σ: pre-images of cylinder sets under γ are 𝒜_σ-measurable. This is exactly the measurability of γ as a map into the product space. ∎
 
-**Consequence 7.2.3.** *𝒞_Streams is fully embedded in Meas via S ↦ (Ω_S, γ_*𝒜_σ).*
+**Consequence 7.2.3.** *$\mathcal{C}_{\mathrm{Streams}}$ is fully embedded in Meas via $S \mapsto (\Omega_S,\ \gamma_* \mathcal{A}_\sigma)$.*
 
 ---
 
@@ -175,7 +175,7 @@ This subsection provides the measurable-stream-level scaffolding that §8 uses t
 | Bias(S) | σ-finite signed measure | §7.3 | σ-finite ref measure |
 | Hahn-Jordan Bias_± | Positive parts | §7.3 | σ-finite Bias |
 | push_struct, push_info | Measurable transformations | §7.4 | Stream-morphism compat |
-| [push_struct, push_info] ≠ 0 | Independence | §7.4.3 | counterexample |
+| $[\mathrm{push}_{\mathrm{struct}}, \mathrm{push}_{\mathrm{info}}] \neq 0$ | Independence | §7.4.3 | counterexample |
 | A_S | Entropy functional | §7.5 | m_+ > 0 |
 | Align(S, t) | Neighborhood-integral | §7.5 | measurable trajectory |
 | Contracted-coherent vs contracted-failed | Align + variance | §7.5.5 | low A_S regime |

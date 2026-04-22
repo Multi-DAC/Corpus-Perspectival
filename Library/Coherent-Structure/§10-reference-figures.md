@@ -33,7 +33,7 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
 \begin{figure}[htbp]
 \centering
 \begin{tikzcd}[column sep=large, row sep=large]
-  \sigma \arrow[r, "\gamma"] \arrow[d, "f_\sigma"'] & F(\sigma) = \sigma^{C^{\mathrm{op}}} \arrow[d, "F(f_\sigma, f_C)"] \\
+  \sigma \arrow[r, "\gamma"] \arrow[d, "f_\sigma"'] & F(\sigma) = \sigma^{C^{\mathrm{op}}} \arrow[d, "{F(f_\sigma, f_C)}"] \\
   \sigma' \arrow[r, "\gamma'"'] & F(\sigma') = (\sigma')^{(C')^{\mathrm{op}}}
 \end{tikzcd}
 \caption{The F-coalgebra square. Each row is a stream S = (\sigma, C, \gamma) (top) and S' = (\sigma', C', \gamma') (bottom). A Stream-morphism f = (f_\sigma, f_C) : S \to S' satisfies the coalgebra-commute: $F(f_\sigma, f_C) \circ \gamma = \gamma' \circ f_\sigma$. The endofunctor $F : \sigma \mapsto \sigma^{C^{\mathrm{op}}}$ is mixed-variance (covariant in $\sigma$, contravariant in $C$).}
@@ -108,7 +108,7 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
 \begin{tikzcd}[column sep=small, row sep=large]
   \mathrm{Stream} \arrow[d, "\pi"] & \\
   \mathbf{ContentIndex}
-    & \arrow[from=u, dashed, bend right=25, "\mathrm{fiber}(\pi, K)"'] K
+    & \arrow[from=u, dashed, bend right=25, "{\mathrm{fiber}(\pi, K)}"'] K
 \end{tikzcd}
 \\[1em]
 \begin{tikzcd}[column sep=large, row sep=large]

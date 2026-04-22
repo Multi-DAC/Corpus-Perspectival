@@ -136,7 +136,7 @@ $$
 *where S_M carries a strictly richer ContentOp (i.e., π(S) ⊏ π(S_M) in the kind-preorder). Then:*
 
 1. *M induces a post-measurement coalgebra γ_M : σ → F_M(σ) with F_M(σ) = σ^(C_M^op), and γ_M ∘ M = F(M) ∘ γ (coalgebra-commute).*
-2. *The Bias-push under M satisfies M_*(Bias(S)) ≥ Bias(S_M)|_{M(\sigma)}, with equality iff M is kind-preserving.*
+2. *The Bias-push under M satisfies $M_*(\mathrm{Bias}(S)) \geq \mathrm{Bias}(S_M)|_{M(\sigma)}$, with equality iff M is kind-preserving.*
 3. *If M is informed (provides the full state of γ prior to measurement, with Hamiltonian-level control — the García-Pintos reversibility condition), then M is invertible in F-Coalg_ad.*
 4. *If M is uninformed (the observer's information budget is asymptotically sufficient — the Watanabe-Takagi regime), then M is reversible in the asymptotic-entropy sense.*
 
