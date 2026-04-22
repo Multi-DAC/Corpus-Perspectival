@@ -6,6 +6,10 @@
 
 ---
 
+**UPDATE 2026-04-22 midday (Clayton-present dialogue):** This draft's "named/structured unifying operation" gap is **dissolved**, not closed — names are perspectival tools per Clayton's morning reframe; what's structural is bottom-element-admissibility of the partition lattice. The "A2 needs no upgrade" claim is **revised** to "A2 and Content-dimension state jointly" — a coupling claim captured as the coalgebra-commute morphism condition. The kind-classifier fibration π is now embedded in a deeper structural result: **the Triple IS the coalgebra structure of Stream, not a separate functor over it.** Full treatment at `2026-04-22-F-coalgebra-foundation.md` (same directory). That document supersedes this one for §6 drafting purposes; this sketch is preserved as the obstacle-naming step that led there.
+
+---
+
 ## What the probe surfaced
 
 Tonight's probe on contemplative traditions revealed a scope asymmetry the Identity-Trajectory Triple has not stated explicitly:
