@@ -52,7 +52,7 @@ The volume presents a **one-parameter theory** (ζ₀) with a complete derivatio
 - α_T = 0 exactly → GR perturbations + modified expansion
 - Growth-expansion decoupling (unique falsifiable signature)
 - ξ = 1/6 from three complementary perspectives (three derivations + four consistency checks; Ch 1 Rem. 1.11)
-- 10 falsifiable predictions (5 structural, 5 parametric)
+- 10 falsifiable predictions developed in detail; canonical registry has 15 (7 structural S1–S7 + 8 parametric P1–P8; App B)
 
 **Revisions completed (April 15):**
 - [x] Abstract updated: c_s → [12c, 15c], four-probe weighted mean ζ₀ = 0.016 ± 0.002

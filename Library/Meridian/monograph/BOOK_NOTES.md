@@ -34,7 +34,7 @@ The book tells its story in three movements, each answering the question the rea
 - Three-layer self-tuning (sequestering + cuscuton constraint + brane tadpole)
 - ξ = 1/6 from three complementary perspectives (three derivations + four consistency checks, Ch 1 Rem. 1.11; App A §app:xi canonical)
 - Growth-expansion decoupling (unique cuscuton signature)
-- 10 falsifiable predictions
+- 10 falsifiable predictions developed in detail (subset of the canonical 15-entry registry: 7 structural S1–S7 + 8 parametric P1–P8; see App B)
 
 ### Movement II — The Evidence
 
