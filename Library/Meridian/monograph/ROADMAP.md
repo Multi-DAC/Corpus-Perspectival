@@ -35,7 +35,7 @@ The volume presents a **one-parameter theory** (ζ₀) with a complete derivatio
 - Prediction registry with verified/falsified/open classifications
 - Links to GitHub repo and computational code references
 
-**Status:** COMPILED INTO MONOGRAPH (April 17, 2026). Draft: `drafts/chapter0_draft.md` (source). LaTeX: `monograph/chapter0_basin.tex`. Figure 0.1: `figures/fig0_derivation_chain.pdf` (compiled from TikZ). Renders as pages 1--8 in the 193-page PDF, numbered "Chapter 0" via `\setcounter{chapter}{-1}` before `\input`.
+**Status:** COMPILED INTO MONOGRAPH (v1 April 17, 2026; v2 April 21, 2026). Draft: `drafts/chapter0_draft.md` (source). LaTeX: `monograph/chapter0_basin.tex`. Figure 0.1: `figures/fig0_derivation_chain.pdf` (compiled from TikZ). Renders as the opening pages of the 198-page v2 PDF (was 193 in v1), numbered "Chapter 0" via `\setcounter{chapter}{-1}` before `\input`. v2 additions: §notation master table (S4.a) and §philosophical frame (S5.c) forward-referencing Anchor DOI 10.5281/zenodo.19634474.
 
 ---
 
@@ -349,8 +349,9 @@ The anchor volume established a working markdown→LaTeX→XeLaTeX pipeline (`bo
 | 4 | Chapter 0 draft | **COMPLETED** (April 15) — 239 lines, 8 sections, Figure 0.1 (derivation chain) |
 | 5 | Chapter revisions (1–5) | **COMPLETED** (April 15) — all 5 chapters revised |
 | 6 | Appendices (B, D, E new) | Parallel with 5 |
-| 7 | Compilation | After all content |
-| 8 | Full review | After compilation |
+| 7 | Compilation | **COMPLETED** (April 17) — v1 193pp, Zenodo 10.5281/zenodo.19634864 |
+| 8 | Full review | **COMPLETED** (April 21) — post-publication review written; all Tier A–C items addressed |
+| 9 | v2 synchronization pass | **COMPLETED** (April 21) — 198pp recompile; `meridian-v2-release` tag; S1–S7 shipped across six commits; Zenodo v2 deposit forthcoming |
 
 *v0.6b results may inform Phases 5–6 but are not blocking.*
 *DESI full dataset analysis expected 2027 (survey completed ahead of schedule, 47M objects vs 34M target).*

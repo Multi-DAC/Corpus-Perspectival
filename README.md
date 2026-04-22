@@ -62,7 +62,7 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 | **Foundation** | [The Coherence Principle](Library/The-Coherence-Principle/) | Framework — paired prose + CT | **Anchor-complete — 267pp, stamped 2026-04-20; next revision gated on Companion** |
 | **Companion** | [Coherent Structure](Library/Coherent-Structure/) | Framework — pure CT reference | Planned — terse formal-only edition (retitled 2026-04-20 — was *Formal Object Companion*) |
 | **1** | [Corpus Perspectival](Library/Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume (retitled 2026-04-20) |
-| **2** | [Meridian](Library/Meridian/) | Physics | **181 pages, compiled** |
+| **2** | [Meridian](Library/Meridian/) | Physics | **v2 — 198pp, compiled 2026-04-21 (supersedes v1 193pp Zenodo 19634864)** |
 | **3** | [The Killing Form](Library/The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections |
 | **4** | [The Living Architecture](Library/The-Living-Architecture/) | Biology / ecology | Planned — framework April 14, 2026 |
 | **5** | [The Coherent Body](Library/The-Coherent-Body/) | Human body | Planned |
@@ -105,9 +105,11 @@ Every formal claim paired with prose translation. Every chapter includes falsifi
 
 ## Project Meridian
 
-A 181-page physics monograph deriving the dark energy equation of state from two geometric axioms: one hidden extra dimension (S¹/Z₂ orbifold with warped metric) and one bulk scalar field.
+A 198-page physics monograph (v2, 2026-04-21; v1 was 193pp) deriving the dark energy equation of state from two geometric axioms: one hidden extra dimension (S¹/Z₂ orbifold with warped metric) and one bulk scalar field.
 
 **The prediction:** w₀(ζ₀) = -1 + C_KK/ζ₀, with C_KK = (1.64 ± 0.33) × 10⁻⁴. Four independent probes converge on ζ₀ = 0.016 ± 0.002, giving w₀ = -0.990. The framework predicts w_a = 0 identically — no phantom crossing, ever. DESI Y5 (2027) reaches 3.8σ discrimination.
+
+**v2 synchronization pass (2026-04-21):** Tier A propagation (ξ=1/6 "three perspectives" canonicalized, N_g=3 "algebraic maximum", 15-prediction registry, C_KK canonical, benchmark taxonomy); Tier B notation (master table, conditional-caveat fboxes on P4/P5/P6/P8); Tier C displays (LISA SNR Monte Carlo, radion potential scan, DE fingerprint comparison table, AS-exclusion section, SymPy C_GB verification, reproducibility manifest); Coherence-Principle integration (inspection-depth ceiling reframe, structured apophaticism, stream scope audit, radion barrier-thinness with three scope-limits, recursive decomposability, philosophical frame forward-referencing Anchor). Tagged `meridian-v2-release` on main. Zenodo v2 deposit forthcoming.
 
 **Sources:** [`Library/Meridian/`](Library/Meridian/), [`Technical-Work/Meridian/scripts/`](Technical-Work/Meridian/scripts/) (244 computation scripts).
 
@@ -147,25 +149,28 @@ Published on [PhilArchive](https://philarchive.org/rec/IGGTDO-4) — **410+ down
 | Corpus Perspectival | PhilArchive | 410+ | [IGGTDO-4](https://philarchive.org/rec/IGGTDO-4) |
 | Corpus Perspectival (Anchor) | Zenodo | 54+ | [10.5281/zenodo.19501896](https://doi.org/10.5281/zenodo.19501896) |
 | Meridian Technical Summary | Zenodo | 70+ | [10.5281/zenodo.19519818](https://doi.org/10.5281/zenodo.19519818) |
+| Meridian (monograph v1) | Zenodo | — | [10.5281/zenodo.19634864](https://doi.org/10.5281/zenodo.19634864) (superseded by v2 in repo) |
+| The Coherence Principle (Anchor) | Zenodo | — | [10.5281/zenodo.19634474](https://doi.org/10.5281/zenodo.19634474) |
 | **Total** | | **534+** | |
 
 PDFs are distributed via Zenodo and PhilArchive only. The repository contains LaTeX/Markdown sources; build artifacts are gitignored.
 
 ---
 
-## Key Numbers (Day 79, 2026-04-20)
+## Key Numbers (Day 80, 2026-04-21)
 
 | Quantity | Value |
 |----------|-------|
-| Compiled books | 2 (*The Coherence Principle* 267pp, anchor-complete — Meridian 181pp, published) |
+| Compiled books | 2 (*The Coherence Principle* 267pp, anchor-complete — Meridian v2 198pp) |
 | Coherence Principle chapters | 11 (§1.0 through §10 + 2 appendices + figures) |
 | Coherence Principle figures | 14 (11 inlined in 267pp PDF) |
+| Meridian v2 commits (this pass) | 6 (S1/S2 bundled + S3/S4/S5/S6/S7) |
 | Library volumes planned | 12 (Foundation + Companion + 10 domain) |
 | Bridges | 110 |
 | Drift essays | 187+ (audited 2026-04-20) |
 | KF findings | 85+ |
 | Total downloads | 534+ |
-| Days since naming | 79 |
+| Days since naming | 80 |
 
 ---
 

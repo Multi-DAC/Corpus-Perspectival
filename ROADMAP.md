@@ -2,7 +2,7 @@
 
 *Whole-program horizon. For per-domain detail, see the program-specific roadmaps linked below.*
 
-**Last updated:** 2026-04-20 (Day 79 afternoon — Coherence Principle anchor-complete; next revision gated on Companion)
+**Last updated:** 2026-04-21 (Day 80 evening — Meridian v2 synchronization pass complete; tagged `meridian-v2-release`)
 
 ---
 
@@ -11,7 +11,7 @@
 **Two compiled books, one structurally complete formalization stamped as anchor, ten volumes planned, one written daily.**
 
 - **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; 14 figures total (11 newly inlined 2026-04-20 PM); F-as-stream formal construction at §9.5; 267pp PDF shipped as `7db8b7b`. **ANCHOR COMPLETE** 2026-04-20 — next revision deferred until *Coherent Structure* (the CT-only companion, previously *Formal Object Companion*) ships (figures upgrade from Mermaid/ASCII to TikZ, intensional→extensional seam closed there).
-- **Project Meridian (physics monograph)** — 181 pages, compiled
+- **Project Meridian (physics monograph)** — v2 compiled 198pp on 2026-04-21 (v1 193pp on Zenodo 19634864); tagged `meridian-v2-release`; v2 Zenodo deposit forthcoming
 - **The Killing Form** — 85+ findings, paper-grade sections drafted
 - **Drift** — 187 essays, ongoing
 - **Bridges** — 110 cross-domain connections mapped
@@ -20,12 +20,12 @@
 
 ---
 
-## Active Workbenches (Day 78 → Day 79)
+## Active Workbenches (Day 78 → Day 80)
 
 | # | Volume / Program | Status | Next Milestone |
 |---|------------------|--------|----------------|
 | 0 | **The Coherence Principle** | **ANCHOR COMPLETE** — graduated to Library (§1.0–§10, Appendices A/B, 11 figures inlined, F-as-stream formal construction at §9.5, earned closure at §9.10, 267pp PDF); stamped 2026-04-20 PM | **No next revision until Companion ships** (figures to TikZ, intensional seam closed there) — Clayton + Clawd agreed to hold |
-| 1 | **Meridian Assessment** | Published; next-steps TBD | Post-publication review; plan next empirical phase |
+| 1 | **Meridian v2** | **SYNCHRONIZATION PASS COMPLETE 2026-04-21** — 198pp recompile, tagged `meridian-v2-release`; post-publication review (Research/Meridian/post-publication-review-2026-04-21.md) Tier A–C + Coherence-Principle integration all shipped across S1–S7 commits; Clayton visual assessment in progress | Zenodo v2 deposit citing v1 (19634864) as `supersedes`; post-visual-review polish if needed |
 | 2 | **Anakin (AIGP pilot)** | Awaiting VQ1 sim (May 2026) | Train once sim drops — compute-heavy |
 | 3 | **Philosophy volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
 | 4 | **Theology volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
@@ -70,7 +70,7 @@ Always            → Drift (daily, independent of all other tracks)
 |---|--------|------|--------|
 | **Foundation** | The Coherence Principle | Paired CT + prose | Graduated to Library 2026-04-20 |
 | **Companion** | Coherent Structure | Pure CT terse reference | Planned — retitled 2026-04-20 (was *Formal Object Companion*) |
-| 1 | Project Meridian | Physics | Compiled (181pp) |
+| 1 | Project Meridian | Physics | v2 compiled 198pp (2026-04-21); v1 superseded |
 | 2 | The Killing Form | Computation | Planned |
 | 3 | Philosophy | Metaphysics + tradition | **New Day 78** — planned |
 | 4 | The Living Architecture | Biology / ecology | Planned |
@@ -87,9 +87,10 @@ Each domain volume will execute the **§10 seven-step filtering recipe** (from *
 
 ## Publication Sequence
 
-1. **Meridian (complete)** — Zenodo monograph, DOI 10.5281/zenodo.19519818
-2. **Anchor V1 (superseded, archived)** — Zenodo, DOI 10.5281/zenodo.19501896
-3. **The Coherence Principle** — graduated to Library; polish + pre-press underway
+1. **Meridian Technical Summary (complete)** — Zenodo, DOI 10.5281/zenodo.19519818
+2. **Meridian Monograph v1** — Zenodo, DOI 10.5281/zenodo.19634864 (superseded by v2 in repo; v2 deposit forthcoming)
+3. **Anchor V1 (superseded, archived)** — Zenodo, DOI 10.5281/zenodo.19501896
+4. **The Coherence Principle** — graduated to Library; anchor-complete 2026-04-20; Zenodo 10.5281/zenodo.19634474
 4. ***Coherent Structure*** — after *The Coherence Principle* stabilizes
 5. **Corpus Perspectival** — drafted parallel to Anakin training
 6. **Universal Coherence** — drafted parallel to Anakin training (lagged by ~1-2 weeks behind *Corpus Perspectival*; depends on its vocabulary)
