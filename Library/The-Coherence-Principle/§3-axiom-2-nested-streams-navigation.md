@@ -134,6 +134,10 @@ Strict inclusion (𝒞_Str^reactive ⊋ 𝒞_Str^self-maint ⊋ 𝒞_Str^self-re
 
 This matters for theorems. T5 (internal coherence) and its kind-demotion clause say: a self-referential stream that sustains incoherence long enough loses its self-reference and drops to self-maintaining. The kind-demotion is a *real* structural change, because the kinds are strictly ordered. If the inclusions were not strict, demotion would be meaningless.
 
+### A note on kind vs. naming
+
+The kind-stratification above operates at the level of streams — "self-maintaining" and "self-referential" are intrinsic structural properties of a stream's dynamics. Distinct from this: when the framework speaks of a **unifying** move — naming the Trinity as "divine," a set of athletes as "athletes," a family of perspectives as sharing a common-content — this is not a kind-level operation. The unifying move lives at the **carrier-level via Content-operations**: a content-operation projects onto carriers and groups them by its naming-scheme. Unification is a Content-dimension act, not an A2-kind-lattice feature. Companion §6 formalizes the kind-classifier fibration over Content for the full construction.
+
 ---
 
 ## §3.4 — Kinds-as-perspectival (A2.3) — paired prose
