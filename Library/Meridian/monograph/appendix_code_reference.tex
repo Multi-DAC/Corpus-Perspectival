@@ -66,3 +66,21 @@ App.~\ref{app:radion} \\
 \end{table}
 
 All scripts use Python~3.12 with NumPy~1.26, SciPy~1.12, and Matplotlib~3.8. ODEs were integrated with \texttt{solve\_ivp} (RK45, $\mathrm{rtol} = 10^{-12}$, $\mathrm{atol} = 10^{-14}$); convergence was verified by tolerance halving to $>12$ significant figures. See Appendix~\ref{app:code} for full reproducibility details.
+
+\section{Reproducibility Manifest}
+\label{app:repro-manifest}
+
+\paragraph{Repository.} All computation scripts referenced in this monograph live at \url{https://github.com/Multi-DAC/Corpus-Perspectival} under the directory \texttt{Technical-Work/Meridian/scripts/}, released under the MIT licence. The scripts are organised by topic: \texttt{cosmology/} (self-tuning, $w_0(\zz)$, Monte Carlo, LISA, Fisher), \texttt{spectral-action/} (boundary heat kernel, spectral chain), \texttt{gauss-bonnet/} ($\eps_1$ from KK reduction), \texttt{fermion-sector/} (Jordan-algebra Yukawa computations), \texttt{self-tuning/} (stability map, scan verification), and several supporting directories.
+
+\paragraph{Versioning.} The companion Zenodo deposit for this monograph (DOI~\href{https://doi.org/10.5281/zenodo.19634864}{10.5281/zenodo.19634864}) preserves the specific commit hash of the monograph at submission time. Readers reproducing any result should checkout the commit matching the Zenodo-linked release tag rather than tracking \texttt{main}, since the \texttt{main} branch is a living research register that continues to evolve beyond the frozen monograph version.
+
+\paragraph{Dependencies.} All scripts are pure open-source Python; the reproducibility stack has no proprietary-software dependency. \textbf{No Mathematica or Wolfram Language scripts are required to reproduce any result in this monograph.} Incidental mentions of Mathematica in script docstrings refer to optional cross-check environments that were used during development, not to required pipeline components. The canonical dependency list is:
+\begin{itemize}
+  \item Python~3.12
+  \item NumPy~1.26, SciPy~1.12, Matplotlib~3.8 (core numerics and plotting)
+  \item SymPy~1.12 (symbolic verification of tensor identities; Section~\ref{app:cgb-sympy})
+  \item CAMB (for the Boltzmann fit in Chapter~\ref{ch:observational}; open source)
+\end{itemize}
+The frozen \texttt{requirements.txt} accompanying each Zenodo release pins exact versions and includes a SHA-256 digest for provenance.
+
+\paragraph{Tolerance discipline.} Every numerical result quoted in the monograph was verified by halving the integrator tolerance and confirming agreement to $>12$ significant figures; the self-tuning scan (Section~\ref{app:selftuning}) additionally matches to machine epsilon (${\sim}15.9$ decimal digits) across 60 orders of magnitude in $\Lambda_5$. This is not a convergence claim about a truncated series; it is a direct verification that the self-tuning mechanism is algebraic, not numerical. Readers reproducing the scan should expect bit-for-bit reproduction modulo platform-dependent last-digit rounding.

@@ -226,4 +226,40 @@ The framework's predictions span the seven $\zz$-independent structural predicti
 The cleanest single test is S1: measurement of $w(z) < -1$ at any redshift at $>3\sigma$ in a model-independent (non-CPL) framework falsifies the Meridian theory. This criterion is topological---the cuscuton kinetic structure guarantees $\Keff \geq 0$ and hence $w \geq -1$ for all $z \geq 0$---and cannot be evaded by parameter adjustment.
 
 \paragraph{Combined fingerprint.}
-The combination $\{w_0 \neq -1,\; w_a \approx 0,\; c_s \sim 15c,\; \mu = \Sigma = 1,\; \alpha_T = 0\}$ is unique to the cuscuton mechanism within five-dimensional self-tuning cosmology. No other dark energy model or modified gravity theory produces this specific pattern.
+The combination $\{w_0 \neq -1,\; w_a \approx 0,\; c_s \sim 15c,\; \mu = \Sigma = 1,\; \alpha_T = 0\}$ is unique to the cuscuton mechanism within five-dimensional self-tuning cosmology. No other dark energy model or modified gravity theory produces this specific pattern. Table~\ref{tab:de-fingerprint} substantiates the uniqueness claim by showing which row of the standard dark-energy and modified-gravity taxonomy fails which column of the fingerprint.
+
+\begin{table}[h!]
+\caption{Dark-energy and modified-gravity model comparison against the Meridian fingerprint. A check ($\checkmark$) means the model's generic prediction matches the fingerprint column; a cross ($\times$) means it does not; a dash (---) means the model can be tuned to match but only at the cost of introducing an additional free parameter that is unmotivated within the model. Meridian is the only row without a failing column.}
+\label{tab:de-fingerprint}
+\small
+\renewcommand{\arraystretch}{1.30}
+\begin{tabular}{@{}p{4.2cm}ccccc@{}}
+\toprule
+\textbf{Model} &
+$w_0 \neq -1$ & $w_a \approx 0$ & $c_s \sim 15c$ & $\mu = \Sigma = 1$ & $\alpha_T = 0$ \\
+\midrule
+Meridian (cuscuton + NCG) &
+$\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\[2pt]
+
+Canonical quintessence &
+$\checkmark$ & $\times$ & $\times$ ($c_s = c$) & $\checkmark$ & $\checkmark$ \\[2pt]
+
+k-essence ($c_s < c$) &
+$\checkmark$ & --- & $\times$ (wrong sign) & $\checkmark$ & $\checkmark$ \\[2pt]
+
+Horndeski $G_2/G_3/G_4/G_5$ (generic) &
+$\checkmark$ & --- & --- & $\times$ (growth) & $\times$ (pre-GW170817) \\[2pt]
+
+Horndeski post-GW170817 ($\alpha_T = 0$) &
+$\checkmark$ & --- & --- & $\times$ (growth) & $\checkmark$ (imposed) \\[2pt]
+
+DHOST (beyond Horndeski) &
+$\checkmark$ & --- & --- & $\times$ ($\mu \neq \Sigma$) & $\checkmark$ (tuned) \\[2pt]
+
+CPL ($w_0, w_a$ both free) &
+$\checkmark$ & $\times$ (generic $w_a$) & $\times$ (unspecified) & N/A & N/A \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Reading the table.} The five fingerprint columns are not independent Bayesian tests --- they are structural consequences of distinct features of the cuscuton $P(X) = \mu^2\sqrt{2X} + \eps_1 X$ kinetic form. $w_0 \neq -1$ comes from $\eps_1 \neq 0$; $w_a \approx 0$ comes from the absence of a dynamical potential; $c_s \sim 15c$ comes specifically from the square-root kinetic term (positive but large); $\mu = \Sigma = 1$ comes from zero-DOF absence of growth modifications; $\alpha_T = 0$ comes from the cuscuton not contributing to graviton kinetic mixing. Any competing model must replicate all five simultaneously without adding free parameters; the table shows that none of the standard DE/MG families does this. The closest row is ``Horndeski post-GW170817'' ($\alpha_T = 0$ imposed), which fails on the growth prediction --- Meridian's $\mu = \Sigma = 1$ is \emph{derived} from the zero-DOF structure, whereas in Horndeski it would require tuning $G_4$ and the $G_2/G_3$ sector simultaneously. The ``up to modulo'' loophole would require finding a Horndeski corner where growth and $c_s \sim 15c$ both emerge without tuning; no such corner is presently known.
