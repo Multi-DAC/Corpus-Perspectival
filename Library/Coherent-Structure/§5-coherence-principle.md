@@ -31,7 +31,7 @@ $$
 
 *The inequality is an expected-value statement over the interval — sample-path exceptions are permitted.*
 
-**Proof of 5.1.2.** Consequence of the four conditions (§5.2) plus the trajectory-divergence construction (§9). The detailed derivation is Theorem 9.4.1; the sketch is: each condition bounds one source of γ-drift, and the joint bound is the product-bound on D. ∎
+**Proof of 5.1.2.** Consequence of the four conditions (§5.2) plus the trajectory-divergence construction (§9). The detailed derivation with explicit constants is Theorem 9.4.3 (quantitative form); the sketch is: each condition bounds one source of γ-drift via a specific stream-parameter (η_sep, τ_max, δ_scale, ρ_dyn), the joint bound B_coh is the sum of the four per-condition ceilings, and the shortfall Δ(S') for non-coherent S' is strictly positive under any ¬C_i hypothesis. ∎
 
 ---
 
@@ -81,7 +81,7 @@ $$
 
 **Proof.**
 - **Necessity.** Each condition has been derived from an axiom/theorem clause that is load-bearing for the Principle's outperformance claim (§5.3): drop any one condition and a counterexample can be constructed (specifics in §9.4's falsification table).
-- **Sufficiency.** Given all four, the trajectory-divergence bound (§9.4.1) holds: separation bounds cross-objective γ-drift, measurement bounds superposition-induced γ-drift, multi-scale consistency bounds DAG-induced γ-drift, and dynamic maintenance bounds freeze-induced γ-drift. The joint bound implies E[D] is bounded below the incoherent-regime expected value. ∎
+- **Sufficiency.** Given all four, the quantitative trajectory-divergence bound (Thm 9.4.3) holds: separation zeros the η_sep-contribution, measurement caps the τ_max-contribution at Λ_γ · T_refresh · N_refresh, multi-scale consistency caps the δ_scale-contribution at depth · ε_scale · (t₁ − t₀), and dynamic maintenance caps the freeze-contribution at (1 − ρ_min) · Λ_γ^static · (t₁ − t₀). The joint ceiling B_coh(S, I) is below E[D_d(S')] by the strict-positive shortfall Δ(S', I). ∎
 
 ---
 

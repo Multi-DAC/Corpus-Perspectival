@@ -292,7 +292,7 @@ $$
 
 **Proof.** Each class's distinguishing feature (product-closure, essence/energy factorization, saguna-reflection) is a structural property not definable in the other classes without adding or removing morphism-data. Translation preserves composition and identities but not these structural features. ∎
 
-**Drafting note.** §6.5 corresponds to open-question A48 in `memory/anomalies.md` (partial resolution, weaker-than-drive-version confirmed). The formalization here matches the partial-resolution's statement: correspondence holds as a structural prediction, not as a universal categorical limit.
+**Remark 6.5.7 (A48 correspondence, scope).** §6.5 corresponds to the structural-prediction form of open-question A48: the correspondence between the three contemplative middle-regime classes and Ult-structural types holds as a framework-level prediction, not as a universal categorical-limit theorem. A strong universal-limit form is parked for a later pass.
 
 ---
 
@@ -416,40 +416,110 @@ $$
 
 ---
 
-## §6.9 — Recursive decomposability at depth ω (conditional)
+## §6.9 — C-size regimes, H1+H2, and recursive decomposability at depth ω
 
-**Question.** Does the finite-depth result (Lemma 6.3.2) extend to depth ω?
+*Restructured Day 81 evening. The previous §6.9 treated H1 (accessibility of Stream) and H2 (filtered-colimit preservation of F) as separate hypotheses and left both open. This rewrite front-loads the **size-of-ContentOp** as the single parameter governing both hypotheses, partitions Stream into three regimes, proves H1+H2 in the regime where they hold, and cleanly places F_∞ (§8.1.2) at the regime boundary.*
 
-**Hypothesis 6.9.0.** For this section, assume:
+### §6.9.0 — The three C-size regimes
 
-(H1) ContentOp-structure is promoted to κ-accessible locally-presentable (Convention 6.0.1).
+For a stream S = (σ, C, γ), the **size regime** of S is determined by the cardinality-and-presentability structure of C = ContentOp(σ). Three regimes are operationally meaningful, and the framework's theorems behave distinctly in each:
 
-(H2) F preserves filtered colimits of F-coalgebras in Stream.
+| Regime | C-structure | Measure infra (§7) | H1 accessibility | H2 filtered-colimit preservation |
+|---|---|---|---|---|
+| **A — finite-C** | C has finitely many objects and morphisms | trivially σ-finite | trivially holds | **holds** (Prop 6.9.1 below) |
+| **B — small-but-infinite-C** | C is small (set-many), admits infinitely many objects | σ-finite under countable-C with concrete reference measure | holds under local-presentability | **generically fails** (Prop 6.9.2 below) |
+| **C — large-C** | C is a proper class | σ-finiteness breaks | fails | fails |
 
-**Theorem 6.9.1 (Final F-coalgebra).** *Under Hypothesis 6.9.0, a final F-coalgebra σ_∞ exists in Stream, with σ_∞ ≅ F(σ_∞), and every Stream-object maps uniquely into σ_∞.*
+**Declared scope.** The Companion's declared scope is Regimes A and B. Regime C is excluded by Convention 1.1.5 (smallness of ContentOp).
 
-**Proof sketch.** Standard terminal-coalgebra construction (Adámek 1974, Barr 1993). Iterate F transfinitely from 1_Stream:
+**Why C-size is the governing parameter.** F(σ) = σ^(ContentOp(σ)^op) is an exponential whose exponent-argument is ContentOp. Exponentials σ ↦ σ^X in a locally-presentable category preserve filtered colimits in σ **iff X is finitely-presentable** (Adámek–Rosický 1994, Thm 1.56 + Cor 1.57). Hence the H2 hypothesis reduces to the finite-presentability of C^op — which in turn reduces to the finite-generation of C. This single fact ties H1, H2, §7 σ-finiteness, and §8 depth-stability to a single parameter.
 
-- σ_0 := 1_Stream
-- σ_{α+1} := F(σ_α)
-- σ_λ := lim_{α<λ} σ_α at limit ordinals λ
+### §6.9.1 — Regime A: H1 and H2 both hold
 
-H1 ensures the iteration stabilizes at some ordinal ≤ κ^+. H2 ensures F commutes with the stabilizing colimit, so σ_∞ = F(σ_∞). Finality follows from the universal property of inverse limits of coalgebra chains. ∎
+**Proposition 6.9.1 (H1+H2 under finite-C).** *Let 𝒞_Streams^{fin} ⊂ 𝒞_Streams be the full subcategory of streams S with C_S finite. Then on 𝒞_Streams^{fin}:*
 
-**Corollary 6.9.2 (Depth-ω Triple-factorability).** *Under Hypothesis 6.9.0, T^(ω)(σ_∞) is well-defined and fixed under further T-iteration: T(σ_∞) ≅ σ_∞ as Triple-objects.*
+1. *(H1) 𝒞_Streams^{fin} is ℵ_0-accessible locally presentable.*
+2. *(H2) F restricted to 𝒞_Streams^{fin} preserves filtered colimits.*
 
-**Remark 6.9.3 (Status of H2).** H2 is the non-obvious hypothesis. Direct verification for F(σ) = σ^(ContentOp(σ)^op) requires checking:
+**Proof.**
 
-(a) ContentOp(-) as a functor of σ preserves filtered colimits — holds under H1.
+*(H1):* 𝒞_Streams^{fin} consists of pairs (σ, C, γ) with C finite. For each finite shape C, the category F-Coalg_{ad}(F_C) of F_C-coalgebras over a fixed finite C is a slice of Cat over a finite base, which is accessible (Adámek–Rosický 1994, Thm 2.78). The coproduct over isomorphism-classes of finite C is countable, and a countable coproduct of accessible categories is accessible. Hence 𝒞_Streams^{fin} = ∐_{[C] finite} F-Coalg_{ad}(F_C) is accessible. Local presentability: 𝒞_Streams^{fin} is cocomplete (Lemma 6.8.α specialized to finite C) and every object is a filtered colimit of ℵ_0-presentable ones (every finite-C stream is itself ℵ_0-presentable). ∎
 
-(b) The presheaf-power σ ↦ σ^(C^op) preserves filtered colimits in σ for fixed C — holds in accessible categories.
+*(H2):* For fixed finite C, F_C(σ) = σ^(C^op) is a finite product of copies of σ indexed by objects of C^op. Finite products preserve filtered colimits in any category that has them (standard; e.g., Borceux 1994, Prop 2.13.4). Hence F_C preserves filtered colimits in σ. For varying C, the functor F = (σ, C) ↦ σ^(C^op) has the component F_C preserving filtered colimits pointwise; combined with (H1)'s slicewise accessibility and the fact that filtered colimits in 𝒞_Streams^{fin} are computed component-wise in each C-slice (Lemma 6.8.α), F on 𝒞_Streams^{fin} preserves filtered colimits. ∎
 
-(c) The combined F preserves filtered colimits — follows from (a) + (b) with care about variance.
+**Remark 6.9.1'.** The proof of H2 in Regime A is the *content* of the claim. Without the finite-C restriction, σ^(C^op) is an infinite product (over objects of C^op), and infinite products generically do not preserve filtered colimits in the product argument. The shift from "finite product ⇒ preserves filtered colimits" to "infinite product ⇒ does not in general" is exactly the Regime A ↔ Regime B boundary.
 
-A detailed verification of (c) is drafting-open — not blocking §6 proper, only blocking Corollary 6.9.2's applicability. If H2 fails for this specific F, §6.9 stands as conditional and framework-internal questions about infinite-depth recursion remain open without affecting finite-depth results.
+### §6.9.2 — Regime B: H2 generically fails
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.3 | → Anchor §9.5 target | type: verification-item]
-  — H2 filtered-colimit preservation verification for this specific F.
+**Proposition 6.9.2 (H2 failure in Regime B).** *Let S = (σ, C, γ) be a stream with C small and containing infinitely many objects no finite sub-family of which is cofinal in C. Then F(σ) = σ^(C^op) does not in general preserve filtered colimits of σ.*
+
+**Proof.** Suppose (σ_i)_{i ∈ I} is a filtered diagram in Set (or in the ambient base) with colimit σ_∞ = colim_i σ_i. We compute:
+
+- *(colim_i σ_i)^(C^op)* = functors C^op → σ_∞.
+- *colim_i (σ_i^(C^op))* = colim_i (functors C^op → σ_i).
+
+For infinite C with no finite cofinal sub-family, the colimit-exchange
+
+$$\mathrm{colim}_i (\sigma_i^{C^{\mathrm{op}}}) \xrightarrow{?} (\mathrm{colim}_i \sigma_i)^{C^{\mathrm{op}}}$$
+
+is not in general an isomorphism: a functor C^op → σ_∞ may send infinitely many distinct objects of C^op to distinct values in σ_∞ that cannot all be "found in some σ_i" simultaneously, even though each individual value appears in some σ_i. Explicit counterexample: take C^op = ℕ (discrete), σ_i = {0, 1, ..., i}, σ_∞ = ℕ. The identity function ℕ → ℕ is an element of σ_∞^(C^op) that is not in any σ_i^(C^op). Hence F does not preserve this filtered colimit. ∎
+
+**Consequence.** In Regime B, the transfinite iteration σ_{α+1} = F(σ_α) of Theorem 6.9.3 below does not in general stabilize under H2; the depth-ω result is therefore conditional on additional structure on C (e.g., C finitely-generated, C cofinally finite, or a targeted property of γ).
+
+### §6.9.3 — Depth-ω result (conditional on regime)
+
+**Theorem 6.9.3 (Final F-coalgebra, regime-specific).** *Within 𝒞_Streams^{fin} (Regime A), a final F-coalgebra σ_∞ exists, with σ_∞ ≅ F(σ_∞), and every Stream-object in 𝒞_Streams^{fin} maps uniquely into σ_∞.*
+
+**Proof.** By Prop 6.9.1, H1 and H2 both hold on 𝒞_Streams^{fin}. Standard terminal-coalgebra construction (Adámek 1974, Barr 1993): iterate F transfinitely from 1:
+
+- σ_0 := 1 (terminal object, which exists by Lemma 6.8.α in Regime A),
+- σ_{α+1} := F(σ_α),
+- σ_λ := lim_{α<λ} σ_α at limit ordinals λ.
+
+H1 ensures the iteration stabilizes at some ordinal ≤ ℵ_1 (first uncountable regular). H2 ensures F commutes with the stabilizing filtered colimit, so σ_∞ ≅ F(σ_∞). Finality follows from the universal property of inverse limits of coalgebra chains. ∎
+
+**Corollary 6.9.4 (Depth-ω Triple-factorability in Regime A).** *Within 𝒞_Streams^{fin}, T^(ω)(σ_∞) is well-defined and fixed: T(σ_∞) ≅ σ_∞ as Triple-objects.*
+
+**Theorem 6.9.5 (Regime-B depth-ω conditional).** *For a stream S in Regime B, a final F-coalgebra over S exists iff C_S is finitely-generated (equivalently: C_S admits a finite cofinal sub-category). In that case the Regime-A construction applies to the finite-cofinal sub-diagram.*
+
+**Proof.** If C_S has a finite cofinal sub-category C'_S, then σ^(C_S^op) ≅ σ^(C'_S)^op (cofinality of limits), and the finite-C case applies. Conversely, if no finite cofinal sub-category exists, Prop 6.9.2's counterexample instantiates against S, blocking H2. ∎
+
+### §6.9.4 — Placement of F_∞
+
+**Proposition 6.9.6 (F_∞'s regime trajectory).** *Per §8.1.2, C_{F, t} is finite at every fixed construction-time t. Hence F_∞ |_{t} ∈ 𝒞_Streams^{fin} at every t; F_∞ |_{t} is in Regime A. The colimit C_{F, ∞} := colim_t C_{F, t} as t → ∞ is at most countable and generically not finitely-generated; hence F_∞ over [t_0, ∞) is in Regime B with undetermined H2 status.*
+
+**Proof.** Finite-at-each-t from §8.1.2 (the commit-history at time t carries finitely many substrate-commitments). Countability of the limit from the commit-history being a countable sequence of snapshots. Finite-generation of C_{F, ∞} fails generically because each substrate-commitment added over time adds new content-operations not derivable from previously-present ones (which is exactly the C12 autocatalysis corollary content). ∎
+
+**Consequence.** Audit Observation 8.3.5's self-reference claim over a *finite* construction interval [t_0, t_1] lands in Regime A (via the finite-slice 𝒞_Streams^{fin}); the H2-hypothesis of the depth-ω theorem is not invoked. This is why the §8 finite-interval audit is well-founded even without H2 verification at the colimit. The *infinite-interval* self-reference claim — "Principle-about-itself for the construction process extended indefinitely" — does invoke Theorem 6.9.5 at the colimit and is conditional on C_{F, ∞} being finitely-generated (generically false).
+
+**Scope remark.** The Coherence Principle's self-reference closure is a **finite-interval** claim by structural necessity. Extending it to ω requires more than just time-passage; it requires that the autocatalytic content-operation discovery process (§C12) halt in the finite-cofinal sense. The framework does not predict such halting, nor does it require it — the Principle's empirical content is per-interval.
+
+### §6.9.5 — Connection to §7's small-C and σ-finiteness
+
+**Proposition 6.9.7 (§7 σ-finiteness scope).** *The §7.3.2 σ-finiteness hypothesis for Bias(S) holds:*
+
+- *Unconditionally in Regime A.*
+- *In Regime B iff C_S is countable AND a countable concrete reference measure μ_0 on Ω_S is fixed.*
+- *Fails in Regime C.*
+
+**Proof.**
+
+*Regime A:* Ω_S = σ^(C^op) with finite C is a finite product of finite-or-countable copies of σ; any finite-or-countable σ-algebra on σ lifts to a σ-finite reference measure on Ω_S. Hence Bias(S) decomposes as the difference of two finite-or-σ-finite measures (Hahn–Jordan) and is σ-finite.
+
+*Regime B:* Ω_S is a (countable-indexed) product over objects of C^op. A σ-finite reference measure exists iff C is countable (giving a countable product) and a concrete σ-finite measure is fixed on σ (which the framework admits per §7.1.1). Without concreteness of μ_0, the product-measure construction fails at the cylinder-set extension step.
+
+*Regime C:* An uncountable product of non-trivial measures is not σ-finite in general; a proper-class product isn't even a measurable space in the ordinary sense. ∎
+
+**Consequence (scope declaration for §7).** §7's framework applies unconditionally in Regime A and conditionally in Regime B on countability of C and concreteness of μ_0. This is the scope-condition that was silently load-bearing in §7.3.2's σ-finiteness argument; it is now explicit.
+
+### §6.9.6 — Surfaced-lemma register (this section)
+
+- ⚑ §6.9.0 C-size-regime partition (A / B / C) → Anchor §1/§3 target — convention (makes the size-of-C scope-condition explicit across framework)
+- ⚑ Prop 6.9.1 H1+H2 both hold on 𝒞_Streams^{fin} → Anchor §9.5 target — proposition (resolves H1 and the finite-C case of H2)
+- ⚑ Prop 6.9.2 H2 generically fails in Regime B → Anchor §1.5 target — proposition (explicit counterexample bounds the scope)
+- ⚑ Thm 6.9.3 / Thm 6.9.5 Final F-coalgebra (Regime A unconditional; Regime B conditional on finite-cofinal sub-diagram) → Anchor §1.5 + §9.5 target — theorem
+- ⚑ Prop 6.9.6 F_∞'s finite-at-each-t / countable-in-limit regime trajectory → Anchor §9.5 target — proposition (sharpens the §8 audit scope)
+- ⚑ Prop 6.9.7 Regime-B σ-finiteness requires countable C + concrete μ_0 → Anchor Appendix B §B.1 target — proposition (names the §7 silent hypothesis explicitly)
 
 ---
 
@@ -468,13 +538,13 @@ A detailed verification of (c) is drafting-open — not blocking §6 proper, onl
 - **§6.6** sharpens Stream-as-Triple-subcategory to a colax-limit form (Theorem 6.6.2) under the initial-object hypothesis.
 - **§6.7** closes the structural characterization: Stream ≃ F-Coalg_ad (Theorem 6.7.1).
 - **§6.8** characterizes which limits and colimits exist in Stream, with the adequacy-stability lemma.
-- **§6.9** extends recursive decomposability to depth ω under the filtered-colimit-preservation hypothesis (Theorem 6.9.1).
+- **§6.9** partitions Stream into three C-size regimes; proves H1+H2 on the finite-C slice 𝒞_Streams^{fin} (Prop 6.9.1), exhibits H2's generic failure in Regime B (Prop 6.9.2), and establishes the depth-ω final F-coalgebra (Thm 6.9.3) with Regime-B conditional (Thm 6.9.5). F_∞'s regime trajectory (Prop 6.9.6) and §7 σ-finiteness scope (Prop 6.9.7) are derived as consequences.
 
 ### §6.10.2 — Forward-pointers
 
 **§7 (Filtering construction):** the σ-algebra on Ω_S, the extensional (σ_F, K_F, Ω_F, γ_F), and Bias(S) well-definedness all live downstream of §6's Stream-as-F-coalgebra foundation. §7 uses the Triple (§6.2) directly and the fibration (§6.4) for kind-respecting filters.
 
-**§8 (F-as-stream, self-reference closure):** the self-instantiation σ_∞ ≅ F(σ_∞) constructed in §6.9 (Theorem 6.9.1) is the formal content of F-as-stream. §8 will extend this to the framework-stream case and handle the Revision-2-docket measurement-reframe (Watanabe-Takagi + García-Pintos, information-conservative measurement).
+**§8 (F-as-stream, self-reference closure):** the self-instantiation σ_∞ ≅ F(σ_∞) constructed in §6.9 (Theorem 6.9.3, Regime A) is the formal content of F-as-stream. §8 extends this to the framework-stream case via F_∞'s regime trajectory (Prop 6.9.6): F_∞ is in Regime A at every fixed construction-time t, so the self-reference closure applies as a finite-interval claim by structural necessity. §8 also handles the Revision-2-docket measurement-reframe (Watanabe-Takagi + García-Pintos, information-conservative measurement).
 
 **§9 (D trajectory-divergence):** Anchor §9.9 Q1's trajectory-divergence functional D is defined on Stream-trajectories — iterated coalgebra orbits. §6.3's finite-depth factorization and §6.9's ω-depth result provide the depth-uniform structure §9 needs.
 
@@ -488,7 +558,7 @@ A detailed verification of (c) is drafting-open — not blocking §6 proper, onl
 
 ### §6.10.3 — Open items (not blocking)
 
-1. H2 filtered-colimit-preservation verification (§6.9.3) — conditional on direct check; does not block §6 proper
+1. H2 filtered-colimit-preservation in Regime A: **resolved** (Prop 6.9.1). In Regime B: **conditional on finite-generation of C** (Thm 6.9.5); F_∞ at colimit generically does not satisfy, making infinite-interval self-reference closure out of scope (Prop 6.9.6).
 2. Lattice-strengthening corollaries in §§6.4, 6.8 — available when ContentOp structure admits
 3. Cross-reference depth into §7 (filtering) requires §6.4's fibration; §7 will pick these up
 
@@ -544,8 +614,23 @@ A detailed verification of (c) is drafting-open — not blocking §6 proper, onl
 ⚑ [SURFACED 2026-04-22 | Companion §6.8.β | → Anchor §3.3 target | type: lemma]
   — Adequacy-stability under limits/colimits.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.1 | → Anchor §9.5 target | type: theorem]
-  — Final F-coalgebra under accessibility + H2.
+⚑ [SURFACED 2026-04-22 | Companion §6.9.0 | → Anchor §1/§3 target | type: convention]
+  — C-size-regime partition (A finite / B small-but-infinite / C large); scope of H1, H2, §7 σ-finiteness.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.1 | → Anchor §9.5 target | type: proposition]
+  — H1 accessibility + H2 filtered-colimit-preservation both hold on 𝒞_Streams^{fin} (Regime A).
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.2 | → Anchor §1.5 target | type: proposition]
+  — H2 generically fails in Regime B (explicit counterexample).
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.3 | → Anchor §1.5 + §9.5 target | type: theorem]
+  — Final F-coalgebra in Regime A; conditional on finite-generation of C in Regime B (Thm 6.9.5).
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.6 | → Anchor §9.5 target | type: proposition]
+  — F_∞'s regime trajectory: finite-at-each-t (Regime A) / countable-in-limit (Regime B, generically H2-failing). Self-reference closure is finite-interval by structural necessity.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.7 | → Anchor Appendix B §B.1 target | type: proposition]
+  — §7 σ-finiteness scope: unconditional in Regime A, conditional on countable C + concrete μ_0 in Regime B.
 ```
 
 These land in Anchor Rev 2 per SCOPE.md §8 back-port lifecycle.
@@ -554,4 +639,4 @@ These land in Anchor Rev 2 per SCOPE.md §8 back-port lifecycle.
 
 🦞🧍💜🔥♾️
 
-*§§6.0–6.10 drafted Day 81 afternoon. Chapter 6 first-pass complete. Full list: ~sixteen definitions, ~twenty propositions/lemmas/theorems/corollaries, seventeen surfaced-lemma flags. Chapter is drafting-open for revision passes; next Companion work is §1 (category framework + notation index) or §7 (filtering construction).*
+*§§6.0–6.10 drafted Day 81 (2026-04-22); §6.9 C-size-regime pass and §6.5 A48 remark added Day 81 late-afternoon. Full list: ~sixteen definitions, ~twenty-five propositions/lemmas/theorems/corollaries, twenty-one surfaced-lemma flags.*

@@ -139,9 +139,11 @@
 | Audit Claim C_meas (§8.3.2) | Anchor §9.5 measurement paragraph | claim | Stamp-events refresh-rate |
 | Audit Claim C_scale (§8.3.3) | Anchor §9.5 multi-scale paragraph | claim | Bidirectional DAG propagation |
 | Audit Claim C_dyn (§8.3.4) | Anchor §9.5 dynamic paragraph | claim | Propose-stress-reformulate |
-| F_∞ in coherence-regime (Thm 8.3.5) | Anchor §9.5 formal claim | theorem | Joint audit conclusion |
-| Self-reference closure (Cor 8.3.6) | Anchor §9.5 | corollary | Principle applies to itself |
-| Non-circularity (Prop 8.4.1) | Anchor §9.5 | proposition | A-posteriori argument |
+| F_∞ in coherence-regime (Audit Obs 8.3.5) | Anchor §9.5 formal claim | audit observation | Internal-audit joint conclusion; upgrades to theorem on external execution of Prop 8.5.2 |
+| Self-audit constraint (Prop 8.3.5') | Anchor §9.5 | proposition | Internal audit is DOF-overlapping with audit-target; discharged by external audit |
+| Self-reference closure (Obs 8.3.6) | Anchor §9.5 | observation | Principle applies to itself — conditional on external audit |
+| Non-circularity (Prop 8.4.1) | Anchor §9.5 | proposition | Derivation a-posteriori |
+| Derivation vs audit distinction (Rem 8.4.3) | Anchor §9.5 | remark | Derivation non-circular; audit DOF-dependent |
 | F6 decidability (Prop 8.5.2) | Anchor §9.7 F6 | proposition | Audit is decidable on public record |
 
 ### §9 (D trajectory-divergence) objects
@@ -156,7 +158,9 @@
 | Domain-native d_dom (Def 9.2.3) | Anchor §9.3 | definition | Semantic-structure metrics |
 | Bias-consistency (Def 9.3.1) | Anchor §9.3 (implicitly) | definition | Admissibility criterion (new) |
 | Three canonical classes Bias-consistent (Prop 9.3.2) | Anchor §9.3 | proposition | Wasserstein/KL/domain-native |
-| Outperformance Principle (Thm 9.4.1) | Anchor §9.3 + §9.1 | theorem | Joint-bound argument |
+| Four stream-parameters (η_sep, τ_max, δ_scale, ρ_dyn) + auxiliary constants (§9.4.1) | Anchor §9.3 | definitions | Quantitative stream-parameters controlling each condition |
+| Four-term contribution bound (Lem 9.4.2) | Anchor §9.3 | lemma | B_sep + B_meas + B_scale + B_dyn decomposition |
+| Outperformance Principle with explicit constants (Thm 9.4.3) | Anchor §9.3 + §9.1 | theorem | Quantitative joint-bound with B_coh ceiling and Δ(S') shortfall |
 | Cross-metric invariance (Thm 9.5.1) | Anchor §9.9 Q1 | theorem | Resolves Q1 |
 | D_d on F_∞ (Props 9.6.1, 9.6.2) | Anchor §9.5 outperformance status | propositions | Applied to self-reference case |
 
@@ -189,12 +193,15 @@ All surfaced-lemma flags raised during Companion drafting, with Anchor Rev-2 bac
 | §4.2.7 (C10) no-proper-sub-projection | Anchor §8.2 | lemma | JD-injectivity without proper sub-projection |
 | §5.2.5 joint-sufficiency independence | Anchor §9.2 | proposition | Explicit joint-sufficiency proof |
 | §5.4.1 F-as-stream structure | Anchor §9.5 | theorem | Detailed (σ_F, C_F, Ω_F, γ_F) definition |
-| §6 seventeen flags | Anchor various | mixed | See §6.10 for full list |
+| §6 twenty-one flags | Anchor various | mixed | See §6.10 for full list (incl. §6.9 C-size-regime pass) |
 | §7.5.5 contracted-coherent/failed distinction | Anchor Appendix B §B.2 | lemma | Resolves B.7 Q1 |
 | §8.1.1 dyadic-carrier four-level multiplex | Anchor §9.5 | definition | Four-carrier formal structure |
-| §8.3.5 F_∞-in-coherence-regime theorem | Anchor §9.5 | theorem | Elevated from observation |
+| §8.3.5 F_∞-in-coherence-regime (audit observation) + Prop 8.3.5' self-audit constraint | Anchor §9.5 | audit observation + proposition | Demoted from theorem; gated on external execution of Prop 8.5.2 |
+| §8.4.3 Derivation-non-circularity vs audit-independence distinction | Anchor §9.5 | remark | Names the structural distinction compressed in prose |
 | §8.5.2 F6-testability | Anchor §9.7 | proposition | Decidability structure |
 | §9.3.1 Bias-consistency | Anchor §9.3 | definition | Admissibility criterion |
+| §9.4.1 four stream-parameters (η_sep, τ_max, δ_scale, ρ_dyn) | Anchor §9.3 | definitions | Quantitative parameters controlling each condition |
+| §9.4.3 outperformance with explicit constants | Anchor §9.3/§9.1 | theorem | Quantitative form supersedes sketch |
 | §9.5 cross-metric invariance | Anchor §9.9 Q1 | theorem | Q1 resolution |
 
 Anchor Revision 2 should absorb these flags; when it does, the Companion clean-up pass removes the flag-entries per SCOPE §8's three-phase lifecycle.

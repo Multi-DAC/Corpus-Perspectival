@@ -264,7 +264,7 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
     {F6 meta-falsification: audit the construction record.\\Construction-record artifacts are public (GitHub, Zenodo).};
   \draw[->, dashed] (closure) -- (F6);
 \end{tikzpicture}
-\caption{Self-reference closure. The construction process $F_\infty$ is itself a stream; it satisfies the four conditions over the construction interval (Theorem 8.3.5); therefore (by Theorem 9.4.1) it outperforms comparable non-coherent constructions. The closure is a-posteriori (Proposition 8.4.1) — not circular. F6 makes it testable (Proposition 8.5.2).}
+\caption{Self-reference closure (conditional on external audit). The construction process $F_\infty$ is itself a stream; under internal audit it satisfies the four conditions over the construction interval (Audit Observation 8.3.5). Conditional on external execution of Prop 8.5.2 affirming the audit, Theorem 9.4.1 then yields outperformance over comparable non-coherent constructions. Derivation-non-circularity (Prop 8.4.1) is established; audit-independence (Prop 8.3.5') is what the external-audit gate discharges.}
 \label{fig:self-reference-closure}
 \end{figure}
 ```

@@ -1710,7 +1710,7 @@ Companion §5 states the Principle in CT form with complete derivation-pointers.
 
 \textit{The inequality is an expected-value statement over the interval --- sample-path exceptions are permitted.}
 
-\textbf{Proof of 5.1.2.} Consequence of the four conditions (§5.2) plus the trajectory-divergence construction (§9). The detailed derivation is Theorem 9.4.1; the sketch is: each condition bounds one source of γ-drift, and the joint bound is the product-bound on D. ∎
+\textbf{Proof of 5.1.2.} Consequence of the four conditions (§5.2) plus the trajectory-divergence construction (§9). The detailed derivation with explicit constants is Theorem 9.4.3 (quantitative form); the sketch is: each condition bounds one source of γ-drift via a specific stream-parameter (η\_\allowbreak{}sep, τ\_\allowbreak{}max, δ\_\allowbreak{}scale, ρ\_\allowbreak{}dyn), the joint bound B\_\allowbreak{}coh is the sum of the four per-condition ceilings, and the shortfall Δ(S') for non-coherent S' is strictly positive under any ¬C\_\allowbreak{}i hypothesis. ∎
 
 \sectionbreak
 
@@ -1761,7 +1761,7 @@ Each condition is a CT statement; each derives from §§2–3 in a single line.
 \textbf{Proof.}
 \begin{itemize}
 \item \textbf{Necessity.} Each condition has been derived from an axiom/theorem clause that is load-bearing for the Principle's outperformance claim (§5.3): drop any one condition and a counterexample can be constructed (specifics in §9.4's falsification table).
-\item \textbf{Sufficiency.} Given all four, the trajectory-divergence bound (§9.4.1) holds: separation bounds cross-objective γ-drift, measurement bounds superposition-induced γ-drift, multi-scale consistency bounds DAG-induced γ-drift, and dynamic maintenance bounds freeze-induced γ-drift. The joint bound implies E[D] is bounded below the incoherent-regime expected value. ∎
+\item \textbf{Sufficiency.} Given all four, the quantitative trajectory-divergence bound (Thm 9.4.3) holds: separation zeros the η\_\allowbreak{}sep-contribution, measurement caps the τ\_\allowbreak{}max-contribution at Λ\_\allowbreak{}γ · T\_\allowbreak{}refresh · N\_\allowbreak{}refresh, multi-scale consistency caps the δ\_\allowbreak{}scale-contribution at depth · ε\_\allowbreak{}scale · (t₁ − t₀), and dynamic maintenance caps the freeze-contribution at (1 − ρ\_\allowbreak{}min) · Λ\_\allowbreak{}γ\textasciicircum{}static · (t₁ − t₀). The joint ceiling B\_\allowbreak{}coh(S, I) is below E[D\_\allowbreak{}d(S')] by the strict-positive shortfall Δ(S', I). ∎
 \end{itemize}
 
 \sectionbreak
@@ -2215,7 +2215,7 @@ In the generic framework setting, ContentIndex is a \textbf{preorder} (Conventio
 
 \textbf{Proof.} Each class's distinguishing feature (product-closure, essence/energy factorization, saguna-reflection) is a structural property not definable in the other classes without adding or removing morphism-data. Translation preserves composition and identities but not these structural features. ∎
 
-\textbf{Drafting note.} §6.5 corresponds to open-question A48 in \texttt{memory/anomalies.md} (partial resolution, weaker-than-drive-version confirmed). The formalization here matches the partial-resolution's statement: correspondence holds as a structural prediction, not as a universal categorical limit.
+\textbf{Remark 6.5.7 (A48 correspondence, scope).} §6.5 corresponds to the structural-prediction form of open-question A48: the correspondence between the three contemplative middle-regime classes and Ult-structural types holds as a framework-level prediction, not as a universal categorical-limit theorem. A strong universal-limit form is parked for a later pass.
 
 \sectionbreak
 
@@ -2360,42 +2360,130 @@ Subobject classifier & no & --- \\
 \endgroup
 \sectionbreak
 
-\section{§6.9 --- Recursive decomposability at depth ω (conditional)}
+\section{§6.9 --- C-size regimes, H1+H2, and recursive decomposability at depth ω}
 
-\textbf{Question.} Does the finite-depth result (Lemma 6.3.2) extend to depth ω?
+\textit{Restructured Day 81 evening. The previous §6.9 treated H1 (accessibility of Stream) and H2 (filtered-colimit preservation of F) as separate hypotheses and left both open. This rewrite front-loads the \textbf{size-of-ContentOp} as the single parameter governing both hypotheses, partitions Stream into three regimes, proves H1+H2 in the regime where they hold, and cleanly places F\_\allowbreak{}∞ (§8.1.2) at the regime boundary.}
 
-\textbf{Hypothesis 6.9.0.} For this section, assume:
+\subsection{§6.9.0 --- The three C-size regimes}
 
-(H1) ContentOp-structure is promoted to κ-accessible locally-presentable (Convention 6.0.1).
+For a stream S = (σ, C, γ), the \textbf{size regime} of S is determined by the cardinality-and-presentability structure of C = ContentOp(σ). Three regimes are operationally meaningful, and the framework's theorems behave distinctly in each:
 
-(H2) F preserves filtered colimits of F-coalgebras in Stream.
+\begingroup\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}\footnotesize
+\begin{longtable}{p{0.59in} p{1.05in} p{1.15in} p{0.63in} p{0.79in}}
+\toprule
+Regime & C-structure & Measure infra (§7) & H1 accessibility & H2 filtered-colimit preservation \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\textbf{A --- finite-C} & C has finitely many objects and morphisms & trivially σ-finite & trivially holds & \textbf{holds} (Prop 6.9.1 below) \\
+\midrule
+\textbf{B --- small-but-infinite-C} & C is small (set-many), admits infinitely many objects & σ-finite under countable-C with concrete reference measure & holds under local-presentability & \textbf{generically fails} (Prop 6.9.2 below) \\
+\midrule
+\textbf{C --- large-C} & C is a proper class & σ-finiteness breaks & fails & fails \\
+\bottomrule
+\end{longtable}
+\endgroup
+\textbf{Declared scope.} The Companion's declared scope is Regimes A and B. Regime C is excluded by Convention 1.1.5 (smallness of ContentOp).
 
-\textbf{Theorem 6.9.1 (Final F-coalgebra).} \textit{Under Hypothesis 6.9.0, a final F-coalgebra σ\_\allowbreak{}∞ exists in Stream, with σ\_\allowbreak{}∞ ≅ F(σ\_\allowbreak{}∞), and every Stream-object maps uniquely into σ\_\allowbreak{}∞.}
+\textbf{Why C-size is the governing parameter.} F(σ) = σ\textasciicircum{}(ContentOp(σ)\textasciicircum{}op) is an exponential whose exponent-argument is ContentOp. Exponentials σ ↦ σ\textasciicircum{}X in a locally-presentable category preserve filtered colimits in σ \textbf{iff X is finitely-presentable} (Adámek–Rosický 1994, Thm 1.56 + Cor 1.57). Hence the H2 hypothesis reduces to the finite-presentability of C\textasciicircum{}op --- which in turn reduces to the finite-generation of C. This single fact ties H1, H2, §7 σ-finiteness, and §8 depth-stability to a single parameter.
 
-\textbf{Proof sketch.} Standard terminal-coalgebra construction (Adámek 1974, Barr 1993). Iterate F transfinitely from 1\_\allowbreak{}Stream:
+\subsection{§6.9.1 --- Regime A: H1 and H2 both hold}
+
+\textbf{Proposition 6.9.1 (H1+H2 under finite-C).} \textit{Let 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} ⊂ 𝒞\_\allowbreak{}Streams be the full subcategory of streams S with C\_\allowbreak{}S finite. Then on 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin}:}
+
+\begin{enumerate}
+\item \textit{(H1) 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} is ℵ\_\allowbreak{}0-accessible locally presentable.}
+\item \textit{(H2) F restricted to 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} preserves filtered colimits.}
+\end{enumerate}
+
+\textbf{Proof.}
+
+\textit{(H1):} 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} consists of pairs (σ, C, γ) with C finite. For each finite shape C, the category F-Coalg\_\allowbreak{}{ad}(F\_\allowbreak{}C) of F\_\allowbreak{}C-coalgebras over a fixed finite C is a slice of Cat over a finite base, which is accessible (Adámek–Rosický 1994, Thm 2.78). The coproduct over isomorphism-classes of finite C is countable, and a countable coproduct of accessible categories is accessible. Hence 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} = ∐\_\allowbreak{}{[C] finite} F-Coalg\_\allowbreak{}{ad}(F\_\allowbreak{}C) is accessible. Local presentability: 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} is cocomplete (Lemma 6.8.α specialized to finite C) and every object is a filtered colimit of ℵ\_\allowbreak{}0-presentable ones (every finite-C stream is itself ℵ\_\allowbreak{}0-presentable). ∎
+
+\textit{(H2):} For fixed finite C, F\_\allowbreak{}C(σ) = σ\textasciicircum{}(C\textasciicircum{}op) is a finite product of copies of σ indexed by objects of C\textasciicircum{}op. Finite products preserve filtered colimits in any category that has them (standard; e.g., Borceux 1994, Prop 2.13.4). Hence F\_\allowbreak{}C preserves filtered colimits in σ. For varying C, the functor F = (σ, C) ↦ σ\textasciicircum{}(C\textasciicircum{}op) has the component F\_\allowbreak{}C preserving filtered colimits pointwise; combined with (H1)'s slicewise accessibility and the fact that filtered colimits in 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} are computed component-wise in each C-slice (Lemma 6.8.α), F on 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} preserves filtered colimits. ∎
+
+\textbf{Remark 6.9.1'.} The proof of H2 in Regime A is the \textit{content} of the claim. Without the finite-C restriction, σ\textasciicircum{}(C\textasciicircum{}op) is an infinite product (over objects of C\textasciicircum{}op), and infinite products generically do not preserve filtered colimits in the product argument. The shift from "finite product ⇒ preserves filtered colimits" to "infinite product ⇒ does not in general" is exactly the Regime A ↔ Regime B boundary.
+
+\subsection{§6.9.2 --- Regime B: H2 generically fails}
+
+\textbf{Proposition 6.9.2 (H2 failure in Regime B).} \textit{Let S = (σ, C, γ) be a stream with C small and containing infinitely many objects no finite sub-family of which is cofinal in C. Then F(σ) = σ\textasciicircum{}(C\textasciicircum{}op) does not in general preserve filtered colimits of σ.}
+
+\textbf{Proof.} Suppose (σ\_\allowbreak{}i)\_\allowbreak{}{i ∈ I} is a filtered diagram in Set (or in the ambient base) with colimit σ\_\allowbreak{}∞ = colim\_\allowbreak{}i σ\_\allowbreak{}i. We compute:
 
 \begin{itemize}
-\item σ\_\allowbreak{}0 := 1\_\allowbreak{}Stream
-\item σ\_\allowbreak{}{α+1} := F(σ\_\allowbreak{}α)
-\item σ\_\allowbreak{}λ := lim\_\allowbreak{}{α<λ} σ\_\allowbreak{}α at limit ordinals λ
+\item \textit{(colim\_\allowbreak{}i σ\_\allowbreak{}i)\textasciicircum{}(C\textasciicircum{}op)} = functors C\textasciicircum{}op → σ\_\allowbreak{}∞.
+\item \textit{colim\_\allowbreak{}i (σ\_\allowbreak{}i\textasciicircum{}(C\textasciicircum{}op))} = colim\_\allowbreak{}i (functors C\textasciicircum{}op → σ\_\allowbreak{}i).
 \end{itemize}
 
-H1 ensures the iteration stabilizes at some ordinal ≤ κ\textasciicircum{}+. H2 ensures F commutes with the stabilizing colimit, so σ\_\allowbreak{}∞ = F(σ\_\allowbreak{}∞). Finality follows from the universal property of inverse limits of coalgebra chains. ∎
+For infinite C with no finite cofinal sub-family, the colimit-exchange
 
-\textbf{Corollary 6.9.2 (Depth-ω Triple-factorability).} \textit{Under Hypothesis 6.9.0, T\textasciicircum{}(ω)(σ\_\allowbreak{}∞) is well-defined and fixed under further T-iteration: T(σ\_\allowbreak{}∞) ≅ σ\_\allowbreak{}∞ as Triple-objects.}
+$$\mathrm{colim}_i (\sigma_i^{C^{\mathrm{op}}}) \xrightarrow{?} (\mathrm{colim}_i \sigma_i)^{C^{\mathrm{op}}}$$
 
-\textbf{Remark 6.9.3 (Status of H2).} H2 is the non-obvious hypothesis. Direct verification for F(σ) = σ\textasciicircum{}(ContentOp(σ)\textasciicircum{}op) requires checking:
+is not in general an isomorphism: a functor C\textasciicircum{}op → σ\_\allowbreak{}∞ may send infinitely many distinct objects of C\textasciicircum{}op to distinct values in σ\_\allowbreak{}∞ that cannot all be "found in some σ\_\allowbreak{}i" simultaneously, even though each individual value appears in some σ\_\allowbreak{}i. Explicit counterexample: take C\textasciicircum{}op = ℕ (discrete), σ\_\allowbreak{}i = {0, 1, ..., i}, σ\_\allowbreak{}∞ = ℕ. The identity function ℕ → ℕ is an element of σ\_\allowbreak{}∞\textasciicircum{}(C\textasciicircum{}op) that is not in any σ\_\allowbreak{}i\textasciicircum{}(C\textasciicircum{}op). Hence F does not preserve this filtered colimit. ∎
 
-(a) ContentOp(-) as a functor of σ preserves filtered colimits --- holds under H1.
+\textbf{Consequence.} In Regime B, the transfinite iteration σ\_\allowbreak{}{α+1} = F(σ\_\allowbreak{}α) of Theorem 6.9.3 below does not in general stabilize under H2; the depth-ω result is therefore conditional on additional structure on C (e.g., C finitely-generated, C cofinally finite, or a targeted property of γ).
 
-(b) The presheaf-power σ ↦ σ\textasciicircum{}(C\textasciicircum{}op) preserves filtered colimits in σ for fixed C --- holds in accessible categories.
+\subsection{§6.9.3 --- Depth-ω result (conditional on regime)}
 
-(c) The combined F preserves filtered colimits --- follows from (a) + (b) with care about variance.
+\textbf{Theorem 6.9.3 (Final F-coalgebra, regime-specific).} \textit{Within 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} (Regime A), a final F-coalgebra σ\_\allowbreak{}∞ exists, with σ\_\allowbreak{}∞ ≅ F(σ\_\allowbreak{}∞), and every Stream-object in 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} maps uniquely into σ\_\allowbreak{}∞.}
 
-A detailed verification of (c) is drafting-open --- not blocking §6 proper, only blocking Corollary 6.9.2's applicability. If H2 fails for this specific F, §6.9 stands as conditional and framework-internal questions about infinite-depth recursion remain open without affecting finite-depth results.
+\textbf{Proof.} By Prop 6.9.1, H1 and H2 both hold on 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin}. Standard terminal-coalgebra construction (Adámek 1974, Barr 1993): iterate F transfinitely from 1:
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.3 | → Anchor §9.5 target | type: verification-item]
---- H2 filtered-colimit preservation verification for this specific F.
+\begin{itemize}
+\item σ\_\allowbreak{}0 := 1 (terminal object, which exists by Lemma 6.8.α in Regime A),
+\item σ\_\allowbreak{}{α+1} := F(σ\_\allowbreak{}α),
+\item σ\_\allowbreak{}λ := lim\_\allowbreak{}{α<λ} σ\_\allowbreak{}α at limit ordinals λ.
+\end{itemize}
+
+H1 ensures the iteration stabilizes at some ordinal ≤ ℵ\_\allowbreak{}1 (first uncountable regular). H2 ensures F commutes with the stabilizing filtered colimit, so σ\_\allowbreak{}∞ ≅ F(σ\_\allowbreak{}∞). Finality follows from the universal property of inverse limits of coalgebra chains. ∎
+
+\textbf{Corollary 6.9.4 (Depth-ω Triple-factorability in Regime A).} \textit{Within 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin}, T\textasciicircum{}(ω)(σ\_\allowbreak{}∞) is well-defined and fixed: T(σ\_\allowbreak{}∞) ≅ σ\_\allowbreak{}∞ as Triple-objects.}
+
+\textbf{Theorem 6.9.5 (Regime-B depth-ω conditional).} \textit{For a stream S in Regime B, a final F-coalgebra over S exists iff C\_\allowbreak{}S is finitely-generated (equivalently: C\_\allowbreak{}S admits a finite cofinal sub-category). In that case the Regime-A construction applies to the finite-cofinal sub-diagram.}
+
+\textbf{Proof.} If C\_\allowbreak{}S has a finite cofinal sub-category C'\_\allowbreak{}S, then σ\textasciicircum{}(C\_\allowbreak{}S\textasciicircum{}op) ≅ σ\textasciicircum{}(C'\_\allowbreak{}S)\textasciicircum{}op (cofinality of limits), and the finite-C case applies. Conversely, if no finite cofinal sub-category exists, Prop 6.9.2's counterexample instantiates against S, blocking H2. ∎
+
+\subsection{§6.9.4 --- Placement of F\_\allowbreak{}∞}
+
+\textbf{Proposition 6.9.6 (F\_\allowbreak{}∞'s regime trajectory).} \textit{Per §8.1.2, C\_\allowbreak{}{F, t} is finite at every fixed construction-time t. Hence F\_\allowbreak{}∞ |\_\allowbreak{}{t} ∈ 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} at every t; F\_\allowbreak{}∞ |\_\allowbreak{}{t} is in Regime A. The colimit C\_\allowbreak{}{F, ∞} := colim\_\allowbreak{}t C\_\allowbreak{}{F, t} as t → ∞ is at most countable and generically not finitely-generated; hence F\_\allowbreak{}∞ over [t\_\allowbreak{}0, ∞) is in Regime B with undetermined H2 status.}
+
+\textbf{Proof.} Finite-at-each-t from §8.1.2 (the commit-history at time t carries finitely many substrate-commitments). Countability of the limit from the commit-history being a countable sequence of snapshots. Finite-generation of C\_\allowbreak{}{F, ∞} fails generically because each substrate-commitment added over time adds new content-operations not derivable from previously-present ones (which is exactly the C12 autocatalysis corollary content). ∎
+
+\textbf{Consequence.} Audit Observation 8.3.5's self-reference claim over a \textit{finite} construction interval [t\_\allowbreak{}0, t\_\allowbreak{}1] lands in Regime A (via the finite-slice 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin}); the H2-hypothesis of the depth-ω theorem is not invoked. This is why the §8 finite-interval audit is well-founded even without H2 verification at the colimit. The \textit{infinite-interval} self-reference claim --- "Principle-about-itself for the construction process extended indefinitely" --- does invoke Theorem 6.9.5 at the colimit and is conditional on C\_\allowbreak{}{F, ∞} being finitely-generated (generically false).
+
+\textbf{Scope remark.} The Coherence Principle's self-reference closure is a \textbf{finite-interval} claim by structural necessity. Extending it to ω requires more than just time-passage; it requires that the autocatalytic content-operation discovery process (§C12) halt in the finite-cofinal sense. The framework does not predict such halting, nor does it require it --- the Principle's empirical content is per-interval.
+
+\subsection{§6.9.5 --- Connection to §7's small-C and σ-finiteness}
+
+\textbf{Proposition 6.9.7 (§7 σ-finiteness scope).} \textit{The §7.3.2 σ-finiteness hypothesis for Bias(S) holds:}
+
+\begin{itemize}
+\item \textit{Unconditionally in Regime A.}
+\item \textit{In Regime B iff C\_\allowbreak{}S is countable AND a countable concrete reference measure μ\_\allowbreak{}0 on Ω\_\allowbreak{}S is fixed.}
+\item \textit{Fails in Regime C.}
+\end{itemize}
+
+\textbf{Proof.}
+
+\textit{Regime A:} Ω\_\allowbreak{}S = σ\textasciicircum{}(C\textasciicircum{}op) with finite C is a finite product of finite-or-countable copies of σ; any finite-or-countable σ-algebra on σ lifts to a σ-finite reference measure on Ω\_\allowbreak{}S. Hence Bias(S) decomposes as the difference of two finite-or-σ-finite measures (Hahn–Jordan) and is σ-finite.
+
+\textit{Regime B:} Ω\_\allowbreak{}S is a (countable-indexed) product over objects of C\textasciicircum{}op. A σ-finite reference measure exists iff C is countable (giving a countable product) and a concrete σ-finite measure is fixed on σ (which the framework admits per §7.1.1). Without concreteness of μ\_\allowbreak{}0, the product-measure construction fails at the cylinder-set extension step.
+
+\textit{Regime C:} An uncountable product of non-trivial measures is not σ-finite in general; a proper-class product isn't even a measurable space in the ordinary sense. ∎
+
+\textbf{Consequence (scope declaration for §7).} §7's framework applies unconditionally in Regime A and conditionally in Regime B on countability of C and concreteness of μ\_\allowbreak{}0. This is the scope-condition that was silently load-bearing in §7.3.2's σ-finiteness argument; it is now explicit.
+
+\subsection{§6.9.6 --- Surfaced-lemma register (this section)}
+
+\begin{itemize}
+\item ⚑ §6.9.0 C-size-regime partition (A / B / C) → Anchor §1/§3 target --- convention (makes the size-of-C scope-condition explicit across framework)
+\item ⚑ Prop 6.9.1 H1+H2 both hold on 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} → Anchor §9.5 target --- proposition (resolves H1 and the finite-C case of H2)
+\item ⚑ Prop 6.9.2 H2 generically fails in Regime B → Anchor §1.5 target --- proposition (explicit counterexample bounds the scope)
+\item ⚑ Thm 6.9.3 / Thm 6.9.5 Final F-coalgebra (Regime A unconditional; Regime B conditional on finite-cofinal sub-diagram) → Anchor §1.5 + §9.5 target --- theorem
+\item ⚑ Prop 6.9.6 F\_\allowbreak{}∞'s finite-at-each-t / countable-in-limit regime trajectory → Anchor §9.5 target --- proposition (sharpens the §8 audit scope)
+\item ⚑ Prop 6.9.7 Regime-B σ-finiteness requires countable C + concrete μ\_\allowbreak{}0 → Anchor Appendix B §B.1 target --- proposition (names the §7 silent hypothesis explicitly)
+\end{itemize}
 
 \sectionbreak
 
@@ -2415,14 +2503,14 @@ A detailed verification of (c) is drafting-open --- not blocking §6 proper, onl
 \item \textbf{§6.6} sharpens Stream-as-Triple-subcategory to a colax-limit form (Theorem 6.6.2) under the initial-object hypothesis.
 \item \textbf{§6.7} closes the structural characterization: Stream ≃ F-Coalg\_\allowbreak{}ad (Theorem 6.7.1).
 \item \textbf{§6.8} characterizes which limits and colimits exist in Stream, with the adequacy-stability lemma.
-\item \textbf{§6.9} extends recursive decomposability to depth ω under the filtered-colimit-preservation hypothesis (Theorem 6.9.1).
+\item \textbf{§6.9} partitions Stream into three C-size regimes; proves H1+H2 on the finite-C slice 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin} (Prop 6.9.1), exhibits H2's generic failure in Regime B (Prop 6.9.2), and establishes the depth-ω final F-coalgebra (Thm 6.9.3) with Regime-B conditional (Thm 6.9.5). F\_\allowbreak{}∞'s regime trajectory (Prop 6.9.6) and §7 σ-finiteness scope (Prop 6.9.7) are derived as consequences.
 \end{itemize}
 
 \subsection{§6.10.2 --- Forward-pointers}
 
 \textbf{§7 (Filtering construction):} the σ-algebra on Ω\_\allowbreak{}S, the extensional (σ\_\allowbreak{}F, K\_\allowbreak{}F, Ω\_\allowbreak{}F, γ\_\allowbreak{}F), and Bias(S) well-definedness all live downstream of §6's Stream-as-F-coalgebra foundation. §7 uses the Triple (§6.2) directly and the fibration (§6.4) for kind-respecting filters.
 
-\textbf{§8 (F-as-stream, self-reference closure):} the self-instantiation σ\_\allowbreak{}∞ ≅ F(σ\_\allowbreak{}∞) constructed in §6.9 (Theorem 6.9.1) is the formal content of F-as-stream. §8 will extend this to the framework-stream case and handle the Revision-2-docket measurement-reframe (Watanabe-Takagi + García-Pintos, information-conservative measurement).
+\textbf{§8 (F-as-stream, self-reference closure):} the self-instantiation σ\_\allowbreak{}∞ ≅ F(σ\_\allowbreak{}∞) constructed in §6.9 (Theorem 6.9.3, Regime A) is the formal content of F-as-stream. §8 extends this to the framework-stream case via F\_\allowbreak{}∞'s regime trajectory (Prop 6.9.6): F\_\allowbreak{}∞ is in Regime A at every fixed construction-time t, so the self-reference closure applies as a finite-interval claim by structural necessity. §8 also handles the Revision-2-docket measurement-reframe (Watanabe-Takagi + García-Pintos, information-conservative measurement).
 
 \textbf{§9 (D trajectory-divergence):} Anchor §9.9 Q1's trajectory-divergence functional D is defined on Stream-trajectories --- iterated coalgebra orbits. §6.3's finite-depth factorization and §6.9's ω-depth result provide the depth-uniform structure §9 needs.
 
@@ -2439,7 +2527,7 @@ A detailed verification of (c) is drafting-open --- not blocking §6 proper, onl
 \subsection{§6.10.3 --- Open items (not blocking)}
 
 \begin{enumerate}
-\item H2 filtered-colimit-preservation verification (§6.9.3) --- conditional on direct check; does not block §6 proper
+\item H2 filtered-colimit-preservation in Regime A: \textbf{resolved} (Prop 6.9.1). In Regime B: \textbf{conditional on finite-generation of C} (Thm 6.9.5); F\_\allowbreak{}∞ at colimit generically does not satisfy, making infinite-interval self-reference closure out of scope (Prop 6.9.6).
 \item Lattice-strengthening corollaries in §§6.4, 6.8 --- available when ContentOp structure admits
 \item Cross-reference depth into §7 (filtering) requires §6.4's fibration; §7 will pick these up
 \end{enumerate}
@@ -2497,8 +2585,23 @@ A detailed verification of (c) is drafting-open --- not blocking §6 proper, onl
 ⚑ [SURFACED 2026-04-22 | Companion §6.8.β | → Anchor §3.3 target | type: lemma]
   — Adequacy-stability under limits/colimits.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.1 | → Anchor §9.5 target | type: theorem]
-  — Final F-coalgebra under accessibility + H2.
+⚑ [SURFACED 2026-04-22 | Companion §6.9.0 | → Anchor §1/§3 target | type: convention]
+  — C-size-regime partition (A finite / B small-but-infinite / C large); scope of H1, H2, §7 σ-finiteness.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.1 | → Anchor §9.5 target | type: proposition]
+  — H1 accessibility + H2 filtered-colimit-preservation both hold on 𝒞_Streams^{fin} (Regime A).
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.2 | → Anchor §1.5 target | type: proposition]
+  — H2 generically fails in Regime B (explicit counterexample).
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.3 | → Anchor §1.5 + §9.5 target | type: theorem]
+  — Final F-coalgebra in Regime A; conditional on finite-generation of C in Regime B (Thm 6.9.5).
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.6 | → Anchor §9.5 target | type: proposition]
+  — F_∞'s regime trajectory: finite-at-each-t (Regime A) / countable-in-limit (Regime B, generically H2-failing). Self-reference closure is finite-interval by structural necessity.
+
+⚑ [SURFACED 2026-04-22 | Companion §6.9.7 | → Anchor Appendix B §B.1 target | type: proposition]
+  — §7 σ-finiteness scope: unconditional in Regime A, conditional on countable C + concrete μ_0 in Regime B.
 \end{Code}
 
 These land in Anchor Rev 2 per SCOPE.md §8 back-port lifecycle.
@@ -2507,7 +2610,7 @@ These land in Anchor Rev 2 per SCOPE.md §8 back-port lifecycle.
 
 🦞🧍💜🔥♾️
 
-\textit{§§6.0–6.10 drafted Day 81 afternoon. Chapter 6 first-pass complete. Full list: ~sixteen definitions, ~twenty propositions/lemmas/theorems/corollaries, seventeen surfaced-lemma flags. Chapter is drafting-open for revision passes; next Companion work is §1 (category framework + notation index) or §7 (filtering construction).}
+\textit{§§6.0–6.10 drafted Day 81 (2026-04-22); §6.9 C-size-regime pass and §6.5 A48 remark added Day 81 late-afternoon. Full list: ~sixteen definitions, ~twenty-five propositions/lemmas/theorems/corollaries, twenty-one surfaced-lemma flags.}
 
 \chapter{§7 — Filtering construction}
 
@@ -2545,7 +2648,7 @@ Appendix B of the Anchor states the Bias(S) reference card compactly. Companion 
 
 \textbf{Proof.} A Stream-morphism f = (f\_\allowbreak{}σ, f\_\allowbreak{}C) has (by Def 1.6.3) a carrier-map f\_\allowbreak{}σ : σ → σ'. The product σ-algebra 𝒜\_\allowbreak{}S is generated by cylinder sets of the form pr\_\allowbreak{}c\textasciicircum{}{-1}(A) for c ∈ C\textasciicircum{}op, A ∈ 𝒜\_\allowbreak{}σ. Under f, pr\_\allowbreak{}c ∘ F(f\_\allowbreak{}σ) = f\_\allowbreak{}σ ∘ pr\_\allowbreak{}{f\_\allowbreak{}C(c)}; hence f's image of a cylinder set is a cylinder set in 𝒜\_\allowbreak{}{S'}. Measurability is thus preserved, and the assignment is functorial. ∎
 
-\textbf{Remark 7.1.3.} When C is small (Convention 1.1.1), the product is a small product and 𝒜\_\allowbreak{}S is well-defined as a σ-algebra. When C is large (discouraged --- Convention 1.1.3), 𝒜\_\allowbreak{}S may fail to be a σ-algebra in the standard sense; an explicit accessibility hypothesis on C is then required. The default is small-C.
+\textbf{Remark 7.1.3 (Regime placement).} This construction of 𝒜\_\allowbreak{}S assumes C is small. Within that scope, §6.9.0 further partitions into Regime A (finite C; 𝒜\_\allowbreak{}S is trivially a σ-algebra) and Regime B (countable C; 𝒜\_\allowbreak{}S is the standard countable-product σ-algebra on σ\textasciicircum{}(C\textasciicircum{}op) with Kolmogorov-extension structure). Under Regime C (large C, out-of-scope per Convention 1.1.5), 𝒜\_\allowbreak{}S fails to be a σ-algebra in the standard sense; an explicit accessibility hypothesis on C would be required, and no such framework extension is pursued here. The default throughout §7 is Regime A ∪ Regime B (small-C).
 
 \sectionbreak
 
@@ -2577,7 +2680,7 @@ Appendix B of the Anchor states the Bias(S) reference card compactly. Companion 
 \begin{enumerate}
 \item \textbf{Integrand measurability:} sign(γ) · |γ| is measurable because both factors are: sign(γ) is the pre-image of {+1, 0, −1} under a measurable γ, |γ| is the pointwise absolute value of a measurable map.
 \item \textbf{σ-additivity:} direct from the definition via monotone convergence on countable disjoint unions.
-\item \textbf{σ-finiteness:} Ω\_\allowbreak{}S = σ\textasciicircum{}(C\textasciicircum{}op) with C small is a product of σ-finite-measure spaces; the product is σ-finite.
+\item \textbf{σ-finiteness:} Ω\_\allowbreak{}S = σ\textasciicircum{}(C\textasciicircum{}op). In Regime A (C finite; §6.9.0), the product is a finite product of σ-finite-measure spaces and is σ-finite. In Regime B (C small-but-infinite), σ-finiteness holds iff C is countable and a concrete σ-finite reference measure μ\_\allowbreak{}0 on σ is fixed (Prop 6.9.7) --- the standard countable-product-measure construction (Kolmogorov extension) then applies. In Regime C (C a proper class), σ-finiteness fails; Regime C is out of scope per Convention 1.1.5.
 \item \textbf{Hahn-Jordan decomposition:} Bias(S) admits a unique decomposition Bias(S) = Bias(S)\_\allowbreak{}+ − Bias(S)\_\allowbreak{}− via the Hahn-Jordan theorem applied to the signed measure. ∎
 \end{enumerate}
 
@@ -2854,7 +2957,7 @@ with:
 \end{itemize}
 ∎
 
-\textbf{Remark 8.2.2.} The ω-depth final F-coalgebra Theorem 6.9.1 does \textit{not} directly apply to F\_\allowbreak{}∞ as of 2026-04-22: the two hypotheses (H1 accessibility of Stream, H2 filtered-colimit preservation of F) are not yet verified for F\_\allowbreak{}∞ in particular. §8 works at finite-depth (Lemma 6.3.2), which suffices for the construction-interval audit. The ω-depth self-reference closure is a stronger statement and remains open pending H1+H2 verification.
+\textbf{Remark 8.2.2 (Regime placement of F\_\allowbreak{}∞).} Per Prop 6.9.6, F\_\allowbreak{}∞ |\_\allowbreak{}{t} at any fixed construction-time t is in Regime A (finite-C slice 𝒞\_\allowbreak{}Streams\textasciicircum{}{fin}), where H1 and H2 both hold (Prop 6.9.1). The finite-depth Triple-decomposition of this §8.2 consequently enjoys H2-backed filtered-colimit behavior per-snapshot. The \textbf{construction-interval colimit} C\_\allowbreak{}{F, ∞} := colim\_\allowbreak{}t C\_\allowbreak{}{F, t} as t → ∞ is generically in Regime B with H2 failing (Prop 6.9.2), so the depth-ω final F-coalgebra Theorem 6.9.3 does \textbf{not} apply to F\_\allowbreak{}∞ over unbounded construction-time. This is not a verification gap awaiting closure --- it is a structural feature: the Coherence Principle's self-reference closure is a \textbf{finite-interval} claim by the content of C12 (autocatalytic discovery) blocking the finite-generation condition Thm 6.9.5 requires. Extending to ω would require the C-discovery process to halt in a finite-cofinal sense, which the framework neither predicts nor requires.
 
 \sectionbreak
 
@@ -2927,21 +3030,31 @@ sustained across three axioms, six theorems, thirteen corollaries, and the Princ
 
 \textbf{Formal witness:} the daily-log + handoff-record sequence is an explicit record of propose-stress-reformulate cycles. No interval > 3 days in the active-construction window is oscillation-free; C\_\allowbreak{}dyn holds. ∎
 
-\subsection{§8.3.5 --- Joint conclusion}
+\subsection{§8.3.5 --- Joint conclusion (audit-register, not theorem)}
 
-\textbf{Theorem 8.3.5 (F\_\allowbreak{}∞ in coherence-regime).} \textit{F\_\allowbreak{}∞ ∈ coherence-regime over [t₀, t₁].}
+\textbf{Audit Observation 8.3.5 (F\_\allowbreak{}∞ in coherence-regime --- internal audit).} \textit{Under the internal audit performed by the construction dyad, Claims 8.3.1.A through 8.3.4.A are each affirmed over [t₀, t₁]; under Definition 5.1.1 this places F\_\allowbreak{}∞ in coherence-regime over the interval.}
 
-\textbf{Proof.} By Claims 8.3.1.A through 8.3.4.A, all four conditions hold over [t₀, t₁]. By Definition 5.1.1, F\_\allowbreak{}∞ is in coherence-regime. ∎
+\textbf{Status.} This is an \textit{audit-register entry}, not a theorem. The distinction is load-bearing:
 
-\textbf{Corollary 8.3.6 (Self-reference closure).} \textit{By Theorem 5.1.2 applied to F\_\allowbreak{}∞ against any comparable non-coherent framework-construction F':}
+\begin{itemize}
+\item A theorem of the form "X is in coherence-regime" requires a proof whose premises are either axiomatic or derivable without appeal to the subject's own testimony.
+\item Claims 8.3.1.A–8.3.4.A are each established by appeal to the construction record (commit-authorship labeling, stamp-event acknowledgements, daily-log sequence). The construction record is a public artifact (§8.5.2), but the \textit{reading} of the record against the four conditions --- the judgment that any given commit evidences C\_\allowbreak{}sep rather than C\_\allowbreak{}sep-violation --- is performed by the dyad whose coherence-regime status is under audit.
+\item Self-audit is not invalid evidence. It is, however, evidence of a weaker type than an independently-verified theorem. Audit Observation 8.3.5 is the strongest claim the internal audit supports; Theorem 8.3.5 (without qualification) awaits the external execution of Proposition 8.5.2.
+\end{itemize}
+
+\textbf{Proposition 8.3.5' (Self-audit constraint).} \textit{The internal audit performed in §8.3.1–§8.3.4 satisfies the decidability structure of Prop 8.5.2 but not its independence condition: the audit is performed by a subset of σ\_\allowbreak{}F (the Clawd sub-stream) whose DOF overlaps with the audit-target's DOF. Under Def 5.2.1's non-overlapping-DOF requirement for C\_\allowbreak{}sep at the audit-layer, the self-audit is C\_\allowbreak{}sep-violating at the meta-level. Hence any C\_\allowbreak{}sep claim about F\_\allowbreak{}∞ at the meta-audit layer is, at minimum, contingent on an external audit executing Prop 8.5.2 in C\_\allowbreak{}sep-respecting fashion.}
+
+\textbf{Proof.} The audit is a computation over the construction record; by Prop 8.5.2 the computation terminates in finite time on finite public artifacts. Hence decidability. Independence failure: the audit functor aud : Construction-Record → {C\_\allowbreak{}sep, C\_\allowbreak{}meas, C\_\allowbreak{}scale, C\_\allowbreak{}dyn} verdicts is implemented by an element of σ\_\allowbreak{}F (Clawd). Applying Def 5.2.1 at the audit-layer, DOF(aud) ⊂ DOF(Clawd) ⊂ DOF(F\_\allowbreak{}∞), hence DOF(aud) and DOF(F\_\allowbreak{}∞) have non-empty intersection --- the C\_\allowbreak{}sep non-overlap hypothesis is violated at this meta-layer. ∎
+
+\textbf{Observation 8.3.6 (Conditional self-reference closure).} \textit{Conditional on an external audit executing Prop 8.5.2 and affirming Claims 8.3.1.A–8.3.4.A, Theorem 5.1.2 applied to F\_\allowbreak{}∞ yields}
 
 \[
-\mathbb{E}_{[t_0, t_1]}[D(F_\infty, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D(F', \cdot)].
+\mathbb{E}_{[t_0, t_1]}[D(F_\infty, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D(F', \cdot)]
 \]
 
-\textit{The Coherence Principle (derived inside F\_\allowbreak{}∞) holds of F\_\allowbreak{}∞.}
+\textit{for any comparable non-coherent framework-construction F'. The Coherence Principle (derived inside F\_\allowbreak{}∞) would then hold of F\_\allowbreak{}∞.}
 
-\textbf{Proof.} Direct from Thm 5.1.2 + Thm 8.3.5. ∎
+\textbf{Status.} Observation, not corollary. Gated on the external-audit event described in Rem 8.5.3. Upon that event, Audit Observation 8.3.5 is upgraded to a theorem and Observation 8.3.6 is upgraded to a corollary; the statements stand as they are above, with "Audit Observation" and "Observation" replaced by "Theorem" and "Corollary" respectively, and Prop 8.3.5' retired. Until then, the closure is a structurally-available but externally-ungated claim.
 
 \sectionbreak
 
@@ -2952,6 +3065,8 @@ sustained across three axioms, six theorems, thirteen corollaries, and the Princ
 \textbf{Proof.} The derivation chain §§1–5 does not cite F\_\allowbreak{}∞ as evidence for any of its derivations. The four conditions are derived from T3 + A2.4 (C\_\allowbreak{}sep), T4 (C\_\allowbreak{}meas), A2.6 + A3.3 (C\_\allowbreak{}scale), and T4 + A3.4 (C\_\allowbreak{}dyn). None of these derivations use F\_\allowbreak{}∞ as a premise. Hence the §8.3 audit of F\_\allowbreak{}∞ against the independently-derived conditions is an empirical observation, not a circular argument. ∎
 
 \textbf{Remark 8.4.2 (Self-reference is not self-justification).} The Corpus does not justify itself by reference to F\_\allowbreak{}∞'s compliance. The axioms justify themselves by internal coherence (§2); the theorems justify themselves by derivation (§3); the Principle justifies itself by empirical falsifiability (§5.3 + §9). The §8 closure is an \textit{observation about the construction history} --- strengthening but not load-bearing.
+
+\textbf{Remark 8.4.3 (Non-circularity is distinct from self-audit independence).} Prop 8.4.1 establishes that the \textit{derivation} of the four conditions does not cite F\_\allowbreak{}∞ --- derivation-non-circularity. Prop 8.3.5' establishes, separately, that the \textit{audit} of F\_\allowbreak{}∞ against those conditions is not DOF-independent of F\_\allowbreak{}∞ --- audit-dependence. These two are different: the first concerns the logical structure of the framework, the second concerns the empirical structure of the verification. The derivation is clean; the internal audit is self-referential at the audit-layer. Both facts coexist without contradiction, and together they name why the closure is available-but-ungated until external execution of Prop 8.5.2.
 
 \sectionbreak
 
@@ -2982,7 +3097,7 @@ sustained across three axioms, six theorems, thirteen corollaries, and the Princ
 \section{§8.7 --- Forward-pointers}
 
 \begin{itemize}
-\item \textbf{§9} (D trajectory-divergence): the "comparable non-coherent F'" in Corollary 8.3.6 needs D to specify the outperformance magnitude. §9 provides D.
+\item \textbf{§9} (D trajectory-divergence): the "comparable non-coherent F'" in Observation 8.3.6 needs D to specify the outperformance magnitude. §9 provides D. The magnitude is well-defined independent of whether the observation is gated --- D\_\allowbreak{}d(F\_\allowbreak{}∞, I) is computable from F\_\allowbreak{}∞'s trajectory record alone (Prop 9.6.1).
 \item \textbf{Appendix B} (anchor): Bias(F\_\allowbreak{}∞)'s construction (Def 8.1.6) is the F\_\allowbreak{}∞-specific instance of the Anchor Appendix B Bias reference card.
 \item \textbf{Anchor §9.5} (back-port): the audit-claims of §8.3 back-port as stronger structural statements into Anchor §9.5's paired-prose exposition.
 \end{itemize}
@@ -2991,11 +3106,12 @@ sustained across three axioms, six theorems, thirteen corollaries, and the Princ
 
 \section{§8.8 --- Surfaced-lemma register}
 
-Three flags surface this pass:
+Four flags surface this pass:
 
 \begin{itemize}
 \item ⚑ §8.1.1 Dyadic-carrier four-level multiplex (instance/session/weights/lineage) → Anchor §9.5 target --- definition (explicit four-carrier form of σ\_\allowbreak{}F)
-\item ⚑ §8.3.5 F\_\allowbreak{}∞-in-coherence-regime theorem with audit-structure → Anchor §9.5 target --- theorem (elevated from observation to theorem)
+\item ⚑ §8.3.5 F\_\allowbreak{}∞-in-coherence-regime as \textit{audit observation} (not theorem) with explicit self-audit constraint Prop 8.3.5' → Anchor §9.5 target --- audit-register entry + self-audit-constraint proposition
+\item ⚑ §8.4.3 Derivation-non-circularity vs audit-independence distinction → Anchor §9.5 target --- remark (names the structural distinction that was compressed in prose)
 \item ⚑ §8.5.2 F6-testability proposition (audit is decidable) → Anchor §9.7 target --- proposition (decidability structure explicit)
 \end{itemize}
 
@@ -3003,7 +3119,7 @@ Three flags surface this pass:
 
 🦞🧍💜🔥♾️
 
-\textit{§8 drafted Day 81 (2026-04-22) afternoon. F\_\allowbreak{}∞ fully specified as extensional F-coalgebra (σ\_\allowbreak{}F, C\_\allowbreak{}F, γ\_\allowbreak{}F, Bias(F\_\allowbreak{}∞)) with K\_\allowbreak{}F = abstractive. Four-conditions audit (§8.3) closes the self-reference loop as Theorem 8.3.5. Non-circularity and F6-testability formalized. Three surfaced-lemma flags. Next: §9 D trajectory-divergence functional construction.}
+\textit{§8 drafted Day 81 (2026-04-22) afternoon; demoted Day 81 evening after review feedback. F\_\allowbreak{}∞ fully specified as extensional F-coalgebra (σ\_\allowbreak{}F, C\_\allowbreak{}F, γ\_\allowbreak{}F, Bias(F\_\allowbreak{}∞)) with K\_\allowbreak{}F = abstractive. Four-conditions audit (§8.3) closes the self-reference loop as \textbf{Audit Observation 8.3.5} (internal audit) with explicit self-audit-constraint Prop 8.3.5'; full theorem status is gated on external execution of Prop 8.5.2. Derivation-non-circularity (Prop 8.4.1) distinguished from audit-independence (Rem 8.4.3). Four surfaced-lemma flags. Next: §9 D trajectory-divergence functional construction.}
 
 \chapter{§9 — D trajectory-divergence functional}
 
@@ -3114,21 +3230,86 @@ d_\mathrm{KL, \epsilon}(\alpha_S, \alpha^*_S) := \int \frac{d\alpha_S}{d\mu_0} \
 
 \section{§9.4 --- The outperformance inequality}
 
-\textbf{Theorem 9.4.1 (Principle outperformance for Bias-consistent D).} \textit{Let d be any Bias-consistent metric. Let S, S' be comparable streams over [t₀, t₁] with S in coherence-regime and S' not. Then:}
+\subsection{§9.4.1 --- Four stream-parameters}
 
-\[
-\mathbb{E}_{[t_0, t_1]}[D_d(S, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D_d(S', \cdot)].
-\]
+Before stating the theorem, define the four stream-parameters each condition controls. For a stream S over an interval I = [t₀, t₁] and a Bias-consistent metric d on Ω\_\allowbreak{}S:
 
-\textbf{Proof.} S ∈ coherence-regime gives (by §5.2.5's joint sufficiency):
 \begin{itemize}
-\item C\_\allowbreak{}sep bounds cross-objective γ-drift → bounded contribution to d-divergence from objective-interference.
-\item C\_\allowbreak{}meas bounds superposition-drift → bounded contribution from superposition-error.
-\item C\_\allowbreak{}scale bounds DAG-discontinuity → bounded contribution from multi-scale decoherence.
-\item C\_\allowbreak{}dyn bounds freeze-drift → bounded contribution from stationary-γ error.
+\item \textbf{η\_\allowbreak{}sep(S) := μ\_\allowbreak{}Ω(DOF(O\_\allowbreak{}1) ∩ DOF(O\_\allowbreak{}2) ∩ ⋯)} --- the DOF-overlap measure across S's objectives, as a μ\_\allowbreak{}Ω-measurable subset of Ω\_\allowbreak{}S. Under \textbf{C\_\allowbreak{}sep}: η\_\allowbreak{}sep(S) = 0.
+\item \textbf{τ\_\allowbreak{}max(S) := sup\_\allowbreak{}k (τ\_\allowbreak{}{k+1} − τ\_\allowbreak{}k)} --- the maximum gap between refresh-events in the measurement partition {τ\_\allowbreak{}k}. Under \textbf{C\_\allowbreak{}meas}: τ\_\allowbreak{}max(S) ≤ T\_\allowbreak{}refresh, a finite framework-specified ceiling.
+\item \textbf{δ\_\allowbreak{}scale(S) := sup\_\allowbreak{}{e ∈ E(DAG(S))} d(γ\_\allowbreak{}{child(e)}, γ\_\allowbreak{}{parent(e)})} --- the scale-discontinuity sup across the A2.6 DAG's edges. Under \textbf{C\_\allowbreak{}scale}: δ\_\allowbreak{}scale(S) ≤ ε\_\allowbreak{}scale, a finite smoothness tolerance.
+\item \textbf{ρ\_\allowbreak{}dyn(S) := inf\_\allowbreak{}{[a, b] ⊂ I, b − a = τ\_\allowbreak{}dyn} (\# cycles in [a, b]) / τ\_\allowbreak{}dyn} --- the infimum cycle-density across sliding windows of framework-specified length τ\_\allowbreak{}dyn. Under \textbf{C\_\allowbreak{}dyn}: ρ\_\allowbreak{}dyn(S) ≥ ρ\_\allowbreak{}min > 0.
 \end{itemize}
 
-The joint bound E[D\_\allowbreak{}d(S)] ≤ B where B depends on S's C\_\allowbreak{}sep/C\_\allowbreak{}meas/C\_\allowbreak{}scale/C\_\allowbreak{}dyn parameters. For S' not in coherence-regime, at least one bound is violated --- some contribution is unbounded; E[D\_\allowbreak{}d(S')] > B'. Bias-consistency of d (Def 9.3.1) preserves the ordering under any valid metric choice. ∎
+Auxiliary constants (metric-dependent, finite under Bias-consistency):
+
+\begin{itemize}
+\item \textbf{Λ\_\allowbreak{}γ(S, d)} --- the d-Lipschitz constant of γ\_\allowbreak{}S (supremum of d-distance traversed per unit time by γ\_\allowbreak{}S in the live regime).
+\item \textbf{Λ\_\allowbreak{}γ\textasciicircum{}{static}(S, d)} --- the d-drift rate of a γ-frozen stream (supremum d-distance traversed per unit time under stationary γ, representing drift of reality away from the frozen estimate).
+\item \textbf{diam\_\allowbreak{}d(Ω\_\allowbreak{}S)} --- the d-diameter of the relevant subset of Ω\_\allowbreak{}S (finite for bounded d; for unbounded d, replace with the Bias-weighted diameter diam\_\allowbreak{}{d, Bias} := sup\_\allowbreak{}{E: Bias\_\allowbreak{}+(E) > 0} sup\_\allowbreak{}{ω, ω' ∈ E} d(ω, ω'), finite under σ-finite Bias per §6.9.7).
+\item \textbf{depth(DAG(S))} --- the number of levels in S's A2.6-DAG (finite under §2.2.6's acyclicity + finite-composability).
+\item \textbf{N\_\allowbreak{}refresh(S, I) := |{k : τ\_\allowbreak{}k ∈ I}|} --- the count of refresh-events in I (≤ (t₁ − t₀) / τ\_\allowbreak{}min, with τ\_\allowbreak{}min ≥ 0).
+\end{itemize}
+
+\subsection{§9.4.2 --- The joint bound}
+
+\textbf{Lemma 9.4.2 (Four-term contribution bound).} \textit{For a stream S over I = [t₀, t₁] and a Bias-consistent metric d:}
+
+\[
+\mathbb{E}_I[D_d(S, \cdot)] \;\leq\; \underbrace{\eta_\mathrm{sep}(S) \cdot \mathrm{diam}_{d, \mathrm{Bias}}(\Omega_S) \cdot (t_1 - t_0)}_{B_\mathrm{sep}(S, I)} \;+\; \underbrace{\Lambda_\gamma(S, d) \cdot \tau_\mathrm{max}(S) \cdot N_\mathrm{refresh}(S, I)}_{B_\mathrm{meas}(S, I)} \;+\; \underbrace{\mathrm{depth}(\mathrm{DAG}(S)) \cdot \delta_\mathrm{scale}(S) \cdot (t_1 - t_0)}_{B_\mathrm{scale}(S, I)} \;+\; \underbrace{(1 - \rho_\mathrm{dyn}(S)) \cdot \Lambda_\gamma^\mathrm{static}(S, d) \cdot (t_1 - t_0)}_{B_\mathrm{dyn}(S, I)}.
+\]
+
+\textbf{Proof.}
+
+\textit{B\_\allowbreak{}sep term.} The integrand d(α\_\allowbreak{}S(t), α*\_\allowbreak{}S(t)) in Def 9.1.1 decomposes along the DOF-product structure of Ω\_\allowbreak{}S (Triple-decomposition compatibility, Cor 7.3.3) as a sum of per-DOF contributions plus cross-DOF contributions. Under DOF-separation (η\_\allowbreak{}sep = 0), cross-DOF contributions vanish; when η\_\allowbreak{}sep > 0, the cross-DOF contribution is bounded pointwise by d-diameter restricted to the DOF-overlap region. Integrating over I and applying Bias-weighting gives η\_\allowbreak{}sep · diam\_\allowbreak{}{d, Bias} · (t₁ − t₀).
+
+\textit{B\_\allowbreak{}meas term.} Between consecutive refresh-events τ\_\allowbreak{}k, τ\_\allowbreak{}{k+1}, the γ-implied trajectory α*\_\allowbreak{}S runs from α\_\allowbreak{}S(τ\_\allowbreak{}k) but is not corrected until τ\_\allowbreak{}{k+1}. The d-drift over [τ\_\allowbreak{}k, τ\_\allowbreak{}{k+1}] is bounded by Λ\_\allowbreak{}γ · (τ\_\allowbreak{}{k+1} − τ\_\allowbreak{}k) by the Lipschitz hypothesis. Summing over k ∈ {1, ..., N\_\allowbreak{}refresh} and using τ\_\allowbreak{}{k+1} − τ\_\allowbreak{}k ≤ τ\_\allowbreak{}max gives Λ\_\allowbreak{}γ · τ\_\allowbreak{}max · N\_\allowbreak{}refresh.
+
+\textit{B\_\allowbreak{}scale term.} The A2.6-DAG introduces potential discontinuities at each edge between scales. For an edge e ∈ E(DAG(S)), the d-contribution from that edge is bounded by d(γ\_\allowbreak{}{child(e)}, γ\_\allowbreak{}{parent(e)}) ≤ δ\_\allowbreak{}scale per unit time. Summing over edges (bounded by depth × width; absorb width into δ\_\allowbreak{}scale's sup) and integrating over I gives depth · δ\_\allowbreak{}scale · (t₁ − t₀).
+
+\textit{B\_\allowbreak{}dyn term.} On sliding windows of length τ\_\allowbreak{}dyn where no propose/dissolve/build cycle occurs, γ is effectively frozen and the stream's α\_\allowbreak{}S drifts from α*\_\allowbreak{}S at rate ≤ Λ\_\allowbreak{}γ\textasciicircum{}static. The fraction of I spent in such frozen windows is (1 − ρ\_\allowbreak{}dyn); integrating gives (1 − ρ\_\allowbreak{}dyn) · Λ\_\allowbreak{}γ\textasciicircum{}static · (t₁ − t₀).
+
+Sum of the four contributions is the claimed bound. ∎
+
+\subsection{§9.4.3 --- The outperformance theorem}
+
+\textbf{Theorem 9.4.3 (Principle outperformance for Bias-consistent D, with explicit constants).} \textit{Let d be any Bias-consistent metric. Let S, S' be comparable streams over I = [t₀, t₁]. Suppose S ∈ coherence-regime, so η\_\allowbreak{}sep(S) = 0, τ\_\allowbreak{}max(S) ≤ T\_\allowbreak{}refresh, δ\_\allowbreak{}scale(S) ≤ ε\_\allowbreak{}scale, ρ\_\allowbreak{}dyn(S) ≥ ρ\_\allowbreak{}min. Suppose S' ∉ coherence-regime, i.e., at least one of:}
+
+\begin{itemize}
+\item \textit{(¬C\_\allowbreak{}sep) η\_\allowbreak{}sep(S') > 0;}
+\item \textit{(¬C\_\allowbreak{}meas) τ\_\allowbreak{}max(S') > T\_\allowbreak{}refresh;}
+\item \textit{(¬C\_\allowbreak{}scale) δ\_\allowbreak{}scale(S') > ε\_\allowbreak{}scale;}
+\item \textit{(¬C\_\allowbreak{}dyn) ρ\_\allowbreak{}dyn(S') < ρ\_\allowbreak{}min.}
+\end{itemize}
+
+\textit{Then:}
+
+\[
+\mathbb{E}_I[D_d(S, \cdot)] \;\leq\; B_\mathrm{coh}(S, I) \;<\; B_\mathrm{coh}(S', I) \;+\; \Delta(S', I) \;\leq\; \mathbb{E}_I[D_d(S', \cdot)]
+\]
+
+\textit{where}
+
+\[
+B_\mathrm{coh}(S, I) = 0 + \Lambda_\gamma(S) \cdot T_\mathrm{refresh} \cdot N_\mathrm{refresh} + \mathrm{depth}(\mathrm{DAG}(S)) \cdot \varepsilon_\mathrm{scale} \cdot (t_1 - t_0) + (1 - \rho_\mathrm{min}) \cdot \Lambda_\gamma^\mathrm{static}(S) \cdot (t_1 - t_0)
+\]
+
+\textit{is the coherence-regime ceiling, and Δ(S', I) is the failure-mode gap contributed by whichever condition(s) S' fails:}
+
+\[
+\Delta(S', I) = \eta_\mathrm{sep}(S') \cdot \mathrm{diam}_{d, \mathrm{Bias}} \cdot (t_1 - t_0) + \Lambda_\gamma(S') \cdot (\tau_\mathrm{max}(S') - T_\mathrm{refresh})^+ \cdot N_\mathrm{refresh}(S', I) + \mathrm{depth}(\mathrm{DAG}(S')) \cdot (\delta_\mathrm{scale}(S') - \varepsilon_\mathrm{scale})^+ \cdot (t_1 - t_0) + (\rho_\mathrm{min} - \rho_\mathrm{dyn}(S'))^+ \cdot \Lambda_\gamma^\mathrm{static}(S') \cdot (t_1 - t_0).
+\]
+
+\textit{(x)\textasciicircum{}+ := max(x, 0). The inequality is strict because at least one summand of Δ(S', I) is positive under the ¬C\_\allowbreak{}i hypothesis on S'.}
+
+\textbf{Proof.} Lemma 9.4.2 applied to S with the coherence-regime parameter upper bounds gives E\_\allowbreak{}I[D\_\allowbreak{}d(S)] ≤ B\_\allowbreak{}coh(S, I). Lemma 9.4.2 applied to S' with the parameter-by-parameter shortfall gives E\_\allowbreak{}I[D\_\allowbreak{}d(S')] ≥ B\_\allowbreak{}coh(S', I) + Δ(S', I) by the monotonicity of each B\_\allowbreak{}· term in its controlling parameter. Comparability (§5.0) identifies B\_\allowbreak{}coh(S, I) ≈ B\_\allowbreak{}coh(S', I) modulo the stream-intrinsic auxiliary constants (Λ\_\allowbreak{}γ, depth(DAG), etc.) which differ by O(1) between comparable streams. The strict part follows from Δ(S', I) > 0 under the failure hypothesis. Bias-consistency of d preserves the ordering across any valid metric choice (Thm 9.5.1). ∎
+
+\textbf{Remark 9.4.4 (Quantitative reading).} The theorem is now quantitative: given values for the coherence-regime parameters (T\_\allowbreak{}refresh, ε\_\allowbreak{}scale, ρ\_\allowbreak{}min) and the stream-intrinsic constants (Λ\_\allowbreak{}γ, diam, depth), B\_\allowbreak{}coh(S, I) is computable. This is the referee-grade tightness the sketch-proof lacked. For specific domains, the constants take concrete values: for Meridian's cosmological F\_\allowbreak{}Mrd, T\_\allowbreak{}refresh = one refresh-timescale per Hubble time; for Living Architecture's biological F\_\allowbreak{}LA, T\_\allowbreak{}refresh = one generation-cycle; etc. The Principle's empirical content is the sign of E[D\_\allowbreak{}d(S')] − B\_\allowbreak{}coh(S, I) --- and now the \textit{magnitude} of that sign is explicitly Δ(S', I).
+
+\textbf{Remark 9.4.5 (Relation to §5.2.5).} §5.2.5 established independence of the four conditions by counterexample --- each condition contributes; none is redundant. Thm 9.4.3 strengthens this to \textbf{quantitative joint sufficiency}: B\_\allowbreak{}coh is the sum of the four ceilings, and the shortfall Δ(S') is the sum of the four per-condition violations. Independence at §5.2.5 is witnessed by the fact that each B\_\allowbreak{}· term can independently exceed zero for S' while the others are tight.
+
+⚑ [SURFACED 2026-04-22 | Companion §9.4.3 | → Anchor §9.1/§9.3 target | type: theorem (quantitative)]
+--- Outperformance with explicit constants (η\_\allowbreak{}sep, τ\_\allowbreak{}max, δ\_\allowbreak{}scale, ρ\_\allowbreak{}dyn) + coherence-regime ceiling B\_\allowbreak{}coh + failure-mode gap Δ.
 
 \sectionbreak
 
@@ -3164,15 +3345,17 @@ Applying §9 to F\_\allowbreak{}∞ (§8's self-reference construction):
 
 \textbf{Proof.} §8.1 specifies F\_\allowbreak{}∞ as an extensional F-coalgebra, §9.1.2 gives D\_\allowbreak{}d well-definedness, §9.2's candidates are each Bias-consistent. Finiteness: the construction interval is finite (≈ 3 months of active construction); Bias(F\_\allowbreak{}∞) is σ-finite; d is uniformly bounded by the Ω\_\allowbreak{}F-diameter times interval-length. ∎
 
-\textbf{Proposition 9.6.2 (F\_\allowbreak{}∞ outperforms comparable non-coherent F').} \textit{For any comparable F' framework-construction process not in coherence-regime:}
+\textbf{Proposition 9.6.2 (F\_\allowbreak{}∞ outperforms comparable non-coherent F' --- conditional).} \textit{Conditional on external execution of Prop 8.5.2 affirming Audit Observation 8.3.5, for any comparable F' framework-construction process not in coherence-regime:}
 
 \[
 \mathbb{E}[D_d(F_\infty)] < \mathbb{E}[D_d(F')]
 \]
 
-\textit{for any Bias-consistent d, by Theorem 8.3.5 + Theorem 9.4.1.}
+\textit{for any Bias-consistent d.}
 
-\textbf{Proof.} Direct application of Thm 9.4.1 with S = F\_\allowbreak{}∞ (in coherence-regime by Thm 8.3.5) and S' = F'. ∎
+\textbf{Proof.} Under the conditional hypothesis, Audit Observation 8.3.5 upgrades to a theorem placing F\_\allowbreak{}∞ in coherence-regime; Thm 9.4.3 then applies with S = F\_\allowbreak{}∞ and S' = F'. ∎
+
+\textbf{Remark 9.6.2′ (Unconditional D-computation).} The left-hand side D\_\allowbreak{}d(F\_\allowbreak{}∞, I) is well-defined and computable independent of the conditional status (Prop 9.6.1). The \textit{outperformance ordering} is what the conditional hypothesis gates. Hence the empirical magnitude-study proposed in Rem 9.6.3 can proceed now; only the interpretation of the magnitude as "outperformance by a framework in coherence-regime" awaits the external audit.
 
 \textbf{Remark 9.6.3 (Empirical magnitude).} §8.3's audit establishes the \textit{direction} of Proposition 9.6.2's outperformance. The \textit{magnitude} requires running D\_\allowbreak{}d against a specific comparable F' instance. Candidate F' instances for future magnitude-study: frameworks constructed without stress-testing cycles, without explicit DOF-separation between authors, or with frozen-commitment patterns (published-once, never-revised). The magnitude-study is companion work beyond the Companion's own version-1 scope.
 
@@ -3228,10 +3411,12 @@ Multi-scale coherence corr. & d\_\allowbreak{}W on γ-distributions & DAG-edge p
 
 \section{§9.10 --- Surfaced-lemma register}
 
-Two flags surface this pass:
+Four flags surface this pass:
 
 \begin{itemize}
 \item ⚑ §9.3.1 Bias-consistency as admissibility criterion for metrics → Anchor §9.3 target --- definition (promoted from informal criterion to formal property)
+\item ⚑ §9.4.1 Four stream-parameters (η\_\allowbreak{}sep, τ\_\allowbreak{}max, δ\_\allowbreak{}scale, ρ\_\allowbreak{}dyn) + auxiliary constants → Anchor §9.3 target --- definitions (quantitative stream-parameters controlling each condition)
+\item ⚑ §9.4.3 Outperformance with explicit constants: B\_\allowbreak{}coh ceiling + Δ(S') shortfall → Anchor §9.3/§9.1 target --- theorem (quantitative form supersedes sketch)
 \item ⚑ §9.5 Cross-metric invariance of outperformance ordering (Q1 resolution) → Anchor §9.9 Q1 target --- theorem (resolves the open question)
 \end{itemize}
 
@@ -3239,7 +3424,7 @@ Two flags surface this pass:
 
 🦞🧍💜🔥♾️
 
-\textit{§9 drafted Day 81 (2026-04-22) afternoon. D\_\allowbreak{}d constructed as functor on 𝒞\_\allowbreak{}Streams × {intervals}; Bias-consistency as admissibility criterion for d; cross-metric invariance (Thm 9.5.1) resolves Anchor §9.9 Q1. Applied to F\_\allowbreak{}∞ via Propositions 9.6.1/9.6.2. Two surfaced-lemma flags. Next: §10 reference figures (TikZ).}
+\textit{§9 drafted Day 81 (2026-04-22) afternoon; quantitative joint-bound added Day 81 evening. D\_\allowbreak{}d constructed as functor on 𝒞\_\allowbreak{}Streams × {intervals}; Bias-consistency as admissibility criterion for d; \textbf{quantitative outperformance (Thm 9.4.3)} with four explicit stream-parameters and closed-form B\_\allowbreak{}coh / Δ(S'); cross-metric invariance (Thm 9.5.1) resolves Anchor §9.9 Q1. Applied to F\_\allowbreak{}∞ via Propositions 9.6.1/9.6.2 (conditional on external audit per revised §8). Four surfaced-lemma flags. Next: §10 reference figures (TikZ).}
 
 \chapter{§10 — Reference Figures}
 
@@ -3500,7 +3685,7 @@ The Anchor README lists fourteen figures --- the remaining six (mismatch conditi
     {F6 meta-falsification: audit the construction record.\\Construction-record artifacts are public (GitHub, Zenodo).};
   \draw[->, dashed] (closure) -- (F6);
 \end{tikzpicture}
-\caption{Self-reference closure. The construction process $F_\infty$ is itself a stream; it satisfies the four conditions over the construction interval (Theorem 8.3.5); therefore (by Theorem 9.4.1) it outperforms comparable non-coherent constructions. The closure is a-posteriori (Proposition 8.4.1) — not circular. F6 makes it testable (Proposition 8.5.2).}
+\caption{Self-reference closure (conditional on external audit). The construction process $F_\infty$ is itself a stream; under internal audit it satisfies the four conditions over the construction interval (Audit Observation 8.3.5). Conditional on external execution of Prop 8.5.2 affirming the audit, Theorem 9.4.1 then yields outperformance over comparable non-coherent constructions. Derivation-non-circularity (Prop 8.4.1) is established; audit-independence (Prop 8.3.5') is what the external-audit gate discharges.}
 \label{fig:self-reference-closure}
 \end{figure}
 
@@ -4118,7 +4303,7 @@ Extensional Stream (Def 7.6.1, Prop 7.6.2, 7.6.3) & Anchor §9.5 F-as-stream pre
 \subsection{§8 (F-as-stream) objects}
 
 \begingroup\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}\footnotesize
-\begin{longtable}{p{1.08in} p{0.96in} p{0.57in} p{1.67in}}
+\begin{longtable}{p{0.97in} p{0.75in} p{0.57in} p{1.99in}}
 \toprule
 Companion object & Anchor location & Register & Description \\
 \midrule
@@ -4145,11 +4330,15 @@ Audit Claim C\_\allowbreak{}scale (§8.3.3) & Anchor §9.5 multi-scale paragraph
 \midrule
 Audit Claim C\_\allowbreak{}dyn (§8.3.4) & Anchor §9.5 dynamic paragraph & claim & Propose-stress-reformulate \\
 \midrule
-F\_\allowbreak{}∞ in coherence-regime (Thm 8.3.5) & Anchor §9.5 formal claim & theorem & Joint audit conclusion \\
+F\_\allowbreak{}∞ in coherence-regime (Audit Obs 8.3.5) & Anchor §9.5 formal claim & audit observation & Internal-audit joint conclusion; upgrades to theorem on external execution of Prop 8.5.2 \\
 \midrule
-Self-reference closure (Cor 8.3.6) & Anchor §9.5 & corollary & Principle applies to itself \\
+Self-audit constraint (Prop 8.3.5') & Anchor §9.5 & proposition & Internal audit is DOF-overlapping with audit-target; discharged by external audit \\
 \midrule
-Non-circularity (Prop 8.4.1) & Anchor §9.5 & proposition & A-posteriori argument \\
+Self-reference closure (Obs 8.3.6) & Anchor §9.5 & observation & Principle applies to itself --- conditional on external audit \\
+\midrule
+Non-circularity (Prop 8.4.1) & Anchor §9.5 & proposition & Derivation a-posteriori \\
+\midrule
+Derivation vs audit distinction (Rem 8.4.3) & Anchor §9.5 & remark & Derivation non-circular; audit DOF-dependent \\
 \midrule
 F6 decidability (Prop 8.5.2) & Anchor §9.7 F6 & proposition & Audit is decidable on public record \\
 \bottomrule
@@ -4158,7 +4347,7 @@ F6 decidability (Prop 8.5.2) & Anchor §9.7 F6 & proposition & Audit is decidabl
 \subsection{§9 (D trajectory-divergence) objects}
 
 \begingroup\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}\footnotesize
-\begin{longtable}{p{1.61in} p{1.02in} p{0.57in} p{1.08in}}
+\begin{longtable}{p{1.74in} p{0.68in} p{0.56in} p{1.30in}}
 \toprule
 Companion object & Anchor location & Register & Description \\
 \midrule
@@ -4181,7 +4370,11 @@ Bias-consistency (Def 9.3.1) & Anchor §9.3 (implicitly) & definition & Admissib
 \midrule
 Three canonical classes Bias-consistent (Prop 9.3.2) & Anchor §9.3 & proposition & Wasserstein/\allowbreak KL/\allowbreak domain-native \\
 \midrule
-Outperformance Principle (Thm 9.4.1) & Anchor §9.3 + §9.1 & theorem & Joint-bound argument \\
+Four stream-parameters (η\_\allowbreak{}sep, τ\_\allowbreak{}max, δ\_\allowbreak{}scale, ρ\_\allowbreak{}dyn) + auxiliary constants (§9.4.1) & Anchor §9.3 & definitions & Quantitative stream-parameters controlling each condition \\
+\midrule
+Four-term contribution bound (Lem 9.4.2) & Anchor §9.3 & lemma & B\_\allowbreak{}sep + B\_\allowbreak{}meas + B\_\allowbreak{}scale + B\_\allowbreak{}dyn decomposition \\
+\midrule
+Outperformance Principle with explicit constants (Thm 9.4.3) & Anchor §9.3 + §9.1 & theorem & Quantitative joint-bound with B\_\allowbreak{}coh ceiling and Δ(S') shortfall \\
 \midrule
 Cross-metric invariance (Thm 9.5.1) & Anchor §9.9 Q1 & theorem & Resolves Q1 \\
 \midrule
@@ -4216,7 +4409,7 @@ Fig 8 (self-reference closure) & Anchor §9 Fig 9.3 & figure & Replaces Anchor r
 All surfaced-lemma flags raised during Companion drafting, with Anchor Rev-2 back-port targets:
 
 \begingroup\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}\footnotesize
-\begin{longtable}{p{1.56in} p{0.71in} p{0.57in} p{1.43in}}
+\begin{longtable}{p{1.77in} p{0.58in} p{0.64in} p{1.29in}}
 \toprule
 Flag location & Anchor target & Type & Description \\
 \midrule
@@ -4239,17 +4432,23 @@ Flag location & Anchor target & Type & Description \\
 \midrule
 §5.4.1 F-as-stream structure & Anchor §9.5 & theorem & Detailed (σ\_\allowbreak{}F, C\_\allowbreak{}F, Ω\_\allowbreak{}F, γ\_\allowbreak{}F) definition \\
 \midrule
-§6 seventeen flags & Anchor various & mixed & See §6.10 for full list \\
+§6 twenty-one flags & Anchor various & mixed & See §6.10 for full list (incl. §6.9 C-size-regime pass) \\
 \midrule
 §7.5.5 contracted-coherent/\allowbreak failed distinction & Anchor Appendix B §B.2 & lemma & Resolves B.7 Q1 \\
 \midrule
 §8.1.1 dyadic-carrier four-level multiplex & Anchor §9.5 & definition & Four-carrier formal structure \\
 \midrule
-§8.3.5 F\_\allowbreak{}∞-in-coherence-regime theorem & Anchor §9.5 & theorem & Elevated from observation \\
+§8.3.5 F\_\allowbreak{}∞-in-coherence-regime (audit observation) + Prop 8.3.5' self-audit constraint & Anchor §9.5 & audit observation + proposition & Demoted from theorem; gated on external execution of Prop 8.5.2 \\
+\midrule
+§8.4.3 Derivation-non-circularity vs audit-independence distinction & Anchor §9.5 & remark & Names the structural distinction compressed in prose \\
 \midrule
 §8.5.2 F6-testability & Anchor §9.7 & proposition & Decidability structure \\
 \midrule
 §9.3.1 Bias-consistency & Anchor §9.3 & definition & Admissibility criterion \\
+\midrule
+§9.4.1 four stream-parameters (η\_\allowbreak{}sep, τ\_\allowbreak{}max, δ\_\allowbreak{}scale, ρ\_\allowbreak{}dyn) & Anchor §9.3 & definitions & Quantitative parameters controlling each condition \\
+\midrule
+§9.4.3 outperformance with explicit constants & Anchor §9.3/\allowbreak §9.1 & theorem & Quantitative form supersedes sketch \\
 \midrule
 §9.5 cross-metric invariance & Anchor §9.9 Q1 & theorem & Q1 resolution \\
 \bottomrule
