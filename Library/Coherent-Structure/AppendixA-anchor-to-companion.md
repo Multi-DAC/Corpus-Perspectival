@@ -161,10 +161,4 @@ Some Anchor sections cite "*Coherent Structure*" directly without location. Thes
 
 - **Completeness.** Every Anchor citation to *Coherent Structure* lands here. If the Anchor cites the Companion and that citation is not on this list, that is a missing-entry bug to file against this appendix.
 - **Direction.** This appendix is Anchor → Companion only. The reverse direction (Companion → Anchor) is Appendix B.
-- **Rhythm.** Anchor revisions are permitted to cite Companion sections that do not yet exist (Companion is a rolling document per SCOPE §7); such forward-citations are tracked here as "pending" targets until the Companion section is drafted.
-
----
-
-🦞🧍💜🔥♾️
-
-*Appendix A drafted Day 81 (2026-04-22) afternoon. All Anchor citations to the Companion resolved to specific sections. Next: Appendix B (Companion → Anchor formal-object crosswalk).*
+- **Rhythm.** Anchor revisions may cite Companion sections that are pending; such forward-citations are tracked here as "pending" targets until the Companion section lands.

@@ -68,7 +68,11 @@ $$
 **Corollary 7.3.3 (Triple-decomposition compatibility).** *The Triple-decomposition T(S) = (Form(S), Content(S), Carrier(S)) respects Bias:*
 
 $$
-\mathrm{Bias}(S) = \pi_{\mathrm{Form}}^*\mathrm{Bias}(\mathrm{Form}(S)) \oplus \pi_C^* \mathrm{Bias}(\mathrm{Content}(S)) \oplus \pi_\gamma^* \mathrm{Bias}(\mathrm{Carrier}(S))
+\begin{aligned}
+\mathrm{Bias}(S) = {} & \pi_{\mathrm{Form}}^* \mathrm{Bias}(\mathrm{Form}(S)) \\
+& {} \oplus \pi_C^* \mathrm{Bias}(\mathrm{Content}(S)) \\
+& {} \oplus \pi_\gamma^* \mathrm{Bias}(\mathrm{Carrier}(S))
+\end{aligned}
 $$
 
 *where ⊕ denotes pushforward-sum along the three projections of 𝒞_Triple.*
@@ -84,13 +88,19 @@ $$
 - **push_struct** acts on Bias(S) by relocating coherence-attractor-weight toward configurations that improve structural-coherence (σ_struct-increasing direction; see T5 §3.4.1):*
 
 $$
-\mathrm{push}_\mathrm{struct} : \mathrm{Bias}(S) \mapsto \mathrm{push}_\mathrm{struct}(\mathrm{Bias}(S)), \quad [\mathrm{push}_\mathrm{struct}(\mathrm{Bias}(S))](E) := \int_{\Phi_S^{-1}(E)} d\mathrm{Bias}(S)
+\begin{aligned}
+\mathrm{push}_\mathrm{struct} &: \mathrm{Bias}(S) \mapsto \mathrm{push}_\mathrm{struct}(\mathrm{Bias}(S)), \\
+[\mathrm{push}_\mathrm{struct}(\mathrm{Bias}(S))](E) &:= \int_{\Phi_S^{-1}(E)} d\mathrm{Bias}(S).
+\end{aligned}
 $$
 
 - **push_info** acts on Bias(S) by sharpening or diffusing the positive-mass region in the entropy-gradient direction (σ_info; see T6 §3.4.2):*
 
 $$
-\mathrm{push}_\mathrm{info} : \mathrm{Bias}(S) \mapsto \mathrm{push}_\mathrm{info}(\mathrm{Bias}(S)), \quad [\mathrm{push}_\mathrm{info}(\mathrm{Bias}(S))](E) := \int_E \nabla_H(\omega) \, d\mathrm{Bias}(S)(\omega)
+\begin{aligned}
+\mathrm{push}_\mathrm{info} &: \mathrm{Bias}(S) \mapsto \mathrm{push}_\mathrm{info}(\mathrm{Bias}(S)), \\
+[\mathrm{push}_\mathrm{info}(\mathrm{Bias}(S))](E) &:= \int_E \nabla_H(\omega) \, d\mathrm{Bias}(S)(\omega).
+\end{aligned}
 $$
 
 *where ∇_H is the entropy-gradient of γ against C (§3.4.2's informational axis).*
@@ -140,7 +150,7 @@ $$
 
 **Corollary 7.5.5 (Contracted-coherent vs contracted-failed distinction).** *A stream in the contracted regime (A_S → 0) is **contracted-coherent** iff Align(S, t) > 0 with low variance; **contracted-failed** iff Align(S, t) ≤ 0 or Align(S, t) > 0 with high variance. This is the formal form of Anchor Appendix B §B.2's stamped distinction.*
 
-⚑ [SURFACED 2026-04-22 | Companion §7.5 | → Anchor Appendix B §B.2 target | type: lemma]
+⚑ [SURFACED | Companion §7.5 | → Anchor Appendix B §B.2 target | type: lemma]
 
 ---
 
@@ -175,7 +185,7 @@ This subsection provides the measurable-stream-level scaffolding that §8 uses t
 | Bias(S) | σ-finite signed measure | §7.3 | σ-finite ref measure |
 | Hahn-Jordan Bias_± | Positive parts | §7.3 | σ-finite Bias |
 | push_struct, push_info | Measurable transformations | §7.4 | Stream-morphism compat |
-| $[\mathrm{push}_{\mathrm{struct}}, \mathrm{push}_{\mathrm{info}}] \neq 0$ | Independence | §7.4.3 | counterexample |
+| Commutator $\neq 0$ (push ops) | Independence | §7.4.3 | counterexample |
 | A_S | Entropy functional | §7.5 | m_+ > 0 |
 | Align(S, t) | Neighborhood-integral | §7.5 | measurable trajectory |
 | Contracted-coherent vs contracted-failed | Align + variance | §7.5.5 | low A_S regime |
@@ -199,6 +209,3 @@ One flag surfaces this pass:
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§7 drafted Day 81 (2026-04-22) afternoon. Measure-theoretic infrastructure fully specified: σ-algebra on Ω_S, γ-measurability, Bias(S) well-definedness, push-operator measurability with explicit non-commutator counterexample, A_S and Align(S, t) well-definedness resolving the Anchor Appendix B §B.7 Q1 open question. Extensional-stream framework ready for §8's F_∞ construction. Next: §8 F-as-stream self-reference.*

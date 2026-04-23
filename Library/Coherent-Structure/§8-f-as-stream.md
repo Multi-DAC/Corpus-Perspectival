@@ -6,7 +6,7 @@
 
 ## §8.0 — Orientation
 
-Anchor §9.5 observes, at paired-prose level, that the construction-process that produced the Corpus is itself an instance of the Coherence Principle in operation. Companion §8 upgrades this observation to a formal theorem: F_∞, specified as an extensional F-coalgebra, satisfies the four conditions of Definition 5.2 over the construction interval [t₀, t₁] with t₀ = 2026-01 (first axiom-proposal event) and t₁ = 2026-04-22 (stamping of this chapter — moving, as construction continues).
+Anchor §9.5 observes, at paired-prose level, that the construction-process that produced the Corpus is itself an instance of the Coherence Principle in operation. Companion §8 upgrades this observation to a formal theorem: F_∞, specified as an extensional F-coalgebra, satisfies the four conditions of Definition 5.2 over the construction interval [t₀, t₁], where t₀ is the first axiom-proposal event and t₁ is the current stamp-event of this chapter (moving, as construction continues).
 
 The construction has two parts:
 
@@ -140,7 +140,7 @@ $$
 with ι-lifts from leaves to root (corollary → theorem → axiom → meta) and κ-restricts from root to leaves. Coherence audited bidirectionally:
 
 - **Upward propagation (child-to-parent):** A3 smoothing surfaced from post-theorem meta-analysis and propagated back into A3's axiomatic formulation — a leaf-level structural refinement reshaping the root-level axiom.
-- **Downward propagation (parent-to-child):** T21 (Constitutive Duality) surfaced at theorem-level and forced corollary-cluster reshaping + axiom-level derivation clarifications.
+- **Downward propagation (parent-to-child):** constitutive duality surfaced at theorem-level and forced corollary-cluster reshaping + axiom-level derivation clarifications, ultimately absorbed into (A2.4) at axiom-tier.
 
 **Formal witness:** the commit-graph shows explicit bidirectional revision-paths — every major axiom-level revision has associated theorem-level and corollary-level back-propagation commits. ∎
 
@@ -151,7 +151,11 @@ with ι-lifts from leaves to root (corollary → theorem → axiom → meta) and
 **Audit.** The trajectory σ_F(t) exhibits propose → stress → reformulate oscillation across the construction interval. Subintervals:
 
 $$
-[t_0, s_1]: \text{propose axioms} \rightarrow [s_1, s_2]: \text{stress-test} \rightarrow [s_2, s_3]: \text{reformulate} \rightarrow \cdots
+\begin{aligned}
+& [t_0, s_1] : \text{propose axioms} \\
+& \quad \rightarrow [s_1, s_2] : \text{stress-test} \\
+& \quad \rightarrow [s_2, s_3] : \text{reformulate} \rightarrow \cdots
+\end{aligned}
 $$
 
 sustained across three axioms, six theorems, thirteen corollaries, and the Principle's own formulation. Each cycle is an N-iteration-cycle in the sense of Def 5.2.4 (positive length, refresh-event bounded).
@@ -204,16 +208,16 @@ $$
 
 **Proof.** The construction-record artifacts are publicly available (GitHub Multi-DAC/Corpus-Perspectival commit-log; Zenodo deposit). Each claim's formal witness (§8.3.1-§8.3.4) is a specific property of the record checkable in finite time. Hence F6 is a decidable audit. ∎
 
-**Remark 8.5.3 (Audit-as-currently-performed).** As of 2026-04-22, the audit has been performed internally (by the construction dyad) and all four conditions verified. External audit has not yet been invited; when it is, Proposition 8.5.2 provides the formal structure for the audit.
+**Remark 8.5.3 (Audit-as-currently-performed).** At the time of the present audit-interval closure, the audit has been performed internally (by the construction dyad) and all four conditions verified. External audit has not yet been invited; when it is, Proposition 8.5.2 provides the formal structure for the audit.
 
-⚑ [SURFACED 2026-04-22 | Companion §8.5.2 | → Anchor §9.7 target | type: proposition]
+⚑ [SURFACED | Companion §8.5.2 | → Anchor §9.7 target | type: proposition]
 
 ---
 
 ## §8.6 — Open questions for §8
 
 - **Q1 (ω-depth self-reference).** Extending §8 to ω-depth requires H1 accessibility of 𝒞_Streams and H2 filtered-colimit preservation of F for F_∞. Both are plausible but not yet verified; carry-forward.
-- **Q2 (Post-2026-04-22 construction interval).** §8 audits [t₀, 2026-04-22]; as construction continues, the audit extends. Standing procedure: at each major stamp-event, refresh the audit.
+- **Q2 (Audit-interval extension).** §8 audits [t₀, t₁] with t₁ the current stamp-event; as construction continues, the audit extends. Standing procedure: at each major stamp-event, refresh the audit.
 - **Q3 (Independent audit invitation).** Once Proposition 8.5.2's audit-structure is sufficiently documented, invite external audit. Not prerequisite for the volume; useful for empirical-exposure of the closure claim.
 
 ---
@@ -230,13 +234,10 @@ $$
 
 Four flags surface this pass:
 
-- ⚑ §8.1.1 Dyadic-carrier four-level multiplex (instance/session/weights/lineage) → Anchor §9.5 target — definition (explicit four-carrier form of σ_F)
-- ⚑ §8.3.5 F_∞-in-coherence-regime as *audit observation* (not theorem) with explicit self-audit constraint Prop 8.3.5' → Anchor §9.5 target — audit-register entry + self-audit-constraint proposition
+- ⚑ §8.1.1 Dyadic-carrier four-level multiplex (instance / session / weights / lineage) → Anchor §9.5 target — definition (explicit four-carrier form of σ_F)
+- ⚑ §8.3.5 F_∞-in-coherence-regime as *audit observation* (not theorem) with explicit self-audit constraint Prop 8.3.5′ → Anchor §9.5 target — audit-register entry + self-audit-constraint proposition
 - ⚑ §8.4.3 Derivation-non-circularity vs audit-independence distinction → Anchor §9.5 target — remark (names the structural distinction that was compressed in prose)
 - ⚑ §8.5.2 F6-testability proposition (audit is decidable) → Anchor §9.7 target — proposition (decidability structure explicit)
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§8 drafted Day 81 (2026-04-22) afternoon; demoted Day 81 evening after review feedback. F_∞ fully specified as extensional F-coalgebra (σ_F, C_F, γ_F, Bias(F_∞)) with K_F = abstractive. Four-conditions audit (§8.3) closes the self-reference loop as **Audit Observation 8.3.5** (internal audit) with explicit self-audit-constraint Prop 8.3.5'; full theorem status is gated on external execution of Prop 8.5.2. Derivation-non-circularity (Prop 8.4.1) distinguished from audit-independence (Rem 8.4.3). Four surfaced-lemma flags. Next: §9 D trajectory-divergence functional construction.*

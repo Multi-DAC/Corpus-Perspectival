@@ -288,7 +288,7 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
 
 ## §10.10 — Forward-pointers
 
-- **Anchor Rev 2 docket entry 2** (README): TikZ back-port from Companion — status: released as of this §10 drafting (2026-04-22).
+- **Anchor Rev 2 docket entry 2** (README): TikZ back-port from Companion — released.
 - **Domain volumes:** see back-port policy above for specific expected uses.
 
 ---
@@ -305,6 +305,3 @@ Each figure is a self-contained `\begin{figure}...\end{figure}` block with a `\l
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§10 drafted Day 81 (2026-04-22) afternoon. Eight canonical figures with full TikZ source: F-coalgebra square, Triple functor, recursive decomposability, kind-classifier fibration, Bias signed-measure + push-operators, dual coherence axes, four-conditions schematic, self-reference closure. Back-port policy and domain-volume citation convention specified. No new surfaced-lemma flags. Next: Appendices A and B (bidirectional anchor↔Companion crosswalks).*

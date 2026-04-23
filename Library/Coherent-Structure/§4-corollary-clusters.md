@@ -221,6 +221,3 @@ Two flags surface this pass:
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§4 drafted Day 81 (2026-04-22) afternoon. Thirteen corollaries stated and proved in F-coalgebra form. Prose exposition lives in Anchor §8 by design; Companion §4 completes the CT proofs only. Two surfaced-lemma flags for Anchor Rev-2. Next: §5 Coherence Principle formal four-conditions.*

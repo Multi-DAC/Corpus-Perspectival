@@ -127,7 +127,7 @@ The outperformance claim of Theorem 5.1.2 uses the trajectory-divergence functio
 
 **Remark 5.4.3 (Non-circularity).** The closure is a-posteriori: the construction did not presuppose the Principle (the Principle was *derived* from the axiom/theorem stress-test); it is observed after the fact that the construction-process exhibited the four conditions. This is not a circular proof — it is an empirical observation about the framework's own construction-history. §8 audits the observation.
 
-⚑ [SURFACED 2026-04-22 | Companion §5.4 | → Anchor §9.5 target | type: theorem]
+⚑ [SURFACED | Companion §5.4 | → Anchor §9.5 target | type: theorem]
 
 ---
 
@@ -176,6 +176,3 @@ Both flag-targets feed the Anchor Rev-2 docket.
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§5 drafted Day 81 (2026-04-22) afternoon. The Principle stated in CT form with the four conditions, each derived in a single line. Outperformance claim as Theorem 5.1.2; self-reference closure as Theorems 5.4.1/5.4.2 with construction deferred to §8 and audit deferred to §8's construction-record reading. Two surfaced-lemma flags. Next: §7 Filtering construction.*

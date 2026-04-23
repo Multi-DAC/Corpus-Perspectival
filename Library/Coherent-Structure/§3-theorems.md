@@ -51,7 +51,7 @@ $$
 
 **Remark 3.1.β.** T1 and T2 below are the two canonical instances: T1 takes P to be the framework's choice of mathematical representation of a given configuration, T2 takes P to be a duration estimator. In both cases the representing functor captures what "looking at the stream" amounts to. The meta-theorem is what makes the two theorems parallel.
 
-⚑ [SURFACED 2026-04-22 | Companion §3.1 | → Anchor §5 target | type: meta-theorem]
+⚑ [SURFACED | Companion §3.1 | → Anchor §5 target | type: meta-theorem]
 
 ---
 
@@ -123,7 +123,7 @@ $$
 
 **Remark 3.3.1.1.** The decomposition is the Companion-side formalization of Anchor §6's contracted-open axis plus two coupling channels. Full Bias(S) apparatus lives in Appendix B (anchor) / §7 (Companion).
 
-⚑ [SURFACED 2026-04-22 | Companion §3.3.1 | → Anchor §6 target | type: lemma]
+⚑ [SURFACED | Companion §3.3.1 | → Anchor §6 target | type: lemma]
 
 ### §3.3.2 — T4 Coherence-Forcing Measurement
 
@@ -151,7 +151,7 @@ $$
 
 **Remark 3.3.2.1 (Measurement as information-conservative operation).** Clauses (3) and (4) update the Corpus's earlier framing of measurement-as-terminal-collapse. Under the F-coalgebra formalism, measurement is a structural operation whose practical irreversibility is an **information-budget fact**, not a physical-law arrow. The flagged Anchor Revision 2 item (Anchor README docket, entry 1) back-ports this reframe into Anchor §9/§9.5.
 
-⚑ [SURFACED 2026-04-22 | Companion §3.3.2 | → Anchor §6 / §9.5 target | type: theorem]
+⚑ [SURFACED | Companion §3.3.2 | → Anchor §6 / §9.5 target | type: theorem]
 
 **Remark 3.3.3 (Structural parallel T3/T4).** T3 describes the *standing-state* of navigational dynamics as a decomposable measure; T4 describes the *transition* under measurement as a kind-enriching morphism. Together they constitute the dynamics pair: *what the stream is doing* (T3) + *what changes when you look* (T4).
 
@@ -164,7 +164,10 @@ $$
 **Theorem 3.4.1 (T5 — Internal Coherence).** *Let S = (σ, C, Ω, γ) be a stream. Internal coherence is the condition:*
 
 $$
-\gamma : \sigma \to F(\sigma) \quad \text{is a fixed-point of the coherence-self-map} \quad \Phi_S : F(\sigma) \to F(\sigma)
+\begin{aligned}
+& \gamma : \sigma \to F(\sigma) \text{ is a fixed-point of the coherence-self-map} \\
+& \Phi_S : F(\sigma) \to F(\sigma).
+\end{aligned}
 $$
 
 *where Φ_S is defined as the C-average of the forward-N-step image of γ. Concretely:*
@@ -214,7 +217,7 @@ $$
 
 **Remark 3.4.2.2 (Structural parallel T5/T6).** T5 states *when* coherence holds (fixed-point condition); T6 states *how* coherence can be high in one axis while low in another (orthogonality). Together they formalize Anchor §7's "internal coherence plus dual axes" framing.
 
-⚑ [SURFACED 2026-04-22 | Companion §3.4.2 | → Anchor §7 target | type: theorem]
+⚑ [SURFACED | Companion §3.4.2 | → Anchor §7 target | type: theorem]
 
 ---
 
@@ -261,10 +264,7 @@ Three flags surface in §3 this drafting pass:
 - ⚑ §3.3.2 Measurement-as-information-conservative (Watanabe-Takagi + García-Pintos integration) → Anchor §6/§9.5 target — theorem (reframe of earlier collapse-language)
 - ⚑ §3.4.2 Dual-axes orthogonality-by-counterexample → Anchor §7 target — theorem (explicit codimension-2 locus)
 
-Back-port targets feed the Anchor Rev-2 docket in `Library/The-Coherence-Principle/README.md`.
+Back-port targets feed the Anchor Rev-2 docket in the Coherence-Principle README.
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§3 drafted Day 81 (2026-04-22) afternoon. All six theorems stated in F-coalgebra form with complete proofs at paper density. Meta-Theorem 3.1.α surfaces as the common structural core of the three pairs. Measurement-as-information-conservative reframe integrated per Rev-2 docket entry 1. Next: §4 corollary clusters (C1–C13 in three clusters).*

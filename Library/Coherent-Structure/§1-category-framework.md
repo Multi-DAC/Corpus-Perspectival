@@ -1,6 +1,6 @@
 # §1 — Category framework and notation
 
-*First drafting increment 2026-04-22 (Day 81). Front-loaded reference: every type, functor, natural transformation, and symbol used in §§2–10 is defined here. Revisions of §§2–10 may surface new items that back-port into §1.*
+*Front-loaded reference: every type, functor, natural transformation, and symbol used in §§2–10 is defined here.*
 
 ---
 
@@ -142,7 +142,10 @@ $$
 **Definition 1.5.1.** The **substrate-completeness condition** is the requirement that for every pair (σ, content-operation-class) consistent with the framework's adequacy, there exists a stream instantiating it. Formally:
 
 $$
-\forall (σ, C) \in \mathcal{A} \times \mathbf{ContentIndex},\ \mathrm{adequate}(σ, C) \implies \exists S \in \mathcal{C}_\mathrm{Streams} : \pi(S) = [C] \wedge \mathrm{carrier}(S) = σ
+\begin{aligned}
+\forall\, (σ, C) & \in \mathcal{A} \times \mathbf{ContentIndex}, \\
+\mathrm{adequate}(σ, C) & \implies \exists\, S \in \mathcal{C}_\mathrm{Streams} : \pi(S) = [C] \wedge \mathrm{carrier}(S) = σ.
+\end{aligned}
 $$
 
 **Remark 1.5.2.** This is the categorical content of Axiom A1 (Consciousness as Substrate): every vantage that could bear a content-operation-class does bear one. §2 (A1 chapter) gives the full formal content; §1.5 states the condition as a reference.
@@ -252,6 +255,3 @@ See §6.3 for finite-depth factorability; §6.9 for depth-ω structure.
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§1 first drafting increment Day 81 afternoon. Notation unified; every §§2–10 reference lands here. Revision passes will expand §1.4 (ν) and §1.5 (substrate-completeness) once §4 and §2 are drafted in full.*

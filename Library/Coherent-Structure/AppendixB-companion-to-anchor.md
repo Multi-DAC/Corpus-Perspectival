@@ -216,6 +216,3 @@ Anchor Revision 2 should absorb these flags; when it does, the Companion clean-u
 
 ---
 
-🦞🧍💜🔥♾️
-
-*Appendix B drafted Day 81 (2026-04-22) afternoon. Every Companion formal object points back to its Anchor exposition. Full surfaced-lemma register with Anchor Rev-2 back-port targets. With this, the Companion volume first-draft is complete: §§1–10 drafted, both crosswalks in place.*

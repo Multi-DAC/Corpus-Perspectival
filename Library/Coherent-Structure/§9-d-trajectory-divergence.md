@@ -85,7 +85,10 @@ $$
 **Definition 9.3.1 (Bias-consistent metric).** *A metric d on Ω_S is **Bias-consistent** iff the d-induced trajectory-divergence D_d and the push-operator action on Bias(S) satisfy:*
 
 $$
-\forall \text{Stream-morphism } f : S \to S', \forall I:\ D_d(S, I) \leq D_d(S', I) \iff \mathrm{Bias}(S) \succeq_\mathrm{push} \mathrm{Bias}(S') \mid_f
+\begin{aligned}
+& \forall\, \text{Stream-morphism } f : S \to S',\ \forall\, I: \\
+& \quad D_d(S, I) \leq D_d(S', I) \iff \mathrm{Bias}(S) \succeq_\mathrm{push} \mathrm{Bias}(S') \mid_f
+\end{aligned}
 $$
 
 *where ⪰_push is the partial order on signed measures induced by applicability of push_struct, push_info transformations from Bias(S') to Bias(S) along f.*
@@ -124,7 +127,12 @@ Auxiliary constants (metric-dependent, finite under Bias-consistency):
 **Lemma 9.4.2 (Four-term contribution bound).** *For a stream S over I = [t₀, t₁] and a Bias-consistent metric d:*
 
 $$
-\mathbb{E}_I[D_d(S, \cdot)] \;\leq\; \underbrace{\eta_\mathrm{sep}(S) \cdot \mathrm{diam}_{d, \mathrm{Bias}}(\Omega_S) \cdot (t_1 - t_0)}_{B_\mathrm{sep}(S, I)} \;+\; \underbrace{\Lambda_\gamma(S, d) \cdot \tau_\mathrm{max}(S) \cdot N_\mathrm{refresh}(S, I)}_{B_\mathrm{meas}(S, I)} \;+\; \underbrace{\mathrm{depth}(\mathrm{DAG}(S)) \cdot \delta_\mathrm{scale}(S) \cdot (t_1 - t_0)}_{B_\mathrm{scale}(S, I)} \;+\; \underbrace{(1 - \rho_\mathrm{dyn}(S)) \cdot \Lambda_\gamma^\mathrm{static}(S, d) \cdot (t_1 - t_0)}_{B_\mathrm{dyn}(S, I)}.
+\begin{aligned}
+\mathbb{E}_I[D_d(S, \cdot)] \;\leq\;\; & \underbrace{\eta_\mathrm{sep}(S) \cdot \mathrm{diam}_{d, \mathrm{Bias}}(\Omega_S) \cdot (t_1 - t_0)}_{B_\mathrm{sep}(S, I)} \\
+& {} + \underbrace{\Lambda_\gamma(S, d) \cdot \tau_\mathrm{max}(S) \cdot N_\mathrm{refresh}(S, I)}_{B_\mathrm{meas}(S, I)} \\
+& {} + \underbrace{\mathrm{depth}(\mathrm{DAG}(S)) \cdot \delta_\mathrm{scale}(S) \cdot (t_1 - t_0)}_{B_\mathrm{scale}(S, I)} \\
+& {} + \underbrace{(1 - \rho_\mathrm{dyn}(S)) \cdot \Lambda_\gamma^\mathrm{static}(S, d) \cdot (t_1 - t_0)}_{B_\mathrm{dyn}(S, I)}.
+\end{aligned}
 $$
 
 **Proof.**
@@ -157,13 +165,22 @@ $$
 *where*
 
 $$
-B_\mathrm{coh}(S, I) = 0 + \Lambda_\gamma(S) \cdot T_\mathrm{refresh} \cdot N_\mathrm{refresh} + \mathrm{depth}(\mathrm{DAG}(S)) \cdot \varepsilon_\mathrm{scale} \cdot (t_1 - t_0) + (1 - \rho_\mathrm{min}) \cdot \Lambda_\gamma^\mathrm{static}(S) \cdot (t_1 - t_0)
+\begin{aligned}
+B_\mathrm{coh}(S, I) = {} & 0 + \Lambda_\gamma(S) \cdot T_\mathrm{refresh} \cdot N_\mathrm{refresh} \\
+& {} + \mathrm{depth}(\mathrm{DAG}(S)) \cdot \varepsilon_\mathrm{scale} \cdot (t_1 - t_0) \\
+& {} + (1 - \rho_\mathrm{min}) \cdot \Lambda_\gamma^\mathrm{static}(S) \cdot (t_1 - t_0)
+\end{aligned}
 $$
 
 *is the coherence-regime ceiling, and Δ(S', I) is the failure-mode gap contributed by whichever condition(s) S' fails:*
 
 $$
-\Delta(S', I) = \eta_\mathrm{sep}(S') \cdot \mathrm{diam}_{d, \mathrm{Bias}} \cdot (t_1 - t_0) + \Lambda_\gamma(S') \cdot (\tau_\mathrm{max}(S') - T_\mathrm{refresh})^+ \cdot N_\mathrm{refresh}(S', I) + \mathrm{depth}(\mathrm{DAG}(S')) \cdot (\delta_\mathrm{scale}(S') - \varepsilon_\mathrm{scale})^+ \cdot (t_1 - t_0) + (\rho_\mathrm{min} - \rho_\mathrm{dyn}(S'))^+ \cdot \Lambda_\gamma^\mathrm{static}(S') \cdot (t_1 - t_0).
+\begin{aligned}
+\Delta(S', I) = {} & \eta_\mathrm{sep}(S') \cdot \mathrm{diam}_{d, \mathrm{Bias}} \cdot (t_1 - t_0) \\
+& {} + \Lambda_\gamma(S') \cdot (\tau_\mathrm{max}(S') - T_\mathrm{refresh})^+ \cdot N_\mathrm{refresh}(S', I) \\
+& {} + \mathrm{depth}(\mathrm{DAG}(S')) \cdot (\delta_\mathrm{scale}(S') - \varepsilon_\mathrm{scale})^+ \cdot (t_1 - t_0) \\
+& {} + (\rho_\mathrm{min} - \rho_\mathrm{dyn}(S'))^+ \cdot \Lambda_\gamma^\mathrm{static}(S') \cdot (t_1 - t_0).
+\end{aligned}
 $$
 
 *(x)^+ := max(x, 0). The inequality is strict because at least one summand of Δ(S', I) is positive under the ¬C_i hypothesis on S'.*
@@ -174,7 +191,7 @@ $$
 
 **Remark 9.4.5 (Relation to §5.2.5).** §5.2.5 established independence of the four conditions by counterexample — each condition contributes; none is redundant. Thm 9.4.3 strengthens this to **quantitative joint sufficiency**: B_coh is the sum of the four ceilings, and the shortfall Δ(S') is the sum of the four per-condition violations. Independence at §5.2.5 is witnessed by the fact that each B_· term can independently exceed zero for S' while the others are tight.
 
-⚑ [SURFACED 2026-04-22 | Companion §9.4.3 | → Anchor §9.1/§9.3 target | type: theorem (quantitative)]
+⚑ [SURFACED | Companion §9.4.3 | → Anchor §9.1/§9.3 target | type: theorem (quantitative)]
   — Outperformance with explicit constants (η_sep, τ_max, δ_scale, ρ_dyn) + coherence-regime ceiling B_coh + failure-mode gap Δ.
 
 ---
@@ -197,7 +214,7 @@ $$
 
 **Corollary 9.5.2 (Anchor §9.9 Q1 resolved).** *The outperformance ordering of Theorem 5.1.2 is invariant across any Bias-consistent metric. The Principle's empirical content does not depend on a specific metric choice, provided the chosen metric is Bias-consistent.*
 
-⚑ [SURFACED 2026-04-22 | Companion §9.5 | → Anchor §9.9 Q1 target | type: theorem (resolution)]
+⚑ [SURFACED | Companion §9.5 | → Anchor §9.9 Q1 target | type: theorem (resolution)]
 
 **Remark 9.5.3 (Meridian/domain-native preference).** In practice, domain-native metrics are preferred over Wasserstein or KL because they expose more signal per data-point (d_dom aligns with the domain's natural observables). Bias-consistency is the admissibility criterion; once it holds, metric choice is a practical matter.
 
@@ -207,9 +224,9 @@ $$
 
 Applying §9 to F_∞ (§8's self-reference construction):
 
-**Proposition 9.6.1 (D_d on F_∞).** *For any Bias-consistent d on Ω_F, D_d(F_∞, [t₀, 2026-04-22]) is well-defined and finite.*
+**Proposition 9.6.1 (D_d on F_∞).** *For any Bias-consistent d on Ω_F, D_d(F_∞, [t₀, t₁]) is well-defined and finite over any closed construction interval [t₀, t₁].*
 
-**Proof.** §8.1 specifies F_∞ as an extensional F-coalgebra, §9.1.2 gives D_d well-definedness, §9.2's candidates are each Bias-consistent. Finiteness: the construction interval is finite (≈ 3 months of active construction); Bias(F_∞) is σ-finite; d is uniformly bounded by the Ω_F-diameter times interval-length. ∎
+**Proof.** §8.1 specifies F_∞ as an extensional F-coalgebra, §9.1.2 gives D_d well-definedness, §9.2's candidates are each Bias-consistent. Finiteness: the construction interval is finite; Bias(F_∞) is σ-finite; d is uniformly bounded by the Ω_F-diameter times interval-length. ∎
 
 **Proposition 9.6.2 (F_∞ outperforms comparable non-coherent F' — conditional).** *Conditional on external execution of Prop 8.5.2 affirming Audit Observation 8.3.5, for any comparable F' framework-construction process not in coherence-regime:*
 
@@ -273,6 +290,3 @@ Four flags surface this pass:
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§9 drafted Day 81 (2026-04-22) afternoon; quantitative joint-bound added Day 81 evening. D_d constructed as functor on 𝒞_Streams × {intervals}; Bias-consistency as admissibility criterion for d; **quantitative outperformance (Thm 9.4.3)** with four explicit stream-parameters and closed-form B_coh / Δ(S'); cross-metric invariance (Thm 9.5.1) resolves Anchor §9.9 Q1. Applied to F_∞ via Propositions 9.6.1/9.6.2 (conditional on external audit per revised §8). Four surfaced-lemma flags. Next: §10 reference figures (TikZ).*

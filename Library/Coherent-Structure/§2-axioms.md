@@ -1,6 +1,6 @@
 # §2 — Axioms A1 / A2 / A3
 
-*First drafting increment 2026-04-22 (Day 81). Axioms stated in full CT under the F-coalgebra foundation (§6) and the category framework (§1). Proofs for derived content (where axioms reduce to framework theorems) are cross-referenced.*
+*Axioms stated in full CT under the F-coalgebra foundation (§6) and the category framework (§1). Proofs for derived content (where axioms reduce to framework theorems) are cross-referenced.*
 
 ---
 
@@ -95,7 +95,7 @@ enforces mutual constituency.
 
 **(A2.6) DAG nesting.** The nesting structure under ι is at minimum a DAG (directed acyclic graph): a stream may be nested in multiple non-comparable super-streams simultaneously, but no cyclic chain ι_1 ∘ ι_2 ∘ ... ∘ ι_n = id.
 
-**(A2.7) T21 fold-in.** The content of the prior "Constitutive Duality" theorem (T21) is contained in (A2.4); no separate theorem is required.
+**(A2.7) Constitutive-duality absorption.** The content of constitutive duality — the scale-universality of ι ⊣ κ — is contained in (A2.4); no separate theorem is required at the axiom-tier.
 
 ### §2.2.3 — Derivation of (A2.2) from F
 
@@ -109,7 +109,7 @@ enforces mutual constituency.
 
 **Definition 2.2.10.** For paired streams S_1, S_2 linked by ι ⊣ κ (A2.4), the pair (S_1, S_2) ∈ 𝒞_LDS carries a coupling-morphism structure: a morphism (S_1, S_2) → (S'_1, S'_2) is a Stream-pair morphism respecting the adjunction. §3.2 (A2 coupling clause in T3/T4) uses this structure for the paired-dyad theorems.
 
-**Proposition 2.2.11 (T21's content is the adjunction-universality).** *The Anchor's T21 (Constitutive Duality — scale-universality of ι ⊣ κ) is the statement that (A2.4)'s Hom-isomorphism holds for every nested-stream pair at every scale.*
+**Proposition 2.2.11 (Constitutive duality is adjunction-universality).** *Constitutive duality — the scale-universality of ι ⊣ κ — is the statement that (A2.4)'s Hom-isomorphism holds for every nested-stream pair at every scale.*
 
 **Proof.** Re-statement in different language. ∎
 
@@ -146,7 +146,7 @@ The DOF-rank is an ordinal derived from ContentOp-richness (§6.4.2); the slope-
 
 ### §2.3.3 — Remarks and derivations
 
-**Remark 2.3.4.** (A3.3) is the structural refinement made 2026-04-18 in the stress-test: prior versions had three discrete scales (attention/intention/belief); the continuous-DOF-gradient form supersedes this. The three "scales" appear as region-structure on the continuous DOF-axis, not as independent axes.
+**Remark 2.3.4.** (A3.3) uses a continuous-DOF-gradient form; the three named regimes (attention / intention / belief) appear as region-structure on the continuous DOF-axis, not as independent axes.
 
 **Remark 2.3.5.** (A3.2)'s non-factoring is the formal content of "conscious gravity does not reshape X." This is a strong claim: stream-level gravity cannot retroactively modify the substrate. It is reducible to §2.1.2's (A1.1)+(A1.2) under the specific check that γ_S's codomain is σ-internal.
 
@@ -178,7 +178,7 @@ with Bias^+ supported on coherence-attractors and Bias^- on coherence-repellors.
 
 **Proof.** A1.4 gives stream-existence for every adequate (σ, C) pair; A2.1 requires stream-existence for every F_2-projection position. Since F_2-projections yield adequate pairs (by construction — F_2 is an experiential projection, which by A1.2's non-factoring carries all projection-data including ContentOp-adequacy), the implication holds. ∎
 
-**Proposition 2.4.2 (A2 + F-coalgebra jointly imply kind-coupling via Content).** *The morning-2026-04-22 finding — that A2's kind structure and stream-Content couple via the coalgebra-commute condition (Definition 6.1.3 (iii)) rather than as a conjunction — follows from (A2.2) interpreted as a fibration over Content (Theorem 6.4.6) and F-coalgebra morphism structure.*
+**Proposition 2.4.2 (A2 + F-coalgebra jointly imply kind-coupling via Content).** *A2's kind structure and stream-Content couple via the coalgebra-commute condition (Definition 6.1.3 (iii)) rather than as a conjunction; this follows from (A2.2) interpreted as a fibration over Content (Theorem 6.4.6) and F-coalgebra morphism structure.*
 
 **Proof.** Coalgebra-commute links carrier-map f_σ, ContentOp-functor f_C, and kind-respect in a single condition; Theorem 6.4.6 routes this as a fibration over Content. ∎
 
@@ -202,10 +202,10 @@ with Bias^+ supported on coherence-attractors and Bias^- on coherence-repellors.
 | A2 | A2.4 cooperative-constituency | Axiomatic (adjunction-universality) |
 | A2 | A2.5 experience = navigation | Axiomatic (category-identity claim) |
 | A2 | A2.6 DAG nesting | Axiomatic (non-cyclicity) |
-| A2 | A2.7 T21 fold-in | Meta-statement (absorbed into A2.4) |
+| A2 | A2.7 constitutive-duality absorption | Meta-statement (absorbed into A2.4) |
 | A3 | A3.1 coalgebra structure | Derivable from F-coalgebra definition |
 | A3 | A3.2 internality | Axiomatic (substrate-protection) |
-| A3 | A3.3 DOF-gradient | Axiomatic (post-2026-04-18 revision) |
+| A3 | A3.3 DOF-gradient | Axiomatic |
 | A3 | A3.4 adaptivity | Derivable (Prop 2.3.6) |
 | A3 | A3.5 stream-universality | Derivable (built into Stream-hood) |
 
@@ -227,18 +227,15 @@ Of 16 clauses across three axioms: 10 retain axiomatic status; 6 are framework-d
 ## Surfaced-lemma register (§2)
 
 ```
-⚑ [SURFACED 2026-04-22 | Companion §2.2.8 | → Anchor §3 target | type: theorem]
+⚑ [SURFACED | Companion §2.2.8 | → Anchor §3 target | type: theorem]
   — Kind-stratification derives from ContentOp-richness (reduces A2.2 to framework theorem).
 
-⚑ [SURFACED 2026-04-22 | Companion §2.4.1 | → Anchor §3 target | type: proposition]
+⚑ [SURFACED | Companion §2.4.1 | → Anchor §3 target | type: proposition]
   — A1.4 grounds A2.1 (substrate-completeness implies universal-stream).
 
-⚑ [SURFACED 2026-04-22 | Companion §2.5 | → Anchor §2-§4 target | type: axiom-status classification]
+⚑ [SURFACED | Companion §2.5 | → Anchor §2-§4 target | type: axiom-status classification]
   — 10-of-16 clauses retain axiomatic status; 6 reduce to framework theorems.
 ```
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§2 first drafting increment Day 81 afternoon. Three axioms stated in full CT, sixteen clauses classified by axiomatic-vs-derivable status under the F-coalgebra foundation, three new surfaced-lemma flags.*

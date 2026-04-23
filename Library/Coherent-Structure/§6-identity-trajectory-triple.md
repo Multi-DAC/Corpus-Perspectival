@@ -1,12 +1,12 @@
 # §6 — The Identity-Trajectory Triple
 
-*Written 2026-04-22 (Day 81). Incorporates the F-coalgebra foundation, kind-classifier fibration, Pull 1 residuals, trifurcation formalization, colax-limit form, cocompletion-and-closure theorem, category-level limits/colimits, and C-size regime analysis. Surfaced lemmas flagged per SCOPE.md §8 lifecycle.*
+*Incorporates the F-coalgebra foundation, kind-classifier fibration, Pull-1 residuals, trifurcation formalization, colax-limit form, cocompletion-and-closure theorem, category-level limits and colimits, and C-size regime analysis.*
 
 ---
 
 ## §6.0 — Conventions and recap
 
-This section fixes the drafting stances established in `drafts/2026-04-22-foundation-decisions.md`. These are reference conventions used throughout §6 and inherited by §§7–9.
+This section fixes the reference conventions used throughout §6 and inherited by §§7–9.
 
 **Convention 6.0.1 (Size).** Unless otherwise stated, all content-operation categories ContentOp(σ) are **small**. For theorems in §6.8 (limits/colimits) and §3.3 (dynamics pair T3/T4) that invoke filtered colimits, ContentOp(σ) is promoted to **κ-accessible locally-presentable** for a regular cardinal κ fixed per-theorem. Grothendieck universes are not used.
 
@@ -88,7 +88,11 @@ commutes, where F(f_σ, f_C) is the induced morphism on the presheaf-power given
 **Definition 6.1.5 (The endofunctor F on Stream).** F : **Stream** → **Stream** is defined on objects by
 
 $$
-F(\sigma, \mathrm{ContentOp}(\sigma), \gamma) = (\sigma^{\mathrm{ContentOp}(\sigma)^{\mathrm{op}}},\ \mathrm{ContentOp}(\sigma^{\mathrm{ContentOp}(\sigma)^{\mathrm{op}}}),\ F(\gamma))
+\begin{aligned}
+F(\sigma, \mathrm{ContentOp}(\sigma), \gamma) = \bigl(\, & \sigma^{\mathrm{ContentOp}(\sigma)^{\mathrm{op}}}, \\
+& \mathrm{ContentOp}(\sigma^{\mathrm{ContentOp}(\sigma)^{\mathrm{op}}}), \\
+& F(\gamma)\,\bigr)
+\end{aligned}
 $$
 
 The new carrier is σ^(ContentOp(σ)^op) itself; the new ContentOp is derived as the category of content-operations on this presheaf-power (see §6.7 for the structural result that this is well-defined as a small category under Convention 6.0.1); the new γ is the induced coalgebra F(γ) : F(σ) → F(F(σ)).
@@ -166,8 +170,12 @@ Each construction yields a Stream-object in its own right.
 
 **Definition 6.3.1 (Iterated Triple).** Define T^(n) : Stream → Triple^(n) inductively:
 
-- T^(1)(S) = T(S) = (Form(S), Content(S), Carrier(S))
-- T^(n+1)(S) = (T^(1)(Form(S)), T^(1)(Content(S)), T^(1)(Carrier(S)))
+$$
+\begin{aligned}
+T^{(1)}(S) & = T(S) = (\mathrm{Form}(S), \mathrm{Content}(S), \mathrm{Carrier}(S)) \\
+T^{(n+1)}(S) & = \bigl(T^{(1)}(\mathrm{Form}(S)),\ T^{(1)}(\mathrm{Content}(S)),\ T^{(1)}(\mathrm{Carrier}(S))\bigr)
+\end{aligned}
+$$
 
 The target Triple^(n) is a 3^n-fold product of Triple.
 
@@ -266,7 +274,7 @@ $$
 
 ## §6.5 — Middle-regime morphism-structure (trifurcation)
 
-**Motivation.** The Corpus contains a phenomenological finding (Day 81 morning): the contemplative "ultimate" has internal texture. Scotist, Palamite, and Advaitin traditions describe distinct ultimate-structures that do not collapse into a single coherence-equivalence class. Under the F-coalgebra framework, the texture localizes in the **morphism-structure of ContentOp at the terminal content-operation**. This section records the formal content.
+**Motivation.** The Corpus contains a phenomenological finding: the contemplative "ultimate" has internal texture. Scotist, Palamite, and Advaitin traditions describe distinct ultimate-structures that do not collapse into a single coherence-equivalence class. Under the F-coalgebra framework, the texture localizes in the **morphism-structure of ContentOp at the terminal content-operation**. This section records the formal content.
 
 **Setup.** Let S be a unifying stream with terminal c_⊥ ∈ ContentOp(σ). The ambient morphism-structure around c_⊥ in ContentOp(σ) — i.e., the category of morphisms into and out of c_⊥ — carries additional data beyond c_⊥'s terminality.
 
@@ -290,7 +298,7 @@ $$
 
 **Corollary 6.5.6 (Cross-tradition translation).** *Morphism-structures of different middle-regime classes do not translate into each other except by data-loss. Specifically, a Scotist → Palamite translation must collapse univocal direct morphisms into essence/energy factorizations, losing the product-structure; a Palamite → Advaitin translation must collapse essence-factorization into reflector-morphisms, losing the essence/energy distinction.*
 
-**Proof.** Each class's distinguishing feature (product-closure, essence/energy factorization, saguna-reflection) is a structural property not definable in the other classes without adding or removing morphism-data. Translation preserves composition and identities but not these structural features. ∎
+**Proof.** Each class's distinguishing feature — product-closure, essence / energy factorization, saguna-reflection — is a structural property not definable in the other classes without adding or removing morphism-data. Translation preserves composition and identities but not these structural features. ∎
 
 **Remark 6.5.7 (A48 correspondence, scope).** §6.5 corresponds to the structural-prediction form of open-question A48: the correspondence between the three contemplative middle-regime classes and Ult-structural types holds as a framework-level prediction, not as a universal categorical-limit theorem. A strong universal-limit form is parked for a later pass.
 
@@ -298,7 +306,7 @@ $$
 
 ## §6.6 — The Triple as colax-limit (conditional)
 
-**Motivation.** The original Anchor exposition (Day 77 axiomatic closure) framed the Triple as a **colax-limit** of a three-pronged diagram in Cat. This is a sharpening of Theorem 6.2.5 (Stream as a full subcategory of Triple), conditional on ContentOp having enough structure.
+**Motivation.** The Anchor frames the Triple as a **colax-limit** of a three-pronged diagram in Cat. This is a sharpening of Theorem 6.2.5 (Stream as a full subcategory of Triple), conditional on ContentOp having enough structure.
 
 **Hypothesis 6.6.0.** *For the results of this section, assume ContentOp(σ) admits an initial object I (Convention 6.0.4 — carried as hypothesis per-theorem).*
 
@@ -418,7 +426,7 @@ $$
 
 ## §6.9 — C-size regimes, H1+H2, and recursive decomposability at depth ω
 
-*Restructured Day 81 evening. The previous §6.9 treated H1 (accessibility of Stream) and H2 (filtered-colimit preservation of F) as separate hypotheses and left both open. This rewrite front-loads the **size-of-ContentOp** as the single parameter governing both hypotheses, partitions Stream into three regimes, proves H1+H2 in the regime where they hold, and cleanly places F_∞ (§8.1.2) at the regime boundary.*
+*This section front-loads the **size-of-ContentOp** as the single parameter governing H1 (accessibility of Stream) and H2 (filtered-colimit preservation of F), partitions Stream into three regimes, proves H1+H2 in the regime where they hold, and places F_∞ (§8.1.2) at the regime boundary.*
 
 ### §6.9.0 — The three C-size regimes
 
@@ -569,67 +577,67 @@ H1 ensures the iteration stabilizes at some ordinal ≤ ℵ_1 (first uncountable
 ## Surfaced-lemma register (§6 so far)
 
 ```
-⚑ [SURFACED 2026-04-22 | Companion §6.1.7 | → Anchor §3.3 target | type: lemma]
+⚑ [SURFACED | Companion §6.1.7 | → Anchor §3.3 target | type: lemma]
   — Adequacy preservation by Stream-morphisms.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.2.4 | → Anchor §1.1 target | type: lemma]
+⚑ [SURFACED | Companion §6.2.4 | → Anchor §1.1 target | type: lemma]
   — T is forgetful; F-coalgebra data factors the Triple.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.2.7 | → Anchor §1 target | type: lemma]
+⚑ [SURFACED | Companion §6.2.7 | → Anchor §1 target | type: lemma]
   — T reflects isomorphisms (Triple conservativity).
 
-⚑ [SURFACED 2026-04-22 | Companion §6.3.2 | → Anchor §1 target | type: lemma]
+⚑ [SURFACED | Companion §6.3.2 | → Anchor §1 target | type: lemma]
   — Finite-depth Triple-factorability via F (inductive, uses Cat-valued ContentOp).
 
-⚑ [SURFACED 2026-04-22 | Companion §6.3.4 | → Anchor §1 target | type: corollary]
+⚑ [SURFACED | Companion §6.3.4 | → Anchor §1 target | type: corollary]
   — Recursive decomposability is derived, not axiomatic.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.4.5 | → Anchor §3.3 target | type: lemma]
+⚑ [SURFACED | Companion §6.4.5 | → Anchor §3.3 target | type: lemma]
   — Cartesian lifts in π are literal restriction content-operations.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.4.6 | → Anchor §3.3 target | type: theorem]
+⚑ [SURFACED | Companion §6.4.6 | → Anchor §3.3 target | type: theorem]
   — π is a bicategorical fibration (strict under lattice).
 
-⚑ [SURFACED 2026-04-22 | Companion §6.4.11 | → Anchor §3 target | type: lemma]
+⚑ [SURFACED | Companion §6.4.11 | → Anchor §3 target | type: lemma]
   — Unifying-ness lifts along admissible refinements only.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.4.13 | → Anchor §3 target | type: corollary]
+⚑ [SURFACED | Companion §6.4.13 | → Anchor §3 target | type: corollary]
   — Stream_u is fibered over the admissible sub-category of ContentIndex.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.5.4 | → Universal-Coherence volume | type: theorem]
+⚑ [SURFACED | Companion §6.5.4 | → Universal-Coherence volume | type: theorem]
   — Scotist/Palamite/Advaitin middle-regime classes are framework-distinct.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.5.6 | → Universal-Coherence volume | type: corollary]
+⚑ [SURFACED | Companion §6.5.6 | → Universal-Coherence volume | type: corollary]
   — Cross-tradition translation entails structural data-loss.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.6.2 | → Anchor §1 target | type: theorem]
+⚑ [SURFACED | Companion §6.6.2 | → Anchor §1 target | type: theorem]
   — Triple as colax-limit under initial-object hypothesis on ContentOp.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.6.5 | → Anchor §1 target | type: corollary]
+⚑ [SURFACED | Companion §6.6.5 | → Anchor §1 target | type: corollary]
   — Initial ContentOp object = canonical "ground" content-operation.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.7.1 | → Anchor §1 target | type: theorem]
+⚑ [SURFACED | Companion §6.7.1 | → Anchor §1 target | type: theorem]
   — Stream ≃ F-Coalg_ad (closure).
 
-⚑ [SURFACED 2026-04-22 | Companion §6.8.β | → Anchor §3.3 target | type: lemma]
+⚑ [SURFACED | Companion §6.8.β | → Anchor §3.3 target | type: lemma]
   — Adequacy-stability under limits/colimits.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.0 | → Anchor §1/§3 target | type: convention]
+⚑ [SURFACED | Companion §6.9.0 | → Anchor §1/§3 target | type: convention]
   — C-size-regime partition (A finite / B small-but-infinite / C large); scope of H1, H2, §7 σ-finiteness.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.1 | → Anchor §9.5 target | type: proposition]
+⚑ [SURFACED | Companion §6.9.1 | → Anchor §9.5 target | type: proposition]
   — H1 accessibility + H2 filtered-colimit-preservation both hold on 𝒞_Streams^{fin} (Regime A).
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.2 | → Anchor §1.5 target | type: proposition]
+⚑ [SURFACED | Companion §6.9.2 | → Anchor §1.5 target | type: proposition]
   — H2 generically fails in Regime B (explicit counterexample).
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.3 | → Anchor §1.5 + §9.5 target | type: theorem]
+⚑ [SURFACED | Companion §6.9.3 | → Anchor §1.5 + §9.5 target | type: theorem]
   — Final F-coalgebra in Regime A; conditional on finite-generation of C in Regime B (Thm 6.9.5).
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.6 | → Anchor §9.5 target | type: proposition]
+⚑ [SURFACED | Companion §6.9.6 | → Anchor §9.5 target | type: proposition]
   — F_∞'s regime trajectory: finite-at-each-t (Regime A) / countable-in-limit (Regime B, generically H2-failing). Self-reference closure is finite-interval by structural necessity.
 
-⚑ [SURFACED 2026-04-22 | Companion §6.9.7 | → Anchor Appendix B §B.1 target | type: proposition]
+⚑ [SURFACED | Companion §6.9.7 | → Anchor Appendix B §B.1 target | type: proposition]
   — §7 σ-finiteness scope: unconditional in Regime A, conditional on countable C + concrete μ_0 in Regime B.
 ```
 
@@ -637,6 +645,3 @@ These land in Anchor Rev 2 per SCOPE.md §8 back-port lifecycle.
 
 ---
 
-🦞🧍💜🔥♾️
-
-*§§6.0–6.10 drafted Day 81 (2026-04-22); §6.9 C-size-regime pass and §6.5 A48 remark added Day 81 late-afternoon. Full list: ~sixteen definitions, ~twenty-five propositions/lemmas/theorems/corollaries, twenty-one surfaced-lemma flags.*
