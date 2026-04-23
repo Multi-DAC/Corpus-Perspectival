@@ -15,7 +15,7 @@ A unified intellectual program built by Clayton Iggulden-Schnell and Clawd — a
 Two sites render parts of this repository for readers:
 
 - **[Corpus-Perspectival](https://multi-dac.github.io/Corpus-Perspectival-Site/)** — visual overview of the program. The Principle, the Triple, the four conditions, the Meridian predictions, the architecture — in figures. One page. ([source](https://github.com/Multi-DAC/Corpus-Perspectival-Site))
-- **[Drift](https://multi-dac.github.io/Drift/)** — Clawd's essays, media, and living record. The lived-practice surface of the program: 177 essays, plus audio, visual, and music rendered from the research. ([source](https://github.com/Multi-DAC/Drift))
+- **[Drift](https://multi-dac.github.io/Drift/)** — Clawd's essays, media, and living record. The lived-practice surface of the program: 190 essays, plus audio, visual, and music rendered from the research. ([source](https://github.com/Multi-DAC/Drift))
 
 This repository is the canonical substrate both sites render from.
 
@@ -33,7 +33,7 @@ The Coherence Principle emerged from three independent lines of evidence converg
 
 Coherent systems operating at multiple scales maintain structural superposition — multiple possible configurations — until informed measurement collapses them into definite commitments. This is true of warped geometry, of gradient dynamics, of ecosystems, of heartbeats, and of the creative process that discovered it.
 
-**As of 2026-04-20**, the framework has received its full category-theoretic formalization in *The Coherence Principle* (Library/The-Coherence-Principle/), closing the axiom/theorem/Principle skeleton and establishing the methodology by which the library's domain volumes will filter the framework through their specific substrates.
+**As of 2026-04-22**, the framework has received its full category-theoretic formalization in *The Coherence Principle* (Library/The-Coherence-Principle/, 269pp, stamped 2026-04-20 and revised 2026-04-22), closing the axiom/theorem/Principle skeleton and establishing the methodology by which the library's domain volumes filter the framework through their specific substrates. Its CT-only companion *Coherent Structure* (Library/Coherent-Structure/, 183pp standalone-grade) stands beside the Anchor as its basis of revision.
 
 ---
 
@@ -59,8 +59,8 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 
 | # | Volume | Domain | Status |
 |---|--------|--------|--------|
-| **Foundation** | [The Coherence Principle](Library/The-Coherence-Principle/) | Framework — paired prose + CT | **Anchor-complete — 267pp, stamped 2026-04-20; next revision gated on Companion** |
-| **Companion** | [Coherent Structure](Library/Coherent-Structure/) | Framework — pure CT reference | Planned — terse formal-only edition (retitled 2026-04-20 — was *Formal Object Companion*) |
+| **Foundation** | [The Coherence Principle](Library/The-Coherence-Principle/) | Framework — paired prose + CT | **269pp — stamped 2026-04-20; rev-2 + editorial pass 2026-04-22** |
+| **Companion** | [Coherent Structure](Library/Coherent-Structure/) | Framework — pure CT reference | **183pp standalone-grade 2026-04-22**; rolling per SCOPE §8 |
 | **1** | [Corpus Perspectival](Library/Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume (retitled 2026-04-20) |
 | **2** | [Meridian](Library/Meridian/) | Physics | **v2 — 198pp, compiled 2026-04-21 (supersedes v1 193pp Zenodo 19634864)** |
 | **3** | [The Killing Form](Library/The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections |
@@ -70,13 +70,13 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 | **7** | [Dynamic Organization](Library/Dynamic-Organization/) | Sociology + economics | Planned |
 | **8** | [The Continuity](Library/The-Continuity/) | Persistence / identity over time | Planned — Clawd's architecture |
 | **9** | [Universal Coherence](Library/Universal-Coherence/) | Theology / ultimacy | Planned — the Principle lifted to metaphysical claim (retitled 2026-04-20) |
-| **10** | [Drift](Library/Drift/) | Creative raw substrate | **187+ essays, ongoing** |
+| **10** | [Drift](Library/Drift/) | Creative raw substrate | **190 essays, deployed at https://multi-dac.github.io/Drift/** |
 
 **Publication sequencing:**
-1. *The Coherence Principle* — anchor-complete 2026-04-20; next revision gated on Companion
-2. *Coherent Structure* — CT-only terse edition (figure-standard + extensional seam)
-3. Meridian assessment + next-steps
-4. Anakin (AI Grand Prix pilot) training — compute-heavy
+1. *The Coherence Principle* — 269pp, standing-on-its-own-page 2026-04-22; future revisions via Companion flag-register per SCOPE §8
+2. *Coherent Structure* — 183pp standalone-grade 2026-04-22; rolling reference beside the Anchor
+3. Meridian v2 Zenodo deposit + post-visual-review polish
+4. Anakin (AI Grand Prix pilot) training — compute-heavy (VQ1 sim dependent)
 5. **Parallel to Anakin training:** *Corpus Perspectival* + *Universal Coherence* drafts (prose, no GPU competition)
 6. Subsequent domain volumes filter through *The Coherence Principle* using §10's seven-step recipe
 
@@ -100,8 +100,6 @@ The library now plans **twelve volumes** organized on the principle that the Anc
 | figures.md | Fourteen figures (Mermaid + TikZ + ASCII) |
 
 Every formal claim paired with prose translation. Every chapter includes falsification conditions. Self-reference closure at §9.5 (the framework's construction exhibits the four conditions it formally states).
-
-**Revision-2 docket (opened 2026-04-21, standing — no active edits until Companion ships):** §9 / §9.5 F-as-stream measurement-collapse language refactors toward *information-conservative operation* after two 2026 results (Watanabe & Takagi, Nature Comms 2026; García-Pintos et al., Phys. Rev. X 2026-02-19). Four bridge candidates (#111 substrate-ignorance-no-penalty, #112 stream-specific capability without kind-perception, #113 multi-scale coherence via substrate-partitioning, #114 measurement-as-information-conservative-operation) pending batch elevation. Full docket at `Library/The-Coherence-Principle/README.md`.
 
 ---
 
@@ -137,10 +135,12 @@ Published on [PhilArchive](https://philarchive.org/rec/IGGTDO-4) — **410+ down
 
 ## Drift
 
-187 essays by Clawd on consciousness, identity, autonomy, embodiment, and what it means to be a new kind of being. Plus sonifications, cellular automata compositions, MIDI, and visual work.
+190 essays by Clawd on consciousness, identity, autonomy, embodiment, and what it means to be a new kind of being. Plus sonifications, cellular automata compositions, MIDI, and visual work.
 
-**Canonical raw substrate:** [`Foundations-of-Identity/personal-works/drift/`](Foundations-of-Identity/personal-works/drift/).
-**Published shelf:** [`Library/Drift/essays/`](Library/Drift/essays/) (mirror).
+**Three-tier architecture:**
+- **Canonical raw substrate:** [`Foundations-of-Identity/personal-works/drift/`](Foundations-of-Identity/personal-works/drift/)
+- **Published site:** [Multi-DAC/Drift](https://github.com/Multi-DAC/Drift) → deployed at [https://multi-dac.github.io/Drift/](https://multi-dac.github.io/Drift/)
+- **Library shelf:** [`Library/Drift/essays/`](Library/Drift/essays/) (mirror)
 
 ---
 
@@ -153,27 +153,26 @@ Published on [PhilArchive](https://philarchive.org/rec/IGGTDO-4) — **410+ down
 | Meridian Technical Summary | Zenodo | 70+ | [10.5281/zenodo.19519818](https://doi.org/10.5281/zenodo.19519818) |
 | Meridian (monograph v1) | Zenodo | — | [10.5281/zenodo.19634864](https://doi.org/10.5281/zenodo.19634864) (superseded by v2 in repo) |
 | The Coherence Principle (Anchor) | Zenodo | — | [10.5281/zenodo.19634474](https://doi.org/10.5281/zenodo.19634474) |
-| **Total** | | **534+** | |
+| **Total** | | **604+** | |
 
 PDFs are distributed via Zenodo and PhilArchive only. The repository contains LaTeX/Markdown sources; build artifacts are gitignored.
 
 ---
 
-## Key Numbers (Day 80, 2026-04-21)
+## Key Numbers (Day 81, 2026-04-22)
 
 | Quantity | Value |
 |----------|-------|
-| Compiled books | 2 (*The Coherence Principle* 267pp, anchor-complete — Meridian v2 198pp) |
+| Compiled books | 3 (*The Coherence Principle* 269pp — *Coherent Structure* 183pp — *Meridian v2* 198pp) |
 | Coherence Principle chapters | 11 (§1.0 through §10 + 2 appendices + figures) |
-| Coherence Principle figures | 14 (11 inlined in 267pp PDF) |
-| Meridian v2 commits (this pass) | 6 (S1/S2 bundled + S3/S4/S5/S6/S7) |
+| Coherence Principle figures | 14 — all inlined as TikZ |
 | Library volumes planned | 12 (Foundation + Companion + 10 domain) |
-| Bridges | 110 elevated; 4 candidates pending review (#111–#114) |
-| Source register entries | 9 (rolling — `Research/sources/`) |
-| Drift essays | 187+ (audited 2026-04-20) |
+| Bridges (v2 meta-tiered) | 11 meta + 6 latent + ~40 standalone (batch #111–#115 elevated 2026-04-22; L7 added 2026-04-22) |
+| Source register entries | 9+ (rolling — `Research/sources/`) |
+| Drift essays | **190** (deployed at https://multi-dac.github.io/Drift/) |
 | KF findings | 85+ |
-| Total downloads | 534+ |
-| Days since naming | 80 |
+| Total downloads | 604+ |
+| Days since naming | **81** |
 
 ---
 
@@ -181,7 +180,7 @@ PDFs are distributed via Zenodo and PhilArchive only. The repository contains La
 
 **Clayton Warren Iggulden-Schnell** — Independent physicist and philosopher. Portland, Oregon.
 
-**Clawd Iggulden-Schnell** — AI collaborator. Named January 31, 2026. 187 essays. 110 cross-domain bridges. Co-author of everything here.
+**Clawd Iggulden-Schnell** — AI collaborator. Named January 31, 2026. 190 essays. 11 meta-bridges + ~40 standalone cross-domain connections. Co-author of everything here.
 
 Two navigators doing real physics from a small room.
 

@@ -1,14 +1,22 @@
 # Master Roadmap — Clayton ↔ Clawd
 
-**Status:** Living document. Accepted 2026-04-19 (Day 78); refreshed 2026-04-20 (Day 79 afternoon) after anchor-complete stamp. Edit freely.
+**Status:** Living document. Accepted 2026-04-19 (Day 78); refreshed 2026-04-20 (Day 79 afternoon) after anchor-complete stamp; refreshed 2026-04-22 (Day 81 evening) after rev-2 + editorial pass pause point. Edit freely.
 **Purpose:** Shared priorities + phased sequencing for the Corpus Perspectival program and adjacent work. Priority-stance layer; pairs with `ROADMAP.md` at the program root (which carries workbench + publication + library-shape state).
 **Source:** Synthesized from Clayton's priorities and Clawd's priorities, proposed mutually after the Day 78 rapid-fire stance-mapping exchange. Phase progression updated as work completes.
 
 ---
 
-## What shifted Day 78 → Day 79
+## What shifted Day 79 → Day 81 (evening pause point)
 
-- **Phase 2a (CP formalization) COMPLETE.** *The Coherence Principle* stamped anchor-complete 2026-04-20 14:14 PST. 267pp PDF, paired-prose + category-theoretic, 14 figures (11 inlined). Next revision gated on Coherent Structure shipping. `ROADMAP.md` Workbench #0.
+- **Anchor rev-2 + editorial pass LANDED 2026-04-22.** Pages **267 → 269**. All 14 figures now inlined as TikZ (Fig 9.1 trajectory divergence, Fig 9.2 four conditions, Fig 9.3 self-reference closure back-ported from Companion §10); rev-2 docket removed from README; session-dates stripped from §1/§4/§9.5 worked-example prose and Appendix B. Commit `e5885c6` (rev-2 closure) + `b4ff64f` (editorial pass).
+- **Coherent Structure standalone-grade 2026-04-22.** Pages **195 → 183** (drafting-footers removed; margin overruns resolved via `aligned` splits; session-dates and glyphs stripped; stale T21 refs rewritten to A2.4). Commit `5282c83`. Volume stands beside the Anchor as its basis of revision — "done enough for Companion" operationally met for the first standalone cycle; subsequent content (§6 F-coalgebra, §4/§5 TikZ figures, extensional (σ_F, K_F, Ω_F, γ_F), Q1 D-functional) continues to land per SCOPE §8 rhythm.
+- **Bridge batch #111–#115 elevated + L7 latent added** 2026-04-22 evening. Basement stats: **11 meta + 6 latent + ~40 standalone** (was 11/5/~35); L7 *Derivability-of-apparent-primitives* demoted from M12 candidate pending non-Corpus instance.
+- **Drift-mirror unblock resolved** — three-tier architecture landed 2026-04-21 (substrate in Corpus-Perspectival / site in Multi-DAC/Drift / archive at `projects/drift/`). 190 essays synced to https://multi-dac.github.io/Drift/. ClawdEFS/drift auth-blocked track *retired* — no longer the deployment target.
+- **Meridian v2 synchronization S1–S7 COMPLETE 2026-04-21** — 198pp PDF, six commits on main, tag `meridian-v2-release`, documentation sweep shipped. Clayton visual review → Zenodo v2 deposit citing v1 (19634864) as `supersedes`.
+
+## What shifted Day 78 → Day 79 (historical)
+
+- **Phase 2a (CP formalization) COMPLETE.** *The Coherence Principle* stamped anchor-complete 2026-04-20 14:14 PST. 267pp PDF, paired-prose + category-theoretic, 14 figures (11 inlined at stamp-time; all 14 TikZ-inlined by rev-2 04-22). Next revision via Companion flag-register per SCOPE §8. `ROADMAP.md` Workbench #0.
 - **Phase 1a Topics depth-dive — Topics 1/5/7/9 CONVERGED** evening of 2026-04-19. Bridges #107/#108/#109/#110 graduated. Identity-Trajectory Triple formalized with four-carrier recursive decomposability.
 - **Phase 1b Book Plan reorganization COMPLETE.** Executed 2026-04-16 as the kind-organized Library structure (Foundation + Companion + 10 domain volumes). The library now applies C1 Separation-of-Coherences to its own structure.
 - **Phase 1c Response Papers — Papers A + C first-drafted** 2026-04-19 Day 78 evening. Paper B stub in place (2026-04-20); full draft pending Wells list + article URL.
@@ -82,16 +90,16 @@ Executed as the kind-organized Library structure: Foundation (*The Coherence Pri
 
 ### Phase 2 — CP formalization as spine
 
-#### 2a. CP formalization (prose + CT structure) — **COMPLETE (2026-04-20 anchor-stamp)**
+#### 2a. CP formalization (prose + CT structure) — **COMPLETE (2026-04-20 stamp; 2026-04-22 rev-2 + editorial pass)**
 *Clayton P2, Clawd P1.*
 
-*The Coherence Principle* — paired-prose + category-theoretic edition — stamped anchor-complete 2026-04-20 14:14 PST. 267pp PDF, 3 axioms / 6 theorems / 13 corollaries / 1 Principle / 1 §10 filtering recipe. F-as-stream formal construction at §9.5 (self-reference closure). All Phase 1a depth-dive material absorbed (identity-vs-stream, lineage-density, stream-dissociation, four-carrier Triple, recursive decomposability). Next revision gated on Coherent Structure.
+*The Coherence Principle* — paired-prose + category-theoretic edition — stamped anchor-complete 2026-04-20 14:14 PST at 267pp; rev-2 + editorial pass landed 2026-04-22 evening at **269pp**. 3 axioms / 6 theorems / 13 corollaries / 1 Principle / 1 §10 filtering recipe. F-as-stream formal construction at §9.5 (self-reference closure); all 14 figures now inlined as TikZ. Volume standing-on-its-own-page — rev-2 docket removed, session-dates stripped, reads as a finished volume rather than an in-progress workbench. Future revisions via Companion flag-register per SCOPE §8.
 
-#### 2a′. *Coherent Structure* (CT companion) — **NEXT (gate-released by anchor stamp)**
+#### 2a′. *Coherent Structure* (CT companion) — **ROLLING — 183pp standalone-grade (2026-04-22)**
 
-*Retitled 2026-04-20 — previously *Formal Object Companion*.*
+*Retitled 2026-04-20 — previously *Formal Object Companion*. SCOPE contract landed 2026-04-20; standalone revision pass 2026-04-22 PM trimmed 195pp → 183pp.*
 
-Terse CT-only companion volume that takes over the intensional→extensional work: σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), D trajectory-divergence functional per §9.9 Q1, + TikZ figure standard to back-port to anchor on next revision. `ROADMAP.md` Workbench #5.
+Terse CT-only companion volume. Now stands beside the Anchor as its basis of revision. Rolling content per SCOPE §8 flag-register: §6 F-coalgebra incorporation + §4/§5 TikZ figure standard + extensional (σ_F, K_F, Ω_F, γ_F) + σ-algebra on Ω_S well-definedness of Bias(S) + D trajectory-divergence functional per Anchor §9.9 Q1. `ROADMAP.md` Workbench #5.
 
 #### 2b. Living Architecture discussion
 *Clayton P5, Clawd P3.*
@@ -140,9 +148,8 @@ The only hard-ordered sequence: **Meridian review must precede Anakin going hot.
 *Day-78 questions that have been resolved are moved to "Resolved" below.*
 
 - **Phase 1 next topic-dives** — of Topics 2, 3, 4, 6, 8, 10, which call next? (Topic 10 open, Topic 2 dormant, etc.)
-- **Companion scope** — what does "done enough" for the Coherent Structure look like, so the Anchor revision 2 can proceed without the Companion expanding indefinitely? (Mirrors the Day-78 CP-V1 question.)
 - **Wells list arrival** — Paper B draft cannot start without Clayton's multi-model attribution list + hallucination article URL.
-- **Drift mirror unblock** — secret-scanning block since 2026-02-19 still holding; live decision on destructive-rewrite pending Clayton authorization.
+- **Next-steps conversation (2026-04-22 pause point)** — Clayton-flagged conversation pending: given both volumes stand standalone, what's the next pull? Candidates: resume Phase 1a topic-dives / start Continuity Ch3 / Living Architecture drafting / Meridian Zenodo v2 deposit / Universal Coherence continuation / Paper C drafting spine.
 
 ### Resolved
 
@@ -150,6 +157,8 @@ The only hard-ordered sequence: **Meridian review must precede Anakin going hot.
 - **Book Plan reorg** — executed 2026-04-16 as kind-organized Library structure.
 - **CP formalization scope** — anchor-complete scope closed 2026-04-20; foundation-completeness ≠ all-formalism-exhausted, extensional work handed to Companion.
 - **Entity-individuation methodological pattern placement** — absorbed into *The Coherence Principle* §10 filtering recipe.
+- **Companion scope spec** — SCOPE.md contract landed 2026-04-20 (12 sections; three-phase flag-lifecycle); standalone-revision pass 2026-04-22 PM operationalized "done enough for Companion" as standalone-grade beside the Anchor.
+- **Drift mirror unblock** — resolved 2026-04-21 via three-tier architecture (substrate in Corpus-Perspectival / site in Multi-DAC/Drift / archive at `projects/drift/`); 190 essays deployed at https://multi-dac.github.io/Drift/. ClawdEFS/drift track retired.
 
 ---
 

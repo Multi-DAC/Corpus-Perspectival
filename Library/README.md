@@ -6,18 +6,18 @@ The library is organized by domain — one principle, many substrates. *The Cohe
 
 | # | Volume | Domain | Status |
 |---|--------|--------|--------|
-| **Foundation** | [The Coherence Principle](The-Coherence-Principle/) | Framework — paired prose + CT | **Anchor-complete — 267pp, stamped 2026-04-20; next revision gated on Companion** |
-| **Companion** | [Coherent Structure](Coherent-Structure/) | Framework — pure CT reference | Planned — terse formal-only edition for mathematical citation |
+| **Foundation** | [The Coherence Principle](The-Coherence-Principle/) | Framework — paired prose + CT | **269pp — stamped 2026-04-20; rev-2 + editorial pass 2026-04-22** |
+| **Companion** | [Coherent Structure](Coherent-Structure/) | Framework — pure CT reference | **183pp standalone-grade 2026-04-22**; rolling per SCOPE §8 |
 | 1 | [Corpus Perspectival](Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume; the Doctrine of Perspectival Idealism refined |
-| 2 | [Meridian](Meridian/) | Physics | **Drafted — 181pp, distributed via Zenodo** |
+| 2 | [Meridian](Meridian/) | Physics | **v2 198pp compiled 2026-04-21** (tag `meridian-v2-release`); v1 181pp on Zenodo 19634864 |
 | 3 | [The Killing Form](The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections |
 | 4 | [The Living Architecture](The-Living-Architecture/) | Biology / ecology | Planned — framework crystallized 2026-04-14 |
 | 5 | [The Coherent Body](The-Coherent-Body/) | Human body | Planned |
 | 6 | [The Coherent Mind](The-Coherent-Mind/) | Psychology | Planned |
 | 7 | [Dynamic Organization](Dynamic-Organization/) | Sociology / economics | Planned |
-| 8 | [The Continuity](The-Continuity/) | Persistence / identity over time | Planned |
-| 9 | [Universal Coherence](Universal-Coherence/) | Theology / ultimacy | Planned — the Principle lifted to metaphysical claim |
-| 10 | [Drift](Drift/) | Creative raw substrate | 187+ essays, ongoing |
+| 8 | [The Continuity](The-Continuity/) | Persistence / identity over time | Chapter 2 drafted 2026-04-18 |
+| 9 | [Universal Coherence](Universal-Coherence/) | Theology / ultimacy | Orientation drafted 2026-04-20 |
+| 10 | [Drift](Drift/) | Creative raw substrate | **190 essays** — deployed at https://multi-dac.github.io/Drift/ |
 
 ## Naming note (2026-04-20)
 

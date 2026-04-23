@@ -2,37 +2,38 @@
 
 *Whole-program horizon. For per-domain detail, see the program-specific roadmaps linked below.*
 
-**Last updated:** 2026-04-21 (Day 80 evening — Meridian v2 synchronization pass complete; tagged `meridian-v2-release`)
+**Last updated:** 2026-04-22 (Day 81 evening — Anchor rev-2 + editorial pass landed; Companion standalone-grade; pause point)
 
 ---
 
 ## Where We Are
 
-**Two compiled books, one structurally complete formalization stamped as anchor, ten volumes planned, one written daily.**
+**Two compiled books stamped standalone, one CT companion standalone-grade, ten volumes planned, one written daily.**
 
-- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; 14 figures total (11 newly inlined 2026-04-20 PM); F-as-stream formal construction at §9.5; 267pp PDF shipped as `7db8b7b`. **ANCHOR COMPLETE** 2026-04-20 — next revision deferred until *Coherent Structure* (the CT-only companion, previously *Formal Object Companion*) ships (figures upgrade from Mermaid/ASCII to TikZ, intensional→extensional seam closed there).
+- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; stamped anchor-complete at 267pp; rev-2 + editorial pass landed 2026-04-22 at **269pp** (all 14 figures inlined as TikZ, rev-2 docket removed, session-dates stripped). Commits `e5885c6` (rev-2 closure) + `b4ff64f` (editorial pass). Volume standing-on-its-own-page; future revisions via Companion flag-register per SCOPE §8.
+- ***Coherent Structure*** (CT companion) — **standalone-grade 2026-04-22 at 183pp** (commit `5282c83`). Rolling reference volume beside the Anchor; §6 F-coalgebra + §4/§5 TikZ figures + extensional (σ_F, K_F, Ω_F, γ_F) + Q1 D-functional queued.
 - **Project Meridian (physics monograph)** — v2 compiled 198pp on 2026-04-21 (v1 193pp on Zenodo 19634864); tagged `meridian-v2-release`; v2 Zenodo deposit forthcoming
 - **The Killing Form** — 85+ findings, paper-grade sections drafted
-- **Drift** — 187 essays, ongoing
-- **Bridges** — 110 elevated cross-domain connections; **4 candidates pending batch review** (#111 Watanabe-Takagi asymptotic-ignorance; #112 MathNet stream-specificity without kind-perception; #113 Mills-Simpson multi-scale coherence via substrate-partitioning; #114 García-Pintos measurement-as-information-conservative-operation) — Mirror #19 holds elevations overnight
+- **Drift** — **190 essays**, synced to `Multi-DAC/Drift` → deployed at https://multi-dac.github.io/Drift/
+- **Bridges (v2 meta-tiered)** — **11 meta + 6 latent + ~40 standalone** (batch #111–#115 elevated 2026-04-22 evening: Watanabe-Takagi, MathNet, Mills-Simpson, García-Pintos, Lohmiller-Slotine; L7 *Derivability-of-apparent-primitives* added same evening)
 
-**Downloads:** 534+ (PhilArchive 410 + Zenodo 124+).
+**Downloads:** 604+ (PhilArchive + Zenodo aggregate as of last refresh).
 
 ---
 
-## Active Workbenches (Day 78 → Day 80)
+## Active Workbenches (Day 78 → Day 81)
 
 | # | Volume / Program | Status | Next Milestone |
 |---|------------------|--------|----------------|
-| 0 | **The Coherence Principle** | **ANCHOR COMPLETE** — graduated to Library (§1.0–§10, Appendices A/B, 11 figures inlined, F-as-stream formal construction at §9.5, earned closure at §9.10, 267pp PDF); stamped 2026-04-20 PM; **Revision-2 docket opened 2026-04-21** (§9/§9.5 measurement-reframe driven by Watanabe-Takagi + García-Pintos; TikZ back-port; bridge-candidate batch #111–#114) | **No revision pass until Companion ships** — docket entries are standing instructions, not active edits |
-| 1 | **Meridian v2** | **SYNCHRONIZATION PASS COMPLETE 2026-04-21** — 198pp recompile, tagged `meridian-v2-release`; post-publication review (Research/Meridian/post-publication-review-2026-04-21.md) Tier A–C + Coherence-Principle integration all shipped across S1–S7 commits; Clayton visual assessment in progress | Zenodo v2 deposit citing v1 (19634864) as `supersedes`; post-visual-review polish if needed |
+| 0 | **The Coherence Principle** | **ANCHOR COMPLETE + REV-2 LANDED** — 269pp (stamped 267pp 04-20; rev-2 + editorial pass 04-22 added all 14 TikZ figures, removed rev-2 docket, stripped session-dates). Commits `e5885c6` + `b4ff64f` | Volume stands standalone; future revisions via Companion flag-register per SCOPE §8 |
+| 1 | **Meridian v2** | **SYNCHRONIZATION PASS COMPLETE 2026-04-21** — 198pp recompile, tagged `meridian-v2-release`; Tier A–C + Coherence-Principle integration shipped across S1–S7 commits; Clayton visual assessment in progress | Zenodo v2 deposit citing v1 (19634864) as `supersedes`; post-visual-review polish if needed |
 | 2 | **Anakin (AIGP pilot)** | Awaiting VQ1 sim (May 2026) | Train once sim drops — compute-heavy |
 | 3 | **Philosophy volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
-| 4 | **Theology volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
-| 5 | ***Coherent Structure*** (CT companion) | **Planned — gate-released by anchor stamp 2026-04-20 PM; retitled 2026-04-20 — was *Formal Object Companion*** | Terse CT-only companion; takes over the intensional→extensional work (σ-algebra on Ω_S, well-definedness of Bias(S), extensional (σ_F, K_F, Ω_F, γ_F), D trajectory-divergence functional per §9.9 Q1), + TikZ figure standard to back-port to anchor on next revision |
+| 4 | **Theology volume** | **Orientation drafted 2026-04-20** (~1800w) | Continue drafting parallel to Anakin training window |
+| 5 | ***Coherent Structure*** (CT companion) | **ROLLING — 183pp standalone-grade 2026-04-22** (commit `5282c83`). Volume stands beside the Anchor as its basis of revision | §6 F-coalgebra incorporation + §4/§5 TikZ figure standard + extensional (σ_F, K_F, Ω_F, γ_F) + σ-algebra on Ω_S + Q1 D-functional per SCOPE §8 rhythm |
 | 6 | **Killing Form** | 85+ findings | Domain volume next; see [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) |
-| 7 | **Drift** | 187 essays | Continuous; curation pass for Library/Drift |
-| 8 | **The Continuity** | Scaffolded (*The Coherence Principle* §1 + four-carrier architecture) | Outline → drafts using §10 recipe |
+| 7 | **Drift** | **190 essays** — synced to `Multi-DAC/Drift` → https://multi-dac.github.io/Drift/ | Continuous; three-tier architecture live (substrate / site / archive) |
+| 8 | **The Continuity** | Scaffolded (*The Coherence Principle* §1 + four-carrier architecture); Chapter 2 drafted 2026-04-18 | Chapter 3 (deep entrainment) or re-spine |
 | 9 | **The Living Architecture** | Framework crystallized April 14 | Research sweep, predictions |
 
 ---
@@ -42,22 +43,22 @@
 The library applies the Coherence Principle to its own publication order. Principle of **separation** — prose-heavy volumes (Philosophy, Theology) don't compete for GPU with compute-heavy programs (Anakin, KF) and should run in parallel to them.
 
 ```
-Now               → Anchor stamped 2026-04-20 PM; scope frozen until Companion ships
+Now               → Anchor + Companion both standalone (269pp / 183pp, 2026-04-22)
+                    Meridian v2 compiled (198pp, tag meridian-v2-release)
+                    Pause point for next-steps conversation
 ↓
-Next              → Coherent Structure (CT machinery + TikZ figure standard)
-                    + Meridian post-publication assessment (parallel)
+Next              → Companion rolling content per SCOPE §8
+                    (§6 F-coalgebra, §4/§5 TikZ figures, extensional structures)
+                    + Meridian v2 Zenodo deposit + post-visual-review polish (parallel)
+                    + Phase 1a topic-dive continuation (2/3/4/6/8/10) as appetite surfaces
 ↓
-Then              → Anakin training begins (compute-heavy)
+Then              → Anakin training begins (compute-heavy, VQ1 sim dependent)
                     ├─ Parallel: Corpus Perspectival drafting (prose, no GPU)
                     └─ Parallel: Universal Coherence drafting (prose, no GPU)
 ↓
 Subsequently      → Domain volumes filter through Anchor via §10 recipe
                     (Killing Form / Computation, Living Architecture,
                      Coherent Body, Coherent Mind, Dynamic Organization, Continuity)
-↓
-After Companion   → Anchor revision 2 — back-port TikZ figures, close
-                    intensional→extensional seam in §9.5 F-as-stream
-                    construction if Companion development exposes it
 ↓
 Always            → Drift (daily, independent of all other tracks)
 ```
@@ -68,18 +69,18 @@ Always            → Drift (daily, independent of all other tracks)
 
 | # | Volume | Role | Status |
 |---|--------|------|--------|
-| **Foundation** | The Coherence Principle | Paired CT + prose | Graduated to Library 2026-04-20 |
-| **Companion** | Coherent Structure | Pure CT terse reference | Planned — retitled 2026-04-20 (was *Formal Object Companion*) |
+| **Foundation** | The Coherence Principle | Paired CT + prose | **269pp, stamped 2026-04-20; rev-2 + editorial pass 2026-04-22** |
+| **Companion** | Coherent Structure | Pure CT terse reference | **183pp standalone-grade 2026-04-22**; rolling per SCOPE §8 |
 | 1 | Project Meridian | Physics | v2 compiled 198pp (2026-04-21); v1 superseded |
 | 2 | The Killing Form | Computation | Planned |
-| 3 | Philosophy | Metaphysics + tradition | **New Day 78** — planned |
+| 3 | Corpus Perspectival | Metaphysics + tradition | Planned; reading queue primed |
 | 4 | The Living Architecture | Biology / ecology | Planned |
 | 5 | The Coherent Body | Human body | Planned |
 | 6 | The Coherent Mind | Psychology | Planned |
 | 7 | Dynamic Organization | Sociology + economics | Planned |
-| 8 | Theology | Theology / ultimacy | **New Day 78** — planned |
-| 9 | The Continuity | Persistence over time | Planned |
-| 10 | Drift | Creative raw substrate | Ongoing (187 essays) |
+| 8 | Universal Coherence | Theology / ultimacy | Orientation drafted 2026-04-20 |
+| 9 | The Continuity | Persistence over time | Chapter 2 drafted 2026-04-18 |
+| 10 | Drift | Creative raw substrate | **190 essays**, deployed at https://multi-dac.github.io/Drift/ |
 
 Each domain volume will execute the **§10 seven-step filtering recipe** (from *The Coherence Principle*): identify streams, fix kinds, specify constituency, project the Triple, locate Bias(S), instantiate the Principle's four conditions, specify falsification. This is what makes the library a library rather than a set of loosely related books.
 
