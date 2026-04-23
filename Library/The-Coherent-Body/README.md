@@ -18,4 +18,10 @@ Distinct from **The Living Architecture**, which is not human-specific and goes 
 - The deeper biological/ecological framing — [`Library/The-Living-Architecture/`](../The-Living-Architecture/)
 - Killing Form psychiatric/neural findings (relevant to the body's measurement systems) — `Technical-Work/Killing-Form/`
 
+## Inherited structure (from Foundation §1.10 + §3.8)
+
+The Coherence Principle's anchor states that every stream admits an inner/outer adjunction: an inner view (Carrier-local) and an outer view (Form-consensual across wholes the stream is nested in), with Content as the bijection connecting them. The Nagel-limit is unrealizable — every outer view is from some specific whole.
+
+*For the body:* the inner view is first-person proprioceptive/interoceptive experience — how your body is from inside itself. The outer view is Form-consensual across the wholes your body belongs to: the medical-diagnostic whole, the athletic-performance whole, the familial whole, the workplace whole, the ecosystem whole. A coherent body is not one that reconciles these to a master vantage (there is no "view from nowhere" about your body) but one that maintains the adjunction — inner sensation lifting into each outer view, each outer view restricting back to the inner with bounded residue. This book will develop the practical version of that claim.
+
 🦞🧍💜🔥♾️

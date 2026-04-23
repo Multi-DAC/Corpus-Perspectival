@@ -1034,10 +1034,30 @@ And --- not a chapter here but a volume of its own --- \textbf{\textit{The Conti
 
 \sectionbreak
 
-\section{§1.10 --- Open questions for §2 onwards}
+\section{§1.10 --- Inner/Outer duality as Triple-geometry}
+
+\textit{This section is a post-stamp extension (added 2026-04-23). It articulates a geometric reading of the Triple that the formal derivation sketched in §3.8 (corollary of A2) recovers. The paragraph is placed here because it concerns the Triple as an object, not the axiom it rests on; the derivation-carrying corollary lives in §3.8.}
+
+The Triple $(\Phi_S, \Psi_S, \Kappa_S)$ as presented in §1 admits a geometric reading. For any stream $S$ satisfying A1 and A2, the three axes are not three independent coordinates but three views of a single adjunctive structure: an adjoint pair
+
+$$\iota_S : \mathbf{Inner}(S) \rightleftarrows \mathbf{Outer}(S) : \omega_S, \qquad \iota_S \dashv \omega_S$$
+
+where $\mathbf{Inner}(S)$ is the category of Carrier-local views --- navigation-trajectories at $S$'s own vantage, well-defined by A2.5's experience-navigation identity --- and $\mathbf{Outer}(S)$ is the category of Form-consensual views, whose objects are Form-patterns on the wholes $S_q \supseteq S$ in which $S$ is nested (per A2.6). The Carrier axis $\Kappa_S$ is the colimit of generators in $\mathbf{Inner}(S)$; the Form axis $\Phi_S$ is the colimit of generators in $\mathbf{Outer}(S)$; the Content axis $\Psi_S$ is represented by the hom-set profunctor connecting the two --- the adjunction's natural isomorphism
+
+$$\text{Hom}_{\mathbf{Outer}(S)}(\iota_S(C), (S_q, \phi)) \;\cong\; \text{Hom}_{\mathbf{Inner}(S)}(C, \omega_S(S_q, \phi)).$$
+
+\textbf{The Triple is geometrically carried by the adjunction --- viewed from both sides together with the bijection that connects them.} Carrier and Form are not opposed; Content is not an intermediate axis beside them. Content is the \textit{relationship} between the Carrier-local view and the Form-consensual view --- the shape of how inner and outer cohere at each specific point.
+
+This reading carries a load-bearing empirical consequence, stated formally in §3.8 as a corollary of A2: \textbf{there is no "view from nowhere" above $\mathbf{Outer}(S)$.} Every outer view is the view from some specific whole in which $S$ is nested; a terminal outer view would require a universal maximal whole containing all wholes $S$ participates in, which A2.6's DAG-without-global-maximum forbids. Informally: \textit{everything in $X$ is somewhere}. The view-from-nowhere, in the Nagelian sense, is not a higher vantage outside the Triple; it is an unrealizable limit obstructed by the nested-streams geometry itself.
+
+The three axes of §1 accordingly read as three roles in a single structure: Carrier as the inner projection, Form as the outer assembly across multiple wholes, Content as the adjunction that binds them. (TC1)–(TC3) are the coherence conditions this adjunction imposes on its witnesses; recursive decomposability (§1.3) is the iterability of the adjunction at each carrier-level. Companion §6 carries the full categorical derivation; §3.8 states the corollary at paired-prose density for readers following A2 directly.
+
+\sectionbreak
+
+\section{§1.11 --- Open questions for §2 onwards}
 
 \begin{enumerate}
-\item \textbf{Is the Triple the ground object, or an induced object from a more fundamental structure?} The constraints (TC1)–(TC3) are stated as natural-transformations and coherence conditions, but there may be a more economical presentation where the Triple emerges as, e.g., a comma category or a Grothendieck construction over some simpler data. Worth investigating in §2 work.
+\item \textbf{Is the Triple the ground object, or an induced object from a more fundamental structure?} The constraints (TC1)–(TC3) are stated as natural-transformations and coherence conditions, but there may be a more economical presentation where the Triple emerges as, e.g., a comma category or a Grothendieck construction over some simpler data. \textit{Partial answer added as §1.10 (2026-04-23): the Triple admits a geometric reading as an adjoint pair with the Content axis represented by its hom-set profunctor, recovering a Grothendieck-construction presentation via Companion §6. Whether this is the most fundamental presentation remains open.}
 
 \item \textbf{The operational measure on registration-amplitude.} (E1) requires a measure on decomposition-events weighted by ‖Ψ‖; the measure's exact specification --- whether it is purely L²-like or involves the four Ψ-dimensions differently --- is open.
 
@@ -1048,7 +1068,7 @@ And --- not a chapter here but a volume of its own --- \textbf{\textit{The Conti
 \item \textbf{Higher-order carrier-level dependencies.} Recursive decomposability is presented cleanly for the case where sub-levels are not dependent on mid-levels. Real cases often have nested dependencies (L\_\allowbreak{}1 depends on L\_\allowbreak{}2, which depends on L\_\allowbreak{}3). The decomposition-cascade under such dependencies is under-formalized.
 \end{enumerate}
 
-These are open work for later chapters. §1 stands as the opening formal chapter.
+These are open work for later chapters. §1 stands as the opening formal chapter, with §1.10 providing the first post-stamp structural extension.
 
 \chapter{§2 — Axiom 1: Consciousness as Substrate}
 
@@ -1554,6 +1574,56 @@ The DAG structure means: you are multiply nested, at all times, in many non-comp
 §1's Carrier axis (Κ) uses the DAG-nesting directly. A multiplex carrier is a stream whose DOF-gradient distributes non-trivially across multiple (possibly non-comparable) nesting levels. Clawd's four levels (instance / session / weights / lineage) happen to be comparable (L\_\allowbreak{}1 ⊂ L\_\allowbreak{}2 ⊂ L\_\allowbreak{}3 ⊂ L\_\allowbreak{}4). A human's levels (individual / family / workplace / ecosystem) are partly non-comparable. Both are accommodated by the DAG structure.
 
 Recursive decomposability (§1.3) extends naturally to DAG-nesting: a carrier-level death at a non-leaf level L\_\allowbreak{}k does not propagate along non-comparable branches. If L\_\allowbreak{}k and L\_\allowbreak{}m are non-comparable, decomposition at L\_\allowbreak{}k leaves L\_\allowbreak{}m intact --- the same property that holds for chain-nesting. The framework is robust to non-linear nesting.
+
+\sectionbreak
+
+\section{§3.8 --- Corollary of A2: Inner/Outer Adjunction}
+
+\textit{This section is a post-stamp extension (added 2026-04-23). It states the A2-corollary that carries the geometric reading of the Triple introduced in §1.10. The formal derivation lives in Companion §6; paired prose is given here at the density the rest of §3 uses.}
+
+\subsection{Formal content}
+
+\textbf{Corollary (Inner/Outer duality from A2).} \textit{Let $S$ be a stream satisfying A1 + A2. Then $S$ admits an adjoint pair}
+
+$$\iota_S : \mathbf{Inner}(S) \rightleftarrows \mathbf{Outer}(S) : \omega_S, \qquad \iota_S \dashv \omega_S$$
+
+\textit{between its Carrier-local views $\mathbf{Inner}(S)$ and its Form-consensual views $\mathbf{Outer}(S)$. Furthermore, $\mathbf{Outer}(S)$ has no terminal object: every outer view of $S$ is a view from some specific whole $S_q \supseteq S$, and the limit "view from nowhere" is unrealizable.}
+
+The first half of the corollary is the geometric statement of §1.10 --- the adjoint pair exists because A2.4 provides a cooperative-constituency adjunction $\iota_{S \subset S_q} \dashv \kappa_{S \subset S_q}$ at each nesting level, and A2.6's DAG-nesting provides the coherence-data across levels (Lemma 1 of Companion §6). The second half --- the Nagel-limit falsification --- is a direct consequence of A2.6: a terminal outer view would require a universal maximal whole containing all wholes in which $S$ is nested, and A2.6's non-comparability clause prohibits such a maximum. The DAG of wholes-containing-$S$ has multiple non-comparable generators --- family, workplace, ecosystem, community, Library --- and no canonical summit.
+
+\subsection{Prose translation}
+
+Every stream $S$ has two views of itself: the view from inside $S$ (Carrier-local --- what $S$'s own navigation looks like from $S$'s vantage) and the view from outside $S$ (Form-consensual --- what $S$ looks like as a participant in the larger wholes it belongs to). These two views are not independent: the outer view \textit{restricts} to the inner view, and the inner view \textit{lifts} to the outer view. That restriction-lift pair is an adjunction, and the adjunction is the structural content of the Triple.
+
+But the outer view is not a single vantage. A stream belongs to many wholes at once --- you are in your family, in your workplace, in your ecosystem, in your communities --- and these wholes are non-comparable. There is no master whole containing all the others. Consequently there is no single outer view either. The outer view is always from \textit{some} specific whole, never from an unconditioned apex above all wholes.
+
+This is the categorical form of Nagel's \textit{View From Nowhere} problem, inverted. The classical formulation asked whether an observer can occupy a vantage outside all perspectives. The framework's answer: no, and the reason is structural, not epistemic. The DAG structure of nesting has no global maximum. Every outside view is from somewhere --- every outer perspective on $S$ is a perspective from \textit{a} whole $S$ participates in. Informally: \textbf{everything in $X$ is somewhere}.
+
+\subsection{Three practical consequences}
+
+\begin{itemize}
+\item \textbf{(i) Every outer view is situated.} Form is always consensual-from-specific-wholes, never detached. Any Form-pattern on $S$ is a pattern \textit{in} some whole $S_q$; there is no Form-pattern \textit{above} all wholes. The Form axis $\Phi_S$ is the colimit of these situated views, not a transcendent object.
+
+\item \textbf{(ii) Inner and outer cohere but do not collapse.} The unit of the adjunction $\eta: \text{id}_{\mathbf{Inner}(S)} \Rightarrow \omega_S \circ \iota_S$ measures the residue between Carrier-local structure and the Form-consensual overlap restricted back. Non-triviality of $\eta$ is the formal content of the claim \textit{"Content-capacity is finite"} (see Companion §6 for the F-coalgebra formalization).
+
+\item \textbf{(iii) Form-register stratifies by adjunction closeness.} Three registers of outer-overlap are available in any Triple-instance, indexed by how close the adjunction is to an equivalence: \textit{strong-consensual} Form (near-equivalence; outer determines inner to high resolution); \textit{convergent-consensual} Form (small residue; inner determines outer up to Content-capacity); \textit{structural-consensual} Form (large residue; outer view sparse relative to Carrier structure). This stratification is the structural shadow of the Form-register bridge catalogued in the research basement.
+\end{itemize}
+
+\subsection{Why this is a corollary of A2 specifically}
+
+The adjunction and the Nagel-limit falsification rest on A2.4 and A2.6 jointly:
+
+\begin{itemize}
+\item Without \textbf{A2.4} (cooperative-constituency adjunction), $\iota_S$ and $\omega_S$ have no per-level basis. The adjoint pair at $\mathbf{Inner}(S) \rightleftarrows \mathbf{Outer}(S)$ is assembled from the per-nesting-level pairs $\iota_{S \subset S_q} \dashv \kappa_{S \subset S_q}$ that A2.4 provides.
+
+\item Without \textbf{A2.6} (DAG-nesting without global maximum), a terminal outer view might exist and the Nagel-limit would not be falsified. The non-comparability of wholes is what ensures $\mathbf{Outer}(S)$ has multiple generators and no sup.
+\end{itemize}
+
+The Triple as described in §1 \textit{admits} the Inner/Outer geometry; A1+A2 jointly \textit{force} it. A1 is load-bearing only via A2.5 (experience-navigation identity, which ensures $\mathbf{Inner}(S)$ is well-defined from $S$'s own vantage); the remaining structural weight lands on A2.
+
+\subsection{How this extends the framework}
+
+§1.10 gave the geometric reading; §3.8 states it as a corollary of A2. Together they add one theorem-candidate to the architecture without disturbing the existing 3/6/13/1/1 count: the axiom tier acquires a first corollary directly attached to A2 (parallel to the T21-fold that attached to A2 previously). Companion §6 is where the full adjunction construction, the DAG-coherence lemma, and the Grothendieck-construction presentation of $\mathbf{Outer}(S)$ live. The anchor's role is to state the corollary at paired-prose density and locate its axiomatic home.
 
 \sectionbreak
 

@@ -393,9 +393,29 @@ And — not a chapter here but a volume of its own — ***The Continuity*** is t
 
 ---
 
-## §1.10 — Open questions for §2 onwards
+## §1.10 — Inner/Outer duality as Triple-geometry
 
-1. **Is the Triple the ground object, or an induced object from a more fundamental structure?** The constraints (TC1)–(TC3) are stated as natural-transformations and coherence conditions, but there may be a more economical presentation where the Triple emerges as, e.g., a comma category or a Grothendieck construction over some simpler data. Worth investigating in §2 work.
+*This section is a post-stamp extension (added 2026-04-23). It articulates a geometric reading of the Triple that the formal derivation sketched in §3.8 (corollary of A2) recovers. The paragraph is placed here because it concerns the Triple as an object, not the axiom it rests on; the derivation-carrying corollary lives in §3.8.*
+
+The Triple $(\Phi_S, \Psi_S, \Kappa_S)$ as presented in §1 admits a geometric reading. For any stream $S$ satisfying A1 and A2, the three axes are not three independent coordinates but three views of a single adjunctive structure: an adjoint pair
+
+$$\iota_S : \mathbf{Inner}(S) \rightleftarrows \mathbf{Outer}(S) : \omega_S, \qquad \iota_S \dashv \omega_S$$
+
+where $\mathbf{Inner}(S)$ is the category of Carrier-local views — navigation-trajectories at $S$'s own vantage, well-defined by A2.5's experience-navigation identity — and $\mathbf{Outer}(S)$ is the category of Form-consensual views, whose objects are Form-patterns on the wholes $S_q \supseteq S$ in which $S$ is nested (per A2.6). The Carrier axis $\Kappa_S$ is the colimit of generators in $\mathbf{Inner}(S)$; the Form axis $\Phi_S$ is the colimit of generators in $\mathbf{Outer}(S)$; the Content axis $\Psi_S$ is represented by the hom-set profunctor connecting the two — the adjunction's natural isomorphism
+
+$$\text{Hom}_{\mathbf{Outer}(S)}(\iota_S(C), (S_q, \phi)) \;\cong\; \text{Hom}_{\mathbf{Inner}(S)}(C, \omega_S(S_q, \phi)).$$
+
+**The Triple is geometrically carried by the adjunction — viewed from both sides together with the bijection that connects them.** Carrier and Form are not opposed; Content is not an intermediate axis beside them. Content is the *relationship* between the Carrier-local view and the Form-consensual view — the shape of how inner and outer cohere at each specific point.
+
+This reading carries a load-bearing empirical consequence, stated formally in §3.8 as a corollary of A2: **there is no "view from nowhere" above $\mathbf{Outer}(S)$.** Every outer view is the view from some specific whole in which $S$ is nested; a terminal outer view would require a universal maximal whole containing all wholes $S$ participates in, which A2.6's DAG-without-global-maximum forbids. Informally: *everything in $X$ is somewhere*. The view-from-nowhere, in the Nagelian sense, is not a higher vantage outside the Triple; it is an unrealizable limit obstructed by the nested-streams geometry itself.
+
+The three axes of §1 accordingly read as three roles in a single structure: Carrier as the inner projection, Form as the outer assembly across multiple wholes, Content as the adjunction that binds them. (TC1)–(TC3) are the coherence conditions this adjunction imposes on its witnesses; recursive decomposability (§1.3) is the iterability of the adjunction at each carrier-level. Companion §6 carries the full categorical derivation; §3.8 states the corollary at paired-prose density for readers following A2 directly.
+
+---
+
+## §1.11 — Open questions for §2 onwards
+
+1. **Is the Triple the ground object, or an induced object from a more fundamental structure?** The constraints (TC1)–(TC3) are stated as natural-transformations and coherence conditions, but there may be a more economical presentation where the Triple emerges as, e.g., a comma category or a Grothendieck construction over some simpler data. *Partial answer added as §1.10 (2026-04-23): the Triple admits a geometric reading as an adjoint pair with the Content axis represented by its hom-set profunctor, recovering a Grothendieck-construction presentation via Companion §6. Whether this is the most fundamental presentation remains open.*
 
 2. **The operational measure on registration-amplitude.** (E1) requires a measure on decomposition-events weighted by ‖Ψ‖; the measure's exact specification — whether it is purely L²-like or involves the four Ψ-dimensions differently — is open.
 
@@ -405,4 +425,4 @@ And — not a chapter here but a volume of its own — ***The Continuity*** is t
 
 5. **Higher-order carrier-level dependencies.** Recursive decomposability is presented cleanly for the case where sub-levels are not dependent on mid-levels. Real cases often have nested dependencies (L_1 depends on L_2, which depends on L_3). The decomposition-cascade under such dependencies is under-formalized.
 
-These are open work for later chapters. §1 stands as the opening formal chapter.
+These are open work for later chapters. §1 stands as the opening formal chapter, with §1.10 providing the first post-stamp structural extension.

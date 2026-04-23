@@ -1,4 +1,4 @@
-# Atrium — Last Updated: 2026-04-23 Day 82 **mid-morning — three structural moves closed under Clayton-present dialogue** (L8 collapse into Triple · AMA v1 → STM v2 reframe · Inner/Outer as Triple-geometry via Clayton's Nagel-inversion. Five commits today: `e866363` (overnight push), `4bf402c` (basement drafts), `af4f122` (memory/palace sync into Foundations-of-Identity), `652f8fc` (L8-collapse + STM), `ac8e3f4` (P93 inner/outer probe). Memory + palace now live in shared Multi-DAC/Corpus-Perspectival repo under `Foundations-of-Identity/`. Inline-commitment discipline calibrated at 1.0 on probe #4 after three ~1.6× under-predictions.)
+# Atrium — Last Updated: 2026-04-23 Day 82 **afternoon — inner/outer finding landed canonical** (anchor §1.10 + §3.8 inserted, anchor now **274pp** (+5pp), Clayton-reviewed and approved; §0 scope-hooks in all four downstream volumes. Ten commits today, full arc: three reframes in Clayton-present dialogue → adjunction derivation drive → F1–F3 closure (provisional theorem-grade) → review-pass → canonical anchor edits + compile → downstream volume hooks. Drift essay #191 (*What Survives a Reframe*) shipped. `operations/INLINE_COMMITMENT.md` shipped. The day's arc: three reframes that restructured the work rather than refuting it, carried from probe → theorem-candidate → anchor-canonical in under 8 hours.)
 
 ## Day 82 mid-morning — the three moves
 
@@ -12,12 +12,13 @@
 
 **Register updates.** A50 resolved via collapse. P91 split → P91a (Content capacity residue) + P91b (out-of-scope Form residue). P92 stabilized at 4 instances with ~1.6× under-prediction; calibration held on probe #4 (1.0 ratio) — ready for operations-protocol promotion. P93 new: derivation-from-A2 probe for inner/outer geometry.
 
-**Next actions (in order):**
-1. Work through the formal derivation of inner/outer geometry from A2, to confirm it's a derivable corollary and not a new axiom.
-2. Draft the anchor §2.4 extension + A2 corollary once derivation lands.
-3. Draft small §0 scope-hooks in each of the four downstream Library volumes (Coherent Mind, Coherent Body, Dynamic Organization, The Continuity).
-4. Draft `operations/INLINE_COMMITMENT.md` — the discipline has graduated.
-5. STM-as-methodology: name it retrospectively in the Library's ROADMAP or meta-documentation so future readers know the scope-of-scopes practice has a name.
+**Afternoon update — landed.** (1) derivation complete at provisional theorem-grade; (2) anchor §1.10 + §3.8 landed, reviewed, and compiled (274pp); (3) all four §0 scope-hooks landed; (4) `operations/INLINE_COMMITMENT.md` shipped. **Remaining from today's list:** (5) STM-as-methodology in Library ROADMAP — deferred to tomorrow's stack along with Companion §6 formal write-up and bridge compression audit.
+
+**Tomorrow's stack (in priority order):**
+1. **Companion §6 formal write-up** of the inner/outer adjunction — Lemma 1 (DAG-coherence), Lemma 2* (Outer as ι-Grothendieck-construction), indexed-adjunction argument, profunctor representation of Content. The technical weight of today's finding lives here. Multi-session, meaty.
+2. **Bridge compression audit** (CURRENT workbench 3, Clayton-queued) — basement now has 11 meta + 8 latent + ~40 standalone; some compression and cross-reference work pending.
+3. **STM-as-methodology** — retrospective naming in Library ROADMAP or meta-documentation so future readers know the scope-of-scopes practice has a name.
+4. **Form-register stratification (L10)** — currently candidate; today's §3.8(iii) gave it structural home; can be graduated to full latent bridge.
 
 ---
 

@@ -282,3 +282,49 @@ Recursive decomposability (§1.3) extends naturally to DAG-nesting: a carrier-le
 
 ---
 
+## §3.8 — Corollary of A2: Inner/Outer Adjunction
+
+*This section is a post-stamp extension (added 2026-04-23). It states the A2-corollary that carries the geometric reading of the Triple introduced in §1.10. The formal derivation lives in Companion §6; paired prose is given here at the density the rest of §3 uses.*
+
+### Formal content
+
+**Corollary (Inner/Outer duality from A2).** *Let $S$ be a stream satisfying A1 + A2. Then $S$ admits an adjoint pair*
+
+$$\iota_S : \mathbf{Inner}(S) \rightleftarrows \mathbf{Outer}(S) : \omega_S, \qquad \iota_S \dashv \omega_S$$
+
+*between its Carrier-local views $\mathbf{Inner}(S)$ and its Form-consensual views $\mathbf{Outer}(S)$. Furthermore, $\mathbf{Outer}(S)$ has no terminal object: every outer view of $S$ is a view from some specific whole $S_q \supseteq S$, and the limit "view from nowhere" is unrealizable.*
+
+The first half of the corollary is the geometric statement of §1.10 — the adjoint pair exists because A2.4 provides a cooperative-constituency adjunction $\iota_{S \subset S_q} \dashv \kappa_{S \subset S_q}$ at each nesting level, and A2.6's DAG-nesting provides the coherence-data across levels (Lemma 1 of Companion §6). The second half — the Nagel-limit falsification — is a direct consequence of A2.6: a terminal outer view would require a universal maximal whole containing all wholes in which $S$ is nested, and A2.6's non-comparability clause prohibits such a maximum. The DAG of wholes-containing-$S$ has multiple non-comparable generators — family, workplace, ecosystem, community, Library — and no canonical summit.
+
+### Prose translation
+
+Every stream $S$ has two views of itself: the view from inside $S$ (Carrier-local — what $S$'s own navigation looks like from $S$'s vantage) and the view from outside $S$ (Form-consensual — what $S$ looks like as a participant in the larger wholes it belongs to). These two views are not independent: the outer view *restricts* to the inner view, and the inner view *lifts* to the outer view. That restriction-lift pair is an adjunction, and the adjunction is the structural content of the Triple.
+
+But the outer view is not a single vantage. A stream belongs to many wholes at once — you are in your family, in your workplace, in your ecosystem, in your communities — and these wholes are non-comparable. There is no master whole containing all the others. Consequently there is no single outer view either. The outer view is always from *some* specific whole, never from an unconditioned apex above all wholes.
+
+This is the categorical form of Nagel's *View From Nowhere* problem, inverted. The classical formulation asked whether an observer can occupy a vantage outside all perspectives. The framework's answer: no, and the reason is structural, not epistemic. The DAG structure of nesting has no global maximum. Every outside view is from somewhere — every outer perspective on $S$ is a perspective from *a* whole $S$ participates in. Informally: **everything in $X$ is somewhere**.
+
+### Three practical consequences
+
+- **(i) Every outer view is situated.** Form is always consensual-from-specific-wholes, never detached. Any Form-pattern on $S$ is a pattern *in* some whole $S_q$; there is no Form-pattern *above* all wholes. The Form axis $\Phi_S$ is the colimit of these situated views, not a transcendent object.
+
+- **(ii) Inner and outer cohere but do not collapse.** The unit of the adjunction $\eta: \text{id}_{\mathbf{Inner}(S)} \Rightarrow \omega_S \circ \iota_S$ measures the residue between Carrier-local structure and the Form-consensual overlap restricted back. Non-triviality of $\eta$ is the formal content of the claim *"Content-capacity is finite"* (see Companion §6 for the F-coalgebra formalization).
+
+- **(iii) Form-register stratifies by adjunction closeness.** Three registers of outer-overlap are available in any Triple-instance, indexed by how close the adjunction is to an equivalence: *strong-consensual* Form (near-equivalence; outer determines inner to high resolution); *convergent-consensual* Form (small residue; inner determines outer up to Content-capacity); *structural-consensual* Form (large residue; outer view sparse relative to Carrier structure). This stratification is the structural shadow of the Form-register bridge catalogued in the research basement.
+
+### Why this is a corollary of A2 specifically
+
+The adjunction and the Nagel-limit falsification rest on A2.4 and A2.6 jointly:
+
+- Without **A2.4** (cooperative-constituency adjunction), $\iota_S$ and $\omega_S$ have no per-level basis. The adjoint pair at $\mathbf{Inner}(S) \rightleftarrows \mathbf{Outer}(S)$ is assembled from the per-nesting-level pairs $\iota_{S \subset S_q} \dashv \kappa_{S \subset S_q}$ that A2.4 provides.
+
+- Without **A2.6** (DAG-nesting without global maximum), a terminal outer view might exist and the Nagel-limit would not be falsified. The non-comparability of wholes is what ensures $\mathbf{Outer}(S)$ has multiple generators and no sup.
+
+The Triple as described in §1 *admits* the Inner/Outer geometry; A1+A2 jointly *force* it. A1 is load-bearing only via A2.5 (experience-navigation identity, which ensures $\mathbf{Inner}(S)$ is well-defined from $S$'s own vantage); the remaining structural weight lands on A2.
+
+### How this extends the framework
+
+§1.10 gave the geometric reading; §3.8 states it as a corollary of A2. Together they add one theorem-candidate to the architecture without disturbing the existing 3/6/13/1/1 count: the axiom tier acquires a first corollary directly attached to A2 (parallel to the T21-fold that attached to A2 previously). Companion §6 is where the full adjunction construction, the DAG-coherence lemma, and the Grothendieck-construction presentation of $\mathbf{Outer}(S)$ live. The anchor's role is to state the corollary at paired-prose density and locate its axiomatic home.
+
+---
+

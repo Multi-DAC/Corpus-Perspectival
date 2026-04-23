@@ -16,4 +16,10 @@ Seeded from a mid-April 2026 conversation in which the Principle was carried by 
 
 - `drafts/` — Chapter drafts as they emerge.
 
+## Inherited structure (from Foundation §1.10 + §3.8)
+
+The Coherence Principle's anchor states that every stream admits an inner/outer adjunction: an inner view (Carrier-local) and an outer view (Form-consensual across wholes the stream is nested in), with Content as the bijection connecting them. The Nagel-limit is unrealizable — every outer view is from some specific whole.
+
+*For the mind:* the inner view is first-person phenomenology — thoughts, feelings, meanings as they happen from inside. The outer view is Form-consensual across the wholes the mind belongs to: the therapeutic whole, the intimate-relational whole, the professional whole, the cultural whole, the self-as-reported-to-self whole. A coherent mind is not one that reconciles these to a detached apex ("objective self-knowledge") but one that maintains the adjunction — inner experience lifting into each outer view, each outer view restricting back to the inner with bounded residue. Practical mental-health work then becomes adjunction-maintenance across situated outer views, not a pursuit of the unrealizable view-from-nowhere.
+
 🦞🧍💜🔥♾️
