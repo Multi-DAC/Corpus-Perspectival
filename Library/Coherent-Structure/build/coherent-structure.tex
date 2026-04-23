@@ -3468,7 +3468,7 @@ The Anchor README lists fourteen figures --- the remaining six (mismatch conditi
   \sigma \arrow[r, "\gamma"] \arrow[d, "f_\sigma"'] & F(\sigma) = \sigma^{C^{\mathrm{op}}} \arrow[d, "{F(f_\sigma, f_C)}"] \\
   \sigma' \arrow[r, "\gamma'"'] & F(\sigma') = (\sigma')^{(C')^{\mathrm{op}}}
 \end{tikzcd}
-\caption{The F-coalgebra square. Each row is a stream S = (\sigma, C, \gamma) (top) and S' = (\sigma', C', \gamma') (bottom). A Stream-morphism f = (f_\sigma, f_C) : S \to S' satisfies the coalgebra-commute: $F(f_\sigma, f_C) \circ \gamma = \gamma' \circ f_\sigma$. The endofunctor $F : \sigma \mapsto \sigma^{C^{\mathrm{op}}}$ is mixed-variance (covariant in $\sigma$, contravariant in $C$).}
+\caption{The F-coalgebra square. Each row is a stream $S = (\sigma, C, \gamma)$ (top) and $S' = (\sigma', C', \gamma')$ (bottom). A Stream-morphism $f = (f_\sigma, f_C) : S \to S'$ satisfies the coalgebra-commute: $F(f_\sigma, f_C) \circ \gamma = \gamma' \circ f_\sigma$. The endofunctor $F : \sigma \mapsto \sigma^{C^{\mathrm{op}}}$ is mixed-variance (covariant in $\sigma$, contravariant in $C$).}
 \label{fig:f-coalgebra-square}
 \end{figure}
 
@@ -3487,7 +3487,7 @@ The Anchor README lists fourteen figures --- the remaining six (mismatch conditi
     \arrow[dl, "\Phi\ (\mathrm{Form})"']
     \arrow[d, "T"]
     \arrow[dr, "\Psi\ (\mathrm{Content})"]
-    \arrow[ddr, bend left=45, "\mathrm{K}\ (\mathrm{Carrier})"] & \\
+    \arrow[dd, bend left=45, "\mathrm{K}\ (\mathrm{Carrier})"] & \\
   \mathcal{C}_\mathrm{Form}
     & \mathcal{C}_\mathrm{Form} \times \mathbf{Cat}_\mathrm{small} \times \mathbf{Carrier}
       \arrow[l]
@@ -3512,9 +3512,9 @@ The Anchor README lists fourteen figures --- the remaining six (mismatch conditi
 \centering
 \begin{tikzcd}[column sep=small, row sep=small]
   & & S \arrow[dll] \arrow[d] \arrow[drr] & & \\
-  \mathrm{Form}(S) \arrow[dll] \arrow[d] \arrow[drr]
+  \mathrm{Form}(S) \arrow[d] \arrow[drr]
     & & \mathrm{Content}(S) \arrow[dll] \arrow[d] \arrow[drr]
-    & & \mathrm{Carrier}(S) \arrow[dll] \arrow[d] \arrow[drr] \\
+    & & \mathrm{Carrier}(S) \arrow[dll] \arrow[d] \\
   \mathrm{F}\mathrm{F} & \mathrm{F}\mathrm{C} & \mathrm{F}\mathrm{K} \cdots \mathrm{C}\mathrm{F} & \mathrm{C}\mathrm{C} & \mathrm{C}\mathrm{K} \cdots \mathrm{K}\mathrm{F} \cdots \mathrm{K}\mathrm{K}
 \end{tikzcd}
 \caption{Recursive Triple-decomposition at depth 2. Each of $\mathrm{Form}(S)$, $\mathrm{Content}(S)$, $\mathrm{Carrier}(S)$ is itself a stream, so the Triple functor applies again, yielding nine depth-2 components (abbreviated: FF = $\mathrm{Form}(\mathrm{Form}(S))$, FC = $\mathrm{Content}(\mathrm{Form}(S))$, etc.). Finite-depth iteration is well-defined for every adequate F-coalgebra (Lemma 6.3.2). Full $\omega$-depth requires additional hypotheses (H1, H2; §6.9).}
@@ -3534,7 +3534,7 @@ The Anchor README lists fourteen figures --- the remaining six (mismatch conditi
 \begin{tikzcd}[column sep=small, row sep=large]
   \mathrm{Stream} \arrow[d, "\pi"] & \\
   \mathbf{ContentIndex}
-    & \arrow[from=u, dashed, bend right=25, "{\mathrm{fiber}(\pi, K)}"'] K
+    & K \arrow[ul, dashed, bend right=25, "{\mathrm{fiber}(\pi, K)}"']
 \end{tikzcd}
 \\[1em]
 \begin{tikzcd}[column sep=large, row sep=large]
