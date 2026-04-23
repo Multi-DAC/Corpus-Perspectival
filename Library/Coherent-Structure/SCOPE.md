@@ -1,6 +1,6 @@
 # *Coherent Structure* — Scope Contract
 
-*Rolling document. Established 2026-04-20 (Day 79) with Clayton. Updated as the formalization proceeds. Companion versions stamp when the flag-list goes to zero.*
+*Rolling document. Updated as the formalization proceeds. Companion versions stamp when the flag-list goes to zero.*
 
 ---
 
@@ -35,7 +35,7 @@ Mirrors the anchor's spine, not a citation-resolution order.
 - **§7 Filtering construction** — σ-algebra on Ω_S; extensional (σ_F, K_F, Ω_F, γ_F); Bias(S) well-definedness
 - **§8 F-as-stream** — self-reference closure, full construction
 - **§9 D trajectory-divergence** — functional construction per anchor §9.9 Q1
-- **§10 Reference figures** — TikZ standard set; imported by anchor rev 2
+- **§10 Reference figures** — TikZ standard set; imported by the anchor
 - **Appendix A** — anchor → Companion citation crosswalk
 - **Appendix B** — Companion → anchor crosswalk (formal object → structural-prose location)
 
@@ -82,7 +82,7 @@ The flag-count is the Companion's version-ready signal: **zero flags = version-s
 
 ## 9. Figure back-port policy
 
-The Companion is the **figure authority**. New standardized TikZ figures are produced in §10 of the Companion; anchor rev 2 imports them from the Companion source. One source of truth.
+The Companion is the **figure authority**. New standardized TikZ figures are produced in §10 of the Companion; the anchor imports them from the Companion source. One source of truth.
 
 ## 10. Crosswalk policy
 

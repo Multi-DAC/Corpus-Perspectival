@@ -554,11 +554,11 @@ H1 ensures the iteration stabilizes at some ordinal ≤ ℵ_1 (first uncountable
 
 **§7 (Filtering construction):** the σ-algebra on Ω_S, the extensional (σ_F, K_F, Ω_F, γ_F), and Bias(S) well-definedness all live downstream of §6's Stream-as-F-coalgebra foundation. §7 uses the Triple (§6.2) directly and the fibration (§6.4) for kind-respecting filters.
 
-**§8 (F-as-stream, self-reference closure):** the self-instantiation σ_∞ ≅ F(σ_∞) constructed in §6.9 (Theorem 6.9.3, Regime A) is the formal content of F-as-stream. §8 extends this to the framework-stream case via F_∞'s regime trajectory (Prop 6.9.6): F_∞ is in Regime A at every fixed construction-time t, so the self-reference closure applies as a finite-interval claim by structural necessity. §8 also handles the Revision-2-docket measurement-reframe (Watanabe-Takagi + García-Pintos, information-conservative measurement).
+**§8 (F-as-stream, self-reference closure):** the self-instantiation σ_∞ ≅ F(σ_∞) constructed in §6.9 (Theorem 6.9.3, Regime A) is the formal content of F-as-stream. §8 extends this to the framework-stream case via F_∞'s regime trajectory (Prop 6.9.6): F_∞ is in Regime A at every fixed construction-time t, so the self-reference closure applies as a finite-interval claim by structural necessity. §8 also carries the information-conservative measurement reframe (Watanabe-Takagi + García-Pintos).
 
 **§9 (D trajectory-divergence):** Anchor §9.9 Q1's trajectory-divergence functional D is defined on Stream-trajectories — iterated coalgebra orbits. §6.3's finite-depth factorization and §6.9's ω-depth result provide the depth-uniform structure §9 needs.
 
-**Anchor Rev 2 back-port items from §6.** Per SCOPE.md §8 lifecycle:
+**Anchor back-port items from §6.** Per SCOPE.md §8 lifecycle:
 
 - Anchor §1: Triple forgetful + conservativity (Lemmas 6.2.4, 6.2.7)
 - Anchor §1: recursive decomposability as theorem (Lemma 6.3.2, Corollary 6.3.4)
@@ -643,7 +643,7 @@ H1 ensures the iteration stabilizes at some ordinal ≤ ℵ_1 (first uncountable
   — §7 σ-finiteness scope: unconditional in Regime A, conditional on countable C + concrete μ_0 in Regime B.
 ```
 
-These land in Anchor Rev 2 per SCOPE.md §8 back-port lifecycle.
+These land in future Anchor revisions per SCOPE.md §8 back-port lifecycle.
 
 ---
 

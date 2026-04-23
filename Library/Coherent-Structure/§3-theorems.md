@@ -149,7 +149,7 @@ $$
 
 (4) Asymptotic reversibility: for a sequence M_n of increasingly-informed measurements, the entropy-loss H(γ ; C) − H(γ_{M_n} ; C_{M_n}) → 0 provided the information budget grows super-polynomially relative to the ContentOp-cardinality of C_M. This is the 2026 Watanabe-Takagi work-extraction result translated into F-Coalg_ad. ∎
 
-**Remark 3.3.2.1 (Measurement as information-conservative operation).** Clauses (3) and (4) update the Corpus's earlier framing of measurement-as-terminal-collapse. Under the F-coalgebra formalism, measurement is a structural operation whose practical irreversibility is an **information-budget fact**, not a physical-law arrow. The flagged Anchor Revision 2 item (Anchor README docket, entry 1) back-ports this reframe into Anchor §9/§9.5.
+**Remark 3.3.2.1 (Measurement as information-conservative operation).** Clauses (3) and (4) update the Corpus's earlier framing of measurement-as-terminal-collapse. Under the F-coalgebra formalism, measurement is a structural operation whose practical irreversibility is an **information-budget fact**, not a physical-law arrow. This reframe is carried in Anchor §9 / §9.5.
 
 ⚑ [SURFACED | Companion §3.3.2 | → Anchor §6 / §9.5 target | type: theorem]
 
@@ -264,7 +264,7 @@ Three flags surface in §3 this drafting pass:
 - ⚑ §3.3.2 Measurement-as-information-conservative (Watanabe-Takagi + García-Pintos integration) → Anchor §6/§9.5 target — theorem (reframe of earlier collapse-language)
 - ⚑ §3.4.2 Dual-axes orthogonality-by-counterexample → Anchor §7 target — theorem (explicit codimension-2 locus)
 
-Back-port targets feed the Anchor Rev-2 docket in the Coherence-Principle README.
+Back-port targets feed future Anchor revisions per the Companion/Anchor rhythm specified in SCOPE §8.
 
 ---
 

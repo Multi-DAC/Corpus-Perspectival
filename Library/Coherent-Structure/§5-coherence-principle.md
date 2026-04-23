@@ -172,7 +172,7 @@ Two flags surface this pass:
 - ⚑ §5.2.5 Joint-sufficiency proposition with independence-by-counterexample → Anchor §9.2 target — proposition (explicit joint-sufficiency proof)
 - ⚑ §5.4.1 F-as-stream formal structure (σ_F, C_F, Ω_F, γ_F) → Anchor §9.5 target — theorem (detailed construction + audit deferred to §8)
 
-Both flag-targets feed the Anchor Rev-2 docket.
+Both flag-targets feed future Anchor revisions per the SCOPE §8 rhythm.
 
 ---
 

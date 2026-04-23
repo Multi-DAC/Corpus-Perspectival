@@ -49,7 +49,7 @@
 | T2 C13-backward-compatibility (Cor 3.2.2.1) | Anchor §5.2 + §8.3 C13 | corollary | Direct bridge |
 | T3 Attentional Quality (Thm 3.3.1) | Anchor §6.1 | theorem | Three-channel decomposition |
 | T4 Coherence-Forcing Measurement (Thm 3.3.2) | Anchor §6.2 | theorem | Four clauses including info-conservative reframe |
-| T4 measurement-as-info-conservative (Remark 3.3.2.1) | Anchor §9/§9.5 target for Rev 2 | remark | Rev-2-docket item |
+| T4 measurement-as-info-conservative (Remark 3.3.2.1) | Anchor §9 / §9.5 | remark | Landed back-port: info-conservative reframe with physics anchoring |
 | T5 Internal Coherence (Thm 3.4.1) | Anchor §7.1 | theorem | Φ-fixed-point condition |
 | T5 coherence-closed-in-F-Coalg_ad (Cor 3.4.1.2) | Anchor §7.1 | corollary | Closure property |
 | T6 Dual Coherence Axes (Thm 3.4.2) | Anchor §7.2 | theorem | Orthogonality + codim-2 locus |
@@ -181,7 +181,7 @@
 
 ## B.2 — Surfaced-lemma register (full)
 
-All surfaced-lemma flags raised during Companion drafting, with Anchor Rev-2 back-port targets:
+All surfaced-lemma flags raised during Companion drafting, with their back-port targets in the Anchor:
 
 | Flag location | Anchor target | Type | Description |
 |---|---|---|---|
@@ -204,15 +204,15 @@ All surfaced-lemma flags raised during Companion drafting, with Anchor Rev-2 bac
 | §9.4.3 outperformance with explicit constants | Anchor §9.3/§9.1 | theorem | Quantitative form supersedes sketch |
 | §9.5 cross-metric invariance | Anchor §9.9 Q1 | theorem | Q1 resolution |
 
-Anchor Revision 2 should absorb these flags; when it does, the Companion clean-up pass removes the flag-entries per SCOPE §8's three-phase lifecycle.
+Future Anchor revisions absorb these flags; as each lands, the Companion clean-up pass removes the corresponding flag-entry per SCOPE §8's three-phase lifecycle.
 
 ---
 
 ## B.3 — Policy
 
-- **Completeness.** Every formal object in the Companion has an Anchor target. If an object has no exposition in the Anchor (e.g., Theorem 2.2.8's kind-stratification-from-C-richness derivation), the Anchor target is the Anchor section where the object *should* appear after Rev 2, and the gap is tracked via a surfaced-lemma flag.
+- **Completeness.** Every formal object in the Companion has an Anchor target. If an object has no exposition in the Anchor (e.g., Theorem 2.2.8's kind-stratification-from-C-richness derivation), the Anchor target is the Anchor section where the object *should* appear after back-port, and the gap is tracked via a surfaced-lemma flag.
 - **Direction.** This appendix is Companion → Anchor. The reverse direction (Anchor → Companion) is Appendix A.
-- **Rhythm.** The Companion flag-list feeds Anchor Revision 2's docket. When Anchor Rev 2 ships with flag-items back-ported, the Companion's flag-register (B.2) reduces accordingly. When the register reaches zero, the Companion stamps version 1.
+- **Rhythm.** The Companion flag-list feeds future Anchor revisions. When an Anchor revision ships with flag-items back-ported, the Companion's flag-register (B.2) reduces accordingly. When the register reaches zero, the Companion stamps version 1.
 
 ---
 

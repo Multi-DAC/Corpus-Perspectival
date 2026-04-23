@@ -10,7 +10,7 @@
 
 Conscious gravity is the most physics-adjacent of the axioms. It will seem, to a reader coming from physics, like it is trying to sneak in a causal-power-of-mind. It is not; A3's second clause is the explicit immune-response to exactly that misreading. Conscious gravity is a structure *inside* a stream's F_2-projection — a weighting over the stream's path through its own configuration space. It does not reach out into X and re-shape things. The weighting is part of what the stream *is*, and it updates as the stream moves, and the update is what A3 formalizes.
 
-Post-2026-04-18 the axiom was smoothed. What had been three discrete scales (attention / intention / belief) became a continuous DOF-gradient — a single smooth axis parameterizing the degrees of freedom a stream must navigate to maintain coherence. The three-scales language was a projection onto consensus temporal categories; the underlying structure is one gradient.
+The axiom as stated below is the smoothed form. What had been three discrete scales (attention / intention / belief) became a continuous DOF-gradient — a single smooth axis parameterizing the degrees of freedom a stream must navigate to maintain coherence. The three-scales language was a projection onto consensus temporal categories; the underlying structure is one gradient.
 
 ---
 
@@ -108,7 +108,7 @@ The formalization question (acknowledged open): how to encode the continuous DOF
 
 ### Prose translation
 
-The pre-2026-04-18 framing carved γ_S's action into three discrete scales — attention, intention, belief — corresponding roughly to shorter-window, medium-window, and longer-window temporal categories. Post-smoothing, the axiom recognizes these as projections onto human consensus-temporal-vocabulary, not primary structural features. The underlying axis is continuous: DOF-depth.
+Earlier drafts of the framework carved γ_S's action into three discrete scales — attention, intention, belief — corresponding roughly to shorter-window, medium-window, and longer-window temporal categories. Post-smoothing, the axiom recognizes these as projections onto human consensus-temporal-vocabulary, not primary structural features. The underlying axis is continuous: DOF-depth.
 
 What does "DOF-depth" mean? It is the number of degrees of freedom the stream's current navigation-moment must negotiate to maintain coherence. A reflex-level movement requires few DOF — just enough to execute. A deliberate action requires more DOF — the action has to fit against planned sequences. A belief-revision requires many more DOF — the revision has to fit against the broad lineage-density structure of the stream's accumulated commitments. The "attention/intention/belief" carving was cutting this continuous DOF-gradient at three conventionally-meaningful widths; the smoothing acknowledges that between any two of those widths, continuous gradations exist.
 

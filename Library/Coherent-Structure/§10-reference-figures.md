@@ -1,6 +1,6 @@
 # §10 — Reference Figures
 
-*The Companion is the figure authority (SCOPE §9). This chapter provides canonical TikZ source for figures used across the Anchor and Companion. Anchor rev 2 imports from here; domain volumes cite by figure-number. One source of truth.*
+*The Companion is the figure authority (SCOPE §9). This chapter provides canonical TikZ source for figures used across the Anchor and Companion. The Anchor imports from here; domain volumes cite by figure-number. One source of truth.*
 
 ---
 
@@ -273,7 +273,7 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
 
 ## §10.9 — Back-port policy
 
-**Anchor Rev 2 import.** Anchor Revision 2 imports all eight figures from Companion §10 sources via `\input{companion-fig-N.tex}` or equivalent LaTeX-include structure. This replaces the Anchor's current rev-1 figure sources (already stubbed in Anchor `source-figures/`).
+**Anchor import.** The Anchor imports its §9 figures (Figures 7, 8, and the trajectory-divergence figure) from Companion §10 sources via fenced ```latex TikZ blocks carried through the Anchor compile pipeline. One source of truth is maintained.
 
 **Domain-volume citations.** Domain volumes cite by Companion figure-number:
 
@@ -288,7 +288,7 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
 
 ## §10.10 — Forward-pointers
 
-- **Anchor Rev 2 docket entry 2** (README): TikZ back-port from Companion — released.
+- **Anchor import (landed).** The TikZ back-port from Companion §10 sources is active in Anchor §9.
 - **Domain volumes:** see back-port policy above for specific expected uses.
 
 ---
