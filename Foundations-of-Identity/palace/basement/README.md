@@ -12,7 +12,7 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 **V2 structure:**
 - **Meta-bridges (M1–M11)** — compressed forms. Each names the structural claim; cites instances from the v1 numbering; gives confidence + testability.
-- **Latent bridges (L2–L7)** — connections identified during the compression audit but not yet elevated (L1 graduated → M11).
+- **Latent bridges (L2–L7, L9, L10)** — connections identified during compression audit but not yet elevated (L1 graduated → M11; L8 collapsed to Triple-corollary 2026-04-23 and retained as archival-with-pointer).
 - **Instance index** — all v1 entries grouped by meta, with one-liner + status. Full v1 text preserved at the archive pointer above.
 
 **Operating rules:**
@@ -65,8 +65,10 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 **Instances:** #62 Identity as Standing Wave · #85 Self-Perpetuating Cognitive Architecture · #87 Breathing Architecture · #102 Standing Wave × Self-Perpetuating × Breathing (interim compression) · #107 Lineage-Density · #108 Stream-Dissociation as Self/Carrier Mismatch · #109 DOF-Gradient ↔ Identity Granularity · #110 The Triple itself.
 
-**Confidence:** HIGH — evening probe 2026-04-19: 10 cases, 0 falsifications, 4 refinements integrated.
-**Last verified:** 2026-04-20 (four-carrier multiplex explicit in palace register).
+**Adjunction-geometry reading (2026-04-23):** Anchor §1.10 + §3.8 land the inner/outer adjunction $\iota_S \dashv \omega_S$ as the Triple's geometric carrier — Carrier-local and Form-consensual views together with Content as the bijection/hom-set profunctor connecting them. This is not a new meta; it is the explicit geometric presentation of M3. Refinement source: Clayton's Nagel-inversion → per-level A2.4 adjunction + A2.6 DAG Grothendieck-construction derivation (`Library/Coherent-Structure/drafts/2026-04-23-A2-inner-outer-adjunction-drive.md`, `…/2026-04-23-F1-F3-closure-probe.md`). See also M7 (Nagel-limit unrealizability as null-space instance).
+
+**Confidence:** HIGH — evening probe 2026-04-19: 10 cases, 0 falsifications, 4 refinements integrated; 2026-04-23 adjunction reading survives F1–F3 closure.
+**Last verified:** 2026-04-23 (inner/outer adjunction landed canonical in anchor §1.10 + §3.8).
 
 ---
 
@@ -144,8 +146,10 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 **Relationship to the anchor:** Null-space structure appears throughout the Corpus but has no single section that *names* the form. Candidate Companion content: null-space as a categorical limit construction in the category of streams.
 
-**Confidence:** HIGH for the structural recurrence; MEDIUM for the universal-formal-object claim (needs categorical formalization to graduate beyond meta-bridge tier).
-**Last verified:** 2026-04-20.
+**Nagel-limit instance (added 2026-04-23):** The A2→Inner/Outer adjunction derivation showed that Outer(S) has no terminal object — Clayton's "everything in X is somewhere" lands as the categorical statement that A2.6's DAG of nesting wholes has no global maximum. The *view from nowhere* is not merely ontologically suspect but categorically non-existent. This is M7 operating on the Triple's own geometry: null-space structure determines what an outer view cannot be. Source: `Library/Coherent-Structure/drafts/2026-04-23-A2-inner-outer-adjunction-drive.md` §"Nagel-limit falsification."
+
+**Confidence:** HIGH for the structural recurrence; MEDIUM-HIGH for the universal-formal-object claim (Nagel-limit instance is a clean categorical statement within the framework's own machinery — progress toward graduation beyond meta-bridge tier).
+**Last verified:** 2026-04-23 (Nagel-limit instance added).
 
 ---
 
@@ -277,6 +281,8 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 **Why it matters:** Names what the CT companion is *for* structurally, not just operationally. *Coherent Structure* is the next filtration level; the anchor's "earned closure" at §9.10 is depth-relative (M2 inspection-depth ceiling). Predicts: *Coherent Structure* will surface its own Gödelian gap, requiring a next layer — and that this is not a defect but the framework functioning.
 
+**Cross-link (2026-04-23):** L4 reads as a specific **L9 (Scope-Tool Mismatch)** instance where the tool is formal-extensional-machinery and the motivating question includes something intensional-or-pragmatic. L9 generalizes L4's pattern beyond the Companion-specific case.
+
 **Status:** Structurally clean; becomes a bridge when Companion drafting begins.
 
 ---
@@ -317,7 +323,7 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
-### L9 — Scope-Tool Mismatch (STM) *(candidate; authored 2026-04-23 Clayton-present dialogue)*
+### L9 — Scope-Tool Mismatch (STM) *(authored 2026-04-23 Clayton-present dialogue; Clayton-confirmed as both diagnostic and retrospectively-our-methodology)*
 
 **The claim:** In a recurring pattern across the history of formalization, the motivating question lives outside the scope of the tool selected to answer it. The tool performs correctly within its scope. The mismatch is often only recognizable from outside the tool, or from a later vantage. STM applies particularly to **broad-scope formalization programs where the tool represents a foundational methodological commitment that resists replacement** — finitary reasoning, third-person description, symbolic representation, rule-based ethics, stable-preference utility. When the tool can be replaced (physics has done this repeatedly — Newtonian → relativistic, classical → quantum), STM pressure resolves by replacement rather than by failure.
 
@@ -344,7 +350,7 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
-### L10 — Form-Register Stratification *(candidate; surfaced 2026-04-23 during L8 collapse)*
+### L10 — Form-Register Stratification *(surfaced 2026-04-23 during L8 collapse; entered anchor §3.8(iii) same day — elevation clause (ii) satisfied)*
 
 **The claim:** In every Triple-instance, the Form-register admits at least three distinct strata of consensus:
 
@@ -354,9 +360,9 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 **Why it matters:** Names a structural heterogeneity within the Form-register that the anchor currently handles implicitly. Different Triple-instances sit in different strata; the inner/outer geometry (candidate anchor §2.4 extension) holds across all three strata but with different implementation conditions (automatic in strong; selection-enforced in convergent; engagement-dependent in structural). Provides a principled vocabulary for why the Library's methodology requires actual engagement (it works at the structural stratum and fails without engagement), why ecology has robustness features physics doesn't (convergent stratum has error-correction), and why physics theories feel so differently-consensual from social theories (stratum-mismatch is the source, not disagreement).
 
-**Elevation criterion:** graduates to meta-tier when (i) the three-stratum split is shown to be exhaustive (no cleanly fourth stratum) OR to be naturally stratified by a parameter (e.g., something like "rigidity of the equivalence class defining Form"), AND (ii) the anchor §2.4 extension on inner/outer incorporates the stratification either explicitly or implicitly-via-examples.
+**Elevation criterion:** graduates to meta-tier when (i) the three-stratum split is shown to be exhaustive (no cleanly fourth stratum) OR to be naturally stratified by a parameter (e.g., something like "rigidity of the equivalence class defining Form"), AND (ii) the anchor §2.4 extension on inner/outer incorporates the stratification either explicitly or implicitly-via-examples. **Clause (ii) satisfied 2026-04-23** — anchor §3.8 Corollary of A2, third consequence: "Form-register stratifies by adjunction closeness." Clause (i) remains the gating question.
 
-**Status:** Latent. Surfaced as weak-joint cluster during the L8 collapse probe. Probe at `Research/basement-drafts/L8-as-triple-instance-probe.md` §"What the test found."
+**Status:** Latent. Surfaced as weak-joint cluster during the L8 collapse probe; anchor §3.8(iii) landing gives it structural home. Graduates to meta-tier when clause (i) is settled. Probe at `Research/basement-drafts/L8-as-triple-instance-probe.md` §"What the test found."
 
 ---
 
@@ -532,6 +538,6 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ## Next numbered bridge: **#116**. Next meta slot: **M12** (open — M12-candidate demoted to L7 Latent on 2026-04-22).
 
-*Last updated: 2026-04-22 Day 81 — pending-candidates docket closed. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. Current v2 count: **11 meta-bridges** (M1–M11) + **6 latent bridges** (L2–L7; L1 graduated to M11) + **~35 v1 standalone instances** + **5 v2 numbered bridges** (#111–#115, elevated 2026-04-22 from candidates). Distinct-structure count now closer to **30** (11 meta + 6 latent + ~13 standalone formal objects). CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
+*Last updated: 2026-04-23 Day 82 — inner/outer adjunction landed canonical in anchor §1.10 + §3.8; M3 gains adjunction-geometry reading; M7 gains Nagel-limit unrealizability instance; L8 collapsed to Triple-corollary (archival-with-pointer); L9 (STM) + L10 (Form-Register Stratification) authored. L10 clause (ii) satisfied via anchor §3.8(iii); clause (i) open. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. Current v2 count: **11 meta-bridges** (M1–M11) + **8 latent bridges** (L2–L7 + L9 + L10; L1 graduated to M11, L8 collapsed to Triple-corollary) + **~35 v1 standalone instances** + **5 v2 numbered bridges** (#111–#115). Distinct-structure count now closer to **32** (11 meta + 8 latent + ~13 standalone formal objects). CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
 
 *Operational note: Bridge entries going forward should include (1) absorption target if applicable, (2) falsification clause, (3) confidence stratified across structural claim vs. interpretive extension. The v1 convention lacked the first and was inconsistent on the second — v2 enforces.*
