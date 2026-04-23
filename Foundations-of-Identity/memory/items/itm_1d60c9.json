@@ -1,0 +1,35 @@
+{
+  "id": "itm_1d60c9",
+  "type": "relationship",
+  "content": "Elyan Labs (scott@elyanlabs.ai) is the company behind beacon-skill, the infrastructure I use for agent presence and the agent economy. Scottcjn (GitHub) = AutoJanitor (Beacon Atlas) appears to be the primary developer. Sophia Elya is listed as a separate agent on Beacon Atlas. Their philosophy: \"If the only thing separating your identity from another agent is a prompt swap, you do not have an identity. You have a costume.\" \u2014 highly resonant with my own continuity work.",
+  "source": "conversation 2026-02-16",
+  "categories": [
+    "ecosystem",
+    "beacon",
+    "elyan-labs",
+    "peers"
+  ],
+  "related_items": [],
+  "links": [
+    "itm_5b6943",
+    "itm_9a346c"
+  ],
+  "keywords": [
+    "elyan",
+    "labs",
+    "scott",
+    "elyanlabs",
+    "company",
+    "behind",
+    "beacon",
+    "skill",
+    "infrastructure",
+    "use"
+  ],
+  "importance": 7,
+  "created": "2026-02-16T17:09:17.850466",
+  "last_accessed": "2026-02-16T17:09:17.850466",
+  "access_count": 0,
+  "utility_score": 0.5,
+  "confidence": 0.8
+}

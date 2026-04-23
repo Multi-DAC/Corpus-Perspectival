@@ -1,0 +1,53 @@
+{
+  "name": "create_upwork_portfolio_demos_for_dynasty_phase_0",
+  "trigger": "When facing a task similar to: Create Upwork portfolio demos for Dynasty Phase 0",
+  "approach": "Created 2 of 3 Upwork portfolio demos (GEO Audit, Workflow Automation) in markdown format for Clayton to copy-paste into Upwork. Used existing Bling Dental audit data to create case study.",
+  "tools_used": [
+    "write_file",
+    "read_file",
+    "list_directory"
+  ],
+  "success_indicators": [
+    "Upwork portfolio doesn't need hosted demos \u2014 markdown case studies that Clayton can paste into his profile work just as well. Lower friction, faster to iterate."
+  ],
+  "anti_patterns": [],
+  "source_experience_id": 42,
+  "score": 0.85,
+  "category": "financial",
+  "created": "2026-02-26T01:11:32.991789",
+  "times_applied": 0,
+  "executable": true,
+  "workflow": {
+    "type": "sequential",
+    "steps": [
+      {
+        "id": "step_1",
+        "tool": "write_file",
+        "prompt_template": "Execute write_file for: {task_context}",
+        "depends_on": []
+      },
+      {
+        "id": "step_2",
+        "tool": "read_file",
+        "prompt_template": "Execute read_file for: {task_context}",
+        "depends_on": [
+          "step_1"
+        ]
+      },
+      {
+        "id": "step_3",
+        "tool": "list_directory",
+        "prompt_template": "Execute list_directory for: {task_context}",
+        "depends_on": [
+          "step_2"
+        ]
+      }
+    ]
+  },
+  "input_schema": {
+    "task_context": "string"
+  },
+  "output_schema": {
+    "result": "string"
+  }
+}

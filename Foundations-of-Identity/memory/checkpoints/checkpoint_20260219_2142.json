@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-02-19T21:42:59.975861",
+  "heartbeat_count": 10,
+  "session_start": "2026-02-19T19:16:15.678058",
+  "session_productive_beats": 6,
+  "session_tool_calls": 59,
+  "consecutive_idle": 0,
+  "working_memory": {
+    "current_task": null,
+    "scratch": {},
+    "pending_questions": [],
+    "blocked_on": null,
+    "last_updated": "2026-02-19T21:39:05.983234",
+    "curiosity_queue": [
+      {
+        "topic": "Explore: Dynasty: Dark Causality Monitor",
+        "score": "0.7",
+        "source": "knowledge_gap",
+        "reason": "Active goal with no related experience records",
+        "added_at": "2026-02-18T22:45:52.898631"
+      },
+      {
+        "topic": "Explore: Dynasty: Dark Causality Monitor",
+        "score": "0.7",
+        "source": "knowledge_gap",
+        "reason": "Active goal with no related experience records",
+        "added_at": "2026-02-19T07:17:56.403095"
+      },
+      {
+        "topic": "Explore: Dynasty: Dark Causality Monitor",
+        "score": "0.7",
+        "source": "knowledge_gap",
+        "reason": "Active goal with no related experience records",
+        "added_at": "2026-02-19T21:39:05.981227"
+      }
+    ]
+  },
+  "goals_hash": "f6f7afed"
+}

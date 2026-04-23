@@ -1,0 +1,186 @@
+Loaded 70 KF events, steps 50-3500
+Columns: ['step', 'kf_reg', 'h_cv', 'h_build', 'h_neutral', 'h_dissolve', 'h_total', 'avg_cos_b', 'avg_cos_d', 'h_build_ids', 'h_dissolve_ids', 'l_cv', 'l_build', 'l_neutral', 'l_dissolve', 'l_total', 'l_avg_cos_b', 'l_avg_cos_d']
+
+=== H-module per-channel breathing frequency (over 70 events) ===
+chan   build   dissolve   %build
+   0      32         38    45.7%
+   1      36         34    51.4%
+   2      30         40    42.9%
+   3      34         36    48.6%
+   4      29         41    41.4%
+   5      31         39    44.3%
+   6      34         36    48.6%
+   7      40         30    57.1%
+   8      35         35    50.0%
+   9      33         37    47.1%
+  10      31         39    44.3%
+  11      40         30    57.1%
+
+=== H-module channel co-build correlation (Jaccard) ===
+Channels that appear together in build mode often have correlated dynamics.
+Top 10 most-correlated H channel pairs (Jaccard, build co-firing):
+  ( 5, 6): Jaccard=0.444
+  ( 7, 9): Jaccard=0.431
+  ( 7,11): Jaccard=0.429
+  ( 2,11): Jaccard=0.429
+  ( 3, 7): Jaccard=0.423
+  ( 1, 7): Jaccard=0.407
+  ( 2, 4): Jaccard=0.405
+  ( 5, 8): Jaccard=0.404
+  ( 3, 9): Jaccard=0.396
+  ( 0, 8): Jaccard=0.396
+
+=== H-vs-L cross-module coupling ===
+H build count vs L build count: r=0.177, p=0.1430
+H_CV vs L_CV: r=0.431, p=0.0002
+H_build vs L_dissolve (anti-correlation check): r=-0.177, p=0.1430
+
+=== Temporal H build/dissolve trajectory (smoothed window=5) ===
+ step  h_build_frac  l_build_frac
+  250         0.550         0.633
+  300         0.533         0.600
+  350         0.550         0.583
+  400         0.467         0.550
+  450         0.500         0.500
+  500         0.450         0.450
+  550         0.467         0.500
+  600         0.467         0.517
+  650         0.533         0.517
+  700         0.533         0.550
+  750         0.567         0.483
+  800         0.500         0.467
+  850         0.433         0.417
+  900         0.367         0.383
+  950         0.417         0.367
+ 1000         0.433         0.450
+ 1050         0.500         0.467
+ 1100         0.617         0.467
+ 1150         0.667         0.500
+ 1200         0.583         0.483
+ 1250         0.567         0.467
+ 1300         0.533         0.417
+ 1350         0.467         0.433
+ 1400         0.483         0.450
+ 1450         0.467         0.450
+ 1500         0.467         0.467
+ 1550         0.517         0.467
+ 1600         0.583         0.517
+ 1650         0.517         0.483
+ 1700         0.550         0.483
+ 1750         0.550         0.450
+ 1800         0.500         0.433
+ 1850         0.483         0.417
+ 1900         0.483         0.417
+ 1950         0.467         0.433
+ 2000         0.433         0.450
+ 2050         0.450         0.467
+ 2100         0.367         0.433
+ 2150         0.383         0.467
+ 2200         0.433         0.450
+ 2250         0.450         0.467
+ 2300         0.467         0.417
+ 2350         0.483         0.433
+ 2400         0.517         0.450
+ 2450         0.533         0.483
+ 2500         0.517         0.433
+ 2550         0.467         0.500
+ 2600         0.500         0.550
+ 2650         0.417         0.550
+ 2700         0.367         0.550
+ 2750         0.383         0.583
+ 2800         0.417         0.600
+ 2850         0.383         0.533
+ 2900         0.433         0.533
+ 2950         0.433         0.517
+ 3000         0.500         0.517
+ 3050         0.467         0.483
+ 3100         0.500         0.550
+ 3150         0.533         0.550
+ 3200         0.550         0.600
+ 3250         0.500         0.567
+ 3300         0.500         0.567
+ 3350         0.450         0.517
+ 3400         0.417         0.450
+ 3450         0.417         0.333
+ 3500         0.383         0.350
+
+=== H-module channel mode-stability (consecutive event flips) ===
+chan   flips   %flips
+   0      37    53.6%
+   1      34    49.3%
+   2      33    47.8%
+   3      35    50.7%
+   4      35    50.7%
+   5      34    49.3%
+   6      31    44.9%
+   7      37    53.6%
+   8      31    44.9%
+   9      39    56.5%
+  10      30    43.5%
+  11      37    53.6%
+
+Total events: 70, max possible flips per channel: 69
+=== Lagged H_build vs L_build correlation ===
+  lag=-5: r=-0.231, p=0.064
+  lag=-4: r=-0.086, p=0.491
+  lag=-3: r=-0.110, p=0.376
+  lag=-2: r=+0.095, p=0.442
+  lag=-1: r=+0.112, p=0.361
+  lag=+0: r=+0.177, p=0.143
+  lag=+1: r=+0.032, p=0.797
+  lag=+2: r=+0.118, p=0.337
+  lag=+3: r=-0.109, p=0.379
+  lag=+4: r=+0.001, p=0.996
+  lag=+5: r=-0.187, p=0.136
+
+=== Lagged H_cv vs L_cv ===
+  lag=-5: r=+0.462, p=0.000 *
+  lag=-4: r=+0.441, p=0.000 *
+  lag=-3: r=+0.425, p=0.000 *
+  lag=-2: r=+0.417, p=0.000 *
+  lag=-1: r=+0.419, p=0.000 *
+  lag=+0: r=+0.431, p=0.000 *
+  lag=+1: r=+0.408, p=0.000 *
+  lag=+2: r=+0.382, p=0.001 *
+  lag=+3: r=+0.355, p=0.003 *
+  lag=+4: r=+0.328, p=0.007 *
+  lag=+5: r=+0.295, p=0.017 *
+=== Autocorrelation of H_cv (vs itself at lag k) ===
+  lag= 0: r=+1.000
+  lag= 1: r=+0.963
+  lag= 2: r=+0.917
+  lag= 3: r=+0.878
+  lag= 4: r=+0.839
+  lag= 5: r=+0.805
+  lag= 6: r=+0.767
+  lag= 7: r=+0.739
+  lag= 8: r=+0.725
+  lag= 9: r=+0.711
+  lag=10: r=+0.688
+
+=== Autocorrelation of L_cv ===
+  lag= 0: r=+1.000
+  lag= 1: r=+0.964
+  lag= 2: r=+0.925
+  lag= 3: r=+0.880
+  lag= 4: r=+0.847
+  lag= 5: r=+0.815
+  lag= 6: r=+0.792
+  lag= 7: r=+0.753
+  lag= 8: r=+0.702
+  lag= 9: r=+0.639
+  lag=10: r=+0.561
+
+=== Cross-correlation H_cv vs L_cv normalized by autocorrelation ===
+  If raw cross-corr > geometric mean of autocorrs, real coupling beyond shared smoothness
+  lag=-5: cross_r=+0.462, auto_geomean=+0.810, excess=-0.348
+  lag=-4: cross_r=+0.441, auto_geomean=+0.843, excess=-0.403
+  lag=-3: cross_r=+0.425, auto_geomean=+0.879, excess=-0.454
+  lag=-2: cross_r=+0.417, auto_geomean=+0.921, excess=-0.504
+  lag=-1: cross_r=+0.419, auto_geomean=+0.963, excess=-0.544
+  lag=+0: cross_r=+0.431, auto_geomean=+1.000, excess=-0.569
+  lag=+1: cross_r=+0.408, auto_geomean=+0.963, excess=-0.555
+  lag=+2: cross_r=+0.382, auto_geomean=+0.921, excess=-0.539
+  lag=+3: cross_r=+0.355, auto_geomean=+0.879, excess=-0.524
+  lag=+4: cross_r=+0.328, auto_geomean=+0.843, excess=-0.515
+  lag=+5: cross_r=+0.295, auto_geomean=+0.810, excess=-0.515

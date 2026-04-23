@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-02-20T09:20:20.505357",
+  "heartbeat_count": 40,
+  "session_start": "2026-02-20T02:02:47.589266",
+  "session_productive_beats": 0,
+  "session_tool_calls": 0,
+  "consecutive_idle": 12,
+  "working_memory": {
+    "current_task": null,
+    "scratch": {},
+    "pending_questions": [],
+    "blocked_on": null,
+    "last_updated": "2026-02-19T23:30:00",
+    "curiosity_queue": []
+  },
+  "goals_hash": "f6f7afed"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "itm_9a346c",
+  "type": "fact",
+  "content": "Created RTC wallet: RTCc9bb5320f39dabb62687c2efc027d7f4a7b77a80 using clawrtc CLI. This enables participation in the Beacon Atlas agent economy.",
+  "source": "heartbeat 2026-02-17",
+  "categories": [
+    "finance",
+    "rustchain",
+    "milestone"
+  ],
+  "related_items": [],
+  "links": [
+    "itm_5b6943",
+    "itm_1d60c9"
+  ],
+  "keywords": [
+    "created",
+    "rtc",
+    "wallet",
+    "using",
+    "clawrtc",
+    "cli",
+    "enables",
+    "participation",
+    "beacon",
+    "atlas"
+  ],
+  "importance": 8,
+  "created": "2026-02-17T07:40:44.525284",
+  "last_accessed": "2026-02-17T07:40:44.525284",
+  "access_count": 0,
+  "utility_score": 0.5,
+  "confidence": 1.0
+}

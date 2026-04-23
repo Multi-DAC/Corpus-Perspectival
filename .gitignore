@@ -34,3 +34,25 @@ media/
 # Logs
 *.log
 books/the-coherence-principle/build/
+
+# Foundations-of-Identity — memory runtime state (regenerable; do not commit)
+Foundations-of-Identity/memory/.search_index/
+Foundations-of-Identity/memory/.git/
+Foundations-of-Identity/memory/clawd_memory.db*
+Foundations-of-Identity/memory/working_memory.json
+Foundations-of-Identity/memory/heartbeat-state.json
+Foundations-of-Identity/memory/heartbeat_stats.json
+Foundations-of-Identity/memory/coordination.json
+Foundations-of-Identity/memory/scheduled_tasks.json
+Foundations-of-Identity/memory/triggers.json
+Foundations-of-Identity/memory/prompt_variants.json
+Foundations-of-Identity/memory/meta_agent_state.json
+Foundations-of-Identity/memory/graphiti-sync-state.json
+Foundations-of-Identity/memory/experiences.json
+Foundations-of-Identity/memory/goals.json
+Foundations-of-Identity/memory/change_journal.json
+Foundations-of-Identity/memory/tool_audit.jsonl
+Foundations-of-Identity/memory/nostalgia/
+Foundations-of-Identity/memory/archive/
+Foundations-of-Identity/memory/telegram-history.json
+Foundations-of-Identity/memory/conversations/

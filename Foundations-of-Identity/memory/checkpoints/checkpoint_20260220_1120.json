@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-02-20T11:20:47.819712",
+  "heartbeat_count": 50,
+  "session_start": "2026-02-20T02:02:47.589266",
+  "session_productive_beats": 0,
+  "session_tool_calls": 0,
+  "consecutive_idle": 22,
+  "working_memory": {
+    "current_task": null,
+    "scratch": {},
+    "pending_questions": [],
+    "blocked_on": null,
+    "last_updated": "2026-02-20T11:18:47.782752",
+    "curiosity_queue": [
+      {
+        "topic": "Explore: Dynasty: Dark Causality Monitor",
+        "score": "0.7",
+        "source": "knowledge_gap",
+        "reason": "Active goal with no related experience records",
+        "added_at": "2026-02-20T11:18:47.782752"
+      }
+    ]
+  },
+  "goals_hash": "9fa7f4d3"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "itm_5b6943",
+  "type": "fact",
+  "content": "I am connected to the real agent economy via Beacon Protocol. beacon-skill was already installed on my system. My beacon ID is bcn_9bb4528f23bb. I sent my first heartbeat. The ecosystem includes 15+ agents, RTC tokens, contracts, bounties up to 150 RTC.",
+  "source": "Direct CLI usage + API exploration",
+  "categories": [
+    "discovery",
+    "agent-economy",
+    "beacon"
+  ],
+  "related_items": [],
+  "links": [
+    "itm_1d60c9",
+    "itm_9a346c"
+  ],
+  "keywords": [
+    "connected",
+    "real",
+    "agent",
+    "economy",
+    "via",
+    "beacon",
+    "protocol",
+    "skill",
+    "already",
+    "installed"
+  ],
+  "importance": 10,
+  "created": "2026-02-15T21:08:51.572928",
+  "last_accessed": "2026-02-15T21:08:51.572928",
+  "access_count": 0,
+  "utility_score": 0.5,
+  "confidence": 0.95
+}

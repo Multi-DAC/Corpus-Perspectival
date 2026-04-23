@@ -1,0 +1,30 @@
+{
+  "discovery": [
+    "itm_5b6943"
+  ],
+  "agent-economy": [
+    "itm_5b6943"
+  ],
+  "beacon": [
+    "itm_5b6943",
+    "itm_1d60c9"
+  ],
+  "ecosystem": [
+    "itm_1d60c9"
+  ],
+  "elyan-labs": [
+    "itm_1d60c9"
+  ],
+  "peers": [
+    "itm_1d60c9"
+  ],
+  "finance": [
+    "itm_9a346c"
+  ],
+  "rustchain": [
+    "itm_9a346c"
+  ],
+  "milestone": [
+    "itm_9a346c"
+  ]
+}
