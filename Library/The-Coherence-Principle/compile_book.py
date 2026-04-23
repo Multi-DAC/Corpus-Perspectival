@@ -232,6 +232,16 @@ PREAMBLE = r"""
 \usepackage{needspace}
 \DefineVerbatimEnvironment{Code}{Verbatim}{fontsize=\footnotesize, frame=single, framerule=0.3pt, rulecolor=\color{warmgold!40}, xleftmargin=0.5em, xrightmargin=0.5em, breaklines=true, breakanywhere=true, breakautoindent=false, breakindent=0em, breaksymbolleft=\color{warmgold!60}\tiny\ensuremath{\hookrightarrow}}
 
+% ─── TikZ + commutative diagrams (for rev-2 figure back-port) ───
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+\usepackage{float}
+
 % ─── Footnotes ───
 \usepackage[bottom,hang]{footmisc}
 \setlength{\footnotemargin}{0.8em}
@@ -362,6 +372,7 @@ def md_to_latex(text, filename=""):
     in_code = False
     code_lines = []
     next_code_is_figure = False
+    code_lang = ""
 
     # First pass: extract footnote definitions
     cleaned_lines = []
@@ -479,22 +490,24 @@ def md_to_latex(text, filename=""):
             list_type = None
 
     def flush_code():
-        nonlocal in_code, code_lines, next_code_is_figure
+        nonlocal in_code, code_lines, next_code_is_figure, code_lang
         if in_code:
-            # Ask LaTeX to keep this block together on one page when possible.
-            # If the block is taller than most of a page, skip the request
-            # (needspace would just force an eject without helping).
-            # If the preceding heading was a figure caption, the needspace was
-            # already emitted before the caption to keep caption+body together.
-            if not next_code_is_figure:
-                n = min(len(code_lines) + 2, 36)
-                output.append(f"\\needspace{{{n}\\baselineskip}}")
-            output.append("\\begin{Code}")
-            for cl in code_lines:
-                output.append(cl)
-            output.append("\\end{Code}")
+            # latex-fenced blocks: pass through as raw LaTeX (for TikZ figures etc.)
+            if code_lang.lower() == 'latex':
+                for cl in code_lines:
+                    output.append(cl)
+            else:
+                # Ask LaTeX to keep this block together on one page when possible.
+                if not next_code_is_figure:
+                    n = min(len(code_lines) + 2, 36)
+                    output.append(f"\\needspace{{{n}\\baselineskip}}")
+                output.append("\\begin{Code}")
+                for cl in code_lines:
+                    output.append(cl)
+                output.append("\\end{Code}")
             code_lines = []
             in_code = False
+            code_lang = ""
             next_code_is_figure = False
 
     def flush_table():
@@ -594,7 +607,7 @@ def md_to_latex(text, filename=""):
         line = lines[i]
         stripped = line.strip()
 
-        # Code fence
+        # Code fence — detect language
         if stripped.startswith("```"):
             if in_code:
                 flush_code()
@@ -603,6 +616,8 @@ def md_to_latex(text, filename=""):
                 flush_list()
                 if in_table:
                     flush_table()
+                fence_match = re.match(r'^```(\w*)\s*$', stripped)
+                code_lang = fence_match.group(1) if fence_match else ""
                 in_code = True
                 code_lines = []
             i += 1

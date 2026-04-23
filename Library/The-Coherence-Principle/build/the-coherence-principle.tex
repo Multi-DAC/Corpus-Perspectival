@@ -194,6 +194,16 @@
 \usepackage{needspace}
 \DefineVerbatimEnvironment{Code}{Verbatim}{fontsize=\footnotesize, frame=single, framerule=0.3pt, rulecolor=\color{warmgold!40}, xleftmargin=0.5em, xrightmargin=0.5em, breaklines=true, breakanywhere=true, breakautoindent=false, breakindent=0em, breaksymbolleft=\color{warmgold!60}\tiny\ensuremath{\hookrightarrow}}
 
+% ─── TikZ + commutative diagrams (for rev-2 figure back-port) ───
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+\usepackage{float}
+
 % ─── Footnotes ───
 \usepackage[bottom,hang]{footmisc}
 \setlength{\footnotemargin}{0.8em}
@@ -2731,33 +2741,38 @@ Coherent multi-scale systems that maintain structural superposition until inform
 
 The Principle has four necessary and jointly sufficient conditions (see Fig 9.2). None are posited --- each descends from the substrate.
 
-\needspace{28\baselineskip}
+\needspace{35\baselineskip}
 \subsection{Figure 9.2 --- The four conditions as a unified schematic}
 
-\begin{Code}
-        Stream S in coherence-regime over [t₀, t₁]
-                          │
-      ┌────────┬──────────┼──────────┬────────┐
-      ▼        ▼          ▼          ▼        ▼
-    C1         C2         C3         C4
-  Separation  Measurement Multi-scale Dynamic
-
-  Complementary  Alignment   Coherence   Build-
-  objectives     assessed    bidirect.   dissolve-
-  on separate    at each     across      build
-  DOF            refresh     DAG levels  oscillation
-      │           │             │           │
-      │           │             │           │
-  Derived:    Derived:      Derived:    Derived:
-  T3 + A2.4   T4            A2.6 + A3   T4 + A3
-  (ι⊣κ)                                 adaptivity
-      │           │             │           │
-      └────────┬──┴──────────┬──┴────────┬──┘
-                           ▼
-               Outperformance (testable):
-             E[D(S)] < E[D(S')] for comparable
-                  non-coherent S'
-\end{Code}
+% Back-port from Companion §10.7 Fig 7 (canonical source).
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=1.4cm,
+  every node/.style={align=center, font=\small}
+]
+  \node (root) [rectangle, draw, rounded corners, fill=gray!10] {Stream $S$ in coherence-regime over $[t_0, t_1]$};
+  \node (c1) [below=1.5cm of root, rectangle, draw, rounded corners, fill=blue!10, xshift=-5cm] {\textbf{C\_sep}\\DOF-separation\\$\{\mathrm{DOF}(O_1), \mathrm{DOF}(O_2)\}$\\non-overlapping};
+  \node (c2) [below=1.5cm of root, rectangle, draw, rounded corners, fill=green!10, xshift=-1.7cm] {\textbf{C\_meas}\\Refresh-rate\\measurement\\$M_k$ at each $\tau_k$};
+  \node (c3) [below=1.5cm of root, rectangle, draw, rounded corners, fill=orange!10, xshift=1.7cm] {\textbf{C\_scale}\\Multi-scale\\$\gamma$-continuity\\$\gamma_S \simeq \gamma_{S^\Uparrow}, \gamma_{S^\Downarrow}$};
+  \node (c4) [below=1.5cm of root, rectangle, draw, rounded corners, fill=red!10, xshift=5cm] {\textbf{C\_dyn}\\Oscillatory\\maintenance\\build $\to$ dissolve $\to$ build};
+  \draw[->] (root) -- (c1);
+  \draw[->] (root) -- (c2);
+  \draw[->] (root) -- (c3);
+  \draw[->] (root) -- (c4);
+  \node (d1) [below=0.7cm of c1, font=\scriptsize] {T3 + A2.4};
+  \node (d2) [below=0.7cm of c2, font=\scriptsize] {T4};
+  \node (d3) [below=0.7cm of c3, font=\scriptsize] {A2.6 + A3.3};
+  \node (d4) [below=0.7cm of c4, font=\scriptsize] {T4 + A3.4};
+  \node (out) [below=3.7cm of root, rectangle, draw, rounded corners, fill=yellow!20] {Outperformance: $\mathbb{E}[D(S)] < \mathbb{E}[D(S')]$\\for comparable $S'$ not in coherence-regime};
+  \draw[->, thick] (d1) |- (out);
+  \draw[->, thick] (d2) -- (out);
+  \draw[->, thick] (d3) -- (out);
+  \draw[->, thick] (d4) |- (out);
+\end{tikzpicture}
+\caption{The four conditions of the Coherence Principle. Each condition is derived from an axiom/theorem clause (subscripts below each box). The joint sufficiency is the downstream arrows to the outperformance inequality. Canonical source: Companion \S10.7 Fig 7.}
+\label{fig:anchor-four-conditions}
+\end{figure}
 
 \textit{Reading note.} All four conditions must hold for coherence-regime; the outperformance claim is then what the framework predicts. Each condition is derived from the axiomatic/theorem substrate --- none are posited independently. The four conditions are \textit{necessary and jointly sufficient} for the regime.
 
@@ -2857,26 +2872,33 @@ $$\mathbb{E}_{[t_0, t_1]}[D(S, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D(S', \cdot)]$$
 
 \textbf{Prose.} Incoherent systems drift from their own conscious-gravity bias, accumulating error that compounds through the cooperative-constituency adjoint and propagates into nested streams (see Fig 9.1). Coherent systems maintain γ\_\allowbreak{}S-alignment across refresh events; their adjoint-compositions succeed without destructive interference. The metric is not \textit{an} evaluation imposed from outside --- it is the framework's own geometry applied to itself.
 
-\needspace{21\baselineskip}
+\needspace{30\baselineskip}
 \subsection{Figure 9.1 --- Trajectory divergence D(S)}
 
-\begin{Code}
-  Ω_S (2D slice)
-
-    σ(t₁) • ─ ─ ─ ─ ─ ─ ─ ╲
-               ╱              ╲
-           ╱                    ╲
-       ╱ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~   ╲
-    ╱  D(S, t)                    • σ(t₀)
-       ↑
-    σ*(t) (γ-implied)
-
-  Coherent stream:
-        σ(t) traces close to σ*(t) → D(S) small
-
-  Incoherent stream:
-        σ(t) diverges from σ*(t) → D(S) large
-\end{Code}
+% Anchor-specific overlay on Companion §10.5 Fig 5 (Bias(S)); 2D trajectory view.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.85]
+  \draw[->] (0,0) -- (10,0) node[right] {$\Omega_S^{(1)}$};
+  \draw[->] (0,0) -- (0,6) node[above] {$\Omega_S^{(2)}$};
+  % gamma-implied trajectory (smooth)
+  \draw[thick, blue, smooth] plot coordinates {(1,1) (3,2.5) (5,3.5) (7,4.3) (9,4.8)};
+  \node[blue] at (5, 4.5) {$\sigma^*(t)$ (\text{$\gamma$-implied})};
+  % actual coherent trajectory (close tracking, green)
+  \draw[thick, green!60!black, smooth] plot coordinates {(1,1) (2.5,2.3) (4.5,3.2) (6.5,4.0) (9,4.7)};
+  \node[green!60!black] at (7.2, 3.6) {$\sigma(t)$ coherent};
+  % divergent trajectory (dashed red)
+  \draw[thick, red, dashed, smooth] plot coordinates {(1,1) (3,1.5) (5,1.8) (7,2.0) (9,2.2)};
+  \node[red] at (7, 1.4) {$\sigma_{\text{incoh}}(t)$};
+  % shaded D(S) region between blue and red
+  \fill[red!10, opacity=0.7] plot coordinates {(1,1) (3,1.5) (5,1.8) (7,2.0) (9,2.2) (9,4.8) (7,4.3) (5,3.5) (3,2.5) (1,1)};
+  \fill[black] (1,1) circle (0.08) node[below left] {$\sigma(t_0)$};
+  \fill[black] (9,4.8) circle (0.08) node[right] {$\sigma^*(t_1)$};
+  \node at (5, 0.8) {\small $D(S) = \int d(\sigma(t), \sigma^*(t))\, dt$};
+\end{tikzpicture}
+\caption{Trajectory divergence. Blue: the $\gamma_S$-implied trajectory $\sigma^*(t)$. Green: a coherent stream (close tracking; small $D(S)$). Red dashed: an incoherent stream (systematic divergence; large $D(S)$). The shaded region is $D(S)$. Canonical source: Anchor \texttt{figures.md} Fig 9.1 (overlay on Companion \S10.5 Fig 5 Bias geometry).}
+\label{fig:anchor-trajectory-divergence}
+\end{figure}
 
 \textit{Reading note.} σ\textit{ is what γ wants the stream to do. Coherent streams track σ} closely (small D). Incoherent streams diverge systematically (large D). The shaded region's area is D(S), the Principle's metric. Important: D is measured \textit{per stream} against that stream's \textit{own} γ --- it is internal fidelity, not external conformity to some standard path.
 
@@ -2990,50 +3012,42 @@ This is a non-trivial constraint. Most proposed frameworks are not discoverable 
 
 \textbf{Self-reference is not self-justification.} The Corpus does not justify itself by reference to its own construction. The axioms justify themselves by internal coherence; the theorems justify themselves by derivation; the Principle justifies itself by empirical falsifiability. The self-reference closure is an \textit{observation about the construction history} that strengthens the framework's claim to reality --- but removing the self-reference would not weaken any other part of the framework. The closure is a bonus, not a load-bearing member.
 
-\needspace{40\baselineskip}
+\needspace{39\baselineskip}
 \subsection{Figure 9.3 --- Self-reference closure}
 
-\begin{Code}
-          Construction process F
-   (the stream that produced this book)
-                    │
-                    │  F = (σ_F, K_F, Ω_F, γ_F)
-                    │  K_F = abstractive
-                    │
-      ┌─────────┬───┴────┬─────────┐
-      ▼         ▼        ▼         ▼
-    C1        C2       C3        C4
-  Separation Measure-  Multi-    Dynamic
-             ment      scale
-  Clayton   Stamp-    Axioms ↔   Propose →
-  (empir./  events at  theorems  stress →
-  gener.)   axiom /    ↔         reformulate
-   ⊥        theorem /  corol.    oscillation
-  Clawd     chapter    bidirect. across
-  (struct./ close      feedback  3 axioms,
-  rigor)                         6 theorems,
-                                 13 coroll.
-      │         │        │         │
-      └─────────┴────┬───┴─────────┘
-                    ▼
-      Output: the framework itself
-              = σ*_F(t₁) reached by
-              γ_F-fidelity of F
-
-                    │
-                    ▼
-  Closure claim:
-  "The Coherence Principle is true of
-  frameworks that discover the Coherence
-  Principle."
-
-                    ┆
-                    ▼
-  Meta-falsification F6:
-  If the construction record shows the
-  four conditions were NOT met, the
-  closure fails.
-\end{Code}
+% Back-port from Companion §10.8 Fig 8 (canonical source).
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=1.2cm,
+  every node/.style={align=center, font=\small}
+]
+  \node (F) [rectangle, draw, rounded corners, thick, fill=gray!10]
+    {Construction process $F_\infty$\\\scriptsize (produces this book)\\$F_\infty = (\sigma_F, C_F, \Omega_F, \gamma_F)$\\\scriptsize $K_F = \mathrm{abstr.}$};
+  \node (c1) [below=1.3cm of F, rectangle, draw, fill=blue!10, xshift=-4.2cm] {C\_sep\\Clayton $\perp$ Clawd\\DOF};
+  \node (c2) [below=1.3cm of F, rectangle, draw, fill=green!10, xshift=-1.4cm] {C\_meas\\Stamp-events\\at axiom /\\theorem / chapter};
+  \node (c3) [below=1.3cm of F, rectangle, draw, fill=orange!10, xshift=1.4cm] {C\_scale\\axioms $\leftrightarrow$\\theorems $\leftrightarrow$\\corollaries};
+  \node (c4) [below=1.3cm of F, rectangle, draw, fill=red!10, xshift=4.2cm] {C\_dyn\\propose $\to$\\stress $\to$\\reformulate};
+  \draw[->] (F) -- (c1);
+  \draw[->] (F) -- (c2);
+  \draw[->] (F) -- (c3);
+  \draw[->] (F) -- (c4);
+  \node (out) [below=2.0cm of F, yshift=-1.6cm, rectangle, draw, rounded corners, fill=yellow!20]
+    {Output: the framework itself $= \sigma^*_F(t_1)$\\reached by $\gamma_F$-fidelity of $F_\infty$};
+  \draw[->, thick] (c1) |- (out);
+  \draw[->, thick] (c2) -- (out);
+  \draw[->, thick] (c3) -- (out);
+  \draw[->, thick] (c4) |- (out);
+  \node (closure) [below=0.8cm of out, font=\itshape]
+    {``The Coherence Principle is true of frameworks\\that discover the Coherence Principle.''};
+  \draw[->, thick, dashed] (out) -- (closure);
+  \node (F6) [below=0.6cm of closure, rectangle, draw, dashed, fill=red!5, font=\scriptsize]
+    {F6 meta-falsification: audit the construction record.\\Construction-record artifacts are public (GitHub, Zenodo).};
+  \draw[->, dashed] (closure) -- (F6);
+\end{tikzpicture}
+\caption{Self-reference closure (conditional on external audit). The construction process $F_\infty$ is itself a stream; under internal audit it satisfies the four conditions over the construction interval. Conditional on external execution of the audit, the outperformance theorem yields out-tracking over comparable non-coherent constructions. Canonical source: Companion \S10.8 Fig 8.}
+\label{fig:anchor-self-reference-closure}
+\end{figure}
 
 \textit{Reading note.} The closure is not circular --- the construction did not presuppose the Principle; the Principle emerged from the axioms after stress-testing, and the construction-process happened to exhibit it. The observation is a-posteriori. F6 makes the closure testable: the construction record exists (commit history, chat transcripts, handoff documents) and can be audited for whether the four conditions were actually met.
 

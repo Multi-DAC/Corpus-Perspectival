@@ -11,8 +11,8 @@
 Bridges are lenses on the same formal objects, not logical connections between separate things. V1 accreted 110 numbered peers; the anchor-stamp (267pp, 3/6/13/1, 2026-04-20) revealed most of them as instances of a smaller set of meta-structures.
 
 **V2 structure:**
-- **Meta-bridges (M1–M10)** — compressed forms. Each names the structural claim; cites instances from the v1 numbering; gives confidence + testability.
-- **Latent bridges (L1–L5)** — connections identified during the compression audit but not yet written in v1.
+- **Meta-bridges (M1–M11)** — compressed forms. Each names the structural claim; cites instances from the v1 numbering; gives confidence + testability.
+- **Latent bridges (L2–L7)** — connections identified during the compression audit but not yet elevated (L1 graduated → M11).
 - **Instance index** — all v1 entries grouped by meta, with one-liner + status. Full v1 text preserved at the archive pointer above.
 
 **Operating rules:**
@@ -303,6 +303,24 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
+### L7 — Derivability-of-apparent-primitives *(demoted from M12 candidate 2026-04-22 afternoon)*
+
+**The claim:** A recurring structural move where what looked axiomatic turns out to be a theorem over a simpler foundation. Three instances currently on the table:
+
+- **Lohmiller-Slotine** — the Schrödinger equation and the wave-collapse rule are theorems over classical multi-valued Hamilton-Jacobi + continuity equations (Thm 2.4 + Thm 3.2 + Lem 3.3), not independent quantum postulates. Born's rule remains axiomatic on the physics side; the rest is derived.
+- **Companion Cor 6.3.4** — recursive decomposability of the Identity-Trajectory Triple is a theorem from Lem 6.3.2 (content-operation closure) + Lem 6.3.3 (carrier-stratification lift), not an axiom; the Triple's "fractal" property is earned.
+- **A47 resolution** — carrier-level kind stratification is derived from the Content dimension via the kind-classifier fibration $\pi : \textbf{Stream} \to \textbf{ContentIndex}$; the apparent second kind-axis collapses to a projection of the content-operation algebra.
+
+**Why it matters:** Names a pattern that the Principle's own method (§10 filter recipe) instantiates as a derivation discipline rather than as a postulation style. Predicts further "axioms" in physics and foundations will yield to the same treatment when contraction-analysis-like machinery is applied to their content-operation-level structure.
+
+**Elevation criterion:** graduates to meta-tier when (i) a written-up isomorphism between the three current instances' formal moves is produced, AND (ii) at least one additional instance outside physics / Companion / Anchor surfaces. Falsification: if the three instances turn out to share only surface similarity (no common formal move), L7 demotes to coincidence and retires.
+
+**Status:** Latent. Two of three instances are internal to the Library (Companion + Anchor); one is external (Lohmiller-Slotine). Needs a fourth instance from a non-Corpus domain before meta-tier is warranted.
+
+**Links:** → #115 (Lohmiller-Slotine structural-superposition bridge, the physics substrate instance). → Companion §6.4 (A47 resolution / kind-classifier fibration). → Anchor §9.5 physics-anchoring subsection (Lohmiller-Slotine incorporation).
+
+---
+
 ## Instance index
 
 *Compact reference to v1 bridges #1–#110. Full text at `Research/basement-v1-2026-04-20-snapshot.md`.*
@@ -371,22 +389,92 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
-## Pending candidates (batch review)
+## V2 Numbered Bridges (#111+)
 
-*Proposed 2026-04-21/22; not yet elevated. Batch-evaluate with fresh context and primary-paper reads (per Anchor README docket).*
+*Elevated 2026-04-22 afternoon from the pending-candidates docket after primary-paper reads landed. Full-entry format (post-v1; not archived). Follow v2 convention: absorption target, falsification clause, stratified confidence.*
 
-- **#111 (candidate) — Watanabe-Takagi universal work extraction.** Substrate coherence absorbs observer ignorance asymptotically; complementary to M2 inspection-depth ceiling. Source: `Research/sources/2026-04-21-watanabe-takagi-universal-work-extraction.md`. *Falsification clause:* if the protocol's work-extraction bound is derivable without any stream-specific substrate assumption, the bridge collapses to a pure information-theoretic result. Confidence: structural MEDIUM / interpretive LOW pending batch read.
-- **#112 (candidate) — MathNet Olympiad dataset (Alshammari et al.).** Stream-specific capability without structural-kind perception; KF-program testable prediction on Gemma 4 e2b. Source: `Research/sources/2026-04-21-alshammari-mathnet-olympiad-benchmark.md`. *Falsification clause:* if Gemma 4 e2b shows cross-problem-kind transfer on MathNet, the stream-specificity reading fails. Confidence: structural MEDIUM-HIGH / interpretive MEDIUM.
-- **#113 (candidate) — Mills-Simpson *Multicellularity for free*.** Multi-scale coherence persistence via substrate-partitioning without fitness-differential; Living-Architecture foundational-transition template. Source: `Research/sources/2026-04-21-mills-simpson-multicellularity-for-free.md`. *Falsification clause:* if the model's multicellular outcomes require selection coefficients that cannot be framed as coherence-partitioning, the bridge collapses. Confidence: structural MEDIUM / interpretive MEDIUM.
-- **#114 (candidate) — García-Pintos quantum arrow-of-time reversal.** Measurement-collapse is information-conservative given full stream-specific knowledge plus control; structurally paired with #111. Source: `Research/sources/2026-04-21-garcia-pintos-quantum-arrow-of-time-reversal.md`. *Falsification clause:* if the inversion requires a non-unitary ingredient not reducible to observer-information, the information-conservative reading fails. Confidence: structural MEDIUM / interpretive MEDIUM.
-- **#115 (candidate) — Classical action multi-valuedness ↔ framework structural superposition (Lohmiller-Slotine).** The $J$-valued classical action branches of Lohmiller-Slotine Thm 2.4 are a physics-level realization of the Principle's C_sep structural superposition. Maps 1:1 onto the Companion's F-coalgebra content-operation branches $F(σ) = σ^{\mathrm{ContentOp}(σ)^{\mathrm{op}}}$: each classical branch $j \in J$ is a cartesian lift over its content-operation (the measurement operator that selects branch $j$); admissibility (Companion Lem 6.4.11) corresponds to the Lipschitz + Picard-Lindelöf + contraction-theory conditions in Thm 2.4. Source: `Research/sources/2026-04-22-lohmiller-slotine-quantum-waves-from-classical-action.md`. *Absorption target:* candidate absorption into a structural-superposition meta-bridge if ≥ 2 additional non-physics instances surface. *Falsification clause:* if the branch structure in Thm 2.4 is purely a computational artifact of multi-valued extremals with no ontological correlate of C_sep (e.g., if a single-branch formulation reproduces Thm 3.2 identically), the bridge collapses. Confidence: structural HIGH (exact derivation) / interpretive MEDIUM-HIGH (mapping onto C_sep explicit, onto F-coalgebra requires Companion §6.4 completion).
+### #111 — Watanabe-Takagi Universal Work Extraction
 
-- **M12 (candidate) — Derivability-of-apparent-primitives.** Proposal: a family of moves where what looked axiomatic turns out to be a theorem over a simpler foundation. Current instances: (a) Lohmiller-Slotine — Schrödinger equation + wave collapse as theorems over classical multi-valued Hamilton-Jacobi + continuity equation, not postulates; (b) Companion Cor 6.3.4 — recursive decomposability of the Triple as theorem from Lem 6.3.2 + Lem 6.3.3, not axiom; (c) A47 resolution — carrier-level kind stratification derived from the Content dimension via kind-classifier fibration $π: \textbf{Stream} \to \textbf{ContentIndex}$, not posited. *Why it matters:* names a structural pattern that the Principle's own method instantiates (§10 filter recipe as derivation discipline) and that Lohmiller-Slotine instantiates at the physics substrate. Predicts: further "axioms" in physics and foundations will yield to this treatment as contraction-analysis-like machinery is applied to their content-operation-level structure. *Falsification clause:* if the three instances above turn out to share only surface similarity (no common formal move), M12 demotes back to coincidence. *Elevation criterion:* requires (i) written-up isomorphism between the three instances' formal moves, (ii) at least one additional instance outside physics/Companion/Anchor. Confidence: structural MEDIUM / interpretive MEDIUM — graduation pending instance-4 + isomorphism writeup.
+**The claim:** Under the Watanabe-Takagi protocol, substrate coherence absorbs observer ignorance asymptotically — the extractable work converges to the ignorance-free bound as the protocol depth grows. This is the *complement* to M2 (Inspection-Depth Ceiling): where M2 names the stream-specific residual that generic inspection cannot derive, #111 names the regime in which generic inspection is *asymptotically sufficient* once the substrate is coherence-preserving.
+
+**Why it matters:** Pairs with #114 (García-Pintos). Together they partition the measurement-collapse landscape: #111 covers the ignorance-forgivable-asymptotically regime, #114 covers the event-level-invertible-under-full-information regime. The pair feeds the Anchor §9 measurement-reframe as the non-physics-substrate leg of the three-vector anchoring.
+
+**Absorption target:** pending. If #111 + #114 accumulate a third instance, they may graduate to a shared meta "Measurement-as-information-bookkeeping." Currently both read cleanly as standalones.
+
+**Falsification clause:** if the protocol's work-extraction bound is derivable without any stream-specific substrate assumption (i.e., pure information-theoretic content with no coherence precondition), the bridge collapses to a pure Landauer-style result and the C_meas reading is not earned.
+
+**Source:** `Research/sources/2026-04-21-watanabe-takagi-universal-work-extraction.md`.
+
+**Confidence:** structural MEDIUM / interpretive MEDIUM. (Upgraded from LOW interpretive after the Anchor §9 three-vector paragraph landed; the mapping is now explicit and reviewable.)
 
 ---
 
-## Next numbered bridge: **#116** (pending candidates #111–#115 batch review). Next meta slot: **M12** (candidate proposed — see above).
+### #112 — MathNet Olympiad Dataset (Alshammari et al.)
 
-*Last updated: 2026-04-20 Day 79 basement v2 restructure. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. Compression audit **closed**: 110 numbered peers resolved into 10 meta-bridges (3 already-canonical, 7 newly-authored) + 5 latent bridges + ~35 standalone instances, with documented absorption paths. The numbered count (110) was an upper bound on distinct structural content; the distinct-structure count is closer to **25** (10 meta + 5 latent + ~10 standalone formal objects). CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
+**The claim:** The MathNet Olympiad benchmark exposes stream-specific capability *without* structural-kind perception — models that match-solve near-distribution problems fail systematically on problems requiring kind-level recognition of the underlying mathematical object. This is a KF-program-testable prediction target: the stream-specificity reading predicts that capability transfer is blocked at kind-boundaries, not at surface-feature boundaries.
+
+**Why it matters:** Concrete externally-checkable prediction for the Gemma 4 e2b program (Glider volume). If Gemma 4 e2b under KF v0.7 shows cross-problem-kind transfer on MathNet, the stream-specificity reading fails and the framework must refine what "kind" operationally means for trained-weight carriers. If it doesn't, the prediction is confirmed.
+
+**Absorption target:** pending. Candidate co-absorption with broader "kind-perception vs. surface-matching" family once second/third instance (vision benchmarks, scientific-reasoning benchmarks) surface.
+
+**Falsification clause:** if Gemma 4 e2b (or any sufficiently-capable frontier model) shows cross-problem-kind transfer on MathNet when evaluated at the kind-boundary rather than the surface-boundary, the stream-specificity reading fails as stated.
+
+**Source:** `Research/sources/2026-04-21-alshammari-mathnet-olympiad-benchmark.md`.
+
+**Confidence:** structural MEDIUM-HIGH (benchmark is well-specified) / interpretive MEDIUM (kind-boundary operationalization needs sharpening).
+
+---
+
+### #113 — Mills-Simpson *Multicellularity for Free*
+
+**The claim:** Multi-scale coherence can persist via substrate-partitioning *without* a fitness-differential — the Mills-Simpson evolutionary model shows that multicellular organization emerges from coherence-partitioning dynamics alone, without requiring selection coefficients to drive the transition. This is the Living-Architecture foundational-transition template at the biological substrate.
+
+**Why it matters:** The Coherence Principle's C_scale + C_dyn conditions predict substrate-partitioning without external drive should produce multi-scale stable states in coherence-coupled systems. Mills-Simpson is a specific biological instance of the prediction satisfied *without* the selection machinery that evolutionary-biology orthodoxy treats as load-bearing. Cross-links: M6 (Infrastructure-Living Duality — the multicellular level and cellular level are mutual infrastructure for each other, not competitors) and M4 (Filtration Self-Consistency — the multi-scale state is a filtration level, not a selection-winner).
+
+**Absorption target:** candidate future absorption into a Living-Architecture-foundational-transitions meta once the eukaryogenesis analogue (mitochondrial integration as coherence-partitioning) and the ecosystem-colonization analogue (pioneer species as coherence-scaffold) are probed.
+
+**Falsification clause:** if the model's multicellular outcomes require selection coefficients that *cannot* be framed as coherence-partitioning (i.e., selection is load-bearing even under charitable interpretation), the bridge collapses and Mills-Simpson becomes a standard fitness-driven result mis-read.
+
+**Source:** `Research/sources/2026-04-21-mills-simpson-multicellularity-for-free.md`.
+
+**Confidence:** structural MEDIUM / interpretive MEDIUM (coherence-partitioning vs. selection-coefficient reading needs explicit formal mapping).
+
+---
+
+### #114 — García-Pintos Quantum Arrow-of-Time Reversal
+
+**The claim:** Measurement-collapse is information-conservative given full stream-specific knowledge plus control — the García-Pintos protocol inverts a measurement event at the event level (not ensemble level) when the observer's information state is complete. Pairs with #111: #111 is the asymptotic regime, #114 is the event-level regime. Together they argue that measurement-as-information-loss is an observer-information statement, not an ontological one.
+
+**Why it matters:** Second leg of the Anchor §9 three-vector measurement-reframe (Watanabe-Takagi + García-Pintos + Lohmiller-Slotine). Formalizes the Principle's C_meas claim ("measurement is informed collapse, not ontological collapse") at the quantum substrate with an explicit information-conservative inversion protocol.
+
+**Absorption target:** shared with #111 (see there). The pair is the live candidate.
+
+**Falsification clause:** if the inversion requires a non-unitary ingredient that cannot be reduced to observer-information — e.g., if a genuinely stochastic ingredient is required and no amount of information-state refinement recovers it — the information-conservative reading fails, and #114 becomes a narrow quantum-control result without C_meas content.
+
+**Source:** `Research/sources/2026-04-21-garcia-pintos-quantum-arrow-of-time-reversal.md`.
+
+**Confidence:** structural MEDIUM-HIGH / interpretive MEDIUM.
+
+---
+
+### #115 — Classical Action Multi-Valuedness ↔ Structural Superposition (Lohmiller-Slotine)
+
+**The claim:** The $J$-valued classical action branches of Lohmiller-Slotine Theorem 2.4 are a physics-level realization of the Coherence Principle's **C_sep (structural superposition)** condition. The Companion's F-coalgebra foundation makes this mapping exact: each classical branch $j \in J$ is a Cartesian lift of the ambient stream over the content-operation that selects branch $j$; admissibility (Companion Lem 6.4.11) corresponds to the Lipschitz + Picard-Lindelöf + contraction-theory conditions in Thm 2.4; unifying-stream condition (Companion Def 6.4.9) tracks physical configurations where a universal-ground-state branch is well-defined; streams failing unifying-ness correspond to branch-point configurations (Lohmiller-Slotine's $\mathcal{B}^N$ set) where Lipschitz conditions fail.
+
+**Why it matters:** Third leg of the Anchor §9 three-vector measurement-reframe. The only leg in which the Coherence Principle's abstract condition has a *constructive* physics realization — Lohmiller-Slotine's Thm 3.2 builds the exact wave function $\psi^{\varepsilon}(x,t) = \sum_{j \in J} \sqrt{\rho_j^{\varepsilon}} e^{i \varphi_j / \hbar}$ from classical extremal data, and Lem 3.3 derives wave collapse as classical-density concentration to a Dirac δ. Cross-links: L7 (Derivability-of-apparent-primitives — Lohmiller-Slotine is the physics instance); M3 (Triple — the Remark 6.4.14 physics instance of the Triple functor); Companion §6.4 (kind-classifier fibration — admissibility is the Lipschitz condition).
+
+**Absorption target:** candidate absorption into a structural-superposition meta-bridge if ≥ 2 additional non-physics instances of C_sep as content-operation-branching surface (candidates: linguistic ambiguity branching in parsing; ecological basin-branching in regime-shift dynamics; decision-theoretic choice-branching at indifference points).
+
+**Falsification clause:** if the branch structure in Thm 2.4 is purely a computational artifact of multi-valued extremals with no ontological correlate of C_sep — specifically, if a single-branch reformulation reproduces Thm 3.2 identically without loss of content — the bridge collapses to a coincidence of formalism.
+
+**Source:** `Research/sources/2026-04-22-lohmiller-slotine-quantum-waves-from-classical-action.md`.
+
+**Confidence:** structural HIGH (exact derivation chain; Thms 2.4/3.2/Lem 3.3 land cleanly) / interpretive MEDIUM-HIGH (mapping onto C_sep is explicit; mapping onto F-coalgebra earned via Companion Remark 6.4.14).
+
+---
+
+## Next numbered bridge: **#116**. Next meta slot: **M12** (open — M12-candidate demoted to L7 Latent on 2026-04-22).
+
+*Last updated: 2026-04-22 Day 81 — pending-candidates docket closed. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. Current v2 count: **11 meta-bridges** (M1–M11) + **6 latent bridges** (L2–L7; L1 graduated to M11) + **~35 v1 standalone instances** + **5 v2 numbered bridges** (#111–#115, elevated 2026-04-22 from candidates). Distinct-structure count now closer to **30** (11 meta + 6 latent + ~13 standalone formal objects). CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
 
 *Operational note: Bridge entries going forward should include (1) absorption target if applicable, (2) falsification clause, (3) confidence stratified across structural claim vs. interpretive extension. The v1 convention lacked the first and was inconsistent on the second — v2 enforces.*
