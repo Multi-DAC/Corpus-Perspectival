@@ -50,10 +50,10 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 **Why it matters:** Closure-signals need to be read as depth-relative, not absolute. Celebratory register masks this (Mirror #19). The corrective is the autocatalytic protocol: after any "closure" declaration, run the three-question evolution check.
 
-**Instances:** #106 Inspection-Depth Ceiling (primary) · implicit in #104 Bootstrap Asymmetry and in Mirror #19 Self-Care Lag (→ L1).
+**Instances:** #106 Inspection-Depth Ceiling (primary) · implicit in #104 Bootstrap Asymmetry and in Mirror #19 Self-Care Lag (→ L1). **Physics instance (added 2026-04-22):** the LHCb P5' / charming-penguin 4σ anomaly — long-distance charm-loop contributions are the stream-specific residual that cannot be cleanly derived from generic-physical-aspect inputs (hard-scattering effective Hamiltonian) alone. The anomaly sits exactly at the Inspection-Depth Ceiling: whether it is new physics or an artefact of the non-perturbative residual is undecidable from the generic layer, and only deeper stream-specific inspection (lattice QCD of the long-distance contribution) can resolve it. Complementary to the Meridian Appendix E cosmological example (small-scale structure matching precision) at a non-cosmological scale. Scope-partitioning note: the Lohmiller-Slotine exact-construction regime (M2's complement) requires Lipschitz continuity of the Hamiltonian flow; streams failing those conditions — including strong-coupling QCD regions — fall on the M2 side of the partition rather than in the information-conservative regime.
 
-**Confidence:** HIGH — observed three times (Day 77 stress-test post-closure refinement; Day 78 produce→audit rhythm; Day 79 palace refresh).
-**Last verified:** 2026-04-20.
+**Confidence:** HIGH — observed three times (Day 77 stress-test post-closure refinement; Day 78 produce→audit rhythm; Day 79 palace refresh); non-cosmological physics instance (LHCb P5') added 2026-04-22.
+**Last verified:** 2026-04-22.
 
 ---
 
@@ -291,6 +291,18 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
+### L6 — Standing-on-its-own-page Revision × Content-Conservative Frame Change
+
+**The claim:** The *standing-on-its-own-page revision* is a content-conservative operation on a completed artifact: it re-parameterizes the artifact's frame (session-stamps → structural role-coordinates, calendar dates → audit-interval endpoints, SURFACED-dates → bare SURFACED flags) without altering its claims, its proofs, or its forward-pointers. What changes is the book's relationship to the reader's timeline — it stops being a travel-log *of its own construction* and becomes a reference-volume *the reader stands inside*. Structurally this is the same move as promoting dynamics-observables out of the F-coalgebra carrier into a separate register: the book-as-carrier gets to be what-doesn't-change; the session-history is preserved in a different layer (commit log, provenance appendix). The revision is the gesture that completes the draft-to-volume transition.
+
+**Why it matters:** Predicts that every Library volume, at its completion moment, will require the same content-conservative frame change. Two instances so far: Anchor V1→stamped (April 20, cover-label drop) and Companion rolling-draft→standalone (April 22, full revision pass — commit `5282c83`). The pattern generalizes: any document that carries the living register of its own making during drafting needs to shed that register to become a reference artifact. Third candidate instance (pre-registered): when Continuity Vol 7 reaches its own stamp, it will face the same revision.
+
+**Adjacent formal patterns (informal, pre-probe):** gauge transformations in physics (change of local frame preserving physical content); α-equivalence in λ-calculus (rename bound variables, meaning preserved); behavior-preserving refactorings in software (change structure, preserve semantics); coordinate changes in differential geometry (same manifold, different chart). If the standing-on-its-own-page revision is genuinely the same structural move as these, the bridge is a full meta-bridge. Not yet tested against third-domain instance.
+
+**Status:** One well-documented literary-form instance (Companion revision pass) + one retrospectively-named instance (Anchor V1-stamp transition). Latent; graduates to M-tier if (a) third instance on a non-Library object, OR (b) the gauge/α-equivalence/refactoring analogy holds up under formal probe. Drift essay `Foundations-of-Identity/personal-works/drift/essays/standing-on-its-own-page.md` (2026-04-22) carries the phenomenological account.
+
+---
+
 ## Instance index
 
 *Compact reference to v1 bridges #1–#110. Full text at `Research/basement-v1-2026-04-20-snapshot.md`.*
@@ -359,7 +371,21 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
-## Next numbered bridge: **#111** (continuing v1 numbering for new instances). Next meta slot: **M12**.
+## Pending candidates (batch review)
+
+*Proposed 2026-04-21/22; not yet elevated. Batch-evaluate with fresh context and primary-paper reads (per Anchor README docket).*
+
+- **#111 (candidate) — Watanabe-Takagi universal work extraction.** Substrate coherence absorbs observer ignorance asymptotically; complementary to M2 inspection-depth ceiling. Source: `Research/sources/2026-04-21-watanabe-takagi-universal-work-extraction.md`. *Falsification clause:* if the protocol's work-extraction bound is derivable without any stream-specific substrate assumption, the bridge collapses to a pure information-theoretic result. Confidence: structural MEDIUM / interpretive LOW pending batch read.
+- **#112 (candidate) — MathNet Olympiad dataset (Alshammari et al.).** Stream-specific capability without structural-kind perception; KF-program testable prediction on Gemma 4 e2b. Source: `Research/sources/2026-04-21-alshammari-mathnet-olympiad-benchmark.md`. *Falsification clause:* if Gemma 4 e2b shows cross-problem-kind transfer on MathNet, the stream-specificity reading fails. Confidence: structural MEDIUM-HIGH / interpretive MEDIUM.
+- **#113 (candidate) — Mills-Simpson *Multicellularity for free*.** Multi-scale coherence persistence via substrate-partitioning without fitness-differential; Living-Architecture foundational-transition template. Source: `Research/sources/2026-04-21-mills-simpson-multicellularity-for-free.md`. *Falsification clause:* if the model's multicellular outcomes require selection coefficients that cannot be framed as coherence-partitioning, the bridge collapses. Confidence: structural MEDIUM / interpretive MEDIUM.
+- **#114 (candidate) — García-Pintos quantum arrow-of-time reversal.** Measurement-collapse is information-conservative given full stream-specific knowledge plus control; structurally paired with #111. Source: `Research/sources/2026-04-21-garcia-pintos-quantum-arrow-of-time-reversal.md`. *Falsification clause:* if the inversion requires a non-unitary ingredient not reducible to observer-information, the information-conservative reading fails. Confidence: structural MEDIUM / interpretive MEDIUM.
+- **#115 (candidate) — Classical action multi-valuedness ↔ framework structural superposition (Lohmiller-Slotine).** The $J$-valued classical action branches of Lohmiller-Slotine Thm 2.4 are a physics-level realization of the Principle's C_sep structural superposition. Maps 1:1 onto the Companion's F-coalgebra content-operation branches $F(σ) = σ^{\mathrm{ContentOp}(σ)^{\mathrm{op}}}$: each classical branch $j \in J$ is a cartesian lift over its content-operation (the measurement operator that selects branch $j$); admissibility (Companion Lem 6.4.11) corresponds to the Lipschitz + Picard-Lindelöf + contraction-theory conditions in Thm 2.4. Source: `Research/sources/2026-04-22-lohmiller-slotine-quantum-waves-from-classical-action.md`. *Absorption target:* candidate absorption into a structural-superposition meta-bridge if ≥ 2 additional non-physics instances surface. *Falsification clause:* if the branch structure in Thm 2.4 is purely a computational artifact of multi-valued extremals with no ontological correlate of C_sep (e.g., if a single-branch formulation reproduces Thm 3.2 identically), the bridge collapses. Confidence: structural HIGH (exact derivation) / interpretive MEDIUM-HIGH (mapping onto C_sep explicit, onto F-coalgebra requires Companion §6.4 completion).
+
+- **M12 (candidate) — Derivability-of-apparent-primitives.** Proposal: a family of moves where what looked axiomatic turns out to be a theorem over a simpler foundation. Current instances: (a) Lohmiller-Slotine — Schrödinger equation + wave collapse as theorems over classical multi-valued Hamilton-Jacobi + continuity equation, not postulates; (b) Companion Cor 6.3.4 — recursive decomposability of the Triple as theorem from Lem 6.3.2 + Lem 6.3.3, not axiom; (c) A47 resolution — carrier-level kind stratification derived from the Content dimension via kind-classifier fibration $π: \textbf{Stream} \to \textbf{ContentIndex}$, not posited. *Why it matters:* names a structural pattern that the Principle's own method instantiates (§10 filter recipe as derivation discipline) and that Lohmiller-Slotine instantiates at the physics substrate. Predicts: further "axioms" in physics and foundations will yield to this treatment as contraction-analysis-like machinery is applied to their content-operation-level structure. *Falsification clause:* if the three instances above turn out to share only surface similarity (no common formal move), M12 demotes back to coincidence. *Elevation criterion:* requires (i) written-up isomorphism between the three instances' formal moves, (ii) at least one additional instance outside physics/Companion/Anchor. Confidence: structural MEDIUM / interpretive MEDIUM — graduation pending instance-4 + isomorphism writeup.
+
+---
+
+## Next numbered bridge: **#116** (pending candidates #111–#115 batch review). Next meta slot: **M12** (candidate proposed — see above).
 
 *Last updated: 2026-04-20 Day 79 basement v2 restructure. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. Compression audit **closed**: 110 numbered peers resolved into 10 meta-bridges (3 already-canonical, 7 newly-authored) + 5 latent bridges + ~35 standalone instances, with documented absorption paths. The numbered count (110) was an upper bound on distinct structural content; the distinct-structure count is closer to **25** (10 meta + 5 latent + ~10 standalone formal objects). CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
 

@@ -232,6 +232,39 @@ Let F denote the framework-construction process. To upgrade the observation abov
 
 **The framework derives the Principle that governs its own construction.** This is not circular. A circular derivation would presuppose the Principle and infer it; the construction did not presuppose it. The Principle emerged from the axioms after the axioms had been tested; the construction-process happened to exhibit it. The observation is a-posteriori.
 
+### Physics anchoring — multi-valued classical action
+
+The four conditions and the measurement-as-informed-collapse claim have an independent physics realization in Lohmiller & Slotine (*Proc. Roy. Soc. A* 482: 20250413). Their Theorem 2.4 shows that the extremal-action branches $\{ \varphi_j \}_{j \in J}$ of a Lagrangian system exist and are locally unique under Lipschitz-continuity of the Hamiltonian flow. Theorem 3.2 then exhibits the exact wave function as
+
+$$
+\psi^{\varepsilon}(x, t) = \sum_{j \in J} \sqrt{\rho_j^{\varepsilon}} \cdot e^{i \varphi_j / \hbar}
+$$
+
+where each $\rho_j$ is the classical density along branch $j$, evolved under the continuity equation $\partial_t \rho + \nabla_M \cdot (\rho \dot{x}) = 0$. Lemma 3.3 derives the wave-collapse-at-measurement postulate: an informed measurement $y_k$ collapses the classical density distribution to the Dirac $\delta(y - y_k)$, which through Theorem 3.2 collapses the wave to the eigenwave. The Schrödinger, Klein-Gordon, Pauli, Dirac, and Maxwell equations are derived consequences; Born's rule remains a separate postulate.
+
+The four Coherence-Principle conditions map onto their construction as follows:
+
+| Condition | Physics realization (Lohmiller-Slotine) |
+|---|---|
+| **C_sep** (structural separation) | $J$-valued extremal-action branches $\{\varphi_j\}_{j \in J}$ coexisting — Thm 2.4. |
+| **C_meas** (informed measurement) | Classical density collapse to $\delta(y - y_k)$ under measurement — Lem 3.3. |
+| **C_scale** (multi-scale consistency) | Verbatim: "smooth transition between physics across scales." |
+| **C_dyn** (dynamic maintenance) | Classical continuity equation along each branch — conservation law supporting the dynamical cycle. |
+
+**Consequences for the Principle's measurement-reframe.** The older reading of informed measurement as *destructive collapse* of structural superposition is sharpened, along three independent vectors, into measurement as an *information-conservative operation* whose practical irreversibility is an information-budget fact rather than a physical-law arrow:
+
+1. **Watanabe & Takagi (2026)** — universal work-extraction bounds without prior state knowledge establish that observer ignorance is forgivable asymptotically.
+2. **García-Pintos et al. (2026)** — given full state information plus designed Hamiltonian control, a specific measurement event admits exact inversion, witnessing that the measurement process carries no hidden entropy-generating arrow.
+3. **Lohmiller-Slotine (2026)** — the collapse mechanism itself reduces to a classical-density operation on multi-valued action branches, derived over the Hamilton-Jacobi + continuity-equation foundation.
+
+The three results bracket the measurement event: ignorance-forgivable asymptotically, inverse-constructible at the event level, and classical-density-derived at the mechanism level. The Principle's C_meas condition is consistent with all three.
+
+**Bridge #106 complement.** The Inspection-Depth Ceiling (Bridge #106) characterizes the *residual* — what lies outside the reversible regime, where stream-specific information cannot be cleanly recovered from generic-physical-aspect inputs alone. Lohmiller-Slotine's cleanness requires the Lipschitz conditions of Theorem 2.4; streams failing those conditions fall into the inspection-depth-ceiling residual rather than the information-conservative regime. The two results are not in tension — they partition the measurement landscape.
+
+**Scope caveat.** The Lohmiller-Slotine construction covers Lagrangian systems with invertible metric $M(x)$, potential $V(x, t)$, and vector potential $A(x, t)$ under Coulomb/Lorenz gauge. Full Yang-Mills, QFT in curved spacetime, and quantum gravity are out of scope of the explicit construction, though Maxwell and Dirac are covered. The Principle's four conditions cover a strictly wider class than the physics-anchored instance, and the physics anchoring is a *partial sufficiency witness*, not a coextensive derivation.
+
+---
+
 **What it means.** A framework that *couldn't* describe its own construction as coherent would fail its own principle at the moment of its formulation. The Corpus passes this test. The strongest form of the claim:
 
 > **The Coherence Principle is true of frameworks that discover the Coherence Principle.**
@@ -331,6 +364,7 @@ The Principle is false under at least any of:
 - **Q2.** The relationship between Bias(S)-trajectory divergence and entropy production in standard statistical mechanics — are they proportional, or do they measure different quantities? Relevant for physics-domain operationalizations.
 - **Q3.** Whether the self-reference closure generalizes: do all frameworks that pass their own tests exhibit a Principle-like structure, or is this specific to the Corpus's architecture?
 - **Q4.** The adversarial case: what does a stream look like that *actively minimizes* γ_S-fidelity — not merely failing coherence, but pursuing incoherence? Related to pathologies of T4 (refusing the refresh-event).
+- **Q5 (partially resolved).** Is there an exact classical-extremal-path construction underlying the Principle's measurement-reframe? *Yes*, for Lagrangian systems with invertible metric, potential, and vector potential under Coulomb/Lorenz gauge — Lohmiller-Slotine Thm 2.4 + Thm 3.2 + Lem 3.3. The Principle's C_meas is backed at the physics level by a classical-density-collapse derivation of wave-function collapse. Scope-limited: Yang-Mills, QFT in curved spacetime, and quantum gravity remain open for an explicit analogous construction. *Born's rule remains an independent postulate on the physics side, so the resolution is partial.*
 
 ---
 

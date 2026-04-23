@@ -357,6 +357,20 @@ A reader of this volume alone will not be misled by these examples --- they are 
 
 §1.0 formal grounding → §1 Triple → §§2–4 axioms → §§5–7 theorem pairs → §8 corollaries → §9 Coherence Principle → §10 filtering recipe → Appendices A (index) and B (Bias(S)).
 
+\subsection{Revision 2 docket}
+
+Opened 2026-04-21 (Day 80 evening) after an evening reading pass on six articles (logged in \texttt{Research/sources/}). Revision 2 is gated on the Companion volume closing its CT skeleton --- these entries are the standing instructions for the next pass, not active edits.
+
+\begin{itemize}
+\item \textbf{§9 / §9.5 F-as-stream measurement-collapse reframe.} Current language treats informed measurement as a terminal collapse of structural superposition. Three 2026 results push this toward an \textit{information-conservative operation} frame: Watanabe \& Takagi (Nature Comms 2026, universal work extraction without prior state knowledge); García-Pintos et al. (Phys. Rev. X, 2026-02-19, controlled reversal of a specific measurement event given full information plus designed Hamiltonian control); and \textbf{Lohmiller \& Slotine (Proc. Roy. Soc. A 482:20250413, received 2025-05, accepted 2026-03, published 2026-04-22)} --- an \textit{exact} construction of Schrödinger/KG/Pauli/Dirac/Maxwell wave functions from the $J$-valued classical action of their Theorem 2.4 plus classical density along each extremal branch. Their Lemma 3.3 derives wave collapse at measurement from classical density collapse to a Dirac δ, making QM postulates theorems over the classical Hamilton-Jacobi + continuity-equation foundation. Together the three results bracket the role of observer information --- ignorance is forgivable asymptotically (Watanabe-Takagi); full knowledge is sufficient for exact inversion at the event level (García-Pintos); the measurement-collapse process itself is a classical-density operation (Lohmiller-Slotine). Refactor §9 and §9.5 accordingly: measurement is a reversible structural operation whose practical irreversibility is an information-budget fact, not a physical-law arrow, and whose physics realization is multi-valued-action + density collapse. Bridge \#106 (Inspection-Depth Ceiling) sharpens as the complement --- what lies outside the reversible regime. Source entries: \texttt{Research/sources/2026-04-21-watanabe-takagi-universal-work-extraction.md}, \texttt{Research/sources/2026-04-21-garcia-pintos-quantum-arrow-of-time-reversal.md}, \texttt{Research/sources/2026-04-22-lohmiller-slotine-quantum-waves-from-classical-action.md}.
+\item \textbf{§9 condition-by-condition physics anchoring (Lohmiller-Slotine).} The four Coherence-Principle conditions each map onto a specific feature of Lohmiller-Slotine Thm 2.4 + Thm 3.2 + Lem 3.3: C\_\allowbreak{}sep = $J$-valued extremal action branches; C\_\allowbreak{}meas = classical density → Dirac δ at measurement (Lem 3.3); C\_\allowbreak{}scale = explicit abstract claim of "smooth transition between physics across scales"; C\_\allowbreak{}dyn = classical continuity equation $\partial_t\rho + \nabla_M \cdot (\rho\dot{x}) = 0$ along each branch. Anchor §9 should acknowledge the physics anchoring and cite Lohmiller-Slotine Theorems 2.4, 3.2, Lemma 3.3. Regime A/B from Companion §6.9.0 (finite/small-but-infinite $J$) matches the physical setups considered in the paper.
+\item \textbf{Companion §6.4 kind-classifier fibration --- physics instance.} The fibration $\pi: \textbf{Stream} \to \textbf{ContentIndex}$ has a QM realization: each branch $j \in J$ is a cartesian lift over its content-operation (the measurement operator that selects branch $j$). Admissibility (Companion Lem 6.4.11) corresponds to the Lipschitz conditions in Lohmiller-Slotine Thm 2.4 that guarantee branch existence and uniqueness via Picard-Lindelöf + contraction theory. Back-port: Anchor §3.3 (kind-vs-naming already added) gains a short worked-example footnote referring the reader to Companion §6.4 for this physics instance.
+\item \textbf{TikZ figure back-port from Companion.} Sequencing gate-released 2026-04-20 stands.
+\item \textbf{Bridge-candidate batch review.} Four candidates pending from Day 80: \#111 (Watanabe-Takagi: substrate coherence absorbs observer ignorance, asymptotic), \#112 (MathNet Olympiad dataset: stream-specific capability without structural-kind perception; KF-testable on Gemma 4 e2b), \#113 (Mills-Simpson \textit{Multicellularity for free}, Nature Eco\&Evo 2026: multi-scale coherence persistence via substrate-partitioning, no fitness differential required), \#114 (García-Pintos: measurement-collapse information-conservative given full stream-specific knowledge plus control). Mirror \#19 held the elevations overnight; batch-evaluate with fresh context and primary-paper reads.
+\item \textbf{Bridge \#106 illustrative example.} The LHCb P5' / charming-penguin 4σ anomaly (TechRadar 2026-04, covering LHCb publication) is a clean non-cosmological instance of the Inspection-Depth Ceiling mechanism: long-distance charm-loop contributions are exactly the stream-specific residual that cannot be cleanly derived from generic-physical-aspect inputs alone. Candidate for inclusion in the \#106 write-up alongside the Meridian Appendix E cosmological example.
+\item \textbf{[Back-ported 2026-04-22, Day 81] §3.3 kind-vs-naming clarification.} One-paragraph note distinguishing A2's stream-kind preorder (reactive/self-maint/self-ref/abstr) from the carrier-level Content-operation unification. Reader risk without the note: mis-generalizing A2 into an "A2 carries a unification structure" reading. Sourced from A47 resolution (2026-04-22 morning). Drafting source: \texttt{Library/Coherent-Structure/drafts/2026-04-22-anchor-s6-clarification-memo.md}. Companion §6 kind-classifier fibration over Content provides the formal construction; this paragraph primes the reader to distinguish kind-stratification from unifying-naming. Landed as \texttt{\#\#\# A note on kind vs. naming} subsection at end of §3.3.
+\end{itemize}
+
 \chapter{§1.0 — The Category of Streams}
 
 
@@ -1391,6 +1405,10 @@ Abstracting streams add categorial production. They can form kinds --- not just 
 Strict inclusion (𝒞\_\allowbreak{}Str\textasciicircum{}reactive ⊋ 𝒞\_\allowbreak{}Str\textasciicircum{}self-maint ⊋ 𝒞\_\allowbreak{}Str\textasciicircum{}self-ref ⊋ 𝒞\_\allowbreak{}Str\textasciicircum{}abstr) says that each higher kind is genuinely more than the lower. You cannot reduce self-maintenance to reactivity --- there are reactive streams that do not self-maintain (rocks, most dissipative structures, photon absorptions). You cannot reduce self-reference to self-maintenance --- there are self-maintaining streams (cells, simple organisms) that do not self-refer. You cannot reduce abstraction to self-reference --- there are self-referential streams (many animals) that do not produce categorial abstractions.
 
 This matters for theorems. T5 (internal coherence) and its kind-demotion clause say: a self-referential stream that sustains incoherence long enough loses its self-reference and drops to self-maintaining. The kind-demotion is a \textit{real} structural change, because the kinds are strictly ordered. If the inclusions were not strict, demotion would be meaningless.
+
+\subsection{A note on kind vs. naming}
+
+The kind-stratification above operates at the level of streams --- "self-maintaining" and "self-referential" are intrinsic structural properties of a stream's dynamics. Distinct from this: when the framework speaks of a \textbf{unifying} move --- naming the Trinity as "divine," a set of athletes as "athletes," a family of perspectives as sharing a common-content --- this is not a kind-level operation. The unifying move lives at the \textbf{carrier-level via Content-operations}: a content-operation projects onto carriers and groups them by its naming-scheme. Unification is a Content-dimension act, not an A2-kind-lattice feature. Companion §6 formalizes the kind-classifier fibration over Content for the full construction.
 
 \sectionbreak
 
@@ -2920,6 +2938,48 @@ Let F denote the framework-construction process. To upgrade the observation abov
 
 \textbf{The framework derives the Principle that governs its own construction.} This is not circular. A circular derivation would presuppose the Principle and infer it; the construction did not presuppose it. The Principle emerged from the axioms after the axioms had been tested; the construction-process happened to exhibit it. The observation is a-posteriori.
 
+\subsection{Physics anchoring --- multi-valued classical action}
+
+The four conditions and the measurement-as-informed-collapse claim have an independent physics realization in Lohmiller \& Slotine (\textit{Proc. Roy. Soc. A} 482: 20250413). Their Theorem 2.4 shows that the extremal-action branches $\{ \varphi_j \}_{j \in J}$ of a Lagrangian system exist and are locally unique under Lipschitz-continuity of the Hamiltonian flow. Theorem 3.2 then exhibits the exact wave function as
+
+$$
+\psi\textasciicircum{}{\varepsilon}(x, t) = \sum\_\allowbreak{}{j \in J} \sqrt{\rho\_\allowbreak{}j\textasciicircum{}{\varepsilon}} \cdot e\textasciicircum{}{i \varphi\_\allowbreak{}j / \hbar}
+$$
+
+where each $\rho_j$ is the classical density along branch $j$, evolved under the continuity equation $\partial_t \rho + \nabla_M \cdot (\rho \dot{x}) = 0$. Lemma 3.3 derives the wave-collapse-at-measurement postulate: an informed measurement $y_k$ collapses the classical density distribution to the Dirac $\delta(y - y_k)$, which through Theorem 3.2 collapses the wave to the eigenwave. The Schrödinger, Klein-Gordon, Pauli, Dirac, and Maxwell equations are derived consequences; Born's rule remains a separate postulate.
+
+The four Coherence-Principle conditions map onto their construction as follows:
+
+\begingroup\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}\footnotesize
+\begin{center}
+\begin{tabular}{p{1.20in} p{3.19in}}
+\toprule
+Condition & Physics realization (Lohmiller-Slotine) \\
+\midrule
+\textbf{C\_\allowbreak{}sep} (structural separation) & $J$-valued extremal-action branches $\{\varphi_j\}_{j \in J}$ coexisting --- Thm 2.4. \\
+\textbf{C\_\allowbreak{}meas} (informed measurement) & Classical density collapse to $\delta(y - y_k)$ under measurement --- Lem 3.3. \\
+\textbf{C\_\allowbreak{}scale} (multi-scale consistency) & Verbatim: "smooth transition between physics across scales." \\
+\textbf{C\_\allowbreak{}dyn} (dynamic maintenance) & Classical continuity equation along each branch --- conservation law supporting the dynamical cycle. \\
+\bottomrule
+\end{tabular}
+\end{center}
+\endgroup
+\textbf{Consequences for the Principle's measurement-reframe.} The older reading of informed measurement as \textit{destructive collapse} of structural superposition is sharpened, along three independent vectors, into measurement as an \textit{information-conservative operation} whose practical irreversibility is an information-budget fact rather than a physical-law arrow:
+
+\begin{enumerate}
+\item \textbf{Watanabe \& Takagi (2026)} --- universal work-extraction bounds without prior state knowledge establish that observer ignorance is forgivable asymptotically.
+\item \textbf{García-Pintos et al. (2026)} --- given full state information plus designed Hamiltonian control, a specific measurement event admits exact inversion, witnessing that the measurement process carries no hidden entropy-generating arrow.
+\item \textbf{Lohmiller-Slotine (2026)} --- the collapse mechanism itself reduces to a classical-density operation on multi-valued action branches, derived over the Hamilton-Jacobi + continuity-equation foundation.
+\end{enumerate}
+
+The three results bracket the measurement event: ignorance-forgivable asymptotically, inverse-constructible at the event level, and classical-density-derived at the mechanism level. The Principle's C\_\allowbreak{}meas condition is consistent with all three.
+
+\textbf{Bridge \#106 complement.} The Inspection-Depth Ceiling (Bridge \#106) characterizes the \textit{residual} --- what lies outside the reversible regime, where stream-specific information cannot be cleanly recovered from generic-physical-aspect inputs alone. Lohmiller-Slotine's cleanness requires the Lipschitz conditions of Theorem 2.4; streams failing those conditions fall into the inspection-depth-ceiling residual rather than the information-conservative regime. The two results are not in tension --- they partition the measurement landscape.
+
+\textbf{Scope caveat.} The Lohmiller-Slotine construction covers Lagrangian systems with invertible metric $M(x)$, potential $V(x, t)$, and vector potential $A(x, t)$ under Coulomb/Lorenz gauge. Full Yang-Mills, QFT in curved spacetime, and quantum gravity are out of scope of the explicit construction, though Maxwell and Dirac are covered. The Principle's four conditions cover a strictly wider class than the physics-anchored instance, and the physics anchoring is a \textit{partial sufficiency witness}, not a coextensive derivation.
+
+\sectionbreak
+
 \textbf{What it means.} A framework that \textit{couldn't} describe its own construction as coherent would fail its own principle at the moment of its formulation. The Corpus passes this test. The strongest form of the claim:
 
 \begin{quote}
@@ -3027,6 +3087,7 @@ The Principle is false under at least any of:
 \item \textbf{Q2.} The relationship between Bias(S)-trajectory divergence and entropy production in standard statistical mechanics --- are they proportional, or do they measure different quantities? Relevant for physics-domain operationalizations.
 \item \textbf{Q3.} Whether the self-reference closure generalizes: do all frameworks that pass their own tests exhibit a Principle-like structure, or is this specific to the Corpus's architecture?
 \item \textbf{Q4.} The adversarial case: what does a stream look like that \textit{actively minimizes} γ\_\allowbreak{}S-fidelity --- not merely failing coherence, but pursuing incoherence? Related to pathologies of T4 (refusing the refresh-event).
+\item \textbf{Q5 (partially resolved).} Is there an exact classical-extremal-path construction underlying the Principle's measurement-reframe? \textit{Yes}, for Lagrangian systems with invertible metric, potential, and vector potential under Coulomb/Lorenz gauge --- Lohmiller-Slotine Thm 2.4 + Thm 3.2 + Lem 3.3. The Principle's C\_\allowbreak{}meas is backed at the physics level by a classical-density-collapse derivation of wave-function collapse. Scope-limited: Yang-Mills, QFT in curved spacetime, and quantum gravity remain open for an explicit analogous construction. \textit{Born's rule remains an independent postulate on the physics side, so the resolution is partial.}
 \end{itemize}
 
 \sectionbreak

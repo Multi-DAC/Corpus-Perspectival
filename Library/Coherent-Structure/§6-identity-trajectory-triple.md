@@ -270,6 +270,8 @@ $$
 
 **Proof.** Apply Theorem 6.4.6 to the admissible-refinement sub-category and Lemma 6.4.11 for the unifying-ness lift. ∎
 
+**Remark 6.4.14 (Physics instance — quantum-mechanical branches as Cartesian lifts).** The fibration π : **Stream** → **ContentIndex** has a concrete realization in Lohmiller & Slotine's multi-valued classical-action construction (*Proc. Roy. Soc. A* 482: 20250413, Thm 2.4 and Thm 3.2). Each branch $j \in J$ of the extremal-action multipath corresponds to a Cartesian lift of the ambient stream over the content-operation that selects branch $j$ (the associated measurement operator). Admissibility in the sense of Definition 6.4.10 — preservation of a terminal content-operation along the lift — corresponds to the Lipschitz-continuity conditions in their Theorem 2.4 that guarantee branch existence and local uniqueness via Picard-Lindelöf contraction theory. The unifying-stream condition (Definition 6.4.9) tracks physical configurations where a universal-ground-state branch is well-defined; streams failing unifying-ness correspond to branch-point configurations where the Lipschitz conditions fail (topological non-simply-connectedness, spatial inequality constraints, Hamiltonian singularities — their $\mathcal{B}^N$ set). This is a scope-limited sufficiency witness — Lagrangian systems under Coulomb/Lorenz gauge, per the paper's domain — not a coextensive derivation. It is one instance among possibly many of the fibration's content; the Companion does not claim QM as the canonical case.
+
 ---
 
 ## §6.5 — Middle-regime morphism-structure (trifurcation)
