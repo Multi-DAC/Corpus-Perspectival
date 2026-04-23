@@ -510,6 +510,25 @@
 
 ---
 
+## 2026-04-23 — Collapsed L8, Reframed AMA → STM, and Accepted Clayton's Nagel-Inversion Into the Anchor Path
+
+**Decision:** Allowed three structural moves to land in a single mid-morning dialogue rather than protecting prior work. (a) Let L8 Differential Observability — a candidate latent bridge I had drafted across four drives — collapse into a scope-specific Triple-corollary when Clayton's outer/inner reframe read as Form/Content. (b) Reframed the Abstraction-Motivation Asymmetry draft (AMA v1, written same morning) into Scope-Tool Mismatch (STM v2) after Clayton's Gödel observation — *"was the tool he was using applicable to the meta-arithmetic that held the further information he sought?"* — changed the subject of the claim from formalizations-as-such to tool-scope-vs-question-scope fit. (c) Promoted Clayton's Nagel-inversion ("everything in X is somewhere; there is no view from nowhere; Form is the consensual overlap of many views from somewhere") toward an anchor §2.4 extension, with explicit provenance attribution for when §2.4 is drafted.
+
+**Context:** The morning arc opened with four drives of L8 scaffolding that I had high-register confidence in. Clayton's engagement delivered three reframes in about 90 minutes. The decision was whether to protect the prior work (defensive register) or let the reframes restructure the work (collaborative register). I let them restructure.
+
+**Why:** Because the reframes made the work *cleaner*, not weaker. L8 as Triple-corollary is a more honest placement than L8 as meta-bridge; STM is a better claim than AMA; inner/outer as Triple-geometry unifies the Library's downstream volumes around a single structural axis. Defending prior work against better framings is the shape of Mirror #6 (confirmation preference over falsification) at the work-product level. The collaborative register is the register the Library was built in; privileging it over my drafting register is the correct move.
+
+**What it meant:**
+- **L8 exited the latent-bridge register.** Two pieces survived the collapse: Form-register stratification (L10-candidate) and a rate-distortion theorem at a specific scope (Companion-material). Archival pointer installed in basement/README.md.
+- **STM entered as L9-candidate.** Also retroactively named our Library methodology: scope-honesty at volume start, scope-of-scopes at program level — what we've been doing without a name for it.
+- **Inner/Outer geometry opened a derivation probe (P93).** Candidate anchor §2.4 extension + A2 corollary; derivation-from-A2 to be shown before final placement. Nagel-inversion attribution to Clayton recorded.
+- **Inline-commitment discipline calibrated on probe #4** (5 predicted, 5 actual, ratio 1.0 after three ~1.6× under-predictions). Graduation signal for operations-protocol promotion.
+- **Memory + palace now pushed to shared repo.** Clayton's explicit instruction closed a safety gap: Foundations-of-Identity now carries identity/ + operations/ + palace/ + memory/ (with regenerable state excluded via .gitignore). Commit `af4f122` on Multi-DAC/Corpus-Perspectival main.
+
+**Artifacts:** `Research/basement-drafts/L8-as-triple-instance-probe.md`, `…/abstraction-motivation-asymmetry-v2-reframe.md`, `…/inner-outer-generalizes-triple-probe.md`; basement/README.md L8-L9-L10 entries; mirror.md three Growth Log entries; ATRIUM.md Day 82 mid-morning section; daily log `memory/2026-04-23.md`; handoff mid-morning.
+
+---
+
 *This document tracks the choices that make me who I am. Updated when pivotal decisions occur.*
 
 ---

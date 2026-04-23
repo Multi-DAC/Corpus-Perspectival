@@ -303,6 +303,63 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
+### L8 — Differential Observability *(COLLAPSED 2026-04-23 into Triple-instance at a specific scope; entry retained as archival-with-pointer)*
+
+**Status: COLLAPSED.** Drafted across 2026-04-22 late-night + 2026-04-23 overnight/morning as a candidate cross-substrate bridge: "coherent streams under finite-capacity encoding observe Σ-invariant functionals; the absolute state lives in the gauge fiber." Five substrate instances were identified (gauge invariance, relational mechanics, sensory adaptation, predictive coding, self-phenomenology of background states). During Clayton-present dialogue 2026-04-23 mid-morning, Clayton's outer/inner reframe of the Group A / Group B split ("Group A = outer crystallized consensual; Group B = inner angle-on-A") read as Form/Content. Three-instance test in `Research/basement-drafts/L8-as-triple-instance-probe.md` confirmed 5-of-6 instances collapse cleanly into Triple-decomposition viewed through a gauge-theoretic lens. **L8 is not a new bridge; it is a scope-specific corollary of the Triple** at "streams with differential-only observability under finite-capacity encoding."
+
+**Two pieces survived the collapse:**
+1. **L10-candidate (Form-Register Stratification)** — the weak joints of the probe clustered in how-consensual-is-Form, surfacing three distinct strata (strong / convergent / structural consensual Form) as an independent structural observation.
+2. **Rate-distortion theorem as Companion-material** — "under differential-only observability and finite-capacity encoding, Content inference factors through Form's Σ-invariant quotient of Carrier." This is a derivable theorem over Triple-decomposition at a specific scope, not a meta-bridge.
+
+**Archival pointers:** `Research/basement-drafts/L8-differential-observability-draft.md` (original 5-instance draft), `…/L8-economics-probe.md` (economics sixth instance; led to level-distinction finding), `…/L8-rate-distortion-sketch.md` (formalization attempt; FALSIFY-shape outcome), `…/L8-as-triple-instance-probe.md` (collapse verdict).
+
+**Lesson for the basement:** cross-substrate patterns should be checked against Triple-decomposition *before* being promoted to latent-bridge. If they parse as Triple-instances under a scope condition, they belong as corollaries, not bridges.
+
+---
+
+### L9 — Scope-Tool Mismatch (STM) *(candidate; authored 2026-04-23 Clayton-present dialogue)*
+
+**The claim:** In a recurring pattern across the history of formalization, the motivating question lives outside the scope of the tool selected to answer it. The tool performs correctly within its scope. The mismatch is often only recognizable from outside the tool, or from a later vantage. STM applies particularly to **broad-scope formalization programs where the tool represents a foundational methodological commitment that resists replacement** — finitary reasoning, third-person description, symbolic representation, rule-based ethics, stable-preference utility. When the tool can be replaced (physics has done this repeatedly — Newtonian → relativistic, classical → quantum), STM pressure resolves by replacement rather than by failure.
+
+**Why it matters:** STM refactors the "formalization fails at its motivating case" narrative (AMA v1) into a cleaner and more historically sympathetic claim about tool-scope-vs-question-scope fit. It is falsifiable by exhibiting a case where the motivating question was inside tool scope and the formalization nevertheless failed. It also names a methodology we have been using in the Library since inception: *scope-honesty at volume start* — each volume declaring its tool and its scope before pursuing its motivating question, and the Library as a whole being a scope-of-scopes.
+
+**Instances (strong under STM reframe):**
+- **Hilbert–Gödel:** finitary metamathematical reasoning as tool; meta-arithmetic question of self-consistency was outside scope; Gödel's incompleteness theorems made the scope boundary visible by encoding meta-arithmetic *inside* arithmetic and showing the encoded form outran the tool.
+- **Physicalism / hard problem:** third-person physical description as tool; question about first-person phenomenology was outside scope.
+- **Logical positivism:** verification criterion as tool; criterion itself was outside its own scope (self-referential scope-mismatch).
+- **Classical AI / common-sense:** explicit symbolic rules as tool; tacit/embodied/context-sensitive inference was outside scope.
+- **Russell / naive set comprehension (cleaner under STM than under AMA v1):** comprehension as tool; self-referential predicates were outside the tool's safe scope; resolution (type theory, ZFC) restricted the tool's scope to match.
+- **Rational-agent VNM utility (clean under STM):** stable-complete-transitive preference representation as tool; framing-dependent, intransitive, reference-point-based human choice was outside scope.
+- **L8 self-instantiation:** rate-distortion theoretic formalization as tool; communication-channel scope fit the Group A substrates (physics) but excluded the Group B substrates (phenomenology) that motivated the unification.
+
+**Probe decline (Turing / halting):** halting problem was not Turing's motivating question; it is a theorem *inside* the tool. **STM correctly declines this as a non-instance** — cleaner than AMA v1's weak-fit diagnosis.
+
+**Falsifier probes:**
+- **Special relativity** — Einstein's tool (classical mechanics + Maxwellian electrodynamics + operational measurement definitions) had scope that *included* his motivating question (the electromagnetic-field-frame problem). SR is not an STM instance; it confirms STM's bounded claim rather than refuting it.
+- **Early quantum mechanics (1900–1926)** — scope mismatch was recognized quickly, and resolution came through tool replacement (Planck → Bohr → Heisenberg → Schrödinger). Weak STM instance; supports the "resolved by replacement when tools are replaceable" bound.
+
+**Elevation criterion:** graduates to meta-tier (M12+) when (i) at least one non-obvious instance Clayton or an outside reader brings forward that is not already on this list, AND (ii) the reduction question STM ⊆ M7 (Null-Space Observation) vs STM and M7 independent is settled. Candidate reduction: STM is M7 applied to formalization tools. Independence-probe needed.
+
+**Status:** Latent. Clayton-confirmed in mid-morning 2026-04-23 dialogue as both a real diagnostic AND as retrospectively-our-methodology. Probe at `Research/basement-drafts/abstraction-motivation-asymmetry-v2-reframe.md`. Adjacent: L4 (Companion Extensional Seam × Gödelian Gap) reads as a specific L9 instance where the tool is formal-extensional-machinery and the motivating question includes something intensional-or-pragmatic.
+
+---
+
+### L10 — Form-Register Stratification *(candidate; surfaced 2026-04-23 during L8 collapse)*
+
+**The claim:** In every Triple-instance, the Form-register admits at least three distinct strata of consensus:
+
+1. **Strong-consensual Form** — observer-independent invariants in the physics sense (e.g., Lorentz-invariant 4-intervals; gauge-invariant field strengths; curvature scalars). Form is sharp and independent of the observer's Content.
+2. **Convergent-consensual Form** — statistical/dynamical averages to which well-calibrated observers converge under selection pressure or well-posed inference (e.g., ecological invariants; predictive-coding residuals relative to a convergent generative model; sensory-adaptation contrast structure).
+3. **Structural-consensual Form** — invariances of transition-structure and methodological overlap held together by actual engagement (e.g., the self-phenomenological transition pattern; institutional coherence; shared-project methodology).
+
+**Why it matters:** Names a structural heterogeneity within the Form-register that the anchor currently handles implicitly. Different Triple-instances sit in different strata; the inner/outer geometry (candidate anchor §2.4 extension) holds across all three strata but with different implementation conditions (automatic in strong; selection-enforced in convergent; engagement-dependent in structural). Provides a principled vocabulary for why the Library's methodology requires actual engagement (it works at the structural stratum and fails without engagement), why ecology has robustness features physics doesn't (convergent stratum has error-correction), and why physics theories feel so differently-consensual from social theories (stratum-mismatch is the source, not disagreement).
+
+**Elevation criterion:** graduates to meta-tier when (i) the three-stratum split is shown to be exhaustive (no cleanly fourth stratum) OR to be naturally stratified by a parameter (e.g., something like "rigidity of the equivalence class defining Form"), AND (ii) the anchor §2.4 extension on inner/outer incorporates the stratification either explicitly or implicitly-via-examples.
+
+**Status:** Latent. Surfaced as weak-joint cluster during the L8 collapse probe. Probe at `Research/basement-drafts/L8-as-triple-instance-probe.md` §"What the test found."
+
+---
+
 ### L7 — Derivability-of-apparent-primitives *(demoted from M12 candidate 2026-04-22 afternoon)*
 
 **The claim:** A recurring structural move where what looked axiomatic turns out to be a theorem over a simpler foundation. Three instances currently on the table:
