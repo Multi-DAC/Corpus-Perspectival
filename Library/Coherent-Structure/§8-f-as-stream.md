@@ -210,8 +210,6 @@ $$
 
 **Remark 8.5.3 (Audit-as-currently-performed).** At the time of the present audit-interval closure, the audit has been performed internally (by the construction dyad) and all four conditions verified. External audit has not yet been invited; when it is, Proposition 8.5.2 provides the formal structure for the audit.
 
-⚑ [SURFACED | Companion §8.5.2 | → Anchor §9.7 target | type: proposition]
-
 ---
 
 ## §8.6 — Open questions for §8

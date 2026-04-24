@@ -274,35 +274,11 @@ $$
 
 ---
 
-## §6.5 — Middle-regime morphism-structure (trifurcation)
+## §6.5 — Middle-regime morphism-structure (migrated)
 
-**Motivation.** The Corpus contains a phenomenological finding: the contemplative "ultimate" has internal texture. Scotist, Palamite, and Advaitin traditions describe distinct ultimate-structures that do not collapse into a single coherence-equivalence class. Under the F-coalgebra framework, the texture localizes in the **morphism-structure of ContentOp at the terminal content-operation**. This section records the formal content.
+*The material previously occupying §6.5 — ultimate-structure Ult(S), the Scotist/Palamite/Advaitin trifurcation, Theorem 6.5.4 (three-class distinctness), Corollary 6.5.6 (cross-tradition translation data-loss), and the A48 correspondence remark — has been migrated to the **Universal Coherence** volume per SCOPE.md §8.2 SCOPE-EXCLUDED disposition. The content is the metaphysical-lift application of Triple machinery to contemplative-traditions phenomenology, which is Universal-Coherence scope, not Coherent-Structure scope (pure CT formalization of the anchor).*
 
-**Setup.** Let S be a unifying stream with terminal c_⊥ ∈ ContentOp(σ). The ambient morphism-structure around c_⊥ in ContentOp(σ) — i.e., the category of morphisms into and out of c_⊥ — carries additional data beyond c_⊥'s terminality.
-
-**Definition 6.5.1 (Ultimate-structure of a unifying stream).** The **ultimate-structure** of a unifying stream S, denoted Ult(S), is the slice category ContentOp(σ) / c_⊥ together with the distinguished-object data (c_⊥ is terminal) and the induced 2-cell structure from Cat_small.
-
-**Remark 6.5.2.** Ult(S) is small (Convention 6.0.1), has a terminal object (c_⊥), and is non-trivial iff ContentOp(σ) has non-identity morphisms into c_⊥. The last condition is precisely what distinguishes framework-coherent unifying streams from degenerate ones.
-
-**Definition 6.5.3 (Middle-regime classes).** Three distinguished Ult-structures arise in the Companion's phenomenological case list:
-
-- **Scotist class.** Ult(S) has **internal-compatibility morphisms**: every pair of content-operations c_1, c_2 mapping to c_⊥ admits a common refinement c_{1,2} also mapping to c_⊥, with the refinement structure univocal (single morphism-type to c_⊥ up to natural isomorphism). Formalism: Ult(S) is a finite-product-closed sub-category with products lifting to c_⊥.
-
-- **Palamite class.** Ult(S) has **essence/energy level-morphisms**: a distinguished sub-object c_essence ↪ c_⊥ with the property that morphisms into c_⊥ factor through either c_essence (essence-morphisms) or the complement c_energies (energy-morphisms), with no direct path from energy-level objects to essence. Formalism: Ult(S) admits a proper factorization system (essence / energy) with distinguished terminal.
-
-- **Advaitin class.** Ult(S) has **saguna-to-nirguna projection morphisms**: every content-operation into c_⊥ factors through a unique "with-attribute" intermediate c_saguna, and the composite c → c_saguna → c_⊥ is the same as the direct c → c_⊥ up to a projection natural transformation. Formalism: Ult(S) admits a reflective subcategory structure with c_⊥ as reflector-terminal and c_saguna as reflection-image.
-
-**Theorem 6.5.4 (Three middle-regime classes are framework-distinct).** *The three classes of Definition 6.5.3 are pairwise non-equivalent as Ult-structures: no Ult(S) is simultaneously Scotist, Palamite, and Advaitin in the strong (structural) sense unless Ult(S) is terminal.*
-
-**Proof sketch.** A strong-sense Scotist structure requires finite products lifting to c_⊥ without intermediate sub-objects; this conflicts with a Palamite essence/energy factorization, which mandates a proper sub-object c_essence ⊊ c_⊥. Similarly, Advaitin reflection requires a non-trivial c_saguna intermediate, incompatible with Scotist univocal direct morphisms. Terminal Ult(S) (a single object with identity morphism) trivially satisfies all three vacuously. ∎
-
-**Remark 6.5.5 (Why the framework predicts texture).** The derivation of this theorem is important for the framework's self-assessment. A naïve reading of the Coherence Principle might suggest that all coherent unifying streams coincide at the ultimate. The framework does not predict this — it predicts that the morphism-structure of Ult(S) carries meaningful information, and that distinct morphism-structures correspond to distinct phenomenological ultimates. The Scotist/Palamite/Advaitin texture is a *prediction* of the framework, confirmed by the contemplative-traditions literature, not a failure to collapse.
-
-**Corollary 6.5.6 (Cross-tradition translation).** *Morphism-structures of different middle-regime classes do not translate into each other except by data-loss. Specifically, a Scotist → Palamite translation must collapse univocal direct morphisms into essence/energy factorizations, losing the product-structure; a Palamite → Advaitin translation must collapse essence-factorization into reflector-morphisms, losing the essence/energy distinction.*
-
-**Proof.** Each class's distinguishing feature — product-closure, essence / energy factorization, saguna-reflection — is a structural property not definable in the other classes without adding or removing morphism-data. Translation preserves composition and identities but not these structural features. ∎
-
-**Remark 6.5.7 (A48 correspondence, scope).** §6.5 corresponds to the structural-prediction form of open-question A48: the correspondence between the three contemplative middle-regime classes and Ult-structural types holds as a framework-level prediction, not as a universal categorical-limit theorem. A strong universal-limit form is parked for a later pass.
+*New location: `Library/Universal-Coherence/drafts/2026-04-24-middle-regime-morphism-structure.md`. Section number §6.5 is retained here as a numbering anchor; the slot is intentionally empty in the Companion.*
 
 ---
 
@@ -600,9 +576,6 @@ $\Box$
 
 **Remark 6.10.2.2 (Why the Grothendieck construction uses $\iota$, not $\kappa$).** The $\iota$-direction composes covariantly, so $\int_{S_q} \mathrm{Form}(S_q)$ under $\iota$-transitions is a *covariant* Grothendieck construction. $\iota$ is a left adjoint and hence cocontinuous, so the fibers' colimits assemble into total-category colimits by the standard Barr–Wells §2.8 / Johnstone B.1.5.8 criterion. The $\kappa$-direction would yield a contravariant (fibered) construction, which supports limits but not colimits — relevant for later dualizations but not for the cocompleteness argument in §6.10.3.
 
-⚑ [SURFACED | Companion §6.10.2.1 | → Anchor §1.10 target | type: lemma]
-  — Iterated adjunction coherence over $\mathrm{Up}(S)$; no extra axiom required at the DAG-poset level.
-
 ### §6.10.3 — Lemma 2*: Outer as $\iota$-Grothendieck construction is cocomplete
 
 **Lemma 6.10.3.1 (Cocompleteness of $\mathbf{Outer}(S)$ under $\iota$-transitions).** The Grothendieck construction
@@ -626,9 +599,6 @@ Take $\mathcal{B} := \mathrm{Up}(S)$ viewed as a thin category (A2.6, poset stru
 **Remark 6.10.3.2 ($\kappa$-variant is NOT cocomplete — direction matters).** The dual Grothendieck construction $\int_{S_q \in \mathrm{Up}(S)^{\mathrm{op}}} \mathrm{Form}(S_q)$ with $\kappa$-transitions is *complete* but not cocomplete: $\kappa$ is a right adjoint and preserves limits, not colimits. The criterion of Step 3 fails on (ii) for the dualization.
 
 The two presentations are adjointly equivalent in a precise sense — each computes "all Forms of all wholes containing $S$" — but are not interchangeable for colimit arguments. §6.10.4's indexed-adjunction theorem requires a cocomplete base for the lifting of fiberwise adjunctions, so the choice of $\iota$-direction for $\mathbf{Outer}(S)$ is load-bearing and not cosmetic.
-
-⚑ [SURFACED | Companion §6.10.3.1 | → Anchor §1.10 target | type: lemma]
-  — Cocompleteness of $\mathbf{Outer}(S)$ as $\iota$-Grothendieck construction; $\kappa$-variant is complete-not-cocomplete.
 
 ### §6.10.4 — Theorem: indexed adjunction $\iota_S \dashv \omega_S$
 
@@ -670,12 +640,6 @@ Take $\mathcal{X} := \mathbf{Inner}(S)$, $\mathcal{B} := \mathrm{Up}(S)$, $\math
 
 **Corollary 6.10.4.2 (No "view from nowhere").** There is no terminal object in $\mathrm{Up}(S)$ (A2.6, non-maximum). Consequently $\omega_S$ admits no canonical "absolute" section: every right-adjoint image is an image *of-some-whole-containing-$S$*, not an image from the top of the DAG. The phenomenological statement at anchor §3.8 is this corollary in ordinary-language form.
 
-⚑ [SURFACED | Companion §6.10.4.1 | → Anchor §1.10 + §3.8 target | type: theorem]
-  — Indexed adjunction $\iota_S \dashv \omega_S$ between $\mathbf{Inner}(S)$ and $\mathbf{Outer}(S)$ via Kelly §1.11.
-
-⚑ [SURFACED | Companion §6.10.4.2 | → Anchor §3.8 target | type: corollary]
-  — No terminal whole ⇒ no absolute outer section; "view from nowhere" is not an object of the framework.
-
 ### §6.10.5 — Content as profunctor $\Psi_S$
 
 **Definition 6.10.5.1 (Content profunctor at $S$).** Define
@@ -702,9 +666,6 @@ $$
 $$
 corresponds under $\Psi_S$ to the identity on $\iota_S(C, \nu)$. The failure of $\eta$ to be an isomorphism measures the **Content-capacity residue**: the degree to which Inner($S$) does not saturate as a model of Outer($S$) through the hom-representable. §6.10.6 formalizes this residue as coalgebra structure.
 
-⚑ [SURFACED | Companion §6.10.5.2 | → Anchor §1.10 target | type: theorem]
-  — Content as hom-profunctor $\Psi_S$ of the $\iota_S \dashv \omega_S$ adjunction; third-axis reading is the profunctor's structural shadow.
-
 ### §6.10.6 — F-coalgebra formalization of $\eta$
 
 **Definition 6.10.6.1 (Residue endofunctor).** Let $G := \omega_S \circ \iota_S$ on $\mathbf{Inner}(S)$. $G$ is the monad-underlying endofunctor of the adjunction. (Note: $G$ is distinct from §6's Stream-level $F$; the collision is notational only — the two endofunctors live on different categories and track different data.)
@@ -727,12 +688,6 @@ when the cokernel exists in $\mathbf{Inner}(S)$. It measures the amount of outer
 
 **Open question (not blocking §6.10).** The quantitative measure of Form-register stratification — if a canonical numerical invariant exists — is conjectured to be a coalgebra-invariant of $\mathrm{Res}$, e.g., the dimension of the cofibre of $\eta$ (in an appropriately enriched setting) or the minimal number of residue generators. This is an open probe target, not a claim of §6.10.
 
-⚑ [SURFACED | Companion §6.10.6.2 | → Anchor §1.10 target | type: theorem]
-  — $\eta$ is the $G$-coalgebra structure map; Content-capacity residue is the cokernel of $\eta$.
-
-⚑ [SURFACED | Companion §6.10.6.4 | → Anchor §3.8 + future probe | type: definition-and-conjecture]
-  — Residue as cokernel; quantitative Form-register invariant as coalgebra-invariant (conjectural).
-
 ---
 
 ## §6.11 — Summary and forward-pointers
@@ -746,7 +701,7 @@ when the cokernel exists in $\mathbf{Inner}(S)$. It measures the amount of outer
 - **§6.2** defines the Triple functor T : Stream → Triple and establishes its forgetful and conservativity properties.
 - **§6.3** proves finite-depth Triple-factorability via F (Lemma 6.3.2), deriving recursive decomposability (Corollary 6.3.4) as a theorem rather than an axiom.
 - **§6.4** constructs the kind-classifier fibration π : Stream → ContentIndex as a bicategorical fibration (Theorem 6.4.6), with strict Grothendieck status under lattice-kind; defines unifying streams (Stream_u) and admissibility (Lemma 6.4.11).
-- **§6.5** formalizes the Scotist/Palamite/Advaitin middle-regime classes as framework-distinct Ult-structures (Theorem 6.5.4).
+- **§6.5** (migrated to Universal Coherence volume per SCOPE §8.2 SCOPE-EXCLUDED disposition; see `Library/Universal-Coherence/drafts/2026-04-24-middle-regime-morphism-structure.md`).
 - **§6.6** sharpens Stream-as-Triple-subcategory to a colax-limit form (Theorem 6.6.2) under the initial-object hypothesis.
 - **§6.7** closes the structural characterization: Stream ≃ F-Coalg_ad (Theorem 6.7.1).
 - **§6.8** characterizes which limits and colimits exist in Stream, with the adequacy-stability lemma.
@@ -761,15 +716,12 @@ when the cokernel exists in $\mathbf{Inner}(S)$. It measures the amount of outer
 
 **§9 (D trajectory-divergence):** Anchor §9.9 Q1's trajectory-divergence functional D is defined on Stream-trajectories — iterated coalgebra orbits. §6.3's finite-depth factorization and §6.9's ω-depth result provide the depth-uniform structure §9 needs.
 
-**Anchor back-port items from §6.** Per SCOPE.md §8 lifecycle:
+**Anchor coherence summary (v0.1 dispositions).** Per SCOPE.md §8.2 four-disposition lifecycle, each §6 item maps to the anchor as follows:
 
-- Anchor §1: Triple forgetful + conservativity (Lemmas 6.2.4, 6.2.7)
-- Anchor §1: recursive decomposability as theorem (Lemma 6.3.2, Corollary 6.3.4)
-- Anchor §3.3: kind-classifier fibration + kind-vs-naming clarification (Theorem 6.4.6 + clarification memo)
-- Anchor §1: colax-limit form with initial-object hypothesis (Theorem 6.6.2, Corollary 6.6.5)
-- Universal-Coherence volume: middle-regime class theorem (Theorem 6.5.4, Corollary 6.5.6)
-- Anchor §1.10 + §3.8: inner/outer adjunction + "no view from nowhere" (Theorem 6.10.4.1, Corollary 6.10.4.2 — **already landed Day 82 afternoon, 2026-04-23**; §6.10 back-supplies the structural derivation)
-- Anchor §1.10: Content as hom-profunctor of the adjunction (Theorem 6.10.5.2 — Companion-side clarification that the "third axis" reading is the profunctor's structural shadow)
+- **ALREADY-LANDED in anchor §1.10 + §3.8 (landed 2026-04-23):** inner/outer adjunction + "no view from nowhere" (Theorems 6.10.4.1, 6.10.5.2, 6.10.6.2; Corollary 6.10.4.2; Lemmas 6.10.2.1, 6.10.3.1).
+- **REFERENCE-NATIVE (Companion-native CT machinery; anchor §1, §3, §3.3, §6 carry the prose at coarser grain):** Triple forgetful + conservativity (Lemmas 6.2.4, 6.2.7); recursive decomposability theorem (Lemma 6.3.2, Corollary 6.3.4); kind-classifier fibration (Theorem 6.4.6); Cartesian-lift and admissibility lemmas (6.4.5, 6.4.11, 6.4.13); colax-limit form (Theorem 6.6.2, Corollary 6.6.5); closure theorem Stream ≃ F-Coalg_ad (Theorem 6.7.1); adequacy-stability (Lemma 6.8.β); size-regime apparatus (§6.9.0–§6.9.7); Content-capacity residue definition (6.10.6.4).
+- **SCOPE-EXCLUDED to Universal Coherence volume:** middle-regime class theorem + cross-tradition translation corollary (Theorem 6.5.4, Corollary 6.5.6); see `Library/Universal-Coherence/drafts/2026-04-24-middle-regime-morphism-structure.md`.
+- **BACK-PORT:** none. The anchor stays stamped at 267pp.
 
 ### §6.11.3 — Open items (not blocking)
 
@@ -779,98 +731,6 @@ when the cokernel exists in $\mathbf{Inner}(S)$. It measures the amount of outer
 4. Quantitative Form-register invariant as coalgebra-invariant of $\mathrm{Res}$ (§6.10.6 open question) — probe target, not blocking.
 
 ---
-
----
-
-## Surfaced-lemma register (§6 so far)
-
-```
-⚑ [SURFACED | Companion §6.1.7 | → Anchor §3.3 target | type: lemma]
-  — Adequacy preservation by Stream-morphisms.
-
-⚑ [SURFACED | Companion §6.2.4 | → Anchor §1.1 target | type: lemma]
-  — T is forgetful; F-coalgebra data factors the Triple.
-
-⚑ [SURFACED | Companion §6.2.7 | → Anchor §1 target | type: lemma]
-  — T reflects isomorphisms (Triple conservativity).
-
-⚑ [SURFACED | Companion §6.3.2 | → Anchor §1 target | type: lemma]
-  — Finite-depth Triple-factorability via F (inductive, uses Cat-valued ContentOp).
-
-⚑ [SURFACED | Companion §6.3.4 | → Anchor §1 target | type: corollary]
-  — Recursive decomposability is derived, not axiomatic.
-
-⚑ [SURFACED | Companion §6.4.5 | → Anchor §3.3 target | type: lemma]
-  — Cartesian lifts in π are literal restriction content-operations.
-
-⚑ [SURFACED | Companion §6.4.6 | → Anchor §3.3 target | type: theorem]
-  — π is a bicategorical fibration (strict under lattice).
-
-⚑ [SURFACED | Companion §6.4.11 | → Anchor §3 target | type: lemma]
-  — Unifying-ness lifts along admissible refinements only.
-
-⚑ [SURFACED | Companion §6.4.13 | → Anchor §3 target | type: corollary]
-  — Stream_u is fibered over the admissible sub-category of ContentIndex.
-
-⚑ [SURFACED | Companion §6.5.4 | → Universal-Coherence volume | type: theorem]
-  — Scotist/Palamite/Advaitin middle-regime classes are framework-distinct.
-
-⚑ [SURFACED | Companion §6.5.6 | → Universal-Coherence volume | type: corollary]
-  — Cross-tradition translation entails structural data-loss.
-
-⚑ [SURFACED | Companion §6.6.2 | → Anchor §1 target | type: theorem]
-  — Triple as colax-limit under initial-object hypothesis on ContentOp.
-
-⚑ [SURFACED | Companion §6.6.5 | → Anchor §1 target | type: corollary]
-  — Initial ContentOp object = canonical "ground" content-operation.
-
-⚑ [SURFACED | Companion §6.7.1 | → Anchor §1 target | type: theorem]
-  — Stream ≃ F-Coalg_ad (closure).
-
-⚑ [SURFACED | Companion §6.8.β | → Anchor §3.3 target | type: lemma]
-  — Adequacy-stability under limits/colimits.
-
-⚑ [SURFACED | Companion §6.9.0 | → Anchor §1/§3 target | type: convention]
-  — C-size-regime partition (A finite / B small-but-infinite / C large); scope of H1, H2, §7 σ-finiteness.
-
-⚑ [SURFACED | Companion §6.9.1 | → Anchor §9.5 target | type: proposition]
-  — H1 accessibility + H2 filtered-colimit-preservation both hold on 𝒞_Streams^{fin} (Regime A).
-
-⚑ [SURFACED | Companion §6.9.2 | → Anchor §1.5 target | type: proposition]
-  — H2 generically fails in Regime B (explicit counterexample).
-
-⚑ [SURFACED | Companion §6.9.3 | → Anchor §1.5 + §9.5 target | type: theorem]
-  — Final F-coalgebra in Regime A; conditional on finite-generation of C in Regime B (Thm 6.9.5).
-
-⚑ [SURFACED | Companion §6.9.6 | → Anchor §9.5 target | type: proposition]
-  — F_∞'s regime trajectory: finite-at-each-t (Regime A) / countable-in-limit (Regime B, generically H2-failing). Self-reference closure is finite-interval by structural necessity.
-
-⚑ [SURFACED | Companion §6.9.7 | → Anchor Appendix B §B.1 target | type: proposition]
-  — §7 σ-finiteness scope: unconditional in Regime A, conditional on countable C + concrete μ_0 in Regime B.
-
-⚑ [SURFACED | Companion §6.10.2.1 | → Anchor §1.10 target | type: lemma]
-  — Iterated adjunction coherence of ι, κ over Up(S); no extra DAG-poset coherence cells.
-
-⚑ [SURFACED | Companion §6.10.3.1 | → Anchor §1.10 target | type: lemma]
-  — Cocompleteness of Outer(S) as ι-Grothendieck construction; κ-variant is complete-not-cocomplete.
-
-⚑ [SURFACED | Companion §6.10.4.1 | → Anchor §1.10 + §3.8 target | type: theorem]
-  — Indexed adjunction ι_S ⊣ ω_S between Inner(S) and Outer(S) via Kelly §1.11.
-
-⚑ [SURFACED | Companion §6.10.4.2 | → Anchor §3.8 target | type: corollary]
-  — No terminal whole ⇒ no absolute outer section; "view from nowhere" is not an object of the framework.
-
-⚑ [SURFACED | Companion §6.10.5.2 | → Anchor §1.10 target | type: theorem]
-  — Content as hom-profunctor Ψ_S of the ι_S ⊣ ω_S adjunction; third-axis reading is the profunctor's structural shadow.
-
-⚑ [SURFACED | Companion §6.10.6.2 | → Anchor §1.10 target | type: theorem]
-  — η is the G-coalgebra structure map; Content-capacity residue is the cokernel of η.
-
-⚑ [SURFACED | Companion §6.10.6.4 | → Anchor §3.8 + future probe | type: definition-and-conjecture]
-  — Residue as cokernel; quantitative Form-register invariant as coalgebra-invariant (conjectural).
-```
-
-These land in future Anchor revisions per SCOPE.md §8 back-port lifecycle.
 
 ---
 

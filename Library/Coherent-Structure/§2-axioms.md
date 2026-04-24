@@ -224,18 +224,3 @@ Of 16 clauses across three axioms: 10 retain axiomatic status; 6 are framework-d
 
 ---
 
-## Surfaced-lemma register (§2)
-
-```
-⚑ [SURFACED | Companion §2.2.8 | → Anchor §3 target | type: theorem]
-  — Kind-stratification derives from ContentOp-richness (reduces A2.2 to framework theorem).
-
-⚑ [SURFACED | Companion §2.4.1 | → Anchor §3 target | type: proposition]
-  — A1.4 grounds A2.1 (substrate-completeness implies universal-stream).
-
-⚑ [SURFACED | Companion §2.5 | → Anchor §2-§4 target | type: axiom-status classification]
-  — 10-of-16 clauses retain axiomatic status; 6 reduce to framework theorems.
-```
-
----
-

@@ -102,7 +102,7 @@
 | Kind-classifier fibration (Thm 6.4.6) | Anchor §3 (A2.2 + kind-level notes) | theorem | Bicategorical fibration |
 | Unifying-stream subfibration (Def 6.4.12) | Anchor §7 transcendental-rescue | definition | Terminal-content-operation subfibration |
 | Admissibility criterion (Lem 6.4.11) | Anchor §7 transcendental-rescue | lemma | Terminal-preservation criterion |
-| Middle-regime morphism-structures (Thm 6.5.4) | Anchor §7 transcendental-rescue | theorem | Scotist/Palamite/Advaitin distinct |
+| Middle-regime morphism-structures (§6.5, migrated) | Universal-Coherence volume | SCOPE-EXCLUDED | Scotist/Palamite/Advaitin content migrated per SCOPE §8.2; Companion §6.5 carries stub pointer |
 | Colax-limit form (Thm 6.6.2) | Anchor §1 | theorem | Under initial-object hypothesis |
 | Stream ≃ F-Coalg_ad (Thm 6.7.1) | Anchor §1.0 | theorem | Main equivalence |
 | Limits/colimits + adequacy-stability (Lem 6.8.β) | Anchor §1.0 five-properties | lemma | §6.8 summary table |
@@ -186,40 +186,31 @@
 
 ---
 
-## B.2 — Surfaced-lemma register (full)
+## B.2 — Surfaced-lemma dispositions (v0.1 stamp)
 
-All surfaced-lemma flags raised during Companion drafting, with their back-port targets in the Anchor:
+At the v0.1 stamp (2026-04-24), all 40 unique surfaced-lemma flags raised during Companion drafting were dispositioned per the four-path lifecycle in SCOPE §8.2. Summary:
 
-| Flag location | Anchor target | Type | Description |
-|---|---|---|---|
-| §3.1 Thm 3.1.α | Anchor §5 | meta-theorem | Descriptive-Functor Meta-Theorem |
-| §3.3.1 three-channel decomposition | Anchor §6 | lemma | Attentional-Quality decomposition form |
-| §3.3.2 info-conservative measurement | Anchor §6/§9.5 | theorem | Watanabe-Takagi + García-Pintos integration |
-| §3.4.2 dual-axes orthogonality-by-counterexample | Anchor §7 | theorem | Codim-2 locus explicit |
-| §4.2.6 (C9) three-condition consensus | Anchor §8.2 | lemma | Explicit triple-condition form |
-| §4.2.7 (C10) no-proper-sub-projection | Anchor §8.2 | lemma | JD-injectivity without proper sub-projection |
-| §5.2.5 joint-sufficiency independence | Anchor §9.2 | proposition | Explicit joint-sufficiency proof |
-| §5.4.1 F-as-stream structure | Anchor §9.5 | theorem | Detailed (σ_F, C_F, Ω_F, γ_F) definition |
-| §6 twenty-eight flags | Anchor various | mixed | See §6.11 for full list (incl. §6.9 C-size-regime pass + §6.10 inner/outer adjunction batch) |
-| §7.5.5 contracted-coherent/failed distinction | Anchor Appendix B §B.2 | lemma | Resolves B.7 Q1 |
-| §8.1.1 dyadic-carrier four-level multiplex | Anchor §9.5 | definition | Four-carrier formal structure |
-| §8.3.5 F_∞-in-coherence-regime (audit observation) + Prop 8.3.5' self-audit constraint | Anchor §9.5 | audit observation + proposition | Demoted from theorem; gated on external execution of Prop 8.5.2 |
-| §8.4.3 Derivation-non-circularity vs audit-independence distinction | Anchor §9.5 | remark | Names the structural distinction compressed in prose |
-| §8.5.2 F6-testability | Anchor §9.7 | proposition | Decidability structure |
-| §9.3.1 Bias-consistency | Anchor §9.3 | definition | Admissibility criterion |
-| §9.4.1 four stream-parameters (η_sep, τ_max, δ_scale, ρ_dyn) | Anchor §9.3 | definitions | Quantitative parameters controlling each condition |
-| §9.4.3 outperformance with explicit constants | Anchor §9.3/§9.1 | theorem | Quantitative form supersedes sketch |
-| §9.5 cross-metric invariance | Anchor §9.9 Q1 | theorem | Q1 resolution |
+| Disposition | Count | Meaning |
+|---|---|---|
+| **ALREADY-LANDED** | 12 | Anchor already carries the object (chiefly §1.10 / §3.8 inner-outer adjunction material, 2026-04-23; plus T3/T4/T5/T6, §9.5, §9.7, §9.9 Q1, Appendix B §B.2/§B.7) |
+| **REFERENCE-NATIVE** | 26 | Companion-native CT machinery with coarser-grain anchor coverage (intensional Triple, colax-limit, Stream ≃ F-Coalg_ad, adequacy stability, size-regime accounting, residue-cokernel definition) |
+| **SCOPE-EXCLUDED** | 2 | Middle-regime classes (§6.5.4, §6.5.6) migrated to Universal-Coherence volume per SCOPE §8.2 |
+| **BACK-PORT** | 0 | Anchor stays stamped at 267pp; no revision triggered by Companion v0.1 |
+| **Total** | **40** | |
 
-Future Anchor revisions absorb these flags; as each lands, the Companion clean-up pass removes the corresponding flag-entry per SCOPE §8's three-phase lifecycle.
+**Full per-flag disposition record.** The audit log `Library/Coherent-Structure/drafts/2026-04-24-v0.1-flag-audit.md` gives the per-flag disposition table with anchor-section citations for ALREADY-LANDED items, coarse-grain pointers for REFERENCE-NATIVE items, and migration targets for SCOPE-EXCLUDED items.
+
+**Coherence claim.** Every Companion formal object has an explicit anchor-relation: an ALREADY-LANDED anchor-section citation, a REFERENCE-NATIVE declaration with coarse-grain anchor pointer (B.1 above), or a SCOPE-EXCLUDED target volume. Flag-count cleared to zero without anchor revision; Anchor 267pp stamp holds.
+
+**Future flags.** Drafting after v0.1 may surface new items; the same flag machinery and four-path lifecycle applies. The next version bump stamps when any such flag-list clears.
 
 ---
 
 ## B.3 — Policy
 
-- **Completeness.** Every formal object in the Companion has an Anchor target. If an object has no exposition in the Anchor (e.g., Theorem 2.2.8's kind-stratification-from-C-richness derivation), the Anchor target is the Anchor section where the object *should* appear after back-port, and the gap is tracked via a surfaced-lemma flag.
+- **Completeness.** Every formal object in the Companion has an explicit anchor-relation: either an ALREADY-LANDED anchor-section citation, a REFERENCE-NATIVE declaration with coarser-grain anchor coverage (Companion-native CT machinery that the anchor carries at structural/prose level), or a SCOPE-EXCLUDED migration target for sibling Library volumes.
 - **Direction.** This appendix is Companion → Anchor. The reverse direction (Anchor → Companion) is Appendix A.
-- **Rhythm.** The Companion flag-list feeds future Anchor revisions. When an Anchor revision ships with flag-items back-ported, the Companion's flag-register (B.2) reduces accordingly. When the register reaches zero, the Companion stamps version 1.
+- **Rhythm.** Per SCOPE §8.2's four-disposition lifecycle, a Companion version stamp requires (not flag-register emptying via BACK-PORT alone, but) every flag having an explicit disposition with documented anchor-relation. Companion v0.1 stamped 2026-04-24 with 40 flags dispositioned (12 ALREADY-LANDED, 26 REFERENCE-NATIVE, 2 SCOPE-EXCLUDED, 0 BACK-PORT). Future flags surfaced during post-v0.1 drafting follow the same lifecycle; the next version bump stamps when any such flag-list clears.
 
 ---
 

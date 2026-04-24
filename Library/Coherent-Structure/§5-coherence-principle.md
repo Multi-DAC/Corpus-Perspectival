@@ -127,8 +127,6 @@ The outperformance claim of Theorem 5.1.2 uses the trajectory-divergence functio
 
 **Remark 5.4.3 (Non-circularity).** The closure is a-posteriori: the construction did not presuppose the Principle (the Principle was *derived* from the axiom/theorem stress-test); it is observed after the fact that the construction-process exhibited the four conditions. This is not a circular proof — it is an empirical observation about the framework's own construction-history. §8 audits the observation.
 
-⚑ [SURFACED | Companion §5.4 | → Anchor §9.5 target | type: theorem]
-
 ---
 
 ## §5.5 — Necessity of each condition (falsification-table reference)

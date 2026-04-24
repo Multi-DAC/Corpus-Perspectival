@@ -27,15 +27,13 @@ The Companion is deliberately inhospitable to a reader who has not first engaged
 - **Diagram-first** where diagrams clarify faster than symbols. §10 is the reference-standard TikZ figure set.
 - **Unified notation.** §1 front-loads every type, functor, natural transformation, and symbol used in the volume. Notation drift is the one thing that would defeat the purpose of a reference companion.
 
-## Surfaced-lemma flags
+## Surfaced-lemma lifecycle (historical note)
 
-When full CT formalization surfaces a lemma or corollary that is latent in the anchor but not stated there, it is recorded in place with a flag:
+During drafting, items that surfaced during CT formalization — lemmas, corollaries, or theorems latent in the anchor but not stated there — were recorded in place with a flag of the form `⚑ [SURFACED | Companion §X.Y | → Anchor §Z target | type]` and tracked toward resolution per SCOPE.md §8.
 
-```
-⚑ [SURFACED | Companion §X.Y | → Anchor §Z target | type: lemma/corollary]
-```
+At the **v0.1 stamp (2026-04-24 Day 83)**, all 40 surfaced flags were dispositioned per the four-path lifecycle in SCOPE §8.2: 12 ALREADY-LANDED in the stamped anchor (chiefly §1.10 + §3.8 inner/outer-adjunction material, 2026-04-23), 26 declared REFERENCE-NATIVE as pure Companion CT machinery with anchor-coarse-grain coverage, 2 SCOPE-EXCLUDED to Universal Coherence (§6.5 middle-regime classes), 0 requiring anchor back-port. The flag-count therefore cleared to zero without requiring anchor revision. Every Companion item carries a documented anchor-relation via Appendix B.
 
-The flag names where the item lives in the Companion, which anchor section it back-ports into, and its type. These flags serve as the docket for future anchor revisions.
+Future drafting may surface new items; the same flag machinery and four-path lifecycle applies. The volume's next version bump stamps when any such flag-list clears.
 
 ## Structure
 

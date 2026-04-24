@@ -150,8 +150,6 @@ $$
 
 **Corollary 7.5.5 (Contracted-coherent vs contracted-failed distinction).** *A stream in the contracted regime (A_S → 0) is **contracted-coherent** iff Align(S, t) > 0 with low variance; **contracted-failed** iff Align(S, t) ≤ 0 or Align(S, t) > 0 with high variance. This is the formal form of Anchor Appendix B §B.2's stamped distinction.*
 
-⚑ [SURFACED | Companion §7.5 | → Anchor Appendix B §B.2 target | type: lemma]
-
 ---
 
 ## §7.6 — Extensional (σ_F, K_F, Ω_F, γ_F) at measurable-stream layer

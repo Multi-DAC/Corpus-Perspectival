@@ -56,7 +56,9 @@ Mirrors the anchor's spine, not a citation-resolution order.
 
 ## 7. Rolling-document status
 
-The Companion is a **rolling document** during the current phase. Anchor revisions can land Companion-citing content without waiting on a Companion version bump. The Companion stamps a version when §8's flag-list goes to zero.
+The Companion is a **rolling document** during the current phase. Anchor revisions can land Companion-citing content without waiting on a Companion version bump. The Companion stamps a version when §8's flag-list goes to zero via any combination of the four dispositions in §8.2.
+
+**v0.1 stamped 2026-04-24** (Day 83). 40 flags dispositioned: 12 ALREADY-LANDED, 26 REFERENCE-NATIVE, 2 SCOPE-EXCLUDED (→ Universal Coherence), 0 BACK-PORT. Anchor stays at 267pp — no revision triggered by v0.1. Audit log: `drafts/2026-04-24-v0.1-flag-audit.md`.
 
 ## 8. Surfaced-lemma lifecycle
 
@@ -69,16 +71,39 @@ When full CT formalization surfaces a lemma or corollary that is latent in the a
 **Four fields:**
 - **SURFACED 2026-MM-DD** — date the item surfaced during formalization
 - **Companion §X.Y** — where the item lives in the Companion
-- **→ Anchor §Z target** — the anchor section it should back-port into
-- **type** — lemma or corollary
+- **→ Anchor §Z target** — the anchor section it should back-port into (or disposition marker per §8.2 below)
+- **type** — lemma / corollary / theorem / proposition / definition-and-conjecture
 
-**Three-phase lifecycle:**
+### 8.1 Original three-phase lifecycle (default path)
 
 1. **Surface:** CT formalization surfaces the item → flagged in the Companion as above
 2. **Back-port:** Next anchor revision incorporates the flagged items; anchor rev_N+1 ships
 3. **Clear:** Companion cleanup pass removes flags whose items now live in the anchor; when flag-list reads zero, Companion version_N stamps
 
 The flag-count is the Companion's version-ready signal: **zero flags = version-stampable**.
+
+### 8.2 Four-disposition extension *(added 2026-04-24 Day 83)*
+
+Experience through the Day-78 → Day-83 formalization pass (anchor stamp 2026-04-20; §1.10 + §3.8 landings 2026-04-23; §6.10 F-coalgebra integration 2026-04-24) revealed that not every surfaced item is structurally awaiting back-port. Some items have already landed in a prior anchor revision; some are Companion-native formal content whose anchor counterpart is at a coarser-than-item granularity (or is structurally unnecessary); some belong to other Library volumes. The three-phase lifecycle in §8.1 remains the default; the extension supplies four terminal dispositions through which any given flag can clear.
+
+**The four dispositions:**
+
+| Disposition | Meaning | Clearance action |
+|---|---|---|
+| **BACK-PORT** | Item needs anchor prose counterpart that does not yet exist. | Anchor revision rev_N+1 absorbs the item. Flag clears on next Companion cleanup pass after rev_N+1 ships. (The §8.1 default path.) |
+| **ALREADY-LANDED** | Item's corresponding anchor material already exists in the current stamped anchor. | Audit to confirm anchor location; add or update AppendixB row; remove flag in-place. No anchor revision needed. |
+| **REFERENCE-NATIVE** | Item is Companion-original formal content whose anchor-prose counterpart is at coarser granularity (a section-level claim the item makes precise) or is structurally not required (the item is pure CT machinery internal to the Companion). | Reclassify: keep item in place as Companion text; add AppendixB row citing the coarse-grain anchor location (or explicitly marking "Companion-native — no finer anchor target"); remove flag. |
+| **SCOPE-EXCLUDED** | Item belongs to a different Library volume (Universal Coherence, a domain volume, The Killing Form, etc.). | Move item's content to the target volume's drafts / research folder with a crosswalk pointer; remove from Companion; remove flag. |
+
+**Disposition-assignment protocol:**
+
+Each flag's disposition is assigned during an **audit pass** that can be performed on demand (not only at cleanup). For each flag, the audit records: disposition, clearance-action taken, date, and — for REFERENCE-NATIVE flags — the rationale (why the anchor's coarser-grain coverage is sufficient, or why the item is structurally pure Companion-machinery).
+
+**Clearance-count semantics:**
+
+The stamp-ready condition is unchanged: **zero flags = version-stampable**. The extension widens the paths to zero. A Companion version-stamp after an audit-and-clearance pass reports the disposition breakdown in its changelog (e.g., *v0.1 stamp cleared N flags: A BACK-PORT via anchor rev_N+1, B ALREADY-LANDED, C REFERENCE-NATIVE, D SCOPE-EXCLUDED*).
+
+**Why this extension preserves the contract.** The §2 done-enough criterion is unchanged: every CT sketch in the anchor has a corresponding full CT development in the Companion, and a mathematician reading the Companion alone can verify the formal structure. The extension records, for each piece of Companion content, *how* that content relates to the anchor — whether as a back-port target, as an already-anchored claim, as a Companion-native refinement, or as out-of-scope-here-but-anchored-in-sibling-volume. Coherence between the two volumes is maintained by documented disposition for every flag.
 
 ## 9. Figure back-port policy
 

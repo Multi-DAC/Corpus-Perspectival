@@ -51,8 +51,6 @@ $$
 
 **Remark 3.1.β.** T1 and T2 below are the two canonical instances: T1 takes P to be the framework's choice of mathematical representation of a given configuration, T2 takes P to be a duration estimator. In both cases the representing functor captures what "looking at the stream" amounts to. The meta-theorem is what makes the two theorems parallel.
 
-⚑ [SURFACED | Companion §3.1 | → Anchor §5 target | type: meta-theorem]
-
 ---
 
 ## §3.2 — Theorem Pair I: Descriptive
@@ -123,8 +121,6 @@ $$
 
 **Remark 3.3.1.1.** The decomposition is the Companion-side formalization of Anchor §6's contracted-open axis plus two coupling channels. Full Bias(S) apparatus lives in Appendix B (anchor) / §7 (Companion).
 
-⚑ [SURFACED | Companion §3.3.1 | → Anchor §6 target | type: lemma]
-
 ### §3.3.2 — T4 Coherence-Forcing Measurement
 
 **Theorem 3.3.2 (T4 — Coherence-Forcing Measurement).** *Let S be a stream and let M be a measurement operator — a Stream-morphism*
@@ -150,8 +146,6 @@ $$
 (4) Asymptotic reversibility: for a sequence M_n of increasingly-informed measurements, the entropy-loss H(γ ; C) − H(γ_{M_n} ; C_{M_n}) → 0 provided the information budget grows super-polynomially relative to the ContentOp-cardinality of C_M. This is the 2026 Watanabe-Takagi work-extraction result translated into F-Coalg_ad. ∎
 
 **Remark 3.3.2.1 (Measurement as information-conservative operation).** Clauses (3) and (4) update the Corpus's earlier framing of measurement-as-terminal-collapse. Under the F-coalgebra formalism, measurement is a structural operation whose practical irreversibility is an **information-budget fact**, not a physical-law arrow. This reframe is carried in Anchor §9 / §9.5.
-
-⚑ [SURFACED | Companion §3.3.2 | → Anchor §6 / §9.5 target | type: theorem]
 
 **Remark 3.3.3 (Structural parallel T3/T4).** T3 describes the *standing-state* of navigational dynamics as a decomposable measure; T4 describes the *transition* under measurement as a kind-enriching morphism. Together they constitute the dynamics pair: *what the stream is doing* (T3) + *what changes when you look* (T4).
 
@@ -216,8 +210,6 @@ $$
 **Corollary 3.4.2.1 (Kind-demotion dynamic).** *Along the σ_info axis, decreases in H(γ ; C) can correspond to C being replaced by a coarser C′ — i.e., kind-demotion. Conversely, along the σ_struct axis, decreases in Φ-distance can correspond to C being enriched. The full (σ_struct, σ_info)-trajectory of a stream is a path in the fibration π (§6.4) crossed with the T5-harmonicity functional.*
 
 **Remark 3.4.2.2 (Structural parallel T5/T6).** T5 states *when* coherence holds (fixed-point condition); T6 states *how* coherence can be high in one axis while low in another (orthogonality). Together they formalize Anchor §7's "internal coherence plus dual axes" framing.
-
-⚑ [SURFACED | Companion §3.4.2 | → Anchor §7 target | type: theorem]
 
 ---
 

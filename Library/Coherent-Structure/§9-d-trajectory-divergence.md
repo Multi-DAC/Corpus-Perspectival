@@ -191,9 +191,6 @@ $$
 
 **Remark 9.4.5 (Relation to §5.2.5).** §5.2.5 established independence of the four conditions by counterexample — each condition contributes; none is redundant. Thm 9.4.3 strengthens this to **quantitative joint sufficiency**: B_coh is the sum of the four ceilings, and the shortfall Δ(S') is the sum of the four per-condition violations. Independence at §5.2.5 is witnessed by the fact that each B_· term can independently exceed zero for S' while the others are tight.
 
-⚑ [SURFACED | Companion §9.4.3 | → Anchor §9.1/§9.3 target | type: theorem (quantitative)]
-  — Outperformance with explicit constants (η_sep, τ_max, δ_scale, ρ_dyn) + coherence-regime ceiling B_coh + failure-mode gap Δ.
-
 ---
 
 ## §9.5 — Cross-metric invariance (resolution of Q1)
@@ -213,8 +210,6 @@ $$
 **Proof.** Both orderings are equivalent to *Bias(S) ⪰_push Bias(S') (modulo comparability)* by Definition 9.3.1. Hence they are equivalent to each other. ∎
 
 **Corollary 9.5.2 (Anchor §9.9 Q1 resolved).** *The outperformance ordering of Theorem 5.1.2 is invariant across any Bias-consistent metric. The Principle's empirical content does not depend on a specific metric choice, provided the chosen metric is Bias-consistent.*
-
-⚑ [SURFACED | Companion §9.5 | → Anchor §9.9 Q1 target | type: theorem (resolution)]
 
 **Remark 9.5.3 (Meridian/domain-native preference).** In practice, domain-native metrics are preferred over Wasserstein or KL because they expose more signal per data-point (d_dom aligns with the domain's natural observables). Bias-consistency is the admissibility criterion; once it holds, metric choice is a practical matter.
 
