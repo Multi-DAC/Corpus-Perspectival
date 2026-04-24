@@ -77,13 +77,47 @@ $\Box$
 
 ---
 
-## Status after §6.10.1 + §6.10.2
+## §6.10.3 — Lemma 2* (Outer as ι-Grothendieck construction is cocomplete)
 
-- §6.10.1 landed: definitions of $\mathbf{Inner}(S)$, $\mathbf{Outer}(S)$ (preview); notation summary; scope remark.
-- §6.10.2 landed: Lemma 1 (iterated adjunction coherence) with proof and the $\iota$-vs-$\kappa$ remark justifying the §6.10.3 construction choice.
-- Remaining in §6.10: Lemma 2* (Outer cocomplete via Grothendieck), §6.10.4 Theorem (indexed adjunction $\iota_S \dashv \omega_S$), §6.10.5 (Content as profunctor), §6.10.6 ($\eta$ formalization — J5 decision needed before drafting).
+**Lemma 6.10.3.1 (Cocompleteness of $\mathbf{Outer}(S)$ under $\iota$-transitions).** The Grothendieck construction
+$$
+\mathbf{Outer}(S) \;=\; \int_{S_q \in \mathrm{Up}(S)} \mathrm{Form}(S_q)
+$$
+with transition-maps given by $\iota_{S_q \subset S_r}$ for each $S_q \subseteq S_r$ in $\mathrm{Up}(S)$ is **cocomplete**. Explicitly: $\mathbf{Outer}(S)$ admits all small colimits, and these are computed level-wise — the colimit of a diagram in $\mathbf{Outer}(S)$ is a pair $(S_*, \varphi_*)$ where $S_*$ is the colimit of the diagram's projection to $\mathrm{Up}(S)$ and $\varphi_* = \mathrm{colim}\, \iota_{S_q \subset S_*}(\varphi_{S_q})$ in $\mathrm{Form}(S_*)$.
 
-**J5 is not forced by anything in §§6.10.1–6.10.2.** The setup and Lemma 1 are neutral; the decision only bites at §6.10.6 (the unit's residue formalization). Safe to draft §§6.10.3 and §6.10.4 before J5 resolves.
+**Proof.**
+
+*Step 1 (fiberwise cocompleteness).* Each fiber $\mathrm{Form}(S_q)$ is cocomplete by A2.5 and the Form-pattern generation structure established in anchor §1 (cf. Companion §1 / §2). Small colimits in $\mathrm{Form}(S_q)$ exist and are stable under the constructions needed below.
+
+*Step 2 (ι is cocontinuous).* Each $\iota_{S \subset S_q}$ is the left adjoint of the per-level A2.4 adjunction and therefore preserves all colimits that exist in its domain. The same holds for each $\iota_{S_q \subset S_r}$ in $\mathrm{Up}(S)$. By Lemma 6.10.2.1, the $\iota$-transitions compose covariantly and associatively up to natural isomorphism.
+
+*Step 3 (Grothendieck-cocompleteness applies).* The standard criterion for cocompleteness of a Grothendieck construction (Barr–Wells, *Toposes, Triples, and Theories* §2.8; alternatively Johnstone, *Sketches of an Elephant* B.1.5.8) states: if $\mathcal{B}$ is a small base and $P : \mathcal{B} \to \mathbf{Cat}$ is a pseudofunctor such that (i) each fiber $P(b)$ is cocomplete and (ii) each transition functor $P(f)$ for $f : b \to b'$ is cocontinuous, then $\int_{\mathcal{B}} P$ is cocomplete.
+
+Take $\mathcal{B} := \mathrm{Up}(S)$ viewed as a thin category (A2.6, poset structure; small by the size-regime conventions of §6.0 and §6.9), and $P(S_q) := \mathrm{Form}(S_q)$ with $P(S_q \subseteq S_r) := \iota_{S_q \subset S_r}$. Step 1 gives (i); Step 2 gives (ii). The criterion applies, yielding cocompleteness of $\int_{\mathrm{Up}(S)} \mathrm{Form}$.
+
+*Step 4 (level-wise computation).* The standard formula (Barr–Wells §2.8.3) gives colimits of $\mathbf{Outer}(S)$ as level-wise colimits in the base and fibers, exactly as stated.
+
+$\Box$
+
+**Remark 6.10.3.2 (κ-variant is NOT cocomplete — direction matters).** The dual Grothendieck construction $\int_{S_q \in \mathrm{Up}(S)^{\mathrm{op}}} \mathrm{Form}(S_q)$ with $\kappa$-transitions is *complete* but not cocomplete: $\kappa$ is a right adjoint and preserves limits, not colimits. The criterion of Step 3 fails on (ii) for the dualization.
+
+The two presentations are adjointly equivalent in a precise sense — each computes "all Forms of all wholes containing $S$" — but are not interchangeable for colimit arguments. §6.10.4's indexed-adjunction theorem requires a cocomplete base for the lifting of fiberwise adjunctions, so the choice of $\iota$-direction for $\mathbf{Outer}(S)$ is load-bearing and not cosmetic.
+
+This was the F3-closure-probe correction to an earlier F2 presentation that used κ-transitions; the drive-artifact lineage is documented in `Research/basement-drafts/F1-F3-closure-probe.md`.
+
+**Flag.** ⚑ [SURFACED | Companion §6.10.3.1 | → Anchor §1.10 target | type: lemma]
+  — Cocompleteness of $\mathbf{Outer}(S)$ as ι-Grothendieck construction; κ-variant is complete-not-cocomplete.
+
+---
+
+## Status after §6.10.1 + §6.10.2 + §6.10.3
+
+- §6.10.1 landed: definitions, notation, scope.
+- §6.10.2 landed: Lemma 1 (DAG-coherence of ι and κ).
+- §6.10.3 landed: Lemma 2* (Outer cocomplete via ι-Grothendieck; κ-variant NOT cocomplete).
+- Remaining in §6.10: §6.10.4 Theorem (indexed adjunction $\iota_S \dashv \omega_S$), §6.10.5 (Content as profunctor), §6.10.6 ($\eta$ formalization — **J5 decision needed before drafting**).
+
+**J5 is not forced by §§6.10.1–6.10.3.** The adjunction-direction correction in Remark 6.10.3.2 is structurally distinct from the J5 choice (which concerns *η*'s reification, not *ι* vs *κ*).
 
 ---
 
