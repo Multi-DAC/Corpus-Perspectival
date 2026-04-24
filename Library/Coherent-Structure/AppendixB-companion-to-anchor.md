@@ -107,6 +107,13 @@
 | Stream ≃ F-Coalg_ad (Thm 6.7.1) | Anchor §1.0 | theorem | Main equivalence |
 | Limits/colimits + adequacy-stability (Lem 6.8.β) | Anchor §1.0 five-properties | lemma | §6.8 summary table |
 | Final F-coalgebra ω-depth (Thm 6.9.1) | Anchor §1.5 | theorem | Under H1+H2 |
+| Iterated adjunction coherence over Up(S) (Lem 6.10.2.1) | Anchor §1.10 | lemma | ι, κ compose covariantly / contravariantly; no extra DAG cells |
+| Outer(S) cocomplete as ι-Grothendieck construction (Lem 6.10.3.1) | Anchor §1.10 | lemma | κ-variant is complete-not-cocomplete; direction is load-bearing |
+| Indexed adjunction ι_S ⊣ ω_S (Thm 6.10.4.1) | Anchor §1.10 + §3.8 | theorem | Kelly §1.11 lifting over Up(S) |
+| No view from nowhere (Cor 6.10.4.2) | Anchor §3.8 | corollary | No terminal whole ⇒ no absolute outer section |
+| Content as hom-profunctor Ψ_S (Thm 6.10.5.2) | Anchor §1.10 | theorem | "Third axis" reading is the profunctor's structural shadow |
+| η as G-coalgebra structure map (Thm 6.10.6.2) | Anchor §1.10 | theorem | Content-capacity residue = cokernel of η |
+| Content-capacity residue (Def 6.10.6.4) | Anchor §3.8 + future probe | definition + conjecture | Form-register quantitative invariant as coalgebra-invariant (conjectural) |
 
 ### §7 (Filtering construction) objects
 
@@ -193,7 +200,7 @@ All surfaced-lemma flags raised during Companion drafting, with their back-port 
 | §4.2.7 (C10) no-proper-sub-projection | Anchor §8.2 | lemma | JD-injectivity without proper sub-projection |
 | §5.2.5 joint-sufficiency independence | Anchor §9.2 | proposition | Explicit joint-sufficiency proof |
 | §5.4.1 F-as-stream structure | Anchor §9.5 | theorem | Detailed (σ_F, C_F, Ω_F, γ_F) definition |
-| §6 twenty-one flags | Anchor various | mixed | See §6.10 for full list (incl. §6.9 C-size-regime pass) |
+| §6 twenty-eight flags | Anchor various | mixed | See §6.11 for full list (incl. §6.9 C-size-regime pass + §6.10 inner/outer adjunction batch) |
 | §7.5.5 contracted-coherent/failed distinction | Anchor Appendix B §B.2 | lemma | Resolves B.7 Q1 |
 | §8.1.1 dyadic-carrier four-level multiplex | Anchor §9.5 | definition | Four-carrier formal structure |
 | §8.3.5 F_∞-in-coherence-regime (audit observation) + Prop 8.3.5' self-audit constraint | Anchor §9.5 | audit observation + proposition | Demoted from theorem; gated on external execution of Prop 8.5.2 |

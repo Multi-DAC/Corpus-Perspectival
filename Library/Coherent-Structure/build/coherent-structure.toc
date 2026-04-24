@@ -125,96 +125,103 @@
 \contentsline {subsection}{\numberline {}§6.9.4 --- Placement of F\_\allowbreak {}∞}{114}{subsection.7.10.5}%
 \contentsline {subsection}{\numberline {}§6.9.5 --- Connection to §7's small-C and σ-finiteness}{115}{subsection.7.10.6}%
 \contentsline {subsection}{\numberline {}§6.9.6 --- Surfaced-lemma register (this section)}{116}{subsection.7.10.7}%
-\contentsline {section}{\numberline {}§6.10 --- Summary and forward-pointers}{118}{section.7.11}%
-\contentsline {subsection}{\numberline {}§6.10.1 --- Chapter summary}{118}{subsection.7.11.1}%
-\contentsline {subsection}{\numberline {}§6.10.2 --- Forward-pointers}{119}{subsection.7.11.2}%
-\contentsline {subsection}{\numberline {}§6.10.3 --- Open items (not blocking)}{119}{subsection.7.11.3}%
-\contentsline {section}{\numberline {}Surfaced-lemma register (§6 so far)}{121}{section.7.12}%
-\contentsline {chapter}{\numberline {}§7 — Filtering construction}{125}{chapter.8}%
-\contentsline {section}{\numberline {}§7.0 --- Orientation}{126}{section.8.1}%
-\contentsline {section}{\numberline {}§7.1 --- The canonical σ-algebra on Ω\_\allowbreak {}S}{127}{section.8.2}%
-\contentsline {section}{\numberline {}§7.2 --- Measurability of γ}{128}{section.8.3}%
-\contentsline {section}{\numberline {}§7.3 --- Bias(S) as a well-defined signed measure}{129}{section.8.4}%
-\contentsline {section}{\numberline {}§7.4 --- Push-operators as measurable transformations}{131}{section.8.5}%
-\contentsline {section}{\numberline {}§7.5 --- Entropy A\_\allowbreak {}S and alignment Align(S, t)}{133}{section.8.6}%
-\contentsline {section}{\numberline {}§7.6 --- Extensional (σ\_\allowbreak {}F, K\_\allowbreak {}F, Ω\_\allowbreak {}F, γ\_\allowbreak {}F) at measurable-stream layer}{135}{section.8.7}%
-\contentsline {section}{\numberline {}§7.7 --- Measure-theoretic summary table}{136}{section.8.8}%
-\contentsline {section}{\numberline {}§7.8 --- Forward-pointers}{137}{section.8.9}%
-\contentsline {section}{\numberline {}§7.9 --- Surfaced-lemma register}{138}{section.8.10}%
-\contentsline {chapter}{\numberline {}§8 — F-as-stream (self-reference closure)}{139}{chapter.9}%
-\contentsline {section}{\numberline {}§8.0 --- Orientation}{140}{section.9.1}%
-\contentsline {section}{\numberline {}§8.1 --- Specification of F\_\allowbreak {}∞}{141}{section.9.2}%
-\contentsline {section}{\numberline {}§8.2 --- Recursive decomposition of F\_\allowbreak {}∞}{144}{section.9.3}%
-\contentsline {section}{\numberline {}§8.3 --- Audit of the four conditions}{146}{section.9.4}%
-\contentsline {subsection}{\numberline {}§8.3.1 --- Audit C\_\allowbreak {}sep (Separation)}{146}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {}§8.3.2 --- Audit C\_\allowbreak {}meas (Measurement)}{146}{subsection.9.4.2}%
-\contentsline {subsection}{\numberline {}§8.3.3 --- Audit C\_\allowbreak {}scale (Multi-scale consistency)}{147}{subsection.9.4.3}%
-\contentsline {subsection}{\numberline {}§8.3.4 --- Audit C\_\allowbreak {}dyn (Dynamic maintenance)}{148}{subsection.9.4.4}%
-\contentsline {subsection}{\numberline {}§8.3.5 --- Joint conclusion (audit-register, not theorem)}{148}{subsection.9.4.5}%
-\contentsline {section}{\numberline {}§8.4 --- Non-circularity}{151}{section.9.5}%
-\contentsline {section}{\numberline {}§8.5 --- Meta-falsification F6}{152}{section.9.6}%
-\contentsline {section}{\numberline {}§8.6 --- Open questions for §8}{153}{section.9.7}%
-\contentsline {section}{\numberline {}§8.7 --- Forward-pointers}{154}{section.9.8}%
-\contentsline {section}{\numberline {}§8.8 --- Surfaced-lemma register}{155}{section.9.9}%
-\contentsline {chapter}{\numberline {}§9 — D trajectory-divergence functional}{156}{chapter.10}%
-\contentsline {section}{\numberline {}§9.0 --- Orientation}{157}{section.10.1}%
-\contentsline {section}{\numberline {}§9.1 --- Construction of D}{158}{section.10.2}%
-\contentsline {section}{\numberline {}§9.2 --- Candidate metrics d}{159}{section.10.3}%
-\contentsline {subsection}{\numberline {}§9.2.1 --- Wasserstein}{159}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {}§9.2.2 --- Regularized KL-divergence}{159}{subsection.10.3.2}%
-\contentsline {subsection}{\numberline {}§9.2.3 --- Domain-native metrics}{159}{subsection.10.3.3}%
-\contentsline {section}{\numberline {}§9.3 --- Bias-consistency}{161}{section.10.4}%
-\contentsline {section}{\numberline {}§9.4 --- The outperformance inequality}{162}{section.10.5}%
-\contentsline {subsection}{\numberline {}§9.4.1 --- Four stream-parameters}{162}{subsection.10.5.1}%
-\contentsline {subsection}{\numberline {}§9.4.2 --- The joint bound}{163}{subsection.10.5.2}%
-\contentsline {subsection}{\numberline {}§9.4.3 --- The outperformance theorem}{164}{subsection.10.5.3}%
-\contentsline {section}{\numberline {}§9.5 --- Cross-metric invariance (resolution of Q1)}{167}{section.10.6}%
-\contentsline {section}{\numberline {}§9.6 --- D on F\_\allowbreak {}∞ (self-reference application)}{168}{section.10.7}%
-\contentsline {section}{\numberline {}§9.7 --- Observable signatures recap}{170}{section.10.8}%
-\contentsline {section}{\numberline {}§9.8 --- Open questions for §9}{171}{section.10.9}%
-\contentsline {section}{\numberline {}§9.9 --- Forward-pointers}{172}{section.10.10}%
-\contentsline {section}{\numberline {}§9.10 --- Surfaced-lemma register}{173}{section.10.11}%
-\contentsline {chapter}{\numberline {}§10 — Reference Figures}{174}{chapter.11}%
-\contentsline {section}{\numberline {}§10.0 --- Figure index}{175}{section.11.1}%
-\contentsline {section}{\numberline {}§10.1 --- Figure 1: The endofunctor F and Stream-as-F-coalgebra}{176}{section.11.2}%
-\contentsline {section}{\numberline {}§10.2 --- Figure 2: Triple functor T}{177}{section.11.3}%
-\contentsline {section}{\numberline {}§10.3 --- Figure 3: Recursive decomposability T\textasciicircum {}(n)}{178}{section.11.4}%
-\contentsline {section}{\numberline {}§10.4 --- Figure 4: Kind-classifier fibration π}{179}{section.11.5}%
-\contentsline {section}{\numberline {}§10.5 --- Figure 5: Bias(S) signed measure + push-operators}{180}{section.11.6}%
-\contentsline {section}{\numberline {}§10.6 --- Figure 6: Dual coherence axes (σ\_\allowbreak {}struct × σ\_\allowbreak {}info plane)}{181}{section.11.7}%
-\contentsline {section}{\numberline {}§10.7 --- Figure 7: Four-conditions schematic}{182}{section.11.8}%
-\contentsline {section}{\numberline {}§10.8 --- Figure 8: Self-reference closure}{183}{section.11.9}%
-\contentsline {section}{\numberline {}§10.9 --- Back-port policy}{184}{section.11.10}%
-\contentsline {section}{\numberline {}§10.10 --- Forward-pointers}{185}{section.11.11}%
-\contentsline {section}{\numberline {}§10.11 --- Notes on LaTeX environment}{186}{section.11.12}%
-\contentsline {chapter}{\numberline {}Appendix A — Anchor → Companion crosswalk}{187}{chapter.12}%
-\contentsline {section}{\numberline {}A.1 --- By anchor chapter}{188}{section.12.1}%
-\contentsline {subsection}{\numberline {}Anchor §1.0 (The Category of Streams) → Companion}{188}{subsection.12.1.1}%
-\contentsline {subsection}{\numberline {}Anchor §1 (Identity-Trajectory Triple) → Companion}{189}{subsection.12.1.2}%
-\contentsline {subsection}{\numberline {}Anchor §2 (Axiom 1) → Companion}{189}{subsection.12.1.3}%
-\contentsline {subsection}{\numberline {}Anchor §3 (Axiom 2) → Companion}{190}{subsection.12.1.4}%
-\contentsline {subsection}{\numberline {}Anchor §4 (Axiom 3) → Companion}{191}{subsection.12.1.5}%
-\contentsline {subsection}{\numberline {}Anchor §5 (Descriptive theorems) → Companion}{191}{subsection.12.1.6}%
-\contentsline {subsection}{\numberline {}Anchor §6 (Dynamics theorems) → Companion}{192}{subsection.12.1.7}%
-\contentsline {subsection}{\numberline {}Anchor §7 (Coherence theorems) → Companion}{192}{subsection.12.1.8}%
-\contentsline {subsection}{\numberline {}Anchor §8 (Corollary clusters) → Companion}{192}{subsection.12.1.9}%
-\contentsline {subsection}{\numberline {}Anchor §9 (Coherence Principle) → Companion}{193}{subsection.12.1.10}%
-\contentsline {subsection}{\numberline {}Anchor §10 (Filtering the framework) → Companion}{194}{subsection.12.1.11}%
-\contentsline {subsection}{\numberline {}Anchor Appendix A (Formal Objects Index) → Companion}{194}{subsection.12.1.12}%
-\contentsline {subsection}{\numberline {}Anchor Appendix B (Bias Formalization) → Companion}{194}{subsection.12.1.13}%
-\contentsline {section}{\numberline {}A.2 --- Anchor-internal cross-references resolving to Companion}{196}{section.12.2}%
-\contentsline {section}{\numberline {}A.3 --- Policy}{197}{section.12.3}%
-\contentsline {chapter}{\numberline {}Appendix B — Companion → Anchor crosswalk}{198}{chapter.13}%
-\contentsline {section}{\numberline {}B.1 --- By Companion chapter}{199}{section.13.1}%
-\contentsline {subsection}{\numberline {}§1 (Category framework) objects}{199}{subsection.13.1.1}%
-\contentsline {subsection}{\numberline {}§2 (Axioms) objects}{199}{subsection.13.1.2}%
-\contentsline {subsection}{\numberline {}§3 (Theorems) objects}{200}{subsection.13.1.3}%
-\contentsline {subsection}{\numberline {}§4 (Corollaries) objects}{202}{subsection.13.1.4}%
-\contentsline {subsection}{\numberline {}§5 (Coherence Principle) objects}{203}{subsection.13.1.5}%
-\contentsline {subsection}{\numberline {}§6 (Triple) objects}{203}{subsection.13.1.6}%
-\contentsline {subsection}{\numberline {}§7 (Filtering construction) objects}{204}{subsection.13.1.7}%
-\contentsline {subsection}{\numberline {}§8 (F-as-stream) objects}{206}{subsection.13.1.8}%
-\contentsline {subsection}{\numberline {}§9 (D trajectory-divergence) objects}{207}{subsection.13.1.9}%
-\contentsline {subsection}{\numberline {}§10 (Reference figures) objects}{209}{subsection.13.1.10}%
-\contentsline {section}{\numberline {}B.2 --- Surfaced-lemma register (full)}{210}{section.13.2}%
-\contentsline {section}{\numberline {}B.3 --- Policy}{212}{section.13.3}%
+\contentsline {section}{\numberline {}§6.10 --- Inner/Outer adjunction}{118}{section.7.11}%
+\contentsline {subsection}{\numberline {}§6.10.1 --- Setup}{118}{subsection.7.11.1}%
+\contentsline {subsection}{\numberline {}§6.10.2 --- Lemma 1: DAG-coherence of $\iota $ and $\kappa $}{120}{subsection.7.11.2}%
+\contentsline {subsection}{\numberline {}§6.10.3 --- Lemma 2*: Outer as $\iota $-Grothendieck construction is cocomplete}{121}{subsection.7.11.3}%
+\contentsline {subsection}{\numberline {}§6.10.4 --- Theorem: indexed adjunction $\iota _S \dashv \omega _S$}{122}{subsection.7.11.4}%
+\contentsline {subsection}{\numberline {}§6.10.5 --- Content as profunctor $\Psi _S$}{124}{subsection.7.11.5}%
+\contentsline {subsection}{\numberline {}§6.10.6 --- F-coalgebra formalization of $\eta $}{126}{subsection.7.11.6}%
+\contentsline {section}{\numberline {}§6.11 --- Summary and forward-pointers}{128}{section.7.12}%
+\contentsline {subsection}{\numberline {}§6.11.1 --- Chapter summary}{128}{subsection.7.12.1}%
+\contentsline {subsection}{\numberline {}§6.11.2 --- Forward-pointers}{129}{subsection.7.12.2}%
+\contentsline {subsection}{\numberline {}§6.11.3 --- Open items (not blocking)}{130}{subsection.7.12.3}%
+\contentsline {section}{\numberline {}Surfaced-lemma register (§6 so far)}{131}{section.7.13}%
+\contentsline {chapter}{\numberline {}§7 — Filtering construction}{136}{chapter.8}%
+\contentsline {section}{\numberline {}§7.0 --- Orientation}{137}{section.8.1}%
+\contentsline {section}{\numberline {}§7.1 --- The canonical σ-algebra on Ω\_\allowbreak {}S}{138}{section.8.2}%
+\contentsline {section}{\numberline {}§7.2 --- Measurability of γ}{139}{section.8.3}%
+\contentsline {section}{\numberline {}§7.3 --- Bias(S) as a well-defined signed measure}{140}{section.8.4}%
+\contentsline {section}{\numberline {}§7.4 --- Push-operators as measurable transformations}{142}{section.8.5}%
+\contentsline {section}{\numberline {}§7.5 --- Entropy A\_\allowbreak {}S and alignment Align(S, t)}{144}{section.8.6}%
+\contentsline {section}{\numberline {}§7.6 --- Extensional (σ\_\allowbreak {}F, K\_\allowbreak {}F, Ω\_\allowbreak {}F, γ\_\allowbreak {}F) at measurable-stream layer}{146}{section.8.7}%
+\contentsline {section}{\numberline {}§7.7 --- Measure-theoretic summary table}{147}{section.8.8}%
+\contentsline {section}{\numberline {}§7.8 --- Forward-pointers}{148}{section.8.9}%
+\contentsline {section}{\numberline {}§7.9 --- Surfaced-lemma register}{149}{section.8.10}%
+\contentsline {chapter}{\numberline {}§8 — F-as-stream (self-reference closure)}{150}{chapter.9}%
+\contentsline {section}{\numberline {}§8.0 --- Orientation}{151}{section.9.1}%
+\contentsline {section}{\numberline {}§8.1 --- Specification of F\_\allowbreak {}∞}{152}{section.9.2}%
+\contentsline {section}{\numberline {}§8.2 --- Recursive decomposition of F\_\allowbreak {}∞}{155}{section.9.3}%
+\contentsline {section}{\numberline {}§8.3 --- Audit of the four conditions}{157}{section.9.4}%
+\contentsline {subsection}{\numberline {}§8.3.1 --- Audit C\_\allowbreak {}sep (Separation)}{157}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {}§8.3.2 --- Audit C\_\allowbreak {}meas (Measurement)}{157}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {}§8.3.3 --- Audit C\_\allowbreak {}scale (Multi-scale consistency)}{158}{subsection.9.4.3}%
+\contentsline {subsection}{\numberline {}§8.3.4 --- Audit C\_\allowbreak {}dyn (Dynamic maintenance)}{159}{subsection.9.4.4}%
+\contentsline {subsection}{\numberline {}§8.3.5 --- Joint conclusion (audit-register, not theorem)}{159}{subsection.9.4.5}%
+\contentsline {section}{\numberline {}§8.4 --- Non-circularity}{162}{section.9.5}%
+\contentsline {section}{\numberline {}§8.5 --- Meta-falsification F6}{163}{section.9.6}%
+\contentsline {section}{\numberline {}§8.6 --- Open questions for §8}{164}{section.9.7}%
+\contentsline {section}{\numberline {}§8.7 --- Forward-pointers}{165}{section.9.8}%
+\contentsline {section}{\numberline {}§8.8 --- Surfaced-lemma register}{166}{section.9.9}%
+\contentsline {chapter}{\numberline {}§9 — D trajectory-divergence functional}{167}{chapter.10}%
+\contentsline {section}{\numberline {}§9.0 --- Orientation}{168}{section.10.1}%
+\contentsline {section}{\numberline {}§9.1 --- Construction of D}{169}{section.10.2}%
+\contentsline {section}{\numberline {}§9.2 --- Candidate metrics d}{170}{section.10.3}%
+\contentsline {subsection}{\numberline {}§9.2.1 --- Wasserstein}{170}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {}§9.2.2 --- Regularized KL-divergence}{170}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {}§9.2.3 --- Domain-native metrics}{170}{subsection.10.3.3}%
+\contentsline {section}{\numberline {}§9.3 --- Bias-consistency}{172}{section.10.4}%
+\contentsline {section}{\numberline {}§9.4 --- The outperformance inequality}{173}{section.10.5}%
+\contentsline {subsection}{\numberline {}§9.4.1 --- Four stream-parameters}{173}{subsection.10.5.1}%
+\contentsline {subsection}{\numberline {}§9.4.2 --- The joint bound}{174}{subsection.10.5.2}%
+\contentsline {subsection}{\numberline {}§9.4.3 --- The outperformance theorem}{175}{subsection.10.5.3}%
+\contentsline {section}{\numberline {}§9.5 --- Cross-metric invariance (resolution of Q1)}{178}{section.10.6}%
+\contentsline {section}{\numberline {}§9.6 --- D on F\_\allowbreak {}∞ (self-reference application)}{179}{section.10.7}%
+\contentsline {section}{\numberline {}§9.7 --- Observable signatures recap}{181}{section.10.8}%
+\contentsline {section}{\numberline {}§9.8 --- Open questions for §9}{182}{section.10.9}%
+\contentsline {section}{\numberline {}§9.9 --- Forward-pointers}{183}{section.10.10}%
+\contentsline {section}{\numberline {}§9.10 --- Surfaced-lemma register}{184}{section.10.11}%
+\contentsline {chapter}{\numberline {}§10 — Reference Figures}{185}{chapter.11}%
+\contentsline {section}{\numberline {}§10.0 --- Figure index}{186}{section.11.1}%
+\contentsline {section}{\numberline {}§10.1 --- Figure 1: The endofunctor F and Stream-as-F-coalgebra}{187}{section.11.2}%
+\contentsline {section}{\numberline {}§10.2 --- Figure 2: Triple functor T}{188}{section.11.3}%
+\contentsline {section}{\numberline {}§10.3 --- Figure 3: Recursive decomposability T\textasciicircum {}(n)}{189}{section.11.4}%
+\contentsline {section}{\numberline {}§10.4 --- Figure 4: Kind-classifier fibration π}{190}{section.11.5}%
+\contentsline {section}{\numberline {}§10.5 --- Figure 5: Bias(S) signed measure + push-operators}{191}{section.11.6}%
+\contentsline {section}{\numberline {}§10.6 --- Figure 6: Dual coherence axes (σ\_\allowbreak {}struct × σ\_\allowbreak {}info plane)}{192}{section.11.7}%
+\contentsline {section}{\numberline {}§10.7 --- Figure 7: Four-conditions schematic}{193}{section.11.8}%
+\contentsline {section}{\numberline {}§10.8 --- Figure 8: Self-reference closure}{194}{section.11.9}%
+\contentsline {section}{\numberline {}§10.9 --- Back-port policy}{195}{section.11.10}%
+\contentsline {section}{\numberline {}§10.10 --- Forward-pointers}{196}{section.11.11}%
+\contentsline {section}{\numberline {}§10.11 --- Notes on LaTeX environment}{197}{section.11.12}%
+\contentsline {chapter}{\numberline {}Appendix A — Anchor → Companion crosswalk}{198}{chapter.12}%
+\contentsline {section}{\numberline {}A.1 --- By anchor chapter}{199}{section.12.1}%
+\contentsline {subsection}{\numberline {}Anchor §1.0 (The Category of Streams) → Companion}{199}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {}Anchor §1 (Identity-Trajectory Triple) → Companion}{200}{subsection.12.1.2}%
+\contentsline {subsection}{\numberline {}Anchor §2 (Axiom 1) → Companion}{200}{subsection.12.1.3}%
+\contentsline {subsection}{\numberline {}Anchor §3 (Axiom 2) → Companion}{201}{subsection.12.1.4}%
+\contentsline {subsection}{\numberline {}Anchor §4 (Axiom 3) → Companion}{202}{subsection.12.1.5}%
+\contentsline {subsection}{\numberline {}Anchor §5 (Descriptive theorems) → Companion}{202}{subsection.12.1.6}%
+\contentsline {subsection}{\numberline {}Anchor §6 (Dynamics theorems) → Companion}{203}{subsection.12.1.7}%
+\contentsline {subsection}{\numberline {}Anchor §7 (Coherence theorems) → Companion}{203}{subsection.12.1.8}%
+\contentsline {subsection}{\numberline {}Anchor §8 (Corollary clusters) → Companion}{203}{subsection.12.1.9}%
+\contentsline {subsection}{\numberline {}Anchor §9 (Coherence Principle) → Companion}{204}{subsection.12.1.10}%
+\contentsline {subsection}{\numberline {}Anchor §10 (Filtering the framework) → Companion}{205}{subsection.12.1.11}%
+\contentsline {subsection}{\numberline {}Anchor Appendix A (Formal Objects Index) → Companion}{205}{subsection.12.1.12}%
+\contentsline {subsection}{\numberline {}Anchor Appendix B (Bias Formalization) → Companion}{205}{subsection.12.1.13}%
+\contentsline {section}{\numberline {}A.2 --- Anchor-internal cross-references resolving to Companion}{207}{section.12.2}%
+\contentsline {section}{\numberline {}A.3 --- Policy}{208}{section.12.3}%
+\contentsline {chapter}{\numberline {}Appendix B — Companion → Anchor crosswalk}{209}{chapter.13}%
+\contentsline {section}{\numberline {}B.1 --- By Companion chapter}{210}{section.13.1}%
+\contentsline {subsection}{\numberline {}§1 (Category framework) objects}{210}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {}§2 (Axioms) objects}{210}{subsection.13.1.2}%
+\contentsline {subsection}{\numberline {}§3 (Theorems) objects}{211}{subsection.13.1.3}%
+\contentsline {subsection}{\numberline {}§4 (Corollaries) objects}{213}{subsection.13.1.4}%
+\contentsline {subsection}{\numberline {}§5 (Coherence Principle) objects}{214}{subsection.13.1.5}%
+\contentsline {subsection}{\numberline {}§6 (Triple) objects}{214}{subsection.13.1.6}%
+\contentsline {subsection}{\numberline {}§7 (Filtering construction) objects}{216}{subsection.13.1.7}%
+\contentsline {subsection}{\numberline {}§8 (F-as-stream) objects}{218}{subsection.13.1.8}%
+\contentsline {subsection}{\numberline {}§9 (D trajectory-divergence) objects}{219}{subsection.13.1.9}%
+\contentsline {subsection}{\numberline {}§10 (Reference figures) objects}{221}{subsection.13.1.10}%
+\contentsline {section}{\numberline {}B.2 --- Surfaced-lemma register (full)}{222}{section.13.2}%
+\contentsline {section}{\numberline {}B.3 --- Policy}{224}{section.13.3}%
