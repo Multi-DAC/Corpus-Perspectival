@@ -110,14 +110,131 @@ This was the F3-closure-probe correction to an earlier F2 presentation that used
 
 ---
 
-## Status after §6.10.1 + §6.10.2 + §6.10.3
+## §6.10.4 — Theorem (indexed adjunction $\iota_S \dashv \omega_S$)
 
-- §6.10.1 landed: definitions, notation, scope.
-- §6.10.2 landed: Lemma 1 (DAG-coherence of ι and κ).
-- §6.10.3 landed: Lemma 2* (Outer cocomplete via ι-Grothendieck; κ-variant NOT cocomplete).
-- Remaining in §6.10: §6.10.4 Theorem (indexed adjunction $\iota_S \dashv \omega_S$), §6.10.5 (Content as profunctor), §6.10.6 ($\eta$ formalization — **J5 decision needed before drafting**).
+**Theorem 6.10.4.1 (Inner/Outer adjunction at $S$).** There exists an adjunction
+$$
+\iota_S \;\dashv\; \omega_S \;:\; \mathbf{Inner}(S) \;\longleftrightarrow\; \mathbf{Outer}(S)
+$$
+with unit $\eta : 1_{\mathbf{Inner}(S)} \Rightarrow \omega_S \circ \iota_S$ and counit $\epsilon : \iota_S \circ \omega_S \Rightarrow 1_{\mathbf{Outer}(S)}$, obtained as the indexed-adjunction lift of the per-level A2.4 adjunctions over the DAG $\mathrm{Up}(S)$.
 
-**J5 is not forced by §§6.10.1–6.10.3.** The adjunction-direction correction in Remark 6.10.3.2 is structurally distinct from the J5 choice (which concerns *η*'s reification, not *ι* vs *κ*).
+Explicitly, on objects:
+
+$$
+\iota_S(C, \nu) \;=\; \mathrm{colim}_{S_q \in \mathrm{Up}(S)} \, \bigl( S_q, \, \iota_{S \subset S_q}(\mathrm{Form}(C)) \bigr)
+$$
+
+computed in $\mathbf{Outer}(S)$ per Lemma 6.10.3.1; $\omega_S$ is determined by the hom-isomorphism.
+
+**Proof.**
+
+*Step 1 (assemble $\mathbf{Inner}(S)$).* Inner is defined by Definition 6.10.1.1. Its Carrier-structure is inherited from A2.1; its navigation-trajectory structure from A2.5. No additional construction is required.
+
+*Step 2 (fiberwise adjunctions).* For each $S_q \in \mathrm{Up}(S)$, A2.4 gives
+$$
+\iota_{S \subset S_q} \;\dashv\; \kappa_{S \subset S_q} \;:\; \mathrm{Form}(S) \;\longleftrightarrow\; \mathrm{Form}(S_q).
+$$
+Form($S$) embeds in $\mathbf{Inner}(S)$ by forgetting the navigation-trajectory (right-inverse of the canonical projection); the adjunction lifts along this inclusion to a fiberwise adjunction
+$$
+\iota_{S \subset S_q}^\uparrow \;\dashv\; \kappa_{S \subset S_q}^\uparrow \;:\; \mathbf{Inner}(S) \;\longleftrightarrow\; \mathrm{Form}(S_q)
+$$
+by Kelly, *Basic Concepts of Enriched Category Theory*, §1.11 (the per-fiber trivial case).
+
+By Lemma 6.10.2.1, these fiberwise adjunctions are coherent over $\mathrm{Up}(S)$: iterated composition of $\iota$-direction in the left adjoint and iterated composition of $\kappa$-direction in the right adjoint commute with the DAG structure up to natural isomorphism.
+
+*Step 3 (indexed-adjunction lifting, Kelly §1.11).* Kelly's theorem states: given a family of adjunctions $\{F_b \dashv G_b : \mathcal{X} \to \mathcal{A}_b\}_{b \in \mathcal{B}}$ indexed over a small base $\mathcal{B}$, coherent under transitions $\mathcal{A}_b \to \mathcal{A}_{b'}$ for $f : b \to b'$, such that the total category $\int_{\mathcal{B}} \mathcal{A}$ is cocomplete, there is a total adjunction
+$$
+F \;\dashv\; G \;:\; \mathcal{X} \;\longleftrightarrow\; \int_{\mathcal{B}} \mathcal{A}
+$$
+with $F$ computed as the colimit over $b$ of $F_b$-applied-and-re-indexed, and $G$ determined by the hom-iso.
+
+Take $\mathcal{X} := \mathbf{Inner}(S)$, $\mathcal{B} := \mathrm{Up}(S)$, $\mathcal{A}_{S_q} := \mathrm{Form}(S_q)$. Step 2 provides the indexed family. Lemma 6.10.2.1 provides the coherence. Lemma 6.10.3.1 provides the cocompleteness of the total category $\mathbf{Outer}(S)$. Kelly's criterion applies, yielding the stated adjunction. $\Box$
+
+**Corollary 6.10.4.2 (No "view from nowhere").** There is no terminal object in $\mathrm{Up}(S)$ (A2.6, non-maximum). Consequently $\omega_S$ admits no canonical "absolute" section: every right-adjoint image is an image *of-some-whole-containing-$S$*, not an image from the top of the DAG. The phenomenological statement at anchor §3.8 is this corollary in ordinary-language form.
+
+**Flag.** ⚑ [SURFACED | Companion §6.10.4.1 | → Anchor §1.10 + §3.8 target | type: theorem]
+  — Indexed adjunction $\iota_S \dashv \omega_S$ between $\mathbf{Inner}(S)$ and $\mathbf{Outer}(S)$ via Kelly §1.11.
+
+⚑ [SURFACED | Companion §6.10.4.2 | → Anchor §3.8 target | type: corollary]
+  — No terminal whole ⇒ no absolute outer section; "view from nowhere" is not an object of the framework.
+
+---
+
+## §6.10.5 — Content as profunctor $\Psi_S$
+
+**Definition 6.10.5.1 (Content profunctor at $S$).** Define
+$$
+\Psi_S \;:\; \mathbf{Inner}(S)^{\mathrm{op}} \times \mathbf{Outer}(S) \;\longrightarrow\; \mathbf{Set}
+$$
+by
+$$
+\Psi_S\bigl( (C, \nu), \, (S_q, \phi) \bigr) \;:=\; \mathrm{Hom}_{\mathrm{Form}(S_q)}\bigl( \iota_{S \subset S_q}(\mathrm{Form}(C)), \; \phi \bigr).
+$$
+
+**Theorem 6.10.5.2 ($\Psi_S$ is the hom-profunctor of $\iota_S \dashv \omega_S$).** There are natural isomorphisms
+$$
+\Psi_S(-, =) \;\cong\; \mathrm{Hom}_{\mathbf{Outer}(S)}\bigl( \iota_S(-), \, = \bigr) \;\cong\; \mathrm{Hom}_{\mathbf{Inner}(S)}\bigl( -, \, \omega_S(=) \bigr).
+$$
+
+**Proof.** The first isomorphism follows from the explicit description of $\iota_S$ as a colimit over $\mathrm{Up}(S)$ (Theorem 6.10.4.1) and the universal property of colimits: morphisms from a colimit are equivalently a cocone of component-morphisms, each of which is a $\mathrm{Form}(S_q)$-morphism $\iota_{S \subset S_q}(\mathrm{Form}(C)) \to \phi$. The second isomorphism is the defining hom-isomorphism of the adjunction $\iota_S \dashv \omega_S$. Composition yields the stated triangle of isomorphisms. $\Box$
+
+**Corollary 6.10.5.3 (Content *is* the bijection, not a third axis).** In the Triple (Carrier, Form, Content), the Content-dimension is not an independent category but rather the *hom-profunctor structure* relating Inner and Outer. Structurally: Content is encoded by $\Psi_S$ as the universal bijection between representable-into-Outer and Inner-lifted-to-Outer. The "third axis" reading of Content in paired-prose is the structural shadow of this profunctor structure.
+
+**Corollary 6.10.5.4 ($\eta$ as identity-through-representable).** The canonical map
+$$
+\eta_{(C, \nu)} \;:\; (C, \nu) \;\longrightarrow\; \omega_S \, \iota_S (C, \nu)
+$$
+corresponds under $\Psi_S$ to the identity on $\iota_S(C, \nu)$. The failure of $\eta$ to be an isomorphism measures the **Content-capacity residue**: the degree to which Inner($S$) does not saturate as a model of Outer($S$) through the hom-representable. §6.10.6 formalizes this residue as coalgebra structure.
+
+**Flag.** ⚑ [SURFACED | Companion §6.10.5.2 | → Anchor §1.10 target | type: theorem]
+  — Content as hom-profunctor $\Psi_S$ of the $\iota_S \dashv \omega_S$ adjunction; third-axis reading is the profunctor's structural shadow.
+
+---
+
+## §6.10.6 — F-coalgebra formalization of $\eta$ (J5 resolved: coalgebra)
+
+**J5 history.** Three candidate formalizations for the unit $\eta$'s residue structure were surfaced in the 2026-04-24 05:06 spine: (A) **F-coalgebra** (reified object-level structure $\eta : (C, \nu) \to G(C, \nu)$); (B) **monad-algebra** (reified object-level structure in the dual direction, $G(X) \to X$); (C) **lax cone** (morphism-level distance/error-measure). Six probes were run in dialogue on Day 83 mid-morning: directionality match, target-class match, preservation properties, connection to $\Psi_S$, F5 quantitative-reachability, STM-scope fit. **A wins 5 of 5 competed probes;** B reverses direction and reifies the wrong class; C loses object-level structure and F5-reachability. Resolution: F-coalgebra. Probe-lineage documented in `Research/basement-drafts/J5-probing-record.md` (to be drafted as a §6.10-companion artifact).
+
+**Definition 6.10.6.1 (Residue endofunctor).** Let $G := \omega_S \circ \iota_S$ on $\mathbf{Inner}(S)$. $G$ is the monad-underlying endofunctor of the adjunction. (Note: $G$ is distinct from §6's Stream-level $F$; the collision is notational only — the two endofunctors live on different categories and track different data.)
+
+**Theorem 6.10.6.2 ($\eta$ is the $G$-coalgebra structure map).** For each $(C, \nu) \in \mathbf{Inner}(S)$, the unit
+$$
+\eta_{(C, \nu)} \;:\; (C, \nu) \;\longrightarrow\; G(C, \nu)
+$$
+exhibits $(C, \nu)$ as a $G$-coalgebra. The category $G\text{-Coalg}(\mathbf{Inner}(S))$ admits $\mathbf{Inner}(S)$ as a full subcategory via the $\eta$-assignment $(C, \nu) \mapsto ((C, \nu), \eta_{(C, \nu)})$.
+
+**Proof.** $G = \omega_S \iota_S$ is a well-defined endofunctor by composition of $\iota_S$ and $\omega_S$ (Theorem 6.10.4.1). The assignment of $\eta_{(C, \nu)}$ to each object is the component-family of the natural transformation $\eta : 1 \Rightarrow G$. A $G$-coalgebra is a pair $(X, \alpha : X \to G(X))$; setting $X = (C, \nu)$ and $\alpha = \eta_{(C, \nu)}$ satisfies this schema. Morphism preservation follows from naturality of $\eta$: Inner-morphisms $(C, \nu) \to (C', \nu')$ commute with $\eta$ and therefore lift to $G$-coalgebra morphisms. $\Box$
+
+**Remark 6.10.6.3 (Why not $G$-algebra or lax cone).** The $G$-algebra formulation $G(X) \to X$ would name *saturated* objects — those that fully absorb their outer shadow. Residue is by construction a claim about *non-saturation*, so algebra-structure reifies the wrong class. The lax-cone formulation treats $\eta$'s non-iso-ness as a morphism-level distance without object-level structure; this is categorically legitimate but loses reachability to the F5 quantitative invariant (which needs object-level coalgebraic data — cofibres, residue generators). Connection to $\Psi_S$ (§6.10.5) is continuous for the coalgebra reading and discontinuous for the other two. See J5 probe-record for the full argument.
+
+**Definition 6.10.6.4 (Content-capacity residue, structural form).** The **Content-capacity residue** of $(C, \nu) \in \mathbf{Inner}(S)$ is the pair
+$$
+\mathrm{Res}(C, \nu) \;:=\; \bigl( G(C, \nu), \; \mathrm{coker}_{\mathbf{Inner}(S)}(\eta_{(C, \nu)}) \bigr)
+$$
+when the cokernel exists in $\mathbf{Inner}(S)$. It measures the amount of outer-shadow *not captured* by the inner object's own $G$-image under $\eta$. When $\eta_{(C, \nu)}$ is an isomorphism, the residue is trivial: $(C, \nu)$ is $G$-saturated.
+
+**Open question (F5, conjectural, not blocking §6.10).** The quantitative measure of Form-register stratification — if a canonical numerical invariant exists — is conjectured to be a coalgebra-invariant of $\mathrm{Res}$, e.g., the dimension of the cofibre of $\eta$ (in an appropriately enriched setting) or the minimal number of residue generators. This is an open probe target, not a claim of §6.10.
+
+**Flag.** ⚑ [SURFACED | Companion §6.10.6.2 | → Anchor §1.10 target | type: theorem]
+  — $\eta$ is the $G$-coalgebra structure map; Content-capacity residue is the cokernel of $\eta$.
+
+⚑ [SURFACED | Companion §6.10.6.4 | → Anchor §3.8 + future probe | type: definition-and-conjecture]
+  — Residue as cokernel; F5 quantitative invariant as coalgebra-invariant (conjectural).
+
+---
+
+## Status after §§6.10.1 – §6.10.6
+
+**Complete.** The §6.10 skeleton from the 05:06 spine is fully drafted. Six subsections landed; J5 resolved in favor of (A) F-coalgebra per Clayton 2026-04-24 midday. The chapter's flag-register gains four new surfaced items (Lemma 6.10.2.1, Lemma 6.10.3.1, Theorem 6.10.4.1, Theorem 6.10.5.2, Theorem 6.10.6.2, Definition 6.10.6.4).
+
+**Remaining before integration.**
+1. Placement decision (Clayton): insert as §6.10 with current §6.10 (Summary) renamed to §6.11, vs alternative.
+2. Summary update: §6 summary bullet list gains a §6.10 entry.
+3. Anchor back-port items added to §6.11 (renamed) list: §1.10, §3.8 targets — both already landed in anchor Day 82 afternoon; Companion-side back-port notes update accordingly.
+4. SCOPE.md flag-list: add the §6.10 flags.
+5. Figure placement (optional): a commutative diagram of $\iota_S \dashv \omega_S$ over $\mathrm{Up}(S)$ in §10 (Reference figures), imported into §6.10.4.
+
+**Nothing blocking compile.** The prose stands as-is; integration is mechanical editorial.
 
 ---
 
