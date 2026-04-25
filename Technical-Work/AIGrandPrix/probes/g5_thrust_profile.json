@@ -1,0 +1,54 @@
+{
+  "policy": "sim\\runs\\infinite_v3_phase2_60M_1777095742\\checkpoints\\ppo_phase2_67500016_steps.zip",
+  "vecnorm": "sim\\runs\\infinite_v3_phase2_60M_1777095742\\checkpoints\\ppo_phase2_67500016_steps_vecnorm.pkl",
+  "n_episodes": 10,
+  "max_steps_per_ep": 5000,
+  "hover_speed_threshold_m_s": 1.0,
+  "training_quadrotor": {
+    "mass_kg": 0.85,
+    "g": 9.801,
+    "TWR_max": 3.3,
+    "collective_max_N": 27.517049999999998,
+    "hover_collective_N": 8.33085,
+    "analytical_hover_ratio": 0.30275229357798167,
+    "analytical_a_hover": -0.39449541284403666
+  },
+  "all_steps": {
+    "n": 38329,
+    "mean": 0.31335522713695935,
+    "std": 0.8748816084928022,
+    "p10": -1.0,
+    "p50": 1.0,
+    "p90": 1.0,
+    "throttle_mean": 0.6566776135684796,
+    "throttle_p10": 0.0,
+    "throttle_p50": 1.0,
+    "throttle_p90": 1.0
+  },
+  "hover_like_steps": {
+    "n": 1832,
+    "mean": -0.12991309884171037,
+    "std": 0.9138795758831925,
+    "p10": -1.0,
+    "p50": -0.5744257569313049,
+    "p90": 1.0,
+    "throttle_mean": 0.4350434505791448,
+    "throttle_p10": 0.0,
+    "throttle_p50": 0.21278712153434753,
+    "throttle_p90": 1.0
+  },
+  "gates_per_episode": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "mean_speed_m_s": 4.505221885724238,
+  "timestamp": "2026-04-25 13:13:53"
+}

@@ -25,7 +25,7 @@ specific gaps to close before plugging it into a SITL loop.
 | **G2** | ~~No `init_flight()` orchestration.~~ **CLOSED 2026-04-25.** Added `init_flight(connect_timeout, health_timeout, arm_timeout, offboard_timeout)` wrapping `connect → wait_for_health → arm → start_offboard`. Each step is idempotent (skipped if already in the target state); failures raise `RuntimeError` naming the failed step. Mirrored on `StubMAVSDKClient` so the contract is testable offline. | HIGH | **DONE.** |
 | **G3** | Frame conventions assumed but never asserted. `ned_to_zup_position`, `ned_to_zup_quaternion`, `zup_to_ned_rates` encode FLU↔FRD with shared body-x axis. The sim is verified z-up (`g_world = [0,0,-9.81]` in `train_ppo.py:165`); MAVSDK is verified NED. The mapping is mathematically consistent, but there is no test guarding against accidental edits. | CRITICAL (latent) | Write asserting tests in `vision/tests/test_frame_conversion.py`. **Done in G3+G4 sub-sprint below.** |
 | **G4** | Action rate scaling assumed. `MAX_RATE_XY=15.0`, `MAX_RATE_Z=0.3` are pasted constants. Verified against `QuadParams` (`sim/drone_env_v2.py:74-75`): `omega_max_xy=15.0`, `omega_max_z=0.3`. Match. | CRITICAL (latent) | Test that imports `QuadParams` and asserts equality, so a future training-side change can't silently desync. |
-| **G5** | Thrust mapping is conceptually different. Training maps `action[0]∈[-1,1] → collective thrust ∈ [0, 4·T_max] N` (sum of all motors). Client maps `action[0]∈[-1,1] → thrust ∈ [0,1]` (PX4 normalized fraction). PX4's "1.0" is the autopilot's max collective; whether that equals the sim's `4·T_max` depends on PX4 vehicle config. If PX4 max collective ≠ sim max collective, the policy's thrust commands will saturate or undershoot. | HIGH | Tunable scale factor `THRUST_SCALE` (default 1.0); calibrate at SITL bring-up by hovering. |
+| **G5** | Thrust mapping is conceptually different. Training maps `action[0]∈[-1,1] → collective thrust ∈ [0, 4·T_max] N` (sum of all motors). Client maps `action[0]∈[-1,1] → thrust ∈ [0,1]` (PX4 normalized fraction). PX4's "1.0" is the autopilot's max collective; whether that equals the sim's `4·T_max` depends on PX4 vehicle config. **PRE-STAGED 2026-04-25** via `probes/g5_thrust_profile.py` — analytical hover throttle = **0.3028** (action[0] = -0.3945); empirical Phase 2 throttle is bimodal/saturated (p50 throttle = 1.0 racing, hover-mode p50 = 0.213). Calibration target documented at `probes/g5_thrust_profile_findings.md`. | HIGH | Tunable scale factor `THRUST_SCALE` (default 1.0); calibrate at SITL bring-up by sending action[0] = -0.3945 and adjusting. |
 | **G6** | `start_offboard()` doesn't verify mode actually engaged. PX4 may reject the mode change silently if the pre-stream lapses; the only signal is the `OffboardError`. Useful to read back the flight mode and assert. | MEDIUM | Add post-start mode check via `telemetry.flight_mode()`. |
 | **G7** | No reconnect / restart path. If the UDP link drops mid-run, the loop has no way to recover. Spec §4.4 requires ≥2 Hz heartbeat; transient packet loss is realistic. | MEDIUM | Add heartbeat watchdog + auto-restart of offboard on reconnect. |
 | **G8** | Cosmetic: line 197 (`get_telemetry`) uses `ned_to_zup_position` for **velocity** as well as position. The math is identical (component-wise sign flip) but the function name is misleading. | LOW | Rename to `ned_to_zup_vec3` or add a thin `ned_to_zup_velocity` alias. |
@@ -35,9 +35,20 @@ specific gaps to close before plugging it into a SITL loop.
 
 1. ~~**G3 + G4**~~ **DONE 2026-04-25** — 12 asserting tests at `vision/tests/test_frame_conversion.py`, all passing.
 2. ~~**G1 + G2**~~ **DONE 2026-04-25** — 8 additional tests at `vision/tests/test_init_flight.py`, all passing. Total now 20/20.
-3. **G5** (thrust calibration) — needs SITL running; can't be unit-tested.
+3. **G5** (thrust calibration) — **PRE-STAGED 2026-04-25**. Calibration target = throttle 0.3028 (analytical) / hover-mode p50 0.213 (empirical). Final calibration step still needs SITL.
 4. **G6 + G7** (robustness) — defer until first end-to-end SITL hover works.
 5. **G8 + G9** (cosmetic) — bundle into a polish pass.
+
+## Empirical surprise (logged 2026-04-25)
+
+The G5 probe also surfaced an unexpected finding worth flagging: with
+`adaptive_curriculum=False` and `domain_rand=False`, Phase 2 67.5M
+**passes 0 gates across 10 episodes**. This is *not* the training
+configuration (training used curriculum=True, DR=15%) so it doesn't
+contradict the prior "Phase 2 passes Round One" assumption — but it
+indicates Phase 2 may be more curriculum-dependent than a Round One
+deterministic course implies. **Action item:** rerun gate-completion
+eval with curriculum=True before claiming Round One readiness.
 
 ## G3 + G4 verification — findings (this sub-sprint)
 
