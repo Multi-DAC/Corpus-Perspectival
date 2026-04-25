@@ -78,6 +78,15 @@ def zup_to_ned_rates(rates_zup: np.ndarray) -> np.ndarray:
     return np.array([rates_zup[0], -rates_zup[1], -rates_zup[2]])
 
 
+# Module-level so tests can assert these match the training env without
+# parsing the function body. Update both sites if you ever change either.
+send_policy_action_constants = {
+    "MAX_RATE_XY": 15.0,   # rad/s — must match QuadParams.omega_max_xy
+    "MAX_RATE_Z": 0.3,     # rad/s — must match QuadParams.omega_max_z
+    "RAD2DEG": 180.0 / math.pi,
+}
+
+
 class MAVSDKClient:
     """
     Synchronous wrapper around MAVSDK's async telemetry + offboard control.
@@ -299,9 +308,11 @@ class MAVSDKClient:
         thrust = (action[0] + 1.0) * 0.5
 
         # Body rates: [-1,1] → rad/s → deg/s
-        MAX_RATE_XY = 15.0   # rad/s (from training)
-        MAX_RATE_Z = 0.3     # rad/s (from training)
-        RAD2DEG = 180.0 / math.pi
+        # Constants live at module scope (send_policy_action_constants) so
+        # tests can assert they match the training env's QuadParams.
+        MAX_RATE_XY = send_policy_action_constants["MAX_RATE_XY"]
+        MAX_RATE_Z = send_policy_action_constants["MAX_RATE_Z"]
+        RAD2DEG = send_policy_action_constants["RAD2DEG"]
 
         roll_rate = action[1] * MAX_RATE_XY * RAD2DEG
         pitch_rate = action[2] * MAX_RATE_XY * RAD2DEG
