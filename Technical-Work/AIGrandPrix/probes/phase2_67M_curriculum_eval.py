@@ -40,8 +40,8 @@ VECNORM = (
     / "checkpoints" / "ppo_phase2_67500016_steps_vecnorm.pkl"
 )
 
-N_EPISODES = 50
-MAX_STEPS_PER_EP = 5000  # 10s at 500 Hz
+N_EPISODES = 30
+MAX_STEPS_PER_EP = 30000  # 60s at 500 Hz — matches snapshots/.../eval_per_maneuver.py
 
 OUT_JSON = BASE / "probes" / "phase2_67M_curriculum_eval.json"
 OUT_MD = BASE / "probes" / "phase2_67M_curriculum_eval.md"
@@ -82,24 +82,28 @@ def main():
     for ep in range(N_EPISODES):
         obs = vecnorm.reset()
         ep_steps = 0
+        ep_gates = 0
+        last_maneuver = None
         for step in range(MAX_STEPS_PER_EP):
             action, _ = policy.predict(obs, deterministic=True)
             obs, _, done, info = vecnorm.step(action)
             ep_steps += 1
+            # Read gates_passed from info[0] BEFORE done triggers auto-reset.
+            # episode_gates on the underlying env gets zeroed by reset().
+            if "gates_passed" in info[0]:
+                ep_gates = int(info[0]["gates_passed"])
+            last_maneuver = venv.envs[0].current_maneuver
             if done[0]:
                 break
 
-        base = venv.envs[0]
-        gates = int(base.episode_gates)
-        maneuver = base.current_maneuver
         per_episode.append({
             "ep": ep,
             "steps": ep_steps,
-            "gates": gates,
-            "current_maneuver": maneuver,
+            "gates": ep_gates,
+            "current_maneuver": last_maneuver,
         })
-        print(f"  ep {ep:2d}: {ep_steps:5d} steps, {gates:2d} gates, "
-              f"last maneuver={maneuver}")
+        print(f"  ep {ep:2d}: {ep_steps:6d} steps, {ep_gates:3d} gates, "
+              f"last maneuver={last_maneuver}")
 
     base = venv.envs[0]
     avg_mastery = base._get_avg_mastery() if hasattr(base, '_get_avg_mastery') else None

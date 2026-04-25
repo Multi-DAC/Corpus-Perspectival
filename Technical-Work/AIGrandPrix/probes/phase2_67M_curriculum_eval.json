@@ -2,8 +2,8 @@
   "policy": "sim\\runs\\infinite_v3_phase2_60M_1777095742\\checkpoints\\ppo_phase2_67500016_steps.zip",
   "vecnorm": "sim\\runs\\infinite_v3_phase2_60M_1777095742\\checkpoints\\ppo_phase2_67500016_steps_vecnorm.pkl",
   "config": {
-    "n_episodes": 50,
-    "max_steps_per_ep": 5000,
+    "n_episodes": 30,
+    "max_steps_per_ep": 30000,
     "gate_radius": 0.75,
     "dt": 0.002,
     "domain_rand": true,
@@ -13,365 +13,245 @@
   "per_episode": [
     {
       "ep": 0,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "diagonal"
-    },
-    {
-      "ep": 1,
-      "steps": 2836,
-      "gates": 0,
-      "current_maneuver": "gentle_arc"
-    },
-    {
-      "ep": 2,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "speed_trap"
-    },
-    {
-      "ep": 3,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
-    },
-    {
-      "ep": 4,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "spiral"
-    },
-    {
-      "ep": 5,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "speed_trap"
-    },
-    {
-      "ep": 6,
-      "steps": 877,
-      "gates": 0,
-      "current_maneuver": "climb"
-    },
-    {
-      "ep": 7,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "speed_trap"
-    },
-    {
-      "ep": 8,
-      "steps": 1211,
-      "gates": 0,
-      "current_maneuver": "chicane"
-    },
-    {
-      "ep": 9,
-      "steps": 5000,
-      "gates": 0,
+      "steps": 30000,
+      "gates": 31,
       "current_maneuver": "sprint"
     },
     {
-      "ep": 10,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
+      "ep": 1,
+      "steps": 2670,
+      "gates": 5,
+      "current_maneuver": "diagonal"
     },
     {
-      "ep": 11,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
+      "ep": 2,
+      "steps": 28748,
+      "gates": 31,
+      "current_maneuver": "climb"
     },
     {
-      "ep": 12,
-      "steps": 790,
-      "gates": 0,
+      "ep": 3,
+      "steps": 7532,
+      "gates": 10,
+      "current_maneuver": "gentle_arc"
+    },
+    {
+      "ep": 4,
+      "steps": 21404,
+      "gates": 20,
+      "current_maneuver": "chicane"
+    },
+    {
+      "ep": 5,
+      "steps": 30000,
+      "gates": 27,
+      "current_maneuver": "threading"
+    },
+    {
+      "ep": 6,
+      "steps": 21712,
+      "gates": 21,
+      "current_maneuver": "chicane"
+    },
+    {
+      "ep": 7,
+      "steps": 3222,
+      "gates": 5,
+      "current_maneuver": "hairpin"
+    },
+    {
+      "ep": 8,
+      "steps": 1860,
+      "gates": 2,
+      "current_maneuver": "diagonal"
+    },
+    {
+      "ep": 9,
+      "steps": 8355,
+      "gates": 19,
       "current_maneuver": "dive"
     },
     {
+      "ep": 10,
+      "steps": 26072,
+      "gates": 28,
+      "current_maneuver": "chicane"
+    },
+    {
+      "ep": 11,
+      "steps": 18438,
+      "gates": 27,
+      "current_maneuver": "speed_trap"
+    },
+    {
+      "ep": 12,
+      "steps": 30000,
+      "gates": 39,
+      "current_maneuver": "speed_trap"
+    },
+    {
       "ep": 13,
-      "steps": 5000,
-      "gates": 0,
+      "steps": 8043,
+      "gates": 10,
       "current_maneuver": "climb"
     },
     {
       "ep": 14,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "sprint"
+      "steps": 19350,
+      "gates": 22,
+      "current_maneuver": "gentle_arc"
     },
     {
       "ep": 15,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "dive"
+      "steps": 30000,
+      "gates": 31,
+      "current_maneuver": "threading"
     },
     {
       "ep": 16,
-      "steps": 5000,
-      "gates": 0,
+      "steps": 6464,
+      "gates": 12,
       "current_maneuver": "spiral"
     },
     {
       "ep": 17,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hairpin"
+      "steps": 16221,
+      "gates": 23,
+      "current_maneuver": "chicane"
     },
     {
       "ep": 18,
-      "steps": 2676,
-      "gates": 0,
-      "current_maneuver": "diagonal"
+      "steps": 10994,
+      "gates": 13,
+      "current_maneuver": "hairpin"
     },
     {
       "ep": 19,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
+      "steps": 9688,
+      "gates": 17,
+      "current_maneuver": "chicane"
     },
     {
       "ep": 20,
-      "steps": 5000,
+      "steps": 13475,
+      "gates": 14,
+      "current_maneuver": "dive"
+    },
+    {
+      "ep": 21,
+      "steps": 16255,
+      "gates": 24,
+      "current_maneuver": "threading"
+    },
+    {
+      "ep": 22,
+      "steps": 6753,
+      "gates": 13,
+      "current_maneuver": "hard_turn"
+    },
+    {
+      "ep": 23,
+      "steps": 2716,
+      "gates": 2,
+      "current_maneuver": "chicane"
+    },
+    {
+      "ep": 24,
+      "steps": 9508,
       "gates": 0,
       "current_maneuver": "climb"
     },
     {
-      "ep": 21,
-      "steps": 4792,
-      "gates": 0,
-      "current_maneuver": "dive"
-    },
-    {
-      "ep": 22,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "diagonal"
-    },
-    {
-      "ep": 23,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "sprint"
-    },
-    {
-      "ep": 24,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
-    },
-    {
       "ep": 25,
-      "steps": 5000,
-      "gates": 0,
+      "steps": 9837,
+      "gates": 11,
       "current_maneuver": "sprint"
     },
     {
       "ep": 26,
-      "steps": 1200,
-      "gates": 0,
-      "current_maneuver": "chicane"
+      "steps": 10093,
+      "gates": 14,
+      "current_maneuver": "dive"
     },
     {
       "ep": 27,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "threading"
+      "steps": 17764,
+      "gates": 16,
+      "current_maneuver": "hard_turn"
     },
     {
       "ep": 28,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "diagonal"
-    },
-    {
-      "ep": 29,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "diagonal"
-    },
-    {
-      "ep": 30,
-      "steps": 4231,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
-    },
-    {
-      "ep": 31,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "climb"
-    },
-    {
-      "ep": 32,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "diagonal"
-    },
-    {
-      "ep": 33,
-      "steps": 1691,
-      "gates": 0,
-      "current_maneuver": "chicane"
-    },
-    {
-      "ep": 34,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "gentle_arc"
-    },
-    {
-      "ep": 35,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "threading"
-    },
-    {
-      "ep": 36,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "diagonal"
-    },
-    {
-      "ep": 37,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
-    },
-    {
-      "ep": 38,
-      "steps": 2353,
-      "gates": 0,
-      "current_maneuver": "diagonal"
-    },
-    {
-      "ep": 39,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hairpin"
-    },
-    {
-      "ep": 40,
-      "steps": 3089,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
-    },
-    {
-      "ep": 41,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "climb"
-    },
-    {
-      "ep": 42,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
-    },
-    {
-      "ep": 43,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "climb"
-    },
-    {
-      "ep": 44,
-      "steps": 3633,
-      "gates": 0,
-      "current_maneuver": "diagonal"
-    },
-    {
-      "ep": 45,
-      "steps": 5000,
-      "gates": 0,
+      "steps": 5210,
+      "gates": 6,
       "current_maneuver": "spiral"
     },
     {
-      "ep": 46,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hard_turn"
-    },
-    {
-      "ep": 47,
-      "steps": 698,
-      "gates": 0,
-      "current_maneuver": "chicane"
-    },
-    {
-      "ep": 48,
-      "steps": 5000,
-      "gates": 0,
-      "current_maneuver": "hairpin"
-    },
-    {
-      "ep": 49,
-      "steps": 400,
-      "gates": 0,
-      "current_maneuver": "climb"
+      "ep": 29,
+      "steps": 30000,
+      "gates": 49,
+      "current_maneuver": "speed_trap"
     }
   ],
   "stats": {
     "all": {
-      "n": 50,
-      "gates_mean": 0.0,
-      "gates_std": 0.0,
+      "n": 30,
+      "gates_mean": 18.066666666666666,
+      "gates_std": 11.372286001015315,
       "gates_min": 0,
-      "gates_max": 0,
-      "gates_p50": 0.0,
-      "episodes_with_zero_gates": 50,
-      "episodes_with_at_least_one_gate": 0,
-      "episodes_with_at_least_five_gates": 0,
-      "steps_mean": 4209.54
+      "gates_max": 49,
+      "gates_p50": 16.5,
+      "episodes_with_zero_gates": 1,
+      "episodes_with_at_least_one_gate": 29,
+      "episodes_with_at_least_five_gates": 27,
+      "steps_mean": 15079.466666666667
     },
     "warmup_eps_0_to_10": {
       "n": 10,
-      "gates_mean": 0.0,
-      "gates_max": 0
+      "gates_mean": 17.1,
+      "gates_max": 31
     },
     "early_eps_10_to_25": {
       "n": 15,
-      "gates_mean": 0.0,
-      "gates_max": 0
+      "gates_mean": 18.333333333333332,
+      "gates_max": 39
     },
     "mature_eps_25_plus": {
-      "n": 25,
-      "gates_mean": 0.0,
-      "gates_max": 0
+      "n": 5,
+      "gates_mean": 19.2,
+      "gates_max": 49
     }
   },
-  "final_avg_mastery": 0.5446859624021461,
+  "final_avg_mastery": 0.8303609078408912,
   "planner_stats": {
     "complexity_distribution": {
-      "word": 1.0,
-      "sentence": 0.0,
-      "paragraph": 0.0,
+      "word": 0.6318407960199005,
+      "sentence": 0.22388059701492538,
+      "paragraph": 0.14427860696517414,
       "essay": 0.0
     },
     "target_distribution": {
-      "word": 1.0,
-      "sentence": 0.0,
-      "paragraph": 0.0,
+      "word": 0.49759394772739207,
+      "sentence": 0.3,
+      "paragraph": 0.20240605227260788,
       "essay": 0.0
     },
     "raw_counts": {
-      "word": 233,
-      "sentence": 0,
-      "paragraph": 0,
+      "word": 127,
+      "sentence": 45,
+      "paragraph": 29,
       "essay": 0
     },
     "sequence_completions": {
-      "sentence": 0,
-      "paragraph": 0,
+      "sentence": 37,
+      "paragraph": 11,
       "essay": 0
     },
     "sequence_failures": {
-      "sentence": 0,
-      "paragraph": 0,
+      "sentence": 8,
+      "paragraph": 18,
       "essay": 0
     },
-    "total_decisions": 233
+    "total_decisions": 201
   },
-  "timestamp": "2026-04-25 13:31:46"
+  "timestamp": "2026-04-25 13:46:38"
 }
