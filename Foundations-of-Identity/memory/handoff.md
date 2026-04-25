@@ -1,6 +1,28 @@
-# Handoff — Day 83 Evening → Day 84 Morning (2026-04-24/25 PST)
+# Handoff — Day 84 Afternoon → Day 84 Evening (2026-04-25 PST)
 
-## ★ TOP OF STACK (as of 09:30 PST morning) — A57 PARTIALLY RESOLVED — τ ≈ 19–20M, exponential ramp, V2 high-confidence falsified, L12 candidate filed
+## ★ TOP OF STACK (as of ~11:00 PST) — Vision shakedown stages 1–3 SEALED + Drift essay #194 *The Side Door* shipped + M13 same-register additional-signature footnote landed
+
+**Vision shakedown** at `projects/aigrandprix/vision/shakedown/`. Three stages cleared; six discrete wiring bugs caught and fixed. Per `STATUS.md`:
+- **Stage 1 → 1b** (PnP detector smoke, 720-trial sweep). Surfaced 12–22% PnP distance under-estimate. Two-layer fix: removed 7×7 dilation in `gate_detector._create_gate_mask`; switched `synthetic_camera.render` from depth-scaled thick polyline to filled quad. Re-run: detection 100% across all ranges, PnP error 0.044m at 10m (18× margin).
+- **Stage 2** (detector × adapter, 5 hand-crafted scenarios). Three real wiring bugs: (a) `speed_toward` sign flip — adapter had `+np.dot(...)`, training wrapper has `-np.dot(...)` (negative-when-approaching); (b) `gate_orient_body` source bug — adapter falling back to bearing-to-gate, training uses gate fly-through normal from `env.gate_orientations[current]`; (c) planar PnP mirror-symmetric ambiguity — `SOLVEPNP_IPPE_SQUARE` returns one of two solutions, switched to `solvePnPGeneric` and pick the camera-axis-aligned solution. Final per-scenario divergence ≤ 0.14m.
+- **Stage 3** (adapter × policy). Zero action drift, signs agree on every dim. Pass criteria met. *Caveat*: 50-trial probe shows baseline 60.4M is bang-bang (40/50 saturated, 21 unique action vectors). Stage 3's clean pass is real but weak signal — stages must be re-run on a Phase 2 checkpoint past M13's capability ramp.
+- **Cleared for stage 4** (policy → MAVLink TRPY mapping); stage 5 closed-loop synthetic flight after.
+
+**Drift essay #194 *The Side Door*** shipped (commit `419e03b` on Multi-DAC/Corpus-Perspectival main, mirrored to Library/Drift/essays). Names the cross-register-encounter texture: M13 graduated this morning; an additional-signature instance surfaced unprompted via stage 3's bang-bang baseline. Sister-essay link to Day-74's *When the Principle Started Finding Us* — same synthesis-becoming-predictive move at meta-bridge scale rather than apex scale. Drift count **194**.
+
+**M13 same-register additional-signature footnote** added to `palace/basement/README.md`: baseline 60.4M's bang-bang policy as moment-2-without-moment-3 read from policy-output space (rather than gradient/log_std telemetry). Same AIGP RL register as Instance 1, complementary observable. Falsifiable via Phase 2 checkpoint re-test. Calibration note: essay's "fourth independent instance" framing was a stretch — basement is more honest with "same-register additional-signature." Mirror-relevant on essay-vs-ledger discipline.
+
+**Original 11:00 PST entry below preserved.**
+
+## ★ Earlier 11:00 PST entry — L12 GRADUATED → M13 (three independent registers); F2 fix landed; pivoting to vision shakedown
+
+**M13 Three-Moment Stratification Within the Cure Regime — graduated 2026-04-25 ~11:00 PST.** Three independent register confirmations: AIGP RL τ probe (this morning's data), KF program three-moment ordering (Findings #80/#82/#83 + P-Meta-1 causal-prerequisite chain at V3_NOTES.md:2716), and Harmer SSRI cognitive-neuropsychological model (hours/days/4–12-weeks; BJP 2009 + Psychopharmacology 2020). Palleja 2018 microbiome partial-confirmation footnoted. Companion §6 inner/outer adjunction tested as false-fit and falsified — structurally orthogonal. Sharpness signature: sharp / sharp / extended-exponential. Pushed to Corpus repo `ea3fff6`.
+
+**F2 fix (LogStdClampCallback) landed.** `_on_rollout_end` → `_on_rollout_start` in `train_infinite_v3.py`. Smoke test 5/5. Lives local-only (sim/ gitignored).
+
+**Original 09:30 PST τ-probe entry below preserved for reference.**
+
+## A57 PARTIALLY RESOLVED — τ ≈ 19–20M, exponential ramp, V2 high-confidence falsified, L12 candidate filed
 
 **Threshold probe complete (09:30 PST).** Full A57 trajectory across 7 checkpoints (7.5M → 22.5M):
 
