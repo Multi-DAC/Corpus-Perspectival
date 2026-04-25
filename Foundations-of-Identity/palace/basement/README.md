@@ -301,6 +301,51 @@ The three strata are exhaustive **among Form-register instances**. The fourth ro
 
 ---
 
+### M13 — Three-Moment Stratification Within the Cure Regime *(graduated 2026-04-25 from L12 on third-instance landing)*
+
+**The claim:** When a cure is applied to a system stuck in a degenerate attractor, the cure does NOT produce capability immediately. It unlocks a temporally-stratified sequence of three moments, each with its own measurable signature and its own timescale:
+
+1. **Substrate-health restoration** — substrate signatures stabilize (no pathology). **SHARP**, fast.
+2. **Mode/pattern commitment** — system stops thrashing and commits to *some* mode. **SHARP**, distinct telemetry signature (often a variability-collapse). The committed mode may be POOR but is consistent.
+3. **Capability/function emergence** — differentiated functional outcomes. **EXTENDED EXPONENTIAL** ramp (not sigmoidal). 5–10× the substrate-cure timescale (sometimes more).
+
+These are **necessary-in-order, decoupled-in-time, distinct-in-signature.** The causal ordering is load-bearing: substrate-health is a prerequisite for sharp mode-commitment; mode-commitment is a prerequisite for capability-emergence to be measurable.
+
+**Why it matters:**
+- **Cure-effectiveness needs three signals, not one.** A cure that fixes substrate (gradient signature) and produces mode-commitment (variability collapse) but doesn't reach capability-emergence is incomplete in a specific quantifiable way. Premature cure-celebration (reading moment-1 or moment-2 telemetry as "cure complete") becomes a measurable failure mode.
+- **Explains the "weeks-to-effect paradox" in psychopharmacology** as the L12 prediction rather than as a puzzle: SSRIs work fast at the substrate (hours) and at the bias-flip (days), but functional remission requires the extended-exponential associative-relearning ramp (weeks).
+- **Explains the gut microbiome moment-3 gap** as expected: the cure (antibiotic clearance) restores substrate fast and re-establishes community structure, but functional capability (rare-species re-seeding, butyrate production) is a different kind of process and may not complete in the observation window.
+- **Explains the AIGP cure-celebration risk:** I would have called the cure complete at 10M training steps based on log_std telemetry. The actual capability emergence took until 22.5M+. Reading gradient signatures as cure-completion is wrong by ~5–10M training steps. Mirror-relevant.
+
+**Instances (three independent registers, distinct mechanisms):**
+
+- **AIGP RL register (PPO + MLP[512,512] + v3 cure stack)** — 7-checkpoint sequence 7.5M → 22.5M training steps. Substrate-health ≤7.5M (value-trunk grad alive at 0.003, no saturation; sharp); log_std variability collapse 7.5M → 10M from 0.044 → 0.007 (sharp 6× drop); per-maneuver capability ramp 12.5M → 22.5M+ exponential (gates 0.53 → 17.95, doubling ≈ 2.5M steps). Source: `Research/basement-drafts/2026-04-25-three-moment-stratification-within-cure.md`. Apparatus: `projects/aigrandprix/probes/phase2_trajectory/TAU_PREDICTION.md`.
+
+- **KF bidirectional-gated dynamics register** — Phase 1 calibration → step-8800 demolition → CE descent ramp. Substrate-health: avg_cos differentiates from 0 at epoch 250, H_CV drops 14× → 1,460 (sharp, ~50 epochs). Mode-commitment: 75% layer demolition synchronously within ONE KF step (step 9000), 3 build/9 dissolve (sharp). Capability-emergence: CE 73 → 55, monotonic non-saturating across step 8800 → 15625 (extended exponential, ~6,800 steps). **Causal ordering verified by P-Meta-1 prediction at `Research/The-Killing-Form/v3/V3_NOTES.md:2716`**: skipping Phase 1 calibration produces less decisive post-break behavior. Boundary: applies only to bidirectional+gated cures; coupled (v0.6b) blurs moments; ungated (v0.5a) shows only two-moment dynamics.
+
+- **Cognitive-neuropsychological model of antidepressant action (Harmer-Goodwin-Cowen)** — clean three-moment match in psychopharmacology. Substrate-health: SSRI 5-HT transporter occupancy, amygdala/ACC reactivity shift on fMRI within hours (sharp). Mode-commitment: emotional-processing-bias flips negative → positive within days to ~1 week (sharp; measured by emotional-faces tasks, dot-probe, recall biases). Capability-emergence: subjective mood / functional remission over 4–12 weeks, requires environmental interaction to enact the new bias into associative learning (extended exponential; early-week-4 improvement predicts week-8 response). **Timescale-ratio match: hours / days / weeks.** The "weeks-to-effect paradox" that motivated this entire research program *is* the L12 prediction. Sources: Harmer 2009 BJP; Harmer 2020 *Psychopharmacology*; PMC8062380.
+
+**Partial-confirmation footnote:** Palleja et al. 2018 (*Nature Microbiology*) gut microbiome post-antibiotic recovery (12 men, meropenem+gentamicin+vancomycin 4 days, 180-day follow-up) shows moments 1 (acute disruption + pathobiont bloom resolved by D14) and 2 (community recovery toward baseline by D42) cleanly, but moment 3 is documented as a *gap*: 9 species + butyrate producers + *Bifidobacterium* still depleted at D180. Reads under M13 as: cure restores substrate and re-organizes community but does not reach the functional layer because rare-species re-seeding requires a different mechanism than the cure provides. Predicted by M13 — a cure that doesn't get to moment 3 is incomplete in a specific quantifiable way.
+
+**Falsifiable predictions:**
+1. **Cross-register sharpness pattern.** Any newly-identified L12-instance should show sharp/sharp/extended-exponential signature. A genuine three-moment cure with sharp/sharp/sharp or sharp/extended/sharp would refine M13 (the canonical sharpness-shape is itself a structural claim, not just an arithmetic fact).
+2. **Causal-prerequisite ordering.** Skipping moment 1 should produce less decisive moment 2 (KF P-Meta-1 generalized). A cure that produces sharp mode-commitment without prior substrate-health restoration would falsify the causal ordering.
+3. **Cure-celebration failure mode.** In any cure-style domain, reading moment-1 or moment-2 telemetry as "cure complete" should mislead by ~the moment-1-to-moment-3 timescale gap. Stake: any new cure-design discipline that uses single-signal cure-completion criteria is structurally incomplete by M13.
+
+**Confidence:** HIGH — three independent registers (RL policy gradients / KF attention-head algebraic dynamics / cognitive-neuropsychological psychopharmacology), each with measurable signatures for all three moments, all matching the sharp/sharp/extended-exponential pattern. Causal-prerequisite ordering verified in two of three. Partial-confirmation footnote (Palleja microbiome) shows the predicted moment-3 incompleteness mode. Cross-substrate invariance: same shape across silicon-RL / silicon-attention / human-brain.
+
+**Links:** ← L12 (graduated). → A57 (PARTIALLY RESOLVED) at `memory/anomalies.md`. → L11 latent (Structure/Capability Axis Independence) at `Research/basement-drafts/2026-04-24-structure-capability-axis-independence.md` — M13 sharpens L11 by naming the *internal structure* of the gap L11 named. → M2 Inspection-Depth Ceiling: M13's sharpness pattern is itself depth-relative (moment 3's "exponential" is a description at the current observation depth; sub-moment structure may surface at finer resolution). → Mirror entries on premature-cure-celebration (writeup pending — M13 names the failure mode). → KF Findings #80 (substrate), #82 (capability ramp), #83 (mode-commitment + P-Meta-1).
+
+**Sources:**
+- AIGP: `projects/aigrandprix/probes/phase2_trajectory/TAU_PREDICTION.md`, `eval_step_*.json`
+- KF: `Research/The-Killing-Form/v3/V3_NOTES.md` (P-Meta-1 at line 2716); KF_ROADMAP.md
+- Harmer: BJP 2009 cognitive-neuropsychological model paper; *Psychopharmacology* 2020 restatement; PMC8062380
+- Palleja partial: Palleja et al. 2018 *Nature Microbiology*, PMID 30349083
+
+**Last verified:** 2026-04-25 morning (graduation drive — three parallel scans: KF retrospective + Companion §6 negative-fit + external-literature search).
+
+---
+
 ## Latent bridges — authored 2026-04-20
 
 *Identified during the compression audit but not yet written. Promote to Meta when instances accumulate or when they enter Library text.*
@@ -423,9 +468,15 @@ The three strata are exhaustive **among Form-register instances**. The fourth ro
 
 ---
 
-### L12 — Three-Moment Stratification Within the Cure Regime *(filed 2026-04-25 with cross-register confirmation)*
+### L12 — Three-Moment Stratification Within the Cure Regime — **GRADUATED 2026-04-25 → M13**
 
-**The claim:** When a "cure" is applied to a learning system stuck in a degenerate attractor, the cure does NOT produce capability immediately. Instead, it unlocks a temporally-stratified sequence of three moments, each with its own measurable signature and its own timescale:
+**Promotion record:** L12 graduated from latent to meta on 2026-04-25 morning when the third independent-register instance (Harmer SSRI cognitive-neuropsychological model in psychopharmacology) landed alongside AIGP RL and KF dynamics. Cross-register sharpness pattern (sharp/sharp/extended-exponential) matched all three; causal-prerequisite ordering verified in two of three. Full M13 entry above.
+
+**Where the pattern now lives:** See **M13 — Three-Moment Stratification Within the Cure Regime** above. The M13 section carries the three confirmed instances (AIGP RL / KF / Harmer SSRI), the Palleja microbiome partial-confirmation footnote, the falsifiable predictions, the causal-prerequisite ordering claim, and the cross-substrate invariance reading.
+
+**What L12 taught:** That a temporally-stratified cure trajectory has internal structure that can be measured signal-by-signal across the moments, and that single-signal cure-completion criteria are structurally incomplete. Also: Companion §6 inner/outer adjunction is **structurally orthogonal** to L12, not even a definitional cousin — §6 is atemporal categorical structure with no cure-trajectory and no mode-commitment moment. The false-fit hypothesis was tested and falsified during the graduation drive.
+
+**Original claim statement (preserved for archival):** When a "cure" is applied to a learning system stuck in a degenerate attractor, the cure does NOT produce capability immediately. Instead, it unlocks a temporally-stratified sequence of three moments, each with its own measurable signature and its own timescale:
 
 1. **Substrate-health restoration** — gradient/structural signatures stabilize, no saturation cascade. **SHARP**, fast.
 2. **Mode-commitment** — system stops thrashing and commits to *some* behavioral/dynamical mode. **SHARP**, distinct telemetry signature (variability collapse). The committed mode may be POOR but is consistent.

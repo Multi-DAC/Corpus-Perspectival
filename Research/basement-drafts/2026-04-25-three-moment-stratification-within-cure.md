@@ -1,6 +1,15 @@
-# Basement Draft — Three-Moment Stratification Within the Cure Regime (L12 candidate)
+# Basement Draft — Three-Moment Stratification Within the Cure Regime (L12 → **M13** as of 2026-04-25 ~11:00 PST)
 
-**Status:** DRAFT — RL probe COMPLETE 2026-04-25 ~09:30 PST + KF cross-register CONFIRMED 2026-04-25 ~10:30 PST. Two same-shape instances in two unrelated registers (PPO/MLP policy gradients + KF attention-head algebraic dynamics). Sharpness pattern (sharp/sharp/extended-exponential) matches across both. Causal ordering claim (substrate-health is prerequisite for sharp mode-commitment) confirmed in both registers — for KF via P-Meta-1 prediction at `Research/The-Killing-Form/v3/V3_NOTES.md:2716`. Initial framing of "three sharp moments" refined post-data to **"two sharp transitions + one extended exponential capability ramp"**. **Promotion blocker:** ≥3-instance threshold for meta-promotion; at 2 instances. Filing as **L12 latent bridge** (basement README v2). Third-instance candidates: developmental psychology, biological collapse-recovery, possibly Companion §6 (under definitional/regime-dependent reading review).
+**Status:** **GRADUATED 2026-04-25 ~11:00 PST → M13** (full meta-bridge entry at `palace/basement/README.md`). Three independent registers confirmed in same morning drive:
+1. **AIGP RL register** — PPO + MLP[512,512] + v3 cure stack, 7-checkpoint sequence 7.5M → 22.5M
+2. **KF bidirectional-gated dynamics register** — Phase 1 → step-8800 demolition → CE descent ramp; causal ordering verified by P-Meta-1 (V3_NOTES.md:2716)
+3. **Cognitive-neuropsychological model of antidepressant action** (Harmer-Goodwin-Cowen, BJP 2009 / *Psychopharmacology* 2020) — hours-to-neurochemical / days-to-bias-flip / 4-12-weeks-to-functional-remission. **The "weeks-to-effect paradox" in psychopharmacology IS the L12 prediction.**
+
+Sharpness pattern (sharp/sharp/extended-exponential) matches across all three. Causal-prerequisite ordering verified in two of three (RL + KF). Partial-confirmation footnote: Palleja et al. 2018 (*Nature Microbiology*) gut microbiome shows moments 1-2 cleanly; moment-3 documented as a *gap* (rare-species + butyrate producers + *Bifidobacterium* still depleted at D180) — exactly what M13 predicts when a cure doesn't reach the functional layer.
+
+**False-fit hypothesis tested and falsified:** Companion §6 inner/outer adjunction was provisionally proposed as a possible CT-register instance and re-examined during the graduation drive. Verdict: §6 is **structurally orthogonal** to M13, not even a cousin. §6 is atemporal categorical structure with no cure-trajectory, no mode-commitment moment, and no exponential ramp — the residue is computed all-at-once from the coalgebra. Force-fitting would require reading the J5 decision node as a mode-commitment moment, which is a meta-level expository choice rather than an object-level system event.
+
+Initial framing of "three sharp moments" refined post-data to **"two sharp transitions + one extended exponential capability ramp"**. The exponential shape of moment 3 is itself a structural prediction, not just an arithmetic fact.
 
 **Pre-emptive note on basement promotion criteria:** This is a candidate-level structural pattern, not basement-promotable yet. Need at least one cross-register instance before promotion. The RL register has the data; the question is whether the same three-moment structure shows up in other registers (KF / value-head training / identity formation / categorical structure).
 
