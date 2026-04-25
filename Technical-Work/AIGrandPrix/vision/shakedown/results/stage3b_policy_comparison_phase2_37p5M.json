@@ -1,0 +1,163 @@
+{
+  "checkpoint_step": 37500016,
+  "checkpoint_path": "sim\\runs\\infinite_v3_phase2_60M_1777095742\\checkpoints\\ppo_phase2_37500016_steps.zip",
+  "saturation_probe": {
+    "n_trials": 50,
+    "n_fully_saturated": 18,
+    "pct_fully_saturated": 36.0,
+    "n_unique_action_vectors": 43,
+    "mean_abs_action_per_dim": [
+      0.8943056464195251,
+      0.8564712405204773,
+      0.9488880634307861,
+      0.8554832935333252
+    ]
+  },
+  "scenarios": [
+    {
+      "scenario": "hover_5m_ahead",
+      "detection_found": true,
+      "pnp_distance_m": 5.005512267988405,
+      "true_distance_m": 5.0,
+      "action_state": [
+        -1.0,
+        0.5467581152915955,
+        1.0,
+        1.0
+      ],
+      "action_vision": [
+        -1.0,
+        0.49983441829681396,
+        1.0,
+        1.0
+      ],
+      "action_diff": [
+        0.0,
+        -0.046923696994781494,
+        0.0,
+        0.0
+      ],
+      "max_abs_diff": 0.046923696994781494,
+      "mean_abs_diff": 0.011730924248695374,
+      "signs_agree": true,
+      "state_obs_post_norm_max_abs": 1.7949814796447754,
+      "vision_obs_post_norm_max_abs": 1.7949814796447754
+    },
+    {
+      "scenario": "approach_8m_5mps",
+      "detection_found": true,
+      "pnp_distance_m": 8.014773216806422,
+      "true_distance_m": 8.0,
+      "action_state": [
+        -0.6716390252113342,
+        -0.03913728520274162,
+        1.0,
+        -0.07603446394205093
+      ],
+      "action_vision": [
+        -0.6138094663619995,
+        0.04152541235089302,
+        1.0,
+        -0.022578338161110878
+      ],
+      "action_diff": [
+        0.05782955884933472,
+        0.08066269755363464,
+        0.0,
+        0.053456127643585205
+      ],
+      "max_abs_diff": 0.08066269755363464,
+      "mean_abs_diff": 0.04798709601163864,
+      "signs_agree": false,
+      "state_obs_post_norm_max_abs": 1.9199702739715576,
+      "vision_obs_post_norm_max_abs": 1.9236462116241455
+    },
+    {
+      "scenario": "retreat_6m_-3mps",
+      "detection_found": true,
+      "pnp_distance_m": 6.007581461888091,
+      "true_distance_m": 6.0,
+      "action_state": [
+        -1.0,
+        -1.0,
+        1.0,
+        -0.6243298053741455
+      ],
+      "action_vision": [
+        -1.0,
+        -1.0,
+        1.0,
+        -0.4936771094799042
+      ],
+      "action_diff": [
+        0.0,
+        0.0,
+        0.0,
+        0.13065269589424133
+      ],
+      "max_abs_diff": 0.13065269589424133,
+      "mean_abs_diff": 0.03266317397356033,
+      "signs_agree": true,
+      "state_obs_post_norm_max_abs": 2.854879856109619,
+      "vision_obs_post_norm_max_abs": 2.85416579246521
+    },
+    {
+      "scenario": "offaxis_6m_yaw15",
+      "detection_found": true,
+      "pnp_distance_m": 5.9328139326527545,
+      "true_distance_m": 6.000000000000001,
+      "action_state": [
+        -1.0,
+        -1.0,
+        0.3505244255065918,
+        0.13462020456790924
+      ],
+      "action_vision": [
+        -1.0,
+        -1.0,
+        0.2495049089193344,
+        0.30576303601264954
+      ],
+      "action_diff": [
+        0.0,
+        0.0,
+        -0.10101951658725739,
+        0.1711428314447403
+      ],
+      "max_abs_diff": 0.1711428314447403,
+      "mean_abs_diff": 0.06804058700799942,
+      "signs_agree": true,
+      "state_obs_post_norm_max_abs": 1.6214909553527832,
+      "vision_obs_post_norm_max_abs": 1.6214909553527832
+    },
+    {
+      "scenario": "climbing_8m",
+      "detection_found": true,
+      "pnp_distance_m": 8.157505577873362,
+      "true_distance_m": 8.139410298049853,
+      "action_state": [
+        -1.0,
+        -0.8471967577934265,
+        1.0,
+        1.0
+      ],
+      "action_vision": [
+        -1.0,
+        -0.840164840221405,
+        1.0,
+        1.0
+      ],
+      "action_diff": [
+        0.0,
+        0.007031917572021484,
+        0.0,
+        0.0
+      ],
+      "max_abs_diff": 0.007031917572021484,
+      "mean_abs_diff": 0.001757979393005371,
+      "signs_agree": true,
+      "state_obs_post_norm_max_abs": 1.9199702739715576,
+      "vision_obs_post_norm_max_abs": 1.9238287210464478
+    }
+  ]
+}

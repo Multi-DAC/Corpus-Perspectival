@@ -136,24 +136,18 @@ class SyntheticCamera:
             if not on_screen:
                 continue
 
-            # Draw gate — thick frame simulating physical gate structure
+            # Draw gate. Current target = bright FILLED quad so the bright
+            # pixel region matches the true projected gate shape exactly
+            # (a thick polyline would extend bright pixels outward by
+            # thickness/2, which biased the detector's PnP toward shorter
+            # distances — Stage 1 smoke test 2026-04-25).
             color = self.gate_color if i == current_gate_idx else self.gate_color_secondary
 
-            # Scale thickness with apparent size (closer = thicker frame)
-            avg_depth = np.mean([c[2] for c in corners_camera])
-            thickness = max(2, int(12 * 5.0 / (avg_depth + 1.0)))
-
-            # Draw solid gate frame
-            cv2.polylines(image, [corners_2d], True, color, thickness)
-
-            # Add filled semi-transparent interior for current gate (VQ1 highlighting)
             if i == current_gate_idx:
-                overlay = image.copy()
-                cv2.fillPoly(overlay, [corners_2d], (160, 180, 200))
-                cv2.addWeighted(overlay, 0.15, image, 0.85, 0, image)
-                # Bright corner markers
-                for corner in corners_2d:
-                    cv2.circle(image, tuple(corner), max(3, thickness), color, -1)
+                cv2.fillPoly(image, [corners_2d], color)
+            else:
+                # Lookahead gates: dimmer thin outline only
+                cv2.polylines(image, [corners_2d], True, color, 2)
 
         return image
 

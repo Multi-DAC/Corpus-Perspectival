@@ -31,6 +31,9 @@ class GateDetection:
     position_3d: Optional[np.ndarray] = None       # (3,) estimated 3D position (if PnP solved)
     distance: Optional[float] = None               # estimated distance to gate (if PnP solved)
     bearing_body: Optional[np.ndarray] = None      # (3,) unit vector toward gate in body frame
+    normal_camera: Optional[np.ndarray] = None     # (3,) gate facing direction in camera frame
+                                                   # (the gate's normal vector — what the policy needs
+                                                   # for fly-through alignment, NOT bearing_body)
 
 
 @dataclass
@@ -58,6 +61,18 @@ class GateDetectorConfig:
 
     # Multi-gate tracking
     max_gates: int = 3                    # max gates to detect per frame
+
+    # Sub-pixel corner refinement (cv2.cornerSubPix) before PnP.
+    # Reduces corner-localization noise from contour approximation, which
+    # tightens PnP residuals without touching the planar-square ambiguity.
+    # Stage 2 (climbing_8m) z-tilt floor was 0.10 with raw corners — the
+    # IPPE_SQUARE sister-pair separation is the lower bound but corner
+    # noise sits on top of it. Refinement targets that noise term.
+    use_subpix_refine: bool = True
+    subpix_win_size: int = 5              # half window; (2*N+1) x (2*N+1) search
+    subpix_zero_zone: int = -1            # -1 = no dead zone
+    subpix_max_iter: int = 30
+    subpix_epsilon: float = 0.01
 
 
 class GateDetector:
@@ -137,6 +152,23 @@ class GateDetector:
         # Limit to max_gates
         detections = detections[:self.config.max_gates]
 
+        # Step 3.5: Sub-pixel corner refinement before PnP.
+        # cv2.cornerSubPix iterates corner positions to sub-pixel accuracy
+        # using local image gradients. Cheap (~µs per corner), shrinks the
+        # PnP-input noise term that sits on top of the IPPE_SQUARE
+        # ambiguity floor.
+        if self.config.use_subpix_refine and detections:
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER,
+                        self.config.subpix_max_iter, self.config.subpix_epsilon)
+            win = (self.config.subpix_win_size, self.config.subpix_win_size)
+            zero = (self.config.subpix_zero_zone, self.config.subpix_zero_zone)
+            for det in detections:
+                corners = det.corners_2d.reshape(-1, 1, 2).astype(np.float32)
+                cv2.cornerSubPix(gray, corners, win, zero, criteria)
+                det.corners_2d = corners.reshape(4, 2)
+                det.center_2d = det.corners_2d.mean(axis=0)
+
         # Step 4: PnP pose estimation if camera is calibrated
         if self._camera_matrix is not None:
             for det in detections:
@@ -160,11 +192,12 @@ class GateDetector:
             hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
             mask = cv2.inRange(hsv, self.config.hsv_lower, self.config.hsv_upper)
 
-        # Morphological cleanup — dilate first to connect thin gate outlines,
-        # then close gaps, then open to remove noise
-        dilate_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (7, 7))
-        mask = cv2.dilate(mask, dilate_kernel, iterations=1)
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
+        # Morphological cleanup — close gaps, then open to remove noise.
+        # No initial dilation: dilating before contouring inflates the gate's
+        # apparent size, which biases PnP toward shorter distances. Stage 1
+        # smoke test (2026-04-25) showed 7x7 dilate caused 12-22% distance
+        # under-estimate, scaling with range.
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
         mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
         mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
 
@@ -248,14 +281,40 @@ class GateDetector:
 
         image_points = detection.corners_2d.astype(np.float64)
 
-        success, rvec, tvec = cv2.solvePnP(
+        # IPPE_SQUARE returns two solutions for a planar square (the inherent
+        # mirror-flip ambiguity when the gate is near-coplanar with the image).
+        # Use solvePnPGeneric to get both, then pick the one whose normal points
+        # closest to the camera optical axis (-z direction toward camera).
+        # Stage 2 smoke (2026-04-25) caught the wrong-solution case in
+        # climbing_8m where PnP returned a 22° spurious tilt.
+        # Move A (reproj-error tiebreak) and A' (LM refinement) both tried
+        # 2026-04-25 midday — both made climbing_8m WORSE (A: 0.10 → 0.37
+        # z-tilt by picking wrong sister; A': diverged to 9.2m distance
+        # error because LM landscape is near-flat between sisters and
+        # gradient-descended out of the physical basin). Camera-axis prior
+        # is load-bearing and unrefined-IPPE-SQUARE is the floor.
+        n_solutions, rvecs, tvecs, errs = cv2.solvePnPGeneric(
             self.gate_model_points,
             image_points,
             self._camera_matrix,
             self._dist_coeffs,
             flags=cv2.SOLVEPNP_IPPE_SQUARE,
         )
-
+        success = n_solutions > 0
+        if success:
+            best_idx = 0
+            if n_solutions > 1:
+                # Prefer the solution whose normal is most camera-facing.
+                best_score = -np.inf
+                for i in range(n_solutions):
+                    R_i, _ = cv2.Rodrigues(rvecs[i])
+                    n_i = R_i @ np.array([0.0, 0.0, 1.0])
+                    score = -abs(n_i[0]) - abs(n_i[1])  # most |z|, least |x|+|y|
+                    if score > best_score:
+                        best_score = score
+                        best_idx = i
+            rvec = rvecs[best_idx]
+            tvec = tvecs[best_idx]
         if success:
             # tvec is position of gate in camera frame
             gate_pos_camera = tvec.flatten()
@@ -264,6 +323,18 @@ class GateDetector:
 
             # Bearing vector (unit direction toward gate in camera/body frame)
             detection.bearing_body = gate_pos_camera / (detection.distance + 1e-6)
+
+            # Gate "fly-through direction": the gate plane is z=0 in gate-local
+            # frame; PnP's rvec rotates gate frame -> camera frame. The training
+            # observation uses the direction the drone *travels through* the
+            # gate (env.gate_orientations[current]), which is the back-face
+            # normal — i.e. pointing AWAY from camera through the gate. We
+            # therefore orient the normal so it points away from the camera.
+            R, _ = cv2.Rodrigues(rvec)
+            normal_cam = R @ np.array([0.0, 0.0, 1.0])
+            if np.dot(normal_cam, gate_pos_camera) < 0:
+                normal_cam = -normal_cam  # flip to point away from camera
+            detection.normal_camera = normal_cam
 
     def detect_primary(self, image: np.ndarray) -> GateDetection:
         """Convenience: detect and return only the primary (largest) gate."""

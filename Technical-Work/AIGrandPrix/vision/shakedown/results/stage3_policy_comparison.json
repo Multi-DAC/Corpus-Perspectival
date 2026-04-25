@@ -1,0 +1,137 @@
+[
+  {
+    "scenario": "hover_5m_ahead",
+    "detection_found": true,
+    "pnp_distance_m": 5.052642851232244,
+    "true_distance_m": 5.0,
+    "action_state": [
+      1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_vision": [
+      1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_diff": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "signs_agree": true
+  },
+  {
+    "scenario": "approach_8m_5mps",
+    "detection_found": true,
+    "pnp_distance_m": 8.135612413144534,
+    "true_distance_m": 8.0,
+    "action_state": [
+      -1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_vision": [
+      -1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_diff": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "signs_agree": true
+  },
+  {
+    "scenario": "retreat_6m_-3mps",
+    "detection_found": true,
+    "pnp_distance_m": 6.075963310629749,
+    "true_distance_m": 6.0,
+    "action_state": [
+      1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_vision": [
+      1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_diff": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "signs_agree": true
+  },
+  {
+    "scenario": "offaxis_6m_yaw15",
+    "detection_found": true,
+    "pnp_distance_m": 5.995535211330012,
+    "true_distance_m": 6.000000000000001,
+    "action_state": [
+      -1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_vision": [
+      -1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_diff": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "signs_agree": true
+  },
+  {
+    "scenario": "climbing_8m",
+    "detection_found": true,
+    "pnp_distance_m": 8.279728240797134,
+    "true_distance_m": 8.139410298049853,
+    "action_state": [
+      -1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_vision": [
+      -1.0,
+      -1.0,
+      1.0,
+      1.0
+    ],
+    "action_diff": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "signs_agree": true
+  }
+]

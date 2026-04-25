@@ -173,11 +173,15 @@ class CompetitionAdapter:
         current_time = self._step_count * self._dt
         time_since_gate = current_time - self._last_gate_time
 
-        # 11. Closing speed (1)
+        # 11. Closing speed (1) — MUST match ImprovedObsWrapper sign convention.
+        # The training wrapper uses speed_toward = -dot(vel, rel_gate_world/|rel|),
+        # which is negative when approaching the gate. Counter-intuitive but the
+        # policy was fit to this — the adapter must reproduce it exactly.
+        # Stage 2 smoke test (2026-04-25) caught a +/- sign flip here that produced
+        # 6-10 m/s divergence vs training observation in approach/retreat scenarios.
         if gate_pos_body is not None and dist > 0.01:
-            # Project velocity onto direction-to-gate
             gate_dir_world = rel_gate_world / (np.linalg.norm(rel_gate_world) + 1e-6)
-            speed_toward = np.dot(vel, gate_dir_world)
+            speed_toward = -np.dot(vel, gate_dir_world)
         else:
             speed_toward = 0.0
 

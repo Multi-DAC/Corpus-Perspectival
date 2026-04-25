@@ -1,0 +1,1285 @@
+[
+  {
+    "scenario": "hover_5m_ahead",
+    "detection_found": true,
+    "pnp_distance_m": 5.005249210937342,
+    "true_distance_m": 5.0,
+    "max_abs_diff": 0.019999999552965164,
+    "big_diffs": [],
+    "per_dim": [
+      {
+        "dim": 0,
+        "label": "vel_body_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 1,
+        "label": "vel_body_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 2,
+        "label": "vel_body_z",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 3,
+        "label": "omega_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 4,
+        "label": "omega_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 5,
+        "label": "omega_z",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 6,
+        "label": "g_body_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 7,
+        "label": "g_body_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 8,
+        "label": "g_body_z",
+        "state": -9.8100004196167,
+        "vision": -9.8100004196167,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 9,
+        "label": "rel_gate_body_x",
+        "state": 5.0,
+        "vision": 5.005235195159912,
+        "diff": 0.005235195159912109,
+        "rel": 0.0010470390552654862
+      },
+      {
+        "dim": 10,
+        "label": "rel_gate_body_y",
+        "state": 0.0,
+        "vision": 0.009371725842356682,
+        "diff": 0.009371725842356682,
+        "rel": null
+      },
+      {
+        "dim": 11,
+        "label": "rel_gate_body_z",
+        "state": 0.0,
+        "vision": 0.007266824133694172,
+        "diff": 0.007266824133694172,
+        "rel": null
+      },
+      {
+        "dim": 12,
+        "label": "dist_to_gate",
+        "state": 5.0,
+        "vision": 5.0052490234375,
+        "diff": 0.0052490234375,
+        "rel": 0.0010498047340661287
+      },
+      {
+        "dim": 13,
+        "label": "rel_next_body_x",
+        "state": 5.0,
+        "vision": 5.005235195159912,
+        "diff": 0.005235195159912109,
+        "rel": 0.0010470390552654862
+      },
+      {
+        "dim": 14,
+        "label": "rel_next_body_y",
+        "state": 0.0,
+        "vision": 0.009371725842356682,
+        "diff": 0.009371725842356682,
+        "rel": null
+      },
+      {
+        "dim": 15,
+        "label": "rel_next_body_z",
+        "state": 0.0,
+        "vision": 0.007266824133694172,
+        "diff": 0.007266824133694172,
+        "rel": null
+      },
+      {
+        "dim": 16,
+        "label": "speed",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 17,
+        "label": "progress",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 18,
+        "label": "rel_gate_world_x",
+        "state": 5.0,
+        "vision": 5.005235195159912,
+        "diff": 0.005235195159912109,
+        "rel": 0.0010470390552654862
+      },
+      {
+        "dim": 19,
+        "label": "rel_gate_world_y",
+        "state": 0.0,
+        "vision": 0.009371725842356682,
+        "diff": 0.009371725842356682,
+        "rel": null
+      },
+      {
+        "dim": 20,
+        "label": "rel_gate_world_z",
+        "state": 0.0,
+        "vision": 0.007266824133694172,
+        "diff": 0.007266824133694172,
+        "rel": null
+      },
+      {
+        "dim": 21,
+        "label": "forward_world_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 22,
+        "label": "forward_world_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 23,
+        "label": "forward_world_z",
+        "state": 1.0,
+        "vision": 1.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 24,
+        "label": "time_since_gate",
+        "state": 0.0,
+        "vision": 0.019999999552965164,
+        "diff": 0.019999999552965164,
+        "rel": null
+      },
+      {
+        "dim": 25,
+        "label": "speed_toward",
+        "state": -0.0,
+        "vision": -0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 26,
+        "label": "gate_orient_body_x",
+        "state": 1.0,
+        "vision": 0.9999057650566101,
+        "diff": -9.423494338989258e-05,
+        "rel": -9.423494338989258e-05
+      },
+      {
+        "dim": 27,
+        "label": "gate_orient_body_y",
+        "state": 0.0,
+        "vision": -0.01317549031227827,
+        "diff": -0.01317549031227827,
+        "rel": null
+      },
+      {
+        "dim": 28,
+        "label": "gate_orient_body_z",
+        "state": 0.0,
+        "vision": 0.003860163502395153,
+        "diff": 0.003860163502395153,
+        "rel": null
+      },
+      {
+        "dim": 29,
+        "label": "gate_alignment",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      }
+    ]
+  },
+  {
+    "scenario": "approach_8m_5mps",
+    "detection_found": true,
+    "pnp_distance_m": 8.01365272653692,
+    "true_distance_m": 8.0,
+    "max_abs_diff": 0.023886652663350105,
+    "big_diffs": [],
+    "per_dim": [
+      {
+        "dim": 0,
+        "label": "vel_body_x",
+        "state": 5.0,
+        "vision": 5.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 1,
+        "label": "vel_body_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 2,
+        "label": "vel_body_z",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 3,
+        "label": "omega_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 4,
+        "label": "omega_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 5,
+        "label": "omega_z",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 6,
+        "label": "g_body_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 7,
+        "label": "g_body_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 8,
+        "label": "g_body_z",
+        "state": -9.8100004196167,
+        "vision": -9.8100004196167,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 9,
+        "label": "rel_gate_body_x",
+        "state": 8.0,
+        "vision": 8.013630867004395,
+        "diff": 0.013630867004394531,
+        "rel": 0.0017038583755493164
+      },
+      {
+        "dim": 10,
+        "label": "rel_gate_body_y",
+        "state": 0.0,
+        "vision": 0.01236534770578146,
+        "diff": 0.01236534770578146,
+        "rel": null
+      },
+      {
+        "dim": 11,
+        "label": "rel_gate_body_z",
+        "state": 0.0,
+        "vision": 0.01418195478618145,
+        "diff": 0.01418195478618145,
+        "rel": null
+      },
+      {
+        "dim": 12,
+        "label": "dist_to_gate",
+        "state": 8.0,
+        "vision": 8.013652801513672,
+        "diff": 0.013652801513671875,
+        "rel": 0.0017066001892089844
+      },
+      {
+        "dim": 13,
+        "label": "rel_next_body_x",
+        "state": 8.0,
+        "vision": 8.013630867004395,
+        "diff": 0.013630867004394531,
+        "rel": 0.0017038583755493164
+      },
+      {
+        "dim": 14,
+        "label": "rel_next_body_y",
+        "state": 0.0,
+        "vision": 0.01236534770578146,
+        "diff": 0.01236534770578146,
+        "rel": null
+      },
+      {
+        "dim": 15,
+        "label": "rel_next_body_z",
+        "state": 0.0,
+        "vision": 0.01418195478618145,
+        "diff": 0.01418195478618145,
+        "rel": null
+      },
+      {
+        "dim": 16,
+        "label": "speed",
+        "state": 5.0,
+        "vision": 5.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 17,
+        "label": "progress",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 18,
+        "label": "rel_gate_world_x",
+        "state": 8.0,
+        "vision": 8.013630867004395,
+        "diff": 0.013630867004394531,
+        "rel": 0.0017038583755493164
+      },
+      {
+        "dim": 19,
+        "label": "rel_gate_world_y",
+        "state": 0.0,
+        "vision": 0.01236534770578146,
+        "diff": 0.01236534770578146,
+        "rel": null
+      },
+      {
+        "dim": 20,
+        "label": "rel_gate_world_z",
+        "state": 0.0,
+        "vision": 0.01418195478618145,
+        "diff": 0.01418195478618145,
+        "rel": null
+      },
+      {
+        "dim": 21,
+        "label": "forward_world_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 22,
+        "label": "forward_world_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 23,
+        "label": "forward_world_z",
+        "state": 1.0,
+        "vision": 1.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 24,
+        "label": "time_since_gate",
+        "state": 0.0,
+        "vision": 0.019999999552965164,
+        "diff": 0.019999999552965164,
+        "rel": null
+      },
+      {
+        "dim": 25,
+        "label": "speed_toward",
+        "state": -4.999999523162842,
+        "vision": -4.999985694885254,
+        "diff": 1.3828277587890625e-05,
+        "rel": 2.7656558359012706e-06
+      },
+      {
+        "dim": 26,
+        "label": "gate_orient_body_x",
+        "state": 1.0,
+        "vision": 0.9997146129608154,
+        "diff": -0.0002853870391845703,
+        "rel": -0.0002853870391845703
+      },
+      {
+        "dim": 27,
+        "label": "gate_orient_body_y",
+        "state": 0.0,
+        "vision": 0.0004217836249154061,
+        "diff": 0.0004217836249154061,
+        "rel": null
+      },
+      {
+        "dim": 28,
+        "label": "gate_orient_body_z",
+        "state": 0.0,
+        "vision": -0.023886652663350105,
+        "diff": -0.023886652663350105,
+        "rel": null
+      },
+      {
+        "dim": 29,
+        "label": "gate_alignment",
+        "state": 1.0,
+        "vision": 0.9997146129608154,
+        "diff": -0.0002853870391845703,
+        "rel": -0.0002853870391845703
+      }
+    ]
+  },
+  {
+    "scenario": "retreat_6m_-3mps",
+    "detection_found": true,
+    "pnp_distance_m": 6.00784398753424,
+    "true_distance_m": 6.0,
+    "max_abs_diff": 0.019999999552965164,
+    "big_diffs": [],
+    "per_dim": [
+      {
+        "dim": 0,
+        "label": "vel_body_x",
+        "state": -3.0,
+        "vision": -3.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 1,
+        "label": "vel_body_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 2,
+        "label": "vel_body_z",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 3,
+        "label": "omega_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 4,
+        "label": "omega_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 5,
+        "label": "omega_z",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 6,
+        "label": "g_body_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 7,
+        "label": "g_body_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 8,
+        "label": "g_body_z",
+        "state": -9.8100004196167,
+        "vision": -9.8100004196167,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 9,
+        "label": "rel_gate_body_x",
+        "state": 6.0,
+        "vision": 6.0078253746032715,
+        "diff": 0.007825374603271484,
+        "rel": 0.0013042291393503547
+      },
+      {
+        "dim": 10,
+        "label": "rel_gate_body_y",
+        "state": 0.0,
+        "vision": 0.010631808079779148,
+        "diff": 0.010631808079779148,
+        "rel": null
+      },
+      {
+        "dim": 11,
+        "label": "rel_gate_body_z",
+        "state": 0.0,
+        "vision": 0.01057655829936266,
+        "diff": 0.01057655829936266,
+        "rel": null
+      },
+      {
+        "dim": 12,
+        "label": "dist_to_gate",
+        "state": 6.0,
+        "vision": 6.007843971252441,
+        "diff": 0.007843971252441406,
+        "rel": 0.001307328580878675
+      },
+      {
+        "dim": 13,
+        "label": "rel_next_body_x",
+        "state": 6.0,
+        "vision": 6.0078253746032715,
+        "diff": 0.007825374603271484,
+        "rel": 0.0013042291393503547
+      },
+      {
+        "dim": 14,
+        "label": "rel_next_body_y",
+        "state": 0.0,
+        "vision": 0.010631808079779148,
+        "diff": 0.010631808079779148,
+        "rel": null
+      },
+      {
+        "dim": 15,
+        "label": "rel_next_body_z",
+        "state": 0.0,
+        "vision": 0.01057655829936266,
+        "diff": 0.01057655829936266,
+        "rel": null
+      },
+      {
+        "dim": 16,
+        "label": "speed",
+        "state": 3.0,
+        "vision": 3.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 17,
+        "label": "progress",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 18,
+        "label": "rel_gate_world_x",
+        "state": 6.0,
+        "vision": 6.0078253746032715,
+        "diff": 0.007825374603271484,
+        "rel": 0.0013042291393503547
+      },
+      {
+        "dim": 19,
+        "label": "rel_gate_world_y",
+        "state": 0.0,
+        "vision": 0.010631808079779148,
+        "diff": 0.010631808079779148,
+        "rel": null
+      },
+      {
+        "dim": 20,
+        "label": "rel_gate_world_z",
+        "state": 0.0,
+        "vision": 0.01057655829936266,
+        "diff": 0.01057655829936266,
+        "rel": null
+      },
+      {
+        "dim": 21,
+        "label": "forward_world_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 22,
+        "label": "forward_world_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 23,
+        "label": "forward_world_z",
+        "state": 1.0,
+        "vision": 1.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 24,
+        "label": "time_since_gate",
+        "state": 0.0,
+        "vision": 0.019999999552965164,
+        "diff": 0.019999999552965164,
+        "rel": null
+      },
+      {
+        "dim": 25,
+        "label": "speed_toward",
+        "state": 2.999999523162842,
+        "vision": 2.999990224838257,
+        "diff": -9.298324584960938e-06,
+        "rel": -3.0994419830676634e-06
+      },
+      {
+        "dim": 26,
+        "label": "gate_orient_body_x",
+        "state": 1.0,
+        "vision": 0.9998452663421631,
+        "diff": -0.00015473365783691406,
+        "rel": -0.00015473365783691406
+      },
+      {
+        "dim": 27,
+        "label": "gate_orient_body_y",
+        "state": 0.0,
+        "vision": -0.012179961428046227,
+        "diff": -0.012179961428046227,
+        "rel": null
+      },
+      {
+        "dim": 28,
+        "label": "gate_orient_body_z",
+        "state": 0.0,
+        "vision": -0.012692189775407314,
+        "diff": -0.012692189775407314,
+        "rel": null
+      },
+      {
+        "dim": 29,
+        "label": "gate_alignment",
+        "state": -1.0,
+        "vision": -0.9998452663421631,
+        "diff": 0.00015473365783691406,
+        "rel": 0.00015473365783691406
+      }
+    ]
+  },
+  {
+    "scenario": "offaxis_6m_yaw15",
+    "detection_found": true,
+    "pnp_distance_m": 5.932927621700758,
+    "true_distance_m": 6.000000000000001,
+    "max_abs_diff": 0.06904125213623047,
+    "big_diffs": [
+      {
+        "dim": 9,
+        "label": "rel_gate_body_x",
+        "state": 5.795555114746094,
+        "vision": 5.726513862609863,
+        "diff": -0.06904125213623047,
+        "rel": -0.011912793852388859
+      },
+      {
+        "dim": 12,
+        "label": "dist_to_gate",
+        "state": 6.0,
+        "vision": 5.93292760848999,
+        "diff": -0.06707239151000977,
+        "rel": -0.011178731918334961
+      },
+      {
+        "dim": 13,
+        "label": "rel_next_body_x",
+        "state": 5.795555114746094,
+        "vision": 5.726513862609863,
+        "diff": -0.06904125213623047,
+        "rel": -0.011912793852388859
+      },
+      {
+        "dim": 18,
+        "label": "rel_gate_world_x",
+        "state": 5.795555114746094,
+        "vision": 5.726513862609863,
+        "diff": -0.06904125213623047,
+        "rel": -0.011912793852388859
+      }
+    ],
+    "per_dim": [
+      {
+        "dim": 0,
+        "label": "vel_body_x",
+        "state": 4.0,
+        "vision": 4.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 1,
+        "label": "vel_body_y",
+        "state": 1.0,
+        "vision": 1.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 2,
+        "label": "vel_body_z",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 3,
+        "label": "omega_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 4,
+        "label": "omega_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 5,
+        "label": "omega_z",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 6,
+        "label": "g_body_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 7,
+        "label": "g_body_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 8,
+        "label": "g_body_z",
+        "state": -9.8100004196167,
+        "vision": -9.8100004196167,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 9,
+        "label": "rel_gate_body_x",
+        "state": 5.795555114746094,
+        "vision": 5.726513862609863,
+        "diff": -0.06904125213623047,
+        "rel": -0.011912793852388859
+      },
+      {
+        "dim": 10,
+        "label": "rel_gate_body_y",
+        "state": 1.5529142618179321,
+        "vision": 1.5513185262680054,
+        "diff": -0.0015957355499267578,
+        "rel": -0.0010275747627019882
+      },
+      {
+        "dim": 11,
+        "label": "rel_gate_body_z",
+        "state": 0.0,
+        "vision": 0.009074059315025806,
+        "diff": 0.009074059315025806,
+        "rel": null
+      },
+      {
+        "dim": 12,
+        "label": "dist_to_gate",
+        "state": 6.0,
+        "vision": 5.93292760848999,
+        "diff": -0.06707239151000977,
+        "rel": -0.011178731918334961
+      },
+      {
+        "dim": 13,
+        "label": "rel_next_body_x",
+        "state": 5.795555114746094,
+        "vision": 5.726513862609863,
+        "diff": -0.06904125213623047,
+        "rel": -0.011912793852388859
+      },
+      {
+        "dim": 14,
+        "label": "rel_next_body_y",
+        "state": 1.5529142618179321,
+        "vision": 1.5513185262680054,
+        "diff": -0.0015957355499267578,
+        "rel": -0.0010275747627019882
+      },
+      {
+        "dim": 15,
+        "label": "rel_next_body_z",
+        "state": 0.0,
+        "vision": 0.009074059315025806,
+        "diff": 0.009074059315025806,
+        "rel": null
+      },
+      {
+        "dim": 16,
+        "label": "speed",
+        "state": 4.123105525970459,
+        "vision": 4.123105525970459,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 17,
+        "label": "progress",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 18,
+        "label": "rel_gate_world_x",
+        "state": 5.795555114746094,
+        "vision": 5.726513862609863,
+        "diff": -0.06904125213623047,
+        "rel": -0.011912793852388859
+      },
+      {
+        "dim": 19,
+        "label": "rel_gate_world_y",
+        "state": 1.5529142618179321,
+        "vision": 1.5513185262680054,
+        "diff": -0.0015957355499267578,
+        "rel": -0.0010275747627019882
+      },
+      {
+        "dim": 20,
+        "label": "rel_gate_world_z",
+        "state": 0.0,
+        "vision": 0.009074059315025806,
+        "diff": 0.009074059315025806,
+        "rel": null
+      },
+      {
+        "dim": 21,
+        "label": "forward_world_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 22,
+        "label": "forward_world_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 23,
+        "label": "forward_world_z",
+        "state": 1.0,
+        "vision": 1.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 24,
+        "label": "time_since_gate",
+        "state": 0.0,
+        "vision": 0.019999999552965164,
+        "diff": 0.019999999552965164,
+        "rel": null
+      },
+      {
+        "dim": 25,
+        "label": "speed_toward",
+        "state": -4.122521877288818,
+        "vision": -4.122310161590576,
+        "diff": 0.0002117156982421875,
+        "rel": 5.135586980031803e-05
+      },
+      {
+        "dim": 26,
+        "label": "gate_orient_body_x",
+        "state": 0.9659258127212524,
+        "vision": 0.9728729128837585,
+        "diff": 0.0069471001625061035,
+        "rel": 0.007192167453467846
+      },
+      {
+        "dim": 27,
+        "label": "gate_orient_body_y",
+        "state": 0.258819043636322,
+        "vision": 0.2313346266746521,
+        "diff": -0.027484416961669922,
+        "rel": -0.10619163513183594
+      },
+      {
+        "dim": 28,
+        "label": "gate_orient_body_z",
+        "state": 0.0,
+        "vision": -0.0016096917679533362,
+        "diff": -0.0016096917679533362,
+        "rel": null
+      },
+      {
+        "dim": 29,
+        "label": "gate_alignment",
+        "state": 0.999858558177948,
+        "vision": 0.9999322295188904,
+        "diff": 7.367134094238281e-05,
+        "rel": 7.368176011368632e-05
+      }
+    ]
+  },
+  {
+    "scenario": "climbing_8m",
+    "detection_found": true,
+    "pnp_distance_m": 8.157739365378879,
+    "true_distance_m": 8.139410298049853,
+    "max_abs_diff": 0.019999999552965164,
+    "big_diffs": [],
+    "per_dim": [
+      {
+        "dim": 0,
+        "label": "vel_body_x",
+        "state": 3.0,
+        "vision": 3.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 1,
+        "label": "vel_body_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 2,
+        "label": "vel_body_z",
+        "state": 1.5,
+        "vision": 1.5,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 3,
+        "label": "omega_x",
+        "state": 0.10000000149011612,
+        "vision": 0.10000000149011612,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 4,
+        "label": "omega_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 5,
+        "label": "omega_z",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 6,
+        "label": "g_body_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 7,
+        "label": "g_body_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 8,
+        "label": "g_body_z",
+        "state": -9.8100004196167,
+        "vision": -9.8100004196167,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 9,
+        "label": "rel_gate_body_x",
+        "state": 8.0,
+        "vision": 8.015729904174805,
+        "diff": 0.015729904174804688,
+        "rel": 0.001966238021850586
+      },
+      {
+        "dim": 10,
+        "label": "rel_gate_body_y",
+        "state": 0.0,
+        "vision": 0.012531103566288948,
+        "diff": 0.012531103566288948,
+        "rel": null
+      },
+      {
+        "dim": 11,
+        "label": "rel_gate_body_z",
+        "state": 1.5,
+        "vision": 1.5154637098312378,
+        "diff": 0.015463709831237793,
+        "rel": 0.01030914019793272
+      },
+      {
+        "dim": 12,
+        "label": "dist_to_gate",
+        "state": 8.139410018920898,
+        "vision": 8.157739639282227,
+        "diff": 0.018329620361328125,
+        "rel": 0.002251959405839443
+      },
+      {
+        "dim": 13,
+        "label": "rel_next_body_x",
+        "state": 8.0,
+        "vision": 8.015729904174805,
+        "diff": 0.015729904174804688,
+        "rel": 0.001966238021850586
+      },
+      {
+        "dim": 14,
+        "label": "rel_next_body_y",
+        "state": 0.0,
+        "vision": 0.012531103566288948,
+        "diff": 0.012531103566288948,
+        "rel": null
+      },
+      {
+        "dim": 15,
+        "label": "rel_next_body_z",
+        "state": 1.5,
+        "vision": 1.5154637098312378,
+        "diff": 0.015463709831237793,
+        "rel": 0.01030914019793272
+      },
+      {
+        "dim": 16,
+        "label": "speed",
+        "state": 3.3541018962860107,
+        "vision": 3.3541018962860107,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 17,
+        "label": "progress",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 18,
+        "label": "rel_gate_world_x",
+        "state": 8.0,
+        "vision": 8.015729904174805,
+        "diff": 0.015729904174804688,
+        "rel": 0.001966238021850586
+      },
+      {
+        "dim": 19,
+        "label": "rel_gate_world_y",
+        "state": 0.0,
+        "vision": 0.012531103566288948,
+        "diff": 0.012531103566288948,
+        "rel": null
+      },
+      {
+        "dim": 20,
+        "label": "rel_gate_world_z",
+        "state": 1.5,
+        "vision": 1.5154637098312378,
+        "diff": 0.015463709831237793,
+        "rel": 0.01030914019793272
+      },
+      {
+        "dim": 21,
+        "label": "forward_world_x",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 22,
+        "label": "forward_world_y",
+        "state": 0.0,
+        "vision": 0.0,
+        "diff": 0.0,
+        "rel": null
+      },
+      {
+        "dim": 23,
+        "label": "forward_world_z",
+        "state": 1.0,
+        "vision": 1.0,
+        "diff": 0.0,
+        "rel": 0.0
+      },
+      {
+        "dim": 24,
+        "label": "time_since_gate",
+        "state": 0.0,
+        "vision": 0.019999999552965164,
+        "diff": 0.019999999552965164,
+        "rel": null
+      },
+      {
+        "dim": 25,
+        "label": "speed_toward",
+        "state": -3.2250490188598633,
+        "vision": -3.226430892944336,
+        "diff": -0.0013818740844726562,
+        "rel": -0.0004284815804567188
+      },
+      {
+        "dim": 26,
+        "label": "gate_orient_body_x",
+        "state": 1.0,
+        "vision": 0.9999997019767761,
+        "diff": -2.980232238769531e-07,
+        "rel": -2.980232238769531e-07
+      },
+      {
+        "dim": 27,
+        "label": "gate_orient_body_y",
+        "state": 0.0,
+        "vision": 0.0007158395601436496,
+        "diff": 0.0007158395601436496,
+        "rel": null
+      },
+      {
+        "dim": 28,
+        "label": "gate_orient_body_z",
+        "state": 0.0,
+        "vision": -0.00019696525123436004,
+        "diff": -0.00019696525123436004,
+        "rel": null
+      },
+      {
+        "dim": 29,
+        "label": "gate_alignment",
+        "state": 0.8944271802902222,
+        "vision": 0.894338846206665,
+        "diff": -8.83340835571289e-05,
+        "rel": -9.876050899038091e-05
+      }
+    ]
+  }
+]
