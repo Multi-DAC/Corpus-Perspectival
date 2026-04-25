@@ -113,11 +113,17 @@ def main():
         obs = venv.reset()
         ep_actions = []
         ep_hover = []
+        ep_gates = 0
         for step in range(MAX_STEPS_PER_EP):
             action, _ = policy.predict(obs, deterministic=True)
             obs, _, done, info = venv.step(action)
             a0 = float(action[0, 0])
             ep_actions.append(a0)
+
+            # Read gates from info before done triggers DummyVecEnv auto-reset
+            # (which zeros venv.envs[0].episode_gates). See Mirror #21.
+            if "gates_passed" in info[0]:
+                ep_gates = int(info[0]["gates_passed"])
 
             # Pull the underlying env state for hover-classification
             base = venv.envs[0]._base_env
@@ -132,7 +138,7 @@ def main():
 
         all_actions0.extend(ep_actions)
         hover_actions0.extend(ep_hover)
-        gates = venv.envs[0].episode_gates
+        gates = ep_gates
         gates_passed.append(gates)
         print(f"  ep {ep}: {len(ep_actions)} steps, {gates} gates, "
               f"{len(ep_hover)} hover-like steps, "

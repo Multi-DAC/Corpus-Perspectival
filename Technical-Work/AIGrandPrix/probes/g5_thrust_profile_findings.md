@@ -1,4 +1,4 @@
-# G5 Thrust Profile — Phase 2 67.5M (probe run 2026-04-25 13:13:53)
+# G5 Thrust Profile — Phase 2 67.5M (probe run 2026-04-25 14:25:54)
 
 **Policy:** `sim\runs\infinite_v3_phase2_60M_1777095742\checkpoints\ppo_phase2_67500016_steps.zip`  
 **VecNormalize:** `sim\runs\infinite_v3_phase2_60M_1777095742\checkpoints\ppo_phase2_67500016_steps_vecnorm.pkl`  
@@ -36,13 +36,7 @@
 
 ## Gates per episode
 
-`[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]` (mean = 0.0)
-
-### NOTE: zero gates across all episodes
-
-This probe runs with `adaptive_curriculum=False` and `domain_rand=False` for clean thrust calibration. The curriculum-off setting falls through to uniform-random maneuver selection, which can start the policy on hairpins/spirals from a cold init. This says nothing about Phase 2's gate-completion rate under the training-matched configuration (curriculum on, DR on).
-
-**Action item:** rerun with `adaptive_curriculum=True` and `domain_rand=True` if we want to claim gate-completion behavior here. For now, this probe's only deliverable is the throttle distribution.
+`[0, 1, 0, 1, 1, 2, 0, 2, 2, 0]` (mean = 0.9)
 
 ## SITL calibration recipe
 
