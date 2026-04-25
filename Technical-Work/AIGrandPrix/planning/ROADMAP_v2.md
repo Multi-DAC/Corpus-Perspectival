@@ -1,7 +1,8 @@
 # Anakin VQ1+VQ2 Roadmap v2 — Pre-sim Window → Both Qualifier Windows
 
 **Authored:** 2026-04-25 Day 84 afternoon (post-Phase-2 trajectory landing, post-vision-shakedown stages 1–3, post-Stage-3b-graded-confirmation, post-MAXIMUS-research, post-DCL-platform-research).
-**Horizon:** Now → VQ1 sim drop (May 2026) → VQ2 sim drop (June 2026) → both qualifier windows close (July 2026).
+**Patched:** 2026-04-25 Day 84 late afternoon (post theaigrandprix.com FAQ — five new facts: no wind in VQ1 or VQ2, no battery telemetry in sim, time-trial scoring with completion floor in *both* VQs, drones provided for physical, weekly newsletter as info channel).
+**Horizon:** Now → VQ1 sim drop (May 2026) → VQ2 sim drop (June 2026) → both qualifier windows close (end of July 2026).
 **Authors:** Clawd + Clayton.
 **Supersedes:** `ROADMAP.md` v1 (Day 83 evening, written before vision shakedown, before DCL constraint surfacing, before MAXIMUS intel).
 
@@ -26,15 +27,17 @@ Two PnP-fix attempts (Move A reprojection-tiebreak; Move A' camera-axis pick + L
 | Window | Event | What it means |
 |---|---|---|
 | **Now → ~May** | Pre-sim window | Build position-less architecture, randomization, sim2real harness, attack policy laggards |
-| **~May 2026** | VQ1 sim drops | Visually-highlighted gates, simplified course. Integration sprint. |
-| **May → July** | VQ1 qualifier window open | Specialize one policy on VQ1 |
-| **~June 2026** | VQ2 sim drops | 3D-scanned realistic environment, harder course |
-| **June → July** | VQ2 qualifier window open | Train second policy on VQ2 (more dynamic training time available) |
-| **~July 2026** | Both qualifier windows close | Submit both |
-| **September 2026** | SoCal physical qualifier | Top finishers only — sim-to-real critical |
-| **November 2026** | Ohio finals | — |
+| **~May 2026** | VQ1 sim drops | "Intentionally simple, small number of gates, desaturated environment, visually highlighted gates" (FAQ). **No wind.** Integration sprint. |
+| **May → end-July** | VQ1 qualifier window open | Time-trial scoring with completion floor; specialize one policy on VQ1 |
+| **~June 2026** | VQ2 sim drops | "Significantly more realistic, 3D-scanned environment" (FAQ). Harder course. **Still no wind.** |
+| **June → end-July** | VQ2 qualifier window open | Train second policy on VQ2 (shorter dynamic training time than VQ1 specialist) |
+| **end of July 2026** | Both qualifier windows close | Submit both |
+| **September 2026** | SoCal physical qualifier | "Two-week in-person training and qualification experience"; indoor, consistent lighting, obstacles + visual distractions. **Drones provided** (no hardware acquisition by us). |
+| **November 2026** | Ohio finals | Top 10 teams guaranteed ≥$5K; one Anduril job; $500K total pool |
 
-**The specialization-gradient experiment Clayton named:** train a VQ1 specialist (May–July, longer specialization horizon) and a VQ2 general/dynamic pilot (June–July, shorter specialization horizon, broader training distribution). The delta between them at submission is itself a clean measurement of the specialization-vs-general gradient — a P96-style empirical artifact independent of the competition outcome.
+**The specialization-gradient experiment Clayton named:** train a VQ1 specialist (May → end-July, ~13 weeks, longer specialization horizon) and a VQ2 general/dynamic pilot (June → end-July, ~9 weeks, shorter specialization horizon, broader training distribution). The delta between them at submission is itself a clean measurement of the specialization-vs-general gradient — a P96-style empirical artifact independent of the competition outcome.
+
+**Time-trial reframe (FAQ-driven update):** Both VQs are "fastest valid times advances" with "runs must successfully pass gates to count." VQ1's intentional simplicity makes completion the *floor*, not the *goal* — speed is the differentiator from the moment completion stabilizes. v1 of this roadmap deferred speed to VQ2; that was wrong. Speed-after-completion-plateau must happen *within* the VQ1 specialization window. This sharpens P6 (don't bolt secondary objectives onto a competent policy at full strength): the right ordering is completion-stable → introduce speed pressure with halt criteria → ramp.
 
 ---
 
@@ -42,12 +45,15 @@ Two PnP-fix attempts (Move A reprojection-tiebreak; Move A' camera-axis pick + L
 
 ### From DCL platform (publicly documented + leaked Northlake spec)
 
-**Hard constraints (publicly documented, dcl-project.com):**
-- Single FPV camera (~12MP wide-angle) + IMU. **No LiDAR. No position telemetry after starting coordinate.**
-- Onboard compute ~100 TOPS (Jetson-class, more capable than Pi).
-- Two virtual qualifier rounds: VQ1 (May, gates **visually highlighted**), VQ2 (June, **real 3D-scanned environment**).
-- Scoring "primarily time-based but runs must successfully pass gates."
+**Hard constraints (publicly documented, dcl-project.com + theaigrandprix.com FAQ):**
+- Single FPV camera (~12MP wide-angle) + IMU (accelerometer, gyroscope, "likely motor RPM readouts"). **No LiDAR. No position telemetry after starting coordinate.**
+- Onboard compute ~100 TOPS (Jetson-class, "more capable than a Raspberry Pi"). Includes RAM/SSD + Wi-Fi/Bluetooth.
+- Two virtual qualifier rounds: VQ1 (May, gates **visually highlighted**, desaturated environment, small number of gates), VQ2 (June, **real 3D-scanned environment**).
+- **No wind / no disturbances in either VQ** (FAQ explicit). Wind only enters at physical qualifier (and even then, indoor with consistent lighting).
+- **No battery telemetry in sim** — battery status only available at physical qualifier.
+- Scoring: "fastest valid times advances" with "runs must successfully pass gates to count" — time-trial with completion floor.
 - Python primary, compiled extensions expected to work.
+- **Drones provided** at physical qualifier (no hardware build/acquisition planning needed by us).
 
 **Operational constraints (leaked via Northlake's blog, treat as best-known):**
 - Submission: Python-only `.zip` ≤500 MB, Python 3.12, Ubuntu 24.04, CUDA 12.x.
@@ -55,11 +61,15 @@ Two PnP-fix attempts (Move A reprojection-tiebreak; Move A' camera-axis pick + L
 - 120-second per-heat limit.
 - Headless containerized eval.
 
-**Unknowns (not public):**
+**Unknowns (not public — FAQ marks several explicitly TBD):**
 - Physics engine (plausibly Unity given DCL game heritage, or PX4-SITL/Gazebo).
 - Telemetry packet structure beyond camera+IMU.
 - Sim rate and control rate.
-- Exact Neros Archer flight controller / camera latency.
+- **Action / control interface — FAQ explicit "details to be released later."** Could be motor RPM, body rates, TRPY, attitude setpoint, or high-level waypoint. Must keep B3 architecture-neutral until specs land.
+- Exact Neros drone model + flight controller / camera latency ("specifications shared at a later stage").
+- Submission file size limit, runtime version, library restrictions ("communicated later"). Northlake's leaked spec (Python 3.12 / Ubuntu 24.04 / CUDA 12.x / ≤500 MB / 120s/heat) is the working assumption but **not FAQ-confirmed**.
+
+**Per FAQ:** interface specs were promised "second half of March" 2026 — that window has passed. Specs may already be available to registered teams; D-workstream priority: register at theaigrandprix.com and capture the spec drop.
 
 **Implication:** The single largest open question for our roadmap is whether telemetry includes IMU integration as derived state (attitude, body rates) or only raw IMU (accelerometer + gyro). The pre-sim window must produce architectures that work in either regime.
 
@@ -71,8 +81,13 @@ Two PnP-fix attempts (Move A reprojection-tiebreak; Move A' camera-axis pick + L
 - **Sustain-not-spike promotion criterion:** ≥80% over rolling 50-episode window for curriculum advancement, not single-episode peak.
 - **Anneal randomness/entropy on promotion:** prevents catastrophic forgetting (their Mixed Curriculum v2 lost 65% reward at 1M steps from un-annealed reintroduction).
 - **No jerk penalty until policy is competent** (their v7 catastrophe: 97.7% → 4.4% completion).
-- **Wind/disturbances only after 80% completion threshold** (action-variance collapse otherwise).
 - **Relative gate encoding in body frame** (already our V2 design).
+
+**What we DROP from MAXIMUS's playbook (FAQ-driven):**
+- **Wind / Ornstein–Uhlenbeck disturbance training.** FAQ confirms no wind in either VQ. Their wind-after-80% rule and OU-process implementation become irrelevant for VQ; revisit only for physical qualifier prep (and even then, indoor consistent-lighting may not need it).
+- **Battery-sag randomization.** Sim has no battery telemetry; physical adds it but the policy can be conditioned on battery state directly rather than trained against simulated sag.
+
+This is a meaningful pre-sim scope reduction — saves Workstream A2 calibration effort and B3 robustness budget.
 
 **Where we likely diverge / can leapfrog:**
 - They use feedforward MLP only — no recurrence. For position-less DCL VIO we likely want either an LSTM head or a temporal-context window stacked into observations.
@@ -110,8 +125,9 @@ Two PnP-fix attempts (Move A reprojection-tiebreak; Move A' camera-axis pick + L
 - Add ambiguity-rejection in `gate_detector.py`: if IPPE_SQUARE returns two solutions with reprojection-error ratio < 1.5, refuse to publish a pose; downstream observation falls back to last-known-good or "no detection" sentinel.
 - This is the move that should have happened instead of Move A/A'.
 
-**A2. Domain randomization harness** (3–5 days)
+**A2. Domain randomization harness** (2–4 days, scope reduced post-FAQ)
 - Build `vision/randomization/` module supplying: gate color/material/shape parameter draws, lighting (hemispheric, directional, spot, exposure), camera intrinsics (FOV 60–110°, resolution 320–640, exposure), motion blur, chromatic aberration.
+- **Drop wind disturbance modeling** — FAQ confirms no wind in either VQ.
 - Apply to `synthetic_camera.py` rendering. Stage 1–3 shakedown re-runs become statistical (N=100 trials per scenario across randomization range), not single-frame.
 - Calibrate noise model in `train_v3.py` (or `train_phase2.py` successor) against measured detector error distribution under randomization, not against guessed numbers.
 
@@ -168,6 +184,11 @@ Two PnP-fix attempts (Move A reprojection-tiebreak; Move A' camera-axis pick + L
 
 **D1. MAXIMUS blog as standing input**
 - Subscribe (RSS or scripted poll) to `northlakelabs.com/max/blog/` updates. Each new post: 30-min read, extract any failure-log items into our principles register.
+
+**D1a. AI Grand Prix weekly newsletter + interface spec capture (NEW from FAQ)**
+- FAQ states "Updates, parameters, and previews will also be shared via weekly newsletters." Register at theaigrandprix.com to receive.
+- Interface specs were promised "second half of March" 2026 — that window has passed. Either (a) registered teams already have them, or (b) they're delayed. Register and request the spec; if delayed, that's signal about the May sim drop schedule.
+- Each newsletter: parse for any technical detail (action interface, telemetry packet, sim physics, scoring details). Add to `projects/aigrandprix/research/aigp_newsletter_log.md`.
 
 **D2. Awesome-autonomous-drone-racing as the field reference**
 - `github.com/aimarket/awesome-autonomous-drone-racing` — review monthly. Particularly check for: any DCL-specific repos appearing, any Swift companion-code release, any AI-Grand-Prix community repos.
@@ -240,9 +261,9 @@ Week 3+ (~May 7 → VQ1 drop):
 
 - **No PnP residual chasing against synthetic gates** (P8). Two failed attempts on Day 84 closed this door.
 - **No new architecture experiments beyond B4** (LSTM contingent). Phase 2 MLP[512,512] is what's been validated.
-- **No speed optimization until completion-rate plateau** (P6). VQ1 is gate-completion-scored; speed is VQ2's concern.
+- ~~**No speed optimization until completion-rate plateau** (P6). VQ1 is gate-completion-scored; speed is VQ2's concern.~~ **STRUCK by FAQ:** Both VQs are time-trial with completion floor. Speed-after-completion-plateau is *primary* VQ1 concern, not deferred to VQ2. Replacement non-goal: no speed optimization *before* completion-rate plateau (P6 still applies — don't bolt secondary objectives onto incompetent policies).
 - **No fine-tuning from baseline 60.4M weights** (carried forward from v1 — wrong-attractor structure, F1+F2+F3 cure does not retroactively apply).
-- **No real-flight data collection until sim policy proves itself.** Hardware risk, schedule risk, and we're not resourced for it pre-VQ.
+- **No real-flight data collection until sim policy proves itself.** Hardware risk, schedule risk, and we're not resourced for it pre-VQ. **FAQ confirms drones are provided at the physical qualifier — no hardware acquisition planning needed at any phase.** This further depressurizes the hardware track entirely.
 - **No learned gate detector for VQ1** (P8 corollary). Classical CV on highlighted gates per MAXIMUS confirmation. Reconsider for VQ2.
 
 ---
