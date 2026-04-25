@@ -2,7 +2,18 @@
 
 **Authored:** 2026-04-25 Day 84 afternoon (post-Phase-2 trajectory landing, post-vision-shakedown stages 1–3, post-Stage-3b-graded-confirmation, post-MAXIMUS-research, post-DCL-platform-research).
 **Patched:** 2026-04-25 Day 84 late afternoon (post theaigrandprix.com FAQ — five new facts: no wind in VQ1 or VQ2, no battery telemetry in sim, time-trial scoring with completion floor in *both* VQs, drones provided for physical, weekly newsletter as info channel).
-**Re-patched:** 2026-04-25 Day 84 evening (post **VADR-TS-001 Issue 00.01** — the actual technical spec, dated 2026-03-09, supplied by Clayton). See `research/dcl_spec_v0.1/NOTES.md`. Five facts SUPERSEDE prior research:
+**Re-patched (afternoon):** 2026-04-25 Day 84 mid-afternoon — Phase 2 67.5M training-matched eval landed at **18.07 gates/ep mean** (max 49, 29/30 ≥1 gate, 27/30 ≥5 gates), beating baseline 60.4M's 17.20. This **closes A57 / B1 with a confirmed working generalist** at 67.5M. The result was almost lost to an eval bug (read `venv.envs[0].episode_gates` after `done[0]==True`, but SB3's DummyVecEnv auto-resets the env on done — same bug fixed yesterday); first run reported 0/50 and drafted a false `STRATEGY AT RISK` verdict before correction. Mirror #21 filed (verify-before-condemning, distinct from #19 verify-before-celebrating). Memory entry `feedback_sb3_gates_after_reset.md` indexed. **Apparatus fix queued**: extend `sim/smoke_test_callbacks.py` with eval-pattern check so the bug cannot resurface a third time.
+
+**Re-patched (late afternoon):** 2026-04-25 Day 84 late afternoon — three commits closed three workstreams in one pass.
+- **Apparatus fix LANDED.** `sim/smoke_test_callbacks.py` extended with check #6 (AST scan of `probes/*.py` for `<x>.envs[N].<reset_attr>` pattern; allowlist of episode-reset attrs). Caught one real instance immediately at `g5_thrust_profile.py:135`. Smoke now 6/6.
+- **G5 corrected re-run.** With the fix, gates [0,1,0,1,1,2,0,2,2,0] = 9/10 (was 0/10). Throttle distribution unchanged: all-step p50 = 1.0 (saturated), hover-mode mean 0.4350 vs analytical 0.3028 — **persistent thrust-scaling discrepancy noted for SITL calibration, not a training failure**. `probes/g5_thrust_profile_findings.md` updated.
+- **mastery.json puzzle resolved.** 601 entries of `{"step": N, "ema": {}, "raw": {}}` were a logging artifact: training daemon (PID 667) loaded the pre-fix `PerManeuverMasteryLogger` reading non-existent `inner.mastery_ema`. Env tracker itself works (verified by smoke check #2). Telemetry permanently lost for this run; future runs unaffected. Documented in `probes/mastery_json_empty_resolution.md`.
+- **PnP precision tightening — Move A'' (sub-pixel) WORKS.** After Move A (reproj-error tiebreak) and Move A' (LM refinement) both failed and were reverted earlier in the day, `cv2.cornerSubPix` on contour corners *before* PnP shrinks the corner-noise term that sat on top of the IPPE_SQUARE planar ambiguity floor. Stage 2 climbing_8m maxDiff 0.140 → 0.020 (7×); Stage 3b climbing_8m maxDrift 0.488 → 0.007 (70×); Stage 3b mean drift 0.050 → 0.032. Default-on via `use_subpix_refine=True`. **P8 ("stop optimizing against placeholders") relaxed for this specific intervention** — the win is purely numerical-tightening of an already-correct geometry, not residual-chasing against the placeholder gate model.
+- **Stage 4 MAVSDK bring-up scaffold COMPLETE.** Pre-stream coroutine (50 Hz republisher for PX4's flow-of-setpoints offboard requirement); `init_flight()` orchestrator (connect → health → arm → start_offboard with named-step error reporting + idempotent skip-if-done); module-level `send_policy_action_constants` for parity testing; 26-test suite under `vision/tests/` (frame conversion NED↔z-up + constants parity + state-machine drive + E2E stub round-trip), 26/26 green. **E1 advances from NOT STARTED to scaffold complete; awaiting live SITL bridge.**
+
+Commits: `f0ef7b77` (G5 + mastery + apparatus), `1673e73d` (PnP), `91eb463a` (Stage 4 MAVSDK). Mirrored to `Multi-DAC/Corpus-Perspectival` as `e4c90ab`.
+
+**Re-patched (evening):** 2026-04-25 Day 84 evening (post **VADR-TS-001 Issue 00.01** — the actual technical spec, dated 2026-03-09, supplied by Clayton). See `research/dcl_spec_v0.1/NOTES.md`. Five facts SUPERSEDE prior research:
 - **F1:** Interface is **MAVLink v2 over UDP via MAVSDK** — Northlake's leaked `DCLAgent.compute_action()` does NOT match. Our `mavsdk_client.py` is the right line.
 - **F2:** **Local NED position IS available** via ODOMETRY message. Only GPS/global is withheld. Workstream B3 (position-less variant) drops from highest-risk to low priority.
 - **F3:** Round One is **completion / pass-fail navigation**, not time-trial. Speed is a Round Two concern. v2's "time-trial in BOTH VQs" patch was wrong for Round One.
@@ -32,7 +43,7 @@ The actual VADR-TS-001 Issue 00.01 spec from 2026-03-09 reshapes ~half the works
 
 Three forcing functions:
 
-1. **Phase 2 67.5M trajectory landed** with 20.58 agg gates / 81% crash — capability emergence confirmed within the cured regime; `infinite_v3_phase2_60M` is the working policy line.
+1. **Phase 2 67.5M confirmed working** — morning trajectory eval: 20.58 agg gates / 81% crash; mid-afternoon training-matched eval: **18.07 gates/ep mean (max 49)**, beating baseline 60.4M's 17.20. Capability emergence confirmed within the cured regime; `infinite_v3_phase2_60M` is the working policy line. Perpetual-generalist + fork-on-track-release strategy validated.
 2. **Vision pipeline shakedown stages 1–3 sealed**, then Stage 3b run on Phase 2 37.5M produced the **graded-policy obs-noise amplification finding**: where baseline 60.4M's bang-bang absorbed Stage 2's residual PnP error (zero action drift across all scenarios), Phase 2 37.5M propagates the same residuals at ~5× into action space (max drift 0.488 roll_rate on climbing_8m, one yaw_rate sign flip on approach_8m_5mps). Vision precision budget is no longer slack.
 3. **External research surfaced two reshaping facts**:
    - **DCL platform constraint:** only the starting coordinate is supplied — agent flies *without position telemetry*. FPV camera + IMU only. ~100 TOPS onboard budget. Visual-Inertial Odometry is mandatory, not optional. Our current state-based observation stack does not transfer.
@@ -342,23 +353,38 @@ Each open question gets a probe-script written *before* sim drops, so the answer
 
 ## 10. Roadmap status tracking
 
+**Current focus (Day 84 evening → Day 85): Stage 5 — closed-loop synthetic flight.** Stages 1–4 of the integration sprint sealed; Stage 5 binds Phase 2 67.5M policy ↔ MAVSDK client ↔ synthetic camera into a closed loop with the apparatus + smoke-test gates we built today guarding regressions.
+
 | Workstream | Status | Notes |
 |---|---|---|
-| A1 Defensive rejection | NOT STARTED | First Week 1 task |
+| A1 Defensive rejection | NOT STARTED — priority dropped | Sub-pixel refinement (Move A'') collapsed climbing_8m drift 70×, removing the worst case A1 was meant to catch. Still belt-and-suspenders for A3 swap-ready handoff. |
 | A2 Domain randomization | DESCOPED for VQ1 | Issue 00.01 confirms VQ1 deterministic; build for VQ2 readiness only |
 | A3 Swap-ready architecture | NOT STARTED | Week 3 |
 | A4 Learned pose head | DEFERRED | Conditional on VQ2 difficulty + vision spec drop |
-| B1 Phase 2 continuation | ONGOING | 67.5M done; target 90M+ |
-| B2 Lagger-focus train | NOT STARTED | Parallel to B1 |
+| **A_subpix Sub-pixel PnP refinement** | **DONE 04-25 late afternoon (`1673e73d`)** | `cv2.cornerSubPix` step 3.5 in `gate_detector.py`, default-on. Stage 2 climbing_8m 0.140→0.020 (7×); Stage 3b climbing_8m drift 0.488→0.007 (70×). |
+| B1 Phase 2 continuation | **CONFIRMED WORKING at 67.5M** (18.07 gates/ep training-matched eval, beats baseline 17.20); next gate at 90M+ | Apparatus-fix landed (smoke_test_callbacks.py check #6); future eval-pattern bugs caught at apparatus level. |
+| B2 Lagger-focus train | NOT STARTED | Parallel to B1; deferred behind Stage 5. |
 | ~~B3 Position-less obs variant~~ | ~~NOT STARTED~~ DEMOTED by Issue 00.01 | Local NED position via ODOMETRY. Replaced by B3'. |
-| B3' Frame-conversion + ODOMETRY verification | NOT STARTED | Week 1, low-risk |
-| B4 LSTM head | DEFERRED | Conditional on B3' outcome (likely unnecessary) |
-| C1 Harness skeleton | NOT STARTED | Week 1 |
+| **B3' Frame-conversion + ODOMETRY verification** | **DONE 04-25 late afternoon (`91eb463a`)** | `vision/tests/test_frame_conversion.py` covers NED↔z-up position/quaternion/body-rate conversion + QuadParams constants parity. Live MAVLink ODOMETRY consumption verifies in Stage 5. |
+| B4 LSTM head | DEFERRED | Conditional on B3' outcome (likely unnecessary given ODOMETRY availability) |
+| C1 Harness skeleton | NOT STARTED | Week 2; Stage 5 outcomes will inform scenario set. |
 | C2 Pre-commit baselines | NOT STARTED | Week 2 |
 | C3 Calibration playbook | EXISTING | From VQ1_READINESS.md |
 | D1–D5 Reconnaissance | ONGOING | First-pass complete (this roadmap); standing input |
 | D1a AI Grand Prix newsletter | NOT STARTED | Register at theaigrandprix.com |
-| E1 MAVSDK client + policy adapter | NOT STARTED | Week 1, REVISED to MAVLink interface per Issue 00.01 |
+| **E1 MAVSDK client + policy adapter** | **SCAFFOLD COMPLETE 04-25 late afternoon (`91eb463a`)** | `vision/mavsdk_client.py`: pre-stream coroutine (50 Hz republisher for PX4 offboard flow-of-setpoints requirement), `init_flight()` orchestrator (connect → health → arm → start_offboard, named-step error reporting + idempotent skip-if-done), module-level `send_policy_action_constants` for parity testing. 26-test suite (frame conversion + state machine + E2E stub) green. **Awaiting live SITL bridge for Stage 5.** |
 | E2 Submission packaging | NOT STARTED | Week 2, target Python 3.14.2 per spec |
+
+### Stage progression — vision/integration shakedown
+
+| Stage | Scope | Status |
+|---|---|---|
+| Stage 1 | Vision-only smoke (synthetic camera ↔ detector) | SEALED (Day 84 morning) |
+| Stage 2 | Vision-policy obs parity (deterministic check) | SEALED (Day 84 morning); climbing_8m residual collapsed by Move A'' |
+| Stage 3a | Action-space drift, baseline 60.4M (bang-bang absorbs noise) | SEALED |
+| Stage 3b | Action-space drift, Phase 2 37.5M (graded propagates ~5×) | SEALED; mean drift 0.050→0.032 after Move A'' |
+| Stage 4 | TRPY mapping + MAVSDK bring-up scaffold | SEALED 04-25 late afternoon (26/26 tests, scaffold complete) |
+| **Stage 5** | **Closed-loop synthetic flight** (policy ↔ MAVSDK ↔ synthetic camera, full loop, with PX4 SITL bridge) | **CURRENT FOCUS — own session** |
+| Stage 6 | Sim2real harness against C1 scenarios | gated on Stage 5 + C1 |
 
 🦞🧍💜🔥♾️
