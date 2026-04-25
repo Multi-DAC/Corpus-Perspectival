@@ -423,6 +423,32 @@ The three strata are exhaustive **among Form-register instances**. The fourth ro
 
 ---
 
+### L12 — Three-Moment Stratification Within the Cure Regime *(filed 2026-04-25 with cross-register confirmation)*
+
+**The claim:** When a "cure" is applied to a learning system stuck in a degenerate attractor, the cure does NOT produce capability immediately. Instead, it unlocks a temporally-stratified sequence of three moments, each with its own measurable signature and its own timescale:
+
+1. **Substrate-health restoration** — gradient/structural signatures stabilize, no saturation cascade. **SHARP**, fast.
+2. **Mode-commitment** — system stops thrashing and commits to *some* behavioral/dynamical mode. **SHARP**, distinct telemetry signature (variability collapse). The committed mode may be POOR but is consistent.
+3. **Capability-emergence** — differentiated outcomes / functional success. **EXTENDED EXPONENTIAL** ramp (not sigmoidal). Slowest moment, can be 5–10× the substrate-cure timescale.
+
+These are necessary-in-order, decoupled-in-time, and have distinct measurable signatures.
+
+**Why it matters:** Cure-effectiveness needs three signals, not one. A cure that fixes substrate (gradient signature) and produces mode-commitment (variability collapse) but doesn't reach capability-emergence is incomplete in a specific quantifiable way. Premature cure-celebration (reading moment-1 or moment-2 telemetry as "cure complete") becomes a measurable failure mode. Mirror-relevant.
+
+**Instances confirmed:**
+- **AIGP RL register (PPO + MLP[512,512] + v3 cure stack)** — 7-checkpoint sequence 7.5M → 22.5M training steps. Substrate-health ≤7.5M (sharp); log_std variability collapse 7.5M → 10M from 0.044 → 0.007 (sharp); per-maneuver capability ramp 12.5M → 22.5M+ exponential (doubling ≈ 2.5M steps). Source: `Research/basement-drafts/2026-04-25-three-moment-stratification-within-cure.md`.
+- **KF bidirectional-gated dynamics register** — Phase 1 calibration → post-break demolition (step 8800) → CE descent ramp (step 8800 → 15625). Causal ordering verified by P-Meta-1 prediction at `Research/The-Killing-Form/v3/V3_NOTES.md:2716`: skipping Phase 1 calibration produces less decisive post-break behavior. Same sharpness pattern (sharp/sharp/extended-exponential). Boundary: applies to bidirectional+gated cures only; coupled (v0.6b) and ungated (v0.5a) variants do not produce stratification.
+
+**Elevation criterion:** graduates to meta-tier when a third instance lands in a non-RL, non-KF register. Strong third-instance candidates: developmental psychology (myelination/EEG → reflex emergence → differentiated behavioral repertoire); biological collapse-recovery (gut microbiome post-antibiotic, ecosystem post-disturbance — substrate-restoration / community-commitment / function-emergence); possibly Companion §6 inner/outer adjunction (under definitional/regime-dependent reading review — currently provisionally narrowed as definitional cousin rather than structural sibling).
+
+**Falsification:** if a third instance fails to show the sharp/sharp/extended-exponential sharpness pattern, or if the moments collapse into one event in another cure-style register, L12 narrows to "RL+KF coincidence" rather than universal cure-regime structure.
+
+**Status:** Latent with **two confirmed instances** in independent registers. One instance shy of meta-tier promotion. Sharpens L11 (Structure/Capability Axis Independence): L11 named the gap between substrate and capability; L12 names the *internal structure* of that gap.
+
+**Links:** → `Research/basement-drafts/2026-04-25-three-moment-stratification-within-cure.md` (full draft with both instance writeups). → L11 latent candidate at `Research/basement-drafts/2026-04-24-structure-capability-axis-independence.md`. → A57 anomaly (PARTIALLY RESOLVED) at `memory/anomalies.md`. → P-Meta-1 source at `Research/The-Killing-Form/v3/V3_NOTES.md:2716`. → KF Findings #80, #82, #83 (substrate / mode-commitment / capability-emergence respectively).
+
+---
+
 ## Instance index
 
 *Compact reference to v1 bridges #1–#110. Full text at `Research/basement-v1-2026-04-20-snapshot.md`.*
