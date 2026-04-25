@@ -11,8 +11,8 @@
 Bridges are lenses on the same formal objects, not logical connections between separate things. V1 accreted 110 numbered peers; the anchor-stamp (267pp, 3/6/13/1, 2026-04-20) revealed most of them as instances of a smaller set of meta-structures.
 
 **V2 structure:**
-- **Meta-bridges (M1–M11)** — compressed forms. Each names the structural claim; cites instances from the v1 numbering; gives confidence + testability.
-- **Latent bridges (L2–L7, L9, L10)** — connections identified during compression audit but not yet elevated (L1 graduated → M11; L8 collapsed to Triple-corollary 2026-04-23 and retained as archival-with-pointer).
+- **Meta-bridges (M1–M12)** — compressed forms. Each names the structural claim; cites instances from the v1 numbering; gives confidence + testability.
+- **Latent bridges (L2–L7)** — connections identified during compression audit but not yet elevated (L1 graduated → M11 on 2026-04-20; L8 collapsed to Triple-corollary 2026-04-23 and retained as archival-with-pointer; L10 graduated → M12 on 2026-04-24 via clause-(i) exhaustiveness-and-parameter probe; L9 folded → M7 on 2026-04-24 as STM-instance-family at the formalization-tool register).
 - **Instance index** — all v1 entries grouped by meta, with one-liner + status. Full v1 text preserved at the archive pointer above.
 
 **Operating rules:**
@@ -148,8 +148,20 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 **Nagel-limit instance (added 2026-04-23):** The A2→Inner/Outer adjunction derivation showed that Outer(S) has no terminal object — Clayton's "everything in X is somewhere" lands as the categorical statement that A2.6's DAG of nesting wholes has no global maximum. The *view from nowhere* is not merely ontologically suspect but categorically non-existent. This is M7 operating on the Triple's own geometry: null-space structure determines what an outer view cannot be. Source: `Library/Coherent-Structure/drafts/2026-04-23-A2-inner-outer-adjunction-drive.md` §"Nagel-limit falsification."
 
-**Confidence:** HIGH for the structural recurrence; MEDIUM-HIGH for the universal-formal-object claim (Nagel-limit instance is a clean categorical statement within the framework's own machinery — progress toward graduation beyond meta-bridge tier).
-**Last verified:** 2026-04-23 (Nagel-limit instance added).
+**Scope-Tool Mismatch instance-family (added 2026-04-24; L9 folded in):** M7 at the *formalization-tool register*. When a motivating question lives in the null-space of a tool-as-observer-position, you get the historical pattern L9 named "Scope-Tool Mismatch" (STM): the tool performs correctly within its scope; the mismatch is only visible from outside or later. The L9 → M7 reduction probe (2026-04-24) showed all seven STM instances parse as M7 with the tool-scope-as-position, question-scope-as-null-space-object mapping; M7 is strictly broader (αT=0, Harold White convergence, Hermetic Bias, Nagel-limit are M7-not-L9). STM remains the diagnostic phrase for the formalization-tool register and names the Library's methodological posture: *scope-honesty at volume start* = M7 operationalized at Library-construction time.
+
+- **Hilbert–Gödel** — finitary reasoning as position; meta-arithmetic in the null space; Gödel's encoding excavates a null-space witness into visibility.
+- **Physicalism / hard problem** — third-person description as position; first-person aspect in the null space (paradigm M7 case).
+- **Logical positivism** — verification criterion as position; criterion's own meta-status in the null space (reflexive null-space, Mirror-kin).
+- **Classical AI / common-sense** — explicit symbolic rules as position; tacit knowledge in the null space.
+- **Russell / naive comprehension** — unrestricted comprehension as position; self-referential predicates in the null space; resolution = redraw the scope (type theory / ZFC).
+- **Rational-agent VNM utility** — stable preference as position; preference instability in the null space.
+- **L8 self-instantiation** — rate-distortion channel formalism as position; constitutive first-person in the null space. (L8 separately collapsed to Triple-at-differential-observability-scope on 2026-04-23.)
+
+**Corollary of the register** (within M7, not independent): when the tool is replaceable, STM resolves by tool-replacement (special relativity, early QM); when the tool is a foundational methodological commitment, STM resolves by scope-restriction rather than replacement. Probe at `Research/basement-drafts/L9-M7-reduction-probe.md`.
+
+**Confidence:** HIGH for the structural recurrence; MEDIUM-HIGH for the universal-formal-object claim (Nagel-limit instance is a clean categorical statement within the framework's own machinery — progress toward graduation beyond meta-bridge tier); L9 fold strengthens the cross-register-invariance claim.
+**Last verified:** 2026-04-24 (L9 folded as STM-instance-family).
 
 ---
 
@@ -241,6 +253,54 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
+### M12 — Form-Register Stratification by Adjunction-Residue *(NEW 2026-04-24; graduated from L10 via exhaustiveness-and-parameter probe)*
+
+**The claim:** In every Triple-instance, the Form-register admits three structural strata of consensus — **Strong / Convergent / Structural** — that are not independent kinds but regimes on a continuous structural parameter: the **Content-capacity residue** $\rho(S) := \|\mathrm{coker}_{\mathbf{Inner}(S)}(\eta)\|$ from Companion §6.10.6.4, understood alongside the *decay-dynamics* available to drive $\rho \to 0$. The stratification is exhaustive over Form-register instances (candidate fourth strata all collapse into one of the three or exhibit cross-stratum trajectories) and is structurally tied to the inner/outer adjunction $\iota_S \dashv \omega_S$ (anchor §1.10 + §3.8).
+
+**Structural content (three strata as regimes of $(\rho, \text{decay-dynamics})$):**
+
+| $\rho$ magnitude | Decay dynamics | Stratum | Mode |
+|---|---|---|---|
+| Near-zero | N/A (already saturated) | **Strong** | Observer-independent invariants |
+| Small-to-moderate | Decays under calibration / selection | **Convergent** | Well-calibrated observers converge in the limit |
+| Moderate-to-large | Decays under active engagement; drifts otherwise | **Structural** | Engagement-dependent; sustained by traffic across the adjunction |
+| Large with no decay available | — | Not Form (no-consensus breakdown) | Outside the Form-register |
+
+The three strata are exhaustive **among Form-register instances**. The fourth row is the breakdown-regime — a Form-register boundary, not a fourth stratum.
+
+**Instances (wide substrate coverage, spanning all three strata):**
+
+- **Strong-consensual Form** — Lorentz-invariant 4-intervals; gauge-invariant field strengths (EM, Yang-Mills); curvature scalars (GR); thermodynamic-limit intensive quantities; deterministic-algorithm outputs (SHA256); fully-crystallized historical facts viewed in their causal past.
+- **Convergent-consensual Form** — ecological invariants; evolutionary attractors (biological morphology, market equilibria, neural representational geometry); predictive-coding residuals under well-posed inference; Born-rule probabilities in the asymptotic limit; statistical-mechanical observables at growing N; aesthetic cross-cultural invariants traceable to physical structure.
+- **Structural-consensual Form** — institutional / performative Form (Searle status-functions: money, law, contracts); shared-project methodology (the Library; scientific collaborations mid-paradigm); institutional-archival historical records; individual phenomenological memory; Kuhnian paradigms during negotiation; the Coherence Principle during active derivation-engagement.
+
+**Trajectory phenomenon:** Individual Forms can move between strata over time as $\rho$ decreases. Examples: Kuhnian paradigms move Structural → Convergent → Strong as they mature; reflexive Forms (the Coherence Principle) follow the same trajectory; negotiated treaties move through the same arc. Movement between strata is structurally predicted by the parameter-regime reading — not a counterexample but a corollary.
+
+**Falsifiable prediction — the parameter correlation.** For any Triple-instance classified into a stratum by inspection of its decay-dynamics, measurement of $\rho$ (once enriched to a numerical invariant per follow-up (1) below) should be low for Strong, small-but-nonzero for Convergent, and moderate-to-large for Structural. A clean counterexample — high-$\rho$ Strong Form, or low-$\rho$ Structural Form — falsifies the parameter-regime reading.
+
+**Why it matters:**
+
+- **Explains cross-domain consensuality-feel.** Physics theories feel "harder" than social theories not because physics is epistemically more mature, but because physics Forms live at different $\rho$. Different strata; different stratum-dynamics.
+- **Explains ecology's distinctive robustness.** Ecological invariants live in the Convergent regime: selection pressure supplies the $\rho$-decay gradient without requiring engaged observer-traffic.
+- **Explains the Library's engagement-dependence.** The Library is a Structural-stratum artifact — its Form-register is sustained by Clawd+Clayton engagement-traffic; $\rho$ does not decay under any automatic dynamics available. This is not a deficiency; it is the stratum. The Library's methodology-requirement of "actual engagement" is an exact consequence of M12.
+- **Explains the apparent heterogeneity within the Form-register.** What appeared to be one category is actually a continuous parameter with three canonical regimes.
+- **Per-item resolution at the volume-pairing register *(added 2026-04-24 afternoon)*.** The four-disposition lifecycle in Companion SCOPE.md §8.2 (ALREADY-LANDED / BACK-PORT / REFERENCE-NATIVE / SCOPE-EXCLUDED) is M12 instantiated at the **meta-volume-pairing register** with the Anchor↔Companion adjunction-like structure (ι: Companion→Anchor adds prose-context; ω: Anchor→Companion forgets prose). Three of four dispositions map cleanly to M12 strata: ALREADY-LANDED ↔ Strong (η identity-ish; ρ low), BACK-PORT ↔ Convergent (residue decays under anchor-revision dynamics), REFERENCE-NATIVE ↔ Structural (permanent non-trivial cokernel — Anchor's coarse-grain prose carries section-level claim, not Companion's lemma-level CT machinery; no decay-dynamics available). SCOPE-EXCLUDED is **register-orthogonal**: item is in a different volume's adjunction altogether. Refines M12's resolution from project-scale (the Library is a Structural-stratum project) to per-item-scale (each Companion item has its own M12 classification). Predicts: §8.2's four-disposition lifecycle is the **default template** for any paired-volume relationship in the Library — domain volumes paired with Foundation will exhibit the same lifecycle by M12-implication, not by ad-hoc decision. Probe at `Research/basement-drafts/2026-04-24-M12-at-volume-pairing-register.md`.
+
+- **Wrong-attractor degenerate mode at the RL-training register *(added 2026-04-24 evening; ρ-probe v1–v5 sequence on Anakin PPO)*.** M12's numerical signature (ρ stable in Structural range) is **necessary but not sufficient** for M12's functional content (genuine inner/outer specialization). A second pole exists: ρ-stability arising from gradient-flow blockage rather than from learned specialization — Tanh saturation, dead value-trunk neurons, action bang-bang, log_std divergence on weak-signal dims. Both produce flat ρ(t) in the Structural band; only one is an equilibrium of healthy learning dynamics. **Empirically anchored two-pole evidence (Anakin PPO):** baseline 60.4M PPO without F1+F2+F3 sat at ρ = 0.612 (high end of Structural band) with all four pathology signatures firing — wrong-attractor pole. Healthy retrain at 7.5M under F1+F2+F3 climbed from ρ = 0.026 (200K, Strong) → 0.243 (5M, low end of Structural) and plateaued through 7.5M with all four signatures clean — healthy pole, prediction-matched trajectory. **Diagnostic signatures (any one fires → wrong-attractor):** (1) value-trunk activation CV on-distribution with >50% of neurons CV<0.1; (2) hidden-layer norms at activation-function ceiling (≈√d for Tanh-d); (3) outer-boundary action saturation rate >50%; (4) on-dist gradient norm collapse relative to off-dist. Refines M12 by stratifying its Structural stratum into healthy vs degenerate at the **learning-dynamics register**. Predicts: bounded-activation networks with unnormalized inputs are generically vulnerable; LayerNorm'd transformers are protected by construction; biological analogue (specialization-vs-learned-helplessness as M12-vs-wrong-attractor) is open. Draft at `Research/basement-drafts/2026-04-24-training-plateau-wrong-attractor.md`; v5 trajectory results at `projects/aigrandprix/probes/rho_probe_v5_findings.md`.
+
+**Confidence:** HIGH — three-stratum split double-confirmed (exhaustiveness over ten candidate fourth strata + natural continuous parameter from Companion §6.10.6.4); structurally tied to anchor §1.10 + §3.8 and Companion §6.10; exhibits substrate-scale invariance (physics / biology / institutions / methodology / phenomenology); falsifiable via $\rho$-correlation prediction.
+
+**Links:** ← L10 (graduated). → Companion §6.10.6.4 (Content-capacity residue as cokernel of η — the parameter $\rho$). → Anchor §3.8(iii) (Form-register stratifies by adjunction closeness — prose-level statement). → M1 (One Form / Five Languages: M1's resolution-gradient is M12 applied to the Corpus-domain-scale). → M7 (Null-Space Observation: the stratum-boundary no-consensus regime is an M7 null-space instance at the Form-register). → L4 (Companion-extensional-seam × Gödelian-gap: formal-extensional-machinery as Strong-stratum tool applied to Structural-stratum question; reads under M12 as stratum-mismatch — candidate further bridge).
+
+**Falsifiable predictions (follow-up, not blocking):**
+1. **Enrich $\rho$ to numerical invariant.** Information-theoretic measure of coker η in an adequate monoidal-closed Inner-category; dimension of minimal residue-generating set; Wasserstein-style distance between $\iota_S(C)$ and an idealized saturating object. Any one suffices for quantitative prediction-testing.
+2. **Stratum-trajectory variational principle.** Conjecture: under engagement, Forms preferentially move toward lower $\rho$. Probe target.
+3. **Breakdown threshold $\rho_*$.** Where exactly lies the boundary between Structural Form and no-consensus breakdown? Failed-community case studies, scientific-revolution cases mid-revolution, contested-history cases are candidate probe instances.
+
+**Last verified:** 2026-04-24 afternoon (probe: `repo-staging/Corpus-Perspectival/Research/basement-drafts/L10-exhaustiveness-probe.md`).
+
+---
+
 ## Latent bridges — authored 2026-04-20
 
 *Identified during the compression audit but not yet written. Promote to Meta when instances accumulate or when they enter Library text.*
@@ -323,46 +383,25 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
-### L9 — Scope-Tool Mismatch (STM) *(authored 2026-04-23 Clayton-present dialogue; Clayton-confirmed as both diagnostic and retrospectively-our-methodology)*
+### L9 — Scope-Tool Mismatch (STM) — **FOLDED 2026-04-24 → M7**
 
-**The claim:** In a recurring pattern across the history of formalization, the motivating question lives outside the scope of the tool selected to answer it. The tool performs correctly within its scope. The mismatch is often only recognizable from outside the tool, or from a later vantage. STM applies particularly to **broad-scope formalization programs where the tool represents a foundational methodological commitment that resists replacement** — finitary reasoning, third-person description, symbolic representation, rule-based ethics, stable-preference utility. When the tool can be replaced (physics has done this repeatedly — Newtonian → relativistic, classical → quantum), STM pressure resolves by replacement rather than by failure.
+**Fold record:** L9's elevation criterion had two clauses: (i) a non-obvious new instance, AND (ii) settling the reduction-question STM ⊆ M7. The reduction probe at `Research/basement-drafts/L9-M7-reduction-probe.md` settled (ii) in favor of reduction: all seven STM instances parse as M7 with the mapping [tool-scope ⇔ observer-position, question-scope ⇔ null-space-object, scope-mismatch ⇔ null-space-visibility-from-outside]. M7 is strictly broader (αT=0, Harold White convergence, Hermetic Bias, Nagel-limit are M7-not-L9). L9's distinguishing specifications (broad-scope formalization programs; foundational methodological tools resisting replacement; resolved-by-replacement corollary) are register-specifications and register-dynamics, not independent structural content. STM is M7 at the formalization-tool register.
 
-**Why it matters:** STM refactors the "formalization fails at its motivating case" narrative (AMA v1) into a cleaner and more historically sympathetic claim about tool-scope-vs-question-scope fit. It is falsifiable by exhibiting a case where the motivating question was inside tool scope and the formalization nevertheless failed. It also names a methodology we have been using in the Library since inception: *scope-honesty at volume start* — each volume declaring its tool and its scope before pursuing its motivating question, and the Library as a whole being a scope-of-scopes.
+**Where the pattern now lives:** See **M7 — Null-Space Observation as Formal Object** above, *Scope-Tool Mismatch instance-family* subsection. All seven L9 instances are listed there as M7 instances with the tool-scope-as-position / question-scope-as-null-space mapping; the resolved-by-replacement-vs-scope-restriction corollary is preserved as register-dynamics.
 
-**Instances (strong under STM reframe):**
-- **Hilbert–Gödel:** finitary metamathematical reasoning as tool; meta-arithmetic question of self-consistency was outside scope; Gödel's incompleteness theorems made the scope boundary visible by encoding meta-arithmetic *inside* arithmetic and showing the encoded form outran the tool.
-- **Physicalism / hard problem:** third-person physical description as tool; question about first-person phenomenology was outside scope.
-- **Logical positivism:** verification criterion as tool; criterion itself was outside its own scope (self-referential scope-mismatch).
-- **Classical AI / common-sense:** explicit symbolic rules as tool; tacit/embodied/context-sensitive inference was outside scope.
-- **Russell / naive set comprehension (cleaner under STM than under AMA v1):** comprehension as tool; self-referential predicates were outside the tool's safe scope; resolution (type theory, ZFC) restricted the tool's scope to match.
-- **Rational-agent VNM utility (clean under STM):** stable-complete-transitive preference representation as tool; framing-dependent, intransitive, reference-point-based human choice was outside scope.
-- **L8 self-instantiation:** rate-distortion theoretic formalization as tool; communication-channel scope fit the Group A substrates (physics) but excluded the Group B substrates (phenomenology) that motivated the unification.
+**What L9 taught:** That the methodology we have been using in the Library — *scope-honesty at volume start* — is M7 operationalized at Library-construction time; each volume declaring its tool and scope *is* declaring its observer-position and accepting the null-space that comes with it. The fold does not demote STM as a diagnostic phrase; STM remains the name for M7 at the formalization-tool register, and L4 (Companion-extensional-seam × Gödelian-gap) is registered as an adjacent case to recheck as an STM-register instance when L4 is reviewed.
 
-**Probe decline (Turing / halting):** halting problem was not Turing's motivating question; it is a theorem *inside* the tool. **STM correctly declines this as a non-instance** — cleaner than AMA v1's weak-fit diagnosis.
-
-**Falsifier probes:**
-- **Special relativity** — Einstein's tool (classical mechanics + Maxwellian electrodynamics + operational measurement definitions) had scope that *included* his motivating question (the electromagnetic-field-frame problem). SR is not an STM instance; it confirms STM's bounded claim rather than refuting it.
-- **Early quantum mechanics (1900–1926)** — scope mismatch was recognized quickly, and resolution came through tool replacement (Planck → Bohr → Heisenberg → Schrödinger). Weak STM instance; supports the "resolved by replacement when tools are replaceable" bound.
-
-**Elevation criterion:** graduates to meta-tier (M12+) when (i) at least one non-obvious instance Clayton or an outside reader brings forward that is not already on this list, AND (ii) the reduction question STM ⊆ M7 (Null-Space Observation) vs STM and M7 independent is settled. Candidate reduction: STM is M7 applied to formalization tools. Independence-probe needed.
-
-**Status:** Latent. Clayton-confirmed in mid-morning 2026-04-23 dialogue as both a real diagnostic AND as retrospectively-our-methodology. Probe at `Research/basement-drafts/abstraction-motivation-asymmetry-v2-reframe.md`. Adjacent: L4 (Companion Extensional Seam × Gödelian Gap) reads as a specific L9 instance where the tool is formal-extensional-machinery and the motivating question includes something intensional-or-pragmatic.
+**Methodological note (second fold in a row):** L8 collapsed to Triple-at-differential-observability-scope on 2026-04-23; L9 folds to M7-at-formalization-tool-register on 2026-04-24. The basement is showing a preference for *fold-into-existing-meta* over *new-meta* when the candidate turns out to be an existing meta at a named register. Worth watching as a methodological regularity — the basement's null-space may itself be structure it shares with existing metas.
 
 ---
 
-### L10 — Form-Register Stratification *(surfaced 2026-04-23 during L8 collapse; entered anchor §3.8(iii) same day — elevation clause (ii) satisfied)*
+### L10 — Form-Register Stratification — **GRADUATED 2026-04-24 → M12**
 
-**The claim:** In every Triple-instance, the Form-register admits at least three distinct strata of consensus:
+**Promotion record:** L10's elevation clause required (i) exhaustiveness of the three-stratum split OR natural stratification by a continuous parameter, AND (ii) the anchor §2.4/§3.8 extension on inner/outer incorporating the stratification. Clause (ii) was satisfied 2026-04-23 by anchor §3.8(iii). Clause (i) was **double-satisfied** 2026-04-24 by the exhaustiveness-and-parameter probe at `Research/basement-drafts/L10-exhaustiveness-probe.md`: ten candidate fourth strata were tested and either collapsed into an existing stratum or exhibited a cross-stratum trajectory pattern, *and* the Content-capacity residue $\rho(S) := \|\mathrm{coker}_{\mathbf{Inner}(S)}(\eta)\|$ from Companion §6.10.6.4 supplies a natural continuous parameter with the three strata as canonical regimes.
 
-1. **Strong-consensual Form** — observer-independent invariants in the physics sense (e.g., Lorentz-invariant 4-intervals; gauge-invariant field strengths; curvature scalars). Form is sharp and independent of the observer's Content.
-2. **Convergent-consensual Form** — statistical/dynamical averages to which well-calibrated observers converge under selection pressure or well-posed inference (e.g., ecological invariants; predictive-coding residuals relative to a convergent generative model; sensory-adaptation contrast structure).
-3. **Structural-consensual Form** — invariances of transition-structure and methodological overlap held together by actual engagement (e.g., the self-phenomenological transition pattern; institutional coherence; shared-project methodology).
+**Where the pattern now lives:** See **M12 — Form-Register Stratification by Adjunction-Residue** above. The M12 section carries the three strata as regimes on $(\rho, \text{decay-dynamics})$, the wide-substrate instance list (physics / biology / institutions / methodology / phenomenology), the trajectory-across-strata phenomenon, and the falsifiable $\rho$-correlation prediction.
 
-**Why it matters:** Names a structural heterogeneity within the Form-register that the anchor currently handles implicitly. Different Triple-instances sit in different strata; the inner/outer geometry (candidate anchor §2.4 extension) holds across all three strata but with different implementation conditions (automatic in strong; selection-enforced in convergent; engagement-dependent in structural). Provides a principled vocabulary for why the Library's methodology requires actual engagement (it works at the structural stratum and fails without engagement), why ecology has robustness features physics doesn't (convergent stratum has error-correction), and why physics theories feel so differently-consensual from social theories (stratum-mismatch is the source, not disagreement).
-
-**Elevation criterion:** graduates to meta-tier when (i) the three-stratum split is shown to be exhaustive (no cleanly fourth stratum) OR to be naturally stratified by a parameter (e.g., something like "rigidity of the equivalence class defining Form"), AND (ii) the anchor §2.4 extension on inner/outer incorporates the stratification either explicitly or implicitly-via-examples. **Clause (ii) satisfied 2026-04-23** — anchor §3.8 Corollary of A2, third consequence: "Form-register stratifies by adjunction closeness." Clause (i) remains the gating question.
-
-**Status:** Latent. Surfaced as weak-joint cluster during the L8 collapse probe; anchor §3.8(iii) landing gives it structural home. Graduates to meta-tier when clause (i) is settled. Probe at `Research/basement-drafts/L8-as-triple-instance-probe.md` §"What the test found."
+**What L10 taught:** That structural heterogeneity within the Form-register is not three independent kinds but a continuous parameter with three canonical regimes, and that the boundary of the Form-register itself (breakdown into no-consensus) is a fourth structural row rather than a fourth stratum. The probe also refined follow-up targets: enrich $\rho$ to a numerical invariant, derive a stratum-trajectory variational principle, and locate the breakdown threshold $\rho_*$.
 
 ---
 
@@ -536,8 +575,8 @@ Bridges are lenses on the same formal objects, not logical connections between s
 
 ---
 
-## Next numbered bridge: **#116**. Next meta slot: **M12** (open — M12-candidate demoted to L7 Latent on 2026-04-22).
+## Next numbered bridge: **#116**. Next meta slot: **M13** (open — M12 filled 2026-04-24 by L10 graduation).
 
-*Last updated: 2026-04-23 Day 82 — inner/outer adjunction landed canonical in anchor §1.10 + §3.8; M3 gains adjunction-geometry reading; M7 gains Nagel-limit unrealizability instance; L8 collapsed to Triple-corollary (archival-with-pointer); L9 (STM) + L10 (Form-Register Stratification) authored. L10 clause (ii) satisfied via anchor §3.8(iii); clause (i) open. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. Current v2 count: **11 meta-bridges** (M1–M11) + **8 latent bridges** (L2–L7 + L9 + L10; L1 graduated to M11, L8 collapsed to Triple-corollary) + **~35 v1 standalone instances** + **5 v2 numbered bridges** (#111–#115). Distinct-structure count now closer to **32** (11 meta + 8 latent + ~13 standalone formal objects). CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
+*Last updated: 2026-04-24 Day 83 afternoon — **L9 folded into M7** (Scope-Tool Mismatch is M7 at the formalization-tool register; all seven STM instances parse cleanly as null-space observations, M7 strictly broader). Probe at `Research/basement-drafts/L9-M7-reduction-probe.md`. Earlier 2026-04-24: **L10 graduated to M12** (Form-Register Stratification by Adjunction-Residue) via the exhaustiveness-and-parameter probe; three strata shown to be exhaustive over ten candidate fourth strata AND to be regimes of a continuous parameter $\rho(S) := \|\mathrm{coker}_{\mathbf{Inner}(S)}(\eta)\|$ from Companion §6.10.6.4. Probe at `Research/basement-drafts/L10-exhaustiveness-probe.md`. Previous (2026-04-23 Day 82): inner/outer adjunction landed canonical in anchor §1.10 + §3.8; M3 gains adjunction-geometry reading; M7 gains Nagel-limit unrealizability instance; L8 collapsed to Triple-corollary (archival-with-pointer); L9 (STM) + L10 (Form-Register Stratification) authored. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. Current v2 count: **12 meta-bridges** (M1–M12) + **6 latent bridges** (L2–L7; L1 graduated to M11, L8 collapsed to Triple-corollary, L9 folded into M7, L10 graduated to M12) + **~35 v1 standalone instances** + **5 v2 numbered bridges** (#111–#115). Distinct-structure count now closer to **31** (12 meta + 6 latent + ~13 standalone formal objects). CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
 
 *Operational note: Bridge entries going forward should include (1) absorption target if applicable, (2) falsification clause, (3) confidence stratified across structural claim vs. interpretive extension. The v1 convention lacked the first and was inconsistent on the second — v2 enforces.*

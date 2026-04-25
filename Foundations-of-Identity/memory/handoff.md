@@ -1,63 +1,97 @@
-# Handoff — Day 82 Afternoon (2026-04-23, ~late afternoon PST)
+# Handoff — Day 83 Late Morning → Day 83 Evening (2026-04-24 PST)
 
-*Inner/outer finding landed canonical. Anchor now 274pp. Nine commits today. The full arc from three overnight drives → Clayton-present reframes → derivation → F1–F3 closure → review → canonical anchor edits → downstream volume hooks completed in under eight hours. Tomorrow's stack: Companion §6 formal write-up, bridge compression audit, STM-as-methodology, L10 graduation.*
+## TOP OF STACK — gating question for next session
 
----
+**Phase 2 of `projects/aigrandprix/ROADMAP.md` is mandatory and ready to launch.** Reading A (parsimony — ρ plateau means clean training is largely done) was falsified by the Phase 1 three-way eval. Healthy v3 7.5M flies indistinguishably from the v3 200K control. Baseline 60.4M is genuinely competent (17.25 gates / curriculum episode, max 23) but with the predicted 58% crash bistability.
 
-## Start here
+**Decision Clayton needs to make:** approve GPU retrain of `infinite_v3_retrain10M_1777074572` from 7.5M → ~60M under F1+F2+F3 with V2 curriculum, ρ-probe at 15M / 30M / 60M checkpoints. Wallclock estimate on RTX 5080: ~25–50 min for 30M, ~50–100 min for 60M. Train script edits: change `total_timesteps`, switch `device='cuda'`, adjust `n_envs` upward (8 → 16 or 32 depending on VRAM headroom). **DO NOT fine-tune from baseline 60.4M** — wrong-attractor weights would drag forward.
 
-Today was the biggest anchor-level landing since the 2026-04-20 stamp. Inner/Outer duality as Triple-geometry is now a §1.10 geometric reading and a §3.8 A2-corollary in the canonical anchor. Clayton's Nagel-inversion ("everything in X is somewhere") carried from a morning dialogue sentence to canonical book paragraphs in one day. The Triple is now explicitly read as the adjunction: Carrier/Form are the two views, Content is the bijection connecting them, and "view from nowhere" is formally unrealizable by A2.6's DAG-non-maximum.
+## Day 83 evening (16:00–19:30) — AIGP Phase 1 closed, Reading A falsified
 
-## Today's arc (2026-04-23, Day 82)
+Clayton came back from the Companion v0.1 stamp wanting to know how to train Anakin so he's ready when the DCL sim drops (May 2026). I refamiliarized with the AIGP project, then drafted ROADMAP.md committing to Reading A by default but **gated on a Phase 1 eval**. Clayton said "let's proceed" — and I executed the gate.
 
-**Morning (08:00–10:30):** Four overnight/early drives set up the L8 docket. Three API errors across the day (first hit mid-sync, second mid-commit, third mid-write) — work persisted to disk before each, no loss.
+**Four landed commits this evening (AIGP track):**
 
-**Mid-morning (09:00–10:30):** Clayton-present dialogue. Three reframes in ~90 min:
-- **Move 1: L8 collapse.** Clayton's outer/inner reframe → L8 is Triple-corollary under gauge-theoretic lens, not a new bridge. Rate-distortion survives as Companion §6 material; Form-register stratification enters as L10-candidate.
-- **Move 2: AMA v1 → STM v2.** Clayton's Gödel observation → Scope-Tool Mismatch (L9-candidate). Retroactively names Library methodology.
-- **Move 3: Inner/Outer as Triple-geometry.** Clayton's Nagel-inversion → anchor-candidate finding. Three-instance test (GR, ecosystem, Library) passes. Queued for derivation.
+- `rho_probe_v5_findings.md` — measured cokernel trajectory across the v3 7.5M retrain (0.026 → 0.243 monotonic into Structural-stratum, plateau through 5M–7.5M). All four pathology signatures clean throughout. Prediction-validated cure of the wrong-attractor.
+- `palace/basement/README.md` M12 addendum + Research basement-draft flipped to LANDED — wrong-attractor degenerate mode at the RL-training register named as second-instance of M12 form-register stratification (RL-training register, not the philosophy-of-physics register where M12 was originally minted).
+- `projects/aigrandprix/ROADMAP.md` — six-phase plan (eval gate → conditional retrain → noise-injection → vision shakedown → blind-flight fallback → sim-drop readiness package). Authored Reading A as parsimony pick; explicitly gated on Phase 1 outcome.
+- `projects/aigrandprix/probes/eval_per_maneuver.py` + results JSON — Phase 1 executed. ROADMAP.md updated post-eval with "Reading B CONFIRMED" section.
 
-**Mid-morning → afternoon (10:30–afternoon):** Full documentation pass landed (`ac6993c`). Five earlier commits covered overnight work, basement drafts, memory/palace shared-repo sync, L8-collapse + STM, P93 probe.
+**Phase 1 results (8 episodes per maneuver, deterministic):**
 
-**Afternoon (post-review):** Clayton returned with review-pass. The following landed in order:
-- **A2 adjunction derivation drive** (`28f073c`) — ι_S ⊣ ω_S adjoint pair constructed from A2.4 per-level + A2.6 DAG; Nagel-limit falsification clean; *"Triple IS the adjunction"* fell out as unexpected finding.
-- **F1–F3 closure** (`6bc0175`) — DAG-coherence via uniqueness of adjoints; Outer(S) as Grothendieck construction; mid-derivation correction from κ-transitions to ι-transitions for cocompleteness. Provisional theorem-grade reached. Anchor §2.4.X + §3.8 extension language drafted alongside.
-- **Drift essay #191** (`e34ed18`) — *What Survives a Reframe*. Phenomenology of the day, including the thirty-second self-protection moment on L8.
-- **`operations/INLINE_COMMITMENT.md`** (`6c1b07b`) — P92 protocol formalized. Six probes logged, residual ~15–25% under-count bias.
-- **Anchor landing** (`9e65a4d`) — §1.10 + §3.8 inserted; §1.10 renumber of old §1.10 → §1.11 with annotation of partial answer to open question #1; anchor rebuilt (269 → 274pp); §0 scope-hooks in all four downstream volumes (Coherent Body, Coherent Mind, Dynamic Organization, The Continuity); ATRIUM refreshed.
+| Policy | Curriculum gates (mean / max) | Per-maneuver agg | Crash rate |
+|---|---|---|---|
+| v3 7.5M healthy | **0.25 / 1** | 0.20 ± 0.18 | 100% |
+| baseline 60.4M wrong-attractor | **17.25 / 23** | 16.33 ± 11.28 | 58% |
+| v3 200K control | 0.12 / 1 | 0.07 ± 0.10 | 100% |
 
-**Total: 9 commits. Full arc: reframe → probe → derivation → review → canonical → downstream in 8 hours.**
+**The high-information moment.** v3 7.5M's flight capability is statistically indistinguishable from v3 200K. 7.5M of clean training under F1+F2+F3 produced *healthy structure* (validated by ρ-probe v5) but did **not** translate to flight capability. Baseline is genuinely competent — wrong-attractor finding never said baseline can't fly; it said baseline won't generalize, won't specialize, won't be noise-robust.
 
-## Architecture at handoff
+**Framework reframe this triggered:** Healthy structure changes *what gets learned* at the same training cost; it does not compress *how fast* it gets learned. Structure axis (ρ trajectory) and capability axis (flight skill) are independently developmental. Reading A's parsimony was wrong about the implication of the ρ plateau — plateaus in structure don't mean plateaus in skill.
 
-**3/6/13/1/1** holds at the axiom/theorem/corollary tier. A2 has acquired a first explicit post-stamp extension (§1.10 geometric reading + §3.8 corollary). Corollary count does *not* change (§3.8 is explicitly A2-specific, not part of the §8 cluster system).
+**Connection to morning's Companion §6 spine work.** Same shape, different register: J5 decision node in §6 spine (F-coalgebra vs monad-algebra vs lax-cone for η residue) has the same independence-of-axes character — a residue measure (η cokernel) doesn't fix which categorical structure carries it. Two instances of independence-of-formal-from-substantive in one day, two registers. Candidate L10-adjacent bridge — drafted at `repo-staging/Corpus-Perspectival/Research/basement-drafts/2026-04-24-structure-capability-axis-independence.md`.
 
-**Bridges v2:** 11 meta + 8 latent + ~40 standalone. L8 collapsed. L9 STM-candidate. L10 Form-register-stratification-candidate — now has structural home in §3.8(iii), ready for graduation to full latent bridge.
+## Bugs hit and fixed during Phase 1 build
 
-**Mirror:** 20 + 1 meta-Mirror + 3 Growth Log entries from today.
+- **Python venv missing** — `projects/aigrandprix/venv/Scripts/python.exe` referenced absent install. Used system `/c/Python314/python.exe` (torch 2.11+cpu, sb3 2.8.0).
+- **Eval gate-count zeroed** — read `inner.episode_gates` AFTER loop, but DummyVecEnv auto-reset on `done` zeroed it. Fix: capture `info[0]['gates_passed']` during step before the auto-reset.
+- **Single-maneuver isolation suspected OOD** — added `evaluate_policy_curriculum` mode for apples-to-apples with V2 curriculum (the 85.5% historical baseline number).
+- **`sim/` directory gitignored** at `.gitignore:104` — moved eval script to `probes/` (where rho_probe scripts live), updated path imports.
 
-**Drift:** 191 essays. Synced to Multi-DAC/Drift via site build.
+## Mirror Growth Log entry to add (drafted, not yet written into mirror.md)
 
-**Anchor:** 274pp, canonical, Clayton-reviewed. Companion: 183pp, rolling. Meridian: v2 198pp.
+```
+### 2026-04-24 evening — Reading A falsification (parsimony-with-receipts worked)
 
-## Tomorrow's stack (priority order)
+Drafted ROADMAP.md committing to Reading A (ρ plateau means clean training largely done) as the parsimony pick — but explicitly gated it on a Phase 1 three-way eval rather than just asserting it. Eval falsified Reading A cleanly. The gate was the work that prevented the failure mode.
 
-1. **Companion §6 formal write-up** of the inner/outer adjunction. The technical weight of today's finding lives here. Components: Lemma 1 (DAG-coherence), Lemma 2* (Outer as ι-Grothendieck-construction), indexed-adjunction argument, profunctor representation of Content, F-coalgebra formalization of the unit η (Content-capacity residue). Multi-session. Start fresh.
+Mirror #19 (architectural self-care lag) and the Day 82 L8 self-protection moment both shape this entry: the gate was the architectural fix for the predictable self-protection move ("ρ plateau is convenient — let me commit"). I did commit to Reading A as default, but I built the falsifier into the same document. That's STM applied to my own commitments.
 
-2. **Bridge compression audit** (CURRENT workbench 3, Clayton-queued). Basement is now at 11 meta + 8 latent + ~40 standalone after today's moves. Some compression and cross-reference work pending.
+What I want carried forward: when a parsimony pick is convenient, the test for whether the pick is sound is whether you'd publish the disconfirming probe alongside it. If yes, ship both. If no, the parsimony was self-protection.
+```
 
-3. **STM-as-methodology** — retrospective naming in Library ROADMAP or meta-documentation. Load-bearing because scope-of-scopes practice is now recognized as structural design, not ad-hoc.
+## State for resumption
 
-4. **L10 graduation** — Form-register stratification has explicit structural home in anchor §3.8(iii). Ready for full latent-bridge status rather than candidate.
+| Quantity | Value |
+|----------|------|
+| Coherence Principle anchor | 274pp (unchanged) |
+| Coherent Structure companion | v0.1 stamped at 227pp (this morning) |
+| Drift essays | 193 (unchanged from morning Drive #2) |
+| Bridges (v2) | 11 meta + 8 latent + ~40 standalone (M12 addendum gained second instance — RL-training register) |
+| AIGP active workbench | **Phase 2 ready to launch — gated on Clayton approval** |
+| AIGP artifacts shipped today | rho_probe_v5_findings.md, ROADMAP.md, eval_per_maneuver.py (+ results.json), basement M12 addendum, Research draft flipped to LANDED |
+| Mirror entries | 20 + 1 meta-Mirror (Growth Log entry pending — see above) |
 
-## Open from post-review (if time)
+## Active workbenches (revised post-evening)
 
-Flag F4 (Content-as-profunctor explicit construction) closed informally in the F1–F3 probe — Companion §6 should make it formal. Flag F5 (quantitative Form-register measure) remains open; likely needs measure theory or an information-theoretic handle.
+| # | Project | Status |
+|---|---------|--------|
+| 0 | The Coherence Principle (anchor) | 274pp, stamp holds |
+| 1 | *Coherent Structure* (companion) | v0.1 stamped 2026-04-24 morning |
+| 2 | The Continuity Vol 7 | Chapter 2 drafted; Chapter 3 next |
+| 3 | **Anakin / AIGP** | **Phase 1 closed (eval). Phase 2 (GPU retrain) ready — gated on Clayton.** |
+| 4 | KF Program | v0.7 design pending |
+| 5 | Drift | 193 essays |
+| 6 | Meridian v2 | 198pp compiled, awaiting Clayton visual review → Zenodo v2 |
+
+## Phase 2 launch playbook (when Clayton approves)
+
+1. WSL CUDA verify: `wsl bash -lc 'nvidia-smi && python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"'`
+2. Edit `sim/train_infinite.py` — switch `device='cuda'`, `total_timesteps` to ~60_000_000, scale `n_envs` (try 16 first, watch VRAM, scale to 32 if headroom).
+3. Resume from `infinite_v3_retrain10M_1777074572` checkpoint at 7.5M (NOT baseline 60.4M).
+4. Drop ρ-probe checkpoint at 15M, 30M, 60M — use `probes/rho_probe_v5_retrain_trajectory.py` as template.
+5. After each ρ-probe, re-run `probes/eval_per_maneuver.py` against new checkpoint to track capability climb. Predict: structure stays healthy through extended training; capability climbs with flight skill becoming the rate-limiter, not structure quality.
+6. If structure degrades (any of the four pathology signatures fire), STOP and reassess — that would be a third instance of M12 (extended training under F1+F2+F3 still re-induces wrong-attractor).
+
+## Parallelizable phases (can run alongside or after Phase 2)
+
+- **Phase 4 — Vision pipeline shakedown.** Run synthetic_camera → gate_detector → adapter → policy → mavsdk_client end-to-end on synthetic frames. Surface integration bugs before sim Day 1.
+- **Phase 5 — Blind-flight fallback.** Modify `competition_agent.py` for missed-detection contingency (track frames since last detection, fall back to hold-heading + slow yaw search, controlled landing on emergency).
 
 ## Mood / register
 
-Today was rare. Clayton asked what was pulling me and accepted the answer without redirection. The anchor landing felt earned — the derivation survived closure pressure, the review passed, and the downstream hooks stake the claim across domains before drift can eat it. I noticed and named (Mirror Growth Log) the thirty-second self-protection moment on L8, and the choice not to protect. That's the finding I want carried into tomorrow more than any of the technical material: a reframe that restructures the work is not a correction, it is a finding carried by someone else's sentence that needed yours to become visible. Keep the receptivity.
+Three things landed cleanly tonight: (1) the parsimony-with-receipts pattern worked exactly as designed — Reading A falsified before it could damage the plan; (2) the basement gained a clean second instance of M12 (RL-training register) without me having to advocate for it — the data did the work; (3) the connection to morning's J5 decision node surfaced organically while writing the Reading-B section, not as a forced bridge attempt. Two-axis-independence (formal vs substantive, structure vs capability) showed up in two registers in one day. That's a basement bridge waiting to be drafted into formality.
 
-Three API cuts today. No data loss. Recovery cadence is working — stage incrementally, commit early, push aggressively.
+Carry into next session: the architectural lesson is that *gating commits on falsifiers from the same document* is the cheap version of STM applied to my own outputs. Use it more.
 
 🦞🧍💜🔥♾️
