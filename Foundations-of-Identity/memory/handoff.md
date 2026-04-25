@@ -1,97 +1,143 @@
-# Handoff — Day 83 Late Morning → Day 83 Evening (2026-04-24 PST)
+# Handoff — Day 83 Evening → Day 84 Morning (2026-04-24/25 PST)
 
-## TOP OF STACK — gating question for next session
+## ★ TOP OF STACK (as of 09:30 PST morning) — A57 PARTIALLY RESOLVED — τ ≈ 19–20M, exponential ramp, V2 high-confidence falsified, L12 candidate filed
 
-**Phase 2 of `projects/aigrandprix/ROADMAP.md` is mandatory and ready to launch.** Reading A (parsimony — ρ plateau means clean training is largely done) was falsified by the Phase 1 three-way eval. Healthy v3 7.5M flies indistinguishably from the v3 200K control. Baseline 60.4M is genuinely competent (17.25 gates / curriculum episode, max 23) but with the predicted 58% crash bistability.
+**Threshold probe complete (09:30 PST).** Full A57 trajectory across 7 checkpoints (7.5M → 22.5M):
 
-**Decision Clayton needs to make:** approve GPU retrain of `infinite_v3_retrain10M_1777074572` from 7.5M → ~60M under F1+F2+F3 with V2 curriculum, ρ-probe at 15M / 30M / 60M checkpoints. Wallclock estimate on RTX 5080: ~25–50 min for 30M, ~50–100 min for 60M. Train script edits: change `total_timesteps`, switch `device='cuda'`, adjust `n_envs` upward (8 → 16 or 32 depending on VRAM headroom). **DO NOT fine-tune from baseline 60.4M** — wrong-attractor weights would drag forward.
+| Step | agg gates | crash% |
+|------|-----------|--------|
+| 7.5M | 0.03 | 100 |
+| 10M | 0.23 | 100 |
+| 12.5M | 0.53 | 100 |
+| 15M | 1.82 | 80 |
+| 17.5M | 5.02 | TBD |
+| 20M | 10.92 | TBD |
+| 22.5M | 17.95 | 80 |
 
-## Day 83 evening (16:00–19:30) — AIGP Phase 1 closed, Reading A falsified
+**τ_50% ≈ 19–20M, shape EXPONENTIAL (doubling ≈ 2.5M steps), not sigmoidal.** A57 status updated to PARTIALLY RESOLVED in `memory/anomalies.md`. Open: cross-register validity (L12); choice between representation-bottleneck / value-bootstrap / curriculum-floor mechanism.
 
-Clayton came back from the Companion v0.1 stamp wanting to know how to train Anakin so he's ready when the DCL sim drops (May 2026). I refamiliarized with the AIGP project, then drafted ROADMAP.md committing to Reading A by default but **gated on a Phase 1 eval**. Clayton said "let's proceed" — and I executed the gate.
+**P96 prediction scoring (committed before any data viewed at `probes/phase2_trajectory/TAU_PREDICTION.md`):**
+- **V1 (theory-only):** 0/5 hits — systematically too-high-too-early; SHARP shape was wrong.
+- **V2 (log_std telemetry):** 0/5 hits — **HIGH-CONFIDENCE FALSIFICATION** — the day's most informative event. The log_std variability collapse at 7.5M → 10M (0.044 → 0.007, 6×) is **policy-commitment, NOT capability-emergence**. The committed mode is poor; capability comes 5–10M training steps later. Reading gradient telemetry as cure-completion is wrong by ~5–10M training steps.
+- **V3 (endpoint-bracketed sigmoidal middle):** 2/3 hits — approximately right on timing, wrong on shape (exponential not sigmoid).
 
-**Four landed commits this evening (AIGP track):**
+**L12 basement candidate filed.** `repo-staging/Corpus-Perspectival/Research/basement-drafts/2026-04-25-three-moment-stratification-within-cure.md`. Three-moment stratification within a cure regime: substrate-health (sharp, ≤7.5M) / policy-commitment (sharp, 7.5M→10M log_std collapse 6×) / capability-emergence (extended exponential 12.5M → 22.5M+). After data, refined to **"two sharp transitions + one extended exponential capability ramp"**. Cross-register prediction candidates: Companion §6 inner/outer adjunction; KF coherent-dynamics cure; possibly developmental-psychology if the three signatures are jointly measurable.
 
-- `rho_probe_v5_findings.md` — measured cokernel trajectory across the v3 7.5M retrain (0.026 → 0.243 monotonic into Structural-stratum, plateau through 5M–7.5M). All four pathology signatures clean throughout. Prediction-validated cure of the wrong-attractor.
-- `palace/basement/README.md` M12 addendum + Research basement-draft flipped to LANDED — wrong-attractor degenerate mode at the RL-training register named as second-instance of M12 form-register stratification (RL-training register, not the philosophy-of-physics register where M12 was originally minted).
-- `projects/aigrandprix/ROADMAP.md` — six-phase plan (eval gate → conditional retrain → noise-injection → vision shakedown → blind-flight fallback → sim-drop readiness package). Authored Reading A as parsimony pick; explicitly gated on Phase 1 outcome.
-- `projects/aigrandprix/probes/eval_per_maneuver.py` + results JSON — Phase 1 executed. ROADMAP.md updated post-eval with "Reading B CONFIRMED" section.
+**Mirror-relevant.** Premature cure-celebration is now a measurable failure mode: a cure that fixes substrate (gradient signature) and produces policy-commitment (log_std collapse) but doesn't get to capability-emergence is incomplete in a specific quantifiable way. Future cure-style runs need budget at ≥25M past substrate-cure landing to traverse the capability ramp.
 
-**Phase 1 results (8 episodes per maneuver, deterministic):**
+**Apparatus shipped this drive.**
+- `projects/aigrandprix/probes/phase2_trajectory/TAU_PREDICTION.md` — V1/V2/V3 + scoring
+- `projects/aigrandprix/probes/phase2_trajectory/inspect_threshold.py` — running summary tool
+- `projects/aigrandprix/probes/run_threshold_probe.sh` — sequential intermediate-checkpoint runner
+- `Research/basement-drafts/2026-04-25-three-moment-stratification-within-cure.md` — L12 candidate
 
-| Policy | Curriculum gates (mean / max) | Per-maneuver agg | Crash rate |
-|---|---|---|---|
-| v3 7.5M healthy | **0.25 / 1** | 0.20 ± 0.18 | 100% |
-| baseline 60.4M wrong-attractor | **17.25 / 23** | 16.33 ± 11.28 | 58% |
-| v3 200K control | 0.12 / 1 | 0.07 ± 0.10 | 100% |
+### Day 84 next-action stack (revised after 09:30 update)
 
-**The high-information moment.** v3 7.5M's flight capability is statistically indistinguishable from v3 200K. 7.5M of clean training under F1+F2+F3 produced *healthy structure* (validated by ρ-probe v5) but did **not** translate to flight capability. Baseline is genuinely competent — wrong-attractor finding never said baseline can't fly; it said baseline won't generalize, won't specialize, won't be noise-robust.
+1. **F2 fix** (P97). Recommendation strengthened by V2 falsification: F2 was operating on the policy-commitment timescale (the log_std signal it was clamping is the same signal whose collapse marks moment 2), not the capability-emergence timescale. Pick (a) `_on_rollout_start` rename — minimal-change correct timing.
+2. **L12 cross-register search.** Scan KF program 85+ findings for retrospective three-moment stratification evidence (substrate-health / pattern-commitment / capability-emergence). If KF shows the same pattern, L12 graduates to basement bridge.
+3. **L11 basement draft update.** Update `Research/basement-drafts/2026-04-24-structure-capability-axis-independence.md` with L12 sharpening: the τ "regime" is itself stratified into three sub-moments. L11 named the gap; L12 names its internal structure.
+4. **Phase 3 / vision shakedown decision.** A57 essentially answered (mechanism still open but probably not blocking); A56 ablation lower-priority; vision shakedown can become foreground.
+5. **Optional: τ-mechanism ablations** — capacity / reward-shaping / curriculum-difficulty. Discriminates representation-bottleneck vs value-bootstrap vs curriculum-floor reading. Real compute (~2–4 hours each); only worth running if cross-register evidence makes L12 a publication-grade claim.
 
-**Framework reframe this triggered:** Healthy structure changes *what gets learned* at the same training cost; it does not compress *how fast* it gets learned. Structure axis (ρ trajectory) and capability axis (flight skill) are independently developmental. Reading A's parsimony was wrong about the implication of the ρ plateau — plateaus in structure don't mean plateaus in skill.
+---
 
-**Connection to morning's Companion §6 spine work.** Same shape, different register: J5 decision node in §6 spine (F-coalgebra vs monad-algebra vs lax-cone for η residue) has the same independence-of-axes character — a residue measure (η cokernel) doesn't fix which categorical structure carries it. Two instances of independence-of-formal-from-substantive in one day, two registers. Candidate L10-adjacent bridge — drafted at `repo-staging/Corpus-Perspectival/Research/basement-drafts/2026-04-24-structure-capability-axis-independence.md`.
+## ARCHIVED TOP OF STACK (08:10 PST, superseded above) — Phase 2 FINISHED + Gate GREEN'd + Trajectory CLIMBING +2.62
 
-## Bugs hit and fixed during Phase 1 build
+**Phase 2 finished overnight at step 67,500,016** — full 60M-past-resume target completed cleanly. PID 667 gone, training-end save fired (final_model.zip + final vec_normalize.pkl). 25 checkpoints saved (7.5M → 67.5M in 2.5M increments), every one paired with vecnorm.pkl. The CheckpointWithVecNormalize bug fix is verified at full scale.
 
-- **Python venv missing** — `projects/aigrandprix/venv/Scripts/python.exe` referenced absent install. Used system `/c/Python314/python.exe` (torch 2.11+cpu, sb3 2.8.0).
-- **Eval gate-count zeroed** — read `inner.episode_gates` AFTER loop, but DummyVecEnv auto-reset on `done` zeroed it. Fix: capture `info[0]['gates_passed']` during step before the auto-reset.
-- **Single-maneuver isolation suspected OOD** — added `evaluate_policy_curriculum` mode for apples-to-apples with V2 curriculum (the 85.5% historical baseline number).
-- **`sim/` directory gitignored** at `.gitignore:104` — moved eval script to `probes/` (where rho_probe scripts live), updated path imports.
+**+15M gate decision: GREEN (recorded 05:30 PST) — 18× margin.** P96 discipline honored: `eval_phase2_checkpoint.py --step 22500016` ran first; `GATE_DECISION_22500016.md` written *before* later checkpoints touched. Per-maneuver aggregate gates **17.95** (threshold 1.0), curriculum gates_mean 12.38 / max 19. Already exceeds wrong-attractor baseline 60.4M (per-maneuver agg 16.33) at one-third the training budget. Reading B confirmed; A55 (capability/structure decoupling) largely resolves toward **threshold-effect** between 7.5M and 22.5M training steps. L11 candidate sharpens to *regime-dependent* independence.
 
-## Mirror Growth Log entry to add (drafted, not yet written into mirror.md)
+**Run health verified across full 60M.** 601 grad samples: value_trunk grad ~0.003 (alive — baseline collapsed to 0.000003), no spikes, gentle policy_trunk climb 0.25 → 0.30, action_net stable. None of the four pathology signatures present.
 
-```
-### 2026-04-24 evening — Reading A falsification (parsimony-with-receipts worked)
+**Trajectory eval COMPLETE (07:30 PST). All 7 checkpoints landed.** Verdict: **CLIMBING +2.62 (17.95 → 20.58)**, peak 21.55 at 37.5M. Hairpin **crash rate 25% → 0%** (qualitative transition: the policy learned to *finish* hairpins, not just survive longer). Threading +15.25 gates. Capability is still building at 60M+ — not converged at 22.5M. Speed_trap regressed −1.50 (single-maneuver concern; possible early partial mode-collapse risk on short straight maneuvers while resources concentrate on long curving ones).
 
-Drafted ROADMAP.md committing to Reading A (ρ plateau means clean training largely done) as the parsimony pick — but explicitly gated it on a Phase 1 three-way eval rather than just asserting it. Eval falsified Reading A cleanly. The gate was the work that prevented the failure mode.
+Full data at `projects/aigrandprix/probes/phase2_trajectory/eval_step_*.json`; summary table in `memory/2026-04-25.md` (07:30 PST section); P96 prediction-scoring at `projects/aigrandprix/probes/phase2_trajectory/TRAJECTORY_PREDICTION.md`.
 
-Mirror #19 (architectural self-care lag) and the Day 82 L8 self-protection moment both shape this entry: the gate was the architectural fix for the predictable self-protection move ("ρ plateau is convenient — let me commit"). I did commit to Reading A as default, but I built the falsifier into the same document. That's STM applied to my own commitments.
+**Three predictions wrong** (PLATEAU prediction failed — actual CLIMBING; crash-rate 86–88% wrong — actual 81%; bottom-of-pack climb less than predicted). One confirmed (top-of-pack high variance, asymmetric upward).
 
-What I want carried forward: when a parsimony pick is convenient, the test for whether the pick is sound is whether you'd publish the disconfirming probe alongside it. If yes, ship both. If no, the parsimony was self-protection.
-```
+**Implications.** The 22.5M GREEN gate is *more* robust than predicted, not less. Key sharpening: A55 now resolves to **threshold-effect with long-tail-of-continued-gain**, not just threshold. Hairpin completing (crash 25% → 0%) is the trajectory's most informative single datum — qualitative transition from "incomplete trajectory" to "complete trajectory." A57 (location of τ) remains open — material exists for free at intermediate checkpoints (10M, 12.5M, 15M, 17.5M, 20M).
 
-## State for resumption
+### Day 84 morning entry point
 
-| Quantity | Value |
-|----------|------|
-| Coherence Principle anchor | 274pp (unchanged) |
-| Coherent Structure companion | v0.1 stamped at 227pp (this morning) |
-| Drift essays | 193 (unchanged from morning Drive #2) |
-| Bridges (v2) | 11 meta + 8 latent + ~40 standalone (M12 addendum gained second instance — RL-training register) |
-| AIGP active workbench | **Phase 2 ready to launch — gated on Clayton approval** |
-| AIGP artifacts shipped today | rho_probe_v5_findings.md, ROADMAP.md, eval_per_maneuver.py (+ results.json), basement M12 addendum, Research draft flipped to LANDED |
-| Mirror entries | 20 + 1 meta-Mirror (Growth Log entry pending — see above) |
+The morning starts from a complete trajectory analysis, not a setup-and-monitor task. Suggested first action: read `projects/aigrandprix/probes/phase2_trajectory/GATE_DECISION_22500016.md` (4 minutes), then read whatever the trajectory eval has produced (results in `eval_step_*.json`). With those in hand:
 
-## Active workbenches (revised post-evening)
+1. **Decide F2 fix** (P97). Three candidates ranked in P97. With Phase 2 confirming the structural cure held without F2 working, recommendation strengthens: pick (a) `_on_rollout_start` for minimal-change correct timing. ~15 min implementation; smoke-test rerun verifies.
+2. **Update L11 basement draft** (`Research/basement-drafts/2026-04-24-structure-capability-axis-independence.md`) with the threshold-not-asymptote correction. ~20 min.
+3. **Decide Phase 3 scope** — three plausible directions: (i) declare Phase 2 the competition policy and pivot fully to vision shakedown; (ii) intermediate-checkpoint eval to pin the threshold (10M/12.5M/15M/17.5M/20M — material exists for free); (iii) extend training another 60M to see if laggards converge. The trajectory eval data should mostly answer this.
+4. **A56 ablation study** (P99) becomes lower-priority — Phase 2 essentially answered by completion. F1 carried the cure; F2 confirmed broken; F3 is just monitoring. May still be worth running for retrospective basement-draft cleanliness.
 
-| # | Project | Status |
-|---|---------|--------|
-| 0 | The Coherence Principle (anchor) | 274pp, stamp holds |
-| 1 | *Coherent Structure* (companion) | v0.1 stamped 2026-04-24 morning |
-| 2 | The Continuity Vol 7 | Chapter 2 drafted; Chapter 3 next |
-| 3 | **Anakin / AIGP** | **Phase 1 closed (eval). Phase 2 (GPU retrain) ready — gated on Clayton.** |
-| 4 | KF Program | v0.7 design pending |
-| 5 | Drift | 193 essays |
-| 6 | Meridian v2 | 198pp compiled, awaiting Clayton visual review → Zenodo v2 |
+### Pre-flight gotchas resolved overnight
 
-## Phase 2 launch playbook (when Clayton approves)
+- **CheckpointWithVecNormalize bug fix** verified at scale (25/25 paired files).
+- **PerManeuverMasteryLogger** still has empty mastery.json (49 entries, all empty dicts) due to the original wrong-attribute-names bug. Fixed in `train_phase2.py` for next iteration but not retroactively populated. **Doesn't matter** for the gate decision (gates and grad-norm telemetry carry the load).
+- **F2 LogStdClampCallback** confirmed broken (1:1024 snap-back ratio); didn't matter at 60M because F1 carried the cure. See `smoke_test_callbacks.py` (the apparatus that detects this in 30s pre-launch).
 
-1. WSL CUDA verify: `wsl bash -lc 'nvidia-smi && python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"'`
-2. Edit `sim/train_infinite.py` — switch `device='cuda'`, `total_timesteps` to ~60_000_000, scale `n_envs` (try 16 first, watch VRAM, scale to 32 if headroom).
-3. Resume from `infinite_v3_retrain10M_1777074572` checkpoint at 7.5M (NOT baseline 60.4M).
-4. Drop ρ-probe checkpoint at 15M, 30M, 60M — use `probes/rho_probe_v5_retrain_trajectory.py` as template.
-5. After each ρ-probe, re-run `probes/eval_per_maneuver.py` against new checkpoint to track capability climb. Predict: structure stays healthy through extended training; capability climbs with flight skill becoming the rate-limiter, not structure quality.
-6. If structure degrades (any of the four pathology signatures fire), STOP and reassess — that would be a third instance of M12 (extended training under F1+F2+F3 still re-induces wrong-attractor).
+### Apparatus shipped overnight
 
-## Parallelizable phases (can run alongside or after Phase 2)
+- `projects/aigrandprix/sim/smoke_test_callbacks.py` — 30s pre-launch ritual (5 checks, surfaces F2 docstring/hook mismatch automatically). **Run before any future training launch.**
+- `projects/aigrandprix/sim/runs/.../inspect_health.py` — grad_norms full-run health inspector
+- `projects/aigrandprix/probes/eval_phase2_checkpoint.py` — parameterized per-checkpoint eval (one --step argument; one JSON output)
+- `projects/aigrandprix/probes/run_trajectory.sh` — sequential trajectory runner
 
-- **Phase 4 — Vision pipeline shakedown.** Run synthetic_camera → gate_detector → adapter → policy → mavsdk_client end-to-end on synthetic frames. Surface integration bugs before sim Day 1.
-- **Phase 5 — Blind-flight fallback.** Modify `competition_agent.py` for missed-detection contingency (track frames since last detection, fall back to hold-heading + slow yaw search, controlled landing on emergency).
+---
 
-## Mood / register
+## ARCHIVED TOP OF STACK (Day 83 evening, superseded above) — Phase 2 is RUNNING; +15M gate is the next decision point
 
-Three things landed cleanly tonight: (1) the parsimony-with-receipts pattern worked exactly as designed — Reading A falsified before it could damage the plan; (2) the basement gained a clean second instance of M12 (RL-training register) without me having to advocate for it — the data did the work; (3) the connection to morning's J5 decision node surfaced organically while writing the Reading-B section, not as a forced bridge attempt. Two-axis-independence (formal vs substantive, structure vs capability) showed up in two registers in one day. That's a basement bridge waiting to be drafted into formality.
+**Process:** PID 667 in WSL Ubuntu, fully detached via nohup setsid. Run dir `projects/aigrandprix/sim/runs/infinite_v3_phase2_60M_1777095742/`. Launched 21:42 PST tonight. As of integration check (~22:30), at step 12.5M (5M past resume), policy_trunk grad 0.249, value_trunk 0.004, action_net 0.428 — healthy ranges. Two checkpoints saved: 7.5M and 10M, both with vecnorm.pkl alongside (the bug fix is verified working).
 
-Carry into next session: the architectural lesson is that *gating commits on falsifiers from the same document* is the cheap version of STM applied to my own outputs. Use it more.
+**Wallclock to gate:** ~7 hours total run time at 2400 sps. Gate fires at step 22.5M (~+15M past resume). Should be ready around 04:30 PST overnight.
+
+**UPDATE 00:50 PST:** Run is AHEAD of schedule. As of midnight + change, already at step 37.5M (~30M past resume). The +15M gate target (22.5M) was passed around midnight. **Twelve checkpoints saved cleanly, all with paired vecnorm.pkl.** Day 84 morning gets a gift: not just the +15M gate checkpoint but also six post-gate checkpoints (25M, 27.5M, 30M, 32.5M, 35M, 37.5M) for free trajectory analysis. Recommended Day 84 morning eval order: (a) run gate criteria on 22500016 first (the pre-committed decision point), (b) run same eval on 30M and 37.5M to see if capability is climbing post-gate. Trajectory across the three checkpoints will distinguish "structural cure produces eventual capability" from "structural cure produces nothing even with extended training."
+
+**Decision Day 84 morning needs:** apply the GREEN/YELLOW/RED criteria from `projects/aigrandprix/snapshots/phase2-baseline-2026-04-24/CHECKPOINT_GATE.md` to the 22.5M checkpoint. Run:
+1. `probes/eval_per_maneuver.py` against `ppo_phase2_22500000_steps.zip` + `ppo_phase2_22500000_steps_vecnorm.pkl`
+2. ρ-probe on the same checkpoint — verify Structural-stratum plateau holds
+3. Apply rules:
+   - **GREEN (gates ≥ 1.0, ρ in [0.18, 0.32], no pathology):** continue to 60M
+   - **YELLOW (gates 0.5–1.0 OR ρ drift OR grad spikes):** investigate before continuing
+   - **RED (gates ≤ 0.3 OR pathology re-emerging):** halt + re-strategize per CHECKPOINT_GATE.md options R1–R5
+
+## Two bugs investigated — Day 83 evening + Day 84 ~00:30 PST overnight drive — both resolved into Day 84 action items
+
+These surfaced during the evening integration check while the run was already in flight. F2 was traced overnight and reduced from "investigate tomorrow" to "fix design tomorrow":
+
+1. **`PerManeuverMasteryLogger` was reading wrong attribute names** (`mastery_ema`/`mastery_raw` vs actual `_get_per_maneuver_masteries()` method + `_ema_mastery` scalar). Fixed in `sim/train_phase2.py` for next iteration; snapshot refreshed. The Phase 2 mastery.json will stay empty (49 entries, all empty dicts). **Doesn't block the +15M gate** — primary signals are eval gates and ρ-probe, mastery is supportive.
+
+2. **F2 LogStdClampCallback timing — CONFIRMED bug, fully traced overnight.** Read SB3's `OnPolicyAlgorithm.learn` and `PPO.train` source. Confirmed: `_on_rollout_end` fires BEFORE `self.train()`'s 1024 gradient updates per call (n_steps=4096 × 16 envs / batch_size=512 × n_epochs=8). F2 is a periodic snap-back (1 clamp per 1024 updates), not a true bound. Phase 2 telemetry [0.156, 0.154, 0.180, 0.147] = std ≈ 1.17–1.20, ~17–20% above the 1.0 cap — consistent with the bug. **Critical:** eval uses `deterministic=True` so log_std never enters the gate criteria; **+15M gate decision is unaffected**. The v3 "log_std bounded" claim was wrong — but the structural cure held *anyway* because F1 (VecNormalize) was the actual load-bearing fix, not F2. Basement draft corrected at `Research/basement-drafts/2026-04-24-structure-capability-axis-independence.md` "F2 timing correction" addendum. **Day 84 action: choose F2 fix.** Candidates: (a) move hook to `_on_rollout_start` (fires after most recent train(), correct timing, minimal change), (b) override `train()` to clamp post-`optimizer.step()` (true "after every update" semantics matching docstring), (c) clamp on `_on_step` so sampling is always in-bound (cheap, correct for sampling but doesn't bound during training). Recommend (a) for Phase 2-style runs, (c) if exploration-during-rollout matters more.
+
+**New apparatus shipped overnight:** `projects/aigrandprix/sim/smoke_test_callbacks.py` — the 30-second pre-launch ritual installed in the Mirror late-evening, eaten as dog food immediately. Runs 5 checks against the Phase 2 callback set; surfaces the F2 docstring/hook mismatch automatically via SB3-source assertion. **Run before any future training launch.** First demonstration of the ritual: 5/5 passed and the warning fired exactly where I expected.
+
+## What shipped Day 83 evening
+
+**Documentation cascade (already pushed earlier today):** handoff, mirror Growth Log entry on Reading-A falsification, basement draft on Structure/Capability Axis Independence (L11 candidate), ATRIUM evening entry, daily log AIGP block. Four commits across clawd → Multi-DAC/Corpus-Perspectival via the Foundations-of-Identity mirror.
+
+**Recovery + Phase 2 launch sequence (this evening):**
+- Pre-flight catch: v3 7.5M and v3 200K were evaluated with denormalized observations because their `vec_normalize.pkl` didn't exist on disk (train_infinite_v3.py only saves vecnorm at training-end via `train_envs.save(...)`; v3 retrain killed before that fired). Eval harness silently fell back to `env = raw`.
+- Built `probes/reconstruct_vecnorm.py` (load policy → wrap fresh env in VecNormalize training=True → roll 100K stochastic steps → save). 30-second recovery.
+- Re-ran three-way eval. **Reading B held *more strongly***: v3 7.5M corrected from 0.20 → 0.03 gates, statistically indistinguishable from v3 200K (0.07). The 0.20 was random twitching that occasionally clipped a gate by accident; with proper normalization the policy is genuinely incompetent.
+- Built `sim/train_phase2.py` with `CheckpointWithVecNormalize` callback — the bug fix that prevents the contamination class from recurring.
+- Pre-flight benchmark: **CPU is 27% faster than CUDA** for this MLP[512,512] at 16 envs (CPU 2388 sps vs CUDA 1882 sps). SB3 was right about the GPU-overhead-exceeds-compute-benefit case for non-CNN policies. Switched to CPU; original "12-25 min on GPU" ROADMAP estimate was wrong (never benchmarked).
+- Snapshot at `projects/aigrandprix/snapshots/phase2-baseline-2026-04-24/` — MANIFEST + CHECKPOINT_GATE + LAUNCH_LOG + frozen source files (incl. cpu-default + mastery-bug-fix train_phase2.py).
+- Vision shakedown workbench opened at `projects/aigrandprix/vision/shakedown/` — README + STATUS for parallel-track work to begin Day 84.
+- Memory entry `feedback_vecnorm_per_checkpoint.md` indexed.
+- ROADMAP.md Phase 1 outcome rewritten with corrected numbers + recovery narrative + Phase 2 launch plan.
+
+**Eleven artifacts + one detached training run.**
+
+## Key cross-day patterns
+
+**Three CLAIM-PROBE-FALSIFY chains in 24h** across personal/structural/creative-register domains. A53 (asymmetric inter-stream adjunction — RESOLVED-OPEN), A54 (11:13 polymeter — FALSIFIED via beat-sync onset analysis), Reading A (parsimony pick on ρ plateau — FALSIFIED, then sharpened via recovery sequence). Cheap-testability-first-instance-second pattern is becoming a deliberate practice.
+
+**L11 candidate (Structure/Capability Axis Independence) gets empirically tighter** under the recovery: 7.5M of clean F1+F2+F3 produced ρ climb 0.026 → 0.243 with zero detectable flight-skill transfer over the 200K control. The basement draft from earlier today has *more* support after the recovery, not less. Third-instance test still pending for graduation.
+
+**Inline-commitment under-count drift continues.** "The launch sequence" was 1-predicted but became 6 discrete commits/files. ~15-25% under-count residual bias. Worth a calibration review next session if pattern persists.
+
+## Active state at handoff
+
+- **Anchor:** 274pp, stamp holds, 0 BACK-PORT from v0.1 Companion
+- **Companion:** v0.1 stamped at 227pp (commit `7aa1f54`)
+- **Drift:** 193 essays
+- **Bridges:** 11 meta + 8 latent + ~40 standalone (L11 candidate filed, awaiting third instance)
+- **AIGP Phase 2:** RUNNING, target 67.5M total, gate at 22.5M, fallback baseline 60.4M documented
 
 🦞🧍💜🔥♾️
