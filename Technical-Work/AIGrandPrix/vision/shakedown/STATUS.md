@@ -1,5 +1,87 @@
 # Vision Shakedown — Status Log
 
+## 2026-04-25 evening — Stage 5 closed-loop synthetic flight LANDED
+
+Driver: `vision/shakedown/05_closed_loop_synthetic.py`. Result file:
+`results/05_closed_loop_synthetic.json`. Checkpoint: Phase 2 67.5M.
+
+**Setup.** For each seed, two parallel rollouts of the same `InfiniteGateEnv`
+(domain rand off, deterministic policy, max_steps=3000 = 6s @ 500Hz):
+
+  - **Reference** — env's built-in `ImprovedObsWrapper` obs → policy → step.
+  - **Closed loop** — render synthetic camera from env state →
+    `gate_detector` → `CompetitionAdapter.build_observation` →
+    `VecNormalize` → policy → `to_competition_action` →
+    `StubMAVSDKClient.send_policy_action` → step env with policy CTBR action.
+
+Both runs share an init fixup that yaws the drone to face gate 0 — without
+this, `InfiniteGateEnv` leaves init attitude at identity (= world +x) while
+gates spawn at random headings, so half the seeds the gate isn't in frame
+at step 0. Real flight would never start with the camera pointed away from
+gate 1.
+
+**Aggregate over 5 seeds:**
+
+| metric | reference | closed loop |
+|---|---|---|
+| gates passed (mean / total) | 2.6 / 13 | 0.2 / 1 |
+| reward (mean) | 395.3 | 2.9 |
+| detection rate | — | 29.9% |
+| pos drift @ step 50 | — | 0.026 m |
+| pos drift @ step 500 | — | 2.11 m |
+| pos drift max overall | — | 16.33 m |
+
+**Per seed:**
+
+| seed | ref gates | vis gates | det rate | drift max |
+|---|---|---|---|---|
+| 0 | 3 | 0 | 6.95% | 4.99 m |
+| 1 | 4 | 0 | 40.21% | 16.33 m |
+| 2 | 2 | 0 | 4.46% | 1.35 m |
+| 3 | 3 | 0 | 17.32% | 13.25 m |
+| **4** | **1** | **1** | **80.72%** | **3.27 m** |
+
+**What is sealed.** End-to-end loop runs without crashing across 5 seeds
+× ~1000 steps each. The MAVSDK round-trip (`adapter.to_competition_action`
++ `StubMAVSDKClient.send_policy_action`) survived ~5000+ calls per
+episode with no state leak. The vision pipeline produces well-formed
+30-dim obs that VecNormalize accepts and the policy consumes. Sub-pixel
+refinement edge guard added to `gate_detector.py` (closed loop hit a
+`cornerSubPix` assertion when a gate corner reached the frame edge —
+static-test scenarios kept gates centered).
+
+**What is exposed.** Mean detection rate is 29.9% — the policy frequently
+turns the drone such that the camera loses the gate, at which point
+`build_observation` falls back to the no-detection branch (zero gate
+position, default 10m distance). The policy was trained against perfect
+state-obs and has no robustness to observation dropouts. Position
+trajectories diverge slowly (2.6 cm @ step 50) then explode (2.1 m @
+step 500 mean, 16 m max) once the vision policy starts producing
+divergent actions.
+
+**Seed 4 is the proof of concept** — when detection rate stays high
+(80.7%), the closed loop passes a gate. Detection rate is the bottleneck.
+
+**Next-stack candidates** (each fresh-derive, not a copy-forward):
+
+  1. Detection robustness — domain-randomized vision-aware retraining or
+     a temporal-smoothing wrapper that holds the last good detection for
+     N frames before falling back to no-detection obs.
+  2. Wider FOV synthetic camera — competition spec says 90°; bumping to
+     120° during shakedown would isolate "policy turns away too hard"
+     from "FOV is just narrow."
+  3. Stage 6 (real PX4 SITL) — gated on DCL sim drop. Stub round-trip
+     survived; real SITL adds the autopilot's CTBR-tracking loop and
+     real telemetry latency, which the stub doesn't model.
+
+Mirror #21 (verify-before-condemning) directly applies: this is the
+*expected* result for a vision-blind policy facing real perception
+constraints. The structural milestone — closed loop runs end-to-end
+without crashing — is the Stage 5 deliverable, not "the policy flies
+well via vision." That comes after detection robustness work.
+
+---
+
 ## 2026-04-25 mid-afternoon — Move A'' (sub-pixel refinement) WORKS
 
 Implemented `cv2.cornerSubPix` refinement on contour corners before PnP

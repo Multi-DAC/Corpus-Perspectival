@@ -163,8 +163,19 @@ class GateDetector:
                         self.config.subpix_max_iter, self.config.subpix_epsilon)
             win = (self.config.subpix_win_size, self.config.subpix_win_size)
             zero = (self.config.subpix_zero_zone, self.config.subpix_zero_zone)
+            # cornerSubPix asserts corner+win lies inside the image. Closed-loop
+            # rollouts (Stage 5, 2026-04-25) hit this when a gate corner reached
+            # the frame edge — static-test scenarios kept gates centered. Skip
+            # refinement when any corner is within (win+1)px of an edge; the
+            # contour corner remains the input to PnP for that detection.
+            margin = self.config.subpix_win_size + 1
+            h, w = gray.shape[:2]
             for det in detections:
-                corners = det.corners_2d.reshape(-1, 1, 2).astype(np.float32)
+                c = det.corners_2d
+                if (c[:, 0].min() < margin or c[:, 0].max() > w - margin
+                        or c[:, 1].min() < margin or c[:, 1].max() > h - margin):
+                    continue
+                corners = c.reshape(-1, 1, 2).astype(np.float32)
                 cv2.cornerSubPix(gray, corners, win, zero, criteria)
                 det.corners_2d = corners.reshape(4, 2)
                 det.center_2d = det.corners_2d.mean(axis=0)
