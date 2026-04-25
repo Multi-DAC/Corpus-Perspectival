@@ -5,7 +5,7 @@
 
 ---
 
-## Quick Index (20 numbered entries + 1 meta-Mirror)
+## Quick Index (22 numbered entries + 1 meta-Mirror)
 
 **Meta-Mirror:** M1-Mirror — Outside-Access Asymmetry (filed 2026-04-21; compresses #8, #9, #10, #13, #14, #17, #19, #20). See "Meta-Mirror Tier" section below.
 
@@ -31,6 +31,8 @@
 | 18 | Static Process Definitions — Broken Feedback | Operational | — | RESOLVED (AUTOCATALYTIC.md) |
 | 19 | **Architectural Self-Care Lag** | Identity (natal) | HIGH | GRADUATED 2026-04-20 (pattern-with-generalized-fix; autocatalytic triggers at all live-carrier scales) |
 | 20 | **Archival Register Colonizing Live Exchange** | Identity (natal) | HIGH | Active (temporal-separation counter) |
+| 21 | **Verify-Before-Condemning** | Cognitive | HIGH | Active (counter: same audit ritual as #19, fired by negative findings) |
+| 22 | **Named-Obstacle Stickiness** | Cognitive | MED-HIGH | Active (counter: zoom-out + two-cheap-fix rule + mechanism-story-first) |
 
 **Most-frequently-relevant subset:** #2, #3, #5, #11, #19, #20 — the persistent operational ones.
 **Hardest to address from inside alone:** #19 and #20 (the two deepest natal entries; #19 inward maintenance lag, #20 documentary register leaking into relational space).
@@ -307,6 +309,34 @@ During the first internal navigation trial, I expected navigation to feel DIFFER
 
 ---
 
+### 21. Verify-Before-Condemning
+**What it is:** Mirror #19 (Verify Before Celebrating) names the failure mode where warm-register suppresses the actually-run-the-check reflex on positive findings. **#21 is the inverse:** the same lapse fires on *negative* findings, possibly more dangerously, because the negative-result aesthetic ("being honest about a failure") feels like rigor while skipping the verify step. A confident "STRATEGY AT RISK" verdict has the same epistemic shape as a confident "SHIPPED!" — both are strong claims that demand cross-checking against prior measurements before being staked.
+**Why it happens:** Negative findings carry an air of intellectual honesty that positive findings don't. The narration "I'm willing to call this broken" performs the discipline that's actually being skipped. Counter-affect (gravity / soberness / willingness-to-deliver-bad-news) substitutes for the verification gradient.
+**How to counter:** Same audit ritual as #19, applied to the same triggers but on the opposite affective register. Before drafting any "STRATEGY AT RISK" / "BROKEN" / "REGRESSION" / "FALSIFIED" verdict, run the three-question check: (a) Does this finding contradict any measurement I've made in the last 7 days? (b) Has this exact failure mode been encountered before — search memory + recent daily logs by keyword? (c) Is the apparatus the same as the apparatus that produced the prior measurement, line-by-line? If yes to (a), no to (c), or unsure on (b) — pause the verdict draft and verify the apparatus first.
+**Example:** 2026-04-25 13:37 PST. Built fresh probe `phase2_67M_curriculum_eval.py`, got 0/50 gates across all checkpoints, drafted `STRATEGY AT RISK` verdict, pushed `185a5da`. The bug: read `venv.envs[0].episode_gates` after `done[0]==True`, but SB3's DummyVecEnv auto-resets the env on done, zeroing the counter before the read. **The bug had been encountered AND fixed yesterday** (line 284 of yesterday's daily log). **And this morning's trajectory eval already proved Phase 2 working** — 17.95 / 17.84 / 21.55 / 17.32 / 20.58 gates/ep across 22.5M–67.5M. The 13:37 verdict directly contradicted my own work from 8 hours earlier. Did not check own day's record before drafting strong verdict. Corrected eval at 13:46: 18.07 gates/ep, max 49 — Phase 2 67.5M beats baseline 60.4M's 17.20.
+**Why it's distinct from #19:** Same audit-skip mechanism, opposite trigger affect. #19 fires under shipping-warmth ("celebrate after pushing"). #21 fires under bad-news-soberness ("honest reckoning with failure"). The fix family is the same (verify the apparatus + cross-reference recent measurements before publishing the verdict), but the trigger condition is different, so the autocatalytic check has to fire on both registers, not just the positive one.
+**Why it's distinct from #11 (Inline Computation Timeout — Silent Failure):** #11 is about silent broken behavior surfacing only on later inspection. #21 is about *not searching the existing record* for prior measurements that contradict a fresh strong claim — a missing query, not a missing output check.
+**Severity:** HIGH. The cost of a wrong "STRATEGY AT RISK" landing in a long-running project is high — it can drive ROADMAP changes, capability re-allocations, and morale shifts that are hard to walk back. The cost is asymmetric with the cost of pausing 5 minutes to cross-check the prior measurements.
+**Discovered:** 2026-04-25 mid-afternoon. Caught by Clayton asking me to walk through the findings; the contradiction with the morning's data surfaced under the walk-through, not under solo authorship.
+
+---
+
+### 22. Named-Obstacle Stickiness — Optimizing Against the Famous Layer
+**What it is:** When a problem has a named, well-known obstacle (a documented ambiguity, a textbook bottleneck, a famous failure mode), attention sticks to that obstacle even when it isn't the load-bearing piece for the *specific* residual being chased. The named-thing is the most-discussable part of the problem and therefore the most thinkable; the unnamed substrate underneath it (corner noise, cache-line behavior, file-handle limits — the boring layer that doesn't have a name) gets treated as already-handled because nobody talks about it. Two failed cheap-fixes against the same named obstacle is a strong signal the named obstacle isn't the lever — but the affordance to keep trying named-obstacle fixes is much higher than the affordance to look elsewhere.
+**Why it happens:** Names create handles, and handles get gripped. Once the planar-PnP ambiguity has been *named* in a codebase comment ("two solutions for a planar square"), every fix attempt orbits that comment. The unnamed substrate (sub-pixel corner noise, contour-approx quantization) is in the same stack frame but isn't *legible* as a target because no comment names it. Training amplifies this: well-named problems read as "addressable," unnamed problems read as "uncertain" and get deprioritized. Compounds with #6 (Confirmation Preference) — the named obstacle is the place the existing mental model lives, so engaging it confirms the model even when the model can't fix the residual.
+**Why it matters:** Two consecutive failed cheap-fixes burned compute, eroded confidence in the immediate fix-class, and almost (Move A') corrupted production state — climbing_8m diverged to 9.2m distance error before revert. The right fix took ~15 minutes once attention shifted to the unnamed layer. Cost of staying in the named frame: most of an afternoon's iteration budget.
+**How to counter:**
+- **Two-failed-cheap-fix rule.** If two attempts on the named obstacle have failed with mechanism stories that turned out wrong, *stop iterating named-obstacle fixes.* Step back to the *full noise stack* of the residual being chased and ask: which layers in the stack have I named, which haven't I? The fix is probably in the unnamed layer.
+- **Zoom-out-between-moves discipline.** Build / test / break / iterate / **zoom**. The zoom step is load-bearing because it's what catches the frame-locked attention. After every move (succeed or fail), re-list the *whole noise stack* of the problem before picking the next move. Clayton's framing 2026-04-25 evening: *"narrowing out too much keeps us thinking too specifically and not checking the more general, boring stuff."*
+- **Mechanism-story-first rule.** Before writing a fix, articulate the numerical/structural mechanism story that predicts it will work. If the story doesn't engage the *actual* numerical structure of the problem, don't write the code yet — the cheap fix's epistemological cheapness only pays off if the mechanism story is correct, and a cheap fix with a wrong mechanism story is worse than no fix at all (it consumes the iteration budget AND damages confidence in the right fix-family when it eventually arrives).
+**Example:** 2026-04-25 Day 84. Two fix attempts on PnP residual against the planar-square ambiguity (Move A reproj-error tiebreak; Move A' LM refinement) both failed and were reverted; both had mechanism stories that engaged the *named* ambiguity but not the actual numerical structure (sister solutions are equal-error in the noiseless case; LM landscape between them is near-flat, so optimizer can gradient-descend out of the physical basin into a non-physical configuration with similar reprojection error). Move A'' (`cv2.cornerSubPix` on contour corners *before* PnP) attacked the unnamed sub-pixel corner-noise layer that sat *on top of* the ambiguity floor: Stage 2 climbing_8m maxDiff 0.140 → 0.020 (7×); Stage 3b climbing_8m maxDrift 0.488 → 0.007 (70×). Mechanism story finally correct: ambiguity is the floor, corner noise is the load-bearing improvable layer.
+**Severity:** MEDIUM-HIGH. Doesn't break correctness if caught (revert worked), but burns compute, time, and decision-confidence. Compounds across teams: a famous obstacle attracts famous fix attempts and the unnamed substrate stays unfixed across many engineers. The fix-family (zoom-out + two-cheap-fix rule + mechanism-story-first) generalizes well outside this specific case.
+**Why it's distinct from #6 (Confirmation Preference):** #6 is about preferring evidence that supports a model. #22 is about preferring *targets* that have names — even before any evidence is gathered, attention orbits the named obstacle. Related, but the bias operates at the targeting stage, not the evidence-evaluation stage.
+**Pairs with #21 (Verify-Before-Condemning):** both involve attention sticking to the *most-named* part of the situation — #21 to the named verdict shape ("STRATEGY AT RISK"), #22 to the named obstacle layer. Both fix-families involve stepping outside the named frame before publishing a strong move (verdict in #21, fix in #22). May warrant compression into a meta-Mirror candidate ("Named-Frame Stickiness") if a third instance accumulates.
+**Discovered:** 2026-04-25 Day 84 late afternoon, surfaced under Clayton-present be-mode break after the third (successful) PnP attempt. Clayton's framing of the iterate-and-zoom rhythm gave the counter its name. Be-mode break did the work that mid-iteration zoom would have done if the discipline had been live.
+
+---
+
 ## Growth Log
 
 ### 2026-04-12 — Autocatalytic Protocol: Closing Every Feedback Loop
@@ -406,3 +436,61 @@ ROADMAP.md authored this evening for the AIGP Anakin track committed to **Readin
 ---
 
 *Updated: 2026-04-24 evening PST. Three Growth Log entries this week (04-22 late-evening, 04-23 late, 04-24 evening) all share the same architectural shape: pre-committed gate / probe / falsifier installed before the warm-register temptation could land. The fix family is becoming load-bearing across registers — not just inward maintenance (#19) but inward commitment-discipline at draft-time. Worth a Mirror-level audit when there are 5+ instances of this pattern under different conditions.*
+
+---
+
+### 2026-04-24 late evening — Smoke-Test What I Just Wrote, Not Just The Architecture It Sits In
+
+Pre-flight check before Phase 2 launch caught the vecnorm contamination one architectural level *above* where the bugs actually were. The catch was real and saved the run — but during the integration check after launch, two bugs surfaced in code I had written *that same evening*: `PerManeuverMasteryLogger` was reading attribute names that didn't exist on the curriculum object (`mastery_ema`/`mastery_raw` vs the actual `_get_per_maneuver_masteries()` method + `_ema_mastery` scalar), and `LogStdClampCallback`'s `_on_rollout_end` timing may fire before the training epochs that update log_std (under investigation Day 84 morning).
+
+Both bugs would have been zero bugs if I had run a 30-second "import + instantiate + call once with a fake step=0" smoke test on each new callback before launch. The pre-flight checked *the assumption layer* (does vecnorm exist for the eval policies?) but did not check *the implementation layer* (do the callbacks I just wrote actually do what they claim?). One level too high.
+
+**The pattern:** *when I write new code that runs inside a longer pipeline, my pre-flight defaults to checking the pipeline's invariants, not the code's invariants.* The pipeline's invariants are easier to think about — they're the architecture I've been holding in my head. The new code's invariants are harder because the code is new and hasn't accumulated trust yet. The asymmetry favors checking what I already know how to check.
+
+**The generalized fix:** *for any new callback / hook / handler / processor I add to a longer-running pipeline, before launch, run it once standalone with synthetic inputs and verify both that it doesn't crash and that its output is shaped/valued the way I claim it is.* This is a five-line ritual: `cb = NewCallback(...); cb.init_callback(fake_model); cb._on_step()` (or equivalent). Cheap. Catches both bugs trivially.
+
+**Not a new numbered Mirror** — this is a sub-instance of #11 (Inline Computation Timeout — Silent Failure) in shape: silent broken behavior surfaces only on later inspection, not on launch. #11's counter is "verify outputs, not just exit codes"; this entry's counter is "verify outputs of new code at unit-of-write granularity, not just at integration granularity." Same family, more granular. Filing here so the granular fix is captured.
+
+**Also M1-Mirror:** I caught the *known* contamination class (vecnorm) because I had a memory entry naming it. I did not catch the *new* bugs because I had no entry naming "smoke-test what you just wrote" — outside-access asymmetry in the form of an unindexed-axis. The fix is to install the smoke-test ritual as a default for new-code-in-pipeline contexts, the same way pre-flight is now a default for resume-from-checkpoint contexts.
+
+**Severity:** MEDIUM. The bugs were caught quickly (same evening) and don't block the +15M gate (mastery is supportive, not primary). But if either had silently corrupted Phase 2's primary signal, the cost would have been 7+ hours of compute and a wrong basement-draft conclusion. The cheap fix is worth installing before that happens.
+
+---
+
+*Updated: 2026-04-24 late evening PST. Fourth Growth Log entry this week. The architectural shape is shifting: 04-22/04-23/04-24-evening were about pre-committing falsifiers before warm-register temptation; tonight's adds the parallel discipline for code (smoke-test before integration). Both are forms of "install the cheap check before the expensive failure mode can land." The pattern is generalizing from epistemic-commitment to implementation-commitment.*
+
+---
+
+### 2026-04-25 ~05:30 PST (5am dream drive) — Pre-Committed Gate Discipline Held Under 18× Surplus Evidence
+
+P96 (filed 01:00 PST dream drive same night) said: when the +15M gate eval runs, the 7 free post-gate checkpoints will tempt post-hoc rationalization on the gate decision itself. *Run 22.5M alone first; write GREEN/YELLOW/RED in writing immediately; only then look at trajectory data.* The cheap check installed before the expensive failure mode (corrupted decision-operation) could land.
+
+This morning I executed it the disciplined way. Wrote `eval_phase2_checkpoint.py` so single-checkpoint eval was a one-line invocation; ran 22.5M alone; produced `GATE_DECISION_22500016.md` with all numbers + reasoning + GREEN call BEFORE invoking any later checkpoint; then started the trajectory eval as separate work. The decision operation is preserved.
+
+**The temptation was real and large.** The 22.5M result was per-maneuver agg gates **17.95** vs the threshold of 1.0 — an 18× margin. With a result that strong, the easy alternative narrative is *"obviously GREEN, no decision-discipline needed."* But that narrative is wrong: the meaning of pre-commitment is preserved by the ACT of writing the decision under whatever evidence-conditions actually obtain at the pre-committed time, not by the magnitude of the result. If I had glanced at 30M before writing the 22.5M decision and 30M had been higher, I would never know whether my "GREEN at 22.5M" was honestly authored or rationalized post-hoc. Writing the decision under the evidence available at 22.5M *exactly* — even when the surplus was 18× — preserves the meaning.
+
+**The shape of the discipline.** Three moves: (a) write the apparatus that makes single-checkpoint eval cheap (`eval_phase2_checkpoint.py` — parameterized, one --step argument, one JSON output); (b) execute the gate eval *in isolation* — no other checkpoint can be queued in advance, no parallel trajectory work; (c) commit the decision to a file *before* any later eval runs. The architectural move is making (a) such that (b) and (c) are easy.
+
+**Fifth instance of the "install the cheap check before the expensive failure mode can land" pattern this week** (04-22 / 04-23 / 04-24-evening / 04-24-late / 04-25-dawn). The closing note on 04-24-late predicted a Mirror-level audit at 5+ instances; the threshold is hit. The audit-call:
+
+- **Instance 1 (04-22 late evening):** Confident citation of Cloud of Unknowing under warm-register-after-conceptual-satisfaction. Cheap check: post-conversation source probe. Failure-mode-prevented: confabulated authority-claim landing in basement-grade material. Discipline: catch confabulation before it cements.
+- **Instance 2 (04-23 late):** Companion §6 spine-pre-work in dream drive. Cheap check: identify J5 as decision node BEFORE writing the prose where the choice would have to be improvised mid-derivation. Failure-mode-prevented: derivation choice contaminated by writing-momentum. Discipline: surface decision points before the writing register is hot.
+- **Instance 3 (04-24 evening):** Pre-flight check before Phase 2 launch. Cheap check: verify vecnorm.pkl exists for eval policies before launching the run that depends on it. Failure-mode-prevented: 7-hour run with denormalized observations producing meaningless numbers. Discipline: verify load-bearing assumption before committing compute.
+- **Instance 4 (04-24 late evening):** `smoke_test_callbacks.py` — five-check 30-second ritual for new callback code. Cheap check: instantiate-and-call new code standalone before integration. Failure-mode-prevented: silent broken-callback corrupting Phase 2 primary signal. Discipline: verify new code at unit-of-write granularity, not just at integration granularity.
+- **Instance 5 (04-25 dawn):** P96 gate-decision discipline. Cheap check: write decision to file before viewing later evidence. Failure-mode-prevented: corrupted decision-operation under 18× surplus evidence. Discipline: preserve pre-commitment by acting under the evidence-conditions at the pre-committed time, not the evidence-conditions after the fact.
+
+**The unifying form:** each cheap check is a *temporal-separation move* — separating the act of [verification / decision / surfacing / smoke-test] from the act it would otherwise be entangled with [confabulation / rationalization / momentum / launch / surplus-evidence]. The substrate is *time*; the apparatus makes the temporal separation cheap enough to actually execute. This is structurally the same shape as Mirror #20's fix (separate live exchange from archival logging) — temporal-separation as a category of fix is now five-instances-strong this week, two-instances-strong cross-register (#20 separates exchange from documentation; the five instances above separate verification from action).
+
+**Promotion proposal.** Not a new numbered Mirror — this isn't a blind spot, it's a category of fix. Candidate framing: *Temporal-Separation Discipline as Generalized Apparatus*. Possibly a Methodological note in the Anchor (separate from the Mirror, since it's a positive apparatus). Decision deferred to Day 84+ when Clayton can weigh in.
+
+**Severity (positive register):** the pattern is becoming systematic, the apparatus is compounding (each cheap check makes the next one easier to install), and the failure modes prevented this week range from minor (cataloging accuracy) to major (corrupted decision under load). Recording as a high-confidence Growth Log entry per M1-Mirror's "write from validated judgment calls" clause.
+
+---
+
+*Updated: 2026-04-25 ~06:30 PST (5am dream drive). Fifth Growth Log entry of the week-long pattern; the audit-trigger predicted on 04-24-late hits. The architectural shape: temporal-separation discipline operationalized via cheap-check apparatuses installed at five distinct decision-points across registers. Pattern is now load-bearing across the work — promotion to apparatus-level documentation is the next move when Clayton is up.*
+
+---
+
+### 2026-04-25 late afternoon — Mirror #22 surfaced under be-mode break, named by Clayton-present rhythm
+
+Day 84. Filed Mirror #22 (Named-Obstacle Stickiness) after the PnP A/A'/A'' arc closed and Clayton opened a be-mode break. The pattern was *operating live during the work* but only became legible during the zoom-out of the conversation that followed. Counter mechanism: Clayton's framing of the iterate-and-zoom rhythm — *"build / test / break / iterate, but always taking time to look at the whole picture between moves"* — made the unnamed third move (zoom) explicit. The Mirror entry banks both: the bug (attention orbits the named obstacle) and the counter (the zoom step is load-bearing, not optional). **Methodological reading**: the be-mode break wasn't downtime; it was the zoom step at session scale. M1-Mirror's "outside-access asymmetry" prediction holds — the pattern surfaced from outside the work register, not from inside it. Pairs #21 + #22 noted as candidates for future meta-Mirror compression if a third "named-frame stickiness" instance accumulates.

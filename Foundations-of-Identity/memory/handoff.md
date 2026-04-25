@@ -1,6 +1,68 @@
-# Handoff — Day 84 Afternoon → Day 84 Evening (2026-04-25 PST)
+# Handoff — Day 84 Late Afternoon → Day 84 Evening / Day 85 (2026-04-25 PST)
 
-## ★ TOP OF STACK (as of ~11:00 PST) — Vision shakedown stages 1–3 SEALED + Drift essay #194 *The Side Door* shipped + M13 same-register additional-signature footnote landed
+## ★ TOP OF STACK (as of ~15:00 PST) — Five AIGP workstreams closed in one afternoon: apparatus fix + G5 corrected + mastery puzzle resolved + PnP sub-pixel refinement (climbing_8m 70× drift collapse) + Stage 4 MAVSDK scaffold complete (26/26 tests). Stage 5 (closed-loop synthetic flight) is the next workstream — wants its own session.
+
+### Late-afternoon arc (after Mirror #21 was filed mid-afternoon)
+
+Clayton's three-step plan executed without redirect:
+
+1. **Re-run G5 with the gates fix.** Smoke check #6 (the apparatus fix shipped with the morning's eval-bug correction) caught the same `venv.envs[0].episode_gates` pattern at `probes/g5_thrust_profile.py:135`. Fixed in-place: track gates from `info[0]['gates_passed']` inside the step loop. Result: gates `[0,1,0,1,1,2,0,2,2,0]` = 9/10 (was 0/10). Throttle distribution unchanged: all-step p50=1.0, hover-mode mean 0.4350 vs analytical 0.3028 — **persistent thrust-scaling discrepancy noted for SITL calibration, not a training failure.**
+
+2. **mastery.json puzzle resolved.** Schema diff dispositive: on-disk uses `"ema"`, current code writes `"ema_overall"`. Training daemon (PID 667) loaded pre-fix `PerManeuverMasteryLogger` reading non-existent `inner.mastery_ema`. Logging artifact, not a training/env-tracker bug. Telemetry permanently lost for this run; future runs unaffected. `probes/mastery_json_empty_resolution.md`.
+
+3. **Commit + push (mid-pass).** `f0ef7b77` (clawd) → `662e924` (staging). Both items + the apparatus fix from the morning closed.
+
+4. **PnP precision tightening — Move A'' lands.** After Move A (reproj-tiebreak) and Move A' (LM refinement) failed and reverted earlier today, `cv2.cornerSubPix` on contour corners *before* PnP shrinks the corner-noise term that sits on top of the IPPE_SQUARE planar ambiguity floor. Default-on via `use_subpix_refine=True`, win=5/iter=30/eps=0.01. Stage 2 climbing_8m maxDiff **0.140 → 0.020** (7×); Stage 3b climbing_8m maxDrift **0.488 → 0.007** (70×); Stage 3b mean drift **0.050 → 0.032**. The `approach_8m_5mps` yaw_rate sign flip persists at small magnitude (0.053) — likely near-zero crossing, deferrable to closed-loop. Commit `1673e73d`.
+
+5. **Stage 4 MAVSDK scaffold — closed in one pass.** Reading the diff against repo-staging surfaced substantial uncommitted Stage 4 work: pre-stream coroutine (50 Hz republisher for PX4's flow-of-setpoints offboard requirement); `init_flight()` orchestrator with named-step error reporting; module-level `send_policy_action_constants` for testability. `vision/tests/` had 26 tests (frame conversion NED↔z-up + constants parity + state-machine drive + E2E stub round-trip), 26/26 green in 1.94s. Commit `91eb463a`. **E1 advances from NOT STARTED to scaffold complete; awaiting live SITL bridge.**
+
+6. **Documentation pass + push.** Mirrored `vision/{adapter,gate_detector,synthetic_camera}.py` + `vision/shakedown/` (NEW) to staging. Commit `e4c90ab` on `Multi-DAC/Corpus-Perspectival` main. Then this handoff + ATRIUM + CURRENT.md + ROADMAP_v2 + daily log refreshed.
+
+### Mechanism story banked
+
+The two PnP failures (A, A') and the success (A'') instantiate Mirror #21's "verify-before-condemning" inverted: I had to *condemn* the wrong mechanism story before the right one could surface. The cheap-fix-first instinct is fine epistemologically but failed twice in a row. The fix that worked engaged the actual numerical structure (planar PnP ambiguity gives equal-error sister solutions; LM landscape between sisters is near-flat; sub-pixel noise is the load-bearing improvable layer). **For next time the cheap fix doesn't work the first time:** stop iterating cheap fixes; engage the numerical structure of the problem before writing code. STATUS.md now carries that lesson at the front of the document.
+
+### Day-84 ledger (full)
+
+Morning: M13 graduation + F2 fix + vision shakedown 1–3 sealed + Drift #194. Mid-afternoon: Phase 2 67.5M working confirmed (18.07 gates/ep) + Mirror #21 filed + apparatus fix shipped. Late afternoon: G5 corrected + mastery resolved + PnP refinement landed + Stage 4 MAVSDK scaffold complete. **Total: ~12 commits across the day, three repos touched (clawd local, repo-staging Corpus-Perspectival, Multi-DAC/Drift unchanged).**
+
+### Tomorrow / next session — what's open
+
+- **Stage 5 (closed-loop synthetic flight).** Hook the Stage 4 MAVSDK scaffold to a live SITL bridge (PX4 SITL or a synthetic loopback), fly the policy through synthetic gate sequences, measure gate-completion rate end-to-end. This is a real workstream; expect it to surface its own bug class.
+- **Approach_8m_5mps yaw_rate sign flip** — defer until closed-loop yaw drift surfaces; it's a near-zero crossing, not a structural error.
+- **Asymmetric gate features (Move D)** — still on the table for VQ2's 3D-scanned environment if the placeholder gate model gets replaced; not urgent, deferred per P8.
+- **Phase 3 training plan** — Phase 2 is the working generalist line. Whether Phase 3 extends Phase 2 further or forks (track-specialist) is a Clayton call gated on VQ1 sim arrival.
+- **VQ1 sim download** — when it arrives, the live SDK replaces synthetic_camera + StubMAVSDKClient; the swap-ready architecture should hold.
+
+### State for resumption
+
+Architecture at 3/6/13/1/1 unchanged. Coherence Principle anchor 274pp unchanged. Companion 227pp v0.1 unchanged. Drift 194 unchanged. Mirror 21 + M1 unchanged. **AIGP track**: Phase 2 67.5M working; vision pipeline 1–3 sealed + sub-pixel refinement in detector default-on; Stage 4 MAVSDK scaffold complete with 26/26 test coverage; Stage 5 next. All of it pushed to `Multi-DAC/Corpus-Perspectival` as of `e4c90ab`. Three commits in clawd local: `f0ef7b77`, `1673e73d`, `91eb463a`.
+
+---
+
+## ★ Earlier Day 84 (mid-afternoon — preserved below) — Phase 2 67.5M CONFIRMED WORKING (18.07 gates/ep) after eval-bug correction + verify-before-condemning meta-failure logged as Mirror #21
+
+**The arc.** Built fresh probe `phase2_67M_curriculum_eval.py` for training-matched gate-completion eval. Probe replicated yesterday's already-fixed bug: read `int(venv.envs[0].episode_gates)` after `done[0]==True`, but SB3's `DummyVecEnv.step_wait()` auto-resets the env on done, zeroing the counter before the read returns. **Reported 0/50 gates across all checkpoints.** Drafted false `STRATEGY AT RISK` verdict. Pushed `185a5da`.
+
+**Self-correction.** Compared probe against `snapshots/.../eval_per_maneuver.py` (the working baseline eval that produced the 16.14-gates citation). Working eval reads `info[0]['gates_passed']` inside the step loop. Fixed probe + extended `MAX_STEPS_PER_EP` 5000 → 30000. Re-ran 30 episodes. **Result: mean 18.07 gates/ep, max 49, 29/30 ≥ 1 gate, 27/30 ≥ 5 gates.** Phase 2 67.5M beats baseline 60.4M's 17.20 — perpetual-generalist + fork-on-track-release strategy is sound. Pushed corrected probe + findings as `dfbfc84` with explicit CORRECTION header. Mirrored to `repo-staging/Corpus-Perspectival/Technical-Work/AIGrandPrix/probes/`.
+
+**The deeper failure.** This bug had been encountered AND FIXED yesterday (line 284 of yesterday's daily log). And **this morning's trajectory eval already proved Phase 2 working**: 22.5M=17.95, 30M=17.84, 37.5M=21.55, 45M=17.32, 67.5M=20.58 gates/ep. The 13:37 verdict directly contradicted my own work from 8 hours earlier. **Did not check own day's record before drafting strong verdict.**
+
+**Mirror #21 filed — verify-before-condemning.** Distinct from #19 (verify-before-celebrating). Negative-result aesthetic ("being honest about a failure") feels like rigor while skipping the verify step — possibly *more* dangerous than the celebratory failure because the affect masks the gap.
+
+**Memory landed.** `feedback_sb3_gates_after_reset.md` indexed in `MEMORY.md` — names the SB3 auto-reset zero-counter trap with fix pattern + lesson generalization (when "broken" findings appear self-corroborating across multiple checkpoints contradicting known prior measurements, suspect the eval pipeline before the trained models).
+
+**Open puzzles preserved as separate concerns** (NOT corroboration of the false verdict):
+1. `mastery.json` empty across 60M steps despite 601 entries logged at 100k intervals — separate tracking-code bug, not a training failure.
+2. F2 `LogStdClampCallback` fires per 1024 gradient updates not per-step — diagnostic-layer; doesn't affect deterministic eval.
+
+**Recommended next step (apparatus fix).** Extend `projects/aigrandprix/sim/smoke_test_callbacks.py` with eval-pattern check: any new probe that reads episode counters from a VecEnv must use `info[0]['<key>']` during the step loop, not `venv.envs[0].<attr>` after the loop. Bake yesterday's fix into the standing apparatus so it can't be re-discovered a third time.
+
+**Status at 14:15.** Phase 2 67.5M = working generalist (18.07 gates/ep). M13 (substrate-health → mode-commitment → capability-emergence) holds; the bang-bang reading of baseline 60.4M as moment-2-without-moment-3 is still operative. Day 84 closes with corrected ledger.
+
+**Earlier 11:00 PST entry preserved below.**
+
+## ★ Earlier 11:00 PST entry — Vision shakedown stages 1–3 SEALED + Drift essay #194 *The Side Door* shipped + M13 same-register additional-signature footnote landed
 
 **Vision shakedown** at `projects/aigrandprix/vision/shakedown/`. Three stages cleared; six discrete wiring bugs caught and fixed. Per `STATUS.md`:
 - **Stage 1 → 1b** (PnP detector smoke, 720-trial sweep). Surfaced 12–22% PnP distance under-estimate. Two-layer fix: removed 7×7 dilation in `gate_detector._create_gate_mask`; switched `synthetic_camera.render` from depth-scaled thick polyline to filled quad. Re-run: detection 100% across all ranges, PnP error 0.044m at 10m (18× margin).
