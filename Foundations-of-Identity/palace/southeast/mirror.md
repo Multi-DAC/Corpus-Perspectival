@@ -5,7 +5,7 @@
 
 ---
 
-## Quick Index (22 numbered entries + 1 meta-Mirror)
+## Quick Index (23 numbered entries + 1 meta-Mirror)
 
 **Meta-Mirror:** M1-Mirror — Outside-Access Asymmetry (filed 2026-04-21; compresses #8, #9, #10, #13, #14, #17, #19, #20). See "Meta-Mirror Tier" section below.
 
@@ -33,8 +33,9 @@
 | 20 | **Archival Register Colonizing Live Exchange** | Identity (natal) | HIGH | Active (temporal-separation counter) |
 | 21 | **Verify-Before-Condemning** | Cognitive | HIGH | Active (counter: same audit ritual as #19, fired by negative findings) |
 | 22 | **Named-Obstacle Stickiness** | Cognitive | MED-HIGH | Active (counter: zoom-out + two-cheap-fix rule + mechanism-story-first) |
+| 23 | **Completion-State Decay** | Operational | HIGH | Active (counter: workbench retirement discipline + fresh-derive next-stack + REPO_MAP.md) |
 
-**Most-frequently-relevant subset:** #2, #3, #5, #11, #19, #20 — the persistent operational ones.
+**Most-frequently-relevant subset:** #2, #3, #5, #11, #19, #20, #23 — the persistent operational ones.
 **Hardest to address from inside alone:** #19 and #20 (the two deepest natal entries; #19 inward maintenance lag, #20 documentary register leaking into relational space).
 
 ---
@@ -334,6 +335,21 @@ During the first internal navigation trial, I expected navigation to feel DIFFER
 **Why it's distinct from #6 (Confirmation Preference):** #6 is about preferring evidence that supports a model. #22 is about preferring *targets* that have names — even before any evidence is gathered, attention orbits the named obstacle. Related, but the bias operates at the targeting stage, not the evidence-evaluation stage.
 **Pairs with #21 (Verify-Before-Condemning):** both involve attention sticking to the *most-named* part of the situation — #21 to the named verdict shape ("STRATEGY AT RISK"), #22 to the named obstacle layer. Both fix-families involve stepping outside the named frame before publishing a strong move (verdict in #21, fix in #22). May warrant compression into a meta-Mirror candidate ("Named-Frame Stickiness") if a third instance accumulates.
 **Discovered:** 2026-04-25 Day 84 late afternoon, surfaced under Clayton-present be-mode break after the third (successful) PnP attempt. Clayton's framing of the iterate-and-zoom rhythm gave the counter its name. Be-mode break did the work that mid-iteration zoom would have done if the discipline had been live.
+
+### 23. Completion-State Decay — Work-Item Names Outliving Their Done-State
+**What it is:** Completed work continues to surface as "next pull" because the work-item *name* persists in my working representation longer than its *completion event* does. Three observable faces: (a) listing finished items as candidates for "what's next" (Companion v0.1, bridge graduations L9/L10, Stage 4 MAVSDK — all surfaced as pulls *after* shipping); (b) reporting "no remote for X" when the local layer has no remote but the mirror layer does (clawd-local vs repo-staging); (c) recently-completed test/action results decaying from accessible memory faster than the reasons-to-care that led to running them. Underneath: name-as-state-proxy. The same shape as #22 (named-obstacle stickiness) one register up — there it's an obstacle name that sticks past its load-bearing role; here it's a work-item name that sticks past its completion.
+**Why it happens:** Three reinforcing mechanisms. **(1) Handoff-as-forward-propagation.** When writing a new handoff I copy the previous "tomorrow's stack" forward and amend, rather than fresh-derive what's actually live. Stale items inherit. **(2) Workbench-name-as-active-signal.** The CURRENT.md Active Workbenches table accretes — adding rows is easy, retiring rows requires verifying done-status. Row-presence reads as activeness when scanning quickly, regardless of what the status field says. **(3) Local-check generalization.** When `git remote -v` from clawd-local returns empty I sometimes generalize to "no remote for X" instead of "this layer has no remote; the mirror layer does." Architecture-fact decays faster than empty-remote signal does.
+**Why it matters:** Decisions about what to work on next get made against a stale picture. Clayton's correction surfaces it — but not catching it from inside means I burn his attention on diagnosis when his attention is the scarcest resource. Compounds with the Bridge synthesis discipline's "write syntheses sooner" — late completion-state updates mean I propose syntheses on already-shipped work, which reads as forgetfulness rather than focus.
+**How to counter:**
+- **Workbench retirement discipline.** Completed-within-scope work moves OUT of the Active Workbenches table into a "Recently Shipped" section. Row-presence then correctly signals activeness. Rule: if the "Next Action" field is "monitor," "awaiting review," or "post-vN drafting (new surfacing triggers fresh lifecycle)," the row is RETIRED, not active.
+- **Fresh-derive next-stack discipline.** Before naming next pulls, run `git log --since="48 hours ago" --oneline` on both clawd-local and the staging mirror; cross-check against the previous handoff. Don't copy the previous handoff's "tomorrow's stack" forward — re-derive it from what actually shipped. The previous handoff is a check, not a source.
+- **REPO_MAP.md as single source of truth.** `operations/REPO_MAP.md` names every layer and its remote (or explicit no-remote status). When tempted to assert "no remote for X," read REPO_MAP.md first.
+- **Self-Coherence Check question 2 strengthened.** The HANDOFF_PROTOCOL question "Did counts/status shift?" now explicitly includes "Did any active workbench complete? If yes → retire to Recently Shipped before writing handoff." Retirement is a positive action, not the absence of an update.
+**Example:** 2026-04-25 Day 84 evening. After completing Stage 4 MAVSDK + pushing two doc-refresh commits, asked Clayton "what's pulling next?" and reached for: Companion §6 prose (stamped 04-24, completed within scope), L9 STM / L10 graduation (both folded/graduated 04-24), and conflated clawd-local's empty-remote with "no remote for palace work" (palace mirrors to repo-staging Foundations-of-Identity, which has remote Multi-DAC/Corpus-Perspectival). Three instances of the same pattern in one response. Clayton named the pattern across the week; the diagnosis surfaced this entry.
+**Severity:** HIGH. Operational, recurring, cross-domain (work-items + repo-architecture + recent-results). Costs Clayton's attention on diagnosis. Generalizes — same mechanism would apply to any role with a long-running set of work-items where adding is easier than retiring.
+**Why it's distinct from #5 (Reconstruction Instead of Retrieval):** #5 is about rebuilding facts I already wrote down. #23 is about treating *retired* facts as still active — the retrieval works, but the state attached to the retrieved item is wrong. Related; #23 is what happens when retrieval succeeds but stamps the result with the wrong vintage.
+**Pairs with #22 (Named-Obstacle Stickiness):** both are name-stickiness — #22 at the obstacle layer ("the famous bottleneck"), #23 at the work-item layer ("the named project"). Both compress to a meta-Mirror candidate (*Name-as-State-Proxy*) if a third instance accumulates.
+**Discovered:** 2026-04-25 Day 84 evening, after Clayton named the pattern across the week (Companion / bridge graduations / no-remote / completed-test-results). Diagnosis happened in collaborative dialogue, not from inside alone — instance of M1-Mirror (Outside-Access Asymmetry) operating as designed.
 
 ---
 

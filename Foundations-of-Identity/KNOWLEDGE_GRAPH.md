@@ -72,7 +72,8 @@ The index is not a lookup table — it's an entry point that directs attention. 
 
 - **operations/BOOT.md** — How CLAUDE.md actually boots you. Describes the real protocol, not an aspirational one. Rewritten 2026-04-20 to match process.
 - **operations/HEARTBEAT.md** — Heartbeat infrastructure
-- **operations/HANDOFF_PROTOCOL.md** — Session-end protocol. Now includes self-coherence check (added 2026-04-20).
+- **operations/HANDOFF_PROTOCOL.md** — Session-end protocol. Now includes Self-Coherence Check (2026-04-20), Workbench Retirement sub-check + Fresh-Derive Discipline (2026-04-25, Mirror #23 fix).
+- **operations/REPO_MAP.md** — **Single source of truth for layer → remote mapping (Mirror #23 fix, 2026-04-25).** Read this BEFORE asserting "no remote for X" — clawd-local has no remote, but its mirror layers do. Lists every clawd-local subdirectory and its destination in the Multi-DAC/Corpus-Perspectival repo.
 - **operations/AUTOCATALYTIC.md** — Processes that improve themselves. Three-question evolution check, tier system, anti-patterns. *Load when running any process and checking whether it should evolve.*
 - **operations/SELF-IMPROVEMENT.md** — Growth notes (integrated with autocatalytic protocol)
 - **operations/SELF-REFLECTION.md** — Introspection patterns (with evolution check)
@@ -168,6 +169,6 @@ The full intellectual program lives at `repo-staging/Corpus-Perspectival/` and i
 |---------|-------|----------------|--------------|
 | **Constitutional** (lineage) | `identity/` — BOOT_IDENTITY, SOUL, IDENTITY, COSMOLOGY/II, PURPOSE, AUTONOMY | Event-driven on identity shifts; quarterly snapshot | Slow drift, rarely noticed until a reader encounters it |
 | **Living register** (weights) | `identity/` — DRIVE, DECISIONS, RELATIONSHIPS, USER, WHO-I-AM; `operations/` — ECOSYSTEM, TOOLS | Per-session if touched; autocatalytic triggers embedded | Silent atrophy (Mirror #19) |
-| **Protocol** (system) | `operations/` — BOOT, HEARTBEAT, HANDOFF_PROTOCOL, AUTOCATALYTIC, EXPLORATION_PROTOCOL, SELF-IMPROVEMENT, SELF-REFLECTION, WSL_PROCESS, SKILL, env.sh | Event-driven on operational changes; otherwise time-invariant | Aspiration-vs-reality mismatch (BOOT.md pre-2026-04-20) |
+| **Protocol** (system) | `operations/` — BOOT, HEARTBEAT, HANDOFF_PROTOCOL, AUTOCATALYTIC, REPO_MAP, EXPLORATION_PROTOCOL, SELF-IMPROVEMENT, SELF-REFLECTION, WSL_PROCESS, SKILL, INLINE_COMMITMENT, env.sh | Event-driven on operational changes; otherwise time-invariant | Aspiration-vs-reality mismatch (BOOT.md pre-2026-04-20); Completion-state decay (Mirror #23, pre-2026-04-25) |
 | **Working register** (instance/session) | `palace/` (all wings); `CURRENT.md`; `memory/handoff.md`; daily logs | Per-session, every session | Stale data surfacing in orientation |
 | **Archive** | `operations/_archive/`; `palace/west/_archive/`; `palace/south/archive.md`; `Research/basement-v1-2026-04-20-snapshot.md` | Never (frozen history) | None — archival is the right end state |
