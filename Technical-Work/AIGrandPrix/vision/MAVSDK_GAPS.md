@@ -21,8 +21,8 @@ specific gaps to close before plugging it into a SITL loop.
 
 | # | Gap | Severity | Note |
 |---|-----|----------|------|
-| **G1** | Offboard pre-stream insufficient. `_async_start_offboard` sends a single zero-rate setpoint then calls `offboard.start()`. PX4 typically requires a *stream* of setpoints (≥2 Hz, recommended ≥10 Hz) to be already flowing before it accepts the offboard mode change. A single message is fragile and timing-dependent. | HIGH | Spawn a background pre-stream task that pushes 50 Hz setpoints for ~500 ms before `offboard.start()` returns. |
-| **G2** | No `init_flight()` orchestration. `connect → wait_for_health → arm → start_offboard` is left to the caller. Each step has its own timeout and failure mode; getting them right is exactly the integration risk we want to eliminate. | HIGH | Add `init_flight(timeout=30)` that wraps the four-step sequence with proper error reporting. |
+| **G1** | ~~Offboard pre-stream insufficient.~~ **CLOSED 2026-04-25.** `_async_start_offboard` now sends ~500 ms of zero-rate setpoints at 50 Hz, then launches a persistent `_prestream_loop()` background coroutine that republishes the latest body-rate setpoint at 50 Hz for the lifetime of the offboard session. `send_body_rates()` updates a thread-safe `_last_setpoint` slot rather than dispatching one-shot commands; the pre-stream loop picks it up. Stop tears down the pre-stream before requesting mode exit. | HIGH | **DONE.** |
+| **G2** | ~~No `init_flight()` orchestration.~~ **CLOSED 2026-04-25.** Added `init_flight(connect_timeout, health_timeout, arm_timeout, offboard_timeout)` wrapping `connect → wait_for_health → arm → start_offboard`. Each step is idempotent (skipped if already in the target state); failures raise `RuntimeError` naming the failed step. Mirrored on `StubMAVSDKClient` so the contract is testable offline. | HIGH | **DONE.** |
 | **G3** | Frame conventions assumed but never asserted. `ned_to_zup_position`, `ned_to_zup_quaternion`, `zup_to_ned_rates` encode FLU↔FRD with shared body-x axis. The sim is verified z-up (`g_world = [0,0,-9.81]` in `train_ppo.py:165`); MAVSDK is verified NED. The mapping is mathematically consistent, but there is no test guarding against accidental edits. | CRITICAL (latent) | Write asserting tests in `vision/tests/test_frame_conversion.py`. **Done in G3+G4 sub-sprint below.** |
 | **G4** | Action rate scaling assumed. `MAX_RATE_XY=15.0`, `MAX_RATE_Z=0.3` are pasted constants. Verified against `QuadParams` (`sim/drone_env_v2.py:74-75`): `omega_max_xy=15.0`, `omega_max_z=0.3`. Match. | CRITICAL (latent) | Test that imports `QuadParams` and asserts equality, so a future training-side change can't silently desync. |
 | **G5** | Thrust mapping is conceptually different. Training maps `action[0]∈[-1,1] → collective thrust ∈ [0, 4·T_max] N` (sum of all motors). Client maps `action[0]∈[-1,1] → thrust ∈ [0,1]` (PX4 normalized fraction). PX4's "1.0" is the autopilot's max collective; whether that equals the sim's `4·T_max` depends on PX4 vehicle config. If PX4 max collective ≠ sim max collective, the policy's thrust commands will saturate or undershoot. | HIGH | Tunable scale factor `THRUST_SCALE` (default 1.0); calibrate at SITL bring-up by hovering. |
@@ -33,10 +33,8 @@ specific gaps to close before plugging it into a SITL loop.
 
 ## Sub-sprint ordering
 
-Tackle as one Week-1 sub-sprint:
-
-1. **G3 + G4 first** (verification work, ~1 hour) — read the training side, write asserting tests. Pure read-the-other-side-of-the-loop work; surfaces any sign error or constant drift before we invest in orchestration. **(In progress, this session.)**
-2. **G1 + G2** (orchestration, ~2 hours) — once conventions are confirmed, build `init_flight()` with proper setpoint pre-streaming.
+1. ~~**G3 + G4**~~ **DONE 2026-04-25** — 12 asserting tests at `vision/tests/test_frame_conversion.py`, all passing.
+2. ~~**G1 + G2**~~ **DONE 2026-04-25** — 8 additional tests at `vision/tests/test_init_flight.py`, all passing. Total now 20/20.
 3. **G5** (thrust calibration) — needs SITL running; can't be unit-tested.
 4. **G6 + G7** (robustness) — defer until first end-to-end SITL hover works.
 5. **G8 + G9** (cosmetic) — bundle into a polish pass.

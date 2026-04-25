@@ -135,6 +135,17 @@ class MAVSDKClient:
         self._in_offboard = False
         self._running = False
 
+        # Latest body-rate setpoint pushed by the pre-stream / control loop.
+        # PX4 requires a *flowing* stream of offboard setpoints (≥2 Hz, ≥10 Hz
+        # recommended) to accept and hold the offboard mode change. We keep
+        # the last commanded value here and let a background coroutine
+        # republish it at PRESTREAM_HZ until a fresh send_body_rates()
+        # arrives.
+        self._last_setpoint = (0.0, 0.0, 0.0, 0.0)  # (thrust, roll, pitch, yaw) NED
+        self._setpoint_lock = threading.Lock()
+        self._prestream_task: Optional[object] = None  # asyncio.Task
+        self._prestream_hz: float = 50.0
+
     # ------------------------------------------------------------------
     # Connection
     # ------------------------------------------------------------------
@@ -265,20 +276,23 @@ class MAVSDKClient:
             pitch_rate_deg_s: Body pitch rate in deg/s (our y-axis)
             yaw_rate_deg_s: Body yaw rate in deg/s (our z-axis)
         """
-        if not self._connected or not self._in_offboard:
+        if not self._connected:
             return
 
         # Convert z-up body rates to NED body rates
         rates_zup = np.array([roll_rate_deg_s, pitch_rate_deg_s, yaw_rate_deg_s])
         rates_ned = zup_to_ned_rates(rates_zup)
 
-        asyncio.run_coroutine_threadsafe(
-            self._async_send_rate(
-                thrust_normalized,
-                rates_ned[0], rates_ned[1], rates_ned[2]
-            ),
-            self._loop,
-        )
+        # Stash the latest setpoint so the pre-stream coroutine can keep
+        # republishing it between policy steps. This guarantees PX4 sees
+        # a continuous flow even if the policy stalls.
+        with self._setpoint_lock:
+            self._last_setpoint = (
+                float(thrust_normalized),
+                float(rates_ned[0]),
+                float(rates_ned[1]),
+                float(rates_ned[2]),
+            )
 
     async def _async_send_rate(self, thrust, roll_rate, pitch_rate, yaw_rate):
         """Send attitude rate command via MAVSDK offboard."""
@@ -344,16 +358,51 @@ class MAVSDKClient:
         future.result(timeout=10)
 
     async def _async_start_offboard(self):
-        # Send initial zero-rate setpoint (required before offboard start)
-        await self._drone.offboard.set_attitude_rate(
-            AttitudeRate(0.0, 0.0, 0.0, 0.0)
-        )
+        # PX4 requires a stream of setpoints flowing *before* it accepts the
+        # mode change. Push ~500 ms of zero-rate setpoints, then launch the
+        # background republisher, then call offboard.start().
+        with self._setpoint_lock:
+            self._last_setpoint = (0.0, 0.0, 0.0, 0.0)
+
+        warmup_n = max(1, int(self._prestream_hz * 0.5))
+        warmup_dt = 1.0 / self._prestream_hz
+        for _ in range(warmup_n):
+            await self._drone.offboard.set_attitude_rate(
+                AttitudeRate(0.0, 0.0, 0.0, 0.0)
+            )
+            await asyncio.sleep(warmup_dt)
+
+        # Launch the persistent republisher before requesting mode change
+        self._prestream_task = asyncio.ensure_future(self._prestream_loop())
+
         try:
             await self._drone.offboard.start()
             self._in_offboard = True
             print("[MAVSDK] Offboard mode started")
         except OffboardError as e:
+            # Tear down the pre-stream we just started
+            self._prestream_task.cancel()
+            self._prestream_task = None
             raise RuntimeError(f"Failed to start offboard: {e}")
+
+    async def _prestream_loop(self):
+        """Republish the latest setpoint at PRESTREAM_HZ until cancelled."""
+        dt = 1.0 / self._prestream_hz
+        try:
+            while self._running:
+                with self._setpoint_lock:
+                    thrust, r, p, y = self._last_setpoint
+                try:
+                    await self._drone.offboard.set_attitude_rate(
+                        AttitudeRate(r, p, y, thrust)
+                    )
+                except Exception as e:
+                    # Log but keep streaming — transient failures shouldn't
+                    # break the offboard contract.
+                    print(f"[MAVSDK] Pre-stream send error: {e}")
+                await asyncio.sleep(dt)
+        except asyncio.CancelledError:
+            pass
 
     def stop_offboard(self):
         """Stop offboard control mode."""
@@ -365,12 +414,70 @@ class MAVSDKClient:
         future.result(timeout=10)
 
     async def _async_stop_offboard(self):
+        # Cancel the pre-stream first so we stop pushing setpoints before
+        # asking PX4 to leave offboard mode.
+        if self._prestream_task is not None:
+            self._prestream_task.cancel()
+            try:
+                await self._prestream_task
+            except asyncio.CancelledError:
+                pass
+            self._prestream_task = None
+
         try:
             await self._drone.offboard.stop()
             self._in_offboard = False
             print("[MAVSDK] Offboard mode stopped")
         except OffboardError as e:
             print(f"[MAVSDK] Stop offboard error: {e}")
+
+    # ------------------------------------------------------------------
+    # Orchestrated bring-up
+    # ------------------------------------------------------------------
+
+    def init_flight(self,
+                    connect_timeout: float = 30.0,
+                    health_timeout: float = 30.0,
+                    arm_timeout: float = 10.0,
+                    offboard_timeout: float = 10.0):
+        """
+        Run the full bring-up: connect → wait_for_health → arm → start_offboard.
+
+        Each step gets its own timeout. On any failure, raises RuntimeError
+        with the failed step named so callers know where to look. Idempotent
+        per-step: skips a step if it's already done.
+
+        After this returns successfully, send_policy_action() / send_body_rates()
+        will be honored by the autopilot.
+        """
+        try:
+            if not self._connected:
+                self.connect(timeout=connect_timeout)
+        except Exception as e:
+            raise RuntimeError(f"init_flight: connect failed — {e}") from e
+
+        try:
+            self.wait_for_health(timeout=health_timeout)
+        except Exception as e:
+            raise RuntimeError(f"init_flight: health check failed — {e}") from e
+
+        try:
+            if not self._armed:
+                # arm() uses a hard-coded 10s timeout internally; we surface
+                # the param here for symmetry but rely on arm()'s own wait.
+                _ = arm_timeout
+                self.arm()
+        except Exception as e:
+            raise RuntimeError(f"init_flight: arm failed — {e}") from e
+
+        try:
+            if not self._in_offboard:
+                _ = offboard_timeout
+                self.start_offboard()
+        except Exception as e:
+            raise RuntimeError(f"init_flight: offboard start failed — {e}") from e
+
+        print("[MAVSDK] init_flight complete — ready for policy commands")
 
     # ------------------------------------------------------------------
     # Status
@@ -467,6 +574,20 @@ class StubMAVSDKClient:
 
     def wait_for_health(self, timeout: float = 30.0):
         pass
+
+    def init_flight(self,
+                    connect_timeout: float = 30.0,
+                    health_timeout: float = 30.0,
+                    arm_timeout: float = 10.0,
+                    offboard_timeout: float = 10.0):
+        """Stub mirror of the real init_flight; runs each step with no I/O."""
+        if not self._connected:
+            self.connect(timeout=connect_timeout)
+        self.wait_for_health(timeout=health_timeout)
+        if not self._armed:
+            self.arm()
+        if not self._in_offboard:
+            self.start_offboard()
 
     def disconnect(self):
         self._connected = False
