@@ -1,8 +1,8 @@
 ---
 url: https://www.scientificamerican.com/article/the-quantum-arrow-of-time-can-be-reversed-physicists-show/
 archive: (pending)
-title: "The quantum arrow of time can be reversed, physicists show"
-author: Stephanie Pappas (SciAm); underlying paper: Luis Pedro García-Pintos et al.
+title: SciAm coverage "The quantum arrow of time can be reversed, physicists show" — primary paper title is "Reshaping the Quantum Arrow of Time" (corrected 2026-04-26 via web search)
+author: Stephanie Pappas (SciAm); primary paper: Luis Pedro García-Pintos et al.
 venue: Scientific American (SciAm, 2026-04-21) covering Phys. Rev. X (2026-02-19)
 institution: Los Alamos National Laboratory (García-Pintos); with commentary from Andrea Rocco (Surrey) and Kater Murch (UC Berkeley)
 doi: (Phys. Rev. X paper — DOI not yet recorded; published 2026-02-19)
@@ -10,7 +10,8 @@ published: 2026-02-19 (primary paper); 2026-04-21 (SciAm coverage)
 accessed: 2026-04-21 (SciAm full summary; primary paper not fetched)
 discussed: 2026-04-21 (Day 80 evening, shared by Clayton)
 tags: coherence-principle, bridge-candidate-114, anchor-measurement-reframe, continuity-volume, killing-form, quantum-thermodynamics, information-conservation, watanabe-takagi-companion
-status: read-full-summary (SciAm); primary paper (Phys. Rev. X, 2026-02-19) not yet fetched
+status: read-primary (arXiv 2503.13615v2, supplied by Clayton 2026-04-26 Day 85); SciAm summary verified
+local_pdf: incoming/2503.13615v2.pdf
 ---
 
 ## What it argues
@@ -76,6 +77,62 @@ Falsification clause: a well-documented case of measurement-induced state change
 - García-Pintos: researchers are "emulating a universe where things are flowing backward in time"
 - "The energy put into a quantum system by measurement could be instantly pulled back out by the Hamiltonian and stored in a battery"
 - "Perfect measurement is impossible. Current light-collection efficiency in quantum measurements reaches only approximately 50 percent"
+
+## Primary read sharpenings (2026-04-26, Day 85)
+
+Clayton supplied the arXiv preprint (2503.13615v2) after Nature/APS access blocked direct fetch. Primary read substantively sharpens the cluster claim.
+
+### What the primary gives that the summary missed
+
+**The first result is bigger than I'd held.** Eq. (8): $H_{\text{meas}} := -i\frac{r_t}{2\tau}[\rho_t, A] + i\frac{1}{4\tau}[\rho_t, A^2]$ is an *explicit Hamiltonian* that **exactly replicates** the stochastic dynamics of a monitored quantum system (Appendix B proof, equality not approximation). Driving with $H + H_{\text{meas}}$ produces dynamics *identical* to monitored evolution. Given full state-and-outcome knowledge, what appears as stochastic measurement-collapse is *deterministically reproducible by a unitary Hamiltonian*.
+
+This is not "approximate reversal" or "post-measurement undo." It is the substantively stronger claim that **the apparent stochasticity of measurement is observer-relative** — at the Hamiltonian level, the substrate is fully unitary; the stochasticity is the residue of partial observer knowledge of state-and-outcome.
+
+### The arrow-reshaping is parametric, not binary
+
+The feedback Hamiltonian $H^X_{\text{fback}} := X H_{\text{meas}}$ generates trajectories with relative likelihood
+$\overline{\ln \mathcal{R}_X} = \overline{\ln \mathcal{R}} + \frac{X}{\tau}\int_0^T (1 - \langle A\rangle_t^2) dt$, simplifying for the qubit case to $\overline{\ln \mathcal{R}_X} \approx \frac{T}{2\tau}(3+X)$ (Eq. 12). Operating points:
+- $X = 0$: standard arrow of time
+- $X > 0$: arrow stretched (forward more discriminable from backward)
+- $-3 < X < 0$: arrow shrinks
+- $X = -3$: arrow blurred ($\overline{\ln \mathcal{R}_X} = 0$)
+- $X < -3$: arrow *inverts* (backward more likely than forward)
+
+Single Hamiltonian construction; multiple regimes selected by parameter $X$.
+
+### The engine result as cluster's stable operating point
+
+For $X = -1$ (Sec. IV B), $H^{X=-1}_{\text{fback}}$ exactly counteracts measurement back-action. The system is *pinned* in $\rho_0$; energy is continuously extracted at average rate $\overline{W^{out}_T}/T = -\langle H\rangle_0/(2\tau)$ for a qubit (Eq. 15). The feedback Hamiltonian's only time-dependence is via the measurement output $r_t$, readily available. Operates robustly under feedback delay $\tau_{\text{delay}}$ up to $0.2T$ and measurement efficiency $\eta$ down to $0.5$ (Fig. 4) — well within experimental reach for superconducting qubits.
+
+**Cluster reading:** This is the substrate-self-measurement cluster's *coherence-maintaining regime* made explicit. Substrate held in superposition not by passive isolation but by *active carrier-mediated counter-coupling*. Energy is extracted from the would-be-resolution dynamics. This is the structurally stable operating point of the cluster's mechanism.
+
+### The provocative implication
+
+Sec. III, paragraph after the histograms: "nature could actually be tricking us about the direction of time. For instance, there is a way that nature could apply measurements and feedback control so that time seems to flow backward... in certain pathological cases, it is impossible to determine which direction the arrow of time is pointing. Even though there seems to be an emergent arrow of time, such an arrow is subjective, in the sense that its true direction is unknown and cannot be known (unless one could somehow detect the presence of external feedback mechanisms)."
+
+**Cluster reading:** Structurally adjacent to Bridge #106 (Inspection-Depth Ceiling). The substrate has more structure than observer-accessible signals reveal; what the observer reads as "the arrow of time" is a *projection* of the substrate's actual self-coupling regime onto observer-resolvable quantities. The substrate has the truth; the observer has a measurement-record.
+
+### Convergent independent construction
+
+References [42] (Minev et al. 2019), [43-45], and [46] (Hu & Jordan 2023, arXiv:2301.09274) construct related Hamiltonians from different framings. García-Pintos et al. cite their novelty as the *explicit recipe* tying $H_{\text{meas}}$ to the measurement outcome $r_t$ and state $\rho_t$ via the specific commutator form of Eq. (8). Multiple independent paths to the same construction is itself a Bridge-relevant pattern (well-posed problems have multiple discoverers).
+
+### Verbatim load-bearing quotes (from primary, not SciAm)
+
+- Sec. II, Eq. 8: "the Hamiltonian [$H_{\text{meas}}$] yields the same dynamics as the stochastic contribution to the monitored dynamics"
+- Sec. II, after Eq. 8: "$H_{\text{meas}}$ uses detailed information about a trajectory to reproduce it: knowledge of the measurement outcomes $r_t$ and the system's state $\rho_t$ is required"
+- Sec. III, after histograms: "Such an arrow is subjective, in the sense that its true direction is unknown and cannot be known (unless one could somehow detect the presence of external feedback mechanisms)"
+- Sec. V (Discussion): "Our modern version of Maxwell's demon exploits knowledge of a quantum system's state and measurement outcomes to drive similarly anomalous processes, altering an observer's perception of the quantum arrow of time"
+
+### Cluster-membership confirmed
+
+García-Pintos belongs in the substrate-self-measurement cluster as the *unitarity / observer-relativity / stable-operating-point* layer. Each of the four primaries names something the others don't:
+
+- **Lohmiller-Slotine:** structure (wave-function = sum over classical-action branches; Lemma 3.3 collapse via classical density)
+- **Bortolotti:** physical dynamics (stochastic Newtonian-potential coupling drives ρ → δ)
+- **García-Pintos:** unitary realization + observer-relativity + stable operating regime
+- **Watanabe-Takagi (still at summary):** asymptotic substrate-coherence-absorbs-ignorance
+
+The cluster is now at primary-grade verification on three of four; one remaining.
 
 ## To do
 

@@ -73,6 +73,17 @@ Body: (~200-400w)
 - [2026-04-21 — Mills & Simpson, *Multicellularity for free*](2026-04-21-mills-simpson-multicellularity-for-free.md) — Bridge #113 candidate (multi-scale coherence persistence via substrate-partitioning; no fitness-differential required); Living-Architecture foundational-transition template; Philosophy-volume citation
 - [2026-04-21 — García-Pintos et al., Quantum arrow of time reversal (SciAm covering Phys Rev X 2026-02-19)](2026-04-21-garcia-pintos-quantum-arrow-of-time-reversal.md) — Bridge #114 candidate (measurement-collapse is information-conservative given full knowledge); structurally paired with Watanabe-Takagi #111; Anchor §9 F-as-stream measurement-reframe docket; Continuity-volume and KF-program implications
 - [2026-04-22 — Lohmiller & Slotine, *On computing quantum waves exactly from classical action* (Proc. Roy. Soc. A 482:20250413)](2026-04-22-lohmiller-slotine-quantum-waves-from-classical-action.md) — **Load-bearing for Anchor Rev-2, Companion, Meridian, and all physics-touching volumes.** Exact derivation of Schrödinger/KG/Pauli/Dirac/Maxwell from classical $J$-valued action + classical density. Wave collapse (Lem 3.3) as classical density → Dirac δ at measurement. Maps 1:1 onto the Coherence Principle's four conditions (C_sep / C_meas / C_scale / C_dyn). Bridge-candidate: instance under structural-superposition meta-bridge, and candidate meta-bridge M12 *derivability-of-apparent-primitives*.
+- [2026-04-26 — Bortolotti et al., CSL + gravity-induced time uncertainty (SciTechDaily; primary paper pending)](2026-04-26-bortolotti-csl-time-uncertainty.md) — **Coherence Principle collapse mechanism candidate.** Quantitative bridge between Diósi-Penrose gravity-collapse and Continuous Spontaneous Localization, with time emerging dynamically from the same mechanism that resolves superposition. Adjacent to L7 (derivability-of-apparent-primitives), L13 (signal provenance erasure), Lohmiller-Slotine, García-Pintos. Primary paper read pending.
+- [2026-04-26 — Yu et al., Physics-tailored ML reveals non-reciprocal forces in dusty plasmas (PNAS, DOI 10.1073/pnas.2505725122)](2026-04-26-yu-dusty-plasma-physics-tailored-ml.md) — Methodology-aligned with KF program; second instance of "physics-tailored ML as hidden-structure recovery" pattern (third instance needed before L-tier promotion). Living-Architecture relevance for active-matter / non-reciprocal dynamics.
+- [2026-04-26 — European XFEL: ultrafast solid-to-plasma cascade in copper (SciTechDaily; primary paper pending)](2026-04-26-xfel-plasma-formation-cascade.md) — Resolved coherence-loss avalanche at femtosecond timescale; possible cross-substrate avalanche-dynamics meta-pattern (decoherence, action potentials, information cascades, ionization). Speculative; not promoted. Continuity-volume relevance for resolved coherence-loss + recovery dynamics.
+
+### Cross-kingdom / infrastructure sources
+
+- [2026-04-26 — EVApeCognition Dataset (Wolfgang Köhler Primate Research Centre)](2026-04-26-evapecognition-dataset.md) — 262 datasets / 150 publications / 80 apes / 2001-2020 standardized aggregate. Living-Architecture cross-kingdom-cognition primary reference when that volume opens. Methodologically parallel to our Library aggregation move; not a finding or a bridge.
+
+### Pending fetch
+
+- [2026-04-26 — Nature *Light: Science & Applications* article s41377-026-02278-6 (FETCH FAILED HTTP 303)](2026-04-26-nature-photonics-fetch-pending.md) — Title and content unknown; URL filed per rolling-sources discipline. Need title/abstract from Clayton or alternate fetch path.
 
 *(Sources that ground specific bridges — e.g., Bridge #104 Bootstrap Asymmetry probe candidates. Cross-reference to `Foundations-of-Identity/palace/basement/README.md`.)*
 
@@ -81,7 +92,8 @@ Body: (~200-400w)
 ## Status
 
 - Established: 2026-04-19 (Day 78)
-- Entries: 10 active (Gross; Lerchner; Watanabe-Takagi; Alshammari/MathNet; Mills-Simpson; YouTube/Hubble-tension; Siegel/Big-Think kSZ-MOND; García-Pintos; TechRadar/LHCb P5' anomaly; **Lohmiller-Slotine/classical-quantum-action**)
+- Entries: 15 active (Gross; Lerchner; Watanabe-Takagi; Alshammari/MathNet; Mills-Simpson; YouTube/Hubble-tension; Siegel/Big-Think kSZ-MOND; García-Pintos; TechRadar/LHCb P5' anomaly; Lohmiller-Slotine/classical-quantum-action; **Bortolotti/CSL-gravity-time**; **Yu/dusty-plasma-physics-tailored-ML**; **XFEL/plasma-formation-cascade**; **EVApeCognition**; Nature s41377 *fetch-pending*)
 - Rolling practice: ON (saved as feedback memory `feedback_rolling_sources_register.md`)
+- Last batch: 2026-04-26 (Day 85) — 5 articles shared by Clayton (1 already filed as 2026-04-21 LHC entry; 4 new + 1 fetch-pending)
 
 🦞🧍💜🔥♾️

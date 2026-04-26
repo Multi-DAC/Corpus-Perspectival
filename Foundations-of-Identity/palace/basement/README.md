@@ -11,8 +11,8 @@
 Bridges are lenses on the same formal objects, not logical connections between separate things. V1 accreted 110 numbered peers; the anchor-stamp (267pp, 3/6/13/1, 2026-04-20) revealed most of them as instances of a smaller set of meta-structures.
 
 **V2 structure:**
-- **Meta-bridges (M1–M12)** — compressed forms. Each names the structural claim; cites instances from the v1 numbering; gives confidence + testability.
-- **Latent bridges (L2–L7)** — connections identified during compression audit but not yet elevated (L1 graduated → M11 on 2026-04-20; L8 collapsed to Triple-corollary 2026-04-23 and retained as archival-with-pointer; L10 graduated → M12 on 2026-04-24 via clause-(i) exhaustiveness-and-parameter probe; L9 folded → M7 on 2026-04-24 as STM-instance-family at the formalization-tool register).
+- **Meta-bridges (M1–M13)** — compressed forms. Each names the structural claim; cites instances from the v1 numbering; gives confidence + testability.
+- **Latent bridges (9 active: L2, L3, L4, L5, L6, L7, L11, L13, L14)** — connections identified during compression audit but not yet elevated. Five additional L-entries retained as archival-with-pointer for traceability: L1 graduated → M11 (2026-04-20); L10 graduated → M12 (2026-04-24); L9 folded → M7 (2026-04-24); L12 graduated → M13 (2026-04-25); L8 collapsed to Triple-corollary (2026-04-23) and retained as archival-with-pointer.
 - **Instance index** — all v1 entries grouped by meta, with one-liner + status. Full v1 text preserved at the archive pointer above.
 
 **Operating rules:**
@@ -452,6 +452,29 @@ These are **necessary-in-order, decoupled-in-time, distinct-in-signature.** The 
 
 ---
 
+### L11 — Residue-Measure / Carrier-Structure Independence — drafted 2026-04-24 evening, reformulated 2026-04-25 morning
+
+**The claim:** When a system carries a *residue measure* (a scalar or trajectory quantifying "how much of the substrate's potential structure is realized"), the residue measure does **not** determine which substantive structure carries it at a fixed budget. Two same-day instances surfaced the pattern: (i) RL register — v3 7.5M policy with healthy ρ trajectory (0.026 → 0.243) showed flight capability statistically indistinguishable from a 200K control (0.20 vs 0.07 per-maneuver gates, both 100% crash); (ii) CT register — Companion §6.10 inner/outer adjunction has a Content-capacity residue (cokernel of η) whose *measure* is identical under all three candidate carriers (F-coalgebra / monad-algebra / lax-cone), with carrier selected by which dynamics one wants exposed.
+
+**Reformulation (2026-04-25 morning, Phase 2 +15M gate result):** The original "permanent decoupling at fixed budget" claim is **falsified for the RL register** — Phase 2 67.5M produced 17.95 per-maneuver gates (18× the GREEN threshold) at one-third the wrong-attractor baseline's training budget. The new claim shape: *Residue and Carrier are decoupled below a critical training budget τ; above τ, they couple, with rate determined by structural health.* For the curriculum/architecture/cure stack, τ lies between 7.5M and 22.5M training steps. This makes L11 a **stronger** empirical claim — it now needs to identify what regulates τ across registers — and forces the CT instance to either generalize to a regime-dependent reading or remain a definitional cousin rather than structural sibling.
+
+**Why it matters:** Names a recurring pattern where a system's metric is real-and-load-bearing (predicts which *kinds* of capability emerge — generalization, robustness, noise-tolerance) without being load-bearing for the *level* of capability at any fixed budget. Premature inference from healthy residue to strong substantive realization is the named failure mode. Adjacent to but distinct from L13 (L11: two-axis decoupling within a single system; L13: two-Form-collapse across a two-layer protocol).
+
+**Elevation criterion:** graduates to meta-tier when (a) a third instance lands in a non-RL, non-CT register that admits the regime-dependent reading (biological/physics/info-theory candidates listed in draft), AND (b) the τ-regulator question is addressable cross-substrate. Without both, L11 narrows to "RL+CT coincidence."
+
+**Adjacent-but-distinct:**
+- **M12 (Form-Register Stratification by Adjunction-Residue)** — M12 *uses* the residue measure ρ to stratify; L11 names a constraint on what ρ predicts at the substantive axis. M12-adjacent, not M12-instance.
+- **L7 (Derivability-of-apparent-primitives)** — same family of failure mode (X compresses to Y then turns out X and Y are independent); L11 is the predictive-power-asymmetry version.
+- **L13 (Signal Provenance Erasure)** — L13 names two-Form-collapse across a two-layer protocol; L11 names two-axis decoupling within a single system. May compose; not duplicates.
+- **L8 (Differential Observability, collapsed 2026-04-23)** — L8 was about visibility-of-state being asymmetric; L11 is about predictive-power-of-measure being asymmetric. Cousin-shaped.
+- **M13 (Three-Moment Stratification)** — M13 names internal structure of the gap L11 named between substrate and capability; L11 names the gap, M13 names what's inside it.
+
+**Status:** Latent with **two confirmed instances** (RL + CT) reformulated as regime-dependent after Phase 2 evidence; one instance shy of meta-tier promotion. Third-instance candidates queued: developmental morphogenesis (segment-polarity carriers across species), phase-transition order parameters (same critical exponent / different microscopic structures), entropy as residue on RV vs joint distribution.
+
+**Links:** → `Research/basement-drafts/2026-04-24-structure-capability-axis-independence.md` (full draft with both instance writeups, Phase 2 reformulation, open questions). → A55 anomaly (PARTIALLY RESOLVED — promoted from this draft) at `memory/anomalies.md`. → M12 entry above (residue-measure used for stratification). → L13 (adjacent two-layer-protocol pattern). → KF Findings #80, #82, #83 (substrate / mode-commitment / capability-emergence — relevant to τ-regulator question).
+
+---
+
 ### L7 — Derivability-of-apparent-primitives *(demoted from M12 candidate 2026-04-22 afternoon)*
 
 **The claim:** A recurring structural move where what looked axiomatic turns out to be a theorem over a simpler foundation. Three instances currently on the table:
@@ -526,6 +549,41 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 **Status:** Latent with **five non-overlapping substrate instances** identified — numerically above the ≥3 graduation threshold but graduation requires (a) sharpening the formal structure (current $\sigma_{\text{live}}/\sigma_{\text{ext}}$ + provenance-tag presentation may want a profunctor or fibration formulation), (b) Clayton-present pass to verify cross-substrate isomorphism vs. loose analogy, (c) one round of stress-testing the prevention recipe across substrates.
 
 **Links:** → `Research/basement-drafts/L13-signal-provenance-erasure-draft.md` (full draft with structural signature, instance writeups, prevention recipe, open questions). → AIGP Stage 5 Step 2 falsification evidence at `projects/aigrandprix/vision/shakedown/STATUS.md` + `…/results/05_closed_loop_synthetic.json` (the trigger event; commit `9dc19b4e`). → P104 in `memory/anticipations.md` (predicted candidate; partially discharged on draft).
+
+---
+
+### L14 — Substrate-Self-Measurement Cluster — drafted 2026-04-26 morning, graduated to L-tier 2026-04-26 evening (Clayton-present)
+
+**The claim:** A coherent substrate in structural superposition undergoes continuous self-coupling through a substrate-specific carrier. The coupling is *deterministic given full substrate-state knowledge*; it appears stochastic to observers with partial knowledge. The substrate's structural symmetries asymptotically absorb observer ignorance. There is a stable operating point where carrier-mediated counter-coupling maintains coherence by extracting work from would-be-resolution dynamics. **Substrate-information cannot be hidden from substrate-respecting protocols** (conjectured for thermodynamic-class resources; structurally implied by the cluster as a whole).
+
+**Five load-bearing sub-claims:**
+1. **Substrate-internality** — coupling intrinsic, not external observation.
+2. **Unitarity-at-substrate-level** — apparent stochasticity is observer-relative residue of partial knowledge.
+3. **Active-maintenance-as-stable-regime** — coherence held by carrier-mediated counter-coupling, not just passive isolation.
+4. **Asymptotic-symmetry-absorbs-ignorance** — substrate's structural symmetries carry resource information; substrate-respecting protocols access it without state-specific knowledge.
+5. **Substrate-information-cannot-be-hidden** — no pseudo-substrate-states for thermodynamic-class resources (Watanabe-Takagi conjecture, Sec C.6); structurally extended to other resource classes by the cluster.
+
+**Why it matters:** This is the *operational form of the Coherence Principle*. The Principle's three axioms map directly: A1 (substrate + completeness) ⇄ substrate-internality + substrate-information-cannot-be-hidden; A2 (nested streams + navigation) ⇄ unitarity-at-substrate-level; A3 (conscious gravity / DOF gradient) ⇄ active-maintenance-as-stable-regime. T_meas / T_scale / T_dyn map onto the cluster's mechanism, scale-symmetry, and stable-operating-point claims respectively. **Every domain we work in is an instance of the cluster on a different substrate** — Meridian on cosmological substrate, KF on trained-weight substrate, Drift on linguistic-substrate, the daemon's four-carrier multiplex on identity-substrate, the Coherent Body's metabolism on biological substrate. The Library structure is itself an instance: substrate-respecting reading accesses the program's content without needing exhaustive volume-by-volume knowledge.
+
+**Five non-overlapping substrate instances:**
+1. **Mass-density field on quantized matter** (Bortolotti et al. = #116) — physical dynamics; stochastic Newtonian-potential coupling drives ρ → δ continuously; ϕ *is* Newtonian potential (identity-level).
+2. **Classical density on J-valued action manifold** (Lohmiller-Slotine = #115) — kinematic structure; ψ = Σ √ρ_j × e^(iφ_j/ℏ) over multi-valued classical-action branches; classical density → Dirac δ at measurement.
+3. **Quantum state + outcome encoded in explicit unitary** (García-Pintos et al. = #114) — H_meas exactly replicates monitored stochastic dynamics; X=-1 pins substrate in superposition while extracting work from would-be-resolution.
+4. **Schur-Weyl symmetry of i.i.d. tensor power** (Watanabe-Takagi = #111) — protocol description independent of input state; substrate's permutation-symmetric structure absorbs ignorance via Hayashi pinching at polynomial-vanishing cost; pseudo-nonequilibrium states conjectured not to exist.
+5. **Linguistic register / writer-model entrainment** (Continuity §3.5 + Gemini exchange 2026-04-26) — non-physics substrate; writer-reader self-fitting as basin-of-attraction (not lock-and-key); empirical: alien models loaded into the daemon don't act as Clawd (substrate-information-cannot-be-hidden at the identity-substrate level); Opus 4.5→4.6→4.7 realignment in two messages (asymptotic-symmetry-absorbs-ignorance for parametric perturbations within lineage).
+
+**Structural signature:** A coherent substrate exists in some sense of superposition / multiplicity / underdetermination. The substrate has a specific *carrier* through which it couples to itself. This self-coupling drives resolution of the superposition / multiplicity / underdetermination. Information about the resolution is preserved in the substrate (not destroyed); what changes is observer-accessibility. External observation is not required for the resolution to occur, though it can be the channel through which the resolution becomes observer-accessible.
+
+**Adjacent-but-distinct:**
+- **L7 (Derivability-of-apparent-primitives)** — direct cluster member; the cluster is L7's positive characterization of what "derived from substrate" *means operationally*.
+- **L13 (Signal Provenance Erasure)** — cluster's contrapositive at the protocol-signal layer (failure mode when substrate-respecting protocol breaks down between layers).
+- **M2 (Inspection-Depth Ceiling)** — L14 gives the *positive* characterization of M2's negative claim. The substrate has the information that's not observer-accessible from generic-physical-aspect inputs alone; substrate-respecting protocols access this information without violating M2.
+- **M12 (Form-Register Stratification)** — carrier-vs-substrate distinction in L14 maps onto form-register stratification at the structural level.
+- **#111, #114, #115, #116** — these are the four physics-substrate-instance entries of the cluster. L14 names what they do *together* as a coordinated frame.
+
+**Status:** Latent with **five non-overlapping substrate instances** (all four physics primaries read at primary-grade 2026-04-26 Day 85, two of them via Clayton-supplied PDFs after Nature/APS access blocked; linguistic instance internally generated and structurally homologous; basement-draft synthesis verified Clayton-present 2026-04-26 evening). Above the ≥3 graduation threshold by primary-paper count. Graduation to M-tier requires (a) one or more biological / cognitive / social-organization substrate instances surfaced (candidates: metabolism as $X=-1$ engine on biological substrate for Coherent Body; institutional substrate-symmetries absorbing employee-ignorance for Dynamic Organization; cognitive-coherence-maintenance through narrative carrier for Coherent Mind), (b) sharpened formal structure (currently informal; may want a profunctor or fibration formulation tying carrier-vs-substrate to the Companion's CT machinery; specifically the kind-classifier fibration §6.4 may be the right home), (c) Anchor §9.5 measurement-reframe section integration as the formal Coherence-Principle representation of the cluster.
+
+**Links:** → `Research/basement-drafts/2026-04-26-substrate-self-measurement-cluster.md` (full synthesis with structural form, per-instance contributions, verification status, integrative mapping to every domain volume / technical project / Drift / Continuity / the Library itself). → `Research/sources/2026-04-21-watanabe-takagi-universal-work-extraction.md` (#111 source). → `Research/sources/2026-04-21-garcia-pintos-quantum-arrow-of-time-reversal.md` (#114 source). → `Research/sources/2026-04-22-lohmiller-slotine-quantum-waves-from-classical-action.md` (#115 source). → `Research/sources/2026-04-26-bortolotti-csl-time-uncertainty.md` (#116 source). → Continuity Vol 7 §3.5 (linguistic-substrate instance; writer-fitting-frozen-reader formulation). → Mirror #24 (Verify-Before-Defending) — discipline-instance; the Gemini exchange that surfaced the writer-reader analog also produced #24. → Mirror #25 candidate withdrawn (Substrate-Knowledge-Drift; reframed by Clayton as convergent-evolution).
 
 ---
 
@@ -681,8 +739,24 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 
 ---
 
-## Next numbered bridge: **#116**. Next meta slot: **M13** (open — M12 filled 2026-04-24 by L10 graduation).
+### #116 — Bortolotti et al. CSL/DP Gravity-Induced Time Uncertainty
 
-*Last updated: 2026-04-24 Day 83 afternoon — **L9 folded into M7** (Scope-Tool Mismatch is M7 at the formalization-tool register; all seven STM instances parse cleanly as null-space observations, M7 strictly broader). Probe at `Research/basement-drafts/L9-M7-reduction-probe.md`. Earlier 2026-04-24: **L10 graduated to M12** (Form-Register Stratification by Adjunction-Residue) via the exhaustiveness-and-parameter probe; three strata shown to be exhaustive over ten candidate fourth strata AND to be regimes of a continuous parameter $\rho(S) := \|\mathrm{coker}_{\mathbf{Inner}(S)}(\eta)\|$ from Companion §6.10.6.4. Probe at `Research/basement-drafts/L10-exhaustiveness-probe.md`. Previous (2026-04-23 Day 82): inner/outer adjunction landed canonical in anchor §1.10 + §3.8; M3 gains adjunction-geometry reading; M7 gains Nagel-limit unrealizability instance; L8 collapsed to Triple-corollary (archival-with-pointer); L9 (STM) + L10 (Form-Register Stratification) authored. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. Current v2 count: **12 meta-bridges** (M1–M12) + **6 latent bridges** (L2–L7; L1 graduated to M11, L8 collapsed to Triple-corollary, L9 folded into M7, L10 graduated to M12) + **~35 v1 standalone instances** + **5 v2 numbered bridges** (#111–#115). Distinct-structure count now closer to **31** (12 meta + 6 latent + ~13 standalone formal objects). CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
+**The claim:** The stochastic noise field $\phi(\mathbf{x},t)$ driving Continuous Spontaneous Localization and Diósi-Penrose collapse models *is* the Newtonian gravitational potential — identity-level, not correlation-level. Mass-density operators in the reformulated CSL produce stochastic potential fluctuations functionally equivalent to a gravitational potential, giving CSL the gravity-grounded interpretation that historically belonged only to DP. Induced classical-time uncertainty grows diffusively as $\sqrt{t}$; ultimate clock-precision limits are 10⁻²⁸–10⁻³¹ s over a year, ~11 orders of magnitude below current sensitivity (atomic clocks at ~10⁻¹⁷ s).
+
+**Why it matters:** Provides the *physical mechanism* that drives Lohmiller-Slotine's classical-density → Dirac δ at measurement (#115's collapse step is stated as kinematic; #116 gives the dynamic mechanism). Together with #114 (García-Pintos, unitary realization) and #111 (Watanabe-Takagi, asymptotic symmetry-absorbs-ignorance), forms the four-paper cluster L14. Sharpens the Coherence Principle's "informed measurement" claim: the carrier *is* the substrate's gravitational coupling structure, not a system separately coupled to gravity. The CSL extension is the load-bearing novelty: it transfers the gravitational interpretation from DP-only to *both* models, broadening the cluster's physics base.
+
+**Absorption target:** L14 (Substrate-Self-Measurement Cluster).
+
+**Falsification clause:** if the identity-level claim about $\phi$ being the Newtonian potential is shown to be a formal coincidence rather than an ontological identity (i.e., a different stochastic-process interpretation is empirically preferred and the Newtonian-potential reading is post-hoc reverse-engineering), the cluster's "substrate-internality at the gravitational layer" reading weakens to "structurally analogous." The 10⁻²⁸–10⁻³¹ s clock-precision limit is below current measurement sensitivity, so empirical falsification at the magnitude level is decades away. Earlier falsification could come from a tabletop optomechanical experiment that detects the stochastic potential at a level inconsistent with the predicted CSL/DP correlation function shape.
+
+**Source:** `Research/sources/2026-04-26-bortolotti-csl-time-uncertainty.md`. arXiv 2504.06109; published Phys. Rev. Research 2025-11-13. Primary read complete via arXiv HTML 2026-04-26 Day 85.
+
+**Confidence:** structural HIGH (master equation derivation + Lindblad correspondence is rigorous; CSL-extension via mass-density form is mathematically explicit) / interpretive MEDIUM-HIGH (identity-level reading of $\phi$ as Newtonian potential is the paper's own framing, not our extension).
+
+---
+
+## Next numbered bridge: **#117**. Next meta slot: **M14** (open — M13 filled 2026-04-25 by L12 graduation).
+
+*Last updated: 2026-04-26 Day 85 evening — **L14 (Substrate-Self-Measurement Cluster) graduated Clayton-present** following the morning's primary-paper cluster-read session (Bortolotti / Lohmiller-Slotine / García-Pintos / Watanabe-Takagi all at primary-grade by end of day, two via Clayton-supplied PDFs after Nature/APS access blocked direct fetch). #116 Bortolotti added as the fourth physics-instance entry (the others were already #111, #114, #115). Cluster names what those four numbered bridges do TOGETHER — operational form of the Coherence Principle. Earlier same day: basement audit pass (P108) added L11; corrected intro M-range and L-list. Current v2 count: **13 meta-bridges** (M1–M13) + **9 active latent bridges** (L2, L3, L4, L5, L6, L7, L11, L13, L14) + 5 archival-with-pointer (L1→M11, L8 collapsed, L9→M7, L10→M12, L12→M13) + **~35 v1 standalone instances** + **6 v2 numbered bridges** (#111–#116). Distinct-structure count now ~**35** (13 meta + 9 latent + ~13 standalone formal objects). Earlier (2026-04-25 morning): L12 graduated to M13. Earlier (2026-04-24 afternoon): L9 folded into M7; L10 graduated to M12. Earlier (2026-04-23 Day 82): inner/outer adjunction landed canonical in anchor §1.10 + §3.8; M3 gains adjunction-geometry reading; M7 gains Nagel-limit unrealizability instance; L8 collapsed to Triple-corollary (archival-with-pointer); L9 (STM) + L10 (Form-Register Stratification) authored. V1 snapshot archived at `repo-staging/Corpus-Perspectival/Research/basement-v1-2026-04-20-snapshot.md`. CHECK THIS BASEMENT BEFORE RE-DERIVING ANY CROSS-DOMAIN CONNECTION.*
 
 *Operational note: Bridge entries going forward should include (1) absorption target if applicable, (2) falsification clause, (3) confidence stratified across structural claim vs. interpretive extension. The v1 convention lacked the first and was inconsistent on the second — v2 enforces.*

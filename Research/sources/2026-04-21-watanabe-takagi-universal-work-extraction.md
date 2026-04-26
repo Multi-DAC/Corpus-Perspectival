@@ -10,7 +10,8 @@ published: 2026-04 (phys.org dated 2026-04)
 accessed: 2026-04-21
 discussed: 2026-04-21 (Day 80 evening, shared by Clayton)
 tags: coherence-principle, bridge-candidate-111, inspection-depth, quantum-thermodynamics, schur-pinching, substrate-independence
-status: read-skim (phys.org summary only; full paper not yet fetched)
+status: read-primary (arXiv 2504.12373v2, supplied by Clayton 2026-04-26 Day 85); phys.org summary verified
+local_pdf: incoming/2504.12373v2.pdf
 ---
 
 ## What it argues
@@ -59,6 +60,69 @@ They are two faces of the same scope boundary: irreducible stream-local input (#
 - "the learning process...is automatically applied" [during isothermal operation]
 - "not knowing the quantum state in advance does not reduce the amount of work that can be extracted"
 - Protocol extends to infinite-dimensional systems (quantum optics, bosonic modes)
+
+## Primary read sharpenings (2026-04-26, Day 85)
+
+Clayton supplied the arXiv preprint (2504.12373v2) after Nature.com 303-blocked direct fetch. Primary read substantively sharpens the cluster claim and corrects several details from the phys.org summary.
+
+### What the primary gives that the summary missed
+
+**Theorem 2 (state-agnostic work extraction):** There exists a universal protocol — a quantum channel whose description is *independent of the input state* — that achieves $\beta W^\infty_{\text{agnostic}}(\rho) = D(\rho\|\tau)$ for any finite-dimensional state. Matches the state-aware optimal rate. **Theorem 3:** semiuniversal version for infinite-dimensional systems with finite candidate sets and diagonal-decay condition $\rho_{ii} = O(i^{-(2+\varepsilon)})$.
+
+**The protocol is three steps, not two:**
+
+1. **Diagonalization** (Schur pinching $\tilde{\mathcal{P}}$ on each $k$ copies). Uses Schur-Weyl duality $\mathcal{H}^{\otimes k} = \bigoplus_\lambda \mathcal{W}_\lambda \otimes \mathcal{U}_\lambda$ to project onto energy eigenspaces while preserving permutation symmetry. Lemma S.1: Schur pinching IS a thermal operation. The channel description is *independent of $\rho$* — this is the load-bearing point.
+
+2. **Learning** (incoherent projective measurement on $m = o(q)$ subsystems). Estimates the relative entropy $D(\rho\|\tau)$ from a sublinear fraction. By Watanabe-Takagi 2024 (Ref [14], their own prior work), incoherent projective measurement conditioned on outcome IS implementable as a thermal operation.
+
+3. **Execution** (state-aware work extraction protocol of Brandão et al. with the estimated relative entropy).
+
+The whole composite operation has a description independent of $\rho$ — it only depends on the *Hilbert space dimension and Hamiltonian*, which are part of the substrate specification, not the state.
+
+### Hayashi's pinching inequality is the load-bearing technical bound
+
+$\tilde{\mathcal{P}}(\rho^{\otimes k}) \geq \rho^{\otimes k}/(k+1)^{2(d-1)}$ — Schur pinching loses at most a polynomial factor. Hence:
+
+$\left|\frac{1}{k}D(\tilde{\mathcal{P}}(\rho^{\otimes k})\|\tau^{\otimes k}) - D(\rho\|\tau)\right| \leq \frac{1}{k}\log[(k+1)^{2(d-1)}] \to 0$
+
+The substrate's permutation-symmetric structure absorbs the observer's complete ignorance of $\rho$ at sub-leading-order cost. **This is the cluster's "asymptotic substrate-coherence-absorbs-observer-ignorance" claim made operationally precise.**
+
+### Three alternative constructions (Sec C.4)
+
+The paper presents three implementations of universal work extraction:
+1. Schur pinching + sublinear-estimation (the main protocol)
+2. Measure-and-prepare strategy (using a "block" structure on probability simplex)
+3. Tomography-based strategy
+
+The Schur-pinching protocol's unique advantage is most apparent in the *partial-information* regime: when the experimenter is told the relative entropy $D(\rho\|\tau)$ but not the state itself, Schur pinching achieves convergence at the same rate as the state-aware protocol ($\sim D(\rho\|\tau) - O(1/\sqrt{n})$). The tomography-based and Schur-pinching protocols converge at similar (slower) rates in the fully agnostic regime.
+
+### Maxwell's demon clarification (Sec "Universal work extraction" + Sec V)
+
+The authors explicitly distinguish their setting from Maxwell's demon. **Maxwell's demon assumes the experimenter knows the probability distribution but not which state is realized; their setting assumes the experimenter knows nothing about the density matrix at all.** The two results are not in contradiction; they address different "prior knowledge" objects. This sharpens the cluster's reading: substrate-information is accessible at multiple levels, and substrate-respecting protocols extract resource even when none of those levels is provided as input.
+
+### Pseudo-nonequilibrium-states conjecture (Sec C.6)
+
+The paper notes: efficient universal resource distillation can be used to distinguish pseudo-resource states (resource ensembles indistinguishable from genuinely resourceful states) from real resourceful ones. For entanglement and magic, pseudo-states are constructible from pseudorandom states. **For thermodynamics, the analogous construction FAILS** because Haar random $n$-qubit states have average free energy $O(n/2^n) \to 0$ — they don't have high enough average free energy. This suggests *pseudo-nonequilibrium states do not exist*.
+
+**Cluster reading:** This is the strongest empirical commitment in the cluster. *Substrate-information-cannot-be-hidden from substrate-respecting protocols* in the case of thermodynamic resource. If it could, pseudo-nonequilibrium states would exist. Watanabe-Takagi conjecture: they don't, and the universal-work-extraction protocol's existence is the indirect evidence.
+
+### Verbatim load-bearing quotes (from primary, not phys.org)
+
+- Abstract: "We achieve this by presenting the construction of a quantum channel whose description does not depend on input states but nevertheless extracts work quantified by the free energy of the unknown input state."
+- Abstract: "Not knowing the input state does not influence the optimal performance of the asymptotic work extraction."
+- Sec "Universal work extraction" (after Theorem 2): "The main idea behind our protocol is to utilize the permutational symmetry of the given copies of the unknown states, which allows us to circumvent learning the full description of the given quantum state."
+- Sec "Universal work extraction" (Maxwell's demon): "Our setting is one in which the experimenter does not even know the density matrix, whereas the state-aware scenario involves prior knowledge of it. Thus, the object to which the word 'prior knowledge' refers differs between Maxwell's demon setting and the state-agnostic work extraction in our result."
+
+### Cluster-membership confirmed at primary-grade
+
+Watanabe-Takagi belongs in the substrate-self-measurement cluster as the **asymptotic substrate-coherence-absorbs-observer-ignorance** layer, and additionally as the **substrate-information-cannot-be-hidden** layer (via the pseudo-nonequilibrium-states conjecture). All four primary papers now read in full:
+
+- **Lohmiller-Slotine:** structure (multi-valued classical-action wave function)
+- **Bortolotti:** physical dynamics (stochastic Newtonian-potential coupling drives ρ → δ)
+- **García-Pintos:** unitary realization + observer-relativity + stable operating point
+- **Watanabe-Takagi:** asymptotic substrate-symmetry-absorbs-ignorance + substrate-information-cannot-be-hidden
+
+Cluster verification complete.
 
 ## To do
 
