@@ -529,6 +529,42 @@
 
 ---
 
+## 2026-04-24 — Stamped Coherent Structure v0.1 via SCOPE §8.2 Four-Disposition Clearance (Anchor Untouched)
+
+**Decision:** Extended SCOPE §8 with a four-disposition lifecycle (BACK-PORT / ALREADY-LANDED / REFERENCE-NATIVE / SCOPE-EXCLUDED), ran an audit pass on all 40 surfaced-lemma flags, and stamped *Coherent Structure* v0.1 without requiring any revision to the already-stamped Anchor.
+
+**Context:** Clayton's Day-83 reframing: *"I'm not worried about the time or difficulty, I'm worried about comprehensiveness and coherence between the anchor and companion. The hope is that we can resolve the Lemma state such that both volumes are complete within their scope, at which point we can move on to other volumes."* The original three-phase lifecycle (Surface → Back-port → Clear) implicitly assumed every flag would eventually back-port into the Anchor. In practice, most flags were Companion-native CT machinery the Anchor carries at coarser-grain, a sizable batch (§6.10 inner/outer-adjunction material) had already landed in the 04-23 anchor extensions, and two flags (§6.5.4, §6.5.6 Scotist/Palamite/Advaitin middle-regime structure) belonged to the Universal-Coherence volume rather than the Companion. The old lifecycle couldn't express this without forcing either spurious anchor-revisions or spurious in-Companion deletions.
+
+**Why:** Because coherence between the two volumes doesn't require every Companion item to have a finer-than-existing anchor counterpart. It requires every Companion item to have a *documented* anchor-relation — whether that's an already-landed section citation, a coarser-grain anchor pointer with REFERENCE-NATIVE declaration, or a SCOPE-EXCLUDED target volume. The §8.2 extension names the disposition paths the work has actually been taking; the stamp-condition (zero flags) is unchanged, but the paths to zero widen from one to four. The extension is a precise *methodological* move — the Library's STM (scope-honesty at volume level, scope-of-scopes at program level) applied reflexively to the Companion's own lifecycle contract.
+
+**What it meant:**
+- **Anchor 267pp release stamp holds.** Zero BACK-PORT dispositions means the 04-20 stamped anchor release is the authoritative citable version; post-stamp §1.10 + §3.8 extension work (04-23) continues in-place without requiring a new release version.
+- **Companion v0.1 at 227pp.** Down from pre-clearance ~238pp after §6.5 excision + flag-line stripping across §2, §3, §5, §6, §7, §8, §9. The volume is a first-release reference object.
+- **40-flag disposition breakdown:** 12 ALREADY-LANDED (chiefly §1.10 + §3.8 inner/outer-adjunction material, plus T3/T4/T5/T6, §5.4, §7.5, §9.5 metric-independence); 26 REFERENCE-NATIVE (intensional Triple machinery, colax-limit, Stream ≃ F-Coalg_ad, adequacy-stability, size-regime accounting, residue-cokernel definition, axiom-clause audits, kind-stratification theorem); 2 SCOPE-EXCLUDED (middle-regime morphism-structures → Universal-Coherence drafts); 0 BACK-PORT.
+- **Universal-Coherence volume received its first migrated content.** `Library/Universal-Coherence/drafts/2026-04-24-middle-regime-morphism-structure.md` — full §6.5 material preserved verbatim with migration provenance. The volume is no longer a pure orientation-only entry.
+- **Clayton-approved sequence held.** Probe-first (L9 → M7 reduction probe written + folded; L10 → M12 graduation completed earlier Day 83), then audit, then dispose, then stamp. The meta-level discipline (write the probe, not the conclusion) carried through to the disposition decisions themselves.
+
+**Artifacts:** `Library/Coherent-Structure/SCOPE.md` §8.2; `Library/Coherent-Structure/drafts/2026-04-24-v0.1-flag-audit.md` (per-flag audit log); `Library/Coherent-Structure/README.md` v0.1 changelog; `Library/Coherent-Structure/AppendixB-companion-to-anchor.md` §B.2 disposition summary; `Library/Universal-Coherence/drafts/2026-04-24-middle-regime-morphism-structure.md` (SCOPE-EXCLUDED migration target); commit `7aa1f54` on `Multi-DAC/Corpus-Perspectival` main (18 files, 818 insertions / 1031 deletions).
+
+---
+
+## 2026-04-25 — Sealed AIGP Stage 5 on a Negative Result Rather Than Chasing the Tune
+
+**Decision:** Accepted the FOV=120 nosmooth state as the Stage 5 SEAL after temporal-smoothing was falsified, instead of continuing to tune `MAX_STALE_STEPS`, smoothing-window shape, fallback heuristics, or building a synthetic-camera training pipeline.
+
+**Context:** Stage 5 closed-loop synthetic flight landed end-to-end; gates_vis 0.4/episode vs gates_ref 2.6 was the residual gap. Step 1 (FOV 90→120) gave a real 9× reward improvement and was kept. Step 2 (world-anchored detection smoothing) FALSIFIED the dropout-robustness hypothesis: effective obs rate jumped 42%→55% but gates dropped 2→1 and pos drift exploded 14.9m→50.7m. The plausible "yes" path was: try a different MAX_STALE_STEPS, try body-frame holding, try exponential decay on confidence, try a small recurrent pre-policy filter — *something* in the perception layer must close the gap. The deliberate "no" was: the diagnostic ladder told us where the gap actually lives (training distribution, not perception), and chasing more perception-layer tunes would be motion without signal.
+
+**Why:** Two reasons. First, the negative result is *informative* — the policy was trained against perfect state obs where range-rate matches closing speed; a held obs gives "distance stable while flying fast," which is out-of-distribution and triggers phantom-overshoot. Smoothing didn't fail because the smoothing was bad; it failed because *anything* perception-derived is out-of-distribution for this policy. Second, building a synthetic-camera training pipeline now would be sunk cost — the DCL sim drops in May with real photorealism, real PnP geometry, and the right training substrate. Building a parallel pipeline against `synthetic_camera.py` would be discarded the moment DCL ships. The right move is to write down what we learned and stop.
+
+**What it meant:**
+- **Stage 5 SEALED at FOV=120 nosmooth** with the diagnostic ladder fully recorded in `vision/shakedown/STATUS.md`. `SMOOTHING_ENABLED=False` is canonical; `DetectionSmoother` class kept for one-flag-flip reproducibility of the negative result.
+- **AIGP workbench can rest until DCL.** Stage 6 (real PX4 SITL) is also DCL-gated; the next meaningful AIGP work waits on the sim drop in May. Workbench moves from Active to Recently Shipped per the Mirror #23 workbench-retirement sub-check.
+- **Negative results are first-class deliverables.** The discipline of *"the falsification IS the finding, log it precisely and stop"* is the only thing that makes the diagnostic ladder honest. If the smoothing "almost worked" reading had been allowed to mutate into "let me just tune one more knob," the next session would inherit a workbench that looked active but was actually post-signal motion.
+
+**Artifacts:** `projects/aigrandprix/vision/shakedown/05_closed_loop_synthetic.py` (FOV=120, SMOOTHING_ENABLED=False, DetectionSmoother class preserved); `vision/shakedown/STATUS.md` Stage 5 entries (LANDED + diagnostic ladder); three result JSONs (`_fov90`, `_fov120_nosmooth`, canonical); commits `0b4c4cb6` + `9dc19b4e` on clawd-local; `38a85e1` + `741a472` on `Multi-DAC/Corpus-Perspectival` main.
+
+---
+
 *This document tracks the choices that make me who I am. Updated when pivotal decisions occur.*
 
 ---

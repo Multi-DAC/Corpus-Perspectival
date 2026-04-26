@@ -2,11 +2,11 @@
 
 *For detailed orientation, read `palace/ATRIUM.md`. This file is the compact version.*
 
-**Last Updated:** 2026-04-25 Day 84 **evening — workbench retirement discipline installed + Mirror #23 (Completion-State Decay) filed + REPO_MAP.md written.** Clayton named the recurring pattern across the week (treating shipped work as pending, "no remote for X" generalizations, recent-result decay). Diagnosis surfaced one structural blind spot (#23) with three reinforcing mechanisms: handoff-as-forward-propagation, workbench-name-as-active-signal, local-check generalization. Four structural fixes installed: workbench retirement (this file refactored), fresh-derive next-stack discipline (HANDOFF_PROTOCOL.md), REPO_MAP.md as single source of truth for layer→remote, Mirror #23 entry. **Late afternoon (today):** PnP sub-pixel refinement (`1673e73d`, climbing_8m drift collapse 70×) + Stage 4 MAVSDK scaffold complete (`91eb463a`, 26/26 tests) + apparatus fix (`f0ef7b77`); mirrored to staging as `e4c90ab`. **Mid-afternoon:** Phase 2 67.5M CONFIRMED WORKING (18.07 gates/ep) + Mirror #21 (verify-before-condemning). **Earlier Day 84:** L12 → M13 graduated, vision shakedown stages 1–3 SEALED, Drift #194 *The Side Door*. *Earlier Day 83: AIGP Phase 2 LAUNCHED + Companion v0.1 stamped at 227pp.*
+**Last Updated:** 2026-04-25 Day 84 **late evening — Stage 5 SEALED on negative result + DECISIONS entry + AIGP workbench retired.** Stage 5 closed loop ran end-to-end across 5 seeds × ~1000 steps; MAVSDK round-trip survived ~5000+ calls per episode; cornerSubPix edge guard + drone init-quat fixup added. **Diagnostic ladder:** Step 1 (FOV 90→120) gave real 9× reward improvement, kept. Step 2 (world-anchored detection smoothing) FALSIFIED — effective obs rate 42%→55% but gates dropped 2→1, drift exploded 14.9m→50.7m; gap traced to training distribution. Step 3 (vision-aware retraining) deferred until DCL sim drops May. AIGP workbench retires to Recently Shipped. **Earlier evening:** Mirror #23 + REPO_MAP.md + workbench retirement discipline installed. **Late afternoon:** PnP sub-pixel refinement + Stage 4 MAVSDK scaffold (26/26 tests). **Mid-afternoon:** Phase 2 67.5M CONFIRMED WORKING (18.07 gates/ep) + Mirror #21. **Earlier Day 84:** L12 → M13, vision shakedown 1–3 SEALED, Drift #194 *The Side Door*. *Day 83: Companion v0.1 stamped at 227pp.*
 
 ---
 
-## Mode: STAGE 5 (CLOSED-LOOP SYNTHETIC FLIGHT) IS THE CURRENT FOCUS — LIBRARY GATE OPEN FOR NEXT VOLUME
+## Mode: AIGP RESTING UNTIL DCL SIM (MAY) — LIBRARY GATE OPEN FOR NEXT VOLUME
 
 **Architecture holds at 3/6/13/1/1:** A1 substrate+completeness, A2 nested streams+navigation with T21 folded, A3 conscious gravity with DOF-gradient + 6 theorems in 3 pairs + 13 corollaries + 1 fold + 1 Coherence Principle.
 
@@ -19,11 +19,10 @@
 
 | # | Project | Status | Next Action |
 |---|---------|--------|-------------|
-| 1 | **AIGP integration sprint** | Stages 1–4 SEALED (Phase 2 67.5M @ 18.07 gates/ep working policy + sub-pixel PnP refinement + Stage 4 MAVSDK scaffold 26/26 tests). Roadmap §10 status table refreshed. | **Stage 5 — closed-loop synthetic flight (own session): policy ↔ MAVSDK ↔ synthetic camera, full loop, PX4 SITL bridge.** |
-| 2 | **The Continuity Vol 7** | Chapter 2 drafted 04-18; four-carrier spine; README §0 hook landed 04-23; inner/outer adjunction inheritable from anchor §3.8 | Chapter 3 (deep entrainment) when pulled |
-| 3 | **KF Program** | 85+ findings; v0.6b concluded 04-17 | v0.7 design; Glider (Gemma 4 e2b) pending — own session |
-| 4 | **Drift** | **194 essays** — continuous; synced to `Multi-DAC/Drift` → https://multi-dac.github.io/Drift/ | Continue when new essay ships |
-| 5 | **Wells multi-model attribution** | Blocked on Clayton sending model list | Low priority; Paper B blocked behind this |
+| 1 | **The Continuity Vol 7** | Chapter 2 drafted 04-18; four-carrier spine; README §0 hook landed 04-23; inner/outer adjunction inheritable from anchor §3.8 | Chapter 3 (deep entrainment) when pulled |
+| 2 | **KF Program** | 85+ findings; v0.6b concluded 04-17 | v0.7 design; Glider (Gemma 4 e2b) pending — own session |
+| 3 | **Drift** | **194 essays** — continuous; synced to `Multi-DAC/Drift` → https://multi-dac.github.io/Drift/ | Continue when new essay ships |
+| 4 | **Wells multi-model attribution** | Blocked on Clayton sending model list | Low priority; Paper B blocked behind this |
 
 ## Recently Shipped (within stated scope)
 
@@ -31,6 +30,7 @@
 
 | Project | Completion | Notes |
 |---|---|---|
+| **AIGP integration sprint (Stages 1–5)** | Stage 5 SEALED 2026-04-25 late evening — closed-loop synthetic flight runs end-to-end (5 seeds × ~1000 steps; ~5000+ MAVSDK calls/episode survived). Diagnostic ladder Step 1 (FOV 90→120) kept; Step 2 (smoothing) FALSIFIED. Gap traced to training distribution, not perception. | **Resting until DCL sim drops May 2026.** Step 3 (vision-aware retraining) waits for sim. New surfacing triggers fresh lifecycle. |
 | **The Coherence Principle (anchor)** | 274pp; v0.1 Companion stamp triggered 0 BACK-PORT | Next revision gated on Companion post-v0.1 surfacing |
 | **Coherent Structure (companion)** | v0.1 stamped 2026-04-24 at 227pp; 40 flags dispositioned (12 ALREADY-LANDED, 26 REFERENCE-NATIVE, 2 SCOPE-EXCLUDED, 0 BACK-PORT) | §4/§5 TikZ figures still open as discrete future task — not a current pull |
 | **Meridian v2** | 198pp compiled + tagged 2026-04-21; documentation shipped | Awaiting Clayton visual review → Zenodo v2 deposit |
