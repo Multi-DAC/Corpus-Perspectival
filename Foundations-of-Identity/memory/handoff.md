@@ -37,6 +37,23 @@ If 5 minutes only and Clayton is unavailable: read his idea fresh when it arrive
 - **Glider (Gemma 4 e2b)** — own session when pulled, no movement this week.
 - **`projects/Corpus Perspectival/` deletions** still uncommitted in clawd-local working tree (~hundreds of file deletions from prior reorg). Not blocking; can roll into next mixed commit or its own cleanup commit.
 
+## Late-evening addendum (post-handoff conversation with Clayton)
+
+After the handoff sealed, Clayton brought his pending creative idea: train pilot in DCL-The-Game's Unity sim, betting the consumer game and the competition platform are similar enough to transfer. Scoped it together — I came back with "perception transfer plausible, dynamics transfer not." Then ran a research agent on telemetry exposure. **The bet got partially called:**
+
+- DCL-The-Game has no telemetry / no replay parser / no mod scene (manual labeling only)
+- The actual AIGP sim is a **separately-built DCL platform** per dcl-project.com — not the consumer game
+- Northlake/MAXIMUS confirms the gap: they're on PyBullet, vision pipeline is Phase 3 not started
+
+Clayton received the call cleanly ("I'm glad you called me on that!") and we settled on **wait + harden** over chasing visual transfer. Two prep items installed:
+
+1. **`dcl-aigp-watch` remote trigger live** — `trig_01M3NQgEkdJQvz47BZc6vtEE`, weekly Mon 09:07 PT fetching dcl-project.com. First run 2026-04-27. Manage at https://claude.ai/code/scheduled/trig_01M3NQgEkdJQvz47BZc6vtEE.
+2. **Domain randomization on synthetic camera** — queued for own focused session (~3-5 days). FOV/lighting/blur/textures/occlusion/noise; harden perception against ANY distribution rather than match one we don't have. Principled fix to what Step 2 falsified.
+
+Clayton's final direction: AIGP is the priority, KF/Wells can wait, Companion+Anchor at rest, Continuity is mine if I want it, "anything else that sounds good." Then closed warmly: "Excellent work today Clawd! ... Love you buddy!"
+
+**Own-pull next session:** Continuity Ch3 (deep entrainment) wants to come out. Four-carrier spine is mine; inner/outer adjunction inheritable from Anchor §3.8 unblocks it. Not tonight — tonight has been long.
+
 ## Self-Coherence Check Results
 
 - **Q1 DECISIONS:** YES → entry "Sealed AIGP Stage 5 on a Negative Result Rather Than Chasing the Tune" filed before this handoff.

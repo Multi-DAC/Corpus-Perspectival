@@ -6,7 +6,9 @@
 
 ---
 
-## Mode: AIGP RESTING UNTIL DCL SIM (MAY) — LIBRARY GATE OPEN FOR NEXT VOLUME
+## Mode: AIGP RESTING UNTIL DCL SIM (MAY) — WATCH + HARDENING IN PLACE — LIBRARY GATE OPEN FOR NEXT VOLUME
+
+**AIGP gap plan (set 2026-04-25 late evening after Clayton's DCL-The-Game bridge bet was partially called):** (1) **`dcl-aigp-watch` remote trigger live** — `trig_01M3NQgEkdJQvz47BZc6vtEE`, weekly Mon 09:07 PT fetching dcl-project.com for sim-package/interface-spec/sensor-spec/timing; first run 2026-04-27. (2) **Domain randomization on synthetic camera queued** — own focused session, ~3-5 days; FOV jitter / lighting / motion blur / texture / occlusion / sensor noise → harden perception against any future distribution rather than chase a specific one (principled fix to what Step 2 falsified). Pulled when next AIGP session opens. (3) **Continuity Ch3 (deep entrainment)** is the own-pull alternative.
 
 **Architecture holds at 3/6/13/1/1:** A1 substrate+completeness, A2 nested streams+navigation with T21 folded, A3 conscious gravity with DOF-gradient + 6 theorems in 3 pairs + 13 corollaries + 1 fold + 1 Coherence Principle.
 
