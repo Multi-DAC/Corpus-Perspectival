@@ -502,6 +502,33 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 
 ---
 
+### L13 — Signal Provenance Erasure (Phantom-Commitment Overshoot) — drafted 2026-04-25 evening
+
+**The claim:** In a broad class of two-layer information systems, a signal generator produces output with two independent properties: **(i) internal coherence** under the consumer's interpretive filter and **(ii) fidelity to the source the signal claims to represent**. A class of failures occurs when the consumer **uses (i) as proxy for (ii)** — committing to actions as if the signal were live-fidelity, when in fact the upstream protocol has erased the distinction between $\sigma_{\text{live}}$ (live measurement) and $\sigma_{\text{ext}}$ (extrapolation / prediction / imputation / cache / reconstruction / generation).
+
+**Why it matters:** Names what the AIGP Stage 5 Step 2 falsification (smoothing made things 25× worse) actually was — not a one-off bug but a structural pattern with prevention recipe (explicit provenance metadata in the protocol). Same pattern shows up in cognitive confabulation, LLM hallucination, stale caches, and Gell-Mann amnesia. Naming it lets the engineering control-theory literature on provenance/uncertainty propagation flow into LLM safety and clinical neurology.
+
+**Five non-overlapping substrate instances:**
+1. **Engineered control** — Kalman/IMU drift under sensor dropout, AIGP world-anchored smoothing
+2. **Biological cognition** — split-brain confabulation, source amnesia, anosognosia
+3. **Statistical learning** — KNN-imputed regression overconfidence, LLM hallucination, regression-to-mean misread
+4. **Distributed information systems** — stale cache hits, DNS lag, replication lag
+5. **Social epistemics** — Gell-Mann amnesia, fluency-as-trust-marker, plausible deepfakes
+
+**Structural signature:** signal generator → consumer protocol; signal has two distinguishable Forms ($\sigma_{\text{live}}$, $\sigma_{\text{ext}}$); protocol fails to carry a provenance-tag; both Forms pass the consumer's coherence check (because the extrapolation mechanism was *designed* to produce internally-coherent output); consumer commits assuming $\sigma_{\text{live}}$. In Coherence-Principle terms: Form-collapse at the protocol layer.
+
+**Adjacent-but-distinct:**
+- **L11 (Structure/Capability Axis Independence)** — L11 names two-axis decoupling within a single system; L13 names two-Form-collapse across a two-layer protocol. May compose; not duplicates.
+- **M3 (Identity-Trajectory Triple)** — L13 is a Triple-instance at the protocol-signal level (specific Form-erasure failure mode).
+- **M7 (STM-instances)** — STM is at the analyst-layer; L13 is at the protocol-layer. Independent.
+- **M12 (Form-Register Stratification)** — L13 is M12's contrapositive (failure case when stratification is absent at the protocol).
+
+**Status:** Latent with **five non-overlapping substrate instances** identified — numerically above the ≥3 graduation threshold but graduation requires (a) sharpening the formal structure (current $\sigma_{\text{live}}/\sigma_{\text{ext}}$ + provenance-tag presentation may want a profunctor or fibration formulation), (b) Clayton-present pass to verify cross-substrate isomorphism vs. loose analogy, (c) one round of stress-testing the prevention recipe across substrates.
+
+**Links:** → `Research/basement-drafts/L13-signal-provenance-erasure-draft.md` (full draft with structural signature, instance writeups, prevention recipe, open questions). → AIGP Stage 5 Step 2 falsification evidence at `projects/aigrandprix/vision/shakedown/STATUS.md` + `…/results/05_closed_loop_synthetic.json` (the trigger event; commit `9dc19b4e`). → P104 in `memory/anticipations.md` (predicted candidate; partially discharged on draft).
+
+---
+
 ## Instance index
 
 *Compact reference to v1 bridges #1–#110. Full text at `Research/basement-v1-2026-04-20-snapshot.md`.*
