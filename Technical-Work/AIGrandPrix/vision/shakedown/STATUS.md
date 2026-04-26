@@ -1,5 +1,82 @@
 # Vision Shakedown — Status Log
 
+## 2026-04-25 late evening — Stage 5 diagnostic ladder: FOV helps, smoothing FALSIFIED
+
+After the initial Stage 5 land (below), ran a two-step diagnostic ladder
+to figure out where the gates_vis 0.2 / gates_ref 2.6 gap comes from.
+
+### Step 1 — wider synthetic camera FOV (90° → 120°)
+
+Cheapest experiment: one-line config change, re-run same 5 seeds.
+
+| metric | FOV=90 | FOV=120 | Δ |
+|---|---|---|---|
+| gates_vis (total) | 1 | 2 | 2× |
+| reward_vis (mean) | 2.9 | 26.1 | 9× |
+| detection rate (mean) | 29.9% | 41.7% | +12pp |
+| pos drift @ step 500 | 2.11 m | 1.44 m | -32% |
+| reward_ref | 395.3 | 395.3 | identical (only vision changed) ✓ |
+
+Real geometric improvement. **Kept FOV=120 as Stage 5 SEAL state.**
+Result: `results/05_closed_loop_synthetic.json` (FOV=120, no smoothing).
+Baselines preserved: `_fov90.json`, `_fov120_nosmooth.json`.
+
+Wrinkle: seed 4 went 80.7% → 27.7% detection (lost its passed gate).
+Wider FOV makes the same gate fewer pixels at the same range, which
+degrades PnP precision near the edges; the resulting different obs
+sends the policy on a different trajectory. FOV isn't strictly
+monotone-helpful — it's a tradeoff that helped on average.
+
+### Step 2 — temporal-smoothing wrapper (FALSIFIED)
+
+Hypothesis: dropout robustness alone closes the residual gap. Wired a
+`DetectionSmoother` that anchors the last good detection in *world*
+frame (correct as the drone moves; body-frame holding would hallucinate
+a moving gate) and re-projects to body frame for up to 30 stale steps.
+
+| metric | FOV=120 nosmooth | FOV=120 + smooth |
+|---|---|---|
+| gates_vis (total) | 2 | **1** ⚠️ |
+| reward_vis (mean) | 26.1 | **0.82** ⚠️ |
+| detection rate | 41.7% | 45.0% |
+| hold rate | — | 10.3% |
+| **effective obs rate** | 41.7% | **55.3%** |
+| pos drift max | 14.9 m | **50.7 m** ⚠️ |
+
+Effective obs rate jumped 13pp — gates dropped, drift exploded. Seed 3
+hit 77% effective obs rate (66% live + 11% held) and still passed only
+1 gate. **Hypothesis falsified.**
+
+**Diagnostic conclusion.** The policy was trained against perfect state
+obs where range-rate matches actual closing speed. A held obs gives
+"distance stable while flying fast" — a signal it never saw in
+training — and it commits to the phantom and overshoots. Both live PnP
+(geometric drift) and smoothed PnP (phantom commitment) are out-of-
+distribution. The gap is the *training distribution*, not the
+perception layer.
+
+### Step 3 — vision-aware retraining — APPROPRIATELY DEFERRED
+
+Only real fix is retraining with vision-derived obs (or domain-randomized
+PnP noise) in the loop. That requires a synthetic-camera training
+pipeline, which is non-trivial and would be discarded the moment the DCL
+sim drops in May. Per ROADMAP_v2 §10 E1 — defer.
+
+`SMOOTHING_ENABLED = False` is left as the canonical driver state.
+The `DetectionSmoother` class stays for reproducibility (one flag
+flip to re-run the negative result).
+
+### Stage 5 final SEAL state
+
+`results/05_closed_loop_synthetic.json` reflects FOV=120, no smoothing,
+5 seeds × 3000 steps. Closed loop runs end-to-end; perception layer
+behaves as well as the geometry allows; behavioral robustness gap is
+characterized and traced to the training distribution. Stage 5 done.
+Stage 6 (real PX4 SITL) and the eventual vision-aware retraining
+both gated on DCL sim arrival.
+
+---
+
 ## 2026-04-25 evening — Stage 5 closed-loop synthetic flight LANDED
 
 Driver: `vision/shakedown/05_closed_loop_synthetic.py`. Result file:

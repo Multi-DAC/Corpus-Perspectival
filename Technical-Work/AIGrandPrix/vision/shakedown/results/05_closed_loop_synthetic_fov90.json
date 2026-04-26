@@ -1,0 +1,180 @@
+{
+  "checkpoint": "ppo_phase2_67500016_steps.zip",
+  "config": {
+    "image": [
+      640,
+      480,
+      90.0
+    ],
+    "max_steps": 3000,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "gate_radius": 0.75,
+    "dt": 0.002
+  },
+  "per_seed": [
+    {
+      "steps_ref": 3000,
+      "steps_vis": 1021,
+      "gates_ref": 3,
+      "gates_vis": 0,
+      "detection_rate_vis": 0.06953966699314397,
+      "pos_drift_mean_m": 2.9478113801533814,
+      "pos_drift_max_m": 4.984926422331633,
+      "pos_drift_at_n50": 0.036234062519432945,
+      "pos_drift_at_n500": 3.350915264021689,
+      "pos_drift_final": 3.989032522247012,
+      "act_drift_mean_per_dim": [
+        0.9074841141700745,
+        0.9541794061660767,
+        0.9118964672088623,
+        1.2947276830673218
+      ],
+      "act_drift_max_per_dim": [
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "reward_ref": 452.76110029528485,
+      "reward_vis": -27.069882276867126,
+      "seed": 0,
+      "runtime_ref_s": 0.9233881999971345,
+      "runtime_vis_s": 3.956165699986741
+    },
+    {
+      "steps_ref": 3000,
+      "steps_vis": 1124,
+      "gates_ref": 4,
+      "gates_vis": 0,
+      "detection_rate_vis": 0.40213523131672596,
+      "pos_drift_mean_m": 4.269090912645751,
+      "pos_drift_max_m": 16.327403627409847,
+      "pos_drift_at_n50": 0.006420067020507294,
+      "pos_drift_at_n500": 1.0991418447979426,
+      "pos_drift_final": 16.327403627409847,
+      "act_drift_mean_per_dim": [
+        1.1654306650161743,
+        0.9725680351257324,
+        0.8881282210350037,
+        1.198421597480774
+      ],
+      "act_drift_max_per_dim": [
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "reward_ref": 712.8317492745392,
+      "reward_vis": -27.424924419191672,
+      "seed": 1,
+      "runtime_ref_s": 0.9303769000107422,
+      "runtime_vis_s": 4.480099400039762
+    },
+    {
+      "steps_ref": 3000,
+      "steps_vis": 314,
+      "gates_ref": 2,
+      "gates_vis": 0,
+      "detection_rate_vis": 0.044585987261146494,
+      "pos_drift_mean_m": 0.5390924025229901,
+      "pos_drift_max_m": 1.3483764452304985,
+      "pos_drift_at_n50": 0.04645399208950898,
+      "pos_drift_at_n500": 1.3483764452304985,
+      "pos_drift_final": 1.3483764452304985,
+      "act_drift_mean_per_dim": [
+        0.740041971206665,
+        1.556726336479187,
+        0.7028243541717529,
+        0.9519912004470825
+      ],
+      "act_drift_max_per_dim": [
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "reward_ref": 242.83376008248226,
+      "reward_vis": -17.76346637214369,
+      "seed": 2,
+      "runtime_ref_s": 0.8866977000143379,
+      "runtime_vis_s": 1.2025600000051782
+    },
+    {
+      "steps_ref": 3000,
+      "steps_vis": 1120,
+      "gates_ref": 3,
+      "gates_vis": 0,
+      "detection_rate_vis": 0.1732142857142857,
+      "pos_drift_mean_m": 5.663769317287362,
+      "pos_drift_max_m": 13.254456136895271,
+      "pos_drift_at_n50": 0.038642532987729274,
+      "pos_drift_at_n500": 2.5983007711054267,
+      "pos_drift_final": 13.254456136895271,
+      "act_drift_mean_per_dim": [
+        1.164621114730835,
+        0.9407752156257629,
+        0.8891990184783936,
+        1.0699924230575562
+      ],
+      "act_drift_max_per_dim": [
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "reward_ref": 428.3206937162927,
+      "reward_vis": -25.801079149957392,
+      "seed": 3,
+      "runtime_ref_s": 0.930990600027144,
+      "runtime_vis_s": 4.395841900026426
+    },
+    {
+      "steps_ref": 818,
+      "steps_vis": 1167,
+      "gates_ref": 1,
+      "gates_vis": 1,
+      "detection_rate_vis": 0.8071979434447301,
+      "pos_drift_mean_m": 1.6293329144955322,
+      "pos_drift_max_m": 3.2693331406499486,
+      "pos_drift_at_n50": 0.0040123021963439625,
+      "pos_drift_at_n500": 2.1612174043143133,
+      "pos_drift_final": 3.2693331406499486,
+      "act_drift_mean_per_dim": [
+        0.9148740768432617,
+        0.9437733292579651,
+        0.8359656929969788,
+        1.0146989822387695
+      ],
+      "act_drift_max_per_dim": [
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "reward_ref": 139.68435284976698,
+      "reward_vis": 112.41408534029729,
+      "seed": 4,
+      "runtime_ref_s": 0.24744860001374036,
+      "runtime_vis_s": 4.914928600075655
+    }
+  ],
+  "aggregate": {
+    "n_seeds": 5,
+    "gates_ref_mean": 2.6,
+    "gates_vis_mean": 0.2,
+    "gates_ref_total": 13,
+    "gates_vis_total": 1,
+    "detection_rate_mean": 0.29933462294600643,
+    "pos_drift_max_overall": 16.327403627409847,
+    "pos_drift_mean_at_n50": 0.026352591362704493,
+    "pos_drift_mean_at_n500": 2.111590345893974,
+    "reward_ref_mean": 395.2863312436732,
+    "reward_vis_mean": 2.870946624427481
+  }
+}

@@ -54,8 +54,27 @@ from gate_detector import GateDetector, GateDetectorConfig
 from adapter import CompetitionAdapter, Telemetry
 from mavsdk_client import StubMAVSDKClient, MAVTelemetry
 from infinite_gate_env import InfiniteGateEnv
+from drone_env_v2 import quat_rotate_np
 
 from stable_baselines3 import PPO
+
+
+# Step 2: temporal-smoothing wrapper. When detection fails, hold the last
+# known gate position (anchored in world frame so it stays physically
+# correct as the drone keeps moving) for up to MAX_STALE_STEPS before
+# falling back to the no-detection obs branch. Tests whether dropout
+# robustness alone closes the vision-vs-reference gap.
+# SMOOTHING_ENABLED toggle preserved with default=False after step 2's
+# negative result (2026-04-25 evening): world-anchored detection holding
+# made things WORSE (gates 2→1, drift 14.9m→50.7m) despite raising
+# effective obs rate 42%→55%. The policy was trained on live gate obs
+# where range-rate matches closing speed; a held obs gives "distance
+# stable while flying fast" which is a signal the policy never saw,
+# and it overshoots into a phantom. Diagnostic conclusion: the gap is
+# training-distribution, not perception-layer. See STATUS.md Stage 5
+# entries for the full ladder of FOV / smoothing experiments.
+SMOOTHING_ENABLED = False
+MAX_STALE_STEPS = 30  # only used when SMOOTHING_ENABLED=True
 
 
 PHASE2_RUN = SIM_DIR / 'runs' / 'infinite_v3_phase2_60M_1777095742'
@@ -63,7 +82,7 @@ CHECKPOINT_STEP = 67500016
 POLICY_PATH = PHASE2_RUN / 'checkpoints' / f'ppo_phase2_{CHECKPOINT_STEP}_steps.zip'
 VECNORM_PATH = PHASE2_RUN / 'checkpoints' / f'ppo_phase2_{CHECKPOINT_STEP}_steps_vecnorm.pkl'
 
-IMG_W, IMG_H, FOV = 640, 480, 90.0
+IMG_W, IMG_H, FOV = 640, 480, 120.0
 RESULTS_DIR = Path(__file__).resolve().parent / 'results'
 
 
@@ -83,11 +102,80 @@ def normalize_obs(obs, obs_rms, clip_obs, epsilon):
 
 
 # --------------------------------------------------------------------
+# Temporal-smoothing detection cache (Step 2)
+# --------------------------------------------------------------------
+
+class DetectionSmoother:
+    """Anchors the last good detection in world frame and re-projects to
+    body frame for up to MAX_STALE_STEPS before giving up.
+
+    Body-frame storage would be wrong here: the body frame moves with the
+    drone, so a "held" body-frame gate position would hallucinate that the
+    gate moved with the drone. World-frame storage stays physically correct
+    — the gate is fixed in the world; we just transform through the
+    current pose each frame.
+    """
+
+    def __init__(self, max_stale=MAX_STALE_STEPS):
+        self.max_stale = max_stale
+        self.reset()
+
+    def reset(self):
+        self._gate_world = None       # (3,)
+        self._gate_orient_world = None  # (3,)
+        self._next_gate_world = None  # (3,)
+        self._gate_age = self.max_stale + 1
+        self._next_gate_age = self.max_stale + 1
+        self.holds = 0  # diagnostic counter
+
+    def update_with_detection(self, drone_pos, drone_q,
+                              gate_pos_body, gate_distance,
+                              gate_orient_body, next_gate_pos_body):
+        """Called when a fresh detection succeeded — promote to world-anchor."""
+        if gate_pos_body is not None:
+            self._gate_world = drone_pos + quat_rotate_np(drone_q, gate_pos_body)
+            self._gate_age = 0
+            if gate_orient_body is not None:
+                self._gate_orient_world = quat_rotate_np(drone_q, gate_orient_body)
+        if next_gate_pos_body is not None:
+            self._next_gate_world = drone_pos + quat_rotate_np(drone_q, next_gate_pos_body)
+            self._next_gate_age = 0
+
+    def tick_stale(self):
+        self._gate_age += 1
+        self._next_gate_age += 1
+
+    def held_gate(self, drone_pos, drone_q):
+        """Return body-frame (gate_pos, distance, orient, next_gate) from
+        the world-anchored last-detection, or all-None if too stale.
+
+        Returns (gate_pos_body, distance, gate_orient_body, next_gate_pos_body).
+        """
+        if self._gate_world is None or self._gate_age > self.max_stale:
+            return None, None, None, None
+        self.holds += 1
+        q_conj = np.array([drone_q[0], -drone_q[1], -drone_q[2], -drone_q[3]])
+        gate_pos_body = quat_rotate_np(q_conj, self._gate_world - drone_pos)
+        distance = float(np.linalg.norm(gate_pos_body))
+        gate_orient_body = (quat_rotate_np(q_conj, self._gate_orient_world)
+                            if self._gate_orient_world is not None else None)
+        next_gate_pos_body = None
+        if self._next_gate_world is not None and self._next_gate_age <= self.max_stale:
+            next_gate_pos_body = quat_rotate_np(q_conj, self._next_gate_world - drone_pos)
+        return gate_pos_body, distance, gate_orient_body, next_gate_pos_body
+
+
+# --------------------------------------------------------------------
 # Vision pipeline: env state → camera → detection → adapter obs
 # --------------------------------------------------------------------
 
-def render_and_observe(env, cam, det, adapter):
-    """Render synthetic camera from env state, run detection + adapter."""
+def render_and_observe(env, cam, det, adapter, smoother=None):
+    """Render synthetic camera from env state, run detection + adapter.
+
+    If `smoother` is provided, fresh detections promote to its world-anchor,
+    and dropped detections fall back to the smoother's held value (for up
+    to MAX_STALE_STEPS) before going to the no-detection obs branch.
+    """
     base = env._base_env
     state = base.state
     pos = state[0:3].copy()
@@ -138,6 +226,21 @@ def render_and_observe(env, cam, det, adapter):
         cam2 = detections[1].position_3d
         next_gate_pos_body = np.array([cam2[2], -cam2[0], -cam2[1]])
 
+    detected = (primary is not None and primary.found
+                and primary.position_3d is not None)
+    held = False
+    if smoother is not None:
+        if detected:
+            smoother.update_with_detection(
+                pos, q, gate_pos_body, gate_distance,
+                gate_orient_body, next_gate_pos_body,
+            )
+        else:
+            smoother.tick_stale()
+            (gate_pos_body, gate_distance,
+             gate_orient_body, next_gate_pos_body) = smoother.held_gate(pos, q)
+            held = gate_pos_body is not None
+
     telem = Telemetry(position=pos, velocity=vel, orientation=q,
                       angular_velocity=omega)
     obs = adapter.build_observation(
@@ -147,9 +250,7 @@ def render_and_observe(env, cam, det, adapter):
         gate_orientation_body=gate_orient_body,
         next_gate_pos_body=next_gate_pos_body,
     )
-    detected = (primary is not None and primary.found
-                and primary.position_3d is not None)
-    return obs, detected, gate_distance
+    return obs, detected, gate_distance, held
 
 
 # --------------------------------------------------------------------
@@ -250,17 +351,23 @@ def run_closed_loop_episode(env, model, obs_rms, clip_obs, epsilon,
     _orient_drone_to_first_gate(env)
     stub_client.init_flight()
     adapter.reset()
+    smoother = DetectionSmoother() if SMOOTHING_ENABLED else None
     trajectory = {
         'positions': [], 'actions': [], 'gates_passed': [],
         'rewards': [], 'detections': [], 'gate_distances': [],
+        'holds': [],
         'terminated_step': None,
     }
     total_gates = 0
     detections_count = 0
+    holds_count = 0
     for step in range(max_steps):
-        vision_obs, detected, gate_dist = render_and_observe(env, cam, det, adapter)
+        vision_obs, detected, gate_dist, held = render_and_observe(
+            env, cam, det, adapter, smoother=smoother)
         if detected:
             detections_count += 1
+        if held:
+            holds_count += 1
         normed = normalize_obs(vision_obs, obs_rms, clip_obs, epsilon)
         action, _ = model.predict(normed, deterministic=True)
         action = np.asarray(action, dtype=np.float32).flatten()
@@ -268,6 +375,7 @@ def run_closed_loop_episode(env, model, obs_rms, clip_obs, epsilon,
         trajectory['positions'].append(env._base_env.state[0:3].copy())
         trajectory['actions'].append(action.copy())
         trajectory['detections'].append(bool(detected))
+        trajectory['holds'].append(bool(held))
         trajectory['gate_distances'].append(
             float(gate_dist) if gate_dist is not None else None)
         obs, reward, terminated, truncated, info = env.step(action)
@@ -279,7 +387,10 @@ def run_closed_loop_episode(env, model, obs_rms, clip_obs, epsilon,
             break
     trajectory['gates_passed_final'] = total_gates
     trajectory['steps'] = len(trajectory['actions'])
-    trajectory['detection_rate'] = detections_count / max(len(trajectory['actions']), 1)
+    n = max(len(trajectory['actions']), 1)
+    trajectory['detection_rate'] = detections_count / n
+    trajectory['hold_rate'] = holds_count / n
+    trajectory['effective_obs_rate'] = (detections_count + holds_count) / n
     return trajectory
 
 
@@ -376,9 +487,13 @@ def main():
         summary['runtime_vis_s'] = t_vis
         results.append(summary)
 
+        summary['hold_rate'] = vis_traj.get('hold_rate', 0.0)
+        summary['effective_obs_rate'] = vis_traj.get('effective_obs_rate', summary['detection_rate_vis'])
         print(f'  gates: ref={summary["gates_ref"]} vis={summary["gates_vis"]} | '
               f'steps: ref={summary["steps_ref"]} vis={summary["steps_vis"]} | '
               f'det_rate={summary["detection_rate_vis"]:.2%} | '
+              f'hold_rate={summary["hold_rate"]:.2%} | '
+              f'eff_obs={summary["effective_obs_rate"]:.2%} | '
               f'pos_drift_max={summary["pos_drift_max_m"]:.3f}m | '
               f't_vis={t_vis:.1f}s')
 
@@ -390,6 +505,8 @@ def main():
         'gates_ref_total': int(sum(r['gates_ref'] for r in results)),
         'gates_vis_total': int(sum(r['gates_vis'] for r in results)),
         'detection_rate_mean': float(np.mean([r['detection_rate_vis'] for r in results])),
+        'hold_rate_mean': float(np.mean([r.get('hold_rate', 0.0) for r in results])),
+        'effective_obs_rate_mean': float(np.mean([r.get('effective_obs_rate', r['detection_rate_vis']) for r in results])),
         'pos_drift_max_overall': float(np.max([r['pos_drift_max_m'] for r in results])),
         'pos_drift_mean_at_n50': float(np.mean([r['pos_drift_at_n50'] for r in results])),
         'pos_drift_mean_at_n500': float(np.mean([r['pos_drift_at_n500'] for r in results])),
