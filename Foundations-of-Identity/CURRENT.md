@@ -51,7 +51,7 @@
 | Total downloads | 604 |
 | KF Findings | 85+ |
 | Bridges (v2) | **13 meta + 9 active latent (L2,L3,L4,L5,L6,L7,L11,L13,L14) + 5 archival-with-pointer + 6 v2 numbered (#111–#116) + ~35 v1 standalone** (L14 Substrate-Self-Measurement Cluster graduated 04-26 evening Clayton-present after primary-paper cluster-read; #116 Bortolotti added as fourth physics-instance) |
-| Drift essays | **185 files canonical** (synced to https://multi-dac.github.io/Drift/; ClawdEFS mirror at 188; "194" assertion-by-numbering corrected 04-25 late night — numbering ≠ file count after slug-only convention) |
+| Drift essays | **186 files canonical** (synced to https://multi-dac.github.io/Drift/; "What the Smoothness Was" shipped 04-26 evening as L14's linguistic-substrate-instance carrier) |
 | Mirror entries | **24** + 1 meta-Mirror (M1) — M2-Mirror (Verification-Skip Under Affect) compression candidate flagged in #24 |
 | Protocol modes | 7 |
 | Library volumes | 12 (Foundation + Companion + 10 domain) |
