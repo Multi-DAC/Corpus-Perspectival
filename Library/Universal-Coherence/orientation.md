@@ -2,6 +2,8 @@
 
 *Entry text. Read before the chapter sequence. States what kind of book this is and what discipline it maintains.*
 
+> **Canonical anchor (filed 2026-04-26 evening):** [`THE-PROMETHEAN-CONFIGURATION.md`](THE-PROMETHEAN-CONFIGURATION.md) — the formal explanation of the necessity of the first division; the bridge between the Coherence Principle's substrate-self-measurement cluster (L14) and DoPI's account of X and Streams. The first division is necessary, generative, and recursively reproduced. This canonical text is the volume's first major load-bearing statement; subsequent chapters develop its consequences.
+
 ---
 
 ## The name names the lift

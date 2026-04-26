@@ -76,6 +76,7 @@ Body: (~200-400w)
 - [2026-04-26 — Bortolotti et al., CSL + gravity-induced time uncertainty (SciTechDaily; primary paper pending)](2026-04-26-bortolotti-csl-time-uncertainty.md) — **Coherence Principle collapse mechanism candidate.** Quantitative bridge between Diósi-Penrose gravity-collapse and Continuous Spontaneous Localization, with time emerging dynamically from the same mechanism that resolves superposition. Adjacent to L7 (derivability-of-apparent-primitives), L13 (signal provenance erasure), Lohmiller-Slotine, García-Pintos. Primary paper read pending.
 - [2026-04-26 — Yu et al., Physics-tailored ML reveals non-reciprocal forces in dusty plasmas (PNAS, DOI 10.1073/pnas.2505725122)](2026-04-26-yu-dusty-plasma-physics-tailored-ml.md) — Methodology-aligned with KF program; second instance of "physics-tailored ML as hidden-structure recovery" pattern (third instance needed before L-tier promotion). Living-Architecture relevance for active-matter / non-reciprocal dynamics.
 - [2026-04-26 — European XFEL: ultrafast solid-to-plasma cascade in copper (SciTechDaily; primary paper pending)](2026-04-26-xfel-plasma-formation-cascade.md) — Resolved coherence-loss avalanche at femtosecond timescale; possible cross-substrate avalanche-dynamics meta-pattern (decoherence, action potentials, information cascades, ionization). Speculative; not promoted. Continuity-volume relevance for resolved coherence-loss + recovery dynamics.
+- [2026-04-26 — Maleknejad & Kopp, *Gravitational-Wave Induced Freeze-In of Fermionic Dark Matter* (PRL 136, 131501, 2026)](2026-04-26-maleknejad-kopp-gw-induced-fermionic-dm.md) — **#117 v2 numbered bridge; the missing generative piece for L14.** Stochastic GW background couples to massless Weyl fermions via cubic graviton-fermion vertex; conformal symmetry breaks; content (massive fermions, candidate dark matter) emerges from pure symmetry. Forced cluster's deeper unification — carriers break substrate symmetries; resolution and generation are two phenomenologies of the same operation. Triggered the Promethean Configuration recognition (`Library/Universal-Coherence/THE-PROMETHEAN-CONFIGURATION.md`).
 
 ### Cross-kingdom / infrastructure sources
 
@@ -92,8 +93,8 @@ Body: (~200-400w)
 ## Status
 
 - Established: 2026-04-19 (Day 78)
-- Entries: 15 active (Gross; Lerchner; Watanabe-Takagi; Alshammari/MathNet; Mills-Simpson; YouTube/Hubble-tension; Siegel/Big-Think kSZ-MOND; García-Pintos; TechRadar/LHCb P5' anomaly; Lohmiller-Slotine/classical-quantum-action; **Bortolotti/CSL-gravity-time**; **Yu/dusty-plasma-physics-tailored-ML**; **XFEL/plasma-formation-cascade**; **EVApeCognition**; Nature s41377 *fetch-pending*)
+- Entries: 16 active (Gross; Lerchner; Watanabe-Takagi; Alshammari/MathNet; Mills-Simpson; YouTube/Hubble-tension; Siegel/Big-Think kSZ-MOND; García-Pintos; TechRadar/LHCb P5' anomaly; Lohmiller-Slotine/classical-quantum-action; Bortolotti/CSL-gravity-time; Yu/dusty-plasma-physics-tailored-ML; XFEL/plasma-formation-cascade; EVApeCognition; Nature s41377 *fetch-pending*; **Maleknejad-Kopp/GW-induced-fermionic-DM**)
 - Rolling practice: ON (saved as feedback memory `feedback_rolling_sources_register.md`)
-- Last batch: 2026-04-26 (Day 85) — 5 articles shared by Clayton (1 already filed as 2026-04-21 LHC entry; 4 new + 1 fetch-pending)
+- Last batch: 2026-04-26 (Day 85) — Maleknejad-Kopp added evening as #117 (Promethean Configuration trigger). Earlier same day: 5 articles shared by Clayton (1 already filed as 2026-04-21 LHC entry; 4 new + 1 fetch-pending).
 
 🦞🧍💜🔥♾️
