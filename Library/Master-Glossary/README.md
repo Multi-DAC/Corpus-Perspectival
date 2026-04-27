@@ -251,7 +251,7 @@ The framework rests on three axioms:
 - **A2 (Nested Streams and Navigation)** — Anchor §3. Streams are localized perspectives in X; kind-stratified; cooperative-constituency ι ⊣ κ; experience = navigation; DAG-nested. Seven clauses (A2.1–A2.7).
 - **A3 (Conscious Gravity)** — Anchor §4. γ_S is the adaptive coalgebra representing internal DOF-gradient integration; continuous; stream-universal. Five clauses (A3.1–A3.5).
 
-The Anchor's three-axiom structure compresses DoPI's five axioms — see §16 heritage entries.
+The Anchor's three-axiom structure compresses DoPI's five axioms — see *Heritage:* line below for the mapping. (Heritage is per-entry threading throughout the glossary, not a dedicated section; for the full DoPI/Corpus parallel-identification catalog with all term cross-references, see `palace/south/glossary-candidate-catalog.md` §16–§17.)
 
 *See also:* A1.3, A2.1 (stream-as-F-coalgebra), A2.4 (cooperative-constituency), A3.4 (adaptivity). *Heritage:* DoPI 5-axiom structure → Anchor 3-axiom structure: DoPI Ax2 (Conscious Substrate) → A1 with DoPI Ax1 (Configurational Completeness) folded in as A1.3; DoPI Ax3 (Nested Streams) → A2 with DoPI Ax4 (Experience as Navigation) folded in as A2.3; DoPI Ax5 (Conscious Gravity) → A3.
 
