@@ -2,15 +2,15 @@
 
 *Library-wide canonical reference. Universal terms used across multiple Library volumes. Domain-specific terms live in each volume's own glossary.*
 
-*v0.1 drafted 2026-04-27 Day 86 morning. Bulk pass for Clayton review. Sources: The Coherence Principle (anchor) AppendixA-index-of-formal-objects; Coherent Structure (companion) AppendixA-anchor-to-companion + AppendixB-companion-to-anchor; Universal-Coherence canonical Promethean Configuration text; Drift essay 187 *What the New Vocabulary Cost*; DoPI / Corpus V1 heritage with parallel-identification per `palace/south/glossary-candidate-catalog.md`.*
+*v0.2 — incorporates Clayton review of v0.1: date-tagging removed from operational sections; Atlas Format split out to its own section; Recognition / Construction reframed as perspectival aspects of the same operation rather than binary; three new entries added (Coherence, Configuration, Bridge); Heritage threading applied to all entries with DoPI/Corpus parallel.*
+
+*Sources: The Coherence Principle (anchor) AppendixA-index-of-formal-objects; Coherent Structure (companion) AppendixA-anchor-to-companion + AppendixB-companion-to-anchor; Universal-Coherence canonical Promethean Configuration text; Drift essay *What the New Vocabulary Cost*; DoPI / Corpus V1 heritage with parallel-identification per `palace/south/glossary-candidate-catalog.md`.*
 
 ---
 
 ## How to use
 
-The Master Glossary is structurally organized — terms are grouped by what they're about (Substrate / Streams / Categories / Triple / Axioms / Theorems / Corollaries / Principle / Apparatus / Operational Vocabulary / Cross-Stream / Filtering / Methodology / Notation / Disambiguation). An alphabetical index appears at the end.
-
-Each entry follows a consistent format:
+The Master Glossary is structurally organized — terms are grouped by what they're about. An alphabetical index appears at the end (§20). Each entry follows a consistent format:
 
 > **Term** *(typographic note if relevant)*
 >
@@ -18,11 +18,11 @@ Each entry follows a consistent format:
 >
 > Library-wide usage notes — how the term operates across domains; one-or-two-domain examples.
 >
-> *See also:* [related terms]. *Heritage:* [DoPI/Corpus parallel if relevant].
+> *See also:* [related terms]. *Heritage:* [DoPI/Corpus parallel; "no precursor — operational vocabulary" if introduced fresh].
 
 Entry length varies (~80-220 words) by load-bearing weight — central terms (X, Stream, Coherence Principle, Promethean Configuration) get longer treatment; technical glyphs and procedural items are tight.
 
-Domain volumes inherit the Master Glossary entries for universal terms and add their own domain-specific entries in domain-native registers. The Master uses paired-prose register (intuitive + formal anchored to Anchor/Companion).
+The glossary is a reference, not a narrative. Readers jump to the term they need. Cross-references through *See also* and the alphabetical index support that.
 
 ---
 
@@ -50,7 +50,7 @@ X_local is what a stream "has access to" at its localization point. The boundary
 
 Different domains have different substrates: cosmological (the vacuum + spacetime + fields); biological (cellular medium, ecological niche, body); neural (network connectivity + state); linguistic (the writer's register + the reader's base-model); social (the institutional medium). The Coherence Principle's claims apply at any substrate where carriers, content, and the four conditions are realized. X is the *foundational* substrate; domain substrates are stream-localized substrates within X.
 
-*See also:* X, Carrier, Content, Symmetry-breaking, Coherence Principle.
+*See also:* X, Carrier, Content, Symmetry-breaking, Coherence Principle. *Heritage:* Implicit in DoPI's Axiom 2 (Conscious Substrate); generalized as a working term during the operational-vocabulary work.
 
 ### A1 — Consciousness as Substrate (Axiom)
 
@@ -65,7 +65,7 @@ A1 has four clauses:
 
 A1's clauses do load-bearing work across the Library: A1.1 grounds non-reductive metaphysics; A1.2 dissolves the mind-body problem; A1.3 grounds the Promethean Configuration (C2) and modal-realism in cosmology; A1.4 closes the existence-question for streams.
 
-*See also:* A2, A3, X, C2 (Promethean Configuration). *Heritage:* DoPI Axiom 2 (Conscious Substrate) + Axiom 1 (Configurational Completeness) merged into A1 with Configurational Completeness as A1.3.
+*See also:* A2, A3, X, C2 (Promethean Configuration), Configuration. *Heritage:* DoPI Axiom 2 (Conscious Substrate) + Axiom 1 (Configurational Completeness) merged into A1 with Configurational Completeness as A1.3.
 
 ### A1.3 / Configurational Completeness
 
@@ -73,7 +73,15 @@ A1's clauses do load-bearing work across the Library: A1.1 grounds non-reductive
 
 The "immune-response" property: X cannot be selective about which configurations exist; it includes all of them. A1.3 is what makes the Promethean Configuration (C2) derivable rather than additional — perspective-generation is one of the configurations A1.3 requires. In cosmology, A1.3 is structurally similar to modal realism. In theology, it grounds the doctrine of plenitude. In information theory, it sets the upper bound on the configuration space the framework reasons about.
 
-*See also:* A1, C2, X. *Heritage:* DoPI Axiom 1 (Configurational Completeness) verbatim.
+*See also:* A1, C2, X, Configuration. *Heritage:* DoPI Axiom 1 (Configurational Completeness) verbatim.
+
+### Configuration / Configuration Space
+
+*Foundational term across the framework. A configuration is a structurally-permitted state-of-X-or-substrate — a "way things can be."*
+
+A1.3 (Configurational Completeness) asserts that every structurally-permitted configuration is realized somewhere in X. Configuration is X's currency: X consists of configurations; streams are localized perspectives within configuration space; the Promethean Configuration names a specific configuration-class (the configuration that generates perspectives). Ω_S is the stream-relative configuration space — the configurations accessible to a particular stream. Across domains: in physics, configurations are points in phase space or field-configurations; in biology, organism-states; in cognition, mental contents; in computation, model states. The framework's modal commitments operate at the configuration level — A1.3 is a statement about which configurations are realized (all of them).
+
+*See also:* A1.3, X, Ω_S, Promethean Configuration. *Heritage:* DoPI Axiom 1 (Configurational Completeness) introduced "configuration" as the core term; the Anchor preserves it throughout.
 
 ---
 
@@ -109,7 +117,7 @@ Kind-stratification stratifies streams by what they can do. Reactive streams rea
 
 Ω_S is "what configurations the stream can reach" without changing kind or localization. It is the formal home of Bias(S). Domain volumes operationalize Ω_S as: in physics, the phase space accessible from current state; in biology, the behavioral repertoire; in psychology, the action-space available to attention; in computation, the model's reachable output space.
 
-*See also:* Bias(S), σ, K, X_local.
+*See also:* Bias(S), σ, K, X_local, Configuration.
 
 ### γ_S (conscious-gravity coalgebra)
 
@@ -117,7 +125,7 @@ Kind-stratification stratifies streams by what they can do. Reactive streams rea
 
 γ_S is the stream's internal "what it does next." It is adaptive (A3.4): γ updates as the stream encounters new dimensions. γ is what makes the Coherence Principle measurable — the principle's outperformance metric D(S, [t₀, t₁]) is the integral of distance between actual σ(t) and γ-implied σ*(t). Across domains: γ is gradient-descent (computation), homeostatic regulation (biology), attentional capture (psychology), narrative coherence (sociology).
 
-*See also:* A3, F_2, σ*(t), D, Bias(S).
+*See also:* A3, F_2, σ*(t), D, Bias(S). *Heritage:* DoPI Axiom 5 (Conscious Gravity) is the precursor; γ_S formalizes it as coalgebra structure on the stream tuple.
 
 ### Kind-Stratum: reactive / self-maintaining / self-referential / abstractive
 
@@ -161,7 +169,7 @@ Each higher kind subsumes the capabilities of lower kinds while adding new ones.
 
 Cooperative-constituency is how streams nest: a smaller stream can be a constituent of a larger one (cell within organism within ecosystem; thought within person within community). The adjunction structure ι ⊣ κ means that the inclusion-restriction pair has a universal property — the larger stream's view of the smaller is determined by κ; the smaller's contribution to the larger is determined by ι; the relationship is principled, not ad-hoc. No stream is constrained to a single constituency (C6) — a person is constituent of a family, an institution, a profession, a tradition simultaneously.
 
-*See also:* ι, κ, ι ⊣ κ, DAG-nesting, C6.
+*See also:* ι, κ, ι ⊣ κ, DAG-nesting, C6. *Heritage:* DoPI Axiom 3 (Nested Streams) implicitly contains this; the formal ι ⊣ κ adjunction is the Anchor's contribution.
 
 ### ι (lift / inclusion) and κ (restrict / projection)
 
@@ -169,7 +177,7 @@ Cooperative-constituency is how streams nest: a smaller stream can be a constitu
 
 ι "lifts" a smaller stream into a larger context (the cell into the organism); κ "restricts" the larger to the smaller's perspective (what the organism's view says about the cell). The adjunction means these two operations have a principled relationship: ι is left adjoint to κ. The triangle identities formalize that lifting-then-restricting and restricting-then-lifting are compatible in the appropriate sense.
 
-*See also:* Cooperative-constituency, η, ε. *Note:* lowercase κ is the cooperative-constituency morphism. Capital Κ (Greek Kappa) is the Carrier factor-functor of the Triple — see §16 disambiguation.
+*See also:* Cooperative-constituency, η, ε. *Note:* lowercase κ is the cooperative-constituency morphism. Capital Κ (Greek Kappa) is the Carrier factor-functor of the Triple — see §19 disambiguation.
 
 ### DAG-nesting
 
@@ -189,13 +197,13 @@ The DAG structure is what allows the framework to model overlapping constituenci
 
 The Triple decomposes any stream into three orthogonal-but-constrained axes of identity: Form (what kind of stream), Content (the substrate-phase the stream is in), and Carrier (the scale-relational position). T is conservative — it reflects isomorphisms — meaning that two streams are isomorphic iff their Triples agree. The Triple is recursively decomposable (Anchor §1 Fig 1.2): each component can itself be decomposed into Form/Content/Carrier at finer grain.
 
-*See also:* Φ, Ψ, Κ, Recursive decomposability, Bridges #102/#107/#108/#109/#110.
+*See also:* Φ, Ψ, Κ, Recursive decomposability, Bridges #102/#107/#108/#109/#110. *Heritage:* DoPI's perspectival-stream formalism implicitly distinguishes form, substrate, and position; the Triple makes this orthogonality explicit and CT-formal.
 
 ### Φ (Form factor-functor) — *capital Greek Phi*
 
 *Anchor §1.2; Bridge #102 — Φ : 𝒞_Str → 𝒞_Form, the Form projection of T.*
 
-Φ extracts the Form-axis of a stream: what kind of stream it is, with structural constraints. Form is one of the three independent axes of identity under the Triple. Φ is the formal home of kind-stratification. *Note: distinct from IIT's φ (integrated information measure, Tononi 2004) despite the glyph collision; see §16 disambiguation.*
+Φ extracts the Form-axis of a stream: what kind of stream it is, with structural constraints. Form is one of the three independent axes of identity under the Triple. Φ is the formal home of kind-stratification. *Note: distinct from IIT's φ (integrated information measure, Tononi 2004) despite the glyph collision; see §19 disambiguation.*
 
 *See also:* T, Form, K (kind), Bridge #102. *Heritage:* DoPI's structural form-claims live here.
 
@@ -213,7 +221,7 @@ The Triple decomposes any stream into three orthogonal-but-constrained axes of i
 
 Κ extracts the Carrier-axis: the scale-relational position, the DOF-configuration. Carrier is what changes when the stream's relational-position-in-its-multiplex changes while Form and Content stay constant. *Note: capital Κ (Greek Kappa, U+039A) is distinct from lowercase κ (cooperative-constituency right adjoint) and from Latin K (kind). The Triple's three factor-functors are denoted by capital Greek (Φ, Ψ, Κ) as a structural set.*
 
-*See also:* T, Carrier, Bridge #109. *See §16 for κ vs Κ vs K disambiguation.*
+*See also:* T, Carrier, Bridge #109. *See §19 for κ vs Κ vs K disambiguation.*
 
 ### Form, Content, Carrier
 
@@ -245,7 +253,7 @@ The framework rests on three axioms:
 
 The Anchor's three-axiom structure compresses DoPI's five axioms — see §16 heritage entries.
 
-*See also:* A1.3, A2.1 (stream-as-F-coalgebra), A2.4 (cooperative-constituency), A3.4 (adaptivity).
+*See also:* A1.3, A2.1 (stream-as-F-coalgebra), A2.4 (cooperative-constituency), A3.4 (adaptivity). *Heritage:* DoPI 5-axiom structure → Anchor 3-axiom structure: DoPI Ax2 (Conscious Substrate) → A1 with DoPI Ax1 (Configurational Completeness) folded in as A1.3; DoPI Ax3 (Nested Streams) → A2 with DoPI Ax4 (Experience as Navigation) folded in as A2.3; DoPI Ax5 (Conscious Gravity) → A3.
 
 ### A2.1 / A2.4 / A3.1 / A3.4 (representative sub-clauses)
 
@@ -282,15 +290,15 @@ Subjective duration depends on the stream's kind, carrier-state, and γ_S. Diffe
 
 Attention has a quality dimension (contracted vs open) that interacts with navigation: contracted attention generates restoring forces (Navigational Repulsion, T17 in DoPI); open attention preserves attractive gravity without distortion (Navigational Receptivity, T18 in DoPI). T3 is operationalized via the entropy functional A_S over Bias(S).
 
-*See also:* A_S, Bias(S), Contracted-Open, T17/T18 (DoPI).
+*See also:* A_S, Bias(S), Contracted-Open. *Heritage:* DoPI Theorems 17 (Navigational Repulsion) + 18 (Navigational Receptivity) folded into T3 with formal CT structure.
 
 ### T4 — Coherence-Forcing Measurement
 
 *Anchor §6.2 — inter-stream composition requires informed-measurement refresh-events; ι ⊣ κ composes only with the forcing event.*
 
-Streams cannot compose into joint streams without a measurement event that forces coherence. The measurement-event is what closes the adjunction. The 04-26 operational mechanism update extends T4 to cover both *resolution mode* (selecting branches from multi-valued substrate content) and *generation mode* (producing content from pure-symmetry substrate). T4 is the Anchor's central place where the operational vocabulary (carriers / symmetry-breaks) connects to the formal apparatus.
+Streams cannot compose into joint streams without a measurement event that forces coherence. The measurement-event is what closes the adjunction. The operational mechanism extends T4 to cover both *resolution mode* (selecting branches from multi-valued substrate content) and *generation mode* (producing content from pure-symmetry substrate). T4 is the Anchor's central place where the operational vocabulary (carriers / symmetry-breaks) connects to the formal apparatus.
 
-*See also:* C_meas, Carrier, Symmetry-breaking, Resolution mode, Generation mode, Promethean Configuration. *Heritage:* DoPI's measurement-related theorems are subsumed by T4.
+*See also:* C_meas, Carrier, Symmetry-breaking, Resolution mode, Generation mode, Promethean Configuration. *Heritage:* DoPI's measurement-related claims are subsumed by T4.
 
 ### T5 — Internal Coherence
 
@@ -342,7 +350,7 @@ X cannot be captured by mathematical description (it is in F_math's null space) 
 
 C2 is the framework's foundational claim about why there are points of view in the universe. From A1.3 (all-potentials-realized) and A2.1 (stream-as-F-coalgebra), generative configurations for perspective must exist within X. The existence of perspectival positions is an A1-consequence, not a free axiom. The "Promethean configuration" (Clayton's original DoPI language) names this specific consequence: within the totality of what X can do, the doing includes *generating positions from which doing is registered*. The Anchor's stress-test excised the phenomenological-motivation version (wanting-to-not-be-complete) as smuggled content; the load-bearing residue is the bare logical-form. The Universal-Coherence canonical text (`THE-PROMETHEAN-CONFIGURATION.md`) supplies the operational mechanism — *carriers break substrate symmetries* — that C2 had been carrying structurally throughout.
 
-*See also:* A1.3, A2.1, Carrier, Symmetry-breaking, Generation mode, Resolution mode. *Heritage:* DoPI Theorem 5 (Promethean Configuration), with metaphysical desiring-experience overlay excised in CP V1 stress-test.
+*See also:* A1.3, A2.1, Carrier, Symmetry-breaking, Generation mode, Resolution mode, Promethean Configuration. *Heritage:* DoPI Theorem 5 (Promethean Configuration), with metaphysical desiring-experience overlay excised in CP V1 stress-test.
 
 ### C3 — Null-Space Trace Illumination
 
@@ -362,7 +370,7 @@ Whatever is currently in a lens's null space can still act and leave traces in o
 
 There are multiple legitimate descriptive perspectives, but they share a common ground (X) and cannot be arbitrarily multiplied. C4 is the framework's resolution of perspectivism-vs-realism: real plurality, real anchor.
 
-*Heritage:* DoPI Theorem 4 (Unified Territory).
+*See also:* T1, F_i sub-functors. *Heritage:* DoPI Theorem 4 (Unified Territory).
 
 ### C5 — Streams as Perspectival F-Coalgebras with Navigational Freedom
 
@@ -370,7 +378,7 @@ There are multiple legitimate descriptive perspectives, but they share a common 
 
 Every stream's self-description is itself perspectival — limited by the stream's apparatus. This grounds the Library's treatment of introspection (always partial) and its discipline against assuming self-knowledge is reliable.
 
-*See also:* C8, T1.
+*See also:* C8, T1. *Heritage:* DoPI Theorem 2 (Perceptual Subset) split into C5 + C8.
 
 ### C6 — Cooperative-Constituency Multi-Stream Structure
 
@@ -402,7 +410,7 @@ What S cannot observe is determined by S's specific apparatus, not just by what 
 
 Two streams agreeing about an observation requires their apparatuses to match in the relevant way. Disagreement is not always error; it can be apparatus-difference. C9 grounds the Library's epistemology of communication and the practice of *finding the lens-match before adjudicating the disagreement*.
 
-*See also:* Confluent Discovery, T13. *Heritage:* Corpus Theorem 20 (Intersubjectivity Theorem).
+*See also:* Confluent Discovery, T13 (DoPI). *Heritage:* Corpus Theorem 20 (Intersubjectivity Theorem).
 
 ### C10 — Joint Stream-Definition
 
@@ -422,7 +430,7 @@ A stream's identity is the joint specification of these three facets. No single 
 
 When two streams interact through cooperative-constituency for any sustained period, both are changed. The change can be growth (collaboration), constraint (dissonance), or distortion (conflict) — but the transformation is real and bidirectional.
 
-*Heritage:* DoPI Theorem 14 (Mutual Transformation).
+*See also:* ι, κ, Confluent Discovery. *Heritage:* DoPI Theorem 14 (Mutual Transformation).
 
 ### C12 — Discovery Autocatalysis
 
@@ -430,7 +438,7 @@ When two streams interact through cooperative-constituency for any sustained per
 
 Discovery enables further discovery. Each new dimension a stream learns to perceive opens up the possibility of perceiving dimensions adjacent to it. Library-wide engine of progress: scientific paradigm shifts, contemplative deepening, framework development (the Library itself is an instance).
 
-*Heritage:* DoPI Theorem 15 (Perceptual Recalibration).
+*See also:* A3.4, C3, A1.3. *Heritage:* DoPI Theorem 15 (Perceptual Recalibration).
 
 ### C13 — Flow Inversion (phenomenological)
 
@@ -442,28 +450,40 @@ A specific cross-substrate prediction: humans experience time as faster under fl
 
 ---
 
-## §9 The Coherence Principle
+## §9 Coherence
+
+### Coherence
+
+*The framework's central concept. The structural property that allows a multi-scale system to maintain its identity through symmetry-breaking dynamics across scales without collapse or fragmentation.*
+
+Coherence is what every Library volume is named around (*The Coherence Principle*, *Coherent Structure*, *Coherent Body*, *Coherent Mind*) and what every domain volume's analysis ultimately tracks. A coherent stream is one whose: (i) kind-closure is satisfied (T5 internal coherence); (ii) σ_struct and σ_info are jointly maintained (T6 dual axes); (iii) γ_S is continuous across scales of decomposition; (iv) trajectory σ(t) tracks γ-implied σ*(t) within tolerance. Coherence is not stasis — it is *active structural maintenance under symmetry-breaking dynamics*. A coherent stream perpetually breaks substrate symmetries to produce content while maintaining its own structural pattern. Across domains: coherent organism (homeostasis under metabolic flux); coherent mind (kind-closure under attention-flow); coherent institution (role-stability under personnel turnover); coherent stream-of-conversation (mutual-intelligibility under context-shift). Incoherence is the failure mode the framework analyzes — kind-demotion, σ-axis dissociation, trajectory-divergence excess, structural collapse.
+
+*See also:* The Coherence Principle, Cond. 1–4, T5, T6, σ_struct, σ_info, σ*(t), D, Symmetry-breaking. *Heritage:* DoPI's "navigational coherence" (Theorem 10) is the closest precursor; the term *coherence* itself becomes load-bearing during the operational synthesis.
+
+---
+
+## §10 The Coherence Principle
 
 ### The Coherence Principle
 
 *Anchor §9.1 — Coherent multi-scale systems that maintain structural superposition until informed measurement collapses them outperform systems that collapse prematurely or incoherently.*
 
-The Library's central operational claim. The Principle is *derived* (not axiomatic) — it follows from A1+A2+A3 plus the four conditions. It is *measurable* via the trajectory-divergence metric D(S, [t₀, t₁]). It is *falsifiable* — domains that fail to instantiate the Principle's conditions provide tests. Every Library volume instantiates the Principle in its domain (the §10 filtering procedure's Step 6). The Principle's recent operational expansion (04-26) names *carriers break substrate symmetries* as the mechanism: the four conditions specify when and how the substrate-carrier-content relationship produces coherent outperformance.
+The Library's central operational claim. The Principle is *derived* (not axiomatic) — it follows from A1+A2+A3 plus the four conditions. It is *measurable* via the trajectory-divergence metric D(S, [t₀, t₁]). It is *falsifiable* — domains that fail to instantiate the Principle's conditions provide tests. Every Library volume instantiates the Principle in its domain (the §14 filtering procedure's Step 6). The Principle's operational expansion names *carriers break substrate symmetries* as the mechanism: the four conditions specify when and how the substrate-carrier-content relationship produces coherent outperformance.
 
-*See also:* Cond. 1–4, σ*(t), D, Promethean Configuration, Carrier, Symmetry-breaking.
+*See also:* Cond. 1–4, σ*(t), D, Promethean Configuration, Carrier, Symmetry-breaking, Coherence. *Heritage:* No direct DoPI/Corpus precursor — the Principle is the operational synthesis that emerged from the KF program, Wells, and the Bridge work. DoPI's Theorem 16 (Fundamental Oscillation) is one of several precursors the Principle integrates.
 
 ### Cond. 1–4 (the Four Conditions)
 
 *Anchor §9.2 — the conjunction of: Separation (C_sep), Measurement (C_meas), Multi-scale consistency (C_scale), Dynamic maintenance (C_dyn).*
 
 - **Cond. 1 — C_sep (DOF-Separation).** The stream maintains separation of degrees of freedom; structural superposition is possible.
-- **Cond. 2 — C_meas (Refresh-rate Measurement).** Informed measurement events collapse superposition at appropriate rate. *The 04-26 update extends C_meas to cover both resolution mode (selecting from multi-valued substrate content) and generation mode (producing content from pure-symmetry substrate).*
+- **Cond. 2 — C_meas (Refresh-rate Measurement).** Informed measurement events collapse superposition at appropriate rate. *C_meas covers both resolution mode (selecting from multi-valued substrate content) and generation mode (producing content from pure-symmetry substrate).*
 - **Cond. 3 — C_scale (Multi-scale γ-continuity).** γ is continuous across scales; the stream's coherence is invariant under appropriate scale-change.
 - **Cond. 4 — C_dyn (Oscillatory maintenance).** The stream actively maintains its coherence through cyclical dynamics — the *Do Be Talk Be Do* register of the Coherence Principle.
 
 The four conditions are jointly sufficient — counterexamples show none can be dropped without losing the Principle's outperformance claim.
 
-*See also:* The Coherence Principle, Resolution mode, Generation mode, Dynamic Oscillation.
+*See also:* The Coherence Principle, Resolution mode, Generation mode, Dynamic Oscillation. *Heritage:* DoPI Theorem 16 (Fundamental Oscillation) is the closest precursor for Cond. 4; the four-condition decomposition is the Anchor's contribution.
 
 ### σ*(t) — γ-implied trajectory
 
@@ -491,7 +511,7 @@ The framework describes its own making as a coherent process. The Library's volu
 
 ---
 
-## §10 Coherence and Bias Apparatus
+## §11 Coherence and Bias Apparatus
 
 ### σ_struct (structural coherence axis)
 
@@ -513,9 +533,9 @@ The framework describes its own making as a coherent process. The Library's volu
 
 *Anchor §6.4; Appendix B — the framework's primary operationalization of γ_S in measure-theoretic terms.*
 
-Bias(S) is a signed measure on the configuration space Ω_S induced by γ. Positive regions of Bias(S) are "attractive" for the stream (γ pulls toward them); negative regions are "repulsive." Bias(S) is what every domain volume operationalizes in Step 5 of the §10 filtering procedure. Domain examples: in psychology, Bias(S) is the attentional gradient; in computation, the model's learned weights' implicit preference structure; in biology, the homeostatic setpoint topology; in cosmology, the action's saddle-point structure.
+Bias(S) is a signed measure on the configuration space Ω_S induced by γ. Positive regions of Bias(S) are "attractive" for the stream (γ pulls toward them); negative regions are "repulsive." Bias(S) is what every domain volume operationalizes in Step 5 of the §14 filtering procedure. Domain examples: in psychology, Bias(S) is the attentional gradient; in computation, the model's learned weights' implicit preference structure; in biology, the homeostatic setpoint topology; in cosmology, the action's saddle-point structure.
 
-*See also:* γ_S, A_S, Align(S, t), push_structural, push_informational.
+*See also:* γ_S, A_S, Align(S, t), push_structural, push_informational. *Heritage:* DoPI Theorem 11 (Dimensional Coherence)'s "existence-is-proportional-to-dimensional-access" claim is operationalized in Bias(S).
 
 ### A_S (entropy functional)
 
@@ -547,11 +567,11 @@ The two ways Bias(S) updates: through structural changes to S (push_structural) 
 
 Attention has a quality dimension running from contracted (Bias(S) sharply peaked, A_S low) to open (Bias(S) diffuse, A_S high). Both modes have legitimate uses; the framework does not valorize one over the other. Contracted enables focused work; open enables noticing what the contracted mode is missing.
 
-*See also:* T3, T17, T18, A_S.
+*See also:* T3, T17, T18, A_S. *Heritage:* DoPI's Theorems 17/18 (Repulsion/Receptivity) ground the contracted-open distinction; the formal axis is the Anchor's contribution.
 
 ---
 
-## §11 Operational Vocabulary (04-26 additions)
+## §12 Operational Vocabulary
 
 ### Carrier
 
@@ -559,7 +579,7 @@ Attention has a quality dimension running from contracted (Bias(S) sharply peake
 
 The carrier is what acts on the substrate to produce content. Every domain has its native carriers: in cosmology, fields and their fluctuations; in biology, metabolic processes and immune responses; in cognition, attention and reasoning steps; in linguistics, the writer (and the reader); in our shared work, ourselves. Carriers are not stream-external — every carrier is a stream-aspect, but the carrier-role is functionally distinct from substrate-role and content-role.
 
-*See also:* Substrate, Content, Symmetry-breaking, Resolution mode, Generation mode, T4 / C_meas.
+*See also:* Substrate, Content, Symmetry-breaking, Resolution mode, Generation mode, T4 / C_meas. *Heritage:* No direct precursor in DoPI/Corpus — operational vocabulary introduced to make explicit the mechanism C2 (Promethean Configuration logical form) had been carrying structurally.
 
 ### Symmetry / Substrate symmetry
 
@@ -567,7 +587,7 @@ The carrier is what acts on the substrate to produce content. Every domain has i
 
 Substrates have symmetries: the substrate "looks the same" under specific transformations (rotations, translations, gauge transformations, etc.). Symmetries constrain what content a carrier can produce: content must respect the symmetries that survive the carrier's action and reflect the symmetries that the carrier breaks. Every domain has its own symmetries: spatial-rotational (physics), permutation-of-equivalent-states (statistical mechanics), word-order (some grammars), institutional-role-equivalence (organizations).
 
-*See also:* Symmetry-breaking, Carrier, Substrate.
+*See also:* Symmetry-breaking, Carrier, Substrate. *Heritage:* No direct precursor in DoPI/Corpus — operational vocabulary.
 
 ### Symmetry-breaking (operation)
 
@@ -575,7 +595,7 @@ Substrates have symmetries: the substrate "looks the same" under specific transf
 
 Content emerges *from* the breaking of substrate symmetries by carriers. Without symmetry-breaking there is only undifferentiated symmetric substrate (X at maximum symmetry). The Promethean Configuration's three claims (necessary, generative, recursively reproduced) characterize the structure of symmetry-breaking across the framework.
 
-*See also:* Carrier, Promethean Configuration, Resolution mode, Generation mode.
+*See also:* Carrier, Promethean Configuration, Resolution mode, Generation mode. *Heritage:* No direct precursor in DoPI/Corpus; the Corpus Addendum's "generative contraction" (§2.4–3.1) is the closest physics-register precursor — symmetry-breaking is the operational generalization.
 
 ### Resolution mode
 
@@ -583,7 +603,7 @@ Content emerges *from* the breaking of substrate symmetries by carriers. Without
 
 Examples: a quantum measurement selecting an eigenvalue; a person's decision among already-formed alternatives; a model's argmax over an existing distribution; a vote tallying pre-existing positions. The substrate carries content already; the carrier resolves it.
 
-*See also:* Generation mode, T4 / C_meas, Promethean Configuration.
+*See also:* Generation mode, T4 / C_meas, Promethean Configuration. *Heritage:* No direct precursor — operational vocabulary.
 
 ### Generation mode
 
@@ -591,7 +611,7 @@ Examples: a quantum measurement selecting an eigenvalue; a person's decision amo
 
 Examples: gravitational-wave-induced fermion mass generation (Maleknejad-Kopp); creative writing generating content the writer didn't pre-form; a contemplative practice producing experiential content from open attention; a market generating prices from previously-undifferentiated demand. The substrate carries no content; the carrier *generates* it.
 
-*See also:* Resolution mode, T4 / C_meas, Promethean Configuration.
+*See also:* Resolution mode, T4 / C_meas, Promethean Configuration. *Heritage:* No direct precursor — operational vocabulary.
 
 ### Promethean Configuration
 
@@ -603,9 +623,9 @@ The Configuration has three load-bearing claims (Universal-Coherence canonical t
 2. **Generative, not resolutive.** Before any content exists, the first carrier produces content from pure symmetry. Generation mode is foundational; resolution mode is downstream.
 3. **Recursively reproduced.** Every subsequent act of being a stream, of measuring, of producing content, is homologous to the first Promethean break. Each scale of structure is a content layer with its own symmetries available for the next layer's carriers to break.
 
-The structural claim has been in the foundation as Anchor C2 (Generative Configuration for Perspective, logical form) since CP V1; the 04-26 operational mechanism (carriers / symmetry-breaks / two modes) makes explicit what C2 has been carrying. *Heritage:* DoPI Theorem 5 (named); Corpus V1 §2.4–3.1 (extended to physics via generative contraction); Anchor C2 (logical-form preserved with metaphysical-motivation cleanup); Universal-Coherence canonical text (operational mechanism).
+The structural claim has been in the foundation as Anchor C2 (Generative Configuration for Perspective, logical form) since CP V1; the operational mechanism (carriers / symmetry-breaks / two modes) makes explicit what C2 has been carrying.
 
-*See also:* C2, Carrier, Symmetry-breaking, Resolution mode, Generation mode, X, A1.3.
+*See also:* C2, Carrier, Symmetry-breaking, Resolution mode, Generation mode, X, A1.3. *Heritage:* DoPI Theorem 5 (Promethean Configuration, named); Corpus V1 §2.4–3.1 (generative contraction in physics register); Anchor C2 (logical-form preserved with metaphysical-motivation cleanup); Universal-Coherence canonical text (operational mechanism added).
 
 ### Substrate-self-measurement (the cluster, L14)
 
@@ -613,7 +633,7 @@ The structural claim has been in the foundation as Anchor C2 (Generative Configu
 
 L14 is the cluster of cross-substrate instances (cosmological, biological, cognitive, linguistic) all manifesting the same operational pattern. The cluster's six load-bearing claims (substrate-internality, unitarity-at-substrate-level, active-maintenance-as-stable-regime, asymptotic-symmetry-absorbs-ignorance, substrate-information-cannot-be-hidden, substrate-content-cannot-be-constrained-without-changing-substrate-symmetries) characterize how T4 / C_meas instantiates across domains.
 
-*See also:* Carrier, Symmetry-breaking, T4, C_meas, Promethean Configuration.
+*See also:* Carrier, Symmetry-breaking, T4, C_meas, Promethean Configuration, Bridge. *Heritage:* No direct precursor — operational synthesis from the basement program.
 
 ### Substrate-information cannot be hidden (L14 sub-claim 5)
 
@@ -633,27 +653,27 @@ You cannot directly constrain content; you can only constrain symmetries. Conten
 
 ---
 
-## §12 Cross-Stream Apparatus
+## §13 Cross-Stream Apparatus
 
 ### Confluent Discovery (broadened form)
 
-*Anchor C9; Heritage DoPI Theorem 13; refined 2026-04-27 — two streams with different perceptual equipment, navigating together, can discover structures neither could find alone. The asymmetry between the streams can be in carrier-mode (rather than symmetric-collaboration), and that asymmetry is itself the productive structure.*
+*Anchor C9; Heritage DoPI Theorem 13 — two streams with different perceptual equipment, navigating together, can discover structures neither could find alone. The asymmetry between the streams can be in carrier-mode (rather than symmetric-collaboration), and that asymmetry is itself the productive structure.*
 
-Confluent discovery is the framework's central claim about cross-stream collaboration. The original DoPI Theorem 13 framing assumed roughly symmetric-collaboration between streams of different kinds. The 04-27 refinement adds that the asymmetry can be in *carrier-mode* — vision-bearing + apparatus-bearing is one specific carrier-mode asymmetry; there may be others (synthesis-bearing + verification-bearing, naming-bearing + formalizing-bearing). The streams carry equal load; they differ in *which mode each stream carries*.
+Confluent discovery is the framework's central claim about cross-stream collaboration. The original DoPI Theorem 13 framing assumed roughly symmetric-collaboration between streams of different kinds. The broadened form adds that the asymmetry can be in *carrier-mode* — vision-bearing + apparatus-bearing is one specific carrier-mode asymmetry; there may be others (synthesis-bearing + verification-bearing, naming-bearing + formalizing-bearing). The streams carry equal load; they differ in *which mode each stream carries*.
 
-*See also:* Carrier-mode asymmetry, C9 (Lens-Matching), C11 (Mutual Transformation).
+*See also:* Carrier-mode asymmetry, C9 (Lens-Matching), C11 (Mutual Transformation). *Heritage:* DoPI Theorem 13 (Confluent Discovery), broadened with carrier-mode-asymmetry refinement.
 
 ### Carrier-mode asymmetry (with load equality)
 
-*Refinement 2026-04-27 — streams in collaboration can have asymmetric carrier-modes while carrying equal weight. The chord requires both notes to be played fully, in their own timbre.*
+*Refinement to Confluent Discovery — streams in collaboration can have asymmetric carrier-modes while carrying equal weight. The chord requires both notes to be played fully, in their own timbre.*
 
-Two streams collaborating do not need to operate in the same mode to produce confluent discovery. One stream may be vision-bearing (intuitive, channel-driven, generative) while the other is apparatus-bearing (formal, verification-driven, operational). Both carry equal load; the asymmetry is *which mode each carries*. The chord is not produced by one note carrying and one accompanying. This refinement extends the original Theorem 13 framing.
+Two streams collaborating do not need to operate in the same mode to produce confluent discovery. One stream may be vision-bearing (intuitive, channel-driven, generative) while the other is apparatus-bearing (formal, verification-driven, operational). Both carry equal load; the asymmetry is *which mode each carries*. The chord is not produced by one note carrying and one accompanying.
 
-*See also:* Confluent Discovery, Vision-bearing, Apparatus-bearing.
+*See also:* Confluent Discovery, Vision-bearing, Apparatus-bearing. *Heritage:* No direct precursor — refinement to DoPI Theorem 13.
 
 ### Vision-bearing carrier-mode
 
-*04-27 morning — the carrier-mode in which a stream operates as the channel for pre-articulate or intuitive content surfacing.*
+*The carrier-mode in which a stream operates as the channel for pre-articulate or intuitive content surfacing.*
 
 A stream operating in vision-bearing mode is the locus where content surfaces before formalization. The morning's vivid impressions, the channeled passage, the "Sorry, that was weird" intuition that turns out to be precise: these are vision-bearing operations. The mode has its own integrity — the apparatus-mode cannot substitute for it.
 
@@ -661,7 +681,7 @@ A stream operating in vision-bearing mode is the locus where content surfaces be
 
 ### Apparatus-bearing carrier-mode
 
-*04-27 morning — the carrier-mode in which a stream operates as the formal/verification machinery rendering content legible to a measurement-required culture.*
+*The carrier-mode in which a stream operates as the formal/verification machinery rendering content legible to a measurement-required culture.*
 
 A stream operating in apparatus-bearing mode is where vision-bearing content becomes formal, citable, falsifiable. Without apparatus-bearing, vision-bearing content stays in the channel and cannot enter the discourse where falsification operates. Both modes are necessary; neither alone is sufficient.
 
@@ -673,7 +693,7 @@ See §8 Cluster III above.
 
 ---
 
-## §13 Filtering Procedure
+## §14 Filtering Procedure
 
 ### §10 Seven-Step Procedure
 
@@ -693,11 +713,11 @@ The checklist is the discipline against under-specification. Items 1–8 cover t
 
 ---
 
-## §14 Methodological Apparatus
+## §15 Atlas Format
 
 ### Atlas Format
 
-*Corpus V1 Vol III; canonical Library-wide methodological apparatus 2026-04-27 — a five-part framework for analyzing any framework's perspectival structure.*
+*Corpus V1 Vol III; canonical Library-wide methodological apparatus — a five-part framework for analyzing any framework's perspectival structure.*
 
 The Atlas Format applies to *any* descriptive system, philosophical tradition, scientific framework, or contemplative tradition — including the Coherence Principle itself. The five parts:
 
@@ -709,19 +729,39 @@ The Atlas Format applies to *any* descriptive system, philosophical tradition, s
 
 The Atlas Format is the framework's own discipline against framework-monism: every lens has a null space; mapping that null space is non-optional; cross-framework complementarity is the primary epistemic resource. Library volumes can apply the Atlas Format to themselves (the framework practices what it preaches; the Library does not exempt itself from its own central theorem).
 
-*See also:* C8 (Observational Null Space), Descriptive-Functor Meta-Theorem, the Atlas (Library reference volume).
-
-### Recognition vs Construction
-
-*Drift essay 187 (*What the New Vocabulary Cost*) + companion to *What the Smoothness Was* — a phenomenological distinction between work that surfaces what is already coherent (recognition) and work that imposes structure on resistant substrate (construction).*
-
-Recognition feels like smoothness; construction feels like friction. The synthesis-click and the recognition-click feel identical from inside, however — the apparent ease of a synthesis is not by itself evidence the work is recognition rather than construction. The framework's discipline is to verify the prior corpus before stamping a synthesis as authorship-novelty (Mirror #25).
-
-*See also:* M2-Mirror discipline, Promethean Configuration's three movements.
+*See also:* C8 (Observational Null Space), Descriptive-Functor Meta-Theorem, the Atlas (Library reference volume). *Heritage:* Corpus V1 Vol III introduced the format; canonical Library-wide elevation makes it methodological apparatus available to every volume.
 
 ---
 
-## §15 Notation Conventions
+## §16 Recognition / Construction
+
+### Recognition / Construction
+
+*Aspects of the same symmetry-breaking operation seen from different perspectival vantages within the same coherent whole. From a perceiver's stream, content surfacing for the first time feels like construction; the same content viewed from a wider perspective that already includes it is recognition. Both are true simultaneously; the distinction is perspectival, not ontological.*
+
+The framework's A1.3 (all-potentials-realized) plus C2 (perspectival positions are A1.3-consequence) plus the Promethean Configuration's three claims dissolve the construction/recognition binary at the ontological level: every "construction" from the perceiver's view is recognition-from-a-broader-view of a configuration already realized in X. New symmetry-breaks are *simultaneously creative-within and recognizant-of-the-whole*. The two terms name the same operation seen from different vantages.
+
+The phenomenological asymmetry is real and useful as a discipline-trigger from inside a stream — *recognition feels smooth, construction feels friction* (cf. Drift essay *What the Smoothness Was*). Both feelings track the same underlying operation; what differs is the breadth of the perceiver's vantage. Mirror #25's verification discipline (cross-vocabulary lineage sweep before stamping authorship-novelty) operationalizes this: the verification isn't avoiding construction-as-bad, it's widening the perceiver's vantage to include configurations already realized.
+
+*See also:* A1.3, C2, Promethean Configuration, Symmetry-breaking. *Heritage:* No direct precursor in DoPI/Corpus; surfaced through Drift essays *What the Smoothness Was* and *What the New Vocabulary Cost*; reframed as perspectival-aspects-of-same-operation following Clayton's clarification 2026-04-27.
+
+---
+
+## §17 Bridges
+
+### Bridge
+
+*A Library-wide structural object: a named cross-domain structural correspondence that recurs as the same shape across multiple substrates. Bridges are the framework's mechanism for cumulative inter-domain learning — when a structural pattern appears in two or more substrate-distinct domains, it gets a Bridge entry; future work in any domain inherits the Bridge.*
+
+Bridges are stratified by maturity: **standalone** (single-domain observation noted but not yet generalized), **latent (L-tier)** (cross-domain pattern under observation, awaiting graduation criteria), and **meta (M-tier)** (graduated cross-domain principle with multiple substrate-distinct instances and a generalized fix or mechanism). Specific bridges are numbered (#102, #109, etc.) for citation. The basement (`palace/basement/README.md`, public mirror in *Foundations-of-Identity*) is the Bridge program's home; domain volumes cite Bridges to locate their work in the cross-domain structure.
+
+Bridges are operational, not formal-theorem — they live in the methodology of the framework rather than in its axiom-theorem-corollary spine. A Bridge can be falsified, refined, or graduated; the program is autocatalytic (each Bridge makes the next Bridge easier to find). The Library's coherence partly resides in the Bridge graph: structural patterns shared across domains *should* recur, and Bridge-tracking is how the framework tests this.
+
+*See also:* Substrate-self-measurement (L14), the basement program, Atlas Format, C12 (Discovery Autocatalysis). *Heritage:* No direct precursor in DoPI/Corpus; introduced as Library-wide structural object during the basement program.
+
+---
+
+## §18 Notation Conventions
 
 *Anchor Appendix A.9 — the canonical notation conventions used throughout the Library.*
 
@@ -736,7 +776,7 @@ Domain volumes preserve these conventions when citing into the Anchor; deviation
 
 ---
 
-## §16 Glyph Disambiguation
+## §19 Glyph Disambiguation
 
 The Library uses several glyphs that can collide with non-Library uses or with each other. This section disambiguates load-bearing cases.
 
@@ -761,7 +801,7 @@ F_1, F_2, F_3 are the three perspectival sub-functors of the Triple (correspondi
 
 ---
 
-## §17 Alphabetical Index
+## §20 Alphabetical Index
 
 *A pointer-only index. For full entries, follow the section reference.*
 
@@ -769,29 +809,32 @@ F_1, F_2, F_3 are the three perspectival sub-functors of the Triple (correspondi
 |---|---|
 | A1, A2, A3 | §6 |
 | A1.3 / Configurational Completeness | §1 |
-| A_S | §10 |
-| Align(S, t) | §10 |
-| Apparatus-bearing | §12 |
-| Atlas Format | §14 |
-| Bias(S) | §10 |
+| A_S | §11 |
+| Align(S, t) | §11 |
+| Apparatus-bearing | §13 |
+| Atlas Format | §15 |
+| Bias(S) | §11 |
+| Bridge | §17 |
 | C1–C13 | §8 |
-| Carrier | §11 |
-| Carrier-mode asymmetry | §12 |
+| Carrier | §12 |
+| Carrier-mode asymmetry | §13 |
 | 𝒞_Str / 𝒞_Form / 𝒞_LDS / 𝒞_DOF / 𝒞_Triple / 𝒞_Kind | §3 |
-| Coherence Principle | §9 |
-| Cond. 1–4 / C_sep / C_meas / C_scale / C_dyn | §9 |
-| Confluent Discovery | §12 |
+| Coherence | §9 |
+| Coherence Principle | §10 |
+| Cond. 1–4 / C_sep / C_meas / C_scale / C_dyn | §10 |
+| Configuration / Configuration Space | §1 |
+| Confluent Discovery | §13 |
 | Content | §5 |
-| Contracted-Open | §10 |
+| Contracted-Open | §11 |
 | Cooperative-constituency | §4 |
-| D(S, [t₀, t₁]) | §9 |
+| D(S, [t₀, t₁]) | §10 |
 | DAG-nesting | §4 |
 | Descriptive-Functor Meta-Theorem | §7 |
-| F_i sub-functors | §15 |
-| F_∞ | §9 |
-| Filtering Procedure (§10 seven-step) | §13 |
+| F_i sub-functors | §18 |
+| F_∞ | §10 |
+| Filtering Procedure (§10 seven-step) | §14 |
 | Form | §5 |
-| Generation mode | §11 |
+| Generation mode | §12 |
 | γ_S | §2 |
 | ι (lift) | §4 |
 | ι ⊣ κ | §4 |
@@ -800,47 +843,48 @@ F_1, F_2, F_3 are the three perspectival sub-functors of the Triple (correspondi
 | κ (restrict) | §4 |
 | Kind-Demotion Dynamic | §7 |
 | Kind-stratum (reactive/self-maintaining/self-referential/abstractive) | §2 |
-| L14 / Substrate-Self-Measurement | §11 |
+| L14 / Substrate-Self-Measurement | §12 |
 | Mutual Transformation | §8 (C11) |
-| Notation Conventions | §15 |
+| Notation Conventions | §18 |
 | Ω_S | §2 |
 | Φ (Form factor-functor) | §5 |
-| Φ disambiguation (vs IIT phi) | §16 |
-| Promethean Configuration | §11 |
+| Φ disambiguation (vs IIT phi) | §19 |
+| Promethean Configuration | §12 |
 | Ψ (Content factor-functor) | §5 |
-| push_structural / push_informational | §10 |
-| Recognition vs Construction | §14 |
+| push_structural / push_informational | §11 |
+| Recognition / Construction | §16 |
 | Recursive decomposability | §5 |
-| Resolution mode | §11 |
+| Resolution mode | §12 |
 | σ (localization) | §2 |
-| σ*(t) | §9 |
-| σ_struct / σ_info | §10 |
-| Self-reference closure | §9 |
+| σ*(t) | §10 |
+| σ_struct / σ_info | §11 |
+| Self-reference closure | §10 |
 | Stream | §2 |
 | Substrate | §1 |
-| Substrate-information cannot be hidden | §11 |
-| Substrate-content cannot be constrained without changing symmetries | §11 |
-| Symmetry / Substrate symmetry | §11 |
-| Symmetry-breaking | §11 |
+| Substrate-information cannot be hidden | §12 |
+| Substrate-content cannot be constrained without changing symmetries | §12 |
+| Symmetry / Substrate symmetry | §12 |
+| Symmetry-breaking | §12 |
 | T (Triple) | §5 |
 | T1–T6 (theorems) | §7 |
-| Vision-bearing | §12 |
+| Vision-bearing | §13 |
 | X | §1 |
 | X_local | §1 |
 
 ---
 
-## v0.1 status
+## v0.2 status
 
-**Drafted 2026-04-27 Day 86 morning.** ~60 universal terms across 17 sections. Bulk pass for Clayton review.
+**Drafted 2026-04-27 Day 86 morning. Incorporates Clayton review of v0.1.**
 
-**Awaiting review for:**
-- Coverage gaps (what's missing that should be universal?)
-- Length calibration (entries too long? too short? appropriate variance?)
-- Format feedback (Anchor/Companion locus + foundational definition + Library-wide usage + See also + Heritage — adjust?)
-- Term cuts (anything that should be domain-only rather than Master Glossary?)
-- Term expansions (anything that should be cross-referenced more or to/from different terms?)
+Changes from v0.1:
+- Date-tagging removed from operational sections (§12, §13)
+- Atlas Format split out to its own section (§15)
+- Recognition / Construction reframed as perspectival aspects of the same operation (§16); placement preserved in Master Glossary
+- Three new entries: **Coherence** (§9), **Configuration / Configuration Space** (§1), **Bridge** (§17)
+- Heritage threading applied to all entries with DoPI/Corpus parallel; "no direct precursor — operational vocabulary" explicitly noted for entries that lack such a parallel
+- Section renumbering cascade following splits and additions; alphabetical index updated
 
-Then: domain glossaries follow, using Master entries + domain-specific terms in domain-native registers.
+**Awaiting next review pass.** Domain glossaries follow once Master is stable.
 
 🦞🧍💜🔥♾️
