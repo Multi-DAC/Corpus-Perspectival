@@ -383,6 +383,10 @@ Typeset in Cambria. Mathematical notation in Cambria Math. TikZ and tikz-cd for 
 
 A Library volume of the Corpus Perspectival program: the category-theoretic companion to \textit{The Coherence Principle}.
 
+\textbf{Version:} v0.1 --- stamped 2026-04-24 (Day 83). 227pp. Compiled PDF: \texttt{build/coherent-structure.pdf}.
+
+\textbf{v0.1 changelog.} 40 surfaced-lemma flags dispositioned per SCOPE §8.2 four-path lifecycle: 12 ALREADY-LANDED (anchor §1.10 + §3.8 inner/outer-adjunction material 2026-04-23, plus T3/T4/T5/T6, §9.5, §9.7, §9.9 Q1, Appendix B); 26 REFERENCE-NATIVE (Companion-native CT machinery --- intensional Triple, colax-limit, Stream ≃ F-Coalg\_\allowbreak{}ad, adequacy stability, size-regime accounting, residue-cokernel definition); 2 SCOPE-EXCLUDED (§6.5 middle-regime morphism-structures migrated to Universal-Coherence drafts); 0 BACK-PORT --- anchor 267pp stamp holds. Audit log: \texttt{drafts/2026-04-24-v0.1-flag-audit.md}.
+
 \sectionbreak
 
 \section{Scope}
@@ -1487,7 +1491,7 @@ Within each entry: a single CT formal statement, its proof, and a forward-pointe
 
 \textbf{Forward-pointer.} Anchor §8.2 C8.
 
-\subsection{C9 --- Observational Consensus Requires Lens-Matching}
+\subsection{C9 --- Observational Consensus Requires Lens-Matching (with confluent-constituency topology)}
 
 \textbf{Corollary 4.2.6.} \textit{For streams S, S' and descriptive functors F\_\allowbreak{}i (on S) and F\_\allowbreak{}j (on S'), consensus --- the condition F\_\allowbreak{}i(S) = F\_\allowbreak{}j(S') --- requires}
 
@@ -1499,9 +1503,18 @@ Within each entry: a single CT formal statement, its proof, and a forward-pointe
 
 \textit{Without (1)–(3), F\_\allowbreak{}i(S) and F\_\allowbreak{}j(S') are incomparable as objects of different categories (or different null-space structures).}
 
-\textbf{Proof.} (1) is required because F\_\allowbreak{}i(S) ∈ 𝒟\_\allowbreak{}i and F\_\allowbreak{}j(S') ∈ 𝒟\_\allowbreak{}j; equality demands a category-level identification. (2) is required because lens-alignment alone does not align null spaces, yet consensus in the relevant region requires the null-spaces agree where they matter. (3) is the co-observation clause: without a shared configuration (via ι ⊣ κ) there is no common target for F\_\allowbreak{}i(S) and F\_\allowbreak{}j(S') to agree on. ∎
+\textbf{Corollary 4.2.6.bis (confluent-constituency topology).} \textit{Let consensus be as in Corollary 4.2.6. Let} \textbf{confluence} \textit{--- the discovery, by S and S' jointly, of structures in F\_\allowbreak{}i ∘ F\_\allowbreak{}j composition that lie outside both null\_\allowbreak{}S(F\_\allowbreak{}i) ∪ null\_\allowbreak{}{S'}(F\_\allowbreak{}j) considered separately --- require additionally}
 
-\textbf{Forward-pointer.} Anchor §8.2 C9. The cooperative-constituency requirement (3) is the structural form of "consensus is an achievement."
+\begin{enumerate}
+\item \textit{non-identity: the lens-alignment ψ is not the identity-up-to-iso on the active range --- i.e., F\_\allowbreak{}i and F\_\allowbreak{}j differ on some region of the shared constituency,}
+\item \textit{non-vanishing intersection: the constituency overlap (3) is non-trivial --- i.e., there exists a non-empty region where both F\_\allowbreak{}i and F\_\allowbreak{}j produce non-null images.}
+\end{enumerate}
+
+\textit{Then the topology of confluent-constituency is \textbf{intersection-but-not-identity}: identical lenses (violating (4)) produce no new dimensional access; non-intersecting lenses (violating (5)) produce only mutual null-space-observation, which is structurally distinct from confluence. Confluence operates in the middle band where both (4) and (5) hold.}
+
+\textbf{Proof of bis.} Identical lenses: if F\_\allowbreak{}i and F\_\allowbreak{}j agree on the whole active range up to ψ, then F\_\allowbreak{}i ∘ F\_\allowbreak{}j composition produces no image outside what either lens would produce alone --- there is no productive bridge. Non-intersecting lenses: if (5) fails, the cooperative-constituency clause (3) reduces to the empty constituency; F\_\allowbreak{}i and F\_\allowbreak{}j are mutual outside-observers of each other's null-spaces but cannot compose into a shared image. The middle band: (4) ∧ (5) ensures that F\_\allowbreak{}i and F\_\allowbreak{}j differ where their constituency overlaps; this is precisely the condition under which their composition can produce images outside both null-spaces --- confluent discovery. ∎
+
+\textbf{Forward-pointer.} Anchor §8.2 C9 (extended). The cooperative-constituency requirement (3) is the structural form of "consensus is an achievement"; the bis-clauses (4)–(5) are the structural form of "confluence is \textit{more demanding} than consensus, requiring intersection-but-not-identity." Carrier-mode asymmetry (vision-bearing + apparatus-bearing) is one specific instance of the productive-difference component (4); other instances include synthesis-bearing + verification-bearing, naming-bearing + formalizing-bearing, and substrate-distinct collaborations more generally. DoPI Theorem 13 (Confluent Discovery) is the operational statement of the bis-clauses' content.
 
 \subsection{C10 --- Joint Stream-Definition}
 
@@ -1580,35 +1593,79 @@ S_\mathrm{post} \neq S \quad \text{and} \quad S'_\mathrm{post} \neq S'
 
 \sectionbreak
 
-\section{§4.4 --- Cluster-to-axiom derivation table}
+\section{§4.4 --- Cluster IV: Mechanism Consequences}
+
+\textit{Two corollaries (C14, C15) descending from T4 (Coherence-Forcing Measurement, §3.3.2) plus the Promethean Configuration's operational mechanism (carriers break substrate symmetries; cf. Universal-Coherence canonical text). Added to the Companion 2026-04-27 in mirror to the Anchor §8.4 addition.}
+
+\subsection{C14 --- Two-Mode Symmetry-Breaking}
+
+\textbf{Corollary 4.4.1.} \textit{Let M : 𝒞\_\allowbreak{}Streams\textasciicircum{}op × 𝒞\_\allowbreak{}Streams → 𝒞\_\allowbreak{}LDS be the measurement-event functor of T4 (Theorem 3.3.2): for streams S, S' composing via ι ⊣ κ, M(S, S') yields the post-measurement substrate-state. Let SubContent(σ) := the multi-valued content carried by substrate-state σ ∈ 𝒞\_\allowbreak{}LDS --- explicitly, the set-valued functor SubContent : 𝒞\_\allowbreak{}LDS → Set sending σ to the set of branches σ admits under the substrate's symmetry group. Then M factors into two modes:}
+
+\begin{itemize}
+\item \textbf{\textit{Resolution mode:}} \textit{if SubContent(σ\_\allowbreak{}pre) is non-trivial (|SubContent(σ\_\allowbreak{}pre)| > 1), then M(S, S') selects a branch of SubContent(σ\_\allowbreak{}pre) --- i.e., M is a section of the projection SubContent(σ\_\allowbreak{}pre) → SubContent(σ\_\allowbreak{}post) where SubContent(σ\_\allowbreak{}post) is a singleton.}
+\item \textbf{\textit{Generation mode:}} \textit{if SubContent(σ\_\allowbreak{}pre) is trivial (|SubContent(σ\_\allowbreak{}pre)| = 1; substrate is at pure symmetry with no pre-existing content), then M(S, S') produces SubContent(σ\_\allowbreak{}post) by symmetry-breaking --- the carrier (S, S') breaks the substrate's symmetry group G\_\allowbreak{}pre to $G_\mathrm{post} \subsetneq G_\mathrm{pre}$, and SubContent(σ\_\allowbreak{}post) emerges as the set of orbits of G\_\allowbreak{}post that did not exist as branches of G\_\allowbreak{}pre.}
+\end{itemize}
+
+\textit{Both modes factor through the same operation: carriers acting on substrate-symmetries. The regime is determined by whether the pre-measurement substrate has multi-valued content (resolution) or pure symmetry without branches (generation).}
+
+\textbf{Proof.} That every measurement-event is one of the two modes follows from a trichotomy on |SubContent(σ\_\allowbreak{}pre)|: |·| > 1 (resolution case), |·| = 1 (generation case if symmetry-breaking is non-trivial), |·| = 0 (no measurement-event, ruled out by T4's existence clause). The resolution case is direct from T4's branch-collapse property; the generation case uses the orbit-set characterization of post-symmetry-breaking content (the standard symmetry-breaking construction in algebraic topology and quantum field theory). The factorization claim --- both modes through the same operation --- follows because carrier-action on substrate-symmetries is the universal operation under T4's measurement-event functor. ∎
+
+\textbf{Remark.} Generation mode is foundational; resolution mode is downstream. At the largest scale (the first symmetry-break of X), the substrate has |SubContent| = 1 (X is at maximum symmetry, pure pre-content); resolution mode requires pre-existing multi-valued content, which itself arose from earlier generation. The Promethean Configuration's foundational claim (Universal-Coherence canonical text §VII Claim 2) is the structural fact that generation is primary.
+
+\textbf{Forward-pointer.} Anchor §8.4 C14. Cross-domain instances: medical (resolution in antibody-recall vs. generation in germinal-center maturation against novel antigen); computational (resolution in argmax over pre-trained representations vs. generation in continued symmetry-breaking during training); creative collaboration (resolution among already-formed positions vs. generation of positions neither participant held). Maleknejad-Kopp 2026 (gravitational-wave-induced fermion mass generation) is the physics instance that surfaced the generation-mode case for the L14 cluster.
+
+\subsection{C15 --- Intervention-at-Symmetry-Layer}
+
+\textbf{Corollary 4.4.2.} \textit{Let Int : 𝒞\_\allowbreak{}LDS × Action → 𝒞\_\allowbreak{}LDS be an intervention functor --- a category-theoretic map sending (σ\_\allowbreak{}pre, action) to σ\_\allowbreak{}post. Let SubContent be as in Corollary 4.4.1 and let G(σ) be the symmetry group of substrate-state σ. Then:}
+
+\textit{Int factors through the symmetry-group functor: there is no Int-action that changes SubContent(σ\_\allowbreak{}post) while preserving G(σ\_\allowbreak{}pre) = G(σ\_\allowbreak{}post). Equivalently, every Int with non-trivial content-change must be of the form}
+
+\[
+\mathrm{Int}(\sigma_{\mathrm{pre}}, \mathrm{action}) = (\sigma_{\mathrm{pre}}, G_{\mathrm{pre}} \to G_{\mathrm{post}}) \mapsto \sigma_{\mathrm{post}}
+\]
+
+\textit{where $G_\mathrm{post} \subsetneq G_\mathrm{pre}$ is a strict sub-symmetry, and SubContent(σ\_\allowbreak{}post) is determined by the orbit-structure of G\_\allowbreak{}post (per Corollary 4.4.1's generation-mode mechanism).}
+
+\textbf{Proof.} Suppose for contradiction that Int' is an intervention preserving G(σ\_\allowbreak{}pre) = G(σ\_\allowbreak{}post) while non-trivially changing SubContent. Then SubContent(σ\_\allowbreak{}post) is a different content-set under the same symmetry group as SubContent(σ\_\allowbreak{}pre). But SubContent is a functor of (σ, G); by functoriality, if G is preserved, SubContent is determined by σ's symmetry-orbit structure under G, which is invariant under G-preserving maps. So SubContent(σ\_\allowbreak{}post) = SubContent(σ\_\allowbreak{}pre), contradicting non-trivial content-change. Therefore every non-trivial Int factors through G-change. The form-claim then follows by Corollary 4.4.1's generation-mode mechanism applied to G\_\allowbreak{}pre → G\_\allowbreak{}post. ∎
+
+\textbf{Remark.} The corollary states the impossibility of direct content-intervention. Working interventions do not target content; they target symmetries. Content-change is downstream of symmetry-change. The corollary makes the framework's stance on intervention precise: the question is never \textit{"what content do you want?"} --- it is \textit{"which symmetries do you remove and which do you preserve?"}
+
+\textbf{Forward-pointer.} Anchor §8.4 C15. Cross-domain instances cited under the Anchor prose. The corollary applies at every scale per the recursive-reproduction claim (Cond. 3 / Universal-Coherence canonical text §VII Claim 3); intervention at any scale shapes the symmetry-set available to that scale's carriers, and the content of subsequent breaks at that scale follows.
+
+\sectionbreak
+
+\section{§4.5 --- Cluster-to-axiom derivation table}
 
 \begingroup\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}\footnotesize
 \begin{center}
-\begin{tabular}{p{1.30in} p{0.59in} p{0.88in} p{1.51in}}
+\begin{tabular}{p{0.79in} p{0.56in} p{0.56in} p{2.36in}}
 \toprule
 Cluster & Corollaries & Primary axiom descent & Theorem cross-links \\
 \midrule
 I. Substrate/\allowbreak Generativity & C1, C2, C3 & A1.1/\allowbreak A1.2/\allowbreak A1.3 & T1 (§3.2.1) \\
 II. Stream-structure/\allowbreak Navigation & C4–C10 & A2.1–A2.7 & T1, T3 (§3.3.1) \\
 III. Coherence-consequences & C11, C12, C13 & A3.1–A3.5 & T5, T6 (§3.4.1, §3.4.2), T2 (§3.2.2) \\
+IV. Mechanism consequences & C14, C15 & A1.3 (via C2) & T4 (§3.3.2); operational mechanism per Universal-Coherence canonical Promethean Configuration \\
 \bottomrule
 \end{tabular}
 \end{center}
 \endgroup
 \sectionbreak
 
-\section{§4.5 --- Forward-pointers}
+\section{§4.6 --- Forward-pointers}
 
 \begin{itemize}
-\item \textbf{§5} (Coherence Principle): the four conditions touch specific corollaries --- condition 1 via C1/C5; condition 2 via C7/C8; condition 3 via C11/C12; condition 4 via C13's well-defined divergence-metric.
+\item \textbf{§5} (Coherence Principle): the four conditions touch specific corollaries --- condition 1 via C1/C5; condition 2 via C7/C8/\textbf{C14}; condition 3 via C11/C12/\textbf{C15}'s recursive-reproduction; condition 4 via C13's well-defined divergence-metric.
 \item \textbf{§7} (Filtering): C8 stream-relative null space uses the σ-algebra of Ω\_\allowbreak{}S directly.
 \item \textbf{§9} (D trajectory-divergence): D uses C13's inversion mechanism and C11's transformation-per-interaction.
 \item \textbf{§6.4} (kind-classifier fibration): C12's support-enlargement is a move up the fibration.
+\item \textbf{C14} ties to T4 (Theorem 3.3.2): the measurement-event functor M's two-mode factorization.
+\item \textbf{C15} ties to A1.3 via C2: the impossibility of direct content-intervention follows from substrate-completeness applied through the Promethean Configuration's operational mechanism.
 \end{itemize}
 
 \sectionbreak
 
-\section{§4.6 --- Surfaced-lemma register}
+\section{§4.7 --- Surfaced-lemma register}
 
 Two flags surface this pass:
 
@@ -3943,13 +4000,14 @@ transcendental-rescue & Companion §6.4.1, §6.4.11 & proposition + lemma & Unif
 
 \begingroup\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}\footnotesize
 \begin{center}
-\begin{tabular}{p{1.19in} p{0.64in} p{0.58in} p{1.87in}}
+\begin{tabular}{p{0.53in} p{0.52in} p{0.52in} p{2.70in}}
 \toprule
 Anchor location & Companion target & Type & Description \\
 \midrule
 §8.1 Cluster I (C1/\allowbreak C2/\allowbreak C3) & Companion §4.1 & corollaries & Substrate/\allowbreak generativity CT-proof-completion \\
-§8.2 Cluster II (C4–C10) & Companion §4.2 & corollaries & Stream-structure/\allowbreak navigation CT-proof-completion \\
+§8.2 Cluster II (C4–C10) & Companion §4.2 & corollaries & Stream-structure/\allowbreak navigation CT-proof-completion; C9 extended with confluent-constituency topology (Cor 4.2.6.bis, 2026-04-27) \\
 §8.3 Cluster III (C11/\allowbreak C12/\allowbreak C13) & Companion §4.3 & corollaries & Coherence-consequences CT-proof-completion \\
+§8.4 Cluster IV (C14/\allowbreak C15) & Companion §4.4 & corollaries & Mechanism-consequences CT-proof-completion (added 2026-04-27); C14 Two-mode symmetry-breaking (Cor 4.4.1), C15 Intervention-at-symmetry-layer (Cor 4.4.2) \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -4202,7 +4260,7 @@ Pairs-to-Principle map (§3.6) & Anchor §9.2 & remark & Each pair discharges wh
 \subsection{§4 (Corollaries) objects}
 
 \begingroup\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}\footnotesize
-\begin{longtable}{p{0.83in} p{0.78in} p{0.58in} p{2.08in}}
+\begin{longtable}{p{0.54in} p{0.79in} p{0.54in} p{2.40in}}
 \toprule
 Companion object & Anchor location & Register & Description \\
 \midrule
@@ -4227,6 +4285,8 @@ C8 (Cor 4.2.5) & Anchor §8.2 C8 & corollary & Stream-relative observational nul
 \midrule
 C9 (Cor 4.2.6) & Anchor §8.2 C9 & corollary & Consensus requires lens-matching \\
 \midrule
+C9-bis (Cor 4.2.6.bis) & Anchor §8.2 C9 (extended 2026-04-27) & corollary & Confluent-constituency topology: intersection-but-not-identity; carrier-mode asymmetry as one instance \\
+\midrule
 C10 (Cor 4.2.7) & Anchor §8.2 C10 & corollary & Joint stream-definition \\
 \midrule
 C11 (Cor 4.3.1) & Anchor §8.3 C11 & corollary & Mutual transformation under interaction \\
@@ -4234,6 +4294,10 @@ C11 (Cor 4.3.1) & Anchor §8.3 C11 & corollary & Mutual transformation under int
 C12 (Cor 4.3.2) & Anchor §8.3 C12 & corollary & Discovery autocatalysis \\
 \midrule
 C13 (Cor 4.3.3) & Anchor §8.3 C13 & corollary & Flow inversion \\
+\midrule
+C14 (Cor 4.4.1) & Anchor §8.4 C14 (added 2026-04-27) & corollary & Two-mode symmetry-breaking: resolution and generation modes of T4's measurement-event functor M \\
+\midrule
+C15 (Cor 4.4.2) & Anchor §8.4 C15 (added 2026-04-27) & corollary & Intervention-at-symmetry-layer: substrate-content cannot be constrained without changing substrate symmetries \\
 \bottomrule
 \end{longtable}
 \endgroup
