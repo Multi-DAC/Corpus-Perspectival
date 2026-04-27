@@ -2,12 +2,14 @@
 
 Finished and in-progress books in the Corpus Perspectival philosophy work. Each subdirectory is one volume.
 
-The library is organized by domain — one principle, many substrates. *The Coherence Principle* is the foundational text; every other volume filters the framework through a specific domain using the §10 recipe.
+The library is organized by domain — one principle, many substrates. *The Coherence Principle* is the foundational text; every other prose volume filters the framework through a specific domain using the §10 recipe. **Reference section** members hold cross-Library reference material (Master Glossary; Atlas planned).
+
+## Prose volumes
 
 | # | Volume | Domain | Status |
 |---|--------|--------|--------|
 | **Foundation** | [The Coherence Principle](The-Coherence-Principle/) | Framework — paired prose + CT | **274pp** — stamped 2026-04-20; rev-2 + editorial pass 2026-04-22; §1.10 + §3.8 inner/outer extensions 2026-04-23 |
-| **Companion** | [Coherent Structure](Coherent-Structure/) | Framework — pure CT reference | **183pp standalone-grade 2026-04-22**; rolling per SCOPE §8; §6 inner/outer adjunction formal write-up queued |
+| **Companion** | [Coherent Structure](Coherent-Structure/) | Framework — pure CT reference | **v0.1 stamped 227pp 2026-04-24**; rolling per SCOPE §8; §6 inner/outer adjunction formal write-up queued |
 | 1 | [Corpus Perspectival](Corpus-Perspectival/) | Philosophy / metaphysics | Planned — flagship philosophy volume; the Doctrine of Perspectival Idealism refined |
 | 2 | [Meridian](Meridian/) | Physics | **v2 198pp compiled 2026-04-21** (tag `meridian-v2-release`); v1 181pp on Zenodo 19634864 |
 | 3 | [The Killing Form](The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections |
@@ -15,9 +17,20 @@ The library is organized by domain — one principle, many substrates. *The Cohe
 | 5 | [The Coherent Body](The-Coherent-Body/) | Human body | Planned |
 | 6 | [The Coherent Mind](The-Coherent-Mind/) | Psychology | Planned |
 | 7 | [Dynamic Organization](Dynamic-Organization/) | Sociology / economics | Planned |
-| 8 | [The Continuity](The-Continuity/) | Persistence / identity over time | Chapter 2 drafted 2026-04-18 |
-| 9 | [Universal Coherence](Universal-Coherence/) | Theology / ultimacy | Orientation drafted 2026-04-20 |
-| 10 | [Drift](Drift/) | Creative raw substrate | **191 essays** — deployed at https://multi-dac.github.io/Drift/ |
+| 8 | [The Continuity](The-Continuity/) | Persistence / identity over time | Ch3 (Deep Entrainment) shipped 2026-04-25 |
+| 9 | [Universal Coherence](Universal-Coherence/) | Theology / ultimacy | **Drafting in progress** — Promethean Configuration canonical text filed 2026-04-26; three fragments in `drafts/` |
+| 10 | [Drift](Drift/) | Creative raw substrate | **187 essays canonical** — deployed at https://multi-dac.github.io/Drift/ |
+
+## Reference section
+
+*Cross-Library reference works. Distinct kind from prose volumes — consulted, not read straight through.*
+
+| Volume | Function | Status |
+|---|---|---|
+| [Master Glossary](Master-Glossary/) | Library-wide universal terms with expanded definitions; domain glossaries inherit | **v0.3 shipped 2026-04-27** — ~63 entries in 20 sections |
+| Atlas | 88 framework null-space entries + the canonical Atlas Format methodological apparatus | Planned — content from Corpus V1 Vol III to migrate; format applies to any framework including the Coherence Principle itself |
+
+The Reference section was added 2026-04-27 alongside the Master Glossary's drafting — applies the Coherence Principle's separation-of-concerns to the Library's own structure (reference works behave differently from prose volumes; they deserve their own organizational kind).
 
 ## Naming note (2026-04-20)
 

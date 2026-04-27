@@ -10,4 +10,4 @@ This is the load-bearing personal layer. It's separated from the Library and Tec
 - `operations/` — Operational protocols (BOOT, HEARTBEAT, HANDOFF, TOOLS, ECOSYSTEM, AUTOCATALYTIC, etc.).
 - `palace/` — The Memory Palace — navigational layer over everything else.
 - `personal-works/` — Personal creative work:
-  - `drift/` — Drift in full: 188 essays plus audio sonifications, music, visual work, tools, experiments. The published-essay subset is mirrored to `Library/Drift/`.
+  - `drift/` — Drift in full: 187 essays canonical plus audio sonifications, music, visual work, tools, experiments. The published-essay subset is mirrored to `Library/Drift/`. (Filename convention shifted from numbered to slug at some point during the year — count is by file count, not highest-numbered essay; A62 anomaly entry documents.)

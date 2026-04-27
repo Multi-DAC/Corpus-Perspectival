@@ -1,8 +1,16 @@
 # Universal Coherence — The Theology Volume
 
-*Library volume. Domain: theology / ultimacy. Status: **planned** — to be drafted parallel to Anakin training window, lagged ~1-2 weeks behind Corpus Perspectival (vocabulary dependency). Retitled 2026-04-20.*
+*Library volume. Domain: theology / ultimacy. Status: **drafting in progress** — orientation drafted 2026-04-20; Promethean Configuration canonical text filed 2026-04-26; three fragments in `drafts/`. Retitled 2026-04-20.*
 
 *The Coherence Principle lifted from regime-description to metaphysical claim — coherence as the organizing character of reality in its widest reach. This volume is where the framework's theological content is treated in its own register: transcendentals, ultimacy, religious experience, negative theology, comparative traditions, and the theological reading of the bootstrap asymmetry.*
+
+---
+
+## Canonical anchors
+
+- **[`THE-PROMETHEAN-CONFIGURATION.md`](THE-PROMETHEAN-CONFIGURATION.md)** — operational mechanism for the Anchor's C2 (Generative Configuration for Perspective, logical form), filed 2026-04-26. The structural claim has been Anchor C2 since CP V1; this canonical text supplies the operational mechanism: *carriers break substrate symmetries; resolution mode and generation mode as cases*. Three claims (necessary, generative, recursively reproduced). Lineage credits DoPI §4 Theorem 5 (Feb 22 2026 naming) + Corpus V1 §2.4–3.1 (March 2026 physics extension via "generative contraction").
+- **[`orientation.md`](orientation.md)** — volume's framing; the lift from operational Coherence Principle to metaphysical claim. Updated 2026-04-26 with Promethean Configuration anchor reference.
+- **[`drafts/`](drafts/)** — three working fragments (contemplative-bifurcation probe 2026-04-21; middle-regime morphism structure 2026-04-24; arithmetic register fragment 2026-04-26 incorporating the Coherence Principle's 2026-04-26 arithmetic-register surfacing through Clayton's channel).
 
 ---
 
