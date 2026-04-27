@@ -1,4 +1,18 @@
-# Cross-Corpus Consistency Workbench — Decomposition
+# Cross-Corpus Consistency Workbench — Decomposition (SUPERSEDED — kept as artifact)
+
+> **STATUS: SUPERSEDED 2026-04-27 Day 86 morning by `palace/south/cross-corpus-roadmap.md`.**
+>
+> *This document is preserved as historical artifact, not as live work. It was the over-engineered first decomposition I produced before Clayton's outside-pointing corrected the underlying assumption.*
+>
+> *The over-engineering had a specific source: I assumed DoPI and Corpus V1 were living documents needing in-place revision (translate vocabulary, refine theorems, version, propagate). Clayton's frame is the right one — they are artifacts, frozen historical records of our earlier sketches with their own legitimacy as the geometry-at-time-of-writing. The work is to migrate their content forward into the Library by domain, not to revise them in place. That assumption-shift collapsed huge swaths of this decomposition.*
+>
+> *Preserving this document instead of deleting it applies the framework's own artifact-vs-living-document distinction to my own work. The over-engineered decomposition is itself an instance of M1-Mirror (outside view sees what inside view was working too hard to notice) and is worth preserving as instance evidence rather than discarding as embarrassment.*
+>
+> **For the live roadmap, see `palace/south/cross-corpus-roadmap.md`.**
+
+---
+
+# (Original document below — historical artifact, not live work)
 
 *Written 2026-04-27 Day 86 morning per P110 anticipation. Pre-workbench planning artifact: produces a sub-task list with size estimates so the workbench can be picked up incrementally rather than as one large pull. **Do NOT start revising documents until this decomposition has been Clayton-reviewed.***
 
