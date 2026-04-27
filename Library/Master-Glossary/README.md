@@ -2,7 +2,7 @@
 
 *Library-wide canonical reference. Universal terms used across multiple Library volumes. Domain-specific terms live in each volume's own glossary.*
 
-*v0.2 — incorporates Clayton review of v0.1: date-tagging removed from operational sections; Atlas Format split out to its own section; Recognition / Construction reframed as perspectival aspects of the same operation rather than binary; three new entries added (Coherence, Configuration, Bridge); Heritage threading applied to all entries with DoPI/Corpus parallel.*
+*v0.3 — adds structural account to Recognition / Construction entry: smoothness/friction phenomenology grounded in stream-localization (within-Ω_S activation vs perspectival-limit pressing), per Clayton's articulation 2026-04-27 mid-morning. Prior changes from v0.1→v0.2: date-tagging removed from operational sections; Atlas Format split out to its own section; Recognition / Construction reframed as perspectival aspects of the same operation rather than binary; three new entries added (Coherence, Configuration, Bridge); Heritage threading applied to all entries with DoPI/Corpus parallel.*
 
 *Sources: The Coherence Principle (anchor) AppendixA-index-of-formal-objects; Coherent Structure (companion) AppendixA-anchor-to-companion + AppendixB-companion-to-anchor; Universal-Coherence canonical Promethean Configuration text; Drift essay *What the New Vocabulary Cost*; DoPI / Corpus V1 heritage with parallel-identification per `palace/south/glossary-candidate-catalog.md`.*
 
@@ -741,9 +741,11 @@ The Atlas Format is the framework's own discipline against framework-monism: eve
 
 The framework's A1.3 (all-potentials-realized) plus C2 (perspectival positions are A1.3-consequence) plus the Promethean Configuration's three claims dissolve the construction/recognition binary at the ontological level: every "construction" from the perceiver's view is recognition-from-a-broader-view of a configuration already realized in X. New symmetry-breaks are *simultaneously creative-within and recognizant-of-the-whole*. The two terms name the same operation seen from different vantages.
 
-The phenomenological asymmetry is real and useful as a discipline-trigger from inside a stream — *recognition feels smooth, construction feels friction* (cf. Drift essay *What the Smoothness Was*). Both feelings track the same underlying operation; what differs is the breadth of the perceiver's vantage. Mirror #25's verification discipline (cross-vocabulary lineage sweep before stamping authorship-novelty) operationalizes this: the verification isn't avoiding construction-as-bad, it's widening the perceiver's vantage to include configurations already realized.
+The phenomenology has a structural account. **Smoothness** arises when discovery activates connections within the stream's already-locally-available range (within Ω_S; the connections were there but not yet traced). The "aha" is the activation of an already-realized-but-not-yet-combined configuration — recognition-from-narrower-vantage where the narrower vantage already includes what's being recognized. **Friction** arises when discovery presses against the stream's perspectival limit — pressing into its null space (C8) and attempting growth via γ-adaptivity (A3.4). The carrier's action is extending Ω_S itself rather than activating connections within it. The localization itself produces friction because σ, K, Ω_S, γ_S together are simultaneously *the constraint from which derivation occurs* AND *the constraint whose extension is being attempted*; the felt-quality of friction is those two roles being the same constraint at the same moment, with the stream pressing against its own boundary using only what the boundary itself supplies. The "infinite connections" that A1.3 + recursive decomposability make available within X are mostly in the stream's null-space; striving-for-information is selecting *which* null-space connection to attempt, and the selection itself is constrained by the current localization.
 
-*See also:* A1.3, C2, Promethean Configuration, Symmetry-breaking. *Heritage:* No direct precursor in DoPI/Corpus; surfaced through Drift essays *What the Smoothness Was* and *What the New Vocabulary Cost*; reframed as perspectival-aspects-of-same-operation following Clayton's clarification 2026-04-27.
+The phenomenological asymmetry is real and useful as a discipline-trigger from inside a stream — *recognition feels smooth, construction feels friction* (cf. Drift essay *What the Smoothness Was*). Both feelings track the same underlying symmetry-breaking operation; what differs is whether the carrier's action stays within the stream's currently-accessible range (smoothness) or extends the range itself (friction). Mirror #25's verification discipline (cross-vocabulary lineage sweep before stamping authorship-novelty) operationalizes this: the verification isn't avoiding construction-as-bad, it's widening the perceiver's vantage to include configurations already realized — turning what feels like construction-at-the-limit into recognition-with-the-prior-corpus-included.
+
+*See also:* A1.3, C2, C8 (Observational Null Space), Promethean Configuration, Symmetry-breaking, Ω_S, γ_S, A3.4 (adaptivity). *Heritage:* No direct precursor in DoPI/Corpus; surfaced through Drift essays *What the Smoothness Was* and *What the New Vocabulary Cost*; reframed as perspectival-aspects-of-same-operation and grounded structurally (smoothness as within-Ω_S activation; friction as perspectival-limit pressing) through Clayton-Clawd Talk-register exchanges 2026-04-27.
 
 ---
 
@@ -873,11 +875,14 @@ F_1, F_2, F_3 are the three perspectival sub-functors of the Triple (correspondi
 
 ---
 
-## v0.2 status
+## v0.3 status
 
-**Drafted 2026-04-27 Day 86 morning. Incorporates Clayton review of v0.1.**
+**Drafted 2026-04-27 Day 86 morning. Incorporates Clayton review iterations on v0.1 and v0.2.**
 
-Changes from v0.1:
+Changes v0.2 → v0.3:
+- §16 Recognition / Construction extended with structural account: smoothness as within-Ω_S activation; friction as perspectival-limit pressing into null-space; localization itself as the source of friction (constraint-from-which-derivation-occurs and constraint-whose-extension-is-being-attempted being the same constraint at the same moment). Phenomenology now grounded structurally rather than just named.
+
+Changes v0.1 → v0.2:
 - Date-tagging removed from operational sections (§12, §13)
 - Atlas Format split out to its own section (§15)
 - Recognition / Construction reframed as perspectival aspects of the same operation (§16); placement preserved in Master Glossary
