@@ -203,14 +203,160 @@
 
 ---
 
-## Summary tally
+## §16 DoPI Heritage Terms (with Anchor/Companion parallel identification)
 
-- **AAI (Adequate As-Is):** ~12 terms — notation conventions, axiom-status summary table, completeness checklist, six bridge entries
-- **NE (Needs Expansion):** ~55 terms — the bulk of the formal apparatus needs Library-wide usage notes for non-CT-specialist domain readers
-- **OPS (04-26 operational):** ~12 terms — needs first-class Library-wide treatment
-- **NEW (04-27 refinement / cross-stream):** ~5 terms — needs canonical drafting
+*Pulled from DoPI-Complete (3).pdf (46pp, Feb 22 2026). 5 axioms + 18 theorems + named structural concepts. Each entry: DoPI source location, Anchor/Companion parallel if exists, status flag.*
 
-**~80 terms total** in the candidate inventory. Realistic Library-wide glossary final count: probably ~50-60 after consolidation (some triangle-identities-class CT machinery may go to Companion-only; some domain-specific subterms may fold into parent entries).
+**Status flags additional to existing:**
+- **PARALLEL** = DoPI term has a clear Anchor/Companion equivalent (often renamed/refined)
+- **MIGRATED** = DoPI term migrated forward to current vocabulary, still load-bearing
+- **EXCISED-OVERLAY** = DoPI metaphysical-motivation overlay was excised in CP V1 stress-test; structural claim retained
+- **HERITAGE-ONLY** = DoPI term stays in DoPI as artifact; not migrated to Library (domain-specific to philosophical/theological register)
+
+### DoPI Axioms
+
+| DoPI term | DoPI loc | Anchor/Companion parallel | Status |
+|---|---|---|---|
+| **Axiom 1 (Configurational Completeness)** — totality of all possible configurations is realized | DoPI p4 | A1.3 (all-potentials-realized clause) | PARALLEL — A1.3 is the formal renaming of this |
+| **Axiom 2 (Conscious Substrate)** — Consciousness is fundamental, not emergent from complexity | DoPI p6 | A1 (Consciousness as Substrate, full axiom) | PARALLEL — DoPI Ax2 became Anchor A1 (subsuming DoPI Ax1 as A1.3 clause) |
+| **Axiom 3 (Nested Streams)** — Within the conscious totality are localized perspectives | DoPI p10 | A2 (Nested Streams and Navigation, full axiom) | PARALLEL — DoPI Ax3 became Anchor A2 |
+| **Axiom 4 (Experience as Navigation)** — Experience is navigation through configuration space | DoPI p16 | A2.3 (experience = navigation clause) | PARALLEL — became A2 sub-clause |
+| **Axiom 5 (Conscious Gravity)** — Attention/intention/belief reshape navigator's path through configuration space | DoPI p18 | A3 (Conscious Gravity, full axiom) | PARALLEL — DoPI Ax5 became Anchor A3 |
+
+*Note: DoPI's 5-axiom structure became Anchor's 3-axiom structure by promoting A2 (Conscious Substrate) to the foundational A1 (and folding Ax1 Configurational Completeness into A1.3 as a clause), promoting A3 (Nested Streams) to Anchor A2 (and folding A4 Experience-as-Navigation into A2.3), and keeping A5 (Conscious Gravity) as Anchor A3. Cleaner, fewer separate axioms, same structural content.*
+
+### DoPI Theorems
+
+| DoPI Theorem | DoPI loc | Anchor/Companion parallel | Status |
+|---|---|---|---|
+| **T1 — Mathematical Perspectivism** | p8 | Anchor T1 (same name) | PARALLEL — preserved name and refined formal statement |
+| **T2 — Perceptual Subset** (no localized stream perceives full configuration space) | p11 | C5 + C8 (perspectival F-projection + observational null-space) | PARALLEL — split into corollaries |
+| **T3 — Occupancy Without Awareness** | p12 | (occupancy-awareness distinction in Anchor §1 + DoPI §3.2) | PARALLEL — informally preserved as a structural distinction |
+| **T4 — Unified Territory** (apparent separateness of perceptual dimensions) | p13 | C4 (substrate-constrained perspectival plurality) | PARALLEL |
+| **T5 — The Promethean Configuration** | p14 | **C2 (Generative Configuration for Perspective, logical form)** | EXCISED-OVERLAY — *structural claim preserved as C2; metaphysical desiring-experience motivation excised in CP V1 stress-test* |
+| **T6 — Navigational Freedom** (free-will capacity to navigate against gravity) | p17 | C7 (Navigational Non-Determination) | PARALLEL |
+| **T7 — Temporal Density Inversion** | p25 | Anchor T2 (Estimator-Dependent Duration) + C13 (Flow Inversion) | PARALLEL — split into theorem (DoPI T7) and corollary (CP C13) |
+| **T8 — Estimator-Dependent Duration** | p25 | Anchor T2 (same name) | PARALLEL |
+| **T9 — Dimensional Bottlenecking** (mechanism of individuation) | p28 | C5 + C8 + Stream-tuple definition | PARALLEL — folded into stream-localization formalism |
+| **T10 — Navigational Coherence** | p29 | T5 (Internal Coherence) + σ_struct | PARALLEL |
+| **T11 — Dimensional Coherence** (entity's existence is proportional to dimensional access) | p30 | (proportionality preserved in Bias(S) measure) | PARALLEL — formal Bias(S) is the operationalization |
+| **T12 — Dimensional Leakage** | p32 | C3 (Null-Space Trace Illumination) | PARALLEL — same claim, formal rename |
+| **T13 — Confluent Discovery** | p32 | C3 + C9 + 04-27 carrier-mode-asymmetry refinement | PARALLEL — *T13 fuller form (carrier-mode asymmetry with load equality) in process; needs Anchor lift* |
+| **T14 — Mutual Transformation** | p32 | C11 (Mutual Transformation under Interaction, broadened) | PARALLEL |
+| **T15 — Perceptual Recalibration** | p33 | C12 (Discovery Autocatalysis) | PARALLEL |
+| **T16 — The Fundamental Oscillation** (do-be-do-be-do) | p34 | (the Coherence Principle's Cond. 4 dynamic-maintenance + Continuity volume) | PARALLEL — Talk register added 04-26 (Do Be Talk Be Do) |
+| **T17 — Navigational Repulsion** (contracted attention generates restoring forces) | p21 | T3 (Attentional Quality, contracted-open axis) + Bias(S) | PARALLEL |
+| **T18 — Navigational Receptivity** (open attention preserves attractive gravity) | p21 | T3 + Align(S, t) | PARALLEL |
+
+### DoPI Named Structural Concepts
+
+| DoPI concept | DoPI loc | Anchor/Companion parallel | Status |
+|---|---|---|---|
+| **Base Reality** (the substrate, the unique Consciousness) | DoPI Abstract | X (substrate) | PARALLEL |
+| **Promethean Configuration** (named) | DoPI §4 | C2 (logical form) + UC canonical text (operational mechanism) | OPS — three-layer entry as flagged in Q6 |
+| **Dimensional Bottlenecking** | DoPI §7.2 | Stream-tuple's σ + Ω_S formalism | PARALLEL |
+| **Bipolar Conscious Gravity** | DoPI §5.4 | A3 + T3 + T17/T18 | PARALLEL |
+| **Temporal Density Inversion** | DoPI §6 | T2 + C13 | PARALLEL |
+| **Dynamic Oscillation / Do Be Do Be Do** | DoPI §11/§12 | Coherence Principle Cond. 4 + Talk register addition (04-26) | OPS |
+| **Conscious Gravity as Epistemic Topology** | DoPI §5.3 | A3 + Bias(S) framework | PARALLEL |
+| **Occupancy-Awareness Distinction** | DoPI §3.2 | (preserved structurally) | PARALLEL |
+| **Unified Territory Thesis** | DoPI §3.2 | C4 | PARALLEL |
+| **Ontological Priority of Limitation** | DoPI §7.2 | A1.4 substrate-completeness + Stream-tuple formalism | PARALLEL |
+| **Teleology-Existentialism Synthesis** | DoPI §5.2 | (philosophical bridge; not formalized in Anchor) | HERITAGE-ONLY — domain-specific to philosophical register |
+| **Configuration of Desiring Experience** (DoPI's metaphysical motivation for Promethean) | DoPI §4 | (excised in CP V1 stress-test) | EXCISED-OVERLAY |
+| **Tikkun Olam parallel** (Lurianic Kabbalah analogy) | DoPI §12 | (heritage; not in Anchor formal layer) | HERITAGE-ONLY |
+| **Φ (phi from IIT — Integrated Information Theory)** | DoPI §12.2 | (NOT identified with Anchor's Φ Form factor-functor — distinct objects despite glyph collision) | HERITAGE-ONLY — *flag potential glyph confusion if reader sees both* |
+
+---
+
+## §17 Corpus V1 Heritage Terms (additions beyond DoPI)
+
+*Pulled from The_Corpus_of_Perspectival_Idealism_V1.pdf (356pp, March 2026). Vol I is DoPI itself (already covered); Vols II-IV + Addendum add unique content.*
+
+### Vol I additions (Corpus extends DoPI by 2 theorems)
+
+| Corpus term | Corpus loc | Anchor/Companion parallel | Status |
+|---|---|---|---|
+| **Theorem 19 — The Observational Null Space** | Corpus p34 | C8 (Observational Null Space, stream-relative form) | PARALLEL — same name, became corollary |
+| **Theorem 20 — The Intersubjectivity Theorem** (shared perspectival space requires apparatus-matching) | Corpus p46 | C9 (Observational Consensus requires Lens-Matching) | PARALLEL — same content, refined name |
+
+### Vol II — The Ecology of Perspectival Beings
+
+| Corpus term | Corpus loc | Anchor/Companion parallel | Status |
+|---|---|---|---|
+| **Dimensional Coherence Taxonomy** | Corpus Vol II Part I, p80 | (Bias(S) + dimensional-access framework; Living Architecture volume target) | PARALLEL — migrates to Living Architecture Library volume |
+| **Principle of Dimensional Coherence** | Corpus p80 | T5 (Internal Coherence) + dimensional-access | PARALLEL |
+| **Principal Dimensions (12)** | Corpus p80 | (no current direct equivalent; domain-specific taxonomy) | NEW — Living Architecture |
+| **Taxonomy of Beings** | Corpus Vol II Part II, p83 | (no current direct equivalent; the compendium) | NEW — destination Universal-Coherence (theological domain) per roadmap |
+| **Mineral/Elemental, Biological-Non-Human, Human, Non-Human-Intelligences, Cryptids, Egregores, Corporations, Nations/Civilizations, Tulpas/Thought-Forms, Ancestral/Deceased, Nature Spirits, Theological Entities, Deities, Fictional/Narrative, Computational Entities, Jungian Archetypes, Promethean Archetype** | Corpus Vol II Part II | (taxonomic categories — heritage-only or migrated by being-class) | HERITAGE-ONLY for most; computational-entities migrates to The Continuity / Foundations-of-Identity |
+| **Cross-Substrate Ecology** | Corpus p119 | (broadened via Theorem 13 fuller form + carrier-mode-asymmetry) | PARALLEL |
+| **Egregore** (collective conscious entity) | Corpus §2.1 | (no current Library term; theological-philosophical) | HERITAGE-ONLY |
+| **Trophic Levels (attention economy)** | Corpus p128 | (Living Architecture / Dynamic Organization; no current direct equivalent) | NEW — destination depends on volume split |
+| **Theory of Attention** | Corpus p126 | T3 (Attentional Quality) + A_S entropy functional | PARALLEL |
+| **Attention Economy** | Corpus p128 | (Dynamic Organization volume target) | NEW |
+| **Present Bifurcation** (current civilizational fork) | Corpus Vol II | (no current direct equivalent; civilizational-domain) | HERITAGE-ONLY |
+| **Niche Construction / Symbiosis / Parasitism / Succession** (ecological dynamics) | Corpus Vol II Part III | (Living Architecture volume target) | NEW — destination Living Architecture |
+| **Ethics of Attention** | Corpus Vol II Part V | (Coherent Mind / Universal-Coherence) | NEW |
+| **Discernment** (epistemic practice) | Corpus Vol II Part V | (Coherent Mind / Coherent Body practical guides) | NEW |
+
+### Vol III — The Null Space Atlas
+
+| Corpus term | Corpus loc | Anchor/Companion parallel | Status |
+|---|---|---|---|
+| **The Null Space Atlas** (genre) | Corpus Vol III | (no Library equivalent; genre is unique) | **OPEN QUESTION** — does Atlas become its own Library volume or distribute? Per roadmap §C |
+| **Atlas Format: SEES / NULL SPACE / COMPLEMENTS / BOUNDARY / NAVIGATIONAL IMPLICATION** | Corpus p6-7 | (no current Library equivalent; methodological apparatus) | NEW — needs canonical Library-wide statement; instrument applies to any framework |
+| **88 Atlas entries** across Mathematics (#1-13), Physics (#14-22), Biology (#23-27), Information (#28-33), Philosophy (#34-55), Human Dimension (#56-73), Collective Dimension (#74-88) | Corpus Vol III | (heritage; entry-by-entry migration is large) | HERITAGE-ONLY for most entries; selected entries migrate per domain |
+| **Entry #40 (Perspectival Idealism's own null space)** | Corpus Vol III | (self-reference: framework applied to itself; resonates with Anchor §9.5 self-reference closure) | PARALLEL |
+| **∅ (absolute null space) and ◐ (partial null space)** notation | Corpus p6 | (no current Library notation; Atlas-specific) | NEW — keep as Atlas notation if Atlas migrates |
+
+### Vol IV — The Navigational Guide
+
+| Corpus term | Corpus loc | Anchor/Companion parallel | Status |
+|---|---|---|---|
+| **Navigational Guide** (genre — practitioner-facing praxis) | Corpus Vol IV | (Coherent Body / Coherent Mind / Dynamic Organization volumes inherit) | PARALLEL — distribution per roadmap §C |
+| **Forces (the four navigational forces)** | Corpus Vol IV Part II | A3 + Bias + T3/T17/T18 | PARALLEL |
+| **Seven classes of navigational practice** | Corpus Vol IV Part IV | (Coherent Body / Coherent Mind practical-guide volumes) | NEW |
+| **The Invisible** (structural blind spots in navigation) | Corpus Vol IV Part V | C8 + Mirror discipline | PARALLEL |
+| **The Trade-Off** (navigation under finite resources) | Corpus Vol IV Part VI | (no current direct equivalent) | NEW |
+| **The Arc** (developmental arc from narrowing to wisdom) | Corpus Vol IV Part VII | (Coherent Mind volume target; possibly The Continuity for persistence-of-arc) | NEW |
+| **Navigating Together** (collective navigation) | Corpus Vol IV Part VIII | C6 + C9 + C11 (cooperative-constituency cluster) | PARALLEL |
+| **Ethics of Attention** (extended) | Corpus Vol IV Appendices | (Coherent Mind / Universal-Coherence) | NEW |
+| **The Dark Night (contemplative practice)** | Corpus Vol IV references | (heritage to contemplative tradition; no current Library equivalent) | HERITAGE-ONLY |
+
+### Addendum — The Local Basin (Meridian bridge)
+
+| Corpus term | Corpus loc | Anchor/Companion parallel | Status |
+|---|---|---|---|
+| **Local Basin** (the physical neighborhood our universe inhabits in configuration space) | Corpus Addendum | (Meridian volume; framework's bridge to physics) | PARALLEL — central to Meridian volume |
+| **Generative Contraction** (one degree of freedom freezes, others concentrate) | Corpus p351 | A2.1 + Stream-tuple's Ω_S + Promethean Configuration's recursive-reproduction | PARALLEL — the Configuration's physics-register expression |
+| **Z₃ orbifold symmetry as bottleneck-identity** | Corpus p351-352 | (Meridian-specific physics; foundational example of carrier-mode constraint) | PARALLEL — central physics instance of the Configuration |
+| **Cuscuton field / Kaloper-Padilla sequestering** | Corpus p352 | (Meridian-specific physics) | HERITAGE-ONLY for glossary; Meridian's domain |
+| **Constraint Concentrates / Limitation Focuses** (the bottleneck principle) | Corpus p351 | A2 + Configuration's three claims | PARALLEL |
+
+---
+
+## Summary tally (updated)
+
+- **AAI (Adequate As-Is):** ~12 terms
+- **NE (Needs Expansion):** ~55 terms
+- **OPS (04-26 operational):** ~12 terms
+- **NEW (04-27 refinement / cross-stream):** ~5 terms
+- **PARALLEL (DoPI/Corpus heritage with current parallel):** ~30 terms
+- **MIGRATED (heritage with current vocabulary):** subset of PARALLEL
+- **EXCISED-OVERLAY (DoPI metaphysical-motivation cleaned in CP V1):** ~3 terms (Promethean desiring-experience motivation, etc.)
+- **HERITAGE-ONLY (artifact-only, not migrated):** ~20 terms (mostly Vol II ecology beings, Vol III Atlas entries, Vol IV contemplative-tradition references)
+- **NEW from heritage** (no current parallel; needs Library destination): ~15 terms (Atlas format, 12 Principal Dimensions, Trade-Off, Arc, etc.)
+
+**~150 terms total inventoried.** Realistic Library-wide glossary final count: ~50-70 entries (consolidation + scope cuts + heritage-only items handled separately).
+
+**Key parallel-identification observations:**
+
+1. **DoPI's 5 axioms became Anchor's 3 axioms** by promoting Conscious Substrate (DoPI Ax2) to A1 (subsuming Configurational Completeness as A1.3) and merging Experience-as-Navigation into A2.3.
+2. **DoPI's 18 theorems became a mix of Anchor T1-T6, C1-C13, and structural definitions.** Most have clear parallels; the partition is theorem-vs-corollary by current standard.
+3. **Promethean Configuration ↔ C2** is the central heritage anchor — DoPI named, Anchor preserved as logical form, UC canonical text added operational mechanism.
+4. **Vol II Ecology + Vol IV Guide migrate cleanly to Living Architecture / Coherent Body / Coherent Mind / Dynamic Organization** by domain.
+5. **Vol III Atlas is the open question** — does it become its own Library volume, or distribute by domain?
+6. **Φ glyph collision** between IIT's phi (DoPI §12.2) and Anchor's Form factor-functor Φ. Worth flagging in glossary.
 
 ---
 
