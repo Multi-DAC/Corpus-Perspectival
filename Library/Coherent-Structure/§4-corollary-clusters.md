@@ -209,7 +209,7 @@ $$
 **Corollary 4.4.1.** *Let M : 𝒞_Streams^op × 𝒞_Streams → 𝒞_LDS be the measurement-event functor of T4 (Theorem 3.3.2): for streams S, S' composing via ι ⊣ κ, M(S, S') yields the post-measurement substrate-state. Let SubContent(σ) := the multi-valued content carried by substrate-state σ ∈ 𝒞_LDS — explicitly, the set-valued functor SubContent : 𝒞_LDS → Set sending σ to the set of branches σ admits under the substrate's symmetry group. Then M factors into two modes:*
 
 - ***Resolution mode:*** *if SubContent(σ_pre) is non-trivial (|SubContent(σ_pre)| > 1), then M(S, S') selects a branch of SubContent(σ_pre) — i.e., M is a section of the projection SubContent(σ_pre) → SubContent(σ_post) where SubContent(σ_post) is a singleton.*
-- ***Generation mode:*** *if SubContent(σ_pre) is trivial (|SubContent(σ_pre)| = 1; substrate is at pure symmetry with no pre-existing content), then M(S, S') produces SubContent(σ_post) by symmetry-breaking — the carrier (S, S') breaks the substrate's symmetry group G_pre to G_post ⊊ G_pre, and SubContent(σ_post) emerges as the set of orbits of G_post that did not exist as branches of G_pre.*
+- ***Generation mode:*** *if SubContent(σ_pre) is trivial (|SubContent(σ_pre)| = 1; substrate is at pure symmetry with no pre-existing content), then M(S, S') produces SubContent(σ_post) by symmetry-breaking — the carrier (S, S') breaks the substrate's symmetry group G_pre to $G_\mathrm{post} \subsetneq G_\mathrm{pre}$, and SubContent(σ_post) emerges as the set of orbits of G_post that did not exist as branches of G_pre.*
 
 *Both modes factor through the same operation: carriers acting on substrate-symmetries. The regime is determined by whether the pre-measurement substrate has multi-valued content (resolution) or pure symmetry without branches (generation).*
 
@@ -229,7 +229,7 @@ $$
 \mathrm{Int}(\sigma_{\mathrm{pre}}, \mathrm{action}) = (\sigma_{\mathrm{pre}}, G_{\mathrm{pre}} \to G_{\mathrm{post}}) \mapsto \sigma_{\mathrm{post}}
 $$
 
-*where G_post ⊊ G_pre is a strict sub-symmetry, and SubContent(σ_post) is determined by the orbit-structure of G_post (per Corollary 4.4.1's generation-mode mechanism).*
+*where $G_\mathrm{post} \subsetneq G_\mathrm{pre}$ is a strict sub-symmetry, and SubContent(σ_post) is determined by the orbit-structure of G_post (per Corollary 4.4.1's generation-mode mechanism).*
 
 **Proof.** Suppose for contradiction that Int' is an intervention preserving G(σ_pre) = G(σ_post) while non-trivially changing SubContent. Then SubContent(σ_post) is a different content-set under the same symmetry group as SubContent(σ_pre). But SubContent is a functor of (σ, G); by functoriality, if G is preserved, SubContent is determined by σ's symmetry-orbit structure under G, which is invariant under G-preserving maps. So SubContent(σ_post) = SubContent(σ_pre), contradicting non-trivial content-change. Therefore every non-trivial Int factors through G-change. The form-claim then follows by Corollary 4.4.1's generation-mode mechanism applied to G_pre → G_post. ∎
 
