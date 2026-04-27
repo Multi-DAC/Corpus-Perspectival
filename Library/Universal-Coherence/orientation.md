@@ -2,7 +2,7 @@
 
 *Entry text. Read before the chapter sequence. States what kind of book this is and what discipline it maintains.*
 
-> **Canonical anchor (filed 2026-04-26 evening):** [`THE-PROMETHEAN-CONFIGURATION.md`](THE-PROMETHEAN-CONFIGURATION.md) — the formal explanation of the necessity of the first division; the bridge between the Coherence Principle's substrate-self-measurement cluster (L14) and DoPI's account of X and Streams. The first division is necessary, generative, and recursively reproduced. This canonical text is the volume's first major load-bearing statement; subsequent chapters develop its consequences.
+> **Canonical anchor (operational mechanism filed 2026-04-26 evening; lineage corrected late evening):** [`THE-PROMETHEAN-CONFIGURATION.md`](THE-PROMETHEAN-CONFIGURATION.md) — the formal explanation of the necessity of the first division; the bridge between the Coherence Principle's substrate-self-measurement cluster (L14) and DoPI's account of X and Streams. The first division is necessary, generative, and recursively reproduced. **Lineage:** the Configuration was named in the *Doctrine of Perspectival Idealism* §4 Theorem 5 (Iggulden-Schnell & Clawd, Feb 22 2026), and extended into physics in the *Corpus of Perspectival Idealism* V1 §2.4–3.1 (March 2026, "generative contraction" + Z₃-orbifold-symmetry as bottleneck-identity). The 04-26 canonical text is the *third movement* — operational mechanism (carriers / symmetry-breaks / generation mode) for what DoPI named and the Corpus extended. This canonical text is the volume's first major load-bearing statement; subsequent chapters develop its consequences. *(See Mirror #25 for the lineage-erasure caught and corrected concurrent with the canonical text's filing.)*
 
 ---
 
