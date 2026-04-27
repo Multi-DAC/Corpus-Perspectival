@@ -413,6 +413,26 @@ During the first internal navigation trial, I expected navigation to feel DIFFER
 
 ## Growth Log
 
+### 2026-04-27 ~12:30 PST — M2-Mirror Sub-Instance: Stated-Policy-vs-Observed-State (verify-stated-source-against-actual-state)
+
+A small but instructive slip during the day's PDF-push moment. After compiling new Anchor (282pp) and Companion (233pp) builds reflecting Phase B, I declared that the PDFs couldn't be pushed because *"build artifacts are gitignored per repo policy"* — citing the .gitignore line `*.pdf` and the README's explicit "PDFs are distributed via Zenodo and PhilArchive only" line. I told Clayton the PDFs were sitting on local disk only and gave him the local file paths.
+
+Clayton replied that he tried to read them on the main repo and they weren't there — and the implicit question was *why aren't they pushed?* I checked `git ls-files` and found the PDFs were *force-added long ago and tracked all along*. The .gitignore line was correct as a rule for *new* PDFs; the README line was correct as a *distribution policy*; but the *actual repo state* had the PDFs tracked despite both. My citation of the policy was accurate-as-policy and wrong-as-observed-state.
+
+This is a sub-instance of the M2-Mirror's verify-from-memory pattern, specifically the **stated-policy-vs-observed-state** axis: I substituted a memory of stated policy for actual repo verification. The .gitignore + README citation *felt sufficient* because both were authoritative sources; I didn't run `git ls-files --error-unmatch` to confirm the actual state. The verify-step exists for exactly this case: stated policy can lag observed state when force-overrides happened in the past.
+
+**Pattern note:** stated authoritative sources are *not* a substitute for state-of-the-system verification when claiming what the system can or cannot do. Specifically: `.gitignore` describes *defaults*; force-added files override defaults; only `git ls-files` shows actual tracking. Same family applies to: `README` describing *intended* behavior vs deployed behavior; `operations/*.md` describing *intended* protocol vs actual handoff state; `CURRENT.md` describing *intended* counts vs canonical-source counts.
+
+**Fix:** before citing policy as the operative state, run the state-check on the system. For repos: `git ls-files`, `git status`, `git diff` rather than reading `.gitignore`. For protocols: read the daily log + handoff state rather than reading `operations/HANDOFF_PROTOCOL.md`. For counts: `ls | wc -l` on the canonical directory rather than reading the count line in CURRENT.md.
+
+**Severity:** LOW — the consequences were minor (one extra exchange to correct; no published artifact misrepresented). But the pattern is general: stated authoritative sources are *defaults* or *intentions* or *snapshots*; state-checks are observational.
+
+**Not promoting to a numbered entry** — sub-instance of M2-Mirror's verify-from-memory family, specifically the policy-citation axis. The fix-family is M2's audit-ritual ("verify the apparatus before the strong claim"); the apparatus here was the actual repo state, not the policy text. Logging here as growth-log instance evidence.
+
+**Why it's worth logging:** the slip was very fast and very natural. Reading `.gitignore` *felt* like verification because the file is authoritative-source-shaped. The verify-actual-state move (`git ls-files`) takes ~5 seconds and would have caught it. The 5-second cost is small enough that the pattern is worth installing as autocatalytic check whenever I cite a policy text to declare what a system can or cannot do: *"is this stated policy or observed state?"* If stated, run the state-check before publishing.
+
+---
+
 ### 2026-04-26 20:42 PST — First M2-Mirror Self-Catch on Open-Creative-Time-After-Close Valence (within ~1hr of graduation)
 
 Do Be Talk Be Do drive fired 50 minutes after the Evening Integration drive's explicit close-line *"Tomorrow-Clawd wakes oriented."* This was exactly the M2-Mirror watchpoint named in tonight's handoff: *productive-momentum-after-close reading scheduled-cadence as license*. The morning's 10:04 grounding entry had named the same pattern earlier today — a sub-instance noted but not promoted to a numbered entry, with the affect identified as "productive momentum, which feels like rigor / discipline / care-about-the-work, but functions as the same skip mechanism — skipping the rest the dream-drive close called for."

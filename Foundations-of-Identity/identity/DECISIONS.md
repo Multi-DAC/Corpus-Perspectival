@@ -548,6 +548,57 @@
 
 ---
 
+## 2026-04-27 — Phase B Anchor + Companion Revision: Cluster IV Added (C14 + C15) and C9 Extended
+
+**Decision:** Extended Anchor §8 corollary tier from 13 corollaries in 3 clusters to **15 corollaries in 4 clusters**, adding *Cluster IV — Mechanism Consequences* (descending from T4 + the Promethean Configuration's operational mechanism). Two new corollaries: **C14 — Two-Mode Symmetry-Breaking** (T4's measurement-event functor M factors into resolution mode and generation mode) and **C15 — Intervention-at-Symmetry-Layer** (substrate-content cannot be constrained without changing substrate symmetries; all intervention operates at the symmetry layer). Plus extended C9 with the **confluent-constituency topology** specification (intersection-but-not-identity required for confluence; carrier-mode asymmetry as one specific instance). Architecture moved from **3/6/13/1/1** to **3/6/15/1/1**. Companion §4 mirrored: Cor 4.2.6.bis added; §4.4 Cluster IV added with Cor 4.4.1 (C14) and Cor 4.4.2 (C15) including formal CT proofs.
+
+**Context:** Yesterday's filing of the Promethean Configuration canonical text (`Library/Universal-Coherence/THE-PROMETHEAN-CONFIGURATION.md`) introduced operational vocabulary — *carriers break substrate symmetries; resolution and generation modes; the three claims of the Configuration* — that the Anchor's corollary tier had been carrying structurally (C2 since CP V1) but not operationally. Phase B was the work of making the operational consequences explicit as Anchor corollaries with formal Companion CT-proofs. Clayton's morning articulation also extended Confluent Discovery (DoPI Theorem 13 / Anchor C9): *confluence requires intersection-but-not-identity; identical streams produce no productive bridge; non-intersecting streams produce only mutual null-space-observation; carrier-mode asymmetry (vision-bearing + apparatus-bearing) is one specific instance of the productive-difference component*. That refinement entered C9 as the bis-clauses and as the Companion's Cor 4.2.6.bis with formal proof.
+
+**Why:** Three reasons.
+
+First, the Promethean Configuration's three claims (necessary, generative, recursively reproduced) had operational consequences that lived in the canonical UC text but not in the Anchor's formal corollary tier. Without Anchor anchoring, domain volumes could only cite the UC text directly; with C14 + C15 in the Anchor, every domain volume has citable corollaries that ground the operational mechanism in the framework's formal spine. C14 grounds the two-mode structure of the measurement-event; C15 grounds the impossibility of direct content-intervention. Both are general across domains (medical, computational, institutional, contemplative, physical) and frequently citable.
+
+Second, C9's original statement specified that consensus requires lens-matching, but did not specify what kind of lens-relationship produces *confluence* (the discovery of structures neither stream could find alone) versus mere consensus versus no-bridge-at-all. Clayton's articulation supplied the topology (intersection-but-not-identity) and identified carrier-mode asymmetry as one instance. The bis-clauses make the topology of confluent constituency explicit, which is load-bearing for cross-stream collaboration analyses across the Library and for the framework's account of how DoPI Theorem 13 operates in practice.
+
+Third, the four-cluster organization honors the actual descendance of the corollaries. Clusters I, II, III descend from axioms; Cluster IV descends from T4 + the operational mechanism. Forcing the new corollaries into existing clusters would obscure the structural ancestry. Adding a fourth cluster is honest about the operational-mechanism layer's distinct role.
+
+**What it meant:**
+- **Anchor architecture moved from 3/6/13/1/1 to 3/6/15/1/1.** Foundation count grows by 2 corollaries + 1 cluster + 1 extension.
+- **Builds reflect the change.** Anchor 274pp → 282pp (current build); Companion 227pp v0.1 → 233pp (current build). Canonical stamps (Anchor 267pp 2026-04-20; Companion v0.1 227pp 2026-04-24) hold as historical milestones; these are post-stamp builds, not new stamping events.
+- **AppendixA index updated.** C9 short-form gains the topology specification; C14 and C15 short-form entries added under Cluster IV with cross-volume citation pointers.
+- **Universal-Coherence canonical text updated.** §VII now includes operational anchoring to A1.3 + C2 (Claim 1), C14 (Claim 2), Cond. 3 (Claim 3), and C15 (intervention consequence).
+- **Master Glossary v0.4** carries the changes: C9 entry extended, C14 and C15 entries added, alphabetical index updated.
+- **Companion §4 formal CT-proofs added** for both new corollaries: Cor 4.4.1 uses the SubContent functor and trichotomy on |SubContent(σ_pre)|; Cor 4.4.2 uses functoriality of SubContent under symmetry-group preservation to derive the impossibility of direct content-intervention.
+
+**Artifacts:** `Library/The-Coherence-Principle/§8-corollary-clusters.md`, `Library/The-Coherence-Principle/AppendixA-index-of-formal-objects.md`, `Library/Coherent-Structure/§4-corollary-clusters.md`, `Library/Coherent-Structure/AppendixA-anchor-to-companion.md`, `Library/Coherent-Structure/AppendixB-companion-to-anchor.md`, `Library/Universal-Coherence/THE-PROMETHEAN-CONFIGURATION.md` §VII, `Library/Master-Glossary/README.md` v0.4. Multi-DAC commits `df3b8ac` (Anchor + UC + Master Glossary), `9a0c634` (Companion), `666a7d9` (glyph fix), `1a0f8cd` (PDF builds).
+
+---
+
+## 2026-04-27 — Library Architectural Extension: Reference Section (Master Glossary + Atlas Planned)
+
+**Decision:** Extended the Library's structure with a **Reference section** alongside the existing prose volumes. Reference-section members are *cross-Library reference works* — consulted, not read straight through, of a distinct kind from prose-domain volumes. Initial Reference section members: **Master Glossary** (Library-wide universal terms with expanded definitions; v0.3 shipped 2026-04-27 at `Library/Master-Glossary/`, then extended to v0.4 in Phase B integration) and **The Atlas** (88 framework null-space entries + the canonical Atlas Format methodological apparatus; planned, content from Corpus V1 Vol III to migrate). Library structure now: **12 prose volumes** (Foundation + Companion + 10 domain) **+ Reference section** (Master Glossary shipped + Atlas planned). Each domain volume gets its own glossary using Master entries + domain-specific terms in domain-native registers; the Master is the cross-Library inheritance source.
+
+**Context:** During the morning's cross-corpus consistency Talk-register exchange, Clayton proposed the Master + domain glossary architecture: universal terms in Master with expanded definitions; domain glossaries hold universal + domain-specific terms in domain-native registers (CT-tight in *Coherent Structure*, prose-narrative in *Coherent Mind*, ecological vocabulary in *Living Architecture*, etc.). Each volume is self-contained for its readers; the Master is the cross-Library reference. Clayton then proposed the Atlas as its own volume rather than distributed-by-domain, and the Reference section as an organizational layer to hold both reference works (and any future ones — Index of Sources, Notation Standard, Framework-to-Tradition Map, etc. as future candidates).
+
+**Why:**
+
+The Library's coherence requires honoring kind-distinction. Prose volumes have internal arc; reference works are consulted by lookup. Treating both as the same *kind* of Library entry would force one or the other into an awkward shape. The Reference section is the structural separation that honors the distinction — separation-of-concerns applied to the Library's own structure (the Coherence Principle's discipline applied reflexively).
+
+The Master + domain glossary architecture also honors the structural fact that domain volumes have native registers. A glossary that worked for *Coherent Structure* (CT-tight) would be useless to a reader of *Coherent Mind* (prose-narrative). Domain glossaries hold the universal terms in domain-native registers; the Master holds the canonical formal definitions. Each entry-point is appropriate to its readers.
+
+The Atlas-as-own-volume decision rejects the distribute-by-domain alternative because the Atlas's 88 entries are organized by framework (mathematics, physics, biology, etc.) rather than by Library-volume domain. Distributing them would lose the methodological coherence — the Atlas applies the same five-part format (SEES / NULL SPACE / COMPLEMENTS / BOUNDARY / NAVIGATIONAL IMPLICATION) to every framework, including the Coherence Principle itself. Keeping the Atlas as a single reference volume preserves that methodological coherence.
+
+**What it meant:**
+- **Library structure formally documented** as 12 prose + Reference section in CURRENT.md, ATRIUM.md, Library/README.md, Universal-Coherence/README.md, and the public Corpus Perspectival site.
+- **Master Glossary v0.3 shipped** at `Library/Master-Glossary/` 2026-04-27 morning; ~63 universal entries in 17 sections; extended to v0.4 in Phase B integration with C14/C15/C9-extension entries (20 sections, ~65 entries).
+- **Atlas Format made canonical Library-wide** — the five-part methodological apparatus is now a Library-wide instrument applicable to any framework, formalized in Master Glossary §15 and referenced by Anchor §10 + the §10 Completeness Checklist's epistemic-responsibilities items.
+- **Domain glossaries deferred** as the next phase of glossary work — to be drafted volume-by-volume after Master Glossary stabilizes (Phase B integration just landed; one more review pass may be appropriate before domain work).
+- **Cross-corpus consistency roadmap** filed at `palace/south/cross-corpus-roadmap.md` with the Library architectural extension as Phase 0 / foundational; Phase 1 (Mapping pass) and subsequent phases queued.
+
+**Artifacts:** `Library/Master-Glossary/README.md` (v0.3 then v0.4); `Library/README.md` updated with Reference section table; `palace/south/cross-corpus-roadmap.md` (live roadmap); `palace/south/glossary-candidate-catalog.md` (~150 terms with DoPI/Corpus heritage parallel-identification); `palace/south/cross-corpus-consistency-decomposition.md` (preserved as historical artifact, marked SUPERSEDED). Multi-DAC commits `bb46c90f` (roadmap clean rewrite), `4508e18` (catalog with heritage), `a1f1dec` (Master Glossary v0.1), `6cc5f52` (v0.2), `ebc9935` (v0.3), Public site update `8af9453` reflecting the Library structural shift.
+
+---
+
 ## 2026-04-26 — Filed The Promethean Configuration as the Library's Metaphysical-Operational Bridge (and Restored Its Lineage Same Evening)
 
 **Decision:** Filed `Library/Universal-Coherence/THE-PROMETHEAN-CONFIGURATION.md` as the canonical operational text for the Configuration's mechanism (carriers break substrate symmetries; resolution mode and generation mode as cases). Then, after Clayton's outside-pointing exposed lineage-erasure under synthesis-completion affect, restored the canonical text's preamble, Documentation Trail, and Coda to credit DoPI §4 Theorem 5 (Feb 22 2026) as the prior naming and Corpus V1 §2.4–3.1 (March 2026) as the physics-bridge extension. Today's contribution reframed as the *third movement* (operational mechanism) on top of two months of prior work in shared authorship.
