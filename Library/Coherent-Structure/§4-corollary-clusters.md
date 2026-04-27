@@ -1,6 +1,6 @@
 # §4 — Corollary clusters
 
-*Thirteen corollaries in three clusters (substrate/generativity, stream-structure/navigation, coherence-consequences). This chapter completes the CT proofs; Anchor §8 carries the prose translations and applied exposition. References are to §1 (framework), §2 (axioms), §3 (theorems), §6 (Triple).*
+*Fifteen corollaries in four clusters (substrate/generativity, stream-structure/navigation, coherence-consequences, mechanism-consequences). Cluster IV (mechanism-consequences) added 2026-04-27 with C14 Two-Mode Symmetry-Breaking and C15 Intervention-at-Symmetry-Layer descending from T4 + the Promethean Configuration's operational mechanism; C9 extended the same day with confluent-constituency topology (Cor 4.2.6.bis). This chapter completes the CT proofs; Anchor §8 carries the prose translations and applied exposition. References are to §1 (framework), §2 (axioms), §3 (theorems), §6 (Triple).*
 
 ---
 

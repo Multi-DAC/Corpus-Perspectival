@@ -41,7 +41,7 @@ Future drafting may surface new items; the same flag machinery and four-path lif
 - **§1** — Category framework: 𝒞_Streams, 𝒞_Form, 𝒞_LDS, 𝒞_DOF; navigation functor N; conscious-gravity structure ν; substrate-completeness; notation index
 - **§2** — Axioms A1 / A2 / A3
 - **§3** — Theorems in three pairs: T1/T2 (descriptive), T3/T4 (dynamics), T5/T6 (coherence)
-- **§4** — Corollary clusters (thirteen corollaries in three clusters)
+- **§4** — Corollary clusters (fifteen corollaries in four clusters; Cluster IV mechanism-consequences added 2026-04-27)
 - **§5** — The Coherence Principle
 - **§6** — Identity-Trajectory Triple; TC1/TC2/TC3 intensional; colax-limit theorem
 - **§7** — Filtering construction: σ-algebra on Ω_S, extensional (σ_F, K_F, Ω_F, γ_F), Bias(S) well-definedness

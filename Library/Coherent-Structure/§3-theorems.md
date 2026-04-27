@@ -149,6 +149,8 @@ $$
 
 **Remark 3.3.3 (Structural parallel T3/T4).** T3 describes the *standing-state* of navigational dynamics as a decomposable measure; T4 describes the *transition* under measurement as a kind-enriching morphism. Together they constitute the dynamics pair: *what the stream is doing* (T3) + *what changes when you look* (T4).
 
+**Remark 3.3.4 (Two-mode factorization of M; forward-pointer to Cor 4.4.1 / C14).** The measurement-event functor M of T4 admits a two-mode factorization (Cor 4.4.1, §4.4): **resolution mode** when the substrate carries pre-existing multi-valued content (carrier selects a branch) and **generation mode** when the substrate carries pure symmetry (carrier produces content from the symmetry-break itself). Both modes factor through the same operation — *carriers break substrate symmetries* — and the regime is determined by the structure of SubContent(σ_pre). The Promethean Configuration's foundational claim (Universal-Coherence canonical text §VII) is that generation mode is primary; resolution mode is downstream. Cor 4.4.2 (C15) follows: substrate-content cannot be constrained without changing substrate symmetries — direct content-intervention is structurally impossible.
+
 ---
 
 ## §3.4 — Theorem Pair III: Coherence
