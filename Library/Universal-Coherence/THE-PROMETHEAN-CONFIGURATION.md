@@ -163,6 +163,16 @@ The Configuration has three claims:
 
 This is the Promethean Configuration. It is what the Coherence Principle's mechanism, the substrate-self-measurement cluster (L14), and DoPI's account of X and streams jointly assert.
 
+**Operational anchoring in the Coherence Principle (Anchor §8 corollaries, 2026-04-27 Phase B revision).** The three claims are operationally anchored in the Anchor's corollary tier as follows:
+
+- **Claim 1 (necessary, not contingent)** is grounded in **A1.3 (Configurational Completeness)** + **C2 (Generative Configuration for Perspective)**: perspectival positions are an A1.3 consequence; symmetry-breaking is structurally required for any content whatsoever. C2 has carried this structural claim since CP V1 with the parenthetical naming *"the 'Promethean configuration' (Clayton's original language)"*; the canonical text supplies the operational mechanism above.
+- **Claim 2 (generative, not resolutive)** is operationalized in **C14 (Two-Mode Symmetry-Breaking)** under **T4 / Cond. 2 (C_meas)**: the measurement-event has resolution mode (carrier selects from multi-valued substrate content) and generation mode (carrier produces content from pure-symmetry substrate); generation is primary, resolution is downstream.
+- **Claim 3 (recursively reproduced)** is operationalized in **Cond. 3 (Multi-scale γ-continuity)**: γ continuous across scales is the operational form of recursive reproduction. Each layer's content is the next layer's symmetry-substrate; the same operation recurs at every scale.
+
+Plus a fourth operational anchoring not part of the three claims but adjacent to Claim 3's recursive-reproduction:
+
+- **The intervention consequence** is captured in **C15 (Intervention-at-Symmetry-Layer)**: substrate-content cannot be constrained without changing substrate symmetries; all intervention operates at the symmetry layer, not the content layer.
+
 ---
 
 ## VIII. Documentation Trail

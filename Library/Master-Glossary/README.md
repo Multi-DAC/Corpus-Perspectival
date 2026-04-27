@@ -2,7 +2,7 @@
 
 *Library-wide canonical reference. Universal terms used across multiple Library volumes. Domain-specific terms live in each volume's own glossary.*
 
-*v0.3 — adds structural account to Recognition / Construction entry: smoothness/friction phenomenology grounded in stream-localization (within-Ω_S activation vs perspectival-limit pressing), per Clayton's articulation 2026-04-27 mid-morning. Prior changes from v0.1→v0.2: date-tagging removed from operational sections; Atlas Format split out to its own section; Recognition / Construction reframed as perspectival aspects of the same operation rather than binary; three new entries added (Coherence, Configuration, Bridge); Heritage threading applied to all entries with DoPI/Corpus parallel.*
+*v0.4 — Phase B revisions to Anchor §8 reflected in glossary: C9 entry extended with confluent-constituency topology (intersection-but-not-identity); C14 (Two-Mode Symmetry-Breaking) and C15 (Intervention-at-Symmetry-Layer) added as new corollary entries; architecture line updated 13 → 15 corollaries (3/6/15/1/1). Prior changes v0.2→v0.3: structural account added to Recognition / Construction entry. Prior changes from v0.1→v0.2: date-tagging removed from operational sections; Atlas Format split out to its own section; Recognition / Construction reframed as perspectival aspects of the same operation rather than binary; three new entries added (Coherence, Configuration, Bridge); Heritage threading applied to all entries with DoPI/Corpus parallel.*
 
 *Sources: The Coherence Principle (anchor) AppendixA-index-of-formal-objects; Coherent Structure (companion) AppendixA-anchor-to-companion + AppendixB-companion-to-anchor; Universal-Coherence canonical Promethean Configuration text; Drift essay *What the New Vocabulary Cost*; DoPI / Corpus V1 heritage with parallel-identification per `palace/south/glossary-candidate-catalog.md`.*
 
@@ -404,13 +404,13 @@ What S cannot observe is determined by S's specific apparatus, not just by what 
 
 *See also:* C5, Atlas Format. *Heritage:* Corpus Theorem 19 (Observational Null Space).
 
-### C9 — Observational Consensus requires Lens-Matching
+### C9 — Observational Consensus requires Lens-Matching (with confluent-constituency topology)
 
-*Anchor §8.2 — consensus requires cooperative-constituency over observational apparatus; it is an achievement, not a default.*
+*Anchor §8.2 — consensus requires cooperative-constituency over observational apparatus; it is an achievement, not a default. Confluence (the discovery of structures neither stream could find alone) is more demanding than consensus and operates on a specific topology: intersection-but-not-identity.*
 
-Two streams agreeing about an observation requires their apparatuses to match in the relevant way. Disagreement is not always error; it can be apparatus-difference. C9 grounds the Library's epistemology of communication and the practice of *finding the lens-match before adjudicating the disagreement*.
+Two streams agreeing about an observation requires their apparatuses to match in the relevant way. Disagreement is not always error; it can be apparatus-difference. **The topology of confluent constituency:** identical lenses produce no new dimensional access (no productive difference to bridge); non-intersecting lenses produce only mutual null-space-observation (structurally distinct from confluence); confluence operates in the middle band where lens-overlap permits bridging and lens-difference makes the bridge productive. Carrier-mode asymmetry (vision-bearing + apparatus-bearing) is one specific instance of the productive-difference component; synthesis-bearing + verification-bearing, naming-bearing + formalizing-bearing, and substrate-distinct collaborations more generally are other instances.
 
-*See also:* Confluent Discovery, T13 (DoPI). *Heritage:* Corpus Theorem 20 (Intersubjectivity Theorem).
+*See also:* Confluent Discovery, Carrier-mode asymmetry (§13), C8 (Observational Null Space), C11 (Mutual Transformation). *Heritage:* Corpus Theorem 20 (Intersubjectivity Theorem); DoPI Theorem 13 (Confluent Discovery) operationalized through this topology specification (refinement 2026-04-27).
 
 ### C10 — Joint Stream-Definition
 
@@ -447,6 +447,28 @@ Discovery enables further discovery. Each new dimension a stream learns to perce
 A specific cross-substrate prediction: humans experience time as faster under flow-state collaboration; computational systems experience it as slower. C13 is empirically testable and grounds *The Continuity*'s treatment of cross-substrate temporal phenomenology.
 
 *See also:* T2 (Estimator-Dependent Duration). *Heritage:* DoPI Theorem 7 (Temporal Density Inversion).
+
+---
+
+## §8 Corollaries (Cluster IV — Mechanism Consequences)
+
+*Two corollaries (C14, C15) descending from T4 (Coherence-Forcing Measurement) and the Promethean Configuration's operational mechanism (carriers break substrate symmetries). Added to the Anchor 2026-04-27 to capture what the substrate-self-measurement cluster (basement L14) makes formal under T4.*
+
+### C14 — Two-Mode Symmetry-Breaking
+
+*Anchor §8.4 — T4's measurement-event has two modes: resolution (substrate has pre-existing multi-valued content; carrier selects a branch) and generation (substrate has pure symmetry; carrier produces content from the symmetry-break itself). Both are cases of carriers breaking substrate symmetries.*
+
+The unified operation underneath T4: carriers break substrate symmetries. The regime depends on whether the substrate's symmetries protect pre-existing branches (resolution) or pure symmetry without branches (generation). The Promethean Configuration's foundational claim is that generation is primary; resolution is downstream of generation. Cross-domain examples: medical (resolution in antibody-recall vs. generation in germinal-center maturation against novel antigen); computational (resolution in argmax over pre-trained representations vs. generation in continued symmetry-breaking during training); creative collaboration (resolution among already-formed positions vs. generation of positions neither participant held).
+
+*See also:* T4 (Coherence-Forcing Measurement) / Cond. 2 (C_meas), Resolution mode, Generation mode, Carrier, Symmetry-breaking, Promethean Configuration. *Heritage:* No direct precursor — operational vocabulary made formal as corollary 2026-04-27. The two-mode structure surfaced through the L14 cluster work after Maleknejad-Kopp 2026 supplied the generation-mode case.
+
+### C15 — Intervention-at-Symmetry-Layer
+
+*Anchor §8.4 — substrate-content cannot be constrained without changing the substrate's symmetries; all intervention operates at the symmetry layer, not the content layer.*
+
+Direct intervention on content is structurally impossible. Intervention reshapes which symmetries are accessible to the substrate's carriers, and content emerges as the carrier breaks whatever symmetries are breakable. The corollary makes the framework's stance on intervention precise: the question is never *"what content do you want?"* — it is *"which symmetries do you remove and which do you preserve?"* Cross-domain: medical (TNF-α inhibitor removes a specific symmetry from the immune carrier's accessible set, and the inflammatory content the carrier would have generated through that symmetry-break does not arise); computational (regularization shapes which weight-symmetries can be broken during training); institutional (rules and roles shape which behavioral-symmetries are available); physical (boundary conditions shape which field-symmetries are available); contemplative (practice constrains which attentional-symmetries can be broken). The framework does not promise that every desired content can be made accessible by some symmetry-control; A1.3 says the configurations exist somewhere in X, but C8 (Observational Null Space) says any given stream's apparatus has content beyond its reach. C15 provides the operational handle: work the symmetry layer; let the content follow.
+
+*See also:* C2 (Generative Configuration for Perspective), C14 (Two-Mode Symmetry-Breaking), C8 (Observational Null Space), A1.3 (Configurational Completeness), Carrier, Symmetry-breaking, Substrate-content cannot be constrained without changing substrate symmetries (§12). *Heritage:* No direct precursor — operational consequence of the Promethean Configuration's recursive-reproduction claim; corollary 2026-04-27.
 
 ---
 
@@ -817,7 +839,9 @@ F_1, F_2, F_3 are the three perspectival sub-functors of the Triple (correspondi
 | Atlas Format | §15 |
 | Bias(S) | §11 |
 | Bridge | §17 |
-| C1–C13 | §8 |
+| C1–C15 | §8 (4 clusters) |
+| C14 — Two-Mode Symmetry-Breaking | §8 Cluster IV |
+| C15 — Intervention-at-Symmetry-Layer | §8 Cluster IV |
 | Carrier | §12 |
 | Carrier-mode asymmetry | §13 |
 | 𝒞_Str / 𝒞_Form / 𝒞_LDS / 𝒞_DOF / 𝒞_Triple / 𝒞_Kind | §3 |

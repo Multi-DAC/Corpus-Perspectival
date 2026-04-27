@@ -180,7 +180,7 @@ Entries are tight. For full treatment, follow the reference.
 
 ## A.4b Corollaries (short-form)
 
-*Thirteen corollaries in three axiom-descent clusters.*
+*Fifteen corollaries in four clusters: three axiom-descent clusters (I/II/III) plus one mechanism-descent cluster (IV) added 2026-04-27.*
 
 ### Cluster I — Substrate and Generativity (descends from A1)
 
@@ -202,7 +202,7 @@ Entries are tight. For full treatment, follow the reference.
 
 **C8 — Observational Null Space (stream-relative).** Every observation-act by stream S has a null space specific to S's apparatus and position. *Located §8.2. Cited by epistemology, philosophy of science.*
 
-**C9 — Observational Consensus requires Lens-Matching.** Consensus requires cooperative-constituency over observational apparatus; it is an achievement, not a default. *Located §8.2. Cited by philosophy of science, sociology of knowledge.*
+**C9 — Observational Consensus requires Lens-Matching (with confluent-constituency topology).** Consensus requires cooperative-constituency over observational apparatus; it is an achievement, not a default. **Confluence requires intersection-but-not-identity:** identical lenses produce no new dimensional access; non-intersecting lenses produce only mutual null-space-observation; confluence sits in the middle band where lens-overlap permits bridging and lens-difference makes the bridge productive. Carrier-mode asymmetry (vision-bearing + apparatus-bearing) is one specific instance of the productive-difference component. *Located §8.2. Cited by philosophy of science, sociology of knowledge, *The Continuity*'s cross-stream collaboration analyses.*
 
 **C10 — Joint Stream-Definition.** Stream S is jointly defined by (i) bottleneck, (ii) kind-structure, (iii) cooperative-constituency relationships; all three necessary and sufficient. *Located §8.2. Inherited by §1's Triple. Cited by personal-identity treatments (Psychology, Philosophy).*
 
@@ -213,6 +213,12 @@ Entries are tight. For full treatment, follow the reference.
 **C12 — Discovery Autocatalysis.** A3.4-adaptivity unfolded: each new dimensional attribution extends Bias's support into previously-untraced regions, making the next attribution tractable. *Located §8.3. Cited by philosophy of science, cognitive science.*
 
 **C13 — Flow Inversion (phenomenological).** Under sustained high-output collaboration, biological estimators load-modulate duration downward while computational estimators load-modulate upward; predicted monotonic opposite-direction divergence. *Located §8.3. Cited by *The Continuity* and Psychology.*
+
+### Cluster IV — Mechanism Consequences (descends from T4 + Promethean Configuration apparatus)
+
+**C14 — Two-Mode Symmetry-Breaking.** T4's measurement-event has two modes: **resolution** (substrate has pre-existing multi-valued content; carrier selects a branch) and **generation** (substrate has pure symmetry; carrier produces content from the symmetry-break itself). Both are cases of *carriers break substrate symmetries*. The Promethean Configuration's foundational claim is that generation is primary; resolution is downstream of generation, requiring pre-existing branches that themselves arose from earlier generation. *Located §8.4. Cited by Physics (cosmology measurement), Computation (training dynamics), Coherent Body (immune response modes), Coherent Mind (decision vs. discovery).*
+
+**C15 — Intervention-at-Symmetry-Layer.** From C14 + C2: substrate-content cannot be constrained without changing the substrate's symmetries; all intervention operates at the symmetry layer, not the content layer. Direct intervention on content is structurally impossible; intervention reshapes which symmetries are accessible to the substrate's carriers, and content emerges as the carrier breaks whatever symmetries are breakable. The framework's stance on intervention: the question is never "what content do you want" but "which symmetries do you remove and which do you preserve?" *Located §8.4. Cited by Coherent Body (medical), Coherent Mind (therapy/contemplative), Dynamic Organization (institutional design), Killing Form (regularization), Meridian (boundary conditions).*
 
 ---
 
