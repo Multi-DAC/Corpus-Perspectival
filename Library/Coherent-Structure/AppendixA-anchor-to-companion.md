@@ -92,8 +92,9 @@
 | Anchor location | Companion target | Type | Description |
 |---|---|---|---|
 | §8.1 Cluster I (C1/C2/C3) | Companion §4.1 | corollaries | Substrate/generativity CT-proof-completion |
-| §8.2 Cluster II (C4–C10) | Companion §4.2 | corollaries | Stream-structure/navigation CT-proof-completion |
+| §8.2 Cluster II (C4–C10) | Companion §4.2 | corollaries | Stream-structure/navigation CT-proof-completion; C9 extended with confluent-constituency topology (Cor 4.2.6.bis, 2026-04-27) |
 | §8.3 Cluster III (C11/C12/C13) | Companion §4.3 | corollaries | Coherence-consequences CT-proof-completion |
+| §8.4 Cluster IV (C14/C15) | Companion §4.4 | corollaries | Mechanism-consequences CT-proof-completion (added 2026-04-27); C14 Two-mode symmetry-breaking (Cor 4.4.1), C15 Intervention-at-symmetry-layer (Cor 4.4.2) |
 
 ### Anchor §9 (Coherence Principle) → Companion
 

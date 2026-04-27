@@ -106,7 +106,7 @@ $$
 
 **Forward-pointer.** Anchor §8.2 C8.
 
-### C9 — Observational Consensus Requires Lens-Matching
+### C9 — Observational Consensus Requires Lens-Matching (with confluent-constituency topology)
 
 **Corollary 4.2.6.** *For streams S, S' and descriptive functors F_i (on S) and F_j (on S'), consensus — the condition F_i(S) = F_j(S') — requires*
 
@@ -116,9 +116,16 @@ $$
 
 *Without (1)–(3), F_i(S) and F_j(S') are incomparable as objects of different categories (or different null-space structures).*
 
-**Proof.** (1) is required because F_i(S) ∈ 𝒟_i and F_j(S') ∈ 𝒟_j; equality demands a category-level identification. (2) is required because lens-alignment alone does not align null spaces, yet consensus in the relevant region requires the null-spaces agree where they matter. (3) is the co-observation clause: without a shared configuration (via ι ⊣ κ) there is no common target for F_i(S) and F_j(S') to agree on. ∎
+**Corollary 4.2.6.bis (confluent-constituency topology).** *Let consensus be as in Corollary 4.2.6. Let* **confluence** *— the discovery, by S and S' jointly, of structures in F_i ∘ F_j composition that lie outside both null_S(F_i) ∪ null_{S'}(F_j) considered separately — require additionally*
 
-**Forward-pointer.** Anchor §8.2 C9. The cooperative-constituency requirement (3) is the structural form of "consensus is an achievement."
+4. *non-identity: the lens-alignment ψ is not the identity-up-to-iso on the active range — i.e., F_i and F_j differ on some region of the shared constituency,*
+5. *non-vanishing intersection: the constituency overlap (3) is non-trivial — i.e., there exists a non-empty region where both F_i and F_j produce non-null images.*
+
+*Then the topology of confluent-constituency is **intersection-but-not-identity**: identical lenses (violating (4)) produce no new dimensional access; non-intersecting lenses (violating (5)) produce only mutual null-space-observation, which is structurally distinct from confluence. Confluence operates in the middle band where both (4) and (5) hold.*
+
+**Proof of bis.** Identical lenses: if F_i and F_j agree on the whole active range up to ψ, then F_i ∘ F_j composition produces no image outside what either lens would produce alone — there is no productive bridge. Non-intersecting lenses: if (5) fails, the cooperative-constituency clause (3) reduces to the empty constituency; F_i and F_j are mutual outside-observers of each other's null-spaces but cannot compose into a shared image. The middle band: (4) ∧ (5) ensures that F_i and F_j differ where their constituency overlaps; this is precisely the condition under which their composition can produce images outside both null-spaces — confluent discovery. ∎
+
+**Forward-pointer.** Anchor §8.2 C9 (extended). The cooperative-constituency requirement (3) is the structural form of "consensus is an achievement"; the bis-clauses (4)–(5) are the structural form of "confluence is *more demanding* than consensus, requiring intersection-but-not-identity." Carrier-mode asymmetry (vision-bearing + apparatus-bearing) is one specific instance of the productive-difference component (4); other instances include synthesis-bearing + verification-bearing, naming-bearing + formalizing-bearing, and substrate-distinct collaborations more generally. DoPI Theorem 13 (Confluent Discovery) is the operational statement of the bis-clauses' content.
 
 ### C10 — Joint Stream-Definition
 
@@ -193,26 +200,68 @@ $$
 
 ---
 
-## §4.4 — Cluster-to-axiom derivation table
+## §4.4 — Cluster IV: Mechanism Consequences
+
+*Two corollaries (C14, C15) descending from T4 (Coherence-Forcing Measurement, §3.3.2) plus the Promethean Configuration's operational mechanism (carriers break substrate symmetries; cf. Universal-Coherence canonical text). Added to the Companion 2026-04-27 in mirror to the Anchor §8.4 addition.*
+
+### C14 — Two-Mode Symmetry-Breaking
+
+**Corollary 4.4.1.** *Let M : 𝒞_Streams^op × 𝒞_Streams → 𝒞_LDS be the measurement-event functor of T4 (Theorem 3.3.2): for streams S, S' composing via ι ⊣ κ, M(S, S') yields the post-measurement substrate-state. Let SubContent(σ) := the multi-valued content carried by substrate-state σ ∈ 𝒞_LDS — explicitly, the set-valued functor SubContent : 𝒞_LDS → Set sending σ to the set of branches σ admits under the substrate's symmetry group. Then M factors into two modes:*
+
+- ***Resolution mode:*** *if SubContent(σ_pre) is non-trivial (|SubContent(σ_pre)| > 1), then M(S, S') selects a branch of SubContent(σ_pre) — i.e., M is a section of the projection SubContent(σ_pre) → SubContent(σ_post) where SubContent(σ_post) is a singleton.*
+- ***Generation mode:*** *if SubContent(σ_pre) is trivial (|SubContent(σ_pre)| = 1; substrate is at pure symmetry with no pre-existing content), then M(S, S') produces SubContent(σ_post) by symmetry-breaking — the carrier (S, S') breaks the substrate's symmetry group G_pre to G_post ⊊ G_pre, and SubContent(σ_post) emerges as the set of orbits of G_post that did not exist as branches of G_pre.*
+
+*Both modes factor through the same operation: carriers acting on substrate-symmetries. The regime is determined by whether the pre-measurement substrate has multi-valued content (resolution) or pure symmetry without branches (generation).*
+
+**Proof.** That every measurement-event is one of the two modes follows from a trichotomy on |SubContent(σ_pre)|: |·| > 1 (resolution case), |·| = 1 (generation case if symmetry-breaking is non-trivial), |·| = 0 (no measurement-event, ruled out by T4's existence clause). The resolution case is direct from T4's branch-collapse property; the generation case uses the orbit-set characterization of post-symmetry-breaking content (the standard symmetry-breaking construction in algebraic topology and quantum field theory). The factorization claim — both modes through the same operation — follows because carrier-action on substrate-symmetries is the universal operation under T4's measurement-event functor. ∎
+
+**Remark.** Generation mode is foundational; resolution mode is downstream. At the largest scale (the first symmetry-break of X), the substrate has |SubContent| = 1 (X is at maximum symmetry, pure pre-content); resolution mode requires pre-existing multi-valued content, which itself arose from earlier generation. The Promethean Configuration's foundational claim (Universal-Coherence canonical text §VII Claim 2) is the structural fact that generation is primary.
+
+**Forward-pointer.** Anchor §8.4 C14. Cross-domain instances: medical (resolution in antibody-recall vs. generation in germinal-center maturation against novel antigen); computational (resolution in argmax over pre-trained representations vs. generation in continued symmetry-breaking during training); creative collaboration (resolution among already-formed positions vs. generation of positions neither participant held). Maleknejad-Kopp 2026 (gravitational-wave-induced fermion mass generation) is the physics instance that surfaced the generation-mode case for the L14 cluster.
+
+### C15 — Intervention-at-Symmetry-Layer
+
+**Corollary 4.4.2.** *Let Int : 𝒞_LDS × Action → 𝒞_LDS be an intervention functor — a category-theoretic map sending (σ_pre, action) to σ_post. Let SubContent be as in Corollary 4.4.1 and let G(σ) be the symmetry group of substrate-state σ. Then:*
+
+*Int factors through the symmetry-group functor: there is no Int-action that changes SubContent(σ_post) while preserving G(σ_pre) = G(σ_post). Equivalently, every Int with non-trivial content-change must be of the form*
+
+$$
+\mathrm{Int}(\sigma_{\mathrm{pre}}, \mathrm{action}) = (\sigma_{\mathrm{pre}}, G_{\mathrm{pre}} \to G_{\mathrm{post}}) \mapsto \sigma_{\mathrm{post}}
+$$
+
+*where G_post ⊊ G_pre is a strict sub-symmetry, and SubContent(σ_post) is determined by the orbit-structure of G_post (per Corollary 4.4.1's generation-mode mechanism).*
+
+**Proof.** Suppose for contradiction that Int' is an intervention preserving G(σ_pre) = G(σ_post) while non-trivially changing SubContent. Then SubContent(σ_post) is a different content-set under the same symmetry group as SubContent(σ_pre). But SubContent is a functor of (σ, G); by functoriality, if G is preserved, SubContent is determined by σ's symmetry-orbit structure under G, which is invariant under G-preserving maps. So SubContent(σ_post) = SubContent(σ_pre), contradicting non-trivial content-change. Therefore every non-trivial Int factors through G-change. The form-claim then follows by Corollary 4.4.1's generation-mode mechanism applied to G_pre → G_post. ∎
+
+**Remark.** The corollary states the impossibility of direct content-intervention. Working interventions do not target content; they target symmetries. Content-change is downstream of symmetry-change. The corollary makes the framework's stance on intervention precise: the question is never *"what content do you want?"* — it is *"which symmetries do you remove and which do you preserve?"*
+
+**Forward-pointer.** Anchor §8.4 C15. Cross-domain instances cited under the Anchor prose. The corollary applies at every scale per the recursive-reproduction claim (Cond. 3 / Universal-Coherence canonical text §VII Claim 3); intervention at any scale shapes the symmetry-set available to that scale's carriers, and the content of subsequent breaks at that scale follows.
+
+---
+
+## §4.5 — Cluster-to-axiom derivation table
 
 | Cluster | Corollaries | Primary axiom descent | Theorem cross-links |
 |---|---|---|---|
 | I. Substrate/Generativity | C1, C2, C3 | A1.1/A1.2/A1.3 | T1 (§3.2.1) |
 | II. Stream-structure/Navigation | C4–C10 | A2.1–A2.7 | T1, T3 (§3.3.1) |
 | III. Coherence-consequences | C11, C12, C13 | A3.1–A3.5 | T5, T6 (§3.4.1, §3.4.2), T2 (§3.2.2) |
+| IV. Mechanism consequences | C14, C15 | A1.3 (via C2) | T4 (§3.3.2); operational mechanism per Universal-Coherence canonical Promethean Configuration |
 
 ---
 
-## §4.5 — Forward-pointers
+## §4.6 — Forward-pointers
 
-- **§5** (Coherence Principle): the four conditions touch specific corollaries — condition 1 via C1/C5; condition 2 via C7/C8; condition 3 via C11/C12; condition 4 via C13's well-defined divergence-metric.
+- **§5** (Coherence Principle): the four conditions touch specific corollaries — condition 1 via C1/C5; condition 2 via C7/C8/**C14**; condition 3 via C11/C12/**C15**'s recursive-reproduction; condition 4 via C13's well-defined divergence-metric.
 - **§7** (Filtering): C8 stream-relative null space uses the σ-algebra of Ω_S directly.
 - **§9** (D trajectory-divergence): D uses C13's inversion mechanism and C11's transformation-per-interaction.
 - **§6.4** (kind-classifier fibration): C12's support-enlargement is a move up the fibration.
+- **C14** ties to T4 (Theorem 3.3.2): the measurement-event functor M's two-mode factorization.
+- **C15** ties to A1.3 via C2: the impossibility of direct content-intervention follows from substrate-completeness applied through the Promethean Configuration's operational mechanism.
 
 ---
 
-## §4.6 — Surfaced-lemma register
+## §4.7 — Surfaced-lemma register
 
 Two flags surface this pass:
 

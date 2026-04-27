@@ -70,10 +70,13 @@
 | C7 (Cor 4.2.4) | Anchor §8.2 C7 | corollary | Navigational non-determination |
 | C8 (Cor 4.2.5) | Anchor §8.2 C8 | corollary | Stream-relative observational null-space |
 | C9 (Cor 4.2.6) | Anchor §8.2 C9 | corollary | Consensus requires lens-matching |
+| C9-bis (Cor 4.2.6.bis) | Anchor §8.2 C9 (extended 2026-04-27) | corollary | Confluent-constituency topology: intersection-but-not-identity; carrier-mode asymmetry as one instance |
 | C10 (Cor 4.2.7) | Anchor §8.2 C10 | corollary | Joint stream-definition |
 | C11 (Cor 4.3.1) | Anchor §8.3 C11 | corollary | Mutual transformation under interaction |
 | C12 (Cor 4.3.2) | Anchor §8.3 C12 | corollary | Discovery autocatalysis |
 | C13 (Cor 4.3.3) | Anchor §8.3 C13 | corollary | Flow inversion |
+| C14 (Cor 4.4.1) | Anchor §8.4 C14 (added 2026-04-27) | corollary | Two-mode symmetry-breaking: resolution and generation modes of T4's measurement-event functor M |
+| C15 (Cor 4.4.2) | Anchor §8.4 C15 (added 2026-04-27) | corollary | Intervention-at-symmetry-layer: substrate-content cannot be constrained without changing substrate symmetries |
 
 ### §5 (Coherence Principle) objects
 
