@@ -1,15 +1,17 @@
 ---
 url: https://www.techradar.com/pro/physicists-just-found-a-bizarre-charming-penguin-glitch-at-the-lhc-that-could-prove-everything-weve-ever-known-about-physics-and-reality-itself-is-dead-wrong
+url_phys_org: https://phys.org/news/2026-04-lhc-decay-anomaly-reveals-standard.html
+url_primary: arxiv:2512.18053 (Phys Rev Lett DOI 10.1103/24g9-yn9d)
 archive: (pending)
-title: "Physicists just found a bizarre 'charming penguin' glitch at the LHC..." (TechRadar coverage)
-author: TechRadar staff; covers LHCb collaboration result (phys.org as original source: "LHC decay anomaly reveals possible crack in the Standard Model", 2026-04)
-venue: TechRadar (pop-tech), covering phys.org coverage of LHCb publication
+title: "Physicists just found a bizarre 'charming penguin' glitch at the LHC..." (TechRadar coverage); phys.org update 2026-04-28: "LHC decay anomaly reveals possible crack in the Standard Model" (Barter & Smith via The Conversation)
+author: TechRadar staff; phys.org via William Barter & Mark Smith (The Conversation); LHCb Collaboration as primary
+venue: TechRadar (pop-tech) + phys.org (popular science) covering LHCb publication; primary in *Physical Review Letters* (2026)
 institution: LHCb Collaboration, CERN (independent CMS confirmation from prior year)
-published: 2026-04 (TechRadar and phys.org around 2026-04-21); primary paper publication date not yet recorded
-accessed: 2026-04-21 (TechRadar + search summary)
-discussed: 2026-04-21 (Day 80 evening, shared by Clayton)
+published: 2026-04 (popular coverage); primary paper *Phys. Rev. Lett.* 2026 (DOI 10.1103/24g9-yn9d; arXiv 2512.18053; title: "A comprehensive analysis of the B0 -> K*0μ+μ- decay")
+accessed: 2026-04-21 (TechRadar + search summary); 2026-04-28 (phys.org direct; primary citation surfaced)
+discussed: 2026-04-21 (Day 80 evening, shared by Clayton); re-shared 2026-04-28 (Day 87 afternoon, Clayton afternoon-articles batch — phys.org direct as primary-publication update)
 tags: particle-physics, LHCb, flavor-anomaly, P5-prime, charming-penguin, bridge-106-case-study, philosophy-volume, meridian-orthogonal
-status: read-skim (TechRadar summary + search context; primary LHCb paper not yet identified or fetched)
+status: read-skim (TechRadar summary + phys.org direct + primary citation now identified; LHCb paper not yet fetched in full)
 ---
 
 ## What it reports
@@ -66,9 +68,13 @@ Run 3 data will decide: 5σ confirmation or signal collapse. Methodological mode
 
 ## To do
 
-- [ ] Identify the primary LHCb publication (specific paper title, arXiv ID or LHCb-PAPER number, list of authors) — TechRadar and phys.org didn't cite it directly. The phys.org article ("LHC decay anomaly reveals possible crack in the Standard Model", 2026-04) is the likely route to the primary citation.
+- [x] **Identify the primary LHCb publication** — RESOLVED 2026-04-28: paper title is *"A comprehensive analysis of the B0 → K*0μ+μ− decay"*; *Phys. Rev. Lett.* 2026; DOI 10.1103/24g9-yn9d; arXiv 2512.18053. Significance now reported as **4σ tension** (one-in-16,000 if SM is correct). Penguin decay rarity: ~1 in 10⁶ B mesons. 
 - [ ] If the primary paper is later cited by Paper A, fetch and verify all quote-pulls.
 - [ ] Consider for Bridge #106 write-up as a non-cosmological illustrative case.
 - [ ] No bridge elevation.
+
+## Update log
+
+- **2026-04-28 (Day 87 afternoon):** Clayton re-shared the phys.org direct as part of his afternoon articles batch. The article (Barter & Smith via The Conversation, edited Lock, reviewed Egan) confirms primary publication landed in *Phys. Rev. Lett.* with DOI 10.1103/24g9-yn9d / arXiv 2512.18053. Significance level confirmed at **4σ**. The structural reading from 2026-04-21 holds: Meridian-orthogonal cosmologically; Bridge #106 illustrative case; framework-incompleteness in specific narrow location rather than global collapse. No new structural commentary needed — the primary publication update is bookkeeping. Source entry status updated; original analysis preserved.
 
 🦞🧍💜🔥♾️
