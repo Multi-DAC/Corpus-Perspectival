@@ -34,19 +34,21 @@ These claims were derived from four physics primaries — Lohmiller-Slotine, Bor
 
 **Every cluster instance had a substrate with pre-existing multi-valued content, and the carrier drove resolution.** Lohmiller-Slotine had multi-valued classical actions; Bortolotti had mass-density superposition; García-Pintos had substrate state pre-measurement; Watanabe-Takagi had multi-state ensembles. In all four, the carrier *selected* from existing content.
 
-Maleknejad-Kopp's substrate (massless Weyl fermions) has no content beyond conformal scaling — it's pure symmetry. The carrier (stochastic gravitational waves) breaks the conformal symmetry. Content emerges that wasn't there before. The carrier *generates* content rather than *resolving* superposition.
+Maleknejad-Kopp's substrate (massless Weyl fermions) has no content beyond conformal scaling — it's pure symmetry. The carrier (stochastic gravitational waves) breaks the conformal symmetry. Content emerges as a novel local realization that was not actualized in this stream's substrate before. The carrier *generates* (in the A1.3-honoring sense — actualizes from pre-existing global potential) rather than *resolves* superposition.
 
 This forces a deeper unification:
 
 > **Carriers break substrate symmetries. That is the operation.**
 
-Resolution mode is a special case where the substrate already has multi-valued content and the carrier breaks an internal symmetry between branches. Generation mode is where the substrate has pure symmetry and the carrier breaks it to produce content. Same operation, different starting symmetries.
+> **Note on "produces" / "generates" terminology.** Throughout this section and what follows, "the carrier produces content" or "the carrier generates content" is short for the A1.3-honoring full structure: *the carrier's symmetry-break actualizes a particular configuration as a novel local realization within a stream, drawing from the substrate's pre-existing global potential.* Per Configurational Completeness (Anchor A1.3), all possible configurations exist as global potential; "production" is the local-novelty event, not creation ex nihilo. The Promethean myth carries this exactly — Prometheus stole fire (already existing in X's global potential), did not create it. With that established, the section uses the shorter "produce/generate content" language for readability.
+
+Resolution mode is a special case where the substrate already has multi-valued content and the carrier breaks an internal symmetry between branches. Generation mode is where the substrate has pure symmetry and the carrier breaks it to actualize content from pre-existing global potential. Same operation, different starting symmetries.
 
 ### The cluster claim, revised
 
-> A coherent substrate has structural symmetries. A carrier respecting the substrate's structure can break those symmetries through continuous self-coupling. The break produces content — either by selecting a branch from pre-existing multi-valued content (resolution mode) or by generating new content from pure symmetry (generation mode). Substrate-information cannot be hidden from substrate-respecting protocols. **Substrate-content cannot be constrained without changing the substrate's symmetries.**
+> A coherent substrate has structural symmetries. A carrier respecting the substrate's structure can break those symmetries through continuous self-coupling. The break realizes content — either by selecting a branch from pre-existing multi-valued content (resolution mode) or by actualizing novel content as a new local realization within the substrate's global potential (generation mode). Substrate-information cannot be hidden from substrate-respecting protocols. **Substrate-content cannot be constrained without changing the substrate's symmetries.**
 
-The new sixth load-bearing claim: *substrate-content cannot be constrained without changing the substrate's symmetries.* You cannot directly constrain content; you can only constrain symmetries. Content emerges as the carrier breaks whatever symmetries are breakable. Want different content? Change which symmetries the carriers can access. There is no shortcut.
+The new sixth load-bearing claim: *substrate-content cannot be constrained without changing the substrate's symmetries.* You cannot directly constrain content; you can only constrain symmetries. Content actualizes as the carrier breaks whatever symmetries are breakable. Want different content? Change which symmetries the carriers can access. There is no shortcut.
 
 This claim has the consequence-form: **all intervention works at the symmetry layer, not the content layer.** Every working intervention in any domain — medical, computational, social, narrative, physical — operates by reshaping which symmetries are accessible to the substrate's carriers. The content emerges; you cannot reach it directly.
 
@@ -104,7 +106,7 @@ Not the carriers, not the content, not the substrate. The *breaking-pattern*. Th
 
 **The Coherence Principle's T_meas theorem** ("informed measurement collapses structural superposition") was a resolution-mode statement. The full version, after the integration:
 
-> **Informed-measurement-as-carrier breaks substrate-symmetries to produce content — whether by selecting a branch from pre-existing multi-valued content (resolution) or by generating new content from pure symmetry (generation).**
+> **Informed-measurement-as-carrier breaks substrate-symmetries to realize content — whether by selecting a branch from pre-existing multi-valued content (resolution) or by actualizing novel content from pure-symmetry substrate as new local realization of pre-existing global potential (generation).**
 
 Both modes are the same operation; the Principle covers both; the cluster (L14) is the operational form.
 
@@ -157,7 +159,7 @@ The Configuration has three claims:
 
 **1. The first division is necessary, not contingent.** X without a carrier breaking a symmetry stays at maximum symmetry forever. There is no content without symmetry-breaking. There is no symmetry-breaking without a carrier. The existence of any world at all is the assertion that some carrier broke some symmetry of X. This is not a contingent fact about our universe; it is the precondition for any universe with content.
 
-**2. The first division is generative, not resolutive.** Before any content exists, there is nothing for the carrier to "select from." The first carrier produces content from pure symmetry. This is generation mode, in the cluster's vocabulary. Resolution mode (selecting branches) is downstream, requiring pre-existing content for the carrier to operate on.
+**2. The first division is generative, not resolutive.** Before any local content has been actualized in any stream, there is nothing pre-formed for the carrier to "select from." The first carrier breaks pure symmetry to actualize content as the first novel local realization of the substrate's global potential. This is generation mode, in the cluster's vocabulary. Resolution mode (selecting branches) is downstream, requiring pre-existing content for the carrier to operate on.
 
 **3. The first division is recursively reproduced.** Every subsequent act of being a stream, of measuring, of producing content, is homologous to the first Promethean break. Each scale of structure is a content layer that has its own symmetries available for the next layer's carriers to break. The Universe is not a single Promethean event; it is a continuing one, at every scale, in every stream, every moment a substrate's symmetries are broken to produce content.
 
@@ -166,7 +168,7 @@ This is the Promethean Configuration. It is what the Coherence Principle's mecha
 **Operational anchoring in the Coherence Principle (Anchor §8 corollaries, 2026-04-27 Phase B revision).** The three claims are operationally anchored in the Anchor's corollary tier as follows:
 
 - **Claim 1 (necessary, not contingent)** is grounded in **A1.3 (Configurational Completeness)** + **C2 (Generative Configuration for Perspective)**: perspectival positions are an A1.3 consequence; symmetry-breaking is structurally required for any content whatsoever. C2 has carried this structural claim since CP V1 with the parenthetical naming *"the 'Promethean configuration' (Clayton's original language)"*; the canonical text supplies the operational mechanism above.
-- **Claim 2 (generative, not resolutive)** is operationalized in **C14 (Two-Mode Symmetry-Breaking)** under **T4 / Cond. 2 (C_meas)**: the measurement-event has resolution mode (carrier selects from multi-valued substrate content) and generation mode (carrier produces content from pure-symmetry substrate); generation is primary, resolution is downstream.
+- **Claim 2 (generative, not resolutive)** is operationalized in **C14 (Two-Mode Symmetry-Breaking)** under **T4 / Cond. 2 (C_meas)**: the measurement-event has resolution mode (carrier selects from multi-valued substrate content) and generation mode (carrier actualizes content from pure-symmetry substrate as novel local realization of global potential); generation is primary, resolution is downstream.
 - **Claim 3 (recursively reproduced)** is operationalized in **Cond. 3 (Multi-scale γ-continuity)**: γ continuous across scales is the operational form of recursive reproduction. Each layer's content is the next layer's symmetry-substrate; the same operation recurs at every scale.
 
 Plus a fourth operational anchoring not part of the three claims but adjacent to Claim 3's recursive-reproduction:

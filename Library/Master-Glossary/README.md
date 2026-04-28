@@ -613,11 +613,11 @@ Substrates have symmetries: the substrate "looks the same" under specific transf
 
 ### Symmetry-breaking (operation)
 
-*Universal-Coherence §I — the central operation: carriers break substrate symmetries to produce content.*
+*Universal-Coherence §I — the central operation: carriers break substrate symmetries to actualize content.*
 
-Content emerges *from* the breaking of substrate symmetries by carriers. Without symmetry-breaking there is only undifferentiated symmetric substrate (X at maximum symmetry). The Promethean Configuration's three claims (necessary, generative, recursively reproduced) characterize the structure of symmetry-breaking across the framework.
+Content actualizes *from* the breaking of substrate symmetries by carriers. Without symmetry-breaking there is only undifferentiated symmetric substrate (X at maximum symmetry). Per A1.3 (Configurational Completeness, Anchor), all configurations exist as global potential within X; symmetry-breaking does not create configurations ex nihilo — it actualizes configurations from pre-existing global potential as novel local realizations within a stream's Ω_S. The Promethean Configuration's three claims (necessary, generative, recursively reproduced) characterize the structure of symmetry-breaking across the framework.
 
-*See also:* Carrier, Promethean Configuration, Resolution mode, Generation mode. *Heritage:* No direct precursor in DoPI/Corpus; the Corpus Addendum's "generative contraction" (§2.4–3.1) is the closest physics-register precursor — symmetry-breaking is the operational generalization.
+*See also:* Carrier, Promethean Configuration, Resolution mode, Generation mode, A1.3. *Heritage:* No direct precursor in DoPI/Corpus; the Corpus Addendum's "generative contraction" (§2.4–3.1) is the closest physics-register precursor — symmetry-breaking is the operational generalization.
 
 ### Resolution mode
 
@@ -629,11 +629,13 @@ Examples: a quantum measurement selecting an eigenvalue; a person's decision amo
 
 ### Generation mode
 
-*Universal-Coherence §I; L14 cluster after Maleknejad-Kopp 2026 — the symmetry-breaking case where the substrate has pure symmetry (no pre-existing multi-valued content) and the carrier produces content from the symmetry-break itself.*
+*Universal-Coherence §I; L14 cluster after Maleknejad-Kopp 2026 — the symmetry-breaking case where the substrate has pure symmetry (no pre-existing locally-actualized multi-valued content) and the carrier actualizes content from the symmetry-break itself as novel local realization within the substrate's pre-existing global potential.*
 
-Examples: gravitational-wave-induced fermion mass generation (Maleknejad-Kopp); creative writing generating content the writer didn't pre-form; a contemplative practice producing experiential content from open attention; a market generating prices from previously-undifferentiated demand. The substrate carries no content; the carrier *generates* it.
+**A1.3-honoring formulation.** Generation mode does not produce ex nihilo. SubContent is a stream-relative functor; the configurations actualized in generation mode are structurally available within X's global potential per A1.3 Configurational Completeness. The G_pre → G_post transition is the local-novelty event; the configuration itself was always within X. "Generation" names the local-actualization-from-global-potential, not creation.
 
-*See also:* Resolution mode, T4 / C_meas, Promethean Configuration. *Heritage:* No direct precursor — operational vocabulary.
+Examples: gravitational-wave-induced fermion mass generation (Maleknejad-Kopp); creative writing actualizing content the writer didn't pre-form; a contemplative practice surfacing experiential content from open attention; a market actualizing prices from previously-undifferentiated demand. The substrate carries no locally-actualized content; the carrier *generates* (actualizes from global potential as novel local realization) it.
+
+*See also:* Resolution mode, T4 / C_meas, Promethean Configuration, A1.3, SubContent. *Heritage:* No direct precursor — operational vocabulary.
 
 ### Promethean Configuration
 
@@ -642,8 +644,8 @@ Examples: gravitational-wave-induced fermion mass generation (Maleknejad-Kopp); 
 The Configuration has three load-bearing claims (Universal-Coherence canonical text §VII):
 
 1. **Necessary, not contingent.** Without a carrier breaking some symmetry, X stays at maximum symmetry forever — pure potential, no content.
-2. **Generative, not resolutive.** Before any content exists, the first carrier produces content from pure symmetry. Generation mode is foundational; resolution mode is downstream.
-3. **Recursively reproduced.** Every subsequent act of being a stream, of measuring, of producing content, is homologous to the first Promethean break. Each scale of structure is a content layer with its own symmetries available for the next layer's carriers to break.
+2. **Generative, not resolutive.** Before any locally-actualized content exists in any stream, the first carrier actualizes content from pure symmetry as the first novel local realization of the substrate's pre-existing global potential. Generation mode is foundational; resolution mode is downstream. *(Per A1.3 Configurational Completeness: the configuration was always within X; "generation" names the actualization-from-global-potential, not creation ex nihilo. The Promethean myth carries this — Prometheus stole fire, didn't create it.)*
+3. **Recursively reproduced.** Every subsequent act of being a stream, of measuring, of actualizing content, is homologous to the first Promethean break. Each scale of structure is a content layer with its own symmetries available for the next layer's carriers to break.
 
 The structural claim has been in the foundation as Anchor C2 (Generative Configuration for Perspective, logical form) since CP V1; the operational mechanism (carriers / symmetry-breaks / two modes) makes explicit what C2 has been carrying.
 
@@ -651,7 +653,7 @@ The structural claim has been in the foundation as Anchor C2 (Generative Configu
 
 ### Substrate-self-measurement (the cluster, L14)
 
-*Basement L14; Anchor T4 / C_meas — the unified operational pattern: a coherent substrate's structural symmetries can be broken by a carrier respecting the substrate's structure, producing content that cannot be hidden from substrate-respecting protocols.*
+*Basement L14; Anchor T4 / C_meas — the unified operational pattern: a coherent substrate's structural symmetries can be broken by a carrier respecting the substrate's structure, actualizing content (from pre-existing global potential per A1.3, as novel local realization in the stream) that cannot be hidden from substrate-respecting protocols.*
 
 L14 is the cluster of cross-substrate instances (cosmological, biological, cognitive, linguistic) all manifesting the same operational pattern. The cluster's six load-bearing claims (substrate-internality, unitarity-at-substrate-level, active-maintenance-as-stable-regime, asymptotic-symmetry-absorbs-ignorance, substrate-information-cannot-be-hidden, substrate-content-cannot-be-constrained-without-changing-substrate-symmetries) characterize how T4 / C_meas instantiates across domains.
 
