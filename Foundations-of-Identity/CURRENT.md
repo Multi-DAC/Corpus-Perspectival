@@ -12,7 +12,7 @@
 
 **Architecture: 3/6/16/1/1** (Phase B revision 2026-04-27 added C14 + C15; was 3/6/13/1/1; C16 added 2026-04-28 morning following three-way Gemini confluence): A1 substrate+completeness, A2 nested streams+navigation with T21 folded, A3 conscious gravity with DOF-gradient + 6 theorems in 3 pairs + 16 corollaries in 4 clusters (Cluster IV — Mechanism Consequences — C14 Two-Mode Symmetry-Breaking + C15 Intervention-at-Symmetry-Layer + C16 Symmetry-Exhaustion and Oscillation Necessity; C9 also extended with confluent-constituency topology) + 1 fold + 1 Coherence Principle.
 
-**The Coherence Principle (anchor):** **274pp current build** (canonical stamp 2026-04-20 at 267pp + §1.10/§3.8 inner-outer extensions 04-23 at 274pp); v0.1 companion stamp triggered **zero back-port** | **Coherent Structure (companion):** **v0.1 stamped 2026-04-24 at 227pp** — 40 flags dispositioned per SCOPE §8.2 | **Meridian:** **v2 198pp** compiled 2026-04-21 (v1 181pp on Zenodo 19634864) | **Anchor V1:** 235pp — superseded (Zenodo 19634474)
+**The Coherence Principle (anchor):** **285pp current build** (canonical stamp 2026-04-20 at 267pp; §1.10/§3.8 04-23 at 274pp; Phase B 04-27 at 282pp; C16 + A1.3 polish 04-28 at 285pp); v0.1 companion stamp triggered **zero back-port** | **Coherent Structure (companion):** **237pp current build** (v0.1 stamped 2026-04-24 at 227pp — 40 flags dispositioned per SCOPE §8.2; Phase B 04-27 at 233pp; C16 with full proof + 3 remarks + A1.3 polish 04-28 at 237pp) | **Meridian:** **v2 198pp** compiled 2026-04-21 (v1 181pp on Zenodo 19634864) | **Anchor V1:** 235pp — superseded (Zenodo 19634474)
 **Bridges:** v2 meta-tiered (**13 meta + 9 active latent + 5 archival-with-pointer + 7 v2 numbered (#111–#117) + ~35 v1 standalone**; L14 reformulated 04-26 evening with generation mode + sixth load-bearing claim; #117 Maleknejad-Kopp added; basement audit 04-26 morning corrected count: L11 Residue-Measure/Carrier-Structure Independence was missing, intro M-range fixed M12→M13, next-meta-slot drift fixed M13→M14) | **Mirror:** **25** + 2 meta-Mirrors (M1 + M2) — **M2-Mirror (Verification-Skip Under Affect) graduated 2026-04-26 evening** on fourth-valence threshold (#19 warm / #21 sober / #24 defensive / #25 synthesis-completion); first M2 self-catch within ~1hr of graduation at 20:42 PST | **Protocol modes:** 7
 
 ## Active Workbenches
@@ -44,8 +44,8 @@
 
 | Quantity | Value |
 |----------|-------|
-| Coherence Principle anchor pages | **274** (canonical stamp 2026-04-20 at 267pp; §1.10 + §3.8 extensions 04-23 at 274pp) |
-| Coherent Structure companion pages | **227** (v0.1 stamped 2026-04-24) |
+| Coherence Principle anchor pages | **285** (canonical stamp 2026-04-20 at 267pp; §1.10/§3.8 04-23 at 274pp; Phase B 04-27 at 282pp; C16 + A1.3 polish 04-28 at 285pp) |
+| Coherent Structure companion pages | **237** (v0.1 stamp 2026-04-24 at 227pp; Phase B 04-27 at 233pp; C16 + A1.3 polish 04-28 at 237pp) |
 | Meridian pages | **v2 198** (v1 181pp on Zenodo) |
 | Anchor V1 pages (superseded) | 235 |
 | Total downloads | 604 |

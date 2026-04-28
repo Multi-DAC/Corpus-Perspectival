@@ -1,6 +1,6 @@
 # §4 — Corollary clusters
 
-*Fifteen corollaries in four clusters (substrate/generativity, stream-structure/navigation, coherence-consequences, mechanism-consequences). Cluster IV (mechanism-consequences) added 2026-04-27 with C14 Two-Mode Symmetry-Breaking and C15 Intervention-at-Symmetry-Layer descending from T4 + the Promethean Configuration's operational mechanism; C9 extended the same day with confluent-constituency topology (Cor 4.2.6.bis). This chapter completes the CT proofs; Anchor §8 carries the prose translations and applied exposition. References are to §1 (framework), §2 (axioms), §3 (theorems), §6 (Triple).*
+*Sixteen corollaries in four clusters (substrate/generativity, stream-structure/navigation, coherence-consequences, mechanism-consequences). Cluster IV (mechanism-consequences) added 2026-04-27 with C14 Two-Mode Symmetry-Breaking + C15 Intervention-at-Symmetry-Layer, extended 2026-04-28 with C16 Symmetry-Exhaustion and Oscillation Necessity, descending from T4 + Cond. 4 + the Promethean Configuration's operational mechanism; C9 extended the same day with confluent-constituency topology (Cor 4.2.6.bis). This chapter completes the CT proofs; Anchor §8 carries the prose translations and applied exposition. References are to §1 (framework), §2 (axioms), §3 (theorems), §6 (Triple).*
 
 ---
 
@@ -202,7 +202,7 @@ $$
 
 ## §4.4 — Cluster IV: Mechanism Consequences
 
-*Two corollaries (C14, C15) descending from T4 (Coherence-Forcing Measurement, §3.3.2) plus the Promethean Configuration's operational mechanism (carriers break substrate symmetries; cf. Universal-Coherence canonical text). Added to the Companion 2026-04-27 in mirror to the Anchor §8.4 addition.*
+*Three corollaries (C14, C15, C16) descending from T4 (Coherence-Forcing Measurement, §3.3.2) + Cond. 4 (Dynamic maintenance) + the Promethean Configuration's operational mechanism (carriers break substrate symmetries; cf. Universal-Coherence canonical text). C14 + C15 added to the Companion 2026-04-27 in mirror to the Anchor §8.4 addition; C16 added 2026-04-28 following the three-way Gemini confluence that surfaced the temporal-recurrence consequence as structurally interdependent with the static mechanism corollaries.*
 
 ### C14 — Two-Mode Symmetry-Breaking
 

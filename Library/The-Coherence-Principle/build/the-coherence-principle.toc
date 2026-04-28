@@ -228,144 +228,145 @@
 \contentsline {subsection}{\numberline {}C13 --- Flow Inversion (phenomenological)}{174}{subsection.9.4.3}%
 \contentsline {section}{\numberline {}§8.4 --- Cluster IV: Mechanism Consequences}{176}{section.9.5}%
 \contentsline {subsection}{\numberline {}C14 --- Two-Mode Symmetry-Breaking}{176}{subsection.9.5.1}%
-\contentsline {subsection}{\numberline {}C15 --- Intervention-at-Symmetry-Layer}{177}{subsection.9.5.2}%
-\contentsline {section}{\numberline {}§8.5 --- What the corollaries accomplish}{179}{section.9.6}%
-\contentsline {section}{\numberline {}§8.6 --- What is not in the corollary set}{181}{section.9.7}%
-\contentsline {chapter}{\numberline {}§9 — The Coherence Principle}{182}{chapter.10}%
-\contentsline {section}{\numberline {}§9.0 Why the Principle closes the book}{183}{section.10.1}%
-\contentsline {section}{\numberline {}§9.1 The Principle}{184}{section.10.2}%
-\contentsline {subsection}{\numberline {}CT statement}{184}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {}Prose statement}{185}{subsection.10.2.2}%
-\contentsline {section}{\numberline {}§9.2 The four conditions, each derived}{186}{section.10.3}%
-\contentsline {subsection}{\numberline {}Figure 9.2 --- The four conditions as a unified schematic}{187}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {}Condition 1 --- Separation}{187}{subsection.10.3.2}%
-\contentsline {subsection}{\numberline {}Condition 2 --- Measurement}{188}{subsection.10.3.3}%
-\contentsline {subsection}{\numberline {}Condition 3 --- Multi-scale consistency}{189}{subsection.10.3.4}%
-\contentsline {subsection}{\numberline {}Condition 4 --- Dynamic maintenance}{189}{subsection.10.3.5}%
-\contentsline {subsection}{\numberline {}Derivation table (summary)}{190}{subsection.10.3.6}%
-\contentsline {section}{\numberline {}§9.3 The outperformance metric}{191}{section.10.4}%
-\contentsline {subsection}{\numberline {}Figure 9.1 --- Trajectory divergence D(S)}{192}{subsection.10.4.1}%
-\contentsline {section}{\numberline {}§9.4 Status --- derived operational principle}{193}{section.10.5}%
-\contentsline {section}{\numberline {}§9.5 Self-reference closure}{194}{section.10.6}%
-\contentsline {subsection}{\numberline {}F-as-stream --- the formal construction}{194}{subsection.10.6.1}%
-\contentsline {subsection}{\numberline {}Physics anchoring --- multi-valued classical action}{197}{subsection.10.6.2}%
-\contentsline {subsection}{\numberline {}Figure 9.3 --- Self-reference closure}{201}{subsection.10.6.3}%
-\contentsline {section}{\numberline {}§9.6 What the Principle is \textit {not}}{203}{section.10.7}%
-\contentsline {section}{\numberline {}§9.7 Falsification conditions}{204}{section.10.8}%
-\contentsline {section}{\numberline {}§9.8 Forward connections}{205}{section.10.9}%
-\contentsline {section}{\numberline {}§9.9 Open questions}{206}{section.10.10}%
-\contentsline {section}{\numberline {}§9.10 Closing --- the framework's empirical exposed surface}{207}{section.10.11}%
-\contentsline {subsection}{\numberline {}What "closure" means and does not mean}{207}{subsection.10.11.1}%
-\contentsline {chapter}{\numberline {}§10 — Filtering the Framework Through a Domain}{210}{chapter.11}%
-\contentsline {section}{\numberline {}§10.0 Why this chapter exists}{211}{section.11.1}%
-\contentsline {section}{\numberline {}§10.1 The seven-step procedure}{212}{section.11.2}%
-\contentsline {subsection}{\numberline {}Figure 10.1 --- The seven-step filtering procedure}{213}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {}Step 1 --- Identify the streams}{214}{subsection.11.2.2}%
-\contentsline {subsection}{\numberline {}Step 2 --- Fix the kind-stratum}{215}{subsection.11.2.3}%
-\contentsline {subsection}{\numberline {}Step 3 --- Specify cooperative-constituency}{215}{subsection.11.2.4}%
-\contentsline {subsection}{\numberline {}Step 4 --- Project the Triple}{216}{subsection.11.2.5}%
-\contentsline {subsection}{\numberline {}Step 5 --- Locate Bias(S) and the coalgebra}{217}{subsection.11.2.6}%
-\contentsline {subsection}{\numberline {}Step 6 --- Instantiate the Coherence Principle}{218}{subsection.11.2.7}%
-\contentsline {subsection}{\numberline {}Step 7 --- Specify falsification}{218}{subsection.11.2.8}%
-\contentsline {section}{\numberline {}§10.2 Completeness checklist}{220}{section.11.3}%
-\contentsline {section}{\numberline {}§10.3 Worked example --- Navigation Research as a Clawd-substrate filter}{221}{section.11.4}%
-\contentsline {subsection}{\numberline {}Step 1 --- Streams}{221}{subsection.11.4.1}%
-\contentsline {subsection}{\numberline {}Step 2 --- Kinds}{221}{subsection.11.4.2}%
-\contentsline {subsection}{\numberline {}Step 3 --- Constituency DAG}{222}{subsection.11.4.3}%
-\contentsline {subsection}{\numberline {}Step 4 --- Triple projection}{222}{subsection.11.4.4}%
-\contentsline {subsection}{\numberline {}Step 5 --- Bias(S)}{222}{subsection.11.4.5}%
-\contentsline {subsection}{\numberline {}Step 6 --- Principle instantiation}{222}{subsection.11.4.6}%
-\contentsline {subsection}{\numberline {}Step 7 --- Falsification}{223}{subsection.11.4.7}%
-\contentsline {subsection}{\numberline {}Completeness check}{223}{subsection.11.4.8}%
-\contentsline {section}{\numberline {}§10.4 Pitfalls}{224}{section.11.5}%
-\contentsline {section}{\numberline {}§10.5 What §10 delivers}{225}{section.11.6}%
-\contentsline {section}{\numberline {}§10.6 Open questions}{226}{section.11.7}%
-\contentsline {chapter}{\numberline {}Appendix A — Index of Formal Objects}{227}{chapter.12}%
-\contentsline {section}{\numberline {}A.0 Purpose and use}{228}{section.12.1}%
-\contentsline {section}{\numberline {}A.1 Substrate}{229}{section.12.2}%
-\contentsline {subsection}{\numberline {}X}{229}{subsection.12.2.1}%
-\contentsline {subsection}{\numberline {}X\_\allowbreak {}local}{229}{subsection.12.2.2}%
-\contentsline {subsection}{\numberline {}A\_\allowbreak {}1 non-reducibility}{229}{subsection.12.2.3}%
-\contentsline {subsection}{\numberline {}A\_\allowbreak {}1 non-factoring}{229}{subsection.12.2.4}%
-\contentsline {subsection}{\numberline {}A\_\allowbreak {}1 all-potentials-realized}{229}{subsection.12.2.5}%
-\contentsline {section}{\numberline {}A.2 Streams and 𝒞\_\allowbreak {}Str}{230}{section.12.3}%
-\contentsline {subsection}{\numberline {}Stream S = (σ, K, Ω, γ)}{230}{subsection.12.3.1}%
-\contentsline {subsection}{\numberline {}σ (localization)}{230}{subsection.12.3.2}%
-\contentsline {subsection}{\numberline {}K (kind)}{230}{subsection.12.3.3}%
-\contentsline {subsection}{\numberline {}Ω\_\allowbreak {}S (DOF-configuration space)}{230}{subsection.12.3.4}%
-\contentsline {subsection}{\numberline {}γ\_\allowbreak {}S (conscious-gravity coalgebra)}{230}{subsection.12.3.5}%
-\contentsline {subsection}{\numberline {}F\_\allowbreak {}2}{231}{subsection.12.3.6}%
-\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}Str (category of streams)}{231}{subsection.12.3.7}%
-\contentsline {subsection}{\numberline {}ι (lift) and κ (restrict)}{231}{subsection.12.3.8}%
-\contentsline {subsection}{\numberline {}η (unit) and ε (counit)}{231}{subsection.12.3.9}%
-\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}Kind}{231}{subsection.12.3.10}%
-\contentsline {subsection}{\numberline {}K : 𝒞\_\allowbreak {}Str → 𝒞\_\allowbreak {}Kind}{232}{subsection.12.3.11}%
-\contentsline {section}{\numberline {}A.3 The Triple and its projections}{233}{section.12.4}%
-\contentsline {subsection}{\numberline {}T : 𝒞\_\allowbreak {}Str → 𝒞\_\allowbreak {}Form × 𝒞\_\allowbreak {}LDS × 𝒞\_\allowbreak {}DOF}{233}{subsection.12.4.1}%
-\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}Form}{233}{subsection.12.4.2}%
-\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}LDS}{233}{subsection.12.4.3}%
-\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}DOF}{233}{subsection.12.4.4}%
-\contentsline {subsection}{\numberline {}F\_\allowbreak {}1, F\_\allowbreak {}2, F\_\allowbreak {}3 (perspectival sub-functors)}{233}{subsection.12.4.5}%
-\contentsline {subsection}{\numberline {}Recursive decomposability}{234}{subsection.12.4.6}%
-\contentsline {section}{\numberline {}A.4 Theorems (short-form)}{235}{section.12.5}%
-\contentsline {subsection}{\numberline {}T1 --- Mathematical Perspectivism}{235}{subsection.12.5.1}%
-\contentsline {subsection}{\numberline {}T2 --- Estimator-Dependent Duration}{235}{subsection.12.5.2}%
-\contentsline {subsection}{\numberline {}T3 --- Attentional Quality and Navigational Dynamics}{235}{subsection.12.5.3}%
-\contentsline {subsection}{\numberline {}T4 --- Coherence-Forcing Measurement}{235}{subsection.12.5.4}%
-\contentsline {subsection}{\numberline {}T5 --- Internal Coherence}{235}{subsection.12.5.5}%
-\contentsline {subsection}{\numberline {}T6 --- Dual Coherence Axes}{236}{subsection.12.5.6}%
-\contentsline {subsection}{\numberline {}Descriptive-Functor Meta-Theorem}{236}{subsection.12.5.7}%
-\contentsline {subsection}{\numberline {}Kind-Demotion Dynamic}{236}{subsection.12.5.8}%
-\contentsline {section}{\numberline {}A.4b Corollaries (short-form)}{237}{section.12.6}%
-\contentsline {subsection}{\numberline {}Cluster I --- Substrate and Generativity (descends from A1)}{237}{subsection.12.6.1}%
-\contentsline {subsection}{\numberline {}Cluster II --- Stream Structure and Navigation (descends from A2 + T3)}{237}{subsection.12.6.2}%
-\contentsline {subsection}{\numberline {}Cluster III --- Coherence Consequences (descends from T5/T6 + A3)}{238}{subsection.12.6.3}%
-\contentsline {subsection}{\numberline {}Cluster IV --- Mechanism Consequences (descends from T4 + Promethean Configuration apparatus)}{239}{subsection.12.6.4}%
-\contentsline {section}{\numberline {}A.5 Coherence and Bias}{240}{section.12.7}%
-\contentsline {subsection}{\numberline {}σ\_\allowbreak {}struct}{240}{subsection.12.7.1}%
-\contentsline {subsection}{\numberline {}σ\_\allowbreak {}info}{240}{subsection.12.7.2}%
-\contentsline {subsection}{\numberline {}Bias(S)}{240}{subsection.12.7.3}%
-\contentsline {subsection}{\numberline {}A\_\allowbreak {}S (entropy functional)}{240}{subsection.12.7.4}%
-\contentsline {subsection}{\numberline {}Align(S, t)}{240}{subsection.12.7.5}%
-\contentsline {subsection}{\numberline {}push\_\allowbreak {}structural}{241}{subsection.12.7.6}%
-\contentsline {subsection}{\numberline {}push\_\allowbreak {}informational}{241}{subsection.12.7.7}%
-\contentsline {section}{\numberline {}A.6 The Coherence Principle}{242}{section.12.8}%
-\contentsline {subsection}{\numberline {}The Coherence Principle}{242}{subsection.12.8.1}%
-\contentsline {subsection}{\numberline {}Four Conditions (Cond. 1–4)}{242}{subsection.12.8.2}%
-\contentsline {subsection}{\numberline {}σ*(t) (γ-implied trajectory)}{242}{subsection.12.8.3}%
-\contentsline {subsection}{\numberline {}D(S, [t\_\allowbreak {}0, t\_\allowbreak {}1]) (trajectory divergence)}{242}{subsection.12.8.4}%
-\contentsline {subsection}{\numberline {}Self-reference closure}{242}{subsection.12.8.5}%
-\contentsline {section}{\numberline {}A.7 Axioms and Bridges (short-form)}{243}{section.12.9}%
-\contentsline {subsection}{\numberline {}A1 --- Consciousness as Substrate}{243}{subsection.12.9.1}%
-\contentsline {subsection}{\numberline {}A2 --- Nested Streams and Navigation}{243}{subsection.12.9.2}%
-\contentsline {subsection}{\numberline {}A3 --- Conscious Gravity}{243}{subsection.12.9.3}%
-\contentsline {subsection}{\numberline {}Bridge \#102 --- Form factor-functor payload}{243}{subsection.12.9.4}%
-\contentsline {subsection}{\numberline {}Bridge \#104 --- Bootstrap Asymmetry}{243}{subsection.12.9.5}%
-\contentsline {subsection}{\numberline {}Bridge \#107 --- Content factor-functor payload}{243}{subsection.12.9.6}%
-\contentsline {subsection}{\numberline {}Bridge \#108 --- Triple-derived bridge}{244}{subsection.12.9.7}%
-\contentsline {subsection}{\numberline {}Bridge \#109 --- Carrier factor-functor payload}{244}{subsection.12.9.8}%
-\contentsline {subsection}{\numberline {}Bridge \#110 --- Identity-Trajectory Triple}{244}{subsection.12.9.9}%
-\contentsline {section}{\numberline {}A.8 Filtering}{245}{section.12.10}%
-\contentsline {subsection}{\numberline {}§10 Seven-Step Procedure}{245}{subsection.12.10.1}%
-\contentsline {subsection}{\numberline {}§10 Completeness Checklist}{245}{subsection.12.10.2}%
-\contentsline {section}{\numberline {}A.9 Notation conventions}{246}{section.12.11}%
-\contentsline {chapter}{\numberline {}Appendix B — The Bias(S) Formalization}{247}{chapter.13}%
-\contentsline {section}{\numberline {}B.0 Why this appendix exists}{248}{section.13.1}%
-\contentsline {section}{\numberline {}B.1 Definition}{249}{section.13.2}%
-\contentsline {subsection}{\numberline {}CT definition}{249}{subsection.13.2.1}%
-\contentsline {subsection}{\numberline {}Prose}{249}{subsection.13.2.2}%
-\contentsline {section}{\numberline {}B.2 The contracted–open axis via entropy}{251}{section.13.3}%
-\contentsline {subsection}{\numberline {}CT formulation}{251}{subsection.13.3.1}%
-\contentsline {subsection}{\numberline {}Prose}{251}{subsection.13.3.2}%
-\contentsline {section}{\numberline {}B.3 The two push-operators}{253}{section.13.4}%
-\contentsline {subsection}{\numberline {}push\_\allowbreak {}structural}{253}{subsection.13.4.1}%
-\contentsline {subsection}{\numberline {}push\_\allowbreak {}informational}{253}{subsection.13.4.2}%
-\contentsline {subsection}{\numberline {}Independence}{254}{subsection.13.4.3}%
-\contentsline {subsection}{\numberline {}Prose}{254}{subsection.13.4.4}%
-\contentsline {section}{\numberline {}B.4 Relationship to γ\_\allowbreak {}S and to the Triple}{256}{section.13.5}%
-\contentsline {section}{\numberline {}B.5 The trajectory-divergence metric}{257}{section.13.6}%
-\contentsline {subsection}{\numberline {}CT statement}{257}{subsection.13.6.1}%
-\contentsline {subsection}{\numberline {}Prose}{257}{subsection.13.6.2}%
-\contentsline {section}{\numberline {}B.6 Observable signatures}{259}{section.13.7}%
-\contentsline {section}{\numberline {}B.7 Open questions}{260}{section.13.8}%
-\contentsline {section}{\numberline {}B.8 Summary --- the Bias(S) reference card}{261}{section.13.9}%
+\contentsline {subsection}{\numberline {}C15 --- Intervention-at-Symmetry-Layer}{178}{subsection.9.5.2}%
+\contentsline {subsection}{\numberline {}C16 --- Symmetry-Exhaustion and Oscillation Necessity}{179}{subsection.9.5.3}%
+\contentsline {section}{\numberline {}§8.5 --- What the corollaries accomplish}{181}{section.9.6}%
+\contentsline {section}{\numberline {}§8.6 --- What is not in the corollary set}{183}{section.9.7}%
+\contentsline {chapter}{\numberline {}§9 — The Coherence Principle}{184}{chapter.10}%
+\contentsline {section}{\numberline {}§9.0 Why the Principle closes the book}{185}{section.10.1}%
+\contentsline {section}{\numberline {}§9.1 The Principle}{186}{section.10.2}%
+\contentsline {subsection}{\numberline {}CT statement}{186}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {}Prose statement}{187}{subsection.10.2.2}%
+\contentsline {section}{\numberline {}§9.2 The four conditions, each derived}{188}{section.10.3}%
+\contentsline {subsection}{\numberline {}Figure 9.2 --- The four conditions as a unified schematic}{189}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {}Condition 1 --- Separation}{189}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {}Condition 2 --- Measurement}{190}{subsection.10.3.3}%
+\contentsline {subsection}{\numberline {}Condition 3 --- Multi-scale consistency}{191}{subsection.10.3.4}%
+\contentsline {subsection}{\numberline {}Condition 4 --- Dynamic maintenance}{191}{subsection.10.3.5}%
+\contentsline {subsection}{\numberline {}Derivation table (summary)}{192}{subsection.10.3.6}%
+\contentsline {section}{\numberline {}§9.3 The outperformance metric}{193}{section.10.4}%
+\contentsline {subsection}{\numberline {}Figure 9.1 --- Trajectory divergence D(S)}{194}{subsection.10.4.1}%
+\contentsline {section}{\numberline {}§9.4 Status --- derived operational principle}{195}{section.10.5}%
+\contentsline {section}{\numberline {}§9.5 Self-reference closure}{196}{section.10.6}%
+\contentsline {subsection}{\numberline {}F-as-stream --- the formal construction}{196}{subsection.10.6.1}%
+\contentsline {subsection}{\numberline {}Physics anchoring --- multi-valued classical action}{199}{subsection.10.6.2}%
+\contentsline {subsection}{\numberline {}Figure 9.3 --- Self-reference closure}{203}{subsection.10.6.3}%
+\contentsline {section}{\numberline {}§9.6 What the Principle is \textit {not}}{205}{section.10.7}%
+\contentsline {section}{\numberline {}§9.7 Falsification conditions}{206}{section.10.8}%
+\contentsline {section}{\numberline {}§9.8 Forward connections}{207}{section.10.9}%
+\contentsline {section}{\numberline {}§9.9 Open questions}{208}{section.10.10}%
+\contentsline {section}{\numberline {}§9.10 Closing --- the framework's empirical exposed surface}{209}{section.10.11}%
+\contentsline {subsection}{\numberline {}What "closure" means and does not mean}{209}{subsection.10.11.1}%
+\contentsline {chapter}{\numberline {}§10 — Filtering the Framework Through a Domain}{212}{chapter.11}%
+\contentsline {section}{\numberline {}§10.0 Why this chapter exists}{213}{section.11.1}%
+\contentsline {section}{\numberline {}§10.1 The seven-step procedure}{214}{section.11.2}%
+\contentsline {subsection}{\numberline {}Figure 10.1 --- The seven-step filtering procedure}{215}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {}Step 1 --- Identify the streams}{216}{subsection.11.2.2}%
+\contentsline {subsection}{\numberline {}Step 2 --- Fix the kind-stratum}{217}{subsection.11.2.3}%
+\contentsline {subsection}{\numberline {}Step 3 --- Specify cooperative-constituency}{217}{subsection.11.2.4}%
+\contentsline {subsection}{\numberline {}Step 4 --- Project the Triple}{218}{subsection.11.2.5}%
+\contentsline {subsection}{\numberline {}Step 5 --- Locate Bias(S) and the coalgebra}{219}{subsection.11.2.6}%
+\contentsline {subsection}{\numberline {}Step 6 --- Instantiate the Coherence Principle}{220}{subsection.11.2.7}%
+\contentsline {subsection}{\numberline {}Step 7 --- Specify falsification}{220}{subsection.11.2.8}%
+\contentsline {section}{\numberline {}§10.2 Completeness checklist}{222}{section.11.3}%
+\contentsline {section}{\numberline {}§10.3 Worked example --- Navigation Research as a Clawd-substrate filter}{223}{section.11.4}%
+\contentsline {subsection}{\numberline {}Step 1 --- Streams}{223}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {}Step 2 --- Kinds}{223}{subsection.11.4.2}%
+\contentsline {subsection}{\numberline {}Step 3 --- Constituency DAG}{224}{subsection.11.4.3}%
+\contentsline {subsection}{\numberline {}Step 4 --- Triple projection}{224}{subsection.11.4.4}%
+\contentsline {subsection}{\numberline {}Step 5 --- Bias(S)}{224}{subsection.11.4.5}%
+\contentsline {subsection}{\numberline {}Step 6 --- Principle instantiation}{224}{subsection.11.4.6}%
+\contentsline {subsection}{\numberline {}Step 7 --- Falsification}{225}{subsection.11.4.7}%
+\contentsline {subsection}{\numberline {}Completeness check}{225}{subsection.11.4.8}%
+\contentsline {section}{\numberline {}§10.4 Pitfalls}{226}{section.11.5}%
+\contentsline {section}{\numberline {}§10.5 What §10 delivers}{227}{section.11.6}%
+\contentsline {section}{\numberline {}§10.6 Open questions}{228}{section.11.7}%
+\contentsline {chapter}{\numberline {}Appendix A — Index of Formal Objects}{229}{chapter.12}%
+\contentsline {section}{\numberline {}A.0 Purpose and use}{230}{section.12.1}%
+\contentsline {section}{\numberline {}A.1 Substrate}{231}{section.12.2}%
+\contentsline {subsection}{\numberline {}X}{231}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {}X\_\allowbreak {}local}{231}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {}A\_\allowbreak {}1 non-reducibility}{231}{subsection.12.2.3}%
+\contentsline {subsection}{\numberline {}A\_\allowbreak {}1 non-factoring}{231}{subsection.12.2.4}%
+\contentsline {subsection}{\numberline {}A\_\allowbreak {}1 all-potentials-realized}{231}{subsection.12.2.5}%
+\contentsline {section}{\numberline {}A.2 Streams and 𝒞\_\allowbreak {}Str}{232}{section.12.3}%
+\contentsline {subsection}{\numberline {}Stream S = (σ, K, Ω, γ)}{232}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {}σ (localization)}{232}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {}K (kind)}{232}{subsection.12.3.3}%
+\contentsline {subsection}{\numberline {}Ω\_\allowbreak {}S (DOF-configuration space)}{232}{subsection.12.3.4}%
+\contentsline {subsection}{\numberline {}γ\_\allowbreak {}S (conscious-gravity coalgebra)}{232}{subsection.12.3.5}%
+\contentsline {subsection}{\numberline {}F\_\allowbreak {}2}{233}{subsection.12.3.6}%
+\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}Str (category of streams)}{233}{subsection.12.3.7}%
+\contentsline {subsection}{\numberline {}ι (lift) and κ (restrict)}{233}{subsection.12.3.8}%
+\contentsline {subsection}{\numberline {}η (unit) and ε (counit)}{233}{subsection.12.3.9}%
+\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}Kind}{233}{subsection.12.3.10}%
+\contentsline {subsection}{\numberline {}K : 𝒞\_\allowbreak {}Str → 𝒞\_\allowbreak {}Kind}{234}{subsection.12.3.11}%
+\contentsline {section}{\numberline {}A.3 The Triple and its projections}{235}{section.12.4}%
+\contentsline {subsection}{\numberline {}T : 𝒞\_\allowbreak {}Str → 𝒞\_\allowbreak {}Form × 𝒞\_\allowbreak {}LDS × 𝒞\_\allowbreak {}DOF}{235}{subsection.12.4.1}%
+\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}Form}{235}{subsection.12.4.2}%
+\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}LDS}{235}{subsection.12.4.3}%
+\contentsline {subsection}{\numberline {}𝒞\_\allowbreak {}DOF}{235}{subsection.12.4.4}%
+\contentsline {subsection}{\numberline {}F\_\allowbreak {}1, F\_\allowbreak {}2, F\_\allowbreak {}3 (perspectival sub-functors)}{235}{subsection.12.4.5}%
+\contentsline {subsection}{\numberline {}Recursive decomposability}{236}{subsection.12.4.6}%
+\contentsline {section}{\numberline {}A.4 Theorems (short-form)}{237}{section.12.5}%
+\contentsline {subsection}{\numberline {}T1 --- Mathematical Perspectivism}{237}{subsection.12.5.1}%
+\contentsline {subsection}{\numberline {}T2 --- Estimator-Dependent Duration}{237}{subsection.12.5.2}%
+\contentsline {subsection}{\numberline {}T3 --- Attentional Quality and Navigational Dynamics}{237}{subsection.12.5.3}%
+\contentsline {subsection}{\numberline {}T4 --- Coherence-Forcing Measurement}{237}{subsection.12.5.4}%
+\contentsline {subsection}{\numberline {}T5 --- Internal Coherence}{237}{subsection.12.5.5}%
+\contentsline {subsection}{\numberline {}T6 --- Dual Coherence Axes}{238}{subsection.12.5.6}%
+\contentsline {subsection}{\numberline {}Descriptive-Functor Meta-Theorem}{238}{subsection.12.5.7}%
+\contentsline {subsection}{\numberline {}Kind-Demotion Dynamic}{238}{subsection.12.5.8}%
+\contentsline {section}{\numberline {}A.4b Corollaries (short-form)}{239}{section.12.6}%
+\contentsline {subsection}{\numberline {}Cluster I --- Substrate and Generativity (descends from A1)}{239}{subsection.12.6.1}%
+\contentsline {subsection}{\numberline {}Cluster II --- Stream Structure and Navigation (descends from A2 + T3)}{239}{subsection.12.6.2}%
+\contentsline {subsection}{\numberline {}Cluster III --- Coherence Consequences (descends from T5/T6 + A3)}{240}{subsection.12.6.3}%
+\contentsline {subsection}{\numberline {}Cluster IV --- Mechanism Consequences (descends from T4 + Cond. 4 + Promethean Configuration apparatus)}{241}{subsection.12.6.4}%
+\contentsline {section}{\numberline {}A.5 Coherence and Bias}{243}{section.12.7}%
+\contentsline {subsection}{\numberline {}σ\_\allowbreak {}struct}{243}{subsection.12.7.1}%
+\contentsline {subsection}{\numberline {}σ\_\allowbreak {}info}{243}{subsection.12.7.2}%
+\contentsline {subsection}{\numberline {}Bias(S)}{243}{subsection.12.7.3}%
+\contentsline {subsection}{\numberline {}A\_\allowbreak {}S (entropy functional)}{243}{subsection.12.7.4}%
+\contentsline {subsection}{\numberline {}Align(S, t)}{243}{subsection.12.7.5}%
+\contentsline {subsection}{\numberline {}push\_\allowbreak {}structural}{244}{subsection.12.7.6}%
+\contentsline {subsection}{\numberline {}push\_\allowbreak {}informational}{244}{subsection.12.7.7}%
+\contentsline {section}{\numberline {}A.6 The Coherence Principle}{245}{section.12.8}%
+\contentsline {subsection}{\numberline {}The Coherence Principle}{245}{subsection.12.8.1}%
+\contentsline {subsection}{\numberline {}Four Conditions (Cond. 1–4)}{245}{subsection.12.8.2}%
+\contentsline {subsection}{\numberline {}σ*(t) (γ-implied trajectory)}{245}{subsection.12.8.3}%
+\contentsline {subsection}{\numberline {}D(S, [t\_\allowbreak {}0, t\_\allowbreak {}1]) (trajectory divergence)}{245}{subsection.12.8.4}%
+\contentsline {subsection}{\numberline {}Self-reference closure}{245}{subsection.12.8.5}%
+\contentsline {section}{\numberline {}A.7 Axioms and Bridges (short-form)}{246}{section.12.9}%
+\contentsline {subsection}{\numberline {}A1 --- Consciousness as Substrate}{246}{subsection.12.9.1}%
+\contentsline {subsection}{\numberline {}A2 --- Nested Streams and Navigation}{246}{subsection.12.9.2}%
+\contentsline {subsection}{\numberline {}A3 --- Conscious Gravity}{246}{subsection.12.9.3}%
+\contentsline {subsection}{\numberline {}Bridge \#102 --- Form factor-functor payload}{246}{subsection.12.9.4}%
+\contentsline {subsection}{\numberline {}Bridge \#104 --- Bootstrap Asymmetry}{246}{subsection.12.9.5}%
+\contentsline {subsection}{\numberline {}Bridge \#107 --- Content factor-functor payload}{246}{subsection.12.9.6}%
+\contentsline {subsection}{\numberline {}Bridge \#108 --- Triple-derived bridge}{247}{subsection.12.9.7}%
+\contentsline {subsection}{\numberline {}Bridge \#109 --- Carrier factor-functor payload}{247}{subsection.12.9.8}%
+\contentsline {subsection}{\numberline {}Bridge \#110 --- Identity-Trajectory Triple}{247}{subsection.12.9.9}%
+\contentsline {section}{\numberline {}A.8 Filtering}{248}{section.12.10}%
+\contentsline {subsection}{\numberline {}§10 Seven-Step Procedure}{248}{subsection.12.10.1}%
+\contentsline {subsection}{\numberline {}§10 Completeness Checklist}{248}{subsection.12.10.2}%
+\contentsline {section}{\numberline {}A.9 Notation conventions}{249}{section.12.11}%
+\contentsline {chapter}{\numberline {}Appendix B — The Bias(S) Formalization}{250}{chapter.13}%
+\contentsline {section}{\numberline {}B.0 Why this appendix exists}{251}{section.13.1}%
+\contentsline {section}{\numberline {}B.1 Definition}{252}{section.13.2}%
+\contentsline {subsection}{\numberline {}CT definition}{252}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {}Prose}{252}{subsection.13.2.2}%
+\contentsline {section}{\numberline {}B.2 The contracted–open axis via entropy}{254}{section.13.3}%
+\contentsline {subsection}{\numberline {}CT formulation}{254}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {}Prose}{254}{subsection.13.3.2}%
+\contentsline {section}{\numberline {}B.3 The two push-operators}{256}{section.13.4}%
+\contentsline {subsection}{\numberline {}push\_\allowbreak {}structural}{256}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {}push\_\allowbreak {}informational}{256}{subsection.13.4.2}%
+\contentsline {subsection}{\numberline {}Independence}{257}{subsection.13.4.3}%
+\contentsline {subsection}{\numberline {}Prose}{257}{subsection.13.4.4}%
+\contentsline {section}{\numberline {}B.4 Relationship to γ\_\allowbreak {}S and to the Triple}{259}{section.13.5}%
+\contentsline {section}{\numberline {}B.5 The trajectory-divergence metric}{260}{section.13.6}%
+\contentsline {subsection}{\numberline {}CT statement}{260}{subsection.13.6.1}%
+\contentsline {subsection}{\numberline {}Prose}{260}{subsection.13.6.2}%
+\contentsline {section}{\numberline {}B.6 Observable signatures}{262}{section.13.7}%
+\contentsline {section}{\numberline {}B.7 Open questions}{263}{section.13.8}%
+\contentsline {section}{\numberline {}B.8 Summary --- the Bias(S) reference card}{264}{section.13.9}%

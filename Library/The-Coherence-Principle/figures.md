@@ -576,7 +576,7 @@ graph TD
     C1["Separation<br/>Clayton (empirical/generative)<br/>⊥ Clawd (structural/rigorous)"]
     C2["Measurement<br/>Stamp-events at every<br/>axiom/theorem/chapter close"]
     C3["Multi-scale<br/>Axioms ↔ theorems ↔ corollaries<br/>bidirectional feedback<br/>(A3 smoothing surfaced from post-theorem analysis)"]
-    C4["Dynamic<br/>Propose → stress → reformulate<br/>oscillation across 3 axioms,<br/>6 theorems, 15 corollaries"]
+    C4["Dynamic<br/>Propose → stress → reformulate<br/>oscillation across 3 axioms,<br/>6 theorems, 16 corollaries"]
 
     Out["The framework itself<br/>= σ*(t₁) reached by<br/>γ-fidelity of the construction"]
 

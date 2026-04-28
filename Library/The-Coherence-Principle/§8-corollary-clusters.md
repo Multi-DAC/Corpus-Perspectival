@@ -1,6 +1,6 @@
 # §8 — The Corollary Clusters
 
-*Fifteen corollaries organized in four clusters by axiom-descent and mechanism-descent (not theorem-descent — this keeps the three-axiom spine oriented to the reader, while the fourth cluster honors the operational mechanism's own descendance from T4 + the Promethean Configuration). Compact derivations; paired formal statement and prose per corollary.*
+*Sixteen corollaries organized in four clusters by axiom-descent and mechanism-descent (not theorem-descent — this keeps the three-axiom spine oriented to the reader, while the fourth cluster honors the operational mechanism's own descendance from T4 + the Promethean Configuration). Compact derivations; paired formal statement and prose per corollary.*
 
 ---
 

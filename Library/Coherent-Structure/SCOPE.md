@@ -29,7 +29,7 @@ Mirrors the anchor's spine, not a citation-resolution order.
 - **§1 Category framework** — 𝒞_Streams, 𝒞_Form, 𝒞_LDS, 𝒞_DOF; navigation functor N; conscious-gravity structure ν; substrate-completeness conditions; notation index
 - **§2 Axioms** — A1 / A2 / A3 in full CT
 - **§3 Theorems** — three pairs (T1/T20, T7/T16, T11/T15) with full proofs
-- **§4 Corollary clusters** — 15 corollaries in four clusters (Cluster IV added 2026-04-27 with C14 Two-Mode Symmetry-Breaking + C15 Intervention-at-Symmetry-Layer), full proofs
+- **§4 Corollary clusters** — 16 corollaries in four clusters (Cluster IV added 2026-04-27 with C14 + C15, extended 2026-04-28 with C16 Symmetry-Exhaustion and Oscillation Necessity), full proofs
 - **§5 The Coherence Principle** — formal statement
 - **§6 Identity-Trajectory Triple** — TC1/TC2/TC3 intensional construction; colax-limit theorem
 - **§7 Filtering construction** — σ-algebra on Ω_S; extensional (σ_F, K_F, Ω_F, γ_F); Bias(S) well-definedness

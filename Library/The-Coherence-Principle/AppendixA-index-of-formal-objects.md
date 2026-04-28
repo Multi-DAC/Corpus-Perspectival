@@ -180,7 +180,7 @@ Entries are tight. For full treatment, follow the reference.
 
 ## A.4b Corollaries (short-form)
 
-*Fifteen corollaries in four clusters: three axiom-descent clusters (I/II/III) plus one mechanism-descent cluster (IV) added 2026-04-27.*
+*Sixteen corollaries in four clusters: three axiom-descent clusters (I/II/III) plus one mechanism-descent cluster (IV) added 2026-04-27 with C14 + C15, extended 2026-04-28 with C16.*
 
 ### Cluster I — Substrate and Generativity (descends from A1)
 
