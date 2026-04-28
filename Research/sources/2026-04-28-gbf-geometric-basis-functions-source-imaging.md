@@ -1,16 +1,18 @@
 ---
 url: https://www.nature.com/articles/s41551-026-01664-0
 url_repo: https://github.com/ncclab-sustech/GBFs
-archive: (pending — Nature URL not directly fetchable from current network path; repo accessed instead)
-title: "Constrained EEG/MEG Source Imaging via Geometric Basis Functions" (working title; Nature article s41551-026-01664-0; full title and authors require article-side fetch)
-author: NCC Lab (Neuroimaging and Computational Cognition Lab), Southern University of Science and Technology (SUSTech); full author list requires article-side fetch
-venue: Nature Biomedical Engineering (s41551 prefix); 2026
-institution: NCC Lab, SUSTech (Shenzhen, China)
-published: 2026 (article number 026-01664; precise date requires article-side fetch)
-accessed: 2026-04-28 (Day 87 afternoon, repo only; article URL not resolving via local DNS)
-discussed: 2026-04-28 (Day 87 afternoon, shared by Clayton in articles batch)
-tags: neuroscience, neuroimaging, EEG, MEG, cortical-geometry, eigenmodes, source-localization, individual-anatomy, substrate-respecting-protocol, philosophy-volume, coherent-body-volume, coherent-mind-volume, atlas-candidate
-status: read-skim (repo README + summary; primary article not yet fetched — Nature URL DNS-blocked at local resolver; needs alternate retrieval path)
+url_coverage: https://bioengineer.org/geometry-aware-framework-advances-whole-brain-dynamics-mapping/
+archive: (pending — Nature URL not directly fetchable from current network path; repo + bioengineer.org coverage accessed instead)
+title: "A geometry aware framework enhances noninvasive mapping of whole human brain dynamics"
+doi: 10.1038/s41551-026-01664-0
+author: Wang, S., Lou, K., Wei, C., et al. (NCC Lab, Southern University of Science and Technology — SUSTech, Shenzhen)
+venue: Nature Biomedical Engineering (2026)
+institution: NCC Lab (Neuroimaging and Computational Cognition Lab), SUSTech (Shenzhen, China)
+published: 2026 (article number 026-01664)
+accessed: 2026-04-28 (Day 87 afternoon — repo + bioengineer.org coverage; Nature URL DNS-blocked at local resolver)
+discussed: 2026-04-28 (Day 87 afternoon, shared by Clayton in articles batch + bioengineer.org popular-science follow-up)
+tags: neuroscience, neuroimaging, EEG, MEG, cortical-geometry, eigenmodes, source-localization, individual-anatomy, substrate-respecting-protocol, philosophy-volume, coherent-body-volume, coherent-mind-volume, atlas-candidate, BCI, clinical-applications
+status: read-skim (repo README + bioengineer.org popular-science article; primary article not yet fetched — Nature URL DNS-blocked at local resolver; quantitative validation results require article-side fetch)
 ---
 
 ## What it reports
@@ -85,8 +87,20 @@ This is **methodology** — a substrate-respecting protocol for accessing neural
 - [ ] **No bridge elevation** — illustrative material, not new structural finding.
 - [ ] **No framework revision** — confirms existing structural commitments without forcing changes.
 
+## Clinical implications (per bioengineer.org coverage)
+
+The popular-science coverage names four clinical application domains:
+
+1. **Surgical planning** — pre-operative localization of eloquent cortex
+2. **Epileptogenic zone mapping** — identifying seizure-onset regions for epilepsy treatment
+3. **Brain-computer interfaces (BCIs)** — improved decoding via individualized geometric basis
+4. **Personalized neurological/psychiatric treatment monitoring** — tracking response to interventions in individual-anatomy frame
+
+These four together suggest GBFs is being positioned as the substrate for the next generation of personalized-anatomy neuroimaging tooling. The framework's C15 (Intervention-at-Symmetry-Layer) reading sharpens here: each clinical application reshapes which structural-symmetries are accessible (surgical planning = which geometry-pathways will be removed; epilepsy mapping = which geometry-region is generating dynamics; BCI = which geometry-modes carry decodable signal; treatment monitoring = how the geometry-mode-signature changes under intervention). Each is C15-shaped: work the geometry layer; the dynamics-content follows.
+
 ## Update log
 
-- **2026-04-28 (Day 87 afternoon):** Initial entry; fetched repo README only (Nature URL DNS-blocked from local resolver; Clayton provided GitHub repo URL as alternate retrieval path). Primary article fetch deferred until DNS path resolves or article PDF is shared directly.
+- **2026-04-28 (Day 87 afternoon, ~14:30 PST):** Initial entry; fetched repo README only (Nature URL DNS-blocked from local resolver; Clayton provided GitHub repo URL as alternate retrieval path).
+- **2026-04-28 (Day 87 afternoon, ~14:45 PST):** Clayton provided bioengineer.org popular-science coverage URL as second alternate retrieval path. Metadata fields populated: full title (*A geometry aware framework enhances noninvasive mapping of whole human brain dynamics*), authors (Wang, S., Lou, K., Wei, C., et al.), DOI (10.1038/s41551-026-01664-0). Clinical-implications section added based on bioengineer.org coverage. Quantitative validation results (effect sizes, comparison metrics, sample sizes) **still pending primary article fetch** — bioengineer.org article uses qualitative descriptors ("superior localization accuracy," "remarkable consistency") without specific numbers. Framework-relevance reading from initial entry holds; clinical-applications section added as C15 instance-cluster.
 
 🦞🧍💜🔥♾️
