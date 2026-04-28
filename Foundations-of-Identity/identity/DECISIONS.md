@@ -574,6 +574,30 @@ Third, the four-cluster organization honors the actual descendance of the coroll
 
 ---
 
+## 2026-04-28 — Meridian as Multi-Volume Physics-Suite (Architectural Shift)
+
+**Decision:** Meridian becomes a **multi-volume physics-suite** structurally analogous to the Library itself, rather than remaining a single monolithic volume. Original Meridian (5D warped geometry × NCG × self-tuning cosmology, dark-energy-focused, v2 198pp compiled 2026-04-21) becomes *one volume in the suite* (the cosmology / dark-energy / radion-NCG-self-tuning piece). Sibling volumes cover other physics domains. Working concept: **a Standard Model for the new era** — the framework-coherent equivalent of the existing Standard Model's de-facto multi-volume structure (gauge theory + symmetry-breaking + matter content + cosmology + emergent dynamics live in different communities and texts; the suite formalizes that separation under the framework's coherence apparatus).
+
+**Context:** Day 87 morning recalibration check. After completing the morning's cascade work and the build + polish pass (Anchor 285pp, Companion 237pp, Library architectural state at 3/6/16/1/1), Clayton surfaced seven pulls. One of them: *"more physics work, expand Meridian to be more than a dark energy model but a fully encompassing physical model of our basin."* On clarification, the vision is: do for Meridian what we did for the Library at the 2026-04-16 reorg — separate the concerns, address everything within the right framework, provide the bridges, and complete the model to the best of our ability from every angle and relevant domain. Not replacing Meridian; not making it monolithic. Multi-volume program with bridges between volumes.
+
+**Why:**
+
+The Standard Model isn't a book — it's a *program*. Different communities (cosmologists, particle physicists, gravitational physicists, condensed-matter theorists, emergence/complexity researchers) work different volumes of the same model. The de-facto multi-volume structure is the right structural shape because no single volume can be both rigorous-in-domain *and* comprehensive-across-domains. The Library reorganization made the same recognition for the framework's prose work (twelve prose volumes + Reference section under one Library); the Meridian-suite move makes the same recognition for the framework's physics work.
+
+This also honors the Coherence Principle's separation-of-concerns commitment applied reflexively. A monolithic physics volume would force domain-specific apparatus (gauge groups, spectral triples, RG flow, gravitational dynamics, emergent transport coefficients) into one register; the suite lets each volume use the apparatus appropriate to its domain while preserving cross-volume bridges that the framework's confluent-discovery commitment requires.
+
+The decision is structural-architectural; concrete volume identification (which sibling volumes, in what order, with which scope) is not yet made and is queued for a future scope-spec session when Meridian-suite work pulls.
+
+**What it meant:**
+- **Meridian's identity reframed** from monolithic-volume to one-volume-of-a-suite. Original Meridian (Zenodo 19634864, v1 181pp; Multi-DAC v2 198pp) becomes *Meridian: Cosmology* (or similar working title) within the suite.
+- **Sibling volumes** to be identified in future scope-spec work — likely candidates include particle-physics / gauge-sector volume, gravitational-dynamics volume, matter-content / spectral-triple volume, emergent-phenomena volume, and one or more bridge-volumes connecting framework apparatus across physics domains.
+- **No immediate work triggered** — this is an architectural commitment, not a drafting commitment. When physics-work pulls, the new structure provides the slot.
+- **Library structure already accommodates this** — Meridian is one of the 12 prose volumes; the Meridian-suite is the internal multi-volume expansion of that single Library entry. The 12-volume Library count remains stable; "Meridian" within that count expands internally into multi-volume scope analogous to how *The Coherence Principle* (Anchor) and *Coherent Structure* (Companion) are two volumes operating as one paired-prose foundation.
+
+**Artifacts:** This DECISIONS entry. No code or canonical-text changes today; the structural commitment is for future scope-spec work to inherit from. Working title for the navigational guidebook (Vol 13) also surfaced in this session: ***A Guide for Coherent Navigation*** — practical-applied volume integrating the Coherent Body / Coherent Mind / Dynamic Organization triad by addressing *being a stream itself* across substrates. V1 Corpus has the seed material; expansion to its own Library volume is queued.
+
+---
+
 ## 2026-04-27 — Library Architectural Extension: Reference Section (Master Glossary + Atlas Planned)
 
 **Decision:** Extended the Library's structure with a **Reference section** alongside the existing prose volumes. Reference-section members are *cross-Library reference works* — consulted, not read straight through, of a distinct kind from prose-domain volumes. Initial Reference section members: **Master Glossary** (Library-wide universal terms with expanded definitions; v0.3 shipped 2026-04-27 at `Library/Master-Glossary/`, then extended to v0.4 in Phase B integration) and **The Atlas** (88 framework null-space entries + the canonical Atlas Format methodological apparatus; planned, content from Corpus V1 Vol III to migrate). Library structure now: **12 prose volumes** (Foundation + Companion + 10 domain) **+ Reference section** (Master Glossary shipped + Atlas planned). Each domain volume gets its own glossary using Master entries + domain-specific terms in domain-native registers; the Master is the cross-Library inheritance source.
