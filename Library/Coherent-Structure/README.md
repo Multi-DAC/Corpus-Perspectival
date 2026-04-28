@@ -14,7 +14,7 @@ A Library volume of the Corpus Perspectival program: the category-theoretic comp
 
 **What this volume contains:**
 
-- Full CT development of every formal object the anchor establishes — the three axioms A1 / A2 / A3, the six theorems T1–T6 in three pairs, the fifteen corollaries in four clusters (Cluster IV mechanism-consequences added 2026-04-27 with C14 Two-Mode Symmetry-Breaking + C15 Intervention-at-Symmetry-Layer), the Coherence Principle, the Identity-Trajectory Triple, the filtering construction, F-as-stream, the D trajectory-divergence functional
+- Full CT development of every formal object the anchor establishes — the three axioms A1 / A2 / A3, the six theorems T1–T6 in three pairs, the sixteen corollaries in four clusters (Cluster IV mechanism-consequences added 2026-04-27 with C14 Two-Mode Symmetry-Breaking + C15 Intervention-at-Symmetry-Layer; extended 2026-04-28 with C16 Symmetry-Exhaustion and Oscillation Necessity), the Coherence Principle, the Identity-Trajectory Triple, the filtering construction, F-as-stream, the D trajectory-divergence functional
 - Complete proofs — no "exercise for the reader"
 - Unified notation index, front-loaded at §1
 - Reference-standard TikZ figures

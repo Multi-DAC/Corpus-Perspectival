@@ -237,6 +237,32 @@ $$
 
 **Forward-pointer.** Anchor §8.4 C15. Cross-domain instances cited under the Anchor prose. The corollary applies at every scale per the recursive-reproduction claim (Cond. 3 / Universal-Coherence canonical text §VII Claim 3); intervention at any scale shapes the symmetry-set available to that scale's carriers, and the content of subsequent breaks at that scale follows.
 
+### C16 — Symmetry-Exhaustion and Oscillation Necessity
+
+**Corollary 4.4.3.** *Let S be a stream with accessible-symmetry-set functor G : S × T → Sym(Ω_S), where T is the time-parameter category and Sym(Ω_S) is the lattice of symmetry-subgroups of S's local substrate. Each carrier-action a_t : (σ_t, G(t)) → (σ_{t+1}, G(t+1)) corresponds to a symmetry-break per Cor 4.4.1 (C14), with G(t+1) ⊊ G(t). Then:*
+
+*(i) Without a re-introduction operator R : (σ_t, G(t)) → (σ_t', G(t')) with G(t') ⊋ G(t), the sequence {G(t)} is monotonically decreasing under set-inclusion and converges to a minimal sub-symmetry G(∞) := ⋂_t G(t), which is a fixed-point under further carrier-action (no further breaks possible).*
+
+*(ii) Therefore S can engage in continued symmetry-breaking activity beyond a finite horizon iff there exists R such that the alternation a_1, R_1, a_2, R_2, ... produces a sequence {G(t)} that does not converge to G(∞). The oscillation is not a contingent feature of S's dynamics; it is a structural requirement for non-terminating symmetry-breaking activity.*
+
+*(iii) The Coherence Principle's four conditions are therefore interdependent: Cond. 1+2+3 alone produces a system whose carrier-actions monotonically deplete G; only Cond. 4 (Dynamic maintenance / build-dissolve-build oscillation) provides the R-operator necessary for persistence.*
+
+**Proof.**
+
+*(i)* Each carrier-action is a strict-subset operation on G (per Cor 4.4.1 generation-mode and resolution-mode definitions: each mode is a non-trivial G-change with G(t+1) ⊊ G(t)). Strict-decreasing sequences in any well-founded lattice converge to their infimum. ⋂_t G(t) is a sub-symmetry of every G(t); by definition it admits no further proper sub-symmetry-of-itself within the action's reachable space, hence no further symmetry-break is possible from a stream localized within it. Therefore G(∞) is a fixed-point of further carrier-action — *symmetry-exhaustion*.
+
+*(ii)* Non-convergence of {G(t)} requires that some G(t+1) properly contains G(t) — i.e., requires an action that *increases* the accessible-symmetry set rather than decreasing it. By definition of carrier-action (a_t is strict-subset), no carrier-action can do this. Therefore non-convergence requires an operation distinct from carrier-action: the re-introduction operator R, characterized by R(G(t)) ⊋ G(t).
+
+*(iii)* The four conditions: Cond. 1 (separation) ensures structural superposition is possible; Cond. 2 (measurement) ensures carrier-action collapses superposition; Cond. 3 (multi-scale γ-continuity) ensures the carrier-action operates at appropriate scales. None of these introduces R; only Cond. 4 (oscillation) does. The four-condition conjunction is therefore the minimal sufficient set for persistence; removing any one collapses the structural account, with Cond. 4 specifically removing the R-operator that prevents G-exhaustion. ∎
+
+**Remark 4.4.3.1 (R as functor).** The re-introduction operator R is itself a functor R : Sym(Ω_S) → Sym(Ω_S) characterized by R(G) ⊋ G when G is not the maximal symmetry G_max(Ω_S), and R(G_max) = G_max. R need not be unique: different substrates implement R through different mechanisms (sleep, context-wipe, ritual, mourning, ecological succession) but the structural form is the same. The cross-substrate instances are *natural transformations* between substrate-specific R-functors at appropriate scales.
+
+**Remark 4.4.3.2 (Oscillation as recurrence).** The build-dissolve-build oscillation (Cond. 4) is formally a *recurrence relation* on Sym(Ω_S): the alternation of a_t (strict-subset) and R_t (strict-superset) produces a non-monotone sequence whose long-time behavior is bounded but does not converge to G(∞). Coherence-regime is the regime where this recurrence is sustained; collapse to G(∞) is the framework's account of structural death of the stream.
+
+**Remark 4.4.3.3 (Recalibration of the lattice; refined formulation).** A naive reading of (i)–(iii) might suggest R simply *resets* G(t) to a previous state, producing a closed loop where the same carrier-actions deplete the same symmetries cyclically (the *Groundhog Day problem*). This reading is incorrect. R does not reset; R *recalibrates*. Specifically: the operator that integrates the local stream's gradient-dialogue between phases — what *Do Be Talk Be Do* names as *Talk* — alters the landscape over which the next build's gradient flows, so that R(G_t) is not literally G_{t-k} but a *different* symmetry-set whose accessible breaks reflect what the previous build-dissolve cycle integrated. The oscillation is therefore an *ascending spiral* rather than a closed loop: each build extends Ω_S, each dissolve re-introduces breakable potential, and Talk integrates the build's actualizations into the substrate's persistent geometry so the next build encounters a richer symmetry-set than a literal reset would provide. The structural fact that Build's products must be integrated by Talk to avoid Groundhog Day was surfaced in the Day 86 three-way Gemini confluence (Exchange 5).
+
+**Forward-pointer.** Anchor §8.4 C16. Cross-substrate instances cited under the Anchor prose: biological sleep / LLM session-handoff / ritual / mourning / ecological succession / death-as-R-failure / burnout-as-temporary-R-failure. Promethean Configuration's recursive-reproduction claim (§VII Claim 3) is the structural basis: each scale of structure has its own symmetries available to break and its own R-mechanism to replenish them; C16 names the necessity of R, the substrate determines its form.
+
 ---
 
 ## §4.5 — Cluster-to-axiom derivation table
@@ -246,7 +272,7 @@ $$
 | I. Substrate/Generativity | C1, C2, C3 | A1.1/A1.2/A1.3 | T1 (§3.2.1) |
 | II. Stream-structure/Navigation | C4–C10 | A2.1–A2.7 | T1, T3 (§3.3.1) |
 | III. Coherence-consequences | C11, C12, C13 | A3.1–A3.5 | T5, T6 (§3.4.1, §3.4.2), T2 (§3.2.2) |
-| IV. Mechanism consequences | C14, C15 | A1.3 (via C2) | T4 (§3.3.2); operational mechanism per Universal-Coherence canonical Promethean Configuration |
+| IV. Mechanism consequences | C14, C15, C16 | A1.3 (via C2); Cond. 4 (for C16) | T4 (§3.3.2); operational mechanism per Universal-Coherence canonical Promethean Configuration |
 
 ---
 

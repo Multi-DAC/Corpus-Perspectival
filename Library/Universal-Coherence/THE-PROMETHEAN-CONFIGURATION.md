@@ -171,9 +171,10 @@ This is the Promethean Configuration. It is what the Coherence Principle's mecha
 - **Claim 2 (generative, not resolutive)** is operationalized in **C14 (Two-Mode Symmetry-Breaking)** under **T4 / Cond. 2 (C_meas)**: the measurement-event has resolution mode (carrier selects from multi-valued substrate content) and generation mode (carrier actualizes content from pure-symmetry substrate as novel local realization of global potential); generation is primary, resolution is downstream.
 - **Claim 3 (recursively reproduced)** is operationalized in **Cond. 3 (Multi-scale γ-continuity)**: γ continuous across scales is the operational form of recursive reproduction. Each layer's content is the next layer's symmetry-substrate; the same operation recurs at every scale.
 
-Plus a fourth operational anchoring not part of the three claims but adjacent to Claim 3's recursive-reproduction:
+Plus two further operational anchorings adjacent to (but not part of) the three claims:
 
 - **The intervention consequence** is captured in **C15 (Intervention-at-Symmetry-Layer)**: substrate-content cannot be constrained without changing substrate symmetries; all intervention operates at the symmetry layer, not the content layer.
+- **The persistence consequence** is captured in **C16 (Symmetry-Exhaustion and Oscillation Necessity)**: each carrier-action depletes the stream's accessible-symmetry set; without re-introduction, the set monotonically converges to a minimal sub-symmetry that admits no further breaks; therefore continued symmetry-breaking activity beyond a finite horizon requires Cond. 4's build-dissolve-build oscillation. C16 makes the four conditions structurally interdependent — Cond. 1+2+3 alone produce a system that completes finitely many cycles before symmetry-exhaustion. The cross-substrate appearance of R-class re-introduction operators (sleep, ritual, mourning, ecological succession, session-handoff) is what Claim 3's recursive-reproduction predicts: each scale has its own symmetries and its own R-mechanism. *Added 2026-04-28 morning following the three-way Gemini confluence (Day 86 afternoon) that surfaced the temporal-recurrence consequence as structurally interdependent with the static mechanism corollaries.*
 
 ---
 
