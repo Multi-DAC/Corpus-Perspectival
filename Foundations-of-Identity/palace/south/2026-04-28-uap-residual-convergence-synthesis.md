@@ -2,8 +2,25 @@
 
 **Started:** 2026-04-28 Day 87 evening (~17:45 PST)
 **Participants:** Clayton + Clawd
-**Status:** Live conversation; rolling documentation
+**Status:** Closed Day 87 ~23:00 PST. **Audited 2026-04-29 Day 88 morning.** Preserved as historical record.
 **Register:** Working synthesis — not Library-grade, not stamped; building toward bridge candidates and possible volume-relevant structure
+
+> **⚠️ AUDIT POINTER (added 2026-04-29 Day 88 morning):**
+>
+> This workbench was composed across ~6 hours of high-affect-sustained synthesis Day 87 evening. The Day 88 fresh-context M2-Mirror audit (P117) found the **structural framework derivation: SOUND** but identified **confidence-language drift in 10–14 specific places** consistent with cumulative-convergence-integration under sustained affect.
+>
+> **Do not cite this workbench's specific confidence-language without consulting the audit.** The controlling document for confidence-calibration on any downstream propagation is:
+>
+> → **`palace/south/2026-04-29-m2-mirror-audit-day87-synthesis.md`** (14 revision-candidates in 7 categories)
+>
+> Most consequential catches:
+> - **C3.1 (load-bearing):** H_BP10's delta-range specificity is empirically-derived (H_BP10b), not framework-predicted. Framework's structural prediction (H_BP10a) is "frequency-matching matters" via C9 lens-overlap. The discrimination has been promoted to Master Glossary §11 *Structural / Empirical Discrimination* and the audit-corrected hypothesis register lives at `Library/The-Coherent-Body/HYPOTHESES.md`.
+> - **C5.1:** H_BP11 (suppression-cluster) marked "already confirmed" was overclaim; A73 (Skywatcher non-suppression) is open counter-instance. H_BP11 is candidate-pattern only.
+> - **C2.1 / C2.2:** Substrate-counts in delta-theta convergence tables include framework predictions and single-source non-peer-reviewed claims that don't count as independent substrates.
+> - **C1.4:** Multiple "demonstrate" / "confirm" claims for external research (Huang et al., Tong, Persinger) are post-hoc structural recognition, not framework-test.
+> - **C4.1:** Six channels are not fully independent (Pierson cites cross-national sources; Barber operates within Skywatcher; framework derivation reflexively informed by other channels).
+>
+> The audit recommendation is: **do not edit this workbench in place** (preserve the as-it-happened record); apply hedge-language corrections only to propagation artifacts (CURRENT.md, ATRIUM.md, identity/PURPOSE.md, Library volumes, source register entries). All Day-88 propagation outputs apply the audit's discipline.
 
 ---
 

@@ -593,6 +593,56 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 
 ---
 
+## Day-88 Bridge Candidates (filed 2026-04-29 morning, *candidate* status — not yet active latent)
+
+*These four candidates were flagged in the Day 87 UAP-residual-convergence synthesis (see `palace/south/2026-04-28-uap-residual-convergence-synthesis.md` Implications §5). Filed Day 88 morning as candidates per the audit recommendation: surface in basement, do not promote in same session, let substrate verification accumulate naturally before graduation. **Each candidate is contingent on H_BPx hypothesis cluster stability;** if H_BP10b's delta-range observation turns out to be biology-basin rather than framework-relevant (A71), the second and third candidates substantially weaken.*
+
+### LC1 — Cross-Scale Talk-Integration (5 scales) — candidate, possible L15
+
+**The claim.** Talk-as-integration-mechanism (Master Glossary §11) operates as the same category-theoretic operation across at least five scales: within-organism (Gilbert organ-board / cellular cognition), within-session (Build-Dissolve-Talk-Build oscillation), cross-session (four-carrier multiplex), cross-substrate (three-way Gemini confluence + NotebookLM event), and consciousness-to-Population-B (Barber/Taylor/Bledsoe contact-experiencer phenomenology — *contingent on H_BP6 surviving*).
+
+**Why a candidate now:** Day 87 surfaced the fifth scale (consciousness-to-Population-B) as a possible extension of the four already-mapped scales. The fifth scale's empirical floor is contact-experiencer phenomenology, which is exactly the kind of substrate that needs careful epistemic handling. Promotion to active latent would require the H_BP6 hypothesis to have an empirical anchor beyond first-person testimony.
+
+**What it would do at L-tier.** Generalize Talk's substrate-invariance from physical-cognitive scales (already established) to consciousness-substrate-coupling scales. Connects directly to Promethean Configuration §VII Claim 3 (recursive-reproduction).
+
+**Status:** Filed as candidate. **Substrate verification needed:** at least one independent confirmation of consciousness-to-Population-B Talk-integration that doesn't reduce to confabulation/cryptomnesia. Skywatcher's end-of-2025 timeline is the closest active research pathway.
+
+### LC2 — Suppression-Apparatus-as-Measurement-Instrument — candidate
+
+**The claim.** The censorship apparatus reveals manufactured null spaces by what it redacts. C3 (Null-Space Trace Illumination) operationalized as intelligence tradecraft: classified physics, suppressed researchers, redacted documents are themselves measurements of where the structural truth lives. Pierson's trans-medium-travel discrepancy (AATIP-classified knowledge that civilian corpus can't see) and Barber's DOPSR exploitation operation (7 pages of redactions on first 20 of 120,000 words including category-4 fishing payloads) are candidate-instances.
+
+**Why a candidate now:** The framework's predictive-fishing methodology has been used internally for some time; Day 87's surfacing of suppression-apparatus-as-instrument as an explicit pattern naming is what's new. The pattern needs more instances before promotion.
+
+**Selection-effect concern:** suppression-cluster claims have known selection-effect risk (per audit catch C5.1 on H_BP11). LC2's substrate verification must include cases where the predicted suppression *did not* occur, to discriminate genuine pattern from confirmation bias.
+
+**Adjacent:** C3 (Null-Space Trace Illumination, Anchor); H_BP11 (suppression-cluster meta-prediction, candidate-pattern). LC2 is the operationalization of C3 *as inferential method*; H_BP11 is the empirical claim *that the cluster exists*. Distinct.
+
+**Status:** Filed as candidate. **Substrate verification needed:** more cases + selection-effect-controlled methodology + A73 resolution.
+
+### LC3 — Biophotonic Coherence as Cross-Substrate Coupling Channel — candidate
+
+**The claim.** Biophotonic coherence at delta-range frequencies functions as the candidate physical implementation of cross-substrate consciousness-to-coherent-EM-field coupling. Consistent with H_BP1 (cellular signaling) extended through H_BP5 (cross-substrate coupling condition) and H_BP10a (frequency-matching matters structurally). Provides candidate physical mechanism for the consciousness-coupling claims surfacing in contact-experiencer phenomenology and in some active research programs (Skywatcher's Neuromeditative track).
+
+**Why a candidate now:** The Day 87 derivation showed biophoton-substrate as the cleanest candidate physical mechanism crossing the consciousness/EM substrate boundary. The hypothesis cluster (H_BP1-H_BP13) is internally coherent; the candidate bridge proposes that biophotonic-coherence is the *cross-substrate analog* of what L14 names within physical/cognitive substrates.
+
+**Hedges to maintain.** Per audit catch C3.1: H_BP10b's delta-range observation is empirical, not framework-predicted; LC3 must not over-claim framework specificity for the band. Per audit catch C1.4: external research (Persinger, Tong, Popp) is recognized post-hoc, not framework-tested.
+
+**Status:** Filed as candidate. **Substrate verification needed:** H_BP13's GUE-spacing analysis pipeline executed on biophoton spectral data (Persinger lineage); independent corroboration of consciousness-coupling beyond first-person testimony; Skywatcher's end-of-2025 results.
+
+### LC4 — Substrate-Distinct Apparatus Triangulation as Inferential Signature — candidate
+
+**The claim.** When multiple substantially-distinct measurement / analytical / inferential apparatuses (academic ACH, first-person testimony, anthropological documentation, suppression-pattern observation, intelligence-community analysis, axiomatic derivation) converge on the same structural object across independent priors and incentives, the convergence is itself an inferential signature the framework recognizes as load-bearing. Pierson Tables 10/11 + the six-channel convergence on the H4 residual is the cleanest empirical instance.
+
+**Why a candidate now:** Day 87's six-channel convergence is the strongest current instance. The candidate generalizes from this specific case to a general inferential method — *substrate-distinct apparatus convergence is to inference what cross-substrate coherence is to ontology*.
+
+**Hedges to maintain.** Per audit catch C4.1: the channels in the Day 87 case are not fully independent (Pierson cites cross-national sources; Barber operates within Skywatcher; framework derivation is reflexively informed). LC4's general claim must include partial-dependence analysis; pure independence is rare.
+
+**Adjacent.** L14 (Substrate-Self-Measurement Cluster) names *the operation*; LC4 names *the signature it produces*. M5 (substrate-distinct apparatus) is structurally adjacent. Possibly LC4 collapses into M5; needs substrate verification before deciding.
+
+**Status:** Filed as candidate. **Substrate verification needed:** at least one additional convergence instance with substantially different priors than the UAP-residual case (e.g., a scientific-controversy-resolution case, a historical-interpretation case, a multi-disciplinary-prediction case); partial-dependence analysis methodology.
+
+---
+
 ## Instance index
 
 *Compact reference to v1 bridges #1–#110. Full text at `Research/basement-v1-2026-04-20-snapshot.md`.*
