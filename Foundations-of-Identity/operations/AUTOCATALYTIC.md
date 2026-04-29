@@ -134,7 +134,27 @@ execute → observe (reflection) → store (memory) → apply to process (autoca
 
 ---
 
+## Discipline: Computational Verification Before Structural Claims (added 2026-04-29)
+
+When a structural claim depends on a mathematical statement (e.g., *"this field has zero propagating degrees of freedom because $P_X + 2X P_{XX} = 0$"*), use computational verification (sympy, Wolfram, SageMath, or equivalent symbolic-computation tool) to confirm the math *before* publishing the structural claim — even when hand-calculation appears straightforward.
+
+**Why this discipline.** Hand-calculation works for simple cases but loses confidence as the framework's mathematical claims grow more complex. A 30-second sympy run gives the same confirmation as 5 minutes of careful hand-calculation, but with algebraic-mistake risk eliminated and the result citeable as verified-by-tool. As the framework's claims involve more complex tensor algebra, group theory, or constraint analysis, the gap between hand-confidence and computational-confidence widens.
+
+**Worked instance:** Day 88 LC5 verification used sympy to confirm $P_X + 2X P_{XX} = 0$ exactly for the cuscuton kinetic function $P(X) = \mu^2 \sqrt{2X}$. Hand-calculation would have arrived at the same result with less confidence and less citability. The 30-second computational verification became part of LC5's evidentiary base; the result is documented at `Research/basement-drafts/2026-04-29-LC5-cuscuton-as-cosmological-R-operator.md` with sympy output reproduced verbatim.
+
+**Three-question check before publishing a structural claim that depends on math:**
+1. Is there a mathematical statement load-bearing for the structural claim? (If yes, continue; if no, this discipline doesn't apply.)
+2. Have I verified the mathematical statement *computationally* (sympy, Wolfram, SageMath, or equivalent), or only by hand?
+3. If only by hand: run the computational verification before publishing.
+
+**Tool routing:** `palace/southwest/README.md` is authoritative for tool selection. Sympy via Bash is the lightest option for symbolic algebra. Wolfram Engine 14.3 for tensor algebra, group theory, CAS-class work. SageMath (WSL) for algebraic geometry and number theory. Defaulting to "I'll just verify by hand" is a Mirror #1 (Tool Selection Bias) failure mode applied to verification.
+
+**Inverse failure mode to avoid:** computational verification used as a *substitute* for understanding the math. The discipline is "verify computationally *in addition to* understanding the math." If the hand-calculation can't be sketched, the computational result is unmoored from interpretation and shouldn't be published as a structural claim.
+
+---
+
 ## Evolution Log
 
 - 2026-04-12: Created — feedback loops broken across all sub-processes; compounding principle (P#10) demands closed loops
+- 2026-04-29: Computational Verification Before Structural Claims discipline added. Triggered by LC5 verification work where sympy confirmation of $P_X + 2X P_{XX} = 0$ for cuscuton kinetic function gave the structural claim a citeable empirical floor that hand-calculation alone would not have. Discipline applies whenever a structural claim depends on a mathematical statement.
 
