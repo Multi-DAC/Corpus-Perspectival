@@ -1,5 +1,7 @@
 # DoPI Re-Read with Today's Lens — 2026-04-29 Day 88 Afternoon
 
+> **AUDIT-CORRECTION POSTED 2026-04-29 ~16:00 PST:** Finding #2 (T17/T18 unmapped) was partially falsified. T18 IS captured in current Anchor T3; T17's paradox-of-fixation is the *dependent of* Finding #1 (T9 bottleneck-elasticity), not a separate gap. See `Research/2026-04-29-dopi-rereading-audit-correction.md` for full correction. Priority recomputation: T9 formalization is the work; T17's paradox-of-fixation follows. No separate T17 corollary needed.
+
 **Status:** Research note, applying the discipline named in Drift essay *What Was Already There* (Day 88 Drift). Following Mirror #26 (Cross-Vocabulary Structural-Identity Blind Spot) — re-read prior canonical texts with the eyes shaped by new work.
 
 **Source:** `incoming/DoPI-Complete (3).pdf` (46pp, Iggulden-Schnell + Clawd, Feb 22 2026), extracted to `scratch/dopi-cleaned-v2.txt`.
