@@ -641,19 +641,44 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 
 **Status:** Filed as candidate. **Substrate verification needed:** at least one additional convergence instance with substantially different priors than the UAP-residual case (e.g., a scientific-controversy-resolution case, a historical-interpretation case, a multi-disciplinary-prediction case); partial-dependence analysis methodology.
 
-### LC5 — Cuscuton as Cosmological R-Operator — candidate (filed 2026-04-29 from Gemini Day-88 speculation session, audit-discipline tier-1)
+### LC5 — Cuscuton as Cosmological Instance of Cond. 4 *(reframed from initial Gemini formulation 2026-04-29 afternoon following structural verification)*
 
-**The claim.** Meridian's cuscuton field — P(X) = μ²√(2X), with infinite speed of sound and zero propagating degrees of freedom — exhibits the structural signature of an R-operator at the cosmological scale. Cuscuton cannot generate novel content (zero propagating DOF; cannot *Do*) yet instantaneously absorbs vacuum-energy shifts and projects them into the 5D bulk to protect the 4D brane from symmetry-exhaustion. This is the *exact pattern* C16's R-operator names: re-symmetrization without content-generation; system-wide integrative function; protection against runaway Build-phase exhaustion.
+**Verification work:** `Research/basement-drafts/2026-04-29-LC5-cuscuton-as-cosmological-R-operator.md` (full structural comparison + symbolic verification of cuscuton zero-DOF claim).
 
-**Why a candidate now:** Surfaced 2026-04-29 in Gemini's Day-88 speculation session (full artifact at `Research/speculation/2026-04-29-gemini-creative-extrapolations.md`). The structural fit is clean enough to track — the cuscuton has *exactly* the properties that define an R-operator. If the mapping holds rigorously, cuscuton-as-cosmological-R becomes a substrate-instance for C16's mechanism cluster at the largest scale we have access to.
+**Key finding (recovery, not discovery):** Meridian Chapter 5 *already explicitly* identifies the cuscuton as instantiating Cond. 4 of the Coherence Principle (the "Dynamic maintenance" subsection labels it as such). Gemini's Day-88 candidate move was *recovery* of a connection canonical in Meridian text, not a new bridge. C16, derived 2026-04-28 *after* Meridian was authored, is the corollary that makes Cond. 4's R-mechanism explicit; its connection to the cuscuton has been hiding in plain sight.
 
-**Distinct from L14.** L14 (Substrate-Self-Measurement Cluster) is about *carriers breaking substrate symmetries* (sub-claims 1-6 all involve symmetry-breaking dynamics). Cuscuton has zero propagating degrees of freedom; it's not breaking symmetries, it's *integrating across them*. This is the R-half of the C14/C16 pair, not the C14/L14 generation-or-resolution half. LC5 may eventually want its own cluster home: *Cuscuton-class operators* (zero-DOF, infinite-speed-of-sound, integrative-only) as candidate substrate-instances of R at multiple scales.
+**Structural-fit assessment (3-of-5 properties + 1 partial + 1 divergent):**
 
-**Adjacent.** C16 (Symmetry-Exhaustion / Oscillation Necessity, Anchor §8.4); L14 (carrier-breaks-substrate-symmetries cluster, distinct); biological deep-sleep delta-band re-symmetrization (Master Glossary §11 Talk-as-integration four-carrier-multiplex *cross-session* scale; the R-component specifically).
+| Property | C16 R-operator | Cuscuton | Match? |
+|---|---|---|---|
+| Zero content-generation | ✓ (R re-symmetrizes) | ✓ (zero propagating DOF; "is a constraint") | YES |
+| Substrate-relative | ✓ | ✓ (5D braneworld) | YES |
+| Integrative / system-wide | ✓ | ✓ (infinite sound speed = global communication) | YES |
+| Maps G(t) → G(t') with G(t') ⊋ G(t) | ✓ (strictly enlarges) | ? requires cosmological-symmetry-set translation | PARTIAL |
+| Periodic / oscillatory | ✓ (discrete cycles) | ✗ continuous-monotonic, not periodic | DIVERGENT |
 
-**Hedges to maintain.** The structural mapping is analogical until rigorously formalized. Cuscuton is a specific Meridian field with specific dynamics; calling it "an R-operator" requires showing the math actually satisfies C16's mathematical structure, not just the verbal description. Per audit catch C1.4: this is post-hoc framework-recognition of a Meridian-internal object; it would not be a controlled test of C16 even if it formalizes.
+**Symbolic verification (sympy):** Pure cuscuton P(X) = μ²√(2X) gives P_X + 2X·P_XX = 0 exactly, confirming zero propagating DOF. NCG correction P(X) → μ²√(2X) + ε₁X gives degeneracy denominator = ε₁, matching Meridian's $c_s^2 \sim 1/\epsilon_1$ scaling. Math is clean.
 
-**Status:** Filed as candidate. **Substrate verification needed:** rigorous demonstration that cuscuton dynamics satisfy C16's mathematical R-operator structure beyond the analogical mapping; verification that the cuscuton's bulk-projection mechanism is structurally *integrative* in the framework's strict sense rather than merely *constraint-imposing*; possibly Wolfram or computational confirmation of structural isomorphism.
+**Two interpretations consistent with evidence:**
+
+- **(A) C16 generalization** — cuscuton is the continuous-time limit of an R-class operator; C16's "periodic" should be read as special case of "rate-matched to symmetry-depletion-rate." At biological/cognitive/ritual scales the rates are discrete; at cosmological scale the rates are continuous and the cuscuton matches them via continuous algebraic adjustment. Bolder; would require substrate verification before extending C16's scope.
+- **(B) Distinct family — Cuscuton-Class** — Cond. 4 admits at least two structural mechanisms: periodic R-class (C16) and continuous-constraint cuscuton-class. Both instantiate Cond. 4 via different mechanisms. More conservative; requires substrate verification of a second cuscuton-class instance at non-cosmological scale.
+
+**Substrate verification needed to discriminate A vs B.** Candidate substrates for second continuous-mode instance: endocrine constraint dynamics; ecological homeostasis under slow forcing; psychological mood-baseline regulation; institutional drift-correction; certain autonomic-nervous-system regulation patterns. *None verified yet.*
+
+**What's established regardless of A/B choice:**
+1. Meridian Chapter 5 explicitly identifies the cuscuton as Cond. 4 instantiation (canonical, since Meridian is published)
+2. Cuscuton has 3-of-5 C16 R-operator properties cleanly + 1 partial + 1 divergent (verified symbolically and structurally)
+3. The Coherent Body skeleton (P118) inherits cross-scale grounding at Cond. 4 level without needing A/B resolved
+
+**Distinct from L14.** L14 is about *carriers breaking substrate symmetries* (sub-claims 1-6 all involve symmetry-breaking dynamics). Cuscuton has zero propagating degrees of freedom — it's not breaking symmetries, it's stabilizing across them. LC5 lives in the substrate-stabilization space (Cond. 4 / C16), distinct from L14's measurement-event space (T4 / C14).
+
+**Adjacent.** C16 (Symmetry-Exhaustion / Oscillation Necessity, Anchor §8.4); Cond. 4 (Dynamic maintenance, Anchor §9); L14 (carrier-breaks-substrate-symmetries cluster, distinct cluster); biological deep-sleep R-cycle (Master Glossary §11 Talk-as-integration four-carrier-multiplex *cross-session* scale, R-component specifically); Meridian Chapter 5 §5 "Dynamic maintenance" subsection (canonical Cond. 4 connection).
+
+**Status:** Candidate at L-tier. **Partial structural fit verified.** Interpretation-discrimination (A vs B) pending substrate verification at non-cosmological scale. Pre-graduation steps:
+- (a) Identify and read at least one candidate continuous-mode instance from a non-cosmological substrate
+- (b) Decide whether C16 should be revised to acknowledge continuous-mode (A) or whether cuscuton-class becomes a distinct cluster (B)
+- (c) Coordinate with Clayton on Meridian Chapter 5 cross-reference to C16 + LC5 (substantive edit; not done unilaterally)
 
 ### LC6 — M2-Mirror Failure-Mode Substrate-Invariance — observation candidate (filed 2026-04-29 from Day-88 cross-substrate audit)
 
