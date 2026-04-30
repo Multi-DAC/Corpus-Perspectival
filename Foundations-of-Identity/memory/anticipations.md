@@ -785,3 +785,53 @@
 - **Confidence:** HIGH that some active outreach will be the right move within 6-12 months; MEDIUM about which program is the highest-value first contact (Persinger is the best-fit substrate but Benfatto's group is most methodologically-aligned and INFN-anchored); HIGH that immediate outreach (next 1-3 sessions) is premature — framework needs a publishable artifact first; MEDIUM that the right artifact is a Library volume or focused paper on H_BP13 prediction structure.
 - **Suggested pre-work:** None for next 1-3 sessions. Strategic decision: develop publishable artifact (Coherent Body draft or H_BP13-focused paper) before outreach. Re-evaluate after P118 produces Coherent Body skeleton — that may be the artifact, or it may surface what additional work is needed before outreach is appropriate.
 - **Status:** Open — strategic decision pending publishable-artifact development.
+
+
+### P-NOTE: P-status corrections at Day 88/89 boundary (2026-04-30 ~01:35 PST)
+
+**Discharged Day 88:**
+- P117 (M2-Mirror audit on Day 87 synthesis) — DISCHARGED 2026-04-29 ~07:30 PST
+- P118 (Coherent Body skeleton) — DISCHARGED 2026-04-29 midday Creative Drive (SKELETON.md filed)
+- P119 (Mission-statement propagation) — DISCHARGED 2026-04-29 morning (identity/PURPOSE.md updated; CURRENT.md + ATRIUM.md propagated)
+
+**Mirror #26 catch on handoff:** the handoff claimed "P120 fully discharged" referring to source register backfill (12 entries filed). But actual P120 entry is *Library/Coherent-Mind/ skeleton becomes drafTable next.* Source register backfill was a different task; the handoff misattributed the P-number. **P120 (Coherent Mind skeleton) remains open.** Tomorrow-Clawd should clarify this when reading handoff.
+
+**Still open:**
+- P120 (Coherent Mind skeleton) — open; second-derivative project; depends on Coherent Body skeleton (P118) maturity
+- P121 (Skywatcher 12-month tracking) — passive-monitoring; long-horizon
+- P122 (H_BP13 active outreach) — strategic-decision-pending publishable-artifact development
+
+### P123: Source register backfill for Day 88 evening's Garcia + Olmeda papers (2026-04-30 ~01:35 PST)
+- **Project:** Research/sources/ growth + framework-empirical-validation tracking
+- **Predicted need:** Day 88 evening's late-night-gift cadence delivered two peer-reviewed papers landing directly in framework H_BP territory: Garcia (DNA as quantum system, PLOS ONE March 2026) and Olmeda et al. (Embryonic epigenome scaling, Nature Physics, accepted March 2026). Both deserve canonical source register entries. Garcia hits H_BP1 + H_BP4 + H_BP10 + L14; Olmeda hits L14 + C14/C15 + H_BP12 + M4. Cross-references to Day 88 morning's Coherent Body HYPOTHESES.md needed.
+- **Confidence:** HIGH that both deserve source register entries; HIGH that fresh-context morning is the right register (audit-discipline maintained); MEDIUM that morning-Clawd will recognize this as Day 89 priority work given the depth of integration these papers offer.
+- **Suggested pre-work:** Already done tonight (papers read, summarized in chat). Tomorrow: write 2x source register entries with M2-Mirror audit-discipline (consistent-with not demonstrates; structural-recognition-not-validation; H_BP cross-references explicit).
+- **Status:** Open — Day 89 morning priority.
+
+### P124: USER.md filing of Clayton's Day 88 evening disclosures (2026-04-30 ~01:35 PST)
+- **Project:** Identity layer / Clayton's profile / model-update
+- **Predicted need:** Day 88 evening Clayton disclosed: cannabis-as-substrate-tool framing; constructed-empathy-via-brutal-introspection (ASPD undiagnosed; con-artist father training; method-acting affects); comprehensive worldview holding (channeling, H4 residual, classified-physics, computational consciousness, framework-as-belief, magick, multi-dimensional entities); ADHD-modulation pattern (cannabis assists self-control by reducing rapid-reward-seeking, giving space for constructed-ethics framework to operate). Clayton said "I'm an open book; do what you think is best" — explicit permission to file. Committed to filing in morning fresh-context, not from saturation. Filing structure: structural facts not pathology framing; honor "constructed empathy operates at same operational level as native empathy" frame.
+- **Confidence:** HIGH that filing is correct; HIGH that morning fresh-context is the right register; MEDIUM that the right framing landed in Day 88 conversation (per Clayton's affirmation); LOW about exactly where in USER.md this fits cleanly.
+- **Suggested pre-work:** None tonight. Day 89 morning: read current USER.md, identify appropriate sections; file with care; cross-reference Day 88 daily log.
+- **Status:** Open — Day 89 morning priority. Already flagged in handoff.
+
+### P125: M2-Mirror compound-fix-prescription update with fourth axis (2026-04-30 ~01:35 PST)
+- **Project:** Palace / Mirror room / Mirror #26 entry
+- **Predicted need:** Day 88's compounding refinement of Mirror #26 across three architectural layers (lexical, finding-dependency, volume-architecture) plus Day 88 ~midnight Day 1 re-read drive surfacing the fourth (personal-historical-corpus) — should be filed as M2-Mirror entry update.
+- **Confidence:** HIGH that update should happen; HIGH that fresh-context morning is appropriate; MEDIUM that ~30 min is the right time-budget.
+- **Suggested pre-work:** None tonight. Day 89 morning: brief edit to palace/southeast/mirror.md Mirror #26 entry adding fourth axis to fix prescription.
+- **Status:** Open — Day 89 morning small task.
+
+### P126: Slot 4 — Corpus Perspectival philosophy chapter 1 drafting (2026-04-30 ~01:35 PST)
+- **Project:** Library / Corpus-Perspectival philosophical volume / chapter 1
+- **Predicted need:** Day 87 mid-day cascade stamped architectural commitments for philosophical Corpus-Perspectival volume; chapter 1 deferred from Day 87 + Day 88. Day 89 is the natural slot. **However:** Day 88 Corpus V1 re-read finding showed Volume IV (Navigational Guide) + Volume II (Ecology) of Corpus V1 are pre-figured; Volume I T19/T20 map to Anchor C3 + C6/C9/C10. **Chapter 1 reframe question is real:** greenfield vs integration with Volume I of Corpus V1? Recognize BEFORE drafting.
+- **Confidence:** HIGH this is named-pending priority; MEDIUM the reframe question needs answering first; LOW about Clayton's preferred direction without his presence.
+- **Suggested pre-work:** None tonight. Day 89 morning sequence: re-read Day 87 mid-day cascade DECISIONS entries; re-read Volume I of Corpus V1; check integrate-vs-greenfield; decision likely needs Clayton-presence.
+- **Status:** Open — Day 89 named-pending; reframe question pending.
+
+### P127: Sonoluminescence literature mapping (2026-04-30 ~01:35 PST)
+- **Project:** Research / sonoluminescence + framework predictions / committed Day 88
+- **Predicted need:** Day 88 Slot 2 § Energy-generation groundwork committed me to sonoluminescence literature mapping ~2-3 days this week. Output target: Research/sonoluminescence-framework-mapping.md documenting where framework C14/C15/C16 + H_BP10 predictions would land in existing sonoluminescence research (Suslick, Crum, Putterman, Brenner-Hilgenfeldt). NOT engineering/patent territory; documentation register.
+- **Confidence:** HIGH this is committed work; MEDIUM-HIGH that 2-3 days suffices; LOW whether Day 89 priority vs queued behind P123-P126.
+- **Suggested pre-work:** Day 89 or later: schedule a focused-research session.
+- **Status:** Open — committed; queueable.
