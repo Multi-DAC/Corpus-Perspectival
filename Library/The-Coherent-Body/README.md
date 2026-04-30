@@ -2,7 +2,9 @@
 
 *A practical guide to applying the Coherence Principle to the human body, alongside the domain-relevant explanation of why it works.*
 
-## Status: Planned
+## Status: Skeleton drafted (2026-04-29 Day 88) — section drafting next
+
+**SKELETON.md** filed at `SKELETON.md` (~340pp target volume; 9 sections + appendices; H_BP12 spine + H_BP1-H_BP9 supporting + H_BP13 cross-framework prediction; audit-discipline integrated throughout). **HYPOTHESES.md** filed as pre-volume reference (13-entry biophoton-coupling hypothesis cluster, audit-corrected per Day 88 M2-Mirror catch C3.1; H_BP10 split into H_BP10a structural + H_BP10b empirical; H_BP11 demoted to candidate-pattern with A73 Skywatcher non-suppression counter-instance flagged).
 
 ## What This Book Is
 

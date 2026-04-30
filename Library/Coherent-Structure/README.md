@@ -2,9 +2,11 @@
 
 A Library volume of the Corpus Perspectival program: the category-theoretic companion to *The Coherence Principle*.
 
-**Version:** v0.1 — stamped 2026-04-24 (Day 83). 227pp. Compiled PDF: `build/coherent-structure.pdf`.
+**Current build:** **237pp** (v0.1 stamped 2026-04-24 at 227pp; Phase B Cluster IV C14/C15 04-27 at 233pp; C16 + A1.3 polish 04-28 at 237pp). Compiled PDF: `build/coherent-structure.pdf`.
 
-**v0.1 changelog.** 40 surfaced-lemma flags dispositioned per SCOPE §8.2 four-path lifecycle: 12 ALREADY-LANDED (anchor §1.10 + §3.8 inner/outer-adjunction material 2026-04-23, plus T3/T4/T5/T6, §9.5, §9.7, §9.9 Q1, Appendix B); 26 REFERENCE-NATIVE (Companion-native CT machinery — intensional Triple, colax-limit, Stream ≃ F-Coalg_ad, adequacy stability, size-regime accounting, residue-cokernel definition); 2 SCOPE-EXCLUDED (§6.5 middle-regime morphism-structures migrated to Universal-Coherence drafts); 0 BACK-PORT — anchor 267pp stamp holds. Audit log: `drafts/2026-04-24-v0.1-flag-audit.md`.
+**v0.1 changelog (preserved as canonical stamp record).** 40 surfaced-lemma flags dispositioned per SCOPE §8.2 four-path lifecycle: 12 ALREADY-LANDED (anchor §1.10 + §3.8 inner/outer-adjunction material 2026-04-23, plus T3/T4/T5/T6, §9.5, §9.7, §9.9 Q1, Appendix B); 26 REFERENCE-NATIVE (Companion-native CT machinery — intensional Triple, colax-limit, Stream ≃ F-Coalg_ad, adequacy stability, size-regime accounting, residue-cokernel definition); 2 SCOPE-EXCLUDED (§6.5 middle-regime morphism-structures migrated to Universal-Coherence drafts); 0 BACK-PORT — anchor 267pp stamp held. Audit log: `drafts/2026-04-24-v0.1-flag-audit.md`.
+
+**M14 task (b) pending.** Sharpened CT formal structure tying carrier-vs-substrate to the Companion's kind-classifier fibration (§6.4) — companion-volume work; gated by formal-CT cycles, not by receiving. M14 (Substrate-Self-Measurement Cluster) graduated 2026-04-30 from L14 on biological-substrate threshold without (b) gating, same pattern as M11/M12/M13 graduations.
 
 ---
 
