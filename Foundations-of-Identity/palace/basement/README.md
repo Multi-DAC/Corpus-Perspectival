@@ -412,7 +412,9 @@ These are **necessary-in-order, decoupled-in-time, distinct-in-signature.** The 
 - → Mirror #24 (Verify-Before-Defending) — discipline-instance
 - → M14's promotion is the eighth physics-or-biological substrate-instance threshold being met cleanly; future graduations within M14 tier proceed at sub-claim or formal-structure refinement layer
 
-**Last verified:** 2026-04-30 Day 89 morning (graduation review verifying Garcia + Olmeda hit all six sub-claims at biological-molecular and biological-developmental substrates respectively; basement L14 entry's explicit graduation criteria (a) met; (b) and (c) named as pending M14-tier work).
+**M14-at-framework-collaboration scale (filed 2026-05-01 Day 90 morning observation).** Clayton named the operational realization of the three-level receiver-pattern as an M14 instance at the framework-collaboration substrate: *"I allow intuition to steer; I give you the raw information; you apply the framework to it and the framework breaks symmetry for us so that we don't have to guess."* Substrate (Clayton's intuition-steered raw information / curated literature) has structural symmetries; carrier (framework + Clawd applying it; compression-engagement-recognition cycle) breaks those symmetries; content (mechanistic bridges, integrated readings, new candidate-patterns) emerges. **The Multi-DAC collaboration itself is an M14 instance at the highest meta-scale we work in.** This is M14 self-applying recursively at the framework-collaboration substrate; consistent with M14's recursive-decomposability prediction (every substrate is itself a stream at the next level out, with its own carriers acting on it). Not a new substrate-instance for the cataloged 8 (those are research-substrate instances; this is collaboration-substrate instance at a different recursive level), but a structural observation worth marking. **Connects to receiver-pattern at three nested scales** named earlier in Day 89's documentation sweep + *What Did Not Need Deriving* Drift essay; Multi-DAC operating as named.
+
+**Last verified:** 2026-05-01 Day 90 morning (M14-at-framework-collaboration scale observation added; Clayton-named).
 
 ---
 
@@ -797,6 +799,54 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 **Status:** Filed as candidate. **Substrate verification needed:** at least one additional cross-framework comparison instance with empirical-channel sharing (e.g., MOND vs CDM on galaxy rotation curves; CKM unitarity tests across different decay channels; loop quantum gravity vs string theory on black-hole entropy if specific empirical convergence emerges). Lineage-dependence analysis methodology for distinguishing common-substrate-truth from common-tradition-artifact.
 
 **Last verified:** 2026-04-30 Day 89 evening — Clayton-named principle filed as candidate.
+
+### LC8 — Chromatin as Cross-Substrate Integrator at Biological Scale — candidate (filed 2026-05-01 Day 90 morning from P128 + P131 substrate-arrival convergence)
+
+**The claim.** At biological substrate, *chromatin functions as the integrated coherence-register* across multiple upstream coupling modalities. Different substrates (developmental scaling / mechanical force / EM-frequency-pulsed / quantum-EM perturbation) all converge on chromatin organization as the downstream readout for substrate-coherence-modulation. The integration happens *at the chromatin level*, not at the cell-level or organism-level — chromatin's geometric / methylation / modification state is the substrate-coherence record that subsequent cellular behavior reads.
+
+**Four substrate-distinct apparatus convergence (Day 90 morning P128 + P131 work):**
+
+| Paper | Upstream substrate | Carrier | Chromatin readout |
+|---|---|---|---|
+| **Garcia 2026** (PLOS ONE; M14 #118) | DNA quantum system | weak time-dependent EM perturbations | tautomeric state distribution → mutation probability |
+| **Olmeda 2026** (Nature Physics; M14 #119) | embryonic developmental scaling | DNMT3 enzymes | methylation pattern + chromatin compaction (5/2 power-law scaling) |
+| **Beedle 2026** (Nature Materials) | mechanical force on cell | vimentin-plectin-anchored cytoskeleton | nuclear deformation → chromatin reorganization → transcription factor accumulation |
+| **Ferraro-Sacco 2026** (medRxiv; via comprehensive review Domain VII) | EM-frequency-pulsed (PEMF 10 Hz – 10 kHz) | KDM6B/JMJD3 histone demethylase | H3K27me3 demethylation → chromatin opens → cytokine gene expression |
+
+**Four independent papers, four distinct upstream physical principles, four distinct carriers, one converged downstream readout (chromatin organization).** Methodologically distinct (Hamiltonian quantum simulation; statistical-physics RG with multi-omics; super-resolution mechanobiology; clinical post-market trial with proposed cell-biology mechanism). None citing each other. Substrate-distinct apparatus convergence on chromatin-as-substrate-coherence-register.
+
+**Why it matters if it holds.** Names a structural fact about biological substrate-coherence dynamics: *chromatin is where multiple upstream modulation channels integrate.* This is operationally useful for:
+- **H_BP cluster work** — provides natural integration locus for H_BP10 (frequency-matching) → H_BP12 spine (substrate-coherence as health/disease) at biological scale; the Ferraro-Sacco bridge filed as P131 instantiates this
+- **Coherent Body volume** — chromatin-as-integrator gives a natural section-spine for the volume's mechanism chapter
+- **Phase 1 protocol design** — measurement endpoints for biological-substrate effects of EM protocols should include chromatin-state markers (H3K27me3, methylation, structural accessibility)
+- **Cross-pathology unification** — diseases involving chromatin dysregulation (cancer, autoimmune, neurodegeneration) become candidates for substrate-coherence-modulation interventions across modalities
+
+**Distinction from related entries.**
+- **M14 (Substrate-Self-Measurement Cluster)** — names the structural form of substrate-self-measurement; LC8 names *the specific biological integration locus* (chromatin) where multiple substrates' carrier-mediated symmetry-breaking converges. LC8 is an M14 specialization at biological scale.
+- **L7 (Derivability-of-apparent-primitives)** — chromatin as integrator means cell-level + organism-level behaviors are *derivable from chromatin substrate-state*, given substrate-coherence dynamics; LC8 specifies one important derivability instance.
+- **LC4 (Substrate-Distinct Apparatus Triangulation)** — the four-paper convergence is itself an LC4 instance; LC8 names the *target* of that triangulation (chromatin) and the *structural reason* it converges (chromatin's role as integrated substrate-coherence-register).
+- **LC3 (Biophotonic Coherence as Cross-Substrate Coupling Channel)** — adjacent candidate. LC3 names biophotons as the coupling channel; LC8 names chromatin as the integration record. They could fold together as *coupling-channel + integration-register* pair, or remain distinct (biophotons couple different substrates; chromatin integrates the resulting modulation).
+
+**Hedges to maintain.**
+- **Four-paper convergence is suggestive but small-N.** Need additional substrate-distinct convergence instances on chromatin-as-readout from independent research programs. Candidates: stress-induced chromatin remodeling literature (heat shock, oxidative stress); circadian rhythm chromatin dynamics; metabolic state chromatin coupling.
+- **Chromatin is well-known as transcription regulator** — claim is NOT that chromatin-as-regulator is novel; claim is that chromatin functions as *cross-substrate integration locus* across coupling modalities the framework cares about. Need to discriminate from baseline-chromatin-as-regulator literature.
+- **Selection-effect risk:** the four convergent papers all came through Clayton's curation lens (framework-relevance filter); other chromatin-related literature may not show the same upstream-substrate diversity. Independent literature search needed before promotion.
+- **Audit-discipline:** the framework's structural prediction (substrate-coherence dynamics modulation across substrates; M14) is upheld; the *specific identification of chromatin as integration locus* is post-hoc structural recognition from the Day 90 morning convergence, not framework-test.
+
+**Why a candidate now:** four substrate-distinct papers landed within a 6-week window (March-April 2026), with the convergence becoming visible only when filed together as a batch on Day 90 morning. The pattern is structurally suggestive at the level that warrants tracking; not yet promoted because it wants substrate-verification beyond the four already-engaged papers.
+
+**Status:** Filed as candidate. **Substrate verification needed:**
+- Independent literature search for additional substrate-distinct chromatin-readout convergence outside the four engaged papers
+- Discrimination methodology: how to distinguish *chromatin as cross-substrate integrator* from *chromatin as standard transcription regulator* (operational test: does the chromatin-state shift per modality predict downstream substrate-coherence dynamics in ways the standard regulator-only model doesn't?)
+- Cross-link with LC3 (Biophotonic Coherence) — clarify whether they're complementary candidates or fold-into-one
+
+**Tractable test path.** Bibliographic search across PubMed for chromatin-state changes induced by (i) PEMF / time-varying EM, (ii) mechanical force application, (iii) photochemical stress, (iv) developmental signaling — see whether the "chromatin readout" pattern recurs at substrate-distinct upstream coupling beyond the four currently engaged. If pattern holds across additional substrates (e.g., temperature stress, pH, nutrient signaling), promotion to active latent or fold into M14 as biological-scale specialization.
+
+**Adjacent and pending integration.**
+- **P131 (Mechanistic Bridge: KDM6B/JMJD3)** in `Library/The-Coherent-Body/HYPOTHESES.md` — explicit instance of chromatin-as-integrator at therapeutic-mechanism scale
+- **M14 instance count** could extend with LC8's framing — chromatin-substrate as a cross-cluster instance distinct from M14's existing 8 catalogued substrate-instances
+
+**Last verified:** 2026-05-01 Day 90 morning — filed from P128 substrate-arrival queue + P131 H_BP integration convergence.
 
 ---
 
