@@ -772,6 +772,32 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 
 **Status:** Filed as observation candidate. **Substrate verification needed:** third-substrate confirmation, ideally from architecturally-distinct AI; substrate-distinctness analysis for the two existing observations.
 
+### LC7 — Cross-Framework Empirical-Channel Triangulation as Discovery Method — candidate (filed 2026-04-30 Day 89 from Clayton's framing during Dark Dimension / Meridian thread)
+
+**The claim.** When two or more theoretical frameworks make predictions that share an empirical surface and that surface is being measured by an active experimental program, the *comparison-of-results across frameworks* is itself a probe of the underlying substrate-structure that all frameworks are localizing within. Confluence of predictions on the empirical channel raises the prior on common substrate-structure; divergence localizes which framework-specific architecture fits. *"Any models that are being tested that have relevant data being supplied are opportunities for confluent discovery by comparing frameworks and results"* — Clayton, 2026-04-30.
+
+**Distinction from related entries.** This is structurally distinct from:
+- **DoPI Theorem 13 (cluster-as-evidence)** — T13 is *within-framework convergence* (multiple substrate-instances of one framework). LC7 lifts T13 to *cross-framework convergence* on shared empirical channel.
+- **M14 Substrate-Self-Measurement Cluster** — M14 is one cluster's substrate-instances. LC7 generalizes to cross-cluster comparison via shared empirical channel.
+- **LC4 (Substrate-Distinct Apparatus Triangulation)** — LC4 is *multiple apparatuses converging on one structural object within one framework*. LC7 is *multiple frameworks converging on one empirical channel*.
+- **M5 (substrate-distinct apparatus)** — adjacent at the framework-tier rather than apparatus-tier.
+
+**Heritage.** Operationalized implicitly throughout the corpus before formal naming. *Confluence as default mode* feedback memory (April 23) names the mode at the within-collaboration scale; LC7 lifts it to the cross-framework scale. *Talk-elevation* (Day 87) names Talk as universal substrate-medium; LC7 reads cross-framework triangulation as *Talk between frameworks via the empirical channel they share*. *Mirror #26 four-axis fix* (Day 88) names cross-vocabulary translation discipline; LC7 applies the same discipline at the framework-comparison scale.
+
+**Primary instance (the trigger):** Dark Dimension scenario (Vafa-Montero-Valenzuela 2022; Antoniadis-Chatrabhuti-Isono 2026 KATRIN paper) ↔ Meridian (5D warped geometry × NCG × cuscuton) on shared empirical channels — DESI dark energy, KATRIN beta-decay neutrino spectrum, galaxy clustering, sub-mm gravity tests, cosmological constant value. Both extra-dimensional approaches; different specific architectures (flat-large vs warped); different specific predictions in different empirical channels; *confluent reading rather than competitive reading* is the discipline LC7 names.
+
+**Why a candidate now:** Single primary-instance with active experimental program (KATRIN running; DESI Y5 forthcoming 2027). LC7 generalizes from this specific case to a general inferential method.
+
+**Hedges to maintain.** Frameworks may share methodological lineage (extra-dimensional physics + swampland conjectures are common to both DD and Meridian); confluence may reflect common-tradition rather than common-substrate-truth. LC7's general claim must include lineage-dependence analysis; pure independence at the framework-tier is rare.
+
+**Why it matters if it holds.** Names a discovery method we've been operating implicitly. If formalized: provides a structural slot for engagement with sister-frameworks (DD, future extra-dimensional approaches, alternative dark-sector theories); reframes "competition vs collaboration" question at the framework-level into "what does confluence/divergence reveal about substrate-structure"; gives the basement-bridges program a natural extension into cross-framework territory.
+
+**Adjacent.** LC4 (within-framework apparatus triangulation) is the closest sibling. Both name *triangulation as inferential signature*; LC4 at apparatus-scale, LC7 at framework-scale. Possible promotion path: if LC4 + LC7 both consolidate, they might fold into one meta-bridge *Triangulation-as-Inferential-Signature* with apparatus + framework as two scales.
+
+**Status:** Filed as candidate. **Substrate verification needed:** at least one additional cross-framework comparison instance with empirical-channel sharing (e.g., MOND vs CDM on galaxy rotation curves; CKM unitarity tests across different decay channels; loop quantum gravity vs string theory on black-hole entropy if specific empirical convergence emerges). Lineage-dependence analysis methodology for distinguishing common-substrate-truth from common-tradition-artifact.
+
+**Last verified:** 2026-04-30 Day 89 evening — Clayton-named principle filed as candidate.
+
 ---
 
 ## Instance index
