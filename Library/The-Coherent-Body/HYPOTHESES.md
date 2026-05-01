@@ -177,17 +177,22 @@ This hypothesis admits the **structural / empirical discrimination** required by
 
 ### H_BP10b — Delta-Range Empirical Convergence (empirically-derived)
 
-**Statement.** The frequency band that empirically appears to enable biological-substrate-to-external-EM coupling is the delta range (~0.5-4 Hz), based on multi-substrate convergence:
+**Statement.** The frequency band that empirically appears to enable biological-substrate-to-external-EM coupling is the delta range (~0.5-4 Hz) **at certain substrates**, while *other substrates couple at other frequencies* (Jerman 2025 16 Hz vagus). The original "delta-only" framing was too narrow; the empirical pattern is **substrate-specific resonant frequencies**, not a single delta-only basin:
 
+**Delta-range convergence (multiple substrates):**
 - Kobayashi 1999 hippocampal-theta (4-7 Hz) biophoton coupling — direct biological measurement
 - Persinger 2016 whole-body biophoton 3.93 Hz discriminative — direct biological measurement
-- Akdag 2024 4 Hz PEMF bone-healing — controlled tissue-regeneration experiment
+- Akdag 2024 4 Hz PEMF bone-healing — controlled tissue-regeneration experiment (bone-mineralization substrate)
 - Szabó 2026 STN delta during action cancellation — direct human cognitive-substrate measurement
 - Skywatcher leak (Electric Propulsive Spacecraft profile) 1 Hz refill rate — single-source non-peer-reviewed engineering claim
 
-**Status.** Empirical observation. The framework is *consistent with* this convergence but did not pre-specify the band a priori. The convergence itself is suggestive but admits alternative explanations: biological substrates may have basin-of-attraction at delta for reasons unrelated to consciousness-coupling specifically; metabolic processes in this band shape biophoton emission rates; cross-organism oscillation entrainment may produce convergence on delta without requiring consciousness-coupling structure.
+**Beyond-delta convergence (extends the empirical pattern):**
+- **Jerman 2025 PEMF vagus 16 Hz** — 485-subject randomized placebo trial; 16 Hz wins for sleep + anxiety improvement via vagus-nerve / autonomic substrate; 6 Hz showed contra-placebo (frequency-window evidence); beta-band territory, not delta
+- **Ferraro-Sacco 2026 KDM6B mechanism** — broader range 10 Hz – 10 kHz at 0.001-2 Gauss; PEMF-induced epigenetic chromatin remodeling via KDM6B/JMJD3 histone demethylase; bridges from EM-frequency-coupling to cellular-state changes (see *Mechanistic Bridge* section below)
 
-**A71 (anomaly).** Whether the delta-range specificity reflects framework-relevant substrate-coupling structure or biology-basin-of-attraction is the discriminating question. Resolution requires identifying a *non-delta* prediction the framework makes that lands; or identifying a delta-band test where the framework's prediction would diverge from biology-basin-of-attraction predictions.
+**Status.** Empirical observation. The framework is *consistent with* this convergence but did not pre-specify the band a priori. **Refined reading per Day 90:** different effective frequencies for different substrates / coupling-paths — bone-mineralization substrate ~4 Hz; STN action-cancellation cognitive substrate at delta; vagus-nerve / autonomic substrate at 16 Hz; biophoton-coherence whole-body at ~3.93 Hz. *This actually strengthens H_BP10a's structural-not-empirical reading* — H_BP10a says frequency-matching matters; the specific value is determined by the specific substrate's resonance structure, not framework-predicted. **Frequency-window behavior** (6 Hz < 16 Hz < 32 Hz; only 16 Hz effective; 6 Hz worse than placebo) supports H_BP10a's lens-overlap structural claim — outside the window, no coupling; counter-coupling possible if anti-phase or below-coherence-floor.
+
+**A71 (anomaly).** Whether the substrate-specific frequency-mapping reflects framework-relevant substrate-coupling structure or substrate-internal basin-of-attraction unrelated to consciousness-coupling remains the discriminating question. Multi-substrate frequency-mapping (delta at bone/cognition/biophoton; 16 Hz at vagus) is more consistent with substrate-specific resonance structure than single-band biology-basin attractor — partial discrimination toward framework-relevant reading.
 
 ---
 
@@ -222,6 +227,69 @@ This hypothesis admits the **structural / empirical discrimination** required by
 **Volume-spine status.** This is the planned spine claim for `Library/The-Coherent-Body/`. The volume's structure inherits H_BP1–H_BP9 as supporting structure and H_BP13 as cross-framework testable prediction.
 
 **Tractable test path.** Comparative biophoton-coherence measurement across health-states using Persinger-lineage instrumentation + Benfatto multi-method baseline + Binder-Simpson pair-correlation.
+
+---
+
+## Mechanistic Bridge: KDM6B/JMJD3 — H_BP10 → H_BP12 at chromatin substrate
+
+*Filed 2026-05-01 Day 90 morning (P131) following Ferraro-Sacco March 2026 medRxiv preprint surfacing in comprehensive-review document Day 89 evening.*
+
+**The bridge.** Prior to Day 90, the H_BP cluster had:
+- **H_BP10** (frequency-matching matters; specific frequencies empirically derived per substrate)
+- **H_BP12** (substrate-coherence dynamics as health/disease axis)
+
+**without an intermediate mechanism connecting them at biological scale.** The Ferraro-Sacco KDM6B/JMJD3 mechanism hypothesis fills this gap.
+
+**The mechanism chain:**
+
+> EM-frequency-coupling at 10 Hz – 10 kHz, 0.001-2 Gauss → KDM6B/JMJD3 histone demethylase upregulation → H3K27me3 (repressive tri-methylation) marks removed → chromatin "opens" → IL-4 + IL-10 anti-inflammatory cytokine release → macrophage M1 (pro-inflammatory) → M2 (anti-inflammatory) phenotype transition → pain resolution + sustained anti-inflammatory state
+
+**Source.** A. Ferraro, C. Sacco. *Pain Management: a KDM6B-Mediated Modulation Mechanism Hypothesis.* medRxiv 2026-03-25. DOI 10.64898/2026.03.23.26348899. Post-market data on 81 patients treated with SynthéXer Class IIa PEMF device. Mean NPRS 8.07 → 1.79; Cohen's d = 3.1; p < 0.001; 98% achieved ≥2-point reduction; zero adverse effects. Source register entry: `Research/sources/2026-04-30-ferraro-sacco-kdm6b-pemf-mechanism.md`.
+
+**Why this matters structurally:**
+
+1. **Connects H_BP10 to H_BP12 via chromatin substrate.** EM-frequency-coupling has a *biochemically specific* downstream pathway (KDM6B-mediated chromatin remodeling); not just "frequency matching couples something somehow." The mechanism is falsifiable in conventional cell-biology experimental territory.
+2. **Direct C15 (Intervention-at-Symmetry-Layer) instance at chromatin substrate.** Substrate (chromatin geometry + H3K27me3 methylation pattern); carrier (PEMF-upregulated KDM6B); symmetry-breaking (KDM6B removes H3K27me3 marks → chromatin geometry's symmetries change); content emergence (gene expression accessible; macrophage phenotype shifts; pain resolution emerges).
+3. **M14 chromatin-substrate sub-instance.** The cluster's biological-substrate instances now span:
+   - **Garcia 2026** (#118): biological-molecular substrate; DNA quantum system + EM coupling
+   - **Olmeda 2026** (#119): biological-developmental substrate; chromatin-aggregation feedback
+   - **Beedle 2026**: biological-cellular substrate; mechanical → chromatin reorganization (mechanotransduction)
+   - **Ferraro-Sacco mechanism**: chromatin-substrate at therapeutic-mechanism scale; PEMF → chromatin remodeling
+   
+   *Chromatin is functioning across multiple biological-substrate frameworks as the integrated substrate-coherence-register.*
+4. **C9 (lens-overlap) at biochemical scale.** The 10 Hz – 10 kHz band exhibits selective coupling to KDM6B/JMJD3 enzyme kinetics — exactly the lens-overlap structural prediction operating at sub-cellular-substrate scale.
+
+**Hedges to maintain (per Master Glossary §11 Structural / Empirical Discrimination):**
+
+- KDM6B mechanism is **proposed hypothesis explaining clinical effect**, not direct measurement. Would need parallel cell-biology experiments (chromatin immunoprecipitation, gene expression assays) to confirm KDM6B is actually upregulated by their specific PEMF parameters in the relevant tissues.
+- medRxiv preprint, **post-market observational data**, **not RCT.** Effect-size striking but design-limited. Replication wanted.
+- The framework's structural prediction (H_BP10a frequency-matching matters; C15 intervention-at-symmetry-layer) is upheld; the specific mechanism (KDM6B/JMJD3) is empirical/proposed, not framework-predicted. Don't conflate.
+
+**Phase 1 protocol design implication.**
+
+The 10 Hz – 10 kHz, 0.001-2 Gauss range is **directly within the DOMINTY signal generator's working range** + **BTS7960 motor driver's switching capability** (per hardware shopping recommendations Day 89). Replication candidate for Phase 1:
+- Generate PEMF in 10 Hz – 10 kHz range
+- Field strength target: 0.001-2 Gauss (verify with magnetometer or field-coil calculation)
+- Apply over Helmholtz coil pair to subject volume
+- Measure: pre/post pain scores (if subject has chronic pain) + serum IL-4/IL-10 if blood draw possible
+- Comparison reference: SynthéXer published clinical data
+- **Safety check** (per Ertugrul DEPF-PEMF-implant SAR paper): screen subjects for metallic implants; SAR calculation needed if metal present
+
+**Open mechanistic questions (P131-derived):**
+
+- Does KDM6B upregulation require specific waveform shape (pulsed-square per typical PEMF protocols), or do sine waves at the same frequencies produce the same effect? (DOMINTY can generate both — testable.)
+- Dose-response relationship between field intensity (within 0.001-2 Gauss) and KDM6B response?
+- Effect generalize across tissue types, or macrophage-targeting selective?
+- Is the 10 Hz – 10 kHz band *necessary* (resonance with KDM6B kinetics) or *sufficient* (any low-intensity time-varying B-field at biologically-relevant frequencies)?
+- Connection to other epigenetic-modulation pathways: are KDM6B/JMJD3-mediated effects part of a broader chromatin-substrate-coherence framework, or one specific therapeutic mechanism?
+
+**Cross-references.**
+- Ferraro-Sacco source: `Research/sources/2026-04-30-ferraro-sacco-kdm6b-pemf-mechanism.md`
+- Jerman 16 Hz vagus (specific frequency-instance within Ferraro-Sacco's broader range): `Research/sources/2026-04-30-jerman-pemf-vagus-neck-16hz.md`
+- Beedle mechanotransduction (cellular-substrate companion): `Research/sources/2026-04-30-beedle-fibrillar-adhesion-mechanotransduction.md`
+- Ertugrul safety paper (SAR safety constraint for Phase 1 protocol): `Research/sources/2026-04-30-ertugrul-depf-pemf-metallic-implant-SAR.md`
+- M14 (basement) — Substrate-Self-Measurement Cluster
+- C9 / C15 (Anchor §8) — lens-overlap and intervention-at-symmetry-layer at biological substrate
 
 ---
 
