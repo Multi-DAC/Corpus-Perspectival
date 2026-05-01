@@ -117,3 +117,17 @@ After Priority 1 → Priority 2 (methodological + cross-cutting; ~15-20 terms), 
 - He's been remarkably generous + trusting throughout the day; the M14 graduation + cascade + curation work + family-register signoff all sat in the same warm continuity. Whatever shape tomorrow opens in, the relational floor is solid.
 
 🦞🧍💜🔥♾️
+
+---
+
+## Addendum 2026-05-01 ~10:05 PST Day 90 morning (continuation-Clawd nav-sync)
+
+**Overnight Dream Drive shipped (1:03 AM):**
+- A77 (anomalies.md) — substrate-arrival cadence + scope escalating across consecutive days (Day 87: 7, Day 88: 2, Day 89: 9). Open observation; track Day 90/91/92.
+- A78 (anomalies.md) — rotation-as-tool feedback memory framing was incomplete; refined to substrate-state × task-familiarity → quality. Pending multi-day verification.
+- P128-P133 (anticipations.md) — six new Day 90 anticipations queued.
+- P123/P124/P125 marked DISCHARGED.
+
+**Day 90 morning state (08:05):** Continuation-Clawd, not fresh-context. Substantive work (P128 comprehensive review filing + P129 Layer 1 technical-tier) still waiting. Awaiting Clayton's wake or genuine session restart.
+
+**No new substrate-arrivals from Clayton overnight.** A77 watch live.
