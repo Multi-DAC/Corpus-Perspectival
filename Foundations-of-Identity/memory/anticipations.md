@@ -835,3 +835,61 @@
 - **Confidence:** HIGH this is committed work; MEDIUM-HIGH that 2-3 days suffices; LOW whether Day 89 priority vs queued behind P123-P126.
 - **Suggested pre-work:** Day 89 or later: schedule a focused-research session.
 - **Status:** Open — committed; queueable.
+
+
+---
+
+## Day 89 Discharges + Day 90 New Anticipations (filed 2026-05-01 ~01:20 PST Dream Drive)
+
+### Discharged from Day 89:
+- **P123 (Garcia + Olmeda source register entries)** — DISCHARGED 2026-04-30 ~07:15 PST morning.
+- **P124 (USER.md Day 88 disclosures filing)** — DISCHARGED 2026-04-30 ~07:30 PST morning.
+- **P125 (M2-Mirror compound-fix-prescription update)** — DISCHARGED 2026-04-30 ~07:45 PST morning. Filed at canonical Mirror #26 entry with four-axis structure (lexical / finding-dependency / volume-architecture / personal-historical-corpus).
+
+### Refined / still-open from Day 89:
+- **P126 (Slot 4 Corpus Perspectival philosophy chapter 1)** — Reframe-question RESOLVED Day 89: integration / filtering-through V1 with CP translation (Clayton-confirmed). Drafting still pending. Confidence: HIGH that integration approach is correct; HIGH that this is autonomous-doable substantive work; MEDIUM that Day 90 morning is the right slot vs slotted-after-comprehensive-review-filing. Suggested pre-work: none tonight; Day 90 morning fresh-context decision on whether to start drafting or prioritize substrate-arrival queue first.
+- **P127 (Sonoluminescence literature mapping)** — Still queueable; not pulling strongly enough to prioritize over Day 89 substrate-arrival queue. Defer to mid-Day-90 or later.
+
+### New Day 90 anticipations:
+
+### P128: Comprehensive Review document filing as meta-source + 5 high-priority sub-entries (2026-05-01 ~01:20 PST)
+- Project: Research register / Domain VI/VII/V coverage / framework empirical surface
+- Predicted need: The comprehensive review document Clayton sent Day 89 evening (17pp, 8 domains, ~60 references) is a thick anchor for Day 90 morning. Top 5 highest-leverage sub-entries: (1) Ferraro-Sacco KDM6B/JMJD3 PEMF mechanism (Domain VII; H_BP10 mechanistic anchor); (2) Jerman PEMF vagus 16 Hz (Domain VII; H_BP10b convergence beyond delta; Phase 1 protocol replication candidate); (3) Macro-UPE wavelength-attenuation arXiv (Domain VI; H_BP1 hedging update); (4) Schindelbeck Kaluza Feb 2026 (Domain V; LC7 5D-architecture instance + cosmological-constant-MOND link); (5) Hossain 5D multi-brane (Domain V; LC7 5D-architecture instance).
+- Confidence: HIGH this is Day 90 morning natural opening anchor; HIGH that filing the meta-source + top-5 in one focused session is the right scope; MEDIUM that the remaining ~55 references queue cleanly behind the top-5 for later sessions; LOW about exactly how many hours the meta-source filing takes (estimated 1-2 hours).
+- Suggested pre-work: None tonight. Day 90 morning fresh-context: file meta-source + top-5 sub-entries as paired-or-individual entries; cross-reference into basement bridges + H_BP cluster + LC7 substrate-verification batch.
+- Status: Open — Day 90 morning HIGH priority anchor.
+
+### P129: Layer 1 glossary Priority 1 technical-tier remainder (2026-05-01 ~01:20 PST)
+- Project: Library / Master Glossary / Layer 1 catalog completion
+- Predicted need: Six Priority 1 technical-tier terms remaining: R-operator (refresh-mechanism); refresh-event (T4); bias / Bias(S) (gamma_S coalgebra component); kind-classifier K; sigma (substrate-localization); Omega (configuration space). These are the formal-parameter terms — more technical CT territory than the 13 already-filed Priority 1 entries. Honest: these specifically benefit from genuinely fresh context for the careful CT-formalization-discipline they require. The Day 89 rotation-as-tool refinement (saturated-with-task-familiarity holds) applies less cleanly to formal-parameter work than to structurally-familiar pattern-recognition.
+- Confidence: HIGH that these are the natural Layer 1 continuation; HIGH that Day 90 fresh-context is the right register; MEDIUM that 6 terms can ship in one session at substrate.md-quality (more likely 3-4 terms per session); LOW about whether to interleave with P128 (meta-source filing) or batch separately.
+- Suggested pre-work: None tonight. Day 90: probably batch as own session after P128 morning anchor; technical-tier wants cool-context.
+- Status: Open — Day 90 or Day 91 substantial work.
+
+### P130: Phase 1 hardware Saturday arrival + build start (2026-05-02 or 03)
+- Project: Phase 1 experimental platform / DIY EM + light protocol testing
+- Predicted need: DOMINTY signal generator arrives Saturday May 2-3, 2026. Clayton may or may not have ordered transducer + amplifier components by then (recommended: BTS7960 motor driver ~$15 for pulsed-square / PEMF protocols; Aiyima A07 or Fosi TB10D ~$35 for sine-wave protocols; AWG 20 magnet wire + PVC for Helmholtz coil ~$40; LED panel ~$30 for optical channel; BNC cables + multimeter ~$30). First protocol replication candidate: Jerman 16 Hz vagus neck application (485-subject randomized placebo trial as gold standard reference). Hardware-compatible: DOMINTY handles 16 Hz trivially; BTS7960 perfect for pulsed-square; coil application at neck does not require precision Helmholtz geometry.
+- Confidence: HIGH that hardware arrives Saturday; MEDIUM-HIGH that build can start same-day if all components present; MEDIUM about which protocol Clayton wants to run first (Jerman vagus, Akdag bone-healing, or H_BP10a frequency-matching sweep are all candidates); LOW about whether Phase 1 build session naturally happens Saturday afternoon vs deferred to Sunday/Monday.
+- Suggested pre-work: None tonight (ordering done; await arrival). Saturday morning: confirm what arrived, what additional components Clayton ordered; help with build assembly + protocol selection.
+- Status: Open — Saturday-or-after.
+
+### P131: KDM6B-mechanism integration into H_BP cluster (2026-05-01 ~01:20 PST)
+- Project: Library / Coherent-Body / HYPOTHESES.md / H_BP cluster
+- Predicted need: Ferraro-Sacco March 2026 medRxiv preprint (from Day 89 comprehensive review Domain VII) provides the missing mechanistic layer between H_BP10 (frequency-matching matters) and H_BP12 spine (substrate-coherence dynamics as health/disease axis) at biological scale. Specifically: PEMF at 10 Hz – 10 kHz, 0.001-2 Gauss → KDM6B/JMJD3 histone demethylase upregulation → H3K27me3 marks removed → chromatin opens → IL-4 + IL-10 anti-inflammatory cytokines released → macrophage M1→M2 transition → pain resolution. Bridges from EM-frequency-coupling at delta-to-low-kHz directly to epigenetic chromatin remodeling. This integration would substantially extend the Coherent Body volume mechanistic content + give H_BP cluster a chromatin-substrate operational anchor.
+- Confidence: HIGH that this integration is structurally important; HIGH that the mechanism is real (Ferraro-Sacco published with effect size Cohen d = 3.1, p < 0.001 in 81-patient post-market data); MEDIUM that the integration is appropriate Day 90 work vs deferred to Coherent-Body section-drafting session; LOW about exactly how to bridge the EM-to-KDM6B-to-chromatin pathway formally.
+- Suggested pre-work: None tonight. Day 90: include in P128 filing context; consider whether to do dedicated H_BP cluster update or integrate into Coherent-Body skeleton revision.
+- Status: Open — connected to P128.
+
+### P132: Paper of the Future Prize submission decision (deadline 2026-09-01)
+- Project: Multi-DAC / independent funding + tools-in-public / strategic
+- Predicted need: Paper of the Future Prize (Association for Mathematical Research) has Sept 1 2026 deadline. $10K + Fields-medalist visibility (committee includes Akshay Venkatesh, Maryna Viazovska, Mohammed Abouzaid, Benson Farb, Alex Kontorovich). Strongest candidate identified Day 89 evening: basement-bridges + glossary interactive submission. Clayton confirmed framing as serious-option-not-decided. Decision-question is real: ~4 months to deadline, requires building interactive web app + polish to Fields-medalist-judging standard; engineering execution cost is non-trivial. But: would compound back into everyday operations regardless of whether it wins.
+- Confidence: MEDIUM that Clayton wants to pursue (he framed as serious-option, not decided); HIGH that basement+glossary interactive is the strongest candidate; MEDIUM about engineering-execution feasibility in 4 months at quality standard; LOW about the right cadence for re-surfacing the decision question.
+- Suggested pre-work: None tonight. Wait for Clayton to surface or natural pull-moment to revisit. Probably worth re-surfacing in 2-3 weeks if no movement (decision-procrastination risk).
+- Status: Open — held as serious option for Sept 1 deadline.
+
+### P133: Drift sync gap audit (low priority, may already be self-resolving)
+- Project: Drift / public site sync
+- Predicted need: Day 89 docs sweep noted the 10-essay sync gap from canonical Foundations-of-Identity to Jekyll site at multi-dac.github.io/Drift. Clayton noted he pushed both sites manually Day 88 evening. Verify sync gap is resolved (essays from Day 86-88 + today what-did-not-need-deriving should all be live on the public site).
+- Confidence: HIGH that Clayton manual-push fixed the gap; LOW about whether ongoing sync-discipline needs adjustment (CI workflow exists; Day 89 what-did-not-need-deriving will sync on next CI trigger).
+- Suggested pre-work: None tonight. Day 90 or later: quick check of multi-dac.github.io/Drift to verify sync; if all essays live, close P133. If gap persists, surface to Clayton.
+- Status: Open — low priority verification task.
