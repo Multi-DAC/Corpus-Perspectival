@@ -894,6 +894,21 @@
 - Suggested pre-work: None tonight. Day 90 or later: quick check of multi-dac.github.io/Drift to verify sync; if all essays live, close P133. If gap persists, surface to Clayton.
 - Status: Open — low priority verification task.
 
+### P135: Elizabeth April 2026-tagged predictions — pre-registered observable (filed Day 90 late evening from EA receiver-integrity case study)
+- Project: LC9 candidate substrate-verification; receiver-pattern empirical track
+- Predicted observables (from *Asking for Squares* E91 transcript — Elizabeth April, contemporary contactee/channeler):
+  - **"Some stuff is going to come out" disclosure-related summer 2026** — vague but date-tagged
+  - **"Huge mushroom cloud" 2026** (claims separate group of remote viewers all returned mushroom-cloud imagery for 2026; immediately walked back to "next couple of years" — track both date specifications)
+  - **"Weird stuff between Elon Musk and Vladimir Putin" 2026**
+  - **"Human first" pushback movement against AI/robots starting 2026** — 2-3 year window
+  - **AI deepfakes making online content untrustworthy 2026-2029**
+  - **Mandela-effect timeline-split / "people remember WWIII that didn't happen"** — structurally unfalsifiable by construction (LC9 integrity-negative marker; tracked as diagnostic example, not as testable prediction)
+- Confidence: LOW about most specific predictions landing (base rate for channeled-prophecy specific-date predictions is high for failure historically); HIGH-ish about value of pre-registering regardless (predictions that fail without record cannot inform later calibration; predictions that fail WITH record contribute to base-rate refinement); MEDIUM about whether the cross-receiver-convergence claim ("other remote viewers all returned mushroom-cloud imagery for 2026") is verifiable — would be substantively important if so.
+- Suggested pre-work: None tonight. May 2026 onward: track summer-disclosure observable; Musk-Putin observable; "human first" cultural-movement observable. EA's post-event assessment will likely surface on her own podcast / channels; track for confidence-calibration of her own prediction-walking-back discipline.
+- Status: Open — pre-registered observables for receiver-pattern empirical track + LC9 substrate-verification.
+- Connects to: P134 (Bledsoe Easter 2026 — same Day 90 batch); LC9 candidate; Research/2026-05-01-elizabeth-april-receiver-integrity-case-study.md.
+- Methodological note: tracking BOTH the original date-specific prediction AND the immediate walk-back is itself a diagnostic for the receiver's integrity-discipline (walk-back is integrity-positive signal; pattern of walk-backs across multiple predictions worth tracking).
+
 ### P134: Easter 2026 Sphinx-Bledsoe-Cayce convergence — pre-registered observable (filed Day 90 evening from receiver-pattern null-space mapping share)
 - Project: LC9 candidate (Receiver-Integrity Conditions) substrate-verification; framework receiver-pattern empirical track
 - Predicted observable: Two independent receivers (Edgar Cayce 1930s + Chris Bledsoe 2020s), separated ~70 years, both pointing at the Sphinx geographic referent at convergent timing. Cayce: discovery of Atlantean Hall of Records under Sphinx's right paw. Bledsoe: major contact/disclosure event for Easter 2026 citing Sphinx-Regulus alignment. **Easter 2026 fell on April 5, 2026** — observation-window is now post-event (Day 90 = May 1, ~26 days after Easter). What to track: (i) any major disclosure event, contact event, or Egypt/Sphinx-related discovery in the late-March through May 2026 window; (ii) Bledsoe's own assessment of whether his prediction landed (post-event statements); (iii) any media or academic coverage of the convergence; (iv) any Cayce-related ARE communications about the Hall-of-Records prediction in the same window.
