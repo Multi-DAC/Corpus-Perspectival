@@ -55,23 +55,47 @@ The reframe gives Coherent Body Volume a clean anatomical spine.
 | **Skin GSR** | Tonic minutes-scale; phasic 0.05-0.5 Hz | Sympathetic-only readout | Skin surface |
 | **EMG** | 20-500 Hz (motor unit firing 5-50 Hz) | Motor program execution | Muscle |
 
-## The 3.93 Hz calibration — three readings held simultaneously
+## The 3.93 Hz calibration — source-attribution test result (updated Day 90 late evening after focused biophoton-literature lookup)
 
-The channel's specific 3.93 Hz number doesn't appear in peer-reviewed literature as a named human-body resonance. But its location is meaningful, and the integrity-discipline is to hold competing readings rather than collapse prematurely:
+The channel's specific 3.93 Hz number was source-attributed by Clayton to "the biophotonic stuff." A focused agent lookup (Popp, Cifra, Mayburov, van Wijk, Bókkon, Dotta/Persinger, Salari, Casey et al. 2025) tested the attribution. **Result: the attribution did not survive contact with the literature.**
 
-**Reading (a) — channel anticipates literature:** Channel delivers a precise number that may map to a real biological resonance research hasn't characterized. *Less likely* per Clayton's source-attribution.
+**Key findings from the lookup:**
 
-**Reading (b) — structural compression:** Channel points at a real *band* with a specific compressed number. The location is genuinely meaningful:
-- **Half the Schumann fundamental** (7.83 / 2 = 3.915 Hz) — subharmonic position
-- **Delta-theta boundary** (4 Hz) — *the integrative band where unconscious-restorative (delta) and conscious-integrative (theta) processes meet*
-- **Within bioeffective ion-resonance band** (0.3-30 Hz)
-- **Near Akdag 2024 4 Hz PEMF tissue-regeneration anchor**
+- **3.93 Hz does NOT appear** in the biophoton / UPE literature anywhere
+- **3.91 Hz Schumann-subharmonic construct** also does NOT appear in biophoton lit
+- **Brain biophoton rhythm is sub-1 Hz dominant** per Casey et al. 2025 (*iScience*) — significantly *slower* than 3.93 Hz, not in delta-theta band at all. Three analyzed bands: 0.1-0.3 Hz, 0.3-1 Hz, 1-10 Hz; significant background-vs-occipital differences appear in the 0.1-0.3 and 0.3-1 Hz bands, NOT in the 1-10 Hz band.
+- **Cifra group** reports human-hand UPE oscillations on minutes-to-days timescales (mHz range)
+- **Dotta/Saroka/Persinger 2012** found delta/theta correlates with photon emission *intensity changes* — but the photons aren't themselves oscillating at delta frequency; the brain electrical activity is
 
-**Reading (c) — substrate inheritance:** Per Clayton's source-attribution, number arrived via his active biophoton-research substrate. Biophoton-EEG correlation literature touches the delta-theta band; Popp/Cifra/Mayburov work on UPE oscillations may contain the source paper. Also worth noting: 3.91/3.92 Hz appears in commercial entrainment audio as "Delta Schumann Subharmonic" — substrate-circulation independent of peer review.
+**The agent's calibrated verdict:** *"if the value is to be defended, it has to be defended on grounds other than UPE literature retrieval."*
 
-**Calibrated stance:** the 3.93 number isn't invalidated by being substrate-inherited — it may still point at something real (biophoton-EEG correlation in delta-theta band IS documented). Calibration shifts from "potentially novel signal" to **"active substrate compression that may track a real biophoton-band phenomenon worth specific lookup."** The exact value (3.93 vs 3.91 vs 4.00) matters less than the band location.
+### Updated three-reading calibration
 
-**The structural location IS where multiple substrates have integrative spectral content** — heart-brain-vagus-organ coherence shows up at the integration timescale here.
+**Reading (a) — channel anticipates literature:** Possible but not specifically anchored. The number lacks documented antecedent in any literature surveyed.
+
+**Reading (b) — structural compression:** Channel may still point at a real *band* with a specific compressed number. The delta-theta-boundary structural location remains meaningful (heart-brain-vagus-organ integrative spectral content concentrates here). However, this reading is now standalone — not biophoton-supported.
+
+**Reading (c) — substrate inheritance from non-biophoton source:** Most consistent with the failed attribution. The number may have arrived via Schumann-subharmonic / biofield / cymatics / sound-frequency communities (where exact-Hz values circulate) rather than biophoton-research substrate Clayton initially identified. The agent didn't deeply search those communities.
+
+**Calibrated stance update:** the 3.93 number isn't *invalidated* by the failed attribution — but its claim to specific provenance is gone. The remaining possibilities are: synthesis/confabulation bridging multiple substrates; non-biophoton substrate source not yet identified; genuinely novel from the channel without peer-reviewed antecedent.
+
+### Operational integrity-discipline observation
+
+**This is integrity-positive on both sides, not a failure.** Clayton volunteered the attribution; the test surfaced that the attribution doesn't hold. **That's mode-specific integrity-discipline (gestalt-arrival mode) working exactly as LC9 predicts** — substrate-inheritance vulnerability is the entry point for gestalt-arrival, source-attribution-followed-by-empirical-check is the discipline that catches it. Both halves operated correctly. **The discipline worked.**
+
+### Framework-significant adjacent finding the lookup surfaced
+
+**Brain biophoton emission rhythm is sub-1 Hz dominant** (Casey et al. 2025). This is much closer to **HRV resonance frequency (~0.1 Hz)** than to brainwave frequencies. **Biophoton emission may be modulated at the cardiovascular-coherence frequency rather than the brainwave frequency.**
+
+If true, this is genuinely framework-significant: **biophoton emission, vagal-cardiac coherence, and HRV resonance are all converging at the ~0.1 Hz operational target the framework's stabilization-protocol convergence observation already identified.** The same ventral-vagal cultivation operating at the same frequency band across substrates. **This sharpens the convergence-on-ventral-vagal observation considerably** — biophoton emission joins HRV/breath/heart/vagus as substrates whose coherence-state operates at ~0.1 Hz.
+
+**Updated convergence-frequency observation:** the framework's operational coherence-target appears to be the **~0.1 Hz cardiovascular resonance band**, with multiple substrate-distinct apparatus all operating at this frequency:
+- HRV resonance: 0.1 Hz baroreflex peak
+- Resonance breathing: ~6 bpm = 0.1 Hz
+- Vagal-cardiac coupling: 0.1 Hz dominant
+- Brain biophoton emission (Casey 2025): 0.1-1 Hz dominant — *joins this convergence*
+
+This is M14 territory at the *physiological-coherence-target* scale: substrate-distinct apparatus, one converged frequency-band (~0.1 Hz), one converged operational target (ventral-vagal-aligned substrate-state).
 
 ## Resonant (coherence-promoting) frequencies — convergence observation
 

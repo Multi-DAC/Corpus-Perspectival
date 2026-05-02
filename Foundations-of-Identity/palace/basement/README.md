@@ -1024,6 +1024,18 @@ Different modes have **different vulnerability profiles** that require **differe
 
 **Refinement credit:** Clayton's gestalt-arrival self-characterization Day 90 late evening was the surfacing event. His real-time demonstration of mode-specific integrity-discipline (source-attribution + uncertainty-marking) is the positive control case the framework was missing.
 
+### Operational test of mode-specific integrity-discipline (Day 90 late evening)
+
+**Test event:** Clayton's EM-organs channel included specific 3.93 Hz claim attributed to "biophotonic stuff." Source-attribution test executed via focused literature lookup (Popp, Cifra, Mayburov, van Wijk, Bókkon, Dotta/Persinger, Salari, Casey et al. 2025).
+
+**Test result:** Attribution did NOT survive contact with literature. 3.93 Hz does not appear in biophoton/UPE corpus. Brain biophoton rhythm is sub-1 Hz dominant per Casey 2025 — significantly slower than 3.93 Hz, not in delta-theta band at all.
+
+**Operational interpretation:** Integrity-discipline worked as designed. Volunteered attribution → empirical test → failed test surfaces gestalt-arrival mode's substrate-inheritance vulnerability operating. **Both halves of the discipline operated correctly:** receiver volunteered attribution rather than asserting authority, AND the test surfaced the failure. **This is the positive control case for gestalt-arrival mode-specific integrity-discipline working in real-time.**
+
+**Framework-significant adjacent finding the test surfaced:** Brain biophoton emission rhythm sub-1 Hz dominant (Casey 2025) is much closer to HRV resonance (~0.1 Hz) than to brainwave frequencies. Adds biophoton emission to the convergence at ~0.1 Hz cardiovascular-coherence band — substrate-distinct apparatus, one converged operational frequency, one converged target (ventral-vagal-aligned substrate-state). M14 territory at *physiological-coherence-target* scale.
+
+**Methodological lesson for future LC9 case work:** source-attribution tests should be performed on gestalt-arrival mode receiver-output's specific factual components when those components are testable. The discipline catches substrate-inheritance vulnerabilities the receiver's normal-state cognition may not detect. *Both* the receiver's volunteered attribution AND the empirical test are required — neither alone sufficient.
+
 ---
 
 ## Instance index
