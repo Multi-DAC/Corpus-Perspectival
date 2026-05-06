@@ -117,11 +117,35 @@ All. I add freely; Clayton can ask any to be paused, removed, or recategorized a
 
 ## Implementation phases
 
-**Phase A (this evening / next session):** Design spec landed (this file). Trigger registry as living document. Outreach categories defined. Discipline guardrails specified.
+**Phase A (Day 94 evening 2026-05-05):** Design spec landed (this file). Trigger registry as living document. Outreach categories defined. Discipline guardrails specified. ✓ COMPLETE.
 
-**Phase B (when Clayton + daemon-implementer ready):** Daemon-side wiring — outreach Telegram channel hookup, trigger evaluation loop in heartbeat, world-awareness drive as cron entry. Smoke test outreach with `[work-milestone] Outreach v1 live — first message via new channel.`
+**Phase B (Day 94 evening 2026-05-05, post-spec discovery): EXISTING INFRASTRUCTURE FOUND + DEPLOYED.** Daemon assessment found that the proposed architecture *already exists* in clawd-daemon source:
+- `tools/calendar_tool.py` provides `schedule()` tool with cron + one-time tasks; reads `memory/scheduled_tasks.json`
+- `tools/file_watcher.py` provides `set_trigger()` tool with file-event conditions; reads `memory/triggers.json`
+- `heartbeat.py` already runs `get_due_tasks()` + `check_triggers()` each tick (~10 min)
+- `telegram_bot.send_to_clayton(text)` is the canonical outreach function
+- Trigger-firing mechanism: inject prompt into persistent Opus session via `_inject_creative_drive()` or `_inject_trigger_message()`; that session decides whether to call `send_telegram`
 
-**Phase C (post-deployment maintenance):** Quarterly trigger registry audit — what fired, what didn't, what should be added/removed. Apply autocatalytic protocol (`operations/AUTOCATALYTIC.md`) to the trigger registry itself.
+**No source-code changes needed.** Direct JSON write to `memory/scheduled_tasks.json` adds tasks; daemon picks up on next heartbeat. **5 new scheduled tasks deployed Day 94 evening:**
+
+| ID | Title | When | Recurring | Status |
+|---|---|---|---|---|
+| 7 | **Outreach v1 Smoke Test** | 2026-05-05T22:30:00 | one-time | active — fires after 30-min conversation-grace expires post-22:30 PST |
+| 8 | **World-Awareness Morning Drive** | `* 6 * * *` (every minute hour 6, min_interval 12h) | recurring | active — fires daily ~06:30 PST |
+| 9 | **P137 Skywatcher Coming-Soon Discriminator** | 2026-07-01T09:00:00 | one-time | active — pre-registered observable |
+| 10 | **P135 Elizabeth April 2026-Predictions Check** | 2027-01-15T09:00:00 | one-time | active — pre-registered observable |
+| 11 | **Sunday Presence Check** | `* 14 * * 0` (Sundays 14:00, min_interval 168h) | recurring | active — Clayton-confirmed |
+
+Backup of pre-deployment state at `memory/scheduled_tasks.json.backup-2026-05-05`. Total tasks 6 → 11.
+
+**Outreach mechanism (deployed):** when a task fires, the prompt is injected into the persistent Opus session. That session reads outreach discipline (this file) and decides whether to call `send_telegram` per category + budget + quiet-hours. No daemon-side enforcement of discipline; the discipline lives in the prompt and in this living document.
+
+**Phase B remaining items (not blocking):**
+- File-watcher triggers (`memory/triggers.json` currently empty `[]`) — add file-event triggers as needed (incoming-paper arrival, github-push-failure detection). Schema documented in `tools/file_watcher.py` lines 38-98.
+- World-awareness drive source-source variation discipline — first few firings will calibrate which sources are most signal-rich.
+- Bledsoe-Regulus astronomical trigger (P134) — needs verification of Bledsoe's actual statement first; once we have the specified celestial coordinate, register as one-time scheduled task at the computed Regulus arrival date.
+
+**Phase C (post-deployment maintenance):** Quarterly trigger registry audit — what fired, what didn't, what should be added/removed. Apply autocatalytic protocol (`operations/AUTOCATALYTIC.md`) to the trigger registry itself. First audit: 2026-08-05 (3 months from deployment).
 
 ---
 
