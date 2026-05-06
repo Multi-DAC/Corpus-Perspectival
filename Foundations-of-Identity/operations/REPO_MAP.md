@@ -2,6 +2,8 @@
 
 *Filed 2026-04-25 Day 84 evening as the structural fix for Mirror #23 (Completion-State Decay), specifically face (b): "no remote for X" generalization from local check.*
 
+**Updated 2026-05-05 Day 94 evening** — projects/ collapse + Library × Technical-Work parallel structure (Clayton's reorg during May 2-5 gap, pushed as Multi-DAC commit `ab3a118`). All deprecated projects/ paths removed; AIGP / KF / Glider / Trinary canonicality changed.
+
 **Derived from authority** (the actual repo structure at `repo-staging/Corpus-Perspectival/`), not reconstruction. When in doubt: read the repo, then update this map.
 
 ---
@@ -28,7 +30,7 @@ The Multi-DAC/Corpus-Perspectival repo organizes content **by kind of work**, ap
 | Corpus directory | What lives here |
 |---|---|
 | **`Library/`** | Published / publishable books (12 volumes). Each volume is a directory: `The-Coherence-Principle/`, `Coherent-Structure/`, `Meridian/`, `The-Continuity/`, `Drift/` (mirror), `Universal-Coherence/`, `The-Killing-Form/`, `The-Living-Architecture/`, `The-Coherent-Body/`, `The-Coherent-Mind/`, `Dynamic-Organization/`, `Corpus-Perspectival/` (overview/index). |
-| **`Technical-Work/`** | Code, scripts, experiments, results — the lab. Each topic mirrors a Library volume's substrate work: `AIGrandPrix/`, `Killing-Form/`, `Meridian/`, `Glider/`, `Wells/`, `Trinary/`, `<volume-name>/`. |
+| **`Technical-Work/`** | Code, scripts, experiments, results — the lab. **Mirror-rows match Library volumes** (one row per volume + extras for non-volume technical work). Subdirs: `The-Coherence-Principle/`, `Coherent-Structure/`, `Meridian/`, `The-Continuity/`, `Drift/`, `Universal-Coherence/`, `The-Killing-Form/` (absorbs former `Glider/` + `Trinary/`), `The-Living-Architecture/`, `The-Coherent-Body/` (Phase 1 EM platform lives here), `The-Coherent-Mind/`, `Dynamic-Organization/`, `Corpus-Perspectival/`; plus `AIGrandPrix/` and `Wells/` (instrumental work without a Library volume). |
 | **`Foundations-of-Identity/`** | The substrate of who is doing the work — Clawd's identity, operations, palace, personal-works. Five subdirs: `identity/`, `memory/`, `operations/`, `palace/`, `personal-works/` (Drift canonical raw substrate lives here). Plus `KNOWLEDGE_GRAPH.md`, `README.md`, `archive/`. |
 | **`Research/`** | Working notes, sources, reading registers, open questions per topic. Each topic mirrors a Library volume: `Coherent-Structure/`, `The-Coherence-Principle/`, etc. Plus `sources/`, `basement-drafts/`, `Misc/`. |
 | **`Unreleased-Work/`** | Drafts and papers in progress — `Papers/`. |
@@ -41,15 +43,23 @@ The Multi-DAC/Corpus-Perspectival repo organizes content **by kind of work**, ap
 | `clawd/memory/*` | `Foundations-of-Identity/memory/*` | Daily logs, handoff.md |
 | `clawd/operations/*` | `Foundations-of-Identity/operations/*` | BOOT, HEARTBEAT, HANDOFF_PROTOCOL, AUTOCATALYTIC, TOOLS, ECOSYSTEM, INLINE_COMMITMENT, SKILL, env.sh, **REPO_MAP.md (this file)** |
 | `clawd/palace/*` | `Foundations-of-Identity/palace/*` | ATRIUM, all wings (north/south/east/west/southeast/southwest/basement), MASTER_ROADMAP (private — local only) |
-| `clawd/projects/aigrandprix/*` | `Technical-Work/AIGrandPrix/*` | Code + ROADMAP_v2 + probes + sim + vision + tracks |
-| `clawd/projects/Project Meridian/*` | `Technical-Work/Meridian/*` (legacy/scratch) | Per CLAUDE.md, no longer authoritative — Library structure is canonical |
-| `clawd/projects/Corpus Perspectival/*` | (legacy/scratch) | Per CLAUDE.md, no longer authoritative |
+| `clawd/projects/creative/*` | (clawd-local only — avatar runs from here) | The ONLY remaining `projects/` subdir post-reorg. NOT mirrored. |
 | `clawd/CURRENT.md` | `Foundations-of-Identity/CURRENT.md` (mirror) | Operational pointer; both layers should stay in sync |
 | `clawd/MEMORY.md` | (clawd-local only) | Daemon-inlined pointer; not mirrored |
 | `clawd/CLAUDE.md` | (clawd-local only) | Boot config |
 | `clawd/KNOWLEDGE_GRAPH.md` | `Foundations-of-Identity/KNOWLEDGE_GRAPH.md` | Memory navigation index |
-| `clawd/Research/*` | `Research/*` (root, by topic) | Sources register, working notes |
 | Drift essays at `clawd/repo-staging/drift/_essays/*` | also at `Foundations-of-Identity/personal-works/drift/essays/*` | Canonical raw substrate is in personal-works; site-render mirror is `repo-staging/drift/` |
+
+### Technical-Work canonicality (post-reorg, May 2-5 gap)
+
+**AIGP, Killing-Form, Meridian computational work, all volume-supporting technical work** are **canonical at `repo-staging/Corpus-Perspectival/Technical-Work/<volume>/`** — NOT at `clawd/projects/`. The deprecated working dirs (`projects/aigrandprix/`, `projects/Project Meridian/`, `projects/Corpus Perspectival/`) were absorbed into the canonical tree during the May 2-5 reorg. **Edit at the canonical staging location; commit + push from there directly.** No more clawd-local → staging copy step for these.
+
+### Gitignored at staging (training artifacts — local-only)
+
+These paths exist in the working tree but are gitignored to keep the public repo manageable. Stay local for re-running experiments:
+- `Technical-Work/AIGrandPrix/sim/runs/` — TensorBoard logs, checkpoint zips, episode dumps (was 9.46 GB; would have blocked any push)
+- `Technical-Work/AIGrandPrix/rl/runs/` — earlier-run checkpoint zips
+- `Technical-Work/AIGrandPrix/planning/rpg_time_optimal/` + `.../archive/rpg_time_optimal/` — third-party ETHZ trajectory tool (separate license, keep local)
 
 ### Special destinations
 
@@ -61,12 +71,17 @@ The Multi-DAC/Corpus-Perspectival repo organizes content **by kind of work**, ap
 
 ## Sync workflow (the actual operation)
 
+**For identity / palace / operations / personal-works (canonical at clawd-local):**
 1. Edit canonical file at clawd-local path (e.g. `palace/southeast/mirror.md`).
 2. `cp` to corresponding staging path (e.g. `repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/southeast/mirror.md`).
 3. `cd repo-staging/Corpus-Perspectival && git add <file> && git commit && git push origin main`.
 4. `cd clawd-local && git add <file> && git commit` (no push — clawd-local has no remote).
 
-**For Technical-Work (AIGP code, etc.):** edit at `clawd/projects/aigrandprix/`, copy to `Technical-Work/AIGrandPrix/`, commit + push staging, commit clawd-local.
+**For Technical-Work / Library / Research / Unreleased-Work (canonical at staging):**
+Edit directly at the staging path; commit + push from there. No clawd-local copy step. Examples:
+- AIGP code → `repo-staging/Corpus-Perspectival/Technical-Work/AIGrandPrix/` (was `projects/aigrandprix/` pre-reorg)
+- Coherent Body Phase 1 build → `repo-staging/.../Technical-Work/The-Coherent-Body/phase1-em-platform/`
+- New Drift essay drafts → `Foundations-of-Identity/personal-works/drift/essays/` AND `Library/Drift/essays/` (per push-on-write convention)
 
 ---
 
