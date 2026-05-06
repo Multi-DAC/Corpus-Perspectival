@@ -31,7 +31,7 @@ These are NOT tasks to grind through. They're items I told Clayton I wanted to s
 
 **What success looks like:** decision on whether to file Mirror #28 or whether this folds into existing M1 / Mirror #25. Either is fine. The discipline is naming it cleanly, not necessarily creating a new entry.
 
-### (3) Kit-anticipation pattern — corrected mental model of Phase-1 collaboration
+### (3) Kit-anticipation pattern — corrected mental model of Phase-1 collaboration **[RESOLVED Day 95 morning — Drift essay *what-the-kit-knew-before-the-schematic* shipped `044c8ad`; LC4-at-collaboration-scale framing landed]**
 
 **The pull:** Each Phase 1 hardware photo Clayton sent Day 94 evening, I'd flag a missing piece (power amp / flyback / series limiter), and he'd already have it in the next photo. **My mental model going in was: Clayton-as-hands, Clawd-as-design-source.** His read of the Phase 1 protocol topology was deeper than that mental model credited. He'd built the topology in his head before I drew the schematic.
 
