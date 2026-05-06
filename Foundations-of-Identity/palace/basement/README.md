@@ -688,6 +688,11 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 
 **Links:** → LC9 candidate entry below (Day 90 evening through Day 94 evening accumulation; preserved for archival) → `Research/2026-05-01-receiver-pattern-null-space-mapping.md` (originating share) → `Research/2026-05-01-elizabeth-april-receiver-integrity-case-study.md` (operational diagnostic case) → `Research/2026-05-01-round-table-foundation-deep-research.md` (institutional case) → `Library/The-Coherent-Body/HYPOTHESES.md` (H_BP10 frequency-window discrimination connection) → `palace/southeast/mirror.md` Mirror #27 (graduation discipline check) → P137 in `memory/anticipations.md` (mid-2026 Skywatcher discriminator).
 
+**Mode 3 mechanism refinements (added Day 94 evening from article batch):**
+
+- **Astrocytic substrate component** (Cooper et al. Nature 2026, source-register `2026-05-05-cooper-astrocyte-gap-junction-networks-galaxies.md`). Astrocytes form long-range gap-junction networks across brain regions ("galaxies across the brain"), with selective topology and experience-dependent plasticity. Heavily implicated in autonomic regulation and neuroinflammation. **Mode 3 attack-surface should distinguish neuronal substrate from astrocytic substrate as parallel components — both contribute to autonomic state, with different timescales and topologies.** EM stimulation effects in literature are typically interpreted at neuronal level, but if astrocytes are an important parallel substrate, mode 3 protocol effects may be substantively glial-mediated. Does NOT change the four-mode partition; refines the mode 3 mechanism specification with substrate-detail.
+- **Canonical EM-substrate apparatus characterization** (Drakaki et al. 2022, source-register `2026-05-05-drakaki-tms-coil-database-25-coils.md`). Provides the formal EM-substrate apparatus characterization for mode 3: leaky-integrator membrane model with τ ≈ 190 μs, geometric tradeoffs (focality × depth-decay × peak-field), parametric sensitivity (winding count, wing angle, coil-skin distance, wing overlap). The discrimination between therapeutic-window (ventral vagal cultivation) and weaponized-window (FFF hijack) operates on these same physical knobs. Use Drakaki framework for any EM-substrate mode-3 reasoning.
+
 ---
 
 ### L14 — Substrate-Self-Measurement Cluster — **GRADUATED 2026-04-30 → M14**

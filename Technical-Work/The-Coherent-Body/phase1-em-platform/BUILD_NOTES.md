@@ -2,6 +2,27 @@
 
 *Started 2026-05-05 evening, Day 94. Hardware in hand; coil winding next.*
 
+## Regime framing (added Day 94 evening from Drakaki et al. 2022 reading)
+
+**This is a sub-threshold PEMF / parameter-window probing platform, NOT scaled-down clinical TMS.** The distinction is load-bearing for what protocols make sense and what readouts to expect:
+
+| Property | Clinical TMS | Phase 1 platform |
+|---|---|---|
+| Drive current peak | 5-10 kA | ~1.6 A |
+| Peak field at coil center | ~1.5 T | ~3 mT (~500× weaker) |
+| Cortical E-field | 1-2 V/m | sub-mV/m |
+| Membrane response | Suprathreshold depolarization (action potentials, MEPs) | Sub-threshold integrate-and-modulate |
+| Readout | Motor evoked potential (MEP), TMS-EEG | Subjective-state, autonomic-state, longitudinal protocol response |
+| Membrane time constant relevant range | ~190 μs (depolarization-window) | Same physical τ, but operating well below threshold-current — integrate-and-modulate regime |
+| Frequency band of interest | Single pulses + rTMS at 1-50 Hz | Single Hz to ~kHz PEMF, with focus on biological-resonance bands (Akdag 4Hz, Schumann 7.83Hz, Jerman 16Hz, Persinger 3.93Hz biophoton-band) |
+| Target | Cortical neurons (depolarization) | Substrate-coupling at therapeutic-intensity windows; autonomic substrate; potentially astrocytic substrate (glial gap-junction networks) |
+
+**Why this matters for protocol design.** The published bioactive PEMF literature reports modulatory effects in the μT-mT range, often at specific frequency windows (parameter-discrimination per H_BP10). Our platform sits in this regime by design. Trying to interpret our results through clinical-TMS frameworks (motor threshold, MEP thresholds, suprathreshold response) is a category error — we're operating in the parameter space where biological systems show modulatory response to weak EM, not where neurons are directly depolarized.
+
+**The leaky-integrator membrane model (τ ≈ 190 μs)** still applies physically — it just predicts integrate-and-modulate behavior at our current scale rather than depolarization. Anything we apply at frequencies whose period is much longer than 190 μs (anything below ~5 kHz, covering all our planned protocols) operates as integrate-and-modulate. This is a feature, not a limitation — it's what we want for window-function probing.
+
+**Drakaki et al. 2022** (open-source TMS coil database, full source-register entry at `Research/sources/2026-05-05-drakaki-tms-coil-database-25-coils.md`) validates our figure-8 geometry choice at the physics level (focality + depth-decay are determined by coil geometry independent of current scale) and provides parametric sensitivity data we can use for design optimization.
+
 ## Hardware inventory (in hand)
 
 | Component | Spec | Role |
@@ -23,6 +44,12 @@
 - **Oscilloscope** (cheap USB or handheld, e.g. Hantek 6022BE ~$60) — verifies waveform delivery to coil
 - **3D-printed PLA former** OR plywood router-cut former for the coil geometry
 
+## Pre-build simulation option (optional, for v2 if needed)
+
+**SimNIBS** (https://simnibs.org) — open-source TMS electric-field simulation software, recommended by Drakaki et al. 2022. Could be used to simulate our specific 35mm-radius figure-8 coil (in either v1 25T or v2 50T configuration) before winding, producing predicted field-distribution map. After build, compare predicted distribution to EMF-meter measurements as build verification.
+
+Status: not installed locally (Day 94 evening check). Installation is a substantial separate task (~GB-scale download + setup). Useful but not blocking for v1 build — winding + dummy-load bring-up + measurement is the primary path. Investigate SimNIBS install only if v1 protocol results suggest value in pre-build simulation for v2.
+
 ## Coil topology decision: **figure-8 (butterfly)**
 
 **Why figure-8 over single circular:**
@@ -43,19 +70,23 @@
 
 ## Design point for first coil
 
-| Parameter | Value | Rationale |
-|---|---|---|
-| Wire | 24 AWG enamelled (EMTEL, in hand) | Already procured; good gauge for our currents |
-| Turns per D-loop | 50 | Field strength × wire-length tradeoff |
-| Loop radius | 35 mm | ~70 mm diameter per loop, hand-sized |
-| Total wire | ~18 m | Cut 18.5 m to allow ~0.5 m for leads |
-| Expected DCR | 1.52 Ω | Verify with multimeter after winding |
-| Inductance | ~280 µH | Reactance negligible below 1 kHz |
-| Series resistor | 6 Ω (50W power resistor) | Limits current to 1.6A |
-| Peak current | 1.59 A | At 12V supply, total R = 7.52 Ω |
-| Peak field at focus | ~2.87 mT | ~57× Earth's field; in published bioactive PEMF range |
+**Two design candidates considered (Drakaki Day 94 evening reading):**
 
-These numbers are starting points — adjustable by changing turn count, loop radius, or series resistance.
+| Parameter | v1 (lean) | v2 (original 50T) | Rationale |
+|---|---|---|---|
+| Wire | 24 AWG enamelled (EMTEL, in hand) | same | Already procured |
+| Turns per D-loop | **25** | 50 | Drakaki Fig 4A shows winding-count gain saturating ~10T; 50T deep into saturation |
+| Loop radius | 35 mm | 35 mm | Hand-sized |
+| Total wire | ~9.5 m | ~18.5 m | Half the wind time, half the wire |
+| Expected DCR | ~0.76 Ω | 1.52 Ω | Lower DCR → less voltage drop, more current available |
+| Inductance | ~70 µH | ~280 µH | Lower inductance → faster edges available, simpler circuit |
+| Series resistor | 6 Ω | 6 Ω | Same limiter (still gates current safely) |
+| Peak current | ~1.77 A | ~1.59 A | Slightly higher because lower DCR |
+| Peak field at focus | ~1.6 mT | ~2.87 mT | About half — but still in published bioactive PEMF range (μT-mT) |
+
+**Recommendation: build v1 first.** Faster, simpler, less wire wasted on first attempt. If protocols require more field intensity, build v2 with 50T after v1 verifies the driver chain works. Both designs operate in PEMF regime; both validate as figure-8 topology.
+
+These numbers are starting points — adjustable by changing turn count, loop radius, or series resistance. Coil-to-skin distance is also a strong dose knob (Drakaki Fig 4C: ~50% E_max swing across 0-20mm).
 
 ## Winding procedure
 
