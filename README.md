@@ -72,14 +72,13 @@ The library plans **twelve prose volumes** plus a **Reference section** (cross-L
 | **Ref** | [Hypothesis Register](Library/The-Coherent-Body/HYPOTHESES.md) | Library-wide hypothesis cluster reference | **Filed 2026-04-29 Day 88 as pre-volume reference**; H_BP1-H_BP13 (biophoton-coupling cluster); audit-corrected (H_BP10 split into H_BP10a structural + H_BP10b empirical; H_BP11 demoted to candidate-pattern with A73 counter-instance) |
 
 **Publication sequencing:**
-1. *The Coherence Principle* — 285pp current; future revisions via Companion flag-register per SCOPE §8
-2. *Coherent Structure* — 237pp current; rolling reference beside the Anchor; M14 task (b) CT 6.4 fibration formal structure pending companion-volume cycles
-3. Meridian v2 Zenodo deposit + post-visual-review polish
-4. *Corpus Perspectival* — drafting via integration / filtering-through Corpus V1 first volume with CP translation (decided 2026-04-30)
+1. *Corpus Perspectival* — Initial Publication released; update pending
+2. *Meridian* - Initial publication released; v2 Zenodo deposit pending post-visual-review polish
+3. *The Coherence Principle* — Initial publication released; future revisions via Companion flag-register per SCOPE §8
+4. *Coherent Structure* — Initial publication released; rolling reference beside the Anchor
 5. *The Coherent Body* — section drafting from Day 88 SKELETON.md
-6. AIGP (Anakin pilot) training — compute-heavy, resting until DCL sim drops May 2026
-7. **Parallel to compute-heavy work:** *Universal Coherence* expansion + further domain volumes (prose, no GPU competition)
-8. Subsequent domain volumes filter through *The Coherence Principle* using §10's seven-step recipe
+6. *Universal Coherence* expansion + further domain volumes
+7. Subsequent domain volumes filter through *The Coherence Principle* using §10's seven-step recipe
 
 ---
 
