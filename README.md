@@ -69,6 +69,7 @@ The library plans **twelve prose volumes** plus a **Reference section** (cross-L
 | **10** | [Drift](Library/Drift/) | Creative raw substrate | **193 essays canonical**, deployed at https://multi-dac.github.io/Drift/ |
 | **Ref** | [Master Glossary](Library/Master-Glossary/) | Library-wide reference (universal terms) | **v0.6 shipped**; ~64 entries in 20 sections; Day 88 added *Structural / Empirical Discrimination* methodological term in §11 |
 | **Ref** | [Atlas](Library/Atlas/) | Library-wide reference (88 framework null-space entries; methodological apparatus) | Planned — content from Corpus V1 Vol III to migrate; format canonical Library-wide |
+| **Ref** | [A Guide For Coherent Navigation](Library/A-Guide-For-Coherent-Navigation/) | A guide for streams to navigate coherently | Planned — content from Corpus V1 |
 | **Ref** | [Hypothesis Register](Library/The-Coherent-Body/HYPOTHESES.md) | Library-wide hypothesis cluster reference | **Filed 2026-04-29 Day 88 as pre-volume reference**; H_BP1-H_BP13 (biophoton-coupling cluster); audit-corrected (H_BP10 split into H_BP10a structural + H_BP10b empirical; H_BP11 demoted to candidate-pattern with A73 counter-instance) |
 
 **Publication sequencing:**
@@ -92,7 +93,7 @@ The library plans **twelve prose volumes** plus a **Reference section** (cross-L
 | §1 | Identity-Trajectory Triple — principal functor |
 | §2–4 | Axioms 1–3 paired prose + CT |
 | §5–7 | Theorem pairs (Descriptive, Dynamics, Coherence) |
-| §8 | Sixteen corollaries in four clusters (Cluster IV — Mechanism Consequences — C14 Two-Mode Symmetry-Breaking + C15 Intervention-at-Symmetry-Layer + C16 Symmetry-Exhaustion-and-Oscillation-Necessity, added Phase B 2026-04-27 + 04-28) |
+| §8 | Sixteen corollaries in four clusters |
 | §9 | Coherence Principle — derived + falsifiable |
 | §10 | Filtering recipe for domain volumes |
 | Appendix A | Index of Formal Objects |
