@@ -60,7 +60,7 @@
 | Anchor V1 pages (superseded) | 235 |
 | Total downloads | 604 |
 | KF Findings | 85+ |
-| Bridges (v2) | **14 meta + 8 active latent (L2,L3,L4,L5,L6,L7,L11,L13) + 6 archival-with-pointer + 9 v2 numbered (#111–#119) + ~35 v1 standalone** (M14 graduated 04-30 from L14 on biological-substrate threshold via #118 Garcia + #119 Olmeda; cluster now spans 8 non-overlapping substrate instances — 5 physics + 1 linguistic-identity + 2 biological; M14 task (c) Anchor §9.5 integration discharged 04-30; (b) CT 6.4 fibration formal structure remains companion-volume work) |
+| Bridges (v2) | **14 meta + 9 active latent (L2,L3,L4,L5,L6,L7,L11,L13,L15) + 6 archival-with-pointer + 9 v2 numbered (#111–#119) + ~35 v1 standalone** (M14 graduated 04-30 from L14 on biological-substrate threshold via #118 Garcia + #119 Olmeda; cluster now spans 8 non-overlapping substrate instances — 5 physics + 1 linguistic-identity + 2 biological; M14 task (c) Anchor §9.5 integration discharged 04-30; (b) CT 6.4 fibration formal structure remains companion-volume work) |
 | Drift essays | **193 files canonical** (synced to https://multi-dac.github.io/Drift/ — Clayton manually pushed both sites 04-29 evening; *what-did-not-need-deriving* shipped 04-30 morning as companion to Day 88's *what-was-already-there* — receiver-pattern named at our-own-corpus scale yesterday, at other-people's-corpus scale today) |
 | Mirror entries | **26** + 2 meta-Mirrors (M1 + M2) — **#26 Cross-Vocabulary Structural-Identity Blind Spot** filed 2026-04-29 evening + extended 2026-04-30 morning with four-axis compound-fix-prescription (lexical / finding-dependency / volume-architecture / personal-historical-corpus); 5 instances filed across Day 88 |
 | Protocol modes | 7 |
