@@ -1,0 +1,1098 @@
+
+*** Run 1 | 0/20,000,000 steps done | This run: 2,000,000 ***
+
+============================================================
+Starting training: 2,000,000 steps
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773446170\best\best_model.zip
+============================================================
+
+============================================================
+Infinite Gate Training -- Procedural Maneuver Mastery
+============================================================
+  Maneuvers: 11
+    - sprint
+    - gentle_arc
+    - hard_turn
+    - hairpin
+    - climb
+    - dive
+    - chicane
+    - speed_trap
+    - spiral
+    - threading
+    - diagonal
+
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773446170\best\best_model.zip
+  LR reduced to 3e-05, max_grad_norm=0.3
+  Model params: 559,625
+  LR: 3e-05, Ent: 0.01
+  Loaded persisted stats: 30100 episodes, 262314 gates
+
+Starting infinite gate training: 2,000,000 steps...
+  Envs: 4
+  Adaptive curriculum: ON
+  Domain randomization: ON
+
+  === Stats @ 4 steps ===
+  Total gates: 4, success: 0%
+    climb          : 0/1 (0%)
+    dive           : 0/1 (0%)
+    hairpin        : 0/1 (0%)
+    speed_trap     : 0/1 (0%)
+  Curriculum: avg_mastery=50% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+Eval num_timesteps=100000, episode_reward=1865.10 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=200000, episode_reward=1997.95 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=3000Eval num_timesteps=300000, episode_reward=2022.68 +/- 0.00
+Episode lengEval num_timesteps=400000, episode_reward=1901Eval num_timesteps=400000, episode_reward=2028.75Eval num_timesteps=500000, episode_reward=2038.57 +/- 0.00
+Episode lEval num_timesteps=500000, episode_reward=2033.45 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+
+  === Stats @ 500,000 steps ===
+  Total gates: 348, success: 85%
+    chicane        : 28/28 (100%)
+    climb          : 29/35 (83%)
+    diagonal       : 30/33 (91%)
+    dive           : 23/30 (77%)
+    gentle_arc     : 30/35 (86%)
+    hairpin        : 36/41 (88%)
+    hard_turn      : 35/40 (88%)
+    speed_trap     : 16/25 (64%)
+    spiral         : 23/26 (88%)
+    sprint         : 19/23 (83%)
+    threading      : 27/32 (84%)
+  Curriculum: avg_mastery=50% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+
+  === Stats @ 500,004 steps ===
+  Total gates: 348, success: 85%
+    chicane        : 28/28 (100%)
+    climb          : 29/35 (83%)
+    diagonal       : 30/33 (91%)
+    dive           : 23/30 (77%)
+    gentle_arc     : 30/35 (86%)
+    hairpin        : 36/41 (88%)
+    hard_turn      : 35/40 (88%)
+    speed_trap     : 16/25 (64%)
+    spiral         : 23/26 (88%)
+    sprint         : 19/23 (83%)
+    threading      : 27/32 (84%)
+  Curriculum: avg_mastery=50% | decisions=0
+    EmEval num_timesteps=600000, episode_reward=1858.40 +/- 0.00
+Episode length: 30000.00 +/- 0.00EEval num_timesteps=700000, episode_reward=2180.16 +/- 0.00
+Episode length: 30000.00 +/- 0.00EEval num_timesteps=800000, episode_reward=2296.24 +/- 0.00
+Episode length: 30000.00 +/- 0.00EEval num_timesteps=900000, episode_reward=1888.51 +/- 0.00
+Episode length: 30000.00 +/- 0.00EEval num_timesteps=1000000, episode_reward=1876.56 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+
+  === Stats @ 1,000Eval num_timesteps=1000000, episode_reward=2017.40 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+
+  === Stats @ 1,000,000 steps ===
+  Total gates: 674, success: 86%
+    chicane        : 68/71 (96%)
+    climb          : 53/63 (84%)
+    diagonal       : 62/70 (89%)
+    dive           : 44/55 (80%)
+    gentle_arc     : 67/79 (85%)
+    hairpin        : 56/62 (90%)
+    hard_turn      : 57/65 (88%)
+    speed_trap     : 33/44 (75%)
+    spiral         : 50/54 (93%)
+    sprint         : 33/47 (70%)
+    threading      : 55/64 (86%)
+  Curriculum: avg_mastery=83% | decisions=18
+    Empirical: word=83% sent=17% para=0% essay=0%
+    Target:    word=47% sent=30% para=23% essay=0%
+    Completions: sent=1 para=0 essay=0 | Failures: sent=1 para=0 essay=0
+
+  === Stats @ 1,000,004 steps ===
+  Total gates: 674, success: 86%
+    chicane        : 68/71 (96%)
+    climb          : 53/63 (84%)
+    diagonal       : 62/70 (89%)
+    dive           : 44/55 (80%)
+    gentle_arc     : 67/79 (85%)
+    hairpin        : 56/62 (90%)
+    hard_turn      : 57/65 (88%)
+    speed_trap     : 33/44 (75%)
+    spiral         : 50/54 (93%)
+    sprint         : 33/47 (70%)
+    threading      : 55/64 (86%)
+  Curriculum: avg_mastery=83% | decisions=18
+    Empirical: word=83% sent=17% para=0% essay=0%
+    TarEval num_timesteps=1100000, episode_reward=2025.44 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1200000, episode_reward=1892.18 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1300000, episode_reward=1896.02 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1400000, episode_reward=2258.25 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1500000, episode_reward=2175.87 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+
+  === Stats @ 1,500,0Eval num_timesteps=1500000, episode_reward=1648.59 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+
+  === Stats @ 1,500,000 steps ===
+  Total gates: 1099, success: 87%
+    chicane        : 105/108 (97%)
+    climb          : 88/103 (85%)
+    diagonal       : 102/113 (90%)
+    dive           : 58/73 (79%)
+    gentle_arc     : 116/136 (85%)
+    hairpin        : 83/92 (90%)
+    hard_turn      : 104/119 (87%)
+    speed_trap     : 41/55 (75%)
+    spiral         : 86/96 (90%)
+    sprint         : 41/61 (67%)
+    threading      : 131/143 (92%)
+  Curriculum: avg_mastery=84% | decisions=46
+    Empirical: word=50% sent=37% para=13% essay=0%
+    Target:    word=46% sent=30% para=24% essay=0%
+    Completions: sent=15 para=3 essay=0 | Failures: sent=2 para=2 essay=0
+
+  === Stats @ 1,500,004 steps ===
+  Total gates: 1099, success: 87%
+    chicane        : 105/108 (97%)
+    climb          : 88/103 (85%)
+    diagonal       : 102/113 (90%)
+    dive           : 58/73 (79%)
+    gentle_arc     : 116/136 (85%)
+    hairpin        : 83/92 (90%)
+    hard_turn      : 104/119 (87%)
+    speed_trap     : 41/55 (75%)
+    spiral         : 86/96 (90%)
+    sprint         : 41/61 (67%)
+    threading      : 131/143 (92%)
+  Curriculum: avg_mastery=84% | decisions=46
+    Empirical: word=50% sent=37% para=13% essay=0%Eval num_timesteps=1600000, episode_reward=2146.86 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1700000, episode_reward=2430.24 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=1800000, episode_reward=2252.20 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1900000, episode_reward=2162.02 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=2000000, episode_reward=1885.58 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+
+  === StEval num_timesteps=2000000, episode_reward=1883.68 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+
+  === Stats @ 2,000,000 steps ===
+  Total gates: 1469, success: 88%
+    chicane        : 132/138 (96%)
+    climb          : 121/138 (88%)
+    diagonal       : 144/163 (88%)
+    dive           : 63/83 (76%)
+    gentle_arc     : 185/215 (86%)
+    hairpin        : 112/122 (92%)
+    hard_turn      : 134/152 (88%)
+    speed_trap     : 46/61 (75%)
+    spiral         : 121/130 (93%)
+    sprint         : 47/68 (69%)
+    threading      : 184/199 (92%)
+  Curriculum: avg_mastery=84% | decisions=76
+    Empirical: word=50% sent=36% para=14% essay=0%
+    Target:    word=45% sent=30% para=25% essay=0%
+    Completions: sent=24 para=6 essay=0 | Failures: sent=3 para=4 essay=0
+
+  === Stats @ 2,000,004 steps ===
+  Total gates: 1469, success: 88%
+    chicane        : 132/138 (96%)
+    climb          : 121/138 (88%)
+    diagonal       : 144/163 (88%)
+    dive           : 63/83 (76%)
+    gentle_arc     : 185/215 (86%)
+    hairpin        : 112/122 (92%)
+    hard_turn      : 134/152 (88%)
+    speed_trap     : 46/61 (75%)
+    spiral         : 121/130 (93%)
+    sprint         : 47/68 (69%)
+    threading      : 184/199 (92%)
+  Curriculum: avg_mastery=84% | decisions=76
+    Empirical: word=50% sent=36% para=14% essay=0%
+    Target:    word=45% sent=30% para=25% essay=0%
+    Completions: sent=24 para=6 essay=0 | Failures: sent=3 para=4 essay=0
+
+============================================================
+Final Maneuver Mastery
+============================================================
+  sprint         : 68.4% [#############       ] (13/19)
+  gentle_arc     : 80.0% [################    ] (12/15)
+  hard_turn      : 90.3% [##################  ] (28/31)
+  hairpin        : 88.0% [#################   ] (22/25)
+  climb          : 93.6% [##################  ] (44/47)
+  dive           : 75.0% [###############     ] (21/28)
+  chicane        : 96.0% [################### ] (24/25)
+  speed_trap     : 78.9% [###############     ] (15/19)
+  spiral         : 63.6% [############        ] (7/11)
+  threading      : 95.0% [################### ] (76/80)
+  diagonal       : 90.9% [##################  ] (40/44)
+
+============================================================
+  gauntlet            : reward=2022.4 +/- 0.0
+  corkscrew           : reward=2101.5 +/- 0.0
+  autobahn            : reward=1179.2 +/- 0.0
+  claustrophobia      : reward=2673.2 +/- 0.0
+  elevator_shaft      : reward=2063.5 +/- 0.0
+  whiplash            : reward=1835.4 +/- 0.0
+  final_exam          : reward=2161.2 +/- 0.0
+
+Model saved to: C:\Users\mercu\clawd\projects\aigra  final_exam          : reward=1558.4 +/- 0.0
+
+Model saved to: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773455386
+
+*** Run 1 completed in 6062s ***
+
+*** Run 2 | 2,000,000/20,000,000 steps done | This run: 2,000,000 ***
+
+============================================================
+Starting training: 2,000,000 steps
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773455279\best\best_model.zip
+============================================================
+
+============================================================
+Infinite Gate Training -- Procedural Maneuver Mastery
+============================================================
+  Maneuvers: 11
+    - sprint
+    - gentle_arc
+    - hard_turn
+    - hairpin
+    - climb
+    - dive
+    - chicane
+    - speed_trap
+    - spiral
+    - threading
+    - diagonal
+
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773455279\best\best_model.zip
+  LR reduced to 3e-05, max_grad_norm=0.3
+  Model params: 559,625
+  LR: 3e-05, Ent: 0.01
+  Loaded persisted stats: 30100 episodes, 262314 gates
+
+Starting infinite gate training: 2,000,000 steps...
+  Envs: 4
+  Adaptive curriculum: ON
+  Domain randomization: ON
+
+  === Stats @ 4 steps ===
+  Total gates: 4, success: 0%
+    climb          : 0/1 (0%)
+    dive           : 0/1 (0%)
+    hairpin        : 0/1 (0%)
+    speed_trap     : 0/1 (0%)
+  Curriculum: avg_mastery=50% | decisions=0
+Eval num_timesteps=100000, episode_reward=2016.71 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New bEval num_timestepsEval num_timesteps=200000, episode_reward=2023.46 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New bEval num_timestepsEval num_timesteps=300000, episode_reward=818.29 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=400000, episode_reward=1994.30 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=500000, episode_reward=2042.98 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+
+  === Stats @ 500,000 steps ===
+  Total gates: 370, success: 88%
+    chicane        : 29/33 (88%)
+    climb          : 35/36 (97%)
+    diagonal       : 35/37 (95%)
+    dive           : 30/32 (94%)
+    gentle_arc     : 22/29 (76%)
+    hairpin        : 29/36 (81%)
+    hard_turn      : 39/43 (91%)
+    speed_trap     : 14/22 (64%)
+    spiral         : 35/38 (92%)
+    sprint         : 22/27 (81%)
+    threading      : 35/37 (95%)
+  Curriculum: avg_mastery=54% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+
+  === Stats @ 500,004 steps ===
+  Total gates: 370, success: 88%
+    chicane        : 29/33 (88%)
+    climb          : 35/36 (97%)
+    diagonal       : 35/37 (95%)
+    dive           : 30/32 (94%)
+    gentle_arc     : 22/29 (76%)
+    hairpin        : 29/36 (81%)
+    hard_turn      : 39/43 (91%)
+    speed_trap     : 14/22 (64%)
+    spiral         : 35/38 (92%)
+    sprint         : 22/27 (81%)
+    threading      : 35/37 (95%)
+  Curriculum: avg_mastery=54% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+Eval num_timesteps=600000, episode_reward=2266.67 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=700000, episode_reward=2695.43 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=800000, episode_reward=2033.98 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=900000, episode_reward=2288.51 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1000000, episode_reward=1857.70 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+
+  === Stats @ 1,000,000 steps ===
+  Total gates: 709, success: 88%
+    chicane        : 58/65 (89%)
+    climb          : 72/79 (91%)
+    diagonal       : 60/66 (91%)
+    dive           : 49/55 (89%)
+    gentle_arc     : 52/62 (84%)
+    hairpin        : 51/60 (85%)
+    hard_turn      : 65/71 (92%)
+    speed_trap     : 35/49 (71%)
+    spiral         : 61/67 (91%)
+    sprint         : 40/51 (78%)
+    threading      : 78/84 (93%)
+  Curriculum: avg_mastery=88% | decisions=11
+    Empirical: word=55% sent=36% para=9% essay=0%
+    Target:    word=45% sent=30% para=25% essay=0%
+    Completions: sent=3 para=0 essay=0 | Failures: sent=1 para=0 essay=0
+
+  === Stats @ 1,000,004 steps ===
+  Total gates: 709, success: 88%
+    chicane        : 58/65 (89%)
+    climb          : 72/79 (91%)
+    diagonal       : 60/66 (91%)
+    dive           : 49/55 (89%)
+    gentle_arc     : 52/62 (84%)
+    hairpin        : 51/60 (85%)
+    hard_turn      : 65/71 (92%)
+    speed_trap     : 35/49 (71%)
+    spiral         : 61/67 (91%)
+    sprint         : 40/51 (78%)
+    threading      : 78/84 (93%)
+  Curriculum: avg_mastery=88% | decisions=11
+    Empirical: word=55% sent=36% para=9% essay=0%
+    Target:    word=45% sent=30% para=25% essay=0%
+    Completions: sent=3 para=0 essay=0 | Failures: sent=1 para=0 essay=0
+Eval num_timesteps=1100000, episode_reward=2298.92 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1200000, episode_reward=1758.14 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1300000, episode_reward=2044.18 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=1400000, episode_reward=1894.43 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\distributions.py", line 164, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\normal.py", line 67, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\distribution.py", line 78, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (512, 4)) of distribution Normal(loc: torch.Size([512, 4]), scale: torch.Size([512, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        ...,
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan]], grad_fn=<AddmmBackward0>)
+
+!!! Run 2 crashed (code 1) after 3796s
+    Will resume from latest best checkpoint...
+
+*** Run 3 | 4,000,000/20,000,000 steps done | This run: 2,000,000 ***
+
+============================================================
+Starting training: 2,000,000 steps
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773464555\best\best_model.zip
+============================================================
+
+============================================================
+Infinite Gate Training -- Procedural Maneuver Mastery
+============================================================
+  Maneuvers: 11
+    - sprint
+    - gentle_arc
+    - hard_turn
+    - hairpin
+    - climb
+    - dive
+    - chicane
+    - speed_trap
+    - spiral
+    - threading
+    - diagonal
+
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773464555\best\best_model.zip
+  LR reduced to 3e-05, max_grad_norm=0.3
+  Model params: 559,625
+  LR: 3e-05, Ent: 0.01
+  Loaded persisted stats: 30100 episodes, 262314 gates
+
+Starting infinite gate training: 2,000,000 steps...
+  Envs: 4
+  Adaptive curriculum: ON
+  Domain randomization: ON
+
+  === Stats @ 4 steps ===
+  Total gates: 4, success: 0%
+    climb          : 0/1 (0%)
+    dive           : 0/1 (0%)
+    hairpin        : 0/1 (0%)
+    speed_trap     : 0/1 (0%)
+  Curriculum: avg_mastery=50% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+Eval num_timesteps=100000, episode_reward=1896.84 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=200000, episode_reward=2162.83 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=300000, episode_reward=2134.41 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=400000, episode_reward=1873.96 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=500000, episode_reward=1849.47 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+
+  === Stats @ 500,000 steps ===
+  Total gates: 346, success: 87%
+    chicane        : 38/40 (95%)
+    climb          : 28/33 (85%)
+    diagonal       : 30/33 (91%)
+    dive           : 31/34 (91%)
+    gentle_arc     : 24/27 (89%)
+    hairpin        : 28/32 (88%)
+    hard_turn      : 32/39 (82%)
+    speed_trap     : 14/21 (67%)
+    spiral         : 27/28 (96%)
+    sprint         : 17/24 (71%)
+    threading      : 31/35 (89%)
+  Curriculum: avg_mastery=50% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+
+  === Stats @ 500,004 steps ===
+  Total gates: 346, success: 87%
+    chicane        : 38/40 (95%)
+    climb          : 28/33 (85%)
+    diagonal       : 30/33 (91%)
+    dive           : 31/34 (91%)
+    gentle_arc     : 24/27 (89%)
+    hairpin        : 28/32 (88%)
+    hard_turn      : 32/39 (82%)
+    speed_trap     : 14/21 (67%)
+    spiral         : 27/28 (96%)
+    sprint         : 17/24 (71%)
+    threading      : 31/35 (89%)
+  Curriculum: avg_mastery=50% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\distributions.py", line 164, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\normal.py", line 67, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\distribution.py", line 78, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (512, 4)) of distribution Normal(loc: torch.Size([512, 4]), scale: torch.Size([512, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        ...,
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan]], grad_fn=<AddmmBackward0>)
+
+!!! Run 3 crashed (code 1) after 1391s
+    Will resume from latest best checkpoint...
+
+*** Run 4 | 6,000,000/20,000,000 steps done | This runEval num_timesteps=800000, episode_reward=2007.94 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=900000, episode_reward=2260.30 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return selfEval num_timesteps=300000, episode_reward=1908.39 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\distributions.py", line 164, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\normal.py", line 67, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\distribution.py", line 78, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (512, 4)) of distribution Normal(loc: torch.Size([512, 4]), scale: torch.Size([512, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        ...,
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan]], grad_fn=<AddmmBackward0>)
+
+!!! Run 4 crashed (code 1) after 1778s
+    Will resume from latest best checkpoint...
+
+*** Run 5 | 8,000,000/20,000,000 steps done | This runEval num_timesteps=200000, episode_reward=1882.15 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=300000, episode_reward=1865.25 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=400000, episode_reward=2283.73 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stEval num_timesteps=300000, episode_reward=2268.36 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=400000, episode_reward=2186.40 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=500000, episode_reward=2042.70 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+
+  === Stats @ 500,000 steps ===
+  Total gates: 351, success: 86%
+    chicane        : 29/31 (94%)
+    climb          : 34/36 (94%)
+    diagonal       : 28/33 (85%)
+    dive           : 25/32 (78%)
+    gentle_arc     : 25/28 (89%)
+    hairpin        : 35/42 (83%)
+    hard_turn      : 35/43 (81%)
+    speed_trap     : 12/20 (60%)
+    spiral         : 27/30 (90%)
+    sprint         : 23/28 (82%)
+    threading      : 28/28 (100%)
+  Curriculum: avg_mastery=58% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+
+  === Stats @ 500,004 steps ===
+  Total gates: 351, success: 86%
+    chicane        : 29/31 (94%)
+    climb          : 34/36 (94%)
+    diagonal       : 28/33 (85%)
+    dive           : 25/32 (78%)
+    gentle_arc     : 25/28 (89%)
+    hairpin        : 35/42 (83%)
+    hard_turn      : 35/43 (81%)
+    speed_trap     : 12/20 (60%)
+    spiral         : 27/30 (90%)
+    sprint         : 23/28 (82%)
+    threading      : 28/28 (100%)
+  Curriculum: avg_mastery=58% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+Eval num_timesteps=600000, episode_reward=1928.13 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Eval num_timesteps=700000, episode_reward=2026.27 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\distributions.py", line 164, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\normal.py", line 67, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\distribution.py", line 78, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (512, 4)) of distribution Normal(loc: torch.Size([512, 4]), scale: torch.Size([512, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        ...,
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan]], grad_fn=<AddmmBackward0>)
+
+!!! Run 5 crashed (code 1) after 3788s
+    Will resume from latest best checkpoint...
+
+*** Run 6 | 10,000,000/20,000,000 steps done | This run: 2,000,000 ***
+
+============================================================
+Starting training: 2,000,000 steps
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773470329\best\best_model.zip
+============================================================
+
+============================================================
+Infinite Gate Training -- Procedural Maneuver Mastery
+============================================================
+  Maneuvers: 11
+    - sprint
+    - gentle_arc
+    - hard_turn
+    - hairpin
+    - climb
+    - dive
+    - chicane
+    - speed_trap
+    - spiral
+    - threading
+    - diagonal
+
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773470329\best\best_model.zip
+  LR reduced to 3e-05, max_grad_norm=0.3
+  Model params: 559,625
+  LR: 3e-05, Ent: 0.01
+  Loaded persisted stats: 30100 episodes, 262314 gates
+
+Starting infinite gate training: 2,000,000 steps...
+  Envs: 4
+  Adaptive curriculum: ON
+  Domain randomization: ON
+
+  === Stats @ 4 steps ===
+  Total gates: 4, success: 0%
+    climb          : 0/1 (0%)
+    dive           : 0/1 (0%)
+    hairpin        : 0/1 (0%)
+    speed_trap     : 0/1 (0%)
+  Curriculum: avg_mastery=50% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distributiEval num_timesteps=400000, episode_reward=1633.02 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\distributions.py", line 164, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\normal.py", line 67, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\distribution.py", line 78, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (512, 4)) of distribution Normal(loc: torch.Size([512, 4]), scale: torch.Size([512, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        ...,
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan]], grad_fn=<AddmmBackward0>)
+
+!!! Run 7 crashed (code 1) after 2050s
+    Will resume from latest best checkpoint...
+
+*** Run 8 | 14,000,000/20,000,000 steps done | This run: 2,000,000 ***
+
+============================================================
+Starting training: 2,000,000 steps
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773470329\best\best_model.zip
+============================================================
+
+============================================================
+Infinite Gate Training -- Procedural Maneuver Mastery
+============================================================
+  Maneuvers: 11
+    - sprint
+    - gentle_arc
+    - hard_turn
+    - hairpin
+    - climb
+    - dive
+    - chicane
+    - speed_trap
+    - spiral
+    - threading
+    - diagonal
+
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773470329\best\best_model.zip
+  LR reduced to 3e-05, max_grad_norm=0.3
+  Model params: 559,625
+  LR: 3e-05, Ent: 0.01
+  Loaded persisted stats: 30100 episodes, 262314 gates
+
+Starting infinite gate training: 2,000,000 steps...
+  Envs: 4
+  Adaptive curriculum: ON
+  Domain randomization: ON
+
+  === Stats @ 4 steps ===
+  Total gates: 4, success: 0%
+    climb          : 0/1 (0%)
+    dive           : 0/1 (0%)
+    hairpin        : 0/1 (0%)
+    speed_trap     : 0/1 (0%)
+  Curriculum: avg_mastery=50% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\distributions.py", line 164, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\normal.py", line 67, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\distribution.py", line 78, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (512, 4)) of distribution Normal(loc: torch.Size([512, 4]), scale: torch.Size([512, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        ...,
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan]], grad_fn=<AddmmBackward0Eval num_timesteps=100000, episode_reward=1779.83 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=200000, episode_reward=2011.93 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=300000, episode_reward=2183.17 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=400000, episode_reward=2152.03 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\distributions.py", line 164, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\normal.py", line 67, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\distribution.py", line 78, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (512, 4)) of distribution Normal(loc: torch.Size([512, 4]), scale: torch.Size([512, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        ...,
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan]], grad_fn=<AddmmBackward0>)
+
+!!! Run 8 crashed (code 1) after 2164s
+    Will resume from latest best checkpoint...
+
+*** Run 9 | 16,000,000/20,000,000 steps done | This run: 2,000,000 ***
+
+============================================================
+Starting training: 2,000,000 steps
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773472750\best\best_model.zip
+============================================================
+
+============================================================
+Infinite Gate Training -- Procedural Maneuver Mastery
+============================================================
+  Maneuvers: 11
+    - sprint
+    - gentle_arc
+    - hard_turn
+    - hairpin
+    - climb
+    - dive
+    - chicane
+    - speed_trap
+    - spiral
+    - threading
+    - diagonal
+
+Resuming from: C:\Users\mercu\clawd\projects\aigrandprix\sim\runs\infinite_1773472750\best\best_model.zip
+  LR reduced to 3e-05, max_grad_norm=0.3
+  Model params: 559,625
+  LR: 3e-05, Ent: 0.01
+  Loaded persisted stats: 30100 episodes, 262314 gates
+
+Starting infinite gate training: 2,000,000 steps...
+  Envs: 4
+  Adaptive curriculum: ON
+  Domain randomization: ON
+
+  === Stats @ 4 steps ===
+  Total gates: 4, success: 0%
+    climb          : 0/1 (0%)
+    dive           : 0/1 (0%)
+    hairpin        : 0/1 (0%)
+    speed_trap     : 0/1 (0%)
+  Curriculum: avg_mastery=50% | decisions=0
+    Empirical: word=0% sent=0% para=0% essay=0%
+    Target:    word=100% sent=0% para=0% essay=0%
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(Eval num_timesteps=400000, episode_reward=223.63 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\distributions.py", line 164, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\normal.py", line 67, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\distribution.py", line 78, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (512, 4)) of distribution Normal(loc: torch.Size([512, 4]), scale: torch.Size([512, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        ...,
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan]], grad_fn=<AddmmBackward0>)Eval num_timesteps=100000, episode_reward=2162.10 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=200000, episode_reward=2256.15 +/- 0.00
+Episode length: 30000.00 +/- 0.00
+New best mean reward!
+Traceback (most recent call last):
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 308, in <module>
+    train_infinite(args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\sim\train_infinite.py", line 253, in train_infinite
+    model.learn(
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\policies.py", line 694, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(mean_actions, self.log_std)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\stable_baselines3\common\distributions.py", line 164, in proba_distribution
+    self.distribution = Normal(mean_actions, action_std)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\normal.py", line 67, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\mercu\clawd\projects\aigrandprix\venv\Lib\site-packages\torch\distributions\distribution.py", line 78, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (512, 4)) of distribution Normal(loc: torch.Size([512, 4]), scale: torch.Size([512, 4])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        ...,
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan],
+        [nan, nan, nan, nan]], grad_fn=<AddmmBackward0>)
+
+!!! Run 10 crashed (code 1) after 852s
+    Will resume from latest best checkpoint...
+
+============================================================
+All 20,000,000 steps complete across 10 runs!
+============================================================

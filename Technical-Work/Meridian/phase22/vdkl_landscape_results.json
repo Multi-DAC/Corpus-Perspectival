@@ -1,0 +1,28 @@
+{
+  "z_tree": "0.27777777777777777778",
+  "z0": "0.27707944216419228306",
+  "delta_z": "-0.0006983356135854947",
+  "delta_z_rel_pct": "-0.2514008209",
+  "target": "0.7768361992120932",
+  "theta1_at_tree": "0.778241706886285",
+  "theta1_at_z0": "0.7768361992120932",
+  "deriv_at_z0": "2.01539327036",
+  "curvature_V": "8.12362006839",
+  "gap_at_tree_pct": "0.1809271601",
+  "landscape": {
+    "max_z": "0.5",
+    "max_theta1": "1.00866684173",
+    "zeros_in_0_1": [
+      "0.27708",
+      "0.72292"
+    ],
+    "symmetry": "z -> 1-z"
+  },
+  "interpretation": {
+    "gap_is": "blow-up correction from resolving 27 Z3 orbifold singularities",
+    "z_discrete_at": "orbifold point (3W in Lambda_gauge)",
+    "z_continuous_at": "resolution (smooth CY bundle moduli)",
+    "correction_size": "natural one-loop: 0.25% of z",
+    "well_width": "much larger than required shift \u2014 no obstruction"
+  }
+}

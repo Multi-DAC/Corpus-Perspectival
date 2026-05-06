@@ -1,0 +1,303 @@
+#!/bin/bash
+# Meridian computational scripts -> category directories
+# Generated 2026-04-09
+
+# === phase3 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase3/meridian_cosmology.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+
+# === phase6 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase6/meridian_fisher.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+
+# === phase7 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase7/meridian_extended.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+
+# === phase8 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase8/meridian_8a_methodology.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase8/meridian_8f_ede_scan.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+
+# === phase11 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11/bao_model_comparison.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11/c_kk_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/gauss-bonnet/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11/c_kk_crosscheck.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/gauss-bonnet/"
+
+# === phase11c ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11c/c1_gb_kk_reduction.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/gauss-bonnet/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11c/c1_symbolic_gb_kk.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/gauss-bonnet/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11c/c2_ncg_sm_coefficient.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11c/c3_coincidence_problem.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11c/c4_cuscuton_quantization.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11c/c7_zeta0_validation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/validation/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11c/c7_zeta0_validation_v3.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/validation/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11c/c8_open_channel_bounds.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/validation/"
+
+# === phase11d ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11d/d1_self_tuning_demonstration.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11d/d2_xi_conformal_coupling.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11d/d3_radion_stabilization.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11d/d4_chi2_monte_carlo.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/validation/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase11d/d5_hk_dataset.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+
+# === monograph ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/monograph/validate_monograph.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/validation/"
+
+# === Ongoing Peer Reviews ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/Ongoing Peer Reviews/Review Archives/hk_covariance_analysis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/validation/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/Ongoing Peer Reviews/Review Archives/hk_diagnostic.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/validation/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/Ongoing Peer Reviews/Review Archives/self_tuning_demo_v2.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/Ongoing Peer Reviews/Review Archives/brane_parameter_analysis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+
+# === ncg_as_bridge ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/ncg_as_bridge/step1_spectral_ratios.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/ncg_as_bridge/step2_as_comparison.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/ncg_as_bridge/step3_matter_corrections.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/ncg_as_bridge/step4_reanalysis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/ncg_as_bridge/verification.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+
+# === phase13 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase13/omega2_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase13/verify_a4.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase13/13F_ckk_parametric.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/gauss-bonnet/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase13/13P_xi_convergence_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase13/13G_chebyshev_self_tuning.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+
+# === phase14 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase14/14A_basin_test.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase14/14A2_warped_spectral_action.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase14/14C_brane_parameters.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase14/14D_coincidence.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase14/14F_collider_phenomenology.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase14/14I_desi_forecast.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase14/14N_vacuum_energy_nogo.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+
+# === phase15 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15A_spectral_triple_RS.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15B2_octonionic_spectral_triple.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15B3_doct_construction.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15B4_orientability.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15C_fermion_mass_hierarchy.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15C2_ckm_pmns.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15D_dark_matter.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15E_radion_inflation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15F_desi_dr2_confrontation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15G_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase15/15G2_rge_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+
+# === phase16 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16C_left_right_fermions.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16D_baryogenesis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/thermal-history/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16E_one_loop_R2.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16F_k_theory.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16G_boundary_heat_kernel.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16G_stability_map.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16H_reheating.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/thermal-history/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16I_coincidence.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16J_kk_tower.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16K_radion_collider.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16L_gravitational_waves.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16M_sterile_neutrino_detection.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16N_litebird_forecast.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase16/16R_boltzmann_cmb.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+
+# === phase17 (excluding Sources/) ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17A_perturbation_theory.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17C_cmb_spectra.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17D_data_confrontation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17E_gauge_unification.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17F_unification_test.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17G_dirac_modes.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17H_b32_evaluation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17I_gravitational_waves.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17J_gw_spectrum_lisa.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17K_anomaly_cancellation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17L_cs_inflow.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17M_s3_breaking.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17N_neutrino_constraints.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17O_neutrino_forecasts.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17P_constant_w_vs_cpl.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17Q_full_planck_analysis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase17/17_b32_prediction_chain.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+
+# === phase18 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/self_tuning_scan_corrected.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18I_mock_validation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_real_data_test.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/gr_growth.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_proper_mcmc.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_plot_from_summary.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/tools/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/pantheonplus_likelihood.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_v3_proper_sne.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_v3_analyze_chains.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_v4_dr2_bao.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_v4b_fixed_rd.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_v5_gpu.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_v5b_gpu.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_v5c_gpu.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/v5c_diagnostic.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/v3_convergence_check.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/v5_eval_at_v3_bestfit.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/camb_grid_accuracy_check.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/generate_camb_grid.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_v5_camb_gpu.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase18/18A_v5_dr1_test.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+
+# === phase19 (.py) ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase19/19B5_perturbation_isolation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/cosmology/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase19/19C2_as_gauge_splitting.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase19/19C2b_bkt_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase19/19C2c_warped_nonfactorization.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+
+# === phase19 (.wl) ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase19/19C3_proton_decay.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase19/19C3_kk_graviton.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase19/19D2_computation.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase19/19D2_refined.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase19/19D2_full_computation.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+
+# === phase20 (.py) ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/higgs_rg_step1.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/higgs_rg_step2.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/higgs_rg_step3.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/higgs_rg_step4.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/higgs_rg_step5.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/20_extended_spectral_triple.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/ps_spectral_triple_analysis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+
+# === phase20 (.wl) ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/20B_higgs_gauge_computation.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/20B_refined_analysis.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/20B_threshold_closure.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/20B_threshold_check.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/20B_threshold_closure_v2.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/20E_swampland.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/20I_spectral_cutoff.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase20/20_as_spectral_part1.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+
+# === phase21 (.py, excluding .sage.py) ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/compute_traces.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/symbolic_regression_776.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/exact_spectral_action_toy.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/kk_threshold_sin2tw.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door1_spin_dependent_kk.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door1_full_anarchic.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door2_calculations.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door2_ln3_sqrt2.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door2_borel_analysis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door2b_warped_lattice.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door2b_exact_spectral_action.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door2b_adscft_analysis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door3_compute.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door3_compute2.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door3_constructive.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/bps_spectrum.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/threshold_sage.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/fenics_torsion_cp2_validation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/fenics_cp2_validation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/cp2_diag.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/cp2_diag2.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/cp2_diag3.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/cp2_diag4.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/track_c_dkl.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/z0_inverse_symbolic.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/z0_inverse_symbolic_v2.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/z0_inverse_symbolic_v3.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+
+# === phase21 (.sage) ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/door3_constructive.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/threshold_ratio.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/dkl_z3_orbifold.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/threshold_z3.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/theta_scan.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/z0_search.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/torsion_setup.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/box1_spectrum.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/box1_spectrum_v2.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/box1_spectrum-1.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/box1_analytic.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/box1_lean.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/f1_delpezz_computation.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/f1_computation_v2.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/f1_definitive.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/track_c_dkl.sage" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+
+# === phase21 (.wl) ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/torsion_cp2.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/torsion_cp2_v2.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/torsion_analytic.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/torsion_analytic_v2.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/torsion_cp1.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/torsion_cp1_v2.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase21/cp2_torsion_scalar.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+
+# === phase22 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/seeley_dewitt_rs1.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/borel_analysis_rs1.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/wilson_line_sensitivity.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/vdkl_landscape.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/fig_topological_correction.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/direct_zv_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/dflatness_check.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/so32_quartic_test.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/narain_kappa1.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/narain_kappa1_v2.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/wilson_line_potential.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase22/narain_kappa1_v3.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+
+# === phase23 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/a1_radion_mass.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/a1b_quantum_radion_mass.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/a2_light_spectrum.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/a3_a5_prediction_suite.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/b1_cuscuton_force.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/b2_np_em_coupling.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/b4_retrodiction_revised.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/d2_spectral_observation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/phase23_2a_barrier.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase23/phase23_2b_landscape_cs.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+
+# === phase24 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/i1_multifield_tunneling.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/i2_catalysis_mechanisms.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/i3_bubble_dynamics.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/i5_safety_analysis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/i6_semiclassical_consistency.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/i7_path_uniqueness.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/i8_falsification_protocol.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/observables/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/spectral_proximity_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/product_geometry_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/inner_fluctuation_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/coherence_step_function_analysis.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/spectral-action/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase24/asymmetric_well_computation.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+
+# === phase26 ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/dynamical_self_tuning.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/phase26b_numerical_self_tuning.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/self-tuning/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/basin_determination.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/dirac_operator_breaking.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/jordan_fermion_sector.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/fermion-sector/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/ftheory_jordan_dP6.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/ftheory_analytic_torsion.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v2.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v3.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v4.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v5.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v6.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v7.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v7_D4.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v8.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v9.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/analytic_torsion_v9b.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/balanced_metric_dp6.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/balanced_metric_qmc.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/balanced_metric_fs.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/convergence_pipeline.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/eigenvalue_sweep.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/spectral_torsion.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/z3_charge_eigenvectors.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/diagnostic_radius.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/diagnostic_sections.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/diagnostic_bkn_verify.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/phase26/vol_diagnostic.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/torsion/"
+
+# === tools ===
+cp "C:/Users/mercu/clawd/projects/Project Meridian/tools/prediction_dashboard.py" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/tools/"
+cp "C:/Users/mercu/clawd/projects/Project Meridian/tools/meridian.wl" "C:/Users/mercu/clawd/repo-staging/Corpus-Perspectival/meridian/tools/"

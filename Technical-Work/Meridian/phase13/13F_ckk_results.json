@@ -1,0 +1,52 @@
+{
+  "ckk_constant": {
+    "value": 0.00024538111342351713,
+    "uncertainty": 8.265562846252943e-05,
+    "mc_value": 0.0002527890953535098,
+    "mc_uncertainty": 8.605911691035035e-05,
+    "relative_uncertainty_percent": 33.684592636055655,
+    "error_budget": {
+      "q0_fraction": 0.7246177501571854,
+      "OmDE_fraction": 0.0009203485615274143,
+      "eps1_fraction": 0.2744619012812873
+    }
+  },
+  "constraints": {
+    "cmb_hk": {
+      "zeta0": 0.037,
+      "zeta0_sigma": 0.01,
+      "w0_mean": -0.9924547657928872,
+      "w0_sigma": 0.004727271599290118
+    },
+    "hz_expansion": {
+      "zeta0": 0.009,
+      "zeta0_sigma": 0.013,
+      "w0_central": -0.9727354318418314
+    },
+    "brane_benchmark": {
+      "zeta0": 0.000964,
+      "w0": -0.7454552765316212
+    },
+    "desi_intersection": {
+      "w0": -0.75,
+      "w0_sigma": 0.05,
+      "zeta0": 0.0009815244536940685,
+      "zeta0_sigma": 0.000446524546092371
+    }
+  },
+  "dimensional_consistency": {
+    "k_required": 0.5,
+    "resolution": "Use M\u00b2_Pl = M\u2085\u00b3/(2k) or state k=1/2 convention explicitly",
+    "physics_affected": false
+  },
+  "perturbative_validity": {
+    "zeta0_min_strict": 0.0024538111342351713,
+    "zeta0_min_marginal": 0.00024538111342351713,
+    "w0_at_brane_benchmark": -0.7454552765316212,
+    "brane_benchmark_perturbative": true
+  },
+  "cross_checks": {
+    "zeta038_gives_w0_993": true,
+    "zeta00096_gives_w0_746": true
+  }
+}

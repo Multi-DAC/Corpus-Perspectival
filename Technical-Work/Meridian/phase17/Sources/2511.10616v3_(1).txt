@@ -1,0 +1,3813 @@
+New multiprobe analysis of modified gravity and evolving dark energy
+Zhiyu Lu
+1, 2, ∗and Th´eo Simon
+3, †
+1Department of Astronomy, School of Physical Sciences,
+University of Science and Technology of China, Hefei, Anhui 230026, China
+2CAS Key Laboratory for Research in Galaxies and Cosmology, School of Astronomy and Space Science,
+University of Science and Technology of China, Hefei, Anhui 230026, China
+3Laboratoire Univers et Particules de Montpellier (LUPM),
+Centre national de la recherche scientifique (CNRS) et Universit´e de Montpellier,
+Place Eug`ene Bataillon, 34095 Montpellier C´edex 05, France
+We study the (w0, wa) parametrization of the dark energy (DE) equation of state, with and
+without the effective field theory of dark energy (EFTofDE) framework to describe the DE pertur-
+bations, parametrized here by the braiding parameter αB and the running of the Planck mass αM.
+We combine the EFTofLSS full-shape analysis of the power spectrum and bispectrum of BOSS data
+with the tomographic angular power spectra Cgg
+ℓ, Cκg
+ℓ, CT g
+ℓ
+and CT κ
+ℓ
+, where g, κ and T stand for
+the DESI luminous red galaxy map, Planck PR4 lensing map and Planck PR4 temperature map,
+respectively. To analyze these angular power spectra, we go beyond the Limber approximation, al-
+lowing us to include large-scale data in Cgg
+ℓ. The combination of all these probes with Planck PR4,
+DESI DR2 BAO and DES Y5 improves the constraint on the 2D posterior distribution of {w0, wa}
+by ∼50% and increases the preference for evolving dark energy over Λ from 3.8σ to 4.6σ. When we
+remove BAO and supernovae data, we obtain a hint for evolving dark energy at 2.3σ. Regarding the
+EFTofDE parameters, we improve the constraints on αB and αM by ∼40% and 50% respectively,
+finding results compatible with general relativity at ∼2σ. We show that these constraints do not
+depend on the choice of the BAO and supernovae likelihoods.
+I.
+INTRODUCTION
+Since the discovery of dark energy (DE) in 1998 [1],
+cosmological data seemed to favor the existence of a cos-
+mological constant Λ, a key element of the standard
+paradigm of cosmology, the ΛCDM model. Cosmolog-
+ical data from cosmic microwave background (CMB) [2],
+large-scale structure (LSS) [3], or supernovae [4] ap-
+peared to favor a dark energy equation of state param-
+eter close to w = −1, with no compelling evidence for
+evolving dark energy. However, since the beginning of
+2024, this picture has been challenged by new measure-
+ments from the Dark Energy Spectroscopic Instrument
+(DESI) [5] and supernovae compilations [6–8]. The first
+DESI data release (DR1) suggests a mild preference for
+evolving dark energy when combined with CMB and su-
+pernovae data, deviating from a cosmological constant
+by 2.5σ −3.9σ [9, 10] (depending on the supernova data
+used). This raises concerns about the consistency of su-
+pernova data–for instance, Ref. [11] pointed out that a
+systematic offset in the magnitude between low and high
+redshift supernovae could mimic an evolving dark energy
+signal. However, with the second DESI data release, a
+preference for evolving dark energy at 3.1σ was observed
+without supernovae measurements [12], along with a 2.3σ
+discrepancy between DESI DR2 BAO and Planck (as-
+suming the ΛCDM model) in the 2D posterior distribu-
+tion of {Ωm, rd · h}, where rd is the sound horizon at
+baryon drag. This discrepancy is exacerbated to 3.7σ in
+∗zhiyulu@mail.ustc.edu.cn
+† theo.simon@umontpellier.fr
+the SPT + ACT analysis [13]. We note that this incon-
+sistency can also be mitigated if we vary the sum of the
+neutrino mass [14], increase the value of the optical depth
+τ [15], or by some early-time dynamics [16–18].
+Interestingly, the reconstructed dark energy equation
+of state crosses w = −1 around z ∼0.5, implying a vio-
+lation of the null energy condition at high redshift. Var-
+ious models have been proposed to explain this behavior
+and address this challenge. For example, the so-called
+phantom mirage mechanism–where a coupling between
+quintessence and dark matter produces an apparent evo-
+lution in w–can mimic dynamical dark energy [19, 20].
+We can also invoke axion-like scalar field models [21],
+scalar field models with a noncanonical kinetic term [22]
+or non-minimally coupled scalar field models [23]. An al-
+ternative explanation involves the quintom scenario [24–
+31], in which two scalar fields (one of quintessence type
+and the other of phantom type) combine to allow a cross-
+ing of the w = −1 limit without instability.
+On the other hand, the potential preference for evolv-
+ing dark energy is a good motivation for studying modi-
+fied gravity models: is the evolving dark energy, in fact,
+the manifestation of an extension or deviation from gen-
+eral relativity [32–35]?
+In the case of a single scalar
+degree of freedom, the effective theory of dark energy
+(EFTofDE) [36–42] provides a unified description of grav-
+ity beyond general relativity, separating background ex-
+pansion from linear perturbations. The expansion his-
+tory can be parametrized by an arbitrary equation of
+state w(z), while the dynamics of perturbations are de-
+scribed by the general time-dependent functions αK, αB,
+αM, and αT . Though no significant derivation from gen-
+eral relativity has been reported so far, a well-known
+arXiv:2511.10616v3  [astro-ph.CO]  18 Mar 2026
+
+---PAGE BREAK---
+2
+challenge is the correlation between the braiding param-
+eter αB and the lensing amplitude AL.
+The so-called
+“lensing anomaly” in CMB data can shift αB away from
+zero by up to 2σ [43–46], although the significance of this
+anomaly is reduced in the Planck 2020 analysis compared
+to Planck 2018 [47].
+Modified gravity alters the evolution of metric pertur-
+bations at late times through the Poisson equation and
+the Weyl potential, which can be directly probed by cos-
+mological observations that are sensitive to the late-time
+perturbed Universe. For instance, it will affect the mat-
+ter overdensity field (and therefore the galaxy overdensity
+field), the CMB gravitational lensing, as well as the CMB
+temperature power spectrum at large angular scales [48]
+[through the integrated Sachs-Wolfe (ISW) effect].
+In
+order to constrain the EFTofDE parameters, we con-
+sider in this paper cross-correlations between these three
+observables, namely, Cκg
+ℓ, CT g
+ℓ, and CT κ
+ℓ
+, correspond-
+ing, respectively, to the cross-angular power spectra be-
+tween CMB lensing and galaxy clustering, between CMB
+temperature and galaxy clustering, and between CMB
+temperature and CMB lensing.
+Ref. [49] has already
+shown that the cross-angular power spectrum between
+the Planck PR4 temperature and lensing maps (CT κ
+ℓ
+) im-
+poses a strong constraint on the branding parameter αB.
+In addition, it has already been demonstrated that CT g
+ℓ
+provides an independent test of general relativity and al-
+lows strong constraints to be set on modified gravity sce-
+narios [50–53]. In particular, using pre-DESI and Planck
+2015 data [50], Ref. [54] imposed significant constraints
+on the EFTofDE parameters. Concerning Cgg
+ℓ
+and Cκg
+ℓ,
+they are also highly sensitive to αB and αM [55–58], and
+can also put strong constraints on the background pa-
+rameters, especially Ωm, h, w0, wa, and σ8 [59–64]. A
+recent study [65] has also shown that analyses based on
+Cgg
+ℓ
+and Cκg
+ℓ
+can exhibit a preference for evolving dark
+energy, even without incorporating primary CMB data.
+In parallel, the effective field theory of large-scale
+structure (EFTofLSS) [66–76] provides a framework for
+extracting maximum information from the galaxy over-
+density field. It provides an accurate modeling of the 3D
+galaxy power spectrum and bispectrum [77], incorporat-
+ing the effects of redshift-space distortions [72, 78], galaxy
+bias [73, 74, 79], and IR resummation [80–82], thereby al-
+lowing robust cosmological parameter inference [83–85].
+In particular, the one-loop EFTofLSS prediction of the
+galaxy power spectrum have made possible the deter-
+mination of the ΛCDM parameters from the full-shape
+analysis of (e)BOSS data [3] at precision higher than
+that from conventional BAO and redshift-space distor-
+tions (BAO/fσ8) analyses (see Ref. [86]), and even com-
+parable to that of CMB experiments. Additionally, the
+inclusion of the one-loop bispectrum yields an additional
+∼30% gain in constraining power on the dark energy
+equation of state [43, 87]. Based on the equivalence prin-
+ciple [88–91], the EFTofLSS can further consistently cap-
+ture the impact of modified gravity [92, 93] and dark en-
+ergy [43, 94–97] from the full shape of the galaxy power
+spectrum and bispectrum.
+The main goal of this work is therefore to comprehen-
+sively assess the constraining power of the current mea-
+surements of tomographic angular power spectra (derived
+from photometric surveys and CMB data) and the 3D
+galaxy power spectrum and bispectrum on the Chevalier-
+Polarski-Linder (CPL) parametrization of the DE equa-
+tion of state, with and without the EFTofDE framework
+to describe the DE perturbations. To do so, we use (i)
+the EFTofLSS full-shape analysis of the power spectrum
+and bispectrum of BOSS Luminous Red Galaxies, (ii)
+the angular power spectrum CT κ
+ℓ
+from the cross corre-
+lation between the Planck PR4 temperature and lensing
+maps, and (iii) the auto angular galaxy power spectra
+Cgg
+ℓ
+from DESI luminous red galaxies, together with the
+cross-angular power spectra Cκg
+ℓ
+and CT g
+ℓ
+from the cross-
+correlation with the Planck PR4 lensing and temperature
+maps.
+This paper is organized as follows.
+In Sec. II, we
+describe the theoretical framework by introducing the
+EFTofDE setup used in this work, while in Sec. III we de-
+tail the analysis setup and the modeling of the 3D galaxy
+power spectrum and angular power spectra mentioned
+above.
+In Sec. IV, we present and discuss the cosmo-
+logical constraints obtained on the CPL parametrization
+and on the EFTofDE parameters, before concluding in
+Sec. V.
+II.
+THEORETICAL FRAMEWORK: DARK
+ENERGY MODELS
+At the background level, DE can be phenomenolog-
+ically described as an effective fluid characterized by
+an equation of state w(a) ≡pDE(a)/ρDE(a).
+In this
+work, we adopt the commonly used CPL parametriza-
+tion [98, 99], where w(a) = w0 + wa(1 −a).
+To
+specify the DE perturbations, we consider two different
+frameworks: (i) a phenomenological fluid parametriza-
+tion called parametrized post-Friedmann, and (ii) a phys-
+ically motivated effective field theory (EFT) approach
+that captures broad classes of single scalar field and modi-
+fied gravity models (in this work, we focus on Horndeski’s
+theories).
+A.
+Dark energy as a fluid
+The
+Parametrized
+Post-Friedmann
+(PPF)
+frame-
+work [100–102] is a phenomenological description of the
+DE perturbations that is commonly adopted to safely al-
+low a phantom crossing. Since dark energy is not directly
+coupled to matter, its perturbations affect structure for-
+mation only through the metric potentials in the Poisson
+equation. In the conformal Newtonian gauge (denoted
+
+---PAGE BREAK---
+3
+“N”), it reads
+k2ϕ = −4πGa2
+
+δρN
+tot −3H(ρtot + ptot)θN
+tot
+k2
+
+=k2Γ −4πGa2
+
+δρN
+t −3H(ρt + pt)θN
+t
+k2
+
+.
+(1)
+In the second line, we isolate the contribution of DE per-
+turbations (expressed in the DE rest frame) as k2Γ ≡
+−4πGa2δρrest
+DE , while the subscript “t” denotes all species
+other than dark energy.
+The evolution equation of Γ is obtained from an inter-
+polation between the superhorizon and subhorizon limits:
+˙Γ = H
+"
+S
+
+1 + c2
+Γk2
+H2
+−1
+−Γ
+
+1 + c2
+Γk2
+H2
+#
+,
+(2)
+where cΓ is an effective sound speed controlling the tran-
+sition between large and small scales, and S is defined
+as
+S ≡4πGa2
+H2
+(ρDE + pDE)θN
+t
+k2 .
+(3)
+The CPL + PPF parametrization therefore provides
+a flexible and simple phenomenological framework for
+studying deviations from a cosmological constant at both
+the background and linear perturbation levels. Through-
+out this work, we fix the fluid sound speed to unity cs = 1
+and set the effective sound speed cΓ = 0.4 · cs, following
+the convention of Ref. [101].
+B.
+EFTofDE framework
+EFTofDE provides a physically motivated model-
+independent description of the DE perturbations around
+an FLRW background for theories with a single scalar
+degree of freedom [103, 104]. Working in unitary gauge
+and including all operators that are invariant under time-
+dependent spatial diffeomorphisms, the quadratic ac-
+tion for linear scalar and tensor perturbations can be
+parametrized by a small set of time-dependent functions.
+Restricting to Horndeski-type theories [104–108], whose
+equations of motion contain at most second-order deriva-
+tives, it is customary to introduce four dimensionless
+EFT functions: αK, αB, αM, and αT , which control the
+kinetic term of the scalar field, the braiding between the
+kinetic terms of the scalar and the metric, the running of
+the Planck mass, and tensor speed excess, respectively.
+We note that the parameter αM is related to the effective
+Planck mass via
+αM ≡d ln M 2
+∗
+d ln a .
+(4)
+In principle, the EFT parameters can have arbitrary time
+dependence. In this work, we consider that αi(a) = ci ·
+ΩDE(a) [39, 93, 109, 110], allowing us to recover general
+0.00
+0.15
+0.30
+0.45
+0.00
+0.15
+0.30
+0.45
+cM
+(z = 1.0)
+0.00
+0.15
+0.30
+0.45
+0.00
+0.15
+0.30
+0.45
+(z = 1.0)
+0.00
+0.15
+0.30
+0.45
+0.00
+0.15
+0.30
+0.45
+cM
+(z = 0.5)
+0.00
+0.15
+0.30
+0.45
+0.00
+0.15
+0.30
+0.45
+(z = 0.5)
+0.00
+0.15
+0.30
+0.45
+cB
+0.00
+0.15
+0.30
+0.45
+cM
+(z = 0.0)
+0.00
+0.15
+0.30
+0.45
+cB
+0.00
+0.15
+0.30
+0.45
+(z = 0.0)
+1.000
+1.025
+1.050
+1.075
+1.00
+1.01
+1.02
+1.03
+1.00
+1.04
+1.08
+1.12
+1.00
+1.02
+1.04
+1.06
+0.96
+1.00
+1.04
+1.08
+0.90
+0.95
+1.00
+1.05
+FIG. 1: The response of µ and Σ to variations in cM
+and cB at redshifts z = 1.0, 0.5, and 0.0. The arrows
+indicate the gradient direction: µ is more sensitive to cM
+at high redshift and to cB at low redshift, while Σ shows
+the opposite trend. The cosmology is fixed to the best-fit
+values of the “All” analysis obtained in Sec. IV B 4.
+relativity at high redshifts. We note that this choice is
+not unique and that our cosmological results depend on
+this particular parametrization. However, this choice is
+able to capture a wide variety of Horndeski models [111–
+113].
+A minimal set of stability conditions for linear scalar
+perturbations is the absence of ghost and gradient insta-
+bilities. In terms of the EFT functions, we can respec-
+tively express those conditions as [104, 114]
+Dkin ≡αK + 3
+2α2
+B > 0 ,
+c2
+s > 0 ,
+(5)
+where cs corresponds to the scalar propagation speed,
+which depends on the background expansion history, the
+
+---PAGE BREAK---
+4
+α-functions, and the matter content as [44]
+c2
+s =
+1
+Dkin
+h
+(2 −αB)
+
+−H′
+aH2 + 1
+2αB + αM
+
+−3(ρt + pt)
+H2M 2∗
++ a′
+B
+aH
+i
+,
+(6)
+where ′ = d/dτ denotes derivative with respect to the
+conformal time. Let us note than once the α-functions
+are set, some parts of the {w0, wa} parameter space al-
+lowed in the CPL + PPF framework become theoret-
+ically forbidden due to the EFTofDE stability condi-
+tions [104, 114].
+Restricting to the quasi-static approximation, where
+we can neglect the time evolution of the scalar degree of
+freedom [94, 115, 116], the EFT functions modify linear
+perturbations through two effective functions, namely,
+µ(k, a), which rescales the Poisson equation and mod-
+ifies the matter clustering, and Σ(k, a), which rescales
+the Weyl potential and controls the photon trajecto-
+ries [117, 118]:
+k2Ψ = −4πGa2µ(k, a)
+X
+i
+ρi∆i ,
+(7)
+k2(Ψ + Φ) = −8πGa2Σ(k, a)
+X
+i
+ρi∆i ,
+(8)
+where ρi and ∆i denote the density and the gauge-
+invariant overdensity fields of the species i, respectively.
+Within the EFTofDE framework, the functions µ(k, a)
+and Σ(k, a) can be written in terms of {M∗, αi, c2
+s}
+as [39, 44, 104]
+µ(a) =
+1
+M 2∗
+
+1 + 2(αM + 1
+2αB)2
+c2s(αk + 3
+2α2
+B)
+
+,
+(9)
+Σ(a) =
+1
+M 2∗
+
+1 + (αM + 1
+2αB)(αM + αB)
+c2s(αk + 3
+2α2
+B)
+
+.
+(10)
+These functions characterize deviations from general rel-
+ativity (GR) by modifying the relations between the met-
+ric potentials and the matter perturbation field, and
+are therefore directly constrained by large-scale struc-
+ture and CMB observations. Note that in this work µ
+and Σ are only functions of time. In addition, we set
+cK = 1 because within the quasi-static limit studied in
+this work, the cosmological data are insensitive to this
+parameter [104, 119–123]. We also set cT = 0 since the
+simultaneous detection of GW170817 and its electromag-
+netic counterpart [124] set a strong constraint on this pa-
+rameter with αT ≲10−15 [119, 125–128]. Therefore, in
+this paper, we aim to constrain the theoretical parameter
+space {cB, cM}. Fig. 1 illustrates the dependence of µ(a)
+and Σ(a) on cB and cM at different redshifts. In particu-
+lar, at high redshifts µ(a) mainly responds to variations
+in cM, whereas at low redshifts it is more sensitive to
+cB, while Σ(a) exhibits the opposite trend. Therefore,
+the dependence of µ(a) and Σ(a) on cB and cM depends
+strongly on the redshift, which is a key feature that mo-
+tivates a multiprobe analysis spanning a wide redshift
+range.
+III.
+ANALYSIS SETUP
+A.
+Datasets and inference framework
+In this paper, we perform Markov chain Monte Carlo
+(MCMC) analyses using the Metropolis-Hastings algo-
+rithm from the MontePython-v31 code [129, 130] inter-
+faced with hiclass,2 a modified version of CLASS3 [131]
+including EFTofDE cosmologies (see Refs. [132, 133] for
+alternative codes). In the following, we describe the var-
+ious likelihoods used in our analysis.
+1.
+Datasets
+Our baseline dataset is made up of the following like-
+lihoods:
+• Planck PR4:
+The high-ℓTT, TE, EE, and
+low-ℓEE CMB power spectrum data (dubbed
+CT T
+ℓ
+, CEE
+ℓ
+, and CT E
+ℓ
+in the following) from the
+Planck Public Release 4 (PR4) analyzed with the
+NPIPE processing pipeline [134], respectively de-
+scribed using the Hillipop and LoLLiPoP likeli-
+hoods [47, 135]. Similar to Planck Public Release
+3 (PR3), we also include the low-ℓTT likelihood
+using Commander [136].
+• Lensing:
+The CMB gravitational lensing spec-
+trum Cκκ
+ℓ
+from Planck PR4 [137] analyzed in
+the multipole range 8 < L < 400.
+Note that
+we have adapted the public Cobaya likelihood4 to
+Montepython-v3.
+• DESI DR2 BAO: The DESI DR2 BAO data from
+Refs. [12, 138] include BAO from bright galaxies
+(0.1 < z < 0.4), luminous red galaxies (0.4 < z <
+1.1), emission line galaxies (0.8 < z < 1.6), quasars
+(0.8 < z < 2.1), and Lyman−α forest quasars
+(1.8 < z < 4.2).
+• DES Y5: DES year 55 catalog of uncalibrated lu-
+minosity distance of type Ia supernovae (SNeIa)
+in the range 0.10 < z < 1.13, combined with
+an external sample of SNeIa at low redshifts from
+0.024 < z < 0.10 [140]. We have adapted the pub-
+lic Cobaya [141] likelihood to Montepython-v3 in
+Ref. [43].
+The main purpose of this work is to combine this baseline
+dataset with the following likelihoods in order to assess
+1 https://github.com/brinckmann/montepython_public
+2 https://miguelzuma.github.io/hi_class_public/
+3 https://lesgourg.github.io/class_public/class.html
+4 https://github.com/carronj/planck_PR4_lensing
+5 In the recent update of the DES supernova analysis [139], the
+evidence for evolving dark energy has been reduced from 4.2σ to
+3.2σ.
+
+---PAGE BREAK---
+5
+their impact on the constraints on the background ex-
+pansion and gravitational properties:
+• ISWL: The angular power spectrum CT κ
+ℓ
+from
+the cross-correlation between the Planck PR4 tem-
+perature map [134] and the Planck PR4 lensing
+map [137] from Ref. [142] analyzed in the multipole
+range 2 < L < 100. Note that we have adapted the
+public Cobaya likelihood6 to Montepython-v3.7
+• EFTBOSS: The full-shape analysis of the power
+spectrum and bispectrum of BOSS luminous red
+galaxies (LRGs) [3]. To model those observables,
+we use the effective field theory of large-scale struc-
+ture (EFTofLSS) up to one loop [66–76] (see below
+for more details). The power spectrum and bispec-
+trum are measured in Refs. [77, 85, 87, 143] from
+the BOSS catalogs DR12 (v5) combined CMASS-
+LOWZ8 [144], and are divided in two redshift bins
+(and four sky cuts): low-z, 0.2 < z < 0.43 (zeff =
+0.32), and high-z, 0.43 < z < 0.7 (zeff = 0.57), with
+north and south Galactic skies for each. The covari-
+ance, including the correlation between power spec-
+trum and bispectrum, is measured through 2048
+Patchy mocks [145], while the window function is
+measured from fkpwin9 [146].
+• DESICℓ:
+The auto-angular galaxy power spec-
+tra Cgg
+ℓ
+from a photometric sample of luminous
+red galaxies (LRGs) of the DESI Legacy Imag-
+ing Survey DR9 [147, 148], together with the
+cross-angular power spectra Cκg
+ℓ
+from the cross-
+correlation between the same LRG photometric
+sample and the Planck PR4 lensing map [137]. The
+data and covariances, analyzed in the multipole
+range 20 ≤L ≤243 and separated into four pho-
+tometric redshift bins (with the effective redshifts
+zeff = {0.470, 0.625, 0.785, 0.914}), are determined
+in Refs. [63, 149] using the NaMaster code10 [150].
+Our MontePyhton-v3 likelihood–inspired from the
+MaPar likelihood11 written in Cobaya [63, 149]–
+does not consider the Limber approximation as in
+Refs. [63, 149], but uses SwiftCℓ12 [151] instead,
+which is an accurate and differentiable JAX-based
+code computing the angular galaxy power spectrum
+beyond the Limber approximation (see below). In
+addition, we also measure the cross-angular power
+spectra CT g
+ℓ
+from the cross-correlation between
+the DESI DR9 LRG photometric samples and the
+6 https://github.com/carronj/planck_PR4_lensing
+7 We have checked that our Montepython-v3 likelihood is consis-
+tent with the original Cobaya one up 0.2σ.
+8 Publicly available at https://data.sdss.org/sas/dr12/boss/
+lss/
+9 https://github.com/pierrexyz/fkpwin
+10 https://github.com/LSSTDESC/NaMaster
+11 https://github.com/NoahSailer/MaPar/tree/main
+12 https://cosmo-gitlab.phys.ethz.ch/cosmo_public/swiftcl
+Planck PR4 temperature map [134], where we use
+NaMaster to determine the data and covariances
+and SwiftCℓto compute the theoretical prediction.
+We refer the reader to App. A for more details on
+the determination of the CT g
+ℓ
+data as well as on the
+difference between the Limber approximation and
+SwiftCℓ. The data used in this likelihood (Cgg
+ℓ,
+Cκg
+ℓ
+and CT g
+ℓ) and the theoretical predictions are
+shown in Fig. 8 of this appendix. The validation of
+our implementation is detailed in Sec. A, while the
+likelihood is publicly available on GitHub § .
+2.
+Correlations between datasets
+In our analyses, we use the CT T
+ℓ
+, CEE
+ℓ
+, Cκκ
+ℓ
+and Cgg
+ℓ
+auto-angular power spectra, while we use the CT E
+ℓ
+(from
+Planck PR4), CT κ
+ℓ
+(from ISWL), CT g
+ℓ
+(from DESICℓ),
+and Cκg
+ℓ
+(from DESICℓ) cross-angular power spectra.
+The objective of this paper is therefore to perform a mul-
+tiprobe analysis to exploit as much information as pos-
+sible from several cosmological probes and their cross-
+correlations. However, caution must be taken when per-
+forming such an analysis to avoid double counting infor-
+mation.
+Below, we list how we take into account the
+various correlations in our analysis:
+• The correlations between the Planck (CT T
+ℓ
+, CEE
+ℓ
+and CT E
+ℓ
+), lensing (Cκκ
+ℓ) and ISWL (CT κ
+ℓ
+) like-
+lihoods are included in our analysis following
+Refs. [137, 142].
+• There is a non-negligible covariance between Cκκ
+ℓ
+(from the lensing likelihood) and Cκg
+ℓ
+(from the
+DESICℓlikelihood). For simplicity, when combin-
+ing Cκg
+ℓ
+with Cκκ
+ℓ, we remove the overlapping mul-
+tipoles by excluding ℓ< 243 for Cκκ
+ℓ
+(see, e.g.,
+Ref. [59] for an estimation of such a covariance).
+• There are also correlations between Cκg
+ℓ
+(DESICℓ)
+and CκT
+ℓ
+(ISWL), as well as between CT g
+ℓ
+(DESICℓ)
+and CT T −T E
+ℓ
+/CT κ
+ℓ
+(Planck/ISWL). However, us-
+ing a Gaussian approximation to compute the full
+covariance [152, 153],
+CovAB,CD
+LL′
+=
+δLL′
+(2ℓL′ + 1) △ℓfsky
+×
+h
+CAC
+L CBD
+L
++ CAD
+L CBC
+L
+i
+,
+(11)
+the correlation coefficient ρ(ℓ) =
+Cov(CT x
+ℓ
+,CAB
+ℓ
+)
+σ(CT x
+ℓ
+)σ(CAB
+ℓ
+) is
+found to be below 8% for these cross-correlations
+and is therefore neglected in this work.
+• As in Ref. [154], we neglect the correlation between
+photometric and spectroscopic data given that they
+probe different cosmological volumes (see Ref. [153]
+for more details), implying that we can safely com-
+bine the DESICℓlikelihood with the DESI DR2
+BAO and EFTBOSS likelihoods.
+
+---PAGE BREAK---
+6
+• Finally, in our analysis, we combine DESI DR2
+BAO with EFTBOSS. To mitigate the correlation
+between these two likelihoods, we use the sound
+horizon rs information from the BAO analysis of
+DESI, while we marginalize it in the EFTBOSS
+full-shape analysis, as done in Ref. [43].
+To do
+so, we follow Refs. [155, 156], splitting the linear
+power spectrum into its broadband shape and its
+wiggle component, before marginalizing over a new
+scaling parameter, dubbed αrs. In DESI DR1, ap-
+proximately 27% of BGS and LRG1 galaxies and
+9% of LRG2 galaxies were already observed by
+SDSS [157], which induces a ∼10% correlation be-
+tween the two datasets, reduced to less than 5%
+when marginalizing over the sound horizon rs [43].
+This overlap increases in DESI DR2 [12], and we
+evaluate that the correlation is at most 10%13 af-
+ter the marginalization over the sound horizon. To
+further support our results, each time we combine
+DESI DR2 BAO with EFTBOSS, we reproduce
+the same analysis by replacing DESI DR2 BAO
+with ext-BAO, a likelihood–that can be safely com-
+bined with BOSS–including BAO measurements
+from 6dFGS at z = 0.106 [158], SDSS DR7 at
+z = 0.15 [159], as well as eBOSS DR14 Ly-α ab-
+sorption auto-correlation at z = 2.34 and cross-
+correlation with quasars at z = 2.35 [160, 161].
+3.
+Analysis settings
+For all runs performed, we impose large flat priors on
+the ΛCDM parameters {ωb, ωcdm, H0, As, ns, τreio}, re-
+spectively corresponding to the dimensionless baryon en-
+ergy density, the dimensionless cold dark matter energy
+density, the current Hubble parameter, the variance of
+the primordial power spectrum at k = 0.05 Mpc−1, the
+primordial power spectrum tilt, and the optical depth to
+reionization. We also impose large flat priors on the DE
+background parameters {w0, wa} and on the EFTofDE
+pertubations parameters {cB, cB}.
+Note that throughout this paper we use the Planck
+neutrino treatment convention, including two massless
+and one massive species with mν = 0.06 eV [2]. We con-
+sider that our chains have converged when the Gelman-
+Rubin criterion R−1 < 0.05. We acknowledge the use of
+13 We note that the DESI BGS and LRG samples together con-
+stitute approximately 28% of the total DESI BAO volume (see
+Tab. III in Ref. [12]).
+As a conservative estimate, we assume
+that roughly half of the galaxies in the DESI BGS and LRG
+samples were already observed by BOSS. Assuming further that
+BOSS covers half the data volume of DESI, and noting that
+the rs-marginalization procedure removes 55% of the correla-
+tion [43], we obtain an upper bound on the residual correlation
+of ρ =
+0.5×VBGS,LRG
+√
+VDESIVBOSS × 45% ∼10%, where 0.5 × VBGS,LRG cor-
+responds to the overlapping volume between BOSS and DESI.
+Procoli [162] to extract the best-fit parameters and the
+best-fit χ2 as well as the use of GetDist [163] to extract
+the probability density functions and produce our plots.
+B.
+Modeling and theoretical predictions
+In this section, we describe the modeling and theoret-
+ical predictions associated with the three likelihoods we
+are adding to our baseline dataset, namely, EFTBOSS
+(in Sec. III B 1), ISWL, and DESICℓ(in Sec. III B 2).
+1.
+Galaxy power spectrum and the EFTofLSS
+Modeling the nonlinear evolution of large-scale struc-
+ture and connecting the galaxy overdensity field to the
+underlying dark matter overdensity field is challenging.
+In this paper, we adopt the effective field theory of large-
+scale structure (EFTofLSS) framework allowing us to or-
+ganize the expansions in fluctuations and derivatives of
+the density and velocity fields of the observed tracers at
+long wavelengths, which allows us to compute the galaxy
+power spectrum and bispectrum in redshift space up to
+one loop.14
+Note that following previous studies (see,
+e.g, Ref. [43]) showing that the Einstein-de Sitter (EdS)
+approximation is sufficient for BOSS data, we adopt it
+here, with the time dependence of density perturbations
+given by δ(n)(a) ∝Dn
++(a).
+To determine the full-modeling information of BOSS
+data (denoted “EFTBOSS”), we adopt the PyBird EFT
+likelihood15 [83], for which we specify all the important
+details below:
+• Renormalization scales: In the redshift-space
+galaxy power spectrum, there are three renormal-
+ization scales :
+the nonlinear scale renormaliz-
+ing the dark matter field kNL, the spatial exten-
+sion of the observed objects renormalizing the spa-
+tial derivative expansion kM, and the “dispersion”
+scale renormalizing the velocity products appear-
+ing in the redshift-space expansion kR.
+Accord-
+ing to Refs. [171, 172], we set kM
+= kNL
+=
+0.7 hMpc−1 and kR = 0.25 hMpc−1.
+In addi-
+tion, we set the mean galaxy number density to
+¯ng = 4 · 10−4 (Mpc/h)3.
+• Priors: For all the EFT parameters, we impose
+a Gaussian prior centered on 0 with a width of 2,
+14 The first formulation of the EFTofLSS was carried out in Eule-
+rian space in Refs. [66, 69] and in Lagrangian space in [164]. Once
+this theoretical framework was established, many efforts were
+made to improve this theory and make it predictive, such as the
+understanding of renormalization [165, 166], the IR-resummation
+of the long displacement fields [72, 80–82, 167, 168], and the com-
+putation of the two-loop matter power spectrum [169, 170]
+15 https://github.com/pierrexyz/pybird
+
+---PAGE BREAK---
+7
+except for the linear bias parameter b1 where we
+impose a log-normal prior, log b1 ∼N(0.8, 0.8944)
+(see Refs. [77, 85] for all the details on the EFT
+parameters and the associated priors). Following
+Ref. [83], we analytically marginalize all the EFT
+parameters that enter linearly in the theory, while
+we vary the other parameters, namely, {b1, b2, b5}
+(see Ref. [77]), allowing us to considerably reduce
+the parameter space probed by the MCMC, going
+from 41 EFT parameters per sky cut to only 3.
+Finally, we consider correlations between the sky
+cuts–thanks to a multivariate Gaussian prior–by
+imposing the EFT parameters to vary by at most
+10% between north and south hemispheres, and by
+at most 20% between the low-z and high-z samples
+(see Refs. [85, 87]).
+• Cutoff
+scales:
+For
+both
+the
+power
+spec-
+trum and the bispectrum,
+we consider k
+∈
+[0.01, 0.20] hMpc−1 for the low-z sample and k ∈
+[0.01, 0.23] hMpc−1
+for the high-z
+sample (see
+Refs. [83, 85, 173]).
+• Observational effects: Our analysis includes sev-
+eral observational modelings (see, e.g., Ref. [171]),
+such as the window functions from Ref. [146] (see
+App. A of Ref. [174] for more details), the binning
+effect [85], or the Alcock-Paczynski effect [175].
+2.
+Angular power spectra
+We now turn to the description of the modeling of the
+ISWL and DESICℓlikelihoods. The cross-angular power
+spectrum between two tracers i, j on the 2D full sky is
+computed from the following line-of-sight integral (see,
+e.g., Ref. [176])
+Cij
+ℓ= 2
+π
+Z
+dkk2∆i
+ℓ(k)∆j
+ℓ(k)P(k, χ, χ′) ,
+(12)
+where P(k, χ, χ′) corresponds to the unequal-time mat-
+ter power spectrum, and where ∆i
+ℓ(k) denotes the source
+function for the tracer i. The latter takes the form of
+a time-dependent window function W i(χ) which is line-
+of-sight integrated over the spherical Bessel functions,
+together with an ℓ-dependent prefactor c(ℓ):
+∆i
+ℓ(k) = c(ℓ)
+Z ∞
+0
+dχW i(χ)j(n)
+ℓ
+(kχ) ,
+(13)
+where (n) corresponds the n-th derivative.
+In this
+paper, we do not consider the commonly used Limber
+approximation [177–179]–reducing the triple integral in
+Eq. (12) into a single integral over the comoving distance
+χ–which is valid only at small scales, but we perform
+the full integral in Eq. (12) using SwiftCℓ[151] (see also
+Ref. [180] for an alternative code).
+In particular, this
+code uses an FFTlog decomposition of the χ-dependent
+part of the integrand, in order to analytically compute
+the integrals over χ and χ′ before numerically integrat-
+ing Eq. (12) over k. We refer the interested reader to
+Ref. [151] for further detail.
+In the ISWL and DESICℓlikelihoods, we consider the
+angular power spectra for the following pairs of fields:
+(g, g), (g, κ), (g, T), (κ, T). Therefore, we need to deter-
+mine the kernels for the galaxy clustering ∆g
+ℓ, the CMB
+lensing ∆κ
+ℓ, and the CMB temperature ∆T
+ℓin order to
+obtain the angular power spectra from Eq. 12. In the fol-
+lowing, we describe the theoretical predictions for these
+observables within the EFTofDE framework depicted in
+Sec. II.
+Galaxy clustering kernel.
+The galaxy clustering
+source function ∆g
+ℓimplemented in SwiftCℓ[151] in-
+cludes contributions from galaxy fluctuations ∆g,D
+ℓ
+(see,
+e.g., Ref. [176]), magnification bias ∆g,µ
+ℓ
+[181–183], and
+redshift-space distortions ∆g,RSD
+ℓ
+[183], such that
+∆g
+ℓ= ∆g,D
+ℓ
++ ∆g,µ
+ℓ
++ ∆g,RSD
+ℓ
+,
+(14)
+where
+∆g,D
+ℓ
+= b1(z)
+Z ∞
+0
+dχW δ,g(χ)D+(k, z(χ))jℓ(kχ) ,
+∆g,µ
+ℓ
+= ℓ(ℓ+ 1)
+k2
+(5sµ −2)
+Z ∞
+0
+dχ
+χ2 W κ,gD+(k, z(χ))jℓ(kχ) ,
+∆g,RSD
+ℓ
+= −
+Z ∞
+0
+f+(z(χ))W δ,g(χ)D+(k, z(χ))j(2)
+ℓ(kχ) .
+(15)
+The full galaxy clustering kernel depends on the galaxy
+fluctuation (W δ,g) and magnification bias (W κ,g) window
+functions, which are respectively given by
+W δ,g(χ) = n(z(χ)) ,
+W κ,g(χ) = 3ΩmH2
+0
+2c2
+Z ∞
+χ
+dχ′n(χ′) χ
+a(χ)
+χ′ −χ
+χ
+,
+(16)
+where n(z(χ)) corresponds the normalized galaxy red-
+shift distribution. In this set of equations, D+(k, z(χ)) =
+p
+P(k, z(χ))/P(k) corresponds to the growth factor and
+f+ = d ln D+/d ln a corresponds to the growth rate,
+which are directly extracted from hiclass. Unlike the
+EFTBOSS likelihood, we consider a linear galaxy bias
+model to determine the galaxy overdensity field in the
+DESICℓlikelihood (see Refs. [184, 185]), where b1(z)–
+defined as δg = b1(z)δm–corresponds to the linear bias
+parameter. We vary b1 for each LRG redshift bin. We
+also include a shot noise contribution SNi in Cgg
+ℓ,i for
+each redshift bin i (see Ref. [149]), in such way that
+Cgg
+ℓ,i →Cgg
+ℓ,i + SNi. Additionally, the magnification bias
+kernel depends on one free parameter, sµ, corresponding
+to the number count slope. We note that this contribu-
+tion is subdominant in our analysis, and that the recon-
+structed posteriors of sµ are largely dominated by the
+priors on the (linear) scales we are considering. Finally,
+unlike Ref. [149], we also include a contribution from the
+
+---PAGE BREAK---
+8
+redshift-space distortion effect, which becomes important
+at large scale, as we show in App. A (see also Ref. [149]).
+CMB lensing kernel. The source function for the
+CMB lensing is given by
+∆κ
+ℓ= ℓ(ℓ+1)3ΩmH2
+0
+2c2k2
+Z χ∗
+0
+dχ
+a(χ)
+χ∗−χ
+χχ∗
+D+(k, z(χ))jℓ(kχ) ,
+(17)
+where χ∗corresponds to the comoving distance to the
+last scattering surface. In this equation, we have incor-
+porated the CMB lensing kernel which is analog to the
+magnification bias kernel (where we replace the galaxy
+redshift distribution by the lens redshift distribution).
+CMB temperature kernel. The CMB gravitational
+lensing field and the galaxy overdensity field are cor-
+related with the integrated Sachs-Wolfe effect contribu-
+tion of the CMB temperature field since the same grav-
+itational potentials are responsible for these three ef-
+fects.
+The source function for the CMB temperature
+anisotropies is given by [186]:
+∆T
+ℓ=2TCMB
+3ΩmH2
+0
+2c3k2
+×
+Z χ∗
+0
+dχ(1 −˜f+(z(χ)))D+(z(χ))H(z(χ))jℓ(kχ) ,
+(18)
+where TCMB is the current CMB temperature, and
+˜f+
+=
+d ln(D+Σ)/d ln a corresponds to the modified
+growth rate (see Ref. [54]).
+The Σ factor, defined in
+Eq. 10, arises from the Weyl potential Φ + Ψ, which
+governs the photon geodesics.
+Note that the growth
+factor D+ here inherently includes modifications to
+gravity through the µ parameter.
+In this work, we adopt the following settings for the
+DESICℓlikelihood:
+• Cutoff scales:
+We consider the following scale
+cuts for the angular power spectra across the four
+redshift bins:
+Cgg
+ℓ
+: [20, 124], [20, 178], [20, 243], [20, 243],
+Cκg
+ℓ
+: [20, 178], [20, 178], [20, 243], [20, 243],
+CT g
+ℓ
+: [20, 178], [20, 178], [20, 178], [20, 178].
+We discuss in App. A how we determine these scale
+cuts.
+• Priors: We impose, for each redshift bin, an uni-
+form prior on b1 and Gaussian priors on sµ and SNi
+(see Refs. [147, 149]):
+b1 ∼U(1, 3) ,
+si
+µ ∼N(1, 0.1) ,
+SNi ∼N(SNi,fid, 0.3 SNi,fid) ,
+where SNi,fid corresponds to the shot noise fiducial
+values for the four redshift bins SNi,fid = {4.07 ·
+10−6, 2.25 · 10−6, 2.05 · 10−6, 2.25 · 10−6}.
+For the details (and validations) about the modeling of
+the DESICℓlikelihood, we refer the interested reader to
+App. A.
+IV.
+RESULTS
+In this section, we discuss the cosmological constraints
+on the CPL parametrization and on the EFTofDE con-
+figuration considered in this work (see Sec. II). Our main
+results are presented in Fig. 2, where we show the 2D
+posterior distributions of {w0, wa} and {cB, cM} for all
+data combinations presented in Sec. III. The associated
+cosmological constraints, the best-fit χ2, and the pref-
+erences over ΛCDM are displayed in Tabs. I and II of
+App. B. Finally, in Fig. 12 of that appendix, we also plot
+the 1D and 2D posterior distributions for all cosmological
+parameters.
+A.
+Baseline analysis and CMB likelihoods
+For the baseline dataset, corresponding to Planck PR4
++ Lensing + DESI DR2 BAO + DES Y5, we obtain
+w0 = −0.769 ± 0.056 and wa = −0.75 ± 0.22 at 68% CL
+(with PPF), and a 3.8σ preference over Λ (see App. B).
+When we extend this analysis to an EFT description
+of the DE perturbations, the constraint on {w0, wa}
+is shifted by 1.2σ toward its ΛCDM limit.
+For the
+EFTofDE parameters, we obtain cB = 0.65+0.24
+−0.37 and
+cM = 0.75+0.63
+−1.0 , leading to a 3.4σ preference over ΛCDM
+(see App. B). While cM is fully consistent with 0, we ob-
+serve that cB is shifted by 1.7σ compared to its GR limit,
+which is related to the lensing anomaly [47, 187, 188], in
+line with previous results [44, 45, 189].16 Finally, we note
+that the correlation between {w0, wa} and {cB, cM} is
+weak, as shown in Fig. 12.
+Compared with the equivalent CPL analysis (without
+EFTofDE) from the DESI DR2 cosmological results [12],
+the best-fit value of wa shows a mild shift toward ΛCDM,
+while the evidence for evolving dark energy decreases
+from 4.2σ to 3.8σ. This difference arises from the choice
+of the CMB likelihoods, for both the lensing and the pri-
+mary spectra.
+In Fig. 3, we compare some variations
+of our baseline analysis with different CMB likelihoods,
+namely, Hillipop [47] vs Camspec [190] for the high-
+ℓTTTEEE likelihood, Lollipop [47] vs Simall [136] for
+the low-ℓTT likelihood, and Planck PR4 [137] vs ACT
+DR6 [191, 192] for the lensing likelihood. We summarize
+our results in the following:
+• Hillipop vs Camspec: We observe a shift up to
+0.2σ on the 1D posteriors of {w0, wa, cB, cM} (see
+16 Although this anomaly has been reduced from 2.8σ in PR3 to
+1.7σ in Camspec [47, 135] and to 0.7σ in Hillipop [190].
+
+---PAGE BREAK---
+9
+EFTBOSS
+ISWL
+DESICℓ
+All
+−1.0
+−0.8
+−0.
+w0
+−1.5
+−1.0
+−0.5
+0.0
+wa
+Baseline (CPL)
++ EFTBOSS (CPL)
++ EFTBOSS (EFTDE)
++ EFTBOSS/extBAO (CPL)
+−1.0
+−0.8
+−0.
+w0
+−1.5
+−1.0
+−0.5
+0.0
+wa
++ ISWLens (CPL)
++ ISWLens (EFTDE)
+−1.0
+−0.8
+−0.
+w0
+−1.5
+−1.0
+−0.5
+0.0
+wa
++ DESICℓ(CPL)
++ DESICℓ(EFTDE)
+−1.0
+−0.8
+−0.
+w0
+−1.5
+−1.0
+−0.5
+0.0
+wa
+w0 + wa = −1
+All (CPL)
+All (EFTDE)
+All/extBAO (CPL)
+0
+1
+2
+cB
+−1
+0
+1
+2
+3
+cM
+Baseline (EFTDE)
++ EFTBOSS (EFTDE)
++ EFTBOSS/extBAO (EFTDE)
+0
+1
+2
+cB
+−1
+0
+1
+2
+3
+cM
++ ISWLens (EFTDE)
+0
+1
+2
+cB
+−1
+0
+1
+2
+3
+cM
++ DESICℓ(EFTDE)
+0
+1
+2
+cB
+−1
+0
+1
+2
+3
+cM
+All (EFTDE)
+All (ΛCDM background)
+All/extBAO (EFTDE)
+FIG. 2: 2D posterior distributions of {w0, wa} and {cB, cM} reconstructed from all data combinations considered in
+this work, namely, Baseline, Baseline + EFTBOSS, Baseline + ISWL, Baseline + DESICℓ, and the combination of
+all these datasets. The black dashed lines correspond to the ΛCDM limits, while the baseline analysis is shown with
+a yellow dotted line.
+−0.8
+−0.7
+w0
+HLP
+HSP
+CSA
+CSP
+-0.769±0.056
+-0.764±0.056
+-0.753±0.057
+-0.757±0.058
+−1.00−0.75
+wa
+-0.755±0.218
+-0.780±0.222
+-0.855±0.232
+-0.822±0.231
+0.5
+1.0
+cB
+0.648±0.327
+0.741±0.343
+0.785±0.334
+0.669±0.325
+0
+1
+cM
+0.746±0.897
+0.772±0.942
+0.647±0.878
+0.670±0.859
+FIG. 3:
+Constraints on {w0, wa, cB, cM} for several
+CMB likelihood combinations, namely, Hillipop (H) vs
+Camspec (C) for the high-ℓTTTEEE likelihood, Lollipop
+(L) vs Simall (S) for the low-ℓTT likelihood, and Planck
+PR4 (P) vs ACT DR6 (A) for the lensing likelihood. Note
+that, for all the data combinations, we use the low-ℓTT
+likelihood from Commander, together with DESI DR2
+BAO and DES Y5. In the first two columns, we assume
+the CPL parametrization without EFTofDE, while in the
+last two columns we consider our EFTofDE configuration
+(with a CPL background). The black dashed lines repre-
+sent the mean values of our baseline analysis.
+HSP vs CSP), and a change in the error bars up to
+10% (for cM).
+• Lollipop vs Simall: Lollipop gives slightly tighter
+constraints than Simall and shifts the posterior up
+to 0.3σ for cB (see HLP vs HSP).
+• Planck PR4 vs ACT DR6 lensing: The con-
+straints are similar between the two likelihoods
+with a shift up to 0.35σ for cB (see CSA vs CSP).
+In the end, we manage to reproduce the results of
+Ref. [12], and the main difference between our baseline
+analysis (HLP) and this reference (CSA) is a shift in wa
+of 0.44σ.
+Note that in our baseline analysis, the con-
+straining power on {cB, cM} mostly comes from the late
+integrated Sachs-Wolfe effect and the CMB lensing [46].
+In the following, we perform a multiprobe analysis to
+improve the constraints on these parameters.
+B.
+Multiprobe analysis
+1.
+EFTBOSS
+We first extend the baseline dataset by incorporat-
+ing both the power spectrum and bispectrum measure-
+ments from BOSS thanks to an EFTofLSS description
+of the dark matter overdensity field (see Sec. III). Un-
+like Ref. [43], which employed the exact time dependence
+
+---PAGE BREAK---
+10
+−0.01
+0.00
+0.01
+ℓ= 0
+Pℓ
+P ΛCDM
+ℓ
+−1
+CPL
+EFTDE
+cB = 0.90, cM = 0.32
+cB = 0.15, cM = 0.32
+cB = 0.60, cM = 0.18
+cB = 0.60, cM = 0.09
+0.025
+0.050
+0.075
+0.100
+0.125
+0.150
+0.175
+0.200
+k[h/Mpc]
+−0.05
+0.00
+0.05
+ℓ= 2
+−0.02
+0.00
+Equilateral
+B0
+BΛCDM
+0
+−1
+CPL
+EFTDE
+−0.05
+0.00
+0.05
+Isoceles
+−0.025
+0.000
+0.025
+Scalene
+0
+20
+40
+60
+80
+100
+120
+Bin index
+0.1
+0.2
+ki[h/Mpc]
+FIG. 4: Left: Residuals of the monopole and quadrupole of the galaxy power spectrum for the CPL model with and
+without EFTofDE, normalized to the ΛCDM model (for the baseline + EFTBOSS analysis). We also show the impact
+of varying cB and cM on this observable, setting the other cosmological parameters to the best-fit. Note that we show
+here the predictions and the data for the low-z NGC sample of BOSS. Right: Same for the bispectrum monopole for
+different triangle configurations.
+description of the EFTofLSS operators, we adopt here
+the EdS approximation where the time evolution of all
+the operators is only encoded in the linear growth factor
+D+(a), since, as demonstrated in Ref. [43], the difference
+between the exact-time and EdS treatments is negligible
+for BOSS sensitivity. We further restrict our analysis to
+the smooth quintessence case, as the smooth and cluster-
+ing scenarios [193, 194] studied in Ref. [43] exhibit similar
+deviations. Our results are presented in the first column
+of Fig. 2.
+The sensitivity of EFTBOSS to cB and cM in the
+quasi-static limit arises from the fact that they act as
+additional sources in the Poisson equation [115], as can
+be seen in Eq. (7). This implies a modification of the
+growth factor D+(a) [and, therefore, of the growth rate
+f+(a)] through the continuity and Euler equations, which
+will modify the time dependence of the EFTofLSS oper-
+ators [70, 195, 196].
+These parameters also affect the
+overall amplitude of the linear power spectrum within
+the scales of interest, namely, 0.01 < k/[h/Mpc] < 0.23,
+which propagate into the one-loop corrections.
+In the
+top panel of Fig. 5, we display the ratios of the linear
+matter power spectrum for several values of cB and cM,
+showing that variations in these parameters lead to an al-
+most scale-independent modification of the linear matter
+power spectrum amplitude. We further note that EFT-
+BOSS is more affected by a change in cM than a change
+in cB, coming from the fact that µ is more sensitive to a
+variation in the former parameter at high redshift, while a
+variation in the latter parameter becomes significant only
+at low redshift (see Fig. 1).17 In the left panel of Fig. 4,
+we display the residuals of the monopole and quadrupole
+of the galaxy power spectrum for several values of cB
+and cM, allowing us to stress that they affect the galaxy
+power spectrum in the same way, namely, that an in-
+crease in these parameters involves an enhancement of
+this observable. This suggests that there is a negative
+correlation between these two parameters in the EFT-
+BOSS likelihood, and that a slight increase in cM can be
+compensated for by a larger decrease in cB.
+When we add EFTBOSS to the baseline analysis (using
+the rs-marginalization procedure described in Sec. III),
+the constraint on the 2D plane {w0, wa} is improved by
+27%,18 and the preference over Λ increases from 3.7σ
+to 4.7σ, consistent with previous findings [43]. Within
+the EFTofDE framework, we obtain a 10.3% (84.7%) im-
+provement for the {w0, wa} ({cB, cM}) plane, increasing
+the preference over ΛCDM from 3.4σ to 4.3σ. As shown
+in Fig. 12, EFTBOSS is able to break the degeneracy
+between σ8 and cM, leading to a 38% improvement in
+the constraint of cM (compared to 2% for cB), allowing
+us to exclude large positive values of the running of the
+17 Let us note that since the growth factor is coupled to µ through
+a differential equation, the effect of cM on the matter density
+perturbations accumulates over cosmic time, implying that EFT-
+BOSS is more sensitive to this parameter than cB.
+18 Throughout the paper, in order to quantify an improvement in
+the {w0, wa} or {cB, cM} 2D planes, we use the ratio of the
+figure of merit (FOM) [10, 197], defined as FOM∝|detC|−1/2,
+where C is the covariance matrix of the parameter posteriors.
+This metric should be taken with a grain of salt for the {cB, cM}
+2D posterior distributions, given that they are not Gaussian.
+
+---PAGE BREAK---
+11
+Plank mass, namely, cM ≳1.5 (see Fig. 2). Finally, and
+as expected, EFTBOSS induces a negative correlation
+between cB and cM (see Fig. 2) due to the exclusion of
+high values of cM (for which the galaxy power spectrum
+is more sensitive).
+To further investigate the constraining power of EFT-
+BOSS, we show, in Fig. 4, the power spectrum and
+bispectrum residuals for the best-fit of CPL with and
+without EFTofDE, normalized to the equivalent ΛCDM
+best-fit.
+For the CPL model with PPF, we obtain
+δχ2
+min(EFTBOSS)
+=
+−7.4 with respect to ΛCDM
+(within the baseline + EFTBOSS analysis), correspond-
+ing to a non-negligible improvement of the fit to the
+BOSS data. Within the EFTofDE framework, we do not
+further improve this fit (as can be seen in Fig. 4), with
+δχ2
+min = −7.5.
+Using the extBAO dataset (instead of DESI BAO
+DR2), and without considering the rs-marginalization
+procedure for the EFTBOSS likelihood, we observe a
+very similar trend, as shown in Fig. 2. The extBAO like-
+lihood provides weaker constraints on the late-time ex-
+pansion than the DESI DR2 BAO likelihood, leading to a
+smaller constraint on the {w0, wa} plane, although con-
+sistent with previous analyses. However, the constraints
+on cB and cM remain comparable, resulting from their
+weak correlation with the background parameters, espe-
+cially Ωm, w0 and wa (see Fig. 12). We note that the
+statistical significance for evolving dark energy decreases
+from 4.7σ to 3.6σ with PPF and from 4.3σ to 3.3σ with
+EFTofDE.
+2.
+ISWL
+In Fig. 5, we show the ratios of CT κ
+ℓ
+for several values of
+cB and cM, allowing us to highlight that this observable
+is highly sensitive to these parameters. In particular, the
+more we increase the value of the braiding parameter cB,
+the more the CT κ
+ℓ
+power spectrum is suppressed, which
+is explained by the fact that this parameter reduces the
+integrated Sachs-Wolfe effect (and can even make it neg-
+ative for large positive values of cB) [49, 54, 104, 198].
+For the running of Planck mass cM, we observe the op-
+posite behavior at large scales, implying that the ISWL
+likelihood introduces a positive correlation between these
+two EFT parameters (see Fig. 2).
+When we add the ISWL likelihood to the baseline anal-
+ysis, we find that the constraints on cB and cM are im-
+proved by 25% and 16%, respectively, while the back-
+ground dark energy parameters remain essentially un-
+changed (see Fig. 2). As expected, we can see in Fig. 2
+that this likelihood induces a positive correlation in the
+{cB, cM} plane, which is significantly reduced by 51.6%.
+This positive correlation is accompanied by the exclu-
+sion of large positive values of the braiding parameter,
+namely, cB ≳1, which is consistent with Ref. [49]. In ad-
+dition, we note that the inclusion of the ISWL likelihood
+does not impact the preference for evolving dark energy,
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+1.012
+1.013
+1.014
+1.015
+∆P(k)
+k [h/Mpc]
+cB
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+1.00
+1.02
+1.04
+cM
+50
+100
+150
+1.010
+1.012
+1.014
+∆Cgg
+ℓ
+50
+100
+150
+0.950
+0.975
+1.000
+1.025
+1.050
+50
+100
+150
+1.0100
+1.0125
+1.0150
+1.0175
+1.0200
+∆Cκg
+ℓ
+50
+100
+150
+0.950
+0.975
+1.000
+1.025
+1.050
+50
+100
+150
+0.0
+0.5
+1.0
+1.5
+∆CTg
+ℓ
+50
+100
+150
+0.6
+0.8
+1.0
+1.2
+1.4
+20
+40
+60
+80
+ℓ
+0.0
+0.5
+1.0
+1.5
+∆CTκ
+ℓ
+cB = 0.65
+cB = 0.46
+cB = 0.37, cM = 0.44
+cB = 0.22
+20
+40
+60
+80
+ℓ
+0.0
+0.5
+1.0
+1.5
+cM = 1.06
+cM = 0.62
+cB = 0.37, cM = 0.44
+cM = 0.09
+FIG. 5: Residuals (with respect to ΛCDM) of the lin-
+ear matter power spectrum, Cgg
+ℓ, Cκg
+ℓ, CT g
+ℓ, and CT κ
+ℓ
+for
+several values of cB (left) and cM (right). The residuals
+are computed at z = 0.625, corresponding to the effec-
+tive redshift of the second redshift range of the DESICℓ
+likelihood. All cosmological parameters are fixed to their
+best-fit values (reconstructed from the “All” analysis),
+while the solid green curves correspond to the best-fit
+values of cB and cM. For the sake of clarity, we divide
+the error bars of Cκg
+ℓ
+and CT g
+ℓ
+by 2 (see Fig. 8 for a real
+representation of these data points).
+which remains at 3.8σ (3.4σ) for the analysis without
+(with) the EFT description of the DE perturbations.
+3.
+DESICℓ
+In Fig. 5, we also show the ratios of Cgg
+ℓ, Cκg
+ℓ, and
+CT g
+ℓ
+for several values of cB and cM.
+Interestingly, a
+variation of these parameters induces a scale-independent
+modification of the amplitude of these three observables,
+with different correlations between cB and cM. In par-
+
+---PAGE BREAK---
+12
+ticular, CT g
+ℓ
+exhibits the same behavior as CT κ
+ℓ
+(see
+Ref. [54]) since both are directly sensitive to Σ, as shown
+in Eq. (18), therefore introducing a positive correlation
+between the two EFT parameters. However, we observe
+a different trend for Cgg
+ℓ
+and Cκg
+ℓ, where an increase in
+both cB or cM leads to an enhancement of these observ-
+ables, implying a negative correlation between these pa-
+rameters. Interestingly, we expect that combining Cgg
+ℓ,
+Cκg
+ℓ, CT g
+ℓ, and CT κ
+ℓ
+will allow us to break the various
+degeneracies described above.
+When we add the DESICℓlikelihood to the baseline
+dataset (where we have removed the low-ℓCMB lens-
+ing data as explained in Sec. III A 2), the precision on
+the {w0, wa} plane remains equivalent to the baseline
+analysis (regardless of the DE perturbation parametriza-
+tion), though the mean values are slightly shifted toward
+ΛCDM: w0 = −0.769 ± 0.056 →−0.780 ± 0.056 and
+wa = −0.75 ± 0.22 →−0.67 ± 0.22 (see Fig. 2).
+Re-
+garding the EFTofDE parameters, the constraint on cM
+is improved by 17%, while the constraint on cB remains
+the same. Indeed, as shown in Fig. 2, the DESICℓlike-
+lihood is able to set a stronger constraint on the upper
+limit of cM compared to the baseline analysis, excluding
+the region cM ≳2, consistent with Ref. [54]. As a result,
+we can clearly see a negative correlation between the two
+EFT parameters, coming from the fact that the main
+constraining power comes from Cgg
+ℓ.
+This is expected
+given the small error bars of this observable compared to
+CT g
+ℓ
+and Cκg
+ℓ
+(see Fig. 8 of App. A). Finally, we note that
+the preference for evolving dark energy remains similar
+to the baseline analysis.
+Our analysis can be improved by including the low-ℓ
+data points of the CMB lensing, after determining the
+covariance between Cκκ
+ℓ
+and Cκg
+ℓ. We further note that
+including smaller scales in Cgg
+ℓ
+would help to improve the
+constraints on the EFTofDE parameters (see Fig. 5). We
+leave this exploration for future work, using a nonlinear
+galaxy bias expansion, as done in Ref. [149].
+4.
+All
+In the previous sections, we saw that EFTBOSS and
+DESICℓintroduce a negative correlation between cB and
+cM, by imposing a stronger constraint on the upper limit
+of cM compared to the baseline analysis (see Fig. 2). Con-
+versely, the ISWL likelihood introduces a positive cor-
+relation between these two parameters, by imposing a
+stronger constraint on the upper limit of cB compared to
+the baseline analysis (see Fig. 2). Therefore, we expect
+that combining all these likelihoods will further break
+these degeneracies, and then improve the constraints on
+cB and cM.
+When we perform such an analysis (always by remov-
+ing the low-ℓCMB lensing data), we improve the con-
+straint on the {w0, wa} plane by 46% (52%) for the
+analysis without (with) EFTofDE compared to the base-
+line analysis. This is accompanied by a 33% (35%) re-
+duction of the {h, Ωm} 2D posterior distribution. Re-
+garding the EFTofDE parameters, the {cB, cM} plane
+is reduced by 177% compared to the baseline analysis,
+and we obtain cB = 0.46+0.16
+−0.22 and cM = 0.31+0.39
+−0.49, re-
+spectively corresponding to an improvement of 37% and
+46%. As explained above, this strong constraint stems
+from the different degeneracies between the EFTofDE
+parameters that are inherent in the different likelihoods
+considered in our work. We finally obtain a preference
+for evolving dark energy of 4.6σ (4.2σ) for the analy-
+sis with PPF (EFTofDE), compared to 3.8σ (3.4σ) for
+the baseline analysis, while we note that the 2D poste-
+rior distribution of {cB, cM} is compatible with its GR
+limit at ∼2σ. We note that the posterior of {w0, wa}
+lies at 3.5σ (3.1σ) from the w0 + wa = −1 line, cor-
+responding to a transition from w < −1 in the past
+to w > −1 today (see quintom models [24–31]).
+To
+understand the origin of this preference, we display in
+Tab. III the best-fit χ2 for each likelihood for ΛCDM,
+CPL with PPF, and CPL with EFTofDE. We obtain
+a total ∆χ2
+min = −24.6 (∆χ2
+min = −26.2) for the CPL
+model with PPF (EFTofDE), mostly coming from the
+EFTBOSS (δχ2
+min ∼−7), DESI BAO (δχ2
+min ∼−5), and
+DES Y5 (δχ2
+min ∼−12) likelihoods.
+To investigate the dependence of the {cB, cM} 2D pos-
+terior distribution on the background cosmology, we per-
+form the same analysis fixing the DE background evolu-
+tion to Λ, as shown in Fig. 2. We obtain cB = 0.32+0.18
+−0.21
+and cM = 0.25+0.25
+−0.43, respectively corresponding to a bet-
+ter constraint of 10% and 22% compared to the analysis
+with the CPL background evolution.
+We further note
+that the {cB, cM} plane is slightly shifted toward its GR
+limit, corresponding to a preference over ΛCDM of 0.68σ
+(and a χ2 improvement of −1.4).
+C.
+Impact of BAO and SN data
+In this section, we study the impact of the BAO and
+supernovae data in our analysis. First, given that the
+preference for evolving dark energy depends on the choice
+of the supernovae and BAO likelihoods (see, e.g., [12]),
+we carry out the “All” analysis by replacing DESI DR2
+BAO with ext-BAO and DES Y5 with Pantheon+ [6],
+as shown in the top panel of Fig. 6. We observe that
+the preference for evolving dark energy decreases from
+4.2σ (with DESI DR2 BAO and DES Y5) to 3.5σ (with
+ext-BAO and DES Y5), then to 3.0σ (with ext-BAO and
+Pantheon+).
+Regarding the EFTofDE parameters, we
+obtain very similar constraints when considering the ext-
+BAO and Pantheon+ likelihoods, with cB = 0.46+0.18
+−0.24
+and cM = 0.29+0.37
+−0.51, due to the low correlations between
+the EFTofDE parameters and the background parame-
+ters (see Fig. 12).
+Second, to gauge the impact of the BAO and super-
+novae likelihoods on our conclusions, we remove those
+datasets in our All analysis, as shown in Fig. 6.
+For
+Planck PR4 + Lensing + EFTBOSS + ISWL + DESICℓ,
+
+---PAGE BREAK---
+13
+−1.0
+−0.9
+−0.8
+−0.7
+w0
+−1.0
+−0.5
+0.0
+0.5
+wa
+All/extBAO/DESY5 (EFTDE)
+All/extBAO/PanPlus (EFTDE)
+0.0
+0.5
+1.0
+1.5
+cB
+−1
+0
+1
+2
+cM
+All/extBAO/DESY5 (EFTDE)
+All/extBAO/PanPlus (EFTDE)
+−1.0
+−0.8
+−0.6
+w0
+−1.5
+−1.0
+−0.5
+0.0
+0.5
+wa
+All/DESIBAO/DESY5 (CPL)
+All w/o BAO and SN (CPL)
+0.0
+0.5
+1.0
+1.5
+cB
+−1
+0
+1
+2
+cM
+All/DESIBAO/DESY5 (EFTDE)
+All w/o BAO and SN (EFTDE)
+FIG. 6:
+2D posterior distributions of {w0, wa} and
+{cB, cM} for several variations of BAO and supernovae
+data. Top: We compare the All dataset (with ext-BAO)
+with the All dataset in which DES Y5 has been replaced
+by Pantheon+. Bottom: We compare the All dataset and
+the All dataset in which DESI BAO DR2 and supernovae
+(SN) data have been removed.
+we obtain a 2.3σ preference for the CPL model with PPF.
+We also note that when we remove the BAO and super-
+novae data, the constraints on cB and cM remain un-
+changed (see Fig. 6).
+In Fig. 7, we present the DESI
+DR2 BAO data alongside the prediction from our anal-
+ysis which does not include BAO and supernova data.
+When we fit this prediction to the DESI DR2 BAO mea-
+surements, we obtain χ2
+min(BAO) = 8.06, which is sig-
+nificantly better than the Planck ΛCDM best-fit [with
+χ2
+min(BAO) = 21.74] or even to the ΛCDM fit to the
+DESI DR2 BAO + BBN dataset [with χ2
+min(BAO) =
+10.28], as shown in Fig. 7.
+We conclude that our All
+analysis without BAO and supernovae data shows a slight
+preference for evolving dark energy and is able to better
+accommodate the DESI DR2 BAO measurements than
+ΛCDM.
+V.
+CONCLUSION
+In this work, we constrain the CPL parametriza-
+tion of the DE equation of state, considering either
+the parametrized post-Friedmann framework or the
+EFTofDE framework to describe the DE perturbations.
+Within the EFTofDE framework, we vary αB, cor-
+responding to the braiding parameter, and αM, cor-
+responding to the running of the Planck mass, both
+parametrized by αi(a) = ci · ΩDE(a).
+The main goal
+of this paper is to constrain the parameter space of
+{w0, wa, cB, cM} with (i) the EFTofLSS full-shape anal-
+ysis of the power spectrum and bispectrum of BOSS lumi-
+nous red galaxies (dubbed “EFTBOSS”), (ii) the angular
+power spectrum CT κ
+ℓ
+from the cross-correlation between
+the Planck PR4 temperature and lensing maps (dubbed
+“ISWL”), and (iii) the auto-angular galaxy power spec-
+tra Cgg
+ℓ
+from DESI luminous red galaxies, together with
+the cross-angular power spectra Cκg
+ℓ
+and CT g
+ℓ
+from the
+cross-correlation with the Planck PR4 lensing and tem-
+perature maps (dubbed “DESICℓ”).
+One of the main novelties of this work is the measure-
+ment of CT g
+ℓ
+(in the DESICℓlikelihood), detected with
+a signal-to-noise ratio of 2.04, and the inclusion of the
+scales 20 < ℓ< 79 in Cgg
+ℓ, thanks to the SwiftCℓcode
+allowing us to go beyond the Limber approximation.
+We summarize our main results in the following:
+• For the baseline analysis–including the primary
+power spectra and CMB gravitational lensing spec-
+trum from Planck PR4, the BAO measurements
+from DESI DR2, and the supernovae compilation
+from DES Y5–we obtain a preference for evolving
+dark energy over Λ at 3.8σ (3.4σ) when consider-
+ing the PPF (EFTofDE) framework. We also show
+that the choice of the CMB likelihood, for both the
+lensing and the primary spectra, can lead to shifts
+up to 0.4σ in the reconstructed DE parameters.
+• When we include the EFTBOSS likelihood in addi-
+tion to the baseline dataset, we increase the prefer-
+ence for evolving dark energy to 4.7σ (4.3σ) for the
+PPF (EFTofDE) parametrization. The constraint
+on the 2D plane {w0, wa} is improved by ∼30%.
+Moreover, the EFTBOSS likelihood introduces a
+negative correlation between the EFTofDE param-
+eters with a strong constraint on the upper bound
+of cM, excluding cM ≳1.5 at 98% CL.
+• When we include the ISWL likelihood in addition
+to the baseline dataset, the preference for evolving
+dark energy and the constraint on the {w0, wa}
+plane remain unchanged. However, the constraint
+on the {cB, cM} plane is significantly improved by
+∼50%, while the ISWL likelihood induces a posi-
+tive correlation between the EFT parameters with
+a strong constraint on the upper bound of cB, ex-
+cluding cB ≳1 at 98% CL.
+• When we include the DESICℓlikelihood in addition
+to the baseline dataset, the preference for evolving
+dark energy and the constraint on the {w0, wa}
+plane remain unchanged as well.
+However, the
+DESICℓlikelihood leads to a negative correlation
+between the EFTofDE parameters (coming from
+Cgg
+ℓ), while improving the upper bound on cM, ex-
+cluding cM ≳2 at 98% CL.
+• When we combine all these likelihoods, we reduce
+the uncertainty on the {w0, wa} plane by ∼50%,
+
+---PAGE BREAK---
+14
+0.5
+1.0
+1.5
+2.0
+z
+0.97
+0.98
+0.99
+1.00
+1.01
+1.02
+1.03
+∆(DM/rs)
+0.5
+1.0
+1.5
+2.0
+z
+∆(DH/rs)
+All w/o BAO and SN (CPL)
+Baseline (CPL)
+BBN+DESI2 (ΛCDM)
+CMB (ΛCDM)
+DESI2 BAO
+FIG. 7: Residuals of the DESI DR2 BAO transverse DM/rs (left) and radial DH/rs (right) modes, together with
+theoretical predictions from different data and models, namely, DESI DR2 BAO (with BBN) under ΛCDM, Planck
+PR4 under ΛCDM, Baseline under CPL (with PPF), and All without BAO and supernovae data under CPL (with
+PPF). The data and theoretical predictions are normalized to the prediction from DESI DR2 BAO + BBN (under
+ΛCDM). The shaded bands represent the 68% CL reconstructed from the full posterior distribution.
+and we increase the preference for evolving dark
+energy to 4.6σ (4.2σ) for the PPF (EFTofDE)
+framework. Regarding the EFTofDE parameters,
+we can exploit the various correlations presented
+above to significantly improve the constraint on
+the {cB, cM} parameter space by 177%, with cB =
+0.46+0.16
+−0.22 and cM = 0.31+0.39
+−0.49. Those constraints
+are compatible with GR at 2σ, and this conclusion
+does not change when we consider a ΛCDM back-
+ground instead.
+• Finally, when we remove the BAO and supernovae
+data, we obtain a hint for evolving dark energy
+at 2.3σ. We also note that the constraints on the
+EFTofDE parameters do not depend on the BAO
+and supernovae likelihoods (due to the low correla-
+tion between the background and EFToDE param-
+eters).
+There are several ways in which our work can be im-
+proved and extended.
+First, our analysis considers a
+linear galaxy bias expansion in the DESICℓlikelihood,
+restricting our analysis of Cgg
+ℓ, Cκg
+ℓ
+and CT g
+ℓ
+to linear
+scales.
+Incorporating a consistent EFTofLSS modeling
+for the galaxy overdensity field, as in Ref. [60], or a
+hybrid-EFT approach, as in Ref. [154], would allow the
+inclusion of smaller scales and further enhance the con-
+straining power of the DESICℓlikelihood. Second, de-
+veloping a self-consistent covariance model between Cκκ
+ℓ
+and Cκg
+ℓ
+would allow us to include the low-ℓCMB lens-
+ing data in the combined analysis and would help to fur-
+ther break parameter degeneracies. Finally, our analysis
+can be reproduced for future high-precision galaxy maps,
+coming from DESI [199], Euclid [200], or LSST [201], to
+improve the signal-to-noise ratio of the EFTBOSS and
+DESICℓlikelihoods, and to enhance the measurement of
+the ISW signal, which is currently limited by observa-
+tional noise.
+Note added.
+Recently, Ref. [59] performed a similar
+5 × 2pt analysis. Their study focuses on early and late
+dark energy models, without considering the EFTofDE
+framework. Our results are consistent with, and inde-
+pendent of, theirs.
+ACKNOWLEDGMENTS
+We thank Chi Zhang and Pierre Zhang for valu-
+able suggestions and discussions. ZL acknowledges the
+hospitality of the Galileo Galilei Institute for Theoret-
+ical Physics, the University of Montpellier, the Uni-
+versity of Milan “La Statale,” as well as CERN dur-
+ing the completion of this work.
+ZL also thanks the
+INFN for partial support.
+This work was supported
+in part by the National Key R&D Program of China
+(2021YFC2203100), by the National Natural Science
+Foundation of China (12433002, 12261131497), by CAS
+young interdisciplinary innovation team (JCTD-2022-
+20), by 111 Project (B23042), by CSC Innovation Tal-
+ent Funds, by USTC Fellowship for International Coop-
+eration, and by USTC Research Funds of the Double
+First-Class Initiative.
+TS acknowledges the European
+Union’s Horizon Europe research and innovation pro-
+gram under the Marie Sk lodowska-Curie Staff Exchange
+grant agreement No 101086085 – ASYMMETRY. This
+
+---PAGE BREAK---
+15
+work was partially supported by the computational re-
+sources from the LUPM’s cloud computing infrastructure
+founded by Ocevu labex and France-Grilles. We finally
+acknowledge the use the standard python packages, such
+as numpy [202], scipy [203], and matplotlib [204].
+Appendix A: Details and validation of the DESICℓ
+likelihood
+1.
+Details on the DESICℓlikelihood
+This appendix documents the implementation of the
+DESICℓlikelihood used in MontePython and highlights
+the differences with Mapar [149], a publicly available like-
+lihood designed to extract cosmological information from
+the auto- and cross-correlations between CMB lensing
+and luminous red galaxies (LRGs) maps.
+This likeli-
+hood makes use of the NaMaster code [150] to measure
+the angular power spectra Cκg
+ℓ
+and Cgg
+ℓ
+as well as their
+covariance matrices under the Gaussian approximation.
+For the theoretical prediction, Ref. [149] numerically in-
+tegrates the angular power spectra using the Limber ap-
+proximation. In addition, the Mapar likelihood consid-
+ers a hybrid effective field theory (HEFT) model [205]
+to determine the galaxy overdensity field from the un-
+derlying dark matter field. In our MontePython likeli-
+hood (DESICℓ), we use the data and covariances from
+Mapar for both Cκg
+ℓ
+and Cgg
+ℓ.
+However, we make use
+of SwiftCℓfor the theoretical prediction, allowing us to
+go beyond the Limber approximation. This enables us
+to include additional data in the range 20 ≤ℓ≤79 for
+Cgg
+ℓ, thus improving the constraints. In addition, in our
+work, we focus on linear scales and adopt a linear galaxy
+bias model, meaning that we do not consider the small-
+scale data included in Ref. [149]. In particular, this ref-
+erence includes data up to lmax = 600 for Cgg
+ℓ
+and Cκg
+ℓ,
+while we perform our analysis up to lmax = 124 −243
+(see Sec. III B 2), as determined in Ref. [149] for the lin-
+ear bias galaxy model. These scales correspond to the
+maximum scales such that the linear prediction does not
+deviate significantly from the nonlinear prediction given
+the data covariance [46, 206, 207].19
+To do so, the χ2
+obtained using the linear perturbation theory prediction
+is compared to the one obtained using the Halofit pre-
+diction [208, 209] for several ℓmax, and we impose that
+χ2 = ∆CT
+ℓC−1 ∆Cℓ< 1.0, where ∆Cℓ= Clin
+ℓ
+−Cnl
+ℓ. We
+further adopt the more conservative choice compared to
+Table 2 of Ref. [149].
+19 Note that Ref. [149] did not include the first redshift bin for Cgg
+ℓ
+and Cκg
+ℓ
+in their linear bias analysis due to the limited scale range
+probed by the linear perturbation theory at low redshift. Given
+that in our analysis we go to higher scales, the constraining power
+of the first redshift bin becomes relevant, and we determine ℓmax
+using the procedure describe in the main text.
+50
+100
+0
+2
+4
+6
+8
+Cgg
+1e
+5
+2 = -5.31
+50
+100
+150
+2 = 0.51
+100
+200
+2 = -2.37
+100
+200
+2 = -5.32
+Limber
+Full
+50
+100
+150
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+C g
+1e
+6
+zeff = 0.470
+2 = 0.67
+50
+100
+150
+zeff = 0.625
+2 = 0.77
+100
+200
+zeff = 0.785
+2 = 0.40
+100
+200
+zeff = 0.914
+2 = 0.02
+50
+100
+150
+1
+0
+1
+2
+3
+4
+CTg
+1e
+9
+2 = -0.04
+SNR=1.24
+50
+100
+150
+2 = -0.00
+SNR=1.22
+50
+100
+150
+2 = -0.01
+SNR=0.49
+50
+100
+150
+2 = -0.03
+SNR=0.94
+FIG. 8: The Cgg
+ℓ, Cκg
+ℓ, and CT g
+ℓ
+data points consid-
+ered in the DESICℓlikelihood, together with the best-
+fit prediction from the full integral (dark blue) or from
+the Limber approximation (crimson). The dashed lines
+correspond to the regimes where the Limber approx-
+imation fails.
+We also display the individual δχ2 =
+χ2(Limber) −χ2(full integral) for each angular power
+spectra and each redshift bin.
+.
+We adopt the same pixel and bandpower window func-
+tions as those used in the Mapar likelihood. The theoret-
+ical angular spectra are multiplied by the pixel window
+function to correct for the pixelization introduced when
+constructing a Healpix [210, 211] overdensity map from
+the galaxy catalog, and then convolved with the band-
+power window function to match the mask-deconvolved
+measurements from NaMaster. Finally, we note that the
+shot noise parameters are not analytically marginalized,
+but are instead varied as free parameters in the MCMC
+
+---PAGE BREAK---
+16
+sampling.
+One of the main novelties of our work is that we ad-
+ditionally include the cross-correlation between LRGs
+and Planck PR4 temperature maps (SEVEM) as shown
+in Fig. 8.
+To measure CT g
+ℓ, we use NaMaster, which
+provides a pseudo-Cℓestimator that accounts for sur-
+vey masks. To cross-check our results, we also measure
+CT g
+ℓ
+with the Polspice code [212], and obtain a good
+consistency up to 0.2σ for all data points.
+To deter-
+mine the maximum scale ℓmax, we use the procedure
+detailed before, allowing us to determine ℓmax = 2212.
+However, due to the limited statistical power of the
+small-scale modes, we fix ℓmax = 178 for CT g
+ℓ
+across
+the four redshift bins.
+Finally, the measurements of
+CT g
+ℓ
+yield a cumulative signal-to-noise ratio [63, 149] of
+SNR =
+qP
+i χ2(CT g,i
+ℓ
+) = 2.04.
+In Fig. 8, we display the data points considered
+in this work for Cgg
+ℓ, Cκg
+ℓ, and CT g
+ℓ, together with
+the best-fit predictions either from the Limber ap-
+proximation
+or
+from
+the
+full
+integral
+(computed
+with
+SwiftCℓ).20
+We
+also
+show
+the
+individual
+δχ2
+=
+χ2(full integral) −χ2(Limber) for each an-
+gular power spectra and each redshift bin. The largest
+improvements are found in the first and fourth redshift
+bins of Cgg
+ℓ, where the χ2 differences reach −5.31 and
+−5.32, respectively.
+For Cκg
+ℓ
+and CT g
+ℓ, the difference
+between the full integral and the Limber approximation
+is negligible, even at large scales. This is consistent with
+Ref. [149], which applies the Limber approximation until
+the same ℓmin as in our analysis for Cκg
+ℓ
+but not for Cgg
+ℓ.
+2.
+Validation of our pipeline
+To validate our pipeline, we compare in Fig. 9 the
+cosmological posteriors from our DESICℓanalysis, using
+MontePython and SwiftCℓ, with those from Mapar, using
+Cobaya and the Limber approximation. For comparison
+purposes, we include only Cgg
+ℓ
+and Cκg
+ℓ, while we consider
+the scale cuts, determined in Ref. [149], which are valid
+for the Limber approximation and the linear bias model
+across the four redshift bins. We further note that the
+shot noise terms are fixed to their fiducial values. The ex-
+cellent agreement between the two approaches confirms
+both the validity of our MontePython likelihood imple-
+mentation and the validity of the SwiftCℓcalculation.
+20 We note that the Limber prediction for the low-ℓpart of the
+galaxy auto-angular power spectrum is extrapolated from the
+small-scale prediction (dashed lines in Fig. 8).
+0.12
+0.14
+ωcdm
+2.5
+3.0
+ln 1010As
+0.7
+0.8
+σ8
+0.7
+0.8
+σ8
+2.5
+3.0
+ln 1010As
+Cgg
+ℓ+ Cκg
+ℓ
+- SwiftCℓ
+Cgg
+ℓ+ Cκg
+ℓ
+- Mapar
+FIG. 9: 1D and 2D posterior distributions reconstructed
+from our DESICℓlikelihood (using MontePython and
+SwiftCℓ) and from the Mapar likelihood (using Cobaya
+and the Limber approximation) for the ΛCDM model.
+3.
+Assessment of the constraining power of the
+DESICℓlikelihood
+In Fig. 10, we compare the cosmological constraints ob-
+tained for the ΛCDM model with different analysis set-
+tings within our DESICℓlikelihood. We vary here two
+cosmological parameters, namely, {ωcdm, ln(1010As)},
+and twelve nuisance parameters, namely, {bi, sµ,i, SNi},
+where i = 1, . . . , 4 corresponds to the four redshift bins.
+In Fig. 11, we show the equivalent analysis for our
+EFTofDE configuration.
+First, we evaluate the impact of the inclusion of the
+additional data points in the range 20 < ℓ< 79 for
+Cgg
+ℓ
+(see Limber vs full). With the full integral analy-
+sis, we obtain Ωm = 0.3063 ± 0.0090, σ8 = 0.750 ± 0.025,
+ln1010As = 2.908 ± 0.098 and S8 = 0.7576 ± 0.022. This
+respectively corresponds to an improvement in the con-
+straining power of 43.8%, 3.8%, 21.6%, 5.5%, and a shift
+of 1.7σ, 0.4σ, 1.1σ, 0.6σ over the Limber approximation
+analysis. However, the inclusion of these additional data
+points does not lead to a noticeable improvement in the
+constraints on the DE parameters (see Fig. 11).
+Second, we evaluate the impact of the inclusion of the
+CT g
+ℓ
+data in the DESICℓlikelihood, an important novelty
+compared to the Mapar likelihood of Ref. [149]. Although
+the inclusion of CT g
+ℓ
+does not improve the constraints on
+the standard ΛCDM parameters (see Fig. 10), it does
+provide additional constraining power on the EFToDE
+parameters cB and cM, as illustrated in Fig. 11.
+The
+
+---PAGE BREAK---
+17
+constraints on cB and cM are improved by 55% and 21%,
+from cB = 1.2+2.0
+−1.5 and cM = 1.4+2.3
+−1.5 (without CT g
+ℓ) to
+cB = 0.94 ± 0.78 and cM = 1.5+1.7
+−1.3 (with CT g
+ℓ). This is
+attributed to the improved sensitivity to the Weyl poten-
+tial thanks to the temperature-galaxy cross-correlation.
+Concerning the constraints on the dark energy equation
+of state parameters w0 and wa, we do not get much im-
+provement.
+0.30
+0.36
+Ωm
+2.5
+3.0
+ln 1010As
+0.7
+0.8
+σ8
+0.7
+0.8
+σ8
+2.5
+3.0
+ln 1010As
+Cgg
+ℓ+ Cκg
+ℓ
+- Limber
+Cgg
+ℓ+ Cκg
+ℓ
+- w/o RSD - full
+Cgg
+ℓ+ Cκg
+ℓ+ CTg
+ℓ
+- w/o RSD - full
+Cgg
+ℓ+ Cκg
+ℓ+ CTg
+ℓ
+- w RSD - full
+FIG. 10: 1D and 2D posterior distributions reconstructed
+from our DESICℓlikelihood for the ΛCDM model and for
+several analysis settings. In particular, we evaluate the
+impact of (i) the full integral prediction compared to the
+Limber approximation, (ii) the RSD correction, and (iii)
+the inclusion of the CT g
+ℓ
+data.
+Third, always in Fig. 10, we gauge the impact of
+adding the redshift-space distortion (RSD) contribution,
+which is significant only on the largest angular scales
+(ℓ≲79 [149]).
+We observe a noticeable shift in the
+parameter posterior of 1.1σ, 0.2σ, and 0.6σ for Ωm,
+σ8, and ln(1010As).
+We then obtain as a final con-
+straint Ωm = 0.3167 ± 0.0088, σ8 = 0.744 ± 0.026,
+ln1010As = 2.842 ± 0.097, and S8 = 0.76 ± 0.024 for
+Cgg
+ℓ
++ Cκg
+ℓ
++ CT g
+ℓ
+(with the full integral and the RSD
+contribution). For the DE parameters, we do not observe
+any significant shift and improvement, and we obtain as
+a final constraint w0 = −0.79 ± 0.32, wa = −1.46+0.61
+−1.4 ,
+cB = 0.82 ± 0.78, and cM = 1.7 ± 1.3.
+Appendix B: Supplementary analysis products
+In this appendix, we report the cosmological con-
+straints, the ∆χ2
+min with respect to ΛCDM, and the pref-
+erence over ΛCDM, for the CPL model with PPF in
+Tab. I and for the CPL model with EFTofDE in Tab. II.
+In addition, in Tab. III, we display the best-fit χ2 per
+experiment reconstructed from our All analysis for the
+ΛCDM model, the CPL model with PPF, and the CPL
+model with EFTofDE. Finally, in Fig. 12, we display the
+1D and 2D posterior distributions reconstructed from our
+Baseline and All analyses for the CPL model with and
+without EFTofDE.
+[1] A. G. Riess et al. (Supernova Search Team), Astron. J.
+116, 1009 (1998), arXiv:astro-ph/9805201.
+[2] N. Aghanim et al. (Planck), Astron. Astrophys. 641, A6
+(2020), [Erratum: Astron.Astrophys. 652, C4 (2021)],
+arXiv:1807.06209 [astro-ph.CO].
+[3] S. Alam et al. (BOSS), Mon. Not. Roy. Astron. Soc.
+470, 2617 (2017), arXiv:1607.03155 [astro-ph.CO].
+[4] D. M. Scolnic et al. (Pan-STARRS1), Astrophys. J. 859,
+101 (2018), arXiv:1710.00845 [astro-ph.CO].
+[5] A. G. Adame et al. (DESI), JCAP 04, 012 (2025),
+arXiv:2404.03000 [astro-ph.CO].
+[6] D.
+Brout
+et
+al.,
+Astrophys.
+J.
+938,
+110
+(2022),
+arXiv:2202.04077 [astro-ph.CO].
+[7] D. Rubin et al.,
+(2023), arXiv:2311.12098 [astro-
+ph.CO].
+[8] T. M. C. Abbott et al. (DES), Astrophys. J. Lett. 973,
+L14 (2024), arXiv:2401.02929 [astro-ph.CO].
+[9] A. G. Adame et al. (DESI), JCAP 02, 021 (2025),
+arXiv:2404.03002 [astro-ph.CO].
+[10] A. G. Adame et al. (DESI), (2024), arXiv:2411.12022
+[astro-ph.CO].
+[11] G. Efstathiou, Mon. Not. Roy. Astron. Soc. 538, 875
+(2025), arXiv:2408.07175 [astro-ph.CO].
+[12] M.
+Abdul
+Karim
+et
+al.
+(DESI),
+(2025),
+arXiv:2503.14738 [astro-ph.CO].
+[13] E. Camphuis et al. (SPT-3G), (2025), arXiv:2506.20707
+[astro-ph.CO].
+[14] A.
+Cozzumbo,
+M.
+Atzori
+Corona,
+R.
+Murgia,
+M.
+Archidiacono,
+and
+M.
+Cadeddu,
+(2025),
+arXiv:2511.01967 [astro-ph.CO].
+[15] T. Jhaveri, T. Karwal, and W. Hu, Phys. Rev. D 112,
+043541 (2025), arXiv:2504.21813 [astro-ph.CO].
+[16] R.
+K.
+Sharma
+and
+J.
+Lesgourgues,
+(2025),
+arXiv:2510.15835 [astro-ph.CO].
+
+---PAGE BREAK---
+18
+Cgg
+ℓ
++ Cκg
+ℓ
+– Limber
+Cgg
+ℓ
++ Cκg
+ℓ
+– w/o RSD – full
+Cgg
+ℓ
++ Cκg
+ℓ
++ CT g
+ℓ
+– w/o RSD – full
+Cgg
+ℓ
++ Cκg
+ℓ
++ CT g
+ℓ
+– w RSD – full
+−2
+0
+2
+4
+cB
+−2
+0
+2
+4
+cM
+−2
+−1
+0
+w0
+−3
+−2
+−1
+0
+1
+wa
+FIG. 11: 2D posterior distributions of {cB, cM} and {w0, wa} reconstructed from our DESICℓlikelihood for our
+EFTofDE configuration and for several analysis settings. In particular, we evaluate the impact of (i) the SwiftCℓ
+prediction compared to the Limber approximation, (ii) the RSD correction and (iii) the inclusion of the CT g
+ℓ
+data.
+[17] V. Poulin, T. L. Smith, R. Calder´on,
+and T. Simon,
+(2025), arXiv:2505.08051 [astro-ph.CO].
+[18] S. H. Mirpoorian, K. Jedamzik,
+and L. Pogosian,
+(2025), arXiv:2504.15274 [astro-ph.CO].
+[19] L.
+Amendola,
+Phys.
+Rev.
+D
+62,
+043511
+(2000),
+arXiv:astro-ph/9908023.
+[20] S. Das, P. S. Corasaniti, and J. Khoury, Phys. Rev. D
+73, 083509 (2006), arXiv:astro-ph/0510628.
+[21] R. Liu, Y. Zhu, W. Hu,
+and V. Miranda,
+(2025),
+arXiv:2510.14957 [astro-ph.CO].
+[22] W. J. Wolf, P. G. Ferreira,
+and C. Garc´ıa-Garc´ıa,
+(2025), arXiv:2509.17586 [astro-ph.CO].
+[23] G. Ye, M. Martinelli, B. Hu,
+and A. Silvestri, Phys.
+Rev. Lett. 134, 181002 (2025), arXiv:2407.15832 [astro-
+ph.CO].
+[24] Y. Cai, X. Ren, T. Qiu, M. Li, and X. Zhang, (2025),
+arXiv:2505.24732 [astro-ph.CO].
+[25] Y.-F. Cai, E. N. Saridakis, M. R. Setare, and J.-Q. Xia,
+Phys. Rept. 493, 1 (2010), arXiv:0909.2776 [hep-th].
+[26] B. Feng, X.-L. Wang, and X.-M. Zhang, Phys. Lett. B
+607, 35 (2005), arXiv:astro-ph/0404224.
+[27] J.-Q. Xia, Y.-F. Cai, T.-T. Qiu, G.-B. Zhao,
+and
+X. Zhang, Int. J. Mod. Phys. D 17, 1229 (2008),
+arXiv:astro-ph/0703202.
+[28] G.-B. Zhao, R. G. Crittenden, L. Pogosian,
+and
+X.
+Zhang,
+Phys.
+Rev.
+Lett.
+109,
+171301
+(2012),
+arXiv:1207.3804 [astro-ph.CO].
+[29] Z.-K. Guo, Y.-S. Piao, X.-M. Zhang, and Y.-Z. Zhang,
+Phys. Lett. B 608, 177 (2005), arXiv:astro-ph/0410654.
+[30] G.-B.
+Zhao,
+J.-Q.
+Xia,
+M.
+Li,
+B.
+Feng,
+and
+X. Zhang, Phys. Rev. D 72, 123515 (2005), arXiv:astro-
+ph/0507482.
+[31] J.-Q.
+Xia,
+G.-B.
+Zhao,
+B.
+Feng,
+H.
+Li,
+and
+X. Zhang, Phys. Rev. D 73, 063521 (2006), arXiv:astro-
+ph/0511625.
+[32] Y. Yang, X. Ren, Q. Wang, Z. Lu, D. Zhang, Y.-F.
+Cai,
+and E. N. Saridakis, Sci. Bull. 69, 2698 (2024),
+arXiv:2404.19437 [astro-ph.CO].
+[33] Y. Yang, Q. Wang, X. Ren, E. N. Saridakis, and Y.-F.
+Cai, Astrophys. J. 988, 123 (2025), arXiv:2504.06784
+[astro-ph.CO].
+[34] Y.-F. Cai, S. Capozziello, M. De Laurentis,
+and
+E. N. Saridakis, Rept. Prog. Phys. 79, 106901 (2016),
+arXiv:1511.07586 [gr-qc].
+[35] C. Li, Y. Cai, Y.-F. Cai,
+and E. N. Saridakis, JCAP
+10, 001 (2018), arXiv:1803.09818 [gr-qc].
+[36] P. Creminelli, G. D’Amico, J. Norena, and F. Vernizzi,
+JCAP 02, 018 (2009), arXiv:0811.0827 [astro-ph].
+[37] P. Creminelli, M. A. Luty, A. Nicolis, and L. Senatore,
+JHEP 12, 080 (2006), arXiv:hep-th/0606090.
+[38] N. Frusciante and L. Perenon, Phys. Rept. 857, 1
+(2020), arXiv:1907.03150 [astro-ph.CO].
+[39] E. Bellini and I. Sawicki, JCAP 07, 050 (2014),
+arXiv:1404.3713 [astro-ph.CO].
+[40] G. Gubitosi, F. Piazza, and F. Vernizzi, JCAP 02, 032
+(2013), arXiv:1210.0201 [hep-th].
+[41] J. Gleyzes, D. Langlois, and F. Vernizzi, Int. J. Mod.
+Phys. D 23, 1443010 (2015), arXiv:1411.3712 [hep-th].
+[42] J. Gleyzes, D. Langlois, F. Piazza,
+and F. Vernizzi,
+JCAP 08, 025 (2013), arXiv:1304.4840 [hep-th].
+[43] Z.
+Lu,
+T.
+Simon,
+and
+P.
+Zhang,
+(2025),
+arXiv:2503.04602 [astro-ph.CO].
+
+---PAGE BREAK---
+19
+2.20
+2.25
+10−2ωb
+0
+2
+4
+cM
+0
+1
+cB
+−1.0
+−0.5
+wa
+−0.95
+−0.80
+−0.65
+w0
+0.80
+0.85
+σ8
+0.96
+0.97
+0.98
+ns
+3.00
+3.05
+ln1010As
+0.66
+0.68
+h
+0.31
+0.32
+0.33
+Ωm
+0.31
+0.33
+Ωm
+0.66
+0.68
+h
+3.01
+3.06
+ln1010As
+0.96
+0.98
+ns
+0.80 0.86
+σ8
+−0.9 −0.7
+w0
+−1.0 −0.2
+wa
+0
+1
+cB
+0
+2
+4
+cM
+Baseline (CPL)
+Baseline (EFTDE)
+All (CPL)
+All (EFTDE)
+FIG. 12: 1D and 2D posterior distributions reconstructed from our Baseline and All analyses for the CPL model with
+and without EFTofDE.
+[44] M. Ishak et al., JCAP 09, 053 (2025), arXiv:2411.12026
+[astro-ph.CO].
+[45] J. Noller and A. Nicola, Phys. Rev. D 99, 103502 (2019),
+arXiv:1811.12928 [astro-ph.CO].
+[46] P. A. R. Ade et al. (Planck), Astron. Astrophys. 594,
+A14 (2016), arXiv:1502.01590 [astro-ph.CO].
+[47] M. Tristram et al., Astron. Astrophys. 682, A37 (2024),
+arXiv:2309.10034 [astro-ph.CO].
+[48] S. Das and T. Souradeep, JCAP 02, 002 (2014),
+arXiv:1312.0025 [astro-ph.CO].
+[49] A. Chudaykin, M. Kunz, and J. Carron, Phys. Rev. D
+112, 083537 (2025), arXiv:2503.09893 [astro-ph.CO].
+[50] B. St¨olzner, A. Cuoco, J. Lesgourgues,
+and M. Bil-
+icki, Phys. Rev. D 97, 063506 (2018), arXiv:1710.03238
+[astro-ph.CO].
+[51] J. Renk, M. Zumalac´arregui, F. Montanari, and A. Bar-
+reira, JCAP 10, 020 (2017), arXiv:1707.02263 [astro-
+ph.CO].
+[52] X.
+Zhao,
+P.
+Zhang,
+and
+F.
+Dong,
+(2025),
+arXiv:2511.04279 [astro-ph.CO].
+
+---PAGE BREAK---
+20
+CPL
+Baseline
+Baseline + ISWL Baseline + EFTBOSS Baseline + DESICℓ
+All
+All w/o BAO and SN
+102ωb
+2.233
+2.229
+2.226
+2.228
+2.230
+2.230
+2.226 ± 0.012
+2.226 ± 0.012
+2.229+0.013
+−0.012
+2.230 ± 0.012
+2.231 ± 0.011
+2.230+0.013
+−0.011
+Ωm
+0.3173
+0.3181
+0.3177
+0.3170
+0.3174
+0.3168
+0.3178 ± 0.0056
+0.3176 ± 0.0055
+0.3183 ± 0.0049
+0.3172 ± 0.0055
+0.3176 ± 0.0047
+0.3218+0.0080
+−0.0091
+h
+0.6673
+0.6664
+0.6675
+0.6671
+0.6666
+0.6680
+0.6675 ± 0.0056
+0.6676 ± 0.0055
+0.6661 ± 0.0047
+0.6670 ± 0.0055
+0.6661 ± 0.0046
+0.6621 ± 0.0084
+ln 1010As
+3.046
+3.044
+3.044
+3.041
+3.042
+3.039
+3.044 ± 0.012
+3.043 ± 0.012
+3.042 ± 0.012
+3.039+0.013
+−0.014
+3.035 ± 0.013
+3.035 ± 0.013
+ns
+0.9692
+0.9693
+0.9700
+0.9712
+0.9707
+0.9697
+0.9684 ± 0.0035
+0.9684 ± 0.0035
+0.9693 ± 0.0036
+0.9698+0.0038
+−0.0033
+0.9703 ± 0.0033
+0.9698 ± 0.0037
+σ8
+0.8003
+0.7993
+0.8033
+0.7981
+0.7971
+0.7993
+0.8023 ± 0.0085
+0.8022 ± 0.0083
+0.7975 ± 0.0077
+0.7964 ± 0.0090
+0.7925 ± 0.0080
+0.789 ± 0.010
+w0
+−0.788
+-0.779
+-0.778
+-0.784
+-0.778
+-0.774
+−0.769 ± 0.056
+−0.768 ± 0.056
+−0.780 ± 0.049
+−0.780 ± 0.057
+−0.788 ± 0.046
+−0.777+0.078
+−0.10
+wa
+−0.65
+-0.68
+-0.72
+-0.66
+-0.67
+-0.72
+−0.75 ± 0.22
+−0.76+0.23
+−0.21
+−0.67+0.21
+−0.18
+−0.67+0.23
+−0.20
+−0.62+0.19
+−0.16
+−0.62+0.37
+−0.27
+χ2
+min
+32218.2
+32220.2
+32863.6
+32247.6
+32895.2
+31249.6
+∆χ2
+min
+-17.8
+-18.0
+-25.4
+-17.0
+-24.6
+-7.6
+n-σ
+3.8
+3.8
+4.7
+3.7
+4.6
+2.3
+TABLE I: Best-fit values (first row) and mean ±1σ (second row) of the reconstructed parameters for the CPL model
+with PPF. We also display the total best-fit χ2
+min, the ∆χ2
+min with respect to ΛCDM, and the preference over ΛCDM.
+[53] F. Dong, P. Zhang, H. Xu,
+and J. Qin, Astrophys. J.
+982, 99 (2025), arXiv:2411.12594 [astro-ph.CO].
+[54] E. Seraille, J. Noller, and B. D. Sherwin, Phys. Rev. D
+110, 123525 (2024), arXiv:2401.06221 [astro-ph.CO].
+[55] G.-B. Zhao, L. Pogosian, A. Silvestri,
+and J. Zylber-
+berg, Phys. Rev. D 79, 083513 (2009), arXiv:0809.3791
+[astro-ph].
+[56] M. Martinelli, E. Calabrese, F. De Bernardis, A. Mel-
+chiorri, L. Pagano,
+and R. Scaramella, Phys. Rev. D
+83, 023012 (2011), arXiv:1010.5755 [astro-ph.CO].
+[57] N. Frusciante et al. (Euclid), Astron. Astrophys. 690,
+A133 (2024), arXiv:2306.12368 [astro-ph.CO].
+[58] I.
+S.
+Albuquerque
+et
+al.
+(Euclid),
+(2025),
+arXiv:2506.03008 [astro-ph.CO].
+[59] A. Reeves, S. Ferraro, A. Nicola,
+and A. Refregier,
+(2025), arXiv:2510.06114 [astro-ph.CO].
+[60] G. D’Amico, A. Refregier, L. Senatore, and P. Zhang,
+(2025), arXiv:2510.24878 [astro-ph.CO].
+[61] A. Reeves, A. Nicola, and A. Refregier, JCAP 06, 042
+(2025), arXiv:2502.01722 [astro-ph.CO].
+[62] R.
+de
+Belsunce
+et
+al.,
+JCAP
+10,
+077
+(2025),
+arXiv:2506.22416 [astro-ph.CO].
+[63] J. Kim et al., JCAP 12, 022 (2024), arXiv:2407.04606
+[astro-ph.CO].
+[64] C. Zhang, L. Zu, H.-Z. Chen, Y.-L. S. Tsai,
+and Y.-
+Z. Fan, JCAP 08, 003 (2024), arXiv:2402.18880 [astro-
+ph.CO].
+[65] M. A. Sabogal and R. C. Nunes, JCAP 09, 084 (2025),
+arXiv:2505.24465 [astro-ph.CO].
+[66] J. J. M. Carrasco, M. P. Hertzberg,
+and L. Senatore,
+JHEP 09, 082 (2012), arXiv:1206.2926 [astro-ph.CO].
+[67] R. Angulo, M. Fasiello, L. Senatore, and Z. Vlah, JCAP
+09, 029 (2015), arXiv:1503.08826 [astro-ph.CO].
+[68] L. Senatore, JCAP 11, 007 (2015), arXiv:1406.7843
+[astro-ph.CO].
+[69] D. Baumann, A. Nicolis, L. Senatore,
+and M. Zal-
+darriaga, JCAP 07, 051 (2012), arXiv:1004.2488 [astro-
+ph.CO].
+[70] A. Perko, L. Senatore, E. Jennings, and R. H. Wechsler,
+(2016), arXiv:1610.09321 [astro-ph.CO].
+[71] T. Fujita, V. Mauerhofer, L. Senatore, Z. Vlah,
+and
+R. Angulo, JCAP 01, 009 (2020), arXiv:1609.00717
+[astro-ph.CO].
+[72] L.
+Senatore
+and
+M.
+Zaldarriaga,
+(2014),
+arXiv:1409.1225 [astro-ph.CO].
+[73] V. Desjacques, D. Jeong, and F. Schmidt, Phys. Rept.
+733, 1 (2018), arXiv:1611.09787 [astro-ph.CO].
+[74] V. Assassi, D. Baumann, D. Green, and M. Zaldarriaga,
+JCAP 08, 056 (2014), arXiv:1402.5916 [astro-ph.CO].
+[75] Z. Vlah, M. White,
+and A. Aviles, JCAP 09, 014
+(2015), arXiv:1506.05264 [astro-ph.CO].
+[76] P. Zhang, G. D’Amico, L. Senatore, C. Zhao,
+and
+Y. Cai, JCAP 02, 036 (2022), arXiv:2110.07539 [astro-
+ph.CO].
+
+---PAGE BREAK---
+21
+EFTofDE
+Baseline
+Baseline + ISWL Baseline + EFTBOSS Baseline + DESICℓ
+All
+All w/o BAO and SN
+102ωb
+2.234
+2.235
+2.233
+2.236
+2.236
+2.236
+2.236 ± 0.012
+2.235 ± 0.012
+2.236+0.013
+−0.011
+2.237 ± 0.011
+2.237+0.011
+−0.010
+2.235 ± 0.012
+Ωm
+0.3165
+0.3166
+0.3171
+0.3167
+0.3162
+0.3173
+0.3159 ± 0.0056
+0.3158 ± 0.0056
+0.3173 ± 0.0047
+0.3159 ± 0.0054
+0.3172 ± 0.0046
+0.3234 ± 0.0091
+h
+0.6675
+0.6671
+0.6672
+0.6666
+0.6673
+0.6661
+0.6673 ± 0.0056
+0.6674 ± 0.0056
+0.6655 ± 0.0047
+0.6670 ± 0.0055
+0.6652 ± 0.0045
+0.6591 ± 0.0089
+ln 1010As
+3.037
+3.038
+3.037
+3.037
+3.040
+3.039
+3.032 ± 0.013
+3.036 ± 0.013
+3.029 ± 0.013
+3.032 ± 0.014
+3.033 ± 0.014
+3.033 ± 0.014
+ns
+0.9706
+0.9711
+0.9703
+0.9715
+0.9720
+0.9725
+0.9710 ± 0.0035
+0.9710 ± 0.0035
+0.9710 ± 0.0035
+0.9715 ± 0.0033
+0.9720 ± 0.0034
+0.9716 ± 0.0036
+σ8
+0.805
+0.807
+0.804
+0.801
+0.805
+0.803
+0.817+0.013
+−0.019
+0.821+0.014
+−0.016
+0.8033+0.0087
+−0.011
+0.812+0.011
+−0.017
+0.8016+0.0097
+−0.011
+0.796 ± 0.013
+w0
+-0.788
+-0.792
+-0.789
+-0.792
+-0.798
+-0.805
+−0.805 ± 0.054
+−0.809 ± 0.052
+−0.801 ± 0.045
+−0.798 ± 0.054
+−0.809 ± 0.043
+−0.820+0.078
+−0.088
+wa
+-0.64
+-0.61
+-0.64
+-0.59
+-0.58
+-0.54
+−0.55 ± 0.20
+−0.53 ± 0.18
+−0.53 ± 0.17
+−0.56+0.21
+−0.18
+−0.49 ± 0.16
+−0.38 ± 0.28
+cB
+0.36
+0.20
+0.60
+0.52
+0.27
+0.28
+0.65+0.24
+−0.37
+0.45+0.16
+−0.30
+0.67+0.23
+−0.37
+0.81+0.28
+−0.41
+0.46+0.16
+−0.22
+0.50+0.18
+−0.26
+cM
+0.10
+0.26
+-0.33
+-0.03
+0.18
+0.19
+0.75+0.63
+−1.0
+0.98+0.56
+−0.82
+0.16+0.41
+−0.60
+0.38+0.53
+−0.83
+0.31+0.39
+−0.49
+0.35+0.39
+−0.54
+χ2
+min
+32216.4
+32218.8
+32862.0
+32245.2
+32893.6
+31247.8
+∆χ2
+min
+-19.6
+-19.4
+-27.0
+-19.4
+-26.2
+-9.4
+n-σ
+3.4
+3.4
+4.3
+3.4
+4.2
+1.9
+TABLE II: Best-fit values (first row) and mean ±1σ (second row) of the reconstructed parameters of the CPL model
+model with EFTofDE. We also display the total best-fit χ2
+min, the ∆χ2
+min with respect to ΛCDM, and the preference
+over ΛCDM.
+χ2
+min
+high-ℓTTTEEE low-ℓTT low-ℓEE Lensing ISWL DESICℓEFTBOSS DESI BAO DES Y5
+Total
+ΛCDM
+30510.69
+21.77
+32.97
+4.87
+2.08
+31.90
+653.00
+12.77
+1649.18 32919.8
+CPL
+30509.83
+22.02
+32.83
+4.16
+1.92
+32.30
+645.86
+8.01
+1637.65 32895.2
+EFTofDE
+30508.91
+22.08
+32.87
+3.54
+2.08
+32.38
+645.57
+8.00
+1637.61 32893.6
+TABLE III: Best-fit χ2 of the various likelihoods included in our full data combination analysis (i.e., the “All” analysis)
+for ΛCDM, CPL with PPF, and CPL with EFTofDE.
+[77] G. D’Amico, Y. Donath, M. Lewandowski, L. Senatore,
+and P. Zhang, JCAP 07, 041 (2024), arXiv:2211.17130
+[astro-ph.CO].
+[78] M. Lewandowski, L. Senatore, F. Prada, C. Zhao,
+and C.-H. Chuang, Phys. Rev. D 97, 063526 (2018),
+arXiv:1512.06831 [astro-ph.CO].
+[79] M. Mirbabayi, F. Schmidt, and M. Zaldarriaga, JCAP
+07, 030 (2015), arXiv:1412.5169 [astro-ph.CO].
+[80] L. Senatore and M. Zaldarriaga, JCAP 02, 013 (2015),
+arXiv:1404.5954 [astro-ph.CO].
+[81] M. Lewandowski and L. Senatore, JCAP 03, 018 (2020),
+arXiv:1810.11855 [astro-ph.CO].
+[82] L. Senatore and G. Trevisan, JCAP 05, 019 (2018),
+arXiv:1710.02178 [astro-ph.CO].
+[83] G. D’Amico, L. Senatore, and P. Zhang, JCAP 01, 006
+(2021), arXiv:2003.07956 [astro-ph.CO].
+
+---PAGE BREAK---
+22
+[84] T. Nishimichi, G. D’Amico, M. M. Ivanov, L. Sen-
+atore,
+M. Simonovi´c,
+M. Takada,
+M. Zaldarriaga,
+and P. Zhang, Phys. Rev. D 102, 123541 (2020),
+arXiv:2003.08277 [astro-ph.CO].
+[85] G. D’Amico, Y. Donath, M. Lewandowski, L. Senatore,
+and P. Zhang, JCAP 05, 059 (2024), arXiv:2206.08327
+[astro-ph.CO].
+[86] T. Simon, P. Zhang,
+and V. Poulin, JCAP 07, 041
+(2023), arXiv:2210.14931 [astro-ph.CO].
+[87] S. Spaar and P. Zhang, Phys. Rev. D 111, 023529
+(2025), arXiv:2312.15164 [astro-ph.CO].
+[88] P.
+Creminelli,
+J.
+Nore˜na,
+M.
+Simonovi´c,
+and
+F. Vernizzi, JCAP 12, 025 (2013), arXiv:1309.3557
+[astro-ph.CO].
+[89] A. Kehagias and A. Riotto, Nucl. Phys. B 873, 514
+(2013), arXiv:1302.0130 [astro-ph.CO].
+[90] G.
+D’Amico,
+M.
+Marinucci,
+M.
+Pietroni,
+and
+F. Vernizzi, JCAP 10, 069 (2021), arXiv:2109.09573
+[astro-ph.CO].
+[91] M. Peloso and M. Pietroni, JCAP 05, 031 (2013),
+arXiv:1302.0223 [astro-ph.CO].
+[92] L. Piga, M. Marinucci, G. D’Amico, M. Pietroni,
+F. Vernizzi,
+and B. S. Wright, JCAP 04, 038 (2023),
+arXiv:2211.12523 [astro-ph.CO].
+[93] P. Taule, M. Marinucci, G. Biselli, M. Pietroni,
+and
+F. Vernizzi, JCAP 03, 036 (2025), arXiv:2409.08971
+[astro-ph.CO].
+[94] B. Bose, K. Koyama, M. Lewandowski, F. Vernizzi, and
+H. A. Winther, JCAP 04, 063 (2018), arXiv:1802.01566
+[astro-ph.CO].
+[95] G. D’Amico, Y. Donath, L. Senatore,
+and P. Zhang,
+JCAP 03, 032 (2024), arXiv:2012.07554 [astro-ph.CO].
+[96] M. Lewandowski, A. Maleknejad,
+and L. Senatore,
+JCAP 05, 038 (2017), arXiv:1611.07966 [astro-ph.CO].
+[97] E. Silva and R. C. Nunes,
+(2025), arXiv:2507.13989
+[astro-ph.CO].
+[98] M. Chevallier and D. Polarski, Int. J. Mod. Phys. D 10,
+213 (2001), arXiv:gr-qc/0009008.
+[99] E. V. Linder, Phys. Rev. Lett. 90, 091301 (2003),
+arXiv:astro-ph/0208512.
+[100] W.
+Hu,
+Phys.
+Rev.
+D
+77,
+103524
+(2008),
+arXiv:0801.2433 [astro-ph].
+[101] W. Fang, W. Hu,
+and A. Lewis, Phys. Rev. D 78,
+087303 (2008), arXiv:0808.3125 [astro-ph].
+[102] J. Dakin, S. Hannestad, T. Tram, M. Knabenhans,
+and J. Stadel, JCAP 08, 013 (2019), arXiv:1904.05210
+[astro-ph.CO].
+[103] C. Cheung, P. Creminelli, A. L. Fitzpatrick, J. Kaplan,
+and L. Senatore, JHEP 03, 014 (2008), arXiv:0709.0293
+[hep-th].
+[104] M. Zumalac´arregui, E. Bellini, I. Sawicki, J. Lesgour-
+gues,
+and P. G. Ferreira, JCAP 08, 019 (2017),
+arXiv:1605.06102 [astro-ph.CO].
+[105] G. W. Horndeski, Int. J. Theor. Phys. 10, 363 (1974).
+[106] A. Nicolis, R. Rattazzi, and E. Trincherini, Phys. Rev.
+D 79, 064036 (2009), arXiv:0811.2197 [hep-th].
+[107] C. Deffayet, X. Gao, D. A. Steer,
+and G. Zahariade,
+Phys. Rev. D 84, 064039 (2011), arXiv:1103.3260 [hep-
+th].
+[108] T. Kobayashi, M. Yamaguchi, and J. Yokoyama, Prog.
+Theor. Phys. 126, 511 (2011), arXiv:1105.5723 [hep-th].
+[109] E. V. Linder, G. Seng¨or, and S. Watson, JCAP 05, 053
+(2016), arXiv:1512.06180 [astro-ph.CO].
+[110] E.
+V.
+Linder,
+Phys.
+Rev.
+D
+95,
+023518
+(2017),
+arXiv:1607.03113 [astro-ph.CO].
+[111] O. Pujolas, I. Sawicki, and A. Vikman, JHEP 11, 156
+(2011), arXiv:1103.5360 [hep-th].
+[112] A. Barreira, B. Li, C. Baugh, and S. Pascoli, JCAP 08,
+059 (2014), arXiv:1406.0485 [astro-ph.CO].
+[113] E. Bellini and M. Zumalacarregui, Phys. Rev. D 92,
+063522 (2015), arXiv:1505.03839 [astro-ph.CO].
+[114] M.
+Cataneo
+and
+E.
+Bellini,
+(2024),
+10.33232/001c.123470, arXiv:2407.11968 [astro-ph.CO].
+[115] G. Cusin, M. Lewandowski, and F. Vernizzi, JCAP 04,
+061 (2018), arXiv:1712.02782 [astro-ph.CO].
+[116] G. Cusin, M. Lewandowski, and F. Vernizzi, JCAP 04,
+005 (2018), arXiv:1712.02783 [astro-ph.CO].
+[117] Z. Sakr and M. Martinelli, JCAP 05, 030 (2022),
+arXiv:2112.14175 [astro-ph.CO].
+[118] L. Pogosian and A. Silvestri, Phys. Rev. D 94, 104014
+(2016), arXiv:1606.05339 [astro-ph.CO].
+[119] E. J. Copeland, M. Kopp, A. Padilla, P. M. Saffin,
+and C. Skordis, Phys. Rev. Lett. 122, 061301 (2019),
+arXiv:1810.08239 [gr-qc].
+[120] E. Bellini, A. J. Cuesta, R. Jimenez,
+and L. Verde,
+JCAP 02, 053 (2016), [Erratum: JCAP 06, E01 (2016)],
+arXiv:1509.07816 [astro-ph.CO].
+[121] D. Alonso, E. Bellini, P. G. Ferreira,
+and M. Zu-
+malac´arregui,
+Phys.
+Rev.
+D
+95,
+063502
+(2017),
+arXiv:1610.09290 [astro-ph.CO].
+[122] J. Gleyzes, D. Langlois, M. Mancarella, and F. Vernizzi,
+JCAP 02, 056 (2016), arXiv:1509.02191 [astro-ph.CO].
+[123] A. Chudaykin and M. Kunz, Phys. Rev. D 110, 123524
+(2024), arXiv:2407.02558 [astro-ph.CO].
+[124] B. P. Abbott et al. (LIGO Scientific, Virgo, Fermi-
+GBM, INTEGRAL), Astrophys. J. Lett. 848, L13
+(2017), arXiv:1710.05834 [astro-ph.HE].
+[125] J. M. Ezquiaga and M. Zumalac´arregui, Phys. Rev.
+Lett. 119, 251304 (2017), arXiv:1710.05901 [astro-
+ph.CO].
+[126] T. Baker, E. Bellini, P. G. Ferreira, M. Lagos, J. Noller,
+and I. Sawicki, Phys. Rev. Lett. 119, 251301 (2017),
+arXiv:1710.06394 [astro-ph.CO].
+[127] C. D. Kreisch and E. Komatsu, JCAP 12, 030 (2018),
+arXiv:1712.02710 [astro-ph.CO].
+[128] P. Creminelli and F. Vernizzi, Phys. Rev. Lett. 119,
+251302 (2017), arXiv:1710.05877 [astro-ph.CO].
+[129] B.
+Audren,
+J.
+Lesgourgues,
+K.
+Benabed,
+and
+S. Prunet, JCAP 1302, 001 (2013), arXiv:1210.7183
+[astro-ph.CO].
+[130] T. Brinckmann and J. Lesgourgues, “MontePython 3:
+boosted MCMC sampler and other features,”
+(2018),
+arXiv:1804.07261 [astro-ph.CO].
+[131] D. Blas, J. Lesgourgues,
+and T. Tram, JCAP 1107,
+034 (2011), arXiv:1104.2933 [astro-ph.CO].
+[132] M. Raveri, B. Hu, N. Frusciante,
+and A. Silvestri,
+Phys. Rev. D 90, 043513 (2014), arXiv:1405.1022 [astro-
+ph.CO].
+[133] E. Bellini et al., Phys. Rev. D 97, 023520 (2018),
+arXiv:1709.09135 [astro-ph.CO].
+[134] Y. Akrami et al. (Planck), Astron. Astrophys. 643, A42
+(2020), arXiv:2007.04997 [astro-ph.CO].
+[135] M. Tristram et al., Astron. Astrophys. 647, A128
+(2021), arXiv:2010.01139 [astro-ph.CO].
+[136] N. Aghanim et al. (Planck), Astron. Astrophys. 641, A5
+(2020), arXiv:1907.12875 [astro-ph.CO].
+
+---PAGE BREAK---
+23
+[137] J. Carron, M. Mirmelstein,
+and A. Lewis, JCAP 09,
+039 (2022), arXiv:2206.07773 [astro-ph.CO].
+[138] M. Abdul Karim et al. (DESI), (2025), 10.1103/2wwn-
+xjm5, arXiv:2503.14739 [astro-ph.CO].
+[139] B. Popovic et al. (DES),
+(2025), arXiv:2511.07517
+[astro-ph.CO].
+[140] T. M. C. Abbott et al. (DES), (2024), arXiv:2401.02929
+[astro-ph.CO].
+[141] J. Torrado and A. Lewis, JCAP 05, 057 (2021),
+arXiv:2005.05290 [astro-ph.IM].
+[142] J. Carron, A. Lewis,
+and G. Fabbian, Phys. Rev. D
+106, 103507 (2022), arXiv:2209.07395 [astro-ph.CO].
+[143] M. M. Ivanov, O. H. E. Philcox, T. Nishimichi, M. Si-
+monovi´c, M. Takada,
+and M. Zaldarriaga, Phys. Rev.
+D 105, 063512 (2022), arXiv:2110.10161 [astro-ph.CO].
+[144] B. Reid et al. (BOSS), Mon. Not. Roy. Astron. Soc. 455,
+1553 (2016), arXiv:1509.06529 [astro-ph.CO].
+[145] F.-S. Kitaura et al., Mon. Not. Roy. Astron. Soc. 456,
+4156 (2016), arXiv:1509.06400 [astro-ph.CO].
+[146] F. Beutler, E. Castorina, and P. Zhang, JCAP 03, 040
+(2019), arXiv:1810.05051 [astro-ph.CO].
+[147] R. Zhou et al., JCAP 11, 097 (2023), arXiv:2309.06443
+[astro-ph.CO].
+[148] R. Zhou et al. (DESI), Astron. J. 165, 58 (2023),
+arXiv:2208.08515 [astro-ph.CO].
+[149] N. Sailer et al., JCAP 06, 008 (2025), arXiv:2407.04607
+[astro-ph.CO].
+[150] D. Alonso, J. Sanchez, and A. Slosar (LSST Dark En-
+ergy Science), Mon. Not. Roy. Astron. Soc. 484, 4127
+(2019), arXiv:1809.09603 [astro-ph.CO].
+[151] L. Reymond, A. Reeves, P. Zhang,
+and A. Refregier,
+(2025), arXiv:2505.22718 [astro-ph.CO].
+[152] Y. Zhang, A. R. Pullen, and A. S. Maniyar, Phys. Rev.
+D 104, 103523 (2021), arXiv:2110.00872 [astro-ph.CO].
+[153] P. L. Taylor and K. Markoviˇc, Phys. Rev. D 106, 063536
+(2022), arXiv:2205.14167 [astro-ph.CO].
+[154] M. Maus et al., (2025), arXiv:2505.20656 [astro-ph.CO].
+[155] G. S. Farren, O. H. E. Philcox,
+and B. D. Sherwin,
+Phys. Rev. D 105, 063503 (2022), arXiv:2112.10749
+[astro-ph.CO].
+[156] T. L. Smith, V. Poulin,
+and T. Simon, Phys. Rev. D
+108, 103525 (2023), arXiv:2208.12992 [astro-ph.CO].
+[157] A. G. Adame et al. (DESI), JCAP 07, 017 (2025),
+arXiv:2411.12020 [astro-ph.CO].
+[158] F.
+Beutler,
+C.
+Blake,
+M.
+Colless,
+D.
+H.
+Jones,
+L. Staveley-Smith, L. Campbell, Q. Parker, W. Saun-
+ders, and F. Watson, Mon. Not. Roy. Astron. Soc. 416,
+3017 (2011), arXiv:1106.3366 [astro-ph.CO].
+[159] A. J. Ross, L. Samushia, C. Howlett, W. J. Percival,
+A. Burden,
+and M. Manera, Mon. Not. Roy. Astron.
+Soc. 449, 835 (2015), arXiv:1409.3242 [astro-ph.CO].
+[160] V. de Sainte Agathe et al. (eBOSS), Astron. Astrophys.
+629, A85 (2019), arXiv:1904.03400 [astro-ph.CO].
+[161] A. Cuceu, J. Farr, P. Lemos, and A. Font-Ribera, JCAP
+10, 044 (2019), arXiv:1906.11628 [astro-ph.CO].
+[162] T. Karwal, Y. Patel, A. Bartlett, V. Poulin, T. L.
+Smith,
+and D. N. Pfeffer,
+(2024), arXiv:2401.14225
+[astro-ph.CO].
+[163] A. Lewis, “GetDist: a Python package for analysing
+Monte Carlo samples,” (2019), arXiv:1910.13970 [astro-
+ph.IM].
+[164] R. A. Porto, L. Senatore,
+and M. Zaldarriaga, JCAP
+05, 022 (2014), arXiv:1311.2168 [astro-ph.CO].
+[165] E. Pajer and M. Zaldarriaga, JCAP 08, 037 (2013),
+arXiv:1301.7182 [astro-ph.CO].
+[166] A. A. Abolhasani, M. Mirbabayi, and E. Pajer, JCAP
+05, 063 (2016), arXiv:1509.07886 [hep-th].
+[167] T.
+Baldauf,
+M.
+Mirbabayi,
+M.
+Simonovi´c,
+and
+M. Zaldarriaga, Phys. Rev. D 92, 043514 (2015),
+arXiv:1504.04366 [astro-ph.CO].
+[168] D. Blas, M. Garny, M. M. Ivanov,
+and S. Sibiryakov,
+JCAP 07, 028 (2016), arXiv:1605.02149 [astro-ph.CO].
+[169] J. J. M. Carrasco, S. Foreman, D. Green, and L. Sen-
+atore, JCAP 07, 056 (2014), arXiv:1304.4946 [astro-
+ph.CO].
+[170] J. J. M. Carrasco, S. Foreman, D. Green, and L. Sen-
+atore, JCAP 07, 057 (2014), arXiv:1310.0464 [astro-
+ph.CO].
+[171] G. D’Amico, J. Gleyzes, N. Kokron, K. Markovic,
+L. Senatore, P. Zhang, F. Beutler,
+and H. Gil-Mar´ın,
+JCAP 05, 005 (2020), arXiv:1909.05271 [astro-ph.CO].
+[172] G. D’Amico, L. Senatore, P. Zhang, and T. Nishimichi,
+JCAP 01, 037 (2024), arXiv:2110.00016 [astro-ph.CO].
+[173] T. Colas, G. D’amico, L. Senatore, P. Zhang,
+and
+F. Beutler, JCAP 06, 001 (2020), arXiv:1909.07951
+[astro-ph.CO].
+[174] T. Simon, P. Zhang, V. Poulin, and T. L. Smith, Phys.
+Rev. D 107, 063505 (2023), arXiv:2208.05930 [astro-
+ph.CO].
+[175] C. Alcock and B. Paczynski, Nature 281, 358 (1979).
+[176] S. Dodelson, Modern Cosmology (Academic Press, Am-
+sterdam, 2003).
+[177] D. N. Limber, Astrophys. J. 119, 655 (1954).
+[178] N. Kaiser, Astrophys. J. 388, 272 (1992).
+[179] M. LoVerde and N. Afshordi, Phys. Rev. D 78, 123506
+(2008), arXiv:0809.5112 [astro-ph].
+[180] X. Fang, E. Krause, T. Eifler, and N. MacCrann, JCAP
+05, 010 (2020), arXiv:1911.11947 [astro-ph.CO].
+[181] J. V. Villumsen, (1995), arXiv:astro-ph/9512001.
+[182] R. Moessner, B. Jain,
+and J. V. Villumsen, Mon.
+Not. Roy. Astron. Soc. 294, 291 (1998), arXiv:astro-
+ph/9708271.
+[183] E. Krause et al. (DES), (2021), arXiv:2105.13548 [astro-
+ph.CO].
+[184] N. Kaiser, Astrophys. J. Lett. 284, L9 (1984).
+[185] J. M. Bardeen, J. R. Bond, N. Kaiser, and A. S. Szalay,
+Astrophys. J. 304, 15 (1986).
+[186] A. Nicola, A. Refregier, and A. Amara, Phys. Rev. D
+94, 083517 (2016), arXiv:1607.01014 [astro-ph.CO].
+[187] E. Di Valentino, A. Melchiorri, and J. Silk, Phys. Rev.
+D 93, 023513 (2016), arXiv:1509.07501 [astro-ph.CO].
+[188] E. Calabrese, A. Slosar, A. Melchiorri, G. F. Smoot,
+and
+O.
+Zahn,
+Phys.
+Rev.
+D
+77,
+123531
+(2008),
+arXiv:0803.2309 [astro-ph].
+[189] E. Specogna, W. Giar`e, and E. Di Valentino, Phys. Rev.
+D 111, 103510 (2025), arXiv:2411.03896 [astro-ph.CO].
+[190] E. Rosenberg, S. Gratton, and G. Efstathiou, Mon. Not.
+Roy. Astron. Soc. 517, 4620 (2022), arXiv:2205.10869
+[astro-ph.CO].
+[191] F. J. Qu et al. (ACT), Astrophys. J. 962, 112 (2024),
+arXiv:2304.05202 [astro-ph.CO].
+[192] M. S. Madhavacheril et al. (ACT), Astrophys. J. 962,
+113 (2024), arXiv:2304.05203 [astro-ph.CO].
+[193] E. Sefusatti and F. Vernizzi, JCAP 03, 047 (2011),
+arXiv:1101.1026 [astro-ph.CO].
+[194] P. Creminelli, G. D’Amico, J. Norena, L. Senatore,
+and F. Vernizzi, JCAP 03, 027 (2010), arXiv:0911.2701
+
+---PAGE BREAK---
+24
+[astro-ph.CO].
+[195] P.
+Zhang
+and
+Y.
+Cai,
+JCAP
+01,
+031
+(2022),
+arXiv:2111.05739 [astro-ph.CO].
+[196] M. A. Rodriguez-Meza, A. Aviles, H. E. Noriega, C.-Z.
+Ruan, B. Li, M. Vargas-Maga˜na, and J. L. Cervantes-
+Cota, JCAP 03, 049 (2024), arXiv:2312.10510 [astro-
+ph.CO].
+[197] A. Albrecht et al., (2006), arXiv:astro-ph/0609591.
+[198] J. Renk, M. Zumalacarregui, and F. Montanari, JCAP
+07, 040 (2016), arXiv:1604.03487 [astro-ph.CO].
+[199] A. G. Adame et al. (DESI), JCAP 09, 008 (2025),
+arXiv:2411.12021 [astro-ph.CO].
+[200] Y. Mellier et al. (Euclid), Astron. Astrophys. 697, A1
+(2025), arXiv:2405.13491 [astro-ph.CO].
+[201] ˇZ. Ivezi´c et al. (LSST), Astrophys. J. 873, 111 (2019),
+arXiv:0805.2366 [astro-ph].
+[202] C. R. Harris, K. J. Millman, S. J. van der Walt, R. Gom-
+mers, P. Virtanen, D. Cournapeau, E. Wieser, J. Tay-
+lor, S. Berg, N. J. Smith, R. Kern, M. Picus, S. Hoyer,
+M. H. van Kerkwijk, M. Brett, A. Haldane, J. F. del R´ıo,
+M. Wiebe, P. Peterson, P. G´erard-Marchant, K. Shep-
+pard, T. Reddy, W. Weckesser, H. Abbasi, C. Gohlke,
+and T. E. Oliphant, Nature 585, 357 (2020).
+[203] P. Virtanen, R. Gommers, T. E. Oliphant, M. Haber-
+land, T. Reddy, D. Cournapeau, E. Burovski, P. Pe-
+terson, W. Weckesser, J. Bright, S. J. van der Walt,
+M. Brett, J. Wilson, K. J. Millman, N. Mayorov,
+A. R. J. Nelson, E. Jones, R. Kern, E. Larson, C. J.
+Carey, ˙I. Polat, Y. Feng, E. W. Moore, J. VanderPlas,
+D. Laxalde, J. Perktold, R. Cimrman, I. Henriksen,
+E. A. Quintero, C. R. Harris, A. M. Archibald, A. H.
+Ribeiro, F. Pedregosa, P. van Mulbregt, and SciPy 1.0
+Contributors, Nature Methods 17, 261 (2020).
+[204] J. D. Hunter, Computing in Science & Engineering 9,
+90 (2007).
+[205] N. Kokron, J. DeRose, S.-F. Chen, M. White,
+and
+R. H. Wechsler, Mon. Not. Roy. Astron. Soc. 505, 1422
+(2021), arXiv:2101.11014 [astro-ph.CO].
+[206] T. M. C. Abbott et al. (DES), Phys. Rev. D 107, 083504
+(2023), arXiv:2207.05766 [astro-ph.CO].
+[207] C. M. A. Zanoletti and C. D. Leonard, Phys. Rev. D
+112, 063547 (2025), arXiv:2503.20951 [astro-ph.CO].
+[208] R. E. Smith, J. A. Peacock, A. Jenkins, S. D. M. White,
+C. S. Frenk, F. R. Pearce, P. A. Thomas, G. Efstathiou,
+and H. M. P. Couchmann (VIRGO Consortium), Mon.
+Not. Roy. Astron. Soc. 341, 1311 (2003), arXiv:astro-
+ph/0207664.
+[209] R. Takahashi, M. Sato, T. Nishimichi, A. Taruya,
+and
+M.
+Oguri,
+Astrophys.
+J.
+761,
+152
+(2012),
+arXiv:1208.2701 [astro-ph.CO].
+[210] A. Zonca, L. Singer, D. Lenz, M. Reinecke, C. Rosset,
+E. Hivon, and K. Gorski, Journal of Open Source Soft-
+ware 4, 1298 (2019).
+[211] K. M. G´orski, E. Hivon, A. J. Banday, B. D. Wandelt,
+F. K. Hansen, M. Reinecke,
+and M. Bartelmann, As-
+trophys. J. 622, 759 (2005), arXiv:astro-ph/0409513.
+[212] A. Challinor, G. Chon, S. Colombi, E. Hivon, S. Prunet,
+and I. Szapudi, “PolSpice:
+Spatially Inhomogeneous
+Correlation Estimator for Temperature and Polari-
+sation,” Astrophysics Source Code Library,
+record
+ascl:1109.005 (2011), ascl:1109.005.
+
+---PAGE BREAK---

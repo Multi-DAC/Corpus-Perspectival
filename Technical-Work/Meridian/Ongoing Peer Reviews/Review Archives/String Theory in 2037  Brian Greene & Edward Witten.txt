@@ -1,0 +1,1337 @@
+00:00 My interpretation of the statement that 
+we have free will is that our actions  
+00:05 are largely determined by the state of our brains.
+00:07 But of course, the state of your brain presumably 
+is described by the equations of fundamental  
+00:12 physics. So when you have a great breakthrough, 
+Edward Witten, with that view, do you take credit?
+00:20 If I discover something nice, I 
+enjoy it without worrying about it.
+00:24 That's probably the best way 
+of going about it for sure.
+00:28 So tonight we're going to be talking about 
+things in the realm of quantum mechanics,  
+00:34 general relativity, gravity, black holes, things 
+of that sort. And I'm so pleased to host Edward  
+00:42 Witten for tonight's conversation. He is widely 
+regarded as the greatest physicist of our era,  
+00:51 the only physicist to receive the Fields 
+Medal, the highest honor in mathematics.  
+00:56 His ideas and research has really transformed 
+the entire landscape of our understanding of  
+01:02 physics. And so with that, Edward, thank 
+you so much for coming here tonight.
+01:06 You said you weren't going to embarrass me.
+01:12 So I just wanted to quickly pick up, Edward, 
+with a conversation that we had 39 years ago.
+01:20 Oh, you've got a good memory.
+01:21 It was at Harvard. You'd 
+just given the Loeb lectures.
+01:25 Yes.
+01:26 And I was a young graduate student 
+or postdoc. I can't recall.
+01:30 And so 1986 we're talking.
+01:32 About 1986. Exactly.
+01:33 So probably I was very 
+excited about String Theory.
+01:35 You were very excited about String 
+Theory. And the environment at Harvard  
+01:40 in many places in the country was not 
+particularly supportive of String Theory.  
+01:45 And so I was sort of hearing these 
+negative things I was working on.  
+01:48 So you and I had a moment together and 
+I said, is String Theory here to stay?
+01:55 Yes.
+01:56 And you said 50 years from now, people 
+will still be talking about String  
+02:00 Theory. That's now 11 years away. Where 
+do you think we are on that prognosis?
+02:08 Well, I'm going to stick with the prediction, 
+first of all. So after all 39 years have gone  
+02:15 by, so we have more perspective on 2036 than 
+we had right back then. Hopefully the world  
+02:21 will be intact, but we'll see about that. Well, 
+we've learned a lot since then, of course. The  
+02:29 biggest advance in String Theory ... In 1986, we 
+understood String Theory as a formal perturbation  
+02:37 expansion, which means we understood it when 
+quantum effects were very small. But understanding  
+02:44 what happens when quantum effects become strong 
+seems completely out of reach. And of course,  
+02:49 that was the biggest advancement that happened 
+in the '90s and the following decade after our  
+02:53 conversation, that we got sort of an overview 
+of what happens when quantum effects are big,  
+02:58 at least with one interpretation of that 
+question. And then at the tail end of that  
+03:03 was sort of Juan Maldacena, now my colleague 
+at the Institute discovered his famous duality  
+03:09 between gauge theory and gravity that gave a 
+completely different perspective and actually gave  
+03:14 us what we call technically a non-perturbative 
+definition of quantum gravity in some situations.
+03:20 That means a complete definition that 
+you can take to the bank, sort of,  
+03:25 but I have to say sort of because it's written 
+in a language we don't understand. So then  
+03:32 off and on for the last almost 30 
+years by now, we've been trying  
+03:36 to learn to decipher the language in 
+which Maldacena's duality is written.
+03:42 But I've told you the highlights of what we've 
+learned. I should balance that by saying what  
+03:46 we haven't learned. So String Theory is 
+this incredible tapestry with all kinds  
+03:53 of amazing things that have been discovered, but 
+the unifying principles behind it, in my opinion,  
+03:58 are not known, and that's why we are still largely 
+in the dark. So if I could make a contrast between  
+04:04 the way Einstein made his greatest discovery, his 
+theory of gravity, known as general relativity. In  
+04:11 bits and pieces, Einstein developed the concepts 
+first and then found the theory that matched the  
+04:15 concepts. Physicists instead stumbled upon String 
+Theory without having any idea what it was,  
+04:21 and that actually originally happened more 
+than a decade before our conversation.  
+04:25 So if we started from the very beginning, 
+it's been more than 50 years by now.
+04:30 Yeah. And so can we go back? I mean, not 
+necessarily 50 years, but just to set this scene  
+04:36 a little bit, you made mention of String Theory, 
+quantum mechanics, general relativity. So quantum  
+04:42 mechanics we learned way back in the 1920s, vital 
+to understanding the small things in the world,  
+04:48 molecules, atoms, subatomic particles, and we 
+did a pretty good job of blending into quantum  
+04:55 mechanics, our understanding of electricity, 
+magnetism, nuclear forces. But we've had a  
+05:02 hard time putting gravity together with 
+quantum mechanics. Why is it so hard?
+05:08 Gravity is hard because the non-linear 
+mathematics Einstein used in his theory  
+05:12 doesn't agree well with quantum theory. So 
+actually understanding the other forces in  
+05:18 quantum theory with special relativity was very 
+difficult. It really took half a century and  
+05:24 didn't come to fruition until the mid '70s 
+with the standard model of particle physics  
+05:30 and that barely works. It works because the other 
+forces are described by mathematics that is still  
+05:36 nonlinear, but is not nearly as nonlinear as the 
+mathematics in Einstein's theory. The mathematics  
+05:41 in Einstein's theory really does not work with 
+quantum theory as far as we understand it. And  
+05:46 the original excitement about String Theory in 
+the 80s and the period where you and I first  
+05:49 met was because String Theory actually overcomes 
+that problem and makes it possible to calculate,  
+05:56 let's say, quantum corrections to processes 
+involving gravity and get sensible answers.
+06:00 And how important ... Another colleague 
+of yours, or at least Freeman Dyson,  
+06:06 he wrote an article some years ago in the New 
+York Review of Books. I don't know if you saw it,  
+06:10 where he basically said, "Why are all these people 
+worrying about putting quantum mechanics and  
+06:15 gravity together? They use quantum mechanics 
+where it's meant to be used small things,  
+06:19 use general relativity for big things, stars, 
+and galaxies. Stop trying to put them together."
+06:25 Well, the obvious counter to that is that the big 
+things are ultimately made out of small things. So  
+06:31 the sun, for example, is one of these big things. 
+We study its gravitational field using general  
+06:37 relativity, but it's ultimately made out of atoms 
+and molecules that we study quantum mechanically.  
+06:42 So it's incoherent to expect to have one theory 
+for the small things and one theory for the big  
+06:47 things. I think Freeman's skepticism was a 
+little bit less crude than that, at least  
+06:54 when he was talking to physicists. But Freeman in 
+general, I must tell you, was a great scientist,  
+07:02 but he also was one who was a contrarian. 
+And if I was a contrarian, I'd be wrong,  
+07:09 close to 100% of the time. So as a contrarian, 
+Freeman had an excellent batting average.
+07:15 So given that it is important, I mean, like you 
+said, big things are many small things. You can  
+07:21 also say, I guess, center of a black hole, 
+the moment to the big bang or realms where  
+07:25 we think you've got to have quantum mechanics 
+and gravity play well and so forth. Given that,  
+07:31 what would you say is special about String 
+Theory that it makes headway where the  
+07:38 previous approaches were running 
+into these non-linearity problems?
+07:41 Well, String Theory is much more restrictive than 
+... Before we even get to String Theory there,  
+07:46 I should explain that physics as it developed 
+in the 20th century was extremely restrictive.  
+07:51 So when the standard model of particle physics was 
+discovered, the experimental data was very limited  
+07:57 and the inventors of the standard model didn't 
+invent it because they were fitting very, very  
+08:02 rich experimental data, which told them what to 
+do. They had very limited clues from experiments,  
+08:07 but the framework of quantum mechanics and 
+special relativity was sufficiently rigid,  
+08:12 that just trying to fit very limited 
+clues, they were able to invent what  
+08:15 came to be known as the standard model 
+and has been very successful since then.
+08:22 So with gravity ... Well, unfortunately, with 
+gravity, our luck ran out. So the framework we  
+08:28 had with quantum mechanics and special relativity 
+was very restrictive, but barely made it possible  
+08:34 to incorporate the other particle forces. 
+And that barely was why, as I just told you,  
+08:39 physicists made so much progress with limited 
+experimental clues. With gravity, because of  
+08:44 Einstein's highly non-linear mathematics, 
+our luck ran out. And in that framework,  
+08:49 it actually doesn't work. The other forces barely 
+worked, but Einstein's theory doesn't work in that  
+08:53 framework. String Theory is even more restrictive 
+than the framework in which the standard model  
+08:59 was built. String Theory kind of forces the theory 
+upon you whether you like it or not. The inventors  
+09:04 of String Theory were not trying to make a theory 
+of gravity. They were trying to make a theory of  
+09:08 the nuclear force. And that ultimately, at 
+least in the original form, didn't work.
+09:15 But one of the reasons it didn't work 
+was that although they didn't like it,  
+09:19 they kept finding this mass-less bin too 
+particle, which isn't there in the nuclear force,  
+09:24 but eventually some people started to take 
+it seriously that it is there with gravity,  
+09:28 according to Einstein. So in the very rigid 
+framework where the standard model was developed,  
+09:38 gravity actually didn't fit, String Theory 
+provides an even more rigid framework that  
+09:43 actually forces gravity upon us. That's 
+probably what I was telling you in 1986.
+09:47 Sure. And when you first saw gravity, 
+as you're saying, forced upon it,  
+09:52 general relativity forced upon 
+us. In fact, I've heard you say,  
+09:55 and I know it's tongue-in-cheek a little bit, 
+but the counterfactual on another planet,  
+10:00 maybe their scientists found String Theory first 
+before their Einstein and they extracted general  
+10:06 relativity from it as opposed to having 
+to put it together with quantum mechanics.
+10:11 I don't find it completely 
+farfetched that that could happen.
+10:14 Right.
+10:14 Yeah, actually.
+10:16 And so when you first realized or 
+learned that general relativity  
+10:21 emerges from String Theory, 
+was that one of those...
+10:25 Well, to avoid misunderstanding, I 
+want to stress that learning was the  
+10:28 right word rather than realizing 
+it really ... Well, physicists of  
+10:34 a generation slightly more senior than I am 
+had understood this in the '70s, although the  
+10:40 insight did not catch fire in the physics world. 
+It seemed too outlandish to a lot of people,  
+10:44 but still it was there. And by the early '80s, 
+a very small number of colleagues, John Schwarz,  
+10:49 Michael Green, Lars Brink were reviving this. And 
+so I would say that where I learned this was in  
+10:56 the summer of 1982, which I spent reading 
+your review article by John Schwarz. Yes,  
+11:01 that was extremely electrifying to understand that 
+there was a framework even more rigid than the  
+11:06 standard framework of physics in which gravity 
+was unavoidable instead of being impossible.
+11:12 Now, when you say it's more rigid, 
+in some ways it is. And otherwise,  
+11:17 and perhaps this is part of the resistance that 
+I was feeling as a young researcher in the 1980s,  
+11:24 the theory also requires more 
+than three dimensions of space.
+11:28 Yes. Well, that's part of its 
+rigidity in formally speaking-
+11:32 Formally speaking.
+11:32 ... in pre-string theories, any 
+dimension is possible. In detail,  
+11:36 in quantum, in the standard framework, you 
+do find that four seems to be the maximum,  
+11:41 although we've learned some loopholes in that-
+11:43 More recently, yeah.
+11:43 ... more recently. Yes. But at the time, in the 
+'70s and '80s, four was believed to be the maximum  
+11:50 in the standard framework. String Theory does 
+force more dimensions upon us, and that's actually  
+11:55 one of the reasons it does have the chance to 
+unify gravity with the other forces because,  
+11:60 well, of course this was very important input to 
+your own work, but making a four dimensional world  
+12:06 starting from higher dimensions, you build it in 
+with potentially a very rich geometry that gives  
+12:14 a very simple theory conceptually, potentially 
+the freedom to be rich enough to describe the  
+12:21 whole world of elementary particles and forces. So 
+I think without the extra dimensions, it would be  
+12:27 hard for such a simple theory to lead to something 
+as complicated as the real world, possibly.
+12:33 But at the same time, I remember in those 
+days, in the 1980s, and especially after you  
+12:39 wrote a critical paper with Candelas, Hartz and 
+Strominger, giving us the mathematical tools for  
+12:47 what to do with these extra dimensions, how they 
+could be curled up in a way that was compatible  
+12:51 with String Theory and so on. Many people, when 
+they encountered the idea of quantum gravity  
+12:59 would be excited, and then you'd say, "But it 
+requires extra dimensions." They'd be like, "Ugh."
+13:03 For many colleagues, it was too big a package. 
+But I might tell you that ... So, okay,  
+13:09 that was electrifying in the summer of 1982, 
+learning about the work done in those period  
+13:14 by Green-Schwarz and Brain Gun. Certainly 
+after that, I was following it closely,  
+13:17 but I was very reluctant to get seriously involved 
+because I felt that even if it was right, it was  
+13:24 potentially too hard to understand. It might take 
+100 years to understand it, and it seemed like  
+13:30 too big a commitments. And so I actually spent two 
+years watching from the sidelines. I was watching  
+13:37 much more closely than most of our colleagues 
+were, because I was very interested in it, but  
+13:42 I only slightly became involved during those two 
+years. I was mostly watching from the sidelines.
+13:50 I pointed out to Green and Schwarz a difficulty 
+with their theory, that technically it was hard  
+13:55 to see how their theory could capture an important 
+aspect of the weak interactions, the fact that  
+14:00 nature is asymmetrical between left and right. 
+It's not something we see in everyday life,  
+14:05 and most of you are probably not too familiar with 
+it, but in the world of elementary particles, one  
+14:10 of the most basic, most deepest, most fundamental 
+facts we know is that there's a fundamental  
+14:14 asymmetry between left and right. And their theory 
+as it existed in 1982 when I first learned about  
+14:20 it, electrifying though it was, appeared incapable 
+of capturing this property, but ... Okay.
+14:30 My only input, I guess, in those two years was to 
+make the few practitioners aware that this was a  
+14:36 problem that had to be solved. And there was an 
+electrifying moment in the summer of 1984 when  
+14:44 Green and Schwarz discovered another trick 
+the theory had that hadn't been appreciated,  
+14:49 that completely obliterated this problem. 
+Now, it's difficult to convey this to you,  
+14:57 but String Theory is an incredible story of the 
+perils of Pauline. There are all kinds of ways  
+15:02 for the theory to prove to be inconsistent and 
+miraculous escapes. There'd been a whole series  
+15:06 of miraculous escapes. And what I was weighing 
+in 1982 when I was not sure if I really wanted  
+15:12 to commit myself to this subject was whether 
+the evidence from the miraculous escapes was  
+15:16 convincing enough that the theory was for real, 
+that I should gamble my career in focusing on it.
+15:24 And as I've told you, I lack the courage 
+to make that commitment in 1982 and 1983.  
+15:29 But when yet another of these miraculous escapes 
+happened in the summer of 1984, after that, well,  
+15:37 my doubt evaporated, but I felt I'd run a kind 
+of experiment. The question I raised in 1982 was,  
+15:44 is this sequence of incredible discoveries all a 
+big mirage or is it real? If it's a big mirage,  
+15:52 then there shouldn't be any more such discoveries 
+made. But not only there was a big discovery made,  
+15:58 but it even involved what I had seen as the most 
+pressing deficiency of the theory. So having gone  
+16:08 through that experience, my direction was 
+clear in my own mind after that. But many  
+16:13 of our colleagues, to get back to your remark 
+that many colleagues did not react as I did,  
+16:18 they'd had no inkling of the theory. They 
+never heard of it before the summer of 1984.
+16:22 They didn't have the experience I had had 
+of watching and wondering for two years,  
+16:26 sitting on the sidelines, being 
+reluctant to commit myself,  
+16:29 waiting to see if there'd be another 
+miracle and then there was. So obviously  
+16:34 someone who hadn't had that experience 
+reacted differently from the way I did.
+16:37 And I want to focus this more on science and 
+sociology, but I have to follow up with one  
+16:43 question. Do you think that part of 
+the resistance back then was of our  
+16:48 own making an exuberance that felt almost 
+threatening to other colleagues, this idea  
+16:57 of the theory of everything, and if you're not 
+working on it, then what are you working on?
+17:01 Well, there could have been some of that, no 
+doubt. And I'm sure that for some colleagues,  
+17:07 Green and Schwarz were respected 
+colleagues, highly regarded,  
+17:10 but maybe they weren't seen as the ones 
+who were supposed to be revolutionizing  
+17:14 the world. And some of our colleagues were 
+skeptical until when told that Green and  
+17:20 Schwarz had made a discovery that was going to 
+revolutionize the world. I can understand it.
+17:24 Yeah, sure.
+17:25 I'm sure if I had never heard 
+of String Theory before 1984,  
+17:28 I would have reacted the same 
+way these other people did.
+17:30 You really think so?
+17:31 Yes.
+17:31 Wow, that's interesting. Anyway, 
+so back to the science. So 1984,  
+17:37 you and the colleagues I mentioned write 
+down this idea of what to do with the  
+17:41 extra dimensions. And to someone like 
+me who was a beginning graduate student,  
+17:45 the idea that qualities of particles 
+that had previously be unexplained,  
+17:53 like why they come in certain organized groupings 
+might be explained by just the shape of the extra  
+17:60 dimension, this little space that would be 
+everywhere around us, but so small that we  
+18:04 can't see, but the intricate nature of its shape 
+would explain these qualities That was astounding.
+18:11 Well, I agree. It's kind of 
+astounding, yes. Of course,  
+18:19 unfortunately there's a question mark about it 
+because we understand that qualitatively it can  
+18:25 work and you can make a reasonable rough 
+draft of the world of elementary particles  
+18:31 with relatively simple assumptions about the 
+extra dimensions, but we haven't gotten past  
+18:35 that. We don't know how to make it work 
+in detail. And that's a disappointment.
+18:39 But can I ask you a question about that? Because 
+one of the critiques, and again, I don't want to  
+18:45 focus solely on the chatter of people who may 
+have other agendas, but one of the critiques,  
+18:52 and it's a real one, is there are many possible 
+shapes for the extra dimension as time went on. I  
+18:59 mean, back in the mid '80s, your paper I think had 
+five possible versions of the extra dimensions.
+19:06 But we learned more and more.
+19:07 We learned more and more. So in the early 
+days it was like, all we have to do is  
+19:10 examine these five shapes and maybe we'll 
+have the answer to everything within there,  
+19:14 but five turned into 10, 100,000 million and 
+the number of possibilities exploded. Now,  
+19:21 sometimes people say, "Well, that means that this 
+is not a real scientific theory because there are  
+19:27 so many possible shapes." But then I look at the 
+standard model of quantum mechanic. It's a quantum  
+19:33 field theory and just so people know, that's 
+not a single theory. It's a whole class of  
+19:39 theories where you can choose the individual 
+fields, how they talk to each other, their  
+19:43 interactions. There are infinitely many quantum 
+field theories, so is that a real critique?
+19:50 Well, it's been an obstruction to doing 
+some of what we want to do. I think we  
+20:00 don't know the last word. I think I want to 
+describe a little bit of it for our audience,  
+20:11 and then we can get back to the 
+question of whether it's a critique.
+20:14 So let's think about the solar system, which we 
+describe by Einstein's theory, but Einstein's  
+20:19 theory doesn't predict exactly what the solar 
+system has to be. And in fact, we now know that  
+20:23 the galaxy we live in is filled with solar systems 
+that also obey Einstein's equations, but they have  
+20:29 different masses and properties of the star and 
+the planets making them up. So Einstein's theory  
+20:37 tells us how solar systems work, but it doesn't 
+tell us which solar system we're living in.  
+20:44 So a possible interpretation of the fact 
+you're mentioning is that String Theory  
+20:53 tells us how gravity interacting with quantum 
+mechanics and elementary particles can work,  
+20:59 but it doesn't tell us which solution of 
+the equations we're experiencing, somewhat  
+21:04 like Einstein's theory doesn't tell us which 
+solution of his equations describes the solar  
+21:08 system that we actually live in. Now, there's a 
+further angle to this, which I should mention,  
+21:13 which perhaps you would have gotten into 
+in a moment if I hadn't, which is that some  
+21:21 colleagues have suggested that this actually 
+has an anthropic interpretation that ... Okay,  
+21:27 there are aspects of the real world that look 
+very strange, like the fact that, first of all,  
+21:31 the expansion of the universe is accelerating, 
+but it's accelerating incredibly slowly.
+21:39 It's difficult to explain to people 
+who haven't studied advanced physics,  
+21:44 why it's so strange that the acceleration 
+is so small, but it is very, very strange  
+21:49 from the point of view of fundamental physics. 
+Now, it's also a fact that we wouldn't be here  
+21:55 if the acceleration was expanding at a decent 
+pace because we would have been blasted to bit  
+22:00 long before we had the chance to evolve. That's 
+stating it conservatively. A lot of other things  
+22:05 would have gone wrong before then. The solar 
+system would have been blasted bits before the  
+22:10 Earth formed and before the sun formed and before 
+the Milky Way formed and everything would have  
+22:15 gone wrong if the expansion of the universe was 
+accelerating at the rate that physicists would  
+22:21 consider easier to understand theoretically. 
+So then you could ask, "Well, how fast would  
+22:28 the universe be accelerating in String Theory?" 
+And we don't completely understand the answer,  
+22:34 but the answer seems to depend on which 
+solution of the equations we assume to be right.
+22:38 And so some of my colleagues said, "Well, no 
+use thinking about the ones where we would  
+22:42 have been blasted to bits. We can only live where 
+we can live." So inevitably, the solution of the  
+22:48 equations that we're experiencing is one that has 
+the miraculous properties that make life possible.  
+22:52 The one I've mentioned is the acceleration of the 
+cosmic expansion, but there are a few other things  
+22:56 like that, like the scale of the elementary 
+particles compared to the scale of gravity.  
+23:03 Now, I have to tell you that this argument became 
+popular in the late '90s. It was popularized by  
+23:11 people like Steven Weinberg, the pioneer of the 
+standard model, Martin Rees, the distinguished  
+23:16 astrophysicist, Leonard Susskind and other highly 
+distinguished theoretical physicists and others,  
+23:22 and I was very upset. It really got me 
+disturbed. First of all, well, as a physicist,  
+23:31 I wanted to explain the masses and lifetimes of 
+the elementary particles and other properties,  
+23:36 rather than accepting the fact that they 
+depended upon the choice of a classical solution.
+23:44 Literally, it made me very unhappy for 
+years. I made my peace with it because I  
+23:50 had no alternative. So I made my peace with it 
+by accepting the fact that the universe wasn't  
+23:56 created for our convenience and understanding it. 
+Maybe the universe is harder to understand in some  
+24:01 ways than we would have wished. It's a shame, but 
+our understanding the universe probably wasn't  
+24:09 the criterion based on which it was made. So I 
+accepted that. I came to accept that, I would say,  
+24:16 by now almost 20 years ago, roughly 20 years ago. 
+And I've had a more peaceful life since then,  
+24:25 but I don't know where the truth of the matter 
+is. So you see, if the anthropic interpretation,  
+24:32 which says to explain why it's even possible 
+to have this very small rate of acceleration,  
+24:39 you have to have a vast plethora 
+of solutions with all kinds of  
+24:42 different values, and then we live 
+in a lucky one where we can live.
+24:45 So that's the anthropic view of the universe. 
+Well, I can't say ... I would prefer to have a  
+24:52 more conventional scientific explanation, but 
+I don't know. Maybe the anthropic explanation  
+24:57 is correct. It would be silly to throw away 
+the right answer because we don't like it.
+25:04 But anyway, there's lots of uncertainty in our 
+lives as theoretical physicists. There are lots  
+25:10 of things we don't understand, and whether the 
+anthropic interpretation is correct or a better  
+25:15 one will be found one day is one of the things 
+we don't understand. I've made peace with it on  
+25:22 the grounds that I've told you, but I haven't 
+stopped wishing that there would be a better  
+25:27 explanation. For example, as far as we know, the 
+acceleration of the cosmic expansion is described  
+25:34 by Einstein's cosmological constant, meaning that 
+the rate of the acceleration is constant in time,  
+25:39 at least toward the future. I'd be incredibly 
+happy if it was discovered experimentally  
+25:45 that's false because I think that would give a 
+better chance of a more conventional scientific  
+25:51 explanation of the world rather than the 
+anthropic one. In my reading of the data,  
+25:56 there's no significant evidence that 
+the simple interpretation is false.
+26:00 There are experimental claims, 
+actually. In their present form,  
+26:04 they're, in my opinion, unconvincing, and 
+I'm someone who would like to be convinced.
+26:11 And I gather it'd be easier to explain if 
+its value is say decreasing over time or  
+26:16 just explaining why we have this value right 
+now as opposed to why it's that value forever.
+26:21 I can't promise we'd be able to explain it 
+better, but intuitively, I suspect we'd have  
+26:25 a better chance. So if that were found that the 
+rate of the acceleration is going down in time,  
+26:33 I'd be encouraged. And there is actually an 
+experiment, the DESI Collaboration that has  
+26:38 claimed evidence in that direction. Unfortunately, 
+as I told you a moment ago, I don't consider it  
+26:42 convincing at the present time, but I'm ready 
+to be convinced if anybody has better data.
+26:47 And so what do you think we realistically 
+should ask of our theories? Everyone has been  
+26:54 very gratified by the standard model of particle 
+physics where we tune all these little numbers  
+27:01 inside the equations to match the mass of the 
+electron and the mass of the quarks and so on.  
+27:06 We don't have explanations for those tunes. 
+We just pick them. So if in String Theory,  
+27:12 we haven't yet, but if we found, say, a shape for 
+the extra dimensions that gave all those numbers,  
+27:17 we'd still be picking the shape 
+by hand, would that be any worse?
+27:23 Well, it would be nice to have, regardless 
+of what you wanted to say about it.  
+27:33 You'd still want to, of course, explain why that 
+was the right solution, but yeah, of course.
+27:39 Yeah. I mean, we always want to push forward.
+27:40 Yes. So we learn more ... Okay. First, 
+as you said, in the late 80s, early '90s,  
+27:49 we learned a lot more ways that you 
+could make something somewhat similar  
+27:52 to the standard model. And then with the 
+advances in what happens for strong coupling,  
+27:57 we got more insight about that. But 
+I don't think our models of the real  
+28:04 world based on String Theory have gotten much 
+more precise than they were in the early days.
+28:08 Yes.
+28:09 And sometimes you have to be pragmatic about 
+where you can make progress. For example,  
+28:16 I'll tell you now where I would most 
+like to make progress, and this is the  
+28:19 same thing I actually would have said in the 
+late 80s, and perhaps did say to you in 1986,  
+28:22 I don't remember specifically. Well, actually, 
+I kind of explained this about 10, 15 minutes  
+28:31 ago. String Theory was kind of invented in bits 
+and pieces without understanding the principles  
+28:35 behind it. And what I'd most like to understand 
+is what are the fundamental principles behind it,  
+28:45 but you can't always choose where you want to 
+make progress. That's what I wanted to do. Okay.  
+28:52 I could have potentially been completely obsessed 
+by this problem in the late 80s, except I had  
+28:57 the sense to realize that I had to do easier 
+things because it was a little too difficult.
+29:02 But one thing I didn't try to do was to understand 
+how String Theory behaved for strong coupling.  
+29:07 I assumed that that was too hard. Strong 
+coupling means when quantum effects are big,  
+29:11 as I've told you before. If you're not a 
+physicist, the phrase strong coupling is  
+29:14 probably gobbledygook. But if I say 
+that when quantum effects are big,  
+29:19 that might also be a gobbly, but maybe at 
+least is a little bit more understandable.
+29:25 Anyway, I would have assumed that problem was 
+out of reach, but actually that's where the most  
+29:29 progress was made in the '90s. So sometimes you 
+have to be pragmatic and accept the fact that you  
+29:35 can't solve the problem you want to solve, and 
+there's a different aspect where you can make  
+29:41 more progress. I thought in the 2010s, I didn't 
+manage to find a good way to contribute myself,  
+29:50 but I thought in the 2010s, the most interesting 
+progress came from rethinking Hawking's discovery  
+29:55 of quantum radiation from black holes and trying 
+to understand better what are the lessons from  
+30:00 that And that's another area that physicists have 
+not gotten to the bottom of, in my opinion. But  
+30:06 very interesting progress was made in the 2010s, 
+a little bit slower recently in my opinion.  
+30:13 I wouldn't be able to tell you. Yeah. 
+I can't give you any kind of straight  
+30:17 line extrapolation from the last few 
+years to where the next advance will be.
+30:21 But in terms of the advances, if we can now turn 
+to say the '90s and beyond, I think one idea that  
+30:28 most people would say is vital to the progress 
+is this notion of duality, this idea. Well,  
+30:35 in fact, maybe you just want to say a word. 
+What do we mean when we talk about duality?
+30:40 Well, usually what duality means is that the same 
+theory can be described in different languages,  
+30:48 but you can't translate in a simple way 
+from one to the other. The prototype is  
+30:55 that quantum effects are small in one 
+region, but they're big in the other  
+30:59 region. If you ask question A, but if you 
+ask question B, it's the other way around.  
+31:03 So dual descriptions of the same physical 
+system are alternative descriptions which  
+31:09 have the property that whatever questions you can 
+answer in one description, you might not be able  
+31:14 to answer in the other description. But if you 
+have several different dual descriptions of the  
+31:17 same theory, you can pull the knowledge 
+you get from different points of view.
+31:24 And why do you think dualities exist? I mean, 
+I'd say in Einstein's day, he had this image,  
+31:33 which I think many of us grew up on. 
+You have a mathematical description of  
+31:38 a theory and that's it. There isn't like 
+a second or a third radically distinct  
+31:44 mathematical description. Then over the 
+years, we found more and more examples.
+31:49 Yes.
+31:50 What does that tell us about 
+mathematics and describe in the world?
+31:54 Well, it's too big a question to answer 
+completely, but one aspect of the answer I  
+31:60 suspect is that it's telling us that String 
+Theory is inherently quantum mechanical  
+32:03 in some way we don't fully understand. So 
+String Theory does have a classical limit,  
+32:08 but it has different classical limits. 
+And each classical limit looks highly  
+32:12 quantum from a different point of view. And 
+because there are different classical limits  
+32:17 that are so different from each other, no 
+classical limit can do justice to the theory.  
+32:22 So String Theory is a theory that really 
+only comes into its own fully in the quantum  
+32:26 case. But I might have mystified you, but I can 
+assure you that Brian and I are also mystified.
+32:34 Without a doubt. But when you 
+actually look at the famous ... Well,  
+32:38 maybe we can just give a couple of examples. 
+Like in String Theory in your early days,  
+32:42 we realized that you could have one mathematical 
+description of a universe that was very small,  
+32:49 like a circular universe with a small radius 
+and a completely different mathematical  
+32:54 description where the universe is really 
+big. You think a small universe and a big  
+32:58 universe are simply different, and yet 
+we found that there were the same theory.
+33:03 Yes.
+33:04 Just describe two different ways.
+33:05 Yes, yes. And at first it looked very quirky, 
+but then of course many other examples were  
+33:11 discovered. And well, that's where you did 
+some of your most exciting work actually,  
+33:15 of course, which I will mention just because you 
+might be too bashful to it form our listeners.
+33:21 Thank you.
+33:25 Well, it's a strange fact about the world that 
+these quantum equivalences between theories that  
+33:34 are classically different look so very special 
+at first, and yet they keep coming up and they  
+33:39 seem to tell you more and more, and they 
+don't only turn up in physics. There's a  
+33:46 theory that's kind of central in number theory 
+and in large areas of mathematics that goes by  
+33:51 the name of the Langlands program. And 
+we now understand that that's a number  
+33:55 theorist version of some of these dualities 
+that physicists study. So clearly the message  
+34:03 from duality is far-reaching and deep, even if 
+we haven't completely come to the bottom of it.
+34:10 Now, famous example of that duality, which 
+you may reference to, Juan Maldacena,  
+34:14 your colleague at the Institute for Advanced 
+Study, which really took everybody by storm  
+34:19 in roughly 1996, 1997, something like that. 
+Just to give a feel for it, I just realized  
+34:27 we didn't actually say what String Theory is 
+in the conventional formulation. Instead of  
+34:31 having little dot particles, you got little 
+vibrating filaments that look string-like.
+34:36 Except they obey quantum laws.
+34:37 They obey quantum laws.
+34:38 So the dot was a fuzzy dot and that's 
+hard to explain. You should study some  
+34:42 differential equations maybe. And then 
+the string also is obeying quantum laws.
+34:49 And so most of us thought that String Theory 
+was one way of describing the world. The dot  
+34:57 description with the fuzziness, which goes on to 
+the name of quantum field theory as this other  
+35:01 approach, but Juan came along and found a duality 
+in which String Theory in a certain realm was  
+35:08 equivalent to quantum field theory in a different 
+realm, in fact, a different dimensional realm.
+35:15 And very importantly, quantum field 
+theory without gravity. Since as our  
+35:20 able students here know, quantum field 
+theory is not consistent with gravity,  
+35:23 so it had to be quantum 
+field theory without gravity.
+35:26 And so that's a stunning realization that 
+means in some sense that String Theory is  
+35:32 maybe not quite as radically different 
+from the old methodology in some way.
+35:38 Well, it is true that String Theory can 
+emerge from more conventional theories as Juan  
+35:43 essentially discovered, but the world in which 
+the ... Juan showed that you could start with  
+35:53 a mathematical world that doesn't have 
+gravity, and there emerges from it, a whole  
+35:59 different world that can have stars, planets, 
+gravitational fields, and civilizations in it.  
+36:07 So you see, there are all these crazy dualities 
+that have been very important in String Theory  
+36:14 since the '80s and '90s, but in many cases, the 
+different dual descriptions, although they're  
+36:20 radically different, they seem like they're 
+radically different in detail, but the differences  
+36:26 might be hard to explain to you because from an 
+outsider's point of view, they might seem like  
+36:32 somewhat similar theories. The Maldacena duality 
+is really different because the alternative  
+36:38 descriptions are really of a completely different 
+type. On one side, there is the type of theory  
+36:43 that the standard model is, a special relativistic 
+quantum theory without gravity, but that obeys  
+36:51 based on the same general principles as 
+the standard model of particle physics.
+36:55 The kind of theory we think 
+we understand in principle,  
+36:57 although in practice, they can sometimes 
+be hard to understand. It's equivalent to  
+37:02 a world like the one you and I actually 
+live in, a world with stars, planets,  
+37:06 galaxies, and gravitational fields 
+and Einstein's theory, all that stuff.
+37:13 And so does that, for instance, we don't yet 
+have experimental evidence for String Theory.  
+37:18 That's an important part of the reason why 
+we're uncertain if these ideas are correct.  
+37:25 Does this link to quantum field theory, the 
+more traditional methodology that has been,  
+37:30 excuse me, tested for other quantum field 
+theories, not the one that Juan invoked,  
+37:36 does that give you any greater confidence?
+37:40 Well, sort of, but I would have said it 
+a little bit differently. What you see,  
+37:46 not only here, also other aspects of some ... 
+This one could be made in relation to other  
+37:50 things we said earlier tonight, but in many 
+respects, Maldacena duality, but also some  
+37:59 of these other discoveries in String Theory have 
+shed new light on existing theories in physics,  
+38:06 in different areas of physics, and even 
+in some cases on mathematical theories,  
+38:10 purely mathematical ideas. So to me, 
+it's implausible that all this thing that  
+38:20 seems to know so many secrets about all the 
+theories we know about exist by accident. So when  
+38:27 Maldacena duality is successfully applied in a new 
+area of physics, to me, that reinforces the belief  
+38:33 that it must be physical, not just a coincidence. 
+But as I've told you, since the summer of 1984,  
+38:40 when that last electrifying discovery was made, 
+I was convinced there couldn't be a coincidence.
+38:45 And so how do you view mathematics? Do you view 
+it as a set of ideas that we invent in order to  
+38:53 describe the patterns that we encounter? Or 
+do you see mathematics as somehow out there  
+38:59 in some platonic realm and we're ultimately 
+just instantiations of these abstract ideas?
+39:06 Mathematicians develop ... Mathematics is 
+largely self-directed by ideas that the  
+39:12 mathematicians find elegant and beautiful, but 
+it also has been, throughout history, heavily  
+39:17 influenced by physics. Newton invented calculus 
+because he needed it to describe the motion of  
+39:23 the planets and well, we could point to many 
+other examples in the 19th and 20th centuries,  
+39:30 partial differential equations, functional 
+analysis. Even Riemannian geometry got a  
+39:34 big boost because Einstein used it for 
+his theory. It existed before Einstein,  
+39:38 and that helped him invent his theory, but 
+mathematicians took it much more seriously  
+39:43 when it was known to be relevant in the real 
+world. It's surprising. I think it's often  
+39:51 surprising how much mathematics is influenced 
+by things that are relevant in physics.
+39:55 And when we have a case of duality, where now 
+you've got two mathematical frameworks that  
+40:03 are describing one and the same universe, a 
+hypothetical universe say. How do you think  
+40:11 about it? Is that one would be right and the other 
+secondary, they're both right? And if they're both  
+40:17 right, then they can't really be the mathematics 
+because they're two different languages?
+40:22 Well, in most of the examples of duality where the 
+different dual descriptions are qualitatively more  
+40:27 or less similar, I see them as being completely 
+on a par and the fact that more than one of them  
+40:33 exists shows that none of them is the truth 
+about the theory. And the fact that we don't  
+40:43 understand where it comes from is our problem. 
+We don't understand the theory very well yet.  
+40:49 This duality of the engaged theory and gravity 
+discovered by Maldacena is a little different  
+40:55 because the two are so ... It raises a completely 
+different kind of question. I'll tell you a  
+40:60 version of that question. So Maldacena showed, 
+argued and subsequent work bought out very well  
+41:08 that you can have a theory of a conventional type 
+without gravity that sort of sits on a shelf,  
+41:14 but it secretly describes in a holographic 
+fashion, a world where we could be living, a world  
+41:19 of planets, stars, galaxies, and gravitational 
+forces and all the things that make life possible.
+41:26 So one world seems very static and just ... Well,  
+41:31 doesn't have any of that. It's a kind 
+of theory that physicists like to study,  
+41:36 but it's not describing stars and people. 
+The other world can have stars and people,  
+41:40 and they seem to be equivalent. But this one 
+is totally crisply defined mathematically, but  
+41:48 this one where we live seems a little bit murky 
+by comparison with our present understanding.
+41:56 I don't feel we know the truth about that. I feel 
+that we're missing a breakthrough that would make  
+42:04 the bulk description. The bulk description is 
+the one where we live that would make that seem  
+42:10 closer, maybe never as sharp as the sort 
+of abstract one that lives on the shelf,  
+42:15 but at least closer to being equally sharp.
+42:19 Can you imagine that we'll get to 
+a point in the next ... And again,  
+42:22 it's always difficult to predict these 
+kind of things, but 10, 20, 30 years,  
+42:27 will we understand things well enough? And do 
+you have any kind of confidence that we might  
+42:34 gain observational or experimental data to 
+bolster this stuff being more than equations?
+42:40 Well, there's some hope, but it depends on being 
+lucky with both the theory and the experiment,  
+42:45 I would say. If you go back to the 80s 
+and you consider what was in prospect in  
+42:51 the 20 years after that, for how much 
+the energy increased at accelerators,  
+42:58 it was more or less universally believed 
+that with that huge jump in energy,  
+43:02 we would discover the next layer in structure 
+beyond the standard model. Now, it came as a  
+43:08 huge surprise that that didn't happen. Actually, 
+the fact that it didn't happen is interpreted by  
+43:14 some as another clue in favor of the anthropic 
+universe. I told you before how much I was upset  
+43:20 over the anthropic universe and eventually made 
+my peace of it with it, but the only ... I told  
+43:27 you there were other clues apart from the 
+acceleration of the cosmic expansion that  
+43:31 suggested that the anthropic universe might be 
+correct, but the second one worth mentioning is  
+43:35 precisely the fact that accelerators improved so 
+much in the 20 years after Brian and I first met,  
+43:43 25 to 30 years after Brian and I first met without 
+giving us physics beyond the standard model.
+43:50 So see, I think it was not only was reasonable 
+to expect that we would have gotten a lot more  
+43:58 input from those experiments than we did, but 
+I'd say it was virtually universally expected  
+44:05 in the field and certainly by me that that would 
+happen. It seemed paradoxical otherwise. In fact,  
+44:12 the paradox has been reinterpreted as a hint of 
+the anthropic universe. As I told you before,  
+44:18 I don't know if that's correct, but it's what 
+we have to live with for now, apparently.  
+44:26 So going back to when Brian and I first met, 
+we would have anticipated with a huge jump in  
+44:32 the power of accelerators that followed, that 
+we learned way more about physics beyond the  
+44:37 standard model. On the other hand, we might have 
+underestimated what would be learned in cosmology.  
+44:43 In 1986, cosmology, if you wanted to summarize the 
+sum total of cosmological knowledge, what was it?
+44:50 Well, there was the temperature of 
+the so called microwave radiation,  
+44:53 the radiation that fills all space that's left 
+over from the Big Bang, 2.7 degrees Kelvin,  
+44:58 2.7 degrees above absolute value, and the 
+same in all directions as far as one could  
+45:02 measure. There was the fact that the universe was 
+expanding ... There were two numbers in cosmology.  
+45:13 There was the temperature, and there was also the 
+expansion rate, and of those, only the temperature  
+45:17 was measured with any reasonable precision. The 
+expansion rate was unknown to a factor of two,  
+45:24 and that was cosmology in 1986. I'm probably 
+cutting some corners in that summary,  
+45:29 but not very much. Now, cosmology mushroomed 
+in an incredible fashion, and we know so much  
+45:36 more today than we knew in 1986. And while 
+I would have greatly underestimated what  
+45:42 we learned ... Sorry. I would have greatly 
+been too optimistic about what we've learned  
+45:47 from accelerators, but I would have greatly 
+underestimated what we learned in cosmology.
+45:53 We were able to observe that the temperature is 
+not the same in all directions, and that gave  
+45:58 us an incredible amount of information about 
+the early universe and how galaxies formed.  
+46:02 Then we discovered this crazy acceleration of 
+the expansion of the universe, which ... Well,  
+46:10 I told you all the angst that it caused 
+me, so that was certainly a big discovery  
+46:15 that we weren't counting on in 1986. 
+That was made in approximately 1997,  
+46:21 actually by coincidence, more or less the same 
+time as Maldacena discovery that you mentioned.
+46:29 And anyway, cosmology has become a real precision 
+science, so we've learned a lot from it. So  
+46:38 it's difficult to predict what clues we 
+will or won't get from experiment in the  
+46:42 next 20 years. I've perhaps best 
+conveyed that by telling you how  
+46:46 far off I would have been in 1986, 
+trying to guess the next 20 years.
+46:50 Sure, absolutely. And so we've been focusing 
+a lot on gravity quantum mechanics, but if  
+46:56 we could pivot for just a moment back to quantum 
+mechanics itself, Einstein famously had his issues  
+47:03 with quantum mechanics, God playing dice, didn't 
+like probabilities, but I think if you look at  
+47:07 the history, what really troubled him was this 
+idea of non-locality, that what you do in one  
+47:14 location could have some weird quantum correlation 
+with something at another location. In retrospect,  
+47:22 do you consider that to have been a reasonable, 
+rational issue that he was uncomfortable with?
+47:29 Well, he's certainly correct that it's very 
+strange, the nature of quantum correlations.  
+47:36 It's also relatively clear that Einstein's 
+hope to get rid of them will not bear fruit.  
+47:42 The subject was understood much more deeply 
+by John Bell in the 2000s, and experiment has  
+47:53 shown that things are much worse than Einstein 
+feared, frankly. So Einstein ... Experiment has  
+47:60 shown that quantum correlations do things that 
+are much worse than what had Einstein upset. So,  
+48:08 yes, Einstein raised an important question, 
+but his hope is not going to be realized.
+48:13 I mean, is that sort of a sign that ... 
+Obviously he was a revolutionary thinker.
+48:18 Yes.
+48:19 Had limits on what he was willing to ...
+48:23 Well, we all do, I'm sorry to say.
+48:25 Right.
+48:26 We all reach our limits, Brian.
+48:28 And what about quantum mechanics 
+itself? So there's another issue  
+48:33 that many people have shone light on, the 
+so called quantum measurement problem,  
+48:39 that you have a description of a quantum system in 
+terms of say a probability wave, it's spread out,  
+48:45 you measure the particle, you find it here, 
+the wave has to somehow accommodate that new  
+48:49 information. We often call it the collapse 
+of the wave function to accommodate that.  
+48:57 No one knows how or if this happens. Where 
+do you come down on that kind of thinking?
+49:04 Well, I don't consider the collapse of the 
+wave function to be a useful concept, so I  
+49:08 don't think that way. I think that unfortunately, 
+to seriously think about it's very eerie because  
+49:15 I think when you try to think seriously about 
+what quantum mechanics means, the essence of it  
+49:22 turns out to be the question of what it means 
+to know something, and that's very strange.  
+49:30 I can try to explain it. I'm not totally sure 
+this will be understandable to all of you, but  
+49:34 I'll try to make it so. Well, first of all, you 
+have to understand that the quantum equation seem  
+49:43 to produce a world of possibilities and it's not 
+clear how a definite outcome emerges from that.
+49:50 What Bohr said was that when a measurement is 
+made, the measuring device records the answer  
+49:58 and the physicist who looks at it learns 
+the answer. But Bohr didn't say in what  
+50:04 sense you're supposed to know what the measuring 
+device said, but whatever the answer is, you're  
+50:08 not supposed to know it by making a measurement of 
+the measuring device because if you had to measure  
+50:13 the measuring device and then you'd have to 
+measure the measuring device of that measurement,  
+50:17 you'd soon get to an infinite regress. So 
+there was a key step in Bohr's explanation,  
+50:23 which was undefined. You were supposed to know 
+the state of the measuring device in an undefined  
+50:28 sense. Now, there was a student at Princeton 
+named Everett. I'm forgetting his first name.
+50:34 Hugh.
+50:34 Hugh Everett who in 1953 or '54 
+wrote a paper that's often cited,  
+50:39 but as far as I can see, rarely read. And 
+I'll tell you what Everett said. Well,  
+50:45 first of all, Everett criticized Bohr. Bohr was 
+not applying quantum mechanics to the observer,  
+50:51 but Everett said justly, "Well, we are 
+ourselves made out of atoms and molecules,  
+50:55 so quantum mechanics must apply to us." And then 
+he said ... If you look at his paper, it's very  
+51:02 interesting. He begins his paper by talking about 
+quantum gravity. He says that in quantum gravity,  
+51:09 especially in a closed universe, nobody can 
+look at the world from outside. He criticizes  
+51:14 Bohr because Bohr had a classical observer who 
+was looking at the quantum system from outside.  
+51:19 Everett wanted to rethink it with the quantum 
+observer being part of the quantum system,  
+51:24 the observer being part of the quantum system. So 
+what Everett said was, "The experiment is done,  
+51:31 the measuring device records the answer. The 
+observer looks at the measuring device and  
+51:37 records the answer in his memory or her memory 
+and there's what ... "He doesn't use the word  
+51:42 entanglement in that paper, but nowadays 
+we call it creates a quantum mechanical  
+51:47 entanglement between the state of the measuring 
+device and the state of the observer's memory.
+51:52 And then, and this is the key point, Everett 
+says, "The observer knows the state of the  
+51:56 observer's memory. In a sense, he didn't define, 
+but not by measuring the state of your memory,  
+52:03 that would have led you to the same infinite 
+regress that Bohr was trying to escape."  
+52:09 So for a long time, I was one of the people 
+who hadn't read this paper, but about 15 years  
+52:14 ago I did read it. And when I did, I was really 
+unimpressed and I couldn't understand why people  
+52:18 thought it was such an advance because all that 
+Everett did was to shift what the strange step  
+52:25 in Bohr's work one step further from the 
+measuring device to the observer's memory,  
+52:31 but the observer was supposed to know the 
+observer's memory in some undefined sense,  
+52:35 but not by quantum mechanical measurement, not 
+in a sense that was defined. So for many years,  
+52:40 I was very dissatisfied with this, but in recent 
+years, I've actually had an afterthought and my  
+52:46 afterthought is that I don't know what's 
+going on when we think we know something.
+52:51 So is it conceivable as a matter 
+of biology and physics that we  
+52:55 are accessing our memory in a way that 
+isn't a quantum mechanical measurement  
+53:00 or in what sense what is happening 
+when we think we know something?
+53:08 Wait, so are you saying that you think 
+the solution to the quantum measurement  
+53:12 problem might involve consciousness at some level?
+53:16 I'm saying that I think you can't 
+discuss it satisfactorily without  
+53:20 discussing the conscious observer 
+who's making the observations.
+53:23 And do you have any thoughts on what 
+consciousness or the conscious observer would be?
+53:29 Well, I share the views of most physicists 
+that consciousness is purely emergent.
+53:32 Yeah.
+53:33 Now, that phrase won't mean much to most of 
+you, so let me explain it. Electric charge  
+53:40 is well-defined. You can count the number of 
+electrons, and that's the electric charge,  
+53:44 or maybe there are protons too, and you count 
+those. But on the other hand, whether a piece  
+53:50 of material is a superconductor is not ... If 
+you have a small piece, question doesn't make  
+53:56 any sense. In the limit of many atoms, it 
+becomes well-defined to say that something  
+53:59 is a superconductor. That's what physicists call 
+an emergent phenomenon. My view of consciousness  
+54:07 is that of most physicists, I believe, that 
+consciousness is an emergent phenomenon that  
+54:11 arises, that can arise for a sufficiently 
+complex system that we call a brain. I of  
+54:18 course don't know that that's true and some have 
+other views about consciousness. Believing that  
+54:26 consciousness is an emergent phenomenon, I also 
+believe that knowledge is an emergent concept.
+54:31 And since I believe the interpretation 
+of quantum mechanics depends on what it  
+54:36 means to know something, I conclude that the 
+interpretation of quantum mechanics should  
+54:42 not be expected to have a sharp answer, that 
+it's fundamentally emergent. I can say this in  
+54:47 another way that would make many physicists 
+less uncomfortable. I think what I've said-
+54:52 You see me squirming in my 
+seat? Is that what it is?
+54:54 Well, I think what I've been saying would 
+make ... Many physicists would want to say  
+54:59 something ... Okay. The notion that the 
+interpretation of quantum mechanics is  
+55:05 emergent with the express in another language 
+by many physicists who would try to keep the  
+55:11 conscious observer out of it. What would they say? 
+Well, the trouble is that since it's not exactly  
+55:18 my viewpoint, I have trouble expressing it with 
+passion. They say roughly that the world becomes  
+55:24 classical when things are sufficiently complex. 
+Well, that's an oversimplification, but ... Okay.  
+55:32 Sorry. I can tell my view with more passion 
+than I can tell other people's view, I'm afraid.
+55:37 And so if you're willing to go there for 
+just half a second, I'm just wondering,  
+55:40 so I think most physicists would 
+agree with you that consciousness  
+55:45 is some emergent phenomenon. 
+We don't need anything else.
+55:48 Yes.
+55:49 Where do you then take that when 
+it comes to human free will?
+55:54 My interpretation of the statement 
+that we have free will is that our  
+55:59 actions are largely determined 
+by the state of our brains. Now,  
+56:04 that interpretation of free will 
+would not make everybody comfortable,  
+56:07 but I think to me that's the meaning of 
+the statement that we have free will.
+56:10 But of course, the state 
+of your brain presumably is  
+56:13 described by the equations of fundamental physics.
+56:15 Yes.
+56:16 So when you have a great breakthrough, 
+Edward Witten, with that view,  
+56:20 do you take credit in your ... So is 
+it the laws of physics that just chose  
+56:27 you and through you yields this insight, or 
+is it something that is intrinsically you?
+56:37 I don't worry about it too much. 
+If I discover something nice,  
+56:45 I enjoy it without worrying about it.
+56:47 That's probably the best way 
+of going about it for sure.
+56:51 One final question and point. You're 
+still extraordinarily active in doing  
+57:00 all sorts of remarkable things, but as 
+you look back on what you've done so far,  
+57:08 is there a single moment where 
+there are many moments that you  
+57:10 would describe seeing something and 
+a sense of awe emerging from ...
+57:17 Even rather little things can give you a 
+sense of awe because they can be very pretty.  
+57:21 So for example, I did some work around 
+1997 that's not so well known on  
+57:28 why the low energy effective action of 
+M-theory is consistent. It was very pretty. So  
+57:33 it looked like magic and it worked, so I got 
+satisfaction from that. It didn't have to be  
+57:40 the biggest discovery I ever made. I answered 
+the question you asked. I thought you were about  
+57:45 to ask me what discoveries had given me most 
+satisfaction, but you didn't quite ask that-
+57:50 But that's a good follow up, 
+so thank you if you want to...
+57:54 It would have to be the work in 1994 and 
+1995 first with Seiberg, on the low energy  
+58:02 dynamics of certain supersymmetric theories, but 
+roughly speaking on those dualities that you were  
+58:06 telling us about. And the following year on 
+similar dualities in String Theory. And the  
+58:13 last insight that I had, the most recent insight 
+I had that made me really happy, unfortunately  
+58:18 was two years ago, I regret to say. I'd like 
+to have that feeling again, but who knows?
+58:22 Sure. Einstein I think liked to shape his 
+own public profile in interesting ways.  
+58:32 We've seen the photograph with his tongue out 
+and so forth. He once described his process as  
+58:39 he would sometimes describe as thinking in 
+music. How would you describe your process?
+58:48 Trying to do research means most of the time 
+it feels like you're sitting around and doing  
+58:52 nothing. So I'd say you spend a lot of time, 
+it feels likes nothing at all is happening. And  
+59:01 if you're lucky, you get a good idea eventually. 
+Okay. You spend a lot of time ... Well,  
+59:11 I don't know if I'm describing everyone. I have 
+no idea of how closely this matches the way you  
+59:15 work. In my case though with an awful lot of days, 
+I come in the morning and at the end of the day,  
+59:20 I just haven't written anything on the sheet 
+of paper that's been in front of me all day.
+59:25 Well, I need to say though, and I won't name 
+any names, but there was a young postdoc at the  
+59:30 Institute for Advanced Study, not me, who was in 
+an office either with an adjoining wall to yours  
+59:36 or within earshot. And apparently there was a 
+period during a summer when only you two were  
+59:41 around. And he said that he was trying to do his 
+calculations while all he'd hear was tap, tap,  
+59:46 tap, tap on the computer, as you were going 
+from brain to paper, brain to paper. So it's  
+59:51 a little hard to imagine this idea of coming 
+in the morning and sort of nothing happening.
+59:56 There are periods. If something does happen, 
+you might go through a period where you know  
+60:01 what you want to write down. So I guess 
+our postdoc was in the next office during  
+60:07 such a period. But I can assure you 
+that there's a lot of the time trying  
+60:13 to do research and theoretical physics feels 
+like you're hanging around and doing nothing.
+60:17 And if you don't mind me asking, 
+like when you're sitting there-
+60:21 Doing nothing.
+... trying to figure something out-
+60:22 Yes.
+60:23 Are you talking to yourself in your head?
+60:25 I'm not even trying to figure 
+something out. I usually don't  
+60:28 even have a good idea about 
+what I want to figure out.
+60:30 And so what do you do when you sit there?
+60:34 Stare at the space. Not much. If I get really 
+frustrated, I might go for a long walk.
+60:47 And the beautiful grounds that you have at the 
+Institute for Advanced Study. Let me just finish  
+60:50 with one small story that is sort of a ... I 
+just thought of as I was coming down in the Uber.  
+60:60 I mentioned 39 years ago, whatever we had that 
+conversation. But even a couple years before that,  
+61:06 when I was at Oxford, it must have been 
+1984 or five, your paper on Calabi-Yau  
+61:12 manifolds you just came out, was trying to 
+understand. I had some question. I called you up.
+61:17 Yes.
+61:17 And you answered and you spoke to me, a little 
+graduate student that you'd never heard of,  
+61:22 and we went through things. And it was really 
+a wonderfully inspiring moment for me and the  
+61:26 other kids in the office. And so that night, 
+we said we need that kind of inspiration. So  
+61:33 what we did was we took all the chairs in the 
+office, we piled them up to the ceiling and we  
+61:37 put your picture at the top so that we would 
+sort of have you with us. What happened was,  
+61:45 story's not quite done. That following 
+morning when the cleaning staff came  
+61:50 in to the Oxford Physics Department, they 
+opened the door, they saw a face up near  
+61:55 the ceiling and they thought that someone had 
+spoofed you. And so they called the police.  
+62:00 By the time I got to the office, there were 
+police cars, there were ambulances and so on.
+62:05 When it was finally determined what 
+the truth was, the chairman of the  
+62:08 department called me into his office and 
+he basically said, "One more infraction,  
+62:12 I'd be out of the program." But I just want 
+to say it was well worth it to have you as  
+62:18 an inspiration then, and you've been an 
+inspiration ever since. So thank you-
+62:21 Thank you, Brian.
+62:22 ... so much for this conversation. Thank you.

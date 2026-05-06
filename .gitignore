@@ -56,3 +56,12 @@ Foundations-of-Identity/memory/nostalgia/
 Foundations-of-Identity/memory/archive/
 Foundations-of-Identity/memory/telegram-history.json
 Foundations-of-Identity/memory/conversations/
+
+# Third-party libraries used locally for AIGP work — not part of public corpus
+Technical-Work/AIGrandPrix/rpg_time_optimal/
+Technical-Work/AIGrandPrix/archive/rpg_time_optimal/
+
+# AIGP training artifacts — regeneratable, way too large for git
+Technical-Work/AIGrandPrix/sim/runs/
+Technical-Work/AIGrandPrix/rl/runs/
+Technical-Work/AIGrandPrix/planning/rpg_time_optimal/

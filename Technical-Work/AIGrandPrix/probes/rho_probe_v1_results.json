@@ -1,0 +1,35 @@
+{
+  "model_path": "C:\\Users\\mercu\\clawd\\projects\\aigrandprix\\sim\\runs\\infinite_1771733969\\best\\best_model.zip",
+  "num_timesteps": 60400000,
+  "n_samples": 20000,
+  "seed": 17,
+  "obs_regime": "uniform_[-1,1]_v1",
+  "R1_policy_trunk_cv": [
+    {
+      "layer": 0,
+      "mean": 1.078361988067627
+    },
+    {
+      "layer": 1,
+      "mean": 1.002363920211792
+    }
+  ],
+  "R2_r2_vf_from_pi": 0.3721197247505188,
+  "R2_r2_pi_from_vf": 0.13832926750183105,
+  "R2_cross_cov_top5_singular": [
+    22.582353591918945,
+    4.785480976104736,
+    3.208530902862549,
+    2.675520658493042,
+    1.9365900754928589
+  ],
+  "R3_entropy_mean": 47.08867645263672,
+  "R3_corr_value_entropy": NaN,
+  "R3_high_val_high_ent_frac": 0.0,
+  "log_std": [
+    0.35927513241767883,
+    0.39471179246902466,
+    0.41356512904167175,
+    40.245365142822266
+  ]
+}

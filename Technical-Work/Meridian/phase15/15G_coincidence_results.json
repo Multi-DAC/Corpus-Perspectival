@@ -1,0 +1,23 @@
+{
+  "relaxation_timescale_Gyr": 111.36331638063817,
+  "relaxation_over_tH": 7.669649888473703,
+  "T_GW_GeV": 509,
+  "T_eq_eV": 750000.0,
+  "T_ratio": 678666.6666666666,
+  "m_r_GeV": 200,
+  "m_r_over_H_GW": 1879721013891408.5,
+  "m_KK1_GeV": 1.9808108493703658e-07,
+  "virtual_KK_ratio": 3.220151130835271e-51,
+  "kk_correction_z0_percent": 12.269055671175854,
+  "tracker_exists": false,
+  "rho_DE_over_mKK4": 1.5986824520833917e-18,
+  "z_peak_conformal_Hubble": 0.632312832078236,
+  "z_eq_LCDM": 0.2955673834609527,
+  "z_accel": 0.6323126179796772,
+  "verdict": "AMELIORATED_NOT_SOLVED",
+  "14D_status": "UNCHANGED_BY_PHASE_15",
+  "new_contribution": "Shimon selection effect is compatible complement",
+  "kappa0_JC": 0.08404303134755461,
+  "C_KK": 0.00024538111342351713,
+  "w0_JC": -0.7546188865764829
+}

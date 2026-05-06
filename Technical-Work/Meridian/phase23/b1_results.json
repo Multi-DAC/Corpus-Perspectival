@@ -1,0 +1,30 @@
+{
+  "computation": "B.1 Cuscuton Force Law",
+  "date": "2026-03-25",
+  "rs1_params": {
+    "k": "2.435e+18",
+    "M5": "2.4349999999999944e+18",
+    "ky_c": "34.538776394910684",
+    "y_c": "1.4184302420907877e-17",
+    "epsilon": "1e-15",
+    "e_2kyc": "9.999999999999999e+29",
+    "e_kyc": "999999999999999.9"
+  },
+  "key_results": {
+    "nature": "constraint (not propagating)",
+    "static_force": "absorbed into G_N",
+    "dynamic_response": "instantaneous (c_s = infinity)",
+    "coupling_alpha": "1/3 (radion coupling, frozen)",
+    "effective_mass_xi0": "0 (massless)",
+    "PPN_gamma": "1 (exact)",
+    "EM_coupling_linear": "E^2/(TeV)^4 ~ 0",
+    "key_signature": "c_s^2 = infinity in dark energy",
+    "unique_prediction": "missing scalar GW mode",
+    "lab_test": "missing sub-mm Yukawa (Eot-Wash)"
+  },
+  "next_computations": [
+    "A.1 radion mass",
+    "A.2 light spectrum",
+    "B.2 NP EM coupling"
+  ]
+}

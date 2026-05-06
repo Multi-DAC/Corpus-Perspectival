@@ -1,0 +1,71 @@
+================================================================
+C1: C_GB RESULTS — COMPLETE
+================================================================
+Date: 2026-03-17
+Authors: Clayton W. Iggulden-Schnell & Clawd
+
+SUMMARY
+-------
+C_GB = 2/3 (analytical, from GB-modified Israel junction conditions)
+
+DERIVATION CHAIN
+----------------
+1. Spectral action a_3 Seeley-DeWitt coefficient gives GB coupling:
+   alpha_5D = f_3/(4*pi^2)
+
+2. Dimensionless alpha_hat from spectral cutoff:
+   alpha_hat = 2*k^3 * f_3 / (4*pi^2 * M_5^3)
+   Range: [0.0219, 0.0276] for k = 10^8 GeV
+   (Sharp: 0.0276, Gaussian: 0.0228, Linear: 0.0219, Quadratic: 0.0269)
+   Central: 0.025
+
+3. C_GB from GB-modified junction conditions (Davis 2002):
+   The GB term modifies the Israel junction conditions:
+     [K_mu_nu] + 2*alpha_GB*(3*J_mu_nu - h_mu_nu*J) = -(S_mu_nu - h_mu_nu*S/3)/M_5^3
+   For the RS orbifold, this changes the effective warp rate k -> k_eff:
+     k_eff = k*(1 - alpha_hat*k^2/2 + ...)
+   The modification at the UV brane changes the cuscuton constraint at O(alpha_hat),
+   producing an epsilon*X kinetic correction with geometric factor C_GB = 2/3.
+
+4. epsilon_1 = alpha_hat * C_GB:
+   Central: 0.025 * (2/3) = 0.01667
+   Range: [0.0146, 0.0184]
+
+5. w_0 = -1 + (1+q_0)^2 * Omega_DE * epsilon_1 / [4*(1-q_0)^2 * zeta_0]:
+   With q_0 = -0.5275, Omega_DE = 0.685, zeta_0 = 0.038:
+   C_KK = 0.2156
+   w_0 = -0.993 +/- 0.002
+
+NUMERICAL VERIFICATION
+----------------------
+- Static RS background: R = -20k^2, R_MN^2 = 80k^4, E_5 = 120k^4 (all exact)
+- Radion perturbation: delta_E5/eps^2 = 66.60 (clean quadratic, verified 5 decades)
+- KK integral perturbation: delta_I/eps^2 = 11.36 (clean quadratic)
+- Mechanism confirmed: brane junction conditions, NOT bulk E_5 perturbation
+
+FULL RANGE (scanning alpha_hat and zeta_0)
+------------------------------------------
+alpha_hat=0.0219, zeta_0=0.028: w_0 = -0.991456
+alpha_hat=0.0219, zeta_0=0.048: w_0 = -0.995016
+alpha_hat=0.0276, zeta_0=0.028: w_0 = -0.989232
+alpha_hat=0.0276, zeta_0=0.048: w_0 = -0.993719
+
+Range: w_0 in [-0.995, -0.989]
+Central: -0.992 +/- 0.003
+
+NARROWED PREDICTION (with C_GB = 2/3 central):
+  w_0 = -0.993 +/- 0.002
+
+FILES
+-----
+c1_gb_kk_reduction.py — 7-part analysis (alpha_hat, E_5, mechanisms)
+c1_gb_kk_results.txt — Full output from 7-part analysis
+c1_symbolic_gb_kk.py — C_GB computation (junction conditions + numerical)
+c1_cgb_results.txt — This file
+
+REMAINING FOR C1 COMPLETION
+----------------------------
+- Rigorous proof of C_GB = 2/3 (currently analytical argument, needs formal derivation)
+- Update Paper I epsilon_1 value
+- Update Papers II-V cross-references
+- C2 (NCG coefficient with SM content) may modify alpha_hat by up to ~30%

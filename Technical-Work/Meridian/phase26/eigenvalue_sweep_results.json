@@ -1,0 +1,80 @@
+{
+  "sweep_date": "2026-04-03",
+  "metric": "balanced (box sampling)",
+  "MAX_DEGREE": 4,
+  "N_basis": 196,
+  "N_MC": 200000,
+  "DOMAIN_R": 5.0,
+  "k_levels": {
+    "8": {
+      "N_sections": 109,
+      "eta_2_w": 0.6883,
+      "lambda_1": 1.4613,
+      "lambda_2": 1.4939,
+      "lambda_3": 1.7407,
+      "lambda_10_sector": [
+        1,
+        0
+      ],
+      "lambda_01_sector": [
+        0,
+        1
+      ],
+      "lambda_10": 1.4613,
+      "lambda_01": 1.7407,
+      "s3_splitting": 0.2794,
+      "gap_to_KE_pct": 2.6
+    },
+    "12": {
+      "N_sections": 235,
+      "eta_2_w": 1.1331,
+      "lambda_1": 1.4085,
+      "lambda_2": 1.4817,
+      "lambda_3": 1.6953,
+      "lambda_10_sector": [
+        1,
+        0
+      ],
+      "lambda_01_sector": [
+        0,
+        1
+      ],
+      "lambda_10": 1.4817,
+      "lambda_01": 1.6953,
+      "s3_splitting": 0.2137,
+      "gap_to_KE_pct": 6.1
+    },
+    "15": {
+      "N_sections": 361,
+      "eta_2_w": 1.4507,
+      "lambda_1": 1.3621,
+      "lambda_2": 1.4826,
+      "lambda_3": 1.6752,
+      "lambda_10_sector": [
+        1,
+        0
+      ],
+      "lambda_01_sector": [
+        0,
+        1
+      ],
+      "lambda_10": 1.4826,
+      "lambda_01": 1.6752,
+      "s3_splitting": 0.1927,
+      "gap_to_KE_pct": 9.2
+    }
+  },
+  "s3_splitting_reduction_pct": 31.0,
+  "spectral_zeta": {
+    "status": "NOT_CONVERGED",
+    "reason": "196 Galerkin basis functions insufficient for spectral zeta",
+    "n_reliable_eigenvalues": 159,
+    "heat_kernel_a0_fit": 0.0285,
+    "heat_kernel_a0_predicted_bal": 0.0293,
+    "a0_ratio": 0.97,
+    "ray_singer_check": 26.25,
+    "ray_singer_expected": 0.0
+  },
+  "target": 0.776836,
+  "target_formula": "ln(3)/sqrt(2)"
+}

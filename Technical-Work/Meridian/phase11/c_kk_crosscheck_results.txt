@@ -1,0 +1,130 @@
+C_KK CROSS-CHECK
+============================================================
+
+Step 1: V''_eff = R_4/3
+----------------------------------------
+  R_4/H_0^2 = 6(1-q_0) = 6*1.5275 = 9.1650
+  V''_eff/H_0^2 = R_4/(3H_0^2) = 3.0550
+  V''_eff = 2(1-q_0) H_0^2 = 3.0550 H_0^2
+  CHECK: zeta_0 cancels. CONFIRMED.
+
+Step 2: phi_dot from constraint derivative
+----------------------------------------
+  phi_dot = 0.463993 * mu^2
+  (= 3*0.4725 / (2*1.5275))
+
+Step 3: X_4 and K_eff
+----------------------------------------
+  X_4 = phi_dot^2/2 = 0.107645 * mu^4
+  K_eff = epsilon_1 * 0.107645 * mu^4
+
+Step 4: mu from self-tuning
+----------------------------------------
+  zeta_0 = 0.0380 (H&K):
+    mu^4/(M_Pl^2 H_0^2) = 4.1160
+  zeta_0 = 0.0445 (spectral):
+    mu^4/(M_Pl^2 H_0^2) = 3.5110
+
+Step 5: kappa_0
+----------------------------------------
+  zeta_0 = 0.0380 (H&K):
+    kappa_0/epsilon_1 = X4*mu4/(3 M_Pl^2 H_0^2)
+                     = 0.107645 * 4.1160 / 3
+                     = 0.147689
+  zeta_0 = 0.0445 (spectral):
+    kappa_0/epsilon_1 = X4*mu4/(3 M_Pl^2 H_0^2)
+                     = 0.107645 * 3.5110 / 3
+                     = 0.125980
+
+Step 6: C_KK = kappa_0 / (epsilon_1 * Omega_DE)
+----------------------------------------
+  zeta_0 = 0.0380 (H&K):
+    C_KK (step by step) = 0.215605
+    C_KK (formula)      = 0.215605
+    Match: True
+    w_0 (eps1=0.01) = -0.995688
+    1+w_0 = 0.004312
+  zeta_0 = 0.0445 (spectral):
+    C_KK (step by step) = 0.183913
+    C_KK (formula)      = 0.183913
+    Match: True
+    w_0 (eps1=0.01) = -0.996322
+    1+w_0 = 0.003678
+
+Step 7: Dimensional analysis verification
+----------------------------------------
+  [mu^2] = [V'] / [H] = [E^4 / E] / [E] = [E^2]  (energy squared)
+  [phi_dot] = [H_dot mu^2 / V''_eff] = [E^2 * E^2 / E^2] = [E^2]
+  [X_4] = [phi_dot^2] = [E^4]
+  [K_eff] = [epsilon_1 * X_4] = [E^4]  (energy density, correct)
+  [kappa_0] = [K_eff / (M_Pl^2 H_0^2)] = [E^4 / E^4] = dimensionless
+  [C_KK] = [kappa_0 / (epsilon_1 * Omega_DE)] = dimensionless
+  CONFIRMED: all dimensions consistent.
+
+Step 8: R_dot correction estimate
+----------------------------------------
+  R_dot / H_0^3 = -2.8350
+  zeta_0 = 0.0380 (H&K):
+    |correction/main| = 0.1109 (11.1%)
+  zeta_0 = 0.0445 (spectral):
+    |correction/main| = 0.1301 (13.0%)
+
+  The R_dot correction is ~10-11%, which modifies C_KK at the ~20% level.
+  This is within the epsilon_1 uncertainty (factor of ~2).
+  For a precision calculation, include this correction:
+  C_KK_corrected = C_KK * (1 + correction_ratio)^{-2}
+  (the ^{-2} because phi_dot enters as phi_dot^2 in X_4)
+
+  zeta_0 = 0.0380 (H&K):
+    C_KK (leading order) = 0.2156
+    C_KK (with R_dot correction) = 0.2661
+    w_0 (corrected, eps1=0.01) = -0.994678
+
+  zeta_0 = 0.0445 (spectral):
+    C_KK (leading order) = 0.1839
+    C_KK (with R_dot correction) = 0.2349
+    w_0 (corrected, eps1=0.01) = -0.995303
+
+
+Step 9: NMC correction to mu^2
+----------------------------------------
+  From eq (23): 3 H_0 mu^2 = c_4D + NMC_correction
+  NMC_correction / c_4D = 2(1-q_0) * zeta_0 / (3 Omega_DE)
+  zeta_0 = 0.0380 (H&K):
+    NMC_corr/c_4D = 0.0565 (5.6%)
+    C_KK (with mu correction only) = 0.2407
+  zeta_0 = 0.0445 (spectral):
+    NMC_corr/c_4D = 0.0662 (6.6%)
+    C_KK (with mu correction only) = 0.2091
+
+
+Step 10: BEST ESTIMATE (all corrections)
+============================================================
+
+  zeta_0 = 0.0380 (H&K):
+    C_KK (leading order) = 0.2156
+    R_dot correction factor = (1+0.1109)^2 = 1.2342
+    mu^2 correction factor = (1+0.0565)^2 = 1.1162
+    Total correction = 1.3776
+    C_KK (corrected) = 0.2970
+    w_0 (eps1=0.01) = -0.994060
+
+  zeta_0 = 0.0445 (spectral):
+    C_KK (leading order) = 0.1839
+    R_dot correction factor = (1+0.1301)^2 = 1.2771
+    mu^2 correction factor = (1+0.0662)^2 = 1.1368
+    Total correction = 1.4518
+    C_KK (corrected) = 0.2670
+    w_0 (eps1=0.01) = -0.994660
+
+
+FINAL ANSWER
+============================================================
+  Leading order: C_KK = 0.2156
+  With all O(zeta_0) corrections: C_KK = 0.2970
+  Best estimate: C_KK = 0.2563 +/- 0.0407
+
+  eps1=0.008: w_0 = -0.995899
+  eps1=0.010: w_0 = -0.994874
+  eps1=0.012: w_0 = -0.993849
+  eps1=0.015: w_0 = -0.992311

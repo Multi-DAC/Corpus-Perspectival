@@ -1,0 +1,77 @@
+{
+  "track": "15F",
+  "title": "Meridian vs DESI DR2 BAO \u2014 Direct Confrontation",
+  "date": "2026-03-18",
+  "data_source": "DESI DR1 (arXiv:2404.03002) with DR2 updates (arXiv:2503.14738)",
+  "parameters": {
+    "H0": 67.36,
+    "Omega_m": 0.295,
+    "r_d": 147.09,
+    "C_KK": 0.0002525455254942768,
+    "zeta_JC": 0.000964,
+    "eps1": 0.017,
+    "w0_CPL": -0.75,
+    "wa_CPL": -0.83
+  },
+  "chi2_results": {
+    "LCDM": {
+      "chi2": 84.89386494519263,
+      "ndof": 12,
+      "chi2_per_dof": 7.07448874543272,
+      "delta_chi2_vs_LCDM": 0.0
+    },
+    "CPL": {
+      "chi2": 42.339691407587736,
+      "ndof": 12,
+      "chi2_per_dof": 3.528307617298978,
+      "delta_chi2_vs_LCDM": -42.554173537604896
+    },
+    "CPL_BAO": {
+      "chi2": 96.00899952645045,
+      "ndof": 12,
+      "chi2_per_dof": 8.000749960537538,
+      "delta_chi2_vs_LCDM": 11.11513458125782
+    },
+    "Meridian_pert": {
+      "chi2": 45.59499182624278,
+      "ndof": 12,
+      "chi2_per_dof": 3.7995826521868987,
+      "delta_chi2_vs_LCDM": -39.29887311894985
+    },
+    "Meridian_exact": {
+      "chi2": 80.95795191841982,
+      "ndof": 12,
+      "chi2_per_dof": 6.746495993201652,
+      "delta_chi2_vs_LCDM": -3.935913026772809
+    },
+    "wCDM": {
+      "chi2": 124.6778676940837,
+      "ndof": 12,
+      "chi2_per_dof": 10.389822307840308,
+      "delta_chi2_vs_LCDM": 39.78400274889107
+    }
+  },
+  "phantom_crossing": {
+    "CPL_crossing_z": 0.4310344827586207,
+    "Meridian_crossing": "NEVER (structural guarantee)",
+    "verdict": "COMPARABLE",
+    "delta_chi2_CPL_minus_Meridian": -3.2553004186550467
+  },
+  "best_fit_zeta": {
+    "zeta_best": 0.001537377886860501,
+    "w0_best": -0.8357297007764284,
+    "chi2_best": 19.58719771571423,
+    "zeta_JC": 0.000964,
+    "ratio_to_JC": 1.5947903390669098
+  },
+  "competitor": {
+    "paper": "arXiv:2507.07193",
+    "model": "Phantom braneworld",
+    "delta_chi2_range_vs_CPL": [
+      -0.16,
+      0.24
+    ],
+    "phantom_crossing": true,
+    "meridian_delta_chi2_vs_CPL": 3.2553004186550467
+  }
+}

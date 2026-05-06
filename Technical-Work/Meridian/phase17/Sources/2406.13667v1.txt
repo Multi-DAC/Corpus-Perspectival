@@ -1,0 +1,2695 @@
+MNRAS 000, 1–20 (2022)
+Preprint 21 June 2024
+Compiled using MNRAS LATEX style file v3.0
+Matter Power Spectra in Modified Gravity: A Comparative Study of
+Approximations and 𝑁-Body Simulations
+B. Bose1,2★, A. Sen Gupta3,4 B. Fiorini4, G. Brando5, F. Hassani6, T. Baker4,
+L. Lombriser7, B. Li8, C. Ruan6, C. Hernández-Aguayo9,10, L. Atayde11, N. Frusciante12
+1Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh, EH9 3HJ, UK
+2Basic Research Community for Physics e.V., Mariannenstraße 89, Leipzig, Germany
+3Astronomy Unit, School of Physical and Chemical Sciences, Queen Mary University of London, Mile End Road, London, E1 4NS, UK
+4Institute of Cosmology and Gravitation, University of Portsmouth, Burnaby Road, Portsmouth PO1 3FX, UK
+5Max Planck Institute for Gravitational Physics (Albert Einstein Institute) Am Mühlenberg 1, 14476 Potsdam-Golm, Germany
+6Institute of Theoretical Astrophysics, University of Oslo, P.O. Box 1029 Blindern, 0315 Oslo, Norway
+7Département de Physique Théorique, Université de Genève, 24 quai Ernest Ansermet, 1211 Genève 4, Switzerland
+8Institute for Computational Cosmology, Department of Physics, Durham University, South Road, Durham, DH1 3LE, UK
+9Max-Planck-Institut für Astrophysik, Karl-Schwarzschild-Str. 1, D-85748, Garching, Germany
+10Excellence Cluster ORIGINS, Boltzmannstrasse 2, D-85748 Garching, Germany
+11Instituto de Astrofisíca e Ciências do Espaço, Faculdade de Ciências da Universidade de Lisboa, Edificio C8, Campo Grande, P-1749016, Lisboa, Portugal
+12Dipartimento di Fisica “E. Pancini", Università degli Studi di Napoli “Federico II", Compl. Univ. di Monte S. Angelo, Edificio G, Via Cinthia, I-80126, Napoli, Italy
+Accepted XXX. Received YYY; in original form ZZZ
+ABSTRACT
+Testing gravity and the concordance model of cosmology, ΛCDM, at large scales is a key goal of this decade’s largest galaxy
+surveys. Here we present a comparative study of dark matter power spectrum predictions from different numerical codes in the
+context of three popular theories of gravity that induce scale-independent modifications to the linear growth of structure: nDGP,
+Cubic Galileon and K-mouflage. In particular, we compare the predictions from full 𝑁-body simulations, two 𝑁-body codes with
+approximate time integration schemes, a parametrised modified 𝑁-body implementation and the analytic halo model reaction
+approach. We find the modification to the ΛCDM spectrum is in 2% agreement for 𝑧≤1 and 𝑘≤1 ℎ/Mpc over all gravitational
+models and codes, in accordance with many previous studies, indicating these modelling approaches are robust enough to be used
+in forthcoming survey analyses under appropriate scale cuts. We further make public the new code implementations presented,
+specifically the halo model reaction K-mouflage implementation and the relativistic Cubic Galileon implementation.
+Key words: cosmology: theory – large-scale structure of the Universe – methods:numerical
+1 INTRODUCTION
+Observations of cosmological large-scale structure (LSS) offer a
+unique laboratory in which to test the concordance cosmological
+model, ΛCDM, which assumes General Relativity (GR). Such ex-
+periments are highly motivated. Indeed, the nature of the cold dark
+matter (CDM) and the constant dark energy (Λ) components, con-
+stituting 95% of the Universe’s total energy density (see for example
+Riess et al. 1998; Perlmutter et al. 1999; Alam et al. 2021; Aghanim
+et al. 2020), remains elusive. Moreover, ΛCDM’s inability to recon-
+cile principles of GR with quantum mechanics points to the need for
+a more unified theory (see Bernardo et al. 2022, for a recent review
+on gravitational approaches to the cosmological constant problem).
+These gaps in our understanding motivate the investigation into alter-
+native theories beyond ΛCDM. By exploring these new frontiers, we
+hope to uncover a more comprehensive picture of the Universe, po-
+★E-mail: ben.bose@ed.ac.uk
+tentially leading to groundbreaking insights into its origin, evolution,
+and ultimate fate.
+This decade will provide an immense opportunity for such insights
+through the efforts of some of the biggest scientific collaborations
+to date. These include the European Space Agency’s Euclid mis-
+sion (Barroso et al. 2024), the Vera Rubin Observatory (LSST Dark
+Energy Science Collaboration 2012; Ivezić et al. 2019) (LSST)1,
+the Dark Energy Survey (Albrecht et al. 2006; Abbott et al. 2016),
+the Nancy Grace Roman Space Telescope (Akeson et al. 2019) and
+the Dark Energy Spectroscopic Instrument (Levi et al. 2019). For
+instance, Euclid and LSST will be measuring up to order 1 billion
+galaxy shapes (Barroso et al. 2024; Ivezić et al. 2019), 2 orders of
+magnitude more than previous surveys (see for example Hildebrandt
+et al. 2017). This means the statistical precision of its resulting weak
+lensing measurements, such as cosmic shear, will be roughly the
+1 Vera Rubin was formerly known as the Large Synoptic Survey Telescope.
+© 2022 The Authors
+arXiv:2406.13667v1  [astro-ph.CO]  19 Jun 2024
+
+---PAGE BREAK---
+2
+same order of magnitude better than previous observations, provid-
+ing a potentially brilliant probe for new physics.
+Consistency tests of ΛCDM are a primary goal, but these missions
+are also charged with investigating if there is any statistical preference
+for new physics. Such beyond-consistency tests require theoretical
+modelling of any new physics we wish to test. In particular, a key task
+is to theoretically model key statistical cosmological quantities over a
+very wide range of physical scales. The 2-point correlation function,
+or its Fourier analog, the power spectrum, of the cosmological matter
+distribution is one such summary statistic. At small physical scales,
+where we have many more galaxy pairs, the measured statistics will
+be far more precise, potentially providing a heightened signal of any
+new physics. It should be kept in mind that this work only considers
+the matter power spectrum, which is a key ingredient for cosmic
+shear weak lensing analyses.
+The small scale precision measurements of forthcoming surveys
+has forced ambitious accuracy demands on such theoretical pre-
+dictions (for example O(1%) accuracy on the matter power spec-
+trum Hearin et al. 2012; Ivezić et al. 2019; Martinelli et al. 2021).
+This requires careful consideration of scale cuts. Most Euclid fore-
+casts (Blanchard et al. 2020; Bonici et al. 2023; Frusciante et al.
+2023; Casas et al. 2023) consider a ‘pessimistic’ and ‘optimistic’
+scale cut in harmonic space, corresponding to a maximum angular
+multipole of ℓ= 1500 and ℓ= 5000, with the precise value of these
+cuts in Fourier mode, or 𝑘-space, varying with redshift. In contrast,
+LSST applies scale cuts in real space. While percent-level accuracy
+remains a desirable goal, definitive accuracy up to a specific 𝑘-cut
+is only achievable through full parameter inference. This nuanced
+approach is essential to fully harness the power of these surveys for
+an exquisite and reliable test of gravity and cosmology.
+For these reasons, the community has sought to accurately model
+these small, nonlinear scales in the matter power spectrum, for
+beyond-ΛCDM scenarios. To this end, many methods have been de-
+veloped to provide such predictions. 𝑁-body simulations provide our
+most accurate predictions, and have been extended to many models
+beyond-ΛCDM (see for example Li et al. 2012, 2013a,b; Puchwein
+et al. 2013; Llinares et al. 2014; Ruan et al. 2022; Hernández-Aguayo
+et al. 2022; Hassani et al. 2019, 2020; Christiansen et al. 2023). This
+accuracy comes at a large computational cost, making this method in-
+appropriate for expensive data-theory comparisons where we wish to
+sample a large cosmological and gravitational parameter space. One
+can alleviate this cost to some extent through approximate methods.
+For example, Comoving Lagrangian Acceleration (COLA) (Tassev
+et al. 2013; Howlett et al. 2015) is an 𝑁-body method that provides
+a balance between accuracy and speed by reducing the time steps in
+particle evolution through the perturbative modelling of large scale
+physics. This method has also been extended to many alternatives to
+ΛCDM (Winther et al. 2017; Wright et al. 2023; Brando et al. 2023).
+While being faster, COLA methods are still too slow to use directly
+in data analyses. Despite the computational cost, simulation meth-
+ods are essential in bench-marking or constructing faster predictive
+pipelines, such as emulators (Arnold et al. 2021; Harnois-Déraps
+et al. 2022; Ramachandra et al. 2021; Fiorini et al. 2023; Nouri-
+Zonoz et al. 2024) or analytic models (Zhao 2014; Mead et al. 2016).
+The halo model reaction (Cataneo et al. 2019) is one such analytic
+method, which can provide a high accuracy at a fraction of the time
+cost and is theoretically general, allowing its extension to many mod-
+els of cosmology.
+This paper is dedicated to assessing the consistency of these
+different methods for a few representative beyond-ΛCDM mod-
+els of cosmological relevance. The models we consider are the
+DGP braneworld model (Dvali et al. 2000), the Cubic Galileon
+model (Nicolis et al. 2009) and the K-mouflage model (Babichev
+et al. 2009). This work runs in a similar vein to the code compar-
+ison project of Ref. Winther et al. (2015), updating the exercise,
+nearly a decade later, to account for improvements in the codes and
+methods, as well as approximations and new theoretical models and
+phenomenology. Such an assessment is vital in modelling the theo-
+retical uncertainty or delimiting the scales of validity of the method
+under consideration, which will play an important role in forthcom-
+ing surveys (Audren et al. 2013; Baldauf et al. 2016). We also present
+an extension of the halo model reaction code, ReACT, which includes
+the specific K-mouflage model of gravity considered in this paper.
+We outline the paper as follows: In section 2 we briefly intro-
+duce the different beyond-ΛCDM models we consider. In section 3
+we outline the different methods we will compare, highlighting the
+key differences between them and the various approximations they
+employ. In section 4 we present matter power spectrum boost com-
+parisons of the different methods. We present our conclusions in
+section 5.
+1.1 Notation and conventions
+In this work we will use the following definitions and conventions:
+(i) We use a metric signature of (−, +, +, +).
+(ii) We work in units where 𝑐= ℏ= 1.
+(iii) Jordan frame quantities appear with a hat, e.g. ˆ𝑞.
+(iv) The Planck mass is denoted as 𝑀pl = (8𝜋𝐺N)−1, where 𝐺N
+is Newton’s constant.
+(v) Overdots denote derivatives with respect to cosmic time 𝑡.
+(vi) Primes denote derivatives with respect to the natural loga-
+rithm of the scale factor, ln 𝑎, unless otherwise stated.
+(vii) Quantities with a ‘0’ subscript denote their value at 𝑧= 0.
+(viii) The canonical scalar field kinetic energy is 𝑋≡−(𝜕𝜙)2/2.
+2 GRAVITY BEYOND GENERAL RELATIVITY
+The simplest, viable class of alternatives to ΛCDM can be found by
+adding a single extra scalar degree of freedom, 𝜙, to GR. Under some
+basic constraints, such as second-order equations of motion (a generic
+condition to avoid unbounded negative energies) and four spacetime
+dimensions, the well-studied Horndeski Lagrangian encompasses
+all possible scalar-tensor theories with minimally coupled matter
+(Horndeski 1974; Deffayet et al. 2011; Kobayashi 2019). If we accept
+the speed of light to be the same as gravitational wave propagation, in
+accordance with the observation of gamma ray burst GRB 170817A
+(Goldstein et al. 2017) and merger signal of GW170817 (Abbott
+et al. 2017), the Horndeski Lagrangian reduces to 2 (Lombriser &
+Taylor 2016; Lombriser & Lima 2017; Creminelli & Vernizzi 2017;
+Ezquiaga & Zumalacárregui 2017; Baker et al. 2017; Sakstein & Jain
+2017; Battye et al. 2018; de Rham & Melville 2018; Creminelli et al.
+2018; Quartin et al. 2023)
+LH = 𝐺4(𝜙) 𝑅+ 𝐺2(𝜙, 𝑋) −𝐺3(𝜙, 𝑋)□𝜙,
+(1)
+where 𝑅is the Ricci curvature scalar, □is the D’Alembert operator
+and each 𝐺𝑖(𝜙, 𝑋), 𝑖= 2, 3, 4 is a free function of the scalar field
+𝜙and its canonical kinetic term 𝑋. Note that the 𝐺4 operator is a
+function of 𝜙only.
+2 This condition may not hold below the frequency band of terrestrial grav-
+itational wave detectors (de Rham & Melville 2018; de Rham et al. 2021;
+Baker et al. 2022, 2023; Harry & Noller 2022).
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+3
+Besides modifying the expansion history of the Universe, mod-
+ified gravity theories also leave an impact on the growth of struc-
+ture (see Hou et al. 2023, for a review). This is generally understood
+by considering linear perturbations on top of a homogeneous and
+isotropic Friedmann-Lemaître-Robertson-Walker background given
+by the following line element
+d𝑠2 = −(1 + 2Ψ) d𝑡2 + 𝑎2(𝑡) (1 −2Φ) 𝛿𝑖𝑗d𝑥𝑖d𝑥𝑗,
+(2)
+where Φ is the usual Poisson potential in Newtonian gravity that
+captures perturbations in the spatial sector of the metric, while Ψ is a
+gravitational potential corresponding to perturbations in the time-like
+sector of the line element.
+The linear evolution of perturbations of modified gravity theories
+given by Equation 1 has been thoroughly studied by many different
+works in the literature (see for example Hu et al. 2014; Zumalacár-
+regui et al. 2017; Frusciante & Perenon 2020). Within the quasi-
+static approximation (Sawicki & Bellini 2015; Winther & Ferreira
+2015b; Pace et al. 2021), the effects of modified gravity on the lin-
+ear growth of structure in the Universe are encoded in a time- and
+scale-dependent effective gravitational constant
+𝐺eff,L(𝑘, 𝑎) = 𝐺N
+
+1 + Δ𝐺eff,L(𝑘, 𝑎)
+𝐺𝑁
+
+,
+(3)
+where 𝑘is the Fourier mode. In this work, we only consider theories
+where the linear modification is scale-independent and so we drop
+the dependency on 𝑘for 𝐺eff,L, where L refers to a linear theory
+prediction. The Poisson equation at large scales is then written in
+Fourier space as
+𝑘2Φ(𝑘, 𝑎) = 4𝜋𝐺eff,L(𝑎)𝑎2 ¯𝜌m(𝑎)𝛿m(𝑘, 𝑎),
+(4)
+where ¯𝜌m is the background matter density, and 𝛿m is the corre-
+sponding linear matter perturbation.
+Another requirement for this class of theories is the inclusion of a
+theoretical mechanism that prevents large modifications in environ-
+ments where GR-like physics has been well confirmed by experiment
+(see Will 2014; Belgacem et al. 2019, for example). Such mechanisms
+are known as screening mechanisms (see Brax et al. 2021, for a recent
+review and experimental tests). The screened environments are thus
+small scale, dense environments. This means that the modification
+to Newton’s constant, more generally written as
+𝐺eff(𝑘, 𝑎) = 𝐺N
+
+1 + Δ𝐺eff(𝑘, 𝑎)
+𝐺𝑁
+
+,
+(5)
+requires the condition that lim𝑘→∞𝐺eff(𝑘, 𝑎) →𝐺N. In this case
+𝐺eff(𝑘, 𝑎) is the effective gravitational constant valid at all scales -
+both linear and nonlinear - and it necessarily depends on scale as
+well as time. In this work we will meet two such screening mech-
+anisms which satisfy this condition: the Vainshtein mechanism and
+K-mouflage screening.
+Returning to Equation 1, we will consider three choices for the
+Lagrangian functions, each having very particular phenomenological
+features, including different screening mechanisms and cosmological
+backgrounds. Where a choice exists, we will give their Lagrangians
+in the Einstein frame where 𝐺4(𝜙) = 𝑀2
+pl/2, with metric 𝑔𝜇𝜈. In this
+frame the ‘pure gravity’ part of the action resembles the Einstein-
+Hilbert action for GR, simplifying some computations. However, this
+frame choice also results in non-minimal coupling of matter to the
+metric, ensuring the theory behaves very differently to GR.
+The Einstein frame is obtained by performing a conformal trans-
+formation of the Jordan frame. The Jordan frame prioritises use
+of a metric, ˆ𝑔𝜇𝜈, which couples minimally to the matter fields but
+contains the non-trivial 𝐺4 function. In this frame the gravitational
+Lagrangian is modified from the the Einstein-Hilbert action. The
+Jordan-frame metric is related to the Einstein-frame metric, 𝑔𝜇𝜈, via
+a conformal factor 𝐴that is a function of the Horndeski scalar:
+ˆ𝑔𝜇𝜈= 𝐴2(𝜙)𝑔𝜇𝜈.
+(6)
+In what follows, specifically in the case of K-mouflage theories, we
+will see that some quantities differ between the Jordan and Einstein
+frame. Though these quantities may be ‘physical’ in nature, they
+are not directly observable. General coordinate invariance – a key
+property shared with GR by nearly all modified gravity theories –
+ensures that observable quantities must be independent of frame
+choices (see for example Catena et al. 2007; Chiba & Yamaguchi
+2013; Francfort et al. 2019).
+We summarise the models considered in this paper, their as-
+sociated additional parameters and some selected constraints in
+Table 1.
+2.1 nDGP
+The first model we consider is the Dvali-Gabadadze-Porrati
+model (Dvali et al. 2000), which does not strictly fall into the Horn-
+deski class, being a five-dimensional braneworld model. It is given
+by the following action
+𝑆=
+1
+16𝜋𝐺5
+∫
+M
+d5𝑥√−𝛾𝑅5 +
+∫
+𝜕M
+d4𝑥√−𝑔
+
+𝑀2
+pl
+2 𝑅+ Lm
+
+,
+(7)
+where 𝛾is the five-dimensional metric and 𝑅5 its Ricci curvature
+scalar. 𝐺5 is the five-dimensional gravitational constant. The mat-
+ter Lagrangian is restricted to a four-dimensional brane in a five-
+dimensional Minkowski spacetime. The induced gravity given by
+the four-dimensional Einstein-Hilbert action is responsible for the
+recovery of four-dimensional gravity on the brane. The parameter
+𝑟c = 𝐺5/(2𝐺N) is called the cross-over scale and is the only free
+parameter of the model, with its GR limit being 𝑟c →∞.
+DGP also exhibits screening coming from higher order deriva-
+tive terms in the effective 4-dimensional action. Such screening is
+known as Vainshtein screening (Vainshtein 1972; Babichev & Def-
+fayet 2013). The so-called decoupling limit of DGP has the effective
+action given by (Luty et al. 2003; Gabadadze & Iglesias 2006)
+LDGP =
+𝑀2
+pl
+2 𝑅+
+ 
+3𝜙−
+1
+Λ3
+DGP
+(𝜕𝜙)2
+!
+□𝜙+
+1
+2𝑀2
+pl
+𝜙𝑇,
+(8)
+where 𝑇is the trace of the energy momentum tensor and Λ3
+DGP =
+𝑀2
+pl/𝑟2𝑐. Note that although Equation 7 is not a Horndeski La-
+grangian, Equation 8 is (compare to Equation 1). In this case we
+have
+𝐺3(𝜙, 𝑋) = 3𝜙+
+2
+Λ3
+DGP
+𝑋,
+(9)
+with 𝐺2(𝜙, 𝑋) = 0 and 𝐺4(𝜙) = 𝑀2
+pl/2.
+The literature typically assumes a ΛCDM background expansion,
+which is accommodated by introducing an appropriate dark energy
+contribution (see for example Schmidt 2009b; Bag et al. 2018) on
+the stable ‘normal’ branch solution of the Friedmann equations. We
+follow this here (see Lue 2006, for more details) and refer to this
+normal branch as nDGP. We also parametrize the modification to
+gravity using the energy density fraction Ωrc ≡1/(4𝑟2c 𝐻2
+0), where
+𝐻0 is the Hubble constant. The GR-limit is then Ωrc →0.
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+4
+Table 1. Overview of gravity models considered in this work. Note the K-mouflage kinetic term in Equation 14 does not pass Solar System tests without running
+into fine-tuning issues (Barreira et al. 2015b). Note the CG has no free parameters with the tracker solution. We have included constraints for the more general
+GCCG (see subsection 2.2).
+model
+screening method
+free parameters
+selected data constraints
+nDGP
+Vainshtein
+{Ωrc}
+Ωrc ≤0.235 (2𝜎) (LSS) (Barreira et al. 2016)
+CG
+Vainshtein
+{𝑠= 2, 𝑞= 0.5}
+𝑠= 0.05+0.08
+−0.05, 𝑞> 0.8 (2𝜎) (Various LSS, GCCG) (Frusciante et al. 2020)
+K-mouflage
+K-mouflage
+{𝑛, 𝛽K, 𝐾0, 𝜆}
+𝛽K ≤0.1 (Lunar laser ranging) (Barreira et al. 2015b)
+Although nDGP is now quite strongly constrained by observa-
+tions (see for example Lombriser et al. 2009; Barreira et al. 2016;
+Piga et al. 2023), its appeal as a modified gravity model stems from
+the simplicity of its 4D effective action relative to the new phe-
+nomenology it introduces. It is one of the simplest examples of
+a gravity model that produces Vainshtein screening effects, whilst
+maintaining scale-independent growth of matter perturbations, and
+having only one additional parameter relative to ΛCDM. This has
+made it a favourite testbed for simulations (Schmidt 2009a; Khoury
+& Wyman 2009; Li et al. 2013a; Winther et al. 2017) and analyses
+with galaxy surveys (Barreira et al. 2016; Piga et al. 2023; Frusciante
+et al. 2023). We refer the reader to Refs. Koyama & Maartens (2006);
+Li et al. (2013a) and section B for details on the modification to the
+Poisson equation (Equation 4) in linear and nonlinear regimes.
+2.2 Cubic Galileon
+The Cubic Galileon (CG) model was first derived by Nicolis
+et al. (2009) as a generalisation of the effective DGP action in 4-
+dimensions. The Lagrangian is given by (see for example Deffayet
+et al. 2009; Kobayashi et al. 2010)
+LCG = 𝑅
+𝑀2
+pl
+2
++ 𝑐2𝑋+ 1
+Λ3
+3
+𝑐3𝑋□𝜙,
+(10)
+where 𝑐2 and 𝑐3 are dimensionless constants parametrizing the
+modification to gravity, and the canonical choice for Λ3 being
+Λ3
+3 = 𝑀pl𝐻2
+0, made to give the scalar field non-trivial dynamics
+on cosmological scales. Comparing with Equation 1 we have
+𝐺2(𝜙, 𝑋) = 𝑐2𝑋,
+𝐺3(𝜙, 𝑋) = −
+1
+𝑀pl𝐻2
+0
+𝑐3𝑋.
+(11)
+This model also exhibits the Vainshtein mechanism due to the pres-
+ence of the higher-order derivative terms (see Barreira et al. 2013a,
+for a derivation in the case of spherical symmetry). In this model,
+𝐺4(𝜙) = 𝐴(𝜙)−2/2 = 1, and hence there is no difference between
+Jordan and Einstein frames (see Equation 6). We note that the absence
+of 𝐺4 and conformal coupling allows one to interpret this model as
+a dark energy model with a non-trivial kinetic term.
+The Cubic Galileon model is one member of a broader family, the
+Galileons, which added further derivative terms to Equation 10 (Def-
+fayet et al. 2009). The Galileon family received intense interest from
+the theoretical physics community due to their shift symmetry prop-
+erties (the actions are invariant under a shift 𝜙(𝑥) →𝜙(𝑥)+𝑐+𝑏𝜇𝑥𝜇,
+𝑐and 𝑏𝜇constants); this leads to special properties of the S-matrix.
+Cosmologically, their impact has been studied on the CMB (for ex-
+ample Barreira et al. 2014; Peirone et al. 2019; Frusciante et al. 2020;
+Albuquerque et al. 2022), linear matter power spectrum (for example
+Barreira et al. 2012) and gravitational lensing by voids (for example
+Baker et al. 2018). See also Refs. Renk et al. (2017); Peirone et al.
+(2018); Frusciante & Pace (2020) for other observational implica-
+tions.
+The more complex Galileon siblings have been virtually elimi-
+nated by their inability to have luminal gravitational waves, leaving
+behind only the Cubic Galileon (see for example Ezquiaga & Zu-
+malacárregui 2017; Baker et al. 2017). The Cubic Galileon model
+can be constrained by considering the integrated Sachs-Wolfe effect
+cross-correlated with a galaxy sample, as was done in Refs. Renk
+et al. (2017); Kable et al. (2022). The resulting cross-correlation,
+however, is shown to be anti-correlated with the expected ΛCDM
+signal, which severely constrains this model. It is worth noting, nev-
+ertheless, that a broader class of cubic Horndeski theories does not
+show this anti-correlation (Brando et al. 2019). Similarly to nDGP,
+it remains a useful testbed displaying Vainshtein screening, with a
+larger degree of flexbility due to its additional parameters and energy
+scales. It is a useful starting point from which to investigate the more
+general model space of the Horndeski Lagrangian (Equation 1).
+We also note that the non-zero 𝐺2 term makes this model phe-
+nomenologically distinct from nDGP. Further, in this paper we do not
+assume a ΛCDM background as with nDGP, but rather the solution
+to the Friedmann equations which include the effects of the scalar
+field (see for example Barreira et al. 2013a). A cosmology with this
+background evolution but with no further gravitational modification
+(so the Poisson equation remains as in GR), will be referred to as
+QCDM as in Ref. Barreira et al. (2013a).
+The more general Generalised Covariant Cubic Galileon (GCCG)
+was recently considered in Ref. Frusciante et al. (2020), which pro-
+motes the 𝐺𝑖functions to be power law functions of 𝑋, i.e. 𝐺𝑖∝𝑋𝑝𝑖.
+This model permits a tracker solution at the background level which
+is given by (De Felice & Tsujikawa 2012)
+𝐻2𝑞+1𝜓2𝑞= 𝜁𝐻2𝑞+1
+0
+,
+(12)
+where 𝑞≡(𝑝3 −𝑝2) + 1/2 and 𝜓= 𝜙′/𝑀pl. We also have the
+parameter 𝑠= 𝑝2/𝑞, leaving only 2 additional degrees of freedom
+for this model over ΛCDM. The GCCG reverts to the Cubic Galileon
+model when 𝑞= 0.5 and 𝑠= 2.
+The GCCG model has not been ruled out by data, with CMB
+experiments giving the 2𝜎bounds of 𝑞> 0 and 𝑠= 0.6+1.7
+−0.6, with a
+slight preference for the model over ΛCDM (Frusciante et al. 2020).
+When combined with SN1a and redshift space distortion data sets,
+the bounds improve to 𝑞> 0.8 and 𝑠= 0.05+0.08
+−0.05. We note that
+theoretical stability conditions require both parameters to be positive.
+In this paper we will only consider the CG limit of GCCG.
+We note that we employ the GCCG patch to the ReACT code (Atayde
+et al. 2024) for those specific predictions. For details on how the
+Poisson equation is modified in the CG limit, we refer the reader to
+Refs. Barreira et al. (2013a); Atayde et al. (2024).
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+5
+2.3 K-mouflage
+2.3.1 Lagrangian
+The last model we consider is the K-mouflage model (Babichev et al.
+2009). This model has the Lagrangian (in the Einstein frame)
+LK = 𝑅
+𝑀2
+pl
+2
++ M4𝐾(𝑋) ,
+(13)
+where 𝐾(𝑋) is a function of the canonical kinetic term, equivalent to
+a restricted 𝐺2(𝜙, 𝑋), and M4 is an energy scale of the theory3. We
+will set M4 = 𝜆2𝐻2
+0 𝑀2
+pl as in Ref. Hernández-Aguayo et al. (2022),
+𝜆being an order 1 dimensionless constant which can be tuned to
+give the current accelerated expansion of the Universe today. In
+this work we will consider a form which has been well studied in
+the literature (Brax & Valageas 2014a,b; Barreira et al. 2015a,b;
+Hernández-Aguayo et al. 2022)
+𝐾(𝑋) = −1 +
+1
+𝐻2
+0𝜆2𝑀2
+pl
+𝑋+ 𝐾0
+1
+𝐻2𝑛
+0 𝜆2𝑛𝑀2𝑛
+pl
+𝑋𝑛,
+(14)
+where 𝐾0 is another dimensionless model parameter and 𝑛≥2 is an
+integer. For the conformal function, we assume an exponential form
+𝐴(𝜙) = exp
+ 𝛽K𝜙
+𝑀pl
+
+,
+(15)
+where 𝛽K is another dimensionless model parameter. In total we then
+have 4 parameters for this particular model: {𝜆, 𝐾0, 𝑛, 𝛽K}.
+Unlike the other two models considered, the Jordan and Einstein
+frames are not set to be identical (𝐴(𝜙) ≠1) which distinguishes this
+model from 𝑘-essence theories (Armendariz-Picon et al. 1999) where
+a universal coupling to matter is not present. In this work we will
+develop predictions for both frames. We provide the transformations
+of key quantities in the next subsection.
+This model exhibits a similar screening mechanism to Vainshtein
+screening, although quantitatively different due to the absence of the
+higher-order 𝐺3(𝜙, 𝑋)□𝜙term, giving it a unique phenomenology. In
+particular, in dense environments of mass 𝑚, the K-mouflage radius
+– the scale below which GR is recovered – goes as 𝑚1/2, whereas
+in Vainshtein theories this screening occurs at smaller scales, with
+a dependence of the Vainshtein radius on the environmental mass
+being 𝑚1/3 (Brax & Valageas 2014a). Vainshtein is also capable
+of screening large cosmological structures, while K-mouflage is not
+(Brax et al. 2015).
+K-mouflage has been confronted with a number of cosmological
+data sets in Refs. Barreira et al. (2015b); Benevento et al. (2019),
+with a review of current constraints given in Ref. Brax et al. (2021)
+and forecasts using spectroscopic and photometric primary probes
+by Euclid given in Ref. Frusciante et al. (2023). In particular, in
+Ref. Barreira et al. (2015b), the authors place a Solar System con-
+straint on the coupling parameter 𝛽K ≤0.1, and argue that the power
+law form for 𝐾(𝑋) as chosen here will necessarily require a degree of
+fine tuning to avoid constraints. Despite this, this model is a good test
+case for implementation as it has been well studied in the literature
+and there are available 𝑁-body simulations with which to compare to
+(Hernández-Aguayo et al. 2022). More viable non-canonical kinetic
+terms can easily be implemented following the current implementa-
+tions.
+We alert the reader that we have made public a Mathematica
+notebook with some key Einstein frame quantities and derivations
+for the model along with this work. This contains useful expressions
+3 Not to be confused with the manifold M in Equation 7.
+such as the exact solutions for the Einstein frame background 𝐻(𝑎)
+in the 𝑛= 2 and 𝑛= 3 cases.
+2.3.2 Transformation to Jordan Frame
+In this section we provide some basic translations between Einstein
+and Jordan frames which will be useful for our comparisons of the
+K-mouflage model. We follow Ref. Francfort et al. (2019) for these
+expressions. We use subscripts ‘J’ and ‘E’ to denote Jordan and
+Einstein frame quantities respectively.
+The scale factor transforms as
+𝑎J = ¯𝐴𝑎E ,
+(16)
+where ¯𝐴is the conformal factor evaluated at the background level
+(see Equation 15). The Hubble rate transforms as
+𝐻J(𝑎) = 𝐻E
+¯𝐴
+
+1 + 𝛽K
+𝑀pl
+d𝜙
+d ln 𝑎E
+
+.
+(17)
+The matter power spectrum transforms as (Francfort et al. 2019)
+(2𝜋)3𝛿D(𝒌1 + 𝒌2)𝑃J(𝑘1) = ⟨𝛿J(𝒌1)𝛿J(𝒌2)⟩
+= ⟨𝛿E(𝒌1)𝛿E(𝒌2)⟩
+−4
+¯𝐴𝜙
+¯𝐴⟨𝛿E(𝒌1)𝛿𝜙(𝒌2)⟩
+−4
+¯𝐴𝜙
+¯𝐴⟨𝛿𝜙(𝒌1)𝛿E(𝒌2)⟩
++ 16
+ ¯𝐴𝜙
+¯𝐴
+!2
+⟨𝛿𝜙(𝒌1)𝛿𝜙(𝒌2)⟩,
+(18)
+where and we used 𝛿J = 𝛿E −4𝛿𝜙¯𝐴𝜙/ ¯𝐴, with ¯𝐴𝜙= d ¯𝐴(𝜙)/d𝜙, 𝛿
+is shorthand for the matter density field perturbation 𝛿m, 𝛿𝜙is the
+scalar field perturbation, 𝜙= ¯𝜙+ 𝛿𝜙, and 𝑘is the comoving Fourier
+mode in ℎ/Mpc. Angular brackets denote an ensemble average. The
+linear order Klein-Gordan equation for the scalar field perturbation
+in Fourier space under the quasi-static approximation is (Brax &
+Valageas 2014b)
+𝛿𝜙(𝒌) = −
+¯𝐴𝛽K𝑎2
+𝑀pl𝐾𝑋𝑘2 ¯𝜌m𝛿E(𝒌) ,
+(19)
+where 𝐾𝑋= d 𝐾(𝑋)/d𝑋. Substituting 𝛿𝜙into Equation 18 gives
+us the following relationship between linear matter power spectra
+predictions
+𝑃L,J(𝑘) = 𝑃L,E(𝑘)
+h
+1 + 2J (𝑘, 𝑎) + J (𝑘, 𝑎)2i
+,
+(20)
+where
+J (𝑘, 𝑎) =
+12 ¯𝐴𝜙𝛽K𝐻2
+0 𝑀plΩm,0
+𝑎𝑘2𝐾𝑋
+,
+(21)
+where we have used the relation ¯𝜌m = 3𝐻2
+0 𝑀2
+plΩm,0𝑎−3. We see
+that the linear matter power spectra in both frames are identical up
+to corrections that are suppressed by powers of ∼𝐻2
+0/𝑘2.
+It was argued in Ref. Francfort et al. (2019) that this correction
+to the matter power spectrum at nonlinear scales continues to go
+as ∼𝐻4/𝑘4, and so becomes negligible on all sub-horizon scales.
+This argument hinged on a number of assumptions, including 𝐴𝜙∼
+−𝐴(𝜙)/(2𝜙). We will show in section 4 that the corrections are
+indeed small at nonlinear scales for the K-mouflage model, using a
+conformal factor given in Equation 15.
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+6
+3 TOOLS & METHODS
+In this section we give an overview of the methods developed to
+give predictions for the large-scale structure in all modified gravity
+scenarios considered. After explaining details of how we compute
+matter power spectra, we describe the methods we will compare in
+this work. Most of these are 𝑁-body simulation-based approaches
+with various degrees of approximation. The halo model reaction
+(Cataneo et al. 2019) is also considered, which is an analytic method
+based on the halo model and perturbation theory. Table 2 gives an
+overview of these methods.
+3.1 𝑃(𝑘) estimation
+𝑁-body simulations track the time-evolution of the matter distribu-
+tion in the simulation box (of side 𝐿box) by means of a number of
+𝑁-body particles (𝑁P). To estimate the matter power spectrum from
+these sort of discrete distributions it is necessary to deal with some
+subtleties. The number of particles used in 𝑁-body simulations is
+often large (i.e. 108 −1012) so that it would be computationally im-
+practical to estimate the matter power spectrum by computing the
+distances between each pair of particles. Hence, the particles are nor-
+mally interpolated on a regular grid using mass assignment schemes
+(MAS). Then the matter power spectrum is estimated exploiting the
+Fast Fourier Transform (FFT) algorithm. However, the modes close
+to the Nyquist frequency of the FFT grid can be significantly affected
+by aliasing (Jing 2005; Sefusatti et al. 2016). To avoid this problem we
+use the interlacing technique with the triangular-shaped-cloud MAS
+(Sefusatti et al. 2016) to compute the matter power spectra from the
+simulations. Aiming to compare our matter power spectra deep in the
+nonlinear regime but mindful of the limited mass-resolution of our
+simulations, we use a FFT grid of size 𝑁mesh,1D = 𝐿box/(d𝑥) where
+d𝑥is the domain grid resolution of the simulation, and use a simple
+linear binning with 𝑘min = 𝑘f/2 and Δ𝑘= 𝑘f, where 𝑘f ≡
+2𝜋
+𝐿box is the
+fundamental frequency of the box.
+3.2 Full 𝑁-body
+Our reference predictions will come from numerical simulations that
+solve the nonlinear Klein-Gordon equation with multi-grid relaxation
+to get the precise modified force law. They also employ a large
+number of time steps over which the particles are evolved, ensuring
+the accuracy of the resulting predictions. We consider two variants
+of these codes.
+3.2.1 ECOSMOG
+The ECOSMOG simulation code (Li et al. 2012, 2013a) is a modi-
+fied gravity extension of the adaptive mesh refinement (AMR) code
+Ramses (Teyssier 2002). ECOSMOG relies on multigrid relaxation tech-
+niques to solve the nonlinear Klein-Gordon equations for the addi-
+tional scalar fields that appear in some modified gravity theories
+(such as those considered here). This code was used to simulate
+several gravity models in the literature:
+• f(R) (Li et al. 2012);
+• nDGP (Li et al. 2013a);
+• symmetron (Davis et al. 2012; Brax et al. 2013);
+• dilaton (Brax et al. 2011);
+• galileon (cubic, quartic, cubic vector) (Barreira et al. 2013b,a;
+Becker et al. 2020).
+The accuracy of this code for predictions of 𝑓(𝑅) (Hu & Sawicki
+2007) effects on the matter power spectrum has been estimated to
+be of ∼1% up to 𝑘∼7ℎ/Mpc in the code comparison paper
+Ref. Winther et al. (2015). This code constitutes the highest pre-
+cision predictive tool to be considered in this work.
+3.2.2 MG-GLAM
+MG-GLAM (Hernández-Aguayo et al. 2022; Ruan et al. 2022) extends
+the Particle Mesh (PM) code GLAM (Klypin & Prada 2018) to a general
+class of modified gravity theories (including the K-mouflage model)
+by adding extra modules for solving the Klein-Gordon equations,
+using the multigrid relaxation algorithm. It uses a regularly spaced 3D
+mesh covering the cubic simulation box, solves the Poisson equation
+for the Newtonian potential using the Fast Fourier Transform (FFT)
+algorithm, and adopts the Cloud-In-Cell (CIC) scheme to implement
+the matter density assignment and force interpolation.
+MG-GLAM has been tested with the results from other high-precision
+modified gravity codes, such as ECOSMOG (Li et al. 2012, 2013a),
+MG-GADGET (Puchwein et al. 2013), and MG-AREPO (Arnold et al.
+2019; Hernández-Aguayo et al. 2021). For example, using 10243
+particles in a box of size 512 Mpc/ℎ, MG-GLAM simulations can accu-
+rately predict the matter power boost, 𝑃MG/𝑃ΛCDM at 𝑘≲3 ℎ/Mpc,
+with about 1% of the computational costs of the high-fidelity code
+ECOSMOG. Being the only code that has been used in the literature
+to simulate K-mouflage cosmologies, an estimate of its accuracy for
+the K-mouflage boost factor is not available. However it has been
+compared to the tree-PM code MG-Arepo for another derivative cou-
+pling model (nDGP) where it showed an agreement of ∼2% up to
+𝑘= 3 ℎ/Mpc, with deviations of ∼1% from MG-Arepo (and theory
+predictions) already present on linear scales.
+3.3 MG-evolution
+We further consider the relativistic 𝑁-body code, MG-evolution (
+Hassani & Lombriser 2020). This code is based on gevolution
+(Adamek et al. 2016b), integrating parametrised modifications of
+gravity for various dark energy scenarios. MG-evolution is imple-
+mented based on a parametrisation framework that includes both
+linear and deeply nonlinear scales, where the nonlinear parametri-
+sation is based on modified spherical collapse computations and a
+parametrised post-Friedmannian expression.
+MG-evolution has been tested for a number of well-studied mod-
+ified gravity models encompassing 𝑓(𝑅) and nDGP gravity that
+include large-field value and derivative screening effects (Hassani &
+Lombriser 2020). Unlike most modified gravity 𝑁-body implemen-
+tations, MG-evolution is as fast as the ΛCDM simulations as it does
+not need to deal with solving computationally expensive scalar field
+equations.
+In section B we discuss the nDGP and CG implementations in
+MG-evolution through a parametrisation with one screening tran-
+sition, 𝑘∗, which is treated as a free parameter (see section B). The
+effective gravitational constant is expressed as
+Δ𝐺eff (𝑘, 𝑎)
+𝐺N
+= Δ𝐺eff, L(𝑎)
+𝐺N
+× Δ𝐺eff, NL(𝑘, 𝑎)
+𝐺N
+,
+(22)
+where we recall 𝐺eff(𝑘, 𝑎) = 𝐺N[1 + Δ𝐺eff(𝑘, 𝑎)/𝐺N], 𝐺eff, L de-
+noting the linear regime parametrisation and 𝐺eff, NL refers to the
+parametrisation of the nonlinear regime that includes the screening
+or other suppression effects. The expressions for 𝐺eff, NL are given
+in section B. MG-evolution then solves the modified Poisson equa-
+tion (Equation 4) based on 𝐺eff obtained from Equation 22. It is
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+7
+Table 2. Overview of the numerical codes employed in this comparison. For more information on screening approximations see main text. PPF: parametrised
+post-Friedmannian; PM: particle mesh; AMR: adaptive mesh refinement; 2LPT: 2nd order Lagrangian perturbation theory; K-G: Klein-Gordon.
+code
+type
+screening approximation
+reference(s)
+ECOSMOG
+𝑁-body (AMR)
+full K-G solution
+Li et al. (2012)
+MG-GLAM
+𝑁-body (uniform PM)
+full K-G solution
+Hernández-Aguayo et al. (2022)
+MG-evolution
+𝑁-body (uniform PM)
+PPF with free parameter 𝑘∗
+Hassani & Lombriser (2020); Adamek et al. (2016b,a)
+Hi-COLA
+𝑁-body (PM in the 2LPT frame)
+screening factor
+Wright et al. (2023), Sen Gupta et al. (in prep.)
+COLA-FML
+𝑁-body (PM in the 2LPT frame)
+linear K-G equation in Fourier space
+Winther et al. (2017); Brando et al. (2023); Scoccimarro (2009)
+ReACT
+Halo model and perturbation theory
+spherical collapse
+Bose et al. (2022); Atayde et al. (2024)
+worth noting that this parametrization of gravitational modification
+is done in Fourier space. As detailed in Ref. Hassani & Lombriser
+(2020), this transformation yields an effective screening wavenumber
+𝑘∗, which can be modeled (Lombriser 2016) for different screening
+types. Currently, as mentioned, we treat 𝑘∗as a free parameter to be
+set by the user. In this work we tune the values of 𝑘∗in order to opti-
+mize the agreement with the reference predictions in each model and
+at each redshift considered. The resulting values of 𝑘∗are presented
+in section 4.
+3.4 COmoving Lagrangian Acceleration
+The COmoving Lagrangian Acceleration (COLA) method (Tassev
+et al. 2013) is a hybrid 𝑁-body approach to performing dark matter
+simulations to study the effects of gravity on the formation of large-
+scale structure. It leverages the fact that the growth of structure
+on large scales can be computed analytically through Lagrangian
+Perturbation Theory (LPT). This informs the small-scale 𝑁-body
+part of COLA codes, thereby allowing for a significant speedup in
+the production of results at the cost of a modest loss of accuracy at
+small scales. In short, the COLA approach is a method well-suited
+for producing large-scale structure results on mildly nonlinear scales
+much faster than traditional 𝑁-body codes.
+The COLA method introduced by Tassev et al. (2013) was orig-
+inally developed for use with GR 𝑁-body codes. However, being
+able to probe nonlinear scales is particularly useful in the study of
+modified gravity theories, as key phenomenology, such as the effects
+of screening mechanisms, become apparent on these scales. Since
+Tassev et al., implementations of COLA codes for modified grav-
+ity theories have followed for specific theories, such as 𝑓(R) and
+nDGP (Winther et al. 2017; Valogiannis & Bean 2017). Below we
+describe two branches of work that extend the COLA method to more
+general families of gravity models.
+3.4.1 Hi-COLA
+Horndeski-in-COLA (Hi-COLA) ( Wright et al. 2023) is an imple-
+mentation of the COLA methodology for a broad Horndeski class
+of scalar-tensor theories. Hi-COLA aims not to carry hard-coded
+theory-specific implementations, but instead receives as input the La-
+grangian functions for a given theory of interest, making it generic.
+The action of the new scalar degree of freedom, 𝜙, is included as a
+fifth force in the COLA simulation. The class of theories Hi-COLA is
+designed to work with are reduced-Horndeski theories, where gravi-
+tational waves travel at the speed of light. Such theories are described
+by Equation 1. This restriction follows the constraints on the theory
+space suggested by the analysis of GW1708174.
+After receiving inputs for the forms of the Horndeski functions,
+𝐺2, 𝐺3 and 𝐺4, the symbolic manipulation modules of Hi-COLA
+construct the appropriate background equations of motion and
+background-dependent fifth force expressions and solves them. These
+are used to handle the expansion of the simulation box, compute 2nd-
+order LPT factors (2LPT) and construct the total force experienced
+by dark matter particles. This force can be schematically written as
+𝐹total = 𝐺eff𝐹N ,
+(23)
+where
+𝐺eff = 𝐺G4
+𝐺N
+
+1 + 𝛽HC(𝑧)𝑆HC(𝑧, 𝛿𝑚)
+	
+.
+(24)
+𝐹N is the regular Newtonian force which is present in GR, and the
+multiplicative factor in braces represents the extra force contributions
+from 𝜙. 𝐺𝐺4 is the effective gravitational constant, which can differ
+from 𝐺N in a time-dependent manner if 𝐺4 in Equation 1 is non-
+trivial. This term will play a role in the results of subsubsection 4.2.3.
+𝛽HC is a background-dependent function known as the coupling
+factor; it controls the total possible strength of the fifth force at a given
+point in time. 𝑆HC is a background and density-dependent function
+called the screening factor. On linear scales 𝑆HC →1, whilst in
+screened regimes 𝑆HC →0. Hence this factor is responsible for the
+suppression of the fifth force in on small scales, returning the theory’s
+behaviour to GR.
+𝑆HC is derived under a quasi-linear perturbative treatment, where
+the metric perturbations are considered to first order, whilst the scalar
+field derivative perturbations are kept up to third order, following
+Ref. Kimura et al. (2012). Combined with the assumptions that the
+quasi-static approximation holds and that the matter over-density is
+distributed spherically in space leads to the analytic form of 𝑆HC
+(see Equation 3.15 in Wright et al. 2023). These assumptions in the
+derivation of 𝑆HC lead to a caveat: that in its current public state,
+Hi-COLA is designed to work with theories that exhibit Vainshtein
+screening. However, recent development of Hi-COLA has focused
+on extending the formalism to other screening mechanisms like K-
+mouflage, and these results are presented in subsubsection 4.2.3.
+The full details of K-mouflage in Hi-COLA will be the subject of an
+upcoming publication, Sen Gupta et al. (in prep.).
+3.4.2 COLA-FML
+In this subsection we describe another approximate simulation
+method to modified gravity theories endowed with the Vainshtein
+4 Though it should be noted that Equation 1 is not the most general action
+describing theories that do not violate the results of GW170817. Some Gauss-
+Bonet theories are excluded, for example; see Ref. Clifton et al. (2020).
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+8
+mechanism, such as nDGP and the Galileon theory family. This
+method was initially proposed in Ref. Scoccimarro (2009), and later
+revisited in Ref. Brando et al. (2023). It consists of linearizing the
+Klein-Gordon equation in Fourier space, and implementing a resum-
+mation scheme to find a function, 𝐺eff(𝑘, 𝑎), defined in the same
+way as Equation 22, that approximately captures the nonlinear cor-
+rections introduced by the Vainshtein mechanism on small scales.
+Specifically, this function transitions between an unscreened regime
+at large scales, where 𝐺eff(𝑘, 𝑎) →𝐺eff,L(𝑎), to the small scale
+regime where GR is recovered, 𝐺eff(𝑘, 𝑎) →𝐺N.
+Consequently, in order to do so, in Refs. Scoccimarro (2009);
+Brando et al. (2023) the authors require the nonlinear function,
+Δ𝐺eff, NL(𝑘, 𝑎)/𝐺N5, has the screening property, i.e.
+Δ𝐺eff, NL(𝑘, 𝑎)
+𝐺N
+(𝑘/𝑘∗≪1) →1,
+Δ𝐺eff, NL(𝑘, 𝑎)
+𝐺N
+(𝑘/𝑘∗≫1) →0 ,
+(25)
+where 𝑘∗is the wavenumber associated with the Vainshtein radius,
+defined in Eq. B3. The specifics behind the computation of the func-
+tion Δ𝐺eff, NL(𝑘, 𝑎)/𝐺N is explicitly shown in Ref. Brando et al.
+(2023). This screening approximation scheme has the advantage of
+not introducing additional screening parameters used to tune the
+approximate results with results from N-body simulations that con-
+sistently solve the full Klein-Gordon equation at each timestep of the
+simulation. The whole dependence of the gravity theory is encoded
+in the Δ𝐺eff, NL(𝑘, 𝑎)/𝐺N function.
+The methodology of this approximate method for Vainshtein
+screening is computed using an external Python notebook, where
+one can follow the steps outlined in Ref. Brando et al. (2023) to com-
+pute 𝐺eff(𝑘, 𝑎) externally. With the tabulated function computed, the
+results are then implemented in the COLA-FML () N-body solver,
+that implements the COLA method in a parallelised manner, ideal
+for fast and approximate simulations. The COLA-FML library also
+has different screening approximations for theories other than the
+ones considered here, and are presented in Ref. Winther & Ferreira
+(2015a). Importantly for this paper, our results for the 𝐺eff(𝑘, 𝑎)
+screening case will be different than the ones of Hi-COLA at nonlin-
+ear scales, however, at linear scales the two codes are identical.
+3.5 Halo Model Reaction
+The halo model reaction (Cataneo et al. 2019) is a flexible, accurate
+and fast means to model the nonlinear matter power spectrum. This
+model has been demonstrated to align with 𝑁-body simulations at the
+2% level down to 𝑘= 3 ℎ/Mpc, with minor variations depending on
+redshift, the extent of modification to GR, and the mass of neutrinos
+(Cataneo et al. 2020; Bose et al. 2021). The method aims to model
+nonlinear corrections to the matter power spectrum resulting from
+modified gravity through the reaction R(𝑘, 𝑧), which incorporates
+both 1-loop perturbation theory and the halo model (see Bernardeau
+et al. 2002; Cooray & Sheth 2002, for reviews). In this framework,
+the nonlinear matter power spectrum is expressed as the product
+𝑃NL(𝑘, 𝑧) = R(𝑘, 𝑧) 𝑃pseudo
+NL
+(𝑘, 𝑧) ,
+(26)
+where the pseudo power spectrum is defined such that all nonlinear
+physics are modeled using GR but the initial conditions are adjusted
+to mimic the modified linear clustering at the target redshift.
+5 We note that in Ref. Brando et al. (2023) this function is called 𝑀(𝑘, 𝑎).
+The halo model reaction without massive neutrinos, R(𝑘, 𝑧), is
+given as a corrected ratio of target-to-pseudo halo model spectra
+R(𝑘, 𝑧) = {[1 −E(𝑧)] 𝑒−𝑘/𝑘★(𝑧) + E(𝑧)} 𝑃2H(𝑘, 𝑧) + 𝑃1H(𝑘, 𝑧)
+𝑃pseudo
+hm
+(𝑘, 𝑧)
+.
+(27)
+The components are explicitly given as
+𝑃pseudo
+hm
+(𝑘, 𝑧) =𝑃2H(𝑘, 𝑧) + 𝑃pseudo
+1H
+(𝑘, 𝑧),
+(28)
+E(𝑧) = lim
+𝑘→0
+𝑃1H(𝑘, 𝑧)
+𝑃pseudo
+1H
+(𝑘, 𝑧)
+,
+(29)
+𝑘★(𝑧) = −¯𝑘
+
+ln
+ 𝐴( ¯𝑘, 𝑧)
+𝑃2H( ¯𝑘, 𝑧) −E(𝑧)
+
+−ln [1 −E(𝑧)]
+−1
+,
+(30)
+with
+𝐴(𝑘, 𝑧) =
+𝑃1−loop(𝑘, 𝑧) + 𝑃1H(𝑘, 𝑧)
+𝑃pseudo
+1−loop(𝑘, 𝑧) + 𝑃pseudo
+1H
+(𝑘, 𝑧)
+𝑃pseudo
+hm
+(𝑘, 𝑧) −𝑃1H(𝑘, 𝑧) .
+(31)
+𝑃2H(𝑘, 𝑧) is the 2-halo term which we approximate with the lin-
+ear matter power spectrum, 𝑃L(𝑘, 𝑧). 𝑃1H(𝑘, 𝑧) and 𝑃pseudo
+1H
+(𝑘, 𝑧)
+are the 1-halo terms as predicted by the halo model, with and
+without modifications to the standard spherical collapse equations,
+respectively. Recall that by definition, the pseudo cosmology has
+no nonlinear beyond-ΛCDM modifications. Similarly, 𝑃1−loop(𝑘, 𝑧)
+and 𝑃pseudo
+1−loop(𝑘, 𝑧) are the standard perturbation theory 1-loop matter
+power spectra with and without nonlinear modifications to ΛCDM,
+respectively. As in the literature, Equation 29’s limit is taken to be at
+𝑘= 0.01 ℎ/Mpc and 𝑘★is computed using ¯𝑘= 0.06 ℎ/Mpc.
+The nDGP model was part of the initial release of the publicly
+available halo model reaction code, ReACT (Bose et al. 2020). This
+code has been updated to include massive neutrinos in Ref. Bose
+et al. (2021) and model independent parametrisations in Ref. Bose
+et al. (2022), which constituted version 2 of the code (). The GCCG
+model was recently implemented in this version of ReACT (Atayde
+et al. 2024), which is employed in section 4 in the CG limit. The
+K-mouflage patch is being made public with this work and we give
+all the relevant expressions in section A.
+For the pseudo spectrum appearing in Equation 26 we use
+HMCode2020 (Mead et al. 2020). This is currently the most accu-
+rate and flexible prescription for the pseudo spectrum and has been
+tested in a number of works (see for example Cataneo et al. 2019;
+Bose et al. 2021, 2022). It is more accurate than the halofit prescrip-
+tion of Ref. Takahashi et al. (2012), quoting a 2.5 −5% accuracy for
+𝑘≤1 ℎ/Mpc. It can also accommodate modifications that induce an
+additional scale dependence in the linear matter power spectrum. For
+modifications that only introduce a scale-independent shift in the lin-
+ear spectrum amplitude, more accurate emulators can be used, such as
+the EuclidEmulator2 (Knabenhans et al. 2019), which are quoted
+to be 1% accurate when compared to high fidelity 𝑁-body simu-
+lations down to 𝑘≤10 ℎ/Mpc. Despite this, the reaction function
+𝑅(𝑘, 𝑧) is only expected to be 1% accurate for 𝑘≤1 ℎ/Mpc (Cataneo
+et al. 2019).
+It is also worth noting that EuclidEmulator2’s internal accuracy
+is restricted to a hyperspheroidal region of their parameter space.
+Points outside this region might have considerable degradation in
+accuracy. This is considerably important in the context of beyond-
+ΛCDM scenarios as we need tools that work in extreme regions
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+9
+of the parameter space. For these reasons, work is currently being
+undertaken to build a pseudo spectrum emulator based on appropriate
+numerical simulations (Giblin et al. 2019).
+The choice of HMCode2020 keeps in line with the halo model re-
+action’s claim of generality, while maintaining competitive accuracy
+within the reaction’s percent-level accuracy range, especially when
+taking the ratio of modified to unmodified spectra, i.e. the matter
+power spectrum boost (see Equation 32).
+4 RESULTS
+Our main results are the comparisons of the nonlinear matter power
+spectrum between the different codes. Specifically, we consider the
+models described in Table 3 for which we have full 𝑁-body simu-
+lations available to use as benchmarks. We list the specifications of
+each simulation ran for these comparisons below. These include: box
+size (𝐿box), number of particles (𝑁P), particle mass (𝑚P), grid cells
+(𝑁g), initial redshift (𝑧ini) and force resolution.
+• ECOSMOG runs: 𝐿box = 1024 Mpc/ℎ,
+𝑁P = 10243,
+𝑚P ≃
+7.8×1010 𝑀⊙/ℎ. The initial conditions are generated at 𝑧ini = 49 by
+MPGrafic (Prunet et al. 2008) using the Zel’dovich approximation.
+It uses a force resolution of ∼15.6kpc/ℎ.
+• MG-GLAM runs: 𝐿box
+= 512 Mpc/ℎ, 𝑁P
+= 10243, 𝑁g
+=
+20483, 𝑚P = 1.07 × 1010 𝑀⊙, /ℎ, where 𝑁g is the number of grid
+cells. Initial conditions are generated at 𝑧ini = 100 using GLAM’s
+own initial condition generator. It uses a fixed force resolution of
+250 kpc/ℎwith an adaptive time-stepping described in the original
+GLAM paper (Klypin & Prada 2018).
+• MG-evolution runs: The nDGP simulation runs use 𝐿box =
+1000 Mpc/ℎwith 𝑁g = 𝑁p = 10243. The initial conditions are
+generated at 𝑧ini = 49. For the CG case, the initial conditions are
+the same as in the COLA runs. These runs use 𝐿box = 400 Mpc/ℎ,
+𝑁P = 𝑁g = 5123.
+• COLA runs: 𝐿box = 400 Mpc/ℎand 𝑁P = 5123 with initial
+conditions generated using 2LPT for all simulations. For K-mouflage:
+𝑚P ≃4.1 × 1010 M⊙/ℎ. Initial conditions are generated at 𝑧ini = 19.
+For nDGP: 𝑚P ≃3.7 × 1010 𝑀⊙/ℎ. Initial conditions are generated
+at 𝑧ini = 49. For CG and QCDM: 𝑚P ≃4.1 × 1010 M⊙/ℎ. Initial
+conditions are generated at 𝑧ini = 49.
+Before presenting the spectra comparisons, we take a look at how
+each model presented in section 2 modifies the standard ΛCDM
+background evolution. This background evolution is adopted for each
+of the different codes and so differences seen in the following section
+only arise from how the perturbations are treated.
+4.1 Background Evolution
+In Figure 1 we show the modification to the standard ΛCDM back-
+ground expansion for the models described in Table 3. We remind the
+reader that we assume a ΛCDM expansion for the nDGP models and
+so this is not shown. We see that the QCDM and CG cases give a much
+larger modification at late times than any of the K-mouflage models
+in the Einstein frame. In all models, we see a slower expansion rate at
+roughly 𝑎> 0.2 which acts to enhance structure formation. Indeed,
+the 𝜎8 is larger for the QCDM model than for both K-mouflage mod-
+els B and C (see Table 3), despite having a lower 𝐴𝑠(although the
+QCDM cosmology has a slightly larger Ωm,0). In all cases, the max-
+imum modification is ∼8% (QCDM), with the K-mouflage models
+giving a maximum modification of 3% at 𝑎= 0.5.
+In the same figure we also show the modification in the Jordan
+frame for the K-mouflage models (middle panel). We see here that
+relative to ΛCDM, we have a significantly slower expansion at 𝑎>
+0.03, with a maxmimum modification of 11% at 𝑎∼0.4. Further, the
+current day expansion is larger than the one expected from ΛCDM by
+5% under the strongest modification considered here. We do remind
+the reader that the free parameter 𝜆has been tuned to match the
+current day expansion rate in ΛCDM in the Einstein frame. These
+panels show that relatively large differences can be observed at the
+background level when switching frames, which we will see in the
+next subsection are not evident at the level of the perturbations (also
+see subsubsection 2.3.2).
+4.2 Matter power spectrum boost
+Next we take a look at the perturbations, specifically how the matter
+power spectrum is modified over ΛCDM. For this, we consider the
+modified gravity boost, defined as
+𝐵(𝑘, 𝑧) ≡
+𝑃NL(𝑘, 𝑧)
+𝑃ΛCDM
+NL
+(𝑘, 𝑧)
+.
+(32)
+4.2.1 nDGP
+In Figure 2 we show how the various predictions for the boost com-
+pare, using the ECOSMOG measurements as a reference, for the nDGP
+cosmologies found in Table 3. Boost comparisons for nDGP amongst
+different codes have already been performed extensively in the liter-
+ature, and so this case is shown mainly as a consistency check, but
+also to compare the Hi-COLA implementation which has not yet been
+tested before.
+We find that for the low modification case, N5, all predictions
+remain within 1% of each other for 𝑘≤3 ℎ/Mpc, including the
+linear prediction, which for 𝑧= 0 gives a modification of 𝐵(𝑘→
+0, 𝑧= 0) = 1.033. For N1, 𝐵(𝑘→0, 𝑧= 0) = 1.149%. In this case,
+all predictions except the linear remain within 2% of the ECOSMOG
+reference for 𝑘≤1 ℎ/Mpc. MG-evolution performs the best as
+expected, having an additional free parameter giving the screening
+transition, 𝑘∗. We have found 𝑘∗= 2 ℎ/Mpc and 𝑘∗= 1 ℎ/Mpc give
+a good overall agreement with the ECOSMOG simulations for the N1
+and N5 models respectively. Using these values the MG-evolution
+boost remains within 1% up to 𝑘≤3 ℎ/Mpc except for the largest
+modes at 𝑧= 1 where it worsens to 2%, consistent with what was
+found in Ref. Hassani & Lombriser (2020). Similarly, the halo model
+reaction remains within 2% for 𝑘≤3 ℎ/Mpc except for the largest
+modes at 𝑧= 1, where it worsens to 3% agreement, in accordance
+with Ref. Cataneo et al. (2019).
+The two COLA methods show similar agreement, but deviate the
+most on average from the reference boost measurements. COLA-FML
+performs slightly better at 𝑧= 0 while Hi-COLA does better at higher
+𝑧, with deviations up to 4% at 𝑘= 3 ℎ/Mpc. This is very consistent
+with the results of Ref. Winther et al. (2017).
+4.2.2 Cubic Galileon (CG)
+Figure 3 shows the boost comparisons between the various codes
+for the CG and QCDM cases, again using ECOSMOG as a reference.
+These ECOSMOG simulations were ran using the same code as pre-
+sented in Ref. Barreira et al. (2013a). We have changed the baseline
+cosmology for these new runs, particularly lowering the value of 𝐴𝑠
+and 𝐻0. We also run a ΛCDM counterpart with which to calculate
+Equation 32. Previous works have compared the boost ratio of the
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+10
+Table 3. Models considered in this work. The ΛCDM 𝜎8(𝑧= 0) = 0.851, 0.805, 0.815 for nDGP, CG and K-mouflage cosmologies respectively. We remind
+the reader that the values for {𝑠, 𝑞} are fixed in CG, while adopting the tracker solution for the scalar field imposes the values for 𝑐2 and 𝑐3 quoted in the table.
+Parameter
+nDGP-N1
+nDGP-N5
+CG
+QCDM
+K-mouflage - A
+K-mouflage - B
+K-mouflage - C
+Ωm,0
+0.281
+0.313
+0.3089
+Ωb,0
+0.046
+0.049
+0.0486
+𝐻0
+69.7
+67.32
+67.74
+𝑛𝑠
+0.971
+0.9655
+0.9667
+𝐴𝑠
+2.297 × 10−9
+2.010 × 10−9
+2.064 × 10−9
+𝜎8(𝑧= 0)
+0.912
+0.865
+0.884
+0.865
+0.881
+0.852
+0.837
+Ωrc
+0.25
+0.01
+-
+-
+-
+-
+-
+𝑐2/𝑐2/3
+3
+-
+-
+-5.378
+-
+-
+-
+-
+𝑐3
+-
+-
+10
+-
+-
+-
+-
+𝑠
+-
+-
+2.0
+-
+-
+-
+-
+𝑞
+-
+-
+0.5
+-
+-
+-
+-
+𝑛
+-
+-
+-
+-
+2
+2
+2
+𝜆
+-
+-
+-
+-
+1.475
+1.460
+1.452
+𝐾0
+-
+-
+-
+-
+1
+10
+1
+𝛽K
+-
+-
+-
+-
+0.2
+0.2
+0.1
+Figure 1. The ratio of the normalised Hubble expansion rate (𝐸(𝑎) = 𝐻(𝑎)/𝐻0) between the modified gravity and GR models. The left panel shows the
+K-mouflage models shown in Table 3 in the Einstein frame, while the middle panel shows the same models in the Jordan frame, with 𝑎now being the Jordan
+frame scale factor. The right panel shows the QCDM model, which has the same background expansion as the CG model. The model parameters for K-mouflage
+are defined in subsection 2.3.
+CG spectrum to that in QCDM (Wright et al. 2023), or have per-
+formed direct spectra comparisons (Atayde et al. 2024). Further, in
+Ref. Atayde et al. (2024) the authors found significant disagreement
+when using an HMCode2020 prescription, which was outperformed
+by the halofit pseudo spectrum prescription. This was being caused
+by the 𝜎8-dependent damping introduced into HMCode2020 (Mead
+et al. 2020), which was not calibrated for particularly high values of
+𝜎8 as that of the simulations found in Ref. Barreira et al. (2013a). The
+lower value of 𝜎8 in our simulations was found to greatly improve
+the performance of HMCode2020 over halofit. For comparison with
+previous work, we also show the comparisons for the ratio of CG to
+QCDM power spectra, or QCDM-based boost, in the bottom panels
+of Figure 3.
+The MG-evolution predictions again give the best agreement,
+remaining within 1% in the CG case for 𝑧≥0.5 down to 𝑘=
+3 ℎ/Mpc. For 𝑧= 1, the linear implementation, or equivalently
+𝑘∗→∞, provides the best match. However, in the figure, we have
+plotted the case 𝑘∗(𝑧≥0.5) = 6 ℎ/Mpc as it appears to work
+well given the resolution of the simulation. Adopting the value 𝑘∗=
+6 ℎ/Mpc at 𝑧= 0 causes a quick divergence of the predictions as
+expected from the nature of 𝑘∗, amounting to a 8% disagreement
+at 𝑘= 1 ℎ/Mpc. Adopting 𝑘∗= 0.4 ℎ/Mpc at 𝑧= 0 brings the
+predictions to within 2% agreement in the same range of scales.
+Interestingly, in the QCDM-based boost case we can adopt the same
+value of 𝑘∗= 0.3 ℎ/Mpc for all redshifts considered while keeping a
+good fit to the ECOSMOG measurements. This seems to indicate that 𝑘∗
+is also degenerate to some extent with the background modification.
+In the QCDM case, the predictions are consistent within 1%
+down to 𝑘= 1 ℎ/Mpc. The disagreement for 𝑘> 1 ℎ/Mpc arises
+from resolution effects, as evidenced by the agreement between
+MG-evolution and Hi-COLA. This suggests that the tuning of 𝑘∗
+performed to match the reference boost factor in CG is compensat-
+ing for the resolution-induced loss of boost due to the background by
+suppressing the small-scale screening.
+The halo model reaction remains within 1% for 𝑘≤1 ℎ/Mpc for
+both QCDM and CG cases, with the exception of the CG at 𝑧= 0.
+Here we find up to 4% disagreement with ECOSMOG. This is an atyp-
+ically large disagreement given the similarity of CG to nDGP, for
+which the halo model reaction performs significantly better. To in-
+vestigate this, we have tested different pseudo spectra prescriptions,
+specifically halofit and EuclidEmulator2, neither offering signif-
+icant improvement for the matter power spectrum boost. We have
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+11
+Figure 2. Comparing boost factors for the various codes listed in Table 2 for nDGP at 𝑧= 0, 0.5, 1 (from left to right) with ECOSMOG as benchmark. The upper
+panels show the results for the nDGP-N5 (low modification) model and the lower panels for the nDGP-N1 (high modification) model (see Table 3).
+also tried omitting the 1-loop correction (see Equation 31) with little
+change to the predictions as found in Ref. Bose et al. (2022). The
+excellent agreement in the QCDM case at 𝑧= 0, with 1% agreement
+beyond 𝑘= 3 ℎ/Mpc, indicates no issue in the background imple-
+mentation. Further, the QCDM-based boost comparisons show the
+same disagreement at 𝑧= 0, but the same or better agreement at
+higher redshifts, which is just a partial cancellation of inaccuracies
+in the QCDM and CG ΛCDM-based boost cases.
+Lastly, we also checked the behaviour of the reaction function
+R for varying GCCG modification strengths by changing the value
+of 𝑠. We compared these to corresponding nDGP predictions for R
+such that the nDGP models gave the same linear enhancement of
+structure as the GCCG cases, making their pseudo spectra identical.
+We observed significantly more suppression coming from R in the
+GCCG than nDGP, especially for large modifications (large 𝑠or large
+Ωrc), which may be due to the 𝐺2 term present in the GCCG. We do
+note that the CG has a very large linear enhancement of clustering at
+𝑧= 0, equivalent to a nDGP model with Ωrc = 0.6. This may indicate
+a break down of the halo model reaction’s assumptions, specifically
+the ΛCDM fits it assumes for the halo mass function and virial
+concentration. The latter has been shown to significantly impact
+its accuracy (Cataneo et al. 2019; Srinivasan et al. 2021, 2024),
+especially when the modification to gravity is large. To further pin
+the 𝑧= 0 CG disagreement down, we would need to run a CG pseudo
+cosmology simulation which would make it clear whether or not the
+reaction modelling or ΛCDM-fits in the halo model components
+are failing. GCCG simulations with a smaller modification will also
+indicate this validity range. This will be the focus of future work.
+Finally, both COLA implementations remain 2% consistent with
+ECOSMOG in the CG case at scales 𝑘≤1 ℎ/Mpc. COLA-FML per-
+forms slightly better at low 𝑧while Hi-COLA shows better agreement
+at higher 𝑧. The implementations differ only in their approach to
+screening and so we only show the Hi-COLA results for QCDM,
+where it is similarly consistent as in the CG case. We note that all
+codes tend to under-predict the boost at small scales. Part of this
+difference surely comes from the fact that while the ECOSMOG code
+consistently solves the full Klein-Gordon equation, the other codes
+implement the screening mechanism in an approximate way, making
+use of the spherical approximation in one way or another. Therefore,
+at smaller scales these approximate methods are not guaranteed to
+be valid. A better test of the accuracy of screening is provided by the
+QCDM-based boost in the bottom panels, where we see far better
+agreement between the COLA methods and ECOSMOG.
+On this note, we remark that both COLA and MG-evolution’s
+disagreement with the benchmarks in both nDGP, CG and QCDM
+cases is also partially due to a low force resolution which can lead to
+a loss of power on small scales (see Brando et al. 2022, for example).
+By increasing the force resolution, and time steps in the COLA
+cases, we expect to find much better agreement above 𝑘= 1 ℎ/Mpc,
+particularly in the QCDM case which does not have screening. We
+note that the limited force accuracy will affect all particle mesh
+codes, including MG-GLAM, and the most efficient and sure way to go
+to smaller scales would be to use Tree-particle mesh or AMR codes
+like ECOSMOG.
+4.2.3 K-mouflage
+For K-mouflage, we restrict our comparisons to MG-GLAM, Hi-COLA
+and ReACT with the MG-evolution implementation to be the focus
+of an upcoming work. We expect the same level of accuracy as
+exhibited in the CG and nDGP cases, especially given the freedom
+imparted by 𝑘∗.
+In Figure 4 we show the results for the K-mouflage model. As a
+reference we use the MG-GLAM simulations, ran for the purpose of
+this comparison. We compare the K-mouflage boost for the three
+models listed in Table 3, all of which assume 𝑛= 2 in Equation 14.
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+12
+Figure 3. Comparing boost factors for the various codes listed in Table 2 for the CG (upper) and QCDM (middle) and QCDM-based boost (bottom) at
+𝑧= 0, 0.5, 1 (from left to right) with ECOSMOG as the benchmark. Note COLA-FML and Hi-COLA’s results for QCDM are identical and so we only show the
+Hi-COLA QCDM ratio in the middle panels.
+Table 4. Maximal percent deviation of the nonlinear matter power spectrum boost under various modelling approaches against benchmarks, at different redshifts
+for 𝑘≤1(3) ℎ/Mpc.
+MG-evolution
+COLA-FML
+Hi-COLA
+ReACT
+Model
+z=0
+z=0.5
+z=1
+z=0
+z=0.5
+z=1
+z=0
+z=0.5
+z=1
+z=0
+z=0.5
+z=1
+N1
+1(1)%
+1(1)%
+1(2)%
+1(2)%
+1(4)%
+1(4)%
+2(4)%
+1(4)%
+1(3)%
+2(2)%
+2(2) %
+2(3)%
+N5
+1(1)%
+1(1)%
+1(1)%
+1(1)%
+1(1)%
+1(1)%
+1(1)%
+1(1)%
+1(1)%
+1(1)%
+1(1)%
+1(1)%
+CG
+1(1)%
+1(1)%
+1(2)%
+1(6)%
+1(5)%
+1(5)%
+1(10)%
+2(6)%
+1(3)%
+4(8)%
+2(5)%
+1(3)%
+QCDM
+1(5)%
+1(3)%
+1(2)%
+-
+-
+-
+2(6)%
+1(3)%
+1(3)%
+1(1)%
+1(4)%
+1(5)%
+K-mouflage A
+-
+-
+-
+-
+-
+-
+1(4)%
+1(3)%
+1(3)%
+2(17)%
+1(8)%
+1(4)%
+K-mouflage B
+-
+-
+-
+-
+-
+-
+1(2)%
+1(1)%
+1(1)%
+2(10)%
+1(5)%
+1(2)%
+K-mouflage C
+-
+-
+-
+-
+-
+-
+1(1)%
+1(1)%
+1(1)%
+1(4)%
+1(3)%
+1(1)%
+We begin by noting that the coupling of matter to the scalar field is
+proportional to 𝛽K/𝐾0 (see Equation. 81 of Brax & Valageas 2014b,
+for example), and so large positive 𝐾0 decreases the fifth force while
+large 𝛽K increases it. We find the larger the modification, the worse
+the agreement between ReACT, Hi-COLA and MG-GLAM. We can see
+this by moving from top to bottom panels in Figure 4. Further, we
+note for the largest modification (top panels), there is a 1% offset
+between MG-GLAM and linear theory (as well as the other codes).
+This was also seen in Figure. 10 of Ref. Hernández-Aguayo et al.
+(2022) but not seen in the linearised simulations presented in that
+reference, suggesting this is a consequence of the nonlinear treatment
+of MG-GLAM. We also note much smaller linear theory offsets at large
+scales for the weaker modifications.
+For the strongest modification, K-mouflage A in Table 3, at low 𝑧,
+all codes are consistent within 2% for 𝑘≤1 ℎ/Mpc. This agreement
+improves for the halo model reaction to 1% agreement for 𝑘≤
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+13
+Figure 4. Comparing boost factors for the various codes listed in Table 2 for the K-mouflage models listed in Table 3 with {𝐾0, 𝛽K}
+=
+{1, 0.2}, {10, 0.2}, {1, 0.1} (from top to bottom) at 𝑧= 0, 0.5, 1 (from left to right) with MG-GLAM as the benchmark. All models assume 𝑛= 2.
+3 ℎ/Mpc for 𝑧= 1 and the weakest modification, K-mouflage C in
+Table 3. Overall, Hi-COLA does not show significant improvement
+or degradation with redshift or modification strength, consistently
+remaining within 2% for 𝑘≤3 ℎ/Mpc. The exception is K-mouflage
+A for 𝑧= 0 (upper left panel), where it degrades to 4% discrepancy
+at 𝑘= 3 ℎ/Mpc. The Hi-COLA predictions are all made in the Jordan
+frame while MG-GLAM and ReACT produce predictions in the Einstein
+frame. It is here we note the consistency of the nonlinear matter power
+spectrum in both frames, confirming the claim of Ref. Francfort et al.
+(2019).
+Before concluding we make some technical notes on the compar-
+isons. In the case of the Jordan frame predictions from Hi-COLA,
+the boost is taken with the K-mouflage spectrum measured at 𝑎J,
+calculated using Equation 16. Finally, we note that ReACT has the
+option to use the PPF screening formalism for K-mouflage as derived
+in Ref. Lombriser (2016), and which we present in section B for
+completeness. This framework comes with an additional degree of
+freedom and so we have chosen not to use this in our comparisons.
+The inclusion of K-mouflage theories in Hi-COLA will be the subject
+of an upcoming publication, Sen Gupta et al. (in prep.).
+5 CONCLUSIONS
+High quality 𝑁-body codes for modified gravity are essential in or-
+der to place reliable constraints on gravity using large-scale structure
+(LSS) observations. Ongoing galaxy surveys such as Euclid or the
+Dark Energy Survey will heighten their necessity by beating down
+the statistical uncertainty on our measurements, making theoretical
+accuracy essential. Benchmarking the accuracy of approximate but
+computationally efficient numerical methods against these high qual-
+ity simulations is an important step towards reliable constraints from
+the forthcoming data.
+In this paper we have performed comparisons of the matter power
+spectrum modification induced by three distinct theories of modified
+gravity, each of which induces a scale-independent enhancement
+of the linear growth of structure: the normal branch of the DGP
+braneworld model, the Cubic Galileon and K-mouflage. The former
+two employ the Vainshtein screening mechanism, while the latter
+employs the K-mouflage screening mechanism. For similar compar-
+isons with scale-dependent modifications to the linear growth and
+the chameleon (Khoury & Weltman 2004) or symmmetron (Hinter-
+bichler & Khoury 2010) screening mechanisms, we refer the reader
+to Refs. Winther et al. (2015, 2017); Cataneo et al. (2019); Hassani
+& Lombriser (2020).
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+14
+We compare the matter power spectrum boost predicted by 6
+different numerical codes, each of which has a varying approach
+to the nonlinear gravitational coupling: full 𝑁-body (ECOSMOG and
+MG-GLAM), Comoving Lagrangian Acceleration (COLA) of which we
+compare two distinct codes, Hi-COLA and COLA-FML, the relativistic
+parametrised 𝑁-body code, MG-evolution, and the semi-analytic
+halo model reaction approach expressed by the ReACT code. We
+summarise the distinctions of each code below:
+• Full 𝑁-body: Solves the Klein-Gordan equation exactly to get
+the force applied to particles in a box. Serves as an accuracy bench-
+mark.
+• Hi-COLA: Includes a fifth force in the COLA formalism via
+a screening factor, as well as consistently solving the modified cos-
+mological expansion history. Screening factors are derived using a
+quasi-linear treatment of the metric and scalar field perturbations,
+along with assuming the quasi-static approximation and spherically
+distributed over-densities.
+• COLA-FML: Introduces the Vainshtein mechanism by evalu-
+ating a function, 𝐺eff(𝑘, 𝑎), that captures on average nonlinear cor-
+rections from the screening mechanism. This method is performed
+by linearizing the Klein-Gordon equation in Fourier space, and the
+full function is found by an iterative process.
+• MG-evolution: Employs a parametrised ansatz for the nonlinear
+force law which comes with a screening parameter.
+• ReACT: Uses spherical collapse, the halo model and 1-loop
+perturbation theory to predict the matter power spectrum.
+We summarize the overall accuracy exhibited by each approach in
+Table 4 with respect to the full 𝑁-body benchmark. We remark that
+𝑁-body codes solving the full Klein-Gordon equation in modified
+gravity are 1% consistent (Winther et al. 2015) for 𝑘≲7 ℎ/Mpc in
+their prediction for the boost.
+We find that all approaches considered here are overall 2% consis-
+tent with the benchmark 𝑁-body boost at scales 𝑘≤1 ℎ/Mpc and for
+𝑧≤1. The only exceptions are ReACT for the strongest modifications
+to ΛCDM and at 𝑧= 0. MG-evolution performs the best, with a
+general accuracy of 1% at all scales considered (𝑘≤3 ℎ/Mpc), but
+this accuracy comes at the cost of tuning the screening parameter de-
+pending on the output redshift or modification strength, which might
+undermine the predictivity of the code.
+We thus can advocate the safe use of these codes, and any emula-
+tors based upon them (see Tsedrik et al. 2024; Carrion et al. 2024;
+Gordon et al. 2024, for example)6, at fairly nonlinear scales for scale-
+independent models. We note the caveat that emulation error should
+be quantified and appropriately accounted for.
+For a more concrete estimate on the validity of these methods, we
+can consider a Euclid-like survey whose weak lensing analysis will
+have a signal to noise peaking at (conservatively) 𝑧≈0.7 (see Lepori
+et al. 2022, for example). Imposing a 2% accuracy demand on the
+matter power spectrum model, and assuming a ΛCDM fiducial back-
+ground cosmology, we can arguably trust all method predictions for
+ℓmax ≲1800. This roughly corresponds to the pessimistic scenario
+described in Ref. Blanchard et al. (2020).
+At scales 𝑘> 1 ℎ/Mpc we find all codes begin to diverge by more
+than 2% for the strongest modifications considered. They should thus
+not be used to model the highly nonlinear scales of structure forma-
+tion in the context of forthcoming LSS analyses without considering
+6 The results of this work do not directly apply to the emulator produced in
+Ref. Fiorini et al. (2023), nDGPemu, as the screening approximation used to
+produced their training set is different from the ones adopted in this work.
+an appropriate theoretical error contribution to the error budget (see
+Audren et al. 2013, for example).
+The goal of this work was to validate different methods to com-
+pute the nonlinear matter power spectrum boost (see Equation 32).
+This function inherently depends on the nonlinear matter power spec-
+trum of ΛCDM. But further, the boost must be applied to an accurate
+ΛCDM spectrum prediction in order to get a nonlinear modified mat-
+ter power spectrum prediction. Therefore, the final modified gravity
+prescription inherits a dependence on predictions of the standard
+model. While we now have state-of-the-art high resolution tools to
+evaluate 𝑃ΛCDM
+NL
+(𝑘, 𝑧), the region in which these tools have internal
+accuracy within 1%−2% may not be as broad as we need for extract-
+ing unbiased constraints on cosmological parameters for Stage-IV
+LSS surveys (see Gordon et al. 2024, for a more in depth discussion).
+Furhtermore it is expected that in beyond-ΛCDM analysis, extreme
+regions of the parameter space need to be sampled, which heightens
+the need for the development of more comprehensive emulators in
+ΛCDM, as these are also imperative for the study of beyond-ΛCDM
+models.
+In a similar vein, a further investigation of the impact of baryons
+in a full parameter inference scenario remains imperative to per-
+form using the codes validated in this work. It has been shown that
+the interplay between baryonic physics and cosmology exhibit some
+dependence at small scales (Elbers et al. 2024). However, it is un-
+known to what extent in the nonlinear regime we can still extract
+relevant cosmological information to improve our constraints, i.e., if
+we need to model baryonic physics deep inside the nonlinear regime,
+𝑘∼10 ℎ/Mpc or not. Alternatively to modelling baryonic physics
+at the level of the power spectrum, it would be interesting to in-
+vestigate the performance of procedures that mitigate the impact of
+baryons in the parameter constrains, such as the methods described
+in Refs. Eifler et al. (2015); Huang et al. (2019, 2021).
+To conclude, let us highlight that the methods compared in this
+work have been designed with an element of theoretical flexibility
+in mind. There is a general shift to move beyond hard-coded codes
+designed to run with only one gravity model, and instead build more
+general tools that can be calibrated to a range of different models7.
+This is an essential step forward to streamline the testing of new
+theoretical ideas with data from Stage IV surveys.
+ACKNOWLEDGEMENTS
+B.B. is supported by a UKRI Stephen Hawking Fellowship
+(EP/W005654/2). A.S.G. is supported by a STFC PhD studentship.
+F.H. acknowledges the Research Council of Norway and the resources
+provided by UNINETT Sigma2 – the National Infrastructure for High
+Performance Computing and Data Storage in Norway. F.H. is also
+supported by a grant from the Swiss National Supercomputing Cen-
+tre (CSCS) under project ID s1051. T.B. is supported by ERC Start-
+ing Grant SHADE (grant no. StG 949572) and by a Royal Society
+University Research Fellowship (grant no. URF\R\231006). L.A. is
+supported by Fundação para a Ciência e a Tecnologia (FCT) through
+the research grants UIDB/04434/2020, UIDP/04434/2020 and from
+the FCT PhD fellowship grant with ref. number 2022.11152.BD.
+N.F. is supported by the Italian Ministry of University and Re-
+search (MUR) through the Rita Levi Montalcini project “Tests of
+gravity on cosmic scales" with reference PGR19ILFGP. L.A. and
+7 A caveat here is that a hard-coded full 𝑁-body code like MG-GLAM or
+ECOSMOG may always be needed for validation.
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+15
+N.F. also acknowledge the FCT project with ref. number PTDC/FIS-
+AST/0054/2021 and the COST Action CosmoVerse, CA21136, sup-
+ported by COST (European Cooperation in Science and Technol-
+ogy). C.H-A. acknowledges support from the Excellence Cluster
+ORIGINS which is funded by the Deutsche Forschungsgemeinschaft
+(DFG, German Research Foundation) under Germany’s Excellence
+Strategy – EXC-2094 – 390783311. G.B. is supported by the Alexan-
+der von Humboldt Foundation. B.F. is supported by a Royal Society
+Enhancement Award (grant no. RF\ERE\210304). This work used
+the DiRAC@Durham facility managed by the Institute for Com-
+putational Cosmology on behalf of the STFC DiRAC HPC Facil-
+ity (www.dirac.ac.uk). The equipment was funded by BEIS capi-
+tal funding via STFC capital grants ST/K00042X/1, ST/P002293/1,
+ST/R002371/1 and ST/S002502/1, Durham University and STFC
+operations grant ST/R000832/1. DiRAC is part of the National e-
+Infrastructure. Hi-COLA data was generated utilising Queen Mary’s
+Apocrita HPC facility, supported by QMUL Research-IT, and the
+Sciama High Performance Compute (HPC) cluster which is sup-
+ported by the ICG, SEPNet and the University of Portsmouth. For
+the purpose of open access, the authors have applied a Creative
+Commons Attribution (CC BY) licence to any Author Accepted
+Manuscript version arising from this submission.
+DATA AVAILABILITY
+The halo model reaction software used in this article is publicly avail-
+able in the ACTio-ReACTio repository at https://github.com/
+nebblu/ACTio-ReACTio. In the same repository we also provide
+a Mathematica notebook, kmouflage.nb, which contains relevant
+calculations for the K-mouflage model. 𝑁-body matter power spectra
+measurements are available upon request.
+REFERENCES
+Abbott T., et al., 2016, Mon. Not. Roy. Astron. Soc., 460, 1270
+Abbott B. P., et al., 2017, Astrophys. J., 848, L13
+Adamek J., Daverio D., Durrer R., Kunz M., 2016a, JCAP, 07, 053
+Adamek J., Daverio D., Durrer R., Kunz M., 2016b, Nature Phys., 12, 346
+Aghanim N., et al., 2020, Astron. Astrophys., 641, A6
+Akeson R., et al., 2019, The Wide Field Infrared Survey Telescope: 100
+Hubbles for the 2020s (arXiv:1902.05569)
+Alam S., et al., 2021, Phys. Rev. D, 103, 083533
+Albrecht A., et al., 2006, Report of the Dark Energy Task Force
+(arXiv:astro-ph/0609591)
+Albuquerque I. S., Frusciante N., Martinelli M., 2022, Phys. Rev. D, 105,
+044056
+Armendariz-Picon C., Damour T., Mukhanov V. F., 1999, Phys. Lett. B, 458,
+209
+Arnold C., Leo M., Li B., 2019, Nature Astronomy, 3, 945
+Arnold C., Li B., Giblin B., Harnois-Déraps J., Cai Y.-C., 2021,
+(arXiv:2109.04984)
+Atayde L., Frusciante N., Bose B., Casas S., Li B., 2024, Non-linear
+power spectrum and forecasts for Generalized Cubic Covariant Galileon
+(arXiv:2404.11471)
+Audren B., Lesgourgues J., Bird S., Haehnelt M. G., Viel M., 2013, JCAP,
+01, 026
+Babichev E., Deffayet C., 2013, Class. Quant. Grav., 30, 184001
+Babichev E., Deffayet C., Ziour R., 2009, Int. J. Mod. Phys. D, 18, 2147
+Bag S., Mishra S. S., Sahni V., 2018, Phys. Rev. D, 97, 123537
+Baker T., Bellini E., Ferreira P. G., Lagos M., Noller J., Sawicki I., 2017,
+Phys. Rev. Lett., 119, 251301
+Baker T., Clampitt J., Jain B., Trodden M., 2018, Phys. Rev. D, 98, 023511
+Baker T., et al., 2022, JCAP, 08, 031
+Baker T., Barausse E., Chen A., de Rham C., Pieroni M., Tasinato G., 2023,
+JCAP, 03, 044
+Baldauf T., Mirbabayi M., Simonović M., Zaldarriaga M., 2016, LSS con-
+straints with controlled theoretical uncertainties (arXiv:1602.00674)
+Baldi M., Simpson F., 2015, Mon. Not. Roy. Astron. Soc., 449, 2239
+Barreira A., Li B., Baugh C. M., Pascoli S., 2012, Phys. Rev. D, 86, 124016
+Barreira A., Li B., Hellwing W. A., Baugh C. M., Pascoli S., 2013a, JCAP,
+10, 027
+Barreira A., Li B., Baugh C. M., Pascoli S., 2013b, JCAP, 11, 056
+Barreira A., Li B., Baugh C., Pascoli S., 2014, JCAP, 08, 059
+Barreira A., Brax P., Clesse S., Li B., Valageas P., 2015a, Phys. Rev. D, 91,
+063528
+Barreira A., Brax P., Clesse S., Li B., Valageas P., 2015b, Phys. Rev. D, 91,
+123522
+Barreira A., Sánchez A. G., Schmidt F., 2016, Phys. Rev. D, 94, 084022
+Barroso J. A. A., et al., 2024, Euclid. I. Overview of the Euclid mission
+(arXiv:2405.13491)
+Battye R. A., Pace F., Trinh D., 2018, Phys. Rev. D, 98, 023504
+Becker C., Arnold C., Li B., Heisenberg L., 2020, JCAP, 10, 055
+Belgacem E., Finke A., Frassino A., Maggiore M., 2019, JCAP, 02, 035
+Bellini E., et al., 2018, Phys. Rev. D, 97, 023520
+Benevento G., Raveri M., LazanuA.,Bartolo N., Liguori M., Brax P.,Valageas
+P., 2019, JCAP, 05, 027
+Bernardeau F., Colombi S., Gaztanaga E., Scoccimarro R., 2002, Phys. Rept.,
+367, 1
+Bernardo H., Bose B., Franzmann G., Hagstotz S., He Y., Litsa A., Nieder-
+mann F., 2022, (arXiv:2210.06810)
+Blanchard A., et al., 2020, Astron. Astrophys., 642, A191
+Bonici M., et al., 2023, Astron. Astrophys., 670, A47
+Bose B., Koyama K., 2016, JCAP, 08, 032
+Bose B., Baldi M., Pourtsidou A., 2018, JCAP, 04, 032
+Bose B., Cataneo M., Tröster T., Xia Q., Heymans C., Lombriser L., 2020,
+Mon. Not. Roy. Astron. Soc., 498, 4650
+Bose B., et al., 2021, Mon. Not. Roy. Astron. Soc., 508, 2479
+Bose B., Tsedrik M., Kennedy J., Lombriser L., Pourtsidou A., Taylor A.,
+2022, (arXiv:2210.01094)
+Brando G., Falciano F. T., Linder E. V., Velten H. E. S., 2019, JCAP, 11, 018
+Brando G., Fiorini B., Koyama K., Winther H. A., 2022, JCAP, 09, 051
+Brando G., Koyama K., Winther H. A., 2023, JCAP, 06, 045
+Brax P., Valageas P., 2014a, Phys. Rev. D, 90, 023507
+Brax P., Valageas P., 2014b, Phys. Rev. D, 90, 023508
+Brax P., van de Bruck C., Davis A.-C., Li B., Shaw D. J., 2011, Phys. Rev. D,
+83, 104026
+Brax P., Davis A.-C., Li B., Winther H. A., Zhao G.-B., 2013, JCAP, 04, 029
+Brax P., Rizzo L. A., Valageas P., 2015, Phys. Rev. D, 92, 043519
+Brax P., Casas S., Desmond H., Elder B., 2021, Universe, 8, 11
+Carrilho P., Carrion K., Bose B., Pourtsidou A., Hidalgo J. C., Lombriser L.,
+Baldi M., 2022, Mon. Not. Roy. Astron. Soc., 512, 3691
+Carrion K., Carrilho P., Spurio Mancini A., Pourtsidou A., Hidalgo J. C.,
+2024, Dark Scattering: accelerated constraints from KiDS-1000 with
+ReACT and CosmoPower (arXiv:2402.18562)
+Casas S., et al., 2023, Euclid: Constraints on f(R) cosmologies from the
+spectroscopic and photometric primary probes (arXiv:2306.11053)
+Cataneo M., Lombriser L., Heymans C., Mead A., Barreira A., Bose S., Li
+B., 2019, Mon. Not. Roy. Astron. Soc., 488, 2121
+Cataneo M., Emberson J. D., Inman D., Harnois-Deraps J., Heymans C.,
+2020, Mon. Not. Roy. Astron. Soc., 491, 3101
+Catena R., Pietroni M., Scarabello L., 2007, Phys. Rev. D, 76, 084039
+Chiba T., Yamaguchi M., 2013, JCAP, 10, 040
+Christiansen O., Hassani F., Jalilvand M., Mota D. F., 2023, JCAP, 05, 009
+Clifton T., Carrilho P., Fernandes P. G. S., Mulryne D. J., 2020, Phys. Rev.
+D, 102, 084005
+Cooray A., Sheth R. K., 2002, Phys. Rept., 372, 1
+Creminelli P., Vernizzi F., 2017, Phys. Rev. Lett., 119, 251302
+Creminelli P., Lewandowski M., Tambalo G., Vernizzi F., 2018, JCAP, 1812,
+025
+Davis A.-C., Li B., Mota D. F., Winther H. A., 2012, Astrophys. J., 748, 61
+De Felice A., Tsujikawa S., 2012, JCAP, 02, 007
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+16
+Deffayet C., Esposito-Farese G., Vikman A., 2009, Phys. Rev. D, 79, 084003
+Deffayet C., Gao X., Steer D. A., Zahariade G., 2011, Phys. Rev. D, 84,
+064039
+Dvali G. R., Gabadadze G., Porrati M., 2000, Phys. Lett. B, 485, 208
+Eifler T., Krause E., Dodelson S., Zentner A. R., Hearin A. P., Gnedin N. Y.,
+2015, Mon. Notices Royal Astron. Soc., 454, 2451
+Elbers W., et al., 2024, The FLAMINGO project: the coupling be-
+tween baryonic feedback and cosmology in light of the 𝑆8 tension
+(arXiv:2403.12967)
+Ezquiaga J. M., Zumalacárregui M., 2017, Phys. Rev. Lett., 119, 251304
+Fiorini B., Koyama K., Baker T., 2023, JCAP, 12, 045
+Francfort J., Ghosh B., Durrer R., 2019, JCAP, 09, 071
+Frusciante N., Pace F., 2020, Phys. Dark Univ., 30, 100686
+Frusciante N., Perenon L., 2020, Phys. Rept., 857, 1
+Frusciante N., Peirone S., Atayde L., De Felice A., 2020, Phys. Rev. D, 101,
+064001
+Frusciante N., et al., 2023, Euclid: Constraining linearly scale-independent
+modifications of gravity with the spectroscopic and photometric primary
+probes (arXiv:2306.12368)
+Gabadadze G., Iglesias A., 2006, Phys. Lett. B, 639, 88
+Giblin B., Cataneo M., Moews B., Heymans C., 2019, Mon. Not. Roy. Astron.
+Soc., 490, 4826
+Goldstein A., et al., 2017, Astrophys. J. Lett., 848, L14
+Gordon J., de Aguiar B. F., Rebouças J. a., Brando G., Falciano F., Miranda
+V., Koyama K., Winther H. A., 2024, Modeling nonlinear scales with
+COLA: preparing for LSST-Y1 (arXiv:2404.12344)
+Harnois-Déraps J., Hernandez-Aguayo C., Cuesta-Lazaro C., Arnold C., Li
+B., Davies C. T., Cai Y.-C., 2022, (arXiv:2211.05779)
+Harry I., Noller J., 2022, Gen. Rel. Grav., 54, 133
+Hassani F., Lombriser L., 2020, Mon. Not. Roy. Astron. Soc., 497, 1885
+Hassani F., Adamek J., Kunz M., Vernizzi F., 2019, JCAP, 12, 011
+Hassani F., L’Huillier B., Shafieloo A., Kunz M., Adamek J., 2020, JCAP,
+04, 039
+Hearin A. P., Zentner A. R., Ma Z., 2012, JCAP, 04, 034
+Hernández-Aguayo C., Arnold C., Li B., Baugh C. M., 2021, MNRAS, 503,
+3867
+Hernández-Aguayo C., Ruan C.-Z., Li B., Arnold C., Baugh C. M., Klypin
+A., Prada F., 2022, J. Cosmology Astropart. Phys., 2022, 048
+Hildebrandt H., et al., 2017, Mon. Not. Roy. Astron. Soc., 465, 1454
+Hinterbichler K., Khoury J., 2010, Phys. Rev. Lett., 104, 231301
+Horndeski G. W., 1974, Int.J.Theor.Phys., 10, 363
+Hou J., Bautista J., Berti M., Cuesta-Lazaro C., Hernández-Aguayo C., Tröster
+T., Zheng J., 2023, Universe, 9, 302
+Howlett C., Manera M., Percival W. J., 2015, Astron. Comput., 12, 109
+Hu W., Sawicki I., 2007, Phys.Rev., D76, 064004
+Hu B., Raveri M., Frusciante N., Silvestri A., 2014, Phys. Rev. D, 89, 103530
+Huang H.-J., Eifler T., Mandelbaum R., Dodelson S., 2019, Mon. Not. of the
+Royal Astron. Soc., 488, 1652
+Huang H.-J., et al., 2021, Mon. Not. of the Royal Astron. Soc., 502, 6010
+Ivezić v., et al., 2019, Astrophys. J., 873, 111
+Jing Y. P., 2005, Astrophys. J., 620, 559
+Kable J. A., Benevento G., Frusciante N., De Felice A., Tsujikawa S., 2022,
+JCAP, 09, 002
+Khoury J., Weltman A., 2004, Phys. Rev. Lett., 93, 171104
+Khoury J., Wyman M., 2009, Phys. Rev. D, 80, 064023
+Kimura R., Kobayashi T., Yamamoto K., 2012, Phys. Rev. D, 85, 024023
+Klypin A., Prada F., 2018, MNRAS, 478, 4602
+Knabenhans M., et al., 2019, Mon. Not. Roy. Astron. Soc., 484, 5509
+Kobayashi T., 2019, Rept. Prog. Phys., 82, 086901
+Kobayashi T., Yamaguchi M., Yokoyama J., 2010, Phys. Rev. Lett., 105,
+231302
+Koyama K., Maartens R., 2006, JCAP, 01, 016
+LSST Dark Energy Science Collaboration 2012, Large Synoptic Survey Tele-
+scope: Dark Energy Science Collaboration (arXiv:1211.0310)
+Lepori F., et al., 2022, Astron. Astrophys., 662, A93
+Levi M., et al., 2019, in Bulletin of the American Astronomical Society. p. 57
+(arXiv:1907.10688)
+Li B., Zhao G.-B., Teyssier R., Koyama K., 2012, JCAP, 01, 051
+Li B., Zhao G.-B., Koyama K., 2013a, JCAP, 05, 023
+Li B., Barreira A., Baugh C. M., Hellwing W. A., Koyama K., Pascoli S.,
+Zhao G.-B., 2013b, JCAP, 11, 012
+Llinares C., Mota D. F., Winther H. A., 2014, Astron. Astrophys., 562, A78
+Lombriser L., 2016, JCAP, 11, 039
+Lombriser L., Lima N. A., 2017, Phys. Lett., B765, 382
+Lombriser L., Taylor A., 2016, JCAP, 1603, 031
+Lombriser L., Hu W., Fang W., Seljak U., 2009, Phys. Rev. D, 80, 063536
+Lue A., 2006, Phys. Rept., 423, 1
+Luty M. A., Porrati M., Rattazzi R., 2003, JHEP, 09, 029
+Martinelli M., et al., 2021, Astron. Astrophys., 649, A100
+Mead A., Heymans C., Lombriser L., Peacock J., Steele O., Winther H., 2016,
+Mon. Not. Roy. Astron. Soc., 459, 1468
+Mead A., Brieden S., Tröster T., Heymans C., 2020, Mon. Not. Roy. Astron.
+Soc.
+Nicolis A., Rattazzi R., Trincherini E., 2009, Phys. Rev. D, 79, 064036
+Nouri-Zonoz A. R., Hassani F., Kunz M., 2024, 𝑘-e𝜇lator: emulating clus-
+tering effects of the 𝑘-essence dark energy (arXiv:2405.10424)
+Pace F., Battye R., Bellini E., Lombriser L., Vernizzi F., Bolliet B., 2021,
+JCAP, 06, 017
+Peirone S., Frusciante N., Hu B., Raveri M., Silvestri A., 2018, Phys. Rev. D,
+97, 063518
+Peirone S., Benevento G., Frusciante N., Tsujikawa S., 2019, Phys. Rev. D,
+100, 063540
+Perlmutter S., et al., 1999, Astrophys. J., 517, 565
+Piga L., Marinucci M., D’Amico G., Pietroni M., Vernizzi F., Wright B. S.,
+2023, JCAP, 04, 038
+Prunet S., Pichon C., Aubert D., Pogosyan D., Teyssier R., Gottloeber S.,
+2008, Astrophys. J. Suppl., 178, 179
+Puchwein E., Baldi M., Springel V., 2013, Mon. Not. Roy. Astron. Soc., 436,
+348
+Quartin M., Tsujikawa S., Amendola L., Sturani R., 2023, JCAP, 08, 049
+Ramachandra N., Valogiannis G., Ishak M., Heitmann K., 2021, Phys. Rev.
+D, 103, 123525
+Renk J., Zumalacárregui M., Montanari F., Barreira A., 2017, JCAP, 10, 020
+Riess A. G., et al., 1998, Astron. J., 116, 1009
+Ruan C.-Z., Hernández-Aguayo C., Li B., Arnold C., Baugh C. M., Klypin
+A., Prada F., 2022, J. Cosmology Astropart. Phys., 2022, 018
+Sakstein J., Jain B., 2017, Phys. Rev. Lett., 119, 251303
+Sawicki I., Bellini E., 2015, Phys. Rev. D, 92, 084061
+Schmidt F., 2009a, Phys. Rev. D, 80, 043001
+Schmidt F., 2009b, Phys. Rev. D, 80, 123003
+Schmidt F., Hu W., Lima M., 2010, Phys. Rev. D, 81, 063005
+Scoccimarro R., 2009, Phys. Rev. D, 80, 104006
+Sefusatti E., Crocce M., Scoccimarro R., Couchman H., 2016, Mon. Not.
+Roy. Astron. Soc., 460, 3624
+Simpson F., 2010, Phys. Rev. D, 82, 083505
+Srinivasan S., Thomas D. B., Pace F., Battye R., 2021, JCAP, 06, 016
+Srinivasan S., Thomas D. B., Battye R., 2024, JCAP, 03, 039
+Takahashi R., Sato M., Nishimichi T., Taruya A., Oguri M., 2012, Astrophys.
+J., 761, 152
+Tassev S., Zaldarriaga M., Eisenstein D., 2013, JCAP, 06, 036
+Teyssier R., 2002, Astron. Astrophys., 385, 337
+Tsedrik M., Bose B., Carrilho P., Pourtsidou A., Pamuk S., Casas S., Les-
+gourgues J., 2024, Stage-IV Cosmic Shear with Modified Gravity and
+Model-independent Screening (arXiv:2404.11508)
+Vainshtein A., 1972, Phys.Lett., B39, 393
+Valogiannis G., Bean R., 2017, Phys. Rev. D, 95, 103515
+Will C. M., 2014, Living Rev. Rel., 17, 4
+Winther H. A., Ferreira P. G., 2015a, Phys. Rev. D, 91, 123507
+Winther H. A., Ferreira P. G., 2015b, Phys. Rev. D, 92, 064005
+Winther H. A., et al., 2015, Mon. Not. Roy. Astron. Soc., 454, 4208
+Winther H. A., Koyama K., Manera M., Wright B. S., Zhao G.-B., 2017,
+JCAP, 08, 006
+Wright B. S., Sen Gupta A., Baker T., Valogiannis G., Fiorini B., 2023, JCAP,
+03, 040
+Zhao G.-B., 2014, Astrophys. J. Suppl., 211, 23
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+17
+Zumalacárregui M., Bellini E., Sawicki I., Lesgourgues J., Ferreira P. G.,
+2017, JCAP, 08, 019
+de Rham C., Melville S., 2018, Phys. Rev. Lett., 121, 221101
+de Rham C., Melville S., Noller J., 2021, JCAP, 08, 018
+APPENDIX A: K-MOUFLAGE REACT PATCH
+Here we present the expressions needed to calculate the halo model
+reaction (see Equation 27) in the K-mouflage model. The halo model
+reaction relies on both the halo model (see Cooray & Sheth 2002,
+for a review) and 1-loop perturbation theory (see Bernardeau et al.
+2002, for a review). In particular, besides the background expansion
+𝐻(𝑎), we require the modifications to the 1st, 2nd, 3rd order pertur-
+bative and nonlinear Poisson equations, as well as contributions to
+the potential energy of halos in order to solve the virial theorem (see
+Cataneo et al. 2019; Bose et al. 2020, for more details). K-mouflage
+also comes with a friction term correction to the Euler equation (Brax
+& Valageas 2014b).
+A1 Background
+For the background expansion we must solve the Klein-Gordon
+and Friedmann equations simultaneously. We do this numerically in
+ReACT as done in Ref. Hernández-Aguayo et al. (2022). The Fried-
+mann equations are
+H2
+𝐻2
+0
+
+1 −𝜑′2
+6
+
+= 𝐴(𝜑)Ωm,0
+𝑎
++ 1
+3𝜆2𝑎2
++ (2𝑛−1)
+3
+𝜆2𝑎2𝐾0
+ 𝜑′2
+2𝜆2𝑎2
+𝑛H2𝑛
+𝐻2𝑛
+0
+,
+(A1)
+dH
+d𝜏
+1
+𝐻2
+0
+= −𝐴(𝜑)Ωm,0
+2𝑎
++ 1
+3𝜆2𝑎2 −1
+3 𝜑′2 H2
+𝐻2
+0
+−(𝑛+ 1)
+3
+𝜆2𝑎2𝐾0
+ 𝜑′2
+2𝜆2𝑎2
+𝑛H2𝑛
+𝐻2𝑛
+0
+,
+(A2)
+while the Klein-Gordan equation is given as
+(𝐾𝑋+ 2 ¯𝑋𝐾𝑋𝑋)
+"
+H2
+𝐻2
+0
+𝜑′′ + dH
+d𝜏
+1
+𝐻2
+0
+𝜑′
+#
++ 2(𝐾𝑋−¯𝑋𝐾𝑋𝑋) H2
+𝐻2
+0
+𝜑′ + 3d𝐴(𝜑)
+d𝜑
+Ωm,0
+𝑎
+= 0 ,
+(A3)
+where 𝐾𝑋𝑋= d2𝐾/d𝑋2 and we recall primes denote derivatives with
+respect to ln 𝑎. In these equations we have defined the normalised
+scalar field 𝜑≡𝜙/𝑀pl and used the conformal Hubble rate H (𝑎) =
+𝐻(𝑎)𝑎. 𝜏is conformal time. We indicate that a few typographical
+errors did occur in Ref. Hernández-Aguayo et al. (2022) which have
+been corrected in the above equations.
+To solve these equations we first find the analytic solutions to
+Equation A1 for a given value of 𝑛8. For 𝑛= 2 this is a quadratic
+equation in H2/𝐻2
+0. Then, for a given value of 𝑎(or ln 𝑎) we can
+substitute H and Equation A2 in Equation A3, enabling us to solve
+for the entire evolution of 𝜑(and 𝜑′), and consequently 𝐻(𝑎).
+8 We provide a Mathematica notebook which computes the solutions for
+𝑛= 2, 3 and checks consistency of the equations.
+A2 Perturbations
+The linear modification to the Poisson equation is given by (Brax &
+Valageas 2014b)
+𝐺eff,L
+𝐺N
+= 𝐴(𝜑)
+ 
+1 +
+2𝛽2
+K
+𝐾𝑋
+!
+.
+(A4)
+Here we have included the conformal factor 𝐴(𝜑), that comes along
+with 𝜌m in the Poisson equation, Equation 4. Note that 𝐺eff,L/𝐺N =
+𝜇(𝑘, 𝑎) in the ReACT standard notation of Refs. Bose & Koyama
+(2016); Cataneo et al. (2019); Bose et al. (2020, 2022) for example.
+The 2nd and 3rd order symmetrised modifications to the Poisson
+equation, in the same notation of Ref. Bose & Koyama (2016); Bose
+et al. (2020), are (Brax & Valageas 2014b)
+𝛾2(𝒌1, 𝒌2, 𝑎) =0 ,
+𝛾3(𝒌1, 𝒌2, 𝒌3, 𝑎) = −9
+2𝐾𝑋𝑋
+ 
+𝐴(𝜑)Ωm,0
+𝑎
+𝐻2
+0
+H2
+!3  𝛽K
+𝐾𝑋
+4 H4
+𝐻2
+0
+1
+𝑎2𝜆2
+×
+ (𝜇12 + 2𝜇13𝜇23)
+𝑘1𝑘2
++ (𝜇13 + 2𝜇23𝜇12)
+𝑘1𝑘3
++ (𝜇23 + 2𝜇13𝜇12)
+𝑘2𝑘3
+
+,
+(A5)
+where we have defined 𝜇𝑖𝑗≡ˆ𝑘𝑖· ˆ𝑘𝑗and 𝑘𝑖= |𝒌𝑖|.
+Lastly, we also have a modification to the Euler equation in the
+form of a friction term (Brax & Valageas 2014b). Similar terms have
+been included in ReACT in the context of interacting dark energy
+models (Simpson 2010; Baldi & Simpson 2015; Bose et al. 2018;
+Carrilho et al. 2022). In the K-mouflage model considered here, this
+term is given as
+𝐴friction = 𝛽K𝜑′ .
+(A6)
+This term enters the Euler equation as expressed in Equation. 2.10
+of Ref. Bose et al. (2018) for example.
+A3 Spherical collapse
+The halo model reaction also requires us to solve for the spherical top-
+hat overdensity. This involves solving the evolution equation for the
+top-hat radius which requires specification of the nonlinear Poisson
+equation. The modification to this equation is to a good approxima-
+tion equal to the linear modification at extra galactic scales given the
+smallness of the K-mouflage radius (Brax & Valageas 2014b)
+𝐺eff(𝑘, 𝑎)
+𝐺N
+= 𝐺eff, L(𝑎)
+𝐺N
+.
+(A7)
+We note in the notation of Ref. Cataneo et al. (2019), F = 𝐺eff/𝐺N−
+1 = Δ𝐺eff/𝐺N. In ReACT F appears as 1+F in the Poisson equation.
+This yields the correct conformal factor accounting for the Einstein-
+frame transformation of the background density in the nonlinear
+Poisson equation, as it is already explicit in Equation A4.
+Lastly, we note that the top-hat radius evolution also must include
+the friction term Equation A6.
+A4 Virial theorem
+Here we present the potential energy contributions to the virial theo-
+rem in the K-mouflage model considered. This is needed to calculate
+the virial mass in the halo model reaction calculations. The specific
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+18
+components we require are (Schmidt et al. 2010; Cataneo et al. 2019)
+𝑊N
+𝐸0
+= −Ωm,0
+𝑎−1
+𝑎2
+i
+𝑦2(1 + 𝛿) ;
+(A8)
+𝑊𝜙
+𝐸0
+= −Ωm,0F 𝑎−1
+𝑎2
+i
+𝑦2𝛿;
+(A9)
+𝑊eff
+𝐸0
+= −
+1
+3𝑀2
+pl𝐻2
+0
+(1 + 3𝑤eff) ¯𝜌eff
+𝑎2
+𝑎2
+i
+𝑦2 ;
+(A10)
+𝑊fric
+𝐸0
+= −2𝐴friction
+𝐻2
+𝐻2
+0
+𝑎2
+𝑎2
+i
+𝑦𝑦′ ,
+(A11)
+where 𝑦≡𝑅TH
+𝑅i
+𝑎i
+𝑎, 𝑅TH being the comoving top-hat radius, 𝑅i the
+initial top-hat radius and 𝐸0 is a normalisation. These represent the
+Newtonian contribution, the scalar field contribution, the effective
+dark energy contribution and a frictional force contribution as derived
+in Ref. Carrilho et al. (2022). In the K-mouflage model the scalar field
+affects both force enhancement and acts as an effective dark energy
+component.
+We recall that F = 𝐺eff/𝐺N −1 which does not account for the
+correct conformal factor to appear in Equation A9 in the K-mouflage
+model. In this case we should have
+𝑊𝜙
+𝐸0
+= −Ωm,0
+
+𝐺eff,L/𝐺N −𝐴(𝜑)
+ 𝑎−1
+𝑎2
+i
+𝑦2𝛿,
+= −Ωm,0
+"
+𝐴(𝜑)
+2𝛽2
+K
+𝐾𝑋
+#
+𝑎−1
+𝑎2
+i
+𝑦2𝛿,
+(A12)
+where we used Equation A7 and Equation A4. 𝐴friction is given by
+Equation A6. 𝑤eff = ¯𝑝eff/ ¯𝜌eff and ¯𝜌eff are the equation of state and
+energy density of the effective dark energy fluid component, with
+¯𝑝eff being the fluid’s pressure. These are given in the Einstein frame
+by (Brax & Valageas 2014a,b):
+¯𝜌eff = −𝑀2
+pl𝐻2
+0𝜆2(𝐾−𝑀2
+pl𝐻2 ¯𝜙′2𝐾𝑋) ;
+(A13)
+¯𝑝eff = 𝑀2
+pl𝐻2
+0𝜆2𝐾.
+(A14)
+We then get
+𝑤eff = −
+𝐾
+𝐾−𝑀2
+pl𝐻2 ¯𝜙′2𝐾𝑋
+.
+(A15)
+We can simplify Equation A10 further by noting that when adopting
+the model in Equation 14 we have
+𝐾𝑋=
+1
+𝐻2
+0𝜆2𝑀2
+pl
++ 𝐾0
+1
+𝐻2𝑛
+0 𝜆2𝑛𝑀2𝑛
+pl
+𝑛𝑋𝑛−1 .
+(A16)
+Substituting this into Equation A15, we find the effective dark energy
+contribution to the potential energy is given by
+𝑊eff
+𝐸0
+= −𝜆2
+3
+"
+2𝐾+ 𝐻2
+𝐻2
+0
+𝜑′2
+𝜆2
+
+1 + 𝐾0𝑛𝑋𝑛−1#
+𝑎2
+𝑎2
+i
+𝑦2 .
+(A17)
+Finally, we should note that the Newtonian contribution also should
+have a conformal factor along with Ωm,0
+𝑊N
+𝐸0
+= −𝐴(𝜑)Ωm,0
+𝑎−1
+𝑎2
+i
+𝑦2(1 + 𝛿) .
+(A18)
+APPENDIX B: PARAMETRISED POST-FRIEDMANNIAN
+EXPRESSIONS
+Here we review expressions for the general parametrisation of the
+effective gravitational constant appearing in the nonlinear Poisson
+equation as described in Ref. Lombriser (2016). This is based on
+the parametrised post-Friedmannian framework and is the means
+of modelling modifications to nonlinear structure formation in the
+MG-evolution code. This parametrisation has also been imple-
+mented in the ReACT code (Bose et al. 2022).
+MG-evolution adopts a generalised form of the Vainshtein
+screening effect given by (Lombriser 2016)
+Δ𝐺eff, NL
+𝐺
+= 𝑏
+ 𝑘∗
+𝑘
+𝑎𝑓(
+1 +
+ 𝑘
+𝑘∗
+𝑎𝑓1/𝑏
+−1
+)
+,
+(B1)
+where NL stands for nonlinear, and 𝑘∗and 𝑏, respectively, charac-
+terise the effective screening wavenumber and the interpolation rate
+between the screened and unscreened regimes. This expression aug-
+ments the linear theory prediction as given in Equation 22 to give the
+full solution for 𝐺eff. We shall briefly provide the particular form of
+this expression for the three models considered in this work and refer
+the reader to Ref. Lombriser (2016) for more details.
+B1 nDGP
+To parametrise nDGP gravity we consider (see Lombriser 2016)
+Δ𝐺nDGP,NL
+𝐺N
+=
+1
+3𝛽(𝑎)
+ 𝑘∗
+𝑘
+3 
+
+"
+1 +
+ 𝑘
+𝑘∗
+3# 1
+2
+−1
+
+
+,
+(B2)
+where 𝑘∗corresponds approximately to the Vainshtein radius:
+𝑟∗= 16𝜋𝐺N𝛿𝑀𝑟2𝑐
+9𝛽2
+,
+(B3)
+where 𝛿𝑀is the mass enclosed by a spherical region, 𝑟𝑐is the
+crossover scale in nDGP theories, and 𝛽(𝑎) is given below. The
+Vainshtein radius effectively defines a region where the fifth force
+introduced by the scalar field gets shielded. The effective screening
+wavenumber 𝑘∗can in principle be modelled. However, it is treated
+as a free parameter in MG-evolution. The function 𝛽(𝑎) reads as
+𝛽(𝑎) = 1 + 2𝐻𝑟𝑐
+
+1 +
+¤𝐻
+3𝐻2
+
+,
+(B4)
+and the linear effective gravitational constant in nDGP is given by
+𝐺eff, L
+𝐺N
+= 1 +
+1
+3𝛽(𝑎) .
+(B5)
+We remind the reader that a cosmological background that matches
+that of ΛCDM is assumed.
+B2 Cubic Galileon
+To parametrise the Cubic Galileon we adopt Equation 22, with the
+nonlinear parametrisation
+Δ𝐺CG, NL
+𝐺N
+=
+ 𝑘∗
+𝑘
+3 
+
+"
+1 +
+ 𝑘
+𝑘∗
+3# 1
+2
+−1
+
+
+.
+(B6)
+To obtain the linear regime parametrisation we use the effective
+gravitational potential in Cubic Galileon theory in the linear regime,
+which reads as (Barreira et al. 2013a)
+Δ𝐺CG, L
+𝐺N
+= −2
+3
+𝑐3 ¤𝜙2
+𝑀plM3𝛽2
+,
+(B7)
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+19
+where 𝜙is the Galileon scalar field. 𝛽2 and M3 read,
+𝛽2 ≡2
+M3𝑀pl
+¤𝜙2
+𝛽1,
+(B8)
+M3 ≡𝑀pl𝐻2
+0 ,
+(B9)
+where
+𝛽1 ≡
+1
+6𝑐3
+
+−𝑐2 −4𝑐3
+M3 ( ¥𝜙+ 2𝐻¤𝜙) + 2
+𝑐2
+3
+𝑀2
+plM6 ¤𝜙4
+
+.
+(B10)
+We consider 𝑐2 = −1 and we use the tracker solution (Bellini et al.
+2018),
+𝜉≡
+¤𝜙𝐻
+𝑀pl𝐻2
+0
+,
+(B11)
+where 𝜉is a constant and can be written in terms of 𝑐2, 𝑐3,
+𝜉= −𝑐2
+6𝑐3
+=
+1
+6𝑐3
+.
+(B12)
+As a result, we have the following solutions for ¤𝜙and ¥𝜙
+¤𝜙=
+𝜉𝑀pl𝐻2
+0
+𝐻
+, ¥𝜙= −
+𝜉𝑀pl𝐻2
+0 ¤𝐻
+𝐻2
+.
+(B13)
+Following the discussion presented in Ref. Barreira et al. (2013b) for
+the background tracker solution, we can derive the Hubble expansion
+rate as a function of scale factor
+𝐻2
+𝐻2
+0
+= 1
+2
+h 
+Ωm,0𝑎−3 + Ωr,0𝑎−4
+(B14)
++
+√︃ Ωm,0𝑎−3 + Ωr,0𝑎−42 + 4  1 −Ωm,0 −Ωr,0
+i
+,
+where 𝐻2
+0 = 8𝜋𝐺
+3
+in MG-evolution units and Ωr,0 is the radiation
+energy density fraction today. Computing the cosmic time derivative
+results in,
+¤𝐻+ 𝐻2
+𝐻2
+0
+= −(𝑎Ωm,0 + 2Ωr,0)
+4𝑎2
+−
+(𝑎Ωm,0 + Ωr,0)(3𝑎Ωm,0 + 4Ωr,0)
+4𝑎6
+√︂
+4(1 −Ωm,0 −Ωr,0) + (𝑎Ωm,0+Ωr,0)2
+𝑎8
++ 𝑎2
+2
+√︄
+4(1 −Ωm,0 −Ωr,0) + (𝑎Ωm,0 + Ωr,0)2
+𝑎8
+.
+B3 K-mouflage
+Here we derive the effective gravitational constant appearing in the
+nonlinear Poisson equation for the K-mouflage model described in
+subsection 2.3. We follow Ref. Lombriser (2016). We also note that
+a conformal factor, 𝐴(𝜑), still needs to be applied to transform the
+density appearing in the nonlinear Poisson equation which is not
+included in the 𝐺KM,eff expressions below.
+The effective modification assuming a spherically symmetric mat-
+ter distribution is given as (Winther & Ferreira 2015a; Brax &
+Valageas 2014b)
+Δ𝐺KM,eff
+𝐺N
+=
+2 𝛽2
+K
+𝐾𝑋𝐻2
+0𝜆2𝑀2
+pl
+.
+(B15)
+Using the Klein-Gordon equation for a spherically symmetric matter
+distribution we can write 𝐾𝑋as
+𝐾2
+𝑋𝑋= −
+2 𝛽2
+K
+𝐻4
+0𝜆4𝑀2
+pl
+𝐹2
+N ,
+(B16)
+where the Newtonian force is just 𝐹N = 𝐺N𝑀(< 𝑟)/𝑟2, 𝑟being the
+physical radial coordinate and 𝑀(< 𝑟) being the mass enclosed in
+radius 𝑟. Substituting for 𝐾𝑋in Equation B15 gives
+Δ𝐺KM,eff
+𝐺N
+= 𝛽K
+𝑀pl
+1
+𝐹N
+√
+−2𝑋.
+(B17)
+Now to solve for 𝑋we can adopt the model in Equation 14. By using
+Equation A16 to solve Equation B16 we get
+𝑋=
+𝐻2
+0𝜆2𝑀2
+pl
+6𝐾0
+[1 −𝑓(𝑥)]2
+𝑓(𝑥)
+,
+(B18)
+where
+𝑓(𝑥) =
+
+1 + 𝑥+
+√︁
+𝑥(𝑥+ 2)
+ 1
+3 ,
+(B19)
+and we have defined 𝑥≡−𝐶𝐴/𝑟4, 𝐶𝐴being a parameter proportional
+to 𝐾0, defined as
+𝐶𝐴≡
+54𝛽2
+K𝐺2
+N𝑀2
+𝐻2
+0𝜆2
+𝐾0 .
+(B20)
+We have written 𝑀= 𝑀(< 𝑟) for compactness. It should be pointed
+out that 𝑥∈(−2, 0) yields no solution for 𝑋which can be a problem
+for for very large 𝑟and 𝐾0 > 0. This will not generally be an issue
+as we look for solutions in the nonlinear regime.
+Substituting Equation B18 into Equation B17 gives
+Δ𝐺KM,eff
+𝐺N
+= 𝐶𝐵
+1 −𝑓(𝑥)
+√︁
+𝑥𝑓(𝑥)
+,
+(B21)
+where
+𝐶𝐵≡3
+√
+2𝛽2
+K .
+(B22)
+We note that in Ref. Lombriser (2016) there seems to be a missing
+factor of 1/(2
+√
+2) in Equation. 3.26 in order to have the identification
+𝐶𝐴= 𝐶2
+2. We allow here the case when 𝑥≤0 which can occur for
+𝐾0 > 0. Further, we note 𝐶1 = −𝐶𝐵, 𝐶1 and 𝐶2 being the equivalent
+quantities for 𝐶𝐴and 𝐶𝐵in Ref. Lombriser (2016). We include a
+Mathematica notebook with our derivations.
+We now derive the PPF expression from the limits of Equation B21:
+Δ𝐺KM,eff
+𝐺N
+→2𝛽2
+K
+for
+|𝑥| ≪1 (i.e. 𝑟4 ≫|𝐶𝐴|) ,
+(B23)
+Δ𝐺KM,eff
+𝐺N
+→
+𝐶𝐵𝑟4/3
+(−𝐶𝐴)1/3
+for
+|𝑥| ≫1 (i.e. 𝑟4 ≪|𝐶𝐴|) ,
+(B24)
+which are the same limits obtained by Ref. Lombriser (2016).
+We now map these onto the (real space) PPF expression, Equa-
+tion. 5.3 of Ref. Lombriser (2016)
+Δ𝐺eff
+𝐺N
+= 𝑝1𝑝2
+(1 + 𝑠𝑎𝑓)
+1
+𝑝1 −1
+𝑠𝑎𝑓
+,
+(B25)
+where
+𝑎𝑓=
+𝑝1
+𝑝1 −1 𝑝3 ,
+(B26)
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---
+20
+and 𝑠= 𝑦scr/𝑦h. 𝑦is the normalised top-hat radius
+𝑦≡𝑅TH/𝑎
+𝑅𝑖/𝑎𝑖
+.
+(B27)
+𝑅TH and 𝑅𝑖are the comoving halo top-hat radius and 𝑎𝑖the initial
+scale factor. The dimensionless screening scale is given by
+𝑦scr = 𝑝4𝑎𝑝5 (2𝐺N 𝐻0𝑀vir) 𝑝6
+ 𝑦env
+𝑦h
+ 𝑝7
+.
+(B28)
+𝑦env refers to the normalised radius of the environment and 𝑀vir is
+the virial mass of the halo.
+Comparing Equation B25 and Equation B28 with Equation B23
+and Equation B24 we find, for a choice of 𝑝1,
+𝑝2 =
+2𝛽2
+K
+𝑝1
+,
+𝑝3 = 4
+3
+𝑝1 −1
+𝑝1
+,
+𝑝4 =
+"
+−
+√
+2𝐾0𝑝3
+1𝛽2
+K
+𝜆2
+# 1
+4
+Ω
+1
+3
+m,0,
+𝑝5 = −1,
+𝑝6 = 1/6,
+𝑝7 = 0 .
+(B29)
+We note that whether there’s a 𝑝1 in 𝑝3 depends on whether 𝑝1 is
+positive or negative (see Equation. 2.14 of Ref. Lombriser (2016)).
+We have also used 𝑀vir ≈4𝜋Ωm,0𝜌crit𝑅3
+th/3.
+This paper has been typeset from a TEX/LATEX file prepared by the author.
+MNRAS 000, 1–20 (2022)
+
+---PAGE BREAK---

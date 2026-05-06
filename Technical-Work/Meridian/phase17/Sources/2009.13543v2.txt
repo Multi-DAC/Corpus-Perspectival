@@ -1,0 +1,5208 @@
+Constraining power of asymptotic safety for scalar ﬁelds
+Astrid Eichhorn1, ∗and Martin Pauly2, †
+1CP3-Origins, University of Southern Denmark, Campusvej 55, DK-5230 Odense M, Denmark
+2Institut f¨ur Theoretische Physik, Ruprecht-Karls-Universit¨at Heidelberg,
+Philosophenweg 16, 69120 Heidelberg, Germany
+We explore the phenomenology of scalar ﬁelds coupled to asymptotically safe quantum gravity,
+in light of their potential signiﬁcance for dark matter, for the inﬂaton as well as dynamical dark
+energy, and in the Higgs sector in and beyond the Standard Model. This work is a step towards de-
+lineating the boundaries of the asymptotically safe swampland by exploiting the constraining power
+of the asymptotic-safety paradigm. Firstly, we strengthen indications that quantum gravitational
+ﬂuctuations could drive scalar potentials towards ﬂatness, with intriguing potential implications for
+inﬂation and dark energy. Secondly, we explore how asymptotic safety could rule out large parts
+of the parameter space in models for scalar dark matter. Thirdly, we discover hints that at an
+asymptotically safe ﬁxed point with ﬁnite top quark mass, the non-minimal Higgs-curvature cou-
+pling could be constrained. Finally, by combining the constraining power of asymptotic safety in
+particle physics and cosmology, we ﬁnd hints that Higgs inﬂation lies in the asymptotically safe
+swampland.
+In summary, we strengthen previous indications for the constraining power of asymptotic safety and
+the resulting large extent of the asymptotically safe swampland.
+CONTENTS
+I. Motivation: Scalars in particle physics and
+cosmology: in search of a UV completion
+2
+II. Asymptotic safety: conceptual and technical
+framework
+2
+A. Predictivity and eﬀective asymptotic safety
+3
+B. Functional Renormalization Group
+3
+C. Three systems: Single scalar, simple Yukawa,
+portal to simple Yukawa dark matter
+5
+III. Single scalar
+6
+A. Fixed-point results
+6
+B. Three perspectives on ﬂat scalar potentials in
+quantum gravity
+7
+1. Global symmetries
+7
+2. The gravity-induced ﬂow towards ﬂatness
+and predictivity
+8
+3. Small slow-roll parameters from
+asymptotic safety
+8
+C. Outlook on potential phenomenological
+consequences
+9
+1. Towards asymptotically safe consequences
+for the inﬂaton
+10
+2. Towards asymptotically safe consequences
+for dynamical dark energy
+12
+IV. Simple Yukawa model for the Higgs-top system
+13
+A. Eﬀects of Fermions
+14
+B. Comparison to the case without non-minimal
+coupling: Impact on predictions of the
+fermion mass
+15
+∗eichhorn@cp3.sdu.dk
+† m.pauly@thphys.uni-heidelberg.de
+C. Spontaneous symmetry breaking in the
+quantum-gravity regime
+17
+D. Indications against the viability of Higgs
+inﬂation in asymptotic safety
+17
+V. Scalar portal to dark matter
+19
+A. Decoupling of a single dark scalar in
+asymptotic safety
+19
+B. Portal coupling to a dark Yukawa system
+20
+C. Fixed-point structures, predictivity and
+near-perturbativity
+20
+D. Connection to the IR
+22
+VI. Conclusions and outlook
+25
+A. Summary of key results
+25
+B. Outlook: improving on systematic
+uncertainties
+27
+Acknowledgments
+28
+A. Formal aspects
+28
+1. Gauge ﬁxing
+28
+2. Choice of regulator
+29
+3. Background ﬁeld dependence
+30
+4. Momentum-dependent interactions
+32
+B. Flow of the Potential
+33
+C. Beta functions
+33
+References
+35
+arXiv:2009.13543v2  [hep-th]  31 Aug 2021
+
+---PAGE BREAK---
+2
+I.
+MOTIVATION: SCALARS IN PARTICLE
+PHYSICS AND COSMOLOGY: IN SEARCH OF A
+UV COMPLETION
+The experimental discovery of the Higgs particle [1, 2]
+has shown that at least one fundamental scalar ﬁeld
+might exist in nature.
+Its production and subsequent
+decay into various Standard-Model (SM) particles is
+consistent with the expected values in the Standard
+Model [3].
+Yet, this impressive success exposes one
+of the open problems of the Standard Model, namely
+a transplanckian Landau pole that is expected in the
+Higgs-Yukawa sector. It is expected to limit the validity
+of the theory and require new physics.
+Given the
+scale at which it appears, quantum gravity constitutes
+a prime candidate for new physics to remedy this
+Landau pole1.
+Within the asymptotic-safety approach
+to quantum gravity, the Higgs ﬁeld could become a
+truly fundamental ﬁeld, as there are indications for an
+asymptotically safe ﬁxed point in the Higgs sector of the
+Standard Model under the impact of quantum-gravity
+ﬂuctuations, see, e.g., [10–17] and [18–23] for beyond-SM
+settings.
+For earlier work on gravity-scalar systems,
+see, e.g., [24–30].
+Asymptotic safety generalizes the
+success story of asymptotic freedom from non-Abelian
+gauge theories to a quantum gravitational setting.
+It
+corresponds to a quantum-scale-invariant ﬁxed-point
+regime of the Renormalization Group (RG) ﬂow. This
+enables an ultraviolet (UV) completion or extension of
+an eﬀective ﬁeld theory such as the Standard Model.
+Requiring the enhancement of the symmetry to quantum
+scale symmetry in the UV implies relations between the
+couplings of the theory that hold in the infrared (IR).
+This results in a potential enhancement of predictive
+power and could open the door to observational tests of
+the asymptotic-safety paradigm.
+Beyond the Higgs sector, fundamental scalar ﬁelds could
+play a variety of roles in cosmology. In the late universe,
+they could constitute a part or all of the dark matter
+[31–34]. The dark-matter sector might become asymp-
+totically safe under the impact of quantum gravitational
+ﬂuctuations.
+There are tentative hints that this could
+entail an enhancement of predictive power [18], see also
+[20, 23, 35], strongly restricting the parameter space of
+the dark matter.
+Further, scalars could be relevant to drive the early-
+and/or late-time expansion of the universe.
+The po-
+tential for such scalars is also expected to be subject
+to constraints if coupled to asymptotically safe quan-
+tum gravity, see, e.g., [24, 36–39].
+At the same time,
+observational data already constrains the form of the
+1 This is the reason why the measurement of 125 GeV for the mass
+of the Higgs particle is a far-reaching result of the LHC – at a
+not too diﬀerent mass, vacuum instability would imply a much
+lower scale of new physics [4–7], as would low-scale Landau poles
+if the Higgs particle was somewhat heavier [8, 9].
+potential for a dark-energy scalar [40–42].
+This raises
+the question whether cosmological observations, such as,
+e.g., upcoming surveys aimed at restricting the dark-
+energy equation of state [43–47], could provide insights
+into the viability of the asymptotic-safety paradigm.
+Similarly, Planck constraints on inﬂationary potentials
+[42, 48] might enable observational tests of the paradigm.
+Taking these manifold physics applications of fun-
+damental scalars within the Standard Model, as dark
+matter, dark energy and as the inﬂaton as our mo-
+tivation, we explore the interplay of asymptotically
+safe gravity with scalars and Yukawa systems, building
+on and extending previous work in [10–21, 23–30, 35–39].
+This paper is structured as follows: In Sec. II we in-
+troduce the method and setup we use.
+In Sec. III we
+study how quantum gravity impacts the potential of a
+single scalar and discuss potential implications for inﬂa-
+tion and dark energy. In Sec. IV we extend the purely
+scalar model to a Yukawa system representing the Higgs-
+top sector of the Standard Model. We study the impact
+of the non-minimal coupling on potential bounds on the
+top mass [13] and explore the viability of asymptotically
+safe Higgs inﬂation. Sec. V discusses two Yukawa systems
+coupled via a portal coupling, and explores how one of
+these two sectors could be a dark sector [35], accounting
+for dark matter.
+We refer readers interested in potential cosmological im-
+plications to Sec. III B 3 on slow-roll-like parameters in
+asymptotic safety; Sec. III C on asymptotically safe inﬂa-
+tion and dark energy, Sec. IV D on the viability of Higgs
+inﬂation in asymptotic safety as well as Sec. V on poten-
+tial dark-matter candidates.
+Additionally, we refer readers interested in potential
+particle-physics implications, to Sec. III B 1 for a discus-
+sion of global symmetries under the impact of asymp-
+totically safe gravity and Sec. IV B on the impact of the
+non-minimal coupling on the bound on the top mass [13].
+Finally, we highlight that readers interested in formal
+aspects of functional Renormalization Group setups will
+ﬁnd a study of auxiliary background-scalar ﬁeld depen-
+dencies in App. A.
+II.
+ASYMPTOTIC SAFETY: CONCEPTUAL
+AND TECHNICAL FRAMEWORK
+...where we ﬁrst introduce some concepts related to
+an asymptotically safe ﬁxed point and then elucidate the
+method we use to explore the scale-dependence of quan-
+tum ﬁeld theories. Finally, we provide speciﬁcs (ﬁeld con-
+tent and interaction structure) of the systems we explore.
+
+---PAGE BREAK---
+3
+A.
+Predictivity and eﬀective asymptotic safety
+...where we review how an interacting ﬁxed point im-
+poses predictivity on a quantum ﬁeld theory. Further, we
+revisit the concept of eﬀective asymptotic safety and how
+it can result in predictivity in an eﬀective-ﬁeld-theory
+setup with a ﬁnite new-physics scale.
+In a quantum ﬁeld theory (QFT), scale-dependent cou-
+plings encode the eﬀect of quantum ﬂuctuations. By in-
+tegrating out quantum ﬂuctuations with momenta larger
+than a momentum scale k, one obtains the scale depen-
+dence of a dimensionless coupling gi(k), encoded in its
+beta function βgi.
+At a Renormalization Group (RG)
+ﬁxed point, all beta functions of a system vanish, real-
+izing quantum scale symmetry.
+If RG trajectories are
+picked for which the UV regime is determined by quan-
+tum scale symmetry, one refers to the resulting model
+as asymptotically safe, and the ﬁxed point itself as an
+asymptotically safe ﬁxed point. Several dynamical mech-
+anisms can be at the heart of such a ﬁxed point, see [49]
+for a review.
+As a consequence, one can consider the
+mathematical limit in which the RG scale is taken to
+arbitrarily high values, and obtain a path integral that
+is well-deﬁned in this limit, i.e., a fundamental theory.
+Firstly, such a limit is physically challenging to access;
+and secondly, it does not imply that new physics might
+not exist at some high scale.
+In this paper, our main
+focus will therefore not be on the UV completeness that
+follows as a consequence of asymptotic safety. Instead,
+we will focus on the predictivity that it implies – even
+in settings where new physics does indeed exist at high
+scales.
+The predictivity of a ﬁxed point is encoded in its crit-
+ical exponents. The critical exponents are deﬁned as
+θ(I) = −eig
+∂βgi
+∂gj
+ 
+⃗g=⃗g∗.
+(1)
+They govern the linearized ﬂow around the ﬁxed point:
+Directions in the space of couplings associated to a pos-
+itive θ are relevant, i.e., IR repulsive. A tiny deviation
+from the ﬁxed-point value continues to grow towards the
+IR, i.e., quantum ﬂuctuations associated to such a direc-
+tion drive the system away from scale symmetry. The IR
+values of the corresponding couplings are not calculable
+from the ﬁxed-point requirement; a range of IR values is
+compatible with asymptotic safety in the UV.
+Directions associated with negative θ are irrelevant, i.e.,
+IR attractive. Deviations from the ﬁxed point decrease
+under the RG ﬂow to the IR, i.e., quantum ﬂuctuations
+associated to such a direction drive the system towards
+scale symmetry. Therefore, the IR values of such cou-
+plings are calculable from the ﬁxed-point requirement.
+Essentially, for each θ < 0 there is a relation between the
+values of couplings, which also has to hold in the IR for
+quantum scale symmetry to be realized in the UV.
+Asymptotic safety is typically introduced as an ul-
+traviolet completion for a quantum ﬁeld theory (QFT),
+with its main interest being the extension of the regime
+of validity of the theory up to arbitrarily high energy
+scales.
+A more pragmatic view on asymptotic safety
+originates in the concept of “eﬀective asymptotic safety”,
+discussed in [50, 51], see also [52]:
+even if the QFT
+description of matter-gravity systems breaks down at
+a transplanckian momentum scale ΛUV > MPl, the
+predictivity of an asymptotically safe ﬁxed point can
+continue to play a major role in determining the IR
+physics.
+In this case, the RG ﬂow starts at initial
+conditions at ΛUV that depend on the UV completion.
+From there, it is attracted by the asymptotically safe
+ﬁxed point along all its (inﬁnitely many) irrelevant
+directions, and repulsed along the ﬁnitely many relevant
+ones. A wide range of suitable initial conditions at ΛUV
+thus results in RG trajectories exhibiting near-scale
+invariance close to the ﬁxed point over a wide range of
+scales. In the deep IR, they therefore closely resemble
+“true” ﬁxed-point trajectories exactly satisfying the
+relation between couplings associated to negative critical
+exponents.
+Accordingly,
+predictions for low-energy
+physics do not necessarily depend on asserting that
+asymptotic safety provides a UV completion valid “to
+arbitrarily high scales”.
+Taking the ﬁxed-point limit,
+where RG trajectories are required to emanate exactly
+out of the ﬁxed point, can be considered as a mere
+mathematical convenience, as it allows to easily make
+“sharp” statements about low-energy predictions. In a
+more general setting with eﬀective asymptotic safety,
+the degree of predictivity a ﬁxed point imposes on IR
+physics has been quantiﬁed in [51].
+B.
+Functional Renormalization Group
+...where we provide an introduction to the Functional
+Renormalization Group,
+focusing on conceptual and
+technical challenges speciﬁc to the gravitational context.
+We work in a Euclidean, Wilsonian framework, where
+quantum ﬂuctuations in the path integral are taken into
+account in a momentum-shell wise fashion. This allows
+us to identify candidates for quantum scale invariant
+dynamics in the UV and connect them with physics
+in the IR, to derive the predictions that follow from
+quantum scale symmetry. Below, we ﬁrst introduce the
+setup in momentum space, then discuss the generaliza-
+tion of a momentum cutoﬀto the gravitational setting
+and highlight its Euclidean nature, before reviewing
+the functional diﬀerential equation that underlies this
+formalism.
+In the gravitational context, the distinction of high-
+momentum and low-momentum modes is more involved
+than in QFT on ﬂat space.
+In general, deﬁning a lo-
+cal notion of a coarse-graining scale – in other words, a
+suitable generalization of a momentum scale – requires
+
+---PAGE BREAK---
+4
+a background geometry. In standard QFT, the ﬂat met-
+ric provides a background such that one can implement
+a cutoﬀin momentum space. In a gravitational setting,
+one can use the background-ﬁeld formalism. To this end,
+the full metric gµν is split into a background ¯gµν and a
+ﬂuctuation hµν,
+gµν = ¯gµν + hµν.
+(2)
+This enables a generalization of the notion of momen-
+tum, by considering the background-covariant Laplacian
+−¯D2, such that −¯D2 →p2 when one chooses ¯gµν = δµν.
+We stress that despite the suggestive notation, metric
+ﬂuctuations hµν need not be small.
+The split in Eq. (2) also facilitates the introduction of a
+gauge-ﬁxing term for the metric, which is necessary in
+order to deﬁne the metric propagator. While the gauge-
+ﬁxing term breaks the full diﬀeomorphism symmetry, it
+can be chosen to respect an auxiliary invariance with
+respect to the background metric, as is standard in the
+background-ﬁeld formalism [53]. This is central for the
+recovery of diﬀeomorphism symmetry in the full eﬀective
+action Γ = Γk→0.
+The comparison of p2 (or −¯D2) to a momentum
+scale k2 is a meaningful distinction of UV and IR
+modes in Euclidean signature.
+For QFTs on a ﬂat
+background, a Wick rotation or analytic continuation
+provides a relation of the Euclidean theory to the
+Lorentzian one.
+For quantum gravity, the analytic
+continuation of a number of metric conﬁgurations is
+not straightforward [54] and the conﬁguration spaces of
+Riemannian and Lorentzian metrics feature a diﬀerent
+topology/connectivity [55]. For these reasons, it is not
+expected that a straightforward relation between Rie-
+mannian and Lorentzian quantum gravity exists beyond
+the perturbative regime. With this cautionary remark,
+let us proceed with the Riemannian calculation, which
+can be thought of as exploring the eﬀect of quantum
+ﬂuctuations of a four-dimensional space (in contrast to
+a 3+1 dimensional spacetime).
+Within the Functional Renormalization Group (FRG),
+one introduces an (unphysical) momentum scale k that
+serves to distinguish UV modes (with momenta higher
+than k) from IR modes (with momenta lower than k).
+One then introduces a mass-like regulator term to imple-
+ment the idea of Wilsonian renormalization: The regula-
+tor Rk(p) suppresses ﬂuctuations with momenta p2 < k2.
+Fluctuations with momenta larger than the scale k are
+integrated out. After introducing this term in the path
+integral, one obtains a generalization of the full eﬀective
+action Γ to a scale-dependent action Γk, which contains
+the eﬀect of quantum ﬂuctuations above the momentum
+scale k only, see [56–58]. The full eﬀective action Γ, en-
+coding the physics, is recovered by integrating over all k.
+In the settings we explore, a main focus is on ﬁnding
+well-deﬁned initial conditions for this integration, i.e.,
+a microscopic dynamics Γk→∞which is deﬁned by an
+asymptotically safe ﬁxed point. The physics implications
+of asymptotic safety are then explored in a second step
+by following the RG ﬂow to k →0.
+The key advantage of introducing a quadratic (i.e., mass-
+like) regulator term in the path integral is the resulting
+functional diﬀerential equation for Γk, which is of an ex-
+act one-loop structure at the formal level [56–58]
+∂tΓk = k∂k Γk = 1
+2STr
+
+Γ(2)
+k
++ Rk
+−1
+∂tRk
+
+.
+(3)
+Here, t = ln k/k0, with a reference scale k0 and Γ(2)
+k
+is the
+second functional derivative of the eﬀective action with
+respect to the ﬂuctuation ﬁelds. In our case, it is a matrix
+in ﬁeld space, and the supertrace includes a trace in ﬁeld
+space, in addition to a summation/integration over the
+discrete/continuous eigenvalues of the Laplacian −¯D2.
+To evaluate the right-hand-side of the ﬂow equation, we
+sum over eigenvalues of the appropriate Laplacians, see,
+e.g., [59–64].
+We employ the “middle-of-the-staircase”
+approximation discussed in [64].
+For Grassmann-valued ﬁelds, such as, e.g., Faddeev-
+Popov ghost ﬁelds and fermion ﬁelds, the supertrace in-
+cludes an additional negative sign.
+For reviews of the
+method see, e.g., [65–68], and [69–72] speciﬁcally for the
+gravitational context.
+The ﬂow equation Eq. (3) shifts the focus away from
+the classical/microscopic action S: Instead of postulat-
+ing a form for S and starting to integrate out quan-
+tum ﬂuctuations in the path integral, where conﬁgura-
+tions are weighed by exp[−S], one can explore the scale-
+dependence of whole families of interactions. This en-
+ables a search for viable microscopic dynamics deﬁned by
+RG ﬁxed points. More speciﬁcally, from Eq. (3), one can
+obtain the beta function for any coupling in the eﬀective
+action. By projecting the right-hand side of Eq. (3) on
+the corresponding interaction monomial, one generates
+diagrams of a one-loop form (with the regulator insertion
+∂tRk sitting on each one of the internal propagators in
+turn). These analytic beta functions enable a ﬁxed-point
+search, allowing to identify candidates for asymptotically
+safe dynamics.
+The relation of these beta functions to those derived in
+diﬀerent schemes in perturbation theory lies in the agree-
+ment of their universal parts; in particular the one-loop
+contributions from perturbation theory are recovered di-
+rectly from the FRG-beta functions. Higher-loop contri-
+butions which are not universal in perturbation theory
+beyond two loops, are encoded in contributions coming
+from higher-order terms in the dynamics Γk [73]. At the
+same time, the FRG beta functions feature nontrivial de-
+nominators from Eq. (3), which result in threshold eﬀects
+and the automatic decoupling of modes once the RG scale
+k falls below their mass. This is in contrast to standard
+perturbative schemes, where modes typically have to be
+decoupled by hand.
+The scale-dependent eﬀective action Γk in principle
+contains all operators compatible with the symmetries
+
+---PAGE BREAK---
+5
+of the system under consideration, including all higher-
+order interactions. For practical calculations, one needs
+to truncate this inﬁnite tower of operators, thereby in-
+troducing a systematic uncertainty.
+Within asymptotically safe gravity-matter systems, the
+principle used to select the truncation is the conjec-
+tured near-perturbative nature of the ﬁxed point. This
+is supported by studies of nontrivial symmetry-identities
+in gravity-matter systems [74–76], studies of the scal-
+ing spectrum in extended pure-gravity truncations [77–
+81] and critical exponents in matter-gravity systems
+[24, 25, 29, 74, 82–88], indications for asymptotic safety
+from one-loop perturbation theory [89, 90], and the con-
+jecture that the asymptotic-safety mechanism [49] relies
+on a balance of canonical scaling and quantum scaling
+that is operative in d = 2 + ϵ dimensions [91–96] and
+can be extended continuously to d = 4 [53, 97]. This im-
+plies that residual interactions shift the critical exponents
+away from their canonical value by an O(1) amount. Ac-
+cordingly, canonically highly irrelevant operators are ex-
+pected to remain irrelevant at the interacting ﬁxed point
+and can be neglected to obtain a robust count of the
+number of relevant directions, i.e., the free parameters of
+the theory.
+While such a choice of truncation would automat-
+ically be robust at non-interacting ﬁxed points, its
+self-consistency needs to be checked a posteriori at an
+interacting ﬁxed point. Anticipating the results of our
+study, the ﬁxed points we explore exhibit near-canonical
+scaling, making our choice of truncation self-consistent.
+Further support for such functional RG results can in
+the future come from other techniques. Similar to the
+gravitational case, Gross-Neveu systems are a paradig-
+matic example for interacting ﬁxed points. The underly-
+ing mechanism generating scale symmetry is the same as
+that conjectured for asymptotically safe quantum gravity.
+Thus, a choice of truncation based on canonical power
+counting produces reliable results [98–105] in agreement
+with other approaches [106–114]. These systems also pro-
+vide a blueprint how the conﬂuence of several methods
+can provide strong evidence for an interacting ﬁxed point.
+In the case of asymptotically safe gravity, a similar degree
+of convergence from diﬀerent techniques has not been
+achieved yet, but asymptotic safety is under active in-
+vestigation both with lattice techniques [115] as well as
+combinatorial tensor models [116].
+The causal-set ap-
+proach [117] could in the future provide direct access to
+a Lorentzian continuum limit, a.k.a. Lorentzian asymp-
+totic safety [118], as could spin foam studies [119].
+C.
+Three systems: Single scalar, simple Yukawa,
+portal to simple Yukawa dark matter
+...where we specify the matter ﬁeld content of the three
+distinct systems we will explore and deﬁne the truncation
+of the dynamics for each case.
+We consider a real scalar ﬁeld φ, featuring a Z2 sym-
+metry, φ →−φ, with the truncated eﬀective action
+Γscal+grav
+k
+=
+Z
+d4x √g
+1
+2Zφgµν∂µφ∂νφ
+−
+
+1
+16πGN
++ ξφ2
+
+R + V (φ2)
+
+.
+(4)
+Similar truncations for scalar-gravity system have been
+explored, e.g., in [15–18, 24, 25, 28–30].
+For work on
+a scalar ﬁeld in the presence of a non-minimal coupling
+ξ but without quantum gravitational eﬀects with FRG
+techniques, see [120].
+The potential V (φ2) includes a
+cosmological constant when expanded about φ = 0, such
+that our truncation includes the Einstein-Hilbert action.
+We will typically terminate this expansion at the quartic
+order,
+V (φ2) =
+2¯Λ
+16πGN
++ ¯m2
+2 φ2 + λ4
+4 φ4,
+(5)
+and always express our results in terms of the dimension-
+less couplings
+g = GN k2, λ = ¯Λ k−2, m2 = ¯m2 k−2.
+(6)
+Dimensionless couplings are best suited to search for
+asymptotic safety in the UV. On the other hand, dimen-
+sionful couplings, such as dimensionful masses can be of
+interest in the IR. The rescaling Eq. (6) could beg the
+question how such dimensionful couplings can be ﬁnite
+in the IR, where k →0. For the limit k →0, we fo-
+cus on the case in which every ﬁeld in the theory comes
+with a mass (this includes the massless graviton, where
+the Planck-scale serves as the mass-scale for metric ﬂuc-
+tuations).
+In this situation, quantum ﬂuctuations are
+suppressed, once k has fallen below the mass scale. All
+dimensionful quantities are then constant, since their di-
+mensionless counterparts scale according to the canonical
+dimension. For instance, the beta function for a dimen-
+sionless mass parameter m2 becomes β2
+m = −2m2, once
+k2 < m2, such that all loop contributions are suppressed.
+Thus, m2(k) ∼k−2. Accordingly, the dimensionful mass
+¯m2 = m2k2 →const. This extends to all other couplings.
+In part of what follows, the real scalar ﬁeld φ will serve
+as a toy model for the SM Higgs ﬁeld. Both have in com-
+mon that there are no massless Goldstone modes after
+spontaneous symmetry breaking, making a Z2-symmetric
+real scalar a suitable toy model to explore aspects of
+Higgs physics in the FRG setup, see [121–123].
+As a representative for the top quark we additionally
+incorporate a single Dirac fermion in Sec. IV by including
+the terms
+Γferm
+k
+=
+Z
+d4x √g
+ i ¯ψ /∇ψ + iy φ ¯ψψ
+
+(7)
+into our truncation for the eﬀective action, where /∇is
+the Dirac operator which contains the spin connection in
+
+---PAGE BREAK---
+6
+the presence of gravity. Earlier work on simple Yukawa
+systems coupled to quantum gravity can be found in
+[12, 26, 27, 83, 85, 124].
+In Sec. V we ﬁrst consider two real scalars coupled to
+gravity, labeled by v/d for a visible/dark sector. In that
+section, we ﬁrst work with
+Γ2−scal+grav
+k
+=
+Z
+d4√g
+Zv
+2 gµν∂µφv∂νφv + ¯m2
+v
+2 φ2
+v
++λv
+8 φ4
+v −ξvφ2
+vR −
+1
+16πGN
+ R −2¯Λ
+
++Zd
+2 gµν∂µφd∂νφd + ¯m2
+d
+2 φ2
+d
++λd
+8 φ4
+d −ξdφ2
+dR
+
+.
+(8)
+The two sectors are coupled via a portal coupling
+Γportal
+k
+=
+Z
+d4x √g λHP
+4 φ2
+vφ2
+d.
+(9)
+In the second part of Sec. V, the visible scalar φv and
+the dark scalar φd are additionally coupled to a visible
+fermion ψv and a dark fermion ψd, respectively, by a
+ﬂowing action of the type (7).
+There, we explore the
+same truncation as put forward in [35].
+While obtaining the beta functions from the eﬀective
+action, one encounters technical choices related to the
+non-minimal coupling. One can choose both, the gauge
+ﬁxing action Sgf as well as the regulator Rk to depend
+on the scalar background ﬁeld.
+In case of a scalar-
+background dependent gauge ﬁxing, one needs to con-
+sider an appropriately chosen ghost term.
+We discuss
+these technical aspects and give the explicit form of our
+gauge ﬁxing and regulator terms in App. A. The (artiﬁ-
+cial) dependence on various technical choices is relatively
+mild, and does not qualitatively alter our results as we
+investigate in detail in that appendix.
+III.
+SINGLE SCALAR
+...where we search for asymptotic safety and charac-
+terize its predictivity in a scalar-gravity system. We tie
+our results for the ﬂattening of the scalar potential under
+the impact of quantum gravity into discussions of global
+symmetries, as well as slow-roll parameters.
+Finally
+we highlight potential phenomenological consequences in
+a cosmological context, with a focus on inﬂation with
+and without non-minimal coupling as well as a short
+discussion of dynamical dark energy and the cosmological
+constant in asymptotic safety.
+In this section we concentrate on the pure scalar grav-
+ity system, with its truncated ﬂowing action given by
+Γk = Γscal+grav
+k
++ Sgf + Sgh.
+(10)
+A.
+Fixed-point results
+...where we show ﬁxed-point results for the scalar po-
+tential and non-minimal coupling. We compare the case
+of the scalar-gravity system to a case with additional,
+purely gravitationally coupled SM-type ﬁelds.
+Finally,
+we treat the gravitational couplings as free parameters,
+to obtain a comprehensive overview of the predictivity of
+asymptotic safety in this context.
+Without additional matter degrees of freedom, the only
+viable ﬁxed point present in the truncation (10) with the
+expansion (5) for the scalar potential lies at
+λ∗= 0.13,
+g∗= 1.32,
+m2
+∗= λ4 ∗= ξ∗= 0.
+(11)
+There are indications that the inclusion of additional
+matter degrees of freedom signiﬁcantly alters the grav-
+itational ﬁxed-point values [125].
+In fact, within the
+background-ﬁeld approximation we employ here, an in-
+creasing number of fermions shifts the ﬁxed-point val-
+ues towards negative microscopic cosmological constant.
+An eﬀective strength of gravity can be deﬁned as geﬀ=
+g∗/(1 −2λ∗)#, with # > 0, as this quantity enters the
+beta functions for matter couplings [74, 85]. As a func-
+tion of an increasing number of fermions, the eﬀective
+strength of gravity decreases. Similar results have been
+found for ﬂuctuation calculations [74]. Under the impact
+of the full Standard Model particle content, one obtains
+the gravitational ﬁxed-point values
+λ∗= −9.97,
+g∗= 7.63.
+(12)
+To assess the eﬀect of such a shift in the gravitational cou-
+plings, we study the critical exponents of the couplings
+m2, λ4 and ξ at the ﬁxed point m2
+∗= 0, λ4 ∗= 0, ξ∗= 0
+at varying values for the gravitational couplings λ∗, g∗.
+Fig. 1 shows the number of relevant directions as a func-
+tion of the gravitational parameters. For the ﬁxed-point
+values in Eq. (11), there are two relevant directions,
+which can be associated with the scalar mass and non-
+minimal coupling. In contrast, there is only one relevant
+direction, associated to the mass parameter, at the ﬁxed
+point in Eq. (12). A third region, with no relevant direc-
+tion, would also in principle be available. The determi-
+nation of the gravitational ﬁxed-point values is subject to
+systematic uncertainties. Therefore, we analyze the en-
+tire λ −g plane instead of focusing on ﬁxed-point values
+in a particular truncation. We focus on g > 0 throughout
+the paper, as g < 0 cannot be connected to a regime with
+attractive gravity in the IR.
+To understand why the diﬀerent regions of the λ −g
+plane show diﬀerent degrees of predictivity in terms of
+number of relevant directions, we will ﬁrst discuss the
+critical exponents in a simple approximation, where we
+assume a diagonal stability matrix, neglecting the mixing
+of operators.
+Then, the gravitational contribution to the anomalous
+dimension for the scalar potential is always towards ir-
+relevance. Given the vanishing canonical dimension of
+
+---PAGE BREAK---
+7
+-15
+-7.5 -2
+-1.5
+-1
+-0.5
+0
+0.4
+0
+2
+4
+6
+8
+10
+Number of
+Relevant
+directions
+0
+1
+2
+FIG. 1.
+Number of relevant directions at the free ﬁxed
+point as a function of the gravitational couplings λ∗and g∗
+respectively, for the three scalar couplings (m2, λ4, ξ). The
+blue triangle/red square marks the position of the ﬁxed point
+Eq. (11)/(12). For larger values of the gravitational coupling
+the ﬁxed point is fully irrelevant. For (large) negative values
+of the cosmological constant one relevant direction turns ir-
+relevant. The vertical dashed line highlights a change in the
+scaling of the λ∗axis at λ∗= −2.
+λ4, there is accordingly at least one irrelevant direction
+everywhere in the λ −g plane. Where geﬀ= g/(1 −2λ)#
+(with # > 0) is largest, the gravitational eﬀects can even
+shift the mass parameter into irrelevance. In fact, geﬀis
+largest for large g and 0 < λ < 1/2 and decreases, as g
+and λ are lowered. Thence, the gravitational contribu-
+tion to the scaling of the scalar mass parameter is larger
+than its canonical dimension of 2 for
+gcrit >
+12π(1 −2λ)2(3 −4λ)2
+159 −460λ + 352λ −16λ3 ,
+(13)
+see also the analysis in [15, 18].
+Finally, the gravitational contribution to βξ is towards
+irrelevance for λ < −0.17, as follows from an inspection of
+βξ at the free matter ﬁxed point (with m2
+∗= 0, λ4 ∗= 0,
+ξ∗= 0),
+βξ = −g 99 + 318λ −1464λ2 + 1232λ3 −96λ4
+18π(1 −2λ)3(3 −4λ)2
+ξ
++4 g
+21 −8λ
+π(3 −4λ)2 ξ2 + 54 g
+5 −8λ
+π(3 −4λ)2 ξ3.
+(14)
+The linear coeﬃcient changes sign at suﬃciently negative
+λ < −0.17. This is associated to a degeneracy of zeros of
+βξ (which are not ﬁxed points of the full system, except
+at the degenerate point corresponding to the free ﬁxed
+point.)
+These two boundaries, namely λ < −0.17 and g > gcrit,
+become deformed once we lift the simple approximation
+and consider oﬀ-diagonal contributions in the stability
+matrix. Nevertheless, a “strong-gravity” island with no
+relevant directions (the deformation of the g > gcrit
+boundary), and a region with only one relevant direc-
+tion for suﬃciently negative λ (the deformation of the
+λ < −0.17 line) are still visible in Fig. 1.
+If the gravitational coupling values fall in the strong-
+gravity regime, then all of the couplings in the scalar
+sector are irrelevant at the ﬁxed point. Along the full
+ﬂow towards the IR , i.e., at all k, their value is pre-
+dicted. In particular, the scalar potential is predicted to
+remain ﬂat in this scenario. Outside of the strong-gravity
+regime, every relevant direction can start to deviate from
+its ﬁxed point value at some ﬁnite scale ktr. The corre-
+sponding (linear combination of) coupling(s) can take a
+range of values in the IR and needs to be determined
+by observation. Once all relevant couplings are ﬁxed the
+theory becomes fully predictive.
+B.
+Three perspectives on ﬂat scalar potentials in
+quantum gravity
+...where we interpret the ﬁxed-point results of the pre-
+vious subsection in light of the more general question
+about global symmetries in quantum gravity, explain how
+our results provide a hint for a mechanism of gravita-
+tional ﬂattening of scalar potentials and ﬁnally rewrite
+our scale-dependent potential in terms of scale-dependent
+slow-roll-inspired parameters, in order to provide a more
+straightforward link of our results to cosmological set-
+tings.
+1.
+Global symmetries
+The fate of global symmetries in quantum gravity is
+an intriguing open question. Arguments suggesting the
+violation of global symmetries through quantum gravita-
+tional eﬀects have been put forward in [126–129] and sub-
+stantiated to some extent in the context of the AdS/CFT
+conjecture [130, 131], in particular in relation to the
+weak-gravity conjecture [132], see also [133] for a review.
+In several other approaches to quantum gravity, less is
+known about this question – in part as a consequence
+of the general diﬃculty to account for matter degrees of
+freedom in many approaches to quantum gravity. As one
+example, conﬂicting results on the realization of chiral
+symmetry in a fermion sector coupled to Loop Quantum
+Gravity exist in the literature [134, 135]. In an asymp-
+totically safe context, the situation is diﬀerent: many
+diﬀerent gravity-matter systems that feature global sym-
+metries in the matter sector have been explored, see, e.g.,
+[24, 25, 82, 84–86]. All results in truncations of the Eu-
+clidean RG ﬂow support the conclusion that quantum
+gravitational ﬂuctuations at ﬁxed topology do not lead
+to a violation of global symmetries, see also the discus-
+sion in [136]. Let us highlight two potential caveats of
+these results: Firstly, Euclidean and Lorentzian quantum
+gravity could diﬀer when it comes to the fate of global
+
+---PAGE BREAK---
+8
+symmetries. Secondly, it could be the expansion to ﬁnite
+orders in the ﬂuctuation ﬁeld hµν that prevents global-
+symmetry-violating terms to become visible in the RG
+ﬂow. Yet, within Euclidean Dynamical Triangulations,
+one also ﬁnds that shift-symmetry is left intact by quan-
+tum gravitational ﬂuctuations [137]. This suggests that
+the non-violation of global symmetries in the FRG set-
+ting is not a consequence of truncations to ﬁnite order
+in the gravitational ﬂuctuation ﬁeld at ﬁxed topology. A
+ﬁrst result in [138] suggests that the presence of topo-
+logical ﬂuctuations might change the picture. Here, we
+remain conservative in that topological ﬂuctuations are
+not taken into account.
+We discuss the ﬁxed point in Eq. (11) from the per-
+spective of global symmetries: Firstly, the Z2 symmetry
+of the scalar ﬁeld is respected by quantum gravitational
+ﬂuctuations. This follows, as the rhs of the ﬂow equation
+vanishes when projected onto ﬁeld monomials with an
+uneven power of φ. Secondly, the shift symmetry of the
+scalar kinetic term, φ →φ + a, is respected by the ﬂow.
+This is an example of how all global symmetries mani-
+fested in the kinetic term of a matter ﬁeld are respected
+by quantum gravity, see [85]. Hence, the Z2- and shift-
+symmetric hypersurface in theory space is a ﬁxed hyper-
+surface under the RG ﬂow. This does not automatically
+imply that there must be a ﬁxed point in this hypersur-
+face, as there are derivative-interactions compatible with
+shift-symmetry and Z2 symmetry. These are generically
+nonzero in the presence of asymptotically safe gravity
+[28, 85]. They are however not guaranteed to feature a
+ﬁxed point. Since these are neglected in our truncation,
+there must be a ﬁxed point respecting Z2- and shift sym-
+metry in our truncated theory space, i.e., a ﬁxed point at
+vanishing scalar potential2, as found in Eq. (11) and pre-
+viously in [11, 12, 15, 18, 24, 25, 29, 30, 39, 124]. Beyond,
+additional ﬁxed points at nonvanishing potential might
+in principle also exist, but turn out to require the pres-
+ence of additional matter ﬁelds, e.g., fermions coupled
+through a Yukawa term, see Sec. IV.
+2.
+The gravity-induced ﬂow towards ﬂatness and
+predictivity
+In our truncation, shift symmetry guarantees the exis-
+tence of a ﬁxed point corresponding to a ﬂat potential and
+vanishing non-minimal coupling. The subsequent press-
+ing question is whether combined ﬂuctuations of gravity
+and matter drive the system away from this ﬁxed point
+2 The inclusion of derivative-interactions is generically determined
+by the following pattern of quantum-gravity induced interac-
+tions: As long as gravitational interactions are suﬃciently weak,
+there is a real ﬁxed point for such interactions, which is the
+shifted Gaußian ﬁxed point, at which they remain irrelevant
+[82, 85].
+At strong enough gravitational interactions, some of
+the induced interactions no longer feature a real ﬁxed point, see,
+e.g., [83, 85, 139].
+or towards it. This information is encoded in the number
+of relevant directions, shown as a function of the gravita-
+tional parameters in Fig. 1. Among the three couplings
+m2, λ4 and ξ, at least one combination is always irrel-
+evant.
+This implies that ﬂowing from the ﬁxed point
+towards the IR, at least one of the three couplings is
+ﬁxed in terms of the others. In fact, under the assump-
+tion of a diagonal stability matrix, the quartic coupling
+is required to vanish at all scales, preventing a φ4-type
+deviation from ﬂatness.
+Additionally, there are regions in the λ−g plane, where
+two or even all three of the couplings m2, λ4 and ξ are ir-
+relevant, cf. Fig. 1. In these regions, the gravity-induced
+ﬂow is towards ﬂatness; all perturbations away from ﬂat-
+ness are irrelevant and therefore excluded. In the regime
+with no relevant directions, the “resurgence mechanism”
+for the scalar mass becomes applicable, which could pro-
+vide a dynamical mechanism for the mass hierarchy be-
+tween the electroweak scale and Planck scale [11].
+Each irrelevant direction also restricts settings in which
+the initial conditions at kUV > MPl are chosen away
+from the ﬁxed point as in eﬀective asymptotic safety, see
+Sec. II A: ﬂowing towards MPl, an irrelevant direction is
+IR-attractive, the RG ﬂow is driven towards the ﬁxed-
+point value.
+The simplest case is that of no relevant
+directions in which case the ﬂat potential and vanish-
+ing non-minimal coupling are fully IR attractive: quan-
+tum ﬂuctuations drive the RG ﬂow towards m2(MPl) ≈
+0, λ4(MPl) ≈0, ξ(MPl) ≈0.
+With increasing ratio
+kUV/MPl, this prediction becomes sharper; see [51] for
+a quantitative measure of predictivity in such a setting.
+As an upshot, quantum-gravity ﬂuctuations could drive
+scalar potentials towards ﬂatness also in eﬀective asymp-
+totic safety, i.e., in presence of a UV scale of new physics.
+3.
+Small slow-roll parameters from asymptotic safety
+The ﬂattening of scalar potentials could be of relevance
+for scalar ﬁelds in cosmological settings, such as inﬂation.
+In this context, a description in terms of the slow-roll
+parameters is commonly applied. To relate to that, we re-
+express our results in a similar terminology by rewriting
+the ﬂow equation for the scalar potential in terms of the
+dimensionless quantities
+ϵi =
+1
+k4−i
+∂iV (φ2)
+∂φi
+,
+(15)
+which are inspired by the standard slow-roll parameters.
+Their physical values are those at k = 0, when all quan-
+tum ﬂuctuations are integrated out. At k ≈MPl, quan-
+tum gravitational ﬂuctuations decouple from the ﬂow,
+and the remaining evolution is determined by quantum
+ﬂuctuations of the scalar ﬁeld, only. We work within the
+approximation ξ = 0, which is self-consistent in the vicin-
+ity of the ﬁxed point ξ∗= 0 and additionally neglect the
+scalar anomalous dimension.
+The scale dependence of
+the potential is given in App. B and determines the ﬂow
+
+---PAGE BREAK---
+9
+of the ϵi by the appropriate derivatives with respect to
+the scalar ﬁeld. The beta functions for the ϵi are explic-
+itly ﬁeld dependent, since they can be understood as the
+ﬂowing coeﬃcients of a local Taylor expansion of the po-
+tential at ﬁnite values of the ﬁeld. The ﬂow of ϵi depends
+on ϵi+1 and ϵi+2. We truncate this hierarchy by setting
+ϵi = 0 ∀i > 2. As expected, the system exhibits a ﬁxed
+point with ﬂat potential, ϵi, ∗= 0 that can be traced back
+to the ﬁxed point (11), and no other ﬁxed points. The
+critical exponents encode whether the low-energy limit
+of this setting has any free parameters which allow the
+potential to deviate from ﬂatness. For φ/k ∼O(1) the
+corresponding RG ﬂows are shown in Fig. 2. At a ﬁxed
+point with vanishing Newton coupling g∗= 0, both ϵ1,2
+would be relevant, as expected from their canonical mass
+dimension. The leading term in g in all critical exponents
+is
+θ(i) = −2(51 −144λ + 104λ2)
+3π(3 −4λ)2(1 −2λ)2 g,
+(16)
+which is negative for all λ ∈(−∞, 0.5).
+Hence, as g∗
+increases, the ϵi one by one become irrelevant and are
+thereby required to be small as a consequence of quantum
+gravity ﬂuctuations.
+C.
+Outlook on potential phenomenological
+consequences
+...where we discuss some of the potential implications
+our ﬁndings might have for inﬂation and (dynamical)
+dark energy in an asymptotically safe context.
+While
+these results are obtained in a truncation of the Eu-
+clidean dynamics, they tentatively hint at the potential
+constraining/predictive power of asymptotic safety in
+cosmology.
+Scalar ﬁelds appear in many cosmological applications
+and our results might entail certain features that could
+arise in these settings as a consequence of asymptotic
+safety. These types of study are relevant for various rea-
+sons.
+Results of such studies can serve as a theoreti-
+cal principle that distinguishes between eﬀective models
+(e.g., in the context of dark matter or dark energy) with
+or without a quantum-ﬁeld theoretic UV completion3.
+The availability of such an asymptotically safe UV com-
+pletion is expected to come with an enhanced predic-
+tive power. On the one hand, this can connect asymp-
+totically safe gravity to observations, making observa-
+tional consistency tests or even the search for “smoking-
+gun” signatures possible. On the other hand, the poten-
+tial constraining power of a given UV completion, e.g.,
+3 A related idea is being explored within the eﬀective ﬁeld theory
+setting, where, e.g., certain deﬁnitions of locality and/or unitar-
+ity are demanded of a viable UV completion and serve to restrict
+the eﬀective ﬁeld theories, see, e.g., [140, 141].
+0.00 0.02 0.04 0.06 0.08 0.10
+-0.10
+-0.05
+0.00
+0.05
+0.10
+0.00 0.02 0.04 0.06 0.08 0.10
+-0.10
+-0.05
+0.00
+0.05
+0.10
+0.00 0.02 0.04 0.06 0.08 0.10
+-0.10
+-0.05
+0.00
+0.05
+0.10
+-0.3
+-0.15
+0
+0.15
+0.3
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+(a)
+(b)
+(c)
+Number of
+relevant
+directions
+0
+1
+2
+FIG. 2.
+(top) The ﬂow of ϵ1 and ϵ2 at various values of g∗,
+with λ∗given by the ﬁxed point (11) and φ/k = 1. For larger
+values of g∗, the ﬁxed point exhibits fewer relevant directions.
+(bottom) The number of relevant direction as a function of
+λ∗and g∗. The three markers indicate the values for (λ∗, g∗)
+represented in the panels at the top of this ﬁgure, and (a)-(c)
+label the three regions explained in more detail in the text.
+
+---PAGE BREAK---
+10
+asymptotic safety, might provide guidance for observa-
+tional searches, as it could (dis)favor certain regions of
+the EFT-parameter space.
+Let us highlight that, as opposed to an eﬀective-ﬁeld-
+theory setting, transplanckian excursions of the inﬂaton
+are not expected to be problematic in an asymptotically
+safe context. In particular, transplanckian imprints on
+inﬂationary observables could arise. Asymptotic safety
+might therefore not be restricted by the transplanckian
+censorship conjecture [142–144].
+1.
+Towards asymptotically safe consequences for the
+inﬂaton
+...where we use results on the behavior of the deriva-
+tives of the potential from Sec. III B 3 in the context
+of inﬂation.
+We ﬁrst focus on the possibility that
+quantum-gravity ﬂuctuations might yield a ﬂattened
+inﬂaton potential. In a second step, we explore whether
+the predictive power of asymptotic safety might make
+the observed amplitude of scalar ﬂuctuations a critical
+observational test of the asymptotic-safety scenario for a
+gravity-inﬂaton system.
+The near-scale-invariance of the spectrum of primor-
+dial scalar perturbations might be interpreted as a hint
+towards scale invariance as a guiding principle for in-
+ﬂationary model building [38, 145–154].
+Within the
+quantum-scale invariant framework of asymptotic safety,
+the scalar degree of freedom that arises in f(R) theories
+and is present in corresponding truncations of the gravi-
+tational action, has been explored as a driver of inﬂation
+[155–159]. An RG-improvement procedure within a toy-
+model has been used to calculate inﬂationary parameters
+from this setting, see [160] for a review as well as [72] for
+a critical discussion of RG improvement.
+Here, we follow an alternative route, and include an ad-
+ditional scalar as the inﬂaton. We consider the “vanilla”
+model of inﬂation, a scalar that does not couple to any of
+the (B)SM degrees of freedom except for a non-minimal
+coupling to gravity. Potential derivative-couplings of the
+inﬂaton to (B)SM ﬁelds that are expected in an asymp-
+totically safe setting [28, 85, 86] will be neglected here,
+motivated by their canonical irrelevance.
+Asymptotic
+safety ﬁxes several of the parameters determining the in-
+ﬂaton potential, as well as potentially the non-minimal
+coupling. In fact, the non-minimal coupling ξ vanishes at
+the asymptotically safe UV ﬁxed point. We ﬁrst explore
+the approximation that ξ remains negligible at all scales,
+before exploring the case with nonvanishing ξ below.
+Inﬂation with vanishing non-minimal coupling?
+From observations, the deviation from scale-invariance
+of the spectrum of primordial scalar ﬂuctuations, ns −1,
+the tensor-to-scalar ratio r and the amplitude of scalar
+ﬂuctuations As can be inferred or constrained, respec-
+tively, see, e.g., [48] for the most recent results. In turn,
+these quantities are calculable in a given inﬂationary set-
+ting, and depend on the potential as well as its ﬁrst
+and second derivative. For vanishing non-minimal cou-
+pling, our study of the slow-roll-inspired parameters ϵi,
+see Sec. III B 3, is applicable. The value of the poten-
+tial (typically evaluated at vanishing ﬁeld) always cor-
+responds to a relevant direction, i.e., its IR value can
+be chosen freely, and corresponds to a cosmological con-
+stant. Within our truncation, there are three regimes to
+distinguish, cf. Fig. 2, where a) the ﬁrst and second, b)
+the second, c) neither the ﬁrst nor the second derivates
+of the inﬂaton potential are ﬁxed in the IR by demand-
+ing asymptotic safety in the UV. In regime a), where all
+derivatives of the scalar potential are ﬁxed by asymptotic
+safety, the potential stays completely ﬂat and inﬂation
+does not exit gracefully. In the second regime, b), the
+ﬁrst derivative of the scalar potential remains a free pa-
+rameter, as it corresponds to a relevant direction of the
+ﬁxed point. The dimensionless second derivative is pre-
+dicted as a function of the ﬁrst, cf. separatrix in the sec-
+ond panel of Fig. 2. Interestingly, the second derivative,
+ϵ2 is driven to negative values, favoring concave poten-
+tials as are indeed also favored by the data, cf. Fig. 8
+in [48]. At this point, we do not embark on a quantita-
+tive comparison with actual data, due to the systematic
+limitations of our study, and simply stress that the pre-
+dictive power of this setting could in the future allow for
+powerful comparison with data. In addition to an inves-
+tigation of the ﬂatness of the potential, the amplitude of
+the primordial perturbations provides a further test (see
+below).
+Additionally, the least predictive of the three regimes,
+c), remains, where the ﬁxed point is IR repulsive in both
+the ﬁrst and second derivative of the potential and no
+predictions about their IR values can be derived from
+asymptotic safety. In this regime, the observed values of
+r and ns can potentially be accommodated, leaving us
+with the amplitude As. It is ﬁxed by the value of the po-
+tential, measured at the value of the ﬁeld corresponding
+to CMB scales. Within asymptotic safety, this quantity
+corresponds to a relevant direction and can therefore be
+chosen freely. However, late-time observations can con-
+strain it: In the absence of an additional scalar ﬁeld,
+i.e., dynamical dark energy, the free parameter has to be
+chosen such as to provide the correct value of the cosmo-
+logical constant.
+In the inﬂationary context, it is particularly worth-
+while to consider the scenario of eﬀective asymptotic
+safety, cf. Sec. II A, see, e.g., [50, 51], see also [52]: In this
+scenario, a ﬁnite UV scale of new physics, ΛUV > MPl
+exists, beyond which a (non quantum ﬁeld theoretic) UV
+completion is valid. Below ΛUV, the gravity-matter RG
+ﬂow provides an eﬀective-ﬁeld-theory description of the
+microphysics. In this case, the initial value of the po-
+tential and its derivatives is speciﬁed at ΛUV by the UV
+completion. The gravity-matter RG ﬂow then drives the
+derivatives of the scalar potential towards smaller val-
+ues, when the UV values of the Newton coupling and
+cosmological constant fall into the dark gray region in
+
+---PAGE BREAK---
+11
+Fig. 2.
+While quantitative statements rely on the de-
+tails of the UV completion, we conclude that asymptotic
+safety could provide a mechanism that drives potentials
+towards ﬂatness, and thus potentially towards an agree-
+ment with the data. Therefore, asymptotic safety might
+provide a mechanism to lift models out of the string-
+theoretic swampland into the string-theoretic landscape,
+see also [50].
+We also point out that this might imply that criteria
+that have been proposed as indications for the possibility
+of eternal inﬂation [161] might be realized in an asymp-
+totically safe context.
+Inﬂation with nonvanishing non-minimal coupling?
+Going beyond the approximation ξ = 0 in the previous
+paragraph, we also explore inﬂation with a nonzero value
+of the non-minimal coupling. In this case, a conformal
+transformation from the Jordan frame (which features a
+non-minimal φ2R term) to the Einstein frame (which is
+minimally coupled) is typically made to analyze the sys-
+tem, and our study of the derivatives of the potential
+does not apply since we worked at ξ = 0 in that anal-
+ysis. Instead, we now assume that the potential can be
+parameterized fully in terms of ξ, m and λ4, including
+at large ﬁeld values. Within our truncation, the follow-
+ing description then holds. Observationally, the case of
+a purely polynomial potential of order two or four with-
+out non-minimal coupling is ruled out by the exceedingly
+large tensor-to-scalar ratio [42]. Therefore, a ﬁnite value
+of the non-minimal coupling is required.
+We ﬁrst ne-
+glect the scalar mass, setting m2 = 0. To match the ob-
+served amplitude of primordial scalar ﬂuctuations, one
+needs to adjust the magnitude of the Einstein frame po-
+tential. In a simple approximation; we require a ratio of
+λ4/ξ2 ∼O(10−9) to do so. As we ﬁnd no indication for
+the existence of an interacting ﬁxed point with ﬁnite ξ,
+the ﬁnite value of ξ would need to be generated along the
+ﬂow away from the ﬁxed point (11).
+There are two distinct regimes of the RG ﬂow:
+a) transplanckian, matter-gravity-driven ﬂow away
+from the ﬁxed point,
+b) subplanckian, purely matter-driven ﬂow.
+For the regime a), there are two cases to distinguish:
+For a suﬃciently large ﬁxed-point value of the cosmo-
+logical constant λ, the non-minimal coupling has overlap
+with a relevant direction, cf. light blue region in Fig. 1.
+As the upper panel in Fig. 3 highlights, the ﬁxed-point
+trajectory that reaches a ﬁnite ξ, does not saﬁsfy the re-
+lation λ4/ξ2 ∼10−9. Instead, a linearization of the crit-
+ical surface around the ﬁxed point approximately yields
+λ4/ξ2 ∼O(−10−2).
+For suﬃciently negative λ, there are two irrelevant, i.e.,
+IR attractive directions that overlap with λ4 and ξ,
+cf. light gray region in Fig. 1. In this case, the values
+of λ4 and ξ remain at zero, i.e., quantum-gravity ﬂuctu-
+ations drive λ4 and ξ back to zero, even if they deviate
+from it, cf. lower panel in Fig. 3.
+-0.010
+-0.005
+0.000
+0.005
+0.010
+-0.010
+-0.005
+0.000
+0.005
+0.010
+ξ
+λ4
+-0.04
+-0.02
+0.00
+0.02
+0.04
+-0.04
+-0.02
+0.00
+0.02
+0.04
+ξ
+λ4
+FIG. 3.
+We show the ﬂow towards the IR in the ξ −λ4 plane
+at g = 1 for λ = 0 (upper panel) and λ = −1 (lower panel)
+and vanishing scalar mass. The thick green lines in the upper
+panel indicate the two ﬁxed-point trajectories which result in
+negative λ4 as ξ grows only touch the relation λ4 ∼10−9ξ2,
+indicated in red dotted, in the ﬁxed point. The green dot in
+the lower panel indicates the ﬁxed point, which is IR attrac-
+tive in the ξ −λ4 plane. Accordingly, the phenomenological
+relation λ4 ∼10−9ξ2 cannot be satisﬁed in this case.
+In both cases, this transplanckian, matter-gravity-
+driven ﬂow is followed by the second regime b). In this
+matter-driven regime, there is a ﬁxed line at ﬁnite ξ and
+vanishing λ4. It is a consequence of the fact that at van-
+ishing λ4, the beta function for ξ vanishes identically, as
+βξ
+
+no gravity =
+λ4
+64π2 (1 + 12ξ).
+(17)
+
+---PAGE BREAK---
+12
+-0.4
+-0.3
+-0.2
+-0.1
+0.0
+0.1
+0.2
+-0.4
+-0.2
+0.0
+0.2
+0.4
+ξ
+λ4
+FIG. 4.
+We show the ﬂow towards the IR in the ξ −λ4 plane
+at g = 0 for vanishing scalar mass. On the λ4 = 0 line, the
+ﬂow vanishes identically.
+The ﬁxed line itself does not satisfy the phenomeno-
+logical relation λ4 ∼10−9ξ2, as it lies at vanishing λ4.
+The ﬂow away from this ﬁxed line leads to negative λ4,
+cf. Fig. 4, whereas the ﬁxed line is IR attractive from the
+regime of positive λ4. While no conclusions about global
+stability can be drawn from a polynomial expansion of
+the potential around vanishing ﬁeld, a destabilization
+around the origin is indicated by such a ﬂow.
+Overall, we conclude that the phenomenological rela-
+tion λ4 ∼10−9ξ2 that results in an amplitude of scalar
+perturbations in agreement with observations appears to
+be diﬃcult to reconcile with an asymptotically safe UV
+completion with gravity within our truncation. The limi-
+tations of our study, lying mainly in its Euclidean nature
+and choice of truncation, should be kept in mind when
+interpreting this result.
+Having highlighted the potential diﬃculties with a po-
+tential which features a quartic coupling, let us instead
+consider the case of a purely quadratic potential, λ4 = 0.
+The two remaining parameters need to take on values
+m2 ∼O(10−11) and ξ ∼O(10−3) in order to be compat-
+ible with observations [162]. However, these values are
+incompatible within our set of beta functions: the non-
+vanishing value of ξ induces a value of λ4 large enough
+to jeopardize the shape of the potential, as Fig. 4 high-
+lights that one cannot ﬂow to ﬁnite ξ while remaining
+at λ4 = 0, at least in the presence of quantum-gravity
+ﬂuctuations.
+We tentatively conclude that the situation does not
+appear promising for a “vanilla” model of inﬂation with a
+single scalar ﬁeld. In general it appears to be challenging
+to reconcile the potential predictive power of asymptotic
+safety with a given value of the amplitude of primordial
+scalar perturbations. This situation might change in two-
+ﬁeld models, and, as emphasized before, our tentative
+conclusions should be interpreted within the limitations
+of our study. Nevertheless, these results might provide
+further motivation to instead focus on inﬂation driven by
+the R2 coupling within asymptotic safety [156, 158, 163–
+165].
+2.
+Towards asymptotically safe consequences for dynamical
+dark energy
+...where
+we
+explore
+potential
+asymptotically
+safe
+consequences for dark energy; highlighting the role of the
+cosmological constant and emphasizing the possibility
+that quantum gravity ﬂuctuations could drive scalar
+potentials towards ﬂatness.
+A scalar might be responsible for the accelerated ex-
+pansion of the late universe, see, e.g., [166, 167]. Scale
+symmetry is a valuable guiding principle to construct vi-
+able dark-energy models [145–147, 150, 168–170]. Poten-
+tial implications of quantum scale symmetry, i.e., asymp-
+totic safety, for dynamical dark energy have been ex-
+plored, e.g., in [37, 38, 171–173]. The notion that dif-
+ferent scales in physics decouple could be taken to sug-
+gest that the late-time acceleration of the observable uni-
+verse is completely decoupled from the physics of quan-
+tum gravity. Various quantum-gravity approaches have
+contested that statement. For instance, the everpresent-
+Lambda proposal [174], rooted in causal sets [117, 175],
+is a proposal that has been related to observations [176]
+and the swampland conjectures, see [133] for a review,
+in string theory and their implications for late-time cos-
+mology are a topic of intense discussions [177–179] with
+the potential to put observational pressure [43–46] on the
+underlying theory [180]. The swampland conjectures, if
+realized, would exclude a cosmological constant by con-
+straining the derivative of scalar potentials to be larger
+than an O(1) constant divided by an appropriate power
+of the Planck scale [177, 178]. This indicates a preference
+for steeper potentials.
+The situation appears to be somewhat diﬀerent in asymp-
+totic safety, judging by results within truncations of the
+full RG ﬂow: Firstly, a positive cosmological constant of
+the correct size to agree with observations can be reached
+along RG trajectories emanating from the asymptotically
+safe ﬁxed point in truncations [181, 182]. Secondly, scalar
+potentials tend to become ﬂattened under the impact of
+asymptotically safe quantum gravity, as discussed above,
+see Sec. III B 2. The ﬁxed-point potential for a scalar that
+is coupled only to gravity and not to any other ﬁelds is
+ﬂat within our truncation; furthermore the non-minimal
+coupling vanishes. The shape of the full eﬀective poten-
+tial at k ≈0, which encodes the physics of asymptotic
+safety, depends on the number of relevant directions as-
+
+---PAGE BREAK---
+13
+sociated to this ﬁxed point: Depending on the strength
+of the gravitational eﬀects, all couplings associated to the
+potential as well as the non-minimal coupling are irrele-
+vant, cf. Fig. 1. In this region (the dark grey region in
+Fig. 1), the potential remains ﬂat at all scales, and the
+full eﬀective potential is constant. This would imply a
+cosmological behavior for the scalar dominated by a cos-
+mological constant.
+In a second region, the light grey region in Fig. 1, which
+contains the gravitational ﬁxed point under the impact
+of minimally coupled matter [125] in our truncation, only
+the scalar mass is relevant, allowing a quadratic eﬀective
+potential.
+In a third region, the light blue region in Fig. 1, in
+which gravitational ﬁxed-point values tend to lie when
+the impact of matter is not accounted for, the mass
+and the non-minimal coupling are relevant; therefore a
+quadratic eﬀective potential together with a nonvanish-
+ing non-minimal coupling can be achieved at k ≈0.
+Therefore we tentatively conclude that the asymptotic-
+safety scenario could a priori be compatible with diﬀer-
+ent eﬀective potentials for dark energy, depending on the
+gravitational ﬁxed-point values. In all cases, a ﬂat eﬀec-
+tive potential is compatible with the ﬁxed-point scenario
+within our truncation, together with a small cosmologi-
+cal constant. Therefore, deviations from w = −1, where
+w is the equation-of-state-parameter, can potentially be
+accommodated by using relevant directions of the ﬁxed
+point. Nevertheless, w = −1 appears to be preferred in
+that a cosmological constant is always present in asymp-
+totic safety.
+In all regions of the gravitational param-
+eter space in our truncation, deviations from w = −1,
+linked to various terms in the scalar eﬀective potential,
+are actually constrained due to the predictive power of
+the asymptotically safe ﬁxed point. Again, we highlight
+that these conclusions regarding phenomenology should
+be viewed in light of the Euclidean signature of our stud-
+ies.
+Besides a ﬁxed-point scenario, we can also use our cal-
+culation of the gravitational eﬀects in an eﬀective-ﬁeld-
+theory setting, where a ﬁnite UV cutoﬀΛUV exists at
+a transplanckian scale.
+Such an ”eﬀective-asymptotic
+safety” scenario, cf. Sec. II A, has been discussed, e.g.,
+in [50, 52].
+At ΛUV, the underlying microscopic the-
+ory provides the initial conditions for the RG ﬂow. In
+the range of scales between ΛUV and MPl, gravitational
+ﬂuctuations drive the ﬂow. Fig. 5 showcases how gravita-
+tional ﬂuctuations drive the slow-roll-inspired parameters
+ϵ1 and ϵ2 (cf. Sec. III B 3) to zero, as soon as the gravita-
+tional couplings g and λ fall into the dark grey region in
+Fig. 1. Below the Planck scale, where gravitational ﬂuc-
+tuations decouple dynamically, scalar ﬂuctuations then
+drive the ﬂow of ϵ1 and ϵ2 towards larger values again.
+This part of the ﬂow is also present in a theory in which
+ΛUV = MPl, i.e., where quantum gravitational ﬂuctu-
+ations do not impact the scalar potential. We observe
+that the larger the ratio ΛUV/MPl, the smaller the ϵi at
+MPl and thus in the IR, ultimately resulting in a ﬂat-
+-5
+0
+5
+10
+15
+20
+25
+30
+10-8
+10-6
+10-4
+0.01
+FIG. 5.
+We show the ﬂow towards the IR for ϵ1, ϵ2 for
+various starting values at trans-planckian scales at φ/k = 1.
+The solid/dashed/dashed-dotted lines correspond to diﬀerent
+initial conditions in the UV. The values of the gravitational
+couplings g = 1.5 and λ = 0.13 lie in the dark grey region
+in Fig. 2, i.e., region a).
+They are held constant here for
+simplicity. As long as gravitational contributions are active,
+the ﬂow heads towards ﬂatter scalar potentials. For large ϵi,
+our truncation of setting ϵi = 0, i ≥3, is expected to break
+down.
+ter eﬀective potential. Therefore a scenario as proposed
+in [50] might have the added consequence of ﬂattening
+the potential for dynamical dark energy coming out of
+string theory.
+It would be interesting to explore this
+quantitatively and compare the ratio V ′/V from string
+theory with and without an intermediate asymptotically
+safe QFT regime with gravitational ﬂuctuations.
+IV.
+SIMPLE YUKAWA MODEL FOR THE
+HIGGS-TOP SYSTEM
+...where we focus on a simple Yukawa system as a
+toy model for the Higgs-top sector under the impact
+of quantum gravity.
+We investigate the stability of
+previous results, indicating a potential mechanism to ﬁx
+the top-quark mass from asymptotic safety [13], under
+the inclusion of the non-minimal coupling. Further, we
+explore whether within the present truncation, Higgs
+inﬂation could be compatible with asymptotic safety.
+As a step towards a more SM-like scalar sector, we in-
+clude a single Dirac fermion that captures the qualitative
+eﬀects of the top quark. This amounts to studying the
+ﬂowing action
+Γk = Γscal+grav
+k
++ Γferm
+k
++ Sgf + Sgh.
+(18)
+Herein, Γscal+grav
+k
+stands for the single-scalar-gravity
+action in Eq. (4) and Γferm
+k
+is given by Eq. (7).
+The
+above model neglects the chiral SU(2) structure that is
+present in the coupling of the top and bottom quark to
+
+---PAGE BREAK---
+14
+the Higgs, resulting in numerical diﬀerences of various
+factors in the beta functions. Nevertheless, as a precur-
+sor to a more realistic chiral Higgs-top-bottom model as
+analyzed with the FRG in [183] and under the impact of
+quantum gravity in [13, 14, 184], the model with a sin-
+gle real scalar and a Dirac fermion can already provide
+valuable insights into potential asymptotic-safety mech-
+anisms.
+Various aspects of the interplay of quantum gravity
+with fermions have previously been studied in [60, 74,
+82, 84, 88, 185–188]. Yukawa systems under the impact
+of asymptotically safe gravity have been explored in [12–
+14, 26, 27, 83, 85, 124, 184, 189].
+In [85], it was ﬁrst
+proposed that asymptotic safety might allow to calculate
+the top quark mass; the proposal was extended to a chiral
+top-bottom system in [14] and to three generations of
+quarks with CKM mixing in [184].
+A.
+Eﬀects of Fermions
+...where we provide additional contributions to beta
+functions in the literature arising from the non-minimal
+coupling and focus on the number of relevant directions
+in the simple Yukawa system. This provides an indica-
+tion for the predictivity that quantum gravity generates
+in this matter system.
+To compute fermion contributions, we apply similar
+techniques as before: we evaluate traces either in mo-
+mentum space or using explicit summation over the spec-
+trum, depending on our interest in the curvature depen-
+dence of the result. For the relevant expressions regard-
+ing the evaluation with spectral methods we again refer
+to [61, 64] for the corresponding expressions, while stress-
+ing the importance to use an appropriate cutoﬀterm for
+the fermions, as discussed in [60]. In particular, for the
+fermionic ﬂuctuations, the regulator is chosen as a func-
+tion of the Dirac operator, cf. Eq. (A17).
+A closed fermion loop contributes
+∆∂t
+ V (φ)/k4
+=
+−1
+8π2(1 + y2φ2/k2),
+(19)
+to the ﬂow of the potential V (φ) and a factor
+∆∂t
+
+1
+16πg + ξφ2/k2
+
+=
+−1
+48π2(1 + y2φ2/k2),
+(20)
+to the ﬂow of the prefactor of the Ricci scalar, respec-
+tively.
+Herein, the notation signiﬁes that the full ﬂow
+of these quantities is given by the previous result from
+the single-scalar section, plus the contribution (19), or
+(20), respectively.
+These results agree with the ones
+reported in [12, 16].
+Additionally, the Yukawa cou-
+pling contributes to the scalar anomalous dimension via
+a fermionic loop, as well as to the fermion anomalous
+dimension via a scalar sunset-type diagram. We adopt
+the expressions for these universal contributions from
+Ref. [85].
+FIG. 6.
+Diagrams that contain contributions from the
+non-minimal coupling, contributing to the Yukawa coupling.
+Curly lines represent gravitons, dashed lines represent scalars,
+and the crossed circle represents a regulator insertion.
+In our truncation, the Yukawa beta function at van-
+ishing scalar mass m2 = 0 takes the form
+βy =
+5
+16π2 y3 −fy y,
+(21)
+with fy capturing the eﬀect of gravitational contributions
+and
+fy = f min
+y
++ ∆f (1)
+y
++ ∆f (2)
+y .
+(22)
+Herein f min
+y
+agrees with [85], given by
+f min
+y
+= −g(96 −235λ + 103λ2 + 56λ3)
+12π(3 −4λ)2(1 −2λ)2
+.
+(23)
+Additionally, the two diagrams depicted in Fig. 6 contain
+parts proportional to the non-minimal coupling. The cor-
+responding contributions to fy read
+∆f (1)
+y
+= −g 24(1 −ηh
+8 )ξ
+π(3 −4λ)2 −g 8(1 −ηφ
+8 )ξ
+π(3 −4λ) ,
+(24)
+and
+∆f (2)
+y
+= g 108(1 −ηh
+9 )ξ
+7π(3 −4λ)2 + g 36(1 −ηφ
+9 )ξ
+7π(3 −4λ)
++ g 18(1 −ηψ
+8 )ξ
+7π(3 −4λ) .
+(25)
+All corresponding expressions including the scalar mass
+are lengthier and can be found in App. C.
+For fy < 0, the only ﬁxed point for the Yukawa cou-
+pling at ﬁnite gravitational ﬁxed-point values is the free
+one, y∗= 0. Indeed, fy < 0 is realized for the values
+of the gravitational couplings in the vicinity of the ﬁxed
+point (11).
+Therefore, this ﬁxed point persists in the
+larger theory space extended by an additional fermion,
+and enforces y∗= 0, see also [83]. The gravitational cou-
+pling values at that ﬁxed point are
+g∗= 3.2
+λ∗= −0.146.
+(26)
+The critical exponents of the combined system are
+θ(1) = 2.92
+θ(2) = 0.728
+θ(3/4) = 0.0921 ± 1.58i
+θ(5) = −0.524
+θ(6) = −1.94.
+(27)
+
+---PAGE BREAK---
+15
+-15
+-7.5 -2
+-1.5
+-1
+-0.5
+0
+0.4
+0
+2
+4
+6
+8
+10
+Number of
+relevant
+directions
+0
+1
+2
+3
+FIG. 7.
+We show the number of relevant directions in the
+y, λ4, m2, ξ-subspace as a function of the gravitational cou-
+plings g, λ at the ﬁxed point with vanishing matter couplings.
+There are no relevant directions in the dark gray area, one
+relevant direction in the light gray area, and two relevant di-
+rections in both light blue area. In the lighter blue area at
+negative λ, the Yukawa coupling is relevant at the GFP, in-
+dicating the existence of an interacting ﬁxed point at which
+it is irrelevant, as in [13]. The dashed gray line at λ∗= −2
+marks a diﬀerence in the scaling of the λ∗-axis.
+The blue
+triangle/red square indicate the ﬁxed points (26)/(12), i.e.,
+without/with the eﬀect of minimally coupled SM ﬁelds.
+The ﬁrst two critical exponents are associated with the
+gravitational couplings, the next two relevant directions
+are associated with the mass parameter and the non-
+minimal coupling, the last two with the quartic coupling
+and the Yukawa coupling. The small changes compared
+to the values in (11) arise due to the impact of the
+additional Dirac fermion.
+Varying the gravitational ﬁxed-point values, for mod-
+erately negative values of −3.3 < λ∗< −0.6 (at g∗given
+by (12)) the Gaußian matter ﬁxed point exhibits one rel-
+evant direction associated with the scalar mass, imply-
+ing a vanishing Yukawa coupling at all scales, cf. Fig. 7.
+This is challenging to reconcile with the presence of ﬁnite
+fermion masses, generated through the Higgs mechanism,
+in the SM, cf. [83, 85, 189].
+For λ∗≲−3.3, the gravity-induced anomalous dimen-
+sion of the Yukawa coupling becomes positive, fy > 0.
+The gravitational ﬁxed-point values incorporating all SM
+degrees of freedom (12) fall into this regime in the trun-
+cation studied in [125]. The Gaußian ﬁxed point features
+two relevant directions for the matter couplings, associ-
+ated with the scalar mass parameter and a relevant di-
+rection in the canonically marginal couplings. The ﬁxed
+point has critical exponents
+θ(1) = 3.98
+θ(2) = 1.97
+θ(3) = 1.92
+θ(4) = 0.0107
+θ(5) = −0.0185
+θ(6) = −0.038.
+(28)
+At the same time, a new ﬁxed point emerges that will be
+the focus of the next subsection.
+B.
+Comparison to the case without non-minimal
+coupling: Impact on predictions of the fermion mass
+...where we investigate the robustness of results from
+[13] that indicate that (an upper bound on) the top quark
+mass might be calculable from asymptotic safety, and
+study the impact of the non-minimal coupling on the
+fermion-mass prediction.
+For λ∗< −3.3 and correspondingly fy > 0, and in the
+approximation where the non-minimal coupling is set to
+zero, ξ = 0, two ﬁxed points at y∗> 0 exist in addition
+to the ﬁxed point at y∗= 0, see Eq. (28). One of these
+is characterized by λ4 ∗< 0, the other by λ4 ∗> 0. For
+values of the gravitational couplings given by Eq. (12),
+the former is located at
+λ4 ∗= −1.15,
+y∗= 0.58,
+(29)
+whereas the latter is located at
+λ4 ∗= 0.18,
+y∗= 0.58.
+(30)
+As ﬁrst observed in [83] and generalized in [13, 14, 184,
+189] to a realistic quark sector, the latter ﬁxed point is
+infrared attractive in both these couplings, thus also gen-
+eralizing the scenario proposed in [10].
+Naturally, the
+interacting nature of the ﬁxed point implies a mixing
+of couplings in the relevant/irrelevant directions, yet, as
+the ﬁxed point is near-perturbative, this mixing is small.
+Consequently, initializing the model at the ﬁxed point in
+Eq. (30) in the UV, the value of the Yukawa coupling
+is ﬁxed at all energy scales and its “sibling” in a top-
+bottom-Higgs system allows to calculate the top mass
+and bottom mass as a consequence of asymptotic safety
+[13, 14, 184]. The diﬀerence in the ﬁxed-point values in
+Eq. (30) compared to the ones reported in [13] arises,
+as we work in a simple Yukawa system here instead of
+a chiral Yukawa system, and our ﬁxed-point values of
+the gravitational couplings diﬀer. The shift in the grav-
+itational ﬁxed-point values is due to a diﬀerent treat-
+ment of gravitational ﬂuctuations; the gravitational beta
+functions used in [13] and ﬁrst computed in [84] are ob-
+tained (a) without decomposing the graviton according
+to (A3) and (b) employing a regulator function that fea-
+tures Γ(2)
+k
+
+λ=0 as its argument. On the one hand the shift
+in ﬁxed-point values highlights the uncertainty in the de-
+termination of ﬁxed-point values, cf. the estimated lower
+
+---PAGE BREAK---
+16
+-20
+-15
+-10
+-5
+0
+-0.10
+-0.05
+0.00
+0.05
+0.10
+FIG. 8.
+Region of positive fy marked in green at vanishing
+mass m2 = 0.
+The dashed line marks the conformal ﬁxed
+point ξ = −1/12. The region is independent of the value of
+g.
+bound on the systematic uncertainty in [13], emphasiz-
+ing the need to study the full gravitational parameter
+space. On the other hand, the stability of the qualitative
+features of the interacting ﬁxed point is encouraging.
+As discussed in the previous Sec. IV A, in addition to
+the interacting ﬁxed points, the system also features a
+ﬁxed point at which all matter couplings vanish.
+The
+interplay of these ﬁxed points results in an upper bound
+on the fermion mass. This upper bound is the value that
+is reached along the unique trajectory connected to the
+interacting ﬁxed point, see [13].
+In the following, we will study the fate of both ﬁxed
+points in Eq. (29) and (30) under the inclusion of the
+non-minimal coupling ξ.
+To qualitatively understand the eﬀect of a non-minimal
+coupling on these ﬁxed points, we ﬁrst solve the β-
+functions for the Yukawa and the quartic coupling with
+the non-minimal coupling ξ as a free parameter.
+The
+gravity-induced anomalous dimension fy depends on the
+non-minimal coupling ξ, and for gravitational coupling
+values given by (12), fy is positive only for
+ξ ∈[−0.06, 0.09],
+(31)
+for more general values of λ, see Fig. 8.
+Let us now compare this interval to the actually real-
+ized ﬁxed-point value for ξ. Crucially, a non-vanishing
+Yukawa coupling breaks shift symmetry and therefore
+causes a nonvanishing non-minimal coupling. At order
+O(ξ), which suﬃces for an analysis within the above win-
+dow, the β-function of the non-minimal coupling at van-
+ishing mass parameter, m2 = 0, is given by
+βξ =
+
+ξ + 1
+12
+  y2
+4π2 + 3λ4
+16π2
+
++ g ξ
+
+2(3 −λ)
+3π(3 −4λ)2 −
+5(3 + 10λ)
+18π(1 −2λ)3
+
+.
+(32)
+A non-vanishing Yukawa and quartic coupling gener-
+ate a ﬁxed-point value ξ∗= −1/12 < −0.06 if g = 0. The
+0.01
+0.1
+1
+10
+100
+1000
+0.00
+0.02
+0.04
+0.06
+0.08
+FIG. 9. We show the value of ξ∗, leaving y∗and g∗as free
+parameters with λ∗given by (12). The Yukawa and gravi-
+tational eﬀects compete. For small gravitational eﬀects the
+ﬁxed-point value approaches ξ∗= −1/12, for large gravita-
+tional eﬀects it approaches the free ﬁxed point.
+direct gravitational contribution, i.e., the second line in
+Eq. (32), is therefore crucial. The Yukawa and the grav-
+itational contribution compete in shifting the ﬁxed point
+between the conformal value ξ∗= −1/12 and the free
+ﬁxed point, as can be seen in Fig. 9. The key question
+is, whether at the ﬁxed point (30) the gravitational con-
+tributions are suﬃciently strong for ξ∗to fall into the
+interval in (31).
+Only then can the ﬁxed point from
+[13, 14, 184] continue to exist in the larger truncation
+we study here.
+The gravitational contribution in Eq. (32) is positive
+for suﬃciently negative λ∗. At the ﬁxed point (29) with
+negative λ4 ∗, the coeﬃcent of the term (ξ + 1/12) is
+negative; the resulting would-be ﬁxed point value for ξ is
+positive and too large to fall into the interval (31). The
+inclusion of ξ hence rules out this previous ﬁxed-point
+candidate with negative λ4 ∗.
+In contrast, at the ﬁxed point (30) with positive λ4 ∗, the
+gravitational eﬀects are strong enough to shift ξ∗into the
+interval in Eq. (31). This ﬁxed point, the generalization
+of which underlies [13, 14, 184] hence persists under the
+inclusion of the non-minimal coupling.
+It is rather nontrivial that the region of suﬃciently
+negative λ∗is actually the region which is already
+selected by requiring fy > 0.
+Now, we ﬁnd that this
+is the region in which it appears to be a qualitatively
+viable approximation to neglect ξ in the analysis of the
+ﬁxed-point structure of Higgs-Yukawa systems.
+In our full system of beta-functions, we ﬁnd a ﬁxed
+point at
+λ∗= −9.49
+g∗= 7.26
+λ4 ∗= 0.139
+y∗= 0.381
+ξ∗= −0.04
+m2
+∗= 0.00086,
+(33)
+
+---PAGE BREAK---
+17
+with three relevant directions and critical exponents
+θ(1) = 3.98
+θ(2) = 1.99
+θ(3) = 1.91
+θ(4) = −0.0364
+θ(5/6) = −0.00855 ± 0.0108i.
+(34)
+In comparison to the ﬁxed point (30), both λ4 ∗as well
+as y∗are considerably lowered due to the presence of the
+non-minimal coupling ξ. This can also be seen in Fig. 10
+which shows contours of constant Yukawa coupling in
+the gravitational parameter space. Under the inclusion of
+the non-minimal coupling, the curves are shifted upwards
+considerably. Assuming that a similar eﬀect will hold in
+the full SM, this aids to realize the scenario presented
+in [13]. Neglecting the non-minimal coupling ξ, in that
+reference the Higgs self-coupling ﬁxed-point value was
+determined to be λ4 ∗= 0.01 at a point with a roughly
+realistic top mass, rendering the Higgs boson slightly too
+heavy. Our results indicate that the inclusion of a non-
+minimal coupling could reduce this overestimation of the
+Higgs mass.
+As one of the nontrivial results of our paper, we high-
+light that the non-minimal coupling, which is canonically
+marginal, actually corresponds to an irrelevant coupling
+at the asymptotically safe ﬁxed point.
+Therefore, its
+value is ﬁxed at all scales as a unique function of the
+relevant couplings.
+Let us brieﬂy mention that, depending on the value of
+the top mass, the Higgs potential in the SM might be
+metastable [4–6]. In that case, the presence of a non-
+minimal coupling can stabilize or destabilize the Higgs
+potential in the early universe, where the background
+curvature is large enough, see [190–196]. At present, it is
+not clear whether or not the SM Higgs potential remains
+stable when coupled to asymptotically safe gravity. To
+answer this question, the gauge degrees of freedom of
+the SM are important, as they aﬀect the Higgs potential;
+therefore we leave the question of vacuum stability, as
+well as a comparison with the corresponding cosmologi-
+cal bounds on ξ, for future work. We highlight that if the
+ﬁxed-point properties of the simple Yukawa system per-
+sist under this extension, the non-minimal coupling takes
+on a uniquely calculable value. Therefore, there might
+be a unique answer to the question whether asymptotic
+safety aids or prevents vacuum stability through the non-
+minimal coupling in the early universe.
+C.
+Spontaneous symmetry breaking in the
+quantum-gravity regime
+...where we explore the emergence of a symmetry-
+broken ﬁxed-point potential in parts of the gravitational
+parameter space.
+Spontaneous symmetry breaking, in our case of the Z2
+symmetry that maps φ to −φ, is signalled by a negative
+value for the squared mass parameter, m2. An asymptot-
+ically safe ﬁxed point could a priori lie at any sign of m2,
+i.e., in principle spontaneous symmetry breaking might
+already occur in the UV. As explained also in [21], in the
+presence of a Yukawa coupling, the ﬁxed-point value for
+the mass remains positive in the strong-gravity regime
+– which lies at λ ≳0 in our truncation. Therefore, we
+focus on the weak-gravity regime, into which the gravita-
+tional ﬁxed-point value is pushed under the impact of the
+SM degrees of freedom [125]. In this regime, ﬁxed-point
+values for matter couplings become perturbatively small,
+and we can focus on a simple approximation of the beta
+function for the mass parameter. In the limit λ ≪0, it
+can be approximated as
+βm2 ≈−2m2 +
+1
+4π2 y2 −
+3
+32π2 λ4 −
+18
+π(3 −4λ)g ξ2
+−
+6gξ
+π(3 −4λ)2 −
+10gξ
+3π(1 −2λ)2 −
+54gξ2
+π(3 −4λ)2
++ O(m2y, m2λ4, m2ξ).
+(35)
+The resulting ﬁxed-point value is
+m2
+∗=
+1
+8π2 y2 −
+3
+64π2 λ4 −
+9
+π(3 −4λ)g ξ2
+(36)
+−
+3gξ
+π(3 −4λ)2 −
+5gξ
+3π(1 −2λ)2 −
+27gξ2
+π(3 −4λ)2 .
+In the absence of the non-minimal coupling, this results
+in a positive mass at all values of g and λ, since the
+λ4-contribution turns out to be subleading compared to
+the y2-contribution.
+In the presence of a ﬁnite non-
+minimal coupling, the combined pure scalar and trace
+mode contributions ∼λ4 and ∼
+1
+(3−4λ)# are negative
+(at negative λ) and start to dominate over the positive
+y2-contribution for suﬃciently negative λ, as shown in
+Fig. 11. Accordingly, the ﬁxed point lies in the sponta-
+neously symmetry- broken regime for λ < −14.9.
+We leave the exploration of the resulting phenomenol-
+ogy and the investigation of the viability of this region
+to future work.
+D.
+Indications against the viability of Higgs
+inﬂation in asymptotic safety
+...where we explore whether a ratio of quartic coupling
+to non-minimal coupling as it would be required for
+Higgs inﬂation could be achieved in our toy model.
+In particular,
+we investigate whether the regime of
+gravitational parameter space that appears preferred by
+Higgs inﬂation in our truncation is also the regime that
+could allow a realistically large value of the Yukawa
+coupling to accommodate the measured top quark mass.
+Higgs inﬂation is an attractive theoretical idea that ties
+together particle physics and cosmology and does not in-
+voke any BSM physics to generate an inﬂationary regime
+
+---PAGE BREAK---
+18
+-20
+-15
+-10
+-5
+0
+2
+4
+6
+8
+10
+0.1
+0.2
+0.3
+0.4
+0.5
+-20
+-15
+-10
+-5
+0
+2
+4
+6
+8
+10
+0.1
+0.2
+0.3
+0.4
+0.5
+FIG. 10.
+Fixed point-value of the Yukawa coupling y∗(color) and the quartic coupling λ4 ∗(dashed lines) as a function of
+the gravitational ﬁxed-point values without (with) a non-minimal coupling on the left (right). The left plot is obtained setting
+m2 = 0, the right one considers the full mass dependence.
+negative trace contributions
+-20
+-15
+-10
+-5
+0.0000
+0.0001
+0.0002
+0.0003
+0.0004
+FIG. 11.
+The leading contributions to βm2 for g = 1,
+cf. Eq. (36). The dotted contribution stems from three di-
+agrams that all include the gravitational trace mode, i.e., the
+three terms with (3−4λ) in the denominator in Eq. (36). The
+dashed and dotted contributions appear with a negative sign
+in the beta function for the mass. The vertical dashed line
+marks the onset of the symmetry-broken regime.
+[197], see [198] for a review. The standard questions re-
+garding the status of the initial conditions [199] remain,
+but in contrast to inﬂationary settings with a new scalar
+degree of freedom as the inﬂaton, Higgs-inﬂation in prin-
+ciple only has one additional free parameter, namely the
+non-minimal coupling of the Higgs ﬁeld to gravity.
+Additional free parameters, linked to higher-order cor-
+rections in the Higgs potential, start to play a role if the
+Higgs potential is metastable, or close to metastability
+[7, 200]. In principle, such corrections can be evaluated
+in an asymptotically safe setting.
+Here, we ask a simpler question, namely, whether the
+non-minimal coupling is available as a free parameter
+in this setting, and we work under the assumption that
+higher-order terms in the potential are negligible.
+We
+ﬁnd that within our truncation, the non-minimal cou-
+pling is predicted by the asymptotic-safety requirement
+in that region of parameter space which could admit a
+ﬁnite Yukawa coupling in the IR, i.e., a ﬁnite top quark
+mass.
+In other words, within our truncation the non-
+minimal coupling is only available as a free parameter at
+the cost of ﬁxing the top quark mass to zero.
+We therefore focus on the region of parameter space with
+λ < −3.3. In this region, an upper bound on the fermion
+mass exists [13, 14, 184], in addition to a prediction of the
+non-minimal coupling. The presence of the ﬁnite Yukawa
+coupling distinguishes the scenario considered here from
+the one discussed in Sec. III C as well as in [201].
+Within our toy model, deﬁned by our choice of degrees
+of freedom and our truncation, asymptotic safety does
+not appear to be compatible with Higgs inﬂation. Un-
+less y∗is made very tiny, y∗≲10−6, the ratio λ4 ∗/ξ2
+∗at
+the interacting ﬁxed point is of O(1), cf. Fig. 12. As all
+three couplings are irrelevant and only ﬂow logarithmi-
+cally towards the IR, it appears unlikely that this yields
+the observed amplitude of primordial scalar ﬂuctuations,
+which would require λ4/ξ2 ∼O(10−9), cf. Sec. III C. This
+
+---PAGE BREAK---
+19
+-20
+-15
+-10
+-5
+0
+2
+4
+6
+8
+10
+0.1
+0.2
+0.3
+0.4
+0.5
+FIG. 12.
+Fixed-point values for λ4/ξ2 (dashed lines) at
+the interacting ﬁxed point as a function of g∗and λ∗, to-
+gether with contours showing the ﬁxed-point value of y. The
+ﬁxed-point value for y translates into an upper bound on the
+fermion mass compatible with asymptotic safety.
+In order
+to achieve ﬁxed-point values for λ4/ξ2 compatible with those
+suggested by Higgs inﬂation, the lower bound on the Yukawa
+coupling generically has to be very small.
+Assuming that
+these results carry over to the SM Higgs-top sector, Higgs in-
+ﬂation would not be compatible with a viable top mass within
+asymptotic safety.
+ﬁnding ﬁts with with Ref. [39], that found that based on
+the ﬁxed point value for ξ Higgs inﬂation is unlikely to
+be realized within asymptotic safety.
+In conclusion, our results indicate that Higgs inﬂation
+might be hard to realize in asymptotic safety as it appears
+diﬃcult to obtain the correct amplitude of primordial
+ﬂuctuations while accommodating a viable top-quark-
+mass.
+Again, this result holds under an extrapolation
+from the Euclidean to the Lorentzian regime.
+V.
+SCALAR PORTAL TO DARK MATTER
+...where we focus on settings, where dark matter is
+coupled to the SM Higgs through a portal coupling. We
+study two coupled scalars as a toy model for the portal
+sector and additionally propose a setting with an addi-
+tional dark fermion as the simplest dark-matter sector
+with an interacting ﬁxed point in the portal coupling.
+We then explore to what extent asymptotic safety leads
+to an enhancement of the predictivity of the model over
+the eﬀective-ﬁeld-theory approach without gravity.
+The ongoing experimental searches for dark mat-
+ter have not yielded a clear discovery yet [202–218].
+While these searches have already excluded an impres-
+sive number of models and parameter combinations, an
+even larger space lies ahead of them.
+Novel theoreti-
+cal ideas could change this situation. Classically, scale-
+invariance enhances the predictivity of Higgs portal mod-
+els [149, 219–231]. Quantum scale invariance [173, 232]
+additionally might allow to ﬁx marginal couplings that
+are not constrained by classical scale invariance, includ-
+ing the portal coupling.
+In particular, a single, uncharged dark scalar remains
+an attractive model for dark matter, due to its concep-
+tual simplicity as a thermal relic and due to its experi-
+mental accessibility, see [233] for a review. In [18], it has
+been found that quantum-gravity ﬂuctuations drive the
+Higgs portal coupling to zero, such that it vanishes at the
+Planck scale. If conﬁrmed in extended theoretical stud-
+ies, this has important phenomenological consequences,
+as it leads to the decoupling of this dark-matter candi-
+date, and requires an extended dark sector to regenerate
+the portal coupling at [35] or below [20, 23] the Planck
+scale.
+In the ﬁrst part of this section, V A, we work with
+two scalars coupled to gravity non-minimally and to each
+other through a portal coupling, described by the trun-
+cation
+Γk = Γ2−scal+grav
+k
++ Γportal
+k
++ Sgf + Sgh.
+(37)
+This provides a model for dark matter coupled to a visible
+scalar as a toy model for the SM Higgs, analyzed with-
+out the non-minimal couplings in [18]. We conﬁrm that
+the decoupling-result from that paper persists under the
+inclusion of the non-minimal couplings in Sec. V A. This
+motivates an extension of the dark sector in order to rec-
+oncile the asymptotic-safety paradigm with the idea that
+dark matter is a thermal relic. In contrast to [20, 23],
+where new physics is added to regenerate the portal cou-
+pling below the Planck scale, we explore the setting in
+which an asymptotically safe ﬁxed point lies at ﬁnite por-
+tal coupling, introduced in [35], see Sec. V B.
+A.
+Decoupling of a single dark scalar in asymptotic
+safety
+...where we conﬁrm that the result that the portal
+coupling between two purely scalar sectors vanishes at
+an asymptotically safe ﬁxed point is robust under the
+inclusion of non-minimal couplings.
+Our ﬁrst key result is that the inclusion of the non-
+minimal couplings does not alter the decoupling result
+from [18], as λHP ∗= 0 and λHP corresponds to an irrel-
+evant direction. The corresponding beta function for the
+portal coupling can be found in App. C. Including the
+additional eﬀect of 45 minimally coupled Weyl fermions,
+12 gauge bosons, 3 minimally coupled scalars, as for the
+degrees of freedom of the Standard Model, we ﬁnd a ﬁxed
+
+---PAGE BREAK---
+20
+point at
+g∗= 9.66, λ∗= −12.4,
+(38)
+with all other couplings vanishing. The underlying rea-
+son for the ﬂat scalar potential is shift symmetry in the
+two scalar sectors; the kinetic term for both scalars is
+invariant under φ →φ + C, with C a constant. Under
+the impact of gravity, that symmetry remains intact, cf.
+Sec. III B 1. The critical exponents read
+θ(1) = 3.99
+θ(2/3) = 1.97,
+θ(4) = 1.92,
+θ(5/6) = −0.0173,
+θ(7/8/9) = −0.0353.
+(39)
+Several of these come in identical pairs due to exchange
+symmetry between the visible and the dark scalar. The
+three smallest critical exponents show a three-fold de-
+generacy, as they are associated with the three quartic
+couplings.
+The Higgs portal coupling is an irrelevant direction,
+just as in [18] and is protected by shift symmetry at all
+scales once set to zero at high scales. Thus, a departure
+from λHP = 0 at low scales is incompatible with the
+ﬁxed-point requirement at high scales.
+Accordingly,
+the conclusions in [18] persist under the inclusion of
+non-minimal couplings; the dark scalar decouples from
+the visible one.
+Within our truncation, asymptotic safety with gravity
+is therefore incompatible with the thermal production of
+a single dark scalar in a setting without additional ﬁelds
+in the dark sector, see [20, 23] for proposed extensions.
+Whether alternative production mechanisms could be
+available, depends on the gravitational parameters: At
+the ﬁxed point in Eq. (38), the dark-matter mass remains
+associated with a relevant direction and can therefore de-
+part from its ﬁxed-point value m2
+d ∗= 0 to take any ﬁnite
+value in the infrared. For a massive, purely gravitation-
+ally coupled particle, gravitational particle production in
+an inﬂating universe might be viable [234], based on the
+classic results in [235]. In particular, superheavy stable
+dark matter, minimally coupled to gravity, might be pro-
+duced in the early universe [236]. The availability of such
+a mechanism also depends on the compatibility of the re-
+quired inﬂationary potentials with asymptotic safety, see
+also Sec. III C 1.
+Additionally, just as for a single scalar [28], one ex-
+pects momentum-dependent interactions between the
+dark scalar and the Higgs scalar to necessarily be present
+if an asymptotically safe ﬁxed point exists, see also [85].
+These are present at high RG scales, but suppressed in
+the IR due to their canonical dimensionality.
+As dis-
+cussed in [237], such planckian-interacting massive dark
+matter might be produced in the early universe.
+B.
+Portal coupling to a dark Yukawa system
+...where we expand on results in [35], tentatively
+hinting at a highly predictive model of a scalar-fermion
+dark sector under the impact of quantum gravity, coupled
+through a portal to the visible Yukawa sector.
+The results in the previous section, lending further sup-
+port to the decoupling of a simple scalar as dark matter
+found in [18], motivate us to ask whether thermal produc-
+tion of dark matter could be compatible with asymptoti-
+cally safe gravity once the dark matter sector is extended.
+Thus, we investigate a model that illustrates how to gen-
+erate a ﬁnite Higgs portal coupling at the Planck scale.
+As a consequence of asymptotic safety, we will ﬁnd that
+this model features a very strongly enhanced predictive
+power compared to its leading-order eﬀective-ﬁeld-theory
+treatment.
+In our toy model, the ﬁrst scalar φv again plays the role
+of the Higgs. The second scalar φd assumes the role of
+a dark scalar. To dynamically break shift symmetry in
+the dark sector, we additionally include a dark fermion.
+This generates a non-vanishing portal, as we discovered
+in [35].
+We hence work with two copies of the action
+from Sec. IV, a dark and a visible one. Additionally, we
+include a portal coupling in the eﬀective action which
+reads
+Γk = Γ2−scal+grav
+k
++Γferm,v
+k
++Γferm,d
+k
++Γportal
+k
++Sgf +Sgh,
+(40)
+where Γ2−scal+grav
+k
+is the action for two non-minimally
+coupled scalars given in Eq. (8), Γportal
+k
+is the portal
+coupling given in Eq. (9), and Γferm,v
+k
+(Γferm,d
+k
+) are the
+fermion action (7) for a visible (dark) fermion ψv (ψd)
+coupled to the visible (dark) scalar φv(φd), respectively.
+The beta functions for this system are given in App. C.
+C.
+Fixed-point structures, predictivity and
+near-perturbativity
+...where we list all possible ﬁxed-point structures of the
+model with a dark and a visible Yukawa sector, explore
+their predictivity, and study whether the most predictive
+ﬁxed point is near-perturbative in nature.
+The action features a Z2 exchange symmetry between
+dark and visible sector. This exchange symmetry is also
+reﬂected in the ﬁxed-point structure of the system and
+leads to degeneracies in the spectrum of critical expo-
+nents at the interacting ﬁxed point that explicitly ex-
+hibits this symmetry.
+The system features several partially Gaußian ﬁxed
+points, as soon as λ∗< −3.3.
+These arise as a con-
+sequence of the fact that under the impact of gravity,
+Yukawa systems could feature a free as well as an in-
+teracting ﬁxed point [13, 83, 85], see Sec. IV. There are
+four ﬁxed points in the system cf. Tab. I. Once the ﬁxed-
+point value of the Yukawa coupling is non-vanishing, the
+resulting explicit breaking of shift-symmetry results in a
+non-ﬂat scalar potential and non-minimal coupling in the
+corresponding sector.
+
+---PAGE BREAK---
+21
+FP
+yv ∗, ξv ∗,
+m2
+v ∗, λ4,v ∗
+yd ∗, ξd ∗,
+m2
+d ∗, λ4,d ∗
+λHP ∗
+number of
+relevant directions
+GMFP
+0
+0
+0
+6
+FP1
+̸= 0
+0
+0
+5
+FP2
+0
+̸= 0
+0
+5
+FP3
+̸= 0
+̸= 0
+̸= 0
+4
+TABLE I. Fixed points and their predictivity in the gravity-
+matter system. FP1 and FP2 are symmetric under the ex-
+change of the dark and the visible sector. Two of the rele-
+vant directions approximately correspond to the gravitational
+couplings g and λ, and two approximately correspond to the
+scalar masses m2
+v and m2
+d. There is a total of eleven canoni-
+cally relevant or marginal couplings in our truncation.
+Fixed points FP1 and FP2 are connected by the ex-
+change symmetry between dark and visible sector. This
+symmetry entails that ﬁxed points which do not obey
+the symmetry, i.e., where, yv ∗̸= yd ∗etc. , must come in
+pairs that map into each other under the symmetry.
+At all four ﬁxed points, both gravitational couplings
+are associated to relevant directions, as are the two mass
+parameters; in addition various of the marginal couplings
+correspond to relevant directions. At the most predic-
+tive ﬁxed point FP3, both sectors are interacting and
+all canonically marginal couplings are actually irrelevant,
+i.e., predicted. In the following we will concentrate on
+this ﬁxed point. This can either be understood as a choice
+for the universality class underlying the UV completion,
+or can also be interpreted in view of eﬀective asymptotic
+safety [51], see Sec. II A: If there is a ﬁnite UV cutoﬀ, be-
+yond which the QFT description for matter-gravity sys-
+tems ceases to hold, then the microscopic model provides
+the initial conditions for the RG ﬂow. From there, the
+ﬂow will be attracted by ﬁxed points along their IR at-
+tractive directions. The ﬁxed point with most irrelevant
+directions is therefore most likely to play a role as an
+“eﬀective” ﬁxed point, generating trajectories with near-
+scale symmetry.
+There are only two relevant directions in the matter sec-
+tor at FP3, both of which set the mass scale in the cor-
+responding sector. All matter interactions are predicted
+at this ﬁxed point.
+This is in marked contrast to an
+eﬀective-ﬁeld theory setting, where all of seven canon-
+ically marginal couplings, (λ4 v, λ4,d, λHP, ξv, ξd, yv, yd),
+correspond to free parameters.
+At the ﬁxed point FP3, the Yukawa couplings break
+the shift symmetry in both sectors. This induces non-
+vanishing ﬁxed-point values for ξv(d) via the ξv(d) inde-
+pendent terms in Eq. (32). These in turn induce a nonva-
+nishing ﬁxed-point value for the portal coupling via the
+diagrams depicted in Fig. 13. These diagrams generate
+λHP independent contributions in the beta function for
+FIG. 13.
+These diagrams induce the Higgs portal coupling.
+The crossed circles correspond to regulator insertions, the
+wiggly lines represent gravitons, the dashed/dashed-dotted
+lines represent the two scalars.
+Additionally, the diagrams
+with regulator insertions on the other internal propagators
+contribute.
+λHP, which reads
+βλHP = 160g2ξdξv
+(1 −2λ)3 + 27648g2ξ2
+dξ2
+v
+(3 −4λ)2
++ 82944g2ξ2
+dξ2
+v
+(3 −4λ)3
++ 864g2ξdξv
+(3 −4λ)3 + 6912g2(9 −4λ)(ξdξ2
+v + ξ2
+dξv)
+5(3 −4λ)3
++O(λHP).
+(41)
+Eq. (41) showcases that λHP ∗= 0 is not available, once
+ξv(d) ∗̸= 0. In summary, the choice of a ﬁxed point at
+ﬁnite Yukawas breaks shift symmetry in both scalar sec-
+tors, resulting in asymptotic safety at non-vanishing por-
+tal coupling.
+We analyze potential physics implications of the
+ﬁxed point FP3 with non-vanishing portal coupling as
+a function of λ∗and g∗, see Fig. 14.
+This completes
+our analysis presented in [35], where we focus more
+particularly on the ﬁxed-point values obtained in a
+speciﬁc setup with the gravitational beta functions
+obtained in [84].
+Interestingly, the ﬁxed point FP3
+can lie at negative m2
+∗< 0 for suﬃciently negative λ∗,
+cf. Fig. 14, where both Z2 symmetries are spontaneously
+broken in the UV.
+Further, the portal coupling can become negative at the
+ﬁxed point.
+Nevertheless, a stability analysis around
+the origin in ﬁeld space indicates that the local stability
+criterion λ4,v ∗λ4,d ∗−λ2
+HP ∗> 0 is always satisﬁed.
+That there is a region in parameter space, in which
+an interacting ﬁxed point not only exists, but also
+satisﬁes local stability and lies in the symmetric phase,
+is clearly a nontrivial result – since both conditions can
+be violated in corresponding regimes of the parameter
+space.
+The ratio of dark-scalar and dark-fermion mass in a
+no-mixing approximation is y(kIR)/
+p
+λ4(kIR), where
+kIR is a suﬃciently IR scale. We observe that the ratio
+y∗/√λ4 ∗is larger than but of the order one, unless the
+ﬁxed-point value λ∗becomes smaller than λ∗≈−10.
+Both couplings ﬂow logarithmically towards the IR,
+therefore the ratio of ﬁxed-point values contains indirect
+information about the mass ratio.
+Indeed, following
+the RG ﬂow towards the IR indicates that, as long as
+the absolute value of the gravitational couplings is not
+too large, the dark (and visible) fermions are heavier
+than their scalar counterparts, making the dark scalar a
+
+---PAGE BREAK---
+22
+-16
+-14
+-12
+-10
+-8
+-6
+-4
+0
+2
+4
+6
+8
+10
+-0.04
+-0.02
+0
+0.02
+0.04
+0.06
+0.08
+0.10
+FIG. 14.
+Fixed-point value of the portal coupling as a func-
+tion of the gravitational ﬁxed-point values. For λ∗< −12.6,
+the ﬁxed point lies in the symmetry-broken regime. The ratio
+y∗
+√λ4 ∗is indicated by the dashed contours.
+potential candidate for a stable dark-matter particle. In
+all cases that we consider, the ratio of the two masses
+remains close to one.
+Our choice of truncation relies on assuming a near-
+perturbative nature of the ﬁxed point, which needs to be
+checked a posteriori.
+In particular, FP3 has been obtained in an approxima-
+tion of the beta functions which only takes into account
+the leading terms in the anomalous dimension and re-
+produces the universal one-loop results for marginal cou-
+plings, see also Sec. A 4. Going beyond this approxima-
+tion, we ﬁnd only small quantitative changes: Taking into
+account the full dependence on the anomalous dimension
+ηφ and ηψ, and hence considering non-polynomial terms
+in the beta functions, only alters both, the ﬁxed-point
+values, as well as the critical exponents, at the percent
+level at generic values of g and λ. The stability of our
+results under this change is an indication for the near-
+perturbative nature of the system.
+Additionally, the ﬁxed-point values for g∗and λ∗lie
+at roughly similar values, no matter which of the four
+ﬁxed-point structures is chosen in the matter sector.
+This indicates that there is no huge “back-reaction”
+from the interactions in the matter sector in the regime
+of parameter space of interest to us, i.e., for λ∗< −3.3
+and g∗not too large.
+We use the deviation from canonical scaling as a mea-
+sure of (near-)perturbativity, see also [77]. Speciﬁcally,
+we deﬁne
+∆θ =
+sP
+i(Re(θ(i)) −d¯gi)2
+P
+i
+,
+(42)
+where the sum runs over all matter couplings in our trun-
+cation and d¯gi denotes the canonical dimension of the ith
+coupling. Fig. 15 showcases that the matter system is
+near-perturbative at the interacting ﬁxed points induced
+by its coupling to quantum gravity. This ﬁnding is well in
+line with previous indications for a near-perturbative na-
+ture of the Reuter ﬁxed point in gravity-matter systems,
+e.g., [74–76]. It further supports our choice of truncation,
+and ﬁnally makes plausible that the Standard Model (ex-
+tended by a few extra ﬁelds), that remains perturbative
+up to the Planck scale, could conceivably be UV extended
+by its coupling to asymptotically safe gravity. In particu-
+lar, the mechanism that we explore here relies on a ﬁnite
+ﬁxed-point value of the Yukawa coupling and is therefore
+not available in the region of parameter space which is
+generically tied to larger ∆θ, lying at λ∗> −3.3. In fact,
+in this region, only a ﬁxed point with vanishing matter
+couplings exist. Its critical exponents can depart more
+signiﬁcantly from canonical scaling, see Fig. 15. Thus,
+the region preferred on phenomenological grounds ap-
+pears to coincide with the near-perturbative ﬁxed-point
+regime.
+D.
+Connection to the IR
+...where we connect the UV ﬁxed point to correspond-
+ing predictions for IR values and explore the quantitative
+relation between the various coupling parameters of the
+dark and visible sectors.
+In particular, we highlight
+the strong enhancement of predictivity, that asymptotic
+safety could entail.
+To extract physical predictions, one needs to translate
+the UV ﬁxed-point values into values at k →0. Within
+a standard EFT treatment that would start at some ﬁ-
+nite cutoﬀscale kUV, all higher-order couplings would
+take arbitrary values. In addition, all couplings in our
+truncation correspond to canonically relevant or marginal
+couplings, and could also be speciﬁed freely.
+Thus, a
+large parameter-space of potential dark-matter proper-
+ties would open up in the IR. In contrast, an asymptot-
+ically safe UV completion (or extension) could impose a
+very high degree of predictivity on the setting. In fact,
+in our truncation, the two masses are the only two rel-
+evant couplings in the matter sector. Thus, these cor-
+respond to the only two parameters that can start to
+deviate from the ﬁxed-point values at an arbitrary scale,
+such that their IR values can be adjusted. Their values
+at k →0 are hence the only two free parameters in the
+scalar-Yukawa sector of the model in the asymptotically
+safe setting. All canonically marginal couplings are irrel-
+evant at FP3; their IR values are ﬁxed as a function of
+the scalar masses.
+
+---PAGE BREAK---
+23
+-15
+-10
+-5
+0
+0
+2
+4
+6
+8
+10
+Gaussian matter
+-8
+-6
+-4
+-2
+0
+2
+-16
+-14
+-12
+-10
+-8
+-6
+-4
+0
+2
+4
+6
+8
+10
+Interacting matter
+-8
+-7
+-6
+-5
+-4
+-3
+-2
+FIG. 15.
+The measure ∆θ, cf. Eq. (42), measuring how close the critical exponents are to the canonical scaling dimension
+for the ﬁxed point that is free (interacting) in the matter sector on the left (right). Both are interacting in the gravity sector.
+Note the diﬀerent λ∗-axes in the two plots.
+-2.0
+-1.5
+-1.0
+-0.5
+FIG. 16.
+Infrared relation between the dark scalar mass MD, the portal coupling λHP, the dark quartic coupling λd and the
+dark fermion mass ψd for various ﬁxed-point values of the gravitational couplings. The color coding indicates the mixing angle
+α, see Eq. (45). The scales on the right and top are not linear. In addition, the non-minimal coupling is also predicted.
+We break the accidental symmetry between the dark
+and visible sector through the RG ﬂow to the IR by
+choosing diﬀerent IR values for the two relevant mass
+parameters of the dark/visible scalar, thereby generating
+a distinction between the dark and visible sector at low
+energies. In an extension of the Standard Model, this ex-
+change symmetry is broken explicitly due to a diﬀerent
+set of degrees of freedom (four real scalars for the Higgs
+ﬁeld), as well as the contribution of gauge interactions,
+which couple only to the visible, but not the dark, scalar
+and fermion.
+To ﬁnd the IR values corresponding to a ﬁxed point tra-
+jectory, we proceed as follows: (i) We initialize the RG
+ﬂow for the model at some scale kUV ≫MPl by perturb-
+ing the relevant directions of FP3. (ii) We conﬁrm that
+our choice of kUV does not inﬂuence our results by re-
+versing the ﬂow, i.e., ﬂowing further “into the UV”, and
+conﬁrming that typical initial conditions for the ﬂow re-
+main at the ﬁxed point for a suﬃciently large range of
+scales. (iii) We then solve the beta functions numerically
+to ﬂow towards small k and extract the coupling values.
+At k ≈MPl, the gravitational degrees of freedom de-
+couple dynamically. Since this decoupling occurs near-
+instantaneously (due to quadratic scaling GN ∼k−2 be-
+low the Planck scale), we can simplify the numerical ﬂows
+such that we only have two instead of four relevant di-
+rections: Instead of solving the full system of ﬂow equa-
+tions, including the gravitational couplings, we decouple
+those degrees of freedom by hand at k = MPl, i.e., we set
+g(k) = g∗for k > MPl and g(k) = 0 for k < MPl.
+Flowing further into the IR, φv or φd can undergo a spon-
+taneous breaking of the Z2 symmetry. We do not study
+trajectories for which the ﬁxed-point values already lie in
+the symmetry-broken regime, and leave the exploration
+of the corresponding phenomenology to future work. In
+order to make the spontaneous symmetry breaking in the
+IR explicit, it is advantageous to rewrite the potential as
+
+---PAGE BREAK---
+24
+a Taylor expansion around the minimum:
+V (φv, φd) = λHP
+4
+ φ2
+v −v2
+v
+  φ2
+d −v2
+d
+
++
+X
+i=v,d
+λi
+8
+ φ2
+i −v2
+i
+2 .
+(43)
+For the ﬂow in the symmetry-broken regime, we extend
+results of [121] in the fermionic sector and perform a
+computation around non-vanishing vacuum expectation
+value to obtain the additional contributions to beta
+functions in our system. Once the scale k drops below
+the mass of both scalars, the ﬂow freezes out and one
+obtains the infrared values for all couplings.
+Anticipating the application of our toy model to the
+full SM, we focus on the regime where φv undergoes spon-
+taneous symmetry breaking and ﬁx the vacuum expecta-
+tion value for φv to match the Higgs vacuum expectation
+value, ⟨φv⟩≡vv ≈246 GeV. We are then left with a sin-
+gle free parameter. We emphasize the marked contrast
+to an EFT analysis of the same model, which would fea-
+ture seven additional canonically marginal couplings as
+free parameters.
+Depending on the IR value of the dark scalar mass m2
+d,
+three diﬀerent scenarios can be distinguished: (i) The
+second scalar φd could remain in the unbroken regime
+in the IR, rendering the corresponding fermion mass-
+less. (ii) The vacuum expectation value of φd could be
+smaller than the one of φv, or (iii) it could be larger.
+Case i) results in the dark scalar being unstable and de-
+caying into the massless fermion. Due to its relativistic
+nature, it would be unlikely to provide a dark-matter
+candidate in agreement with constraints from structure
+formation. This leaves us with cases ii) and iii). Once
+φd also undergoes spontaneous symmetry breaking, the
+physical masses are given by the eigenvalues of the Hes-
+sian of the corresponding symmetry-broken potential,
+M 2
+V/D = 1
+2
+
+λvv2
+v + λdv2
+d
+±
+q
+(λvv2v −λdv2
+d)2 + 4λ2
+HPv2v v2
+d
+
+. (44)
+Both scalars mix with a mixing angle, see, e.g., [233, 238]
+tan 2α = −2vvvdλHP
+λvv2v −λdv2
+d
+.
+(45)
+For MD > MV , i.e., scenario (iii), the portal coupling in
+the SM to a dark scalar needs to be ∼O(0.1) in order
+to thermally produce the correct relic density, see, e.g.,
+[239].
+For smaller portal couplings, an excess of dark
+matter will be produced. In comparison, the portal cou-
+pling λHP in our toy model is typically very small at the
+ﬁxed point FP3, cf. Fig. 14. Assuming that a quantita-
+tive comparison between the toy model and the SM is
+meaningful, we conclude that MD > MV is likely disfa-
+vored as it might overclose the universe. Thus, we focus
+on scenario (ii) with MD < MV .
+FIG. 17.
+Illustration of the critical surface in a coupling
+space spanned by three couplings gi. The ﬁrst coupling g1
+is ﬁxed in terms of g2 and g3. For a ﬂat hypersurface g1 is
+independent of g2 and g3. If the critical surface is curved it
+is ﬁxed as a function of the other couplings.
+In Fig. 16, we vary the ﬁxed-point values for g∗and
+λ∗, since these depend on, e.g., the number of additional
+matter ﬁelds in the system. At a given choice of g∗, λ∗, a
+unique relationship between the portal coupling and the
+dark scalar mass emerges. The quantitative relationship
+also depends on the relevant parameters in the matter
+sector of the system, mv and md. This is a consequence
+of the curvature of the critical hypersurface of the ﬁxed
+point: For a critical hypersurface that is not curved, each
+irrelevant coupling must take one uniquely ﬁxed value
+in the IR as a consequence of asymptotic safety in the
+UV. In contrast, for a critical hypersurface with curva-
+ture, the IR value of an irrelevant coupling is a func-
+tion of the values of the relevant ones, see illustration in
+Fig. 17. In particular, once the relevant coupling vv(kIR)
+is ﬁxed by observations, one relevant direction remains
+in the matter sector, namely vd. Due to the curvature of
+the critical hypersurface, the IR values of all irrelevant
+couplings depend on the value of this relevant direction.
+Translating it into the scalar dark-matter mass then re-
+sults in a unique curve in the λHP, λd, Mψd, ξd-parameter
+space.
+In [35], we kept g∗and λ∗ﬁxed, showing just
+one such curve. Computing the gravitational ﬁxed-point
+value with a particular set of beta functions and assum-
+ing a ﬁxed matter content allowed us to obtain a sin-
+gle quantitative relation. Here, we instead explore the
+predictive relationship as a function of g∗, λ∗, account-
+ing for systematic uncertainties in the gravitational beta
+functions.
+Going beyond the gravitational ﬁxed point
+considered in [35], the existence and qualitative nature
+of the predictive relation remains unchanged, see Fig. 16.
+Quantitatively, it changes upon varying the gravitational
+ﬁxed point values. The portal coupling is always of or-
+der |λHP| ∼10−3. The existence of a predictive relation
+beyond the ﬁxed point considered in [35] illustrates, how
+asymptotic safety might identify interesting regions in
+the matter parameter space independent of the particu-
+lar gravitational ﬁxed point values.
+To connect to existing and upcoming observational
+constraints, both from direct searches [202–217], as well
+as from cosmological probes [240, 241], a crucial next step
+is to extend the visible sector to a more realistic repre-
+sentation of the SM Higgs sector. In this context it will
+
+---PAGE BREAK---
+25
+also be crucial to extend the understanding of the role of
+the dark fermion in the thermal history of the universe.
+In summary, our scalar-Yukawa model provides a con-
+crete example of a model with a non-vanishing portal
+coupling.
+It illustrates the high degree of predictivity
+that can emerge in asymptotically safe dark-matter mod-
+els. Beyond our portal model, asymptotic safety allows to
+classify dark matter models with regard to whether they
+can be UV completed/extended through the existence
+of an asymptotically safe gravity-matter ﬁxed point. In
+doing so, asymptotic safety could identify models and
+parameter regions that are of special interest for experi-
+mental dark matter searches.
+VI.
+CONCLUSIONS AND OUTLOOK
+A.
+Summary of key results
+In this paper, we have studied the interplay of scalar
+ﬁelds with quantum gravity. We have mostly focused on
+asymptotically safe gravity, while including some com-
+ments from a broader, eﬀective-ﬁeld-theory perspective.
+Scalar ﬁelds play a key role in particle physics, constitut-
+ing the Higgs sector in and beyond the Standard Model.
+Further, they could be relevant in a cosmological con-
+text, driving an early inﬂationary phase as well as late-
+time expansion of the universe. At the interface of parti-
+cle physics and cosmology, scalars constitute dark-matter
+candidates. In all three contexts, a decoupling argument
+is typically invoked to neglect quantum gravity, based
+on a separation of the relevant scales from the Planck
+scale. Here, we challenge this view, by pointing out that
+the interplay of scalar ﬁelds with quantum gravity could
+strongly constrain scalar systems. In fact, quantum grav-
+ity is non-negligible at the microscopic scales which deter-
+mine the fundamental properties of scalar sectors. Hence,
+while quantum gravity is not dynamically relevant at the
+scales at which we make observations in particle physics
+and cosmology today, it may be inherently relevant by
+ﬁxing the fundamental parameters of these systems which
+determine their observable properties.
+Within the asymptotic-safety approach to quantum
+gravity, the underlying quantum scale symmetry requires
+a balance between the microscopic interaction strength
+of quantum gravity with that of the matter ﬁelds. This
+balance relates various couplings in the system to each
+other at the microscopic level. The RG ﬂow maps the
+corresponding relations to the values of couplings at
+macroscopic scales. Consequences of asymptotic safety
+are thereby (in principle) imprinted on the (observable)
+macrophysics.
+Therefore, free parameters of the SM,
+dark matter and dark energy as well as the inﬂation-
+ary sector could become calculable in asymptotic safety,
+see, e.g., [10, 11, 13–15, 17, 18, 38, 242, 243] for earlier
+work along these lines and [49, 244] for reviews and fur-
+ther references therein. Potentially, even free parameters
+of the geometry, such as the spacetime dimensionality,
+might be constrained by asymptotic safety [87].
+The leading question for this research is, whether
+scenarios in particle physics and/or cosmology could
+be
+excluded
+based
+on
+their
+incompatibility
+with
+asymptotically safe gravity.
+For phenomenology and
+model-building, this could serve as a powerful guiding
+principle to distinguish among diﬀerent eﬀective the-
+ories.
+For fundamental quantum-gravity research, it
+could provide an observational test that could rule out
+asymptotically safe gravity.
+To achieve this goal, it is
+important to identify no-go examples, i.e., models which
+cannot be consistently embedded into asymptotic safety
+4.
+In this work, we provisionally strengthen previous
+evidence for such no-go examples and ﬁnd tentative
+indications for new ones.
+For instance, we identify
+Higgs inﬂation as one such potential no-go-example.
+Quite intriguingly, it is the combination of cosmological
+considerations and particle-physics considerations which
+provide hints against the viability of asymptotically
+safe Higgs inﬂation in agreement with observations.
+This highlights that the development of a useful phe-
+nomenology of quantum gravity might require a broader
+view that encompasses particle physics and cosmology,
+instead of the focus on just one of these sectors.
+In this work, we explore simple models for the mat-
+ter sector, starting with a single scalar coupled to quan-
+tum gravity, promoting it to a simple Yukawa system,
+then two coupled scalar sectors and ﬁnally two coupled
+Yukawa systems. These simple systems serve to eluci-
+date the mechanisms by which asymptotic safety might
+impose its predictive power on particle physics and cos-
+mology.
+Let us add an important disclaimer: all results hold
+within truncations of the Euclidean Renormalization
+Group ﬂow; therefore they are aﬀected by systematic
+uncertainties, the choice of Euclidean vs.
+Lorentzian
+signature, and additionally, our restriction to simple
+models which account for a subset of the degrees of
+freedom of the Standard Model only.
+We will discuss
+these limitations in more detail after reviewing our
+results.
+It is a main aim of our investigations to provide
+new and strengthen existing hints for the potential
+consequences of asymptotic safety for IR physics.
+We
+mostly do so by leaving the ﬁxed-point values for the
+gravitational couplings, the Newton coupling g∗and
+the cosmological constant λ∗, unspeciﬁed.
+In fact,
+diﬀerent consequences for low-energy physics follow
+from asymptotic safety in diﬀerent regions within this
+parameter space.
+Note that this places no restriction
+on the measured low-energy values of these gravita-
+tional couplings.
+Exploring the full parameter space
+4 One might also call this the “swampland” of asymptotic safety
+– in analogy to the swampland of string theory.
+
+---PAGE BREAK---
+26
+for these two couplings enables us to study which
+low-energy
+physics
+scenarios
+could
+in principle
+be
+compatible with asymptotic safety. Firstly, this allows
+us to identify whether a given scenario is ruled out
+in the entire region of the gravitational parameter
+space that we explore.
+Secondly, the realization of
+a given scenario could single out a preferred region
+in the gravitational parameter space.
+Where in this
+parameter space the ﬁxed point lies, is computable
+and depends on the number of matter ﬁelds, see, e.g.,
+[16, 30, 64, 74, 84, 88, 125, 245–248].
+Thus, within
+asymptotic safety, a given matter content (in the dark
+and visible sector) is (in principle) connected to a par-
+ticular set of low-energy physics consequences, see also
+[13] for a discussion in the context of the top-quark mass.
+Particle physics
+We ﬁnd that the inclusion of the non-minimal coupling
+leaves the scenario from [13, 83, 184] intact, where
+the ﬁxed-point structure of gravity-Yukawa systems
+could result in a calculation of the top and bottom
+quark masses.
+In our study, adding the non-minimal
+coupling to the setting, the physics of simple Yukawa
+systems is still determined by the interplay of two
+ﬁxed points.
+These result in an upper bound on the
+fermion mass compatible with asymptotic safety. Quite
+intriguingly, there is only a narrow range of values for
+the non-minimal coupling ξ for which this is the case.
+The ﬁxed-point value ξ∗falls right into this range in our
+truncation, constituting a rather nontrivial test of the
+mechanism proposed in [13, 83, 184].
+Moreover, we ﬁnd that under the impact of quantum
+gravity, the non-minimal coupling could push simple
+Yukawa systems into a regime of spontaneous symmetry
+breaking already at the UV ﬁxed point, see [21] for
+related considerations in grand uniﬁed theories. Within
+our approximation, this gravity-induced spontaneous
+symmetry breaking occurs only for suﬃciently negative
+ﬁxed-point values of the cosmological constant.
+In
+order to properly investigate the resulting low-energy
+phenomenology, global ﬂows for the Higgs potential, see,
+e.g., [249], are called for.
+Finally, we ﬁnd that the value of the non-minimal
+coupling ξ is a prediction of asymptotic safety within
+our truncation. If this property persists for the full SM
+coupled to quantum gravity, the prediction for ξ could
+become highly relevant for considerations of vacuum
+stability in the early universe, see [195].
+Cosmology
+We strengthen previous results indicating that quantum
+gravity tends to drive scalar potentials towards ﬂatness,
+see, e.g., [11, 15, 17, 18, 24, 25, 29, 30]. This occurs in an
+appropriate part of the gravitational parameter space.
+This ﬂattening-mechanism also reduces the number
+of free parameters in a scalar potential compared to
+the canonically relevant and marginal set.
+Within a
+cosmological setting, these results might play a role
+both for inﬂation as well as dynamical dark energy, and
+might potentially set asymptotic safety apart from other
+proposals for fundamental physics.
+We re-express our result in terms of scale-dependent
+slow-roll-inspired parameters which lend themselves to
+a study in an inﬂationary setting.
+We ﬁnd that the
+predictive power of asymptotic safety could ﬁx the
+values of these parameters in an appropriate regime of
+the gravitational parameter space.
+The gravitational
+ﬂattening-mechanism appears encouraging in view of the
+observational indications for near-scale invariance. Yet,
+matching the amplitude of scalar ﬂuctuations within
+the potentially rather constraining setting of asymptotic
+safety might be a challenge.
+The next decade in observational cosmology is ex-
+pected to produce exciting novel insights into the value
+of the equation-of-state parameter for dark energy [43–
+47]. Within asymptotic safety, realizing a cosmological
+constant of the correct magnitude appears possible,
+since it corresponds to a relevant coupling. Additionally,
+scenarios with a very ﬂat scalar potential also appear
+viable – and even preferred – within asymptotic safety
+in our truncation.
+Therefore, we tentatively conclude
+that an equation-of-state-parameter w ≈−1 might be
+preferred in asymptotic safety.
+The degree of predictivity for scalar potentials de-
+pends on the gravitational ﬁxed-point values.
+The
+latter
+in
+turn
+depend
+on
+the
+number
+of
+matter
+degrees of freedom – both dark and visible ones
+[16, 30, 64, 74, 84, 88, 125, 245–248].
+Accordingly, a
+given set of matter ﬁelds could translate into strong
+constraints on inﬂation and dynamical dark energy.
+Conversely, for alternative BSM settings, matter ﬁelds
+might push the gravitational ﬁxed-point values into a
+regime, where fewer theoretical constraints on scalar
+potentials exist. In the former case, a confrontation with
+observational data is more promising and might even
+allow to rule out asymptotic safety with a given matter
+content in the future.
+At the interface
+To make a beginning step in the investigation of Higgs
+inﬂation, we use a simple Yukawa system as a toy model
+for the Higgs-top-sector of the SM. We ﬁnd that the
+ratio of quartic coupling and non-minimal coupling could
+reach small enough values to match observational data
+on the amplitude of scalar ﬂuctuations for a suﬃciently
+small ﬁxed-point value g∗. Due to the predictive nature
+of the asymptotically safe ﬁxed point, this requirement
+simultaneously ﬁxes the IR value of the Yukawa coupling
+in our truncation. Sizable values of the Yukawa coupling
+can only be accommodated at large values of λ4/ξ2.
+Hence, we conclude that within our truncation and toy
+model, a sizable top mass cannot be reconciled with
+
+---PAGE BREAK---
+27
+a realistic amplitude of primordial scalar ﬂuctuation
+anywhere in the gravitational parameter space.
+These
+studies clearly call for an extension of the model and the
+truncation; an investigation of the value of the Higgs
+mass is then also required. Nevertheless, using observa-
+tions from particle physics and cosmology concertedly
+already provides us with a ﬁrst tentative hint for the
+incompatibility of Higgs inﬂation with asymptotic safety.
+Dark matter is another mystery at the interface of
+cosmology and particle physics. Here, we strengthen the
+decoupling result from [18] for a single, uncharged scalar
+as the only ﬁeld in the dark sector: Under the impact of
+asymptotic safety, the Higgs portal coupling vanishes at
+all scales, ruling out the scalar ﬁeld as a thermal relic,
+also in the presence of a non-minimal coupling.
+This
+could constitute a compelling example for a dark-matter
+model in the asymptotically safe swampland.
+We further expand on the dark-matter model we
+proposed in [35] that consists of two Yukawa sectors.
+These represent a dark sector consisting of a dark scalar
+and a dark fermion and a toy model for the Higgs-top
+sector of the SM. A non-vanishing ﬁxed-point value
+for both Yukawa couplings induces ﬁnite non-minimal
+couplings and non-vanishing portal coupling; therefore
+the dynamical dark fermion is instrumental in lifting the
+decoupling property of the dark sector.
+The resulting ﬁxed point is highly predictive, featuring
+only two free parameters in the matter sector within our
+truncation:
+Both Yukawa couplings, all three quartic
+couplings and both non-minimal coupling are predicted
+by asymptotic safety as a function of the two free pa-
+rameters. Fixing one of them by requiring to match the
+vacuum expectation value of the Higgs ﬁeld, we remain
+with just a single free parameter.
+This allows us to
+compute a unique relation between the dark-matter mass
+and all canonically marginal couplings in the infrared
+that holds in our truncation and toy model. In contrast,
+a canonical EFT treatment features four free parameters
+in the dark sector only, namely the dark Yukawa cou-
+pling, dark non-minimal coupling, dark quartic coupling
+and portal coupling,
+providing no relation between
+them.
+This exempliﬁes that asymptotic safety might
+be a powerful paradigm to severely constrain the theo-
+retically viable parameter space for dark-matter searches.
+As emphasized previously, these results are subject to
+systematic uncertainties which need to be addressed in
+the future, and which we will discuss in more detail now.
+B.
+Outlook: improving on systematic uncertainties
+Several sources of systematic uncertainties are aﬀect-
+ing the current state-of-the-art in asymptotic-safety re-
+search and have been discussed extensively in [72], see
+also [250]. More recently, progress in one of the key open
+questions, that of unitarity, has been made in [251–253].
+In particular, a proposal for an asymptotically safe action
+which satisﬁes a perturbative notion of unitarity (tied to
+the poles of the graviton propagator about a ﬂat back-
+ground) has been put forward.
+Here, we will highlight some of the open questions
+that are most relevant for our discussion.
+Systematic uncertainties: Choice of truncation
+Our results are achieved within a truncation of the eﬀec-
+tive dynamics. It follows the assumption that canonical
+power counting remains a good guiding principle at the
+interacting ﬁxed point, which is supported by a number
+of explicit results [74–80, 89, 90], see Sec. II B for more
+details. We ﬁnd further evidence in support of the corre-
+sponding near-perturbative nature of asymptotic safety,
+in that the critical exponents at the ﬁxed point do typ-
+ically not diﬀer from the canonical dimensions by large
+amounts. This also constitutes an a-posteriori viability-
+check of our choice of truncation.
+Fixed-point structures in simple Yukawa systems [13] and
+a dark sector with portal coupling [18] remain stable un-
+der the inclusion of the non-minimal coupling, lending
+further support to an asymptotically safe UV comple-
+tion of such systems with an enhanced predictive power.
+Based on the principle of near-perturbativity, the addi-
+tion of R2 and R2
+µν to the gravitational dynamics appears
+indicated. This has partially been done in [12, 85] for
+scalar systems and Yukawa systems coupled to gravity,
+see also [17] for the unimodular asymptotic safety case.
+In short, the higher-order couplings modify the propaga-
+tor for metric ﬂuctuations, which is still proportional to
+g, but with a denominator that depends on the higher-
+order couplings in addition to the cosmological constant.
+Accordingly, the parameter space explored, e.g., in Fig. 1,
+7, 10 and 12 is enlarged by two additional directions. At
+ﬁnite values of higher-order couplings, the boundaries in
+the λ−g plane are deformed. Therefore, the mechanisms
+we explored here are expected to persist in this larger pa-
+rameter space.
+In the future, going beyond polynomial truncations
+for the scalar potential, e.g., with grid methods [254]
+or spectral methods [249, 255], is also indicated, in
+particular to properly investigate the stability of the
+Higgs potential.
+Systematic uncertainties: Lorentzian signature
+Our results are obtained within a fully Euclidean set-
+ting. While the RG ﬂow at momentum scales below the
+Planck scale can be analytically continued, this is not
+necessarily the case for the transplanckian ﬂow. As long
+as the gravitational ﬁxed point is near-perturbative, and
+the vacuum of the theory is ﬂat, or at least maximally
+symmetric,
+an
+analytic
+continuation
+might
+remain
+feasible even for the quantum gravity regime.
+This
+pressing question deserves further investigation in the
+future.
+
+---PAGE BREAK---
+28
+Systematic uncertainties: Missing degrees of freedom
+Here, we have worked in toy models with few matter
+ﬁelds. The RG ﬂows of such simpliﬁed matter systems
+share many characteristics with that of the Higgs-top-
+sector of the Standard Model, and are therefore useful
+to explore possible structures that might arise in the
+Standard Model coupled to quantum gravity. Neverthe-
+less, accounting for the missing degrees of freedom is an
+important future task.
+In summary, we have strengthened existing and found
+novel indications that certain models for dark matter as
+well as inﬂation might lie in the “swampland” of asymp-
+totic safety, i.e., be incompatible with an asymptotically
+safe UV sector. Such negative results are key in order
+to identify potential observational routes to ruling out
+this proposal for quantum gravity. Conversely, we have
+also identiﬁed potential phenomenological implications of
+asymptotic safety which could be compatible with obser-
+vations, identifying matter theories in the “landscape” of
+asymptotic safety. In both cases, their source is the pre-
+dictive power of asymptotic safety, which conversely im-
+plies that asymptotic safety could serve as a very strong
+selection principle for particle physics, cosmology and at
+the interface of the two ﬁelds.
+ACKNOWLEDGMENTS
+We would like to thank Aaron Held for insightful dis-
+cussions, Jan Kwapisz for a discussion on eternal inﬂa-
+tion and the speakers and participants of the Online-
+Workshop Series on Quantum Gravity for discussions
+on the interplay of dark energy and quantum gravity.
+This work is supported by a research grant (29405) from
+VILLUM FONDEN. M. P. is supported by a scholar-
+ship of the German Academic Scholarship Foundation
+and gratefully acknowledges the extended hospitality at
+CP3-Origins during various stages of this work.
+Appendix A: Formal aspects
+...where we specify the gauge-ﬁxing procedure and the
+regulator with our focus on an auxiliary background-
+scalar
+ﬁeld
+dependence
+related
+to
+the
+non-minimal
+coupling, which we then analyze.
+Further, we study
+the anomalous dimension of the scalar as a measure of
+robustness of our truncation.
+While obtaining the beta functions from the eﬀec-
+tive action, one encounters subtleties related to the non-
+minimal coupling. We discuss these by focusing on the
+following truncation for scalar-gravity for the remainder
+of this section
+Γk = Γscal+grav
+k
++ Sgf + Sgh.
+(A1)
+Here, we use a split of the scalar into
+φ = ¯φ + ϕ.
+(A2)
+In contrast to the metric, there is actually no need to
+introduce this split, since no gauge-ﬁxing is required and
+the coarse-graining procedure is based on ¯gµν.
+Never-
+theless, it can be useful to introduce ¯φ for calculational
+convenience in the gauge-ﬁxing and regularization term
+for the metric, see, e.g., [24].
+1.
+Gauge ﬁxing
+...where
+we
+specify
+the
+background-ﬁeld-dependent
+gauge ﬁxing we employ and detail how the scalar
+background-ﬁeld appears in the construction of the
+gravitational gauge-ﬁxing term.
+To invert Γ(2)
+k , it is computationally advantageous to
+decompose the metric ﬂuctuation hµν into a transverse-
+traceless tensor, a divergence-free vector and two scalar
+modes according to the York decomposition [256], as fol-
+lows
+hµν = hTT
+µν + ¯DµvT
+ν + ¯DνvT
+µ + ¯Dµ ¯Dνσ −¯gµν ¯D2σ −1
+4 ¯gµνh.
+(A3)
+Herein, ¯Dµ is the covariant derivative with respect to the
+background metric ¯gµν. hTT
+µν is transverse, ¯DνhTT
+µν = 0
+and traceless ¯gµνhTT
+µν = 0, and vT
+µ is transverse, ¯DµvT
+µ =
+0.
+Due to the gauge symmetry in the gravitational sec-
+tor, Γ(2)
+k
+contains zero modes, requiring gauge ﬁxing. We
+choose a linear, background-covariant gauge ﬁxing
+Sgf = 1
+2α
+Z
+d4x √¯g ¯gµνFµFν,
+(A4)
+with
+Fµ =
+r
+1
+16πGN
++ αGFξ ¯φ2
+
+¯Dρhρµ −1 + β
+4
+¯Dµhρ
+ρ
+
+.
+(A5)
+For all results reported in the following, we specify to β =
+α = 0, see, e.g., [257] for a study of the gauge dependence
+in the pure-gravity case. Our choice decouples one of the
+two scalar modes and leaves only contributions from hTT
+µν
+and h in the beta functions of matter couplings.
+In choosing the gauge ﬁxing (A4), we have introduced
+a term dependent on the scalar background ﬁeld into
+the gauge ﬁxing.
+It is convenient to do so in trunca-
+tions that include non-minimal gravity-scalar couplings,
+as the gauge-ﬁxed propagator simpliﬁes for this choice
+[24]. We point out that it is not consistent to disregard
+this background-scalar-ﬁeld dependence in the Faddeev-
+
+---PAGE BREAK---
+29
+Popov determinant
+det
+δFµ
+δζλ
+
+= det
+ r
+1
+16πGN
++ αGFξ ¯φ2 ·
+(A6)
+·
+
+¯Dρ¯gσ
+µgλ
+σDρ + ¯Dσ¯gρ
+µgλ
+σDρ −1 + β
+2
+¯Dµ¯gρσgλ
+σDρ
+!
+.
+In the above, ζλ is the parameter describing an inﬁnites-
+imal diﬀeomorphism.
+As usual, Faddeev-Popov ghosts can be used to ex-
+ponentiate the determinant. A redeﬁnition of the ghost
+ﬁelds absorbing a factor of √16πGN that is present even
+at αGF = 0 allows to normalize the ghost term conve-
+niently. We write the ghost term in the form
+Sgh = −
+Z
+d4x √¯g
+q
+1 + αGF(1 −αghost)16πGNξ ¯φ2·
+·¯cµ
+
+¯Dρ¯gµκgκνDρ + ¯Dρ¯gµκgρνDκ
+−1 + β
+2
+¯Dµ¯gρσgρνDσ
+
+cν.
+(A7)
+Here, the parameter αghost is an auxiliary parameter,
+that we introduce to track the background-scalar depen-
+dence of the ghost term. Exponentiating the Faddeev-
+Popov determinant (A7) actually results in αghost = 0.
+With this choice, we fully compensate the additional
+background- scalar dependence of the gauge ﬁxing term.
+In contrast, for αghost = 1 the background-scalar ﬁeld
+dependence in the Faddeev-Popov determinant has been
+dropped. By comparing αghost = 0 to αghost = 1, we
+quantify the impact of such a treatment.
+2.
+Choice of regulator
+...where we provide details of the regulator function we
+use and discuss how the scalar background ﬁeld appears
+in the construction.
+For the regulator, we utilize
+Rk( ¯D) = ¯D r
+k2
+¯D
+
+,
+(A8)
+with the shape function r(x) = (x −1)Θ(x −1), where
+Θ(x) is the Heaviside distribution [258]. The operator
+¯D denotes a generalized background-covariant Laplacian.
+In the simplest case of a ﬂat background, it reduces to p2.
+More general choices for the argument of the regulator
+function in Eq. (A8) are possible and can be advanta-
+geous for practical calculations. There must not be an
+additional dependence on the dynamical ﬁelds in the reg-
+ulator, since this would destroy the one-loop structure
+of the ﬂow equation. In contrast, the background-ﬁeld
+dependence is a priori unrestricted with unbroken back-
+ground gauge invariance the only strict requirement.
+For simplicity, one would like the regulator to entirely
+remove the appearance of Laplacians in the denomina-
+tor of the ﬂow equation. This strategy has been imple-
+mented, e.g., in [24].
+For a system with higher-order
+curvature invariants and/or non-minimal couplings, this
+strategy entails a choice of regulator that introduces a
+scalar background-ﬁeld dependence in addition to the
+background-metric dependence contained in the back-
+ground Laplacians. In [259], it has been demonstrated
+in the context of a non-gravitational theory that such
+additional background-scalar ﬁeld dependencies have to
+be treated with care within approximations, where they
+can lead to deformations of ﬁxed points or even introduce
+new zeros of beta functions. Therefore, we will explore
+the dependence on the background scalar ﬁeld that arises
+through the choice of regulator as in [24] carefully. We
+also refer to [30] for a brief discussion of the same point
+using the exponential split.
+In order to test the eﬀect of additional background-
+scalar-ﬁeld dependencies we introduce an additional pa-
+rameter αreg accompanying the background-scalar-ﬁeld-
+dependent part of the regulator. Speciﬁcally, we choose
+Rµνρσ
+k TT = 1
+4
+
+1
+16πGN
++ ξαreg ¯φ2
+
+·
+·
+
+k2 + (−¯D
+2)
+
+Θ
+
+k2 + (−¯D
+2)
+
+1µνρσ
+TT
+(A9)
+Rµν
+k vv = 1
+2α
+
+1
+16πGN
++ ξαGF ¯φ2
+
+·
+·
+
+k2 + (−¯D
+2)
+
+Θ
+
+k2 + (−¯D
+2)
+
+1µν
+v
+(A10)
+Rk hh = −3
+32
+
+1
+16πGN
++ ξαreg ¯φ2
+
+·
+·
+
+k2 + (−¯D
+2)
+
+Θ
+
+k2 + (−¯D
+2)
+
+(A11)
+Rk σσ =
+3
+32α
+(3 −α)
+16πGN
+−(ααreg −3αGF)ξ ¯φ2
+
+·
+·
+
+k2 + (−¯D
+2)
+
+Θ
+
+k2 + (−¯D
+2)
+
+(A12)
+Rk φφ = 1
+2
+
+k2 + (−¯D
+2)
+
+Zφ Θ
+
+k2 + (−¯D
+2)
+
+(A13)
+Rk hσ = −1
+16
+
+1
+16πGN
++ ξαreg ¯φ2
+
+Θ
+
+k2 + (−¯D
+2)
+
+·
+·
+q
+3k2(3k2 −¯R)
+−
+q
+3(−¯D
+2)(3(−¯D
+2) + ¯R)
+
+(A14)
+Rk hφ = −3
+2
+
+k2 + (−¯D
+2)
+ √αregξ ¯φ Θ
+
+k2 + (−¯D
+2)
+
+(A15)
+Rk σφ = −1
+2
+q
+3k2(3k2 −¯R)
+−
+q
+3(−¯D
+2)(3(−¯D
+2) + ¯R)
+
+·
+·√αregξ ¯φ Θ
+
+k2 + (−¯D
+2)
+
+,
+(A16)
+
+---PAGE BREAK---
+30
+with 1TT and 1v the identity in the space of transverse-
+traceless tensors and transverse vectors, respectively.
+The choice αreg = 1 corresponds to the choice in [24]
+with a background-scalar dependent regulator.
+The
+choice αreg = 0 corresponds to a computation with a
+background-scalar independent regulator.
+In the sections IV and V, where fermions are included,
+we choose a fermionic regulator of the form
+Rk ¯
+ψψ = iZψ ¯/∇
+
+1 −
+q
+k2/(−¯/∇)2
+
+Θ
+
+k2 −(−¯/∇)2
+.
+(A17)
+3.
+Background ﬁeld dependence
+...where we study quantitatively, whether the auxiliary
+background-scalar-ﬁeld
+dependence
+of
+regulator
+and
+gauge ﬁxing changes key aspects of the results, such as,
+e.g., the signs of critical exponents within our truncation.
+This can also be interpreted as a study of the robustness
+of our approximation.
+For clarity, we list the three parameters that track the
+background-scalar-ﬁeld dependence in our calculation:
+• αGF tracks the background-scalar-ﬁeld dependence
+of the gauge-ﬁxing term, which vanishes for αGF =
+0,
+• αghost
+allows
+to
+independently
+vary
+the
+background-scalar-ﬁeld dependence of the corre-
+sponding Faddeev-Popov ghost term. In principle,
+one needs to choose αghost = 0 (if αGF ̸= 0) for
+consistency. Here we treat αghost as an indepen-
+dent parameter to compare to previous work in
+the literature.
+• αreg tracks the background-scalar-ﬁeld dependence
+of the regulator for the metric ﬂuctuations.
+Choosing the values αGF = 0 = αreg results in an ab-
+sence of the extra background-scalar-ﬁeld dependence
+from these terms.
+The ﬁxed-point values are independent of αGF, αreg
+and αghost and given by 5
+λ∗= 0.171,
+g∗= 0.843
+m2
+∗= λ4 ∗= ξ∗= 0.
+(A18)
+In contrast, the critical exponents are aﬀected by these
+parameters, as would the ﬁxed-point coordinates be if ξ∗
+was not equal to zero. Modifying αGF, αghost and αreg
+can aﬀect the β-functions for the individual couplings, as
+5 Quantitative deviations of this ﬁxed point from (11) arise due to
+the diﬀering approximations for the graviton anomalous dimen-
+sion ηh.
+-0.6
+-0.4
+-0.2
+0.0
+0.2
+0.4
+0.0
+0.5
+1.0
+-0.01
+0.
+0.01
+-0.02
+0.
+0.02
+FIG. 18.
+The β-function for the non-minimal coupling ξ as a
+function of ξ for varying background-scalar dependence. We
+set the quartic coupling to its ﬁxed-point value λ4 ∗= 0.
+can also be seen in Fig. 18. As an example of the dif-
+ferences between the background-scalar dependent com-
+putation (αreg = αGF = αghost = 1) and a background-
+scalar independent one (αreg = αGF = 0), the diﬀerence
+for βm2 and βξ in the transverse traceless sector reads
+βdep
+m2 −βindep
+m2
+= 5g(1 −4λ)ξ
+2π(1 −2λ)2 ,
+(A19)
+βdep
+ξ
+−βindep
+ξ
+= −5gλ(3 −2λ)ξ
+3π(1 −2λ)3 .
+(A20)
+The additional terms arise from the ﬁeld dependence of
+the regulator as well as the gauge ﬁxing term.
+These
+changes under a relatively small change of an unphysical
+parameter do not necessarily signify much if they occur
+in non-observable quantities like beta functions. At the
+same time, critical exponents of a physical ﬁxed point are
+universal, i.e., must be independent of such a technical
+choice. This statement holds, as long as they are calcu-
+lated exactly; an approximation introduces a dependence
+on such unphysical parameters. In the following we use
+this to probe the ﬁxed point (A18) and test the quality
+of the approximation.
+If we choose αGF = αreg = 0 (with arbitrary αghost)
+and our gauge choice β = 0, the beta functions we ob-
+tain for the potential terms at ξ = 0 agree with the beta
+functions reported in [18]. For this case, the critical ex-
+ponents are given by
+θ(1/2) = 2.72 ± 1.70i,
+θ(3/4) = 0.63 ± 2.55i,
+θ(5) = −2.26.
+(A21)
+The ﬁrst two relevant directions overlap with λ and g and
+the third and fourth align roughly with m2 and ξ.
+
+---PAGE BREAK---
+31
+0.0
+0.5
+1.0
+1.5
+2.0
+0.0
+0.5
+1.0
+1.5
+2.0
+0.86
+0.88
+0.90
+0.92
+0.94
+0.96
+0.98
+FIG. 19.
+Real part of the critical exponent θ(3) as a function
+of the parameters αGF and αghost. The red dot marks the
+point corresponding to the computation with ﬁeld dependent
+regulator and gauge-ﬁxing term as in [24]. For αghost = 0,
+the critical exponent becomes independent of αGF as the con-
+tributions from the ghost term cancel those from the gauge
+ﬁxing term. The critical exponent is evaluated at the ﬁxed
+point (A18). For diﬀerent values of the gravitational couplings
+as well as for αreg = 0, i.e., a background-scalar independent
+regulator, the dependence on αGF and αghost is qualitatively
+similar.
+Setting αGF = αreg = αghost = 1 and choosing the
+gauge β = 1, our β-function for the scalar potential
+agrees with the one found in [24].
+If we evaluate the
+traces with heat-kernel methods, also the β-function for
+the non-minimal coupling agrees with that reference. To
+compare to those results, let us choose αGF = αreg =
+αghost = 1 and take into account the eﬀect of βg and βξ
+terms on the rhs, cf. discussion below in Sec. A 4. At the
+ﬁxed point (A18) the critical exponents read
+θ(1/2) = 2.36 ± 2.81i,
+θ(3/4) = 0.36 ± 2.81i,
+θ(5) = −2.26.
+(A22)
+As expected, the characteristic shift of the third and
+fourth critical exponent by −2 compared to the lead-
+ing critical exponents, ﬁrst observed in [24], is present in
+our results as well. The minor numerical diﬀerences with
+respect to that reference arise due to a diﬀerent gauge
+choice.
+We now study the scalar-background dependence by
+ﬁrst varying αGF and αghost continuously and then vary-
+ing αreg.
+First, ﬁxing αreg = 1, we observe that as long as the
+background-scalar dependence of the gauge-ﬁxing term
+is not fully accounted for by the ghost term (αghost ̸= 0),
+the critical exponents vary considerably under changes in
+αGF, cf. Fig. 19. This can go as far as changing the num-
+-2
+0
+2
+4
+0
+1
+2
+3
+4
+5
+FIG. 20.
+Real part of the critical exponents θ(3/4) as a func-
+tion of αreg at αghost = 0. The critical exponent is evaluated
+at the ﬁxed point (A18). For smaller λ∗, the curve ﬂattens,
+while the value of αreg at which θ(3/4) = 0, shifts to the left.
+ber of relevant directions for αGF = αghost ≈5.2. The
+choice αGF = αghost = 1 used in [24] could be criticized
+based on the extra ﬁeld-dependence it introduces, but
+does not yield qualitatively diﬀerent results from the case
+without the additional ﬁeld dependence. In fact, the two
+second-largest critical exponents are θ(3/4) = 0.99±2.06i,
+once the scalar-background dependence is fully taken into
+account in the ghost action (αghost = 0). In this case, the
+critical exponents become independent of αGF, as they
+should.
+Second, ﬁxing αghost = 0, such that the dependence
+on αGF vanishes, we vary αreg in Fig. 20. For moder-
+ate values of |αreg| ≤1.5, the critical exponents depend
+quantitatively on αreg, with no value for αreg preferred
+by the principle of minimum sensitivity. For large abso-
+lute values of αreg, the qualitative picture changes: For
+αreg < −1.8 and αreg > 4.1, the number of relevant direc-
+tions decreases. Similarly to the eﬀect observed in [259],
+the single-ﬁeld approximation for the scalar ﬁeld can thus
+change the qualitative picture, and αreg = 0 appears pre-
+ferred for this reason. For this choice one ﬁnds the criti-
+cal exponents in Eq. (A21). As long as the background-
+scalar dependence is not too strong, the number of rele-
+vant directions remains stable under technical modiﬁca-
+tions of the regulator and gauge-ﬁxing term.
+The number of relevant directions as a function of the
+gravitational ﬁxed point parameters is shown in Fig. 21.
+Here we also display the number of relevant directions for
+the Yukawa system considered in Sec. IV. In that system
+the number of relevant directions changes at the ﬁxed
+point (26) due to diﬀering technical choices, elucidating
+the diﬀering results in [124] and [12].
+The qualitative
+change under a relatively minor technical choice exem-
+pliﬁes why we consider the full gravitational parameter
+space.
+
+---PAGE BREAK---
+32
+-15
+-7.5 -2
+-1.5
+-1
+-0.5
+0
+0.4
+0
+2
+4
+6
+8
+10
+Number of
+Relevant
+directions
+0
+1
+2
+-15
+-7.5 -2
+-1.5
+-1
+-0.5
+0
+0.4
+0
+2
+4
+6
+8
+10
+Number of
+relevant
+directions
+0
+1
+2
+3
+FIG. 21.
+Number of relevant directions at the free ﬁxed
+point as a function of the gravitational couplings λ∗and g∗for
+αreg = αGF = 0 in the purely scalar (Yukawa) system, for the
+three (four) scalar couplings (m2, λ4, ξ(, y)) in the top (bot-
+tom) panel. The thin lines indicate the position of the corre-
+sponding areas using a scalar-background dependent regula-
+tor (αreg = αGF = αghost = 1) and the background ﬁeld ap-
+proximation ηh = −2. Reduced background-ﬁeld dependence
+reduces the sensitivity to a change in gravitational ﬁxed-point
+values. The vertical dashed line highlights a change in the
+scaling of the λ∗axis at λ∗= −2. For the Yukawa system
+the number of relevant directions changes. The blue triangle
+corresponds to the ﬁxed point (A18)/(26), the red square to
+ﬁxed point (12).
+4.
+Momentum-dependent interactions
+...where we explore the size of the scalar anomalous
+dimension and its impact on the ﬁxed-point results as a
+measure for the robustness of our truncation.
+As a test for the stability of the truncation (5), we com-
+pute the scalar anomalous dimension ηφ = −∂t ln Zφ(k2)
+-1.0
+-0.8
+-0.6
+-0.4
+-0.2
+0.0
+0.2
+0.4
+0.02
+0.04
+0.06
+0.08
+0.10
+-1.0
+-0.5
+0.0
+0.5
+1.0
+0.0
+0.5
+1.0
+1.5
+FIG. 22.
+The anomalous dimension ηφ for a varying value of
+the cosmological constant λ (upper panel) and non-minimal
+coupling ξ (lower panel) around the ﬁxed point λ∗= 0.171
+(ξ∗= 0). All other couplings are held constant. The anoma-
+lous dimension varies mildly with varying λ and increases to-
+wards the pole at λ = 1/2. It varies more strongly for varying
+ξ and is slightly negative for a very small range of negative ξ.
+in the presence of a non-minimal coupling to explore how
+much this impacts the ﬁxed-point results. We obtain
+ηφ = g (8 −ηh)(1 + 48(ξ −1
+2m2)) + 8ηhm2
+16π(3 −4λ)2(1 + m2)
++ g (8 −ηφ)(1 −24ξ + 432ξ2 −144ξm2) + 48ηφξm2
+48π(3 −4λ)(1 + m2)2
+−g
+108(ξ −1
+3m2)2
+π(3 −4λ)2(1 + m2)2 .
+(A23)
+In the limit ξ →0 and m2 →0, this reduces to the result
+from [85], as it should.
+Calculating the anomalous dimension with the ﬁxed-
+point values (A18), one obtains a small value of ηφ ≈
+0.044. In Fig. 22 we explore how this result depends on
+the particular ﬁxed-point values by studying the value
+of the anomalous dimension as a function of the non-
+minimal coupling and the cosmological constant treated
+as external parameters. Away from the pole λ = 1/2 and
+for |ξ| ≲0.5, the anomalous dimension remains small,
+tentatively indicating that momentum-dependent exten-
+sions of the truncation might be subleading. For larger
+
+---PAGE BREAK---
+33
+values of the non-minimal coupling, it appears indicated
+to extend the truncation to include higher-order momen-
+tum dependence.
+The shift due to the anomalous dimension modiﬁes
+the ﬁxed point (A18) at the sub-percent level.
+The
+critical exponents exhibit slightly larger modiﬁcations.
+The third/fourth critical exponents is shifted to θ(3/4) =
+0.58±2.55i. In particular a scenario in which the anoma-
+lous dimension shifts these parameters into the irrelevant
+region is not realized. Given that the anomalous dimen-
+sion is numerically small in a part of the parameter space,
+we will neglect it in some sections; but always indicate
+clearly whether we work in the approximation ηφ = 0.
+So far, in line with most of the existing literature, we
+employed the background-ﬁeld approximation, in which
+the anomalous dimension for the metric ﬂuctuation ﬁeld
+hµν equals the anomalous dimension for the background
+Newton coupling, ηh = ηN = −2. In the main body of
+the paper, instead, we set ηh = 0. Indeed, results in the
+literature indicate that this is a better approximation
+than ηN = −2 [75, 125, 246, 260–263].
+Appendix B: Flow of the Potential
+The ﬂow of the dimensionless potential in terms of the
+parameters (15) is given by
+∂tv =
+1
+96π2g(1 −16πgv) (3(1 + ϵ2) −32πg(v −2ϵ2
+1 + vϵ2))
+
+3g
+ 19 + 16ϵ2 −384π2v(1 + ϵ2)
+
++ 16πg2  48ϵ2
+1 + 1920π2v2(1 + ϵ2) −3v(9 + 512π2ϵ2
+1 + 4ϵ2)
+
++ 512π2g3v
+ 16ϵ2
+1 −384π2v2(1 + ϵ2) −v(5 −768π2ϵ2
+1 + 8ϵ2)
+ 
+.
+(B1)
+Taking derivatives of this equation with respect to the
+ﬁeld φ, one obtains the ﬂow of the ϵi.
+Appendix C: Beta functions
+In the following we report the beta functions for the
+three couplings m2, ξ, λ4 in a scalar gravity theory with
+gauge choice β = 0 and a background-scalar independent
+regulator.
+βm2 = −(2 −ηφ)m2 −
+36gξ2ηφ
+5π(3 −4λ) (1 + m2)2 + 4gm2(12ξ −ηφ(m2 + 6ξ))
+3π(3 −4λ) (1 + m2)2
+−3gξ(6ξ −ηφ(2m2 + 3ξ))
+π(3 −4λ) (1 + m2)2
+−
+2gm4 (2 −ηφ)
+π(3 −4λ) (1 + m2)2 −
+108gξ2ηh
+5π(3 −4λ)2 (1 + m2) −9gξ(6ξ −ηh(2m2 + 3ξ))
+π(3 −4λ)2 (1 + m2)
+−5g
+ ξ (8 −ηh) −m2 (6 −ηh)
+
+12π(1 −2λ)2
+−g
+ 3ξ (8 −ηh) −2m2 (6 −ηh)
+
+4π(3 −4λ)2
++ 4gm2(12ξ −ηh(m2 + 6ξ))
+π(3 −4λ)2 (1 + m2)
+−
+6gm4 (2 −ηh)
+π(3 −4λ)2 (1 + m2) −
+λ4 (6 −ηφ)
+64π2 (1 + m2)2 , (C1)
+
+---PAGE BREAK---
+34
+βλ4 = 2λ4ηφ −64g2  81m2ξ2 (10 −ηφ) −45m4ξ (8 −ηφ) + 10m6 (6 −ηφ) −54ξ3 (12 −ηφ)
+
+15(3 −4λ)2 (1 + m2)2
++ 512g2  −756m2ξ3 (12 −ηφ) + 567m4ξ2 (10 −ηφ) −210m6ξ (8 −ηφ) + 35m8 (6 −ηφ) + 405ξ4 (14 −ηφ)
+
+105(3 −4λ)2 (1 + m2)3
++ 8g2  −10m2ξ (8 −ηh) + 5m4 (6 −ηh) + 6ξ2 (10 −ηh)
+
+3(1 −2λ)3
+−16g2  −30m2ξ (ηh −8) + 10m4 (ηh −6) + 27ξ2 (ηh −10)
+
+5(3 −4λ)3
++ 128g2  −81m2ξ2 (10 −ηh) + 45m4ξ (8 −ηh) −10m6 (6 −ηh) + 54ξ3 (12 −ηh)
+
+5(3 −4λ)3 (1 + m2)
++ 512g2  −756m2ξ3 (12 −ηh) + 567m4ξ2 (10 −ηh) −210m6ξ (8 −ηh) + 35m8 (6 −ηh) + 405ξ4 (14 −ηh)
+
+35(3 −4λ)3 (1 + m2)2
++ 4gλ4
+ −30m2ξ (8 −ηφ) + 10m4 (6 −ηφ) + 27ξ2 (10 −ηφ)
+
+5π(3 −4λ) (1 + m2)3
++ 4gλ4
+ 3ξ (8 −ηφ) −2m2 (6 −ηφ)
+
+3π(3 −4λ) (1 + m2)2
++ 6gλ4
+ −30m2ξ (8 −ηh) + 10m4 (6 −ηh) + 27ξ2 (10 −ηh)
+
+5π(3 −4λ)2 (1 + m2)2
+−4gλ4
+ 2m2 (6 −ηh) −3ξ (8 −ηh)
+
+π(3 −4λ)2 (1 + m2)
++ 5gλ4 (6 −ηh)
+12π(1 −2λ)2
++ gλ4 (6 −ηh)
+2π(3 −4λ)2 +
+3λ2
+4 (6 −ηφ)
+32π2 (1 + m2)3 ,
+(C2)
+βξ = ξηφ + 2g
+ 18ξ2 (2 −ηh) + m6ηh −m4(12ξ −ηh(1 + 6ξ)) −6m2ξ(2 + 3ξ(2 −ηh))
+
+3π(3 −4λ)2 (1 + m2)2
+−5g
+ ξ(6 + 20λ −ηh(1 + 2λ)) −m2 (15 −6λ + ηh(2λ −3))
+
+36π(1 −2λ)3
++ g
+ 12ξ −m2 (6 −ηh)
+
+12π(3 −4λ)2
++ 9gξ2ηφ
+ 5m2 + 32ξ + 5
+
+20π(3 −4λ) (1 + m2)3
+−gξ
+ −3ξ(4 + 18ξ + ηh(1 −9ξ)) −m2(12ξ −ηh(4 + 15ξ + 4m2))
+
+π(3 −4λ)2 (1 + m2)2
++ 27gξ2ηh
+ 5 + 5m2 + 16ξ
+
+20π(3 −4λ)2 (1 + m2)2
++ gm2 (2 −ηh)
+ m2(1 + m2) −6ξ
+
+π(3 −4λ)2 (1 + m2)2
+−gm2 (2 −ηφ)
+ m4 + m2(1 + 6ξ) −6ξ
+
+3π(4λ −3) (1 + m2)3
++ gξ
+ 3ξ(4 + 36ξ + ηφ(1 −18ξ)) + m2(12ξ −ηφ(4 + 4m2 + 33ξ))
+
+3π(3 −4λ) (1 + m2)3
++ 2g
+ 18ξ2 (2 −ηφ) + m6ηφ −m4 (12ξ −ηφ(1 + 12ξ)) −6m2ξ (2 + 9ξ (2 −ηφ))
+
+9π(3 −4λ) (1 + m2)3
++ λ4 (6 −ηφ)
+ 1 + m2 + 12ξ
+
+384π2 (1 + m2)3
+.
+(C3)
+The beta function for the Yukawa coupling is
+βy = y ηψ + y ηφ
+2 + y3
+ 
+5 −ηψ
+80π2 (1 + m2) +
+6 −ηφ
+96π2 (1 + m2)2
+!
+−3y g
+16
+ 16 (6 −ηψ)
+15π(3 −4λ) + 192(7 −ηh)
+35π(3 −4λ)2
+
++ 9y g
+256
+ 32 (7 −ηψ)
+21π(3 −4λ) + 4(8 −ηh)
+π(3 −4λ)2
+
++ 5y g(6 −ηh)
+12π(1 −2λ)2 + y g(6 −ηh)
+2π(3 −4λ)2
+−y g
+ 45ξ (8 −ηψ) −28m2 (6 −ηψ)
+
+140π(3 −4λ) (1 + m2)
++ y g
+ 36m2 (7 −ηφ) −60ξ (9 −ηφ)
+
+105π(3 −4λ) (1 + m2)2
++ y g
+ 3ξ (8 −ηφ) −2m2 (6 −ηφ)
+
+3π(3 −4λ) (1 + m2)2
+−y g
+ 2(6 −ηh)m2 −3(8 −ηh)ξ
+
+π(3 −4λ)2 (1 + m2)
++ y g
+ 36(7 −ηh)m2 −60(9 −ηh)ξ
+
+35π(3 −4λ)2 (1 + m2)
+,
+(C4)
+where parts of the Yukawa beta function is taken from
+[85]. The portal system described in Sec. V consists of
+two copies of the these beta functions. Additionally, the
+dark sector contributes
+
+---PAGE BREAK---
+35
+∆βm2v = −(6 −ηφd)λHP
+192π2(1 + m2
+d)2 ,
+(C5)
+∆βλ4,v = (6 −ηφd)λ2
+HP
+96π2(1 + m2
+d)3 ,
+(C6)
+∆βξv = (6 −ηφd)λHP(1 + m2
+d + 12ξd)
+1152π2(1 + m2
+d)3
+,
+(C7)
+to the beta functions for the visible couplings and vice versa. The beta function for the Higgs portal coupling reads
+βλHP = (ηφd + ηφv) λHP
++ 41472g2ξ2
+d (14 −ηh) ξ2
+v
+7(3 −4λ)3
++ 16g2ξd (10 −ηh) ξv
+(1 −2λ)3
++ 432g2ξd (10 −ηh) ξv
+5(3 −4λ)3
++ 6912g2ξ2
+dξ2
+v (28 −ηφd −ηφv)
+7(3 −4λ)2
++ 36gξdλHPξv (20 −ηφd −ηφv)
+5π(3 −4λ)
++ 108gξd (10 −ηh) λHPξv
+5π(3 −4λ)2
++ 5g (6 −ηh) λHP
+12π(1 −2λ)2
++ g (6 −ηh) λHP
+2π(3 −4λ)2
++ 3456g2ξ2
+vξd (12 −ηh)
+5(3 −4λ)3
++ 3456g2ξvξ2
+d (12 −ηh)
+5(3 −4λ)3
++ 576g2ξdξ2
+v (12 −ηφv)
+5(3 −4λ)2
++ 576g2ξ2
+dξv (12 −ηφd)
+5(3 −4λ)2
++ 6gξd (8 −ηh) λHP
+π(3 −4λ)2
++ 6gξv (8 −ηh) λHP
+π(3 −4λ)2
++ 27gξ2
+d (10 −ηh) λHP
+5π(3 −4λ)2
++ 27gξ2
+v (10 −ηh) λHP
+5π(3 −4λ)2
++ 18gξ2
+dλHP (10 −ηφd)
+5π(3 −4λ)
++ 18gλHPξ2
+v (10 −ηφv)
+5π(3 −4λ)
++ 2gξdλHP (8 −ηφd)
+π(3 −4λ)
++ 2gξvλHP (8 −ηφv)
+π(3 −4λ)
++ λ2
+HP (6 −ηφv)
+48π2
++ λ2
+HP (6 −ηφd)
+48π2
++ λHPλ4v (6 −ηφv)
+32π2
++ λ4dλHP (6 −ηφd)
+32π2
+.
+(C8)
+where in the last expression we set the masses to zero for better readability.
+[1] G. Aad et al. (ATLAS), Phys. Lett. B 716, 1 (2012),
+arXiv:1207.7214 [hep-ex].
+[2] S. Chatrchyan et al. (CMS), Phys. Lett. B 716, 30
+(2012), arXiv:1207.7235 [hep-ex].
+[3] P. Zyla et al. (Particle Data Group), PTEP 2020,
+083C01 (2020).
+[4] G. Degrassi, S. Di Vita, J. Elias-Miro, J. R. Espinosa,
+G. F. Giudice, G. Isidori,
+and A. Strumia, JHEP 08,
+098 (2012), arXiv:1205.6497 [hep-ph].
+[5] D. Buttazzo, G. Degrassi, P. P. Giardino, G. F. Giu-
+dice, F. Sala, A. Salvio, and A. Strumia, JHEP 12, 089
+(2013), arXiv:1307.3536 [hep-ph].
+[6] A. Andreassen, W. Frost,
+and M. D. Schwartz, Phys.
+Rev. D 97, 056006 (2018), arXiv:1707.08124 [hep-ph].
+[7] F. Bezrukov and M. Shaposhnikov, J. Exp. Theor. Phys.
+120, 335 (2015), arXiv:1411.1923 [hep-ph].
+[8] N. Cabibbo, L. Maiani, G. Parisi,
+and R. Petronzio,
+Nucl. Phys. B 158, 295 (1979).
+[9] M. Lindner, Z. Phys. C 31, 295 (1986).
+[10] M. Shaposhnikov and C. Wetterich, Phys. Lett. B 683,
+196 (2010), arXiv:0912.0208 [hep-th].
+[11] C. Wetterich and M. Yamada, Phys. Lett. B 770, 268
+(2017), arXiv:1612.03069 [hep-th].
+[12] Y. Hamada and M. Yamada, JHEP 08, 070 (2017),
+arXiv:1703.09033 [hep-th].
+[13] A. Eichhorn and A. Held, Phys. Lett. B 777, 217 (2018),
+arXiv:1707.01107 [hep-th].
+[14] A. Eichhorn and A. Held, Phys. Rev. Lett. 121, 151302
+(2018), arXiv:1803.04027 [hep-th].
+[15] J. M. Pawlowski, M. Reichert, C. Wetterich,
+and
+M.
+Yamada,
+Phys.
+Rev.
+D
+99,
+086010
+(2019),
+arXiv:1811.11706 [hep-th].
+[16] C. Wetterich and M. Yamada, Phys. Rev. D 100, 066017
+(2019), arXiv:1906.01721 [hep-th].
+[17] G. P. De Brito, A. Eichhorn, and A. D. Pereira, JHEP
+09, 100 (2019), arXiv:1907.11173 [hep-th].
+[18] A. Eichhorn, Y. Hamada, J. Lumma, and M. Yamada,
+Phys. Rev. D 97, 086004 (2018), arXiv:1712.00319 [hep-
+th].
+[19] J. H. Kwapisz, Phys. Rev. D 100, 115001 (2019),
+arXiv:1907.12521 [hep-ph].
+[20] M. Reichert and J. Smirnov, Phys. Rev. D 101, 063015
+(2020), arXiv:1911.00012 [hep-ph].
+[21] A. Eichhorn, A. Held, and C. Wetterich, JHEP 08, 111
+(2020), arXiv:1909.07318 [hep-th].
+[22] G. Dom`enech, M. Goodsell, and C. Wetterich, (2020),
+arXiv:2008.04310 [hep-ph].
+[23] Y. Hamada, K. Tsumura, and M. Yamada, Eur. Phys.
+J. C 80, 368 (2020), arXiv:2002.03666 [hep-ph].
+[24] G. Narain and R. Percacci, Class. Quant. Grav. 27,
+075001 (2010), arXiv:0911.0386 [hep-th].
+[25] G. Narain and C. Rahmede, Class. Quant. Grav. 27,
+
+---PAGE BREAK---
+36
+075002 (2010), arXiv:0911.0394 [hep-th].
+[26] O. Zanusso, L. Zambelli, G. Vacca,
+and R. Percacci,
+Phys. Lett. B 689, 90 (2010), arXiv:0904.0938 [hep-th].
+[27] G. Vacca and O. Zanusso, Phys. Rev. Lett. 105, 231601
+(2010), arXiv:1009.1735 [hep-th].
+[28] A.
+Eichhorn,
+Phys.
+Rev.
+D
+86,
+105021
+(2012),
+arXiv:1204.0965 [gr-qc].
+[29] R. Percacci and G. P. Vacca, Eur. Phys. J. C 75, 188
+(2015), arXiv:1501.00888 [hep-th].
+[30] P. Labus, R. Percacci, and G. P. Vacca, Phys. Lett. B
+753, 274 (2016), arXiv:1505.05393 [hep-th].
+[31] V. Silveira and A. Zee, Phys. Lett. B 161, 136 (1985).
+[32] J. McDonald, Phys. Rev. D 50, 3637 (1994), arXiv:hep-
+ph/0702143.
+[33] C. Burgess, M. Pospelov,
+and T. ter Veldhuis, Nucl.
+Phys. B 619, 709 (2001), arXiv:hep-ph/0011335.
+[34] C. Boehm and P. Fayet, Nucl. Phys. B 683, 219 (2004),
+arXiv:hep-ph/0305261.
+[35] A. Eichhorn and M. Pauly,
+(2020), arXiv:2005.03661
+[hep-ph].
+[36] T. Henz, J. M. Pawlowski, A. Rodigast,
+and C. Wet-
+terich, Phys. Lett. B 727, 298 (2013), arXiv:1304.7743
+[hep-th].
+[37] T. Henz, J. M. Pawlowski,
+and C. Wetterich, Phys.
+Lett. B 769, 105 (2017), arXiv:1605.01858 [hep-th].
+[38] J. Rubio and C. Wetterich, Phys. Rev. D 96, 063509
+(2017), arXiv:1705.00552 [gr-qc].
+[39] C. Wetterich, (2019), arXiv:1911.06100 [hep-th].
+[40] T. Abbott et al. (DES), Phys. Rev. D 98, 043526 (2018),
+arXiv:1708.01530 [astro-ph.CO].
+[41] D. Scolnic et al., Astrophys. J. 859, 101 (2018),
+arXiv:1710.00845 [astro-ph.CO].
+[42] N. Aghanim et al. (Planck), Astron. Astrophys. 641, A6
+(2020), arXiv:1807.06209 [astro-ph.CO].
+[43] P. A. Abell et al. (LSST Science, LSST Project), (2009),
+arXiv:0912.0201 [astro-ph.IM].
+[44] L. Amendola et al. (Euclid Theory Working Group),
+Living Rev. Rel. 16, 6 (2013), arXiv:1206.1225 [astro-
+ph.CO].
+[45] A. Aghamousa et al. (DESI), (2016), arXiv:1611.00036
+[astro-ph.IM].
+[46] D. J. Bacon et al. (SKA), Publ. Astron. Soc. Austral.
+37, e007 (2020), arXiv:1811.02743 [astro-ph.CO].
+[47] A. Weltman et al., Publ. Astron. Soc. Austral. 37, e002
+(2020), arXiv:1810.02680 [astro-ph.CO].
+[48] Y. Akrami et al. (Planck), Astron. Astrophys. 641, A10
+(2020), arXiv:1807.06211 [astro-ph.CO].
+[49] A. Eichhorn, Front. Astron. Space Sci. 5, 47 (2019),
+arXiv:1810.07615 [hep-th].
+[50] S. de Alwis, A. Eichhorn, A. Held, J. M. Pawlowski,
+M. Schiﬀer,
+and F. Versteegen, Phys. Lett. B 798,
+134991 (2019), arXiv:1907.07894 [hep-th].
+[51] A. Held, Front. in Phys. 8, 341 (2020), arXiv:2003.13642
+[hep-th].
+[52] R. Percacci and G. P. Vacca, Class. Quant. Grav. 27,
+245026 (2010), arXiv:1008.3621 [hep-th].
+[53] M. Reuter, Phys. Rev. D 57, 971 (1998), arXiv:hep-
+th/9605030.
+[54] A. Baldazzi, R. Percacci, and V. Skrinjar, Class. Quant.
+Grav. 36, 105008 (2019), arXiv:1811.03369 [gr-qc].
+[55] M. Demmel and A. Nink, Phys. Rev. D 92, 104013
+(2015), arXiv:1506.03809 [gr-qc].
+[56] C.
+Wetterich,
+Phys.
+Lett.
+B
+301,
+90
+(1993),
+arXiv:1710.05815 [hep-th].
+[57] U. Ellwanger, , 206 (1993), arXiv:hep-ph/9308260.
+[58] T. R. Morris, Int. J. Mod. Phys. A 9, 2411 (1994),
+arXiv:hep-ph/9308265.
+[59] A. Eichhorn, H. Gies, and M. M. Scherer, Phys. Rev.
+D 80, 104003 (2009), arXiv:0907.1828 [hep-th].
+[60] P. Dona and R. Percacci, Phys. Rev. D 87, 045002
+(2013), arXiv:1209.3649 [hep-th].
+[61] D. Benedetti and F. Caravelli, JHEP 06, 017 (2012),
+[Erratum: JHEP 10, 157 (2012)], arXiv:1204.3541 [hep-
+th].
+[62] N. Ohta, R. Percacci, and G. P. Vacca, Phys. Rev. D
+92, 061501 (2015), arXiv:1507.00968 [hep-th].
+[63] N. Ohta, R. Percacci, and G. P. Vacca, Eur. Phys. J.
+C 76, 46 (2016), arXiv:1511.09393 [hep-th].
+[64] N. Alkofer and F. Saueressig, Annals Phys. 396, 173
+(2018), arXiv:1802.00498 [hep-th].
+[65] J. M. Pawlowski, Annals Phys. 322, 2831 (2007),
+arXiv:hep-th/0512261.
+[66] H. Gies, Lect. Notes Phys. 852, 287 (2012), arXiv:hep-
+ph/0611146.
+[67] O.
+J.
+Rosten,
+Phys.
+Rept.
+511,
+177
+(2012),
+arXiv:1003.1366 [hep-th].
+[68] N. Dupuis,
+L. Canet,
+A. Eichhorn,
+W. Metzner,
+J. Pawlowski, M. Tissier,
+and N. Wschebor,
+(2020),
+arXiv:2006.04853 [cond-mat.stat-mech].
+[69] M. Reuter and F. Saueressig, New J. Phys. 14, 055022
+(2012), arXiv:1202.2274 [hep-th].
+[70] R. Percacci, An Introduction to Covariant Quantum
+Gravity and Asymptotic Safety, 100 Years of General
+Relativity, Vol. 3 (World Scientiﬁc, 2017).
+[71] M. Reuter and F. Saueressig, Quantum Gravity and the
+Functional Renormalization Group: The Road towards
+Asymptotic Safety (Cambridge University Press, 2019).
+[72] A. Bonanno, A. Eichhorn, H. Gies, J. M. Pawlowski,
+R. Percacci, M. Reuter, F. Saueressig, and G. P. Vacca,
+Front. in Phys. 8, 269 (2020), arXiv:2004.06810 [gr-qc].
+[73] A. Baldazzi, R. Percacci,
+and L. Zambelli,
+(2020),
+arXiv:2009.03255 [hep-th].
+[74] A. Eichhorn, S. Lippoldt, and M. Schiﬀer, Phys. Rev.
+D 99, 086002 (2019), arXiv:1812.08782 [hep-th].
+[75] A. Eichhorn, S. Lippoldt, J. M. Pawlowski, M. Re-
+ichert, and M. Schiﬀer, Phys. Lett. B 792, 310 (2019),
+arXiv:1810.02828 [hep-th].
+[76] A. Eichhorn, P. Labus, J. M. Pawlowski,
+and M. Re-
+ichert, SciPost Phys. 5, 031 (2018), arXiv:1804.00012
+[hep-th].
+[77] K. Falls, D. Litim, K. Nikolakopoulos, and C. Rahmede,
+(2013), arXiv:1301.4191 [hep-th].
+[78] K. Falls,
+D. F. Litim,
+K. Nikolakopoulos,
+and
+C.
+Rahmede,
+Phys.
+Rev.
+D
+93,
+104022
+(2016),
+arXiv:1410.4815 [hep-th].
+[79] K. Falls, C. R. King, D. F. Litim, K. Nikolakopou-
+los, and C. Rahmede, Phys. Rev. D 97, 086006 (2018),
+arXiv:1801.00162 [hep-th].
+[80] K. G. Falls, D. F. Litim, and J. Schr¨oder, Phys. Rev.
+D 99, 126015 (2019), arXiv:1810.08550 [gr-qc].
+[81] Y. Kluth and D. F. Litim,
+(2020), arXiv:2008.09181
+[hep-th].
+[82] A. Eichhorn and H. Gies, New J. Phys. 13, 125012
+(2011), arXiv:1104.5366 [hep-th].
+[83] A. Eichhorn, A. Held, and J. M. Pawlowski, Phys. Rev.
+D 94, 104027 (2016), arXiv:1604.02041 [hep-th].
+[84] A. Eichhorn and S. Lippoldt, Phys. Lett. B 767, 142
+(2017), arXiv:1611.05878 [gr-qc].
+
+---PAGE BREAK---
+37
+[85] A. Eichhorn and A. Held, Phys. Rev. D 96, 086025
+(2017), arXiv:1705.02342 [gr-qc].
+[86] A. Eichhorn, S. Lippoldt, and V. Skrinjar, Phys. Rev.
+D 97, 026002 (2018), arXiv:1710.03005 [hep-th].
+[87] A. Eichhorn and M. Schiﬀer, Phys. Lett. B 793, 383
+(2019), arXiv:1902.06479 [hep-th].
+[88] J. Daas, W. Oosters, F. Saueressig, and J. Wang, Phys.
+Lett. B 809, 135775 (2020), arXiv:2005.12356 [hep-th].
+[89] M. R. Niedermaier, Phys. Rev. Lett. 103, 101303
+(2009).
+[90] M. Niedermaier, Nucl. Phys. B 833, 226 (2010).
+[91] R. Gastmans, R. Kallosh, and C. Truﬃn, Nucl. Phys.
+B 133, 417 (1978).
+[92] S. Christensen and M. Duﬀ, Phys. Lett. B 79, 213
+(1978).
+[93] H. Kawai and M. Ninomiya, Nucl. Phys. B 336, 115
+(1990).
+[94] H. Kawai, Y. Kitazawa, and M. Ninomiya, Nucl. Phys.
+B 393, 280 (1993), arXiv:hep-th/9206081.
+[95] H. Kawai, Y. Kitazawa, and M. Ninomiya, Nucl. Phys.
+B 404, 684 (1993), arXiv:hep-th/9303123.
+[96] T. Aida and Y. Kitazawa, Nucl. Phys. B 491, 427
+(1997), arXiv:hep-th/9609077.
+[97] M. Reuter and F. Saueressig, Phys. Rev. D 65, 065016
+(2002), arXiv:hep-th/0110054.
+[98] L. Rosa, P. Vitale, and C. Wetterich, Phys. Rev. Lett.
+86, 958 (2001), arXiv:hep-th/0007093.
+[99] F. Hoﬂing, C. Nowak, and C. Wetterich, Phys. Rev. B
+66, 205111 (2002), arXiv:cond-mat/0203588.
+[100] J. Braun, H. Gies, and D. D. Scherer, Phys. Rev. D 83,
+085012 (2011), arXiv:1011.1456 [hep-th].
+[101] H. Gies and L. Janssen, Phys. Rev. D 82, 085018 (2010),
+arXiv:1006.3747 [hep-th].
+[102] F. Gehring, H. Gies, and L. Janssen, Phys. Rev. D 92,
+085046 (2015), arXiv:1506.07570 [hep-th].
+[103] L. Classen, I. F. Herbut, L. Janssen, and M. M. Scherer,
+Phys. Rev. B 93, 125119 (2016), arXiv:1510.09003
+[cond-mat.str-el].
+[104] G. P. Vacca and L. Zambelli, Phys. Rev. D 91, 125003
+(2015), arXiv:1503.09136 [hep-th].
+[105] B.
+Knorr,
+Phys.
+Rev.
+B
+94,
+245102
+(2016),
+arXiv:1609.03824 [cond-mat.str-el].
+[106] G. Parisi, Nucl. Phys. B 100, 368 (1975).
+[107] K. Gawedzki and A. Kupiainen, Phys. Rev. Lett. 55,
+363 (1985).
+[108] J. Gracey, Nucl. Phys. B 341, 403 (1990).
+[109] S. Hikami and T. Muta, Prog. Theor. Phys. 57, 785
+(1977).
+[110] B. Rosenstein, B. J. Warr, and S. H. Park, Phys. Rev.
+Lett. 62, 1433 (1989).
+[111] G. Gat, A. Kovner, and B. Rosenstein, Nucl. Phys. B
+385, 76 (1992).
+[112] B. Rosenstein, H.-L. Yu, and A. Kovner, Phys. Lett. B
+314, 381 (1993).
+[113] L. N. Mihaila, N. Zerf, B. Ihrig, I. F. Herbut,
+and
+M. M. Scherer, Phys. Rev. B 96, 165133 (2017),
+arXiv:1703.08801 [cond-mat.str-el].
+[114] N. Zerf, L. N. Mihaila, P. Marquard, I. F. Herbut,
+and M. M. Scherer, Phys. Rev. D 96, 096010 (2017),
+arXiv:1709.05057 [hep-th].
+[115] R.
+Loll,
+Class.
+Quant.
+Grav.
+37,
+013002
+(2020),
+arXiv:1905.08669 [hep-th].
+[116] A. Eichhorn, T. Koslowski, and A. D. Pereira, Universe
+5, 53 (2019), arXiv:1811.12909 [gr-qc].
+[117] S.
+Surya,
+Living
+Rev.
+Rel.
+22,
+5
+(2019),
+arXiv:1903.11544 [gr-qc].
+[118] A. Eichhorn, J. Phys. Conf. Ser. 1275, 012010 (2019),
+arXiv:1902.00391 [gr-qc].
+[119] B. Bahr and S. Steinhaus, Phys. Rev. Lett. 117, 141302
+(2016), arXiv:1605.07649 [gr-qc].
+[120] B. S. Merzlikin, I. L. Shapiro, A. Wipf, and O. Zanusso,
+Phys. Rev. D 96, 125007 (2017), arXiv:1711.02224 [hep-
+th].
+[121] H. Gies and M. M. Scherer, Eur. Phys. J. C 66, 387
+(2010), arXiv:0901.2459 [hep-th].
+[122] H. Gies, S. Rechenberger,
+and M. M. Scherer, Eur.
+Phys. J. C 66, 403 (2010), arXiv:0907.0327 [hep-th].
+[123] A. Eichhorn, H. Gies, J. Jaeckel, T. Plehn, M. M.
+Scherer, and R. Sondenheimer, JHEP 04, 022 (2015),
+arXiv:1501.02812 [hep-ph].
+[124] K.-y. Oda and M. Yamada, Class. Quant. Grav. 33,
+125011 (2016), arXiv:1510.03734 [hep-th].
+[125] P. Don`a, A. Eichhorn, and R. Percacci, Phys. Rev. D
+89, 084035 (2014), arXiv:1311.2898 [hep-th].
+[126] T. Banks and L. J. Dixon, Nucl. Phys. B 307, 93 (1988).
+[127] M. Kamionkowski and J. March-Russell, Phys. Lett. B
+282, 137 (1992), arXiv:hep-th/9202003.
+[128] R. Kallosh, A. D. Linde, D. A. Linde, and L. Susskind,
+Phys. Rev. D 52, 912 (1995), arXiv:hep-th/9502069.
+[129] T. Banks and N. Seiberg, Phys. Rev. D 83, 084019
+(2011), arXiv:1011.5120 [hep-th].
+[130] D. Harlow and H. Ooguri, Phys. Rev. Lett. 122, 191601
+(2019), arXiv:1810.05337 [hep-th].
+[131] D. Harlow and H. Ooguri,
+(2018), arXiv:1810.05338
+[hep-th].
+[132] N. Arkani-Hamed, L. Motl, A. Nicolis,
+and C. Vafa,
+JHEP 06, 060 (2007), arXiv:hep-th/0601001.
+[133] E.
+Palti,
+Fortsch.
+Phys.
+67,
+1900037
+(2019),
+arXiv:1903.06239 [hep-th].
+[134] J. Barnett and L. Smolin, (2015), arXiv:1507.01232 [gr-
+qc].
+[135] R. Gambini and J. Pullin, Phys. Lett. B 749, 374 (2015),
+arXiv:1506.08794 [gr-qc].
+[136] A. Eichhorn, in 57th International School of Subnu-
+clear Physics:
+In Search for the Unexpected (2020)
+arXiv:2003.00044 [gr-qc].
+[137] R. G. Jha, J. Laiho, and J. Unmuth-Yockey, PoS LAT-
+TICE2018, 043 (2018), arXiv:1810.09946 [hep-lat].
+[138] Y. Hamada, J. M. Pawlowski, and M. Yamada, (2020),
+arXiv:2009.08728 [hep-th].
+[139] N. Christiansen and A. Eichhorn, Phys. Lett. B 770,
+154 (2017), arXiv:1702.07724 [hep-th].
+[140] C. de Rham, S. Melville, A. J. Tolley, and S.-Y. Zhou,
+JHEP 03, 011 (2018), arXiv:1706.02712 [hep-th].
+[141] S. Melville and J. Noller, Phys. Rev. D 101, 021502
+(2020), [Erratum:
+Phys.Rev.D 102, 049902 (2020)],
+arXiv:1904.05874 [astro-ph.CO].
+[142] J. Martin and R. H. Brandenberger, Phys. Rev. D 63,
+123501 (2001), arXiv:hep-th/0005209.
+[143] A. Bedroya and C. Vafa, JHEP 09, 123 (2020),
+arXiv:1909.11063 [hep-th].
+[144] A.
+Bedroya,
+R.
+Brandenberger,
+M.
+Loverde,
+and C. Vafa, Phys. Rev. D 101, 103502 (2020),
+arXiv:1909.11106 [hep-th].
+[145] M. Shaposhnikov and D. Zenhausern, Phys. Lett. B
+671, 187 (2009), arXiv:0809.3395 [hep-th].
+[146] J. Garcia-Bellido, J. Rubio, M. Shaposhnikov,
+and
+D. Zenhausern, Phys. Rev. D 84, 123504 (2011),
+
+---PAGE BREAK---
+38
+arXiv:1107.2163 [hep-ph].
+[147] F. Bezrukov,
+G. K. Karananas,
+J. Rubio,
+and
+M. Shaposhnikov, Phys. Rev. D 87, 096001 (2013),
+arXiv:1212.4148 [hep-ph].
+[148] J. Garcia-Bellido, J. Rubio,
+and M. Shaposhnikov,
+Phys. Lett. B 718, 507 (2012), arXiv:1209.2119 [hep-
+ph].
+[149] V. V. Khoze, JHEP 11, 215 (2013), arXiv:1308.6338
+[hep-ph].
+[150] J. Rubio and M. Shaposhnikov, Phys. Rev. D 90, 027307
+(2014), arXiv:1406.5182 [hep-ph].
+[151] P. G. Ferreira, C. T. Hill, and G. G. Ross, Phys. Rev.
+D 95, 043507 (2017), arXiv:1610.09243 [hep-th].
+[152] K.
+Kannike,
+M.
+Raidal,
+C.
+Spethmann,
+and
+H. Veerm¨ae, JHEP 04, 026 (2017), arXiv:1610.06571
+[hep-ph].
+[153] G. K. Karananas and J. Rubio, Phys. Lett. B 761, 223
+(2016), arXiv:1606.08848 [hep-ph].
+[154] P. G. Ferreira, C. T. Hill, and G. G. Ross, Phys. Lett.
+B 763, 174 (2016), arXiv:1603.05983 [hep-th].
+[155] A. Bonanno, A. Contillo, and R. Percacci, Class. Quant.
+Grav. 28, 145026 (2011), arXiv:1006.0192 [gr-qc].
+[156] A. Bonanno and A. Platania, Phys. Lett. B 750, 638
+(2015), arXiv:1507.03375 [gr-qc].
+[157] G. Koﬁnas and V. Zarikas, Phys. Rev. D 94, 103514
+(2016), arXiv:1605.02241 [gr-qc].
+[158] A. Bonanno, A. Platania, and F. Saueressig, Phys. Lett.
+B 784, 229 (2018), arXiv:1803.02355 [gr-qc].
+[159] A. Platania, Universe 5, 189 (2019), arXiv:1908.03897
+[gr-qc].
+[160] A.
+Platania,
+Front.
+in
+Phys.
+8,
+188
+(2020),
+arXiv:2003.13656 [gr-qc].
+[161] T. Rudelius, JCAP 08, 009 (2019), arXiv:1905.05198
+[hep-th].
+[162] T. Tenkanen, JCAP 12, 001 (2017), arXiv:1710.02758
+[astro-ph.CO].
+[163] S.
+Weinberg,
+Phys.
+Rev.
+D
+81,
+083535
+(2010),
+arXiv:0911.3165 [hep-th].
+[164] A.
+Bonanno,
+Phys.
+Rev.
+D
+85,
+081503
+(2012),
+arXiv:1203.1962 [hep-th].
+[165] E. J. Copeland, C. Rahmede,
+and I. D. Saltas, Phys.
+Rev. D 91, 103530 (2015), arXiv:1311.0881 [gr-qc].
+[166] C. Wetterich, Nucl. Phys. B 302, 645 (1988).
+[167] C.
+Wetterich,
+Nucl.
+Phys.
+B
+302,
+668
+(1988),
+arXiv:1711.03844 [hep-th].
+[168] D. Blas, M. Shaposhnikov,
+and D. Zenhausern, Phys.
+Rev. D 84, 044001 (2011), arXiv:1104.1392 [hep-th].
+[169] S. Casas, M. Pauly,
+and J. Rubio, Phys. Rev. D 97,
+043520 (2018), arXiv:1712.04956 [astro-ph.CO].
+[170] S. Casas, G. K. Karananas, M. Pauly,
+and J. Ru-
+bio, Phys. Rev. D 99, 063512 (2019), arXiv:1811.05984
+[astro-ph.CO].
+[171] C.
+Wetterich,
+Nucl.
+Phys.
+B
+897,
+111
+(2015),
+arXiv:1408.0156 [hep-th].
+[172] F. K. Anagnostopoulos, S. Basilakos, G. Koﬁnas, and
+V. Zarikas, JCAP 02, 053 (2019), arXiv:1806.10580
+[astro-ph.CO].
+[173] C. Wetterich, (2019), arXiv:1901.04741 [hep-th].
+[174] M.
+Ahmed,
+S.
+Dodelson,
+P.
+B.
+Greene,
+and
+R. Sorkin, Phys. Rev. D 69, 103523 (2004), arXiv:astro-
+ph/0209274.
+[175] L. Bombelli, J. Lee, D. Meyer,
+and R. Sorkin, Phys.
+Rev. Lett. 59, 521 (1987).
+[176] N. Zwane, N. Afshordi, and R. D. Sorkin, Class. Quant.
+Grav. 35, 194002 (2018), arXiv:1703.06265 [gr-qc].
+[177] G. Obied, H. Ooguri, L. Spodyneiko,
+and C. Vafa,
+(2018), arXiv:1806.08362 [hep-th].
+[178] P. Agrawal, G. Obied, P. J. Steinhardt,
+and C. Vafa,
+Phys. Lett. B 784, 271 (2018), arXiv:1806.09718 [hep-
+th].
+[179] S. K. Garg and C. Krishnan, JHEP 11, 075 (2019),
+arXiv:1807.05193 [hep-th].
+[180] L. Heisenberg,
+M. Bartelmann,
+R. Brandenberger,
+and A. Refregier, Phys. Rev. D 98, 123502 (2018),
+arXiv:1808.02877 [astro-ph.CO].
+[181] M. Reuter and H. Weyer, JCAP 12, 001 (2004),
+arXiv:hep-th/0410119.
+[182] G. Gubitosi, R. Ooijer, C. Ripken, and F. Saueressig,
+JCAP 12, 004 (2018), arXiv:1806.10147 [hep-th].
+[183] H. Gies and R. Sondenheimer, Eur. Phys. J. C 75, 68
+(2015), arXiv:1407.8124 [hep-ph].
+[184] R. Alkofer, A. Eichhorn, A. Held, C. M. Nieto, R. Per-
+cacci, and M. Schr¨oﬂ, Annals Phys. 421, 168282 (2020),
+arXiv:2003.08401 [hep-ph].
+[185] H. Gies and S. Lippoldt, Phys. Rev. D 89, 064040
+(2014), arXiv:1310.2509 [hep-th].
+[186] J. Meibohm and J. M. Pawlowski, Eur. Phys. J. C 76,
+285 (2016), arXiv:1601.04597 [hep-th].
+[187] G. P. De Brito, Y. Hamada, A. D. Pereira, and M. Ya-
+mada, JHEP 08, 142 (2019), arXiv:1905.11114 [hep-th].
+[188] K. Kowalska, E. M. Sessolo, and Y. Yamamoto, (2020),
+arXiv:2007.03567 [hep-ph].
+[189] A. Held, From particle physics to black holes: The pre-
+dictive power of asymptotic safety., Ph.D. thesis, U. Hei-
+delberg (main) (2019).
+[190] M.
+Herranen,
+T.
+Markkanen,
+S.
+Nurmi,
+and
+A. Rajantie, Phys. Rev. Lett. 113, 211102 (2014),
+arXiv:1407.3141 [hep-ph].
+[191] M.
+Herranen,
+T.
+Markkanen,
+S.
+Nurmi,
+and
+A. Rajantie, Phys. Rev. Lett. 115, 241301 (2015),
+arXiv:1506.04065 [hep-ph].
+[192] A. Rajantie and S. Stopyra, Phys. Rev. D 95, 025008
+(2017), arXiv:1606.00849 [hep-th].
+[193] A. Joti, A. Katsis, D. Loupas, A. Salvio, A. Strumia,
+N. Tetradis,
+and A. Urbano, JHEP 07, 058 (2017),
+arXiv:1706.00792 [hep-ph].
+[194] D. G. Figueroa, A. Rajantie,
+and F. Torrenti, Phys.
+Rev. D 98, 023532 (2018), arXiv:1709.00398 [astro-
+ph.CO].
+[195] T. Markkanen, A. Rajantie, and S. Stopyra, Front. As-
+tron. Space Sci. 5, 40 (2018), arXiv:1809.06923 [astro-
+ph.CO].
+[196] Z. Lalak, A. Nakonieczna, and L. Nakonieczny, (2020),
+arXiv:2004.12327 [hep-th].
+[197] F. L. Bezrukov and M. Shaposhnikov, Phys. Lett. B
+659, 703 (2008), arXiv:0710.3755 [hep-th].
+[198] J. Rubio, Front. Astron. Space Sci. 5, 50 (2019),
+arXiv:1807.02376 [hep-ph].
+[199] A. Ijjas, P. J. Steinhardt, and A. Loeb, Phys. Lett. B
+723, 261 (2013), arXiv:1304.2785 [astro-ph.CO].
+[200] F. Bezrukov, J. Rubio,
+and M. Shaposhnikov, Phys.
+Rev. D 92, 083512 (2015), arXiv:1412.3811 [hep-ph].
+[201] I. D. Saltas, JCAP 02, 048 (2016), arXiv:1512.06134
+[hep-th].
+[202] A. Wagner et al. (ADMX), Phys. Rev. Lett. 105, 171801
+(2010), arXiv:1007.3766 [hep-ex].
+[203] D. Hooper and L. Goodenough, Phys. Lett. B 697, 412
+(2011), arXiv:1010.2752 [hep-ph].
+
+---PAGE BREAK---
+39
+[204] M. Ahnen et al. (MAGIC, Fermi-LAT), JCAP 02, 039
+(2016), arXiv:1601.06590 [astro-ph.HE].
+[205] M. Aartsen et al. (IceCube), Eur. Phys. J. C 76, 531
+(2016), arXiv:1606.00209 [astro-ph.HE].
+[206] D. Akerib et al. (LUX), Phys. Rev. Lett. 118, 021303
+(2017), arXiv:1608.07648 [astro-ph.CO].
+[207] C. Amole et al. (PICO), Phys. Rev. Lett. 118, 251301
+(2017), arXiv:1702.07666 [astro-ph.CO].
+[208] R. Agnese et al. (SuperCDMS), Phys. Rev. D 97,
+022002 (2018), arXiv:1707.01632 [astro-ph.CO].
+[209] X. Cui et al. (PandaX-II), Phys. Rev. Lett. 119, 181302
+(2017), arXiv:1708.06917 [astro-ph.CO].
+[210] P. Agnes et al. (DarkSide), Phys. Rev. D 98, 102006
+(2018), arXiv:1802.07198 [astro-ph.CO].
+[211] E. Aprile et al. (XENON), Phys. Rev. Lett. 121, 111302
+(2018), arXiv:1805.12562 [astro-ph.CO].
+[212] A. Abdelhameed et al. (CRESST), Phys. Rev. D 100,
+102002 (2019), arXiv:1904.00498 [astro-ph.CO].
+[213] R. K. Leane and T. R. Slatyer, Phys. Rev. Lett. 123,
+241101 (2019), arXiv:1904.08430 [astro-ph.HE].
+[214] A. Aguilar-Arevalo et al. (DAMIC), Phys. Rev. Lett.
+123, 181802 (2019), arXiv:1907.12628 [astro-ph.CO].
+[215] T. Braine et al. (ADMX), Phys. Rev. Lett. 124, 101303
+(2020), arXiv:1910.08638 [hep-ex].
+[216] Q. Arnaud et al. (EDELWEISS), Phys. Rev. Lett. 125,
+141301 (2020), arXiv:2003.01046 [astro-ph.GA].
+[217] A. Andrianavalomahefa et al. (FUNK Experiment),
+Phys. Rev. D 102, 042001 (2020), arXiv:2003.13144
+[astro-ph.CO].
+[218] E. Aprile et al. (XENON), Phys. Rev. D 102, 072004
+(2020), arXiv:2006.09721 [hep-ex].
+[219] L. Alexander-Nunneley and A. Pilaftsis, JHEP 09, 021
+(2010), arXiv:1006.5916 [hep-ph].
+[220] M. Holthausen, J. Kubo, K. S. Lim, and M. Lindner,
+JHEP 12, 076 (2013), arXiv:1310.4423 [hep-ph].
+[221] C. D. Carone and R. Ramos, Phys. Rev. D 88, 055020
+(2013), arXiv:1307.8428 [hep-ph].
+[222] E. Gabrielli, M. Heikinheimo, K. Kannike, A. Racioppi,
+M. Raidal, and C. Spethmann, Phys. Rev. D 89, 015017
+(2014), arXiv:1309.6632 [hep-ph].
+[223] T. Hambye and A. Strumia, Phys. Rev. D 88, 055022
+(2013), arXiv:1306.2329 [hep-ph].
+[224] J. Guo and Z. Kang, Nucl. Phys. B 898, 415 (2015),
+arXiv:1401.5609 [hep-ph].
+[225] A. Karam and K. Tamvakis, Phys. Rev. D 92, 075010
+(2015), arXiv:1508.03031 [hep-ph].
+[226] A. Karam and K. Tamvakis, Phys. Rev. D 94, 055004
+(2016), arXiv:1607.01001 [hep-ph].
+[227] A. J. Helmboldt,
+P. Humbert,
+M. Lindner,
+and
+J. Smirnov, JHEP 07, 113 (2017), arXiv:1603.03603
+[hep-ph].
+[228] H. Ishida, S. Matsuzaki, S. Okawa,
+and Y. Omura,
+Phys. Rev. D 95, 075033 (2017), arXiv:1701.00598 [hep-
+ph].
+[229] C. Cosme, J. a. G. Rosa, and O. Bertolami, JHEP 05,
+129 (2018), arXiv:1802.09434 [hep-ph].
+[230] S. Yaser Ayazi and A. Mohamadnejad, Eur. Phys. J. C
+79, 140 (2019), arXiv:1808.08706 [hep-ph].
+[231] H. Ishida, S. Matsuzaki, and R. Ouyang, Chin. Phys.
+C 44, 111002 (2020), arXiv:1907.09176 [hep-ph].
+[232] C. Wetterich, (2020), arXiv:2007.08805 [hep-th].
+[233] G. Arcadi, A. Djouadi,
+and M. Raidal, Phys. Rept.
+842, 1 (2020), arXiv:1903.03616 [hep-ph].
+[234] Y. Ema, K. Nakayama,
+and Y. Tang, JHEP 09, 135
+(2018), arXiv:1804.07471 [hep-ph].
+[235] L. Parker, Phys. Rev. 183, 1057 (1969).
+[236] D. J. Chung, E. W. Kolb, and A. Riotto, Phys. Rev. D
+59, 023501 (1998), arXiv:hep-ph/9802238.
+[237] M. Garny, M. Sandora,
+and M. S. Sloth, Phys. Rev.
+Lett. 116, 101302 (2016), arXiv:1511.03278 [hep-ph].
+[238] G. Dupuis, JHEP 07, 008 (2016), arXiv:1604.04552
+[hep-ph].
+[239] A. Beniwal, F. Rajec, C. Savage, P. Scott, C. Weniger,
+M. White, and A. G. Williams, Phys. Rev. D 93, 115016
+(2016), arXiv:1512.06458 [hep-ph].
+[240] V. Gluscevic et al.,
+(2019), arXiv:1903.05140 [astro-
+ph.CO].
+[241] A. Drlica-Wagner et al. (LSST Dark Matter Group),
+(2019), arXiv:1902.01055 [astro-ph.CO].
+[242] U. Harst and M. Reuter, JHEP 05, 119 (2011),
+arXiv:1101.6007 [hep-th].
+[243] A. Eichhorn and F. Versteegen, JHEP 01, 030 (2018),
+arXiv:1709.07252 [hep-th].
+[244] A. Eichhorn and A. Held, in An Alpine LHC Physics
+Summit 2019 (2019) arXiv:1907.05330 [hep-th].
+[245] J. Meibohm, J. M. Pawlowski, and M. Reichert, Phys.
+Rev. D 93, 084035 (2016), arXiv:1510.07018 [hep-th].
+[246] P. Don`a, A. Eichhorn, P. Labus, and R. Percacci, Phys.
+Rev. D 93, 044049 (2016), [Erratum: Phys.Rev.D 93,
+129904 (2016)], arXiv:1512.01589 [gr-qc].
+[247] J. Biemans, A. Platania, and F. Saueressig, JHEP 05,
+093 (2017), arXiv:1702.06539 [hep-th].
+[248] N.
+Christiansen,
+D.
+F.
+Litim,
+J.
+M.
+Pawlowski,
+and M. Reichert, Phys. Rev. D 97, 106012 (2018),
+arXiv:1710.04669 [hep-th].
+[249] J. Borchardt, H. Gies, and R. Sondenheimer, Eur. Phys.
+J. C 76, 472 (2016), arXiv:1603.05861 [hep-ph].
+[250] J.
+F.
+Donoghue,
+Front.
+in
+Phys.
+8,
+56
+(2020),
+arXiv:1911.02967 [hep-th].
+[251] T. Draper, B. Knorr, C. Ripken,
+and F. Saueressig,
+(2020), arXiv:2007.00733 [hep-th].
+[252] T. Draper, B. Knorr, C. Ripken,
+and F. Saueressig,
+(2020), arXiv:2007.04396 [hep-th].
+[253] A. Platania and C. Wetterich, (2020), arXiv:2009.06637
+[hep-th].
+[254] M. Reichert, A. Eichhorn, H. Gies, J. M. Pawlowski,
+T. Plehn, and M. M. Scherer, Phys. Rev. D 97, 075008
+(2018), arXiv:1711.00019 [hep-ph].
+[255] J. Borchardt and B. Knorr, Phys. Rev. D 91, 105011
+(2015), [Erratum:
+Phys.Rev.D 93, 089904 (2016)],
+arXiv:1502.07511 [hep-th].
+[256] J. York, James W., J. Math. Phys. 14, 456 (1973).
+[257] H. Gies, B. Knorr, and S. Lippoldt, Phys. Rev. D 92,
+084020 (2015), arXiv:1507.08859 [hep-th].
+[258] D. F. Litim, Phys. Rev. D 64, 105007 (2001), arXiv:hep-
+th/0103195.
+[259] I. H. Bridle, J. A. Dietz, and T. R. Morris, JHEP 03,
+093 (2014), arXiv:1312.2846 [hep-th].
+[260] A. Codello, G. D’Odorico, and C. Pagani, Phys. Rev.
+D 89, 081701 (2014), arXiv:1304.4777 [gr-qc].
+[261] N. Christiansen, B. Knorr, J. M. Pawlowski,
+and
+A.
+Rodigast,
+Phys.
+Rev.
+D
+93,
+044036
+(2016),
+arXiv:1403.1232 [hep-th].
+[262] N.
+Christiansen,
+B.
+Knorr,
+J.
+Meibohm,
+J.
+M.
+Pawlowski, and M. Reichert, Phys. Rev. D 92, 121501
+(2015), arXiv:1506.07016 [hep-th].
+[263] T. Denz, J. M. Pawlowski, and M. Reichert, Eur. Phys.
+J. C 78, 336 (2018), arXiv:1612.07315 [hep-th].
+
+---PAGE BREAK---

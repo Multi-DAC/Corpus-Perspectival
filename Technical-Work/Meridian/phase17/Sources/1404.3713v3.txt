@@ -1,0 +1,2263 @@
+Prepared for submission to JCAP
+Maximal freedom at minimum cost:
+linear large-scale structure in general
+modiﬁcations of gravity
+Emilio Bellinia and Ignacy Sawickib
+aInstitut f¨ur Theoretische Physik, Ruprecht-Karls-Universit¨at Heidelberg
+Philosophenweg 16, 69120 Heidelberg, Germany
+bAfrican Institute for Mathematical Sciences
+7 Melrose Road, Cape Town 7945, South Africa
+E-mail: bellini@thphys.uni-heidelberg.de, ignacy.sawicki@outlook.com
+Abstract. We present a turnkey solution, ready for implementation in numerical codes, for
+the study of linear structure formation in general scalar-tensor models involving a single
+universally coupled scalar ﬁeld. We show that the totality of cosmological information on the
+gravitational sector can be compressed — without any redundancy — into ﬁve independent
+and arbitrary functions of time only and one constant. These describe physical properties of
+the universe: the observable background expansion history, fractional matter density today,
+and four functions of time describing the properties of the dark energy. We show that two
+of those dark-energy property functions control the existence of anisotropic stress, the other
+two — dark-energy clustering, both of which are can be scale-dependent. All these properties
+can in principle be measured, but no information on the underlying theory of acceleration
+beyond this can be obtained.
+We present a translation between popular models of late-
+time acceleration (e.g. perfect ﬂuids, f(R), kinetic gravity braiding, galileons), as well as
+the eﬀective ﬁeld theory framework, and our formulation. In this way, implementing this
+formulation numerically would give a single tool which could consistently test the majority
+of models of late-time acceleration heretofore proposed.
+arXiv:1404.3713v3  [astro-ph.CO]  17 Jun 2014
+
+---PAGE BREAK---
+Contents
+1
+Introduction
+1
+2
+Scope: General Scalar-Tensor Theories
+3
+3
+Minimal Description of Dynamics
+5
+3.1
+Non-Redundant Set of Linear-Perturbation Properties
+5
+3.2
+Cosmological Background
+7
+3.3
+Background Stability
+10
+3.4
+Linear Perturbations
+11
+3.5
+Connection to EFT
+14
+4
+Physics of Horndeski Linear Structure Formation
+15
+4.1
+Example: No Braiding
+17
+4.2
+Example: Negligible Standard Kinetic Term
+18
+4.3
+Comment on Quasi-Static Limit
+19
+4.4
+Constraints beyond Large-Scale Structure
+20
+5
+Discussion and Conclusions
+21
+A Deﬁnitions of Evolution Variables
+24
+B Scale Dependence in Dynamics
+25
+C Perturbation Equations in Synchronous Gauge
+26
+1
+Introduction
+Even before the discovery of the acceleration of the expansion of the universe, dynam-
+ical mechanisms for generating such a phase in the evolution history were being proposed
+(e.g. quintessence [1, 2]). The actual discovery resulted in a very large volume of proposals for
+dynamical models of this late-time acceleration, both based on classical ﬁeld theories (usu-
+ally of a scalar ﬁeld, but also modiﬁed theories of the gravitational metric, e.g. f(R) gravity
+[3]) and on phenomenological approaches (e.g. see reviews [4, 5]). It was quickly understood
+that one could potentially get a handle on the actual mechanism behind the acceleration by
+comparing the behaviour of the background expansion history with that of the large-scale
+structure which evolves on this background [6].
+It is really this comparison that is key to understanding the nature of dark energy. A
+detection of an expansion history incompatible with a Λ-cold-dark-matter (ΛCDM) universe
+does mean that an explanation alternative to the cosmological constant is required, but
+does not actually say much about the nature of the dynamical mechanism.
+Conversely,
+the ΛCDM framework describes the whole gravitational sector using one constant parameter
+(ΩΛ) measurable from the background expansion. The growth of structure is then completely
+ﬁxed (the remaining theoretical uncertainties on non-linear scales notwithstanding) and a
+measurement of the properties of large-scale structure is necessary to ascertain that some
+– 1 –
+
+---PAGE BREAK---
+other mechanism with background expansion close to ΛCDM is not actually responsible. Just
+measuring the background is not enough.
+Structure in the can be studied universe in two approaches.
+One can build model-
+independent null tests from observables which can be used to constrain properties of the
+models. This approach is well studied for the case of the evolution of the background [7–9].
+In the case of perturbations, it was demonstrated that one can in principle reconstruct the
+gravitational potentials as a function of time and scale and therefore measure such properties
+as the anisotropic stress in a model-independent manner [10, 11]. For example, Euclid should
+be able to measure the slip parameter in such a model-independent manner to within a few
+percent, depending on the assumptions [12].
+A much more usual approach is to take a particular dark energy model and fold in the
+evolution described by it into a full cosmological Boltzmann code, such as CAMB [13] or
+CLASS [14, 15] following this with a Monte Carlo exploration of the parameter space allowed
+by the totality of all the available observational data. The disadvantage of this method is that
+it is very computationally expensive since each model must be constrained separately, unless
+it is nested in some sort of larger model class. Typically one therefore reduces the models
+to a small number of parameters which capture the gross behaviour and tries to constrain
+the parameters’ allowed values. For example, it is well understood that, on the level of the
+background, the eﬀective equation of state of the dark energy, which is in principle a free
+function of time, fully describes the evolution of the metric. It is frequently parameterised
+using the ﬁrst two terms of a Taylor expansion [16, 17].
+The description of perturbations is more complicated. Scalar perturbations dominate
+at linear scales and, in principle, all one needs to do is to relate the two scalar gravitational
+potentials to the matter distribution through some sort of parameterisation involving two
+functions of both scale and time [18–20]. The remaining question is how to do it in a way
+that models properties of the underlying dark-energy theory, rather than being an arbit-
+rary parameterisation which could capture a deviation away from the concordance model
+but not necessarily the physics. To be speciﬁc, general relativity has a generally covariant
+structure with no scalar degrees of freedom of its own, which leads to a particular set of
+relations between the gravitational potentials, their derivatives, and the density and velocity
+perturbations of the matter. The idea is to ﬁnd the appropriate ways of generalising such
+relationships in more complicated theories.
+For example, one can appropriately take large-scale eﬀects into consideration [21], but
+this is clearly not enough to fully specify the theory. This can be matched to small-scale
+behaviour using a phenomenological interpolation [22, 23]. Alternatively, requiring gauge
+invariance of the equations [24, 25] restricts the possible structures, but still leaves a very
+large number of free functions to be determined. One can then attempt to describe the dark
+energy through its ﬁeld content and its eﬀective ﬂuid — or some sort of hopefully physical
+— properties [26–29]. Instead, one can assume that the dark-energy model preserves locality
+and is approximately quasi-static, which results in a particular behaviour of the perturbations
+with scale [10, 30–32].
+An alternative approach is to consider an eﬀective ﬁeld theory (EFT) for perturbations
+on top of a Friedmann-Robertson-Walker (FRW) cosmological background. This method was
+introduced in [33] and has been developed in the context of general dark-energy cosmologies in
+[34–39] (see also the review [40]). The idea is that one writes down an action for perturbations
+containing all possible operators allowed by the symmetries of the FRW background and
+properties required of the underlying dark energy. These operators have arbitrary coeﬃcients
+– 2 –
+
+---PAGE BREAK---
+that are purely functions of time and represent the maximal freedom that is permitted in
+the equations of motion for perturbations. Not all these operators contribute in a distinct
+manner to the perturbations [38] but they do represent the maximal freedom that one has
+in deforming Einstein equations according to whichever DE properties are required. This
+approach to perturbations has been implemented numerically in ref. [41].
+Our approach in this paper is similar in spirit to the EFT approach, although we restrict
+our attention to the Horndeski class of models [42]. The Horndeski models are the most
+general set of theories of a single extra scalar degree of freedom or, equivalently, which have
+equations of motion with at most second derivatives on any background [43]. The majority
+of universally coupled dark energy and modiﬁed gravity models belong to this class. We
+show that the evolution of linear perturbations can be completely described by specifying an
+arbitrary background evolution history, the constant Ωm0 — fractional matter density today
+— and four additional independent functions of time only which fully specify the eﬀects of
+the dark-energy model. We provide the full set of equations for direct implementation in
+standard cosmological codes. Since most popular models of dynamical dark energy fall into
+the scope of this paper, they can be easily mapped onto our formulation. We present this
+mapping, demonstrating how a code modiﬁed for our formulation can immediately be used
+to model perturbations in these less general classes of dark-energy theories, allowing for a
+single code to be used to constrain many classes of models.
+Our choice of these four functions is equivalent to a particular combination of the EFT
+operators of refs [34, 35], but one which has the advantage of mapping directly onto physical
+eﬀects. In addition, contrary to the EFT descriptions where some of the operators enter
+both the background and the perturbation properties, our formulation completely separates
+the two. We also explicitly demonstrate that the four two of these parameters control the
+existence of anisotropic stress while the other two control the clustering of the dark energy
+A non-detection of anisotropic stress or any deviation from the standard growth rate
+would constrain the parameters to lie close to their ΛCDM values of zero. Combined with
+an expansion history consistent with ΛCDM, such a result would imply that any dynamical
+dark-energy mechanism is responsible for no more than a small fraction of the acceleration,
+with the remainder being driven by the standard vacuum energy.
+We begin in section 2 by describing the scope of our approach. In section 3, we deﬁne
+our formulation and present the full background and perturbation equations in Newtonian
+gauge in terms of our parameter functions. We discuss the requirements posed by stabil-
+ity considerations, connect our formulation to previous approaches and provide a mapping
+between popular models of dark energy onto our formulation. We discuss the eﬀect of the
+dark energy on the physics of structure formation in section 4, discussing the validity of
+the quasi-static limit, constraints from Solar-System tests and the measurability of the dark
+energy parameters. We discuss our ﬁndings and conclude in section 5. In the Appendix,
+we present the relevant equation in synchronous gauge, allowing for immediate inclusion in
+popular Boltzmann codes.
+2
+Scope: General Scalar-Tensor Theories
+In this paper, we discuss the properties of linear perturbations of scalar-tensor theories be-
+longing to the Horndeski class of actions [42, 43] when evolving on a cosmological background.
+This action is the most general action for a single classical scalar ﬁeld in the presence of gravity
+which does not result in any derivatives higher than second order in the equations of motion
+– 3 –
+
+---PAGE BREAK---
+on any metric. We assume that the weak equivalence principle holds and therefore that all
+matter species external to the scalar-tensor system are coupled minimally and universally.
+The combined action for gravity and the scalar is deﬁned by
+S =
+ˆ
+d4x √−g
+" 5
+X
+i=2
+Li + Lm[gµν]
+#
+,
+(2.1)
+where gµν is the metric to which the matter sector, described by Lm, is coupled.1
+For
+the purpose of this paper, the matter sector should be thought of as describing all of dark
+matter, baryons, radiation and neutrinos; we will not diﬀerentiate between them here. The
+Lagrangians Li are usually written as
+L2 = K(φ, X) ,
+L3 = −G3(φ, X)□φ ,
+L4 = G4(φ, X)R + G4X(φ, X)
+h
+(□φ)2 −φ;µνφ;µνi
+,
+L5 = G5(φ, X)Gµνφ;µν −1
+6G5X(φ, X)
+h
+(□φ)3 + 2φ;µνφ;ναφ;αµ −3φ;µνφ;µν□φ
+i
+.
+The couplings to gravity are completely ﬁxed by the Lagrangians L4−5. The four functions
+K(φ, X) and Gi(φ, X) are arbitrary functions of the scalar ﬁeld φ and its canonical kinetic
+term X = −φ;µφ;µ/2. The subscript X represents a derivative w.r.t. X while φ is a derivative
+w.r.t. the ﬁeld φ. This class of models therefore comprises four functional degrees of freedom
+which will combine into the four degrees of freedom in our parameterisation.
+This general class of actions includes essentially all universally coupled models of dark
+energy with one scalar degree of freedom: quintessence [1, 2], Brans-Dicke models [44], k-
+essence [45, 46], kinetic gravity braiding [47–49], galileons [50, 51]. Archetypal modiﬁed-
+gravity models such as f(R) [3] and f(G) [52] gravity are within our purview.
+Models
+such as Dvali-Gabadadze-Porrati (DGP) gravity [53] or ghost-free massive gravity [54–56]
+lie outside of our purview.
+However, their appropriately covariantised decoupling limits,
+Galileon Cosmology [57] and proxy massive gravity [58, 59], which should correctly capture
+the behaviour of the scalar degree of freedom, do belong to the Horndeski class and therefore
+are described by our formulation.
+As we explain later, our approach is also closely related to the eﬀective ﬁeld theory
+method of describing linear perturbations on the Friedman cosmological metric.
+It was
+proven in ref. [36] that the maximal theory for linear perturbation described by equations
+with no more than second derivatives is equivalent to that given by the Horndeski action.
+Although ref. [36] notes that there is an extension allowed where the Einstein equations
+contain third derivatives, but the equation for the propagating scalar degree of freedom does
+not. Surprisingly, this structure seems to be repeated on non-linear level [60].2
+Some models of dark energy break the equivalence principle between the baryonic and
+dark sectors (e.g. coupled quintessence [62] or non-universal disformal couplings [63, 64])
+allowing, for example, for a much simpler evasion of Solar-System constraints. Our method
+could be extended to these models quite simply with the introduction of an additional para-
+meter for the coupling to dark matter and the relative DM/baryon density. We must note
+1We use the (−+ ++) signature convention.
+2See also the possibly related ref. [61].
+– 4 –
+
+---PAGE BREAK---
+that our framework does not in general cover such classes of models as: Lorentz-invariance-
+violating models (e.g. Hoˇrava-Lifschitz models [65, 66]) or non-conservative ﬂuids arising from
+high-temperature self interactions of a scalar (e.g. Dark Goo [67]).
+3
+Minimal Description of Dynamics
+We assume that the universe is well described by small scalar perturbations on top of a FRW
+metric. We assume spatial ﬂatness and use the Newtonian gauge with the notation of ref. [68]
+throughout the paper3, i.e. the line element takes the form
+ds2 = −(1 + 2Ψ)dt2 + a2(t)(1 −2Φ)dx2 .
+(3.1)
+We have chosen this gauge since the metric potentials Φ and Ψ are in fact cosmological
+observables [11]. We present the main results in synchronous gauge in the Appendix C.
+The purpose of the presentation that follows in the rest of this section is dual. Firstly,
+it provides suﬃcient information to fully solve for the evolution of linear cosmological per-
+turbations in any particular dark-energy model in the Horndeski class. Given an action for
+a model, all one is required to do is to compute the form of four functions αi deﬁned in
+section 3.1 and solve the resulting equations of motion for the background and perturba-
+tions. On this level, the method gives a uniﬁed, “write once use many” approach for evolving
+linear large-scale structure in dark energy models. To obtain constraints on parameters of
+the Lagrangian, the algorithm would need to scan through potential initial conditions on the
+scalar ﬁeld value, solving for the background evolution and then determining the values of
+the αi as a function of time for that model. This is what is being done today for example
+for covariant galileon models [69]; our formulation essentially provides a book-keeping device
+when seen from this perspective.
+However, a potentially more fruitful approach would be one close to that taken by
+EFT methods: observations to date have determined that the background expansion history
+appears close to ΛCDM. Since our description identiﬁes the maximal number of functions
+independent of background expansion, the equations we provide can be used to constrain the
+forms of these property functions αi compatible with the observed quasi-ΛCDM background,
+without making any reference to a particular model or initial conditions for the scalar’s
+background value. In fact, the values of the functions αi are the maximum unambiguous
+information that can ever be extracted about such dark-energy models from the evolution of
+linear cosmological perturbations.
+We now describe the physical meaning and origin of the four property functions αi, be-
+fore turning to the background equations and stability tests and ﬁnally the full perturbations
+equations involving all of these property functions.
+3.1
+Non-Redundant Set of Linear-Perturbation Properties
+It is well known that the evolution history of the cosmological background does not specify
+the dark-energy model (for example quintessence and f(R) gravity have diﬀerent predictions
+for the growth of structure given the same expansion history). The main result of this paper
+is that we have formulated the possible linear perturbation theory for dark-energy models
+belonging to class (2.1) in terms of four functions of time, αi(t). Augmenting them with the
+3Note that in this paper we used Ψ and Φ instead of ψ and φ, being these potentials the correspondent
+gauge invariant variables in the Newtonian gauge.
+– 5 –
+
+---PAGE BREAK---
+background evolution history H(t) and the matter density today ˜ρm0 fully determines the
+evolution of large-scale structure. It is important to stress that for a general model all of
+these are completely independent. Equally importantly: this is the minimal set of functional
+parameters which is capable of describing all models within our scope.
+When considering a particular model, with appropriate initial conditions for the back-
+ground variables, the four functions αi are determined by the Lagrangian and the value of the
+scalar ﬁeld through the deﬁnitions (A.7-A.10). On one hand they can be considered a helpful
+compression of the perturbations equations. However, this is not the approach we advocate
+here. Given a ﬁxed background and ˜ρm0, any two trajectories in any two seemingly diﬀerent
+models which have the same αi exhibit absolutely no diﬀerence in their behaviour. This
+implies that no measurements of linear structure can ever say anything about the particular
+theory of dark energy beyond the measurement of ρm0 and αi(t). This is the maximum extent
+to which dark-energy Horndeski Lagrangians can ever be reconstructed using linear-theory
+observations.
+The above is strictly true only when the scalar rolls monotonically, i.e. ˙φ ̸= 0. If there
+are oscillations of the background values (e.g. see ref. [70]), then the equations need to be
+expanded and they do depend also on the value of ˙φ. In such a case, the full model must be
+supplied and solved for.
+Since the four DE property functions αi are arbitrary and independent of the back-
+ground, the matter sector and of each other, we argue that they should be thought of as
+being essentially the relevant independent physical properties of the dark energy and should
+be the ones targeted for measurement. We describe the physical meaning of these function
+here, while their analytic deﬁnition in terms of the Horndeski functions K and Gi can be
+found in Appendix A,
+• αK, kineticity. Kinetic energy of scalar perturbations arising directly from the action.
+It is the only contribution of perfect-ﬂuid models but is not present at all in archetypal
+“modiﬁed gravity” models such as f(R) and f(G). Large values act to suppress the
+sound speed of scalar perturbations. Contribution from all of K, G3, G4, G5.
+• αB, braiding. Signiﬁes braiding, or mixing of the kinetic terms of the scalar and metric.
+Contributes to kinetic energy of scalar perturbations indirectly, by backreacting through
+gravity. Second time derivatives of metric and scalar ﬁeld to appear in equations of
+motion for both the scalar and the metric. Causes dark energy to cluster. Contributions
+from G3, G4, G5.
+• αM, Planck-mass run rate. Rate of evolution of the eﬀective Planck mass. A constant
+redeﬁnition of the Planck mass does not aﬀect physics. Its time evolution in the Jordan
+frame of the observer creates anisotropic stress. Contributions from G4 and G5.
+• αT, tensor speed excess. Deviation of the speed of gravitational waves from that of
+light. This violation of Lorentz-invariance for tensors also changes the response of the
+Newtonian potential Ψ to matter sources even in the presence of no scalar perturbations,
+leading to anisotropic stress. Contributions from G4 and G5.
+The existence of these four contributions can be roughly allocated to the four possible types
+of perturbation structures in the dark-energy EMT at linear order. Following ref. [26], we
+analyse the perturbations on “comoving” φ = const (equal clock) hypersurfaces.
+– 6 –
+
+---PAGE BREAK---
+• The αK contributions are essentially those of linear perturbations of the standard
+perfect-ﬂuid EMT.
+• Braiding αB represents a space-like energy ﬂux vector qi in this frame (a T 0i contri-
+bution); essentially this is a generalisation of the imperfect contributions described for
+kinetic gravity braiding models in [49].
+• The change in the speed of tensors αT arises as a contribution in the DE EMT propor-
+tional to the curvature of the spatial comoving hypersurfaces, (3)Rµν, which contains
+the graviton gradient terms. The eﬀect of this is to introduce an oﬀset between the two
+metric potentials, i.e. anisotropic stress.
+• Finally, αM is a result of contributions in the EMT proportional to the Einstein tensor.
+On φ = const hypersurfaces at linear order it has no impact. However, any variation
+of the Planck mass represents a conformal rescaling of the metric which splits the two
+gravitational potentials introducing anisotropic stress.
+We have have presented a list of αi’s for a selection of popular dark-energy model classes
+in table 1. Typically, any particular dark-energy model class will only turn on one of the
+αi’s (perfect ﬂuids), or the values of multiple parameters will be related (e.g. f(R)). Thus
+measuring the appropriate values of the parameters allows for a determination of the class of
+models into which the dark energy falls. Standard parameterisations for particular models
+can easily be used by ﬁnding the appropriate conversion between them and the αi.
+In principle, it might be possible to directly measure the parameters αi as a function of
+redshift given good enough data (see the null tests of ref. [11] for a method), but most likely
+they will have to be inferred from the integrated total of cosmological structure-formation
+data. This means that a parameterisation is necessary, especially if this method is to be
+implemented in Boltzmann codes. For a general parameterisation we propose that
+αi = (1 −˜Ωm)ˆαi ,
+ˆαi = const
+(3.2)
+be used. This sort of parameterisation reﬂects the fact the values of αi are driven by the
+same functions of the scalar ﬁeld as the energy density and their derivatives. Thus naively
+one would expect them to be of similar size, i.e. ˆαi ∼1. If any of the ˆαi ≫1 (for example,
+in a perfect ﬂuid model with c2
+s ≪1 + wX), then this is a sign that the energy density and
+pressure both have some kind of cancellation which disappears when additional derivatives
+are taken to form the αi. Thus this kind of situation, which is in principle perfectly well
+allowed, can be considered evidence of tuning in the structure of the Lagrangian. Finally, the
+situation where all the ˆαi ≪1 implies that the acceleration is mainly driven by a cosmological
+constant, with a marginal contribution from the dynamical dark-energy mechanism.
+3.2
+Cosmological Background
+The Friedmann equations can be obtained in the usual manner. The ambiguity is the fact
+that in Horndeski theories the Planck mass can be a function of time. In particular, the role
+of the Planck mass is played by
+M2
+∗(φ, X, H) ≡2
+
+G4 −2XG4X + XG5φ −˙φHXG5X
+
+,
+(3.3)
+which depends on time implicitly through the solution realised by the universe in φ, X and
+H. If the Planck mass M2
+∗is constant on the solution realised by the Universe then it can
+– 7 –
+
+---PAGE BREAK---
+Model Class
+αK
+αB
+αM
+αT
+ΛCDM
+0
+0
+0
+0
+cuscuton (wX ̸= −1)
+[71]
+0
+0
+0
+0
+quintessence
+[1, 2]
+(1 −Ωm)(1 + wX)
+0
+0
+0
+k-essence/perfect ﬂuid
+[45, 46]
+(1−Ωm)(1+wX)
+c2s
+0
+0
+0
+kinetic gravity braiding
+[47–49]
+m2(nm+κφ)/H2M2
+Pl
+mκ/HM2
+Pl
+0
+0
+galileon cosmology
+[57]
+−3/2α3
+MH2r2
+ce2φ/M
+αK/6 −αM
+−2 ˙φ/HM
+0
+BDK
+[26]
+˙φ2K, ˙φ ˙φe−κ/H2M2
+−αM
+˙κ/H
+0
+metric f(R)
+[3, 72]
+0
+−αM
+B ˙H/H2
+0
+MSG/Palatini f(R)
+[73, 74]
+−3/2α2
+M
+−αM
+2 ˙φ/H
+0
+f(Gauss-Bonnet)
+[52, 75, 76]
+0
+−2H ˙ξ
+M2+H ˙ξ
+˙H ˙ξ+H ¨ξ
+H(M2+H ˙ξ)
+¨ξ−H ˙ξ
+M2+H ˙ξ
+Table 1. Parameter functions αi for various classes of models determined from their actions using
+deﬁnitions (A.6-A.10). For example in quintessence models, background evolution determines ab-
+solutely everything about linear perturbations, while in k-essence we have an additional degree of
+freedom, the sound speed. Perfect-ﬂuid models are described by just the kineticity αK. On the other
+hand, the archetypal “modiﬁed gravity” models such as f(R) and f(G) have αK = 0, but turn on
+other directions in the space of perturbations. Most simple models of dark energy are described by a
+single or possibly two functions forming a subspace in the full potential theory space spanned by the
+αi.
+have no eﬀect on observables, since masses can always be redeﬁned to reabsorb it. The only
+dependence of physics can be on the (dimensionless) rate of evolution of the Planck mass
+which is one of the property functions described in section 3.1,
+αM ≡H−1 d ln M2
+∗
+dt
+.
+(3.4)
+The Friedmann equations are
+3H2 = ˜ρm + ˜E
+(3.5)
+2 ˙H + 3H2 = −˜pm −˜P
+where we have kept the left-hand side standard. ˜ρm and ˜pm are the background energy density
+and pressure of all the matter components together, while ˜E and ˜P are the background energy
+density and pressure of the dark energy.4 We also sometimes use the matter equation of state
+parameter and the fractional matter density,
+wm ≡˜pm
+˜ρm
+,
+˜Ωm ≡˜ρm
+3H2 .
+(3.6)
+4Bear in mind that we have removed some terms that appear in the EMT by collecting them to form the
+Planck mass M 2
+∗, eq. (3.3).
+– 8 –
+
+---PAGE BREAK---
+We are using the tilde to indicate that all the quantities are divided by M2
+∗, e.g.
+˜ρm ≡ρm
+M2∗
+.
+(3.7)
+The full expressions for ˜E and ˜P are given in the Appendix A, eqs. (A.1) and (A.2). Here
+we will only note that the pressure term contains a dependence on ¨φ,
+˜P ≡˜P(φ, X, H) −αB
+H ¨φ
+˙φ ,
+(3.8)
+where ˜P is the part of the pressure only depending on φ, X and H. The dependence on
+¨φ results from kinetic braiding, the mixing between the scalar and metric kinetic terms
+which was extensively described as an essential feature of kinetic gravity braiding models in
+Refs [47, 49]. In general Horndeski models, the braiding αB receives contributions from all
+of G3−5 and is deﬁned in the Appendix in eq. (A.9).
+As a result of absorbing a potentially time-evolving Planck mass in the deﬁnition of the
+tilded quantities such as (3.7), the energy density is not necessarily covariantly conserved,
+˙˜ρm + 3H (˜ρm + ˜pm) = −αMH ˜ρm ,
+(3.9)
+˙˜E + 3H
+ ˜E + ˜P
+
+= αMH ˜ρm ,
+but rather is exchanged between the scalar and matter subsystems whenever the value of
+M2
+∗is changing. This presents a slight complication: one must either keep track of the value
+of M2
+∗but is then able to use the standard conservation laws for the untilded quantities.
+Alternatively, the densities of all matter species need to appropriately integrated whenever
+αM ̸= 0 using Eq. (3.9).
+It is important to stress that, despite appearing in background equations, both αB and
+αM are only possible to determine through their inﬂuence on structure formation. Any ex-
+pansion history can be realised for any choice of these two functions. However, the linear
+perturbation theory changes when these functions change and this physics cannot be replic-
+ated by changing the other parameters. They are thus linear-perturbation properties and
+their appearance in this section is stressed only to guide those working to constrain models
+with fully deﬁned actions, rather than in the eﬀective framework advocated here.
+Given the non-conservation of the matter components whenever the Planck mass runs,
+there is an ambiguity as to the deﬁnition of the equation of state and its relation to evolution
+of energy density for the dark energy. We will choose to make an operational deﬁnition based
+on the Friedmann equations (3.5) and therefore on the dark-energy background conﬁguration,
+1 + wX ≡
+˜E + ˜P
+˜E
+= −2 ˙H + ˜ρm + ˜pm
+3H2 + ˜ρm
+.
+(3.10)
+This choice does not in general fully determine the evolution of dark-energy energy density,
+but is a useful book-keeping device in the perturbation equations and stability analysis.
+We should note that the observation of the background expansion history only determines
+H(z)/H0. The value of ˜ρm0, the density of the matter sector today, is a free parameter that
+can only be determined through measurement of large-scale structure [10, 11]. Depending
+on diﬀerent choices of ˜ρm0, the history of wX will also diﬀer given a background expansion
+history ﬁxed by observations.
+– 9 –
+
+---PAGE BREAK---
+Finally, the scalar ﬁeld value evolves according to the equation of motion which can be
+written succinctly as,
+˙n + 3Hn = Pφ ,
+(3.11)
+where n, deﬁned in the Appendix in eq. (A.4), is a shift charge density which is covariantly
+conserved whenever the action exhibits a Noether symmetry with respect to constant shifts,
+φ →φ + const.
+Pφ is a partial derivative of the pressure with respect to φ, deﬁned by
+eq. (A.5). Whenever the shift symmetry is present, the models feature attractors where the
+charge density n = 0. These provide natural scaling solutions and post-inﬂationary conditions
+for the models [47, 77].
+3.3
+Background Stability
+One of the complications of the non-canonical Horndeski models is that backgrounds can
+become unstable to perturbations. The meaning of these instabilities is that the background
+solution found is no longer appropriate. This is a particular concern when no full action is
+given, but a more phenomenological approach we advocate here is taken. Thus one must
+ensure that instabilities are not present and discard a particular range of parameters if they
+are found.
+Generally, the background can suﬀer either from ghost or gradient instabilities, or both.
+Gradient instabilities occur when the background evolves to a region where the speed of
+sound squared of the perturbations is negative, leading to an exponential destabilisation of
+the perturbations at small scales, with timescales of the order of the cutoﬀof the theory.
+Ghost instabilities occur when the sign of the kinetic term for of the background perturbations
+is wrong. Usually, they are discussed in the context of quantum stability since the vacuum
+can destabilise to produce ghost and normal modes, if ghosts are present, dynamical and
+coupled (see estimates of the rates of such destabilisation in [78]).
+The second-order action for perturbations of the Horndeski action was ﬁrst derived in
+ref. [79] where a 3+1 decomposition in the unitary gauge to obtain actions for the propagating
+modes: the tensors (gravitational waves) hij, the scalar ζ and the perfect-ﬂuid matter sound
+waves, the last of which which we will not write out here,
+S2 =
+ˆ
+dtd3xa3
+"
+QS
+ 
+˙ζ2 −c2
+s
+a2 (∂iζ)
+!
++ QT
+ 
+˙h2
+ij −c2
+T
+a2 (∂khij)2
+!#
+,
+(3.12)
+with the stability of the background to the scalar modes requiring
+QS =
+2M2
+∗D
+(2 −αB)2 > 0 ,
+D ≡αK + 3
+2α2
+B ,
+(3.13)
+c2
+s = −
+(2 −αB)
+h ˙H −1
+2H2αB (1 + αT) −H2 (αM −αT)
+i
+−H ˙αB + ˜ρm + ˜pm
+H2D
+> 0 ,
+while the stability to the tensor modes requires
+QT = M2
+∗
+8
+> 0 ,
+(3.14)
+c2
+T = 1 + αT > 0 .
+– 10 –
+
+---PAGE BREAK---
+Taking all the conditions together also implies that the no-ghost condition for the scalar
+perturbations reduces to D > 0. We should note here that cs is the speed of propagation
+of small scalar perturbations in the inﬁnite frequency (eikonal) limit, k →∞, and therefore
+a statement about the causal structure of the model. It is therefore not a function of scale
+but only of time. It is not in general equivalent to the frequently used function C2 relating
+the dark-energy pressure and density perturbations, δP ≡C2δE, which usually depends on
+scale, but which is not necessarily related to stability (see e.g. the discussion in ref. [26]).
+It is the expression for QT that validates why we chose to call M2
+∗, eq. (3.3), the eﬀective
+Planck mass: the unambiguous meaning of Planck mass is as the normalisation of the graviton
+kinetic term. The action for the tensor perturbations also clariﬁes the meaning of αT: it is
+the deviation of the speed of tensors from the speed of light. The graviton gradient terms
+are contained in the Ricci scalar of the spatial hypersurface in unitary gauge, (3)R.
+When evaluating the suitability of backgrounds, one must ensure that all conditions
+(3.13) and (3.14) are satisﬁed at all times of interest. When αB ̸= 0, the region of phase
+space where D = 0 represents a pressure singularity [47] and no trajectory ever evolves across
+it [80]. However, nothing in the background dynamics prevents a trajectory with c2
+s > 0 from
+crossing into an unstable region. It is also possible that theories which violate the null energy
+condition suﬀer from some sort of non-linear instability even when they do not exhibit the
+instabilities described above [81].
+One may, in principle, also wish to constrain the viable models to such trajectories where
+the speeds of sound are subluminal. Subluminality is a necessary precondition for there to
+exist a standard Wilsonian ultraviolet completion of the action [82]. However, in general
+Horndeski models superluminalities always exist somewhere in the phase space, especially in
+the presence of matter external to the scalar [83]. There are not necessarily causal paradoxes
+in theories with superluminality [84, 85], but these theories must be ultraviolet completed in
+an alternative way, e.g. via classicalisation [86, 87].
+3.4
+Linear Perturbations
+The value of the scalar ﬁeld value is not an observable. We can reparameterise the ﬁeld
+by deﬁning a new ˜φ ≡˜φ(φ) and all observables must remain unchanged. This means that
+focussing on the scalar’s value introduces unobservable redundancy into the description.
+Instead, one can notice that the scalar-ﬁeld gradient forms a natural four-velocity,
+uµ ≡−∂µφ
+√
+2X
+,
+(3.15)
+which deﬁnes a comoving frame, provided that ∂µφ be timelike, X > 0. The meaning of φ
+then is one of a clock and its gradient is the time direction for an observer at rest in this frame.
+The perturbation of the scalar, when appropriately normalised, can then be interpreted as a
+scalar potential for a peculiar velocity ﬁeld,
+vX ≡−δφ
+˙φ ,
+(3.16)
+where the overdot denotes the derivative with respect to the coordinate time t. This velocity
+potential is then invariant under the reparameterisations of φ and allows us to write down
+a much simpler set of perturbations equations. Oscillating models, where the background
+ﬁeld velocity ˙φ crosses zero, cannot be directly described using our formulation, since the
+– 11 –
+
+---PAGE BREAK---
+singularities in (3.16) would have to be appropriately accounted for.
+The main result of this paper is the non-redundant formulation of linear cosmological
+perturbation equations in a manner immediately implementable in codes for calculating linear
+large-scale structure such as CAMB [13] or CLASS [14, 88]. We present the Einstein equations
+below in the user-friendly Newtonian gauge and coordinate time, providing the conformal-
+time synchronous-gauge version in Appendix C. We are not the ﬁrst to derive these equations
+(see refs [34, 35, 89] and section 3.5), but we argue in this paper that our choice of variables
+allows for the separation of diﬀerent physical eﬀects and a natural limit to concordance
+cosmology. This allows us to discuss the physics of general Horndeski theories with relative
+ease in section 4.
+The eﬀect of the presence of the Horndeski scalar is to introduce the dynamical velocity
+potential vX, describing the perturbation of the scalar ﬁeld through eq. (3.16). We keep these
+terms on the left-hand side of the perturbed Einstein equations to emphasise the gravity-like
+nature of this degree of freedom, resulting from the universality of its coupling. In addition,
+the scalar’s background conﬁguration changes the coeﬃcients of the gravitational potentials
+away from their standard values arising from the Einstein tensor. On the right-hand-side of
+the Einstein equations lie the standard contributions of all the matter sources in the cosmo-
+logy: dark matter, baryons, photons and neutrinos.
+The Hamiltonian constraint (Einstein (00) equation) takes the form:
+3 (2 −αB) H ˙Φ + (6 −αK −6αB) H2Ψ + 2k2Φ
+a2
+(3.17)
+−(αK + 3αB) H2 ˙vX −
+"
+αB
+k2
+a2 −3 ˙HαB + 3
+
+2 ˙H + ˜ρm + ˜pm
+#
+HvX = −˜ρmδm ,
+the momentum constraint (Einstein (0i) equation)
+2 ˙Φ + (2 −αB) HΨ −αBH ˙vX −
+
+2 ˙H + ˜ρm + ˜pm
+
+vX = −(˜ρm + ˜pm) vm ,
+(3.18)
+the anisotropy constraint (spatial traceless part of the Einstein equations)
+Ψ −(1 + αT) Φ −(αM −αT) HvX = ˜pmπm ,
+(3.19)
+and the pressure equation (spatial trace part of the Einstein equations)
+2¨Φ −αBH¨vX + 2 (3 + αM) H ˙Φ + (2 −αB) H ˙Ψ
+(3.20)
++
+h
+H2 (2 −αB) (3 + αM) −(αBH). + 4 ˙H −
+
+2 ˙H + ˜ρm + ˜pm
+i
+Ψ
+−
+h
+2 ˙H + ˜ρm + ˜pm
+
++ (αBH). + H2αB (3 + αM)
+i
+˙vX
+−
+h
+2 ¨H + 2 ˙HH (3 + αM) + ˙˜pm + αMH ˜pm
+i
+vX = δpm/M 2
+∗,
+where we have kept the eﬀective Planck mass on the right hand side explicitly to stress that
+the matter-pressure perturbation refers only to the matter sector and not any perturbations
+in the Planck mass, which are already included on the left-hand side.
+– 12 –
+
+---PAGE BREAK---
+Finally, the equation of motion for the scalar velocity potential vX,
+3HαB ¨Φ + H2αK¨vX −3
+h
+2 ˙H + ˜ρm + ˜pm
+
+−H2αB (3 + αM) −(αBH).i ˙Φ
+(3.21)
++ (αK + 3αB) H2 ˙Ψ −2 (αM −αT) H k2
+a2 Φ −αBH k2
+a2 Ψ−
+−
+h
+3
+
+2 ˙H + ˜ρm + ˜pm
+
+−˙H(2αK + 9αB)−
+−H ( ˙αK + 3 ˙αB) −H2 (3 + αM) (αK + 3αB)
+i
+HΨ+
++
+h
+2 ˙HαK + ˙αKH + H2αK (3 + αM)
+i
+H ˙vX + H2M2vX+
++
+h
+−
+
+2 ˙H + ˜ρm + ˜pm
+
++ 2H2 (αM −αT) + H2αB (1 + αM) + (αBH).i k2
+a2 vX = 0 ,
+with
+H2M2 ≡3 ˙H
+h ˙H (2 −αB) + ˜ρm + ˜pm −H ˙αB
+i
+−3HαB
+h ¨H + ˙HH (3 + αM)
+i
+.
+(3.22)
+The system is completed by the standard evolution for the perturbations of the combined
+matter sector — δm, vm, δpm and πm — obtained through the usual Boltzmann code.
+The most important feature of this formulation of the equations is that the evolution
+equations depend only on the standard matter-sector perturbation quantities, the background
+expansion history H(t) (and its derivatives ˙H and ¨H), the background energy density and
+pressure of the matter sector, and the values of the four dimensionless functions of time αi(t)
+which fully deﬁne the properties of the dark-energy perturbations. All of these elements are
+in general completely independent of each other and can take arbitrary values. The values
+of the scalar ﬁeld φ or the velocity ˙φ do not enter the any of the equations directly at all.
+This formulation is purely in terms of physical quantities.
+The expansion history H(t)/H0 has been quite precisely observed and is seen to match
+that of ΛCDM with parameter ΩΛCDM
+m0
+quite closely (e.g. [90, 91]). One can vary this expan-
+sion history somewhat at the price of making it less compatible with distance measurements.
+Given that the matter sector is understood at linear order (DM is essentially non-interacting
+and follows geodesics, baryons and photons interact at high densities, neutrinos do not inter-
+act) the evolution of the background evolution of each of the components and perturbations
+is determined. However, it is frequently not appreciated that the energy density of matter
+today ˜ρm0 is a free parameter that cannot be determined from the expansion history without
+a prior knowledge of the dark-energy evolution history [10]: one can keep H(t) ﬁxed to be
+e.g. exactly ΛCDM while altering the amount of dark matter and simultaneously appropri-
+ately changing the evolution of the equation of state. Essentially, Ωm0 can only be determined
+from the growth of perturbations even in simple dark-energy cases like quintessence.5
+Indeed, in our formulation, one can think of picking a value for ˜Ωm0 ̸= ΩΛCDM
+m0
+for a
+ﬁxed ΛCDM expansion history as describing a dark-energy model which tracks the energy
+density of the matter sector at early times and therefore is a model of early dark energy
+5Seen in this light, even cluster counts are a measure of the amplitude of the gravitational potential and
+therefore a non-linear measure of the perturbations and not of background evolution.
+– 13 –
+
+---PAGE BREAK---
+(“EDE”) with an eﬀective parameterisation similar to ref. [92].
+Such tracker models are
+tightly constrained by cosmic-microwave-background data [93–95], but this is assuming that
+the dark energy does not cluster. A dark energy that tracks the background equation of
+state but clusters at all scales during recombination and afterwards would act exactly like
+dark matter and therefore is not constrained at all. Our formulation gives an easy way to
+investigate the viability of such models.
+We note that in the limit αi →0 together with 2 ˙H + ˜ρm →0, the equations (3.17-
+3.20) reduce to the standard ΛCDM Einstein equations, while the equation of motion for the
+scalar (3.21) identically vanishes, since the scalar degree of freedom is no longer present. This
+means that, for suﬃciently small deviations from this limit, the growth of perturbations will
+be suﬃciently close to that of ΛCDM and this parameterisation has the concordance model
+as its natural limit.
+On the other hand, the limit αi →0 but with a non-ΛCDM expansion history is a little
+peculiar: eq. (3.21) reduces to a constraint. the constraint structure of general relativity is
+modiﬁed allowing for an arbitrary evolution of the background. In fact, this limit is equivalent
+to the cuscuton model of refs [71, 96] which is a limit of the k-essence class of models where
+the sound speed is inﬁnite. It should be noted that such a limit is the proper way of modelling
+perturbations within the context of a wCDM cosmology that preserves general covariance of
+the full action.
+Finally, as is well known (e.g. [72]), exactly ΛCDM expansion history does not neces-
+sarily imply that perturbations grow as in ΛCDM. As discussed above, this is obviously true
+for models with EDE where ˜Ωm0 ̸= ΩΛCDM
+m0
+. However, even in the case 2 ˙H + ˜ρm = 0 the
+Einstein equations diﬀer by the arbitrary functions αi, which alter the solutions on top of
+the concordance background and can change growth rates.
+3.5
+Connection to EFT
+We have chosen the set of variables αi related to the form of the perturbations of the
+dark-energy EMT, since that is most simply related to physical properties of the perturba-
+tions. However, our approach is very much equivalent to the recent results obtained through
+eﬀective-ﬁeld-theory methods [34–38]. Since the Horndeski Lagrangian describes all theories
+with no more than second derivatives in their equations of motion on the FRW background,
+the two approaches diﬀer by essentially a redeﬁnition of variables for this subclass of models.
+The EFT framework does allow for an extension which involve third derivatives in the Ein-
+stein equations, which cancel once the constraints are solved [36, 60]. In principle an extra
+property function would have to be added to our formulation to describe such theories.
+As we have explained above, our claim is that our variables are more concretely connec-
+ted to physical properties of the perturbations and the energy-momentum tensor, whereas
+the EFT framework describes perturbations through coeﬃcients of particular operators per-
+mitted by the symmetries of the Friedmann background. The beneﬁt of our approach is that
+it cleanly separates the properties of the background expansion ( ˙H and Ωm0) from those of
+the perturbations (αi), whereas the EFT approach mixes the two. Moreover, as noted by
+ref. [38], the EFT approach has some redundancy, which when removed reduces to the same
+number of degrees of freedom as we have in our minimal framework, ﬁve. We have provided
+a mapping between the EFT operators and our αi in table 2, as well as deﬁnitions employed
+by other authors in the past to connect all these approaches together.
+– 14 –
+
+---PAGE BREAK---
+Variable Translations
+M 2
+∗
+M 2
+∗HαM
+M 2
+∗H2αK
+M 2
+∗HαB
+M 2
+∗αT
+Amendola et al.
+[10]
+w1
+˙w1
+2
+3 w3 + 6Hw2 −6H2w1
+−w2 + 2Hw1
+w4 −w1
+Bloomﬁeld et al.
+[35, 37]
+m2
+0Ω+ ¯
+M2
+2
+m2
+0 ˙Ω+ ˙¯
+M2
+2
+2c + 4M4
+2
+−¯
+M3
+1 −m2
+0 ˙Ω
+−¯
+M2
+2
+De Felice et al.
+[89]
+GT
+˙GT
+2Σ + 12HΘ −6H2GT
+−2Θ + 2HGT
+FT −GT
+Gubitosi et al.
+[34, 36]
+M2
+∗f + 2m2
+4
+M2
+∗˙f + 2 m2
+4
+·
+2c + 4M4
+2
+−m3
+3 −M2
+∗˙f
+−2m2
+4
+Piazza et al.
+[38]
+M2(1 + ϵ4)
+ M2(1 + ϵ4)·
+2M2(C + 2µ2
+2)
+−M2(µ3 + µ)
+−M2ϵ4
+Table 2. Translation table between the independent linear perturbation variables αi in our formula-
+tion and deﬁnitions used in other works. Our approach is equivalent to the EFT methods, but removes
+the redundancy in the description. For example, our αK is a combination of the EFT variables c and
+M 4
+2 : they never appear separately in the perturbations equations (3.17-3.21) or stability conditions
+(3.13-3.14) and therefore cannot be individually constrained, as already pointed out in (3.17). We
+discuss the relation of our variables to classes of dark energy models in table 1 and their impact on
+physics and therefore detectability in section 4.
+4
+Physics of Horndeski Linear Structure Formation
+We eliminate the scalar ﬁeld vX using the constraints (3.17-3.19) and the time derivative of
+eq. (3.19) to obtain a dynamical equation for the potential Φ with a source driven by the
+matter perturbations,
+¨Φ + β1β2 + β3α2
+B
+k2
+a2
+β1 + α2
+B
+k2
+a2
+˙Φ + β1β4 + β1β5 k2
+a2 + c2
+sα2
+B
+k4
+a4
+β1 + α2
+B
+k2
+a2
+Φ = −1
+2 ˜ρm
+β1β6 + β7α2
+B
+k2
+a2
+β1 + α2
+B
+k2
+a2
+δm ,
+(4.1)
+where the functions βi ≡βi (t) are all functions of the property functions αi and the back-
+ground H(t), deﬁned in appendix B. We have neglected the matter velocity term since for the
+purposes of this section we will assume it that the matter is dust and therefore the velocities
+are irrelevant inside the cosmological horizon. We can obtain the Newtonian potential Ψ
+through a version of the constraint (3.19) with the scalar ﬁeld eliminated,
+α2
+B
+k2
+a2
+
+Ψ −Φ
+
+1 + αT + 2 (αM −αT)
+αB
+
++
+(4.2)
++β1
+"
+Ψ −Φ (1 + αT)
+ 
+1 −2DH2 (αM −αT)
+β1
+!#
+= (αM −αT)
+h
+αB˜ρmδm −2HD ˙Φ
+i
+.
+Augmented with the standard evolution equations for dust perturbations
+˙δm −k2
+a2 vm = 3 ˙Φ ,
+˙vm = −Ψ ,
+(4.3)
+eqs (4.1) and (4.2) form the complete dynamical system.
+The equations presented in section 3.4 describe in full generality the evolution of ﬁrst-
+order scalar perturbations in models within the scope deﬁned in section 2, and they are in
+the natural form for implementation in numerical codes such as CAMB [13] and CLASS
+[14, 15]. However, for the purpose of interpreting the physics, it is helpful to eliminate the
+– 15 –
+
+---PAGE BREAK---
+scalar ﬁeld vX and express all of the dynamics in terms of the variables familiar from the
+standard ΛCDM case.
+We have written the equations (4.1) and (4.2) in a particular manner to make explicit
+the existence of a new transition scale in the behaviour of the dynamics, which we will call
+the braiding scale kB. Whenever there is any kinetic braiding, αB ̸= 0, then the response of
+the gravitational potentials will transition between two separate regimes at the scale
+k2
+B
+a2H2 ≡
+β1
+α2
+BH2 = D
+α2
+B
+h
+(1 −˜Ωm)(1 + wX) + 2 (αM −αT)
+i
++ 9
+2
+˜Ωm .
+(4.4)
+During matter domination, the braiding scale — if it at all exists, αB ̸= 0 — typically lies at
+the cosmological horizon, but can lie inside when
+αK
+α2
+B
+(1 −˜Ωm)(1 + wX) ≫1 .
+(4.5)
+The same braiding scale kB appears in both the dynamical equation (4.1) and in the aniso-
+tropy constraint (4.2) and was discussed for the ﬁrst time in ref. [26] in the context of a small
+subclass of the models being considered here.6 If kB lies subhorizon, this is evidence of a
+hierarchy between the values of αK and αB. In archetypal modiﬁed-gravity models such as
+f(R) and f(G), αK = 0 and therefore kB always lies either close to or outside the cosmolo-
+gical horizon. The whole subhorizon regime always exhibits braiding in these models (in the
+linear regime).
+When considering the observable impact, it is usual to compress any modiﬁcations from
+the concordance case into an eﬀective Newton’s constant and the slip parameter. Since there
+are two potentials, two eﬀective Newton’s constants can be deﬁned,
+Y ≡−2k2Ψ
+a2˜ρmδm
+,
+Z ≡−2k2Φ
+a2˜ρmδm
+.
+(4.6)
+One usually discusses Y , since this is the term that enters directly in the equations for growth
+rate for matter perturbations (see e.g. [20]). However, it is actually Φ that is the dynamical
+variable (related to the spatial curvature perturbation) and it turns out to generically have a
+simpler behaviour. Thus Z should be considered more amenable to parameterisation in the
+classes of models considered here. Since it is Z that appears in the Hamiltonian constraint,
+eq. (3.17), it is a deviation of Z from its subhorizon GR value of 1 that signiﬁes that dark
+energy clusters.
+An honestly model-independent observable that can be measured by comparing weak
+lensing and redshift-space distortions is the slip parameter describing the anisotropic stress,
+¯η ≡
+2Ψ
+Ψ + Φ .
+(4.7)
+We have chosen a non-standard deﬁnition of this ratio to reﬂect the fact that projected
+measurement errors from Euclid are minimised for this particular combination and could
+be as low as a few percent under certain assumptions [12]. A parameterisation of one of
+6It was named the imperfect scale in ref. [26], since the anisotropic stress vanished outside it. This was the
+result of a Brans-Dicke-type non-minimal coupling considered, but it is not the general behaviour, as shown
+in section 4.1.
+– 16 –
+
+---PAGE BREAK---
+the eﬀective Newton’s constants (4.6) and the slip parameter (4.7) is suﬃcient to describe
+the dynamics of the matter sector and therefore to calculate the observables. These can be
+translated to observables in more frequent use by the community through
+Y =
+¯η
+2 −¯ηZ
+Σ =
+2Z
+2 −¯η .
+(4.8)
+We devote the remainder of this section to describing the typical behaviour of these
+variables in the class of models within our scope to build an understanding of what can be
+expected in models which are fully consistent rather than purely phenomenological. First, one
+can ignore all the scale dependence and seek the extreme quasi-static limit of the dynamics,
+k →∞, where
+ZQS = 1 + α2
+B (1 + αT) + 2αB (αM −αT)
+2Dc2s
+,
+(4.9)
+¯ηQS = 1 +
+2
+ β7 −c2
+s
+ (αM −αT) + β7αBαT
+2 (β7 −c2s) (αM −αT) + β7 (2αB + αBαT) ,
+αB ̸= 0 .
+We note here that the dark energy clusters at small scales (Z ̸= 1) only if there is braiding,
+αB ̸= 0. Thus a detection of clustering of dark energy is unambiguous evidence of the presence
+of kinetic mixing of the scalar and graviton. Secondly, the limit for ¯η taken in (4.9) does
+not exist when there is no braiding (see section 4.1 for an account of what happens when
+αB = 0).
+In the following subsections, we discuss in more detail two limiting cases which put the
+above observation on ﬁrmer footing:
+• No braiding, αB = 0; the braiding scale kB does not exist. The sound speed provides
+the only scale in the problem. Inside the Jeans scale, dark energy does not cluster,
+Z = 1. Anisotropic stress can be non-vanishing, with a slip parameter constant as a
+function of scale inside the Jeans length.
+• Negligible standard kinetic term, αK ≪α2
+B; the braiding scale kB is superhorizon.
+There is a single transition scale determined by the Compton mass of the scalar. DE
+clusters only inside the Compton scale. The slip parameter interpolates between two
+values with the transition also occurring at the Compton scale.
+In principle, the fully general model will contain another scale (the braiding scale kB) across
+which the behaviour transitions between these two behaviours (see the behaviour in ref. [26]).
+We defer a detailed description of the phenomenology to a numerical analysis, but stress that
+in general such properties as anisotropic stress and DE clustering are scale-independent only
+for very particular subclasses of dark-energy models.
+4.1
+Example: No Braiding
+Here we assume that there is no braiding: the graviton and the scalar do not mix kinetically
+at any scale, αB = 0. This set of models can be thought of as a generalisation of perfect-
+ﬂuid models to include anisotropic stress. The new scale dependence in the coeﬃcients of
+eqs. (4.1-4.2) disappears and we remain with
+¨Φ + H (4 + αM + 3Υ) ˙Φ +
+ 
+β4 + c2
+sk2
+a2
+!
+Φ = −1
+2c2
+s ˜ρmδm ,
+(4.10)
+– 17 –
+
+---PAGE BREAK---
+for the dynamical equation. The variable Υ is deﬁned in eq. (B.12); it can be thought of as a
+generalisation of the adiabatic sound speed for cases where the dark energy is not a perfect
+ﬂuid. The structure of eq. (4.10) is fundamentally unchanged from the case of the perfect
+ﬂuid (αM = αT = 0). In particular, inside the Jeans length the eﬀective Newton’s constant
+Z ≃1
+for
+k2
+a2 ≫β4/c2
+s
+(4.11)
+no matter what other modiﬁcations are present. Since β4 ∼H2, this range of validity of this
+quasi-static approximation is essentially determined by the sound speed of the dark energy.
+Despite the fact that there is no modiﬁcation in (4.11), and therefore — just as in the
+case of a perfect-ﬂuid dark energy — it does not cluster, growth rates can be aﬀected, since
+this sort of dark energy can carry anisotropic stress. The anisotropy constraint reduces to
+Hc2
+sαKΨ + H
+h
+c2
+sαK + 2 (αM −αT)
+i
+(1 + αT) Φ = −2 (αM −αT) ˙Φ ,
+(4.12)
+i.e. it also loses any scale dependence of the coeﬃcients as well as its dependence on δm. The
+only scale dependence that can appear in the slip parameter is through ˙Φ, which cannot be
+neglected here, especially if c2
+s ≪1.7 The scale-independent result valid in the regime of
+(4.11), is
+¯η = 1 +
+cS2αKαT + 2 (αM −αT)2
+cS2αK (2 + αT) + 2 (αM −αT)2 .
+(4.13)
+4.2
+Example: Negligible Standard Kinetic Term
+In this section, we assume that the kinetic term of the scalar mode is mainly produced
+through mixing with the graviton rather than directly, α2
+B ≫αK. For the sake of simplicity
+of presentation, we also choose αT = 0.
+These kind of models can be considered as a
+generalization of the f(R) theories, since the braiding αB and the Planck-mass run rate
+αM are uncorrelated here (see table 1). More generally, we are essentially describing the
+behaviour of other modiﬁed gravity models such as f(G) and models with large braiding
+such as Imperfect Dark Energy of ref. [47].
+The positivity of the sound speed (3.13) provides an upper limit to the magnitude of
+the braiding αB. We will take it to be
+αB ≲˜ΩX .
+(4.14)
+Under this assumption, the braiding scale (4.4) always lies superhorizon,
+k2
+B
+a2 ≡β1
+α2
+B
+≲O(H2) .
+(4.15)
+and therefore inside the observable domain the dark energy scalar is always kinetically mixed
+with the graviton. In this subhorizon regime, the evolution equation (4.1) reduces to
+¨Φ + (3 + αM) H ˙Φ +
+ 
+β1β5
+α2
+B
++ c2
+s
+k2
+a2
+!
+Φ ≃−1
+2 ˜ρm
+ 
+β1β6
+α2
+B
+k2
+a2
++ β7
+!
+δm .
+(4.16)
+7This is an example of the failure of the quasi-static approximation, see section 4.3.
+– 18 –
+
+---PAGE BREAK---
+Yet again, a scale is present in this equation
+k2
+C
+a2 ≡β1β5
+α2
+Bc2s
+(4.17)
+which in the context of f(R) gravity is called the Compton mass scale [97]. On either side
+of this scale, in the quasi-static limit, we have
+Z =β6
+β5
+aH ≪k ≪kC ,
+(4.18)
+Z =β7
+c2s
+= 1 + 1
+3c2s
++ 2αM
+3αBc2s
+k ≫kC .
+The requirement that Z remain of the order of 1 in order to not catastrophically aﬀect
+structure formation ensures that the coeﬃcients of Φ and δm in eq. (4.16) both transition in
+their behaviour around the same scale. Thus, despite the rather peculiar k-dependence, the
+behaviour of the braided models is to interpolate between two diﬀerent values of the eﬀective
+Newton’s constant Z across the Compton scale. It is typical for β5 ≫1 before dark-energy
+domination, ensuring that most of the scales relevant to structure formation observations are
+super-Compton. We also note that Z is naturally close to 1 when the parameters αi are not
+tuned to create large hierarchies.
+The only scale present in the coeﬃcients of the anisotropy equation (4.2) is the scale
+(4.15) which is superhorizon at all times. Therefore the only scale dependence in the slip
+parameter is a result of the scale dependence in Z, thus we obtain
+¯η ≡1 −
+αM
+αB (αM + 2Υ)
+1 + Υ −3
+2αBcS2 −αM
+αB (αM + 2Υ)
+aH ≪k ≪kC
+(4.19)
+¯η ≡1 +
+αM
+αB
+
+1 + 2 αM
+αB
+
+3cS2 +
+
+1 + αM
+αB
+ 
+1 + 2 αM
+αB
+
+k ≫kC
+where Υ is deﬁned in eq. (B.12) and is a variable that reduces to the adiabatic sound speed
+in the case of a perfect ﬂuid. Thus in general the anisotropic stress can be non-vanishing
+both inside and outside the Compton scale.
+A natural limit of this class of models is f(R) gravity for which αM = −αB. It can easily
+be checked that at super-Compton scales both Z and ¯η are very close to their ΛCDM values
+of 1 (with corrections of order αM), while inside the Compton scale we have the standard
+result Z = 2/3 and ¯η = 4/3.
+4.3
+Comment on Quasi-Static Limit
+Typically when discussing modiﬁed-gravity models, the quasi-static approximation (QS) is
+used to obtain the eﬀective Newton’s constant Z and the slip parameter ¯η. This involves
+neglecting all terms time derivatives in eq. (3.21), turning a dynamical equation into a con-
+straint between the value of the velocity potential vX and the gravitational potential. This
+result is then used in the Hamiltonian constraint (3.17) and the anisotropy constraint (3.19)
+under a similar approximation to obtain Z and ¯η. Does this procedure give the same result
+as the quasi-static limit of eq. (4.1) which was obtained without such approximations?
+It turns out that the two results are identical in the k →∞limit (4.9). However the
+term subleading in k2 are aﬀected. The reason for this is that both equation (3.18) and
+– 19 –
+
+---PAGE BREAK---
+(3.20) do not have any scale dependence. As a result eliminating, the time derivatives of
+vX in eq. (3.21) does not aﬀect any of the k2 terms. However the other terms are changed,
+leading to non-negligible diﬀerences at larger scales. One must therefore be careful about
+how the quasi-static limit is taken when calculating e.g. the Compton mass, as in section 4.2.
+A separate issue is whether the QS limit is at all a good approximation to the full
+dynamics at small-enough scales. In reality, taking the QS approximation is equivalent to
+turning a full degree of freedom into a constraint.
+In principle the dynamics of the late
+universe are described by the coupled system of equations (4.1) and conservation for the
+matter EMT (4.3). One should investigate the normal modes of this coupled system and ask
+what their behaviour is. It may well be that an instability exists which the quasi-static limit
+would hide.
+In particular, the QS approximation removes from consideration the oscillating modes
+which solve the homogeneous version of eq. (4.1). Whether those decay or grow compared
+to the solutions obtained in the QS limit depends, among others, on the friction term in
+(4.1), i.e. on the values of β2 and β3. If all the αi ≲1 −˜Ωm, then β2 ∼4H + O(αiH) and
+β3 ∼3H+O(αiH) and therefore there is no large diﬀerence between the friction terms on any
+scales. Inside the braiding scale the homogeneous mode may be marginally more unstable,
+but probably this is not something particularly dangerous for most models. The details do
+however depend on the behaviour of the mass term and should be studied more extensively.
+4.4
+Constraints beyond Large-Scale Structure
+In addition to the eﬀect on cosmological large-scale structure driven by the modiﬁcations in
+section 3.4, the realised dynamical dark energy mechanism must satisfy additional constraints
+(see e.g. refs [98, 99] and references therein)
+1. Bing-Bang Nucleosynthesis constrains the expansion rate to be within approximately
+10% of the standard one imputed using local measurements of Newton’s constant. This
+is a restriction on the evolution history of the Planck mass M∗.
+2. Shapiro-time-delay tests in the Solar System constrain the parameterised post-Newtonian
+parameter |γ −1| < 10−5. This is a restriction on the anisotropic stress present around
+the solar solution, i.e. the slip parameter ¯η.
+3. Binary-pulsar orbits decay in a manner consistent with general relativity. A new grav-
+itationally coupled scalar is a new channel for radiation and therefore accelerated orbit
+evolution [100].
+4. If gravity is slower than the speed of light, ˇCerenkov radiation into gravitons would be
+produced by particles moving suﬃciently quickly, such as cosmic rays.
+One must be careful in how one interprets these constraints in the context of dynamical
+dark energy.
+The linear perturbation equations (3.17-3.21) must remain valid whenever
+the background has all the symmetries of an FRW universe, i.e. well inside any localised
+distribution of matter which is suﬃciently homogeneous and isotropic. However, it is not
+necessarily true that the local values of the parameters αi are the same as those for the
+cosmology at large scales. As a result of screening around localised objects, a transition
+region can appear where eqs (3.17-3.21) are no longer valid and the solution interpolates
+– 20 –
+
+---PAGE BREAK---
+between the cosmological and the local values of the αi (see e.g. [101, 102] and references
+therein for a discussion of screening mechanisms).
+The constraints (1) and (2) above should therefore be seen as constraints on the local or
+Solar System values of the αi and not on their cosmological values. In particular, constraint
+(1) in our context should be interpreted as
+Ωm(tBBN)YSS
+M2
+∗(tBBN)
+M2
+∗,SS
+−1
+ ≲10% .
+(4.20)
+No measurement of the pure Planck mass exists, but rather the force felt by masses in the
+Solar-System is a sum of both the gravitational and the scalar force and is described by the
+local values of the eﬀective Newton’s constant YSS and the the Solar-System value of M∗,SS,
+which may not be the same as the one at large distances today. On the other hand, the
+constraints on the expansion rate during BBN are sensitive to both the value of the Planck
+mass and on the presence of any early dark energy at that time.
+Similarly, constraint (2) is sensitive to the Solar System value of the slip parameter, i.e.
+|¯ηSS −1| =
+
+γSS −1
+2
+ ≲10−5
+(4.21)
+which is related to the cosmological one through the screening mechanism, just as in ref. [103].
+The knowledge of the screening mechanism is required to answer whether screening can
+happen in the Solar System, but this requires the study of higher-order perturbation theory
+and cannot be answered within the context of the linear one.
+Only in models where no
+screening occurs, the Solar-System values are the same as the cosmological ones and the
+constraints above apply directly.
+Binary-pulsar orbits in principle constrain our models at various locations in the Galaxy.
+However, since neutron stars are much more compact than the Sun, the level of screening
+is likely to be much stronger than in the Solar System and therefore the constraints they
+provide are related to even denser environments than those of the Solar System.
+Finally, constraint (4) is relevant both to the local tests but also the wider cosmological
+scales. The requirement that no gravitational ˇCerenkov radiation be emitted is a lower bound
+on the speed of gravity
+αT ≳−10−15 ,
+(4.22)
+but no such upper limit exists on cosmological scales [104–106].
+5
+Discussion and Conclusions
+In this paper, we have presented a turnkey solution for the study of linear cosmological
+perturbations in general dark-energy and modiﬁed-gravity models described by the Horndeski
+Lagrangian, with a formulation focussing on non-redundant variables which lead to physical
+eﬀects. Our approach is essentially equivalent to the recent work within the framework of
+eﬀective ﬁeld theory, amounting to a redeﬁnition of variables in this context. However, we
+make explicit the variables which independently aﬀect the behaviour of perturbations and
+which are constrainable by observations.
+The dark-energy/gravity sector of an arbitrary
+general Horndeski model can be described by ﬁve functions of time and one constant:
+– 21 –
+
+---PAGE BREAK---
+1. A completely arbitrary dimensionless background expansion history H(t)/H0, which
+is all that observations of distances, using supernovae, BAOs can map out (in prin-
+ciple, spatial curvature Ωk0 can also be allowed as an extra constant parameter and
+unambiguously measured using longitudinal BAO [10]).
+2. The value of fractional matter density Ωm0.
+This is a constant not determined by
+measurements of the background expansion history since one can always change the
+amount of dark matter and replace it with an appropriately evolving dark energy.
+More appropriately, one should think of Ωm0 as being a parameter which can only
+be measured by observing the evolution of cosmological perturbations, whether in the
+cosmic microwave background or at late times.
+3. Four arbitrary dimensionless property functions αi(t) deﬁning the eﬀect of the dark
+energy model on the evolution of linear perturbations and independent from the above
+and each other in the most general case.
+In addition, to convert these prediction to physical units, a value of H0, the Hubble parameter
+today, is necessary. Local measurements of supernovae are aﬀected by cosmic variance and
+therefore not quite true measurements of the averaged H0, especially in the sense independent
+of the dark-energy model [107, 108]. Alternatively, measurements of age diﬀerences of red
+galaxies can be used, as proposed in refs [109, 110] (see also refs [111–113]).
+All the subclasses of dark-energy models in our scope are described as lying in a subspace
+of the four dimensions spanned by αi. For example, quintessence models oﬀer no freedom
+whatsoever once (1) and (2) have been ﬁxed; each of perfect ﬂuid (k-essence), f(R) and f(G)
+models are completely speciﬁed by (1) and (2) and then a one-dimensional subspace relating
+the functions αi to each other. We have speciﬁed the restrictions on the full freedom that
+various popular subclasses of dark energy models imply in table 1.
+Even though there exists a Horndeski model which would describe any background for
+any choice of the functions αi, not all such conﬁgurations are stable. For any particular
+choice of background expansion history and Ωm0, only certain ranges of αi are permitted,
+as implied by the inequalities given in section 3.3. The background is unstable to scalar
+modes whenever there are ghosts, αK < −3
+2α2
+B, or the sound speed squared c2
+s is smaller
+than zero. In particular, this means that any perfect-ﬂuid model (αM = αB = αT = 0) is
+unstable whenever the DE has wX < −1. In addition, one must pay attention to the tensor
+modes: whenever the Planck mass M2
+∗is evolving, it cannot be allowed to become negative
+in the past. The stability conditions speciﬁed here when tested for over the whole relevant
+evolution history should be considered a prerequisite for the acceptance of a particular linear
+solution, even if linear codes would seemingly allow an instability within the region of interest.
+The evolution of perturbations is completely described by the set of modiﬁed Einstein
+equations (3.17-3.21) (or, alternatively, their synchronous-gauge versions in appendix C). All
+the eﬀects of dynamical dark energy are included as modiﬁcations to the left-hand side of
+the equations, with the contributions from the matter EMT on the right-hand side standard
+in all but one way: if the Planck mass is evolving (αM ̸= 0), the energy density of none of
+the matter species is conserved, but must be tracked according to eq. (3.9).
+In order to access the physics of these models, we have presented the full evolution
+equations for the gravitational potentials with the unobservable scalar degree of freedom
+eliminated in section 4. We have demonstrated the following:
+– 22 –
+
+---PAGE BREAK---
+• The eﬀect of dark energy on the eﬀective Newton’s constant Z is simpler than on Y
+and parameterisations should in general focus on Z and ¯η.
+• There is a braiding scale kB driven by the competition between the kineticity αK and
+kinetic braiding αB, eq. (4.4). This scale may be subhorizon and separates two beha-
+viours in Z:
+– No braiding, αB = 0: perfect-ﬂuid-like behaviour for Z: Z = 1 inside Jeans length,
+and usual gravitational instability outside it.
+– Negligible kineticity, αK small: Dark energy clusters, Z ̸= 1. Transition between
+two regimes at scales related to Compton mass of the scalar.
+• Anisotropic stress, ¯η ̸= 1, can only be present at linear order whenever the tensor modes
+are non-minimally coupled, i.e. either αM ̸= 0 or αT ̸= 0. Its presence is completely
+independent of values of αK and αB, but its value depends on all property functions.
+If no deviation from the ΛCDM expansion history is detected and the growth of perturbations
+is consistent with αi = 0 up to some level of precision, then one should think of this result
+as a statement that dynamical dark energy is responsible for at most a small part of the
+acceleration mechanism. This sort of argument was put forward in the case of models with
+chameleon screening in ref. [114]. The remainder of the acceleration can then be considered to
+be driven by a pure non-dynamical cosmological constant. For the ΛCDM expansion history,
+there essentially always exists a family of models which interpolate between the cosmological
+constant as the only source of acceleration and models with αi ≈O
+
+1 −˜Ωm
+
+which are fully
+dynamical.
+The formulation we have proposed is limited in scope to universally coupled dark-energy
+models. However, it can be extended to also cover non-universal couplings with the addition
+of new parameters (some relative density of the non-universally coupled specie and the rate
+of evolution of the coupling). In principle, only the right-hand side of the Einstein equations
+and the (non)-conservation equation for the diﬀerently coupled species need be modiﬁed.
+Adding additional scalar degrees of freedom to the dark energy is a much more complicated
+proposition. No full description of such a multi-scalar model exists (the multi-ﬁeld Horndeski
+action conjectured in [115] does not seem to contain all possible terms [116]), although one
+can make progress through EFT methods [39]. The number of free αi-like parameters is
+likely to increase tremendously in addition to these models’ having new unobservable vX-like
+degrees of freedom. Therefore the predictivity and the measurability of such models is likely
+to be much poorer.
+The most important conclusion of this paper is that for the gravity-like models within
+our scope, there are no properties beyond those speciﬁed above which would aﬀect any ob-
+servations. Measuring the background H(t), ˜Ωm0 and the four functions αi is the maximum
+that can be done using linear structure formation. If there is no evidence that the αi are
+diﬀerent from zero up to some precision then dynamical dark energy does not contribute by
+more than this precision to the acceleration mechanism. The question of whether a more
+fundamental mechanism than Λ is present becomes moot, since it would be irrelevant to the
+dynamics. In a sense, measuring the αi with the best precision is the goal of large-scale-
+structure measurements within the context of dark-energy cosmology.
+– 23 –
+
+---PAGE BREAK---
+Acknowledgements
+The work of EB is supported by “Fondazione Ing. Aldo Gini” and “Fondazione Angelo Della
+Riccia”. The authors are grateful to Luca Amendola, Guillermo Ballesteros, Bruce Bassett,
+Chris Clarkson, Ruth Durrer, Bin Hu, Julien Lesgourgues, Martin Kunz, Marco Raveri, Ip-
+pocratis Saltas, Navin Sivanandham, Alexander Vikman, Miguel Zumalac´arregui for valuable
+comments and criticisms. The computations presented in this paper have been partially done
+with the xAct package for Mathematica [117–119].
+A
+Deﬁnitions of Evolution Variables
+The energy density and pressure of a dark energy described by a Horndeski Lagrangian (2.1)
+are
+M2
+∗˜E ≡−K + 2X (KX −G3φ) + 6 ˙φH (XG3X −G4φ −2XG4φX)
+(A.1)
++12H2X (G4X + 2XG4XX −G5φ −XG5φX) + 4 ˙φH3X (G5X + XG5XX) ,
+M2
+∗˜P = K −2X (G3φ −2G4φφ) + 4 ˙φH (G4φ −2XG4φX + XG5φφ)
+(A.2)
+−M2
+∗αBH
+¨φ
+˙φ −4H2X2G5φX + 2 ˙φH3XG5X .
+where we have already absorbed the contribution to the Planck mass M∗. The equation of
+motion for the background values of the scalar ﬁeld (3.11) is an equation for the evolution of
+the shift charge,
+˙n + 3Hn = Pφ
+(A.3)
+with the charge density
+n ≡˙φ (KX −2G3φ) + 6HX (G3X −2G4φX) +
+(A.4)
++6H2 ˙φ (G4X + 2XG4XX −G5φ −XG5φX) +
++2H3X (3G5X + 2XG5XX) ,
+and the non-conservation driven by a violation of the shift symmetry through the term
+Pφ ≡Kφ −2XG3φφ + 2¨φ
+
+XG3φX + 3H ˙φG4φX
+
++ 6 ˙HG4φ+
+(A.5)
++ 6H2 (2G4φ + 2XG4φX −XG5φφ) + 2H3 ˙φXG5φX .
+The evolution of perturbations on a particular background is determined by four independ-
+ent and dimensionless functions of time, αi, which can be determined for any particular
+Lagrangian by
+– 24 –
+
+---PAGE BREAK---
+M2
+∗≡2
+
+G4 −2XG4X + XG5φ −˙φHXG5X
+
+(A.6)
+HM 2
+∗αM ≡d
+dtM2
+∗
+(A.7)
+H2M2
+∗αK ≡2X (KX + 2XKXX −2G3φ −2XG3φX) +
+(A.8)
++ 12 ˙φXH (G3X + XG3XX −3G4φX −2XG4φXX) +
++ 12XH2 
+G4X + 8XG4XX + 4X2G4XXX
+
+−
+−12XH2 
+G5φ + 5XG5φX + 2X2G5φXX
+
++
++ 4 ˙φXH3 
+3G5X + 7XG5XX + 2X2G5XXX
+
+HM 2
+∗αB ≡2 ˙φ (XG3X −G4φ −2XG4φX) +
+(A.9)
++ 8XH (G4X + 2XG4XX −G5φ −XG5φX) +
++ 2 ˙φXH2 (3G5X + 2XG5XX)
+M2
+∗αT ≡2X
+
+2G4X −2G5φ −
+¨φ −˙φH
+
+G5X
+
+(A.10)
+B
+Scale Dependence in Dynamics
+Since the value of the scalar perturbation vX is not an observable, it is helpful to eliminate
+it by solving all the constraints in the Einstein equations to produce an evolution equation
+for the Newtonian potential Φ, eq. (4.1),
+¨Φ + β1β2 + β3α2
+B
+k2
+a2
+β1 + α2
+B
+k2
+a2
+˙Φ + β1β4 + β1β5 k2
+a2 + cS2α2
+B
+k4
+a4
+β1 + α2
+B
+k2
+a2
+Φ =
+(B.1)
+= −1
+2 ˜ρm
+"
+β1β6 + β7α2
+B
+k2
+a2
+β1 + α2
+B
+k2
+a2
+δm + (1 + wm)β1β8 + β9α2
+B
+k2
+a2
+β1 + α2
+B
+k2
+a2
+vm
+#
+,
+and an anisotropy constraint that relates the two potentials Φ and Ψ, eq. 4.2,
+α2
+B
+k2
+a2
+
+Ψ −Φ
+
+1 + αT + 2 (αM −αT)
+αB
+
++ β1
+"
+Ψ −Φ (1 + αT)
+ 
+1 −2DH2 (αM −αT)
+β1
+!#
+= (αM −αT)
+h
+αB˜ρmδm −2HD ˙Φ −H (3αB + αK) (˜ρm + ˜pm) vm
+i
+.
+(B.2)
+Both equations are repeated here for convenience without neglecting the matter velocity vm.
+The parameters βi are deﬁned to be functions of the background evolution and the αi:
+– 25 –
+
+---PAGE BREAK---
+β1 ≡3α2
+B
+2
+(˜ρm + ˜pm) −D [2H + ˜ρm + ˜pm]
+(B.3)
+β2 ≡2H (2 + αM) + 3HΥ
+(B.4)
+β3 ≡H (3 + αM) + αK
+D
+ ˙αK
+αK
+−2 ˙αB
+αB
+
+(B.5)
+β4 ≡(1 + αT)
+h
+2 ˙H + H2 (3 + 3Υ + αM)
+i
++ ˙αTH
+(B.6)
+β5 ≡c2
+s + αB (β3 −β2)
+HD
++ Hα2
+B
+β1
+(1 + αT) (β3 −β2) + α2
+Bβ4
+β1
+(B.7)
+β6 ≡β7 + αB (β3 −β2)
+HD
+(B.8)
+β7 ≡c2
+s −wm + α2
+B (1 + αT + 3wm) + 2 (αM −αT) αB
+2D
+(B.9)
+β8 ≡β9 + (β2 −β3) (αK + 3αB)
+D
+(B.10)
+β9 ≡β3 −H
+
+4 + 3c2
+s + αM + αT
+
+(B.11)
+where we have deﬁned
+H ≡˙H −H2 (αM −αT) ,
+(B.12)
+D ≡αK + 3
+2α2
+B ,
+3β1HΥ ≡2D
+h ˙H + (3 + αM) HH
+i
+−H (˜ρm + ˜pm) (3αB + αK) (αM −αT)
++ αK
+  ˙˜pm + αMH ˜pm
+ + αKα2
+B
+2D
+(˜ρm + ˜pm)
+ ˙αK
+αK
+−2 ˙αB
+αB
+
+,
+and where the sound speed of the scalar mode is
+c2
+s = −
+(2 −αB)
+h
+H −1
+2H2αB (1 + αT)
+i
+−H ˙αB + ˜ρm + ˜pm
+H2D
+.
+(B.13)
+C
+Perturbation Equations in Synchronous Gauge
+In this section, we provide the equations of motion for linear perturbations in synchronous
+gauge and using conformal time. This is to allow for direct implementation of our formulation
+in codes as CAMB [13] or CLASS [14, 15]. For the metric potentials in synchronous gauge,
+we continue to use the notation of ref. [68].8 Note that with respect to the main text, we
+have made the redeﬁntions
+vX →aVX ,
+H ≡aH = a′
+a ,
+8Note that CAMB redeﬁnes time derivatives of η and h using the scheme: h′ →2kZ and η′ →k/3 (σ∗−Z).
+– 26 –
+
+---PAGE BREAK---
+for notational simplicity. The equations in this section are equivalent to those derived in
+ref. [41] in the eﬀective ﬁeld theory formalism. As we discuss in section 3.5, the advantage
+of our formulation is the fact that it is non-redundant, splits background and perturbation
+contributions and is more directly related to physical eﬀects, as shown in section 4.
+The Einstein time-time equation is
+2k2η = −ρmδma2
+M∗2
++ H
+2 (2 −αB) h′ + H2 (αK + 3αB) VX′
+(C.1)
++
+
+αBk2 −3
+
+H2 −H′
+(2 −αB) + H2 (αK + 3αB) + 3a2 ρm + pm
+M∗2
+
+HVX .
+The Einstein time-space equation is
+2η′ =
+a2
+M∗2 (ρm + pm) vm + αBHVX′
+(C.2)
+−
+
+2
+
+H2 −H′
+−H2αB −a2 ρm + pm
+M∗2
+
+VX .
+The Einstein space-space traceless equation is
+3η′′+h′′
+2 + H (2 + αM)
+
+3η′ + h′
+2
+
+−k2 (1 + αT) η =
+(C.3)
+= Hk2 (αM −αT) VX −a2PΠm
+M∗2
+.
+The Einstein space-space trace equation is
+h′′ = −3a2
+M∗2 δpm −H (2 + αM) h′ + 2k2 (1 + αT) η −3HαBVX′′ + 2Hk2 (αM −αT) VX (C.4)
+−3
+h
+2
+
+H′ −H2
++ HαB′ + αBH′ + H2αB (3 + αM)
+i
+VX′
+−3
+h
+2H′′ + H2αB′ −H3 (2 + αM) (2 −αB) + 2HH′ (αM + αB)
+i
+VX
+−3a2 ρm + pm
+M∗2
+VX′ + HVX
+ −3a2p′
+m
+M∗2 VX .
+The scalar-ﬁeld equation of motion is
+H2
+
+αK + 3
+2α2
+B
+
+VX′′ + AVX′ +
+
+3B + Ck2
+VX −C
+2 h′
++ 3αB
+2M∗2 a2δpm + [2 (αM −αT) + αB (1 + αT)] ρmHδma2
+2M∗2
+= 0 ,
+(C.5)
+where
+– 27 –
+
+---PAGE BREAK---
+A ≡1
+2H3 (2 −αB) [αK (1 + αT) −3αB (1 −αT + αM)] + H
+
+αK + 3
+2α2
+B
+ 
+H2 + H′
++H
+ αKH′ + HαK′ + 3HαB
+
+H′ + 1
+2HαB′
+
++ 3 (ρm + pm) HαBa2
+2M∗2
+,
+B ≡a2 ρm + pm
+M∗2
+
+H′ + 1
+2H2αT (2 −αB) −H2 (1 + αM)
+
++ HαBa2p′
+m
+2M∗2
++H2 (2 −αB)
+1
+6αKH2 (1 + αT) −H2 (1 −αB) αT −H′αM
+
++1
+2H2 (2 −αB)2 
+H2αM + H′αT
+
++ (2 −αB)
+
+H2 −H′2
++H3
+1
+3αK′ + αB′
+
++
+1
+2H2αB −H′
+
+HαB′ +
+
+αK + 3
+2α2
+B
+
+H2H′ ,
+C ≡HαB′ + (2 −αB)
+
+H2αM −H′ + 1
+2H2 (2 −2αT + αB + αBαT)
+
+−a2 ρm + pm
+M∗2
+.
+Note that compared to the Newtonian-gauge equation (3.21), we have diagonalised the
+kinetic term for the scalar by eliminating the highest derivatives of the metric h′′ and η′′ as
+well as k2η using eqs (C.1) and (C.4). This should simplify the implementation in the
+Boltzmann codes.
+References
+[1] B. Ratra and P. Peebles, “Cosmological Consequences of a Rolling Homogeneous Scalar
+Field,” Phys.Rev. D37 (1988) 3406.
+[2] C. Wetterich, “Cosmology and the Fate of Dilatation Symmetry,” Nucl.Phys. B302 (1988)
+668.
+[3] S. M. Carroll, V. Duvvuri, M. Trodden, and M. S. Turner, “Is cosmic speed - up due to new
+gravitational physics?,” Phys.Rev. D70 (2004) 043528, arXiv:astro-ph/0306438
+[astro-ph].
+[4] T. Clifton, P. G. Ferreira, A. Padilla, and C. Skordis, “Modiﬁed Gravity and Cosmology,”
+Phys.Rept. 513 (2012) 1–189, arXiv:1106.2476 [astro-ph.CO].
+[5] M. Kunz, “The phenomenological approach to modeling the dark energy,” Comptes Rendus
+Physique 13 (2012) 539–565, arXiv:1204.5482 [astro-ph.CO].
+[6] M. Ishak, A. Upadhye, and D. N. Spergel, “Probing cosmic acceleration beyond the equation
+of state: Distinguishing between dark energy and modiﬁed gravity models,” Phys.Rev. D74
+(2006) 043513, arXiv:astro-ph/0507184 [astro-ph].
+[7] D. Huterer and G. Starkman, “Parameterization of dark-energy properties: A
+Principal-component approach,” Phys.Rev.Lett. 90 (2003) 031301, arXiv:astro-ph/0207517
+[astro-ph].
+[8] C. Clarkson, B. Bassett, and T. H.-C. Lu, “A general test of the Copernican Principle,”
+Phys.Rev.Lett. 101 (2008) 011301, arXiv:0712.3457 [astro-ph].
+[9] C. Zunckel and C. Clarkson, “Consistency Tests for the Cosmological Constant,”
+Phys.Rev.Lett. 101 (2008) 181301, arXiv:0807.4304 [astro-ph].
+[10] L. Amendola, M. Kunz, M. Motta, I. D. Saltas, and I. Sawicki, “Observables and
+unobservables in dark energy cosmologies,” Phys.Rev. D87 (2013) 023501, arXiv:1210.0439
+[astro-ph.CO].
+– 28 –
+
+---PAGE BREAK---
+[11] M. Motta, I. Sawicki, I. D. Saltas, L. Amendola, and M. Kunz, “Probing Dark Energy through
+Scale Dependence,” Phys.Rev. D88 (2013) 124035, arXiv:1305.0008 [astro-ph.CO].
+[12] L. Amendola, S. Fogli, A. Guarnizo, M. Kunz, and A. Vollmer, “Model-independent
+constraints on the cosmological anisotropic stress,” arXiv:1311.4765 [astro-ph.CO].
+[13] A. Lewis, A. Challinor, and A. Lasenby, “Eﬃcient computation of CMB anisotropies in closed
+FRW models,” Astrophys.J. 538 (2000) 473–476, arXiv:astro-ph/9911177 [astro-ph].
+[14] J. Lesgourgues, “The Cosmic Linear Anisotropy Solving System (CLASS) I: Overview,”
+arXiv:1104.2932 [astro-ph.IM].
+[15] D. Blas, J. Lesgourgues, and T. Tram, “The Cosmic Linear Anisotropy Solving System
+(CLASS) II: Approximation schemes,” JCAP 1107 (2011) 034, arXiv:1104.2933
+[astro-ph.CO].
+[16] M. Chevallier and D. Polarski, “Accelerating universes with scaling dark matter,”
+Int.J.Mod.Phys. D10 (2001) 213–224, arXiv:gr-qc/0009008 [gr-qc].
+[17] E. V. Linder, “Exploring the expansion history of the universe,” Phys.Rev.Lett. 90 (2003)
+091301, arXiv:astro-ph/0208512 [astro-ph].
+[18] R. R. Caldwell and M. Doran, “Dark-energy evolution across the cosmological-constant
+boundary,” Phys.Rev. D72 (2005) 043527, arXiv:astro-ph/0501104 [astro-ph].
+[19] E. V. Linder, “Cosmic growth history and expansion history,” Phys.Rev. D72 (2005) 043529,
+arXiv:astro-ph/0507263 [astro-ph].
+[20] L. Amendola, M. Kunz, and D. Sapone, “Measuring the dark side (with weak lensing),”
+JCAP 0804 (2008) 013, arXiv:0704.2421 [astro-ph].
+[21] E. Bertschinger, “On the Growth of Perturbations as a Test of Dark Energy,” Astrophys.J.
+648 (2006) 797–806, arXiv:astro-ph/0604485 [astro-ph].
+[22] W. Hu and I. Sawicki, “A Parameterized Post-Friedmann Framework for Modiﬁed Gravity,”
+Phys.Rev. D76 (2007) 104043, arXiv:0708.1190 [astro-ph].
+[23] L. Lombriser, J. Yoo, and K. Koyama, “Relativistic eﬀects in galaxy clustering in a
+parametrized post-Friedmann universe,” Phys.Rev. D87 (2013) 104019, arXiv:1301.3132
+[astro-ph.CO].
+[24] T. Baker, P. G. Ferreira, C. Skordis, and J. Zuntz, “Towards a fully consistent
+parameterization of modiﬁed gravity,” Phys.Rev. D84 (2011) 124018, arXiv:1107.0491
+[astro-ph.CO].
+[25] T. Baker, P. G. Ferreira, and C. Skordis, “The Parameterized Post-Friedmann Framework for
+Theories of Modiﬁed Gravity: Concepts, Formalism and Examples,” Phys.Rev. D87 (2013)
+024015, arXiv:1209.2117 [astro-ph.CO].
+[26] I. Sawicki, I. D. Saltas, L. Amendola, and M. Kunz, “Consistent perturbations in an imperfect
+ﬂuid,” JCAP 1301 (2013) 004, arXiv:1208.4855 [astro-ph.CO].
+[27] R. A. Battye and J. A. Pearson, “Eﬀective action approach to cosmological perturbations in
+dark energy and modiﬁed gravity,” JCAP 1207 (2012) 019, arXiv:1203.0398 [hep-th].
+[28] R. A. Battye and J. A. Pearson, “Parameterizing dark sector perturbations via equations of
+state,” Phys.Rev. D88 (2013) 061301, arXiv:1306.1175 [astro-ph.CO].
+[29] R. A. Battye and J. A. Pearson, “Computing model independent perturbations in dark energy
+and modiﬁed gravity,” arXiv:1311.6737 [astro-ph.CO].
+[30] E. Bertschinger and P. Zukin, “Distinguishing Modiﬁed Gravity from Dark Energy,”
+Phys.Rev. D78 (2008) 024015, arXiv:0801.2431 [astro-ph].
+– 29 –
+
+---PAGE BREAK---
+[31] A. Silvestri, L. Pogosian, and R. V. Buniy, “A practical approach to cosmological
+perturbations in modiﬁed gravity,” Phys.Rev. D87 (2013) 104015, arXiv:1302.1193
+[astro-ph.CO].
+[32] A. Hojjati, L. Pogosian, A. Silvestri, and G.-B. Zhao, “Observable physical modes of modiﬁed
+gravity,” arXiv:1312.5309 [astro-ph.CO].
+[33] P. Creminelli, M. A. Luty, A. Nicolis, and L. Senatore, “Starting the Universe: Stable
+Violation of the Null Energy Condition and Non-standard Cosmologies,” JHEP 0612 (2006)
+080, arXiv:hep-th/0606090 [hep-th].
+[34] G. Gubitosi, F. Piazza, and F. Vernizzi, “The Eﬀective Field Theory of Dark Energy,” JCAP
+1302 (2013) 032, arXiv:1210.0201 [hep-th].
+[35] J. K. Bloomﬁeld, E. E. Flanagan, M. Park, and S. Watson, “Dark energy or modiﬁed gravity?
+An eﬀective ﬁeld theory approach,” JCAP 1308 (2013) 010, arXiv:1211.7054
+[astro-ph.CO].
+[36] J. Gleyzes, D. Langlois, F. Piazza, and F. Vernizzi, “Essential Building Blocks of Dark
+Energy,” JCAP 1308 (2013) 025, arXiv:1304.4840 [hep-th].
+[37] J. Bloomﬁeld, “A Simpliﬁed Approach to General Scalar-Tensor Theories,” arXiv:1304.6712
+[astro-ph.CO].
+[38] F. Piazza, H. Steigerwald, and C. Marinoni, “Phenomenology of dark energy: exploring the
+space of theories with future redshift surveys,” arXiv:1312.6111 [astro-ph.CO].
+[39] L. A. Gergely and S. Tsujikawa, “Eﬀective ﬁeld theory of modiﬁed gravity with two scalar
+ﬁelds: dark energy and dark matter,” arXiv:1402.0553 [hep-th].
+[40] S. Tsujikawa, “The eﬀective ﬁeld theory of inﬂation/dark energy and the Horndeski theory,”
+arXiv:1404.2684 [gr-qc].
+[41] B. Hu, M. Raveri, N. Frusciante, and A. Silvestri, “Eﬀective Field Theory of Cosmic
+Acceleration: an implementation in CAMB,” arXiv:1312.5742 [astro-ph.CO].
+[42] G. W. Horndeski, “Second-order scalar-tensor ﬁeld equations in a four-dimensional space,”
+Int.J.Theor.Phys. 10 (1974) 363–384.
+[43] C. Deﬀayet, X. Gao, D. Steer, and G. Zahariade, “From k-essence to generalised Galileons,”
+Phys.Rev. D84 (2011) 064039, arXiv:1103.3260 [hep-th].
+[44] C. Brans and R. Dicke, “Mach’s principle and a relativistic theory of gravitation,” Phys.Rev.
+124 (1961) 925–935.
+[45] C. Armendariz-Picon, T. Damour, and V. F. Mukhanov, “k-Inﬂation,” Phys. Lett. B458
+(1999) 209–218, arXiv:hep-th/9904075.
+[46] C. Armendariz-Picon, V. F. Mukhanov, and P. J. Steinhardt, “Essentials of k-essence,” Phys.
+Rev. D63 (2001) 103510, arXiv:astro-ph/0006373.
+[47] C. Deﬀayet, O. Pujolas, I. Sawicki, and A. Vikman, “Imperfect Dark Energy from Kinetic
+Gravity Braiding,” JCAP 1010 (2010) 026, arXiv:1008.0048 [hep-th].
+[48] T. Kobayashi, M. Yamaguchi, and J. Yokoyama, “G-inﬂation: Inﬂation driven by the Galileon
+ﬁeld,” Phys.Rev.Lett. 105 (2010) 231302, arXiv:1008.0603 [hep-th].
+[49] O. Pujolas, I. Sawicki, and A. Vikman, “The Imperfect Fluid behind Kinetic Gravity
+Braiding,” JHEP 1111 (2011) 156, arXiv:1103.5360 [hep-th].
+[50] A. Nicolis, R. Rattazzi, and E. Trincherini, “The galileon as a local modiﬁcation of gravity,”
+Phys. Rev. D79 (2009) 064036, arXiv:0811.2197 [hep-th].
+[51] A. Nicolis, R. Rattazzi, and E. Trincherini, “Energy’s and amplitudes’ positivity,” JHEP 05
+(2010) 095, arXiv:0912.4258 [hep-th].
+– 30 –
+
+---PAGE BREAK---
+[52] S. M. Carroll, A. De Felice, V. Duvvuri, D. A. Easson, M. Trodden, et al., “The Cosmology of
+generalized modiﬁed gravity models,” Phys.Rev. D71 (2005) 063513,
+arXiv:astro-ph/0410031 [astro-ph].
+[53] G. Dvali, G. Gabadadze, and M. Porrati, “4-D gravity on a brane in 5-D Minkowski space,”
+Phys.Lett. B485 (2000) 208–214, arXiv:hep-th/0005016 [hep-th].
+[54] C. de Rham and G. Gabadadze, “Generalization of the Fierz-Pauli Action,” Phys. Rev. D82
+(2010) 044020, arXiv:1007.0443 [hep-th].
+[55] C. de Rham, G. Gabadadze, and A. J. Tolley, “Resummation of Massive Gravity,”
+Phys.Rev.Lett. 106 (2011) 231101, arXiv:1011.1232 [hep-th].
+[56] S. Hassan, R. A. Rosen, and A. Schmidt-May, “Ghost-free Massive Gravity with a General
+Reference Metric,” JHEP 1202 (2012) 026, arXiv:1109.3230 [hep-th].
+[57] N. Chow and J. Khoury, “Galileon Cosmology,” Phys. Rev. D80 (2009) 024037,
+arXiv:0905.1325 [hep-th].
+[58] C. de Rham and L. Heisenberg, “Cosmology of the Galileon from Massive Gravity,” Phys.Rev.
+D84 (2011) 043503, arXiv:1106.3312 [hep-th].
+[59] L. Heisenberg, R. Kimura, and K. Yamamoto, “Cosmology of the proxy theory to massive
+gravity,” arXiv:1403.2049 [hep-th].
+[60] J. Gleyzes, D. Langlois, F. Piazza, and F. Vernizzi, “Healthy theories beyond Horndeski,”
+arXiv:1404.6495 [hep-th].
+[61] M. Zumalac´arregui and J. Garc´ıa-Bellido, “Transforming gravity: from derivative couplings to
+matter to second-order scalar-tensor theories beyond the Horndeski Lagrangian,”
+arXiv:1308.4685 [gr-qc].
+[62] L. Amendola, “Coupled quintessence,” Phys.Rev. D62 (2000) 043511,
+arXiv:astro-ph/9908023 [astro-ph].
+[63] T. S. Koivisto, D. F. Mota, and M. Zumalacarregui, “Screening Modiﬁcations of Gravity
+through Disformally Coupled Fields,” Phys.Rev.Lett. 109 (2012) 241102, arXiv:1205.3167
+[astro-ph.CO].
+[64] M. Zumalac´arregui, T. S. Koivisto, and D. F. Mota, “DBI Galileons in the Einstein Frame:
+Local Gravity and Cosmology,” Phys.Rev. D87 (2013) 083010, arXiv:1210.8016
+[astro-ph.CO].
+[65] P. Hoˇrava, “Quantum Gravity at a Lifshitz Point,” Phys.Rev. D79 (2009) 084008,
+arXiv:0901.3775 [hep-th].
+[66] D. Blas, O. Pujol`as, and S. Sibiryakov, “Consistent Extension of Horava Gravity,”
+Phys.Rev.Lett. 104 (2010) 181302, arXiv:0909.3525 [hep-th].
+[67] J.-S. Gagnon and J. Lesgourgues, “Dark goo: Bulk viscosity as an alternative to dark energy,”
+JCAP 1109 (2011) 026, arXiv:1107.1503 [astro-ph.CO].
+[68] C.-P. Ma and E. Bertschinger, “Cosmological perturbation theory in the synchronous and
+conformal Newtonian gauges,” Astrophys.J. 455 (1995) 7–25, arXiv:astro-ph/9506072
+[astro-ph].
+[69] A. Barreira, B. Li, C. Baugh, and S. Pascoli, “Linear perturbations in Galileon gravity
+models,” arXiv:1208.0600 [astro-ph.CO].
+[70] M. A. Amin, P. Zukin, and E. Bertschinger, “Scale-Dependent Growth from a Transition in
+Dark Energy Dynamics,” Phys.Rev. D85 (2012) 103510, arXiv:1108.1793 [astro-ph.CO].
+[71] N. Afshordi, D. J. Chung, and G. Geshnizjani, “Cuscuton: A Causal Field Theory with an
+Inﬁnite Speed of Sound,” Phys.Rev. D75 (2007) 083513, arXiv:hep-th/0609150 [hep-th].
+– 31 –
+
+---PAGE BREAK---
+[72] Y.-S. Song, W. Hu, and I. Sawicki, “The Large Scale Structure of f(R) Gravity,” Phys.Rev.
+D75 (2007) 044004, arXiv:astro-ph/0610532 [astro-ph].
+[73] S. M. Carroll, I. Sawicki, A. Silvestri, and M. Trodden, “Modiﬁed-Source Gravity and
+Cosmological Structure Formation,” New J.Phys. 8 (2006) 323, arXiv:astro-ph/0607458
+[astro-ph].
+[74] D. N. Vollick, “1/R Curvature corrections as the source of the cosmological acceleration,”
+Phys.Rev. D68 (2003) 063510, arXiv:astro-ph/0306630 [astro-ph].
+[75] A. De Felice, D. F. Mota, and S. Tsujikawa, “Matter instabilities in general Gauss-Bonnet
+gravity,” Phys.Rev. D81 (2010) 023532, arXiv:0911.1811 [gr-qc].
+[76] T. Kobayashi, M. Yamaguchi, and J. Yokoyama, “Generalized G-inﬂation: Inﬂation with the
+most general second-order ﬁeld equations,” Prog.Theor.Phys. 126 (2011) 511–529,
+arXiv:1105.5723 [hep-th].
+[77] A. De Felice and S. Tsujikawa, “Cosmology of a covariant Galileon ﬁeld,” Phys.Rev.Lett. 105
+(2010) 111301, arXiv:1007.2700 [astro-ph.CO].
+[78] P. Brax and P. Valageas, “K-mouﬂage Cosmology: the Background Evolution,”
+arXiv:1403.5420 [astro-ph.CO].
+[79] A. De Felice and S. Tsujikawa, “Conditions for the cosmological viability of the most general
+scalar-tensor theories and their applications to extended Galileon dark energy models,” JCAP
+1202 (2012) 007, arXiv:1110.3878 [gr-qc].
+[80] D. A. Easson, I. Sawicki, and A. Vikman, “G-Bounce,” JCAP 1111 (2011) 021,
+arXiv:1109.1047 [hep-th].
+[81] I. Sawicki and A. Vikman, “Hidden Negative Energies in Strongly Accelerated Universes,”
+Phys.Rev. D87 no. 6, (2013) 067301, arXiv:1209.2961 [astro-ph.CO].
+[82] A. Adams, N. Arkani-Hamed, S. Dubovsky, A. Nicolis, and R. Rattazzi, “Causality,
+analyticity and an IR obstruction to UV completion,” JHEP 10 (2006) 014,
+arXiv:hep-th/0602178.
+[83] D. A. Easson, I. Sawicki, and A. Vikman, “When Matter Matters,” JCAP 1307 (2013) 014,
+arXiv:1304.3903 [hep-th].
+[84] E. Babichev, V. Mukhanov, and A. Vikman, “k-Essence, superluminal propagation, causality
+and emergent geometry,” JHEP 02 (2008) 101, arXiv:0708.0561 [hep-th].
+[85] C. Burrage, C. de Rham, L. Heisenberg, and A. J. Tolley, “Chronology Protection in Galileon
+Models and Massive Gravity,” JCAP 1207 (2012) 004, arXiv:1111.5549 [hep-th].
+[86] G. Dvali, G. F. Giudice, C. Gomez, and A. Kehagias, “UV-Completion by Classicalization,”
+JHEP 1108 (2011) 108, arXiv:1010.1415 [hep-ph].
+[87] G. Dvali and D. Pirtskhalava, “Dynamics of Unitarization by Classicalization,” Phys.Lett.
+B699 (2011) 78–86, arXiv:1011.0114 [hep-ph].
+[88] D. Blas, O. Pujolas, and S. Sibiryakov, “Models of non-relativistic quantum gravity: the good,
+the bad and the healthy,” arXiv:1007.3503 [hep-th].
+[89] A. De Felice, T. Kobayashi, and S. Tsujikawa, “Eﬀective gravitational couplings for
+cosmological perturbations in the most general scalar-tensor theories with second-order ﬁeld
+equations,” Phys.Lett. B706 (2011) 123–133, arXiv:1108.4242 [gr-qc].
+[90] BOSS Collaboration Collaboration, L. Anderson et al., “The clustering of galaxies in the
+SDSS-III Baryon Oscillation Spectroscopic Survey: Baryon Acoustic Oscillations in the Data
+Release 10 and 11 galaxy samples,” arXiv:1312.4877 [astro-ph.CO].
+– 32 –
+
+---PAGE BREAK---
+[91] M. Betoule, R. Kessler, J. Guy, J. Mosher, D. Hardin, et al., “Improved cosmological
+constraints from a joint analysis of the SDSS-II and SNLS supernova samples,”
+arXiv:1401.4064 [astro-ph.CO].
+[92] M. Doran and G. Robbers, “Early dark energy cosmologies,” JCAP 0606 (2006) 026,
+arXiv:astro-ph/0601544 [astro-ph].
+[93] C. L. Reichardt, R. de Putter, O. Zahn, and Z. Hou, “New limits on Early Dark Energy from
+the South Pole Telescope,” Astrophys.J. 749 (2012) L9, arXiv:1110.5328 [astro-ph.CO].
+[94] V. Pettorino, L. Amendola, and C. Wetterich, “How early is early dark energy?,” Phys.Rev.
+D87 (2013) 083009, arXiv:1301.5279 [astro-ph.CO].
+[95] Planck Collaboration Collaboration, P. Ade et al., “Planck 2013 results. XVI.
+Cosmological parameters,” arXiv:1303.5076 [astro-ph.CO].
+[96] N. Afshordi, D. J. Chung, M. Doran, and G. Geshnizjani, “Cuscuton Cosmology: Dark
+Energy meets Modiﬁed Gravity,” Phys.Rev. D75 (2007) 123509, arXiv:astro-ph/0702002
+[astro-ph].
+[97] A. De Felice and S. Tsujikawa, “f(R) theories,” Living Rev.Rel. 13 (2010) 3,
+arXiv:1002.4928 [gr-qc].
+[98] J.-P. Uzan, “Varying Constants, Gravitation and Cosmology,” Living Rev.Rel. 14 (2011) 2,
+arXiv:1009.5514 [astro-ph.CO].
+[99] C. M. Will, “The Confrontation between General Relativity and Experiment,”
+arXiv:1403.7377 [gr-qc].
+[100] K. Yagi, D. Blas, E. Barausse, and N. Yunes, “Constraints on Einstein-Æther theory and
+Horava gravity from binary pulsar observations,” arXiv:1311.7144 [gr-qc].
+[101] P. Brax, C. Burrage, and A.-C. Davis, “Screening ﬁfth forces in k-essence and DBI models,”
+JCAP 1301 (2013) 020, arXiv:1209.1293 [hep-th].
+[102] E. Babichev and C. Deﬀayet, “An introduction to the Vainshtein mechanism,”
+Class.Quant.Grav. 30 (2013) 184001, arXiv:1304.7240 [gr-qc].
+[103] W. Hu and I. Sawicki, “Models of f(R) Cosmic Acceleration that Evade Solar-System Tests,”
+Phys. Rev. D76 (2007) 064004, arXiv:0705.1158 [astro-ph].
+[104] G. D. Moore and A. E. Nelson, “Lower bound on the propagation speed of gravity from
+gravitational Cherenkov radiation,” JHEP 0109 (2001) 023, arXiv:hep-ph/0106220
+[hep-ph].
+[105] J. W. Elliott, G. D. Moore, and H. Stoica, “Constraining the new Aether: Gravitational
+Cerenkov radiation,” JHEP 0508 (2005) 066, arXiv:hep-ph/0505211 [hep-ph].
+[106] R. Kimura and K. Yamamoto, “Constraints on general second-order scalar-tensor models
+from gravitational Cherenkov radiation,” JCAP 1207 (2012) 050, arXiv:1112.4284
+[astro-ph.CO].
+[107] V. Marra, L. Amendola, I. Sawicki, and W. Valkenburg, “Cosmic variance and the
+measurement of the local Hubble parameter,” Phys.Rev.Lett. 110 (2013) 241305,
+arXiv:1303.3121 [astro-ph.CO].
+[108] I. Ben-Dayan, R. Durrer, G. Marozzi, and D. J. Schwarz, “The value of H0 in the
+inhomogeneous Universe,” arXiv:1401.7973 [astro-ph.CO].
+[109] R. Jimenez and A. Loeb, “Constraining cosmological parameters based on relative galaxy
+ages,” Astrophys.J. 573 (2002) 37–42, arXiv:astro-ph/0106145 [astro-ph].
+[110] J. Simon, L. Verde, and R. Jimenez, “Constraints on the redshift dependence of the dark
+energy potential,” Phys.Rev. D71 (2005) 123001, arXiv:astro-ph/0412269 [astro-ph].
+– 33 –
+
+---PAGE BREAK---
+[111] D. Stern, R. Jimenez, L. Verde, M. Kamionkowski, and S. A. Stanford, “Cosmic
+Chronometers: Constraining the Equation of State of Dark Energy. I: H(z) Measurements,”
+JCAP 1002 (2010) 008, arXiv:0907.3149 [astro-ph.CO].
+[112] M. Moresco, R. Jimenez, A. Cimatti, and L. Pozzetti, “Constraining the expansion rate of the
+Universe using low-redshift ellipticals as cosmic chronometers,” JCAP 1103 (2011) 045,
+arXiv:1010.0831 [astro-ph.CO].
+[113] E. Bellini and R. Jimenez, “The parameter space of Cubic Galileon models for cosmic
+acceleration,” Phys.Dark Univ. 2 (2013) 179–183, arXiv:1306.1262 [astro-ph.CO].
+[114] Y. Wang, “Figure of Merit for Dark Energy Constraints from Current Observational Data,”
+Phys. Rev. D77 (2008) 123525, arXiv:0803.4295 [astro-ph].
+[115] A. Padilla and V. Sivanesan, “Covariant multi-galileons and their generalisation,” JHEP 1304
+(2013) 032, arXiv:1210.4026 [gr-qc].
+[116] T. Kobayashi, N. Tanahashi, and M. Yamaguchi, “Multi-ﬁeld G-inﬂation,” Phys.Rev. D88
+(2013) 083504, arXiv:1308.4798 [hep-th].
+[117] J. M. Mart´ın-Garc´ıa. http://www.xact.es/.
+[118] J. M. Mart´ın-Garc´ıa, “xPerm: fast index canonicalization for tensor computer algebra,”
+Computer Physics Communications 179 no. 8, (2008) 597 – 603.
+http://www.sciencedirect.com/science/article/pii/S001046550800221X.
+[119] D. Brizuela, J. M. Mart´ın-Garc´ıa, and G. A. Mena Marugan, “xPert: Computer algebra for
+metric perturbation theory,” Gen.Rel.Grav. 41 (2009) 2415–2431, arXiv:0807.0824
+[gr-qc].
+– 34 –
+
+---PAGE BREAK---

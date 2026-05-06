@@ -1,0 +1,54 @@
+{
+  "jc_benchmark": {
+    "sigma_UV": 6.0,
+    "alpha_UV": 0.01,
+    "mu2": 0.1,
+    "Phi_0": 0.07606684167319004,
+    "zeta_0": 0.0009643607336890268,
+    "w0_linear": -0.7455309082719941,
+    "w0_exact": -0.7742536434305601
+  },
+  "desi_constraint": {
+    "zeta_0_median": 0.0009779334988023114,
+    "zeta_0_1sigma": [
+      0.000654589616883553,
+      0.0014464030946469404
+    ],
+    "zeta_0_2sigma": [
+      0.0004345062317992993,
+      0.0021382392146793495
+    ],
+    "jc_desi_offset_sigma": -0.03428273323061682
+  },
+  "ncg_prediction": {
+    "mu2_over_k2": 3.333333333333333,
+    "sigma_UV_RS": 6.0,
+    "alpha_UV": "free parameter",
+    "note": "reduces 3 free params to 1"
+  },
+  "as_analysis": {
+    "all_brane_params_relevant": true,
+    "eta_m_xi_sixth": -0.0,
+    "dim_mu2": 2.0,
+    "note": "no determination - all params UV-free"
+  },
+  "convergence": {
+    "status": "PARTIAL",
+    "jc_desi_consistent": true,
+    "remaining_free_params": 1,
+    "free_param": "alpha_UV",
+    "resolution_paths": [
+      "Conjecture 4.1 proof (NCG axioms fix boundary conditions)",
+      "5D FRG on RS orbifold (additional fixed-point constraints)",
+      "Stability analysis (tachyonic mode exclusion)",
+      "Goldberger-Wise (radion stabilization constraint)"
+    ]
+  },
+  "best_estimate": {
+    "zeta_0": 0.000971147116245669,
+    "w_0": -0.74730913999036,
+    "uncertainty_CKK": 0.08575629130361079,
+    "uncertainty_zeta": 0.10261456251892515,
+    "uncertainty_total": 0.1337306619257534
+  }
+}

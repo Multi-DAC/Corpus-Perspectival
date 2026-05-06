@@ -1,0 +1,25 @@
+Device: cuda
+
+======================================================================
+P48 GENERATION-MODE DETECTOR — EleutherAI/pythia-410m
+======================================================================
+Loading EleutherAI/pythia-410m...
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  27%|██▋       | 79/292 [00:00<00:00, 786.76it/s]Loading weights:  56%|█████▌    | 164/292 [00:00<00:00, 822.58it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 1309.27it/s]
+  24 layers, 16 heads
+  Generating 50 tokens per prompt, KF at each step
+  12 prompts
+
+  [FACTUAL      ] fact_prefix_1: "The chemical formula for water is..."
+    Step   0: CV=0.000909, E/L=27.60, r=-0.914
+    Step  10: CV=0.000422, E/L=21.50, r=-0.915
+    Step  20: CV=0.000399, E/L=22.39, r=-0.922
+    Step  30: CV=0.000384, E/L=24.15, r=-0.916
+    Step  40: CV=0.000372, E/L=23.50, r=-0.916
+    Step  49: CV=0.000362, E/L=24.15, r=-0.920
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=22.11 → late_gen=23.82 (ratio=1.078, rho=+0.679, p=0.0000)
+
+  [FACTUAL      ] fact_prefix_2: "Isaac Newton published the Principia Mathematica i..."
+    Step   0: CV=0.001060, E/L=25.10, r=-0.896
+    Step  10: CV=0.000531, E/L=20.64, r=-0.906

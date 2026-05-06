@@ -1,0 +1,2753 @@
+MITP-25-085
+Gauge Coupling Unification in Gauge-Higgs
+GUT: Theory and Phenomenology
+Andrei Angelescu,a Andreas Bally,a Florian Goertz,a Sascha Weberb
+aMax-Planck-Institut f¨ur Kernphysik
+Saupfercheckweg 1, 69117 Heidelberg, Germany
+bPRISMA+ Cluster of Excellence & Mainz Institute for Theoretical Physics, FB 08 -
+Physics, Mathematics and Computer Science, Johannes Gutenberg-Universit¨at Mainz,
+Staudingerweg 9, 550099 Mainz, Germany
+E-mail: florian.goertz@mpi-hd.mpg.de, wesascha@uni-mainz.de
+Abstract: We present a concise survey of the running of gauge couplings in realistic
+models of gauge-Higgs grand unification in a slice of AdS5 space and investigate their
+potential unification. Besides unifying the gauge groups of the Standard Model, these
+models can address various unresolved puzzles, such as the lightness of the Higgs
+boson and the strong hierarchies within fermion masses and mixings, as well as
+provide a common origin of the gauge symmetries and the sector that spontaneously
+breaks them. At the same time, they furnish interesting LHC signatures in the form
+of TeV-scale resonances of the X, Y –like bosons, providing a trace of the grand-unified
+group, accessible at low energies.
+Using the method of Planck-brane correlators allows us to evolve the couplings
+consistently from the electroweak scale up to the Planck scale, avoiding shortcom-
+ings of other frequently-used approaches and including the effects of bulk scalars,
+fermions, and gauge-bosons within a common framework. We thereby revisit, con-
+trast, and supplement results in the literature, the latter for example by including
+brane masses and the gauge-Higgs vacuum expectation value. Moreover, in a phe-
+nomenology section, we apply our results to the concrete case of Georgi–Glashow–like
+unification with a SU(6) ⊃SU(5) symmetry in the 5D bulk, presenting a quantita-
+tive survey of the quality of unification. We find that grand unification is possible
+in such models in the presence of moderately large brane kinetic terms.
+arXiv:2512.22094v1  [hep-ph]  26 Dec 2025
+
+---PAGE BREAK---
+Contents
+1
+Introduction
+1
+2
+Warped Extra Dimensions and SU(6) GHGUT
+3
+3
+Gauge-Coupling Evolution in 5D
+6
+4
+Explicit Derivation of the Running
+8
+4.1
+Scalar Fields
+10
+4.2
+Fermion Fields
+12
+4.3
+Gauge Fields
+15
+4.4
+Summary of the Contributions
+17
+5
+Matching at the Low Scale
+17
+6
+Application to SU(6) GHGUT
+18
+7
+Conclusions
+20
+A Propagators
+21
+A.1 Fermion Propagator
+21
+A.2 Scalar Propagator
+25
+A.3 Gauge boson Propagator
+28
+A.4 Ghost Propagator
+30
+A.5 A5 Propagator
+31
+1
+Introduction
+There is a long history in physics in trying to unify apparently different phenomena
+in a single theoretical description, seeking a common origin. Prominent examples
+are grand unified theories (GUTs) [1, 2], that integrate the known gauge forces
+into a simple gauge group. A further step would be to also include the spontaneous
+breaking of the corresponding gauge symmetries. This can be achieved in models with
+extra dimensions, allowing to embed the Higgs sector within a higher-dimensional
+gauge field, via the idea of gauge-Higgs grand unified theories (GHGUTs) [3–26],
+thereby also solving the hierarchy problem of GUTs [27–29] (see also [30–32] for
+4D-dual composite Higgs GUTs). One of the most attractive features of GUTs is
+the unification of gauge couplings: the values of the gauge couplings at a low scale
+– 1 –
+
+---PAGE BREAK---
+have a common origin at a high scale and the relation between the two is given by
+the running of the couplings, determined by the renormalization group equations
+(RGEs). In this work we build upon existing techniques and extend them to study
+explicitly the running of gauge couplings in a realistic GHGUT, also comparing to
+different approaches used in the literature.
+As a specific example we take a minimal viable model based on a SU(6) symmetry
+in the bulk of a warped extra dimension, which includes a SU(5) grand unified group,
+presented in [18, 21], but our results can easily be applied to other models, too. In
+the model of [18, 21], common challenges in GHGUT constructions are overcome by
+directly breaking to the Standard Model (SM) gauge group at one boundary of the
+(warped) extra dimension, which allowed for the first time to correctly reproduce
+all fermion masses from 5D spinors together with generating a natural Higgs mass
+mh ≈125 GeV and avoiding ultra-light exotic particles.1 Here we will investigate
+if the same model also allows for successful unification of gauge couplings at a high
+scale.
+Calculating the running of the couplings in the usual 4D space–time and the
+application to 4D GUTs is well known, a prime example of this is the original Georgi–
+Glashow model based on the GUT group SU(5) [1], although the gauge couplings
+do not meet precisely enough given our current low energy limits on them.2 To see
+if gauge coupling unification occurs in the GHGUT models based on warped extra
+dimensions, one has to know how gauge couplings evolve in AdS5, which comes with
+additional challenges compared to the 4D case.
+For flat extra dimensions the RGE has been calculated e.g. in [33, 34], finding
+a power–law running, in contrast to the logarithmic running in 4D. Given masses of
+the lowest KK excitations of the order of TeV this would necessitate unification at
+the TeV scale. As has been pointed out in [35], this is no longer true in warped extra
+dimensions: there can be a logarithmic evolution of gauge coupling up to the Planck
+scale even with Kaluza-Klein (KK) excitations at the TeV scale, the latter possibly
+providing experimental hints for the existence of the GUT group.
+Subsequently, the running and the application to GUTs in warped spaces have
+been further studied in [30, 31, 36–49], using different approaches and methods. The
+difference between them can broadly be classified according to how they connect
+with low energy phenomenology. In [35–41] the KK picture is used to calculate the
+zero-mode gauge coupling by an appropriate regularization of the infinite KK tower.
+The resulting evolution is only valid for momenta below the TeV scale, since for
+higher momenta the zero mode becomes strongly coupled, as has been pointed out
+e.g. in [38]. Alternatively, one can also use holographic methods to relate warped
+extra dimensions to dual 4D strongly coupled theories, i.e., Composite Higgs (CH)
+1It is interesting to note that minimal GHGUTs also allow for a group-theoretical cancellation
+mechanism for fermionic corrections to the Higgs boson mass [23].
+2This can, for example, be improved in a supersymmetric set–up.
+– 2 –
+
+---PAGE BREAK---
+theories. In the context of CH theories the running and unification have been studied
+in [30, 31, 42]. Furthermore, one can use deconstruction to find an approximate 4D
+theory and study the running within it, as has been done in [45, 46]. Staying in the
+5D theory an approach inspired by holography has also been taken up in [43, 44]
+by using a position–dependent cut–off. Given the explicit dependence of the final
+β–functions on the regulator, the result is hard to interpret [41, 48] and, similar to
+the KK picture, it focuses on the coupling of the zero mode and is only valid for low
+momenta. Moreover, we found that one encounters additional challenges when one
+tries to apply this method to fermions in the loop, leading to non-gauge invariant
+results [50].
+In this work, we employ the Planck–brane correlator approach [47–49], which
+avoids the limitations discussed above. Inspired by holography as well, it uses the
+brane–to–brane correlator on the Planck–brane, a correlation function which is valid
+for momenta above the TeV scale, to derive the gauge–coupling running in the effec-
+tive theory up to the (high) unification scale. Furthermore, it can be matched at low
+momenta to the results from the calculations using the zero mode [38], see Sec. 5. In
+particular, we present numerical results for the quality of unification in the minimal
+SU(6) GHGUT.
+This paper is structured as follows: In Section 2 we will provide the necessary
+overview of warped extra dimensions and introduce the SU(6) GHGUT of [18]. Sec-
+tion 3 gives an overview on unification in GUTs and a quick intuition to understand
+the differences emerging in (warped) extra dimensions. We will use the Planck–brane
+correlator to derive the gauge-coupling running for general scalar, fermion, and gauge
+fields in Section 4, reproducing and extending results available in the literature. This
+is followed by a brief discussion on the matching at low energies in Section 5. In Sec-
+tion 6 we will apply our results to specific realistic incarnations of SU(6) GHGUTs
+to highlight their differences and comment on the quality of precision unification.
+Finally, we will summarize our results and conclude in Section 7.
+2
+Warped Extra Dimensions and SU(6) GHGUT
+In this section we give a brief overview on the details of warped extra dimensions
+necessary for this work. More comprehensive reviews can be found e.g. in [51–58].
+Working in conformal coordinates, the metric of the warped AdS5 space is given by
+ds2 =
+ 1
+kz
+2
+(ηµνdxµdxν −dz2) ,
+(2.1)
+where z ∈[1/k, 1/T], and k ∼Mpl (T ∼TeV) corresponds to the position of the
+UV (IR) brane, truncating the extra dimension. Given these energy scales, one also
+refers to the UV brane as the Planck brane and to the IR brane as the TeV brane.
+We collect the relevant parts of the action for the various fields that propagate in the
+– 3 –
+
+---PAGE BREAK---
+Figure 1: Setup of the G(UV)
+SM
+(left) and G(IR)
+SM (right) models, indicating the unbroken
+gauge groups on the respective branes. See text for details.
+extra dimension, as well as their propagtors and vertices, in Appendix A. Eventually,
+the full SM will live in the compactified five-dimensional space-time.
+There are at least two useful ways to connect these 5D theories with low energy
+observations. The first is a so called Kaluza-Klein (KK) decomposition, where one
+decomposes a 5D field ϕ(x, z) into a set of 4D fields ϕn(x) as (see, e.g., [54, 56–58])
+ϕ(x, z) =
+X
+n
+fn(z)ϕn(x).
+(2.2)
+Integrating over the extra dimensions and taking into account the KK wavefunctions
+fn(z), results in a theory of a tower of 4D fields (KK modes) ϕn(x) with increasing
+mass mn. Depending on the boundary conditions (BCs) at z = 1/k, 1/T, there can
+be a massless zero mode solution (n = 0) in the spectrum, resembling a known SM-
+like particle, and all higher massive modes (n ≥1) have masses starting from the
+KK scale mKK ∼T ∼TeV [54, 56–58]. Furthermore, the localization of the bulk
+profile solutions fn(z) along the extra dimension will have important consequences
+for the running, as we will see later.
+The second way to relate to low energy phenomenology is by using holography.
+Inspired by the AdS/CFT correspondence [59], one can look at the field values on the
+UV brane and integrate out the rest of the bulk and the IR brane. By doing this one
+obtains a weakly coupled sector, the elementary sector, corresponding to fields on the
+UV brane which are weakly coupled to a strongly interacting sector, the composite
+sector, corresponding to the fields which have been integrated out [51, 55, 56, 58].
+This latter sector is described by a conformal field theory for energies below the UV
+scale with conformal invariance beeing spontaneously broken at the IR scale leading
+to confinement.
+Fields can be unified in various ways in this extra dimensional setup. A 5D
+gauge field Aa
+M = (Aa
+µ, Aa
+5) can be split into a 4D vector part Aa
+µ and a 4D scalar
+part Aa
+5. The idea of gauge-Higgs unification (GHU) [60–63] is to embed the Higgs
+field in a zero mode of the 4D scalar Aa
+5. Indeed, a potential for Aa
+5 is forbidden
+by 5D gauge symmetry. At one-loop, upon symmetry breaking at the boundaries,
+a finite potential is generated possibly inducing a 4D vev ⟨Aa
+5(x)⟩= va. A Gauge–
+– 4 –
+
+---PAGE BREAK---
+Higgs Grand Unified Theory (GHGUT) tries to combine this with the idea of a GUT,
+where also the gauge interactions are unified into a single gauge field under one gauge
+group. Thus GHGUTs can lead to a complete description of the full bosonic sector
+of the SM in terms of one single 5D gauge field of a (simple) gauge group.
+For
+simple gauge groups, the minimal group is SU(6) and in [18, 21] it was shown that a
+correct radiative Higgs potential as well as the SM flavor structure can be reproduced
+successfully – even predicting the correct down-quark hierarchies – if an appropriate
+simple breaking pattern is employed. In the following we will describe this set–up,
+studied below, briefly.
+For the gauge sector we employ two incarnations of the model, denoted by G(UV)
+SM
+(G(IR)
+SM ) in [21]. Here, the bulk gauge symmetry SU(6) is broken to the SM group
+by non-universal BCs for the gauge fields on the UV (IR) brane (respecting only
+GSM and allowing no other vector-boson zero-modes), while on the other brane the
+unbroken group is SU(5), see Fig. 1. For the G(UV)
+SM
+setup, the BCs explicitly read [21]
+Aµ =
+
+
+
+
+
+
+
+
+
+(++) (++) (−+) (−+) (−+) (−−)
+(++) (++) (−+) (−+) (−+) (−−)
+(−+) (−+) (++) (++) (++) (−−)
+(−+) (−+) (++) (++) (++) (−−)
+(−+) (−+) (++) (++) (++) (−−)
+(−−) (−−) (−−) (−−) (−−) (−−)
+
+
+
+
+
+
+
+
+
+,
+(2.3)
+where a +(−) denotes a Neuman (Dirichlet) BC on the respective brane and the
+upper-left (central) highlighted block belongs to SU(2)L (SU(3)c). Only fields with
+(++) BCs feature a zero mode.
+For the case of G(IR)
+SM , the UV and IR BCs are
+interchanged.
+Moving on to the fermion content, the minimal viable embedding consists of a
+1, 6, 15 and a 20, which are the four smallest SU(6) representations [18]. For G(UV)
+SM
+the decomposition into GSM representations and associated BCs read [21]
+20 →q′(3, 2)+,−
+1/6 ⊕(3∗, 1)+,−
+−2/3 ⊕ec′(1, 1)+,−
+1
+⊕(3∗, 2)+,−
+−1/6 ⊕u(3, 1)−,−
+2/3 ⊕(1, 1)+,−
+−1 ,
+15 →q(3, 2)+,+
+1/6 ⊕(3∗, 1)−,+
+−2/3 ⊕ec(1, 1)+,+
+1
+⊕d′(3, 1)−,+
+−1/3 ⊕lc′(1, 2)−,+
+1/2 ,
+6 →d(3, 1)−,−
+−1/3 ⊕lc(1, 2)−,−
+1/2 ⊕νc(1, 1)+,+
+0
+,
+1 →νc′(1, 1)+,−
+0
+,
+(2.4)
+where we present as superscripts the BCs for the left–handed (LH) spinors with
+those for the right–handed (RH) fields being flipped. The fields which feature light
+– 5 –
+
+---PAGE BREAK---
+zero modes are suggestively labeled with the corresponding SM symbols.3 The fields
+with a prime are connected to the unprimed ones via brane masses on the IR brane,
+whose precise structure can be found in [21], but will not be important for the results
+derived here. For G(IR)
+SM the same decomposition applies just with the UV and IR
+BCs interchanged.
+As it will turn out, for G(UV)
+SM , an important parameter determining the con-
+tribution of fermions to the RGE is the bulk mass parameter c = m/k. We use
+the ranges denoted by C1, as listed in Table 1, which can reproduce the SM flavor
+structure [21]. To compare to other composite Higgs GUT models in the literature,
+C1 & C2
+C1
+C2
+c20,1 < −1/2,
+c20,2 < −1/2,
+−1/2 < c20,3 < +1/2
+c20,3 > +1/2
+c15,1 > +1/2,
+c15,2 > +1/2,
+−1/2 < c15,3 < +1/2
+c15,3 > +1/2
+c6,1 < −1/2,
+c6,2 < −1/2,
+c6,3 < −1/2
+Table 1: Assignment of fermion bulk parameters ci ∈[−1, 1] used in [21] (C1)
+compared to a theory resembling the composite Higgs GUT of [30] (C2). See text
+for details.
+e.g. [30], we will also use the assignment C2, also listed in Table 1. The precise
+numerical values of these bulk masses will not be important for the results of this
+work, but the qualitative difference between these assignments becomes clear when
+looking at their 4D composite duals. For C2, all SM fermion fields are elementary
+except for the RH top tR, which is composite, as is often assumed in CH theories. In
+the case of C1, the first and second generations of SM fermions are elementary and
+one has a non–elementary third generation with the RH top tR, the third generation
+LH quark doublet q3 and the RH tau lepton τR.
+3
+Gauge-Coupling Evolution in 5D
+In flat 4D theories the action of a gauge field can be written as
+S ⊃
+Z
+d4x
+
+−1
+4g2FµνF µν
+
+,
+(3.1)
+where we have rescaled the originally canonical normalized fields by Aµ →g−1Aµ,
+such that the 4D gauge coupling g only appears as the coefficient of the gauge ki-
+netic term and thus only in the propagator of the gauge field. Regularization and
+renormalization leads to a scale dependence of the gauge coupling. If the model is
+3We use Ψc
+L ≡(Ψc)L = (ΨR)c. Therefore the label L/R indicates the transformation properties
+under the Lorentz group. For the SM leptons, embedded as conjugates, this means the singlet and
+doublet electron are denoted by ec
+L and lc
+R, respectively.
+– 6 –
+
+---PAGE BREAK---
+described by a GUT, like the Georgi–Glashow (GG) model based on SU(5) [1], the
+gauge couplings should meet, up to threshold effects, at some energy scale. This
+can also be explored by studying the differential running of the three SM couplings,
+i.e., the running of ∆αi1 = αi −α1, with the fine structure constants αi = g2
+i /(4π).
+Alternatively, assuming unification, the meeting point is given by only two couplings,
+say α1, α2, from which the low energy value of the third, α3, can be postdicted. For
+the GG model one obtains δ3 = (αtheo
+3
+−αexp
+3 )/αexp
+3
+≈40%, for which the discrepancy
+with the measured value is too large, although the situation improves when adding
+additional fields, like in supersymmetric theories. That the gauge couplings evolve
+logarithmically is no coincidence and can already be anticipated from the mass di-
+mension of the operator coefficients in the action. The divergence structure has the
+same form as (3.1), thus can be renormalized via the gauge coupling g. Since we
+have [g−2] = 0 for the mass dimension of the gauge coupling, the dependence on a
+regularization mass scale Λ can only be logarithmically with log(Λ).
+This situation changes considerably in higher dimensional theories. For a slice
+of AdS5 the gauge field part of the action reads
+S ⊃
+Z
+d4xdz
+ 1
+kz
+ 
+−1
+4g2
+5
+FMNF MN + λk
+4 FµνF µνδ
+
+z −1
+k
+
++ λT
+4 FµνF µνδ
+
+z −1
+T
+
+,
+(3.2)
+where we have again normalized the gauge fields such that the bulk gauge coupling
+g5 appears in front of the kinetic term and not in the covariant derivative. Here,
+[g−2
+5 ] = 1 and there will be power-law divergent contributions to the gauge boson
+self energy scaling as Λ1 with Λ an UV cutoff [48]. Additionally, because of the
+finite extra dimension, there are brane kinetic terms with dimensionless coefficients
+[λk] = [λT] = 0 which can be used to renormalize logarithmic divergencies, i.e.
+log(Λ) [48]. The power-law divergencies dominate for energies above the inverse size
+L−1 of the extra dimension, at which point the effective description of the theory
+breaks down [47–49]. Below these energies, the logarithmic divergencies dominate
+instead. If we assume KK excitations with masses of the O(TeV) this implies for
+flat extra dimensions a size of O
+ TeV−1
+but, due to the warping, in warped extra
+dimensions typically a size of O
+ M −1
+Pl
+
+. Thus for warped extra dimensions we can
+have logarithmic running of gauge couplings up to the Planck scale if we can use
+a well defined correlation function to access it.
+The correlation function of zero
+mode fields will not be calculable for momenta above the TeV scale as the zero mode
+becomes strongly coupled [38]. Instead, as mentioned before, we will use the Planck–
+brane correlator [47–49], inspired by holography, which is valid up to the energies of
+the order k ∼MPl and, as we will see in the next section, has the right divergence
+structure to be renormalized by the brane coupling λk on the Planck brane.
+– 7 –
+
+---PAGE BREAK---
+4
+Explicit Derivation of the Running
+We now turn to the explicit analysis of the Planck–brane correlator, i.e. the 5D gauge
+field propagator whose endpoints lie on the Planck brane. We initially closely follow
+[49], but including fermion brane masses in Section 4.2, and add our own calculation
+for gauge fields in Section 4.3. Since we rescaled the fields in Eq. (3.2) such that the
+bulk gauge coupling g5 appears in front of the kinetic term, the two-point correlator
+will be proportional to g2
+5 at tree level. In line with this, we define the general effective
+gauge coupling of the elementary sector g(p) via the Planck–brane correlator4 as
+∆µν(q2) =
+Z
+d4x eiq·x
+
+Aµ
+
+x, 1
+k
+
+Aν
+
+0, 1
+k
+
+= g2(q)
+q2 ηµν + gauge dep. .
+(4.1)
+We will drop the gauge dependent parts in the following and focus only on the terms
+proportional to ηµν, which will be sufficient for calculating the running. Furthermore,
+we will employ dimensional regularization using d = 4 −2ϵ and work directly in
+Euclidean AdSd+1 space to make the resulting integrals well defined.
+First, we look at the tree–level value of this coupling. Using the propagators5
+given in Appendix A.3 we have
+g2(q)
+q2 δµν
+
+tree
+= ∆µν(q2)
+
+tree
+= g2
+5G1,q
+1
+k, 1
+k
+
+δµν ,
+(4.2)
+where G1,q (z, z′) = G1 (q, z, z′) is the transverse component of the gauge boson 5D
+propagator with 4D (euclidean) momentum q from position z′ to z (see Eq. (A.44)).
+It is instructive to expand this for energies q ≪T and T ≪q ≪k, where
+g2(q)
+
+tree ≃
+
+
+
+g2
+5
+k
+ln( k
+T )
+q ≪T
+g2
+5
+k
+ln(2e−γE k
+q)
+T ≪q ≪k
+.
+(4.3)
+Notice that for q ≪T this agrees with the tree–level value for the zero mode coupling
+g2(q ≪T)
+
+tree ≃g2
+5
+1
+L ≡g2
+4D,0 ,
+(4.4)
+with L =
+1
+k ln
+  k
+T
+
+the separation between the UV and IR branes. The tree–level
+coupling of the zero mode g4D,0 depends on the large logarithm ln
+  k
+T
+
+as if it would
+be a running coupling which has been run down from the Planck scale k to the low
+scale T. This is commonly referred to as ”tree–level running” [35, 44, 48, 49, 51].
+In fact, in the holographic dual this value arises from the universal leading pure
+CFT correction [48]. Note that for q ≫T the effective gauge coupling g(q) depends
+already on the momentum q at tree–level.
+4 Strictly speaking, the propagator is not gauge invariant for non–abelian gauge fields in contrast
+to the Wilson loop [49]. Although we work with this gauge-dependent definition, gauge invariance
+implies the equivalence for different gauge choices.
+5For convenience, we work in the following with the euclidean action and, because of our rescaling
+AM →g−1
+5 AM, the propagator includes an extra factor of g2
+5.
+– 8 –
+
+---PAGE BREAK---
+←−
+q
+←−
+q
+( 1
+k)
+( 1
+k)
+Figure 2: Planck-brane correlator determining the evolution of the gauge coupling
+at one loop.
+Our goal is now to look at loop corrections to the Planck–brane correlator, de-
+picted in Fig. 2. In general, this takes the form
+∆µν(q2)
+
+1–loop =
+Z
+dzdz′g2
+5G1,q
+1
+k, z
+
+× Πµν,q(z, z′) × g2
+5G1,q
+
+z′, 1
+k
+
+,
+(4.5)
+where z, z′ can lie in the bulk. Let us look at the external propagators more closely.
+Since we are interested in the coupling of the gauge fields which feature zero modes,
+i.e. the SM gauge fields, we can take the 5D propagators from Appendix A.3 using
+(+, +) BCs (i.e. PUV = 0, PIR = 0) and no UV brane masses (i.e M 2
+UV = 0). We are
+interested in the region q ≫T for which we expand the propagator
+G1,q(1
+k, z) ≈(kz)(d−3)/2 1
+q
+ 
+√
+kz
+K d
+2 −1(qz)
+K d
+2 −2( q
+k)
+!
+Ω(z)† ,
+(4.6)
+where Ω(z) parametrizes the effects of EWSB (see Eq. (A.42)). Due to
+K d
+2 −1(qz) ∝
+
+
+
+q
+π
+2qze−qz
+for qz > 1
+(qz)−( d
+2 −1)
+for qz < 1
+,
+(4.7)
+the propagator is exponentially suppressed for qz ≫1 and the bulk of the contri-
+bution comes from the smallest z values, thus near the Planck–brane. This implies
+Ω(z) →Ω(1/k) = 1 as well as that the dynamics on the IR brane are completely
+irrelevant.6
+It will turn out that for the momentum range T ≪q ≪k and for the divergence
+structure relevant for the differential running (further contributions will be neglected
+in the following), the z–integration and the integration over loop momenta will sep-
+arate for the case of scalars, fermions and gauge bosons in the loop. In this case, the
+integration over z can be performed explicitly leading always to two copies of the
+6This limit is equivalent to taking 1/T →∞. Moreover, the BCs and brane masses on the IR
+brane do not affect the behavior of the propagators near the UV brane and for convenience we
+choose in the following PIR = 0, MIR = 0, Ω(z) = 1 for all fields.
+– 9 –
+
+---PAGE BREAK---
+tree–level Planck–brane propagator. Explicitly, we find
+∆µν(q2)
+
+1–loop ≃g2
+5G1,q
+1
+k, 1
+k
+
+× Πµν(q2) × g2
+5G1,q
+1
+k, 1
+k
+
+,
+(4.8)
+where Πµν(q2) ≃q2δµνΠ(q2) turns out to be equal to the gauge boson self energy in
+4–dimensional flat space [48, 49]. In particular for scalar fields this can be intuitively
+understood, since there is effectively only one KK-mode which is not suppressed at
+the Planck-brane [49]. For other fields the result Eq. (4.8) will be true as well, thus
+to calculate the running it will be sufficient to know the results of Π(q2), which we
+will explicitly calculate in the following sections for the different fields. The divergent
+term Π(q2) can be regularized in the usual way, e.g. via dimensional regularization,
+leading to 1/ϵ poles as well as logarithms of the form
+Π(q2) =
+b
+16π2
+1
+ϵ −γE + log(4π) + log
+µ2
+q2
+
++ . . .
+
+,
+(4.9)
+with the coefficient b depending on the fields in the loop, see the upcoming subsections
+for the explicit values. Notice that Eq. (4.8) can be interpreted as a vertex Πµν(q2)
+localized on the Planck brane.
+For small enough λk the brane kinetic term localized on the Planck brane can
+be treated perturbatively and gives (dropping again gauge dependent terms)
+∆µν(q2)
+
+brane = g2
+5G1,q
+1
+k, 1
+k
+
+× (−λkq2δµν) × g2
+5G1,q
+1
+k, 1
+k
+
+.
+(4.10)
+This has the same structure as the divergent loop contribution, as it has to be to
+renormalize the divergence in (4.9) via the coupling λk →λk(µ), where µ is the
+subtraction scale. Adding this to the tree-level coupling we find, after the usual
+resummation, the running coupling
+1
+g2(q2)
+
+tree+1–loop
+=
+1
+g2(q2)
+
+tree
++ λk(µ) −
+b
+16π2 log
+µ2
+q2
+
+(4.11)
+In the next subsections we will clarify the details for the different fields with different
+BCs, brane masses, and Gauge–Higgs vev.
+4.1
+Scalar Fields
+Given that there are no fundamental scalars in our theory, we just use them as
+an explicit straightforward example to demonstrate the formalism. The following
+calculation is essentially the same as in [49], so we will only highlight the important
+steps in the calculation and its interpretation, with a focus on the application to
+the GHGUT. We consider a (+, +) complex scalar field with no brane mass (PUV =
+0, M 2
+UV = 0), with a finite bulk mass (m ̸= 0), coupled to a U(1) gauge field. From
+– 10 –
+
+---PAGE BREAK---
+←−
+q
+−→
+p
+p+q
+←−−
+←−
+q
+z
+z′
+←−
+q
+p←−
+←−
+q
+z
+Figure 3: Diagrams contributing to the RGE for internal scalars.
+the last section we saw that the Gauge-Higgs vev can be neglected for q ≫T (see
+discussion under Eq. (4.7)).
+There are two diagrams contributing, which are depicted in Fig. 3, with extra
+factors of (R/z)d−1 from the warped metric compared to scalar QED. We obtain
+Πµν,q(z, z′) = Π(1)
+µν,q(z, z′) + Π(2)
+µν,q(z, z′), with
+Π(1)
+µν,q(z, z′) =
+Z
+p
+" 1
+kz
+d−1
+(2p + q)µ
+#
+G0,p(z, z′)G0,p+q(z′, z)
+" 1
+kz′
+d−1
+(2p + q)ν
+#
+,
+Π(2)
+µν,q(z, z′) = δ(z −z′)
+Z
+p
+" 1
+kz
+d−1
+2δµν
+#
+G0,p(z, z) ,
+(4.12)
+where G0,p(z, z′) = G0(p, z, z′) is the 5D scalar propagator (see Eq. (A.24)) and we
+neglected the longuitudinal, i.e., gauge dependent part of the gauge boson propagator
+as described in the last section. The factors in square brackets describe the vertices,
+which are the same as in scalar QED but dressed with factors coming from the
+warped metric.
+For q ≪k, loop momenta above the scale k cannot give rise to non–analytic
+effects [49], thus we expand the internal propagators in T ≪p, (p + q) ≪k. As
+the leading contribution from the z–integration comes from the region near z = 1/k
+we can also expand the internal propagators in pz, (p + q)z, pz′, (p + q)z′ ≪1 to
+determine the leading non–analytic behavior. In the following we will only focus
+on these non–analytic parts, since they determine the divergence and therefore the
+running of the couplings. The analytical parts only change the constants appearing
+in Eq. (4.9), and dropping them is an implicit choice of scheme.7 Including also an
+expansion in m/k ≪d, the internal propagators, derived in Appendix A.2, can be
+written as
+G0,p(z, z′) ≃k (2 −d) (kz)
+d−1
+2 (kz′)
+d−1
+2 (kz)−α (kz′)−α
+
+1
+p2 + m2
+d
+
+,
+(4.13)
+7Note that such a scheme choice does not influence the low energy predictions for physical
+observables if used consistently [49].
+– 11 –
+
+---PAGE BREAK---
+where we introduced m2
+d ≡−2+d
+d
+m2 and α = (
+p
+d2 + 4m2/k2 −1)/2 ≃(d −1)/2. We
+see that the functional dependence on z and p has split into separate parts allowing
+us to split the corresponding integrals.
+The integration over z can be performed together with the external propagators
+in the limit k ≫q and gives for both i = 1, 2
+∆(i)
+µν(q2)
+
+1–loop ≃
+
+g2
+5G1,q
+1
+k, 1
+k
+2
+Π(i)
+µν(q2) ,
+(4.14)
+where the remaining momentum integrals read
+Π(1)
+µν (q2) =
+Z
+p
+[(2p + q)µ] [(2p + q)ν]
+1
+p2 + m2
+d
+1
+(p + q)2 + m2
+d
+Π(2)
+µν (q2) =
+Z
+p
+[2δµν]
+1
+p2 + m2
+d
+.
+(4.15)
+These are the standard integrals from scalar QED in d–dimensional euclidean space
+which can be evaluated, as in 4D, around d = 4 −2ϵ. Adding them, and taking
+the limit m →0 for simplicity, we obtain the general result of equations (4.8) and
+(4.9) with b = −1/3 and therefore, after renormalizing with the Planck-brane kinetic
+term (4.10), the running is given by equation (4.11) with the same b.
+This can
+be generalized for the case of SU(N) by including the appropriate group theoretic
+factors. In total, we can summarize that the contribution of a scalar field with (+)
+BCs on the Planck brane to the β–function is that of the corresponding 4D scalar
+field with a mass md.
+If we change now the BCs of the scalar field to (−) BCs (PUV = 1) one gets a
+similar structure as (4.13) but with a mass m2
+d ≈2(−2+d)k2, so a mass of the order
+of the Planck scale. These terms only give contributions to the difference in gauge
+couplings for q ≳k. For the energies we are interested in (q ≪k) this means that a
+field with (−) BCs on the UV brane does not contribute to the differential running
+at all. A similar conclusion will apply also for fermions and gauge bosons in the loop
+and will be very important in deriving the running in the GHGUT.
+Lastly, there is also an intuitive understanding of the above from the KK picture.
+For (−) BCs the individual fields vanish on the Planck brane, giving no contribution
+to the non-analytic part of the Planck–brane correlator. For (+) BCs most modes
+will be localized towards the IR brane, apart from one single mode, which is the zero
+mode in the case of m = 0 and a mode with a KK mass of the order m for m ̸= 0.
+This intuition will carry over to the other spin fields.
+4.2
+Fermion Fields
+Next we consider Fermion fields. After discussing the important changes from the
+scalar case for vanishing brane masses, we will also consider the effect of non-zero
+fermion brane masses to be able to apply the results to the model of [18, 21].
+– 12 –
+
+---PAGE BREAK---
+←−
+q
+−→
+p
+p+q
+←−−
+←−
+q
+z
+z′
+Figure 4: Diagram contributing to the RGE for internal fermions.
+There is the usual QED type of diagram for the self energy (c.f. Fig. 4), leading
+to
+Πµν,q(z, z′) =
+Z
+p
+Tr
+" 1
+kz
+d
+γµG1/2,p(z, z′)
+ 1
+kz′
+d
+γνG1/2,p+q(z′, z)
+#
+.
+(4.16)
+Here G1/2,p(z, z′) = G1/2(p, z, z′) is the fermion propagator (see Eq. (A.4)) and the
+vertices are like the ones in standard QED but dressed with factors from the warped
+metric.
+By splitting the propagators into the different chirality components (see
+(A.7)) the Dirac structure can be simplified. Focusing first on (+) BCs on the UV
+brane, we find that only the ˜GLL part in (A.7) will give rise to relevant, non-analytic
+structures. The precise form depends on the value of the bulk mass parameter c. For
+c > 1
+2 we find after the expansion, as described in Section 4.1
+G1/2,p(z, z′) ≃(kz)d/2 (kz′)d/2 PLi/p ˜GLL
+≃(kz)d/2 (kz′)d/2 k(−1 + 2c) (kz)−c (kz′)−c
+PLi/p
+p2
+
+.
+(4.17)
+Again, the prefactor, when integrated over z, z′ with the external propagators, leads
+to [g2
+5G1,q(1/k, 1/k)]2 and the remaining momentum integral is reminiscent of the
+usual 4D integral of QED with a massless fermion. The corresponding contribution
+to the β–function will thus be given as in Eq. (4.11) with b = −2/3 corresponding
+to a Weyl fermion, or to a Dirac Fermion including an additional factor 1/2 coming
+from PL, reflecting that only the LH component contributes for the latter. The result
+can easily be extended to non-abelian gauge fields by multiplying b with the Dynkin
+index T(Rf) of the corresponding fermion representation Rf. Contrary to the scalar
+case the bulk mass parameter c does not give a mass term to this propagator, but
+changes the localization, and thus the divergence structure.
+This can be seen by studying the case c < 1
+2, for which we find
+G1/2,p(z, z′) ≃(kz)d/2 (kz′)d/2 PLi/p ˜GLL
+≃(kz)d/2 (kz′)d/2 4cΓ(1
+2 + c)
+Γ(1
+2 −c) (kz)−c (kz′)−c
+
+PLi/p
+k(p/k)1+2c
+
+.
+(4.18)
+– 13 –
+
+---PAGE BREAK---
+For −1
+2 < c < 1
+2 no large logarithms arise since the propagator is more singular in
+the UV. We note that UV power corrections will be universal if the symmetry is
+broken only by boundary effects (like in the present case), and therefore will not
+contribute to the differential running [49]. For c < −1
+2 the propagator is analytic
+with no contribution to the differential running, too. Lastly, we can talk about the
+case c = ±1
+2 by taking the limit c →±1
+2 after the integration over z finding the same
+momentum structure as for c > 1
+2 (c < −1
+2) for c →+1
+2 (c →−1
+2). Thus for (+)
+BC on the UV brane only in the case c ≥1
+2 there is a contribution to the running
+equal to half the contribution of Dirac fermions in 4D flat space. For (−) BCs on
+the UV brane one finds a similar result except now only the RH part contributes
+for c ≤−1
+2. This is not surprising as the equation for the fermion propagator are
+symmetric under simultaneously changing (+) ↔(−), c ↔−c, L ↔R.
+Having established the general behavior of fermionic contributions, we study now
+the case where they are connected via brane masses, which has not been considered
+in the literature before. For simplicity we focus on two flavors Ψ = (ψ1 ψ2)T with
+opposite BCs (+) and (−), respectively. They can be connected via a UV brane
+mass mUV .8 This is already quite involved since we need to consider the propagator
+for each of the four flavor components and each of the four chirality components.
+Moreover, in each of these cases the pole structure will look differently, depending on
+the possible assignments of the bulk mass parameters c1, c2. For example, for c1 > 1
+2
+and c2 < −1
+2 and writing
+
+ψi ¯ψj
+
+∼Gij
+1/2 for the propagator we find
+G11
+1/2,LL,p(z, z′) ≃−(kz)d/2 (kz′)d/2 k(1 −2c1) (kz)−c1 (kz′)−c1
+×
+
+1 + |mUV |21 + 2c2
+1 + 2c1
+ 
+PLi/p
+p2 + |mUV |2k2(1 −2c1)(1 + 2c2)
+
+,
+(4.19)
+G22
+1/2,RR,p(z, z′) ≃−(kz)d/2 (kz′)d/2 k(1 + 2c2) (kz)c2 (kz′)c2
+×
+
+1 + |mUV |21 −2c1
+1 −2c2
+ 
+PRi/p
+p2 + |mUV |2k2(1 −2c1)(1 + 2c2)
+
+.
+(4.20)
+Without the brane mass (mUV = 0) this case corresponds to two Weyl fermions
+contributing to the running, a left-handed mode for ψ1 ((+) BC and c1 > 1/2) and a
+right-handed mode ψ2 ((−) BC and c2 < −1/2). Including brane masses on the UV
+brane, these modes combine to form a Dirac fermion with mass m2 = |mUV |2k2(1 −
+2c1)(1 + 2c2). Their combination would only contribute to the differential running
+above this mass scale. However, in the GHGUT model incarnations considered in
+this work, we never connect such fermion fields via Planck brane masses. In these
+cases we get a contribution as without a brane mass.
+8Here we write the 2 × 2 matrix in flavor space MUV = mUV
+0 0
+1 0
+
+, such that mUV is a scalar.
+– 14 –
+
+---PAGE BREAK---
+←−
+q
+−→
+p
+p+q
+←−−
+←−
+q
+z
+z′
+←−
+q
+p←−
+←−
+q
+z
+Figure 5: Diagrams contributing to the RGE for internal Aµ.
+For example, for the same assignments of BCs and now c1 > 1
+2 and −1
+2 < c2 < 1
+2
+we obtain instead
+G11
+1/2,LL,p(z, z′) ≃(kz)d/2 (kz′)d/2 k(−1 + 2c1) (kz)−c1 (kz′)−c1
+PLi/p
+p2
+
+,
+(4.21)
+G22
+1/2,RR,p(z, z′) ≃(kz)d/2 (kz′)d/2 4−c2 Γ(1
+2 −c2)
+Γ(1
+2 + c2) (kz)c2 (kz′)c2
+
+1 + |mUV |21 −2c1
+1 −2c2
+
+×
+
+
+PRi/p/k
+(p/k)1−2c2 + |mUV |2(1 −2c1)(1 + 2c2)2−1−2c2 Γ(−1
+2 −c2)
+Γ( 1
+2 +c2)
+
+,
+(4.22)
+where only the LH part of ψ1 contributes to the running as in the case without the
+brane mass. We see that for two fermion fields, where only one of them would con-
+tribute to the running without the UV-brane mass, the UV brane mass is irrelevant
+for the contribution to the running. This is the case for all brane masses in the
+models considered in the following sections.
+4.3
+Gauge Fields
+For non-abelian SU(N) gauge fields Ref. [49] used the Wilson loop to define the
+effective gauge coupling and then calculated the loop contribution with the help of
+AdS/CFT arguments. Instead, here we continue to use Eq. (4.1) and just calculate
+loop corrections to the Planck-brane correlator. While strictly speaking this is not
+gauge invariant, the running of the extracted coupling respects gauge invariance
+and is physical (see footnote 4). Our results are qualitatively consistent with the
+statements made in [49].
+In the following we consider the 4D vector Aµ and scalar A5 contributions of
+the 5D gauge field separately. For only Aµ’s running in the loop, we find a similar
+– 15 –
+
+---PAGE BREAK---
+contribution as for 4D gauge fields in QCD with the two terms (c.f. Fig. 5)
+Π(1),ab
+µν,q (z, z′) =
+Z
+p
+" 1
+kz
+d−3
+P a1a2a
+λ1λ2µ(p + q, −q, −p)
+#
+G1,p,λ1ρ1(z, z′)G1,p+q,λ2ρ2(z, z′)
+×
+" 1
+kz′
+d−3
+P a1a2b
+ρ1ρ2ν (−p −q, q, p)
+#
+Π(2)
+µν,q(z, z′) = δ(z −z′)
+Z
+p
+" 1
+kz
+d−3
+N accb
+µλ1λ2ν
+#
+G1,p,λ1λ2(z, z) ,
+(4.23)
+with the usual 4D “three-gluon” vertex P a1a2a3
+λ1λ2λ3(p1, p2, p3) and 4D “four-gluon” vertex,
+N a1a2a3a4
+λ1λ2λ3λ4 dressed by factors from the warped metric in the square brackets. In this
+notation we define P a1a2a3
+λ1λ2λ3(p1, p2, p3) such that all momenta pi are incoming, ai are
+the gauge group indices and λi the Lorentz indices.
+Focusing first on the case without brane masses, we can use the same approxi-
+mations as before (sub-Planckian momenta and UV localization) to find that there
+exists a pole in the internal propagator only for (+) BC where the propagator is
+explicitly given as
+G1,p(z, z′) ≃−2
+d
+2 −2
+
+k 1
+p2 ,
+(4.24)
+While in the limit d →4 this propagator seems to vanish, the prefactor in Eq. (4.24),
+after integration over z, z′ and including the external propagators, leads again to
+[g2
+5G1,q(1/k, 1/k)]2 which remains finite in the limit d →4. Note that the ghost
+propagator (see Eq. (A.54)) is described by the same propagator as the gauge fields
+up to gauge dependent terms. We are then once more left with the standard 4D
+diagrams which lead to the usual gauge field contribution of a SU(N) gauge field,
+i.e., b = 11N/3.
+Next we consider the field A5. As an example, one finds for (−) BC, which
+corresponds to the case of non-zero A5 on the UV brane and a zero mode in the
+spectrum, the following propagator expansion for sub-Planckian momenta and UV
+localization
+G5,p(z, z′) ≃−(kz)−d+4 (kz′)−d+4 2−5+d p
+k
+5−d Γ(d
+2 −2)
+Γ(3 −d
+2) .
+(4.25)
+This propagator has no momentum pole around d = 4, and loops with only A5 will
+not contribute to the running. For diagrams with a Aµ and A5 in the loop, only the
+propagator of Aµ can have a pole, but we can always shift the momentum variable
+to make this pole scaleless. Therefore, these diagrams do not give a contribution in
+dimensional regularization. The same will be true no matter the BCs of A5, leading
+to the conclusion that none of the scalar parts of gauge fields contribute to the
+running.
+– 16 –
+
+---PAGE BREAK---
+4.4
+Summary of the Contributions
+Here we summarize the above results. For all cases, the BCs on the IR brane as well
+as brane masses on the IR brane and the Higgs vev do not influence if and how a field
+contributes to the Planck–brane correlator. A 5D scalar contributes to the running
+only for (+) BCs on the UV brane with a β–function of a corresponding 4D scalar,
+with a mass m2
+d = −2+d
+d
+m2 given by the bulk mass m. The contribution of a 5D
+fermion depends on the bulk mass parameter c. For c ≥1/2 only for (+) BCs there
+is a contribution to the β–function equal to a corresponding 4D LH massless fermion.
+For −1/2 < c < 1/2 there is no contribution to the β–function, no matter the BCs.
+For c ≤−1/2 only for (−) BCs there is a contribution to the β–function equal to a
+corresponding 4D RH massless fermion. The inclusion of UV–brane masses, which
+connect different fermion fields, does not affect the contribution to the β–function
+unless a field with (+) BC and c1 ≥1/2 is connected to a field with (−) BC and
+c2 ≤−1/2, in which case these combine giving a contribution to the β–function like
+a 4D Dirac fermion with mass m2 = (1 −2c1)(1 + 2c2)|mUV |2k2. Finally, the vector
+part Aµ of a 5D gauge field AM = (Aµ, A5) contributes to the running only for (+)
+BCs on the UV brane with a β–function of a corresponding 4D gauge field. The
+scalar part A5 of a 5D gauge field AM = (Aµ, A5) does not contribute to the running
+for all values of the BCs on the UV brane.
+5
+Matching at the Low Scale
+After having outlined the general contributions of fields to the running, we detail in
+this section how to relate to the measured coupling at low energies. The remaining
+symmetry on the UV brane determines the contribution of the individual fields as
+well as which brane kinetic terms are present. For the breaking pattern G(UV)
+SM , which
+breaks on the UV brane to the SM, there are three UV-brane kinetics corresponding
+to the three gauge fields with zero modes, which we identify with the three gauge
+fields of the SM. Explicitly we have at one loop for the fine structure constants αi
+α−1
+i (q2) = α−1
+tree(q2) + 4πλk,i(µ) −bi
+4π log
+µ2
+q2
+
+(5.1)
+Note that the uncalculable tree–level contribution is the same for each gauge field
+and it drops out of the differential running ∆α−1
+i1 ≡α−1
+i
+−α−1
+1 ,
+∆α−1
+i1 (q2) = 4π∆λk,i1(µ) −∆bi1
+4π log
+µ2
+q2
+
+(5.2)
+where we defined ∆λk,i1 ≡λk,i −λk,1 and ∆bi1 ≡bi −b1. The coefficients ∆bi1
+are fully determined by the field content, UV BCs and Lagrangian parameters (e.g.
+bulk mass parameters). However, one needs further assumptions on the couplings
+– 17 –
+
+---PAGE BREAK---
+λk,i. Since these couplings correspond to brane kinetic terms for the gauge fields, one
+can think of them as UV-brane gauge couplings λk,i ∼1/g2
+UV,i [41, 64]. Under the
+assumption of strong coupling one expects from naive dimensional analysis (NDA)
+λk,i(µ = k) ≈1/(16π2) [64], for which these corrections would be small, but without
+knowledge of a concrete UV completion also larger values seem possible. We will
+comment more on this issue and the unification of the gauge couplings for the concrete
+model in the next section.
+The above formula is only valid for momenta above the TeV scale, at which it
+could be matched to results from other methods like [38], which focus on the zero
+mode propagator, if the running below the TeV scale should be included. However,
+as the main contribution to the running comes from the evolution from the Planck
+scale to the TeV scale, we ignore the exact matching and use the usual SM running
+for momenta below the IR scale T.
+Before presenting the results for the G(UV)
+SM
+setup, we briefly discuss the other
+breaking pattern G(IR)
+SM for the SU(6) GHGUT of [18, 21], see Section 2, where one
+breaks to the SM on the IR brane and to SU(5) on the UV brane. In this case,
+the gauge kinetics λk,i as well as the coefficients bi will be SU(5) universal, implying
+that a unification of the gauge couplings would have to happen at the TeV scale.
+However, the values of the measured gauge couplings at low energies are too different
+to unify at this scale with only logarithmic running.
+6
+Application to SU(6) GHGUT
+In the following, we present our numerical results for the G(UV)
+SM
+model of Section 2.
+Given our choice of BCs presented in Eqs. (2.3) and (2.4), one can directly determine
+the β–functions from the bosonic and fermionic field content and the bulk mass
+parameter assignments C1 and C2 of Table 1 using the results of Section 4.4. We
+plot the differential running for both cases in Figure 6 and will describe the underlying
+contributions below. We can conveniently summarize the relevant contributions for
+each case by looking at the changes compared to the SM. Starting with the bosonic
+fields, the gauge fields Aµ have (+) BCs on the UV brane only for the SM fields
+resulting in a contribution to the differential running as in the SM. On the other
+hand, the Higgs, being embedded in the A5 component, always drops out. Since the
+contribution of the Higgs to the running of the SM gauge coupling is minuscule, this
+is a small effect. The contributions of the fermions are much more important.
+For C1, the bulk mass parameters of the first two fermion generations are chosen
+in such a way that only the fields corresponding to the SM fermions are contributing,
+whereas the primed fields and exotics from Eq. (2.4) do not. This is different for the
+third generation. Here, the c values for the 20 and 15 lie in between −1/2 < c <
++1/2, so none of the fields is contributing. Thus, compared to the SM, the third
+generation u, q and ec do not contribute. Note that they form a complete SU(5)
+– 18 –
+
+---PAGE BREAK---
+Figure 6: Differential running for the fermion assignment C1 (left) and assignment
+C2 (right) in red, compared to the SM differential running in dashed. The vertical
+dotted lines display the Planck scale k and the TeV scale T below which the SM
+running is employed. The impact of ∆λk,i1 on the Planck-brane is illustrated by
+colored bands. The NDA estimate ∆λk,i1 ≈1/(16π2), shown in black, is too small
+to have a visible vertical extend. We additionally display regions corresponding to
+moderately large ∆λk,i1 ≲1 (∆λk,i1 ≲1.5) in orange (blue). In the presence of such
+terms, values of the couplings within these regions allow for a successful embedding
+in the unified group. See text for details.
+multiplet, which has no effect on the differential running. Hence, the differential
+running is the same as in the SM, up to the small difference due to the missing Higgs
+contribution. For C2 the situation changes. Still the first two generations contribute
+as in the SM, but now also the third generation q and ec in the 15 contribute as
+well. Although the c value of the 20 changes too, the third generation u = tR still
+does not contribute, but instead the exotics in the second row of the 20 in (2.4) now
+contribute to the differential running. Note that they complete the tR to a SU(5)
+multiplet and for the differential running one can describe their contribution as a
+missing tc
+R. This is exactly the same scenario for the differntial running as in [30]. In
+the dual theory, one can interpret the assignment C2 as having elementary fields for
+all SM fields except for the tR which is composite. Consequently, we need additional
+exotics to fill out a complete multiplet of the strong sector. Thus, the right panel of
+Figure 6 exactly matches Figure 1 in [30].
+We can also comment on the unification of the gauge couplings. Due to the
+presence of the possibly different UV brane gauge kinetic couplings λk,i for each
+gauge coupling gi, the gauge couplings, strictly speaking, never unify. Nonetheless,
+if the differences ∆λk,i are small, one can give a range in which the the low energy
+gauge couplings should lie, given the presence of a grand unified gauge group in the
+bulk, and confront it with experimental results. Note that in this model, the GUT
+breaking scale has to be the Planck–scale, as compared to regular flat 5D SU(5)
+– 19 –
+
+---PAGE BREAK---
+unification where the unification scale typically would lie around the TeV scale. For
+this we show in Figure 6 a range of possible variations of ∆λk,i. For the assignment
+C1 one needs at least ∆λk,i ≈1.4 in order to reproduce the correct low energy
+couplings, and although the meeting of the gauge couplings for the assignment C2 is
+much better at the scale q ∼1015 GeV, at the scale q ∼k one needs ∆λk,i ≈1.2. If
+one interprets λk,i = 1/g2
+UV,i one can reproduce this with couplings gUV,i ∼O(1).
+7
+Conclusions
+In this article, we provided a comprehensive condensed survey of the RGE of the
+gauge couplings in realistic models of gauge-Higgs grand unification, including ana-
+lytical and numerical results. Such models furnish well motivated extensions of the
+SM that can address several of its shortcomings, while unifying fundamental concepts
+in various facets and leading to interesting predictions around the TeV scale (see, e.g.,
+[21, 23]). After introducing GHGUTs and specifically a phenomenologically viable
+variant of Georgi–Glashow–like unification with a SU(6) ⊃SU(5) symmetry in the
+bulk, we presented general results for the running of the gauge couplings in a slice of
+AdS5, induced by scalars, fermions, and gauge bosons, using the well-defined and ver-
+satile Planck-brane-correlator approach, also including brane-localized fermion mass
+terms generically present in viable models, as well as a finite Higgs vev. A concise
+summary of the various contributions to the RGE is presented in Sec. 4.4. We also
+discussed the interpretation in the 5D and the dual 4D (composite Higgs) theory and
+commented on connections to existing results in the literature.
+Finally, we applied our results to concrete SU(6) ⊃SU(5) GHGUTs and pre-
+sented a quantitative survey of the quality of unification for two motivated variants of
+fermion realizations. We found that successful grand unification at the Planck scale
+is possible, in the presence of moderately large brane kinetic terms ∆λk,i ≈1.2−1.4.
+Acknowledgments
+We are grateful to Kaustubh Sadanand Agashe, Emilian Dudas and Javier Fuentes-
+Martin for useful comments.
+S. W. acknowledges support by the Cluster of Excellence “Precision Physics, Fun-
+damental Interactions, and Structure of Matter” (PRISMA+ EXC 2118/1) funded by
+the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) within
+the German Excellence Strategy (Project No. 390831469). S. W. thanks the Max-
+Planck-Institut f¨ur Kernphysik for the support in the initial phase of this project.
+– 20 –
+
+---PAGE BREAK---
+A
+Propagators
+In this appendix we derive the 5D propagators used in the main text. In the appro-
+priate limits they agree with the results from the literature [44, 65–70].
+A.1
+Fermion Propagator
+We start by considering the quadratic action in AdSd+1 describing a set of fermion
+fields organized in a column of spinors, Ψ = (ψ1 ψ2 . . .)T. Including brane masses
+and a non–zero A5 vev, the relevant quadratic action reads
+Sd+1 =
+Z
+d5x
+ 1
+kz
+d
+Ψ
+
+iγµ∂µ −γ5
+
+∂z −d
+2z −i 1
+kzg5⟨Aˆa
+5(z)⟩tˆa
+
+−c
+z
+−δ
+
+z −1
+k
+ 
+MUV PL + M †
+UV PR
+
+−δ
+
+z −1
+T
+ 
+MIRPL + M †
+IRPR
+
+Ψ,
+(A.1)
+where tˆa, MUV/IR, and c are matrices in flavor space, with c being diagonal. In
+the absence of brane masses and A5 vevs one can choose the following (Dirichlet)
+boundary conditions (BCs) for each field: either PLψi(x, 1/k) = 0 or PRψi(x, 1/k) =
+0 and similar Dirichlet BCs for the IR brane. The BCs for the other chirality are
+completely determined by the equations of motion.
+By defining projectors PUV and PIR, who single out the LH ψi’s which have
+Dirichlet BCs on the UV and IR brane, respectively, they can be conveniently sum-
+marized as
+PUV PLΨ(x, z)|z=1/k = 0,
+PIRPLΨ(x, z)|z=1/T = 0,
+(1−PUV )PRΨ(x, z)|z=1/k = 0,
+(1−PIR)PRΨ(x, z)|z=1/T = 0,
+(A.2)
+where with a slight abuse of notation we have denoted the identity matrix in flavor
+space as 1, a notation that we shall keep throughout this paper. Turning on the
+brane masses and the A5 vevs, the boundary conditions now become:
+(PUV −MUV )PLΨ(x, z)|z=1/k = 0,
+(PIR + MIR)Ω
+ 1
+T
+
+PLΨ(x, z)|z=1/T = 0,
+(1 −PUV + M †
+UV )PRΨ(x, z)|z=1/k = 0,
+(1 −PIR −M †
+IR)Ω
+ 1
+T
+
+PRΨ(x, z)|z=1/T = 0,
+(A.3)
+where Ω(1/T) is the Goldstone matrix, defined as [66, 71]
+Ω(z) ≡exp
+
+i g5
+Z z
+1/k
+dz′
+ 1
+kz′
+
+⟨Aˆa
+5(z′)⟩tˆa
+
+,
+Ω(z)Ω†(z) = Ω†(z)Ω(z) = 1.
+Since a brane mass can only connect two fermions with (+) BCs on the respective
+branes, it follows that MUV PL = PUV MUV (1 −PUV )PL.
+– 21 –
+
+---PAGE BREAK---
+We now use the BCs in Eq. (A.3) in order to compute the (Euclidean) 5D
+fermion propagators. Starting from the 5D action from Eq. (A.1) and going to Eu-
+clidean 4D momentum p, we get the following differential equation for the propagator
+G1/2(p, z, z′):
+
+i/p −γ5
+
+∂z −d
+2z −i 1
+kzg5⟨Aˆa
+5(z)⟩tˆa
+
+−c
+z
+
+G1/2(p, z, z′) = (kz)d δ(z −z′),
+(A.4)
+where he have left implicit the Dirac and flavor identity matrices on the right hand
+side. Also, the brane masses have been dropped as they will appear in the BCs. In
+order to simplify the calculations, we write the propagator as
+G1/2(p, z, z′) = (kz)d/2 (kz′)d/2 Ω(z) ˜G1/2(p, z, z′) Ω(z′)†.
+(A.5)
+From now on, unless needed, we will omit p in the argument of the propagator.
+Eq. (A.4) then simplifies to:
+
+i/p −γ5∂z −c
+z
+
+˜G1/2(z, z′) = δ(z −z′).
+(A.6)
+Writing the propagator as
+˜G1/2 = PL
+
+i/p ˜GLL + ˜GLR
+
++ PR
+
+i/p ˜GRR + ˜GRL
+
+,
+(A.7)
+eq. (A.6) leads to
+
+∂2
+z −c(c + 1)
+z2
+−p2
+
+˜GLL(z, z′) = δ(z −z′),
+˜GRL(z, z′) =
+
+∂z + c
+z
+
+˜GLL(z, z′),
+
+∂2
+z −c(c −1)
+z2
+−p2
+
+˜GRR(z, z′) = δ(z −z′),
+˜GLR(z, z′) =
+
+−∂z + c
+z
+
+˜GRR(z, z′).
+(A.8)
+We start by computing ˜GLL. We first write it down as
+˜GLL(z, z′) = ˜G<
+LL(z, z′)θ(z′ −z) + ˜G>
+LL(z, z′)θ(z −z′),
+(A.9)
+in order to separate the regions with z > z′ and z < z′. ˜GLL inherits the boundary
+conditions from PLΨ, c.f. Eq. (A.3):
+(PUV −MUV ) ˜G<
+LL
+1
+k, z′
+
+= 0,
+(PIR + MIR)Ω(1/T) ˜G>
+LL
+ 1
+T , z′
+
+= 0,
+(1 −PUV + M †
+UV ) ˜G<
+RL
+1
+k, z′
+
+= 0,
+(1 −PIR −M †
+IR)Ω(1/T) ˜G>
+RL
+ 1
+T , z′
+
+= 0,
+(A.10)
+– 22 –
+
+---PAGE BREAK---
+while the junction between ˜G<
+LL and ˜G>
+LL is made through the continuity and jump
+conditions:
+˜G>
+LL(z′, z′) −˜G<
+LL(z′, z′) = 0
+h
+∂z + c
+z
+
+˜G>
+LL(z, z′) −
+
+∂z + c
+z
+
+˜G<
+LL(z, z′)
+i
+z=z′ = 1,
+(A.11)
+where in the second line we have introduced the c/z terms for later convenience, even
+though they cancel out by virtue of the continuity condition from the first line.
+To simplify the calculations, we derive a property of GLL using GLL(z, z′) ∝
+
+ΨL(z)ΨL(z′)
+
+. It follows immediately that ˜G>
+LL and ˜G<
+LL can be related in a simple
+way:
+˜GLL(z, z′) = ˜G†
+LL(z′, z) ⇒˜G>
+LL(z, z′) = ˜G<,†
+LL(z′, z).
+(A.12)
+Later on we shall use this relation9 to derive a simple but general expression for
+fermion propagators in the presence of brane masses and A5 vevs.
+We now define two functions,
+˜Ck
+c (z) = p
+k
+√
+kz
+
+Kc−1/2(p/k)Ic+1/2(pz) + Ic−1/2(p/k)Kc+1/2(pz)
+
+,
+˜Sk
+c (z) = p
+k
+√
+kz
+
+Kc+1/2(p/k)Ic+1/2(pz) −Ic+1/2(p/k)Kc+1/2(pz)
+
+,
+(A.13)
+which both solve the differential equation for GLL(z, z′) with z ̸= z′, see Eq. (A.8).
+They are similar to the warped sine and cosine defined in [72], and satisfy several
+properties reminiscent of the hyperbolic sine and cosine, to which they reduce for
+c = 0:
+˜Ck
+0(z) = cosh [p(z −1/k)] ,
+˜Sk
+0(z) = sinh [p(z −1/k)] ,
+˜Ck
+c (1/k) = 1,
+˜Sk
+c (1/k) = 0,
+˜Ck
+c (z) ˜Ck
+−c(z) −˜Sk
+c (z) ˜Sk
+−c(z) = 1,
+
+∂z + c
+z
+
+˜Ck
+c (z) = p ˜Sk
+−c(z),
+
+∂z + c
+z
+
+˜Sk
+c (z) = p ˜Ck
+−c(z).
+(A.14)
+Similarly, we define ˜CT
+c and ˜ST
+c with k →T. With the help of these functions, we
+define
+˜f k
+L(z) = ˜Sk
+c (z)(PUV −M †
+UV ) + ˜Ck
+c (z)(1 −PUV + MUV ),
+˜f T
+L (z) = ˜ST
+c (z)(PIR + M †
+IR) + ˜CT
+c (z)(1 −PIR −MIR),
+1
+p
+
+∂z + c
+z
+
+˜f k
+L(z) ≡˜f k
+R(z) = ˜Ck
+−c(z)(PUV −M †
+UV ) + ˜Sk
+−c(z)(1 −PUV + MUV ),
+1
+p
+
+∂z + c
+z
+
+˜f T
+L (z) ≡˜f T
+R(z) = ˜CT
+−c(z)(PIR + M †
+IR) + ˜ST
+−c(z)(1 −PIR −MIR).
+(A.15)
+9As we have explicitly checked, one can reach the same results without resorting to this symmetry
+relation, albeit with much more effort.
+– 23 –
+
+---PAGE BREAK---
+Using the brane mass matrix properties from Eq. (A.10) and the warped hyperbolic
+functions’ properties from Eq. (A.14), it is straightforward to show that ˜fL satisfy
+almost the same BCs as ˜GLL.
+One can now write an ansatz for ˜GLL which satisfies both the BCs from Eq. (A.10)
+and the symmetry property from Eq. (A.12):
+˜G<
+LL(z, z′) = 1
+p
+˜f k
+L(z) M 1
+2 ˜f T,†
+L (z′) Ω(1/T),
+˜G>
+LL(z, z′) = 1
+pΩ†(1/T) ˜f T
+L (z) M†
+1
+2
+˜f k,†
+L (z′),
+(A.16)
+where M 1
+2 is a matrix in flavor space. Assuming M 1
+2 does not depend on z, z′,
+M 1
+2 can be computed by introducing the propagator ansatz from above into the
+continuity and jump conditions in Eq. (A.11):
+Ω†(1/T) ˜f 1/T
+L
+(z′) M†
+1
+2
+˜f k,†
+L (z′) −˜f k
+L(z′) M 1
+2 ˜f T,†
+L (z′) Ω(1/T) = 0,
+Ω†(1/T) ˜f 1/T
+R
+(z′) M†
+1
+2
+˜f k,†
+L (z′) −˜f k
+R(z′) M 1
+2 ˜f 1/T,†
+L
+(z′) Ω(1/T) = 1,
+(A.17)
+where we have used the definitions of ˜fR from Eq. (A.15) and the fact that Ω(1/T)
+commutes with c.10 From here, the expression for M 1
+2 follows:
+M−1
+1
+2
+= f T,†
+R (z′)Ω(1/T) ˜f k
+L(z′) −˜f T,†
+L (z′)Ω(1/T) ˜f k
+R(z′),
+(A.18)
+where we used that ˜f †
+R(z′) ˜fL(z′) = ˜f †
+L(z′) ˜fR(z′). An explicit computation verifies
+that ∂zM−1
+1
+2
+= 0 and it will be convenient to evaluate M 1
+2 at z′ = 1/T
+M−1
+1
+2
+= (PIR + MIR)Ω(1/T) ˜f k
+L(1/T) −(1 −PIR −M †
+IR)Ω(1/T) ˜f k
+R(1/T).
+(A.19)
+A useful consistency check of the above result is provided by observing that the
+fermionic spectral function is, up to an unphysical sign, given by:
+ρ1/2(−p2) = det
+h
+(PIR + MIR)Ω(1/T) ˜f k
+L(1/T) −(1 −PIR −M †
+IR)Ω(1/T) ˜f k
+R(1/T)
+i
+,
+which guarantees that the Euclidean propagator enjoys the correct property of having
+poles along the imaginary axis at p2 = −m2
+n, with mn denoting the fermion KK
+spectrum.
+One can repeat the same exercise to compute ˜GRR, while ˜GLR and ˜GRL follow
+immediately from Eq. (A.8). For the reader’s convenience, we summarize below all
+10The fact that Ω(z) and Ω†(z) commute with the diagonal matrix c follows from the fact that
+that the A5 vev only mixes fermion fields from the same bulk multiplet, in other words only fermions
+having the same c parameter.
+– 24 –
+
+---PAGE BREAK---
+the results for the propagators:
+p ˜G<
+LL(z, z′) = ˜f k
+L(z) M ˜f T,†
+L (z′) Ω(1/T),
+˜G>
+LL(z, z′) = ˜G<,†
+LL(z′, z),
+˜G<
+LR(z, z′) = ˜f k
+L(z) M ˜f T,†
+R (z′) Ω(1/T),
+˜G>
+LR(z, z′) = ˜G<,†
+RL(z′, z),
+−p ˜G<
+RR(z, z′) = ˜f k
+R(z) M ˜f T,†
+R (z′) Ω(1/T),
+˜G>
+RR(z, z′) = ˜G<,†
+RR(z′, z),
+˜G<
+RL(z, z′) = ˜f k
+R(z) M ˜f T,†
+L (z′) Ω(1/T),
+˜G>
+RL(z, z′) = ˜G<,†
+LR(z′, z),
+(A.20)
+with ˜fL/R and M given in Eqs. (A.15) and (A.19), respectively. This completes the
+calculation of the fermion propagator.
+A.2
+Scalar Propagator
+One can use a similar derivation as in the previous section for scalar propagators.
+We start by considering the quadratic action describing a set of complex scalar fields
+organized in a column of scalars, Φ = (ϕ1 ϕ2 . . .)T in AdSd+1. As we saw in Section 4,
+the dynamics on the IR brane are irrelevant for the differential running, so we neglect
+the gauge-Higgs vev and IR brane masses and only include UV brane masses in the
+following. With this, the relevant quadratic action reads
+Sd+1 =
+Z
+ddx
+Z
+dz
+ 1
+kz
+d−1
+Φ†
+(
+−∂2 + (kz)d−1 ∂z
+ 1
+kz
+d−1
+∂z
+−
+ 1
+kz
+2
+m2 + δ(z −1/k)M 2
+UV k
+)
+Φ.
+(A.21)
+In the absence of brane masses the fields satisfy either Dirichlet BCs on the UV brane
+ϕi(x, z)|z=1/k = 0 or von Neumnann BCs ∂zϕi(x, z)|z=1/k = 0 and similar conditions
+for the IR brane. By defining projectors PUV and PIR, who single out the ϕi’s which
+have Dirichlet BCs on the UV and IR brane, respectively, they can be conveniently
+summarized as
+PUV Φ(x, z)|z=1/k = 0,
+PIRΦ(x, z)|z=1/T = 0,
+(1−PUV )∂zΦ(x, z)|z=1/k = 0,
+(1−PIR)∂zΦ(x, z)|z=1/T = 0,
+(A.22)
+Turning on the brane masses, the boundary conditions now become:
+PUV Φ(x, z)|z=1/k = 0,
+PIRΦ(x, z)|z=1/T = 0,
+(1−PUV )
+ ∂z −M 2
+UV k
+
+Φ(x, z)|z=1/k = 0,
+(1−PIR)∂zΦ(x, z)|z=1/T = 0.
+(A.23)
+The quadratic action (A.21) and the BCs (A.23) can be used to determine the
+(Euclidean) 5D scalar field propagator. Starting from the 5D action from (A.21) and
+going to Euclidean 4D momentum p →ip, we get the following differential equation
+– 25 –
+
+---PAGE BREAK---
+for the propagator G0(p, z, z′):
+(
+−p2 + (kz)d−1 ∂z
+ 1
+kz
+d−1
+∂z −
+ 1
+kz
+2
+m2
+)
+G0(p, z, z′) = (kz)d−1 δ(z −z′)
+(A.24)
+and the BCs
+PUV G<
+0 (p, z, z′)(x, z)|z=1/k = 0,
+PIRG>
+0 (p, z, z′)|z=1/T = 0,
+(1−PUV )
+ ∂z −M 2
+UV k
+
+G<
+0 (p, z, z′)|z=1/k = 0,
+(1−PIR)∂zG>
+0 (p, z, z′)|z=1/T = 0.
+(A.25)
+Here we have already written the propagators as
+G0(p, z, z′) = G<
+0 (p, z, z′)θ(z′ −z) + G>
+0 (p, z, z′)θ(z −z′).
+(A.26)
+Each of them satisfies the differential equation (A.24) with the right hand side set to
+zero and a continuity and jump condition for the propagator at z = z′ following from
+that equation which we will specify later. Moreover, since G0(p, z, z′) ∝
+
+Φ(z)Φ†(z′)
+
+,
+we can relate these two via
+G0(p, z, z′) = G†
+0(p, z′, z) ⇒G>
+0 (p, z, z′) = G<,†
+0 (p, z′, z) .
+(A.27)
+To simplify the differential equation we first write
+G0(p, z, z′) = (kz)
+d−1
+2 (kz′)
+d−1
+2
+˜G0(z, z′),
+(A.28)
+where we will from now on omit p in the argument of the propagator unless needed.
+Then, (A.24) simplifies to
+
+∂2
+z −α(α + 1)
+z2
+−p2
+
+˜G0(z, z′) = δ(z −z′),
+(A.29)
+where we defined α = 1
+2(
+p
+d2 + 4m2/k2 −1). The functions
+˜Ck
+α(z) = p
+k
+√
+kz
+h
+Aα−1
+2(p/k)Iα+ 1
+2(pz) + Bα−1
+2(p/k)Kα+ 1
+2(pz)
+i
+,
+˜Sk
+α(z) = p
+k
+√
+kz
+h
+Kα+ 1
+2(p/k)Iα+ 1
+2(pz) −Iα+ 1
+2(p/k)Kα+ 1
+2(pz)
+i
+,
+˜Dk
+α(z) = p
+k
+√
+kz
+h
+Aα−1
+2(p/k)Bα−1
+2(pz) −Bα−1
+2(p/k)Aα−1
+2(pz)
+i
+,
+˜T k
+α(z) = p
+k
+√
+kz
+h
+Kα+ 1
+2(p/k)Bα−1
+2(pz) + Iα+ 1
+2(p/k)Aα−1
+2(pz)
+i
+,
+(A.30)
+with
+Aα−1
+2(p/k) = Kα+ 3
+2(p/k) −(α + 1
+2) + (β + 1
+2)
+p/k
+Kα+ 1
+2(p/k),
+Bα−1
+2(pR) = Iα+ 3
+2(pR) + (α + 1
+2) + (β + 1
+2)
+p/k
+Iα+ 1
+2(p/k),
+(A.31)
+– 26 –
+
+---PAGE BREAK---
+solve the differential equation for z ̸= z′. We have defined β =
+d−1
+2
+and one has
+Aα−1
+2(p/k) →Kα−1
+2(p/k) and Bα−1
+2(p/k) →Iα−1
+2(p/k) for m2 →0 or equivalently
+α →β. We normalized these functions such that they satisfy
+˜Ck
+α(1/k) = 1,
+˜Sk
+α(1/k) = 0,
+˜Dk
+α(1/k) = 0,
+˜T k
+α(1/k) = 1,
+
+∂z + β
+z
+
+˜Ck
+α(z) = p ˜Dk
+α(z),
+
+∂z + β
+z
+
+˜Sk
+α(z) = p ˜T k
+α(z).
+(A.32)
+We can define similarly ˜CT
+α , ˜ST
+α , ˜DT
+α, ˜T T
+α by replacing k →T. With these we define
+now
+˜hk
+L(z) = ˜Sk
+α(z)PUV +
+"
+˜Ck
+α(z) + M 2
+UV
+˜Sk
+α(z)
+p/k
+#
+(1 −PUV ),
+˜hT
+L(z) = ˜ST
+α (z)PIR + ˜CT
+α (z)(1 −PIR),
+˜hk
+R(z) = ˜T k
+α(z)PUV +
+"
+˜Dk
+α(z) + M 2
+UV
+˜T k
+α(z)
+p/k
+#
+(1 −PUV ),
+˜hT
+R(z) = ˜T T
+α (z)PIR + ˜DT
+α(z)(1 −PIR),
+(A.33)
+which also satisfy the BCs. Here the index L/R is introduced to show the similarities
+with the fermion case. These functions satisfy
+1
+p
+
+∂z + β
+z
+
+˜hL(z) = ˜hR(z)
+(A.34)
+We can write down explicitly the solution for ˜G0 as
+˜G<
+0 (z, z′) = 1
+p
+˜hk
+L(z)M0˜hT,†
+L (z′),
+˜G>
+0 (z, z′) = 1
+p
+˜hT
+L(z)M†
+0˜hk,†
+L (z′),
+(A.35)
+where M0 is a matrix in flavor space introduced such that ˜
+G0 fulfills the continuity
+and jump conditions
+˜G>
+0 (z′, z′) −˜G<
+0 (z′, z′) = 0
+
+∂z + β
+z
+
+˜G>
+0 (z, z′) −
+
+∂z + β
+z
+
+˜G<
+0 (z, z′)
+
+z=z′
+= 1.
+(A.36)
+On can solve these equations for M0 under the assumption that M0 does not depend
+on z, z′ and using ˜h†
+L(z′)˜hR(z′) = ˜h†
+R(z′)˜hL(z′), giving
+M−1
+0
+= ˜hT,†
+R (z′)˜hk
+L(z′) −˜hT,†
+L (z′)˜hk
+R(z′).
+(A.37)
+An explicit computation verifies ∂z′M−1
+0
+= 0 and it will be convenient to evaluate it
+at z′ = 1/T giving
+M−1
+0
+= PIR˜hk
+L(1/T) −(1 −PIR)˜hk
+R(1/T).
+(A.38)
+This completes the calculation of the scalar propagator.
+– 27 –
+
+---PAGE BREAK---
+A.3
+Gauge boson Propagator
+One can use once more the same approach in order to compute the gauge boson
+propagator. We start by considering the quadratic action in AdSd+1 describing a
+set of gauge boson fields organized in a column of gauge fields, Aµ =
+ A1
+µ A2
+µ . . .
+T.
+Including UV-brane masses and a non–zero A5 vev, the relevant quadratic action
+reads
+Sd+1 =
+Z
+d5x
+ 1
+kz
+d−3
+Aµ
+1
+2
+(
+−ηµν∂2 +
+
+1 −1
+ξ
+
+∂µ∂ν + ηµν (kz)d−3 ∂z
+ 1
+kz
+d−3
+∂z
++ηµνM2 + δ(z −1/k)ηµν  M 2
+UV k
+	
+Aν,
+(A.39)
+with M2
+ab = 2g2
+5f Eaˆcf Eb ˆd⟨Aˆc
+5(z)⟩⟨A
+ˆd
+5(z)⟩, while M 2
+UV is a matrix in gauge space with
+dimensionless entries. If sourced by a UV brane scalar getting a vev vGUT ∼MGUT,
+the typical values for these entries are (g2
+5k)k−2M 2
+GUT = g2
+∗M 2
+GUT/M 2
+Pl, therefore
+rather suppressed.
+In the absence of brane masses and Higgs vev the fields satisfy either Dirichlet
+BCs on the UV brane Ai
+µ(x, z)|z=1/k = 0 or von Neumnann BCs ∂zAi
+µ(x, z)|z=1/k = 0
+and similar conditions for the IR brane. By defining projectors PUV and PIR, who
+single out the Ai
+µ’s which have Dirichlet BCs on the UV and IR brane, respectively,
+they can be conveniently summarized as
+PUV Aµ(x, z)|z=1/k = 0,
+PIRAµ(x, z)|z=1/T = 0,
+(1−PUV )∂zAµ(x, z)|z=1/k = 0,
+(1−PIR)∂zAµ(x, z)|z=1/T = 0 .
+(A.40)
+Turning on the brane masses and the A5 vevs, the boundary conditions become
+PUV Aµ(x, z)|z=1/k = 0,
+PIRΩ(1/T)Aµ(x, z)|z=1/T = 0,
+(1−PUV )
+ ∂z −M 2
+UV k
+
+Aµ(x, z)|z=1/k = 0,
+(1−PIR)Ω(1/T)∂zAµ(x, z)|z=1/T = 0.
+(A.41)
+Note that a brane mass can only connect fields which are non–zero at the respective
+boundary giving M 2
+UV = (1 −PUV )M 2
+UV (1 −PUV ).
+We now define the Goldstone matrix leading to mixing between the gauge bosons:
+Ωab(z) = 2 Tr
+n
+Ωf(z)T bΩ†
+f(z)T ao
+,
+(A.42)
+where
+Ωf(z) = exp
+
+i g5
+Z z
+1/k
+dz′
+ 1
+kz′
+
+⟨Aˆc
+5(z′)⟩T ˆc
+
+is the Goldstone matrix given in Eq. (A.1) pertaining to the fundamental represen-
+tation and the T’s indicate the SU(N) generators in the fundamental representation.
+– 28 –
+
+---PAGE BREAK---
+Starting from the 5D action from (A.39) and going to Euclidean 4D momentum
+p →ip, we get the following differential equation for the propagator G1,νλ(p, z, z′):
+(
+−δµνp2 +
+
+1 −1
+ξ
+
+pµpν + δµν (kz)d−3 ∂z
+ 1
+kz
+d−3
+∂z + δµνM2
+)
+G1,νλ(p, z, z′)
+= (kz)d−3 δ(z −z′)δµ
+λ.
+(A.43)
+The tensor structure as well as the gauge dependence can be simplified by the fol-
+lowing ansatz [44]
+G1,νλ(p, z, z′) = G1(p, z, z′)
+
+δνλ −pνpλ
+p2
+
++ G1
+ p
+√ξ, z, z′
+ pνpλ
+p2
+
+.
+(A.44)
+Furthermore, we write the gauge propagator as (dropping p from the argument of
+the propagator in order to simplify notation):
+G1(z, z′) = (kz)(d−3)/2 (kz′)(d−3)/2 Ω(z) ˜G1(z, z′) Ω(z′)†,
+(A.45)
+such that ˜G1 satisfies
+
+∂2
+z −α(α + 1)
+z2
+−p2
+
+˜G1(z, z′) = −δ(z −z′),
+(A.46)
+where we have defined α = d−3
+2 . Up to a minus sign, ˜G1(z, z′) satisfies the same dif-
+ferential equation as ˜GLL(z, z′) (see Eq. (A.8)) with c = α. With this, the propagator
+BCs become:
+PUV ˜G<
+1 (1/k, z′) = 0,
+(1 −PUV )
+
+∂z + α
+z −M 2
+UV k
+
+˜G<
+1 (z, z′)
+
+z=1/k = 0,
+PIRΩ(1/T) ˜G>
+1 (1/T, z′) = 0,
+(1 −PIR)Ω(1/T)
+
+∂z + α
+z
+
+˜G>
+1 (z, z′)
+
+z=1/T = 0.
+(A.47)
+The rest of the derivation proceeds as in the fermionic case. We therefore quote
+just the final result:
+˜G<
+1 (z, z′) = −1
+p˜gk
+L(z) M1 ˜gT
+L(z′) Ω(1/T),
+˜G>
+1 (z, z′) = ˜G<,†
+1 (z′, z),
+(A.48)
+with (ρ1 is the gauge boson spectral function):
+M−1
+1
+= PIRΩ(1/T)˜gk
+L(1/T) −(1 −PIR)Ω(1/T)˜gk
+R(1/T)
+⇒
+ρ1(−p2) = det M−1
+1 .
+(A.49)
+– 29 –
+
+---PAGE BREAK---
+In the equations above, we have used the following shorthand notations:
+˜gk
+L(z) = ˜Sk
+α(z)PUV +
+"
+˜Ck
+α(z) + M 2
+UV
+˜Sk
+α(z)
+p/k
+#
+(1 −PUV ),
+˜gT
+L(z) = ˜ST
+α (z)PIR + ˜CT
+α (z)(1 −PIR),
+˜gk
+R(z) = ˜Ck
+−α(z)PUV +
+"
+˜Sk
+−α(z) + M 2
+UV
+˜Ck
+−α(z)
+p/k
+#
+(1 −PUV ),
+˜gT
+R(z) = ˜CT
+−α(z)PIR + ˜ST
+−α(z)(1 −PIR).
+(A.50)
+This completes the calculation of the gauge boson propagator.
+A.4
+Ghost Propagator
+We saw in Appendix A.3 that the effect of the Gauge-Higgs vev modifies the IR BC
+after a suitable gauge transformation. Moreover, we saw in Section 4 that the dy-
+namics on the IR brane are irrelevant for the running of the Planck-brane correlator.
+To simplify the ghost field propagator we drop therefore, the Gauge-Higgs vev and
+IR brane masses in this section. Since none of the models we consider in this work
+has UV brane masses for gauge bosons we also drop them in the following. With
+these assumptions the gauge fixing functional reduces to known expressions [44] and
+by varying it, we obtain the quadratic part of the ghost action
+Sd+1 =
+Z
+d5x
+ 1
+kz
+d−3
+¯c
+(
+∂2 + ξ (kz)d−3 ∂z
+ 1
+kz
+d−3
+∂z
+)
+c .
+(A.51)
+The boundary conditions are the same as the ones for the corresponding gauge fields
+Aµ and we can write
+PUV c(x, z)|z=1/k = 0,
+PIRc(x, z)|z=1/T = 0,
+(1−PUV )∂zc(x, z)|z=1/k = 0,
+(1−PIR)∂zc(x, z)|z=1/T = 0,
+(A.52)
+with the same PUV and PIR as in Section A.3.
+Starting from the 5D action from (A.51) and going to Euclidean 4D momentum
+p →ip, we get the following differential equation for the propagator Gg(p, z, z′):
+(
+−p2 + ξ (kz)d−3 ∂z
+ 1
+kz
+d−3
+∂z
+)
+Gg(p, z, z′) = (kz)d−3 δ(z −z′).
+(A.53)
+Comparing this to Eq. (A.43) for gauge fields and because the ghost fields have the
+same BCs as the gauge fields we can immediately write down the solution of the
+ghost propagator as [44]
+Gg(p, z, z′) = 1
+ξ G1
+ p
+√ξ, z, z′
+
+,
+(A.54)
+with the expression for G1(p/√ξ, z, z′) given in Appendix A.3.
+– 30 –
+
+---PAGE BREAK---
+A.5
+A5 Propagator
+For A5, we neglect again the gauge-Higgs vev and brane masses on the IR brane as
+they are not relevant to the running. We also do not use any UV brane mass as none
+of the models considered in this work contains one. With this the quadratic part of
+the action for A5 reads
+Sd+1 =
+Z
+d5x
+ 1
+kz
+d−3
+A5
+1
+2
+(
+−∂2 + ξ∂z (kz)d−3 ∂z
+ 1
+kz
+d−3)
+A5 .
+(A.55)
+The BCs are opposite to the BCs for the corresponding gauge fields Aµ and thus can
+be written as
+(1−PUV )A5(x, z)|z=1/k = 0,
+(1−PIR)A5(x, z)|z=1/T = 0,
+PUV ∂z
+  1
+kz
+d−3
+A5(x, z)
+! 
+z=1/k
+= 0,
+PIR∂z
+  1
+kz
+d−3
+A5(x, z)
+! 
+z=1/T
+= 0,
+(A.56)
+with the same PUV and PIR as in in Section A.3.
+Starting from the 5D action from (A.55) and going to Euclidean 4D momentum
+p →ip, we get the following differential equation for the propagator G5(p, z, z′):
+(
+−p2 + ξ∂z (kz)d−3 ∂z
+ 1
+kz
+d−3)
+G5(p, z, z′) = (kz)d−3 δ(z −z′).
+(A.57)
+We write the A5 propagator as (dropping p from the argument of the propagator in
+order to simplify notation):
+G5(z, z′) = (kz)(d−3)/2 (kz′)(d−3)/2 ˜G5(z, z′) ,
+(A.58)
+such that ˜G5 satisfies
+
+∂2
+z −α(α + 1)
+z2
+−p2
+ξ
+
+ξ ˜G5(z, z′) = δ(z −z′),
+(A.59)
+where we have defined α = −d−3
+2 . With this, the propagator BCs become:
+(1 −PUV ) ˜G<
+5 (1/k, z′) = 0,
+PUV
+
+∂z + α
+z
+
+˜G<
+5 (z, z′)
+
+z=1/k = 0,
+(1 −PIR) ˜G>
+5 (1/T, z′) = 0,
+PIR
+
+∂z + α
+z
+
+˜G>
+5 (z, z′)
+
+z=1/T = 0.
+(A.60)
+Comparing this to the differential equation and BCs of the gauge bosons in Ap-
+pendix A.3, we can immediately write down the solution
+˜G5(p, z, z′) = 1
+ξ
+˜G1
+ p
+√ξ, z, z′
+
+, with α →−d −3
+2
+, PUV ↔(1−PUV ), PIR ↔(1−PIR) ,
+(A.61)
+and the expression for G1(p/√ξ, z, z′) given in Appendix A.3.
+– 31 –
+
+---PAGE BREAK---
+References
+[1] H. Georgi and S.L. Glashow, Unity of All Elementary Particle Forces, Phys. Rev.
+Lett. 32 (1974) 438.
+[2] J.C. Pati and A. Salam, Lepton Number as the Fourth Color, Phys. Rev. D 10
+(1974) 275.
+[3] L.J. Hall, Y. Nomura and D. Tucker-Smith, Gauge Higgs unification in higher
+dimensions, Nucl. Phys. B 639 (2002) 307 [hep-ph/0107331].
+[4] Y. Nomura, D. Tucker-Smith and N. Weiner, GUT breaking on the brane, Nucl.
+Phys. B 613 (2001) 147 [hep-ph/0104041].
+[5] G. Burdman and Y. Nomura, Unification of Higgs and Gauge Fields in Five
+Dimensions, Nucl. Phys. B 656 (2003) 3 [hep-ph/0210257].
+[6] N. Haba, Y. Hosotani, Y. Kawamura and T. Yamashita, Dynamical symmetry
+breaking in gauge Higgs unification on orbifold, Phys. Rev. D 70 (2004) 015010
+[hep-ph/0401183].
+[7] C.S. Lim and N. Maru, Towards a realistic grand gauge-Higgs unification, Phys.
+Lett. B 653 (2007) 320 [0706.1397].
+[8] Y. Hosotani and N. Yamatsu, Gauge–Higgs grand unification, PTEP 2015 (2015)
+111B01 [1504.03817].
+[9] A. Furui, Y. Hosotani and N. Yamatsu, Toward Realistic Gauge-Higgs Grand
+Unification, PTEP 2016 (2016) 093B01 [1606.07222].
+[10] Y. Hosotani, Gauge-Higgs EW and Grand Unification, Int. J. Mod. Phys. A 31
+(2016) 1630031 [1606.08108].
+[11] Y. Hosotani and N. Yamatsu, Electroweak symmetry breaking and mass spectra in
+six-dimensional gauge–Higgs grand unification, PTEP 2018 (2018) 023B05
+[1710.04811].
+[12] Y. Hosotani and N. Yamatsu, Gauge-Higgs seesaw mechanism in 6-dimensional
+grand unification, PTEP 2017 (2017) 091B01 [1706.03503].
+[13] N. Maru and Y. Yatagai, Fermion Mass Hierarchy in Grand Gauge-Higgs
+Unification, PTEP 2019 (2019) 083B03 [1903.08359].
+[14] N. Maru and Y. Yatagai, Improving fermion mass hierarchy in grand gauge–Higgs
+unification with localized gauge kinetic terms, Eur. Phys. J. C 80 (2020) 933
+[1911.03465].
+[15] S. Funatsu, H. Hatanaka, Y. Hosotani, Y. Orikasa and N. Yamatsu, GUT inspired
+SO(5) × U(1) × SU(3) gauge-Higgs unification, Phys. Rev. D 99 (2019) 095010
+[1902.01603].
+[16] C. Englert, D.J. Miller and D.D. Smaranda, Phenomenology of GUT-inspired
+gauge-Higgs unification, 1911.05527.
+– 32 –
+
+---PAGE BREAK---
+[17] C. Englert, D.J. Miller and D.D. Smaranda, The Weinberg angle and 5D RGE
+effects in a SO (11) GUT theory, Phys. Lett. B 807 (2020) 135548 [2003.05743].
+[18] A. Angelescu, A. Bally, S. Blasi and F. Goertz, Minimal SU(6) gauge-Higgs grand
+unification, Phys. Rev. D 105 (2022) 035026 [2104.07366].
+[19] N. Maru, H. Takahashi and Y. Yatagai, Fermion Mass Hierarchy and Mixing in
+simplified Grand Gauge-Higgs Unification, 2205.05824.
+[20] N. Maru, H. Takahashi and Y. Yatagai, Gauge Coupling Unification in simplified
+Grand Gauge-Higgs Unification, 2207.10253.
+[21] A. Angelescu, A. Bally, F. Goertz and S. Weber, SU(6) gauge-Higgs grand
+unification: minimal viable models and flavor, JHEP 04 (2023) 012 [2208.13782].
+[22] K. Hamaguchi, S. Hor and N. Nagata, Minimal Nambu-Goldstone-Higgs model in
+supersymmetric SU(5) revisited, Phys. Rev. D 107 (2023) 035016 [2210.09333].
+[23] A. Angelescu, A. Bally, F. Goertz and M. Hager, Restoring naturalness via conjugate
+fermions, Phys. Rev. D 110 (2024) 115023 [2309.05698].
+[24] N. Maru and R. Nago, New models of SU(6) grand gauge-Higgs unification, JHEP
+11 (2024) 035 [2405.07463].
+[25] G. Cacciapaglia, A.S. Cornell, A. Deandrea, W. Isnard, R. Pasechnik, A. Preda
+et al., General vacuum stability of orbifold gauge breaking and application to
+asymptotic grand unification, Phys. Rev. D 111 (2025) 095013 [2409.16137].
+[26] Y. Komori and N. Maru, SU(7) Grand Gauge-Higgs Unification, 2503.04090.
+[27] E. Gildener, Gauge Symmetry Hierarchies, Phys. Rev. D 14 (1976) 1667.
+[28] S. Weinberg, Gauge Hierarchies, Phys. Lett. B 82 (1979) 387.
+[29] J.D. Wells, The Intrinsic and Extrinsic Hierarchy Problems, 2506.05472.
+[30] K. Agashe, R. Contino and R. Sundrum, Top compositeness and precision
+unification, Phys. Rev. Lett. 95 (2005) 171804 [hep-ph/0502222].
+[31] M. Frigerio, J. Serra and A. Varagnolo, Composite GUTs: models and expectations
+at the LHC, JHEP 06 (2011) 029 [1103.2997].
+[32] J. Barnard, T. Gherghetta, T.S. Ray and A. Spray, The Unnatural Composite Higgs,
+JHEP 01 (2015) 067 [1409.7391].
+[33] K.R. Dienes, E. Dudas and T. Gherghetta, Extra space-time dimensions and
+unification, Phys. Lett. B 436 (1998) 55 [hep-ph/9803466].
+[34] K.R. Dienes, E. Dudas and T. Gherghetta, Grand unification at intermediate mass
+scales through extra dimensions, Nucl. Phys. B 537 (1999) 47 [hep-ph/9806292].
+[35] A. Pomarol, Grand unified theories without the desert, Phys. Rev. Lett. 85 (2000)
+4004 [hep-ph/0005293].
+[36] K. Agashe, A. Delgado and R. Sundrum, Gauge coupling renormalization in RS1,
+Nucl. Phys. B 643 (2002) 172 [hep-ph/0206099].
+– 33 –
+
+---PAGE BREAK---
+[37] K. Agashe, A. Delgado and R. Sundrum, Grand unification in RS1, Annals Phys.
+304 (2003) 145 [hep-ph/0212028].
+[38] R. Contino, P. Creminelli and E. Trincherini, Holographic evolution of gauge
+couplings, JHEP 10 (2002) 029 [hep-th/0208002].
+[39] K.-w. Choi, H.D. Kim and I.-W. Kim, Gauge coupling renormalization in orbifold
+field theories, JHEP 11 (2002) 033 [hep-ph/0202257].
+[40] K.-w. Choi, H.D. Kim and I.-W. Kim, Radius dependent gauge unification in
+AdS(5), JHEP 03 (2003) 034 [hep-ph/0207013].
+[41] K.-w. Choi and I.-W. Kim, One loop gauge couplings in AdS(5), Phys. Rev. D 67
+(2003) 045005 [hep-th/0208071].
+[42] T. Gherghetta, Partly supersymmetric grand unification, Phys. Rev. D 71 (2005)
+065001 [hep-ph/0411090].
+[43] L. Randall and M.D. Schwartz, Unification and the hierarchy from AdS5, Phys. Rev.
+Lett. 88 (2002) 081801 [hep-th/0108115].
+[44] L. Randall and M.D. Schwartz, Quantum field theory and unification in AdS5, JHEP
+11 (2001) 003 [hep-th/0108114].
+[45] L. Randall, Y. Shadmi and N. Weiner, Deconstruction and gauge theories in AdS(5),
+JHEP 01 (2003) 055 [hep-th/0208120].
+[46] A. Falkowski and H.D. Kim, Running of gauge couplings in AdS(5) via
+deconstruction, JHEP 08 (2002) 052 [hep-ph/0208058].
+[47] W.D. Goldberger and I.Z. Rothstein, High-energy field theory in truncated AdS
+backgrounds, Phys. Rev. Lett. 89 (2002) 131601 [hep-th/0204160].
+[48] W.D. Goldberger and I.Z. Rothstein, Effective field theory and unification in AdS
+backgrounds, Phys. Rev. D 68 (2003) 125011 [hep-th/0208060].
+[49] W.D. Goldberger and I.Z. Rothstein, Systematics of coupling flows in AdS
+backgrounds, Phys. Rev. D 68 (2003) 125012 [hep-ph/0303158].
+[50] S. Weber, Quantum Field Theory and Phenomenology in 5D Warped Space-Time:
+Gauge-Higgs Grand Unification, Master’s thesis, Heidelberg U., 5, 2022.
+[51] N. Arkani-Hamed, M. Porrati and L. Randall, Holography and phenomenology,
+JHEP 08 (2001) 017 [hep-th/0012148].
+[52] C. Csaki, TASI lectures on extra dimensions and branes, in Theoretical Advanced
+Study Institute in Elementary Particle Physics (TASI 2002): Particle Physics and
+Cosmology: The Quest for Physics Beyond the Standard Model(s), pp. 605–698, 4,
+2004 [hep-ph/0404096].
+[53] C. Csaki, J. Hubisz and P. Meade, TASI lectures on electroweak symmetry breaking
+from extra dimensions, in Theoretical Advanced Study Institute in Elementary
+Particle Physics: Physics in D ≧4, pp. 703–776, 10, 2005 [hep-ph/0510275].
+– 34 –
+
+---PAGE BREAK---
+[54] R. Sundrum, Tasi 2004 lectures: To the fifth dimension and back, in Theoretical
+Advanced Study Institute in Elementary Particle Physics: Physics in D ≧4,
+pp. 585–630, 8, 2005 [hep-th/0508134].
+[55] R. Contino, The Higgs as a Composite Nambu-Goldstone Boson, in Theoretical
+Advanced Study Institute in Elementary Particle Physics: Physics of the Large and
+the Small, pp. 235–306, 2011, DOI [1005.4269].
+[56] T. Gherghetta, A Holographic View of Beyond the Standard Model Physics, in
+Theoretical Advanced Study Institute in Elementary Particle Physics: Physics of the
+Large and the Small, pp. 165–232, 2011, DOI [1008.2570].
+[57] E. Ponton, TASI 2011: Four Lectures on TeV Scale Extra Dimensions, in
+Theoretical Advanced Study Institute in Elementary Particle Physics: The Dark
+Secrets of the Terascale, pp. 283–374, 2013, DOI [1207.3827].
+[58] C. Cs´aki and P. Tanedo, Beyond the Standard Model, in 2013 European School of
+High-Energy Physics, pp. 169–268, 2015, DOI [1602.04228].
+[59] J.M. Maldacena, The Large N limit of superconformal field theories and
+supergravity, Adv. Theor. Math. Phys. 2 (1998) 231 [hep-th/9711200].
+[60] Y. Hosotani, Dynamical gauge symmetry breaking as the casimir effect, Physics
+Letters B 129 (1983) 193.
+[61] Y. Hosotani, Dynamical mass generation by compact extra dimensions, Physics
+Letters B 126 (1983) 309.
+[62] N. Manton, A new six-dimensional approach to the weinberg-salam model, Nuclear
+Physics B 158 (1979) 141.
+[63] D. Fairlie, Higgs fields and the determination of the weinberg angle, Physics Letters
+B 82 (1979) 97.
+[64] L.J. Hall and Y. Nomura, Gauge unification in higher dimensions, Phys. Rev. D 64
+(2001) 055003 [hep-ph/0103125].
+[65] M. Carena, A. Delgado, E. Ponton, T.M.P. Tait and C.E.M. Wagner, Warped
+fermions and precision tests, Phys. Rev. D 71 (2005) 015010 [hep-ph/0410344].
+[66] A. Falkowski, Pseudo-goldstone Higgs production via gluon fusion, Phys. Rev. D 77
+(2008) 055018 [0711.0828].
+[67] C. Csaki, Y. Grossman, P. Tanedo and Y. Tsai, Warped penguin diagrams, Phys.
+Rev. D 83 (2011) 073002 [1004.2037].
+[68] F. Goertz, Warped Extra Dimensions: Flavor, Precision Tests and Higgs Physics,
+Ph.D. thesis, Mainz U., Inst. Phys., 2011. 1112.6387.
+[69] M. Beneke, P. Dey and J. Rohrwild, The muon anomalous magnetic moment in the
+Randall-Sundrum model, JHEP 08 (2013) 010 [1209.5897].
+[70] R. Malm, M. Neubert, K. Novotny and C. Schmell, 5D Perspective on Higgs
+– 35 –
+
+---PAGE BREAK---
+Production at the Boundary of a Warped Extra Dimension, JHEP 01 (2014) 173
+[1303.5702].
+[71] Y. Hosotani, S. Noda, Y. Sakamura and S. Shimasaki, Gauge-Higgs unification and
+quark-lepton phenomenology in the warped spacetime, Phys. Rev. D 73 (2006)
+096006 [hep-ph/0601241].
+[72] A. Falkowski, About the holographic pseudo-Goldstone boson, Phys. Rev. D 75
+(2007) 025017 [hep-ph/0610336].
+– 36 –
+
+---PAGE BREAK---

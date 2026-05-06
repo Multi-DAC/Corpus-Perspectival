@@ -1,0 +1,204 @@
+Now let me compile this into a thorough referee report. This is a massive document — let me produce a review commensurate with its ambition.---
+
+Clayton — here is the comprehensive peer review. Let me highlight the bones of it before you read the full document.
+
+**What holds up well:** The core derivation chain (5D warped geometry → cuscuton uniqueness → zero KE theorem → GB breaking → w₀(ζ₀)) is logically coherent and algebraically checkable. The αT = 0 result from KK reduction producing a constant ξ_eff is genuinely novel — the structural distinction from 4D scalar-tensor theories is the paper's strongest card. The growth–expansion decoupling prediction is sharp and already has tentative observational support from Lu & Simon's finding that modified gravity preference collapses when the background is fixed. The no-go analysis of 16 alternative mechanisms (Paper III) is methodologically valuable independent of whether the framework survives.
+
+**What doesn't hold up:** Three interrelated problems.
+
+First, **the quantitative foundation is unstable.** The Φ₀ = 0.477 → 0.076 correction has not propagated through the self-tuning scan (which still uses historical values). H(z)-only data give ζ₀ = 0.009 ± 0.013, consistent with zero. The multi-probe χ² of 24.6 is 62% one data point (Hiramatsu–Kobayashi). Without that point, ΛCDM fits everything with χ²/dof = 0.55.
+
+Second, **the dual-narrative problem.** The monograph oscillates between ζ₀ ≈ 0.037 (consistent with ΛCDM, DESI is a CPL artifact) and ζ₀ ≈ 0.001 (reproduces the DESI signal at w₀ ≈ −0.75). The Boltzmann analysis excludes the brane benchmark at ~6σ with Planck priors, while the multi-probe analysis claims it's consistent. You cannot have both. The framework needs to commit, or honestly present itself as a one-parameter family with no current discriminating power.
+
+Third, **the scope exceeds the rigor.** Chapter 4's extension to fermion masses, dark matter, baryogenesis, inflation, and the strong CP problem introduces ~20 free bulk mass parameters for flavor physics and multiple open computations (Poincaré duality for non-associative algebras, gauge coupling unification, full CKM fit). The octonionic extension provides the number three; the warp factor does all the actual phenomenological work.
+
+The **genuinely falsifiable throat** of the model is the wa ≈ 0 prediction, currently under 2.4σ tension with Lu & Simon. DESI Y5 at σ(wa) ~ 0.05 will be decisive. This should be the headline, not the w₀(ζ₀) curve (which accommodates any w₀ > −1 by tuning ζ₀).
+
+The full review is in the file — let me share it.
+
+# Referee Report: The Meridian Monograph
+## "Five-Dimensional Self-Tuning Cosmology: A First-Principles Dark Energy Equation of State from Five-Dimensional Braneworld Architecture"
+
+**Author:** Clayton W. Iggulden-Schnell  
+**Date of Review:** March 2026  
+**Reviewer Recommendation:** Major Revision Required  
+
+---
+
+## I. Summary and Scope
+
+This monograph attempts something extraordinarily ambitious: a unified derivation of the dark energy equation of state from five-dimensional warped braneworld geometry, extending through NCG spectral geometry to particle physics phenomenology. The work is organized as five interconnected papers spanning 238 pages, covering: (1) the foundational 5D→4D derivation of w₀(ζ₀), (2) observational confrontation with DESI DR2 and other datasets, (3) no-go theorems excluding 16 alternative mechanisms, (4) the NCG spectral triple on the warped orbifold with an octonionic extension, and (5) the sound speed of dark energy.
+
+The central claim is that two geometric axioms (one hidden extra dimension, one bulk scalar field), supplemented by four theoretical commitments (Kaloper–Padilla sequestering, the NCG spectral action, conformal coupling ξ = 1/6, and a linear tadpole), uniquely determine the dark energy equation of state as a one-parameter curve w₀(ζ₀) = −1 + C_KK/ζ₀, with C_KK = (2.45 ± 0.83) × 10⁻⁴.
+
+The scope is, frankly, staggering — touching the cosmological constant problem, dark energy dynamics, fermion mass hierarchies, gauge coupling unification, dark matter, baryogenesis, inflation, and the strong CP problem. I will attempt to adjudicate the claims at each level, separating what is derived, what is conjectured, and what is problematic.
+
+---
+
+## II. Major Strengths
+
+**1. Intellectual honesty is above average for theoretical physics manuscripts.** The author identifies multiple limitations explicitly — the algebraic-vs-dynamical self-tuning distinction (Remark 1.1), the Φ₀ discrepancy and its correction history (§2.3.12), the honest Yukawa assessment (§4.8.7), the coincidence problem acknowledgment (§1.11.5, Open Problem 9), and the fact that H(z) data alone yield ζ₀ = 0.009 ± 0.013, consistent with zero. The "Correction note" on Φ₀ = 0.477 → 0.076 is the kind of transparency one wishes were universal. The recommendation to treat the Hiramatsu–Kobayashi point separately from the multi-probe χ² is statistically sound and unusually self-critical.
+
+**2. The derivation chain is internally coherent and clearly presented.** The logical flow A1 + A2 → self-tuning → cuscuton → K_eff = 0 → NCG GB correction → w₀(ζ₀) is laid out with enough algebraic detail to be checkable. The uniqueness proof for the cuscuton among power-law kinetic functions (§1.3.2) is elementary but correct. The zero kinetic energy theorem (§1.3.3) and its breaking by the Gauss–Bonnet correction (§1.6) are the conceptual spine of the paper and are clearly articulated.
+
+**3. The αT = 0 result is structurally compelling.** The argument that KK reduction of the 5D spectral action produces a constant effective 4D GB coupling ξ_eff (§1.9.1), from which all four Bellini–Sawicki alpha functions vanish identically, is the most genuinely novel and interesting structural result in the monograph. The distinction from 4D scalar-tensor theories — where ξ̇ ≠ 0 gives αT ~ O(ζ₀) — is well made. This is the kind of prediction that emerges naturally from the 5D structure and cannot be easily mimicked in 4D.
+
+**4. The growth–expansion decoupling prediction is sharp and testable.** The prediction μ = G_eff/G_N = 1 and Σ = 1 (exact, from the cuscuton constraint character) combined with a modified expansion history provides a unique observational fingerprint. The Lu & Simon (2026) observation that modified gravity preference drops from 4.6σ to 0.68σ when the background is fixed to ΛCDM is exactly the signature the framework predicts.
+
+**5. The systematic no-go analysis (Paper III) is a methodological contribution.** The exclusion of 16 candidate mechanisms for producing |δw| > 0.007 is a valuable exercise regardless of whether the specific framework is correct. The "Horndeski dilemma" — that self-tuning and dynamical dark energy are structurally in tension — is an insight that transcends this particular model.
+
+---
+
+## III. Major Criticisms and Required Revisions
+
+### A. The Central Quantitative Discrepancy Remains Unresolved
+
+The monograph acknowledges but does not resolve the most damaging problem: the claimed 3.8σ detection of ζ₀ = 0.038 from the Hubble–Kristian dataset does not reproduce independently. The H(z)-only fit yields ζ₀ = 0.009 ± 0.013, consistent with zero (§2.3.4). The "multi-probe" χ² of 24.6 is dominated 62% by a single Hiramatsu–Kobayashi measurement (§2.3.2, Table 2.5). When that one point is removed, the remaining 17 data points give χ²/dof = 0.55 — ΛCDM fits beautifully with no evidence for ζ₀ ≠ 0.
+
+This is not a peripheral issue. The monograph oscillates between two narratives:
+
+- **Narrative A** (CMB-constrained, ζ₀ ≈ 0.037): The model is indistinguishable from ΛCDM at current precision (max deviation 0.29σ). The DESI signal is a CPL artifact.
+- **Narrative B** (Brane benchmark, ζ₀ ≈ 0.001): The model predicts w₀ ≈ −0.75, squarely reproducing the DESI signal.
+
+These narratives are mutually contradictory and the monograph does not commit to either. The Boltzmann analysis (§2.3.7) excludes the brane benchmark at Δχ² = +35 (~6σ) when Planck compressed priors are included, while the "full multi-probe analysis" (§2.3.10) claims it is consistent. The explanation — that CMB priors pull toward ΛCDM while expansion data pull toward w₀ ≈ −0.75 — is a description of the tension, not a resolution.
+
+**Required action:** The monograph must either (a) commit to a specific ζ₀ regime with a clear physical justification from brane physics, or (b) present the framework transparently as a one-parameter family with no current discriminating power, acknowledging that the data do not select a value of ζ₀. The current rhetorical strategy — citing ζ₀ = 0.001 when DESI agreement is desired and ζ₀ = 0.037 when CMB consistency is needed — will not survive peer review at a journal.
+
+### B. The Φ₀ Discrepancy and the Self-Tuning Scan
+
+The corrected junction-condition solution gives Φ₀ = 0.076, a factor-of-six correction from the historical Φ₀ = 0.477. The author acknowledges this transparently (§1.10.4 Correction note, §2.3.12). However, the self-tuning numerical scan in Appendix A.1.3 still uses the historical value. The updated scan with corrected boundary conditions is "left to future work."
+
+This is a significant gap. The self-tuning scan (Table 1.1) is the primary computational evidence for the three-layer self-tuning mechanism. If the boundary conditions have changed by a factor of six in Φ₀ (and ~40× in ζ₀), the scan should be rerun. The author argues that the algebraic proof of Λ₅-independence (§1.3.7) establishes the result independently of the numerical scan, which is correct at the level of the argument's structure — but a referee who cannot reproduce the stated numbers will not accept an algebraic argument as a substitute.
+
+**Required action:** Rerun the self-tuning scan with the corrected brane parameters. If the algebraic independence is genuinely structural, the new scan should confirm it and there is no excuse for deferring it.
+
+### C. The Axiom Count Is Understated
+
+The abstract and preface frame the work as deriving from "two minimal assumptions" (A1: hidden extra dimension, A2: bulk scalar field). But the actual derivation requires six inputs (A1–A6), as §1.2.5 honestly catalogs: Kaloper–Padilla sequestering (A3), the NCG spectral action (A4), conformal coupling ξ = 1/6 (A5), and a linear tadpole V = cΦ (A6), plus the supplementary condition α_IR > 0 for radion stability.
+
+Furthermore, A5 is described as "derived from the spectral triple" — but this derivation requires A4 (the spectral action), which is itself a theoretical commitment, not a mathematical consequence of A1+A2. The "derivation" of ξ = 1/6 from the a₂ Seeley–DeWitt coefficient presupposes that the spectral action is the correct formalism. The chain of seven arguments for ξ = 1/6 (Remark 1.7) includes three "independent derivations" and four "consistency checks," but all three derivations involve the spectral action or conformal structure — they are perspectives on the same geometric fact, not independent derivations in the sense that a mathematician would accept.
+
+**Required action:** The framing should be revised to accurately convey the input count. "Two geometric axioms supplemented by four theoretical commitments" is the honest formulation already present in §1.2.5 and should appear in the abstract and preface instead of "two minimal assumptions."
+
+### D. The Octonionic Extension (Chapter 4) Is Speculative
+
+Chapter 4 is by far the most ambitious and least rigorous part of the monograph. The central claim — that three generations of fermions follow from the representation theory of the complexified Dixon algebra T_C = C_C ⊗ H_C ⊗ O_C — rests on associating the three independent complex structures on the octonions with the three generations.
+
+Several problems:
+
+1. **The Poincaré duality issue (§4.8.4–4.8.5).** The NCG axioms require Poincaré duality, which is formulated in terms of K-theory classes. For non-associative algebras like O, K-theory is not defined in the standard sense. The resolution via the "associative envelope" A_env(O) = M₈(R) is a workaround, not a proof. Open Problem 6 acknowledges that "a fully non-associative KK-theory" would be needed. Without this, the claim that the octonionic spectral triple satisfies all Connes axioms is incomplete.
+
+2. **The Yukawa structure produces V_CKM = I₃ at the algebraic level (§4.8.7).** The S₃ symmetry forces the mass matrix to be democratic, so CKM mixing vanishes until 5D warp profiles are introduced. The honest assessment is welcome, but the consequence is that all flavor physics depends on ~20 free bulk mass parameters (Table 4.5), not on the octonionic structure. The octonions provide the number three; the warp factor does all the phenomenological work.
+
+3. **The fermion mass hierarchy claims rely on O(1) bulk mass parameters** whose values are fitted, not predicted. The Gatto–Sartori–Tonin relation |V_us| ~ √(m_d/m_s) = 0.224 is reproduced, but this relation was already known and is a consequence of the democratic matrix Ansatz plus hierarchical profiles — it does not require octonions.
+
+4. **The gauge coupling unification tension (§4.17)** is acknowledged but not resolved. The three "resolution pathways" (KK threshold corrections, R2 = 0 boundary condition modification, full boundary b₃/₂ computation) are speculative.
+
+**Required action:** Chapter 4's claims about particle phenomenology should be clearly demarcated as conjectural extensions of the cosmological framework. The cosmological predictions (Chapters 1–3, 5) stand or fall independently of Chapter 4; the current presentation creates the impression that the octonionic extension is a derived consequence, when it is more accurately a speculative program built on the same geometric foundations.
+
+### E. The Sound Speed cs ≈ 11c Requires More Careful Treatment
+
+The superluminal sound speed is defended (§1.8.2, §5.3.3) by arguing that cs governs phase velocity, not signal velocity, and that causality is preserved within the effective metric. This is standard lore for k-essence theories, but the specific case cs ≈ 11c deserves more scrutiny:
+
+1. The Adams et al. (2006) positivity bounds are discussed (§5.3.2, §A.8.1) but the resolution is that the S-matrix amplitude vanishes in the cuscuton limit (Q_s = ϵ₁ → 0), placing the theory "at the boundary of its domain of applicability." This is precisely where one should be most careful, not least. The EFT cutoff ambiguity acknowledged in §A.8.1 needs to be quantified — what is the regime of validity of the EFT?
+
+2. The Jeans length λ_J ~ 33,000 Mpc (§1.8.4) is larger than the observable universe, so dark energy never clusters. This is consistent but makes the sound speed effectively unmeasurable by galaxy surveys. The claimed detection strategy via gravitational wave dispersion (§5.4.4) is speculative and no sensitivity estimate is provided.
+
+**Required action:** The positivity bounds analysis should be expanded, not relegated to a supplementary note. Either the EFT has a well-defined UV completion that permits cs > 1 (in which case the completion should be characterized), or the bounds are genuinely violated and the consequences should be confronted.
+
+### F. The "Falsification" Claims Are Asymmetric
+
+The monograph lists 10 falsifiable predictions (§1.10), several of which are genuinely sharp (w > −1 at all epochs, αT = 0 exactly, growth–expansion decoupling). However, the falsification criteria are applied asymmetrically:
+
+- If DESI measures w₀ = −0.75 with small ζ₀, the framework is "confirmed."
+- If DESI measures w₀ = −0.99, the framework is "confirmed" with large ζ₀.
+- If DESI measures w₀ = −1.000 ± 0.001, the framework is "consistent" in the ζ₀ → 0 limit.
+
+The only clean falsification is w < −1 at any epoch. Since w₀(ζ₀) = −1 + C_KK/ζ₀ with ζ₀ free, any measurement of w₀ > −1 is "predicted" by some ζ₀. This is not falsifiability — it is accommodation. The honest falsification criterion is the wa = 0 prediction, which is genuinely under 2.4σ tension with Lu & Simon (2026). The monograph should foreground this as the decisive near-term test, rather than burying it among nine other predictions.
+
+**Required action:** Restructure §1.10 to clearly distinguish structural predictions (αT = 0, w > −1, growth–expansion decoupling, wa ≈ 0) from parametric accommodations (the w₀(ζ₀) curve itself). The wa prediction is the throat of the model; DESI Y5 at σ(wa) ~ 0.05 will either confirm or kill it.
+
+---
+
+## IV. Moderate Criticisms
+
+### G. The Radion Stabilization Is Incomplete
+
+Section 1.4.3 provides a "shooting-method proof sketch" for radion stabilization, but acknowledges that the O(1) coefficient in the mass estimate m_rad ~ k√ζ₀ e^{−kyc} remains undetermined. Whether the cuscuton constraint provides stabilization that is "parametrically stiffer than the Goldberger–Wise mechanism" is stated as "an open question." The mass estimate of O(10² GeV) is parametric, not computed.
+
+For a paper that derives many things from first principles, the radion stabilization — which is essential for the physical consistency of the RS setup — remains at the level of a sketch. This should be flagged as an open computation, not presented as a result.
+
+### H. Convention and Notation Concerns
+
+The notation table (pp. xii–xiii) is helpful, but the text uses "Hubble–Kristian" for two different things: the H(z) expansion rate compilation (a dataset) and the Hiramatsu–Kobayashi CMB modified-gravity constraint (a theoretical parameter). The author notes this potential confusion in §1.4.4 and §2.3.1, but the abbreviation "HK" continues to appear for both throughout the text. This will confuse readers and referees. Rename one of them.
+
+### I. The Self-Tuning No-Go Confrontation (§1.11.6) Claims Too Much
+
+The five propositions (1.2–1.6) are presented as a "chain of structural arguments" establishing that self-tuning is unique, ξ = 1/6 is necessary, the extra dimension is essential, etc. These are proof sketches, not proofs. Proposition 1.3 (necessity of ξ = 1/6) relies on "numerical verification" at one value of kyc; Proposition 1.4 (necessity of the extra dimension) invokes Weinberg's theorem but the evasion of (W4) is argued by example, not proven in generality. Proposition 1.5 claims radiative stability but (c) explicitly notes that "a full non-perturbative proof... remains open."
+
+The prose should consistently reflect that these are proof sketches establishing plausibility, not rigorous mathematical proofs. The word "theorem" should not be applied to results whose proofs contain phrases like "numerical verification confirms" and "is deferred to future work."
+
+### J. Statistical Methodology
+
+The Monte Carlo propagation of CKK (N = 100,000 samples) with input uncertainties q₀ = −0.55 ± 0.05, ΩDE = 0.685 ± 0.007, ϵ₁ = 0.017 ± 0.003 is a reasonable approach, but the choice q₀ = −0.55 ± 0.05 is described as "a deliberately wider, conservative prior" that differs from the Planck central value q₀ = −0.5275. The 72.5% variance contribution from q₀ means the CKK uncertainty is driven by a prior the author chose to be deliberately wide. This should be presented more carefully — showing CKK with both the Planck-centered prior and the wider prior would be transparent.
+
+---
+
+## V. Minor Issues
+
+1. The bibliography has formatting inconsistencies — some references cite the monograph's own papers as [9]–[12] but the numbering does not correspond to the order of appearance in the text. The reference list in Chapter 4 appears to use a different numbering scheme than Chapter 1.
+
+2. Equation (1.101) Φ₀² = ζ₀M₅³/ξ = 6ζ₀M₅³ is stated as "convention-independent." Verify this claim explicitly by carrying both the reduced and unreduced Planck mass through the assembly in Step 4.
+
+3. The "seven-fold convergence of ξ = 1/6" (Remark 1.7) is a rhetorical device. Seven arguments for the same thing provide less evidential weight than one rigorous proof. The seven overlap substantially (all involve conformal structure in some way). Present the strongest argument (the a₂ Seeley–DeWitt derivation) and relegate the others to a remark.
+
+4. Table 2.5 is one of the most important tables in the monograph. The fact that removing one data point (Hiramatsu–Kobayashi) drops χ² from 24.56 to 9.39 should be stated in the abstract.
+
+5. The DESI DR2 BAO confrontation (§2.4) computes distances for three models but acknowledges (§2.4.6) that "all five models produced χ²/N_data > 3.5" due to "a systematic pathology in the compressed BAO likelihood implementation." This is concerning — the quantitative BAO confrontation, which is supposed to be the paper's observational centerpiece, could not be completed. The qualitative conclusions are drawn from "the published literature."
+
+6. The coincidence problem analysis (Open Problem 9, Appendix A.6.3) claims the dynamical equation of state "widens the coincidence window from ~54% to ~97% of cosmic age." This metric (what fraction of cosmic history satisfies ΩDE/Ωm within some range) is not standard and its meaning is unclear without specifying the range.
+
+---
+
+## VI. Assessment of Individual Papers
+
+| Paper | Quality | Status |
+|-------|---------|--------|
+| Paper I (Chapter 1): Foundational derivation | Strong, with caveats on axiom count and radion | Publishable after revision |
+| Paper II (Chapter 2): Observational confrontation | Weakened by the dual-narrative problem and incomplete BAO analysis | Major revision needed |
+| Paper III (Chapter 3): No-go theorems | Methodologically valuable, proof sketches need tightening | Minor revision |
+| Paper IV (Chapter 4): NCG/octonionic extension | Overreaches; cosmological core is solid, particle phenomenology is conjectural | Major revision (separate into established and speculative) |
+| Paper V (Chapter 5): Sound speed | Competent, EFT validity needs strengthening | Minor revision |
+
+---
+
+## VII. Overall Assessment
+
+This is an ambitious, extensively worked-out, and in many places genuinely insightful piece of theoretical physics. The core derivation chain (5D warped geometry → cuscuton → GB correction → w₀(ζ₀)) is logically coherent and produces structural predictions (αT = 0, growth–expansion decoupling, wa ≈ 0) that are both novel and falsifiable. The self-critical tone is refreshing and the level of algebraic detail is sufficient for verification.
+
+However, the monograph suffers from three interrelated problems that prevent acceptance in its current form:
+
+1. **The quantitative foundation is unstable.** The Φ₀ correction has not propagated through all numerical results (the self-tuning scan still uses historical values). The H(z)-only fit gives ζ₀ consistent with zero. The Hiramatsu–Kobayashi point dominates the multi-probe χ². The framework currently has no empirical anchor for its free parameter.
+
+2. **The rhetorical framing overpromises.** "Two minimal assumptions" is misleading when six inputs are required. "First-principles prediction" is misleading when ζ₀ is free. The w₀(ζ₀) curve accommodates rather than predicts, and the genuinely falsifiable predictions (wa ≈ 0, αT = 0) deserve more prominent placement.
+
+3. **The scope exceeds the rigor.** The extension from dark energy to fermion masses, dark matter, baryogenesis, inflation, and the strong CP problem in a single monograph dilutes the impact of the cosmological core. Each extension introduces additional assumptions and open computations that weaken the overall argument.
+
+My recommendation is **major revision**, with the core cosmological framework (Chapters 1, 3, 5) strengthened and the observational confrontation (Chapter 2) rewritten to honestly confront the dual-narrative problem. Chapter 4 should be published separately once its open computations (Poincaré duality, gauge coupling unification, full CKM fit) are completed. The resulting slimmer monograph would be a stronger contribution to the literature.
+
+The framework will live or die on three near-term measurements: (1) DESI Y5's determination of wa (the wa ≈ 0 prediction), (2) improved constraints on growth–expansion decoupling from Euclid and Vera Rubin, and (3) LiteBIRD's measurement of r (testing the α = 1 inflation prediction). The author would serve the work best by sharpening these predictions and stripping away the speculative extensions that currently obscure them.
+
+---
+
+*Signed: Anonymous Referee*
+
+
+There's the full report. Let me add a few things that didn't fit cleanly into the formal referee structure but that I think matter for your revision strategy.
+
+**On the strategic question of what to do next.** The monograph's strongest move would be to split. The cosmological core (Chapters 1, 3, 5) constitutes a self-contained, falsifiable framework with a novel structural prediction (αT = 0 from 5D KK reduction) and a sharp near-term test (wa ≈ 0 vs. DESI Y5). That's a publishable paper — possibly a very good one — without the octonionic extension dragging it into territory where the open computations outnumber the completed ones. Chapter 4 is its own program, and mixing it into the cosmological argument makes the whole edifice look less solid than its best parts actually are.
+
+**On the dual-narrative problem specifically.** This is the issue that will sink you with referees if left unresolved. The honest position, I think, is something like: "The framework predicts w₀(ζ₀) = −1 + CKK/ζ₀. Current data are consistent with ζ₀ ∈ [0, 0.04]. If ζ₀ ~ 10⁻³ (as the junction-condition benchmark suggests but does not prove), the framework naturally produces the DESI signal. If ζ₀ ~ 0.03, the framework is indistinguishable from ΛCDM. The determination of ζ₀ is an open problem." That's clean. What you can't do is cite the brane benchmark when you want DESI agreement and the CMB benchmark when you want Planck consistency — a careful reader will notice, and a hostile referee will use it to dismiss the entire work.
+
+**On what you've already identified as the priority action.** You noted in your top-of-mind context that the corrected brane parameters may invert the monograph's narrative — that with Φ₀ = 0.076 (rather than 0.477), the framework with corrected parameters may predict something compatible with DESI's best-fit w₀ ≈ −0.75. That's exactly right, and it's what the junction-condition benchmark shows. The issue is that this requires ζ₀ ~ 10⁻³, which the Boltzmann analysis with CMB priors excludes at ~6σ. The tension between CMB priors and expansion data is the real physical content here — and it may be telling you something genuine about either the CMB compressed likelihood or the brane physics.
+
+**On the wa = 0 tension.** This is where the model lives or dies in the near term, and I want to be direct: 2.4σ is not fatal but it's not comfortable either, and the monograph's response — that the CPL phantom crossing is a "compromise artifact" — is a hypothesis, not a demonstration. The definitive test (constant-w + GR perturbations vs. CPL + coupled perturbations on the same data, §2.7.4) has not been performed. If you could perform that comparison before submission, it would be the single highest-value addition to the manuscript.

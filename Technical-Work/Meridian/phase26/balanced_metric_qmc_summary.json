@@ -1,0 +1,60 @@
+{
+  "description": "Balanced metric on dP6 \u2014 QMC + importance sampling (Phase B.2.5)",
+  "N_MC": 524288,
+  "k_values": [
+    8,
+    10,
+    12,
+    15
+  ],
+  "results": {
+    "8": {
+      "N_sections": 109,
+      "N_pts": 1572864,
+      "iterations": 27,
+      "eta_2_w": 0.7232640240042879,
+      "eta_inf_s": 3.643036899559422,
+      "delta_G": 5.381324919614417e-09,
+      "time": 74.19533586502075,
+      "converged": true,
+      "rad_s": 3.0,
+      "vol_ratio": 0.9100307366365217
+    },
+    "10": {
+      "N_sections": 166,
+      "N_pts": 1572864,
+      "iterations": 27,
+      "eta_2_w": 0.9051688897866645,
+      "eta_inf_s": 4.5392501616354854,
+      "delta_G": 6.3157820368486365e-09,
+      "time": 117.83198642730713,
+      "converged": true,
+      "rad_s": 3.5,
+      "vol_ratio": 0.8013159060479987
+    },
+    "12": {
+      "N_sections": 235,
+      "N_pts": 1572864,
+      "iterations": 27,
+      "eta_2_w": 1.1004433644657587,
+      "eta_inf_s": 6.134267946747025,
+      "delta_G": 7.001367943197957e-09,
+      "time": 167.28717637062073,
+      "converged": true,
+      "rad_s": 4.0,
+      "vol_ratio": 0.7085937029634836
+    },
+    "15": {
+      "N_sections": 361,
+      "N_pts": 1572864,
+      "iterations": 27,
+      "eta_2_w": 1.4054851921183191,
+      "eta_inf_s": 8.48195209086828,
+      "delta_G": 7.603597967226802e-09,
+      "time": 247.41831755638123,
+      "converged": true,
+      "rad_s": 4.75,
+      "vol_ratio": 0.585667252309165
+    }
+  }
+}

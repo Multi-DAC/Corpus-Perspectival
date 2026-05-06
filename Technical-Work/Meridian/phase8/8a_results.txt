@@ -1,0 +1,57 @@
+================================================================================
+  PROJECT MERIDIAN — PHASE 8A: DATA METHODOLOGY VERIFICATION
+================================================================================
+
+  8A.1: REFERENCE VALUES
+
+  ΛCDM (with w₀wₐ prior):
+    BAO=2.27  fσ₈=7.11  H₀=0.01  H&K=15.17  w₀wₐ=1.82  TOTAL=26.38
+
+  ΛCDM (WITHOUT w₀wₐ prior):
+    BAO=2.27  fσ₈=7.11  H₀=0.01  H&K=15.17  TOTAL=24.56
+
+  Phase 7 best-fit (with w₀wₐ prior):
+    BAO=2.26  fσ₈=7.33  H₀=0.03  H&K=0.00  w₀wₐ=1.83  TOTAL=11.45
+    w₀=-0.9948, wₐ=0.0166, H₀=67.46
+
+  Phase 7 best-fit (WITHOUT w₀wₐ prior):
+    BAO=2.26  fσ₈=7.33  H₀=0.03  H&K=0.00  TOTAL=9.62
+
+============================================================
+  8A.1: OPTIMIZATION WITHOUT w₀wₐ PRIOR
+============================================================
+  Fitting: BAO + fσ₈ + H₀ + H&K only (no w₀wₐ constraint)
+
+  ═══════════════════════════════════════════════════════
+  BEST-FIT WITHOUT w₀wₐ PRIOR
+  ═══════════════════════════════════════════════════════
+    ζ₀  = 0.0379
+    γ_r = 0.0189
+    α_b = 25.8635
+    λ₀  = 0.0000
+    v₀  = 0.6849
+
+    chi2 breakdown (no w₀wₐ prior):
+      BAO:   2.26  (ΛCDM: 2.27)
+      fσ₈:  7.33  (ΛCDM: 7.11)
+      H₀:   0.03  (ΛCDM: 0.01)
+      H&K:  0.00  (ΛCDM: 15.17)
+      Total: 9.62  (ΛCDM: 24.56)
+      Δchi2 vs ΛCDM = -14.93
+      H₀ = 67.46 km/s/Mpc
+
+    DERIVED w₀wₐ (not used in fit, just computed):
+      w₀ = -0.9944
+      wₐ = 0.0180
+      w₀ pull vs CMB+SN: -1.2σ
+      wₐ pull vs CMB+SN: 1.3σ
+      w₀ pull vs DESI: -4.2σ
+      wₐ pull vs DESI: 3.3σ
+
+    If we NOW evaluate w₀wₐ chi2 (post-hoc, not used in fit):
+      chi2_w = 1.83
+      Total with prior: 11.45
+
+  ═══════════════════════════════════════════════════════
+  COMPARISON: RE-OPTIMIZE WITH w₀wₐ PRIOR
+  ═══════════════════════════════════════════════════════

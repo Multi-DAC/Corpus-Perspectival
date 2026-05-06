@@ -1,0 +1,2497 @@
+arXiv:1004.4187v1  [hep-ph]  23 Apr 2010
+CERN-PH-TH/2010-027
+Energy Budget of
+Cosmological First-order Phase Transitions
+Jos´e R. Espinosaa,b, Thomas Konstandinb,
+Jos´e M. Noc and G´eraldine Servant b,c
+aICREA, Instituci`o Catalana de Recerca i Estudis Avan¸cats,
+at IFAE, Universitat Aut`onoma de Barcelona, 08193 Bellaterra, Barcelona, Spain
+bCERN Physics Department, Theory Division, CH-1211 Geneva 23, Switzerland
+cInstitut de Physique Th´eorique, CEA/Saclay, F-91191 Gif-sur-Yvette C´edex, France
+jose.espinosa@cern.ch, thomas.markus.konstandin@cern.ch,
+jose.miguel.no.redondo@cern.ch, geraldine.servant@cern.ch
+Abstract
+The study of the hydrodynamics of bubble growth in ﬁrst-order phase transitions is
+very relevant for electroweak baryogenesis, as the baryon asymmetry depends sensi-
+tively on the bubble wall velocity, and also for predicting the size of the gravity wave
+signal resulting from bubble collisions, which depends on both the bubble wall velocity
+and the plasma ﬂuid velocity. We perform such study in diﬀerent bubble expansion
+regimes, namely deﬂagrations, detonations, hybrids (steady states) and runaway so-
+lutions (accelerating wall), without relying on a speciﬁc particle physics model. We
+compute the eﬃciency of the transfer of vacuum energy to the bubble wall and the
+plasma in all regimes. We clarify the condition determining the runaway regime and
+stress that in most models of strong ﬁrst-order phase transitions this will modify ex-
+pectations for the gravity wave signal. Indeed, in this case, most of the kinetic energy
+is concentrated in the wall and almost no turbulent ﬂuid motions are expected since
+the surrounding ﬂuid is kept mostly at rest.
+
+---PAGE BREAK---
+Contents
+1
+Introduction
+1
+2
+Hydrodynamic relations
+3
+2.1
+Basic concepts
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+2.2
+Equation of state . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+2.3
+Relativistic ﬂuid equations and bulk kinetic energy
+. . . . . . . . . . . . . .
+7
+3
+Detonations, deﬂagrations and hybrids
+8
+3.1
+Detonations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10
+3.2
+Deﬂagrations
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+12
+3.3
+Hybrids
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+4
+Eﬃciency coeﬃcients
+15
+5
+Bubble wall velocity for steady state walls
+17
+5.1
+EoM for the Higgs ﬁeld and the friction parameter η
+. . . . . . . . . . . . .
+18
+5.2
+Wall velocity in the (η, αN) plane . . . . . . . . . . . . . . . . . . . . . . . .
+21
+5.3
+Microscopic determination of η
+. . . . . . . . . . . . . . . . . . . . . . . . .
+23
+6
+Runaway walls
+24
+7
+Energy budget of ﬁrst-order phase transitions
+28
+8
+Summary
+29
+A Numerical ﬁts to the eﬃciency coeﬃcients
+32
+1
+Introduction
+A cosmological ﬁrst-order phase transition could have far-reaching consequences and could
+lead to many interesting phenomena, as for example electroweak baryogenesis [1], primordial
+magnetic ﬁelds [2] or a stochastic background of gravitational waves [3–5]. All of them are
+based on the fact that a ﬁrst-order phase transition proceeds by bubble nucleation and, in the
+process, a large portion of the available vacuum energy is stored close to the bubble walls. In
+all these phenomena, some essential characteristics of the ﬁrst-order phase transition enter,
+namely the velocity of the expanding bubbles and the eﬃciency coeﬃcients that keep track
+of the energy budget of the transition, that is, how the free energy of the Higgs ﬁeld φ
+initially available is distributed among bulk ﬂuid motion, thermal energy of the plasma and
+gradient/kinetic energy of the Higgs ﬁeld.
+Quite generally, treatments of the bubble wall velocity assume that the expansion of the
+bubbles is hindered by some form of friction, such that the bubble wall reaches a constant
+speed after a rather short time of order ∼1/m, where m represents the typical mass scale
+associated with the transition (i.e. electroweak mass scale in the case of the electroweak phase
+transition). Assuming that the free energy of the Higgs ﬁeld is released into the plasma, a
+1
+
+---PAGE BREAK---
+hydrodynamic treatment of the plasma can be used to determine the ﬂuid motion [6, 7].
+However, as long as the microscopic mechanism of friction is unknown, this approach leaves
+one free parameter, typically the wall velocity. In [7] it was argued that the velocity should
+be ﬁxed by the Chapman-Jouguet condition, like in chemical combustion, and this condition
+was subsequently used in many studies of gravitational wave production [8]. The Chapman-
+Jouguet condition generally leads to supersonic wall velocities with a rarefaction wave behind
+the bubble wall. This scenario favors gravitational wave production, since fast moving walls
+are essential for the production of gravitational radiation in bubble collisions [4, 5, 9–11],
+turbulence [12,13] or magnetic ﬁelds [13].
+Nevertheless, while being observed in chemical combustion, the Chapman-Jouguet condi-
+tion is unrealistic for cosmological phase transitions [14]. To replace the Chapman-Jouguet
+condition, friction has been studied through a phenomenological parametrization in the Higgs
+equation of motion [15,16]. Extensive simulations of hydrodynamic equations in conjunction
+with an equation for the Higgs ﬁeld have been used to identify the stable expansion modes
+of the bubbles [14, 16–19]. It turns out that many solutions which are viable close to the
+phase transition front, where the free energy of the Higgs ﬁeld is released into the plasma,
+are not stable globally.
+The friction coeﬃcient appearing in the Higgs equation can be determined by solving
+Boltzmann-type equations close to the phase transition front [15, 20]. This approach leads
+to subsonic wall velocities in the Standard Model (SM) and its supersymmetric extension
+(MSSM) and is widely used in studies of MSSM electroweak baryogenesis [21–25]. Subsonic
+wall velocities are crucial in electroweak baryogenesis, since this mechanism is based on
+diﬀusion of particle asymmetries into the plasma in front of the bubble wall and for a too
+fast wall, there is no time to build up a baryon asymmetry.
+In strong ﬁrst-order phase transitions, the friction exerted by the plasma on the wall
+might not be suﬃcient to prevent the bubble wall from a runaway behavior in which the
+wall keeps accelerating, toward ultra-relativistic velocities, as pointed out recently in [27].
+We also study this runaway regime and discuss the energy balance in that case.
+Our general goal in this paper is to present a uniﬁed picture of all the diﬀerent regimes.
+We go beyond the (unjustiﬁed) Chapman-Jouguet assumption and provide general formula
+for the wall velocity, the ﬂuid velocity and the eﬃciency factors accounting for the distribu-
+tion of energy among bulk ﬂuid motion, thermal energy of the plasma and gradient/kinetic
+energy of the Higgs ﬁeld. The paper is organized as follows. We review the hydrodynamic
+treatment of the plasma in secs. 2 and 3, and subsequently obtain the eﬃciency coeﬃcients
+in sec. 4. In sec. 5 we present a simpliﬁed treatment of the Higgs equation (a similar one
+has been carried out recently in [26]). We present detailed results both for the wall velocity
+and the eﬃciency coeﬃcients that are required for the determination of gravitational wave
+spectra. We discuss the runaway regime in sec. 6 and summarize our results on the energy
+budget of ﬁrst-order phase transitions in sec. 7. We conclude in sec. 8 and provide numerical
+ﬁts to the eﬃciency coeﬃcients in Appendix A.
+2
+
+---PAGE BREAK---
+2
+Hydrodynamic relations
+In this section we introduce the basic concepts and set up the notation used for the hydro-
+dynamic analysis of the combined “wall-plasma” system [6,7,16].
+2.1
+Basic concepts
+The energy-momentum tensor of the Higgs ﬁeld φ is given by
+T φ
+µν = ∂µφ∂νφ −gµν
+1
+2∂ρφ∂ρφ −V0(φ)
+
+,
+(1)
+where V0(φ) is the renormalized vacuum potential. The energy momentum-tensor of the
+plasma is given by
+T plasma
+µν
+=
+X
+i
+Z
+d3k
+(2π)3Ei
+kµkνfi(k, x),
+(2)
+where the sum is carried out over the species in the plasma and fi(k, x) is the distribution
+function for each species. If the plasma is locally in equilibrium (perfect ﬂuid) this can be
+parametrized as
+T plasma
+µν
+= w uµuν −gµν p,
+(3)
+where w and p are the plasma enthalpy and pressure, respectively. The quantity uµ is the
+four-velocity ﬁeld of the plasma, related to the three-velocity v by
+uµ =
+(1, v)
+√
+1 −v2 = (γ, γv) .
+(4)
+A constant φ background contributes to the total pressure [see eq. (1)] and from now on we
+will use p for this total pressure, including such contribution.
+The enthalpy w, the entropy density σ and the energy density e are deﬁned by
+w ≡T ∂p
+∂T ,
+σ ≡∂p
+∂T ,
+e ≡T ∂p
+∂T −p ,
+(5)
+where T is the plasma temperature. One then has
+w = e + p .
+(6)
+Conservation of energy-momentum is given by
+∂µTµν = ∂µT φ
+µν + ∂µT plasma
+µν
+= 0 .
+(7)
+We are primarily interested in a system with a constant wall velocity and, assuming there
+is no time-dependence, eq. (7) reads in the wall frame (with the wall and ﬂuid velocities
+aligned in the z direction)
+∂zT zz = ∂zT z0 = 0 .
+(8)
+3
+
+---PAGE BREAK---
+Integrating these equations across the phase transition front and denoting the phases in front
+and behind the wall by subscripts + (symmetric phase) and −(broken phase) one gets the
+matching equations (in the wall frame):
+w+v2
++γ2
++ + p+ = w−v2
+−γ2
+−+ p−,
+w+v+γ2
++ = w−v−γ2
+−.
+(9)
+From these equations we can obtain the relations
+v+v−= p+ −p−
+e+ −e−
+,
+v+
+v−
+= e−+ p+
+e+ + p−
+.
+(10)
+To proceed further, one needs to assume a speciﬁc equation of state (EoS) for the plasma.
+2.2
+Equation of state
+Usually the plasma is well described by a relativistic gas approximation. In the symmetric
+phase,
+p+ = 1
+3a+T 4
++ −ǫ ,
+e+ = a+T 4
++ + ǫ ,
+(11)
+where ǫ denotes the false-vacuum energy resulting from the Higgs potential (deﬁned to be
+zero in the broken, T = 0, true-minimum phase). While in the broken phase
+p−= 1
+3a−T 4
+−,
+e−= a−T 4
+−,
+(12)
+with a diﬀerent number of light degrees of freedom across the wall and therefore diﬀerent
+values a+ and a−(with a+ > a−) and diﬀerent temperatures on both sides of the wall. These
+expressions correspond to the so-called bag equation of state.
+In the general case, the free energy (F = −p, also called sometimes eﬀective potential,
+including ﬁnite temperature corrections) of a plasma of particles with arbitrary masses mi(φ)
+is given, in the non-interacting-gas approximation, by
+F
+=
+V0 +
+Z
+d3p
+(2π)3
+X
+i
+Ni log
+
+1 ∓e−Ei/T
+=
+V0 + T 4
+2π2
+X
+i
+Ni Yb/f(mi/T) ,
+(13)
+where V0 is the T = 0 eﬀective potential, E2
+i = p2 + m2
+i ,
+Yb/f(x) =
+Z ∞
+0
+dy y2 log[1 ∓exp(−
+p
+x2 + y2)],
+(14)
+the −/+ signs in the last equation hold for bosons/fermions, the index i denotes the diﬀerent
+species and Ni the internal degrees of freedom (that in this notation is negative for fermions).
+Species that are light compared to T behave as a relativistic gas while species much heavier
+than T are Boltzmann suppressed in the plasma and can be neglected. As is well known,
+4
+
+---PAGE BREAK---
+for small mi/T the function Yb/f tends to a constant (−π4/45 for bosons and 7π4/360 for
+fermions) so that a± in the bag EoS are explicitly given by
+a± = π2
+30
+X
+light i
+
+Nb
+i + 7
+8|Nf
+i |
+
+;
+(15)
+while for large mi/T one has Yb/f(mi/T) ∼± exp (−mi/T). Hence, only particles that have
+masses comparable to T can cause deviations from the bag EoS. In many cases this deviation
+is small because the free-energy is dominated by a large number of light degrees of freedom.
+For example in the Standard Model, the W ± and Z0 bosons contribute to this deviation
+from the bag EoS (and to a lesser extent the tops) but altogether the modiﬁcation in the
+energy density is at the percent level and hence small.
+If the deviations from the bag EoS are not so small one can still parametrize the plasma
+behavior in terms of quantities that mimic the bag EoS ones. In particular, from the free-
+energy (F = −p) we can deﬁne
+a± ≡
+3
+4T 3
+±
+∂p
+∂T
+
+±
+= 3ω±
+4T 4
+±
+,
+ǫ± ≡1
+4(e± −3p±) .
+(16)
+In the special case of bag EoS, these deﬁnitions reproduce the correct a± and give ǫ+ = ǫ
+and ǫ−= 0. In terms of these quantities one can write
+p± = 1
+3a±T 4
+± −ǫ± ,
+e± = a±T 4
+± + ǫ± ,
+(17)
+but now a± and ǫ± are T-dependent quantities and should be interpreted with some care.
+By their deﬁnition (16) they satisfy:
+∂ǫ±
+∂T±
+= T 4
+±
+3
+∂a±
+∂T±
+.
+(18)
+There is a certain arbitrariness in the deﬁnition of a± but ours is especially convenient
+because some formulas we discuss in sect. 5 can be easily generalized even if the bag EoS is
+not valid.
+Using the bag equations of state (11) and (12) in eq. (10) we get
+v+v−
+=
+1 −(1 −3α+)r
+3 −3(1 + α+)r,
+v+
+v−
+=
+3 + (1 −3α+)r
+1 + 3(1 + α+)r,
+(19)
+where we deﬁned
+α+ ≡
+ǫ
+a+T 4
++
+,
+r ≡a+T 4
++
+a−T 4
+−
+.
+(20)
+The quantity α+ is the ratio of the vacuum energy to the radiation energy density and
+typically characterizes the “strength” of the phase transition: the larger α+ the stronger the
+phase transition. These two equations can be combined to give
+v+ =
+1
+1 + α+
+
+
+v−
+2 +
+1
+6v−
+
+±
+sv−
+2 +
+1
+6v−
+2
++ α2
++ + 2
+3α+ −1
+3
+
+,
+(21)
+5
+
+---PAGE BREAK---
+so that there are two branches of solutions, corresponding to the ± signs in eq. (21). In the
+general case, with some deviation from the bag EoS, eqs. (19) and (21) still apply, with r
+deﬁned as before and α+ ≡(ǫ+ −ǫ−)/(a+T 4
++).
+Figure 1 shows these solutions for several values of α+. The ﬁrst branch (with positive
+sign) gives solutions of detonation type, v+ > v−, corresponding to r <
+1
+1+3α+. The function
+v+ has a minimum at v−= cs. Notice that the point v+ = v−= 1 is always a solution of
+this kind, with r =
+1
+1+3α+; besides, in the limit r →0 one obtains v+ = 1 and v−= 1/3.
+The second branch of solutions exists only if α+ < 1/3, and is of deﬂagration type, v+ < v−
+(it ranges over all values of v−). Also for deﬂagrations, the function v+ has an extremum at
+v−= cs; the endpoint, v−= 1, is given by the limit r →∞and yields v+ = 1−3α+
+3+3α+ . The
+limiting case α+ = 0 corresponds to v+v−= 1/3, connects both regions and will be relevant
+for the discussion of shock fronts in the next section.
+0
+0.2
+0.4
+0.6
+0.8
+1
+v-
+0
+0.2
+0.4
+0.6
+0.8
+1
+v+
+ α+ = 1
+ α+ = 0.3
+ α+ = 0.1
+ α+ = 0.01
+ α+ = 0
+deflagrations
+detonations
+Figure 1: Contours of the ﬂuid velocities v+ and v−in the wall frame for ﬁxed α+. In the shaded
+region in the top-left no consistent solutions to hydrodynamic equations exist. Flow proﬁles in the
+shaded region in the bottom-right decay into hybrid solutions, with v−= c−
+s (see sect. 3.3).
+To determine all relevant quantities in terms of the phase transition parameters, one still
+has to determine one of the two velocities, or equivalently, relate T+ to T−; this will be the
+subject of sec. 5. Before doing so, we want to provide a more detailed description and a
+physical understanding of the above solutions as well as of the hybrid regime. Hence, for
+now, we treat the wall velocity as a free parameter, without any further assumptions about
+the microscopic properties of the plasma. In sections 3 and 4 we present the analysis of
+6
+
+---PAGE BREAK---
+the diﬀerent types of solutions for the motion of the plasma ﬂuid. We will be particularly
+interested in the eﬃciency factor κ (that measures how much of the vacuum energy goes into
+bulk kinetic energy and is a crucial quantity to determine gravitational wave production) as
+a function of the wall velocity. To deﬁne κ, we ﬁrst need the relativistic ﬂuid equations for
+the plasma that we derive now.
+2.3
+Relativistic ﬂuid equations and bulk kinetic energy
+The starting point are the continuity equations (7) that, for a general plasma of form (3),
+read (see e.g. [6])
+∂µT µν = uν∂µ(uµ w) + uµ w∂µuν −∂ν p.
+(22)
+Projecting along the ﬂow then leads, using uµ∂νuµ = 0, to
+∂µ(uµ w) −uµ∂µ p = 0.
+(23)
+Consider next the projection perpendicular to the ﬂow with some space-like vector ¯u =
+γ(v, v/v) such that ¯uµuµ = 0, ¯u2 = −1. This turns (22) into the relativistic Euler equation
+¯uνuµ w∂µuν −¯uν∂ν p = 0.
+(24)
+In the following we assume a spherically symmetric conﬁguration. Additionally, because
+there is no characteristic distance scale in the problem, the solution should be a similarity
+solution that depends only on the combination ξ = r/t where r is the distance from the
+center of the bubble and t is the time since nucleation.1 ξ is thus the velocity of a given
+point in the wave proﬁle and the particles at the point described by ξ in the wave proﬁle
+move with velocity v(ξ), which is therefore the ﬂuid velocity in the frame of the bubble
+center. This turns the diﬀerent gradients into
+uµ∂µ = −γ
+t (ξ −v)∂ξ,
+¯uµ∂µ = γ
+t (1 −ξ v)∂ξ.
+(25)
+Finally, this yields for eqs. (23) and (24)
+(ξ −v)∂ξe
+w
+=
+2v
+ξ + [1 −γ2v(ξ −v)]∂ξv ,
+(1 −vξ)∂ξp
+w
+=
+γ2(ξ −v)∂ξv.
+(26)
+The derivatives ∂ξe and ∂ξp can be related through the speed of sound in the plasma,
+c2
+s ≡(dp/dT)/(de/dT), so as to get the central equation describing the velocity proﬁle:
+2v
+ξ = γ2(1 −vξ)
+µ2
+c2
+s
+−1
+
+∂ξv,
+(27)
+with µ the Lorentz-transformed ﬂuid velocity
+µ(ξ, v) = ξ −v
+1 −ξv .
+(28)
+1 The matching equations (9) can also be derived using energy-momentum conservation for similarity
+solutions in the rest frame.
+7
+
+---PAGE BREAK---
+In general, c2
+s depends on the EoS for the plasma, being c2
+s = 1/3 in the bag case. In the
+general case, c2
+s will be ξ-dependent, although in many cases of interest deviations from 1/3
+will be small.
+Eq. (27) can then be solved (with the appropriate boundary conditions) to yield the
+velocity proﬁle v(ξ) of the plasma. Subsequently, eqs. (26) can be integrated to yield
+w(ξ) = w0 exp
+"Z v(ξ)
+v0
+
+1 + 1
+c2s
+
+γ2 µ dv
+#
+.
+(29)
+In the calculation of the gravitational radiation produced in the phase transition one
+needs to compute the kinetic energy in the bulk motion of the plasma. We have now all
+ingredients necessary to perform such calculation. The ratio of that bulk kinetic energy over
+the vacuum energy gives the eﬃciency factor κ as
+κ =
+3
+ǫξ3
+w
+Z
+w(ξ)v2γ2 ξ2 dξ ,
+(30)
+where ξw is the velocity of the bubble wall. Notice that this deﬁnition coincides with the
+expression used in the gravitational wave literature, that is given by κ =
+3
+ǫR3w
+R
+w v2γ2 R2dR,
+but diﬀers from the deﬁnition used in ref. [5] by a factor ξ3
+w.
+We also numerically check energy conservation: Integration of T00 over a region larger
+than the bubble (including the shock front) is constant in time, giving
+Z 
+(γ2 −1
+4)w −3
+4wN
+
+ξ2dξ = ǫ
+3ξ3
+w,
+(31)
+where wN denotes the enthalpy at nucleation temperature far in front of the wall. This
+implies that the energy which is not transformed into kinetic bulk motion, but is used
+instead to increase the thermal energy, is
+1 −κ =
+3
+ǫξ3w
+Z 3
+4(w −wN)ξ2dξ =
+3
+ǫξ3w
+Z
+(e −eN)ξ2dξ.
+(32)
+3
+Detonations, deﬂagrations and hybrids
+We can now use the previous ﬂuid equations to describe the diﬀerent kinds of solutions for
+the motion of the plasma disturbed by the moving phase transition wall. In the discussion
+below, the sound velocity in the plasma plays a very relevant role. This velocity will in general
+depend on ξ and it is convenient to distinguish its asymptotic values in the symmetric and
+broken phases. We denote those two velocities by c±
+s . In many cases, we expect the bag EoS
+to hold in the symmetric phase and therefore c+
+s = 1/
+√
+3.
+Before embarking in the discussion of the diﬀerent types of velocity proﬁles, it proves use-
+ful to study ﬁrst in more detail the proﬁle eq. (27) without worrying about physical boundary
+conditions. The diﬀerent curves in Fig. 2 are obtained by solving for ξ as a function of v
+[instead of the more physically meaningful v(ξ), the plasma velocity proﬁle] using arbitrary
+boundary conditions and setting cs = 1/
+√
+3. This procedure has the advantage that ξ(v) is
+8
+
+---PAGE BREAK---
+a single-valued function. The meaning of the diﬀerent regions will be explained later on. We
+see two diﬀerent ﬁxed points: one for ξ = cs and v = 0 and the other for ξ = v = 1. This
+structure of ﬁxed points can be understood analytically in a simple way by introducing an
+auxiliary quantity τ to describe parametrically these curves in the plane (ξ, v). Using such
+parameter, eq. (27) can be split in the two simpler equations
+dv
+dτ
+=
+2vc2
+s(1 −v2)(1 −ξv) ,
+dξ
+dτ
+=
+ξ[(ξ −v)2 −c2
+s(1 −ξv)2] ,
+(33)
+which clearly display the mentioned ﬁxed points. The point (cs, 0) is in fact what is techni-
+cally called an improper node and all curves approach it tangentially to the v = 0 line. One
+also sees that dv/dτ > 0 so that along each curve v grows monotonically with τ. In the more
+general case with a ξ-dependent cs deviating somewhat from 1/
+√
+3 one expects quantitative
+changes in these curves but the same qualitative behavior [with the ﬁxed point at (c−
+s , 0)].
+0
+0.2
+0.4
+0.6
+0.8
+1
+ξ
+0
+0.2
+0.4
+0.6
+0.8
+1
+v(ξ)
+deflagrations
+detonations
+Figure 2: General proﬁles of the ﬂuid velocity v(ξ) in the frame of the bubble center (with c2
+s =
+1/3). Detonation curves start below µ(ξ, v) = cs (dashed-doted curve) and end at (ξ, v) = (cs, 0).
+Deﬂagration curves start below v = ξ and end at µ(ξ, v)ξ = c2
+s (dashed curve) corresponding to the
+shock front, as explained in the text. There are no consistent solutions in the shaded regions.
+Physical velocity proﬁles for expanding bubbles have to go to zero at some distance in
+front and behind the bubble wall and, in view of Fig. 2, this clearly requires some discon-
+tinuous jump, which usually can take place right at the phase transition front, where many
+other quantities also jump. The diﬀerent types of possible velocity proﬁles that result are
+discussed next.
+9
+
+---PAGE BREAK---
+3.1
+Detonations
+A pictorial representation of a typical detonation is depicted in Fig. 3, right plot.
+The
+corresponding velocity proﬁle is as in Fig. 4, lower left plot. More precisely, in detonations
+the phase transition wall moves at supersonic speed ξw (ξw > c+
+s ) hitting ﬂuid that is at rest
+in front of the wall. In the wall frame, the symmetric-phase ﬂuid is moving into the wall at
+v+ = ξw and entering the broken phase behind the wall where it slows down so that v−< v+.
+In the rest frame of the bubble center, the ﬂuid velocity right after the wall passes jumps to
+v(ξw) = µ(v+, v−) (the Lorentz transformation (28) from the frame of the wall to the rest
+frame of the center of the bubble) and then slows down until it comes to a stop, at some
+ξ < ξw, forming a rarefaction wave behind the wall. From the previous discussion we know
+that v will go to zero smoothly at ξ = c−
+s .
+deflagration
+ξw < cs
+ξw > cs
+ξw > cs
+hybrid
+detonation
+Figure 3: Pictorial representation of expanding bubbles of diﬀerent types. The black circle is the
+phase interface (bubble wall). In green we show the region of non-zero ﬂuid velocity.
+In order to obtain a consistent solution in the region c−
+s < ξ < ξw, one needs 0 < ∂ξv < ∞
+which, using eq. (27), requires µ(ξ) > µ(ξw) ≥c−
+s behind the wall. Consequently, detonation
+solutions are conﬁned to the lower right corner of ﬁg. 2, as indicated. Boosting to the wall
+frame this implies v−≥c−
+s , since v−= µ(ξw, v(ξw)). Therefore, detonations can be divided
+into Jouguet detonations (v−= c−
+s ) and weak detonations (v−> c−
+s ); strong detonations
+(v−< c−
+s ) are not consistent solutions of the ﬂuid equations, see ﬁg. 1.2
+Fig. 4 shows also the enthalpy proﬁle (bottom right) for a detonation. Concerning this
+proﬁle, remember that the matching conditions across the wall give
+wN = w+ = w−
+1 −ξ2
+w
+ξw
+ 
+v−
+1 −v2
+−
+
+,
+(34)
+where the subscript N denotes the plasma at the temperature of nucleation far in front of
+2As c−
+s can be diﬀerent from 1/
+√
+3 in the most general case, the forbidden region v−< c−
+s , shaded in
+Fig. 1, will be shifted in those cases.
+10
+
+---PAGE BREAK---
+0.45
+0.5
+0.55
+0.6
+0.65
+ξ
+0
+0.2
+0.4
+0.6
+v(ξ)
+deflagration
+0.45
+0.5
+0.55
+0.6
+0.65
+ξ
+0
+1
+2
+3
+w/wN  and  σ/σN 
+deflagration
+w- w+
+wsh wN
+α+ = 0.263
+r  = 10.3
+0.6
+0.65
+0.7
+0.75
+ξ
+0
+0.2
+0.4
+0.6
+v(ξ)
+hybrid
+0.6
+0.65
+0.7
+0.75
+ξ
+0
+1
+2
+3
+4
+w/wN  and  σ/σN
+hybrid
+w- w+
+wsh wN
+α+ = 0.052
+r  = 2.06
+0.5
+0.6
+0.7
+0.8
+ξ
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+v(ξ)
+detonation
+0.5
+0.6
+0.7
+0.8
+ξ
+0
+0.5
+1
+1.5
+2
+2.5
+3
+w/wN  and  σ/σN
+detonation
+w-   w+=wN
+α+ = 0.091
+r  = 0.458
+Figure 4: Examples of the ﬂuid velocity (in the plasma rest frame), enthalpy and entropy proﬁles
+for a subsonic deﬂagration, a deﬂagration with rarefaction wave (hybrid) and a detonation, for
+a−/a+ = 0.85. The bubble of broken phase is in gray. For detonations, the ﬂuid kinetic energy
+and thermal energy are concentrated near the wall but behind it i.e. inside the bubble, while they
+are located outside (mostly outside) of the bubble for deﬂagrations (hybrids).
+the wall. Then, eq. (29) transforms into
+w(ξ) = wN
+
+ξw
+1 −ξ2w
+ 1 −v2
+−
+v−
+
+exp
+"
+−
+Z v(ξw)
+v(ξ)
+
+1 + 1
+c2s
+
+γ2 µ dv
+#
+.
+(35)
+11
+
+---PAGE BREAK---
+Similar formulas can be derived for other quantities like the entropy (also shown in ﬁg. 4),
+the temperature, etc. It is straightforward to show that
+T−> T+ = TN .
+(36)
+by using the detonation condition r < 1/(1 + 3α+).
+3.2
+Deﬂagrations
+A pictorial representation of a typical deﬂagration is depicted in Fig. 3, left plot.
+The
+corresponding velocity proﬁle is as in Fig. 4, upper left plot. In contrast with detonations,
+in deﬂagrations the plasma is at rest right behind the wall, so that the wall velocity is now
+ξw = v−. These solutions correspond to the lower branches in Fig. 1, with a ﬂuid velocity
+that is larger behind the wall than in front, v−> v+. From Fig. 1 we also see that in this
+case the hydrodynamic relations across the wall imply v+ < cs. The ﬂuid velocity just in
+front of the wall jumps to v(ξw) = µ(v−, v+). As v−> v+, we get v(ξw) < ξw, so that the
+proﬁle of deﬂagration solutions start below the line v = ξ, as indicated in ﬁg. 2.
+As one moves out in ξ, v(ξ) decreases and eventually would become double-valued before
+reaching zero3. Now we cannot accommodate the required jump to zero velocity using the
+phase transition front, which is already ﬁxed at the beginning of the velocity proﬁle. The
+way out of this dilemma is that the ﬂow can drop to zero in a shock-front: we can use eq. (19)
+where now quantities with subscript ± denote the two sides of the shock-front instead of the
+phase transition wall. (Notice also that the shock occurs in the symmetric phase where in
+general we can assume the bag EoS holds.) At the shock-front there is no discontinuity in
+ǫ, and therefore α+ = 0, yet a discontinuity in velocities is possible. As given by eq. (19)
+and shown in Fig. 1, this requires [17] that the inward and outward velocities of the ﬂuid
+in the shock-front rest-frame fulﬁll the relation v+v−= 1/3, which in the plasma rest frame
+translates to µ(ξsh, vsh) ξsh = c2
+s. This condition determines the position of the shock front,
+which can be seen to occur before the singular point µ(ξ, v(ξ)) = cs (where dv/dξ →−∞)
+is reached, see ﬁg. 2.
+Fig. 4 also shows the enthalpy and entropy proﬁles (top right) for a deﬂagration. Notice
+that the temperature T+ in this case does not coincide with the temperature of the plasma
+outside the shock TN, since thermodynamic quantities are changing in front of the wall and
+also at the shock front discontinuity. [For the same reason, explicit formulas like (35) would
+be now more involved.] As illustrated by the plots in Fig. 4 one always has the inequality
+ω+ > ωN, i.e. a+T 4
++ > aNT 4
+N. In fact, for deﬂagrations one always has the inequalities
+T+ > Tsh > TN > T−
+(37)
+although the last one depends on the details of the Higgs equation of motion, discussed in
+sect. 5. Hence the limit α+ < 1/3, that one found for α+ = ǫ/(a+T 4
++) in deﬂagrations,
+translates into a weaker bound on the ratio αN = ǫ/(aNT 4
+N) as αN > α+.
+An upper limit on αN will be important later on to set an upper limit on η. How large
+can αN be for a ﬁxed wall velocity? From α+ < 1/3 we get the upper bound αN < ω+/(3ωN)
+3In spite of appearances, this happens even for very low values of the starting v(ξ) due to the improper-
+node nature of the point (cs, 0) (see discussion above).
+12
+
+---PAGE BREAK---
+and the ratio ω+/ωN cannot be made arbitrarily large. Inspection of the deﬂagration proﬁles
+in Fig. 2 shows that ω+/ωN will be maximized by the case with strongest shock-front, which
+corresponds to the highest possible v(ξw), that is, v(ξw) = ξw. In the wall frame this gives
+v+ = 0 and, using the matching conditions (9), this case also has ω−→0, i.e. a−T 4
+−→0.
+Physically this would represent a limiting case for which the transition is such that the broken
+phase inside the bubble is empty: the plasma is swept away by the wall (thus leading to the
+strongest possible shock-front) and larger values of η cannot be realized microscopically. The
+same matching conditions also give us ω+ →4ǫ, which represents a ﬁxed upper bound for ω+.
+Going now to the shock rest frame and matching there one gets ωN = ωshc2
+s(1−ξ2
+sh)/(ξ2
+sh−c4
+s).
+The quantities ωsh and ξsh can be obtained once the boundary condition v(ξw) = ξw is ﬁxed
+and lead to the minimal value of ωN.
+The resulting upper bound on αN can be ﬁtted
+numerically as a function of the wall velocity, and one gets
+αmax
+N
+|deﬂa. ≃1
+3
+1
+(1 −ξw)−13/10 ,
+(38)
+as derived in Appendix A.
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+ξ
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+v(ξ)
+αN = 0.3
+Figure 5: Fluid velocity proﬁles (in the plasma rest frame) for deﬂagrations, hybrids and detona-
+tions, for diﬀerent wall velocities and αN = 0.3.
+3.3
+Hybrids
+From the previous discussion of velocity jumps it is clear that it should be possible to com-
+bine detonation and deﬂagration solutions into a new velocity proﬁle that is a superposition
+of both types (thus the name hybrid), provided the wall is supersonic. In fact, it is known
+from hydrodynamics simulations [19] that supersonic deﬂagrations are not stable but develop
+a rarefaction wave, identical to the detonation proﬁle discussed earlier. A pictorial repre-
+sentation of a typical hybrid bubble is depicted in Fig. 3, central plot. The corresponding
+13
+
+---PAGE BREAK---
+velocity proﬁle is shown in Fig. 4, middle left plot. Applying the hydrodynamic constrains
+for deﬂagration and detonation solutions we have (see ﬁg. 1) µ (ξw, v(ξ−
+w)) = v−≥c−
+s and
+µ (ξw, v(ξ+
+w)) = v+ ≤c+
+s . On the other hand, entropy considerations enforce v−≤c−
+s , so
+that the rarefaction wave has to be of Jouguet type, with v−= c−
+s .
+Therefore in these hybrid solutions the wall velocity ξw is not identiﬁed with either v+
+or v−, and the phase transition front is followed by a rarefaction wave of Jouguet type
+(ξw > v−= c−
+s > v+) and is preceded by a shock front. Typical enthalpy and entropy
+proﬁles are shown in the middle right plot of Fig. 4. As the wall velocity increases, the
+deﬂagration part of the solution becomes thinner, and eventually disappears, as shown in
+Fig. 5.
+0.4
+0.6
+0.8
+1
+ξw
+0
+0.2
+0.4
+0.6
+0.8
+1
+v+
+v-
+ξsh
+α+/αN
+deflagration
+hybrid
+detonation
+αΝ = 0.1
+Figure 6: The ﬂow velocities in the wall frame, v+ and v−, the velocity of the shock front ξsh and
+the ratio α+/αN as a function of the wall velocity (for αN = 0.1).
+In summary, one obtains the following picture. For subsonic wall velocities, the bubble
+expansion proceeds in general by deﬂagrations. If for constant αN the wall velocity is in-
+creased beyond the velocity of sound, the ﬂow proﬁle develops a rarefaction wave. If the wall
+velocity is further increased, the shock becomes thinner until it completely vanishes and the
+bubble expansion proceeds by a Jouguet detonation. When the shock front vanishes, some
+of the quantities right in front of the wall experience a jump, namely the temperature T+,
+the ﬂow velocity v+ and also α+ as illustrated in Fig. 6. Beyond this point the solutions are
+given by weak detonations (v−> c−
+s ). The hybrid solutions then ﬁll the gap of wall velocities
+between Jouguet deﬂagrations and Jouguet detonations [19], as seen in Fig. 7 which gives
+the maximal ﬂow velocity in the plasma rest frame as a function of the wall velocity ξw for
+ﬁxed values of αN. For deﬂagrations and hybrids the maximal ﬂow is in front of the wall
+while for detonations it is behind it. Notice that, in the transition from hybrids to detona-
+tions, the maximal ﬂow velocity jumps without a gap in ξw. The whole ﬂow proﬁle can be
+14
+
+---PAGE BREAK---
+0
+0.2
+0.4
+0.6
+0.8
+1
+ξw
+0
+0.2
+0.4
+0.6
+0.8
+1
+v(ξ)
+deflagrations
+detonations
+hybrids
+0.01
+0.03
+0.1
+0.3
+1
+3
+0.01
+0.03
+0.1
+0.3
+1
+3
+Figure 7: The maximal ﬂow velocity in the plasma rest frame as a function of the wall velocity
+and several values of αN, as indicated by the labels of each curve.
+reconstructed using Fig. 2.
+4
+Eﬃciency coeﬃcients
+In the following we present the analysis of the eﬃciency coeﬃcient κ (the ratio of bulk kinetic
+energy to vacuum energy) following ref. [6,17,5]. Steinhardt argued in his seminal work [7]
+that the relative plasma velocity behind the wall should just be given by the speed of sound,
+v−= c−
+s . Using this piece of information in eq. (19) gives immediately
+ξw = ξJ ≡
+p
+α+(2 + 3α+) + 1
+√
+3(1 + α+)
+(Jouguet detonations),
+(39)
+and
+κ ≃
+√αN
+0.135 + √0.98 + αN
+(Jouguet detonations).
+(40)
+Notice that this diﬀers from the result in ref. [5] due to our diﬀerent deﬁnition of the eﬃciency
+factor κ [see discussion after eq. (30)].
+As already mentioned, the Jouguet condition turns out to be unrealistic in cosmological
+phase transitions [19], and therefore one needs to rederive a formula for κ that supersedes
+eq. (40). In the next section we will discuss how to relate the two velocities in the plasma
+v+ and v−(which is equivalent to the determination of the bubble wall). Knowing the wall
+15
+
+---PAGE BREAK---
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+ξw
+10
+-2
+10
+-1
+1
+ κ 
+αN = 0.01
+0.03
+0.1
+0.3
+1
+3
+10
+deflagrations
+hybrids
+detonations
+Figure 8: The eﬃciency coeﬃcient κ as a function of the wall velocity ξw for ﬁxed αN.
+The
+dashed and dashed-dotted lines mark the transitions from deﬂagrations to hybrids and further to
+detonations. The dashed-dotted line corresponds to Jouguet detonations (the only case used in
+the literature, although with a missing 1/ξ3
+w factor). Analytical ﬁts for κ(αN, ξw) are provided in
+Appendix A.
+velocity ξw and the parameter α+ (or αN) the velocity proﬁle is determined and κ can be
+calculated using eq. (30) independently from further assumptions on friction and microscopic
+physics in the plasma close to the wall (which are relevant to ﬁx ξw).
+The results are shown in Fig. 8 which gives κ as a function of the wall velocity for
+several values of the vacuum energy αN. Note also that for large values of αN, small wall
+velocities are impossible, see Fig. 7 and the discussion about deﬂagrations in Sec. 3. The
+eﬃciency increases with αN and is maximal for the hybrid solutions. Nevertheless, according
+to numerical simulations, the detonation solutions are the only supersonic modes that are
+globally stable for small values of αN and realistically the maximal eﬃciency corresponds
+to the Jouguet case in this regime.
+The gravity wave literature focused on the Jouguet
+detonations (dashed-dotted line) and hence overestimated the eﬃciency κ.
+However, we
+stress that this eﬀect is mostly compensated by the missing factor ξ3
+w in the formula of κ(α)
+we mentioned before. In appendix A, we give ﬁts to the eﬃciency κ shown in Fig. 8 as a
+function of the parameters αN and ξw.
+Finally, it is interesting to estimate the thickness of the plasma shell near the bubble
+wall where the kinetic energy in the plasma is concentrated (as this is relevant for GW
+production). In Fig. 9 we give the thickness ∆ξ of a shell around the transition wall such
+that it contains a given fraction of the kinetic energy, ∆κ/κ, as indicated. For each type
+of bubble we choose the shell so as to maximize that fraction. That is, for detonations the
+shell is (ξw, ξw −∆ξw); for deﬂagrations (ξw −∆ξw, ξw) and in-between for hybrids. The
+dots in each line mark the boundaries between diﬀerent regimes (deﬂagrations, hybrids and
+detonations, in order of increasing wall velocity). We see that, especially for hybrid solutions,
+16
+
+---PAGE BREAK---
+0.2
+0.4
+0.6
+0.8
+1
+ξw
+0
+0.1
+0.2
+∆ξ / ξw
+αN = 1
+αN = 0.1
+∆κ/κ = 0.5
+∆κ/κ = 0.9
+Figure 9: Curves with a ﬁxed fraction of kinetic energy ∆κ/κ in a shell of thickness ∆ξ for
+αN = 0.1 and αN = 1 as a function of the wall velocity ξw. The lower black (upper brown) lines
+denote ∆κ/κ = 0.5 (∆κ/κ = 0.9). The dots in each line mark the boundaries between diﬀerent
+regimes (deﬂagrations, hybrids and detonations, in order of increasing wall velocity).
+the kinetic energy is localized in the shock, which can be rather thin in this case. For weaker
+deﬂagrations, the shock is thicker. For detonations, part of the kinetic energy is always in
+the tail of the rarefaction wave.
+In the limit of ultra-relativistic wall velocities (ξw →1) the velocities v± approach 1 with
+a relative slope v+/v−that depends on α+ (see Fig. 1). Generically, the ﬂuid velocity will
+not be ultra-relativistic in the plasma frame and the bubbles will expand as detonations (see
+Fig. 2). Expanding (21) in powers of 1/γ± one gets
+γ2
++
+γ2
+−
+= 1 + 3αN ,
+v(ξw) = µ(v+, v−) =
+3αN
+2 + 3αN
+,
+(41)
+where we have used α+ = αN as we are in the regime of detonations. This relativistic case
+requires r = 1/(1 + 3α+), which translates into p+ −p−= 2ǫ. Numerically, the resulting
+eﬃciency in this limit is given by
+κ ≃
+αN
+0.73 + 0.083√αN + αN
+(relativistic ξw).
+(42)
+This result is relevant for the analysis of the case of runaway walls in section 6.
+5
+Bubble wall velocity for steady state walls
+When a bubble of the broken phase is nucleated, and is large enough to start growing, it
+will expand in an accelerated way, with the diﬀerence in free-energy across its wall acting as
+17
+
+---PAGE BREAK---
+driving force. There is however a resistance to this expansion from the surrounding plasma,
+which exerts a friction force that grows with the velocity of the moving wall. Eventually, an
+equilibrium between these two forces is reached after a short time of expansion and, since
+then on, the bubble wall keeps expanding in a steady state at a constant terminal velocity.
+As explained in the last sections, hydrodynamics alone cannot be used to determine this
+terminal wall velocity and one has to analyze the mechanism of entropy production and
+friction in the wall.
+5.1
+EoM for the Higgs ﬁeld and the friction parameter η
+We take into account entropy production and friction through the equation of motion of the
+Higgs ﬁeld
+□φ + ∂V0
+∂φ +
+X
+i
+dm2
+i
+dφ
+Z
+d3p
+(2π)32Ei
+fi(p) = 0 .
+(43)
+By decomposing
+fi(p) = f eq
+i (p) + δfi(p) ,
+(44)
+where f eq
+i
+= 1/[exp (Ei/T) ∓1] is the equilibrium distribution function of particle species
+i with E2
+i = p2 + m2
+i , eq. (43) takes the simple form (see also ref. [16] and more recently
+ref. [26])
+□φ + ∂F
+∂φ −K(φ) = 0 ,
+(45)
+where the second term gives the force driving the wall and K(φ) stands for the friction term
+K(φ) = −
+X
+i
+dm2
+i
+dφ
+Z
+d3p
+(2π)32Ei
+δfi(p) .
+(46)
+Friction is therefore due to deviations of particle distributions from equilibrium. In prin-
+ciple, calculation of K(φ) requires solving a coupled system involving Boltzmann equations
+for particle species with a large coupling to the Higgs ﬁeld. This intricate calculation has
+been performed in the Standard Model [15] and in the MSSM [20] and under the assumption
+that the deviation from thermal equilibrium is small, i.e. δfi(p) ≪fi(p), which is only true
+for weakly ﬁrst-order phase transitions.
+In this paper, we want to follow a more phenomenological and model-independent ap-
+proach. In refs. [16,26] a particularly simple choice for K(φ) was used:
+K(φ) = TN ˜η uµ∂µφ ,
+(47)
+(where TN is inserted just to make ˜η dimensionless). This Lorentz invariant choice is mo-
+tivated by similar approaches in the inﬂationary context but, as we will see in the next
+section, it does not lead to the correct behavior for highly relativistic bubble wall velocities:
+this friction force could increase without bounds, due to the γ factor appearing through
+uµ∂µφ, but we know from ref. [27] that at large wall velocities the friction term approaches
+a constant (see next section).
+Friction comes from out-of-equilibrium eﬀects and the assumption that it depends lo-
+cally only on the plasma four-vector uµ and a Lorentz scalar η is too simplistic. In our
+18
+
+---PAGE BREAK---
+phenomenological approach we ensure that the friction force grows with v and not γv. Such
+behavior could arise from a friction term in the Higgs equation of motion of the form
+K(φ) = TN ˜η
+uµ∂µφ
+p
+1 + (λµuµ)2 ,
+(48)
+where the Higgs background is parametrized by a four-vector λµ [such that φ(λµxµ) and λµ
+is (0, 0, 0, 1) in the wall frame]. One can show that the entropy production from such a term
+is always positive, as it should be.
+Assuming then that in the steady state the bubble is large enough so that we can use
+the planar limit, using (48) in eq. (45) we get, in the wall frame,
+∂2
+zφ −∂F
+∂φ = −TN ˜ηv∂zφ ,
+(49)
+where z is the direction of the wall velocity. Note that the right-hand side would be multiplied
+by γ if we use (47) instead of (48). If we multiply this diﬀerential equation by ∂zφ on both
+sides and integrate across the wall, we get
+Z
+dz ∂zφ ∂F
+∂φ = TN ˜η
+Z
+dz v (∂zφ)2 .
+(50)
+The integration of the force term could be simply performed if the free energy F did not have
+an implicit dependence on z via the change in the temperature, T(z), with T(±∞) = T±.
+Using dF/dz = (∂F/∂φ)∂zφ + (∂F/∂T)∂zT, one can rewrite the driving force of the bubble
+expansion as:
+Fdr ≡
+Z
+dz ∂zφ ∂F
+∂φ = F|+
+−−
+Z
+dz ∂zT ∂F
+∂T ,
+(51)
+and, using ǫ± and a(z) as deﬁned in eqs. (16) and (17), one gets, without making assumptions
+on the plasma equation of state:
+Fdr = ǫ+ −ǫ−−1
+3
+Z
+da T 4 .
+(52)
+By making further use of the deﬁnition of a(z) and assuming that the distribution functions
+for particle species are the equilibrium ones one can rewrite eq. (52) as
+Fdr = ∆V0 +
+X
+i
+|Ni|
+Z
+dzdm2
+i
+dz
+Z
+d3p
+(2π)3
+f eq
+i
+2Ei
+,
+(53)
+where ∆V0 is the T = 0 part of ǫ+ −ǫ−, that is, the diﬀerence in (T = 0) potential energy
+between the symmetric and broken minima (ǫ, for the bag equation of state). This expression
+for the driving force will be useful in sect. 6.
+Notice that this force does not coincide with the latent heat Λ, given by
+Λ ≡e+ −e−=
+ ǫ + a T 4+
+−.
+(54)
+nor with the free energy (pressure) diﬀerence
+∆F ≡p−−p+ =
+
+ǫ −a
+3 T 4
++
+−.
+(55)
+19
+
+---PAGE BREAK---
+Using the fact that the number of eﬀective degrees of freedom decreases continuously in the
+wall, the last integral in (52) is bounded as
+1
+3(a+ −a−)T 4
+min ≤1
+3
+Z
+da T 4 ≤1
+3(a+ −a−)T 4
+max ,
+(56)
+where Tmin = Min{T−, T+} and Tmax = Max{T−, T+}.
+For weak phase transitions one
+typically has T+ ≈T−and the concrete choice of the proﬁles in the wall are not important.
+For very strong phase transitions, the free energy is dominated by the vacuum contribution
+and the plasma contribution is rather small altogether:
+Fdr ≈∆F
+≈
+ǫ+ −ǫ−−(a+ −a−)T 4
+3
+(for weak phase transitions)
+(57)
+Fdr ≈∆F ≈Λ
+≈
+ǫ+ −ǫ−
+(for strong phase transitions)
+(58)
+For simplicity, let us approximate the integral in eq. (56) by the expression involving T+.
+For other approximations the results would not change qualitatively. In this case, the Higgs
+equation of motion gives
+α+ −1
+3
+
+1 −a−
+a+
+
+= ˜ηTN
+a+T 4
++
+Z
+dz v (∂zφ)2 .
+(59)
+In the SM, the second term in (59) is roughly (1 −a−/a+)/3 = 0.05. For small values of α+
+the left hand side of (59) is negative and no bubbles can nucleate (for nucleation one can
+consider T+ = T−, in which case Fdr = F+ −F−, so that the wrong sign of the free-energy
+diﬀerence is the reason that prevents the phase transition). For larger values of α+, the
+left-hand side of the equation is positive and has to be balanced by the friction force so as
+to obtain a constant wall velocity, as already explained. We will rewrite the right hand side
+of (59) as
+˜ηTN
+a+T 4
++
+Z
+dz v (∂zφ)2 ≡η α+
+αN
+⟨v⟩,
+(60)
+which serves as the deﬁnition of η. Here ⟨v⟩denotes the ﬂuid velocity average across the
+wall (in the wall frame), that we approximate as
+⟨v⟩≡
+R
+dz v (∂zφ)2
+R
+dz (∂zφ)2
+≃1
+2(v+ + v−) .
+(61)
+In this way, (59) is simply written as4
+α+ −1
+3
+
+1 −a−
+a+
+
+= η α+
+αN
+⟨v⟩.
+(62)
+Eq. (62) reproduces the correct behavior for small and very large wall velocities, even
+though the parameter η will not be the same in these two limits. This simple phenomenolog-
+ical approach already reproduces almost all qualitative features found in the hydrodynamic
+4Compared to ref. [26], our velocity average does not include a γ factor and we use a diﬀerent expression
+for the driving force.
+20
+
+---PAGE BREAK---
+simulations performed in ref. [16]. Notice that the right hand side of (59) is an increasing
+function of the wall velocity (since v+ and v−are, see also Fig. 6). On the other hand, the
+left hand side of the equation is decreasing for small velocities and jumps when the ﬂow
+solutions change from deﬂagrations to detonations (also the velocity v+ jumps but this is
+less essential). Hence, for a certain range of values of the friction coeﬃcient η, eq. (59) has
+two solutions while in ref. [16] three solutions were found. The discrepancy is due to the
+fact that we neglect the thickness of the wall compared to the shock and this would smooth
+out the jumps in v+ and α+/αN, thus producing a third solution. The three solutions would
+in the present model then be a deﬂagration (or a hybrid solution), a weak detonation and a
+conﬁguration close to a Jouguet detonation, in agreement with the results found in ref. [16].
+Finally, at the critical temperature at which the two phases have degenerate free energy,
+one expects that the gravitational wave signal vanishes.
+However, an analysis using the
+Jouguet condition still implies supersonic bubble expansion. This led to the fact that the
+diﬀerence in free energy is often confused with the vacuum energy ǫ in the literature on
+gravitational wave production that is based on the Jouguet condition. Replacing the Jouguet
+condition by the equation of motion (EoM) of the Higgs ﬁeld solves this problem consistently,
+since at the critical temperature one obtains αN = (1−a−/a+)/3 and, according to equation
+(62), the bubble cannot expand.
+5.2
+Wall velocity in the (η, αN) plane
+A fully numerical calculation of ⟨v⟩in a given model would require the following proce-
+dure. The starting point is the computation of the free-energy (in some approximation) as
+a function of the Higgs ﬁeld and the temperature, F(φ, T) = −p. First, the nucleation tem-
+perature TN of the phase transition should be determined (this is standard). To obtain the
+steady-state proﬁles across the phase-transition wall in the planar limit of quantities like the
+velocity, temperature and Higgs ﬁeld, one should integrate the following system of coupled
+diﬀerential equations:
+∂2
+zφ −∂F
+∂φ + TN ˜ηv∂zφ = 0 ,
+∂z[ωγ2v] = 0 ,
+∂z
+1
+2(∂zφ)2 + ωγ2v2 + p
+
+= 0 .
+(63)
+In addition to the ﬁrst Higgs equation which we already discussed, the two extra equations
+correspond to the diﬀerential (and static) form of energy-momentum conservation. Their
+integration across the wall gives immediately the Steinhardt’s matching conditions (9).
+One wants to solve the system (63) for the primary quantities φ(z), T(z) and v(z). The
+boundary conditions for φ(z) are
+φ(−∞) = φ0(T−)
+and
+φ(∞) = 0,
+(64)
+where φ0(T−) is the Higgs vacuum expectation value in the broken phase at some temperature
+T−to be determined. The z = ±∞boundaries correspond to the assumption that the width
+of the phase transition front is much smaller than the width of the shell with non-zero
+21
+
+---PAGE BREAK---
+0.01
+0.1
+1
+10
+ η
+0.1
+1
+10
+ αN
+κ  (detonations)
+runaway
+no detonations
+0.2
+0.3
+0.5
+0.4
+0.7
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.6
+0.8
+0.01
+0.1
+1
+10
+ η
+0.1
+1
+10
+ αN
+ξw (detonations)
+runaway
+no detonations
+0.75
+0.8
+0.9
+0.85
+0.95
+0.01
+0.1
+1
+10
+ η
+0.1
+1
+10
+ αN
+κ  (deflagrations)
+0.003
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.01
+0.03
+0.1
+0.2
+no solutions
+no deflagrations
+0.01
+0.1
+1
+10
+ η
+0.1
+1
+10
+ αN
+ξw  (deflagrations)
+0.003
+0.3
+0.4
+cs
+0.01
+0.03
+0.1
+0.2
+0.5
+no solutions
+0.7
+0.8
+0.9
+no deflagrations
+0.6
+0.95
+Figure 10: Contour plots of κ and ξw as functions of η and αN (for a−/a+ = 0.85). The blue lines
+mark the transition to regions without solutions. The green lines mark the boundaries between
+stationary and runaway solutions. The red lines mark the transition from subsonic to supersonic
+deﬂagrations (hybrids). We superimposed the detonation region in the lower plots as a gray band.
+plasma velocity, which in general is a very good approximation. For ˜η ﬁxed, the boundary
+conditions (say at z = −∞) for T(z) and v(z) cannot be chosen freely: e.g. if one ﬁxes
+T(+∞) = T+ (in general diﬀerent from TN) only one particular v(+∞) = v+ is selected
+and then all proﬁles φ(z), T(z), v(z) can be determined. Detonation solutions will have
+v(+∞) = v+ = ξw > v(−∞) = v−and one should choose T(+∞) = TN. Deﬂagrations
+22
+
+---PAGE BREAK---
+will have instead v+ < v−= ξw and T(+∞) = T+ has to be set consistently with such wall
+velocity (and corresponding deﬂagration hydrodynamic proﬁle). Finally, hybrid solutions
+have v+ < v−= c−
+s . Their wall velocity, ξw > c−
+s is not ﬁxed unequivocally by v± but
+should match the choice of T+. Our analytical formula (62) is expected to give a reasonable
+approximation to the more complicated numerical approach just described.
+Such simple
+formula is very useful to investigate in a model-independent way the parametric dependences
+of the wall velocity (and derived quantities) in diﬀerent regimes of bubble expansion, which
+we do next.
+Armed with eq. (62) we can calculate the wall velocity for given values of αN (that
+measures the strength of the transition) and η (that measures the friction of the plasma).
+The results are shown in Fig. 10, which plots contour lines of the wall velocity ξw and the
+eﬃciency coeﬃcient κ in the plane (η, αN), for the particular case of a−/a+ = 0.85 (as in
+the SM). Let us ﬁrst explain the diﬀerent boundaries of the parameter space available in
+the plane (η, αN). For the bubbles to be able to grow, the left hand side of (62) should
+be positive.
+This requires α+ > (1 −a−/a+)/3 which, in this particular example, gives
+αN ≥α+ > 0.05. Both the low horizontal boundary (αN > 0.05) and the boundary at larger
+αN and small η come from this requirement. That bubbles might not be able to grow even
+if the transition is in principle quite strong (large αN) is due to the fact that one can have
+α+ ≪αN for hybrid solutions (see ﬁgs. 6 and 14). The boundary at αN > 1/3 and large
+η corresponds to the extreme case with v+ →0 and T−→0 and determines the maximal
+possible value of the friction coeﬃcient for a given αN. We have plotted separately the cases
+of detonations and deﬂagrations. Runaway solutions are realized for strong transitions and
+small friction as one would expect. We see that for weak phase transitions and small friction,
+deﬂagrations compete with detonations (superimposed in the lower plots as a gray band).
+In the overlapping region, the wall velocity for the deﬂagration solution is always smaller
+than for the detonation solution, which could have indicated that the deﬂagration solution
+is reached ﬁrst and is therefore realized. However, hydrodynamic simulations indicate that
+these solutions turn out to be unstable globally and in this regime the phase transition
+proceeds by detonation bubbles [19] (or eventually by runaway behavior if the upper bound
+on friction would be incorporated in the model).
+Henceforth, the only way of realizing
+supersonic deﬂagrations is in a regime where hybrids but no detonations are possible [19].
+5.3
+Microscopic determination of η
+In the following we provide the connection of our results to the work [15, 20] in which the
+friction in the wall was explicitly calculated in the SM and MSSM5. The friction force in
+ref. [20] is of the form
+Ffr = ˆη ⟨v⟩TN
+Z
+dz φ2 (∂zφ)2,
+(65)
+where ˆη is a constant that depends mostly on the particle content of the model and its
+couplings to the Higgs. φ(z) = 1
+2φN[1 + tanh(z/lw)] where lw is the wall thickness and φN
+is the Higgs vev at nucleation temperature. Comparison with our friction force shows that
+5We consider those results more reliable than the ones of refs. [28,26] which deduce particle distribution
+functions δf without taking interactions into account.
+23
+
+---PAGE BREAK---
+our parameter η can be written as
+η ∼
+ˆη
+10 a+
+1
+TNlw
+φN
+TN
+4
+(66)
+The coeﬃcient ˆη was determined in the SM [15] (ˆη ≈3) and in the MSSM [20] (ˆη ≲100 with
+a sizable dependence on tan β). A particularly interesting case is given by the parameter
+region of the MSSM that allows for viable electroweak baryogenesis. The bound on sphaleron
+wash-out implies φN/TN ≳1 and using TNlw ≈10, ˆη ≈100 one ﬁnds η ≈1/30. Due to a
+small diﬀerence in free energies, this leads to subsonic wall velocities ⟨v⟩= 0.05 ÷ 0.1 [20]
+as required for the diﬀusion of CP-violating particle densities into the symmetric phase in
+front of the wall. This corresponds to a very weak phase transition with a value of αN just
+slightly above its lower bound (that depends on a−/a+). Note that for models with a similar
+particle content the friction η is not expected to change much, while the strength of the
+phase transition can increase signiﬁcantly. This is for example the case in singlet extensions
+of the SM and MSSM which can easily lead to detonations or runaway solutions.
+In this section we have assumed that the bubble wall reaches at some (not too late) stage
+of the expansion a constant velocity. In this case the fraction of energy transformed into
+kinetic energy of the Higgs ﬁeld becomes negligible, since it only scales with the surface of
+the bubble, while the similarity solutions of bulk motion scale with the volume. This can
+change in cases in which the wall keeps accelerating without reaching a terminal velocity, as
+discussed in the next section.
+6
+Runaway walls
+It was recently argued [27] that the friction exerted on the Higgs wall by the plasma might
+be too small and the wall might continuously accelerate. In this case a constant fraction of
+the free vacuum energy is transformed into kinetic and gradient energies of the wall. In this
+section we analyze the energy balance and the eﬃciency coeﬃcient in this situation.
+Let us ﬁrst quickly present the main result of [27] that is based on the analysis of refs. [29–
+31]. The passing phase-transition wall disturbs the distribution functions of particles in the
+plasma. As discussed in the previous section, if we knew such non-equilibrium distributions,
+fi(p, z), for each particle species, we could write, for the total force acting on the wall per
+unit area and including friction:
+Ftot = Fdr −Ffr = ∆V0 +
+X
+i
+|Ni|
+Z
+dzdm2
+i
+dz
+Z
+d3p
+(2π)3
+fi
+2Ei
+.
+(67)
+This has the same form as eq. (53) for the driving force Fdr but with the replacement f eq
+i
+→fi.
+Now, the ultra-relativistic case is particularly simple: to leading order in 1/γw, the wall
+induces a sudden change in particle masses, m2
+i,+ →m2
+i,−, but leaves particle distribution
+functions as they were in the symmetric phase fi = f eq
+i,+ (which are not the equilibrium ones
+in the broken phase). This allows the z-integral in (67) to be performed and one obtains
+Ftot = ∆V0 −
+X
+i
+|Ni|∆m2
+i
+Z
+d3p
+(2π)3
+f eq
+i,+
+2Ei,+
+,
+(68)
+24
+
+---PAGE BREAK---
+where ∆m2
+i = m2
+i |−
++ and Ei,+ in the momentum integral is also the one corresponding to the
+symmetric phase, as indicated.
+If Ftot remains positive even for v →1, the system will enter the runaway regime. Besides
+the explicit form (68), this condition can be rephrased in terms of the free energies in the
+mean ﬁeld approximation [27]. Notice that the mean ﬁeld approximation implies
+⟨VT(φ)⟩MF = VT(0) +
+X
+i
+[m2
+i (φ) −m2
+i (0)] dVT
+dm2
+i
+
+0
+,
+(69)
+such that
+
+V −
+T
+
+MF =
+
+V +
+T
+
+MF +
+X
+i
+∆m2
+i
+dVT
+dm2
+i
+
++
+,
+(70)
+and the criterion for runaway behaviour reads
+0 < Ftot =
+
+F + −F −
+MF .
+(71)
+The results we just summarized can be interpreted as saying that the friction Ffr (which
+we expect to increase monotonically with v) saturates at a ﬁnite value6 for v →1. A sketch
+for this behavior is given in Fig. 11. Noting that the driving force is given by
+Fdr = F −−F +,
+(72)
+then the maximal value for the friction force reads (⟨F +⟩MF = F +)
+F max
+fr
+=
+
+F −
+MF −F −=
+
+V −
+T
+
+MF −V −
+T
+(73)
+Using the convexity properties of the diﬀerent contributions to VT one can show that F max
+fr
+is necessarily positive.
+If ⟨F + −F −⟩MF > 0, then Fdr < F max
+fr
+, and the wall velocity will grow till the friction
+force equilibrates Fdr and a steady state with some terminal velocity is reached.
+In the
+opposite case with ⟨F + −F −⟩MF < 0, one has Fdr > F max
+fr
+and the wall will keep accelerating
+without reaching a steady state, i.e. it will “run-away”. The crucial assumptions here are
+that there are no hydrodynamic obstacles that prohibit the wall velocities to become highly
+relativistic in the ﬁrst place, and that the mean free-path of the particles is larger than the
+wall thickness.
+It is instructive to rederive the results of ref. [27] we have just presented in the language
+of Kadanoﬀ-Baym equations (see refs. [32] for an introduction to Kadanoﬀ-Baym equations
+in Wigner space). In this formalism, the Wightman function G<
+i (for particle species i) is the
+relevant Green function that encodes the distribution function of the particles in the plasma.
+Under the assumption that the mean free-path of the particles that obtain a mass by the
+Higgs vacuum expectation value is much larger than the thickness of the bubble wall, one
+can neglect collisions in the wall. In this case the Kadanoﬀ-Baym equation for the Wightman
+function G<
+i reads
+(p2 −m2
+i ) ei⋄/2 G< = 0,
+(74)
+6Up to a possible logarithmic increase with log γw (we thank Guy Moore for clariﬁcations on this point).
+25
+
+---PAGE BREAK---
+0
+0.5
+1
+1.5
+2
+2.5
+< γ v >
+Ffr
+Ffr
+max
+?
+state
+runaway
+steady
+Figure 11: A sketch of the friction force as a function of the wall velocity showing the saturation
+at ⟨v⟩→1. The behavior for intermediate velocities is largely unknown. The arrows indicate two
+possible values for the driving force that would lead to steady or runaway bubble expansion, as
+indicated.
+where the diamond operator is deﬁned as
+⋄= ←−∂x
+−→∂p −←−∂p
+−→∂x.
+(75)
+In the semi-classical limit, the operator ei⋄/2 can be expanded in gradients and the real/imaginary
+parts of the equations become, at ﬁrst order,
+(p2 −m2
+i )G<
+i
+=
+0,
+(76)
+(p2 −m2
+i ) ⋄G<
+i
+=
+0.
+(77)
+The gradient expansion is justiﬁed in the present case because in the wall frame the particles
+have momenta of order γT, which is large compared to the inverse wall thickness. Using the
+ansatz
+G<
+i = 4π δ(p2 −m2
+i )fi(xµ, pµ) ,
+(78)
+this yields for the particle distribution function the equation
+
+p · ∂x + 1
+2(∂ζm2
+i )λ · ∂p
+
+fi(xµ, pµ) = 0.
+(79)
+We introduced again a four-vector λµ to parametrize the motion of the wall [that is, λµ =
+(0, 0, 0, 1) in the frame moving with the wall] and ζ ≡λ·x. Notice that the ﬁrst term in (79)
+is the ﬂow term of a Boltzmann equation while the second term represents the force from
+the wall acting on the plasma. In front of the wall the distribution function is given by the
+equilibrium one. E.g., for a bosonic degree of freedom
+f eq
+i,+ =
+θ(p0)
+exp[β(u · p)] −1 ,
+(80)
+26
+
+---PAGE BREAK---
+where uµ is the plasma velocity four-vector. Solving eq. (79) the distribution function behind
+the wall reads (with ∆m2
+i as before)
+fi =
+θ(p0)
+exp β Ωi −1,
+(81)
+with
+Ωi = u · p + u · λ
+
+λ · p −sign(λ · p)
+q
+(λ · p)2 + ∆m2
+i
+
+.
+(82)
+In the wall frame this yields
+Ωi = γp0 −γv
+q
+p2
+z + ∆m2
+i .
+(83)
+This is in accord with the results of [27] and our previous discussion: in the wall frame the
+particles just cross the wall and change their momentum according to
+p2
+z →p2
+z −∆m2
+i .
+(84)
+The contribution of particle species i to the pressure behind the wall is (in the wall frame
+and per degree of freedom) given by
+δiT plasma
+zz
+=
+Z
+d4p
+(2π)4 p2
+z G<
+i
+=
+2
+Z
+d4p
+(2π)3δ(p2 −m2
+i,−) p2
+z fi
+≈
+2
+Z
+d4p
+(2π)3δ(p2 −m2
+i,+) pz
+q
+p2
+z −∆m2
+i sign (pz) θ(p2
+z −∆m2
+i ) f eq
+i,+,
+(85)
+where the last line is obtained by shifting the integration variable as in (84) and noting
+that the measure dpz pz does not change. Hence, for the pressure diﬀerence produced by the
+plasma this gives
+δi∆Tzz
+≈
+∆m2
+i
+Z
+d4p
+(2π)3δ(p2 −m2
+i,+)f eq
+i,+
+=
+∆m2
+i
+Z
+d3p
+(2π)3 2E f eq
+i,+,
+(86)
+which agrees with the formula obtained in ref. [27].
+In terms of ∆Tzz, the criterion for
+runaway solutions is very transparent and is simply
+ǫ > ∆Tzz =
+X
+i
+δi∆Tzz.
+(87)
+In this case, only a part of the available vacuum energy is released into the plasma and the
+remaining energy is used to further accelerate the wall.
+This criterion for runaway behavior can be reformulated in terms of parameters of the
+phase transition in case it is rather strong. For particles that are light in both phases, the
+27
+
+---PAGE BREAK---
+contribution to the pressure is similar in both phases.
+Particles that are heavy in both
+phases do not contribute much to either pressure diﬀerence or free energy. Hence, mostly
+the particles that become heavy during the phase transition produce a pressure diﬀerence
+along the wall. Using this, one obtains for an accelerated wall the criterion
+∆Tzz = T 2
+N
+24
+X
+light→heavy
+ci |Ni| m2
+i = T 2
+N
+24 ⟨φ⟩2
+X
+light→heavy
+ci |Ni| y2
+i < ǫ ,
+(88)
+with ci = 1 (1/2) for bosons (fermions), |Ni| are the corresponding numbers of degrees
+of freedom, yi are the coupling strengths to the Higgs boson and ⟨φ⟩the Higgs vacuum
+expectation value in the broken phase. Using the relation ǫ = αN(aNT 4
+N) we get that a
+runaway wall is in principle possible for
+αN > α∞≡30
+π2
+⟨φ⟩
+TN
+2 P
+light→heavy ci |Ni| y2
+i
+P
+light c′
+i |Ni|
+,
+(89)
+with c′
+i = 1 (7/8) for bosons (fermions). This equation serves as the deﬁnition of α∞. In
+extensions of the SM, eventually more particles contribute to the pressure diﬀerence, but
+typically not many new light particles are in thermal equilibrium. One hence can deduce
+that for
+αN > 1.5 × 10−2
+⟨φ⟩
+TN
+2
+,
+(90)
+runaway walls are possible depending on the details of the model. It is interesting to note
+that models which lead to sizable gravitational wave production typically satisfy the runaway
+condition and this should be taken into account when calculating the GW signal.
+Next, we make contact with the case of a constant wall velocity, discussed in the last
+section.
+7
+Energy budget of ﬁrst-order phase transitions
+The analysis in the last section assumed that the system was time-independent in the wall
+frame, which leads to the fact that the Higgs ﬁeld only contributes a pressure component
+from the vacuum energy to the energy momentum tensor
+T φ
+zz |+
+−= −ǫ ,
+T φ
+0z |+
+−= 0 .
+(91)
+In a static system these contributions have to be compensated by the plasma and this requires
+T plasma
+zz
+|+
+−= ǫ ,
+T plasma
+0z
+|+
+−= 0 .
+(92)
+Such relations lead to the matching conditions (9) used as boundary conditions in the hydro-
+dynamic analysis of the plasma. In the case of a highly relativistic plasma, these boundary
+conditions can be derived explicitly from the particle distribution functions. Following the
+same calculation as in the previous section, for T plasma
+0z
+one ﬁnds
+T plasma
+zz
+|+
+−= ∆Tzz,
+T plasma
+0z
+|+
+−= 0,
+(93)
+28
+
+---PAGE BREAK---
+0.1
+1
+10
+αN
+0
+0.2
+0.4
+0.6
+0.8
+1
+η = 0.2
+0.1
+1
+10
+αN
+0
+0.2
+0.4
+0.6
+0.8
+1
+η = 1.0
+deflagration
+run-away
+detonation
+deflagration
+detonation
+run-away
+thermal
+bulk
+Higgs
+Higgs
+bulk
+thermal
+Figure 12: The energy budget for η = 0.2 and η = 1.0. The diﬀerent contributions (from top
+to bottom) are thermal energy, bulk ﬂuid motion and energy in the Higgs ﬁeld.
+The last two
+components can potentially produce anisotropic stress in the plasma and subsequently gravity
+waves.
+Hence, in the runaway case, with αN > α∞the solutions for the ﬂuid motion are identical
+to the ones with αN = α∞, according to the distribution functions determined close to the
+wall. At the same time the Higgs ﬁeld cannot be time-independent anymore and energy
+momentum conservation implies that the remaining energy is used to accelerate the wall.
+We observed in section 4 that, in the limit of large wall velocities, the eﬃciency factor
+does not depend on the wall velocity but is given by (42). This means that, in the runaway
+case,
+κ∞≃
+α∞
+0.73 + 0.083√α∞+ α∞
+(runaway).
+(94)
+In summary, in the runaway regime and for given αN, a portion α∞of the initial αN produces
+bulk motion with eﬃciency κ∞, as given by eq. (94), while the remaining portion, αN −α∞,
+is transformed directly into kinetic/gradient energy of the Higgs ﬁeld with eﬃciency κ =
+1.
+These two components can potentially produce anisotropic stress in the plasma and
+subsequently gravity waves while the thermal energy in the plasma can not.
+Figure 12
+shows the energy budget of the phase transition for two choices of the friction coeﬃcient η
+as a function of αN in diﬀerent regimes of bubble expansion.
+8
+Summary
+The bubble wall velocity ξw in ﬁrst-order phase transitions is a key quantity entering the
+calculation of the baryon asymmetry in electroweak baryogenesis and its derivation has been
+discussed extensively in the literature. However, it has been treated in detail only in speciﬁc
+models (corresponding to weak ﬁrst-order phase transitions) and a general account of the
+problem was lacking. In this work, we attempted to gather all the important information
+in a self-consistent manner and in a model-independent approach. We presented a uniﬁed
+29
+
+---PAGE BREAK---
+description of all the diﬀerent regimes characterizing bubble growth and stressed how they
+are connected.
+In the last few years, there has been a signiﬁcant eﬀort towards working out the relic
+gravity wave background generated by bubble collisions. Production of gravity waves during
+a ﬁrst-order phase transition is due to bulk motions in the plasma and magnetic ﬁelds
+generated by these ﬂuid motions. The resulting gravity wave spectrum scales as a large
+power of the typical ﬂuid velocity, roughly as v4. The ﬂuid velocity proﬁle in the vicinity
+of the bubble wall is relevant and it is therefore important to estimate the fraction κ of
+the vacuum energy density ǫ liberated during the phase transition which goes into the ﬂuid
+motions.
+So, ξw and κ are the two salient quantities that one would like to predict for any given
+particle physics model leading to a ﬁrst-order phase transition. The most straightforward
+quantity to compute in a given model is αN, the ratio of the vacuum energy density ǫ to the
+radiation energy density at the nucleation temperature. One would be interested in knowing
+in which regime (detonation, deﬂagration, hybrids, runaway) the given model is expected to
+fall in, without having to deal with the intricate Boltzmann equations. There is a relation
+which has been used extensively in the literature for ξw as a function of αN. Such relation is
+valid for supersonic walls and is based on the assumption of Jouguet detonations. Assuming
+Jouguet detonations amounts to setting the value of the ﬂuid velocity at the inner boundary
+of the velocity proﬁle in the wall frame to the speed of sound. There is no justiﬁcation for
+this choice although it has been used in the literature for simplicity. Setting arbitrarily some
+boundary condition for the velocity leads to inconsistencies and corresponds to ignoring the
+constraints from the equation of motion of the Higgs ﬁeld. By dealing explicitly with that
+Higgs equation, our study goes beyond this assumption.
+The diﬃculty is that the problem under consideration is not fully determined by αN. As
+we elucidated, for a given αN, there are many possible wall velocities and a large range of κ
+values7, as seen in Fig. 8. To ﬁx the solution, one needs to compute the friction term that
+restrains the bubble expansion. There are two approaches to this problem. The rigorous
+(but tedious) treatment requires solving coupled Boltzmann equations. A simpler approach
+is to take the friction as a parameter independent from the bubble wall velocity and solve
+the equation of motion for the Higgs ﬁeld by using some phenomenological description for
+the friction. This is the approach that we took in this paper. It has been adopted in some
+numerical studies [14, 16–19], although the modeling of the friction was not appropriate in
+the limit of large velocities. We now use a more realistic modeling which allows us to describe
+the runaway regime in addition to the steady state regime, eq. (49).
+One of our ﬁnal results has been to present, in Fig. 10, model-independent contours for
+ξw and κ in the η −αN plane, where η and αN are the two crucial physical (dimensionless)
+parameters respectively characterizing the strength of the phase transition and the amount
+of friction. In concrete models, αN and η are not independent parameters. However, we
+believe that the information contained in these plots is useful as it enables to investigate the
+parametric dependence of the wall velocity and the κ factor in diﬀerent regimes and gather
+all the important physics in a single comprehensive ﬁgure. The contour plots are not fully
+model-independent as we have ﬁxed the relative change in the number of relativistic degrees
+7We have also corrected a missing factor 1/ξ3
+w in the deﬁnition of κ which is found in the literature.
+30
+
+---PAGE BREAK---
+of freedom between the two phases but they serve the purpose of describing the qualitative
+behavior of ξw and κ. From our analysis, we obtain that only a small band in the (η, αN)
+plane leads to pure detonations. We also ﬁnd that in a large region of this plane, hybrids
+coexist with runaway solutions, meaning that our time-independent analysis is not suﬃcient
+to ﬁx the solution. According to numerical studies, hybrids are mostly unstable [19]. We
+would therefore conclude that the most likely solutions are either deﬂagrations or runaway
+solutions. We have clariﬁed the condition determining the runaway regime, see eq. (89),
+and found that for values αN ∼O(1) common in the literature, a runaway regime is quite
+likely. Note however than numerical studies have not been carried out in the ultra relativistic
+regime.
+For deﬂagrations and hybrids, a signiﬁcant fraction of the available energy goes into bulk
+ﬂuid motions. On the other hand, for a non-steady state solution, a large fraction of the
+energy goes into accelerating the wall and little goes into bulk ﬂuid motions, as seen in
+Fig. 12. Therefore, and perhaps counterintuitively, we ﬁnd that, in a very strong ﬁrst order
+phase transition, the contribution to the gravity wave spectrum from turbulent ﬂuid ﬂows
+is probably subdominant. While the overall size of the gravity wave signal is essentially
+controlled by the amount of vacuum energy released, i.e.
+by αN, its detailed spectrum
+will depend on how the energy is distributed among the diﬀerent components (wall versus
+plasma). We have therefore provided the relation between the ﬂuid velocity and the bubble
+wall velocity in Fig. 7. In addition, we estimated the thickness of the plasma shell near
+the bubble wall where the kinetic energy in the plasma is concentrated. In all numerical
+calculations of the GW background [4,5,10], it has been assumed for simplicity that all the
+energy was concentrated on the bubble surface and ﬁnite thickness eﬀects were ignored (they
+were instead considered in the analytical approach of [9]). This is a reasonable approximation
+for detonations, although we show that even for supersonic wall velocities, the thickness of
+the plasma shell can reach ∼20% of the bubble size, see Fig. 9.
+Finally, the nature of the electroweak phase transition is unknown and it will take some
+time before we can determine whether electroweak symmetry breaking is purely Standard
+Model-like or there are large deviations in the Higgs sector which could have led to a ﬁrst-
+order phase transition. Although our analysis was implicitly motivated by the electroweak
+phase transition, it could be applicable to other ﬁrst-order phase transitions in the early
+universe.
+Acknowledgment
+We thank Dan Chung for mentioning the mismatch in the diﬀerent deﬁnitions of eﬃciency
+factors to us. J.R.E. and J.M. No thank CERN TH-Division for partial ﬁnancial support dur-
+ing diﬀerent stages of this work. We acknowledge support from the European Commission the
+European Research Council Starting Grant Cosmo@LHC and the Marie Curie Research and
+Training Networks “ForcesUniverse” (MRTN-CT-2006-035863) and ’UniverseNet’ (MRTN-
+CT-2006-035863); by the Spanish Consolider-Ingenio 2010 Programme CPAN (CSD2007-
+00042); the Comunidad Aut´onoma de Madrid under grant HEPHACOS P-ESP-00346 and
+the Spanish Ministry MICNN under contract FPA 2007-60252.
+31
+
+---PAGE BREAK---
+A
+Numerical ﬁts to the eﬃciency coeﬃcients
+In this section we provide ﬁts to the numerical results of section 4. These ﬁts facilitate the
+functions κ(ξw, αN) and α+(ξw, αN) without solving the ﬂow equations and with a precision
+better that 15% in the region 10−3 < αN < 10.
+In order to ﬁt the function κ(ξw, αN), we split the parameter space into three regions
+and provide approximations for the four boundary cases and three families of functions that
+interpolate in-between: For small wall velocities one obtains (ξw ≪cs)
+κA ≃ξ6/5
+w
+6.9αN
+1.36 −0.037√αN + αN
+.
+(95)
+For the transition from subsonic to supersonic deﬂagrations (ξw = cs)
+κB ≃
+α2/5
+N
+0.017 + (0.997 + αN)2/5 .
+(96)
+For Jouguet detonations (ξw = ξJ), as stated in eq. (40)
+κC ≃
+√αN
+0.135 + √0.98 + αN
+and
+ξJ =
+q
+2
+3αN + α2
+N +
+p
+1/3
+1 + αN
+.
+(97)
+And ﬁnally for very large wall velocity, (ξw →1) as stated in eq. (42)
+κD ≃
+αN
+0.73 + 0.083√αN + αN
+.
+(98)
+For subsonic deﬂagrations a good ﬁt to the numerical results is provided by
+κ(ξw ≲cs) ≃
+c11/5
+s
+κAκB
+(c11/5
+s
+−ξ11/5
+w
+)κB + ξwc6/5
+s κA
+,
+(99)
+and for detonations by
+κ(ξw ≳ξJ) ≃
+(ξJ −1)3ξ5/2
+J ξ−5/2
+w
+κCκD
+[(ξJ −1)3 −(ξw −1)3]ξ5/2
+J κC + (ξw −1)3κD
+.
+(100)
+The numerical result for the hybrid (supersonic deﬂagration) region is well described by a
+cubic polynomial. As boundary conditions, one best uses the two values of κ and the ﬁrst
+derivative of κ at ξw = cs. Notice that the derivative of κ in ξw is not continuous at the
+point ξJ. The derivative at ξw = cs is approximately given by
+δκ ≃−0.9 log
+√αN
+1 + √αN
+.
+(101)
+This diﬀers from the derivative one would obtain from the ﬁt in the region ξw < cs, but
+mostly for values α ≳1, where no solutions exist for ξw < cs. The expression for supersonic
+deﬂagrations then reads
+κ(cs < ξw < ξJ) ≃κB + (ξw −cs)δκ + (ξw −cs)3
+(ξJ −cs)3 [κC −κB −(ξJ −cs)δκ] .
+(102)
+32
+
+---PAGE BREAK---
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+vw
+10
+-2
+10
+-1
+1
+ κ 
+αN = 0.01
+0.03
+0.1
+0.3
+1
+3
+10
+deflagrations
+hybrids
+detonations
+Figure 13: The eﬃciency coeﬃcient κ as a function of the wall velocity ξw for ﬁxed αN and the
+ﬁt (dashed lines) described in the text.
+The ﬁts of κ compared to the numerical results are given in Fig. 13. The relative errors
+never exceed 15%.
+Another useful function is the maximal αN that can be realized for ﬁxed ξw. This function
+is approximately given by
+αmax
+N
+≃1
+3(1 −ξw)−13/10 .
+(103)
+Finally, the connection between αN and α+ might be needed in phenomenological studies.
+Like in the case for κ, we provide approximations or analytic expressions in limiting cases
+and interpolate in between. For velocities larger than the Jouguet velocity ξJ, α+ and αN
+coincide. For αN < 1/3 all velocities can be realized and in this case the limit vw →0 also
+yields α+ →αN. Otherwise there is a minimal ξw which is, according to eq. (103), given by
+α+ = 1/3
+for
+ξw = 1 −(3αN)−10/13
+if
+αN > 1
+3.
+(104)
+For relatively small αN a wall velocity of the speed of sound can be realized leading to a ﬁt
+α+(cs)
+≃
+αN(0.329 −0.0793 log αN + 0.0116 log2 αN + 0.00159 log3 αN)
+if
+αN < 1
+3(1 −cs)−13/10 ≃1.02.
+(105)
+Finally, the transition from supersonic deﬂagrations to detonations can be determined ana-
+lytically leading to
+α+(ξJ) = αN
+3 −3ξ2
+J
+9ξ2
+J −1
+for all
+αN.
+(106)
+For αN > 1/3, the function α+(αN, ξw) is well approximated by a polynomial in ξw that
+contains the two/three data points just given for the case αN ≷1.02. For αN < 1/3, the
+33
+
+---PAGE BREAK---
+function α+(αN, ξw) is approximately linear in the region ξw ∈[cs, ξJ] and goes slowly to αN
+for ξw →0. For velocities below cs, a reasonable approximation is of the form
+α+ = αN + c1 ξ2
+w
+1 + c2 ξ2w
+,
+(107)
+and matching of this function and its derivative to the linear regime yields
+α+ = (c2
+s −ξ2
+w)[α+(ξJ) −α+(cs)]αN −2ξ2
+w(1 −ξJ/cs)[α+(cs) −αN]α+(cs)
+(c2s −ξ2w)[α+(ξJ) −α+(cs)] −2ξ2w(1 −ξJ/cs)[α+(cs) −αN]
+.
+(108)
+The comparison between ﬁt and numerical results is given in Fig. 14. The relative error
+never exceeds 5% and is worst for αN ∼0.3.
+0
+0.2
+0.4
+0.6
+0.8
+1
+vw
+0
+0.2
+0.4
+0.6
+0.8
+1
+α+ / αN
+10
+3
+1
+0.3
+0.1
+0.03
+0.01
+deflagrations
+hybrids
+Figure 14: The ratio α+/αN as a function of the wall velocity ξw for ﬁxed αN and the ﬁt (dashed
+lines) described in the text.
+References
+[1] The mechanism was ﬁrst worked out in: A. G. Cohen, D. B. Kaplan and A. E. Nelson,
+Phys. Lett. B 245 (1990) 561; Nucl. Phys. B 349 (1991) 727; Nucl. Phys. B 373 (1992)
+453; Phys. Lett. B 336 (1994) 41 [hep-ph/9406345]. For a review see e.g J. M. Cline,
+[hep-ph/0609145].
+[2] C. J. Hogan, Phys. Rev. Lett. 51 (1983) 1488; J. M. Quashnock, A. Loeb and
+D. N. Spergel, Astrophys. J. Lett. 344: L49 (1989); T. Vachaspati, Phys. Lett. B
+265, 258 (1991); B. l. Cheng and A. V. Olinto, Phys. Rev. D 50, 2421 (1994); G. Baym,
+D. Bodeker and L. D. McLerran, Phys. Rev. D 53 (1996) 662 [hep-ph/9507429].
+34
+
+---PAGE BREAK---
+[3] E. Witten, Phys. Rev. D 30, 272 (1984); C. Hogan, MNRAS 218, 629, 1986.
+[4] A. Kosowsky, M. S. Turner and R. Watkins, Phys. Rev. D 45 (1992) 4514; Phys. Rev.
+Lett. 69, 2026 (1992); A. Kosowsky and M. S. Turner, Phys. Rev. D 47 (1993) 4372
+[astro-ph/9211004].
+[5] M. Kamionkowski, A. Kosowsky and M. S. Turner, Phys. Rev. D 49 (1994) 2837
+[astro-ph/9310044].
+[6] L. D. Landau and E. M. Lifshitz, “Fluid Mechanics,” Pergamon Press, New York, 1989.
+[7] P. J. Steinhardt, Phys. Rev. D 25 (1982) 2074.
+[8] R. Apreda, M. Maggiore, A. Nicolis and A. Riotto, Nucl. Phys. B 631 (2002) 342
+[gr-qc/0107033]; A. Nicolis, Class. Quant. Grav. 21 (2004) L27 [gr-qc/0303084]; C. Gro-
+jean and G. Servant, Phys. Rev. D 75 (2007) 043507 [hep-ph/0607107]; L. Randall and
+G. Servant, JHEP 0705 (2007) 054 [arXiv:hep-ph/0607158]; S. J. Huber and T. Kon-
+standin, JCAP 0805 (2008) 017 [hep-ph/0709.2091]; T. Kahniashvili, A. Kosowsky,
+G. Gogoberidze and Y. Maravin, Phys. Rev. D 78 (2008) 043003 [astro-ph/0806.0293].
+[9] C. Caprini, R. Durrer and G. Servant, Phys. Rev. D 77 (2008) 124015 [astro-
+ph/0711.2593];
+[10] S. J. Huber and T. Konstandin, JCAP 0809 (2008) 022 [hep-ph/0806.1828];
+[11] C. Caprini, R. Durrer, T. Konstandin and G. Servant, [astro-ph/0901.1661].
+[12] A. Kosowsky, A. Mack and T. Kahniashvili, Phys. Rev. D 66 (2002) 024030
+[astro-ph/0111483]; A. D. Dolgov, D. Grasso and A. Nicolis, Phys. Rev. D 66 (2002)
+103505 [astro-ph/0206461]; G. Gogoberidze, T. Kahniashvili and A. Kosowsky, Phys.
+Rev. D 76 (2007) 083002 [astro-ph/0705.1733].
+[13] C. Caprini and R. Durrer, Phys. Rev. D 74 (2006) 063521 [astro-ph/0603476];
+C. Caprini, R. Durrer and G. Servant, JCAP 0912 (2009) 024 [astro-ph.CO:0909.0622].
+[14] M. Laine, Phys. Rev. D 49 (1994) 3847 [hep-ph/9309242].
+[15] G. D. Moore and T. Prokopec, Phys. Rev. D 52 (1995) 7182 [hep-ph/9506475].
+[16] J. Ignatius, K. Kajantie, H. Kurki-Suonio and M. Laine, Phys. Rev. D 49 (1994) 3854
+[astro-ph/9309059].
+[17] H. Kurki-Suonio, Nucl. Phys. B 255 (1985) 231.
+[18] M. Gyulassy, K. Kajantie, H. Kurki-Suonio and L. D. McLerran, Nucl. Phys. B 237, 477
+(1984); K. Kajantie and H. Kurki-Suonio, Phys. Rev. D 34, 1719 (1986); K. Enqvist,
+J. Ignatius, K. Kajantie and K. Rummukainen, Phys. Rev. D 45 (1992) 3415; M. Dine,
+R. G. Leigh, P. Y. Huet, A. D. Linde and D. A. Linde, Phys. Rev. D 46 (1992) 550
+[hep-ph/9203203]; B. H. Liu, L. D. McLerran and N. Turok, Phys. Rev. D 46 (1992)
+2668; P. Y. Huet, K. Kajantie, R. G. Leigh, B. H. Liu and L. D. McLerran, Phys. Rev.
+35
+
+---PAGE BREAK---
+D 48 (1993) 2477 [hep-ph/9212224]; J. C. Miller and L. Rezzolla, Phys. Rev. D 51
+(1995) 4017 [astro-ph/9411091].
+[19] H. Kurki-Suonio and M. Laine, Phys. Rev. D 51, 5431 (1995) [hep-ph/9501216].
+[20] P. John and M. G. Schmidt, Nucl. Phys. B 598 (2001) 291 [Erratum-ibid. B 648 (2003)
+449] [hep-ph/0002050].
+[21] J. M. Cline, M. Joyce and K. Kainulainen, JHEP 0007 (2000) 018 [hep-ph/0006119].
+[22] M. S. Carena, J. M. Moreno, M. Quiros, M. Seco and C. E. M. Wagner, Nucl. Phys. B
+599 (2001) 158 [hep-ph/0011055].
+[23] M. S. Carena, M. Quiros, M. Seco and C. E. M. Wagner, Nucl. Phys. B 650 (2003) 24
+[hep-ph/0208043].
+[24] T. Konstandin, T. Prokopec, M. G. Schmidt and M. Seco, Nucl. Phys. B 738 (2006) 1
+[hep-ph/0505103].
+[25] V. Cirigliano, S. Profumo and M. J. Ramsey-Musolf, JHEP 0607, 002 (2006)
+[hep-ph/0603246].
+[26] A. Megevand and A. D. Sanchez, [hep-ph/0904.1753]; Nucl. Phys. B 825 (2010) 151
+[hep-ph/0908.3663].
+[27] D. Bodeker and G. D. Moore, JCAP 0905 (2009) 009 [hep-ph/0903.4099].
+[28] G. D. Moore, JHEP 0003 (2000) 006 [arXiv:hep-ph/0001274].
+[29] B. H. Liu, L. D. McLerran and N. Turok, Phys. Rev. D 46 (1992) 2668.
+[30] M. Dine, R. G. Leigh, P. Y. Huet, A. D. Linde and D. A. Linde, Phys. Rev. D 46 (1992)
+550 [arXiv:hep-ph/9203203].
+[31] P. B. Arnold, Phys. Rev. D 48 (1993) 1539 [arXiv:hep-ph/9302258].
+[32] T. Prokopec, M. G. Schmidt and S. Weinstock, Annals Phys. 314 (2004) 208
+[hep-ph/0312110]; Annals Phys. 314 (2004) 267 [hep-ph/0406140].
+36
+
+---PAGE BREAK---

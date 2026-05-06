@@ -1,0 +1,96 @@
+{
+  "track": "14I",
+  "title": "DESI DR3 Forecast & Model Selection",
+  "date": "2026-03-18",
+  "parameters": {
+    "C_KK": 0.00024538111342351713,
+    "C_KK_sigma": 8.265562846252943e-05,
+    "C_KK_sigma_future": 4.5600665993362195e-05,
+    "zeta_JC": 0.001,
+    "zeta_lo": 0.0008,
+    "zeta_hi": 0.0012,
+    "kappa0_JC": 0.08404303134755461
+  },
+  "section1_wz": {
+    "w0_JC": -0.7546188865764829,
+    "w0_lo": -0.6932736082206036,
+    "w0_hi": -0.7955157388137357,
+    "wa_effective": -0.23188515218522365,
+    "wa_CPL": -0.86,
+    "w0_linearized_JC": -0.7546188865764829,
+    "w0_exact_JC": -0.7814347756320207,
+    "w_at_desi_zbins": {
+      "BGS": {
+        "z": 0.295,
+        "w_meridian_JC": -0.8207720125719999,
+        "w_CPL": -0.9459073359073359,
+        "delta": 0.12513532333533595
+      },
+      "LRG1": {
+        "z": 0.51,
+        "w_meridian_JC": -0.8613297464608809,
+        "w_CPL": -1.0404635761589405,
+        "delta": 0.17913382969805958
+      },
+      "LRG2": {
+        "z": 0.706,
+        "w_meridian_JC": -0.8908951372653072,
+        "w_CPL": -1.105896834701055,
+        "delta": 0.2150016974357477
+      },
+      "LRG3+ELG1": {
+        "z": 0.934,
+        "w_meridian_JC": -0.9172034157933188,
+        "w_CPL": -1.1653257497414684,
+        "delta": 0.24812233394814964
+      },
+      "ELG2": {
+        "z": 1.317,
+        "w_meridian_JC": -0.9466935772569773,
+        "w_CPL": -1.238830384117393,
+        "delta": 0.29213680686041577
+      },
+      "QSO": {
+        "z": 1.491,
+        "w_meridian_JC": -0.9558183120362521,
+        "w_CPL": -1.2647571256523484,
+        "delta": 0.3089388136160963
+      },
+      "Lya": {
+        "z": 2.33,
+        "w_meridian_JC": -0.9800773680895402,
+        "w_CPL": -1.3517417417417419,
+        "delta": 0.37166437365220173
+      }
+    }
+  },
+  "section2_phantom": {
+    "phantom_crossing": false,
+    "w_always_gt_minus1": true,
+    "cpl_phantom_z": 0.40983606557377056,
+    "w_min_check_z100": -0.9999992439238461
+  },
+  "section3_growth": {
+    "gamma_LCDM": 0.55,
+    "gamma_Meridian": 0.5495000000000001,
+    "gamma_DGP": 0.68,
+    "fsig8_LCDM_z05": 0.47455704172805346,
+    "fsig8_Meridian_z05": 0.47447999325717893,
+    "growth_deviation_percent": -0.016235871370481724
+  },
+  "section5_sensitivity": {
+    "CKK_sigma_current": 8.265562846252943e-05,
+    "CKK_sigma_future": 4.5600665993362195e-05,
+    "improvement_factor": 1.8125969580041021,
+    "w0_sigma_current": 0.08265562846252943,
+    "w0_sigma_future": 0.0456006659933622,
+    "q0_dominance_current": 0.7246177501571854,
+    "eps1_dominance_future": 0.9017466988445755
+  },
+  "section6_neutrino": {
+    "mnu_LCDM_95CL": 0.0642,
+    "mnu_Meridian_95CL": 0.09364573361082204,
+    "delta_mnu": 0.02944573361082205,
+    "resolves_NH_tension": true
+  }
+}

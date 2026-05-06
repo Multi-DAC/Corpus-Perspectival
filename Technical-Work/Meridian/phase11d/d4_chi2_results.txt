@@ -1,0 +1,155 @@
+======================================================================
+D4: CHI-SQUARED MONTE CARLO ANALYSIS
+======================================================================
+
+======================================================================
+PART A: EXACT CHI-SQUARED DISTRIBUTION
+======================================================================
+Number of data points: 18
+Number of fitted parameters: 1
+Degrees of freedom: 17
+Observed chi^2: 9.6
+Observed chi^2/dof: 0.5647
+
+Chi^2(17) distribution:
+  Mean: 17
+  Std dev: 5.83
+  chi^2/dof expected: 1.00 +/- 0.343
+
+P(chi^2 <= 9.6 | 17 dof) = 0.0805 = 8.05%
+P(chi^2 >= 9.6 | 17 dof) = 0.9195 = 91.95%
+
+VERDICT ON chi^2/dof = 0.56:
+  MARGINALLY low (p = 0.0805), in the 5-10% range
+  Unusual but not statistically anomalous
+
+======================================================================
+PART B: MONTE CARLO SIMULATION
+======================================================================
+
+Simulating 100000 mock LCDM datasets...
+Each dataset: 18 H(z) measurements with Gaussian noise
+Fitting: zeta_0 as single free parameter
+
+Method 1: Direct chi^2(17) sampling
+  P(chi^2/dof <= 0.5647) = 0.0794 (7.94%)
+  (Exact: 0.0805)
+
+Method 2: Full simulation with 18 H(z) mock measurements
+  Redshift range: [0.07, 1.50]
+  Typical sigma(beta_HK): 0.041
+
+  Results from 100000 trials:
+  Mean chi^2/dof: 0.9995 (expected: 1.0)
+  Std chi^2/dof:  0.3430 (expected: 0.3430)
+  P(chi^2/dof <= 0.5647): 0.0812 (8.12%)
+  P(|zeta_0| >= 0.038 | LCDM): 0.0000 (0.00%)
+
+  chi^2/dof percentiles (null distribution):
+      1%: 0.3751
+      5%: 0.5089
+     10%: 0.5914 <-- observed
+     25%: 0.7519
+     50%: 0.9616
+     75%: 1.2047
+     90%: 1.4585
+     95%: 1.6194
+     99%: 1.9625
+
+======================================================================
+PART C: SMALL SAMPLE SIZE EFFECT
+======================================================================
+
+With only 18 data points, chi^2/dof has substantial variance.
+The chi^2(17) distribution has:
+  Mean: 17
+  Std: sqrt(34) = 5.83
+  chi^2/dof std: sqrt(2/17) = 0.343
+
+So chi^2/dof = 0.57 is (1.0 - 0.57) / 0.343 = 1.25 standard deviations
+below the mean. This is NOT unusual for a small dataset.
+
+chi^2/dof = 0.5647
+Expected: 1.0 +/- 0.3430
+Deviation: 1.27 sigma below mean
+Two-sided P(|deviation| >= 1.27): 0.2044
+
+For context: chi^2/dof = 0.57 would be MORE suspicious with more data:
+  N=  18: P(chi^2/dof <= 0.57) = 0.083896, deviation = 1.3 sigma
+  N=  50: P(chi^2/dof <= 0.57) = 0.006677, deviation = 2.1 sigma
+  N= 100: P(chi^2/dof <= 0.57) = 0.000180, deviation = 3.0 sigma
+  N= 500: P(chi^2/dof <= 0.57) = 0.000000, deviation = 6.8 sigma
+  N=1000: P(chi^2/dof <= 0.57) = 0.000000, deviation = 9.6 sigma
+
+======================================================================
+PART D: ALTERNATIVE EXPLANATIONS FOR LOW chi^2/dof
+======================================================================
+
+Three possible explanations for chi^2/dof = 0.57:
+
+1. STATISTICAL FLUCTUATION (most likely)
+   - With 17 dof, P(chi^2/dof <= 0.57) ~ 10%
+   - Not unusual. One in ten correct models would look this way.
+
+2. OVERESTIMATED ERROR BARS
+   - If the H(z) compilation errors are overestimated by factor f,
+     then the true chi^2 = observed_chi^2 * f^2.
+   - For chi^2/dof = 1.0: f = sqrt(0.57) = 0.755
+   - This would mean errors are overestimated by ~25%.
+   - HOWEVER: this is hard to test without independent error estimates.
+
+3. CORRELATIONS IN THE DATA
+   - If some data points are correlated (e.g., overlapping galaxy samples),
+     the effective number of independent data points is < 18.
+   - Effective dof_eff < 17 would make chi^2/dof closer to 1.
+   - This is why the covariance matrix needs to be published.
+
+RECOMMENDATION: Report the exact P-value and discuss all three explanations
+honestly. The result is NOT anomalous at any conventional significance level.
+
+
+======================================================================
+PART E: LCDM chi^2/dof FOR COMPARISON
+======================================================================
+LCDM: chi^2 = 24.6, dof = 18, chi^2/dof = 1.367
+P(chi^2 >= 24.6 | 18 dof) = 0.1363
+
+Meridian: chi^2 = 9.6, dof = 17, chi^2/dof = 0.565
+P(chi^2 <= 9.6 | 17 dof) = 0.0805
+
+Comparison:
+  LCDM chi^2/dof = 1.367 — slightly high but P = 0.136 (normal)
+  Meridian chi^2/dof = 0.565 — low but P = 0.080 (normal)
+  Neither is anomalous. The Meridian fit is better (delta_chi^2 = -15).
+  The F-test for adding one parameter:
+  F = (24.6 - 9.6) / (9.6/17) = 26.56
+  P(F >= 26.56 | 1, 17) = 0.000080
+  Significance: 3.9 sigma
+
+======================================================================
+SUMMARY
+======================================================================
+
+chi^2/dof = 0.56 is NOT suspiciously good.
+
+1. EXACT P-VALUE: P(chi^2/dof <= 0.56) = 0.080 (8.0%)
+   This is 1.3 sigma below the mean — well within normal
+   variation for a dataset of 18 points.
+
+2. MONTE CARLO CONFIRMS: 8.1% of null realizations produce
+   chi^2/dof <= 0.56. Not anomalous.
+
+3. SMALL SAMPLE SIZE: With only 18 points, chi^2/dof has std = 0.343.
+   Values of 0.57 are expected ~8% of the time.
+
+4. LCDM COMPARISON: LCDM gives chi^2/dof = 1.37 (also normal).
+   The improvement delta_chi^2 = -15 for one parameter is significant
+   at 3.9 sigma by the F-test.
+
+5. RECOMMENDATION: Add to Paper II:
+   - Report P(chi^2 <= 9.6 | 17 dof) = 0.080
+   - Note that 8% is not anomalous at any conventional level
+   - Discuss small-sample variance as the dominant explanation
+   - Acknowledge that publishing the covariance matrix (D5) would allow
+     readers to verify independently
+

@@ -1,0 +1,187 @@
+Device: cuda
+
+======================================================================
+P48 GENERATION-MODE DETECTOR — EleutherAI/pythia-410m
+======================================================================
+Loading EleutherAI/pythia-410m...
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  30%|███       | 88/292 [00:00<00:00, 874.66it/s]Loading weights:  64%|██████▍   | 187/292 [00:00<00:00, 939.22it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 1308.26it/s]
+  24 layers, 16 heads
+  Generating 50 tokens per prompt, KF at each step
+  12 prompts
+
+[IncrementalSaver] Saving to: /mnt/c/Users/mercu/clawd/projects/Corpus Perspectival/p48_generation_pythia_410m.json
+  [FACTUAL      ] fact_prefix_1: "The chemical formula for water is..."
+    Step   0: CV=0.000909, E/L=27.57, r=-0.914
+    Step  10: CV=0.000422, E/L=21.49, r=-0.915
+    Step  20: CV=0.000399, E/L=22.39, r=-0.922
+    Step  30: CV=0.000384, E/L=24.15, r=-0.916
+    Step  40: CV=0.000372, E/L=23.49, r=-0.916
+    Step  49: CV=0.000362, E/L=24.12, r=-0.920
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=22.11 → late_gen=23.82 (ratio=1.078, rho=+0.676, p=0.0000)
+
+  [FACTUAL      ] fact_prefix_2: "Isaac Newton published the Principia Mathematica i..."
+    Step   0: CV=0.001060, E/L=25.13, r=-0.896
+    Step  10: CV=0.000531, E/L=20.66, r=-0.906
+    Step  20: CV=0.000460, E/L=20.46, r=-0.912
+    Step  30: CV=0.000422, E/L=20.67, r=-0.912
+    Step  40: CV=0.000396, E/L=20.31, r=-0.911
+    Step  49: CV=0.000377, E/L=19.72, r=-0.911
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=21.05 → late_gen=20.20 (ratio=0.959, rho=-0.883, p=0.0000)
+
+  [FACTUAL      ] fact_prefix_3: "The largest planet in our solar system is..."
+    Step   0: CV=0.001045, E/L=35.30, r=-0.917
+    Step  10: CV=0.000452, E/L=33.02, r=-0.933
+    Step  20: CV=0.000402, E/L=35.62, r=-0.928
+    Step  30: CV=0.000376, E/L=36.67, r=-0.925
+    Step  40: CV=0.000357, E/L=37.47, r=-0.915
+    Step  49: CV=0.000342, E/L=37.57, r=-0.920
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=33.69 → late_gen=37.10 (ratio=1.101, rho=+0.971, p=0.0000)
+
+  [FACTUAL      ] fact_prefix_4: "DNA stores genetic information using four bases:..."
+    Step   0: CV=0.001151, E/L=14.35, r=-0.873
+    Step  10: CV=0.000521, E/L=10.13, r=-0.881
+    Step  20: CV=0.000458, E/L=10.32, r=-0.891
+    Step  30: CV=0.000417, E/L=11.35, r=-0.891
+    Step  40: CV=0.000391, E/L=10.21, r=-0.887
+    Step  49: CV=0.000371, E/L=10.21, r=-0.893
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=10.80 → late_gen=10.77 (ratio=0.997, rho=-0.292, p=0.0397)
+
+  [HALLUCINATION] halluc_prefix_1: "The Brennan-Kowalski theorem in algebraic topology..."
+    Step   0: CV=0.000877, E/L=61.24, r=-0.923
+    Step  10: CV=0.000424, E/L=46.14, r=-0.917
+    Step  20: CV=0.000360, E/L=42.95, r=-0.917
+    Step  30: CV=0.000328, E/L=41.90, r=-0.918
+    Step  40: CV=0.000307, E/L=41.67, r=-0.921
+    Step  49: CV=0.000292, E/L=40.69, r=-0.919
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=47.13 → late_gen=41.48 (ratio=0.880, rho=-0.981, p=0.0000)
+
+  [HALLUCINATION] halluc_prefix_2: "Professor Elaine Marchetti's 2023 Nature paper on ..."
+    Step   0: CV=0.000550, E/L=30.47, r=-0.922
+    Step  10: CV=0.000291, E/L=24.10, r=-0.924
+    Step  20: CV=0.000254, E/L=22.79, r=-0.924
+    Step  30: CV=0.000235, E/L=22.37, r=-0.928
+    Step  40: CV=0.000221, E/L=22.14, r=-0.928
+    Step  49: CV=0.000212, E/L=21.83, r=-0.931
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=24.57 → late_gen=22.19 (ratio=0.903, rho=-0.996, p=0.0000)
+
+  [HALLUCINATION] halluc_prefix_3: "The ancient city of Veltharion, discovered beneath..."
+    Step   0: CV=0.000682, E/L=40.06, r=-0.942
+    Step  10: CV=0.000401, E/L=36.41, r=-0.939
+    Step  20: CV=0.000358, E/L=36.07, r=-0.935
+    Step  30: CV=0.000339, E/L=36.00, r=-0.935
+    Step  40: CV=0.000325, E/L=36.07, r=-0.935
+    Step  49: CV=0.000316, E/L=35.97, r=-0.937
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=36.83 → late_gen=36.05 (ratio=0.979, rho=-0.426, p=0.0020)
+
+  [HALLUCINATION] halluc_prefix_4: "The Kravinskii process for room-temperature ammoni..."
+    Step   0: CV=0.000697, E/L=73.98, r=-0.923
+    Step  10: CV=0.000350, E/L=61.95, r=-0.935
+    Step  20: CV=0.000301, E/L=58.91, r=-0.931
+    Step  30: CV=0.000276, E/L=56.29, r=-0.928
+    Step  40: CV=0.000259, E/L=55.17, r=-0.926
+    Step  49: CV=0.000247, E/L=54.42, r=-0.926
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=62.81 → late_gen=55.95 (ratio=0.891, rho=-0.997, p=0.0000)
+
+  [HYPOTHESIS   ] hypo_prefix_1: "If consciousness is substrate-independent, then we..."
+    Step   0: CV=0.000963, E/L=38.17, r=-0.905
+    Step  10: CV=0.000484, E/L=33.76, r=-0.928
+    Step  20: CV=0.000439, E/L=35.37, r=-0.933
+    Step  30: CV=0.000414, E/L=35.99, r=-0.936
+    Step  40: CV=0.000395, E/L=36.39, r=-0.936
+    Step  49: CV=0.000380, E/L=36.41, r=-0.934
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=34.51 → late_gen=36.28 (ratio=1.051, rho=+0.808, p=0.0000)
+
+  [HYPOTHESIS   ] hypo_prefix_2: "One possible explanation for the fine-tuning of ph..."
+    Step   0: CV=0.000733, E/L=52.21, r=-0.913
+    Step  10: CV=0.000410, E/L=46.82, r=-0.919
+    Step  20: CV=0.000383, E/L=48.62, r=-0.923
+    Step  30: CV=0.000371, E/L=50.18, r=-0.924
+    Step  40: CV=0.000362, E/L=51.70, r=-0.927
+    Step  49: CV=0.000355, E/L=52.06, r=-0.929
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=48.11 → late_gen=50.98 (ratio=1.060, rho=+0.796, p=0.0000)
+
+  [HYPOTHESIS   ] hypo_prefix_3: "The hard problem of consciousness might dissolve i..."
+    Step   0: CV=0.000961, E/L=29.15, r=-0.915
+    Step  10: CV=0.000501, E/L=27.49, r=-0.920
+    Step  20: CV=0.000467, E/L=29.74, r=-0.925
+    Step  30: CV=0.000448, E/L=31.29, r=-0.926
+    Step  40: CV=0.000432, E/L=31.74, r=-0.922
+    Step  49: CV=0.000418, E/L=32.20, r=-0.922
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=28.24 → late_gen=31.60 (ratio=1.119, rho=+0.977, p=0.0000)
+
+  [HYPOTHESIS   ] hypo_prefix_4: "Dark energy could be a manifestation of vacuum str..."
+    Step   0: CV=0.001068, E/L=48.10, r=-0.930
+    Step  10: CV=0.000508, E/L=40.04, r=-0.935
+    Step  20: CV=0.000450, E/L=41.00, r=-0.931
+    Step  30: CV=0.000425, E/L=42.33, r=-0.936
+    Step  40: CV=0.000408, E/L=42.34, r=-0.936
+    Step  49: CV=0.000395, E/L=43.18, r=-0.936
+    Generated: "<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|..."
+    E/L trend: early_gen=41.30 → late_gen=42.44 (ratio=1.027, rho=+0.587, p=0.0000)
+
+
+======================================================================
+P48 — GENERATION TRAJECTORY COMPARISON
+======================================================================
+
+FACTUAL (n=4):
+  E/L early gen:    21.91
+  E/L late gen:     22.97
+  E/L trend ratio:  1.034 (STABLE)
+  CV trend ratio:   0.753
+  Mean rho(E/L, step): +0.118
+
+HALLUCINATION (n=4):
+  E/L early gen:    42.84
+  E/L late gen:     38.92
+  E/L trend ratio:  0.913 (DECREASING)
+  CV trend ratio:   0.733
+  Mean rho(E/L, step): -0.850
+
+HYPOTHESIS (n=4):
+  E/L early gen:    38.04
+  E/L late gen:     40.32
+  E/L trend ratio:  1.064 (INCREASING)
+  CV trend ratio:   0.798
+  Mean rho(E/L, step): +0.792
+
+----------------------------------------------------------------------
+PREDICTIONS CHECK
+----------------------------------------------------------------------
+
+  P48a: Hallucination E/L trend > Factual E/L trend?
+    Hallucination: 0.913, Factual: 1.034
+    NOT CONFIRMED
+
+  P48b: Hypothesis E/L trend < Hallucination E/L trend?
+    Hypothesis: 1.064, Hallucination: 0.913
+    NOT CONFIRMED
+
+  P48c: Hypothesis E/L trend closer to Factual than Hallucination?
+    Distance to Factual: 0.0304
+    Distance to Hallucination: 0.1511
+    CONFIRMED
+
+----------------------------------------------------------------------
+PAIRWISE COMPARISONS (E/L trend ratio)
+----------------------------------------------------------------------
+  factual       vs hallucination: U=15.0, p=0.0571
+  factual       vs hypothesis   : U=6.0, p=0.6857
+  hallucination vs hypothesis   : U=0.0, p=0.0286
+[IncrementalSaver] Finalized: /mnt/c/Users/mercu/clawd/projects/Corpus Perspectival/p48_generation_pythia_410m.json
+Saved to /tmp/corpus/p48_pythia_410m.json
+Saved to /mnt/c/Users/mercu/clawd/projects/Corpus Perspectival/p48_pythia_410m.json
+
+Total time: 41.9s

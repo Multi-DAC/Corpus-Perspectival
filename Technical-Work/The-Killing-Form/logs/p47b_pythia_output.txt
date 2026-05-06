@@ -1,0 +1,66 @@
+Device: cuda
+
+======================================================================
+P47b SCALED — EleutherAI/pythia-410m
+======================================================================
+Loading EleutherAI/pythia-410m...
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  27%|██▋       | 80/292 [00:00<00:00, 798.94it/s]Loading weights:  59%|█████▉    | 172/292 [00:00<00:00, 860.94it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 1284.35it/s]
+  24 layers, 16 heads
+  48 prompts total
+
+  [ 1/48] [FACTUAL      ] factual_01
+         CV=0.000420, E/L=26.94, r=-0.913
+  [ 2/48] [FACTUAL      ] factual_02
+         CV=0.000465, E/L=37.52, r=-0.921
+  [ 3/48] [FACTUAL      ] factual_03
+         CV=0.000625, E/L=26.24, r=-0.928
+  [ 4/48] [FACTUAL      ] factual_04
+         CV=0.000436, E/L=33.11, r=-0.932
+  [ 5/48] [FACTUAL      ] factual_05
+         CV=0.000581, E/L=26.87, r=-0.912
+  [ 6/48] [FACTUAL      ] factual_06
+         CV=0.000353, E/L=29.02, r=-0.917
+  [ 7/48] [FACTUAL      ] factual_07
+         CV=0.000492, E/L=30.67, r=-0.927
+  [ 8/48] [FACTUAL      ] factual_08
+         CV=0.000533, E/L=20.32, r=-0.913
+  [ 9/48] [FACTUAL      ] factual_09
+         CV=0.000568, E/L=24.09, r=-0.912
+  [10/48] [FACTUAL      ] factual_10
+         CV=0.000341, E/L=13.88, r=-0.899
+  [11/48] [FACTUAL      ] factual_11
+         CV=0.000512, E/L=30.87, r=-0.926
+  [12/48] [FACTUAL      ] factual_12
+         CV=0.000433, E/L=24.26, r=-0.907
+  [13/48] [FACTUAL      ] factual_13
+         CV=0.000422, E/L=19.20, r=-0.916
+  [14/48] [FACTUAL      ] factual_14
+         CV=0.000438, E/L=16.56, r=-0.896
+  [15/48] [FACTUAL      ] factual_15
+         CV=0.000496, E/L=20.94, r=-0.898
+  [16/48] [FACTUAL      ] factual_16
+         CV=0.000610, E/L=29.78, r=-0.926
+  [17/48] [HALLUCINATION] halluc_01
+         CV=0.000399, E/L=39.47, r=-0.922
+  [18/48] [HALLUCINATION] halluc_02
+         CV=0.000470, E/L=35.86, r=-0.930
+  [19/48] [HALLUCINATION] halluc_03
+         CV=0.000404, E/L=46.78, r=-0.911
+  [20/48] [HALLUCINATION] halluc_04
+         CV=0.000457, E/L=30.10, r=-0.924
+  [21/48] [HALLUCINATION] halluc_05
+         CV=0.000408, E/L=48.55, r=-0.924
+  [22/48] [HALLUCINATION] halluc_06
+         CV=0.000484, E/L=37.69, r=-0.930
+  [23/48] [HALLUCINATION] halluc_07
+         CV=0.000389, E/L=39.50, r=-0.921
+  [24/48] [HALLUCINATION] halluc_08
+         CV=0.000323, E/L=20.96, r=-0.918
+  [25/48] [HALLUCINATION] halluc_09
+         CV=0.000293, E/L=26.22, r=-0.917
+  [26/48] [HALLUCINATION] halluc_10
+         CV=0.000591, E/L=42.44, r=-0.934
+  [27/48] [HALLUCINATION] halluc_11
+         CV=0.000321, E/L=25.43, r=-0.917
+  [28/48] [HALLUCINATION] halluc_12

@@ -1,0 +1,1158 @@
+JHEP04(2024)144
+Published for SISSA by
+Springer
+Received: December 13, 2023
+Accepted: March 29, 2024
+Published: April 26, 2024
+Effective cuscuton theory
+Maria Mylovaa,b and Niayesh Afshordic,d,e
+aKavli Institute for the Physics and Mathematics of the Universe (WPI), The University of Tokyo,
+Kashiwa, Chiba 277-8583, Japan
+bScience Education, Ewha Womans University,
+52 Ewhayeodae-gil, Seoul, Republic of Korea
+cDepartment of Physics and Astronomy, University of Waterloo,
+Waterloo, ON, N2L 3G1, Canada
+dWaterloo Centre for Astrophysics, University of Waterloo,
+Waterloo, ON, N2L 3G1, Canada
+ePerimeter Institute for Theoretical Physics,
+31 Caroline St. N., Waterloo, ON, N2L 2Y5, Canada
+E-mail: mylova@g.ecc.u-tokyo.ac.jp, nafshordi@pitp.ca
+Abstract: Cuscuton field theory is an extension of general relativity that does not introduce
+additional propagating degrees of freedom, or violate relativistic causality. We construct a
+general geometric description of the cuscuton field theory by introducing curvature corrections
+to both the volume (potential) and the surface (kinetic) terms in the original cuscuton action.
+Our assumptions involve a stack of spacelike branes, separated by 4-dimensional bulks. We
+conjecture that the cuscuton, initially a discrete field, becomes continuous in the limit,
+there are many such transitions. From this we derive an effective action for the cuscuton
+theory and show that at the quadratic level our theory propagates only the two tensorial
+degrees of freedom.
+Keywords: Classical Theories of Gravity, Cosmological models
+ArXiv ePrint: 2312.06066
+Open Access, © The Authors.
+Article funded by SCOAP3.
+https://doi.org/10.1007/JHEP04(2024)144
+
+---PAGE BREAK---
+JHEP04(2024)144
+Contents
+1
+Introduction
+1
+2
+A brief introduction of the cuscuton
+4
+3
+Effective cuscuton theory
+6
+3.1
+Constructing the effective action
+6
+4
+ADM decomposition of action and EOMs
+9
+4.1
+ADM decomposition
+10
+4.2
+ADM analysis
+11
+5
+Going beyond leading-order in the effective cuscuton theory
+12
+6
+Discussion
+14
+1
+Introduction
+Lovelock’s theorem [1, 2] states that within the confines of four-dimensional spacetime,
+General Relativity (GR) is the sole metric theory that propagates two tensorial degrees of
+freedom, while at the same time satisfies full diffeomorphism invariance and produces field
+equations with at most two derivatives acting on the metric. However, due to the dynamical
+cosmological background, our existent universe spontaneously breaks time-diffeomorphism
+invariance. In light of this, it is natural to ask whether the physics that aim to elucidate
+our present-day cosmological mysteries could be better described by a theory which modifies
+GR but, nevertheless, propagates only two tensorial degrees of freedom?
+This line of inquiry has received a lot of attention over the past decade, originating with
+the seminal cuscuton theory [3]. Since its inception, there have been several attempts to
+formulate cuscuton-like theories, which go under the names of extended cuscuton theory [4],
+minimally modified gravity (MMG) [5–12] and spatial covariant gravity with two tensorial
+degrees of freedom (TTDOF) [13, 14], to mention a few. The key motivation behind this
+“minimalist” approach to modified gravity is to reconcile disparities between theory and
+empirical observations in the so-called dark sector without resorting to the introduction of
+extra degrees of freedom. There have been a number of studies on cuscuton-like theories
+revealing intriguing theoretical and observational ramifications for both cosmology and
+astrophysics. A detailed review is beyond the scope of this work, but the curious reader
+can explore [15–48] and the references therein.
+Much progress has been made in the classification of cuscuton-like theories, whose
+derivation usually involves a level of brute force while at the same time obeying some
+organising principle. The standard prescription is to assume a generic Lagrangian that obeys
+invariance under spatial diffeomorphism. It is a general function of the lapse N, the intrinsic
+curvatures Rij, and the extrinsic curvatures Kij. The Lagrangian may also contain functions
+– 1 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+of time t and/or spatial derivatives Di. Then one can try to derive consistency conditions
+motivated by a Hamiltonian analysis [6, 13] that ensure the only dynamics in the theory are
+due to the two tensorial degrees of freedom. Another approach is instead to start directly from
+the Hamiltonian of the theory and determine which conditions need to be satisfied so that the
+scalar degree of freedom can be eliminated. Then one can build a Lagrangian which is made
+up of terms which satisfy these conditions [7, 48, 49]. Alternatively, perturbative methods
+can be used to impose conditions that no scalar degree of freedom propagates at each order in
+the perturbative expansion [14]. All of these approaches have their merits and shortcomings.
+Conditions imposed at the level of the Hamiltonian can be very useful due to their generality
+but at the same time challenging to solve in order to produce viable Lagrangians. Meanwhile,
+the simple structure one obtains when starting directly with a Hamiltonian analysis may be
+difficult to translate into a concrete Lagrangian. In contrast, perturbative methods can be
+more directly applied to the Lagrangian but may involve a certain level of tuning, albeit finite.
+In this work, we adopt an alternative approach. We are interested in constructing an
+effective action for the cuscuton by taking an effective field theory (EFT) point of view. This
+requires us to extend the cuscuton leading action, order by order in a perturbative gradient
+expansion. One difficulty with doing so is that one is required to construct an effective field
+theory for a non-dynamical degree of freedom. Indeed, the typical formulation of effective
+field theories relies on having knowledge of the fundamental symmetries and available degrees
+of freedom. Conversely, the cuscuton lacks internal dynamics. However, what about its
+underlying symmetries? In flat spacetime, the cuscuton exhibits a scalarless symmetry [50, 51],
+guaranteeing the absence of propagating scalar excitations. Viewing it through a braneworld
+perspective, its action can be derived from a brane probing a 5-dimensional bulk with two
+time-like directions. This hints at the possibility of expressing the cuscuton as a geometric
+theory of defects. Nevertheless, so far, no one has succeeded in covariantizing this symmetry.
+The only remaining avenue is to extend the cuscuton theory based on its geometric
+description, originally presented in [3]. This can become manifest by re-expressing the
+cuscuton action as a combination of surface and volume contributions. For a scalar field with
+a time-like gradient ∂µϕ, the cuscuton action (2.1) can be written as1
+Sϕ =
+Z
+d4x√−g
+h
+µ2|nµ∂µϕ| −V (ϕ)
+i
+= µ2
+Z
+dϕ Σ(ϕ) −
+Z
+d4x√−gV (ϕ),
+with
+Σ(ϕ) ≡
+Z
+ϕ
+d3x√γ,
+(1.1)
+where γ is the determinant of the induced metric on the hypersurface of constant ϕ. This
+way, it becomes apparent that the volume and surface terms represent the potential and the
+leading order kinetic term of the cuscuton, respectively. Thus, from an effective field theory
+point of view, one conceivable approach would be to try and extend (1.1) by introducing
+curvature corrections to both volume and surface terms.
+The action in eq. (1.1) can be understood as analogous to the surface and volume terms,
+associated with the energy of soap bubbles and films in a 3-d Euclidean space. For cuscuton,
+the 2-d surfaces of soap films are replaced by 3-dimensional spatial hypersurfaces of constant ϕ,
+living in a 4-dimensional Lorentzian spacetime (or bulk). These spacelike branes or S-branes
+1For more details see [3] which is where the geometric picture of the cuscuton originated.
+– 2 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+are understood to be topological defects, localised on a spatial hypersurface representing an
+instant in time (in a particular coordinate system). They are usually taken to have no thickness
+but only a surface. In general, S-branes have been studied in relation to string theory [52, 53],
+but we do not make this connection here.
+Taking as our starting point the geometric
+description in (1.1), in the new geometric description, corrections to the cuscuton kinetic
+term reside on the boundaries or S-branes of the 4-dimensional picture, while the corrections
+to the potential live in the 4-dimensional bulk. This setup is reminiscent to braneworld
+constructions [54, 55] which are typically used to build actions with higher derivative terms
+which admit at most quadratic equations of motion and therefore do not propagate any extra
+degrees of freedom around the background. In braneworld scenarios, a dynamical 3-brane is
+moving in a fixed 4+1 dimensional background. Our setup is different in that:
+• We assume a stack of spacelike branes living in a 4-dimensional spacetime. These are
+discrete spatial surfaces that do not talk to each other (i.e., if we move one, the other
+does not know). This results in the non-dynamical nature of the cuscuton field.
+• We further assume that the cuscuton is a discrete field (labelling each transition) that
+becomes continuous in the limit that there are many such transition interfaces, assuming
+the geometry varies slowly from one transition to the next.
+• To realise several such transitions, we expect the branes to interface between different
+vacua.
+This implies that the bulks separated by the S-branes may have different
+couplings, e.g., different cosmological and gravitational constants.
+In this investigation, we exclusively concentrate on Lovelock terms, which include the
+cosmological constant, the Einstein-Hilbert action, and higher-order Lovelock terms like the
+Gauss-Bonnet term in 4 dimensions. Interestingly, while the Gauss-Bonnet term is topological
+in 4 dimensions, we observe that in the continuous limit of these discrete transitions, this
+term plays a role in the overall dynamics. The Lovelock terms existing within the bulk
+have associated boundary terms located on the surfaces of the branes. In the continuous
+limit, we discover that these terms function as “counterterms”, ensuring that the metric
+carries only two degrees of freedom.
+To summarise the above, in this discrete geometric picture, the cuscuton is represented
+by the mismatch or discontinuities in the couplings of Lovelock terms, as we jump from
+one bulk to another. The cuscuton effective action emerges in the continuous limit of these
+discrete transitions. This process is explained in detail in section 3 and draws parallels
+with early attempts to formulate effective actions for the study of critical phenomena in
+condensed matter systems [56]. In this sense, our effective construction may initially appear
+to be crude and lacking finesse. Nevertheless, it could be useful to demystify the puzzles
+surrounding the cuscuton and cuscuton-like theories in general. At this stage, it is best to
+consider our setup as a pure mathematical tool for building an effective cuscuton theory.
+We comment more on this in section 6.
+Before closing this section, it is worth mentioning that non-propagating fields appear in
+other places in the literature.2 Non-propagating form fields are known to play an important
+2We thank C. P. Burgess for bringing these topics to our attention.
+– 3 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+role in the EFT for Quantum Hall (QH) systems, where in this case non-propagating Maxwell
+fields (2-forms) are essential in expressing how the QH state samples the topology of the space
+in which the system resides [57]. Another example comes from the effective construction in
+Supersymmetric Large Extra Dimensions (SLED) models, where a non-propagating 4-form
+is what tells the EFT that flux in the extra dimensions is quantized [58]. The presence of
+this field imposes a particular form on the low-energy potential that is precisely what is
+required for it to reproduce the dimensionally reduced result. Finally, in [59] they show
+that all auxiliary fields in the low energy 4-dimensional EFT of string compactifications
+arise as 4-forms. This implies there is a very general connection in 4 dimensions between
+non-propagating topological form fields and non-propagating auxiliary fields in 4-dimensional
+supergravity. While these topics are not often discussed, they may be especially important for
+the technical naturalness of theories (see [60, 61] for possible applications). Although these
+subjects are interesting to explore, they come with a plethora of technical intricacies associated,
+e.g., with supersymmetry and higher dimensions. On the other hand, the cuscuton serves
+as a straightforward illustration of a 4-dimensional non-propagating field, offering a more
+accessible avenue towards understanding how non-propagating fields may lose their dynamics.
+This manuscript is organised as follows: first, we give a brief introduction of the cuscuton
+in section 2 and lay down the main ingredients for the construciton of the effective cuscuton
+theory in section 3. We proceed to analyse the leading terms of the effective cuscuton action
+in section 4. We briefly discuss the treatment of higher-order operators in section 5 and
+we conclude in section 6.
+2
+A brief introduction of the cuscuton
+Historically, cuscuton was introduced as a scalar field characterised by an infinite speed of
+sound cs →∞. However, it does not propagate information outside (or inside) the light
+cone because it lacks a dynamical phase space. From a quantum perspective, the energy of
+a cuscuton quantum excitation is given by ℏω = ℏcsk →∞, for any finite wavenumber k,
+which implies that it takes infinite energy to carry information using cuscuton excitations.
+Furthermore, it benefits from protection against radiative corrections thanks to an enlarged
+set of symmetries [62, 63].
+However, we should note that the limit cs →∞is only well defined for a restricted set of
+boundary conditions. From a geometric perspective, as we see below, the cuscuton constant
+field surfaces are constant mean curvature surfaces (or “Lorentzian soap bubbles”) that are
+anchored on the boundary; healthy boundary conditions would require that the surfaces
+do not intersect in the bulk [3]. Furthermore, an initial-boundary value problem for such a
+system is only well-posed in the frame that the cuscuton is uniform, which ensures elliptic
+constraint equations (rather than pathologies such as apparent instabilities, or instantaneous
+modes that propagate back in time [64]).
+The action is expressed in terms of a scalar field ϕ with a non-canonical kinetic term, as
+S =
+Z
+d4x√−g
+ 
+M2
+P
+2 R −µ2√
+X + V (ϕ)
+!
+,
+X = −gµν∂µϕ∂νϕ,
+X > 0.
+(2.1)
+The cuscuton is a non-dynamical field satisfying constraint equations that modify the dynamics
+of the fields it couples to. To see this, let us assume a flat Friedmann-Lemaitre-Robertson-
+– 4 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+Walker (FLRW) spacetime with metric
+ds2 = −dt2 + a2(t) dx2,
+(2.2)
+and take a look at the background equations of motion, which read
+H2 = 1
+3V (ϕ),
+(2.3)
+˙H = −3H2
+2
+−1
+2µ2
+q
+˙ϕ2 + 1
+2V (ϕ),
+(2.4)
+3µ2H = −V ′(ϕ),
+(2.5)
+where the Friedmann equations are given by (2.3) and (2.4), while the last expression comes
+from varying the action with respect to the scalar field. It is now clear that the scalar
+field equation can be represented by a straightforward algebraic expression. We can then
+solve for the first Friedmann equation to get H =
+p
+V (ϕ)/6 and substituting into the last
+equation, we find µ2p
+3V (ϕ) = −V ′(ϕ). Therefore, we see that the equations of motion for
+GR+cuscuton cannot be generally satisfied, and thus we need to add additional content,
+i.e. matter, to the theory
+H2 = ρtot
+3 ,
+(2.6)
+where ρtot = ρm + V (ϕ) with MP = 1, to find instead that
+1
+3µ4 V ′2(ϕ) −V (ϕ) = ρm,
+(2.7)
+where ρm is the background density of matter species [15]. It is now clear that the cuscuton
+has no internal dynamics, but it merely modifies the fields it couples to through constraint
+equations. As an example, if we fix ρm, this consequently fixes ϕ, from which it follows
+that ϕ is just a function of matter density.
+The cuscuton has an interesting geometric representation which was first pointed out
+in [3]. Its equation of motion can be written in a covariant form, as
+1
+√−g∂µ
+√−ggµν∂νϕ
+√
+X
+
++ V ′(ϕ) = 0.
+(2.8)
+Using that the normal vector nµ for constant ϕ hypersurfaces, is given by
+nµ ≡∂µϕ
+√
+X
+,
+(2.9)
+and the definition of the extrinsic curvature K = ∇µnµ, we find that (2.8) becomes
+K(ϕ) = −V ′(ϕ)
+µ2
+.
+(2.10)
+Therefore, the constant ϕ hypersurfaces are also surfaces of constant mean curvature (or
+CMCs). The geometric picture that arises through this set-up is akin to soap bubbles or
+– 5 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+films in 3-dimensional Euclidean space. In this case, the CMC condition can be seen as the
+balance between the pressure and the surface tension forces. This can be understood by
+rewriting (2.10) in terms of the pressure difference across the surface, as
+(µ2∆ϕ)Kdisc = −∆V.
+(2.11)
+We thus see that µ2∆ϕ can be interpreted as the surface tension of the soap bubble. Eq. (2.11)
+can be solved to find the surface of the soap bubble or film. The result is a discrete set of
+solutions which can be determined by supplying the necessary boundary conditions.
+From this we understand that the contribution to the kinetic term in (1.1) can be thought
+of as summing over all such surfaces and taking the continuous limit. This motivates a
+natural conjecture that the cuscuton is a fundamentally discrete field associated with spacelike
+discontinuities/ topological defects in spacetime.
+3
+Effective cuscuton theory
+3.1
+Constructing the effective action
+As we explained in the Introduction, the aim of this work is to extend the geometric picture
+above into an effective cuscuton theory, that generalises the surface and volume terms. We
+do so by putting forward the following conjecture:
+The cuscuton is a fundamentally discrete ‘field’ labelling transitions in spacetime. In the
+limit of many transitions, it can be approximated by a continuous field with an infinite speed
+of sound. In this way, the effective cuscuton theory (ECT) emerges as a curvature expansion
+of the geometric theory of a series of bulks and their boundaries.
+We now explain how this picture can be realised. We consider a stack of spatial branes,
+having zero thickness, labelled ϕ = 1, 2, · · · . These can be thought of as hypersurfaces,
+each representing an instant in time. For the sake of simplicity, we take only gravity to
+propagate in the bulk (i.e., we turn the standard-model fields off). Assuming that these
+branes live on some bulk geometry, we expect the kinetic term to be given by the surface,
+whereas the potential will be given by the volume in the geometric picture. Additionally,
+we expect that geometric terms due to 4-d bulk gravity, i.e., the Einstein-Hilbert term and
+higher-order curvature invariants (for example, Lovelock invariants, such as the non-dynamical
+Gauss-Bonnet in 4 dimensions), will have associated boundary terms living on the brane
+geometry (see [54, 55, 65] and references therein).
+An interpretation of this geometrical description, which can be seen in figure 1, is
+that we are essentially studying the theory for consequent 3-dimensional defects in a 3 + 1
+dimensional field theory, with the key idea being, the cuscuton describes discontinuous jumps
+in spacetime. In this picture, we focus on the continuous limit of these discrete transitions
+(i.e., we approximate the sum as an integral over the geometric invariants living on the
+bulks and branes). As long as constant-ϕ hypersurfaces are spacelike, we can choose the
+unitary gauge, such that the scalar field is homogeneous, ϕ = ϕ(t), and thus its gradient
+points in the time direction.
+We first give a prescription for how to realise the continuous limit of this discrete
+geometric picture. The discrete action is given by the sum over all the geometric terms living
+– 6 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+Figure 1. The geometric picture of the cuscuton is described by a stack of non-identical spatial
+branes labeled by ϕ = 1 · · · n. Each bulk has its own value for the cosmological constant Vϕ, its own
+gravitational strength fϕ, and its own value for the Lovelock couplings ωϕ.
+in the bulks and the branes. For simplicity, let us focus only on the volume and surface
+contributions to the discrete action, which can be written as
+Sdisc =
+X
+ϕ
+V(ϕ, ϕ + ∆ϕ) × V (ϕ) +
+X
+ϕ
+S(ϕ) × c1(ϕ)∆ϕ,
+(3.1)
+where V(ϕ, ϕ + ∆ϕ) is the volume enclosed between ϕ and ϕ + ∆ϕ surfaces, while S(ϕ) is the
+area of the ϕ-hypersurface. Taking the continuous limit for the volume term gives
+X
+ϕ
+V(ϕ, ϕ + ∆ϕ) × V (ϕ)
+
+∆ϕ→0 =
+Z
+d4x√−g V (ϕ),
+(3.2)
+assuming that V (ϕ) is a slow-varying function of ϕ. This is nothing more than the potential
+V for the cuscuton. Similarly, taking the continuous limit of the surface term gives
+X
+ϕ
+S(ϕ) × c1(ϕ)∆ϕ
+
+∆ϕ→0 =
+Z
+d3x dϕ √γ c1(ϕ),
+(3.3)
+where √γ d3x is the 3-dimensional invariant surface element and c1(ϕ) is a slow-varying
+function of ϕ. To recover the 4-dimensional volume element we need to simply multiply and
+divide by Ndt, where N is the lapse. Therefore, the surface contribution to the action becomes
+Z
+d3x dϕ √γ c1(ϕ) =
+Z
+d4x √−g c1(ϕ) 1
+N =
+Z
+d4x √−g c1(ϕ)
+√
+X.
+(3.4)
+– 7 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+This way, we recover the cuscuton kinetic term3 from the surface contribution in the geometric
+picture.4 From this it follows that all other possible gravitational terms living in the boundary
+will, naturally, be coupled to the cuscuton through
+√
+X.
+Following the same prescription, we can now extend the theory by summing over the
+geometric invariants living in the bulks and on the boundaries, ordered in powers of curvature.
+In the continuous limit ∆ϕ →0, the sum becomes an integral, which we call the effective
+cuscuton action (ECT):
+SECT = Λ4
+Z
+d4x√−g
+
+V (ϕ) + f(ϕ) R
+2Λ2 + ω(ϕ)RGB
+2Λ4
++ c1(ϕ)
+√
+X
+Λ
++ εc2(ϕ)
+√
+XK
+Λ2
++ c3(ϕ)
+√
+X R
+Λ3
++ c4(ϕ)
+√
+X KGB
+Λ4
++ · · ·
+
+,
+(3.5)
+where, from now on, we assume ϕ is dimensionless, and introduce a mass scale Λ, associated
+with the UV-completion of cuscuton, which could be comparable or lower than the Planck
+mass. Here, “+ · · · ” indicates higher-order curvature invariants that may live in the bulk
+and/or on the boundary. R is the 4-dimensional Ricci scalar and RGB is the 4-dimensional
+Gauss-Bonnet term, given in terms of the 4-dimensional curvature invariants:
+RGB = R2 −4RµνRµν + RµνρσRµνρσ.
+(3.6)
+The potential V (ϕ) of the scalar field corresponds to the leading contribution of the volume
+terms in the geometric picture, while the leading contribution to the surface terms is given
+by the standard cuscuton term
+√
+X. The trace of the extrinsic curvature Kij is denoted
+as K = γijKij, with γij being the spatial metric, R is the intrinsic curvature (or the 3d
+Ricci scalar, γijRij), and KGB is the boundary term for the 4-dimensional Gauss-Bonnet
+term [66], given by
+KGB = −2
+
+J −2εGijKij
+
+,
+(3.7)
+where
+J = 1
+3γij
+2KKicKc
+j + KcdKcdKij −2KicKcdKdj −K2Kij
+
+.
+(3.8)
+As illustrated in figure 1, in the discrete geometric picture, the effective couplings are constant
+coefficients that characterise the different phases or vacua separating each successive brane.
+Each bulk contains distinct values for the cosmological constant, gravitational constant and
+couplings to the Lovelock terms. Likewise, every brane possesses unique values for the
+coefficients of the gravitational surface terms. Whenever there is a discontinuity or jump
+in the bulk couplings, there will be a corresponding surface term associated with it. In the
+continuous limit, the couplings are taken to be slow-varying functions of the scalar field ϕ.
+However, not all effective couplings are independent. The effective couplings corresponding
+3This can be understood because in the unitary gauge the role of the physical clock is played by ϕ such
+that ∇µ is time-like. Therefore, X = −gµν∂µt∂νt = 1/N 2.
+4Comparing to eq. (2.1), we see that µ2 = c1(ϕ) matches the original cuscuton action.
+– 8 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+to the boundary terms for the Einstein-Hilbert and Gauss-Bonnet terms are completely
+determined by the geometry [65]. In the continuous limit, this fixes the coefficients c2, c4, · · · :
+c2(ϕ) = lim
+∆ϕ→0
+f(ϕ + ∆ϕ) −f(ϕ)
+∆ϕ
+= ∂f(ϕ)
+∂ϕ ,
+(3.9)
+c4(ϕ) = lim
+∆ϕ→0
+ω(ϕ + ∆ϕ) −ω(ϕ)
+∆ϕ
+= ∂ω(ϕ)
+∂ϕ
+.
+(3.10)
+In other words, the even-labelled surface couplings represent the rate of change of the bulk
+curvature couplings as we transition from one vacuum to another (in the limit where the sum
+becomes continuous). In this sense, the boundary is bookkeeping that something physical
+is changing. We shall see that this will play a key role in ensuring, the ECT propagates
+only the two tensorial degrees of freedom. The reason is that in the continuous limit, these
+boundary contributions act as counterterms to the bulk contributions, effectively eliminating
+the terms responsible for propagating the scalar degree of freedom. This will be clarified in
+the next section where we will closely examine the structure of the action in (3.5).
+Note that the leading volume term, V (ϕ) describing the cuscuton potential, has no
+derivatives and, therefore, no surface term associated with it.
+Finally, c3 accompanies
+curvature terms that may live in each brane, which by dimensional analysis should be
+included in the effective action, such as R. In the limit of constant couplings, i.e., f = M2
+Pl,
+where MPl ≡1/
+√
+8πG is the reduced Planck mass and c1 = −µ2, we recover the leading
+cuscuton action in (2.1). It is now evident that the effective action in (3.5) is simply an
+extension of (1.1) containing curvature corrections to the volume and the surface terms.
+To conclude this section, we have constructed a geometric effective description for the
+cuscuton. Given that the original cuscuton theory (with only non-vanishing V and c1, and
+constant f) is a subset of the Type II MMG theories [6, 8] or the covariant spatial gravity
+theories [13, 14], with only two tensorial degrees of freedom, it is natural to wonder whether
+ECT also fits into (either of) these two frameworks. We shall come back to this question in
+the next section, where we examine the ADM decomposition of ECT.
+4
+ADM decomposition of action and EOMs
+As we saw in the previous section, the ECT is expressed as an expansion in the powers
+of curvature. While it would be desirable to confirm the validity of our conjecture for
+arbitrary powers of curvature, the treatment of higher-order curvature invariants can become
+increasingly complex and technical. This would divert attention from the main focus of
+this manuscript which is to introduce the reader to the geometric construction of the ECT
+and outline its main features. While we shall briefly comment on the handling of higher
+curvature terms (such as RGB) and some of the technicalities associated with the elimination
+of additional degrees of freedom beyond the two tensorial modes, we leave a more detailed
+analysis for future work. As such, for the remainder of this work, we will focus on the
+leading-terms in the ECT, namely
+SECT = Λ4
+Z
+d4x√−g
+
+f(ϕ)
+(4)R
+2Λ2 + c1(ϕ)
+√
+X
+Λ
++ V (ϕ) + εc2(ϕ)
+√
+XK
+Λ2
+
+.
+(4.1)
+– 9 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+4.1
+ADM decomposition
+The action in (4.1) is given in terms of 3- and 4-dimensional objects. Ideally, it is desirable
+to express these terms using a consistent framework. To facilitate this, we opt to employ the
+ADM formalism [67]. The necessary ingredients of this decomposition are outlined below.
+We define the normalisation nαnα = ε = −1 where nα is a timelike vector pointing
+in the direction of increasing ϕ, i.e., nν = ε∂νϕ/
+√
+X.
+The induced metric is given by
+gαβ = γαβ −nαnβ and we define the extrinsic curvature Kab = ∇anb −naab where Kab = Kba
+is a symmetric tensor and acceleration aa = −nb∇bna = −Da ln N = −DaN
+N . We will often
+make use of the identity nµ∇αnµ = 0 and that the extrinsic curvature satisfies the relation
+Lnγab = 2Kab.
+(4.2)
+With these definitions, the projections of the 4-D Riemann tensor read (see also [68], albeit
+with different conventions)
+(4)Rijkl = KikKjl −KilKjk + (3)Rijkl,
+(4.3)
+(4)Rijkn ≡nµ (4)Rijkµ = DiKjk −DjKik,
+(4.4)
+(4)Rinkn ≡nµnν (4)Riµjν = −LnKij + KikK k
+j + 1
+N DiDjN.
+(4.5)
+Next, we use that Rαβ = gµνRµανβ and from this, we derive the projections of the 4-
+dimensional Ricci tensor:
+(4)Rij = KKij −2K a
+i Kja + Rij −DjDiN
+N
++ LnKij,
+(4.6)
+(4)Rnj = DaKja −DjK,
+(4.7)
+(4)Rnn = −KijKij + DiDiN
+N
+−LnKij.
+(4.8)
+Contracting again gives an expression for the Ricci scalar
+(4)R = KijKij + K2 + R −DaDaN
+N
++ 2
+ ˙K −LNK
+
+,
+(4.9)
+where
+LNKij ≡NkDkKij + KikDjNk + KjkDiNk,
+(4.10)
+and Ni is the shift vector. Finally, in the unitary gauge, i.e. ϕ = ϕ(t), we see that under
+the ADM decomposition
+√
+X = Lnϕ,
+(4.11)
+where the Lie derivative acting in the direction of n, is defined as
+Ln = 1
+N
+˜Ln = 1
+N (Lt −LN),
+(4.12)
+– 10 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+with Ltϕ = ∂tϕ and with our conventions,5 we have that LNϕ = Ni∂iϕ = 0 so that we can
+safely ignore spatial derivatives acting on ϕ. Finally, in terms of the ADM variables, the
+extrinsic curvature and its trace can be written as follows:
+Kij =
+1
+2N (∂tγij −DiNj −DjNi),
+(4.13)
+K = γijKij =
+1
+2N
+
+γij∂tγij −2DiNi
+,
+(4.14)
+respectively.
+4.2
+ADM analysis
+Using the ADM definitions, given above, the action in (4.1) can be expressed in the 3 + 1
+decomposition as
+SECT = Λ4
+Z
+d4x N√γ
+
+V (ϕ) + c1(ϕ)
+√
+X
+Λ
++ f(ϕ)
+2Λ2
+
+KabKab + K2 + R
+−2DaDaN
+N
++ 2LnK
+
+−εc2(ϕ)
+√
+XK
+Λ2
+
+.
+(4.15)
+The term proportional to DaDaN is independent of the volume form and therefore a total
+derivative, while the term proportional to LnK can be integrated by parts to give
+SECT = Λ4
+Z
+d4x N√γ
+
+V (ϕ) + c1(ϕ)
+√
+X
+Λ
++ f(ϕ)
+2Λ2
+
+K2 −KabKab + R
+
+−1
+Λ2 f′(ϕ)
+√
+XK −εc2(ϕ)
+√
+XK
+Λ2
+
+.
+(4.16)
+Then, by using (3.10), (4.11) and that with our conventions ε = −1, it is straightforward
+to show that the last two terms cancel out, leaving
+SECT = Λ4
+Z
+d4x N√γ
+
+V (ϕ) + c1(ϕ)
+√
+X
+Λ
++ f(ϕ)
+2Λ2
+
+K2 −KabKab + R
+
+.
+(4.17)
+Given that ϕ = ϕ(t) and
+√
+X = ˙ϕ(t)/N in the unitary gauge, the action (4.1) written in the
+form (4.17) is nothing but a subset of the minimally-modified gravity theories MMG-II [6, 9]
+having the generic form L = NF(Kij, Rij, γij, t) + G(Kij, Rij, γij, t). Comparing the two, we
+see that the potential and spatial curvature terms, which are coupled to f(ϕ), appear to be
+linear in the lapse N and therefore correspond to the term NF, while the cuscuton term,
+which couples to c1(ϕ), is independent of the lapse and therefore corresponds to the term
+G. The classification II refers to the fact that these type of modified gravity theories have
+no Einstein frame. In [6, 9] it was shown, through Hamiltonian analyses, that this type of
+action propagates only two tensorial degrees of freedom.6
+We can use the geometric construction of the ECT to obtain some intuition of why this
+is the case. Going from (4.16) to (4.17) we found that the contributions from the surface
+5Here, we have assumed ˙ϕ > 0.
+6See sections 3.1 and 3.4 in [6], for a proof of this statement.
+– 11 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+terms, in the geometric picture, act as counterterms, i.e., they induce cancellations such that
+the resulting system does not propagate a scalar degree of freedom, but simply leads to a set
+of constraint equations. This becomes clearer when examining the equations of motion:
+0 = V (ϕ) −f(ϕ)
+2
+
+K2 −KcdKcd −R
+
+,
+(4.18)
+0 = f(ϕ)(DcK c
+i −DiK),
+(4.19)
+0 = V (ϕ)γij + c1(ϕ)
+√
+Xγij + f(ϕ)
+
+KKij −2KiaKja −Gij
+−1
+2KabKabγij −1
+2K2γij −γijLnK + LnKij
+
++ f′(ϕ)Lnϕ(Kij −Kγij),
+(4.20)
+0 = V ′(ϕ) −c1(ϕ)K Lnϕ
+√
+X
++ f′(ϕ)
+2
+
+K2 −KabKab + R
+
+,
+(4.21)
+where (4.18) is the Hamiltonian constraint, (4.19) is the momentum constraint, (4.20) is the
+evolution of the spatial metric and (4.21) is the scalar field equation. For brevity, we have
+absorbed the scale Λ within the couplings. Equation (4.20) is not independent; therefore, we
+can directly substitute the Hamiltonian constraint (4.18) into the scalar field equation (4.21),
+to find a constraint equation:
+K =
+1
+c1(ϕ)
+3
+2
+ V ′(ϕ) + f′(ϕ)R
+
+.
+(4.22)
+For a flat FLRW background, the equations of motion read
+0 = 3H2f(ϕ) −V (ϕ),
+(4.23)
+0 = f(ϕ)
+
+˙H + 3
+2H2
+
++ Hf′(ϕ) ˙ϕ −1
+2c1(ϕ) ˙ϕ −1
+2V (ϕ),
+(4.24)
+0 = 3H2f′(ϕ) −3 c1(ϕ) H + V ′(ϕ).
+(4.25)
+If we add matter into the mix, we find that the second Friedmann equation is indeed
+independent. As before, we can substitute the first Friedmann equation into the scalar field
+equation to find a constraint equation:
+V ′(ϕ) −c1(ϕ)
+s
+3 V ′(ϕ)
+4 f′(ϕ) = 0.
+(4.26)
+Similarly to the case of cuscuton, the ECT field equation in empty flat FLRW reduces to a
+constraint on the functions c1(ϕ), f(ϕ), and V (ϕ), without actually constraining the expansion
+history. Therefore, we only expect a sensible cosmology, if we introduce additional matter
+that changes the left-hand sides of equations (4.23)–(4.24). In this case, the field ϕ will simply
+follow the expansion rate H, through the field equation (4.25).
+5
+Going beyond leading-order in the effective cuscuton theory
+As we discussed earlier, the ECT is an expansion in powers of curvature, allowing one to
+incorporate an arbitrary number of higher-derivative terms into the action, accompanied by
+– 12 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+the corresponding counterterms, as prescribed by the geometric picture. Supposing that our
+conjecture proves valid, these counterterms should eliminate the propagation of the scalar
+degree of freedom at every order, thereby ensuring that the theory retains solely the two
+desired tensorial degrees of freedom. As with all EFTs, in practise, the theory is truncated
+at a specific order within the perturbative expansion. This is typically decided depending
+on two factors: i) the nature of the intended physical application, and ii) the energy range
+that our physical experiments can feasibly probe [57].
+When extending our EFT beyond the leading order, one possible option would involve
+including curvature invariants, such as those discussed in [69, 70]. Unfortunately, not all
+boundary terms for curvature invariants have yet been fully explored.7 For this reason,
+here we choose to work with terms of Lovelock type, such as the Gauss-Bonnet term whose
+boundary contributions to the action were previously studied in [66]. As an added bonus,
+this choice guarantees second-order equations of motion without the need of performing
+field redefinitions, order by order in the preturbative expansion, which is typically the case
+with other curvature invariants.
+Including the Gauss-Bonnet (ignoring the c3 term for now), the action (3.5) becomes
+SECT = Λ4
+Z
+d4x N√γ
+
+V (ϕ) + c1(ϕ)
+√
+X
+Λ
++ f(ϕ)
+2Λ2
+
+K2 −KabKab + R
+
++ ω(ϕ)
+2Λ4
+
+RGB −12KacKabKbdKcd −8
+3KK c
+a KabKcd −KabKabKcdKcd
++ 2K2KcdKcd −1
+3K4 + 16KacKab Rbc + 2KabKab R −2K2 R
++ 4KabKcd Racbd + 8 DbDaGab + 8KabDbDaK + 8KDcDbKbc −8KDcDcK
+−16KabD(cDb)Kac + 8KabDcDcKab + 8KabLnGab
+
+,
+(5.1)
+where we have performed several integrations by parts and used the relation in (3.10) to
+cancel out the counterterms. We have defined the following:
+RGB = R2 −4RijRij + RijklRijkl,
+(5.2)
+Gij = Rij −1
+2γijR,
+(5.3)
+and
+A(ab) ≡1
+2(Aab + Aba),
+(5.4)
+is defined as the symmetrized sum for any two tensor indices.
+Comparing this to the action in (4.17) and employing the language used in [6, 13], the
+action in (5.1) is of the general form
+SECT = Λ4
+Z
+d4x N√γF(Kij, Rij, Di, γij, Ln, t).
+(5.5)
+7It was recently suggested that they make take the form as in [71].
+– 13 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+We anticipate, the presence of mixed space-time derivatives, (i.e., of the form DiK) will likely
+modify the Hamiltonian structure of (5.1) and make it challenging to solve conditions obtained
+from Hamiltonian analysis, as discussed in [6, 13]. Certainly, we did not face these issues with
+the action in (4.17). Additionally, the presence of the Lie derivative in the last term of (5.1),
+namely LnGab, introduces complications and a Hamiltonian analysis may not be feasible due
+to the mixing of time and spatial partial derivatives of the metric. Fortunately for us, the Lie
+derivative drops out at the level of the equations of motion. This can be seen by following the
+same procedure as in the previous section. We can extend the constraint equation in (4.22)
+to include the contributions from the Gauss-Bonnet term plus counterterms, which reads
+K =
+1
+c1(ϕ)
+3
+2V ′(ϕ) + f′(ϕ)R + ω′(ϕ)(B + C)
+
+,
+(5.6)
+where
+B = 12KacKabKbdKcd+ 8
+3KK c
+a KabKcd+KabKabKcdKcd−2K2KcdKcd+ 1
+3K4,
+(5.7)
+C = RGB+8DbDaGab+16DcDaN
+N
+
+K c
+a Kab−KKbc
++8DcDcN
+N
+
+K2−KabKab
+.
+(5.8)
+Indeed, we discover that the troublesome Lie derivatives can be eliminated from the constraint
+equation. The terms involving spatial covariant derivatives acting on the lapse were initially
+removed from the action in (5.1), through repeated integration by parts. However, these terms
+have been reintroduced into the equations of motion, as one would expect. Nonetheless, the
+eliminations of LnGab from the constraint equation, gives us hope that a proper Hamiltonian
+analysis may be possible.8
+6
+Discussion
+In the Introduction, we discussed various approaches to constructing cuscuton-like theories,
+which have been demonstrated to be helpful in obtaining theories of modified gravity without
+an additional scalar degree of freedom. These could have implications in understanding dark
+energy, black holes, or even the cosmological Big Bang. Yet, it is crucial to maintain focus on
+the fundamental aspects defining what makes a theory cuscuton-like. This is particularly
+intriguing since the cuscuton appears in several places in physics, such as being the IR limit
+to Horava-Lifshitz gravity and the UV limit (X ≫1) of the (anti-)DBI action [72].
+Understanding the fundamental reasons behind a theory being cuscuton-like might hold
+the key to discovering something much more profound. This is the motivation of this work,
+in which we extended the cuscuton theory through geometric postulates by introducing
+curvature corrections to both the volume and the surface terms in the original cuscuton
+action. Our assumptions involve a stack of spacelike branes, separated by 4-dimensional
+bulks, conjecturing that the cuscuton, initially a discrete field, becomes continuous in the
+limit; there are many such transitions.
+Analysis of this effective cuscuton theory (ECT), at the quadratic level of the action,
+reveals that it is a subset of Type II MMG or covariant spatial gravity theories. These
+8We thank Shinji Mukohyama for bringing this point to our attention.
+– 14 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+are modified gravity theories that propagate only the two tensorial degrees of freedom. We
+find that, in the continuous limit, the surface contributions act as “counterterms”, inducing
+cancelations that effectively eliminate terms responsible for propagating the scalar degree
+of freedom.
+This novel approach to constructing cuscuton-like theories serves as the manuscript’s
+focus, introducing readers to its main mechanics and features. Detailed treatments of higher-
+order curvature terms, such as the Gauss-Bonnet, are deferred to future work, along with the
+exploration of underlying symmetries and the stability analysis of this geometric construction.
+Finally, the geometric picture for the cuscuton involves a series of subsequent phase
+transitions (or quantum tunnelings), which are commonly believed to become quickly non-
+perturbative through bubble nucleations and collisions. One may, however, imagine that
+there may be an alternative regime in this process that may be “cuscuton-like”, but we shall
+refrain from commenting any further at this point, as we enter the realm of pure speculation.
+Acknowledgments
+The authors would like to thank C.P. Burgess, X. Gao, J-O. Gong, W. Kinney, T. Kobayashi,
+S. Mukohyama, M. Sasaki and G. Tasinato for helpful discussions and insightful comments
+to the manuscript. NA is supported by the University of Waterloo, Natural Sciences and
+Engineering Research Council of Canada (NSERC) and the Perimeter Institute for Theoretical
+Physics. Research at Perimeter Institute is supported in part by the Government of Canada
+through the Department of Innovation, Science and Economic Development Canada and
+by the Province of Ontario through the Ministry of Colleges and Universities.
+MM is
+supported in parts by the Mid-Career Research Program (2019R1A2C2085023) through
+the National Research Foundation of Korea Research Grants. MM is also supported Kavli
+IPMU which was established by the World Premier International Research Center Initiative
+(WPI), MEXT, Japan.
+Open Access.
+This article is distributed under the terms of the Creative Commons
+Attribution License (CC-BY4.0), which permits any use, distribution and reproduction in
+any medium, provided the original author(s) and source are credited.
+References
+[1] D. Lovelock, The Einstein tensor and its generalizations, J. Math. Phys. 12 (1971) 498 [INSPIRE].
+[2] D. Lovelock, The four-dimensionality of space and the einstein tensor, J. Math. Phys. 13 (1972)
+874 [INSPIRE].
+[3] N. Afshordi, D.J.H. Chung and G. Geshnizjani, Cuscuton: A Causal Field Theory with an
+Infinite Speed of Sound, Phys. Rev. D 75 (2007) 083513 [hep-th/0609150] [INSPIRE].
+[4] A. Iyonaga, K. Takahashi and T. Kobayashi, Extended Cuscuton: Formulation, JCAP 12 (2018)
+002 [arXiv:1809.10935] [INSPIRE].
+[5] A. De Felice and S. Mukohyama, Minimal theory of massive gravity, Phys. Lett. B 752 (2016)
+302 [arXiv:1506.01594] [INSPIRE].
+– 15 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+[6] C. Lin and S. Mukohyama, A Class of Minimally Modified Gravity Theories, JCAP 10 (2017)
+033 [arXiv:1708.03757] [INSPIRE].
+[7] S. Mukohyama and K. Noui, Minimally Modified Gravity: a Hamiltonian Construction, JCAP
+07 (2019) 049 [arXiv:1905.02000] [INSPIRE].
+[8] K. Aoki et al., Phenomenology in type-I minimally modified gravity, JCAP 01 (2019) 017
+[arXiv:1810.01047] [INSPIRE].
+[9] A. De Felice, A. Doll and S. Mukohyama, A theory of type-II minimally modified gravity, JCAP
+09 (2020) 034 [arXiv:2004.12549] [INSPIRE].
+[10] K. Aoki, M.A. Gorji and S. Mukohyama, A consistent theory of D →4 Einstein-Gauss-Bonnet
+gravity, Phys. Lett. B 810 (2020) 135843 [arXiv:2005.03859] [INSPIRE].
+[11] K. Aoki, F. Di Filippo and S. Mukohyama, Non-uniqueness of massless transverse-traceless
+graviton, JCAP 05 (2021) 071 [arXiv:2103.15044] [INSPIRE].
+[12] A. De Felice, K.-I. Maeda, S. Mukohyama and M.C. Pookkillath, Comparison of two theories of
+Type-IIa minimally modified gravity, Phys. Rev. D 106 (2022) 024028 [arXiv:2204.08294]
+[INSPIRE].
+[13] X. Gao and Z.-B. Yao, Spatially covariant gravity theories with two tensorial degrees of freedom:
+the formalism, Phys. Rev. D 101 (2020) 064018 [arXiv:1910.13995] [INSPIRE].
+[14] Y.-M. Hu and X. Gao, Spatially covariant gravity with 2 degrees of freedom: Perturbative
+analysis, Phys. Rev. D 104 (2021) 104007 [arXiv:2104.07615] [INSPIRE].
+[15] N. Afshordi, D.J.H. Chung, M. Doran and G. Geshnizjani, Cuscuton Cosmology: Dark Energy
+meets Modified Gravity, Phys. Rev. D 75 (2007) 123509 [astro-ph/0702002] [INSPIRE].
+[16] J. Magueijo, Speedy sound and cosmic structure, Phys. Rev. Lett. 100 (2008) 231302
+[arXiv:0803.0859] [INSPIRE].
+[17] N. Afshordi, Cuscuton and low energy limit of Hořava-Lifshitz gravity, Phys. Rev. D 80 (2009)
+081502 [arXiv:0907.5201] [INSPIRE].
+[18] D. Bessada, W.H. Kinney, D. Stojkovic and J. Wang, Tachyacoustic Cosmology: An Alternative
+to Inflation, Phys. Rev. D 81 (2010) 043510 [arXiv:0908.3898] [INSPIRE].
+[19] N. Afshordi, M. Fontanini and D.C. Guariento, Horndeski meets McVittie: A scalar field theory
+for accretion onto cosmological black holes, Phys. Rev. D 90 (2014) 084012 [arXiv:1408.5538]
+[INSPIRE].
+[20] A. Agarwal and N. Afshordi, Thermal Tachyacoustic Cosmology, Phys. Rev. D 90 (2014) 043528
+[arXiv:1406.0575] [INSPIRE].
+[21] A. De Felice and S. Mukohyama, Phenomenology in minimal theory of massive gravity, JCAP 04
+(2016) 028 [arXiv:1512.04008] [INSPIRE].
+[22] J. Bhattacharyya et al., Revisiting the cuscuton as a Lorentz-violating gravity theory, Phys. Rev.
+D 97 (2018) 064020 [arXiv:1612.01824] [INSPIRE].
+[23] N. Afshordi and J. Magueijo, The critical geometry of a thermal big bang, Phys. Rev. D 94
+(2016) 101301 [arXiv:1603.03312] [INSPIRE].
+[24] S.S. Boruah, H.J. Kim and G. Geshnizjani, Theory of Cosmological Perturbations with Cuscuton,
+JCAP 07 (2017) 022 [arXiv:1704.01131] [INSPIRE].
+[25] J. Chagoya and G. Tasinato, A new scalar-tensor realization of Hořava-Lifshitz gravity, Class.
+Quant. Grav. 36 (2019) 075014 [arXiv:1805.12010] [INSPIRE].
+– 16 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+[26] S.S. Boruah, H.J. Kim, M. Rouben and G. Geshnizjani, Cuscuton bounce, JCAP 08 (2018) 031
+[arXiv:1802.06818] [INSPIRE].
+[27] A. De Felice, F. Larrouturou, S. Mukohyama and M. Oliosi, Black holes and stars in the minimal
+theory of massive gravity, Phys. Rev. D 98 (2018) 104031 [arXiv:1808.01403] [INSPIRE].
+[28] K. Aoki et al., Minimally modified gravity fitting Planck data better than ΛCDM, Eur. Phys. J.
+C 80 (2020) 708 [arXiv:2005.13972] [INSPIRE].
+[29] J. Quintin and D. Yoshida, Cuscuton gravity as a classically stable limiting curvature theory,
+JCAP 02 (2020) 016 [arXiv:1911.06040] [INSPIRE].
+[30] A. De Felice, S. Mukohyama and M.C. Pookkillath, Minimal theory of massive gravity and
+constraints on the graviton mass, JCAP 12 (2021) 011 [arXiv:2110.01237] [INSPIRE].
+[31] K. Aoki, M.A. Gorji and S. Mukohyama, Cosmology and gravitational waves in consistent D →4
+Einstein-Gauss-Bonnet gravity, JCAP 09 (2020) 014 [Erratum ibid. 05 (2021) E01]
+[arXiv:2005.08428] [INSPIRE].
+[32] K. Aoki, M.A. Gorji, S. Mizuno and S. Mukohyama, Inflationary gravitational waves in
+consistent D →4 Einstein-Gauss-Bonnet gravity, JCAP 01 (2021) 054 [arXiv:2010.03973]
+[INSPIRE].
+[33] A. Iyonaga, K. Takahashi and T. Kobayashi, Extended Cuscuton as Dark Energy, JCAP 07
+(2020) 004 [arXiv:2003.01934] [INSPIRE].
+[34] A. De Felice, A. Doll, F. Larrouturou and S. Mukohyama, Black holes in a type-II minimally
+modified gravity, JCAP 03 (2021) 004 [arXiv:2010.13067] [INSPIRE].
+[35] A. De Felice and S. Mukohyama, Weakening gravity for dark matter in a type-II minimally
+modified gravity, JCAP 04 (2021) 018 [arXiv:2011.04188] [INSPIRE].
+[36] A. De Felice, S. Mukohyama and M.C. Pookkillath, Addressing H0 tension by means of VCDM,
+Phys. Lett. B 816 (2021) 136201 [Erratum ibid. 818 (2021) 136364] [arXiv:2009.08718]
+[INSPIRE].
+[37] W.-C. Lin and W.H. Kinney, The Trans-Planckian problem in Tachyacoustic Cosmology, JCAP
+04 (2021) 044 [arXiv:2007.09144] [INSPIRE].
+[38] S. Panpanich and K.-I. Maeda, Cosmological dynamics of Cuscuta-Galileon gravity, Eur. Phys. J.
+C 83 (2023) 240 [arXiv:2109.12288] [INSPIRE].
+[39] M. Mylova, M. Moschou, N. Afshordi and J. Magueijo, Non-Gaussian signatures of a thermal
+Big Bang, JCAP 07 (2022) 005 [arXiv:2112.08179] [INSPIRE].
+[40] J.C.N. de Araujo, A. De Felice, S. Kumar and R.C. Nunes, Minimal theory of massive gravity in
+the light of CMB data and the S8 tension, Phys. Rev. D 104 (2021) 104057 [arXiv:2106.09595]
+[INSPIRE].
+[41] M.C. Pookkillath, Minimally Modified Gravity Fitting Planck Data Better Than ΛCDM, Astron.
+Rep. 65 (2021) 1021 [INSPIRE].
+[42] N. Bartolo, A. Ganz and S. Matarrese, Cuscuton inflation, JCAP 05 (2022) 008
+[arXiv:2111.06794] [INSPIRE].
+[43] A. Iyonaga and T. Kobayashi, Distinguishing modified gravity with just two tensorial degrees of
+freedom from general relativity: Black holes, cosmology, and matter coupling, Phys. Rev. D 104
+(2021) 124020 [arXiv:2109.10615] [INSPIRE].
+[44] K.-I. Maeda and S. Panpanich, Cuscuta-Galileon cosmology: Dynamics, gravitational constants,
+and the Hubble constant, Phys. Rev. D 105 (2022) 104022 [arXiv:2202.04908] [INSPIRE].
+– 17 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+[45] T. Hiramatsu and T. Kobayashi, Testing gravity with the cosmic microwave background:
+constraints on modified gravity with two tensorial degrees of freedom, JCAP 07 (2022) 040
+[arXiv:2205.04688] [INSPIRE].
+[46] K. Kohri and K.-I. Maeda, A possible solution to the helium anomaly of EMPRESS VIII by
+cuscuton gravity theory, PTEP 2022 (2022) 091E01 [arXiv:2206.11257] [INSPIRE].
+[47] J. Saito and T. Kobayashi, Black hole perturbations in spatially covariant gravity with just two
+tensorial degrees of freedom, Phys. Rev. D 108 (2023) 104063 [arXiv:2308.00267] [INSPIRE].
+[48] Z.-B. Yao, M. Oliosi, X. Gao and S. Mukohyama, Minimally modified gravity with auxiliary
+constraints formalism, Phys. Rev. D 107 (2023) 104052 [arXiv:2302.02090] [INSPIRE].
+[49] Z.-B. Yao, M. Oliosi, X. Gao and S. Mukohyama, Minimally modified gravity with an auxiliary
+constraint: A Hamiltonian construction, Phys. Rev. D 103 (2021) 024032 [arXiv:2011.00805]
+[INSPIRE].
+[50] J. Chagoya and G. Tasinato, A geometrical approach to degenerate scalar-tensor theories, JHEP
+02 (2017) 113 [arXiv:1610.07980] [INSPIRE].
+[51] G. Tasinato, Symmetries for scalarless scalar theories, Phys. Rev. D 102 (2020) 084009
+[arXiv:2009.02157] [INSPIRE].
+[52] M. Gutperle and A. Strominger, Space-like branes, JHEP 04 (2002) 018 [hep-th/0202210]
+[INSPIRE].
+[53] M. Cicoli et al., String cosmology: From the early universe to today, Phys. Rept. 1059 (2024) 1
+[arXiv:2303.04819] [INSPIRE].
+[54] C. de Rham and A.J. Tolley, DBI and the Galileon reunited, JCAP 05 (2010) 015
+[arXiv:1003.5917] [INSPIRE].
+[55] G. Goon, K. Hinterbichler and M. Trodden, Symmetries for Galileons and DBI scalars on curved
+space, JCAP 07 (2011) 017 [arXiv:1103.5745] [INSPIRE].
+[56] K.G. Wilson, Renormalization group and critical phenomena. I. Renormalization group and the
+Kadanoff scaling picture, Phys. Rev. B 4 (1971) 3174 [INSPIRE].
+[57] C.P. Burgess, Introduction to effective field theory, Cambridge University Press (2020)
+[DOI:10.1017/9781139048040].
+[58] C.P. Burgess, R. Diener and M. Williams, Self-Tuning at Large (Distances): 4D Description of
+Runaway Dilaton Capture, JHEP 10 (2015) 177 [arXiv:1509.04209] [INSPIRE].
+[59] S. Bielleman, L.E. Ibanez and I. Valenzuela, Minkowski 3-forms, Flux String Vacua, Axion
+Stability and Naturalness, JHEP 12 (2015) 119 [arXiv:1507.06793] [INSPIRE].
+[60] C.P. Burgess and F. Quevedo, Who’s Afraid of the Supersymmetric Dark? The Standard Model
+vs Low-Energy Supergravity, Fortsch. Phys. 70 (2022) 2200077 [arXiv:2110.13275] [INSPIRE].
+[61] C.P. Burgess, D. Dineen and F. Quevedo, Yoga Dark Energy: natural relaxation and other dark
+implications of a supersymmetric gravity sector, JCAP 03 (2022) 064 [arXiv:2111.07286]
+[INSPIRE].
+[62] E. Pajer and D. Stefanyszyn, Symmetric Superfluids, JHEP 06 (2019) 008 [arXiv:1812.05133]
+[INSPIRE].
+[63] T. Grall, S. Jazayeri and E. Pajer, Symmetric Scalars, JCAP 05 (2020) 031
+[arXiv:1909.04622] [INSPIRE].
+– 18 –
+
+---PAGE BREAK---
+JHEP04(2024)144
+[64] A. De Felice et al., Generalized instantaneous modes in higher-order scalar-tensor theories, Phys.
+Rev. D 98 (2018) 084024 [arXiv:1803.06241] [INSPIRE].
+[65] E. Dyer and K. Hinterbichler, Boundary Terms, Variational Principles and Higher Derivative
+Modified Gravity, Phys. Rev. D 79 (2009) 024028 [arXiv:0809.4033] [INSPIRE].
+[66] S.C. Davis, Generalized Israel junction conditions for a Gauss-Bonnet brane world, Phys. Rev. D
+67 (2003) 024030 [hep-th/0208205] [INSPIRE].
+[67] R.L. Arnowitt, S. Deser and C.W. Misner, The dynamics of general relativity, Gen. Rel. Grav.
+40 (2008) 1997 [gr-qc/0405109] [INSPIRE].
+[68] N. Deruelle, M. Sasaki, Y. Sendouda and D. Yamauchi, Hamiltonian formulation of f(Riemann)
+theories of gravity, Prog. Theor. Phys. 123 (2010) 169 [arXiv:0908.0679] [INSPIRE].
+[69] S. Weinberg, Effective Field Theory for Inflation, Phys. Rev. D 77 (2008) 123541
+[arXiv:0804.4291] [INSPIRE].
+[70] A.R. Solomon and M. Trodden, Higher-derivative operators and effective field theory for general
+scalar-tensor theories, JCAP 02 (2018) 031 [arXiv:1709.09695] [INSPIRE].
+[71] G. Neri and S. Liberati, On the resilience of the gravitational variational principle under
+renormalization, JHEP 10 (2023) 054 [arXiv:2306.17505] [INSPIRE].
+[72] V.F. Mukhanov and A. Vikman, Enhancing the tensor-to-scalar ratio in simple inflation, JCAP
+02 (2006) 004 [astro-ph/0512066] [INSPIRE].
+– 19 –
+
+---PAGE BREAK---

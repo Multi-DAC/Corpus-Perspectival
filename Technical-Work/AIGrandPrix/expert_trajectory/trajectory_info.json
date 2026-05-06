@@ -1,0 +1,38 @@
+{
+  "total_time": 30.3473,
+  "num_steps": 801,
+  "dt": 0.037934125,
+  "state_dim": 13,
+  "action_dim": 4,
+  "state_labels": [
+    "px",
+    "py",
+    "pz",
+    "vx",
+    "vy",
+    "vz",
+    "qw",
+    "qx",
+    "qy",
+    "qz",
+    "wx",
+    "wy",
+    "wz"
+  ],
+  "action_labels": [
+    "u1",
+    "u2",
+    "u3",
+    "u4"
+  ],
+  "stats": {
+    "peak_speed_ms": 28.069593348685057,
+    "avg_speed_ms": 9.292129856660393,
+    "peak_bodyrate_rads": 14.98549214713002,
+    "max_thrust_N": 6.878980725700585,
+    "altitude_range": [
+      0.5000632412778834,
+      4.1838597140903095
+    ]
+  }
+}

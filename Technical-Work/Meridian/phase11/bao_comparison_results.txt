@@ -1,0 +1,83 @@
+================================================================================
+BAO DISTANCE COMPARISON: Meridian vs ΛCDM vs CPL at DESI DR2 Redshifts
+================================================================================
+
+TABLE 1: D_M/r_d at DESI DR2 effective redshifts
+---------------------------------------------------------------------------
+Tracer       z_eff       ΛCDM   Meridian        CPL
+---------------------------------------------------------------------------
+BGS          0.295     8.2814     8.2750     8.1133
+LRG1         0.510    13.5012    13.4867    13.1924
+LRG2         0.706    17.7018    17.6801    17.3141
+LRG3+ELG1    0.934    21.9962    21.9674    21.5690
+ELG2         1.321    28.0838    28.0460    27.6614
+QSO          1.484    30.2780    30.2374    29.8695
+Lya          2.330    39.1864    39.1374    38.8581
+
+TABLE 2: D_H/r_d at DESI DR2 effective redshifts
+---------------------------------------------------------------------------
+Tracer       z_eff       ΛCDM   Meridian        CPL
+---------------------------------------------------------------------------
+BGS          0.295    25.8560    25.8209    25.1049
+LRG1         0.510    22.7414    22.7032    22.2133
+LRG2         0.706    20.1708    20.1362    19.8872
+LRG3+ELG1    0.934    17.5705    17.5423    17.4905
+ELG2         1.321    14.0665    14.0480    14.1398
+QSO          1.484    12.8817    12.8663    12.9757
+Lya          2.330     8.6178     8.6117     8.6972
+
+TABLE 3: FRACTIONAL DIFFERENCE FROM ΛCDM (%)
+  δ(D_M/r_d) = (Model - ΛCDM) / ΛCDM × 100
+  Compared to approximate DESI DR2 measurement precision σ(%)
+-------------------------------------------------------------------------------------
+Tracer           z Merid δDM%   CPL δDM%   σ_DM% Merid δDH%   CPL δDH%   σ_DH%
+-------------------------------------------------------------------------------------
+BGS          0.295    -0.0777    -2.0293    1.50    -0.1358    -2.9051    2.00
+LRG1         0.510    -0.1074    -2.2872    0.95    -0.1677    -2.3219    1.72
+LRG2         0.706    -0.1225    -2.1899    0.56    -0.1712    -1.4058    1.25
+LRG3+ELG1    0.934    -0.1311    -1.9421    0.46    -0.1606    -0.4551    0.95
+ELG2         1.321    -0.1346    -1.5038    0.76    -0.1317    +0.5211    1.52
+QSO          1.484    -0.1339    -1.3491    1.56    -0.1195    +0.7300    2.64
+Lya          2.330    -0.1250    -0.8378    1.16    -0.0710    +0.9211    1.17
+
+-------------------------------------------------------------------------------------
+
+SUMMARY:
+  Meridian max |δD_M|: 0.1346%
+  Meridian max |δD_H|: 0.1712%
+  CPL max |δD_M|:      2.2872%
+  CPL max |δD_H|:      2.9051%
+  Min DESI σ_DM:       0.46%
+  Min DESI σ_DH:       0.95%
+
+TABLE 4: DETECTION SIGNIFICANCE |δ/σ| (number of sigma)
+---------------------------------------------------------------------------
+Tracer           z  Merid DM    CPL DM  Merid DH    CPL DH
+---------------------------------------------------------------------------
+BGS          0.295     0.052σ     1.353σ     0.068σ     1.453σ
+LRG1         0.510     0.113σ     2.408σ     0.097σ     1.350σ
+LRG2         0.706     0.219σ     3.911σ     0.137σ     1.125σ
+LRG3+ELG1    0.934     0.285σ     4.222σ     0.169σ     0.479σ
+ELG2         1.321     0.177σ     1.979σ     0.087σ     0.343σ
+QSO          1.484     0.086σ     0.865σ     0.045σ     0.276σ
+Lya          2.330     0.108σ     0.722σ     0.061σ     0.787σ
+
+  Approx Σ(δ/σ)² for Meridian: DM=0.195, DH=0.075
+  Approx Σ(δ/σ)² for CPL:      DM=45.929, DH=6.240
+
+================================================================================
+INTERPRETATION
+================================================================================
+
+If Meridian |δ/σ| << 1 at all redshifts:
+  → Our model is INDISTINGUISHABLE from ΛCDM with current DESI precision.
+  → The 'tension' is not between our model and data,
+    but between our model and the CPL parameterization.
+
+If CPL |δ/σ| > 1 at some redshifts:
+  → CPL IS distinguishable from ΛCDM — that's where the statistical preference comes from.
+  → But if model-independent analyses (cosmographic, pivoted w_p)
+    don't show this preference, CPL is forcing an artifact.
+
+Our prediction w₀ = -0.993 is falsifiable by Euclid/Rubin/Roman
+when σ(w₀) drops below ~0.007 (current precision: ~0.07).

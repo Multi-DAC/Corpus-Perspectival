@@ -1,0 +1,62 @@
+================================================================
+C3: COINCIDENCE PROBLEM — COMPLETE
+================================================================
+Date: 2026-03-17
+Authors: Clayton W. Iggulden-Schnell & Clawd
+
+SUMMARY
+-------
+Resolution: AMELIORATES but does NOT SOLVE the coincidence problem.
+Type: HONEST NEGATIVE — stated explicitly as a limitation.
+
+KEY RESULTS
+-----------
+1. |1+w| grows MONOTONICALLY with scale factor a:
+   z = 10:   |1+w| = 1.74e-05  (undetectable)
+   z = 1:    |1+w| = 0.0023    (below current sensitivity)
+   z = 0:    |1+w| = 0.0073    (present epoch)
+   z = -0.5: |1+w| = 0.0101    (approaching asymptote)
+   z -> -1:  |1+w| = 0.0107    (asymptotic maximum)
+
+2. Present deviation is 68.7% of asymptotic maximum.
+   We are NOT at a special epoch — the signal simply grows with time.
+
+3. 5D signature becomes measurable (|1+w| > 0.003) at z = 0.76.
+   DE becomes significant (Omega_DE > 0.1) at z = 1.67.
+   Observability window opens at z ~ 0.76.
+
+STRUCTURAL AMELIORATION (3 features)
+-------------------------------------
+a) Self-tuning removes the 10^123 fine-tuning (old CC problem SOLVED)
+b) The 5D signature grows with cosmic time — not an accident but a
+   structural consequence of K_DE = kappa_0/E^2 being suppressed
+   at early times when E >> 1
+c) DE value set by geometric parameters (k, alpha_hat, zeta_0),
+   not by cancellation of large numbers
+
+WHAT REMAINS OPEN
+-----------------
+Why Omega_DE ~ Omega_m at the present epoch. The framework does not
+generate a tracking mechanism or attractor that forces this coincidence.
+This is honestly stated as a limitation.
+
+MECHANISM
+---------
+K_DE = kappa_0 / E^2(a)
+- E^2(a) = Omega_m * a^{-3} + Omega_r * a^{-4} + v_0 + kappa_0
+- At early times (a << 1): E^2 >> 1, so K_DE ~ 0 and w ~ -1 exactly
+- At late times (a >> 1): E^2 -> v_0 + kappa_0 ~ 0.686, K_DE -> kappa_0/0.686
+- The deviation from Lambda CDM is bounded: |1+w|_max = 0.0107
+
+IMPLICATIONS FOR PAPER I
+-------------------------
+Section X (Limitations) should explicitly state:
+"The coincidence problem -- why rho_DE ~ rho_m at the present epoch --
+is ameliorated but not solved by the self-tuning mechanism."
+This is an honest limitation, not a flaw. No single-field model solves
+the coincidence problem without additional assumptions (tracking, anthropic).
+
+FILES
+-----
+c3_coincidence_problem.py — Full analysis script
+c3_coincidence_results.txt — This file

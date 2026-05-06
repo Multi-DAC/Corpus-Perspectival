@@ -1,0 +1,16 @@
+Device: cuda
+
+======================================================================
+P48 GENERATION-MODE DETECTOR — EleutherAI/pythia-410m
+======================================================================
+Loading EleutherAI/pythia-410m...
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  31%|███       | 91/292 [00:00<00:00, 909.67it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 1460.36it/s]
+  24 layers, 16 heads
+  Generating 50 tokens per prompt, KF at each step
+  12 prompts
+
+[IncrementalSaver] Saving to: /mnt/c/Users/mercu/clawd/projects/Corpus Perspectival/p48_generation_pythia_410m.json
+  [FACTUAL      ] fact_prefix_1: "The chemical formula for water is..."
+    Step   0: CV=0.000909, E/L=27.60, r=-0.914
+    Step  10: CV=0.000422, E/L=21.50, r=-0.915

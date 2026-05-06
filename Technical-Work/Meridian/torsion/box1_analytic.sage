@@ -1,0 +1,255 @@
+"""
+box_1 spectrum on CP^2 — analytic derivation
+=============================================
+
+On CP^2 = SU(3)/U(2), the sections of Omega^{0,1}(O(k)) decompose into
+SU(3) irreps. The eigenvalue of the Casimir (= Laplacian) on V_{(a,b)} is:
+  C_2(a,b) = (a^2 + ab + b^2 + 3a + 3b) / 3
+
+For (0,1)-forms on O(0):
+  The isotropy rep m^- has SU(2) spin j=1/2 (hw=1 in root convention)
+  and U(1) charge q=-1.
+
+  By Frobenius reciprocity, V_{(a,b)} appears iff its restriction to U(2)
+  contains m^- = (SU(2) hw 1, U(1) charge -1).
+
+  SU(3) branching rule to SU(2) x U(1):
+  V_{(a,b)} -> bigoplus_{p,q} (SU(2) irrep of hw a-p+b-q) x (U(1) charge ...)
+
+  Actually, let me use the EXPLICIT branching rule.
+
+  The branching of SU(3) irrep with Dynkin labels (a,b) to SU(2) x U(1) is:
+  For the standard embedding U(2) -> SU(3) (block diagonal):
+
+  V_{(a,b)}|_{U(2)} = bigoplus_{r=0}^{min(a,b)} bigoplus_{t=0}^{...} (j_rt, q_rt)
+
+  Standard result (Baird & Biedenharn, or any group theory text):
+  V_{(a,b)} restricted to SU(2) x U(1) decomposes as:
+
+  For each "layer" labeled by the U(1) charge:
+  The U(1) charge ranges over specific values, and for each charge,
+  we get a collection of SU(2) irreps.
+
+  The weight diagram of (a,b) has weights (m1, m2) in Dynkin basis.
+  In the epsilon basis, a weight is (w1, w2, w3) with w1+w2+w3=0.
+
+  U(1) charge = w1 + w2 (= -w3).
+  SU(2) weight within each U(1) sector = w1 - w2.
+
+  For the decomposition into SU(2) irreps at fixed U(1) charge:
+  We need to find all weights with w3 = -q and decompose the
+  resulting SU(2) weight system.
+
+  ALTERNATIVE APPROACH: Use the tensor product method.
+  L^2(Omega^{0,1}(O(0))) = L^2(O(0)) tensor_SU(3) m^-
+  But this isn't quite right because m^- is a U(2) rep, not SU(3).
+
+  THE CORRECT APPROACH via induced representations:
+  Sections of Omega^{0,1}(O(k)) = Ind_{U(2)}^{SU(3)}(m^- ⊗ det^k)
+
+  The SU(3) irreps appearing are characterized by:
+  V_{(a,b)} appears iff m^- ⊗ det^k is contained in V_{(a,b)}|_{U(2)}
+
+  For k=0: need m^- = (SU(2) fund, U(1) charge -1) in V_{(a,b)}|_{U(2)}
+
+  The KEY simplification: on a Hermitian symmetric space G/K,
+  the LOWEST K-type of each G-irrep determines which bundle it appears in.
+
+  For CP^2 = SU(3)/U(2):
+  The (0,1)-forms correspond to the representation m^- of U(2).
+  An SU(3) irrep V_{(a,b)} contributes to (0,1)-forms iff
+  m^- appears as a K-type.
+
+  From the Cartan-Helgason theorem and branching rules:
+  The scalar functions have K-type = trivial, which appears in (l,l).
+  The (0,1)-forms have K-type = m^-, which appears in (a,b) where...
+
+  Let me just enumerate small cases to find the pattern.
+"""
+from sage.all import *
+from collections import defaultdict
+
+W = WeylCharacterRing("A2", style="coroots")
+
+def casimir(a, b):
+    return (a**2 + a*b + b**2 + 3*a + 3*b) / QQ(3)
+
+# For small irreps, compute the branching by hand using weight diagrams
+
+def compute_branching(a, b, q_target):
+    """
+    For SU(3) irrep (a,b), find how many times the SU(2) fundamental
+    (highest weight 1, dim 2) with U(1) charge q_target appears.
+
+    Uses SageMath's branching_rule infrastructure.
+    """
+    # Use SageMath's built-in branching
+    # Branch SU(3) -> SU(2) x U(1) using the A2 -> A1 branching
+    # The standard maximal subgroup is A1 x U(1)
+
+    rep = W(a, b)
+
+    # Get all weights and their multiplicities
+    wm = rep.weight_multiplicities()
+
+    # For each weight, compute U(1) charge and SU(2) weight
+    # Weight in A2 coroot basis: (m1, m2)
+    # Epsilon coords: w1 = (2m1+m2)/3, w2 = (-m1+m2)/3, w3 = (-m1-2m2)/3
+    # U(1) charge = -w3 = (m1+2m2)/3
+    # SU(2) weight = w1-w2 = (2m1+m2)/3 - (-m1+m2)/3 = (3m1)/3 = m1
+
+    # So: SU(2) weight = m1 (first Dynkin label!)
+    #     U(1) charge = (m1 + 2*m2)/3
+
+    # For m^-: SU(2) hw = 1, U(1) charge = -1
+    # So we need: m1 ranges with the SU(2) decomposition having hw=1,
+    # and U(1) charge = q_target = -1, i.e., m1 + 2*m2 = -3
+
+    # Collect SU(2) weights (= m1 values) at fixed U(1) charge
+    su2_weights = defaultdict(int)
+    for wt, mult in wm.items():
+        coeffs = wt.to_vector()
+        m1, m2 = coeffs[0], coeffs[1]
+        q = (m1 + 2*m2) / QQ(3)  # U(1) charge
+        if q == q_target:
+            su2_weights[m1] += int(mult)
+
+    if not su2_weights:
+        return 0
+
+    # Decompose into SU(2) irreps by peeling highest weight
+    # SU(2) weight = m1, so SU(2) irreps have hw = j and weights j, j-2, ..., -j
+    # (in Dynkin convention, SU(2) weights go j, j-2, ..., -j for an irrep of hw j)
+    # Wait: the SU(2) weight here is the FIRST Dynkin label m1.
+    # For SU(2) with Dynkin label convention, the hw is j and weights are j, j-2, ..., -j
+    # where dimension = j+1.
+    # But m1 as SU(2) weight: for the fundamental of SU(2) (dim 2), Dynkin hw = 1,
+    # weights are +1 and -1. ✓
+
+    wts = dict(su2_weights)
+    fund_count = 0  # count of SU(2) fundamental (hw=1)
+
+    while True:
+        nonzero = {m: c for m, c in wts.items() if c > 0}
+        if not nonzero:
+            break
+        max_m = max(nonzero.keys())
+        j = int(max_m)  # highest weight
+
+        # Remove one copy of spin-j: weights j, j-2, ..., -j
+        for mm in range(j, -j-1, -2):
+            wts[mm] = wts.get(mm, 0) - 1
+
+        if j == 1:
+            fund_count += 1
+
+    return fund_count
+
+
+# ===================================================================
+# COMPUTE SPECTRUM FOR (0,1)-FORMS ON O(0)
+# ===================================================================
+print("=== box_1 spectrum: Omega^{0,1}(CP^2, O(0)) ===")
+print("U(1) charge = -1, SU(2) fundamental (hw=1)")
+print()
+
+spec_O0 = []
+for a in range(25):
+    for b in range(25):
+        if a + b > 30:
+            continue
+        mult = compute_branching(a, b, QQ(-1))
+        if mult > 0:
+            c2 = casimir(a, b)
+            dim_v = W(a,b).degree()
+            spec_O0.append((float(c2), dim_v * mult, a, b, mult, dim_v))
+
+spec_O0.sort()
+
+# Group by eigenvalue
+ev_O0 = defaultdict(list)
+for c2, total, a, b, br, dim_v in spec_O0:
+    ev_O0[c2].append((total, a, b, br, dim_v))
+
+print(f"{'lambda':>10} {'mult':>8}  contributing irreps")
+for lam in sorted(ev_O0.keys())[:25]:
+    entries = ev_O0[lam]
+    total = sum(e[0] for e in entries)
+    irreps = ", ".join(f"({e[1]},{e[2]})[d={e[4]},b={e[3]}]" for e in entries)
+    print(f"{lam:10.4f} {total:8d}  {irreps}")
+
+# ===================================================================
+# COMPUTE SPECTRUM FOR (0,1)-FORMS ON O(2)
+# ===================================================================
+print("\n\n=== box_1 spectrum: Omega^{0,1}(CP^2, O(2)) ===")
+print("U(1) charge = 1, SU(2) fundamental (hw=1)")
+print()
+
+spec_O2 = []
+for a in range(25):
+    for b in range(25):
+        if a + b > 30:
+            continue
+        mult = compute_branching(a, b, QQ(1))
+        if mult > 0:
+            c2 = casimir(a, b)
+            dim_v = W(a,b).degree()
+            spec_O2.append((float(c2), dim_v * mult, a, b, mult, dim_v))
+
+spec_O2.sort()
+
+ev_O2 = defaultdict(list)
+for c2, total, a, b, br, dim_v in spec_O2:
+    ev_O2[c2].append((total, a, b, br, dim_v))
+
+print(f"{'lambda':>10} {'mult':>8}  contributing irreps")
+for lam in sorted(ev_O2.keys())[:25]:
+    entries = ev_O2[lam]
+    total = sum(e[0] for e in entries)
+    irreps = ", ".join(f"({e[1]},{e[2]})[d={e[4]},b={e[3]}]" for e in entries)
+    print(f"{lam:10.4f} {total:8d}  {irreps}")
+
+# ===================================================================
+# LOOK FOR CLOSED FORM PATTERNS
+# ===================================================================
+print("\n\n=== PATTERN SEARCH ===")
+
+print("\nO(0) eigenvalues and multiplicities:")
+sorted_O0 = sorted(ev_O0.items())
+for i, (lam, entries) in enumerate(sorted_O0[:20]):
+    total = sum(e[0] for e in entries)
+    # Try formula: lambda_n = n(n+2) + c for some integer n, c
+    # Or: lambda_n = f(n) for n starting from some value
+    # Check if lam = n(n+2) for some n
+    n_check = (-2 + sqrt(4 + 4*lam)) / 2 if lam >= 0 else None
+    n_check2 = (-2 + sqrt(4 + 4*(lam-1))) / 2 if lam >= 1 else None  # shifted by 1
+    n_check3 = (-2 + sqrt(4 + 4*(lam-2))) / 2 if lam >= 2 else None  # shifted by 2
+    n_check4 = (-2 + sqrt(4 + 4*(lam-3))) / 2 if lam >= 3 else None  # shifted by 3
+    print(f"  {i}: lambda={lam:.4f}, mult={total}, "
+          f"n(n+2)? n={n_check:.4f}, "
+          f"(lam-3)=n(n+2)? n={n_check4:.4f}")
+
+print("\nO(2) eigenvalues and multiplicities:")
+sorted_O2 = sorted(ev_O2.items())
+for i, (lam, entries) in enumerate(sorted_O2[:20]):
+    total = sum(e[0] for e in entries)
+    n_check = (-2 + sqrt(4 + 4*lam)) / 2 if lam >= 0 else None
+    n_check2 = (-4 + sqrt(16 + 4*lam)) / 2 if lam >= 0 else None  # n(n+4)
+    n_check3 = (-4 + sqrt(16 + 4*(lam-3))) / 2 if lam >= 3 else None  # (lam-3) = n(n+4)
+    print(f"  {i}: lambda={lam:.4f}, mult={total}, "
+          f"n(n+2)? n={n_check:.4f}, "
+          f"n(n+4)? n={n_check2:.4f}")
+
+# ===================================================================
+# EXACT FORMULAS for spectral zeta computation
+# ===================================================================
+print("\n\n=== DATA FOR SPECTRAL ZETA ===")
+print("\nbox_1 on O(0): (eigenvalue, multiplicity) pairs")
+for lam in sorted(ev_O0.keys())[:40]:
+    total = sum(e[0] for e in ev_O0[lam])
+    print(f"  ({lam}, {total})")
+
+print("\nbox_1 on O(2): (eigenvalue, multiplicity) pairs")
+for lam in sorted(ev_O2.keys())[:40]:
+    total = sum(e[0] for e in ev_O2[lam])
+    print(f"  ({lam}, {total})")

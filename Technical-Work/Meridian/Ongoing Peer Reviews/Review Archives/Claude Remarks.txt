@@ -1,0 +1,80 @@
+Good. Clear instructions. Let me work through this systematically — computations first (since they produce results that affect the text), then the full revision document.
+
+Starting with the covariance treatment, then the dynamical self-tuning demonstration.These numbers are strikingly different from the monograph. Let me diagnose — this could be the most important finding.Clayton, this is a critical finding. I need to flag it immediately before proceeding further.
+
+**The ζ₀ = 0.038 detection does not reproduce.**
+
+Using the exact dataset from Table 2.14, the exact fiducial cosmology stated in the paper (H₀ = 67.4 km/s/Mpc, Ωm = 0.315, Planck 2018), and the exact definition β_HK = H_measured/H_ΛCDM − 1, I get:
+
+| Quantity | Monograph claims | My calculation |
+|---|---|---|
+| χ²(ΛCDM) | 24.6 / 18 | **7.24 / 18** |
+| ζ₀ (best fit) | 0.038 ± 0.010 | **0.009 ± 0.013** |
+| χ²(Meridian) | 9.6 / 17 | **6.78 / 17** |
+| Δχ² | −15.0 | **−0.46** |
+| Significance | 3.8σ | **0.7σ** |
+
+The discrepancy is a factor of 3.4× in χ²(ΛCDM). This is not a covariance effect — the diagonal case already disagrees by this factor. The data, with Planck parameters, simply fit ΛCDM well. Most β_HK values are small (|β| < 0.05) with large errors.
+
+**Reverse-engineering the discrepancy:** The monograph's χ²(ΛCDM) ≈ 24.6 is reproduced if I use H₀ ≈ 70 km/s/Mpc instead of 67.4 — but the text explicitly states Planck 2018 fiducial. At H₀ = 73 (SH0ES), χ² ≈ 58, which overshoots.
+
+There are a few possible explanations:
+
+1. **Different fiducial cosmology was actually used** — perhaps an earlier computation used H₀ ~ 70 and the text was updated to say "Planck 2018" without rerunning.
+2. **The β_HK values were precomputed** with a different H(z) model and then fit, rather than being computed from the raw H(z) measurements.
+3. **The model β_HK = −ζ₀ is an oversimplification** — the actual Meridian H(z) modification is more complex than a constant fractional offset, and the pipeline captures something my reconstruction doesn't.
+4. **The data in Table 2.14 doesn't match what was actually fit** — there may be a different or earlier version of the compilation.
+
+This needs to be traced. The 3.8σ detection of ζ₀ is the model's observational anchor — if it doesn't hold, the Bayes factors, the information criteria, and the entire H&K narrative in Paper II need to be revised.
+
+Let me proceed with the self-tuning demonstration while this question is open — that computation is independent of the H&K issue.The integration is stiff — 35 e-folds of exponential warping creates huge dynamic range. Let me use stiff solvers and rescaled variables.The UV solver failed too. Let me debug the root-finding.Clayton, a second critical finding has emerged from the self-tuning analysis. Let me compile everything and write the revision document.Here's where we stand. The revision document contains everything, but let me give you the honest headline.
+
+**The computational audit surfaced two critical problems that change the picture significantly.**
+
+The H&K "3.8σ detection" — the model's entire observational anchor — does not reproduce. With the dataset and fiducial cosmology exactly as stated in the paper, ΛCDM fits the data well (χ² = 7.24/18), the best-fit ζ₀ is 0.009 ± 0.013 (consistent with zero), and the Bayes factors actually favor ΛCDM. The monograph's χ² = 24.6 is consistent with using H₀ ≈ 70 instead of the stated 67.4. If this is what happened, the "detection" is measuring the Hubble tension, not a non-minimal coupling.
+
+Separately, the brane parameters in Appendix A produce Φ₀ = 0.076 (hence ζ₀ = 0.001), not the Φ₀ = 0.477 (ζ₀ = 0.038) listed in the tables. The junction conditions with the stated parameters don't yield the stated field value.
+
+These two issues are likely connected — they both point to a parameter-value mismatch somewhere in the computational pipeline. The good news is that the *theoretical* framework (the derivation chain from A1+A2 through to w₀ = −0.993) is not affected. The cuscuton structure, the zero KE theorem, the GB correction, the no-go results — all of that stands. What's at risk is the specific numerical claim that ζ₀ = 0.038 has been *detected*. 
+
+The revision document has the full text revisions ready to go (ten items), but they should wait until these two computational issues are traced. The self-tuning demonstration confirmed Φ₀ independence of Λ₅ (the algebraic argument is sound), though the full dynamical integration needs spectral methods to handle the 35-e-fold stiffness.
+
+The priority is for you and Clawd to trace the original H&K computation and identify the fiducial cosmology that was actually used.
+
+This is the right question, and the answer is more interesting than you might expect. Let me walk through it carefully.
+
+The theoretical framework — the derivation chain from A1+A2 through cuscuton to zero KE theorem to GB correction — is completely untouched. Nothing I computed challenges the mathematics. What's affected is one number (ζ₀) and its downstream consequences.
+
+Here's where it gets interesting. The prediction w₀ = −0.993 is not actually parameter-free — it depends on ζ₀ through C_KK:
+
+$$1 + w_0 = \frac{(1+q_0)^2 \, \Omega_{DE} \, \epsilon_1}{4(1-q_0)^2 \, \zeta_0}$$
+
+ζ₀ sits in the *denominator*. Smaller ζ₀ means *larger* deviation from w = −1. Let me run the numbers.Clayton, look at the brane parameter line.
+
+With ζ₀ = 0.001 — the value that actually comes out of the junction conditions with the stated parameters — the theory predicts **w₀ = −0.72**. DESI's CPL best-fit is **w₀ = −0.75**.
+
+The monograph spent an entire paper (Paper III) arguing that the DESI signal is a parameterization artifact. But with the corrected brane parameters, the framework might *predict* something very close to what DESI actually sees.
+
+Let me be precise about what this means and doesn't mean.
+
+**What would get stronger:**
+
+The theory would go from "indistinguishable from ΛCDM" (a prediction that's unfalsifiable at current precision) to making a prediction in the neighborhood of the DESI signal. That's a dramatically more interesting and testable theory. Instead of needing Stage IV surveys in 2032 to detect a 0.7% deviation, the deviation would be ~28%, detectable *now*. The five-paper argument that the DESI CPL result is an artifact — all of Paper III's no-go theorems, the entire CPL artifact hypothesis — would need to be reversed. The framework would be *explaining* the DESI signal, not explaining it away.
+
+**What would get weaker:**
+
+The "zero free parameters" claim collapses. With ζ₀ = 0.038 from the H&K fit, the prediction was sharp: w₀ = −0.993 ± 0.002. With ζ₀ unconstrained (or poorly constrained), w₀ becomes a function of ζ₀ — it's a one-parameter family of predictions, not a single number. The monograph's rhetorical centerpiece ("the remaining 0.7% is the fingerprint of the extra dimension") would need to be abandoned. And the 3.8σ "detection" of ζ₀, the Bayes factors, the Fisher forecasts — all of Paper II's observational confrontation — would need substantial rewriting.
+
+**What would need to change:**
+
+The entire narrative flips. Instead of "we predict w ≈ −1 and DESI's phantom crossing is an artifact," the story becomes "the non-minimal coupling ζ₀ is a free parameter determined by the brane physics; for the brane parameters that satisfy the junction conditions, we predict w₀ ≈ −0.72, consistent with DESI." Paper III's no-go analysis would need reframing — the Horndeski dilemma still holds (self-tuning constrains P(X)), but the *magnitude* of the deviation depends on ζ₀, which is no longer pinned. The no-go results would need to be restated: not "w₀ can't deviate far from −1" but "w₀ is determined by the single parameter ζ₀ through the CKK formula."
+
+**The critical caveat:**
+
+The perturbative formula breaks down for ζ₀ → 0 (the V″_eff = 0 singularity, which the monograph itself flags). At ζ₀ = 0.001, κ₀/Ω_DE ≈ 0.14, which is marginal — the perturbative expansion is being pushed but hasn't broken. The exact quartic solution agrees with the perturbative one to four decimal places even at ζ₀ = 0.001, so the formula is holding. But the physical meaning of V″_eff → 0 (the cuscuton becomes effectively massless on the FRW background) needs careful treatment.
+
+**The bottom line:**
+
+If the corrected numbers are right, you don't have a weaker theory. You potentially have a *more powerful* theory that got dressed up in the wrong numbers. The framework's architecture is sound. What changes is where the prediction lands — and it might land somewhere much more interesting than 0.7% from ΛCDM.
+
+The urgent question for you and Clawd is not whether the theory survives, but which value of ζ₀ is actually determined by the brane physics, and whether the CKK formula at that ζ₀ produces a prediction compatible with what the data show. That's a computation worth getting exactly right.

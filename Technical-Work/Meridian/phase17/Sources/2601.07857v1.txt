@@ -1,0 +1,2128 @@
+Electroweak Structure and Three Fermion Generations
+in Clifford Algebra with S3 Family Symmetry
+Niels Gresnigt
+Department of Physics, Xi’an Jiaotong-Liverpool University, 111 Ren’ai Rd., Suzhou 215123,
+P.R. China
+niels.gresnigt@xjtlu.edu.cn
+Abstract
+We construct an explicit algebraic realisation of three fermion generations within
+a single Clifford algebra, transforming under the full Standard Model SU(3)C ×
+SU(2)L × U(1)Y gauge group, in which an intrinsic S3 family symmetry permutes
+three algebraically distinguished but gauge-equivalent fermion sectors without repli-
+cating the gauge bosons. Fermionic states are represented by minimal left ideals
+of the complex Clifford algebra Cℓ(10), while the three-generation structure arises
+from an embedded discrete S3 symmetry acting on the space of algebraic spinors.
+The Standard Model gauge generators are identified as elements commuting with
+this S3 action and act on physical states via the adjoint (commutator) action. The
+resulting spectrum reproduces the correct Standard Model quantum numbers for
+three linearly independent generations of fermions.
+1
+Introduction
+The Standard Model (SM) of particle physics represents a triumph of mathematical mod-
+eling, offering a highly accurate description of elementary matter. Despite its impressive
+agreement with experimental data, it remains limited in its ability to fully address several
+fundamental questions. These include among others:
+1. What foundational principle, if any, gives rise to the gauge group of the SM?
+2. Why are specific irreducible representations of Lie groups associated with particle
+multiplets, while others do not exhibit this correspondence?
+3. What is the underlying origin of the three fermion generations observed in the SM?
+In this work, building on our earlier algebraic constructions [1–3]1, we construct an ex-
+plicit algebraic realisation of three linearly independent fermion generations transforming
+under the full SM gauge group SU(3)C × SU(2)L × U(1)Y . The construction is formu-
+lated within the complex Clifford algebra Cℓ(10) and incorporates an embedded discrete
+S3 symmetry, interpreted as a family symmetry acting on the space of algebraic spinors.
+Crucially, the SM gauge generators are required to commute with this S3 action, ensuring
+that the gauge sector remains generation-independent and is not replicated.
+1See also [4–7].
+1
+arXiv:2601.07857v1  [physics.gen-ph]  9 Jan 2026
+
+---PAGE BREAK---
+At the technical level, fermionic states are realised as elements of selected minimal
+left ideals of Cℓ(10), while gauge transformations act via the adjoint (commutator) action
+[ · , · ].
+The colour and electroweak gauge algebras are identified as distinguished sub-
+algebras preserving a suitable Witt basis, and the action of S3 generates three linearly
+independent but gauge-equivalent copies of the fermionic spectrum. This structure pro-
+vides a purely algebraic mechanism for three generations that is compatible with the full
+SM gauge symmetry.
+The remainder of this Introduction places the present work in the context of earlier
+algebraic approaches based on division algebras and Clifford algebras. We then summarise
+the key algebraic ingredients needed for the construction, before presenting the explicit
+realisation of the gauge algebra and the three-generation fermionic spectrum.
+In the search for a mathematically minimal framework that accounts for the structure
+of the SM gauge group, its particle content, and the existence of three generations, there
+has been growing interest in algebraic approaches to high-energy physics in recent years.
+In particular, the four normed division algebras (R, C, H, O), together with the Clifford
+algebras arising from their left multiplication endomorphisms, have repeatedly shown
+promise in accounting for the structure and particle content of the SM.
+The idea of relating the four normed division algebras to the SM has a long and rich
+history. Shortly after the discovery of quarks, G¨uynadin and G¨ursey [8] constructed a
+model of quark colour symmetry based on the algebra of the split octonions2. Subse-
+quently, a series of papers by Barducci et al, and Casalbuoni and Gatto [9–11] explored
+a unified description of leptons and quarks with internal degrees of freedom in terms of
+fermionic oscillators (corresponding to a Witt basis of a Clifford algebra). Three fermionic
+oscillators3 are associated with the colour degrees of freedom. The inclusion of electric
+charge requires a fourth fermionic oscillator (which in [9–11] is unrelated to division al-
+gebras). Related connections between the octonions and the SM, including their relation
+to SU(3), have been investigated in [12–14].
+The early association of the split octonions with quarks in [8] was expanded upon
+by Dixon [15–18] who revealed that the mathematical characteristics of a single fermion
+generation are inherent in T2, where T = R ⊗C ⊗H ⊗O, commonly referred to as the
+Dixon algebra. Dixon treats T as a spinor, acted upon by the algebra itself, with each
+possible action corresponding to a linear map. These linear maps generate the so called
+associative multiplication algebra, in this case the complex Clifford algebra Cℓ(10), which
+acts on the spinor space.
+Furey and other have encompassed both bosons and fermions within Cℓ(10), repre-
+senting spinors through the minimal left ideals of the algebra [19–24]. In such approaches,
+both the gauge groups and fermions are contained within a Clifford algebra, generated
+from a composition of the four division algebras acting on itself. Although a composition
+of division algebras need not be associative (nor alternative), the Clifford algebras gener-
+ated from the algebra acting on itself via its endomorphisms is necessarily associative.
+The representation of spinors as minimal left ideals of Clifford algebras dates back to
+work in the 1930s and 1940s [25–27], with their construction via a Witt decomposition
+reviewed by Ab lamowicz [28].
+Other research has explored models using real Clifford algebras, revealing shared fea-
+2It is important to note that the construction is possible only in the split octonions, and not in the
+octonions themselves.
+3The abstract algebra of three fermionic oscillators has two different realisations, one in terms of split
+octonions [8], the other in terms of the (associative) complex Clifford algebra Cℓ(6).
+2
+
+---PAGE BREAK---
+tures with division algebra-based models [29–33]. Group theoretical foundations in par-
+ticle physics, alongside relevant subgroups of Clifford algebras, are discussed in [34–37].
+Division algebraic representations of the exceptional Lie groups E6 and E8 in relation
+to the SM are explored in [38,39]. Efforts to integrate gravity into algebraic unification
+models have also been undertaken by several authors [40–44].
+While these frameworks are mathematically appealing, most successfully describe only
+a single fermion generation, offering no intrinsic algebraic mechanism for the existence of
+three. Indeed, despite numerous attempts to account for three generations [1,17,45–48],
+division-algebra based constructions to date remain largely limited to a single generation.
+The same issue plagues the most popular GUTs, such as those based on SU(5), SO(10),
+and the Pati-Salam model, which are also inherently single-generation models, lacking an
+explanation for the origin three generations.
+Furey endeavours to represent three generations SU(3)C × U(1)em gauge symmetry
+directly from the algebra Cℓ(6) [46, 47]. A similar construction based on Cℓ(6), which
+includes an SU(2) gauge symmetry, is given by Gording and Schmidt-May [48]. Dixon, on
+the other hand, characterises three generations using the algebra T6 = C⊗H2⊗O3 [17]. In
+the unified theories of [11], an additional m fermionic oscillators are included in order to
+represent 2m generations (a necessarily even number). However, these additional fermionic
+oscillators cannot be associated with the division algebras in an obvious way, nor is there
+any algebraic guidance on what m should be.
+Other authors have sought to encode
+three generations within the exceptional Jordan algebra J3(O), comprising three-by-three
+matrices over the octonions O [49–54]. Each octonion is associated with one generation
+through the three canonical J2(O) subalgebras of J3(O).
+Several independent approaches to algebraic unification have identified Cℓ(8) as a
+natural setting for addressing the existence of three fermion generations.
+Early work
+by Silagadze proposed that the triality of Spin(8) may underlie the appearance of three
+generations [55]4.
+The author’s own work on sedenions and Cℓ(8), dates back to 2019 [1,4], where the
+discrete group S3 was identified as a generation symmetry arising from the automorphism
+structure of the sedenions. Recently, Furey and Hughes considered Cℓ(8) within a division-
+algebra and triality-inspired framework [59]. In a distinct dynamical approach, Quinta
+derives Cℓ(8) directly from a Lagrangian formulation [60], with triality again playing a key
+role and leading to predictive mass relations. Taken together, these developments indicate
+that Cℓ(8) arises independently across a range of approaches, reinforcing its relevance for
+addressing the problem of fermion generations.
+The present work builds on a previously proposed algebraic framework accounting for
+the existence of three fermion generations [1–3]5. In this approach, the discrete group S3,
+arising as a automorphisms of the sedenion algebra S obtained via the Cayley–Dickson
+construction from the octonions O, is identified as a natural candidate for a generation
+symmetry. Indeed, the automorphism group of the sedenions is known to be Aut(S) ∼=
+G2 × S3 [61].
+The endomorphisms of the algebra C ⊗S provide a faithful representation of the
+complex Clifford algebra Cℓ(8). In our earlier work, the S3 automorphisms of S were
+embedded into the complex Clifford algebra Cℓ(8), yielding an algebraic realisation of
+three linearly independent fermion generations transforming under the unbroken gauge
+group SU(3)C × U(1)em. The central idea is to represent physical states as elements of
+4See also [5,53,56–58] for related discussions on triality in relation to three generations.
+5See also [4–7].
+3
+
+---PAGE BREAK---
+minimal left ideals of Cℓ(8), while identifying gauge symmetries as subalgebras preserving
+an appropriate Witt basis. Requiring the gauge generators to commute with the S3 action
+ensures that the gauge sector is not replicated across generations.
+In the present paper, we extend this construction to include the full electroweak sector
+SU(2)L×U(1)Y , which necessitates enlarging the algebra to Cℓ(10). Although the original
+motivation for the model arose from the sedenion algebra, we work here directly with Cℓ(8)
+and Cℓ(10), invoking the sedenion origin only where required.
+2
+Cℓ(8) basis and its minimal left ideals
+In previous works [2, 3] we used a Cℓ(8) basis obtained directly from the hypercomplex
+algebra of sedenions. Here instead we opt to use a different basis which highlights the
+underlying geometry and algebraic structure more transparently. In particular we choose a
+basis in which the primitive idempotents are diagonal. Since Cℓ(8) ∼= Mat(16, C) is simply,
+all faithful representations differ by a similarity transformation (inner automorphism), and
+so all our results are basis independent.
+We define the following Cℓ(8) basis
+e1 = iσ1 ⊗σ1 ⊗σ1 ⊗σ1,
+e2 = iσ1 ⊗σ1 ⊗σ3 ⊗I2,
+e3 = −iσ1 ⊗σ1 ⊗σ1 ⊗σ3,
+e4 = −iσ1 ⊗σ3 ⊗I2 ⊗I2,
+e5 = −iσ1 ⊗σ1 ⊗σ1 ⊗σ2,
+e6 = −iσ1 ⊗σ2 ⊗I2 ⊗I2,
+e7 = iσ1 ⊗σ1 ⊗σ2 ⊗I2,
+e8 = iσ2 ⊗I2 ⊗I2 ⊗I2,
+(1)
+which satisfies
+e2
+i = −1,
+{ei, ej} = 2δij,
+i, j = 1, ..., 8.
+(2)
+The pseudoscalar of the algebra is defined as
+ω8 := e1e2e3e4e5e6e7e8 = σ3 ⊗I2 ⊗I2 ⊗I2 ⊗I2.
+(3)
+2.1
+Primitive idempotents in Cℓ(8)
+In order to construct the primitive idempotents and subsequently the minimal left ideals
+of the algebra, we first define a Witt basis6:
+aj = 1
+2(−ej + iej+4),
+a†
+j = 1
+2(ej + iej+4),
+(4)
+where j = 1, 2, 3, 4. These satisfy the algebra of of four fermionic oscillators:
+{ai, aj} = 0,
+{a†
+i, a†
+j} = 0,
+{ai, a†
+j} = δij.
+(5)
+6See [28] for an overview on the construction of minimal left ideals of Clifford algebras.
+4
+
+---PAGE BREAK---
+For each j = 1, 2, 3, 4 define the simple idempotents
+π(+)
+j
+= aja†
+j =
+1
+2
+ 1 −i ejej+4
+
+,
+π(−)
+j
+= a†
+jaj =
+1
+2
+ 1 + i ejej+4
+
+,
+(6)
+where the image of 1 in the matrix representation in eqn. (1) is the 16×16 identity matrix
+I16. These form a maximal set of mutually commuting simple idempotents
+π(±)
+j
+π(±)
+k
+= π(±)
+k
+π(±)
+j
+.
+(7)
+These simple idempotents correspond to rank-8 diagonal matrices7.
+The 16 primitive (rank-1) idempotents are ontained by choosing one simple idempotent
+from each pair and multiplying:
+fε1ε2ε3ε4 = π(ε1)
+1
+π(ε2)
+2
+π(ε3)
+3
+π(ε4)
+4
+,
+εj ∈{+, −}.
+(8)
+These primitive idempotents are mutually orthogonal and complete:
+fεfε′ = δε,ε′fε,
+X
+ε∈{+,−}4
+fε = I16,
+fε = fε1ε2ε3ε4.
+(9)
+In the present matrix realisation, these primitive idempotents correspond to matrix
+units Ei,i where i = 1, ..., 16. In this paper the focus will be on four Cℓ(8) primitive
+idempotents in particular:
+f++++
+=
+(a1a†
+1)(a2a†
+2)(a3a†
+3)(a4a†
+4) = E1,1,
+(10)
+f−−−+
+=
+(a†
+1a1)(a†
+2a2)(a†
+3a3)(a4a†
+4) = E14,14,
+(11)
+f−−−−
+=
+(a†
+1a1)(a†
+2a2)(a†
+3a3)(a†
+4a4) = E6,6.
+(12)
+f+++−
+=
+(a1a†
+1)(a2a†
+2)(a3a†
+3)(a†
+4a4) = E9,9,
+(13)
+Because,
+aif++++ = 0,
+i = 1, 2, 3, 4,
+(14)
+the first minimal left ideal I1 can be written as
+I1 = Cℓ(8)f++++ = (r0 + ria†
+i + rija†
+ia†
+j + rijka†
+ia†
+ja†
+k + r1234a†
+1a†
+2a†
+3a†
+4)f++++,
+(15)
+where i, j, k ∈{1, 2, 3, 4}, i ̸= j ̸= k and r ∈C. This minimal left ideal occupies the
+first column in our representation (1). Each basis element of the minimal ideal is then
+proportional to some Ej,1, where j = 1, ..., 16. For example, a†
+1a†
+2f++++ = −E4,1. One
+can likewise construct minimal ideals on the primitive idempotents f−−−+, f−−−−, and
+f+++−.
+2.2
+Witt-basis preserving symmetries
+Although any transformation of the form
+ei 7→eiϕkgkeie−iϕkgk,
+ϕk ∈R,
+gk ∈Cℓ(8),
+(16)
+7In fact, given our Cℓ(8) basis in eqn. (1), the choice of Witt basis in eqn. (4) is the unique choice
+that gives diagonal simple idempotents.
+5
+
+---PAGE BREAK---
+will preserve the anticommutation relations in eqn.
+(5), not all such transformations
+preserve the Witt basis in eqn. (4) or, equivalently, the isotropic subspaces generated
+by them. In particular, not all elements of Spin(8), whose Lie algebra is generated by
+the bi-vectors of Cℓ(8), leave these isotropic subspaces invariant. Imposing the additional
+restrictions that
+[gk,
+X
+i
+κiai] =
+X
+j
+µjaj,
+and
+[gk,
+X
+i
+κ′
+ia†
+i] =
+X
+j
+µ′
+ja†
+j,
+(17)
+and that transformations on a†
+i (ai) commute with hermitian conjugation †;
+eiϕkgka†
+ie−iϕkgk = (e−iϕkgk)†a†
+i(eiϕkgk)†,
+(18)
+reduces Spin(8) to its maximal subgroup U(4) = SU(4)×U(1). These unitary symmetries
+preserve the Witt basis (and hence the minimal left ideals) via the action in eqn. (16).
+Both the non-abelian SU(4) generators Λ1 −Λ15 and the abelian U(1) generator N8 can
+be written in terms of the Witt basis, and these are explicitly listed in Appendix A.
+Via the commutator (adjoint) action of SU(4), the minimal left ideal I1 transforms as
+the exterior algebra Λ•C4:
+I1
+∼=
+Λ0C4 ⊕Λ1C4 ⊕Λ2C4 ⊕Λ3C4 ⊕Λ4C4
+∼=
+1 ⊕4 ⊕6 ⊕4 ⊕1.
+(19)
+In terms of the Witt basis:
+Λ0C4
+=
+span{ f },
+(20)
+Λ1C4
+=
+span{ a†
+if }4
+i=1,
+(21)
+Λ2C4
+=
+span{ a†
+ia†
+jf }1≤i<j≤4,
+(22)
+Λ3C4
+=
+span
+n
+1
+6 εijkl a†
+ja†
+ka†
+lf
+o4
+i=1,
+(23)
+Λ4C4
+=
+span{ a†
+1a†
+2a†
+3a†
+4f },
+(24)
+where for brevity we have written f = f++++.
+Under the SU(3) subgroup of SU(4), generated by Λ1, ..., Λ8 the exterior powers re-
+strict as
+Λ0C4
+→
+1, Λ1C4 →3 ⊕1, Λ2C4 →3 ⊕3, Λ3C4 →3 ⊕1, Λ4C4 →1.
+(25)
+Consequently I1 transforms as
+I1 ∼= 1 ⊕(3 ⊕1) ⊕(3 ⊕3) ⊕(3 ⊕1) ⊕1,
+(SU(3)).
+(26)
+3
+The discrete S3 symmetry in Cℓ(8)
+We will consider the discrete group S3 as a family symmetry in what is to follow. This
+discrete group corresponds to an automorphism group of the hypercomplex algebra of
+sedenions, S, and is related to the triality automorphism of Spin(8) [3,61,62].
+S3 is generated by the order three generator ψ3, together with the order two generator
+ϵ satisfying ψ3
+3 = Id, ϵ2 = Id and ϵψ3 = ψ2
+3ϵ. Here we introduce a realisation of these two
+generators, and thus S3 within the context of Cℓ(8).
+6
+
+---PAGE BREAK---
+To do so, we first introduce the following multivector elements of Cℓ(8):
+g1
+= 1
+2e1e8(B1 −1),
+(27)
+g2
+= 1
+2e2e8(B2 −1),
+(28)
+g3
+= 1
+2e3e8(B3 −1),
+(29)
+g4
+= 1
+2e4e8(B4 −1),
+(30)
+g5
+= 1
+2e5e8(B5 −1),
+(31)
+g6
+= 1
+2e6e8(B6 −1),
+(32)
+g7
+= 1
+2e7e8(B7 −1),
+(33)
+where Bi are the following four-vectors:
+B1
+= −e2345 + e2367 + e4567,
+(34)
+B2
+= e1346 + e1357 + e4567,
+(35)
+B3
+= e1256 −e1247 + e4567,
+(36)
+B4
+= e1256 + e1357 + e2367,
+(37)
+B5
+= −e1247 + e1346 + e2367,
+(38)
+B6
+= −e1247 + e1357 −e2345,
+(39)
+B7
+= e1256 + e1346 −e2345.
+(40)
+These multivector elements ultimately arise from the left actions of the sedenion alge-
+bra onto itself, with each such action representing a linear transformation. In particular,
+such left actions by the first eight imaginary sedenion units generate Cℓ(8), whereas the
+left actions of the remaining seven imaginary sedenion units are represented by the specific
+multivector combinations gi within Cℓ(8), as constructed in previous work [2, 3]. Since
+our focus here is on the Clifford algebraic structure, we take these elements as given and
+work entirely within Cℓ(8).
+We now define the action of the order-three S3 generator ψ3 on the generating basis
+of Cℓ(8) as follows:
+ψ3
+:
+ei 7→1
+4ei +
+√
+3
+4 gi −
+√
+3
+4 eie8 −3
+4gie8,
+(41)
+where i = 1, ..., 7. Both e8 as well as the identity are fixed by ψ3, consistent with the
+sedenion automorphisms in [61]. We note that ψ3 does not map one-vectors to one-vectors,
+and so does not correspond to a Spin(8) transformation. In fact, ψ3 does not preserve the
+Z2-grading of Cℓ(8), and thus mixes even and odd grades.
+Subsequently, we can determine the action of ψ3 on the multivectors gi using the fact
+that ψ3 extends to a homomorphism of the algebra
+ψ3
+:
+gi 7→−
+√
+3
+4 ei + 1
+4gi + 3
+4eie8 −
+√
+3
+4 gie8.
+(42)
+Likewise we define the action of the order-two generator ϵ on the Cℓ(8) generating
+basis:
+ϵ
+:
+ei 7→−ei,
+i = 1, ..., 8.
+(43)
+This order-two map leaves gi unchanged
+ϵ
+:
+gi 7→gi,
+i = 1, ..., 7.
+(44)
+7
+
+---PAGE BREAK---
+These generators satisfy ψ3
+3 = Id, ϵ2 = Id and ϵψ3 = ψ2
+3ϵ, and together they generate
+S3:
+⟨ψ3, ϵ | ψ3
+3 = Id, ϵ2 = Id, ϵψ3 = ψ2
+3ϵ⟩∼= S3.
+(45)
+The order-three generator ψ3 generates the cyclic subgroup Z3 of S3.
+3.1
+The action of ϵ and ψ3 on primitive idempotents
+We can now determine the action of the S3 generators on the Witt basis and minimal left
+ideals of Cℓ(8). We note that
+ϵ
+:
+ai 7→−ai,
+i = 1, 2, 3, 4,
+(46)
+from which it follows that
+ϵ
+:
+aia†
+i 7→aia†
+i ⇒ϵ : π(±)
+i
+7→π(±)
+i
+,
+i = 1, 2, 3, 4.
+(47)
+The primitive idempotents are therefore fixed by ϵ, and each minimal left ideal is closed
+under ϵ, which only induces a sign change on the odd-grade terms in the minimal left
+ideals.
+Next, We determine the action of ψ3 on the primitive idempotent f++++ = E1,1 to be:
+ψ3(E1,1)
+=
+1
+4E1,1 + 3
+4E14,14 + i
+√
+3
+4 (E14,1 −E1,14),
+(48)
+ψ2
+3(E1,1)
+=
+1
+4E1,1 + 3
+4E14,14 −i
+√
+3
+4 (E14,1 −E1,14), .
+(49)
+Acting with ψ3 once more returns E1,1, as required. It follows immediately that
+E1,1 + ψ3(E1,1) + ψ2
+3(E1,1) = 3
+2(E1,1 + E14,14),
+(50)
+is S3-invariant.
+We can do the same calculations for f−−−+ = E14,14:
+ψ3(E14,14)
+=
+3
+4E1,1 + 1
+4E14,14 + i
+√
+3
+4 (E1,14 + E14,1),
+(51)
+ψ2
+3(E14,14)
+=
+3
+4E1,1 + 1
+4E14,14 −i
+√
+3
+4 (E1,14 + E14,1),
+(52)
+and likewise for f+++−= E9,9 and f−−−−= E6,6. The subspaces
+Cℓ(8)E1,1
+⊕
+Cℓ(8)E14,14,
+(53)
+Cℓ(8)E9,9
+⊕
+Cℓ(8)E6,6,
+(54)
+are therefore each closed under S3. Each of these subspaces is 32 (complex) dimensional.
+One furthermore finds that although the SU(4) generators are not S3-invariant, the
+SU(3) generators Λ1, ..., Λ8 are [3]:
+ψ3(Λi) = Λi
+i = 1, . . . , 8.
+(55)
+This is expected since SU(3) corresponds to a maximal subgroup of Aut(O) = G2 and S3
+fixes G2 pointwise.
+8
+
+---PAGE BREAK---
+Starting with the first minimal left ideal I1 and applying ψ3, we can generate three
+sets of 16 states. These however cannot all be linearly independent, since the ψ3-closed
+subspace Cℓ(8)E1,1 ⊕Cℓ(8)E14,14 is only 32-dimensional.
+Consider therefore splitting the 16 dimensional spinor I1 into its 8 dimensional even
+and odd semi-spinors
+I+
+1 = ρ+I1,
+I−
+1 = ρ−I1,
+(56)
+where ρ± := 1
+2(1 + ω8). Then,
+I+
+1 := Cℓ+(8)f++++ = (r0 + rija†
+ia†
+j + ri4a†
+ia†
+4 + r1234a†
+1a†
+2a†
+3a†
+4),
+(57)
+where i, j ∈{1, 2, 3}, i ̸= j and r ∈C. The generated set of 24 states {I+
+1 , ψ3(I+
+1 ), ψ2(I+
+1 )}
+are then found to all be linearly independent [3]8.
+4
+Three generations of fermions with SU(3)C × U(1)em
+gauge symmetry in Cℓ(8)
+In an earlier work [3], we used the above described structure of S3 inside Cℓ(8) to represent
+three linearly independent generations of fermions with unbroken SU(3)C ×U(1)em gauge
+symmetry. Here, a brief overview of this construction is provided.
+We already established that the SU(3) generators Λ1, ..., Λ8 are S3-invariant. This is
+essential to avoid introducing three generations of gluons.
+Identify (half of) the first generation states with the first semi-spinor I+
+1 :
+I+
+1 := Cℓ+(8)f++++ = (r0 + rija†
+ia†
+j + ri4a†
+ia†
+4 + r1234a†
+1a†
+2a†
+3a†
+4)f++++.
+(58)
+These first generation states transform via SU(3) as
+I+
+1 ∼= 1 ⊕3 ⊕3 ⊕1,
+(59)
+as required. The action of SU(3) on I+
+1 is taken to be via the commutator
+
+Λi, I+
+1
+
+,
+following [63]. However it is readily checked that this commutator action reduces to a
+left-only action, since the term I+
+1 Λi = 09. That is
+
+Λi, I+
+1
+
+= ΛiI+
+1 ,
+i = 1, ..., 8.
+(60)
+To obtain both particle and anti-particle states we include the odd semi-spinor of the
+minimal ideal, I−
+9 = I+
+1 a4, constructed on the primitive idempotent f+++−= E9,9. These
+states likewise transform as
+I−
+9 ∼= 1 ⊕3 ⊕3 ⊕1,
+(61)
+where again the commutator action reduces to a left action.
+The first generation of
+fermions is therefore represented as
+I+
+1 ⊕I−
+9
+=
+Cℓ+(8)f++++ ⊕Cℓ−(8)f+++−,
+First generation.
+(62)
+8The calculation was carried out using Mathematica.
+9See Section 4.1 for a more in-depth discussion.
+9
+
+---PAGE BREAK---
+The second and third generations are then obtained via the action of ψ3 on the first
+generation of states. That is:
+ψ3(I+
+1 ⊕I−
+9 ),
+Second generation,
+(63)
+ψ2
+3(I+
+1 ⊕I−
+9 ),
+Third generation.
+(64)
+The three sets of Witt bases {ai, a†
+i}, {ψ3(ai), ψ3(a†
+i)}, and {ψ2
+3(ai), ψ2
+3(a†
+i)} all satisfy
+the usual fermionic anticommutation relations (5), and ψ3 transforms primitive idempo-
+tents into primitive idempotents. Because the ψ3-invariant spaces I+
+1 ⊕ψ3(I+
+1 ) ⊕ψ2
+3(I+
+1 )
+and I−
+9 ⊕ψ3(I−
+9 ) ⊕ψ2
+3(I−
+9 ) are linearly independent as subspaces of Mat(16, C), the 48
+states represented in this way are guaranteed to be linearly independent in Cℓ(8).
+Since the SU(3) generators Λi are fixed by ψ3, the map ψ3 intertwines the SU(3)
+action. Indeed, for any X ∈I+
+1 ⊕I−
+9 we have
+ψ3([Λi, X])
+=
+ψ3(ΛiX −XΛi)
+=
+ψ3(Λi)ψ3(X) −ψ3(X)ψ3(Λi)
+=
+Λiψ3(X) −ψ3(X)Λi
+=
+[Λi, ψ3(X)].
+(65)
+Thus ψ3 : I+
+1 ⊕I−
+9 →ψ3(I+
+1 ⊕I−
+9 ) is an SU(3)-equivariant isomorphism, and the same
+holds for ψ2
+3 : I+
+1 ⊕I−
+9 →ψ2
+3(I+
+1 ⊕I−
+9 ). Since we already know that
+I+
+1
+∼= 1 ⊕3 ⊕¯3 ⊕1,
+I−
+9
+∼= 1 ⊕3 ⊕¯3 ⊕1
+(66)
+as an SU(3) representation, it follows that the second and third generations carry the
+same decomposition. The three generations are therefore equivalent SU(3) modules.
+The S3-invariant electric charge generator is defined as
+Q := 1
+3
+ Q1 + ψ3(Q1) + ψ2
+3(Q1)
+
+,
+(67)
+where
+Q1 := 1
+3
+
+a1a†
+1 + a2a†
+2 + a3a†
+3 −3a4a†
+4
+
+.
+(68)
+The generator Q1 is proportional to the SU(4) generator Λ15 which commutes with SU(3).
+I+
+1 then contains the isospin-up states, whereas I−
+9 contains the isospin-down states. The
+Q eigenvalues for the first generation of states are listed in Table 1.
+4.1
+Spinor transformations and localisation of the gauge action
+In the present framework, we follow [63] and take the gauge generators to act on algebraic
+spinor states through the commutator
+[Λa, X],
+X ∈Cℓ(8).
+(69)
+This commutator in general mixes left and right multiplication. Whereas left multiplica-
+tion leads to a transformation within a given minimal left ideal, right multiplication leads
+to transformations between different minimal ideals.
+10
+
+---PAGE BREAK---
+State
+Q eigenvalue
+f++++
+0
+a†
+ia†
+jf++++
+1
+3
+a†
+ia†
+4f++++
+2
+3
+a†
+1a†
+2a†
+3a†
+4f++++
+1
+a4f+++−
+−1
+a†
+ia†
+ja4f+++−
+−2
+3
+a†
+if+++−
+−1
+3
+a†
+1a†
+2a†
+3f+++−
+0
+Table 1: Eigenvalues of the adjoint action [Q, ·] on first generation states.
+For the algebraic states of interest, however, this commutator localises to a pure left
+action on precisely four minimal left ideals,
+I1
+=
+Cℓ(8)f++++,
+I14 = Cℓ(8)f−−−+,
+(70)
+I9
+=
+Cℓ(8)f+++−,
+I6 = Cℓ(8)f−−−−,
+(71)
+corresponding to the four spinors used in our construction of three fermion generation with
+SU(3)C × U(1)em gauge symmetry. On these ideals the action of the SU(3) generators is
+implemented entirely by left multiplication, so the fermionic states transform as genuine
+left-modules under the colour gauge algebra.
+More explicitly, for any generator Λa with a ∈{1, 2, 4, 5, 6, 7} one has
+[Λa, X] = ΛaX
+for all X ∈Ik,
+k ∈{1, 6, 9, 14},
+(72)
+Directly. For the Cartan elements Λ3 and Λ8, the commutator is not purely left-acting in
+general, but the deviation may always be absorbed into an ideal-dependent redefinition.
+That is, for each k ∈{1, 6, 9, 14} there exist elements Λ[k]
+3 and Λ[k]
+8 such that
+[Λr, X] = Λ[k]
+r X,
+r ∈{3, 8}, X ∈Ik.
+(73)
+These replacements differ from the original Λ3, Λ8 only by elements of the commutant of
+Ik, which act trivially on Ik. They therefore do not modify the physical representation
+of the colour algebra. In particular, the redefined Cartan generators Λ[k]
+3,8 close the same
+su(3) Lie algebra, and introduce no new gauge degrees of freedom.
+On minimal ideals other than I1, I6, I9, I14, some non-Cartan generator has unavoidable
+off-diagonal support into neighbouring columns, and the commutator fails to restrict to a
+single left multiplier.
+For the U(1)em generator Q, the commutator [Q, X] does not a priori reduce to a
+purely left action. However, Q is diagonal in the basis in eqn. (1), and for all algebraic
+states X belonging to the minimal left ideals used in the present construction one finds
+XQ = 1
+2X.
+(74)
+As a consequence, the right action of Q reduces to an ideal-independent scalar on these
+states. On the physically relevant minimal left ideals, the commutator may therefore be
+rewritten as
+[Q, X] =
+ Q −1
+2I
+
+X.
+(75)
+11
+
+---PAGE BREAK---
+This defines an equivalent purely left-acting generator. Since the identity element I is
+central in Cℓ(8), this shift does not modify the U(1)em algebra or the electric charge
+assignments extracted from the commutator action.
+Thus, on the physically relevant minimal ideals, both the colour and electromagnetic
+gauge symmetry acts entirely by left multiplication, and introduces no mixing between
+distinct minimal left ideals.
+Finally, we note that commutator action of the SU(2)L symmetry to be introduced
+in Section 6.2 likewise reduces to a one-sided action. In that case however, we find that
+the commutator action reduces to a right action. Consequently, the SU(2)L action does
+not preserve individual minimal left ideals, but instead induces transformations between
+distinct ideals.
+5
+Enlarging Cℓ(8) to Cℓ(10)
+In order to include the weak sector, we need to enlarge the algebra from Cℓ(8) to Cℓ(10)10.
+We achieve this using the graded tensor product realization Cℓ(10) ∼= Cℓ(2) ˆ⊗Cℓ(8).
+Consider the unital injective homomorphism
+ι : Cℓ(8)
+,→
+Cℓ(10),
+(76)
+ι(ei)
+7→
+I2 ⊗ei,
+i = 1, ..., 8,
+(77)
+and define the remaining Cℓ(10) basis units as
+e9 := −i¯σ1 ⊗ω8,
+e10 := i¯σ2 ⊗ω8,
+(78)
+where ¯σi are Pauli matrices, and the bar is used to avoid confusion with the Pauli matrices
+used to define our Cℓ(8) basis in eqn. (1). From now on, unless confusion is likely to
+arise, we will simply write ei instead of ι(ei).
+Note that
+ι(Cℓ(8)) = I2 ⊗Cℓ(8) =
+Cℓ(8)
+0
+0
+Cℓ(8)
+
+,
+(79)
+so that Cℓ(8) once embedded into Cℓ(10) takes on a block-diagonal form.
+We can use the same injective homomorphism ι to define the Cℓ(10) Witt basis
+ι(aj)
+=
+1
+2(−ι(ej) + iι(ej+4)),
+a5 := 1
+2(−e9 + ie10),
+(80)
+ι(aj)†
+=
+1
+2(ι(ej) + iι(ej+4)),
+a†
+5 := 1
+2(e9 + ie10).
+(81)
+For simplicity we will from now on simply write (for example) ai instead of ι(ai) unless
+confusion is likely to arise. In particular one finds that
+a5 =
+0
+iω8
+0
+0
+
+,
+a†
+5 =
+ 0
+0
+iω8
+0
+
+.
+(82)
+Next, define the simple idempotents
+π(+)
+5
+:= a5a†
+5 =
+I16
+0
+0
+0
+
+,
+π(−)
+5
+:= a†
+5a5 =
+0
+0
+0
+I16
+
+.
+(83)
+10The algebra Cℓ(8) corresponds to the algebra of endomorphisms of C ⊗S. Likewise, Cℓ(10) an be
+considered as the left (only) endomorphism algebra of C ⊗H ⊗S.
+12
+
+---PAGE BREAK---
+Subsequently the 32 primitive idempotents of Cℓ(10) are given by
+fε1ε2ε3ε4ε5 = π(ε1)
+1
+π(ε2)
+2
+π(ε3)
+3
+π(ε4)
+4
+π(ε5)
+5
+,
+εj ∈{+, −}.
+(84)
+They are mutually orthogonal and complete:
+fεfε′ = δε,ε′fε,
+X
+ε∈{+,−}5
+fε = I32,
+fε = fε1ε2ε3ε4ε5
+(85)
+and correspond to rank-1 diagonal projectors equal to matrix units Ei,i where i = 1, ..., 32.
+It is readily checked that
+f+++++ := f++++π(+)
+5
+= E1,1,
+f++++−:= f++++π(−)
+5
+= E17,17.
+(86)
+More generally we find that
+ι(Ei,i)π(+)
+5
+= Ei,i,
+ι(Ei,i)π(−)
+5
+= Ei+16,i+16,
+i = 1, ..., 16.
+(87)
+We can therefore write the first minimal left ideal of Cℓ(10) as
+I1 := Cℓ(10)f+++++
+=
+Cℓ(8)f+++++ ⊕Cℓ(8)a†
+5f+++++,
+(88)
+=
+Cℓ(8)f++++
+0
+0
+0
+
+⊕
+
+0
+0
+Cℓ(8)a†
+5f++++
+0
+
+.
+(89)
+5.1
+Embedding S3 into Cℓ(10)
+The S3 generators ψ3 and ϵ act on the Cℓ(8) basis {ei}, whereas their action on the Cℓ(2)
+algebra generated by {¯σa}, a = 1, 2, 3 is trivial
+ψ3(¯σa) = ¯σa,
+ϵ(¯σa) = ¯σa,
+a = 1, 2, 3.
+(90)
+Nonetheless, the action of S3 on e9 and e10 is nontrivial, since both include a factor of ω8,
+the Cℓ(8) pseudoscalar which is itself not invariant under ψ3.
+ψ3(e9)
+=
+ψ3(−i¯σ1 ⊗ω8) = −i¯σ1 ⊗ψ3(ω8),
+(91)
+ψ3(e10)
+=
+ψ3(i¯σ2 ⊗ω8) = i¯σ2 ⊗ψ3(ω8).
+(92)
+On the other hand ϵ(ω8) = ω8, and so
+ϵ(a5) = a5,
+ϵ(a†
+5) = a†
+5.
+(93)
+It can subsequently be verified that the three Witt bases {ai, a†
+i}, {ψ3(ai), ψ3(a†
+i)}, and
+{ψ2
+3(ai), ψ2
+3(a†
+i)} (now with i = 1, ..., 5) all satisfy the usual fermionic anticommutation
+relations, and that ψ3 transforms primitive idempotents into primitive idempotents.
+The S3 action is block diagonal with respect to the Cℓ(2)ˆ⊗Cℓ(8) decomposition in
+eqn. (79). In other words
+ι : ψ3
+,→
+ψ3 ⊕ψ3,
+(94)
+ι : ϵ
+,→
+ϵ ⊕ϵ.
+(95)
+In Cℓ(8) it was established that the subspaces
+Cℓ(8)f++++ ⊕Cℓ(8)f−−−−,
+(96)
+Cℓ(8)f+++−⊕Cℓ(8)f−−−+,
+(97)
+13
+
+---PAGE BREAK---
+are each closed under S3. When we subsequently pass to Cℓ(10) via the graded tensor
+product, we obtain four copies of this structure. Explicitly, the (64 complex dimensional)
+closed subspaces are
+Cℓ(10)f+++++ ⊕Cℓ(10)f−−−++
+=
+Cℓ(10)E1,1 ⊕Cℓ(10)E14,14,
+(98)
+Cℓ(10)f++++−⊕Cℓ(10)f−−−+−
+=
+Cℓ(10)E17,17 ⊕Cℓ(10)E30,30,
+(99)
+Cℓ(10)f+++−+ ⊕Cℓ(10)f−−−−+
+=
+Cℓ(10)E9,9 ⊕Cℓ(10)E6,6,
+(100)
+Cℓ(10)f+++−−⊕Cℓ(10)f−−−−−
+=
+Cℓ(10)E25,25 ⊕Cℓ(10)E22,22.
+(101)
+6
+Three generations of fermion states in Cℓ(10)
+We are now in a position to extend the Cℓ(8) construction of Section 4 to Cℓ(10) as a
+way to incorporate the SU(2)L ×U(1)Y gauge sector of the SM. The goal is to embed the
+SM gauge symmetries into Cℓ(10) in such a way that
+1. The three generations of physical states are linearly independent,
+2. The Lie algebra generators of the gauge symmetries are invariant under S3,
+3. The commutator action of gauge symmetries on fermion states reduce to a one sided
+action (subject to the discussion in Section 4.1),
+4. The gauge groups commute.
+6.1
+The colour symmetry SU(3)C
+The SU(3) generators used in the Cℓ(8) model embed into Cℓ(10) in a straighforward
+manner
+ι : Λi ∈Cℓ(8) ,→I2 ⊗Λi ∈Cℓ(10),
+i = 1, ..., 8.
+(102)
+These generators therefore remain invariant under S3 and SU(3) now acts identically on
+the two Cℓ(8) blocks in eqn. (79).
+We can then embed the three linearly independent generations of fermions from Cℓ(8)
+into Cℓ(10). There is not a unique way to do this, but one option is to embed these states
+in the upper Cℓ(8) block of (79) via right multiplication by π(+)
+5
+:
+ι(I+
+1 )π(+)
+5
+⊕ι(I−
+9 )π(+)
+5
+,
+First generation.
+(103)
+The remaining two generations are then obtained via ψ3.
+This gives the required 48
+linearly independent states that transform as three generations under SU(3).
+6.2
+The chiral weak symmetry SU(2)L
+In order to include the weak symmetry the number of states needs to be doubled to ensure
+each fermions comes in both left- and right-handed copies. To ensure SU(2)L only acts
+non-trivially on the left-handed states, an (S3-invariant) projector will be introduced.
+The role of this projector will be to identify the minimal left ideals which contain SU(2)L
+doublet states. To ensure that the SU(2)L generators introduced in the next subsection
+are S3 invariant, the projector itself needs to be S3 invariant, and commute with the
+SU(3) generators.
+14
+
+---PAGE BREAK---
+6.2.1
+An S3 invariant projector
+In section 3 the action of ψ3 on the Cℓ(8) primitive idempotent f++++ = E1,1 was deter-
+mined. In particular the rank-2 projector f++++ + f−−−+ = E1,1 + E14,14 was found to be
+S3-invariant. Since a†
+5a5 (and a5a†
+5) are likewise S3-invariant, the action of ψ3 (and ϵ) on
+f++++ carries over to f+++++ in Cℓ(10). Subsequently, an S3-invariant rank-4 projector
+can be defined in Cℓ(10):
+P
+:=
+I2 ⊗(f++++ + f−−−+) = f+++++ + f−−−++ + f++++−+ f−−−+−,
+(104)
+=
+E1,1 + E14,14 + E17,17 + E30,30 ∈Cℓ(10).
+(105)
+All four primitive idempotents that make up P transform as SU(3) singlets, guaranteeing
+that P commutes with SU(3) as required. It is furthermore readily verified that
+Pω8 = ω8P,
+Pe9 = e9P,
+Pe10 = e10P,
+(106)
+from which it follows that P commutes with both a5 and a†
+5. It is important to note that
+Pfε1ε2ε3ε4ε5 = fε1ε2ε3ε4ε5P = fε1ε2ε3ε4ε5
+(107)
+if ε1ε2ε3ε4ε5 ∈{+ + + + +, −−−+ +, + + + + −, −−−+ −}, and is equal to zero
+otherwise.
+6.2.2
+S3 invariant SU(2)L generators
+The SU(2)L generators can now be defined as
+T1 :
+=
+1
+2(−ia5 + ia†
+5)ω8P = i
+2e9ω8P,
+(108)
+T2 :
+=
+1
+2(a5 + a†
+5)ω8P = i
+2e10ω8P,
+(109)
+T3 :
+=
+1
+2(a†
+5a5 −a5a†
+5)P = i
+2e9e10P,
+(110)
+from which it follows that
+T+ := T1 + iT2 = ia†
+5ω8P,
+T−:= T1 −iT2 = −ia5ω8P.
+(111)
+These generators commute with the SU(3)C generators.
+We already established that P is an S3-invariant projector. The S3-invariance of e9ω8
+and e10ω8 follows immediately from the definition of e9 and e10:
+(−i¯σ1 ⊗ω8)(I2 ⊗ω8)
+=
+−i¯σ1 ⊗I16,
+(112)
+(¯σ2 ⊗ω8)(I2 ⊗ω8)
+=
+i¯σ2 ⊗I16.
+(113)
+The SU(2)L generators are therefore invariant under S3, as required in order to avoid
+introducing three generations of weak gauge bosons.
+6.2.3
+Weak doublet states
+We are now in a position to determine our physical states. Focus first on the eight isospin-
+up states of the first generation. We need these states to satisfy the following properties:
+15
+
+---PAGE BREAK---
+1. They must transform as 1 ⊕3 ⊕¯3 ⊕1 via SU(3),
+2. The 24 states obtained from applying ψ3 must be linearly independent,
+3. Either the left or right action of the projector P onto the states must give zero in
+order to ensure the the commutator action of SU(2)L on the states reduces to a
+one-sided action,
+4. The states must give the correct electric charges.
+In Cℓ(8), the states I+
+1 were shown to transform as 1 ⊕3 ⊕¯3 ⊕1 via SU(3), and the
+24 states {I+
+1 , ψ3(I+
+1 ), ψ2
+3(I+
+1 )} generated via ψ3 were shown to be linearly independent.
+The most straightforward choice is therefore to consider the states ι(I+
+1 ) ∈Cℓ(10) as the
+isospin-up states of the first generation. This however does not work because
+ι(I+
+1 )P = ι(I+
+1 ),
+Pι(I+
+1 ) = f+++++.
+(114)
+The commutator action of SU(2)L on these states therefore does not reduce to a one-sided
+action. The only offending term is the SU(3) singlet state f++++. We might therefore
+find a replacement singlet state in I1 ∈Cℓ(10). Let us therefore replace the state f++++
+with a†
+4a†
+5f++++.
+Explicitly, we choose our eight isospin-up states (of the first generation) as follows:
+a†
+1a†
+2a†
+3a†
+4f+++++
+,
+(SU(3) singlet),
+(115)
+a†
+ia†
+4f+++++
+,
+(SU(3) triplet),
+(116)
+a†
+ia†
+jf+++++
+,
+(SU(3) anti-triplet),
+(117)
+a†
+4a†
+5f+++++
+,
+(SU(3) singlet).
+(118)
+Note that all these states have even grade and so live in the even semi-spinor I+
+1 of Cℓ(10).
+Define
+V +
+1 := (c1234a†
+1a†
+2a†
+3a†
+4 + ci4a†
+ia†
+4 + cija†
+ia†
+j + c45a†
+4a†
+5)f+++++,
+i = 1, 2, 3
+(119)
+where c1234, ci4, cij, c45 ∈C.
+Via the action of ψ3, the resulting 24 states are linearly
+independent and live entirely in the closed subspace spanned by the two minimal ideals
+built on the primitive idempotents f+++++ = E1,1 and f−−−++ = E14,14. This ensures
+three linearly independent generations of isospin-up states.
+Define therefore the 24 isospin-up states as
+V + := V +
+1 ⊕ψ3(V +
+1 ) ⊕ψ2
+3(V +
+1 ) ⊂Cℓ(10)f+++++ ⊕Cℓ(10)f−−−++.
+(120)
+The corresponding isospin down states are obtained simply by multiplying the isospin-
+up states on the right by a5.
+a†
+1a†
+2a†
+3a†
+4f+++++a5
+=
+a†
+1a†
+2a†
+3a†
+4a5f++++−,
+(SU(3) singlet),
+(121)
+a†
+ia†
+4f+++++a5
+=
+a†
+ia†
+4a5f++++−,
+(SU(3) triplet),
+(122)
+a†
+ia†
+jf+++++a5
+=
+a†
+ia†
+ja5f++++−,
+(SU(3) anti-triplet),
+(123)
+a†
+4a†
+5f+++++a5
+=
+a†
+4f++++−,
+(SU(3) singlet),
+(124)
+where we have used f+++++a5 = f++++a5a†
+5a5 = a5f++++a†
+5a5 = a5f++++−11.
+11More generally one finds that
+f+++++a†
+5
+=
+0,
+f+++++a5 = a5f++++−,
+(125)
+f++++−a5
+=
+0,
+f++++−a†
+5 = a†
+5f+++++,
+(126)
+f−−−−+a†
+5
+=
+0,
+f−−−−+a5 = a5f−−−−−,
+(127)
+f−−−−−a5
+=
+0,
+f−−−−−a†
+5 = a†
+5f−−−−+.
+(128)
+16
+
+---PAGE BREAK---
+That is, right multiplying states in the minimal left ideal I1 by a5 gives states in
+the minimal left ideal I17 (built on the primitive idempotent f++++−). Likewise, right
+multiplying states in I17 by a†
+5 gives back states in I1.
+Cℓ(10) f+++++
+| {z }
+E1,1
+a5
+=
+Cℓ(10) f++++−
+| {z }
+E17,17
+,
+Cℓ(10) f++++−
+| {z }
+E17,17
+a†
+5 = Cℓ(10) f+++++
+| {z }
+E1,1
+. (129)
+Define
+V −
+1 := V +
+1 a5 = (c12345a†
+1a†
+2a†
+3a†
+4a5 + ci45a†
+ia†
+4a5 + cij5a†
+ia†
+ja5 + c4a†
+4)f++++−,
+(130)
+where c12345, ci45, c123, cij ∈C. Applying ψ3 to the isospin-down states results in a total of
+24 linearly independent algebraic states that live entirely in the closed subspace spanned
+by the the two minimal left ideals built on the primitive idempotents f++++−= E17,17
+and f−−−+−= E30,30. This ensures three linearly independent generations of isospin-down
+states, that are also disjoint from the isospin-up states. We therefore define the set of
+isospin-down states as:
+V −:= V −
+1 ⊕ψ3(V −
+1 ) ⊕ψ2
+3(V −
+1 ) ⊂Cℓ(10)f++++−⊕Cℓ(10)f−−−+−.
+(131)
+The SU(2)L doublet states of the first generation are then
+ a†
+1a†
+2a†
+3a†
+4f
+a†
+1a†
+2a†
+3a†
+4fa5
+
+,
+ a†
+ia†
+4f
+a†
+ia†
+4fa5
+
+,
+ a†
+ia†
+jf
+a†
+ia†
+jfa5
+
+,
+ a†
+4a†
+5f
+a†
+4a†
+5fa5
+
+,
+SU(2) doublets
+(132)
+where f = f+++++. The second and third generation doublets are obtained by applying
+ψ3.
+For both the isospin-up and isospin-down states, the commutator action of SU(2)L
+reduces to a right action
+
+Ti, V +
+= V +Ti,
+
+Ti, V −
+= V −Ti,
+i = 1, 2, 3.
+(133)
+6.2.4
+Weak singlet states
+To include the weak singlet states, we must identify suitable minimal ideals IX, X =
+1, ..., 32, such that
+IXP = PIX = 0.
+(134)
+This condition is satisfied provided that X ̸= 1, 14, 17, 30. However, the action of SU(3)
+only reduces to a left-sided action (see eqn. (60)) for X = 1, 6, 9, 14, 17, 22, 25, 30, leaving
+us with only the choices X = 6, 9, 22, 25.
+Define the singlet states as
+U +
+1 := V +
+1 a4a5,
+U −
+1 := V +
+1 a4,
+(135)
+where we note that
+f+++++a4a5
+=
+a4a5f+++−−= a4a5E25,25,
+(136)
+f+++++a4
+=
+a4f+++−+ = a4E9,9.
+(137)
+.
+17
+
+---PAGE BREAK---
+By applying ψ3 we obtain a total of 48 linearly independent singlet states, which are
+disjoint from the doublet states. Therefore all 96 states are linearly independent.
+Finally therefore, define the three generations of fermion states as follows
+S1 :
+=
+V +
+1 ⊕V +
+1 a5 ⊕V +
+1 a4 ⊕V +
+1 a4a5,
+First generation,
+(138)
+S2 :
+=
+ψ3(S1),
+Second generation,
+(139)
+S3 :
+=
+ψ2
+3(S1),
+Third generation.
+(140)
+The order-three generator ψ3 then cyclically permutes the three generations of states
+S1
+ψ3
+−→S2
+ψ3
+−→S3
+ψ3
+−→S1.
+(141)
+6.3
+Electric charge U(1)em and hypercharge U(1)Y
+Using the electric charge generator Q from Section 4 assigns the same electric charges to
+the isospin-up and isospin-down states, because Q commutes with a5. We therefore define
+the electric charge generator in Cℓ(10) as
+Q′ :
+=
+Q + (2P −I)a†
+5a5
+(142)
+=
+1
+3
+ a1a†
+1 + a2a†
+2 + a3a†
+3 −3 a4a†
+4
+
++ (2P −I)a†
+5a5.
+(143)
+Note that Q′ remains S3-invariant.
+Subsequently, define the hypercharge generator Y as
+Y := 2(Q′ −T3).
+(144)
+The eigenvalues for the first generation of algebraic states, which for definiteness we
+identify these with the first generation of SM fermions are listed in Table 2 .
+7
+Discussion
+In this work we have presented an explicit algebraic framework in which three fermion
+generations arise intrinsically within a single Clifford algebra and transform under the
+full SM gauge group. Fermionic states are realised as minimal left ideals of the complex
+Clifford algebra Cℓ(10), while the three-generation structure emerges from an embedded
+discrete S3 symmetry acting on the space of algebraic spinors. A central feature of the
+construction is that the SM gauge generators are required to be S3-invariant, ensuring
+that the gauge sector remains unique and is not replicated across generations. In this
+way, three linearly independent but gauge-equivalent fermion generations are obtained
+without introducing additional gauge degrees of freedom or ad hoc assumptions.
+A notable aspect of the present framework is that it simultaneously realises three
+fermion generations, the full SM gauge group SU(3)C × SU(2)L × U(1)Y , and a non-
+replicated gauge sector within a single Clifford algebra. The generations arise intrinsi-
+cally from the internal S3 symmetry, while the requirement of S3-invariance of the gauge
+generators enforces the uniqueness of the gauge sector.
+Unlike conventional discrete
+family-symmetry models, where gauge fields are typically assumed to be family blind
+by construction, the present framework implements this property as a direct algebraic
+consequence.
+18
+
+---PAGE BREAK---
+Although the construction is formulated within the relatively large algebra Cℓ(10), the
+resulting fermionic spectrum is in fact highly constrained. The choice of Cℓ(10) is mini-
+mal in the sense that it is the smallest Clifford algebra in which the colour, electroweak,
+and family structures can be realised simultaneously within the present framework. In
+particular, compatibility between the adjoint action of the SU(3)C generators and their
+interpretation as left actions severely restricts the available minimal left ideals. Within
+these ideals, further nontrivial constraints arise: each admissible ideal must support the
+correct SU(3)C representations, decomposing as 1 ⊕3 ⊕¯3 ⊕1, and the action of the S3
+symmetry must generate three generations whose states are linearly independent. Impos-
+ing these conditions leaves very little freedom in the choice of physical states, highlighting
+that the construction is highly constrained rather than arbitrary.
+A further structural feature of the construction concerns the realisation of the weak
+SU(2)L symmetry. In contrast to the colour sector, whose commutator action can be
+identified with a left action on the relevant minimal ideals, the SU(2)L commutator action
+naturally reduces to a right action. This distinction is not imposed by hand but follows
+from the presence of an S3-invariant projector contained in the weak subalgebra, which in
+the present construction has rank four and selects precisely the minimal ideals supporting
+the electroweak doublet states. By contrast, a left action of SU(2)L would require an
+S3-invariant rank-eight projector capable of selecting a full 1 ⊕3 ⊕¯3 ⊕1 decomposition
+within each ideal. No such projector exists in the present framework. The appearance of
+SU(2)L as a right action is therefore a structural consequence of the algebraic constraints,
+rather than an arbitrary modelling choice.
+It is also worth contrasting the present framework with conventional Spin(10) grand
+unified theories.
+Although the construction is formulated within the Clifford algebra
+Cℓ(10), the Standard Model gauge symmetries do not combine into a single simple gauge
+group such as Spin(10), nor is such a unification required here. Instead, the colour and
+electroweak gauge sectors are realised as distinguished subalgebras whose actions are con-
+strained by compatibility with the S3 family symmetry and the structure of the minimal
+ideals. The emphasis of the present work is therefore not on gauge unification in the
+traditional GUT sense, but on identifying an algebraic setting in which gauge structure
+and fermion generations emerge together.
+Beyond its structural features, the present framework suggests several phenomenolog-
+ical directions. One immediate aspect is the presence of an intrinsic S3 family symmetry,
+which has been widely studied in flavour physics as a means of constraining fermion masses
+and mixing patterns [64–68]. In most existing models, however, S3 is introduced in an
+ad hoc manner as an external flavour symmetry acting on otherwise conventional gauge
+representations. In contrast, in the present construction the S3 symmetry arises internally
+as an automorphism of the algebra and acts directly on the space of algebraic spinors.
+As a result, the family symmetry is tightly linked to the underlying algebraic structure
+rather than imposed phenomenologically, which may lead to distinctive constraints on
+inter-generational couplings once Yukawa interactions and symmetry-breaking effects are
+incorporated.
+A second, closely related feature is the appearance of generation-dependent charge
+operators. Although the physical electric charge and hypercharge operators are required
+to be S3-invariant, they are constructed as symmetric combinations of three generation-
+specific operators (such as Q1). This structure is reminiscent of so-called tri-hypercharge
+models, in which different generations couple to distinct abelian charges that combine
+into the observed hypercharge [69–72]. Such models have been explored previously in phe-
+19
+
+---PAGE BREAK---
+nomenological contexts, but typically without an accompanying discrete family symmetry.
+In the present framework, the S3 family symmetry and the tri-hypercharge structure arise
+simultaneously and are closely related: the same symmetry that permutes the fermion
+generations also enforces the invariance of the physical gauge charges. This interplay
+between discrete family symmetry and generation-dependent abelian charges appears to
+be a novel feature of the construction and may have implications for flavour structure
+and anomaly constraints in extended versions of the model. The phenomenological con-
+sequences of these features, including their implications for flavour structure and charge
+assignments, are currently under investigation and will be presented in future work.
+One additional direction for future work is to clarify the relationship between the S3
+symmetry appearing here as arising from sedenion automorphisms, and the S3 associated
+with Spin(8) triality, which has previously been proposed as a possible origin of three
+fermion generations.
+State
+T3 eigenvalue
+Q′ eigenvalue
+Y eigenvalue
+Particle
+a†
+1a†
+2a†
+3a†
+4f+++++
++1
+2
+1
+1
+e+
+L
+a†
+ia†
+jf+++++
++1
+2
++1
+3
+−1
+3
+¯d(¯3)
+L
+a†
+ia†
+4f+++++
++1
+2
++2
+3
++1
+3
+u(3)
+L
+a†
+4a†
+5f+++++
++1
+2
+0
+−1
+νL
+a†
+1a†
+2a†
+3a†
+4a5f++++−
+−1
+2
+0
+1
+¯νL
+a†
+ia†
+ja5f++++−
+−1
+2
+−2
+3
+−1
+3
+¯u(¯3)
+L
+a†
+ia†
+4a5f++++−
+−1
+2
+−1
+3
++1
+3
+d(3)
+L
+a†
+4f++++−
+−1
+2
+−1
+−1
+e−
+L
+a†
+1a†
+2a†
+3a5f+++−−
+0
+1
++2
+e+
+R
+a†
+ia†
+ja4a5f+++−−
+0
++1
+3
++2
+3
+¯d(¯3)
+R
+a†
+ia5f+++−−
+0
++2
+3
++4
+3
+u(3)
+R
+f+++−−
+0
+0
+0
+νR
+a†
+1a†
+2a†
+3f+++−+
+0
+0
+0
+¯νR
+a†
+ia†
+ja4f+++−+
+0
+−2
+3
+−4
+3
+¯u(¯3)
+R
+a†
+if+++−+
+0
+−1
+3
+−2
+3
+d(3)
+R
+a†
+5f+++−+
+0
+−1
+−2
+e−
+R
+Table 2: Eigenvalues of T3, Q′, and Y for the first generation of algebraic states, identified
+with the first generation of fermions.
+Acknowledgements
+The author would like to thank Liam Gourlay for useful discussions and for exploring
+preliminary aspects of this construction during his PhD work. The present formulation,
+analysis, and conclusions are solely those of the author.
+20
+
+---PAGE BREAK---
+A
+U(4) symmetry generators
+Λ1 = −a†
+2a1 −a†
+1a2,
+Λ2 = ia†
+2a1 −ia†
+1a2,
+Λ3 = a†
+2a2 −a†
+1a1,
+Λ4 = −a†
+1a3 −a†
+3a1,
+Λ5 = −ia†
+1a3 + ia†
+3a1,
+Λ6 = −a†
+3a2 −a†
+2a3,
+Λ7 = ia†
+3a2 −ia†
+2a3,
+Λ8 = −1
+√
+3(a†
+1a1 + a†
+2a2 −2a†
+3a3),
+Λ9 = −a†
+4a1 −a†
+1a4,
+Λ10 = ia†
+4a1 −ia†
+1a4,
+Λ11 = −a†
+4a2 −a†
+2a4,
+Λ12 = ia†
+4a2 −ia†
+2a4,
+Λ13 = −a†
+4a3 −a†
+3a4,
+Λ14 = ia†
+4a3 −ia†
+3a4,
+Λ15 = −1
+√
+6(a†
+1a1 + a†
+2a2+ a†
+3a3 −3a†
+4a4).
+(145)
+N8 =
+4
+X
+i=1
+a†
+iai
+(146)
+References
+[1] Adam B Gillard and Niels G Gresnigt. Three fermion generations with two unbroken
+gauge symmetries from the complex sedenions. The European Physical Journal C,
+79(5):1–11, 2019.
+[2] Niels G Gresnigt, Liam Gourlay, and Abhinav Varma. Three generations of colored
+fermions with S3 family symmetry from Cayley-Dickson sedenions. The European
+Physical Journal C, 83(83):1–13, 2023.
+[3] Liam Gourlay and Niels Gresnigt. Algebraic realisation of three fermion generations
+with S3 family and unbroken gauge symmetry from Cℓ(8). The European Physical
+Journal C, 84(10):1129, 2024.
+[4] Adam B Gillard and Niels G Gresnigt. The Cℓ(8) algebra of three fermion generations
+with spin and full internal symmetries. 2019. arXiv:1906.05102.
+[5] Niels Gresnigt. Sedenions, the Clifford algebra Cℓ(8), and three fermion generations.
+In European Physical Society Conference on High Energy Physics, pages 10–17, 2019.
+[6] NG Gresnigt, L Gourlay, and A Varma. Toward a three generation model of standard
+model fermions based on Cayley–Dickson sedenions. Physics of Particles and Nuclei,
+54(6):1006–1010, 2023.
+[7] Niels Gresnigt. A sedenion algebraic representation of three colored fermion gener-
+ations. In Journal of Physics: Conference Series, volume 2667, page 012061. IOP
+Publishing, 2023.
+[8] Murat G¨unaydin and Feza G¨ursey. Quark structure and octonions. Journal of Math-
+ematical Physics, 14(11):1651–1667, 1973.
+[9] A. Barducci, F. Buccella, R. Casalbuoni, L. Lusanna, and E. Sorace. Quantized
+Grassmann variables and unified theories. Phys. Lett. B, 67:344–346, 1977.
+21
+
+---PAGE BREAK---
+[10] R. Casalbuoni and R. Gatto. Unified description of quarks and leptons. Phys. Lett.
+B, 88:306–310, 1979.
+[11] R. Casalbuoni and R. Gatto. Unified theories for quarks and leptons based on Clifford
+algebras. Phys. Lett. B, 90:81–86, 1980.
+[12] Anthony Lasenby. Some recent results for su(3) and octonions within the geometric
+algebra approach to the fundamental forces of nature. Mathematical Methods in the
+Applied Sciences, 47(3):1471–1491, 2024.
+[13] Alessio Marrani, Daniele Corradetti, and Francesco Zucconi. Physics with non-unital
+algebras? an invitation to the okubo algebra. Journal of Physics A: Mathematical
+and Theoretical, 58(7):075202, 2025.
+[14] Kirill Krasnov. Octonions, complex structures and Standard Model fermions. 2025.
+arXiv:2504.16465.
+[15] Geoffrey Dixon. Derivation of the standard model. Il Nuovo Cimento B (1971-1996),
+105(3):349–364, 1990.
+[16] Geoffrey Dixon.
+Division algebras: family replication.
+Journal of Mathematical
+Physics, 45(10):3878–3882, 2004.
+[17] Geoffrey M. Dixon. Division algebras. Kluwer Academic Publishers, Dordrecht, 1994.
+[18] Geoffrey M Dixon. Division algebras; spinors; idempotents; the algebraic structure
+of reality. 2010. arXiv:1012.1304.
+[19] Cohl Furey. Standard model physics from an algebra? 2016. arXiv:1611.09182.
+[20] Ivan Todorov. Superselection of the weak hypercharge and the algebra of the standard
+model. Journal of High Energy Physics, 2021(4):1–21, 2021.
+[21] Niels G Gresnigt. The Standard Model particle content with complete gauge sym-
+metries from the minimal ideals of two Clifford algebras. The European Physical
+Journal C, 80(6):1–7, 2020.
+[22] N Furey. An Algebraic Roadmap of Particle Theories, Part I: General construction.
+2023. arXiv:2312.12377.
+[23] N Furey. An Algebraic Roadmap of Particle Theories, Part II: Theoretical check-
+points. 2023. arXiv:2312.12799.
+[24] N Furey. An Algebraic Roadmap of Particle Theories, Part III: Intersections. 2023.
+arXiv:2312.14207.
+[25] Gustave Juvet. Op´erateurs de dirac et ´equations de maxwell. Commentarii Mathe-
+matici Helvetici, 2(1):225–235, 1930.
+[26] Fritz Sauter. L¨osung der diracschen gleichungen ohne spezialisierung der diracschen
+operatoren. Zeitschrift f¨ur Physik, 63:803–814, 1930.
+[27] Marcel Riesz. Clifford numbers and spinors, volume 54. Springer Science & Business
+Media, 2013.
+22
+
+---PAGE BREAK---
+[28] Rafa l Ab lamowicz. Construction of spinors via witt decomposition and primitive
+idempotents: A review. Clifford Algebras and Spinor Structures: A Special Volume
+Dedicated to the Memory of Albert Crumeyrolle (1919–1992), pages 113–123, 1995.
+[29] Greg Trayling. A geometric approach to the standard model. arXiv preprint hep-
+th/9912231, 1999.
+[30] Greg Trayling and WE Baylis. A geometric basis for the standard-model gauge group.
+Journal of Physics A: Mathematical and General, 34(15):3309, 2001.
+[31] Greg Trayling and William E Baylis. The Cℓ(7) approach to the standard model. In
+Clifford Algebras, pages 547–558. Springer, 2004.
+[32] JSR Chisholm and RS Farwell. Properties of Clifford algebras for fundamental par-
+ticles. In Clifford (Geometric) Algebras, pages 365–388. Springer, 1996.
+[33] Andrew JS Hamilton and Tyler McMaken. Unification of the four forces in the spin
+(11, 1) geometric algebra. Physica Scripta, 98(8):085306, 2023.
+[34] Robert Arnott Wilson.
+Remarks on the group-theoretical foundations of par-
+ticle physics.
+International Journal of Geometric Methods in Modern Physics,
+19(11):2250164, 2022.
+[35] Robert Arnott Wilson. A group-theorist’s perspective on symmetry groups in physics.
+2020. arXiv:2009.14613.
+[36] Robert A Wilson. Subgroups of Clifford algebras. 2020. arXiv:2011.05171.
+[37] Robert Arnott Wilson. On the problem of choosing subgroups of Clifford algebras for
+applications in fundamental physics. Advances in Applied Clifford Algebras, 31(4):1–
+22, 2021.
+[38] Corinne A Manogue, Tevian Dray, and Robert A Wilson. Octions: an E8 description
+of the standard model. Journal of Mathematical Physics, 63(8), 2022.
+[39] Tevian Dray, Corinne A Manogue, and Robert A Wilson. A new division algebra
+representation of E6 from E8. Journal of Mathematical Physics, 65(3), 2024.
+[40] Tejinder P Singh. Trace dynamics and division algebras: towards quantum gravity
+and unification. Zeitschrift f¨ur Naturforschung A, 76(2), 2021.
+[41] Tejinder Pal Singh. The characteristic equation of the exceptional jordan algebra: its
+eigenvalues, and their relation with the mass ratios of quarks and leptons. Preprints,
+2021.
+[42] Carlos Castro Perelman. R ⊗C ⊗H ⊗O-Valued Gravity as a Grand Unified Field
+Theory. Advances in Applied Clifford Algebras, 29(1):1–20, 2019.
+[43] Carlos Castro Perelman.
+On C ⊗H ⊗O -Valued Gravity, Sedenions, Hermitian
+Matrix Geometry and Nonsymmetric Kaluza–Klein Theory. Advances in Applied
+Clifford Algebras, 29(3):1–16, 2019.
+23
+
+---PAGE BREAK---
+[44] Felix Finster, Niels G Gresnigt, Jos´e M Isidro, Antonino Marcian`o, Claudio F Pa-
+ganini, and Tejinder P Singh. Causal fermion systems and octonions. Fortschritte
+der Physik, 72(11):2400055, 2024.
+[45] Corinne A Manogue and Tevian Dray.
+Dimensional reduction.
+Modern Physics
+Letters A, 14(02):99–103, 1999.
+[46] Cohl Furey. SU(3)C ×SU(2)L ×U(1)Y (×U(1)X) as a symmetry of division algebraic
+ladder operators. The European Physical Journal C, 78(5):1–12, 2018.
+[47] Cohl Furey. Generations: three prints, in colour. Journal of High Energy Physics,
+2014(10):1–11, 2014.
+[48] Brage Gording and Angnis Schmidt-May. The unified standard model. Advances in
+Applied Clifford Algebras, 30(4):55, 2020.
+[49] Michel Dubois-Violette. Exceptional quantum geometry and particle physics. Nuclear
+Physics B, 912:426–449, 2016.
+[50] Michel Dubois-Violette and Ivan Todorov. Exceptional quantum geometry and par-
+ticle physics II. Nuclear Physics B, 938:751–761, 2019.
+[51] Ivan Todorov and Svetla Drenska. Octonions, Exceptional Jordan Algebra and The
+Role of The Group F4 in Particle Physics. Advances in Applied Clifford Algebras,
+28(4):1–36, 2018.
+[52] Ivan Todorov and Michel Dubois-Violette. Deducing the symmetry of the standard
+model from the automorphism and structure groups of the exceptional Jordan alge-
+bra. International Journal of Modern Physics A, 33(20):1850118, 2018.
+[53] Latham Boyle. The Standard Model, The Exceptional Jordan Algebra, and Triality.
+2020. arXiv:2006.16265.
+[54] Latham Boyle and Shane Farnsworth. The standard model, the Pati–Salam model,
+and ‘Jordan geometry’. New Journal of Physics, 22(7):073023, 2020.
+[55] Z. K. Silagadze. SO(8) Colour as possible origin of generations. 1994. arXiv:hep-
+ph/9411381.
+[56] Carlos Castro Perelman. On Jordan–Clifford Algebras, Three Fermion Generations
+with Higgs Fields and a SU(3)×SU(2)L×SU(2)R×U(1) Model. Advances in Applied
+Clifford Algebras, 31(3):1–18, 2021.
+[57] A Garrett Lisi. C, P, T, and Triality. 2024. arXiv:2407.02497.
+[58] A Garrett Lisi. An exceptionally simple theory of everything. 2007. arXiv:0711.0770.
+[59] N Furey and MJ Hughes. Three generations and a trio of trialities. Physics Letters
+B, 865:139473, 2025.
+[60] Gon¸calo M. Quinta. Spacetime Grand Unified Theory. 2025. arXiv:2507.11564.
+[61] Robert Brown. On generalized Cayley-Dickson algebras. Pacific Journal of Mathe-
+matics, 20(3):415–422, 1967.
+24
+
+---PAGE BREAK---
+[62] VS Varadarajan. Spin(7)-subgroups of SO(8) and Spin(8). Expositiones Mathemati-
+cae, 19(2):163–177, 2001.
+[63] JSR Chisholm and RS Farwell. Gauge transformations of spinors within a clifford
+algebraic structure. Journal of Physics A: Mathematical and General, 32(15):2805,
+1999.
+[64] F Gonzalez Canales, A Mondragon, and M Mondragon. The S3 flavour symmetry:
+Neutrino masses and mixings. Fortschritte der Physik, 61(4-5):546–570, 2013.
+[65] VV Vien and HN Long. Neutrino mass and mixing in the 3-3-1 model and s 3 flavor
+symmetry with minimal higgs content.
+Journal of Experimental and Theoretical
+Physics, 118(6):869–890, 2014.
+[66] KS Babu, Yongcheng Wu, and Shiyuan Xu. Fermion masses, neutrino mixing and
+higgs-mediated flavor violation in 3hdm with S3 permutation symmetry. Journal of
+High Energy Physics, 2024(12):1–37, 2024.
+[67] D Hernandez and A Yu Smirnov. Lepton mixing and discrete symmetries. Physical
+Review D—Particles, Fields, Gravitation, and Cosmology, 86(5):053014, 2012.
+[68] Diego Cogollo and Joao P Silva. Two higgs doublet models with an S3 symmetry.
+Physical Review D, 93(9):095024, 2016.
+[69] Mario Fern´andez Navarro, Stephen F King, and Avelino Vicente. Minimal complete
+tri-hypercharge theories of flavour. Journal of High Energy Physics, 2024(7):1–36,
+2024.
+[70] Mario Fern´andez Navarro and Stephen F King. Tri-hypercharge: a separate gauged
+weak hypercharge for each fermion family as the origin of flavour. Journal of High
+Energy Physics, 2023(8):1–34, 2023.
+[71] BC Allanach, Joe Davighi, and Scott Melville. An anomaly-free atlas: charting the
+space of flavour-dependent gauged U(1) extensions of the standard model. Journal
+of High Energy Physics, 2019(2):1–29, 2019.
+[72] R Martinez, F Ochoa, and JM Quimbayo. B meson decay anomaly with a nonuni-
+versal U(1)′ extension. Physical Review D, 98(3):035036, 2018.
+25
+
+---PAGE BREAK---

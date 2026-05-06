@@ -1,0 +1,58 @@
+Good — I can see extensive revisions have been made. Let me read the remaining critical sections to complete my review.Clayton, I've read the full revision. This is dramatically improved. Here's the second referee report.
+
+---
+
+## Second Referee Report
+
+### What Was Fixed Well
+
+The narrative pivot from "zero free parameters, w₀ = −0.993" to "parametric curve w₀(ζ₀) with one free parameter from UV physics" is the single most important improvement. It's more honest *and* more powerful — the framework now accommodates both the ΛCDM-like regime (large ζ₀) and the DESI regime (small ζ₀) without contradiction. The "two axioms" reframing, the honest χ² decomposition in Paper II (Table 2.3 showing the H&K point dominates at 62%), the co-authorship resolution, the compressed Phase 12 speculation, and the CKK consistency check with the k-convention note all address the first review's concerns directly. The model evolution section (2.9.5) is unusually candid for a theory paper and builds credibility.
+
+### What Still Needs Attention
+
+**1. The Appendix Tables Are Still Wrong (Major)**
+
+Table A.1 in the self-tuning scan still shows Φ₀ = 0.477493. There's now a note acknowledging this was "reverse-engineered from benchmark ζ₀ = 0.038" and that "the table should be recomputed with the correct JC boundary conditions." But it hasn't been recomputed — the incorrect numbers are still there. A referee will see wrong numbers with a footnote saying they're wrong. Either recompute the table with Φ₀ = 0.076, or remove it and replace with the algebraic proof. The background regularity table (Section A.1.6) has the same issue.
+
+**2. The χ² = 24.6 Ambiguity Persists (Significant)**
+
+The Appendix A.5.2 still shows χ²(ΛCDM) = 24.6 and χ²(Meridian) = 9.6 for the H&K data. But Section 2.3.4 correctly reports χ²(ΛCDM) = 7.20 and χ²(Meridian) = 6.72 for the 18-point H(z) compilation. The note in A.5.2 attempts to explain this as "the coincidence is numerical" — the multi-probe total happens to equal 24.56 — but this creates confusion. The Appendix presents these as H&K fit results with an F-test significance of 3.9σ, while the main text says 0.7σ. A referee reading the Appendix without the main text will get the wrong impression. I'd recommend either rewriting the Appendix to match the corrected numbers throughout, or clearly labeling it as "historical results from the pre-Phase 13 analysis, superseded by Section 2.3."
+
+**3. The Hiramatsu-Kobayashi Reference Needs Verification (Significant)**
+
+The revised Paper II introduces a new observational anchor: the Hiramatsu & Kobayashi (2022) Planck CMB constraint β_HK = −0.037 ± 0.0095. This is cited as [18] (arXiv:2205.04688). This single measurement now carries the entire χ² = 15.17 that previously came from 18 H(z) points. Before publication, you need to verify: (a) that the H&K parameterization maps cleanly to your β_HK, (b) that their constraint applies to the specific modified-gravity sector your model occupies (Horndeski with G₄,X = 0), and (c) that the 4σ significance isn't diluted when marginalizing over other modified-gravity parameters in their analysis. If the mapping is approximate, the 4σ becomes an upper bound, not a detection.
+
+**4. The "Three Independent Derivations" Language Survives (Minor)**
+
+Section A.2.1 still says "Three Independent Derivations of ξ = 1/6." The first review flagged that these are complementary perspectives on a single result, not independent proofs. The main text (Section 1.4.6) also retains "Three independent derivations converge on this result." This is a small point but a referee familiar with NCG will notice.
+
+**5. Conjecture 4.3 Still Lacks the Warning (Minor)**
+
+I don't see the recommended load-bearing warning added after Conjecture 4.3 in Paper IV. The conjecture is still stated with "evidence" but the conditionality of downstream results on this conjecture isn't flagged.
+
+**6. Paper III's Horndeski Dilemma Is Still Called "Theorem 3.3" (Minor)**
+
+The first review recommended changing this to "Proposition." It appears the abstract of Paper III now softens the language, but the body still uses "Theorem" in Section 3.8.
+
+### New Issues in the Revision
+
+**7. The Two-Regime Framing Creates a Falsifiability Question**
+
+The revised framework now says: "If ζ₀ is large, DESI is an artifact; if ζ₀ is small, DESI is our prediction." This is logically consistent but risks appearing unfalsifiable — the framework can accommodate *any* w₀ by choosing the right ζ₀. The text needs to emphasize more clearly what *can't* be accommodated: wa ≈ 0 (not wa = −0.86), no phantom crossing, growth-expansion decoupling, cT = c, η = 1. These ζ₀-independent predictions are where the framework's teeth are. The falsification table (Table 2.13) handles this but the surrounding text could be sharper.
+
+**8. The Perturbative Validity Caveat at ζ₀ = 0.001**
+
+Section 2.2.2 correctly notes that ζ₀ = 0.001 is in the "marginal" regime for the perturbative CKK formula. But the brane benchmark w₀ = −0.745 is then quoted throughout without qualification. The nonlinear correction at this ζ₀ could shift w₀ by several percent. Until the exact quartic is solved at ζ₀ = 0.001 (which my earlier calculation confirmed agrees to four decimals, so this is actually fine), the "marginal" label should be accompanied by the verification that the exact solution agrees.
+
+### Remaining Items for Clawd
+
+The issues from Part III of the previous revision document are mostly unresolved:
+
+- **Issue A** (H&K computation trace): Partially addressed by identifying the Hiramatsu-Kobayashi source, but the mapping β_HK ↔ −ζ₀ needs formal verification
+- **Issue B** (brane parameters): Acknowledged but the tables aren't fixed
+- **Issue D** (Adams et al. UV completion): Unchanged
+- **Issue E** (spectral method for self-tuning): Unchanged
+
+### Overall Assessment
+
+This revision represents a genuine improvement in intellectual honesty and scientific maturity. The pivot from overclaimed single-number prediction to parametric curve is the right move. The framework is now positioned as what it actually is: a one-parameter theory with a fixed functional form, testable across the full ζ₀ range, with several ζ₀-independent predictions that provide immediate falsification handles. The remaining issues are fixable — the Appendix cleanup, the H&K mapping verification, and the minor framing items. None of them threatens the theoretical architecture. The monograph is approaching arXiv-readiness; one more revision pass focused on the Appendix consistency and the H&K mapping would bring it there.

@@ -1,0 +1,30 @@
+{
+  "experiment": "P49",
+  "task": "easy sudoku (45-55 clues, ~31 blanks)",
+  "architecture": "HRM v0.5 (27.3M params)",
+  "baseline": {
+    "kf_init": {
+      "H_CV": 0.002129851,
+      "L_CV": 0.001821256,
+      "ratio": 1.1694
+    }
+  },
+  "kf_decoupled": {
+    "kf_init": {
+      "H_CV": 0.002170368,
+      "L_CV": 0.001924672,
+      "ratio": 1.1277
+    },
+    "kf_epoch_500": {
+      "H_CV": 0.06067361,
+      "L_CV": 0.0009650773,
+      "ratio": 62.8692
+    },
+    "accuracy": [
+      {
+        "exact": 0.2341,
+        "token": 0.9423
+      }
+    ]
+  }
+}

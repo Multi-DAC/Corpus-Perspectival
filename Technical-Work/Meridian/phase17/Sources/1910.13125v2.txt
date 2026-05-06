@@ -1,0 +1,3260 @@
+DESY 19-159
+IPPP/19/27
+HIP-2019-14/TH
+MITP/19-066
+IFT-UAM/CSIC-19-139
+Detecting gravitational waves from cosmological phase
+transitions with LISA: an update
+Chiara Caprinia, Mikael Chalab,c,†, Glauber C. Dorschd, Mark Hindmarshe,f,
+Stephan J. Huberf, Thomas Konstanding,‡, Jonathan Kozaczukh,i,j,§,
+Germano Nardinik, Jose Miguel Nol,m, Kari Rummukainene, Pedro
+Schwallern, Geraldine Servantg,o, Anders Tranbergk, David J. Weire,p,¶
+For the LISA Cosmology Working Group
+Abstract
+We investigate the potential for observing gravitational waves from cosmological
+phase transitions with LISA in light of recent theoretical and experimental develop-
+ments. Our analysis is based on current state-of-the-art simulations of sound waves in
+the cosmic ﬂuid after the phase transition completes. We discuss the various sources of
+gravitational radiation, the underlying parameters describing the phase transition and
+a variety of viable particle physics models in this context, clarifying common miscon-
+ceptions that appear in the literature and identifying open questions requiring future
+study. We also present a web-based tool, PTPlot, that allows users to obtain up-to-date
+detection prospects for a given set of phase transition parameters at LISA.
+†Corresponding author: mikael.chala@ugr.es
+‡Project coordinator: thomas.konstandin@desy.de
+§Corresponding author: jkozaczuk@ucsd.edu
+¶Corresponding author: david.weir@helsinki.ﬁ
+arXiv:1910.13125v2  [astro-ph.CO]  12 Jan 2021
+
+---PAGE BREAK---
+a Laboratoire Astroparticule et Cosmologie, CNRS UMR 7164,
+Universit´e Paris-Diderot, 75013 Paris, France
+b Institute of Particle Physics Phenomenology, Physics Department,
+Durham University, Durham DH1 3LE, UK
+c CAFPE and Departamento de F´ısica Te´orica y del Cosmos,
+Universidad de Granada, E-18071 Granada, Spain
+d Center for Astrophysics and Cosmology & PPGCosmo,
+Universidade Federal do Esp´ırito Santo, 29075-910, Vit´oria, ES, Brazil
+e Department of Physics and Helsinki Institute of Physics, PL 64,
+FI-00014 University of Helsinki, Finland
+f Department of Physics and Astronomy, University of Sussex, Brighton BN1 9QH, UK
+g DESY, Notkestr. 85, 22607 Hamburg, Germany
+h Department of Physics, University of California, San Diego, La Jolla, CA, 92093, USA
+i Department of Physics, University of Illinois, Urbana, IL, 61801, USA
+j Amherst Center for Fundamental Interactions, Department of Physics,
+University of Massachusetts, Amherst, MA, 01003, USA
+k Faculty of Science and Technology, University of Stavanger, 4036 Stavanger, Norway
+l Departamento de Fisica Teorica, Universidad Autonoma de Madrid,
+Cantoblanco, 28049, Madrid, Spain
+m Instituto de Fisica Teorica, IFT-UAM/CSIC,Cantoblanco, 28049, Madrid, Spain
+n PRISMA+ Cluster of Excellence and Mainz Institute for Theoretical Physics,
+Johannes Gutenberg-Universit¨at Mainz, 55099 Mainz, Germany
+o II. Institute of Theoretical Physics, University of Hamburg, D-22761 Hamburg, Germany
+p School of Physics and Astronomy, University of Nottingham, Nottingham NG7 2RD, UK
+
+---PAGE BREAK---
+Contents
+1
+Introduction
+2
+2
+Preliminaries: phase transition dynamics and parameters (H∗, β, α, vw)
+4
+2.1
+Bubble nucleation and PT duration . . . . . . . . . . . . . . . . . . . . . . . .
+5
+2.2
+The energy budget
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+2.3
+The wall speed
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+3
+Prediction of the Gravitational Wave Signal
+11
+3.1
+Gravitational waves from bulk ﬂuid motion . . . . . . . . . . . . . . . . . . . .
+11
+3.2
+Relevant time scales and scaling of GW energy density
+. . . . . . . . . . . . .
+14
+3.3
+GW power spectra: numerical simulations
+. . . . . . . . . . . . . . . . . . . .
+16
+3.4
+GW power spectra: discussion . . . . . . . . . . . . . . . . . . . . . . . . . . .
+17
+4
+The PTPlot tool
+18
+4.1
+Signal to noise ratio plots
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+19
+5
+Determining α, β, and H∗in speciﬁc models
+21
+6
+Overview of speciﬁc models
+22
+6.1
+Singlet extension of the SM
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+22
+6.1.1
+Non-perturbative PT analysis . . . . . . . . . . . . . . . . . . . . . . .
+26
+6.2
+Extensions of the SM with Scalar Electroweak Multiplets . . . . . . . . . . . .
+27
+6.2.1
+Non-perturbative PT analysis . . . . . . . . . . . . . . . . . . . . . . .
+30
+6.3
+SUSY-extended SM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+31
+6.3.1
+Non-perturbative PT analysis . . . . . . . . . . . . . . . . . . . . . . .
+33
+6.4
+EFT approach to extensions of the SM . . . . . . . . . . . . . . . . . . . . . .
+35
+6.5
+Models with warped extra dimensions . . . . . . . . . . . . . . . . . . . . . . .
+37
+6.6
+Composite Higgs models and conﬁning phase transitions
+. . . . . . . . . . . .
+40
+6.6.1
+A strong ﬁrst-order EWPT from an extra singlet in non-minimal cosets
+41
+6.6.2
+A strong ﬁrst-order EWPT from Higgs-dilaton interlinked dynamics . .
+43
+6.7
+First order PTs in a dark sector . . . . . . . . . . . . . . . . . . . . . . . . . .
+45
+6.7.1
+Subtleties with dark sector PTs . . . . . . . . . . . . . . . . . . . . . .
+45
+6.7.2
+DM and collider connection
+. . . . . . . . . . . . . . . . . . . . . . . .
+47
+7
+Conclusions and outlook
+49
+A Phase transition parameters from the lattice
+51
+1
+
+---PAGE BREAK---
+1
+Introduction
+The direct observation of gravitational waves (GWs) by the LIGO collaboration [1] has ush-
+ered in a new era of GW astronomy. In addition to observing gravitational radiation from
+astrophysical sources, GW interferometers provide direct access to the physics of the early
+Universe. Little is known about the cosmic epoch after reheating and prior to Big Bang
+nucleosynthesis (BBN) as there are few observables directly or indirectly sensitive to this era.
+However, while opaque to light before photon decoupling, the early Universe was transparent
+to GWs. This allows for the exciting possibility of probing the pre-BBN Universe for the ﬁrst
+time using GW experiments.
+First-order cosmological phase transitions (PTs) provide a particularly compelling source
+of GWs in the early Universe. At a ﬁrst-order cosmological PT, bubbles of a new phase
+begin to nucleate and expand as the Universe cools. The region inside the bubbles contains
+the new phase, typically characterized by a vacuum expectation value (VEV) of a scalar
+ﬁeld that diﬀers from its value outside the bubbles. The collision of the bubbles and the
+resulting motion of the ambient cosmic ﬂuid sources a stochastic GW background that can
+be observable at GW interferometers. In the Standard Model (SM) of particle physics, a
+PT could in principle have occurred when either the electroweak (EW) gauge symmetry or
+the approximate chiral symmetry of QCD were spontaneously broken in the early Universe.
+Given the mass of the Higgs boson, it is known that the EW symmetry is broken at a cross-
+over in the SM [2,3]. Likewise, absent large quark chemical potentials in the early Universe,
+the QCD PT of the SM is known not to be ﬁrst-order [4]. However, many compelling and
+well-motivated extensions of the SM predict strong ﬁrst-order cosmic PTs at the EW scale
+and beyond.
+First order PTs associated with the EW to multi–TeV scales typically predict a stochastic
+background peaking at frequencies accessible by the Laser Interferometer Space Antenna
+(LISA) [5]. These scales are particularly interesting as they are often thought to harbor new
+physics related to e.g. the hierarchy problem, dark matter (DM), or baryogenesis. Searching
+for a stochastic GW background from physics beyond the Standard Model (BSM) will be an
+important science goal of the LISA mission. In doing so, LISA will provide a powerful probe
+of new physics that complements collider and other experimental tests of these scenarios.
+LISA has been selected by the European Space Agency as one of its ﬂagship missions, and
+is currently in the planning stages, with an expected launch in the early 2030s. It is thus
+important and timely to study the science case for LISA as thoroughly and accurately as
+possible, including its prospects for detecting a stochastic GW background from cosmic PTs.
+Several important steps are required to accurately predict the GW signal arising from
+a cosmological PT in a given particle physics model at LISA (and other GW experiments).
+Schematically, a typical analysis proceeds as illustrated in Fig. 1. First, one speciﬁes the
+ﬁeld content and Lagrangian of a given particle physics model. From this information, the
+phase structure of the theory can be analyzed at ﬁnite temperature. If the model admits
+a ﬁrst-order PT, the ﬁnite temperature eﬀective action can be used to compute the Hubble
+2
+
+---PAGE BREAK---
+PT parameters
+Eﬀective action →β, H∗
+Energy budget →α, κ(α, vw)
+Bubble wall dynamics →vw
+GW power spectrum
+Numerical simulations →
+h2ΩGW(f; H∗, α, β, vw)
+LISA sensitivity
+Conﬁguration + noise level →
+h2Ωsens(f)
+Particle
+physics model
+Signal-to-noise ratio
+Figure 1: Blueprint for analyzing cosmological PTs in the context of LISA. See text for details.
+parameter H∗(or temperature T∗) at the time when the PT completes and the PT duration β
+(deﬁned in more detail below). Next, one can analyze the energy budget associated with the
+PT to determine its strength, characterized by the parameter α (see Sec. 2), and the amount
+of energy converted into ﬂuid kinetic energy, often characterized by an eﬃciency parameter κ,
+again deﬁned below6. Simultaneously, one should self-consistently solve the bubble wall equa-
+tion(s) of motion (EOM) for the bubble wall speed vw. These PT parameters are then used
+as inputs for the determination of the stochastic GW power spectrum h2ΩGW(f) in numerical
+simulations of the colliding bubbles and cosmic ﬂuid. In practice, analytic expressions for the
+GW power spectrum derived from the simulations are typically used in this step rather than
+directly simulating for each choice set of parameters. Finally, given a particular experimental
+conﬁguration and knowledge of the noise level, one can obtain the predicted LISA sensitivity
+h2Ωsens(f) to cosmological sources. Comparing the predicted power spectrum to the LISA
+sensitivity for a given mission duration yields a signal-to-noise ratio (SNR) which indicates
+to what extent the scenario under consideration can be reconstructed [6,7].
+Each step of the analysis described above carries with it a set of technical challenges
+and open questions. A primary aim of this work is to elucidate these issues and propose a
+conservative approach to obtaining state-of-the-art sensitivity estimates for LISA in detecting
+a stochastic GW from cosmic PTs. In what follows, we will attempt to clear up common
+misconceptions that arise in the literature, discuss the state-of-the-art in the various steps of
+6As explained in Sec. 2, κ can be expressed as a function of α and vw, so it is not an independent parameter.
+3
+
+---PAGE BREAK---
+Fig. 1, and, in cases where there remains some ambiguity or lack of concrete results, suggest
+how to proceed. We will then apply these results to speciﬁc models to present up-to-date
+prospects for detection of a corresponding stochastic GW background at LISA. We primarily
+focus on GWs produced by sound waves, thought to be the dominant source in most cases
+of interest as discussed further below (for an overview of other possible sources we refer the
+reader to our previous study [8]). We will show that, in its current incarnation, LISA will
+provide a powerful probe of cosmic PTs in many well-motivated extensions of the SM. Given
+the recent progress reﬂected in this work, our study should be understood as an update to
+our previous publication [8]. The results presented here can also be used to study GWs from
+cosmic PTs at other GW experiments.
+Given that there remain several open questions related to determining the stochastic GW
+power spectrum from ﬁrst-order cosmological PTs, and that the LISA mission details have
+not yet been ﬁnalized, predictions for the detectability of a given model at LISA may change
+somewhat over the coming years. To assist the community in performing up-to-date analyses,
+we introduce a web-based tool, PTPlot, that allows users to determine whether GWs from
+a PT in a given model can be detected by LISA. This tool will be updated periodically to
+reﬂect predictions from the most state-of-the art simulations of GW generation at PTs, and
+feature up-to-date sensitivity curves for the LISA experiment.
+This remainder of work is structured as follows. In Sec. 2 we discuss preliminaries such as
+the characteristics of the PT (typical bubble size, energy budget, wall velocity). In Sec. 3 we
+explain our assumptions regarding the GW spectrum that accounts only for sound shells as
+seen in simulations. Next, in Sec. 4 we present the tool PTPlot and describe its usage. The
+computation of the PT parameters in speciﬁc models, along with the related uncertainties,
+are discussed in Sec. 5, with some further details provided in Appendix A. Finally, we present
+the prospects for observing the stochastic background in concrete BSM scenarios in Sec. 6.
+We conclude in Sec. 7.
+2
+Preliminaries: phase transition dynamics and param-
+eters (H∗, β, α, vw)
+In this section, we discuss preliminaries for the determination of the GW power spectrum.
+In particular, we review the properties of cosmological PTs relevant for GW production.
+The focus is on open questions and recent developments in the literature rather than on
+an introductory explanation of the material. For a more pedagogical treatment see [8]. In
+general, the signal is a sum of contributions originating from distinct sources: the scalar ﬁeld
+(bubble wall) kinetic energy, the sound waves from the bulk ﬂuid, and turbulent motion. As
+will be argued below, in this paper we will eventually estimate the GW signal coming from
+sound waves only, to be conservative.
+4
+
+---PAGE BREAK---
+2.1
+Bubble nucleation and PT duration
+GW production at a ﬁrst order PT in the early Universe principally depends on four param-
+eters, which determine the length scale, amplitude, and lifetime of the shear stress perturba-
+tions.
+At a ﬁrst-order PT, the Universe is trapped in a metastable state. It can escape either
+by thermal ﬂuctuation or by quantum tunneling; in either case the escape route is via the
+appearance of spherical bubbles of the stable phase with a microscopic critical radius Rc.
+The bubbles are nucleated at a rate per unit volume P, which depends exponentially on the
+critical bubble action7 Sc:
+P = A(t)e−Sc(t).
+(1)
+The collisions of the bubbles, and the subsequent ﬂuid ﬂows, produce the shear stresses which
+source GWs.
+In the thermal case, the high-temperature phase becomes metastable at a critical temper-
+ature Tc. Below Tc the bubble action decreases from inﬁnity and the nucleation probability
+increases rapidly. The rate of increase, deﬁned as
+β(T) = d
+dt ln P(T) ,
+(2)
+is an important quantity, as we will explain below. It is a very good approximation to take
+β(T) = −dSc/dt as long as Sc ≫1 and β ≫H.
+When the bubbles appear they grow due to a pressure diﬀerence ∆p between the interior
+and exterior, which is non-zero below the critical temperature. The onset of the PT is char-
+acterized by the nucleation of one bubble per horizon volume on average, which corresponds
+roughly to
+Sc ≃140
+(3)
+for EW-scale transitions. As the bubbles grow and more appear, the fraction of the Universe in
+the metastable phase decreases extremely rapidly [9], leading to bubble percolation for the PT
+to successfully complete. While the nucleation rate increases, the volume into which bubbles
+are nucleating decreases, and so the volume averaged nucleation rate reaches a maximum.
+The estimate (3) can be improved by taking the precise value of the functional determinant
+A(t) and the expansion velocity of the bubbles into account. However, for EW baryogenesis
+and the production of GWs, the time of percolation is more relevant than the onset of the
+PT. The criteria for the onset of the transition [10,11] and the end of the PT (which should
+more or less coincide with the time of percolation) in a radiation-dominated epoch generally
+7This is the action for the smallest possible bubble able to expand. The word “critical” here is unrelated
+to the critical temperature Tc deﬁned below, which is the temperature below which bubble nucleation can
+occur.
+5
+
+---PAGE BREAK---
+read
+Sc(onset)
+≃
+141 + log(A/T 4) −4 log
+
+T
+100 GeV
+
+−log
+β/H
+100
+
+,
+(4)
+Sc(percolation)
+≃
+131 + log(A/T 4) −4 log
+
+T
+100 GeV
+
+−4 log
+β/H
+100
+
++ 3 log(vw) .(5)
+Here H denotes the Hubble parameter and the prefactor A(t) for the electroweak phase
+transition (EWPT) turns out to be log(A/T 4) ≃−14 [12]. For moderately strong PTs, we
+do not need to distinguish between the Hubble parameter at the nucleation temperature Tn
+(Hn, deﬁned by solving (4)) and the Hubble parameter during percolation (H∗, deﬁned by
+solving (5)) as their values are very similar.
+In some cases, the percolation temperature T∗determined from (5) can lie signiﬁcantly
+below the PT critical temperature Tc (when the original phase becomes metastable). In this
+strong supercooling regime, the vacuum energy diﬀerence between the phases can come to
+dominate the energy density of the Universe. This modiﬁes the percolation criterion above
+and in some cases makes it diﬃcult for the PT to complete (models with non-polynomial
+potentials are an important exception, as discussed in Sec. 6.5 and 6.6). In a given model
+predicting strongly supercooled transitions, it should therefore be veriﬁed that percolation
+does indeed occur, by e.g. comparing the predicted percolation temperature from (5) and
+that for which the Universe becomes vacuum energy dominated.
+The ﬁrst two important parameters for GW production at a thermal PT are then the
+percolation temperature T∗(or better, the Hubble rate at percolation, H∗), and the nucle-
+ation rate parameter at this temperature, which we call β without indicating a temperature
+argument. This nucleation rate parameter ultimately determines the mean bubble separation.
+Several possible bubble expansion modes exist (see e.g. [13]) depending on the value of the
+bubble wall velocity vw. For bubbles expanding as detonations, the typical separation between
+bubbles is set by the wall velocity vw. For bubbles expanding as deﬂagrations (vw < cs, where
+cs denotes the speed of sound in the plasma), the reheating of the plasma by the reaction
+front can suppress further bubble formation for large enough α. The mean bubble separation
+should be corrected to account for this eﬀect. In what follows we therefore estimate the mean
+bubble separation as
+R∗= (8π)
+1
+3
+β
+Max(vw, cs) .
+(6)
+where for deﬂagrations we have simply replaced vw by cs as the relevant speed.
+Careful
+deﬁnition of R∗is important, since features (such as sound shells) of size R∗are expected to
+carry the majority of the energy of the transition. Further reﬁnement of (6) would allow for
+more accurate predictions in the case of deﬂagrations and warrants future investigation.
+Note that in the case of very slow PTs occurring for tuned polynomial potentials [14–17],
+when β/H∗becomes of order unity, (6) breaks down and the mean bubble separation at
+percolation R∗must be calculated directly from ﬁrst principles [11,17], rather than via (6).
+6
+
+---PAGE BREAK---
+2.2
+The energy budget
+The next relevant parameter is the amount of vacuum energy released by the PT, which is
+then transferred into kinetic energy [13,18]. We always assume that the total energy density
+of the Universe e consists of two main components: radiation energy and vacuum energy from
+the scalar ﬁeld potential. The kinetic energy fraction can be estimated from the study of the
+self-similar ﬂows around expanding bubbles. The kinetic energy in the ﬂuid as a fraction of
+the total energy originally contained in the bubble is
+K =
+3
+e v3
+w
+Z
+w(ξ) v2γ2ξ2dξ ,
+(7)
+where v = v(ξ) is the ﬂuid velocity and w = e + p is the enthalpy of the ﬂuid and ξ = r/t the
+coordinate of the self-similar solution. The fraction K for one bubble is a good estimate of
+the average for the whole ﬂuid once the bubbles have collided, at least for small fractions [19].
+Since the ﬂuid velocity v(ξ) and enthalpy w(ξ) depend on both the wall speed vw and the
+strength of the PT (whose precise deﬁnition we discuss below), the one-bubble kinetic energy
+fraction depends on these parameters too.
+To simplify matters, many analyses use the bag model. In this model, pressure and energy
+density in the plasma are given as
+p+ = 1
+3 a+T 4 −ϵ ,
+e+ = a+T 4 + ϵ ,
+p−= 1
+3 a−T 4 ,
+e−= a−T 4 ,
+(8)
+where a± encode the number of relativistic degrees of freedom in the plasma in the symmetric
+(+) and broken (−) phases, and ϵ is the so-called bag constant parametrizing the jump
+in energy density and pressure across the phase boundary. In the bag model, the relative
+importance of the bag constant to the thermal energy can be used to parameterize the strength
+of the PT, with a strength parameter α deﬁned as
+α =
+ϵ
+a+T 4 .
+(9)
+This is the deﬁnition of α which is being used in most of the literature and which is very
+easy to compute in a given particle physics model where ϵ corresponds to the potential energy
+diﬀerence between the metastable and true minima. The kinetic energy fraction is then often
+given in terms of an eﬃciency factor [13,18] by normalizing it to the bag constant,
+κ =
+3
+ϵ v3
+w
+Z
+w(ξ) v2γ2ξ2dξ .
+(10)
+The kinetic energy fraction is then
+K =
+κα
+1 + α.
+(11)
+Notice that for a deﬂagration the temperature in front of the wall and the nucleation tem-
+perature diﬀer. Fits to the ratio of these temperatures and κ as a function of α and vw are
+given in [13].
+7
+
+---PAGE BREAK---
+This leaves the question how the analysis in a concrete model can be linked to the cal-
+culation of the energy budget above (that uses the bag equation of state). A more general
+deﬁnition, not speciﬁc to the bag model, notes that the bag constant is related to the trace
+of the energy momentum tensor θ = (e −3p)/4, and the thermal energy density (i.e. the
+energy density excluding the bag constant) is given in terms of the enthalpy, 3w/4 [20]. This
+motivates the more general deﬁnition
+αθ ≡4
+3
+∆θ(Tn)
+w+(Tn) ,
+(12)
+where ∆denotes the diﬀerence between broken and symmetric phase. The deﬁnition of α is
+partly a matter of convention, and having chosen the convention, the eﬃciency parameter κ
+can always be deﬁned so that the kinetic energy fraction is given by (11).
+Another reasonable choice to match a concrete model to the bag equation of state is the
+diﬀerence in energy between the two phases, ∆e(Tn), that is the natural input parameter
+when studying the energy budget of the PT [13]
+αe ≡4
+3
+∆e(Tn)
+w+(Tn) .
+(13)
+Before the advent of full hydrodynamic simulations, this deﬁnition was most commonly used
+to quantify the amount of kinetic energy in bulk motion, since it allowed one to easily connect
+the energy budget calculation to results from the envelope approximation8. For strong PTs
+(i.e. α ≳1), ∆e and ∆θ are very similar since the zero temperature potential will dominate
+the energy density and free energy, thus α ∼αθ ∼αe. For weak PTs, the pressure diﬀerence
+will be rather small and the energy diﬀerence ∆e will be roughly four times the trace ∆θ.
+Therefore, the deﬁnition (13) tends to overestimate the kinetic energy in this regime.
+On one hand, the bag model (8) is rather crude, and in principle an analysis along the
+lines of [13,18] is required in every speciﬁc model, using the equation of state evaluated in a
+better approximation, such as the high temperature expansion. Such analyses are currently
+lacking9. On the other hand, it was already noticed in [13] and [20] that the main quantity
+entering the hydrodynamic analysis is actually ∆θ even when the analysis does not rely on
+the bag equation of state. Hence, besides relatively minor eﬀects (as the ﬂuid velocity and
+enthalpy proﬁles around the bubble depend on the sound speed) the hydrodynamic analysis
+of κ in terms of ∆θ should be model independent. At the current state of knowledge of the
+GW power spectrum, an evaluation of α from the eﬀective potential and (12), and using the
+ﬁtting functions for κ in [13] is suﬃcient for estimating the GW signal of particle physics
+models. In what follows we use (12), dropping the θ subscript in our notation.
+8Notice that the quantity ∆e is often called latent heat even though technically the latent heat is a
+diﬀerence in enthalpy, L = ∆w(Tc).
+9A general feature expected in more realistic models is that the speed of sound is smaller in the broken
+phase; see [21] for calculations of κ in this case.
+8
+
+---PAGE BREAK---
+2.3
+The wall speed
+The last important ingredient in the prediction of the GW spectrum is the bubble wall velocity,
+vw. This is the speed of the phase interface after nucleation in the rest frame of the plasma
+far from the wall. The velocity is particularly important since it impacts the energy budget
+of the PT [13]. Generally, a small wall velocity will limit the prospects for observing a GW
+signal regardless of the details of the GW production mechanism.
+Determining the wall velocity is one of the more involved aspects of PT calculations.
+While many quantities entering the energy budget can be determined by equilibrium or hy-
+drodynamic considerations, the wall velocity requires an out-of-equilibrium calculation. This
+is done using a combination of Boltzmann and scalar ﬁeld equations [10,22–24]. The actual
+calculation depends on the scalar sector of the theory under consideration as well as the parti-
+cles that obtain masses through their coupling to one of the scalars. Due to the dependence on
+the scalar sector and speciﬁc particle content, scenarios must be treated on a model-by-model
+basis.
+Recently, a more model independent approach was presented in [25] which applies to
+transitions where the scalar ﬁeld undergoing the transition is identiﬁed with the SM Higgs
+ﬁeld, which drives the bubble expansion and experiences the majority of the friction. The
+approach is based on using the criterion from bubble nucleation to reduce the number of
+relevant parameters of the bubble wall velocity to two, namely the pressure diﬀerence in units
+of the Higgs VEV, ∆V/φ4
+0, and the strength of the PT, ξ = φ0/T. Most wall velocities in our
+models section do not yet apply these recent results.
+Another limit where the bubble wall velocities can be more easily inferred are very strong
+PTs. Since our last report on PTs [8], a signiﬁcant new result has appeared related to the
+calculation of the wall speed in the relativistic regime [26], which prompts a reanalysis of the
+GW power spectrum for very strong PTs.
+The original analysis [27] performed a leading order evaluation of the friction on a PT
+bubble wall moving at ultrarelativistic speeds γ =
+p
+1 −v2
+w ≫1, and showed that the
+pressure due to the ﬂux of particles crossing the bubble wall saturates as γ →∞. In the
+reference frame of the bubble wall, this can be understood from the interplay of the density of
+incoming particles ∝γ T 3, and the mean momentum transfer per particle ∆m2/(2E) ∝γ−1.
+For N degrees of freedom, the maximal pressure diﬀerence is then given by [27]
+∆pfr = ∆m2 N
+Z
+d3p
+(2π)3
+f(p)
+2Ep
+∼∆m2 N T 2 ,
+(14)
+where ∆m2 denotes the change of mass across the bubble wall, f(p) is the particle distribution
+function at equilibrium, and Ep is the energy of a particle with momentum p. This coincides
+with the leading mean-ﬁeld contribution to the eﬀective potential, and so runaway behavior
+is possible if the free energy in the low-temperature phase exceeds that in the metastable
+phase in the mean-ﬁeld approximation [27]. If this criterion is met, the wall will keep on
+accelerating to highly relativistic velocities.
+9
+
+---PAGE BREAK---
+In the original work [27] it was noted that higher order eﬀects could change this picture.
+Such eﬀects have been recently discussed in [26], the most relevant being particle production
+when masses or interaction strengths change across the phase boundary. These processes are
+analogous to transition radiation in electrodynamics.
+For the EWPT (and in general, for the spontaneous breaking of a gauge symmetry)
+the dominant friction contribution at highly relativistic bubble wall velocities comes from
+transition radiation of gauge bosons acquiring mass at the interface, and scales as
+∆pfr ∼γ αw N ′ ∆m T 3 ,
+(15)
+with αw = g2/(4π) the corresponding gauge coupling and N ′ the number of species partic-
+ipating in the transition radiation. As a result, many models that were believed to exhibit
+runaway behavior will actually develop a ﬁnite wall velocity, with γs ∼(N ′αw)−1. This has
+important implications for the GW spectrum from the PT, since it implies that the dominant
+fraction of the latent heat will be transformed into bulk ﬂow of the plasma and not into
+kinetic energy of the Higgs ﬁeld. This follows from the fact that, once the bubble wall reaches
+a terminal velocity, the energy stored in kinetic/gradient energy at the wall only grows like
+R2 (where R is the radius of the bubble), while the energy in the plasma grows like R3.
+Thus the GW power spectrum is primarily sourced by sound waves from bubbles producing
+a self-similar radial ﬂow with vw ≃1 in a much larger class of PTs than previously appreciated.
+There are nevertheless two scenarios where the above picture becomes more complicated, and
+which may lead to much larger values of γ and even to runaway behavior:
+No transition radiation: For scenarios where no gauge ﬁelds are present, as in the sponta-
+neous breaking of an (approximate) global symmetry (e.g. in a hidden sector), the dominant
+transition radiation/splitting processes may only involve scalars and fermions, resulting in
+a friction contribution growing at most like ∆pfr ∝logγ. As a result, the (γ-independent)
+leading order friction term may still provide the dominant contribution in the ultrarelativistic
+limit, and runaway behavior could be possible in this case.
+Extreme supercooling: When the PT exhibits extreme supercooling, as in the case of
+models with (approximate) conformal symmetry (see Secs. 6.5 and 6.6), the temperature of
+the plasma at the time of bubble nucleation can be many orders of magnitude smaller than
+the energy scale that deﬁnes the scalar potential, Tn ≪∆m. It would then seem that plasma
+friction would play a negligible role on the expansion; however, for this to be the case, the
+amount of supercooling is typically required to be extremely large. To see this, we assume in
+the following that there is a relatively small number N ′ of particles in the plasma that acquire
+a mass ∆m in the PT and produce transition radiation (notice that this is questionable in
+one of the prime examples – the holographic phase transition [28–40] – since there a large
+tower of particles will obtain a mass in the transition). The released energy is in this case of
+order ∆m4 (or somewhat larger) and using (15) one ﬁnds that the Lorentz factor increases
+10
+
+---PAGE BREAK---
+until it reaches the steady-state value
+γs ≃
+∆m3
+αwT 3
+n N ′ ≫1 ,
+(16)
+whereupon the self-similar hydrodynamic ﬂow is established around the bubble. At the early
+stage of the bubble expansion, the friction from the plasma can be neglected. The Higgs ﬁeld
+behaves as in vacuum and the Higgs proﬁle is a function of
+p
+t2 −r2 + R2
+c (Rc is the bubble
+size at nucleation and also of order ∆m−1). This leads to the following relation between
+bubble size and its wall velocity
+R = γRc ∼γ/∆m .
+(17)
+The bubble size when friction becomes important Rs has to be compared with the mean
+bubble size at collision, R∗, which can be no larger than the Hubble parameter during the
+PT, H ∼∆m2/mP (with mP the Planck mass). Hence, the bubble wall continues to accelerate
+until collision if
+Rs
+R∗
+∼
+∆m4
+αwT 3
+nmP N ′
+1
+HnR∗
+≳1 .
+(18)
+For example, if the near-conformal behavior of the models described in Secs. 6.5 – 6.6 holds
+down to QCD temperatures [36,40], T ≃1 GeV, runaway behavior up to bubble percolation at
+the end of the PT requires ∆m ≳10(HnR∗N ′)
+1
+4 TeV, typically corresponding to several orders
+of magnitude of supercooling. Below this bound, the bubble wall approaches a steady state
+and a ﬁnite but highly relativistic bubble wall velocity. The latent heat is then transformed
+mostly into bulk motion. We will assume this is the case in our analysis, in contrast with
+our previous study [8] (see also [41] for an extended analysis of the issue). Notice that the
+PT strength parameter α scales as α ∼(∆m/Tn)4 →∞, while the fraction of energy in bulk
+motion K ∼γ2
+f (Tn/∆m)4 approaches unity [13]. Hence, the Lorentz factor of the ﬂuid motion
+is of order γf ∼(∆m/Tn)2. This challenging regime is so far unexplored by hydrodynamic
+simulations and deserves further attention. In addition, the bubble wall velocity in scenarios
+of conﬁning PTs where a very large number of degrees of freedom acquire a mass across the
+bubble wall (see sections 6.5 and 6.6) has never been explored and is an important open
+question. Results should therefore be taken with a grain of salt in these cases.
+3
+Prediction of the Gravitational Wave Signal
+3.1
+Gravitational waves from bulk ﬂuid motion
+In this section we review estimates of the GW energy density Ωgw generated by a PT occurring
+during the radiation era. To obtain the corresponding GW energy density parameter today
+Ωgw,0, which is the quantity relevant for LISA, one multiplies Ωgw, which is normalised to the
+Universe’s energy density at production time, by the factor
+Fgw,0 = Ωγ,0
+gs 0
+gs ∗
+ 4
+3 g∗
+g0
+.
+(19)
+11
+
+---PAGE BREAK---
+Here Ωγ,0 is the density parameter of photons today, gs ∗(resp. gs 0) is the eﬀective number of
+entropic degrees of freedom at production time (resp. today), and g∗(resp. g0) is the eﬀective
+number of relativistic degrees of freedom after the PT during which the GWs are produced
+(resp. today). Using the Planck best-ﬁt value H0 = 67.8 ± 0.9 km s−1 Mpc−1 [42], and the
+FIRAS temperature for the CMB Tγ,0 = 2.725 ± 0.002 K [43], setting gs∗= g∗(true in the
+SM for T > 0.1 MeV), and g0 = 2, gs 0 = 3.91, we have
+Fgw,0 = (3.57 ± 0.05) × 10−5
+100
+g∗
+ 1
+3
+.
+(20)
+It was originally thought [18, 44] that GWs were mainly produced by the kinetic energy
+of bubble walls during bubble collisions, as this was believed to be the relevant source of
+anisotropic stresses in the case of strongly ﬁrst-order PTs. This thinking motivated a widely-
+adopted model known as the envelope approximation [45], in which the shear stresses are
+considered to be localised in thin shells near the phase boundary, and instantaneously dissipate
+as the walls collide.
+It is now understood that gravitational radiation from the collision
+phase is typically swamped by the radiation generated by ﬂuid motion in later phases of the
+transition, unless there is so little friction from the plasma that the bubble wall runs away (see
+Sec. 2.3). In a runaway, most of the available energy at the transition goes into the kinetic
+energy of the bubble walls, and gravitational radiation from the collision phase dominates,
+although latest numerical simulations show that the shear stresses in the collision region have
+a more complex behaviour than envisaged in the envelope approximation [46].
+In this paper, we concentrate on the more common case of gravitational radiation gen-
+erated by bulk ﬂuid motion. In this case, the GW energy density spectrum at the time of
+production takes the form (see e.g. [19,20,47])
+Ωgw ∼K2 (kLf)3
+Z dt1
+t1
+Z dt2
+t2
+cos(k(t1 −t2)) ˜Π(k, t1, t2) .
+(21)
+where Ωgw actually denotes d log Ωgw(k)/d log k.
+In the above equation, K is the kinetic
+energy fraction of the ﬂuid, deﬁned to be
+K = ⟨wγ2v2⟩
+¯e
+= Γ ¯U 2
+f ,
+(22)
+where w = e + p is the enthalpy, ¯e is the mean energy density of the ﬂuid, v is the spatial
+part of the ﬂuid 4-velocity, Γ = ¯w/¯e is the mean adiabatic index, and ¯U 2
+f = ⟨wγ2v2⟩/ ¯w is
+the enthalpy-weighted root mean square (RMS) of v, reducing to the RMS 3-velocity for
+non-relativistic ﬂows. For an ultra-relativistic ﬂuid, Γ ≃4/3. The kinetic energy fraction can
+be estimated using a hydrodynamic analysis of the expansion of spherical bubbles [13, 18].
+Furthermore, in (21), k is the comoving wave-number and Lf denotes the ﬂow length scale, the
+scale at which the kinetic energy of the ﬂuid motion is maximal: this is set by the mean bubble
+separation Lf ∼R∗∼vw/β. The double integral comes from the deﬁnition of the GW energy
+density parameter, while cos(k(t1 −t2))/(t1t2) is the Green’s function of the GW equation
+12
+
+---PAGE BREAK---
+of motion, assuming that the source is operating during the radiation era with a scale factor
+evolving as a ∝t with respect to the conformal time t (see e.g. the derivation in [48]). Finally,
+˜Π(k, t1, t2) is the unequal time correlator of the normalised ﬂuid shear stress. It is convenient
+to normalise the spatial part of the ﬂuid energy momentum tensor Tij(x, t) = wγ2vivj as
+˜Tij = Tij/(¯eKL3/2
+f
+), leading to the normalised shear stress ˜Πij(k, t) = Λijkℓ˜Tkℓ(k, t), where
+Λijkℓprojects the transverse traceless part. The unequal time correlator appearing in (21) is
+then deﬁned as ⟨˜Πij(k, t1)˜Πij(q, t2)⟩= (2π)3δ(k −q)˜Π(k, t1, t2).
+Some fairly general considerations dictate the possible scaling of Ωgw from (21).
+One
+expects the source to be active for a given time interval τv, which sets the integration range in
+(21). Furthermore, the source is expected to decorrelate over an autocorrelation time τc < τv,
+which represents the time interval that it takes for the anisotropic stress to decorrelate. If
+the duration of the source is less than one Hubble time τvH∗< 1, the factor (t1t2)−1 in (21)
+becomes (H∗a∗)2, where a∗denotes the scale factor at the bubble collision time. Usually one
+then ﬁnds, for k < τ −1
+c
+Ωgw ∼K2 (kLf)3 (H∗τv)(H∗τc) ˜Pgw(k)
+(τvH∗< 1 ,
+k < τ −1
+c )
+(23)
+where ˜Pgw(k) parametrizes the dependence on wave-number inherited directly from the source.
+For k > τ −1
+c , the factor H∗τc becomes H∗/k.
+If the duration of the source is more than one Hubble time, τvH∗> 1, one expects
+decorrelation after a time τc < H−1
+∗, yielding instead
+Ωgw ∼K2 (kLf)3 (H∗τc) ˜Pgw(k)
+(τvH∗> 1 ,
+k < τ −1
+c )
+(24)
+and again H∗τc →H∗/k for k > τ −1
+c . It appears that the eﬀective lifetime for GW production
+is of order τv ≃H−1
+∗
+for a source persisting for longer than a Hubble time10. [19,47,49].
+We will use the scalings above to determine the expected GW energy density from bulk
+ﬂuid motion. To do so, one must specify the scales τv and τc entering (23) – (24). Since the
+source of the anisotropic stress is the bulk ﬂuid motion, we set τc to the ﬂuid autocorrelation
+time, which typically scales as the ratio between the ﬂow length scale and the characteristic
+propagation velocity of the ﬂow (c.f. Table 1).
+The results of the simulations presented
+in section 3.3 conﬁrm this assumption.
+Two processes of the ﬂuid motion source GWs:
+sound waves (the longitudinal mode) and turbulence (the vortical mode). In considering the
+dynamics of the ﬂuid, there are (at least) three relevant timescales that determine the lifetime
+of the bulk motion. Besides the ﬂuid autocorrelation time τc mentioned above, there are the
+shock formation time τsh and the turbulence eddy turnover time τtu. Table 1 collects these
+timescales. We will further discuss their respective role in the following subsection.
+10We focus here on the case of a source that indeed decorrelates (i.e. for which τc < τv) as this is the relevant
+one for bulk ﬂuid motion. Note, however, that non decorrelating sources might also exist. If the source
+remains coherent over its lifetime τv, the above estimates change as follows. If the lifetime is smaller than one
+Hubble time, the factor (H∗τv)(H∗τc) in (23) becomes simply (H∗τv)2 for k < τ −1
+v . On the other hand, for
+a coherent source lasting more than one Hubble time, one ﬁnds Ωgw ∼K2 (kLf)3 log2 [(t∗+ τv)/t∗] ˜Pgw(k),
+where t∗= 1/(H∗a∗) denotes the initial time of action of the source. For k > τ −1
+v , the behaviour depends on
+the details of the time dependence of the source [47,49].
+13
+
+---PAGE BREAK---
+Symbol
+Role
+Approximate expression
+β−1
+PT duration
+τc
+Fluid autocorrelation time
+Lf/cs (turbulence: τtu)
+τsh
+Shock formation time
+Lf/ ¯U∥
+τtu
+Eddy turnover time on the scale of the ﬂow
+Lf/ ¯U⊥
+τv
+Time for which bulk motion of the ﬂuid lasts
+H−1
+∗
+Hubble time
+Table 1:
+Summary of timescales discussed in the text, approximately arranged by expected
+duration.
+3.2
+Relevant time scales and scaling of GW energy density
+GW power is determined by the kinetic energy fraction in the bulk motion of the plasma K,
+the ﬂuid autocorrelation time τc, and the time for which the bulk motion lasts τv. As we will
+see in the following, the latter scale depends on whether or not shocks develop and turbulence
+is produced.
+At a ﬁrst-order PT, the expanding bubbles generate compression and rarefaction waves
+(i.e. sound) [50], which continue oscillating long after the transition is complete, generating
+signiﬁcant gravitational radiation [19,20,51]. This acoustic phase has a lifetime determined
+by the generation of shocks [52, 53], which happens on a timescale τsh ∼Lf/ ¯U∥, where ¯U∥
+is the RMS longitudinal velocity associated with the sound waves.
+The shocks decay by
+generating entropy, on the same timescale, setting the lifetime of the acoustic phase. The
+autocorrelation time in acoustic production is set by the sound-crossing time of the ﬂow length
+scale τc ∼Lf/cs ∼R∗/cs [54]. Applying these timescales, one ﬁnds for long-lasting acoustic
+production (c.f. (24)),
+Ωac
+gw ∝K2 (H∗R∗/cs) .
+(25)
+For stronger ﬂows with ¯U∥≫H∗R∗, the lifetime of the sound waves is less than the Hubble
+time, since shocks develop within one Hubble time.
+The GW energy density parameter
+becomes (c.f. (23))
+Ωac
+gw ∝K3/2 (H∗R∗)2/cs .
+(26)
+To arrive at a corresponding estimate for the contribution from turbulence, one requires
+the fraction of kinetic energy converted into vortical motion.
+Numerical simulations of
+intermediate-strength transitions have shown that during the acoustic phase approximately
+1-10 % of the bulk motion from the bubble walls is converted into vorticity: this can be
+estimated from the ratio ¯U⊥/ ¯Uf, given for example in Table II of [19] and Table III of [20].
+Meanwhile, transitions featuring deﬂagrations with larger α were recently found to exhibit
+more eﬃcient generation of vortical motion and a suppression of the kinetic energy trans-
+ferred to the plasma [55]. Based on the ﬁndings for detonations and small-α deﬂagrations,
+in our last report [8] we set ε = K⊥/K = 0.05. This estimate is accurate at low RMS ﬂuid
+velocities, ¯Uf ≲0.05, but ε is likely larger than 0.05 at higher ﬂuid velocities. Moreover, when
+14
+
+---PAGE BREAK---
+shocks develop within a Hubble time their collisions and other non-linear eﬀects may also
+generate turbulence in the transverse (vortical) component of the ﬂuid ﬂow. Nevertheless,
+the kinetic energy fraction of the turbulent ﬂow cannot exceed the total kinetic energy frac-
+tion in bulk ﬂows of the plasma, setting an upper bound on the total possible contribution to
+the GW energy density from turbulence. The relative importance of acoustic and turbulent
+GW production depends on how eﬃciently turbulent kinetic energy K⊥is generated from the
+decaying sound waves and is a subject of ongoing study.
+In addition, several timescales are also relevant for determining the contribution from
+turbulence to the GW energy density. The turbulent cascade is expected to set in after one
+eddy turnover time at the ﬂow length scale, τtu ∼Lf/ ¯U⊥. Afterwards, in the absence of
+stirring, turbulence decays. The net turbulent kinetic energy is dissipated when the Reynolds
+number at the ﬂow length scale becomes of order one [52]. In the early Universe ﬂuid this
+can take several Hubble times, so the turbulence lifetime could in principle satisfy τv ≫
+H−1
+∗
+[47]. However, turbulence decorrelates, which eﬀectively reduces its lifetime to τv ≃
+H−1
+∗, as reﬂected in (24). At the integral scale Lf, the autocorrelation time of the turbulent
+ﬂow corresponds to one eddy turnover time [56]; it therefore features the same parametric
+dependence as the shock appearance time, τtu ∼Lf/ ¯U⊥. At smaller scales, the autocorrelation
+time is the eddy turn-over time on that scale [56]. Turbulence decorrelation is usually modelled
+with a Gaussian functional form [57].
+Diﬀerent approaches to describe turbulent decay adopted in the literature lead to diﬀerent
+parametric dependences for the resulting GW power, as well as diﬀerent predictions for the
+GW power spectrum. [58] considered stationary turbulence with a ﬁxed lifetime, and a scale-
+dependent velocity decorrelation time, corresponding to the eddy turn-over time on a given
+scale. Reference [49] attempted to include the free-decay, but to guarantee positivity of the
+GW power spectrum introduced a “top-hat” modelling of the shear stress two-time correlation
+function that sets the autocorrelation time of the shear stresses to the light-crossing time on a
+given scale [47,49]. A direct consequence of this assumption is that the GW power spectrum
+changes slope at frequencies higher than H∗, absent in [58]. This model provides the basis of
+the turbulent GW power spectrum used in our last report [8]. More recently, ﬂows with both
+compressional and rotational modes, and with both helical and non-helical magnetic ﬁelds,
+have been modelled in detail [59]. The new ingredient is the Kraichan sweeping model for
+the velocity decorrelation, and a variety of power laws and peak shapes are found depending
+on the relative amount of turbulence. The ﬁrst numerical simulations [60] of GW production
+by MHD turbulence have produced power spectra which remain to be understood in the
+context of the models. There are interesting indications that turbulent ﬂows are less eﬃcient
+at producing GW than sound waves.
+The preceding discussion highlights that the turbulence contribution to Ωgw is the subject
+of ongoing study. Nevertheless, scaling predictions for Ωgw can be derived from (24) under
+diﬀerent assumptions. For turbulence lasting longer than the Hubble time at nucleation [47],
+setting the autocorrelation time to the eddy turnover time on the characteristic scale of the
+15
+
+---PAGE BREAK---
+ﬂow τc = τtu ∼R∗/ ¯U⊥yields
+Ωtu
+gw ∝K3/2
+⊥(H∗R∗).
+(27)
+This scaling is in agreement with the result of [47], adopted in [8]. If, on the other hand, one
+neglects the free decay and assumes that the turbulence lifetime is much less than the Hubble
+time at nucleation, one has the estimates τv ∼τc ∼τtu [47], leading to
+Ωtu
+gw ∝K⊥(H∗R∗)2.
+(28)
+We have discussed how the characteristics of the ﬂuid dynamics inﬂuence the scaling of
+the GW power spectrum amplitude with the relevant ﬂuid ﬂow parameters. As presented in
+the next section, in the case of GW production from sound waves, the results from numerical
+simulations allow one to also infer the shape of the power spectrum. On the other hand,
+further work is required to assess the amplitude and spectral shape from turbulence. In the
+remainder of this study we therefore neglect GWs from turbulence altogether, in order to be
+conservative in estimating the corresponding GW signals at LISA.
+3.3
+GW power spectra: numerical simulations
+Our expressions for Ωgw,0, and in particular its spectral shape, are motivated by large-scale
+simulations of bubble collisions and the resulting bulk ﬂuid motion. In [19, 20, 51, 61] GW
+production from a thermal PT was studied through numerical simulations of a scalar ﬁeld
+coupled to a relativistic ideal ﬂuid. The best results for the amplitude and spectral shape
+of the GW power spectrum come from [19,20]. While the bubbles in these simulations are
+nucleated simultaneously (as opposed to the distribution of bubble sizes expected from a ﬁrst
+order PT), it is expected that for a given mean bubble separation R∗the results can be used
+to infer the results for a given β via (6).
+The ansatz below, based on the simulations in [19, 20] and the analytic understanding
+in [54, 62], is most reliable when the sound shell surrounding the bubble wall is large. This
+means, in turn, that the wall speed must be far from the Chapman-Jouguet speed, in which
+case the ﬂuid just reaches sonic velocity in the frame of the shock. For deﬂagrations (wall
+speed smaller than the speed of sound) this means vw < vCJ = cs, while for detonations (wall
+speed faster than the speed of sound) we require vw > vCJ ≃cs(1 + √2αθ) so that the ﬂuid
+ﬂow behind the wall is well away from the speed of sound.
+Using (25), for wall speeds away from the Chapman-Jouguet speed, we have
+dΩgw,0
+d ln(f) = 0.687Fgw,0K2(H∗R∗/cs)˜ΩgwC
+ f
+fp,0
+
+,
+(29)
+where the numerical factor ensures that the total GW power is K2(H∗R∗/cs)˜Ωgw and Fgw,0 is
+given by equation (20). The kinetic energy fraction of the ﬂuid K is as deﬁned above in (11);
+R∗can be related to β and vw by (6); ˜Ωgw ∼10−2 is numerically obtained from simulations;
+16
+
+---PAGE BREAK---
+and the spectral shape function is
+C(s) = s3
+
+7
+4 + 3s2
+ 7
+2
+(30)
+with peak frequency
+fp,0 ≃26
+
+1
+H∗R∗
+ zp
+10
+ 
+T∗
+100 GeV
+  g∗
+100
+ 1
+6 µHz.
+(31)
+The quantity zp ≃10 is determined from simulations, and accounts for the observed peak
+value of kR∗. We denote by T∗the temperature after the PT. For weak PTs this will coincide
+with the nucleation temperature Tn but it can diﬀer signiﬁcantly for large supercooling. In
+the end what controls the redshifting of the peak frequency is the Hubble scale. Prior to
+a PT with large enough α, the vacuum energy is the main component of the total energy,
+while after the PT it is the thermal plasma. Hence the redshifting is related to the (reheat)
+temperature after the PT, T∗.
+When vw ≈vCJ, the value of zp may diﬀer from 10: the sound shells are so thin that
+they may set a substantially smaller length scale ∆R∗= R∗|vw −cs|/cs. More importantly,
+though, the spectral shape ansatz in (30) fails to describe these scenarios well due to the more
+intricate nature of the source, and a more complicated analysis is required [54].
+In arriving at (29), the source was assumed to last for τv ∼1/H∗. An additional modiﬁ-
+cation is required, however, if the shock formation timescale is less than a Hubble time, i.e.
+H∗τsh < 1. In this case, the total GW power should be reduced by a factor H∗τsh = H∗R∗/K1/2
+to compensate for the appearance of shocks and onset of turbulence (c.f. 26), leading to the
+modiﬁed expression
+dΩgw,0
+d ln(f) = 0.687Fgw,0K3/2(H∗R∗/√cs)2 ˜ΩgwC
+ f
+fp,0
+
+.
+(32)
+As emphasized in [17] and below in Sec. 6, most models of interest for LISA predict H∗τsh < 1,
+and so (32) is often the relevant expression. This reduces the size of the GW signal from
+sound waves relative to (29), which is typically used in the literature. However, for H∗τsh < 1
+the overall GW signal might receive additional non-negligible contributions from turbulence,
+which we do not account for in our study.
+In summary, the two key formulae used to derive the results of this paper, in particular
+the SNR for LISA detection, are (29) and (32). In the ﬁgures displaying SNR contours, such
+as. Fig. 2, the grey-shaded regions will indicate where the shock formation time is longer than
+one Hubble time, and therefore where (29) is used. Elsewhere, we use (32).
+3.4
+GW power spectra: discussion
+Where hydrodynamic numerical simulations can be combined with a good physical under-
+standing of the ﬂuid ﬂows, we can obtain reliable power spectra for the generation of GWs,
+17
+
+---PAGE BREAK---
+corresponding to (29) – (32) above. Still, there are regimes where hydrodynamic numerical
+simulations have not (yet) been carried out, or additional production mechanisms occur, the
+eﬀects of which are currently diﬃcult to quantify. In the following we comment on these
+cases. In the numerical analysis we rely only on the predictions from sound wave simulations
+(see Sec. 4). We try to be conservative whenever the simulation results do not immediately
+apply.
+One such scenario for which (29) – (32) do not necessarily apply consists of strong PTs
+with ever accelerating runaway bubble walls. In this case, the envelope approximation or
+scalar ﬁeld simulations seem to be the more reliable setup [46]. Even when the bubble walls
+do not runaway but approach a highly-relativistic terminal velocity, the expected form of the
+GW power spectrum is not clearly settled. Also in this scenario, one could make the case
+that derivatives of the envelope approximation such as the so-called bulk ﬂow model are more
+realistic [63,64].
+Another issue concerns the appearance of turbulence and magnetic ﬁelds. In principle,
+turbulence should develop at late times and drain the energy in the sound waves into heat, as
+discussed in Sec. 3.2. However, current simulations could not conﬁrm the onset of turbulent
+motion, as for now they analyse the case of low RMS ﬂuid velocities and the system is not
+evolved for suﬃcient time to observe the appearance of shocks and turbulence. As pointed
+out above, our understanding of the turbulence contribution to the GW spectrum is still
+evolving. In the last analysis [8], we limited the contribution from turbulence to the percent
+level, based on the ﬁndings of simulations. In light of the uncertainties that exist, and in order
+to be conservative, we will neglect turbulence altogether in what follows. Note, however, that
+for ﬁrst order PTs in speciﬁc models (for which the relation among ¯Uf and H∗R∗can be
+predicted), the characteristic time of shock formation is often expected to be shorter than one
+Hubble time [17], likely leading to turbulent ﬂows and emphasizing the importance of future
+study along this direction.
+4
+The PTPlot tool
+To allow the reader to explore the GW power spectra in light of the preceding discussion in
+speciﬁc scenarios, we have developed a web-based tool ‘PTPlot’ to accompany this paper. It
+may be accessed at ptplot.org. This tool is written in Python using the Django framework,
+performing server-side rendering of power spectra and SNR contour plots. The aim is to make
+high-quality, up-to-date and reliable predictions of the GW power spectra easily available to
+the model-building community. In time, it may be extended to include other cosmological
+sources of GWs, and other GW detectors.
+PTPlot allows the user to display GW power spectra for any thermal PT parameters (α,
+β/H∗, g∗, T∗, vw) of their choice, using the formulae presented here, with a comparison to
+the public sensitivity curve for LISA given in the Science Requirements Document [65]. The
+PTPlot tool uses (29) (shading the corresponding regions grey) and (32) that, as discussed
+18
+
+---PAGE BREAK---
+Figure 2: Example output of the PTPlot tool. The colored lines show the SNR that depends on
+T∗, g∗(T∗) and vw. The two remaining parameters can either be α vs β/H∗or ¯Uf vs R∗H∗. The
+dotted straight lines are the contours of the ﬂuid turnover time HnR∗/Uf quantifying the eﬀect of
+turbulence. In the gray shaded region the decay of sound waves into turbulence is less important
+than the Hubble damping and the SNR curve reﬂects this eﬀect. The model parameters are given
+in the text.
+before, only take into account the contribution from sound waves.
+It is anticipated that the sensitivity curve (and SNR contours) will be updated if, in the
+future, an improved public estimate of the eventual LISA sensitivity curve is made available.
+The site carries a database of benchmark points for all the theories considered in Sec. 6 below,
+and the power spectra can be viewed for these as well.
+4.1
+Signal to noise ratio plots
+In addition to the GW power spectra, SNR contour plots can also be viewed. These show
+where the parameter (or parameters) lie in either the HnR∗-U f or β/H∗-α planes 11. The
+SNR is computed according to the standard formula,
+SNR =
+s
+T
+Z fmax
+fmin
+df
+h2ΩGW(f)
+h2ΩSens(f)
+2
+,
+(33)
+where T is the duration of the mission times its duty cycle and h2ΩSens(f) is the nominal
+sensitivity of a given LISA conﬁguration to cosmological sources, obtained from the power
+spectral density Sh(f)
+h2ΩSens(f) = 2π2
+3H2
+0
+f 3Sh(f).
+(34)
+We take H0 = 100 h km s−1 Mpc−1 and the observed Hubble parameter today is given by
+h = 0.678 ± 0.009 [42]. For ΩGW(f), we use (29) and (32) as appropriate. For T we take 4
+11Note that we use Hn and H∗interchangeably in this section.
+19
+
+---PAGE BREAK---
+Figure 3: Example output of the PTPlot tool.
+The plot shows an example of the GW power
+spectrum from a ﬁrst-order PT, along with the LISA sensitivity curve (h2ΩSens(f) taken from the
+LISA Science Requirements Document [65]). The parameters of the example model are vw = 0.9,
+α = 0.1, β/H∗= 50, T∗= 200 GeV, g∗= 100.
+years as the mission duration and a duty cycle of 75%, yielding T ≃9.46 × 107 s which is the
+minimal data-taking time guaranteed by the LISA mission requirements [65].
+To give a responsive web interface, the SNR values are precomputed as a function of U f and
+HnR∗at ﬁxed T∗and g∗; note that the SNR contours are necessarily two-dimensional slices
+through a higher-dimensional parameter space and this slicing was chosen for consistency with
+previous work [8]. In our case, U f and HnR∗are calculated from β/H∗, vw and α using (6),
+(11), (22) and the eﬃciency factor from the literature [13].
+Note that an SNR plot in the U f-HnR∗plane was ﬁrst presented in [20]; it is a natural
+choice of parameters, motivated by the results of simulations. Furthermore, contours of the
+ﬂuid turnover time HnR∗/U f are straight lines on this plot; this combination quantiﬁes the
+expected importance of turbulence. Regions where the acoustic period will last for a Hubble
+time are shaded on these SNR plots. Note that for producing the SNR curves the duration
+of the source is taken to be the Hubble time or the ﬂuid turnover time, whichever is shorter,
+as the most conservative estimate possible [17,20].
+On the other hand, for an SNR plot in the β/H∗-α plane, which is more practical for
+model builders, the input parameters can be plotted directly, but the contours are deformed
+by the inverse mapping from U f and HnR∗to α and β/H∗.
+Figs. 2 and 3 show three example plots produced by the PTPlot tool. The two plots in
+Fig. 2 display the SNR in the ¯Uf vs R∗H∗and α vs β/H∗parameter spaces. Figure 3 shows
+the expected GW power spectrum for some example model and the LISA sensitivity curve.
+All sensitivity plots presented in Sec. 6 were made with PTPlot.
+20
+
+---PAGE BREAK---
+5
+Determining α, β, and H∗in speciﬁc models
+When considering a speciﬁc model, the parameters α, β, and T∗(or H∗) entering the energy
+budget (and PTPlot) need to be computed microphysically.
+This is typically done using
+a perturbative eﬀective potential approach (implicitly assumed in the discussion of Sec. 2),
+which can result in signiﬁcant uncertainties in the predicted GW parameters. Here, we discuss
+methods for going beyond the standard approach and the corresponding uncertainties as they
+relate to LISA.
+The majority of GW predictions in speciﬁc BSM scenarios rely on the computation of
+the eﬀective potential V [{φi}], through a perturbative expansion to one- or sometimes two-
+loop order in 4D. Here, {φi} denotes the set of scalar ﬁelds involved in the transition (the
+order parameters). Under the assumption that the {φi} are homogeneous, one may compute
+the ﬁnite temperature corrections to the classical potential.
+The global minimum of the
+eﬀective potential then corresponds to the ﬁnite temperature expectation value of the ﬁelds.
+The order of the transition is determined by whether this minimum changes continuously
+(second-order/cross-over) or discontinuously (ﬁrst-order) as a function of the temperature.
+The parameter α follows directly from the eﬀective potential, while β/H∗and T∗can be
+determined by computing the action of the bounce solution, which follows from the Euclidean
+equations of motion for the scalar(s) again utilizing the eﬀective potential.
+An alternative method that has received renewed interest lately is to investigate the phase
+diagram and determine the GW parameters by computing the eﬀective action using numerical
+Monte-Carlo lattice simulations.
+This method was instrumental in establishing that the
+minimal SM does not have a ﬁrst-order PT at the physical value of the Higgs mass [2].
+By considering the eﬀective action rather than just the eﬀective potential, no assumption is
+made about homogeneity of the ﬁelds, and mixed conﬁgurations (such as bubbles) contribute.
+Issues related to the well-known infrared divergences of ﬁnite temperature perturbation theory
+are automatically avoided in this approach, allowing for theoretically robust and accurate
+predictions. The computation may be done in full 4D simulations of an eﬀective bosonic
+model [3], but because of the numerical eﬀort involved, parameter scans are more feasible in
+simulations of eﬀective 3D models that are matched onto the 4D theory at high temperature
+through a procedure known as dimensional reduction (DR). The status of the art regarding
+this method is reviewed in Appendix A.
+The short summary is that there remain several challenges associated with providing non-
+perturbative predictions for LISA in BSM scenarios. Firstly, lattice Monte Carlo simulations
+are still computationally expensive in 3D, and, as argued in Appendix A, need to be done on a
+model-by-model basis. Even once a model is speciﬁed, scanning the parameter space nonper-
+turbatively is often not feasible. Instead, one typically chooses benchmark points to analyze,
+which further prevents extensive phenomenological investigation. Furthermore, many sce-
+narios rely on relatively large couplings to induce a ﬁrst-order PT through radiative eﬀects.
+Dimensional reduction is usually done perturbatively to a ﬁxed order in the couplings, and so
+large couplings limit the accuracy of the dimensionally reduced description (see e.g. [66, 67]
+21
+
+---PAGE BREAK---
+for recent discussions). In this case, the perturbative matching procedure can fail, and one
+cannot perform 3D Monte Carlo studies of the model at ﬁnite temperature, necessitating gen-
+uine 4D simulations which are even more computationally challenging. Thus, there remains
+ample room for future improvements along this direction as LISA moves towards launch. In
+the interim, we rely mostly on results obtained from 4D perturbation theory, commenting
+on existing nonperturbative results for the various models discussed in Sec. 6 below when
+applicable.
+6
+Overview of speciﬁc models
+A variety of new physics models predict ﬁrst order PTs in the early Universe. In [8] several
+such models were considered to benchmark LISA’s sensitivity to realistic BSM scenarios. This
+section should be considered both an update as well as an extension of the previous work. The
+recent developments in the computation of the stochastic GW background from PTs discussed
+in the preceding sections and the updated LISA sensitivity curve necessitate a re-evaluation
+of the detectability of speciﬁc scenarios and benchmark points. Furthermore additional data,
+e.g. from the LHC, has become available and puts additional constraints on models that
+modify the electroweak phase transition (EWPT). With respect to these developments, the
+models and benchmark points of [8] will be updated below. In addition, we will summarise
+the recent developments in the study of models with cosmological PTs, with a focus on new,
+more precise theoretical computations of the PT properties (c.f. Sec. 5) as well as on the
+complementarity between LISA and other experiments in probing these models.
+The models we discuss below fall into two broad categories: those where new physics
+contributions modify the nature of the EWPT, and those where some other ﬁeld undergoes
+a PT largely independent of the Higgs, with an intermediate regime of multi-ﬁeld and multi-
+step transitions involving the Higgs and other ﬁelds. Among the simplest possibilities are
+extensions of the SM by a scalar singlet or EW multiplet, discussed in Secs. 6.1 and 6.2, or
+eﬀective operators in the case that the new physics aﬀecting the EWPT is suﬃciently heavy
+(Sec. 6.4). The dynamics of more complex models such as supersymmetric extensions of the
+SM (Sec. 6.3) can often be reduced to that of the SM with a small number of additional ﬁelds,
+and in that sense the results of Secs. 6.1 – 6.4 can be considered representative of a large class
+of BSM scenarios. More qualitative changes occur if the new physics involves non-perturbative
+or non-polynomial potentials such as extra dimensional or composite Higgs models, or if the
+PT happens in a dark sector, as discussed in Secs. 6.5, 6.6, and 6.7 respectively.
+6.1
+Singlet extension of the SM
+Many extensions of the SM feature new gauge singlet scalar ﬁelds that can yield strong ﬁrst-
+order cosmological PTs in the early Universe, and hence contribute to the stochastic GW
+background. Such extensions can be tied to dark matter (DM) [68–70], the EW hierarchy
+22
+
+---PAGE BREAK---
+problem [71], and EW baryogenesis [72, 73], for example12. Singlet scalars can be diﬃcult
+to probe experimentally despite featuring sizable couplings to the SM Higgs ﬁeld, since they
+do not couple directly to the other SM states except through mixing with the Higgs. While
+these models are sometimes considered ‘nightmare scenarios’ at colliders [68], they provide
+a compelling target for LISA [8] and highlight the complementarity between LISA and the
+LHC.
+Consider a gauge singlet scalar ﬁeld, S, that couples to the SM Higgs ﬁeld, H. The most
+general renormalizable scalar potential is
+V (H, S) = −µ2 |H|2 + λ |H|4 + 1
+2a1 |H|2 S + 1
+2a2 |H|2 S2
++ b1S + 1
+2b2S2 + 1
+3b3S3 + 1
+4b4S4.
+(35)
+A redeﬁnition of the S ﬁeld allows one to either remove the tadpole term from the above
+expression (see e.g. [74]), or shift away the VEV of S at zero-temperature. We choose the
+latter, but emphasize that this is simply a convention and that the results can be translated
+between schemes with simple redeﬁnitions of the various parameters (see e.g. [75] for an in-
+depth discussion of these parametrizations). After EW symmetry breaking, in unitary gauge
+we can parametrize H = [0, (h + v)/
+√
+2]T, where v = 246 GeV. The cross-terms in (35) then
+result in mixing between h and S. The mass eigenstate ﬁelds can be written as
+h1 = h cos θ −s sin θ ,
+h2 = h sin θ + s cos θ ,
+(36)
+where the subscripts indicate the mass ordering, m1 ≤m2.
+LHC measurements indicate
+that the observed 125 GeV Higgs ﬁeld is quite SM-like, and currently the mixing angle is
+constrained to satisfy [76–78]
+|sin θ| ≲0.2 −0.3 ,
+(37)
+depending on the mass of the singlet-like state and assuming m1 ≃125 GeV (i.e. taking
+the singlet-like state to be the heavier scalar). We will primarily focus on this case in what
+follows. This approximate bound comes from a combination of direct searches at the LHC as
+well as EW precision measurements, and applies across the mass range m2 ∼125 GeV – 1
+TeV. For more precise mass-dependent limits, see e.g. [76–78].
+An interesting limit of the model arises by imposing a discrete Z2 symmetry under which
+S →−S. If the Z2 symmetry remains unbroken at T = 0, there is no h −S mixing, and S
+might be stable on cosmological time scales, thereby contributing to the observed DM density.
+The prospects for discovery at colliders in this case are much more limited, since S can only
+be pair produced through the Higgs and can only be indirectly observed through missing
+12Even though certain models with extra dimensions or a composite Higgs are technically speaking singlet
+extensions of the SM (with a dilaton playing the role of the singlet), we will treat them separately in Secs. 6.5
+and 6.6.
+23
+
+---PAGE BREAK---
+energy in such events [68,71]. However, from the standpoint of LISA, the prospects are more
+encouraging, as we will see below.
+In both the general and Z2 cases, the tree-level couplings of S to H can yield a strong
+ﬁrst-order EWPT. Such a transition can proceed in either one or two steps [74, 75]. In the
+two-step case, the EWPT is preceded by a transition in the singlet direction. The strength of
+the EWPT is governed by the couplings of S to the Higgs ﬁeld (a1 and a2). These parameters
+also govern the interactions of the singlet-like state with the SM. We discuss the prospects
+for LISA and other experiments to probe these models below.
+After ﬁxing the Higgs mass and VEV, as well as setting the singlet VEV to zero, the model
+in (35) contains ﬁve free parameters. In [79], a strategy was suggested for systematically
+studying the parameter space featuring strong ﬁrst-order transitions, which we adopt here.
+Speciﬁcally, with regards to the LHC, the most relevant parameters of the model are the
+singlet-like mass, and the mixing angle with the Higgs, θ. For a given m2 and θ, one can then
+vary a2, b3 and b4 across the entire range of values allowed by
+• Absolute vacuum stability: The potential (35) is required to predict no zero-temperature
+vacua deeper than the physical minimum at v = 246 GeV, either at tree– or one-loop–
+level13.
+• Perturbativity: We require a2, b4 < 4π, so that an analysis utilizing standard perturba-
+tion theory techniques can be justiﬁed14.
+Imposing these requirements, we scan linearly over the corresponding parameter space for
+various values of m2 and sin θ, searching for points with a strong ﬁrst-order EWPT15, deﬁned
+as those for which vc/Tc ≥1, with vc the Higgs VEV at the critical temperature Tc. Our
+conventions for the Coleman-Weinberg and ﬁnite-temperature contributions to the eﬀective
+potential are those detailed in [79]. To determine the properties relevant for the GW signal,
+we deﬁne the PT temperature T∗as that for which the three-dimensional Euclidean action of
+the bounce solution, S3, satisﬁes S3/T∗= 100. This choice was inspired by the percolation
+requirement in (5). We compute the bounce with a modiﬁed version of the CosmoTransitions
+pathDeformation module [80], and use this to determine β/H and α at T∗.
+For illustration, we consider masses m2 = 170, 240 GeV and sin θ = 0.01, 0.1. These
+values are motivated by distinct discovery prospects at the LHC and future colliders. As
+discussed above, currently, values of | sin θ| ≲0.2 are not constrained experimentally for
+these masses. At the high-luminosity LHC, direct searches for the singlet-like state will likely
+probe | sin θ| ≳0.1 for m2 > 2mW [81]. In contrast, the parameter space with sin θ = 0.01
+13Note that in [79], tree-level vacuum stability was not required.
+14In [79], in addition to perturbativity, the coupling b4 was bounded by perturbative unitarity. In our case,
+since we require absolute vacuum stability at tree-level, this requirement does not signiﬁcantly impact the
+parameter space.
+15Strong singlet-only transitions were not searched for, but can also produce a signal at LISA. However,
+the physics driving such transitions does not necessarily involve the couplings of S to the SM Higgs, and so
+the collider prospects for discovery are not as correlated.
+24
+
+---PAGE BREAK---
+Figure 4:
+LEFT: Predicted values of α and β/H for m2 = 170 GeV and 240 GeV (combined in
+one plot) in the general singlet model obtained by linearly varying the free parameters of the model
+and imposing requirements as described in the text. The mixing angles considered were sin θ = 0.01
+(blue points) and 0.1 (orange points). The models in blue (orange) are unlikely (likely) to be probed
+by the high-luminosity LHC. The expected LISA sensitivities correspond to T∗= 50 GeV. RIGHT:
+Sensitivity curve for the Z2 symmetric singlet extension. In both the left and right panels we have
+taken vw = 1.
+is unlikely to be probed by the LHC or future colliders. LISA sensitivity to these points
+therefore illustrates its complementarity with collider searches.
+It is worth noting that resonant di-Higgs production (pp →h2 →h1h1) can provide an
+additional probe of the parameter space for m2 > 2m1 ≈250 GeV, [82–85], but we do not
+discuss this region further here, as larger singlet masses tend to be harder to detect with
+LISA. For lower masses, non-resonant h2h2 and h1h1 production can also provide a handle
+on the parameter space for large values of a2, [79]. It would be interesting to investigate the
+correlation between these observables and LISA in the future.
+In the left panel of Fig. 4, we show results of our analysis of the parameter space for
+m2 = 170, 240 GeV in terms of the properties of the EWPT relevant for GW production
+and detection at LISA. We categorize points by whether or not they are expected to be
+probed by direct searches at the high-luminosity LHC with 3000 fb−1. We ﬁnd that most
+points feature T∗between 20-100 GeV. As a result, the LISA sensitivity curves shown assume
+T∗= 50 GeV. Also, for the predicted sensitivities, we have assumed a large wall velocity,
+vw = 1. This is expected to be an excellent assumption for points with strong PTs in singlet
+models [23,24,26,27].
+We see that LISA will be sensitive to the strongest EWPTs in this model, while transitions
+of intermediate strength and below (α < O(0.1)) may not be probed. Our results also show
+that LISA will be sensitive to regions of the parameter space not accessible to the LHC or
+other near-future experiments. There also exist regions to which both LISA and the LHC
+may be sensitive. This opens up the exciting possibility of detection both in direct collider
+25
+
+---PAGE BREAK---
+searches, and a conﬁrmation of a strong ﬁrst-order EWPT through the GW signal at LISA.
+We repeat the previous exercise in the Z2 limit, corresponding to sin θ = 0, b3 = 0 in
+our parametrization, scanning over m2 < 300 GeV. We also require the singlet to be heavier
+than half the HIggs mass to avoid bounds on the invisible Higgs branching fraction. We
+concentrate on the parameter space producing two-step PTs, as these transitions tend to be
+stronger and hence can yield an observable signal at LISA (see e.g. [86]). We vary a2 < 3 and
+b4 < 3 searching for strong ﬁrst-order PTs requiring absolute vacuum stability. We show our
+results in the right panel of Fig. 4. Our results agree with the conclusions appearing elsewhere
+in the literature (see e.g. [8,68,86–89]).
+Comparing these results to those of the collider studies in e.g. [68,86], it can be inferred
+that the LHC will probe virtually none of the parameter space shown. Future colliders will
+provide some sensitivity through a combination of measurements of the Zh production cross-
+section, deviations in the Higgs self-coupling, and non-resonant SS production. Reference [68]
+claims that a combination of these measurements might be able to cover the entire parameter
+space shown. Even if this is the case, LISA will likely have the ﬁrst opportunity to directly
+probe the parameter space with strong ﬁrst-order transitions in the Z2 case16.
+6.1.1
+Non-perturbative PT analysis
+The EWPT in the singlet model has also been studied non-perturbativey. The dimensional
+reduction (DR) and a preliminary investigation of the parameter space using existing SM
+lattice results were performed for the singlet-extended SM in [90]. Subsequently, [91] investi-
+gated several diﬀerent regions of the model parameter space both in the Z2 and non-Z2 cases,
+comparing the perturbative and nonperturbative predictions. Requiring the self-consistency
+of the dimensional reduction and that the eﬀects from higher-dimension operators and dynam-
+ics of the singlet ﬁeld17 are small limits the regions of parameter space that can be accurately
+described by the SM-like 3D eﬀective ﬁeld theory (EFT) used in these studies. Where the
+3D EFT results can be trusted, [91] found reasonable agreement for the scaling of the PT
+strength with the model parameters in both approaches. Furthermore, [91] applied existing
+lattice results to determine α, β and Tn for an illustrative benchmark point in the general sin-
+glet model, ﬁnding good agreement between perturbative and non-perturbative approaches
+for the relative amount of supercooling, Tn/Tc, while the individual quantities Tn, α, and
+β/Hn featured larger (up to O(100%)) discrepancies. However, accounting for uncertainties
+due to the neglected dimension-6 operators in the 3D theory, as well as the scale-dependence
+16If the Z2 symmetry is valid up to high enough scales, S can be cosmologically stable, contributing
+to the observed DM abundance.
+As a result the model can also be constrained by DM direct detection
+experiments [68]. Note however, that these signatures are much more model-dependent, in that they are
+sensitive to whether or not additional DM annihilation channels are present.
+Furthermore they are not
+necessarily correlated with the existence of a strong ﬁrst-order EWPT.
+17In these studies, the singlet ﬁeld was integrated out altogether, and so any potential impact of the singlet-
+Higgs vacuum structure on the transition discarded. This is a general issue for EFTs [92] and not speciﬁc to
+DR.
+26
+
+---PAGE BREAK---
+in the perturbative results, brings the results into closer agreement.
+Taken at face value, the ﬁndings of [90] and [91] suggest that the perturbative calculations
+reﬂected in Fig. 4 might predict the correct values of α and β/H to within O(1) factors.
+However, none of the parameter space considered in [91] features PTs strong enough to
+be detectable by LISA, and so future work is required to draw ﬁrm conclusions about the
+accuracy of perturbative predictions in these regions of the model. This will require dedicated
+nonperturbative studies of the singlet-extended SM, which are in progress.
+6.2
+Extensions of the SM with Scalar Electroweak Multiplets
+A strong ﬁrst-order EWPT may be obtained through the existence of a non-minimal scalar
+sector featuring electroweakly charged scalar ﬁelds in addition to the SM Higgs doublet. The
+SM gauge non-singlet nature of these ﬁelds helps in making them accessible at colliders, which
+yields a more direct connection between the generation of GWs from a ﬁrst-order cosmological
+PT and phenomenological LHC studies. Here we focus mostly on two-Higgs-doublet-model
+(2HDM) scenarios, in which the SM Higgs sector is enlarged by a second doublet. These
+scenarios provide a compelling benchmark of extended scalar sectors where the new scalars
+are charged under the EW symmetry of the SM. We also brieﬂy discuss the case of other EW
+representations, namely scalar triplet extensions of the SM, at the end of this subsection.
+The strength of the EWPT in the 2HDM and its early Universe implications have been
+widely studied in the literature [93–105]. In the following we provide an overview of the
+discovery potential of such a scenario at LISA and discuss the complementarity with ongoing
+and future BSM searches at the LHC. The scalar potential for the 2HDM is given by
+V (H1, H2)
+=
+µ2
+1 |H1|2 + µ2
+2 |H2|2 −µ2 h
+H†
+1H2 + h.c.
+i
++ λ1
+2 |H1|4 + λ2
+2 |H2|4
++λ3 |H1|2 |H2|2 + λ4
+H†
+1H2
+
+2
++ λ5
+2
+
+H†
+1H2
+2
++ h.c.
+
+,
+where we have assumed a (soﬂy broken) Z2 symmetry18. The breaking of the EW symmetry is
+shared between the two Higgs doublets H1 and H2, their VEVs given by v1,2 (with
+p
+v2
+1 + v2
+2 =
+v = 246 GeV, v2/v1 ≡tanβ). The 2HDM features three new physical states in addition to
+the 125 GeV Higgs h: a charged scalar H± and two neutral states H0, A0. A ﬁnal relevant
+aspect of the 2HDM concerns the various possibilities for coupling the Higgs doublets H1,2 to
+the SM fermions (see e.g. [106]). This has implications for the phenomenology of the model,
+e.g. the current and future LHC sensitivity prospects, but it is not relevant for the EWPT19.
+We will comment on the impact of 2HDM fermion coupling choices for the complementarity
+between the LHC and LISA when relevant.
+18This is assumed for phenomenological reasons:
+its absence results in potentially dangerous ﬂavour-
+changing-neutral-current contributions once the Higgs doublets are coupled to the SM fermions.
+19The top quark is generically the only SM fermion whose Yukawa coupling is large enough to be of relevance
+for the EWPT, and the diﬀerent possible fermion coupling choices share the same top quark Yukawa coupling
+assignment.
+27
+
+---PAGE BREAK---
+The strength of the EWPT in 2HDM scenarios is primarily determined by a decrease
+in the free-energy diﬀerence between the EW-symmetric maximum and EW-broken phase
+at T = 0 with respect to the corresponding SM value [102, 104] (see also the discussion in
+Sec. 6.4). This eﬀect is mostly due to T = 0 one-loop contributions to the free energy. As
+a result, a strongly ﬁrst-order EWPT in 2HDMs is very much correlated with the SM-like
+nature of the Higgs state h when mH0 > mh = 125 GeV, as well as with a large mass splitting
+between the states H0, A0 [98, 101–103], which provides an important connection to LHC
+searches for new scalars in ﬁnal states consisting of gauge and Higgs bosons.
+In the following, we assume a SM-like 125 GeV Higgs, as currently favoured by LHC
+Higgs experimental data [107].
+For the 2HDM this means aligning the state h with the
+direction of EW symmetry breaking.
+We also assume mH± ≃mA0 as favoured by EW
+precision observables. Finally, we consider the squared mass scale M 2 ≡µ2(tanβ + tan−1β),
+corresponding to the approximate mass scale for the non-SM scalar doublet within the 2HDM,
+to satisfy, for simplicity20, M 2 ≃m2
+H0. These assumptions leave mH0, mA0 and tan β as the
+relevant parameters in our subsequent analysis. In addition, we ﬁnd that tan β does not
+inﬂuence the strength of the EWPT as measured by the parameter α (tan β does however
+play an important role in the corresponding LHC phenomenology, see the discussion below),
+which is shown in Fig. 5 (left), in the (tanβ, mA0) plane for mH0 = 200 GeV (solid lines) and
+400 GeV (dashed lines).
+We perform a scan in mH0, mA0, with mH0 ∈[180 GeV, 450 GeV] and mA0 ∈[mH0 +
+100 GeV, mH0 +350 GeV], computing the PT parameters α, β/H and T∗for points predicting
+a strong ﬁrst-order PT. The corresponding 2HDM results in the (α, β/H) plane are shown on
+the right hand side of Fig. 5 together with several LISA ﬁxed-SNR contours, as provided by
+PTPlot. The LISA SNR curves are computed for T∗= 50 GeV (corresponding approximately
+to the values of T∗for the 2HDM benchmarks yielding the strongest transitions, see e.g. [100])
+and assuming a bubble wall velocity of21 vw = 0.7. The blue and orange points in the ﬁgure
+correspond to 2HDM benchmarks for which diﬀerent LHC constraints apply, as discussed
+below. We stress that allowing for a slight departure from our assumptions about the 2HDM
+parameters (SM-like Higgs h, mH± ≃mA0 and M 2 ≃m2
+H0) within the experimentally allowed
+region would result in a small decorrelation between α and β/H as compared to the very
+strong correlation shown in Fig. 5 (essentially, a minor “thickening” of the line traced out by
+the 2HDM benchmark data in Fig. 5). We also note that in the 2HDM one tends to ﬁnd
+larger values of β/H for a given α as compared to other models (e.g. the singlet model, see
+Sec. 6.1).
+LHC searches for the BSM states A0, H0, H± can also probe the 2HDM region of parameter
+space with a strongly ﬁrst-order EWPT, resulting in a strong level of complementarity between
+20Despite not being strictly required, this condition is favoured by the boundedness of the scalar potential
+from below and unitarity considerations in the 2HDM.
+21Preliminary attempts towards computing the bubble wall velocity in 2HDM scenarios featuring a strongly
+ﬁrst-order PT were made in [25,100], where it was found that in a considerable part of parameter space bubbles
+expand as deﬂagrations, with only the strongest transitions being detonations.
+28
+
+---PAGE BREAK---
+5
+10
+15
+20
+25
+30
+tan β
+300
+350
+400
+450
+500
+550
+600
+650
+700
+mA0 (GeV)
+α = 0.0008
+α = 0.0032
+α = 0.0089
+α = 0.01899
+α = 0.1093
+α = 0.008
+α = 0.012
+α = 0.016
+α = 0.024
+α = 0.1067
+mH0 = 200 GeV
+mH0 = 400 GeV
+Figure 5:
+Results in the 2HDM. LEFT: Strength of the EWPT as given by α in the (tanβ,
+mA0) plane, for mH0 = 200 GeV (solid red) and mH0 = 400 GeV (dashed blue). RIGHT:
+2HDM benchmark points (from a scan in mH0, mA0, see text for details) in the (α, β/H)
+plane. The points currently excluded by the LHC for the Type-II 2HDM (but not for the
+Type-I 2HDM) are shown in orange. The expected LISA sensitivities correspond to T∗= 50
+GeV and assume vw = 0.7.
+the LHC and LISA. In particular, given the sizable mass splitting mA0 −mH0 characteristic
+of a strong EWPT in the 2HDM22, LHC searches for A0 →ZH0 [98] by CMS [108] and
+ATLAS [109] yield important constraints on the allowed 2HDM parameter space.
+These
+constraints depend on the speciﬁc type of 2HDM Yukawa coupling assignment: for a Type-II
+2HDM, the present bounds from the LHC √s = 13 TeV ATLAS A0 →ZH0 search with 36.1
+fb−1 of integrated luminosity [109] exclude values mH0 ≲340 GeV independently of tan β.
+The points that would be currently excluded by this search for a Type-II 2HDM are depicted
+in orange in Figs. 5. In contrast, for a Type-I 2HDM the present limits from [109] yield a
+lower bound on tan β as a function of mH0 and mA0. Future LHC searches (see e.g. [110])
+will be able to completely explore the region of parameter space with a strongly ﬁrst-order
+EWPT within the Type-II 2HDM, while for a Type-I 2HDM the future LHC measurements
+will only be able to increase the reach in tanβ without fully exploring the model parameter
+space. LISA, however, can probe such points, making clear the complementarity between the
+LHC and LISA.
+Beyond the 2HDM discussed above, other scenarios with EW scalar multiplets added to the
+SM could lead to a ﬁrst-order EWPTs and a GW signature potentially within the sensitivity
+range of LISA. References [111,112] (see also [113,114]) studied the properties of the EWPT
+22This can be readily inferred from Fig. 5: a strongly ﬁrst-order EWPT in the 2HDM observable by LISA
+would require at least α ≳0.1, which from Fig. 5 (left) implies mA0 −mH0 ≳250 GeV.
+29
+
+---PAGE BREAK---
+within a scalar EW triplet extension of the SM. They found that this scenario allows for a
+multi-step PT analogous to that of the Z2 symmetric singlet extension of the SM23 (recall
+the discussion in Sec. 6.1). Such two-step transitions have also been explored in [113] in the
+context of the inert doublet model (a particular version of the 2HDM with an unbroken Z2
+symmetry). These multi-step scenarios in BSM theories with a new scalar EW inert doublet
+or triplet could give rise to very strong ﬁrst-order EWPTs within the reach of LISA (see
+e.g. [112]), while also predicting several distinct collider signatures [111,113,115]. The latter
+include the modiﬁcation of the Higgs coupling to two photons and signals associated with a
+compressed scalar spectrum (e.g. disappearing tracks and ﬁnal states involving soft objects).
+Finally, [116] has also considered higher EW scalar multiplets (EW quadruplets) as ul-
+traviolet (UV) completions of a SM EFT framework (see Sec. 6.4), ﬁnding that strongly
+ﬁrst-order EWPTs yielding a GW signal detectable by LISA are possible, and that there is a
+high-degree of complementarity with the LHC: quadruplet masses mΘ ≲600 GeV would be
+probed by the LHC via multi-lepton signatures, while LISA could in principle probe much
+higher masses depending on the value of the couplings between the EW quadruplet and the
+SM Higgs doublet.
+6.2.1
+Non-perturbative PT analysis
+Some of the scenarios discussed in the previous subsection have also been studied nonper-
+turbatively at ﬁnite temperature.
+The dimensional reduction of the 2HDM to a SM-like
+3D EFT (see Appendix A) was performed in [117–119], and the PT analysed using exist-
+ing SM lattice results in the case without CP-violation and in the alignment limit assuming
+mH± = mA0. The parameters mH0, mA0 and µ2 were then varied for a few values of tanβ,
+showing that a region featuring a ﬁrst-order PT emerges (see [118]) and broadly conﬁrming
+that mA0 > mZ + mH0 is preferred in this region. However, in parts of the parameter space,
+issues remain regarding the validity of one or more steps in the DR procedure, as well as the
+mapping to the 3D theory in this approach. Again, some information about the two-ﬁeld
+transition dynamics may be lost, even in the alignment limit.
+More recently, [67] performed new lattice simulations including the dynamical second
+doublet. The results for the equilibrium properties (α, Tc) were compared with predictions
+from perturbation theory in both 3D (using the two-loop eﬀective potential) and 4D using
+diﬀerent resummation schemes. For the benchmark points considered in [67], the standard
+4D treatment (used in the results of Fig. 5, for example) reproduces Tc to within about 20%
+and α to within a factor of two. The 3D two-loop eﬀective potential approach more closely
+reproduces the lattice results, but O(10)% uncertainties remain in some cases. The results
+of this section obtained in the 4D perturbative approach should therefore be understood in
+light of these ﬁndings.
+23However, as opposed to the two-step transition for the Z2 symmetric singlet scenario, here the ﬁrst step
+of the transition breaks the EW symmetry. This could impact the generation of GWs (bubble wall friction
+from the SM gauge bosons would generically result in smaller values of vw than in the singlet scenario), as
+well as other processes such as EW baryogenesis.
+30
+
+---PAGE BREAK---
+As emphasized in [67], the PTs studied nonperturbatively to date are not strong enough
+to be detected by LISA. To go to larger α, larger couplings are required, which decreases the
+accuracy of the dimensional reduction. Future work is therefore required to make nonpertur-
+bative predictions for LISA in the 2HDM.
+Similarly to the case of a second doublet added to the SM, the scenario with an additional
+scalar triplet [120] may also be dimensionally reduced to a SM-like EFT at long distances,
+and predicts a region of ﬁrst-order PTs. As for the doublet and singlet models, the viability
+of the DR in the ﬁrst-order PT region may be an issue (see [120] for details). The authors
+argue in favour of using a diﬀerent 3D target theory, implying future numerical work to be
+done to pin down the corresponding phase diagram and extract nonperturbative predictions
+relevant for LISA.
+6.3
+SUSY-extended SM
+The previous two subsections studied LISA’s sensitivity to extensions of the SM with minimal
+new ﬁeld content and motivated mostly from a bottom-up perspective. However, LISA can
+also probe richer UV-complete scenarios. The classic example is supersymmetry (SUSY).
+SUSY is one of the most investigated embeddings of the SM. Several features make SUSY
+compelling: it predicts gauge coupling uniﬁcation, provides a variety of DM candidates, and
+is an important ingredient in theories of quantum gravity such as string theory. Furthermore,
+SUSY arises naturally in generalizing the Poincare algebra. As a result, there are no quadratic
+divergences in the scalar sectors of SUSY models, while the remaining logarithmic divergences
+are not sensitive to e.g. the Planck cutoﬀbut instead to the (potentially much lower) SUSY
+breaking scale. All radiative corrections are then small when the SUSY breaking scale is
+close to the TeV scale, in which case the predicted EW scale is of the order of the W and Z
+boson masses without requiring tuning between the low-energy parameters. Intriguingly, low-
+scale SUSY breaking implies light new physics, with obvious implications for EW symmetry
+breaking and, possibly, the dynamics of the EWPT.
+The MSSM is the simplest supersymmetric extension of the SM. In this setup the EWPT
+can be strongly ﬁrst-order if the two stops (scalar top partners) feature small mixing and one
+of the two is lighter than the top quark [121–124]. Interestingly enough, naturalness also favors
+light stops. However light stops are in strong tension with current LHC measurements: a light
+stop with small mixing boosts the ratio between the Higgs gluon-fusion and vector-boson-
+fusion signal strengths. Furthermore, light stops are highly constrained by direct searches
+at ATLAS and CMS [125–129]. Despite potential loopholes in the experimental limits (see
+e.g. [130]), it seems unfeasible to overcome all current constraints simultaneously and so a
+strong ﬁrst-order EWPT in the MSSM can be considered essentially ruled out.
+Non-minimal supersymmetric scenarios, on the other hand, can still feature strong ﬁrst-
+order EWPTs, the singlet extension of the MSSM being a prominent example. Numerous
+analyses have investigated the EWPT in this setup before the LHC constraints on SUSY
+became as stringent [131–134]. As a proof of principle, one can however check that, although
+31
+
+---PAGE BREAK---
+Benchmark
+PT parameters
+α
+β/H∗
+vw
+T∗/GeV
+SUSY1 (1A)
+0.037
+277
+0.95
+112
+SUSY1 (1B)
+0.066
+106
+0.95
+95
+SUSY1 (1C)
+0.105
+33.2
+0.95
+82
+SUSY1 (1D)
+0.143
+6.0
+0.95
+76.4
+SUSY2 (2A)
+0.050
+830
+0.73
+135
+SUSY2 (2B)
+0.040
+2914
+0.72
+146
+SUSY3 (3A)
+0.062
+214
+0.5
+74
+SUSY3 (3B)
+0.045
+200
+0.5
+79
+SUSY4 (4A)
+0.22
+57
+0.95
+48
+Table 2: Benchmarks scenarios for SUSY embeddings. Note that the listed values of vw are quoted
+from the original references and are not necessarily realistic (see the main text). For the analysis of
+our benchmark points we simply take vw ≃0.95 absent more detailed microphysical calculations of
+vw in these models.
+tuned, there exists a region of parameter space compatible with a very strong EWPT and that
+would avoid detection at the LHC. To arrive at such scenarios, one must build a superpotential
+allowing all new physics irrelevant for the EWPT to be above the LHC energy reach. This
+implies that an exact Z2 symmetry cannot be enforced on the singlet [135]. The 125 GeV
+Higgs and the singlet therefore mix. This mixing must be tuned to a small value to mimic the
+SM-like Higgs signal strengths. As a result of these considerations, at low energy the theory
+looks like the singlet extension of the SM with an approximate Z2 symmetry (see Sec. 6.1). In
+particular EW symmetry breaking can proceed via a two-step EWPT with ultra-relativistic
+bubbles [135]. The benchmark points in Table 2 labeled SUSY1 are taken from [135] and
+represent this setup.
+From the standpoint of LISA, it is interesting to note that singlet extensions of the MSSM
+do not necessarily predict ultra-relativistic bubbles. In contrast to the aforementioned split
+scenario, one can instead assume the electroweakinos to be light and obtain a EWPT strong
+enough to be accessible by LISA through the mechanism discussed previously [136,137]. The
+presence of these new degrees of freedom in the thermal bath increases the friction between
+the bubble wall and the plasma. Moreover, they can provide a new source of CP-violation.
+Thus, at least in principle, all the ingredients required by electroweak baryogenesis could be
+present [134,138–141]. In Table 2, the benchmark models labeled SUSY2 and SUSY3 corre-
+spond to this light electroweakino scenario and are taken from [136] and [137] respectively24.
+It remains an open question whether such benchmark models, characterized by large CP-
+24As discussed in the original articles, the obtained values of the bubble velocities are not computed mi-
+crophysically and therefore are subject to large uncertainties. [136] determines vw as the Chapman-Jouguet
+speed, which underestimates vw in the detonation regime (see Sec. 3.3). [137] instead does not compute vw
+and provides benchmark points assuming an optimistic and pessimistic value of vw in the deﬂagration regime.
+32
+
+---PAGE BREAK---
+violating sources and light electroweakinos, would be able to produce the observed baryon
+asymmetry of the Universe while remaining consistent with bounds from electric dipole mo-
+ment (EDM) experiments [142,143] and collider searches [144–148]. Such limits are already
+very stringent. If they become stronger, these benchmark points would most likely be ruled
+out before LISA ﬂies.
+A further step into non-minimality consists of introducing custodial triplets. As a result
+of the custodial symmetry, these ﬁelds can acquire large VEVs without spoiling EW precision
+tests [149,150]. As a consequence, the structure of the scalar potential can diﬀer signiﬁcantly
+from that of the MSSM, and a tree-level barrier between the diﬀerent phases could exist.
+Very strong PTs with ultra-relativistic bubble velocities can then occur [151]. Even if light,
+the triplets can evade current LHC bounds as well as relax some of the tension between light
+stops and LHC data [152, 153]. The benchmark scenario SUSY4 in Table 2 corresponds to
+this setup [151].
+Finally, we remark that relaxing minimality can also result in modiﬁcations of theory
+at high energies. Such extensions may not impact the phenomenology at experimentally-
+accessible scales but instead could explain the origin of the “accidental” tunings perceived at
+low energy in the examples we have discussed25. In other words, perhaps the lack of tuning
+at low energy is not a robust guiding principle. Here we refrain from judging this argument
+or assessing the plausibility of the SUSY benchmark scenarios discussed above; we simply
+take the SUSY benchmark points that the literature has identiﬁed as interesting from the
+standpoint of GW signatures, and update their detection prospects in light of the new, more
+precise predictions discussed in Sec. 3.
+Fig. 6 summarizes our ﬁndings for SUSY models summarized in Table 2. These results
+show that LISA is capable of probing many of the proposed benchmark scenarios, provided vw
+is large enough. In fact, were vw below the speed of sound, our conclusions would be radically
+diﬀerent. Existing calculations, however, suggest that whenever the EWPT is strong and
+the plasma does not diﬀer much from that of the SM, wall velocities larger than the speed
+of sound arise. This is indeed what happens in SUSY scenarios that reduce to the singlet
+model at low energies where the wall velocity has been directly computed [24]. We hence
+assume vw = 1 in Fig, 6 which, for PTs of these strengths, is likely to be more realistic
+than the Chapman-Jouguet speed assumed in most analyses. We emphasize, however, that
+microphysical calculations vw in these models should be done to obtain more accurate results.
+6.3.1
+Non-perturbative PT analysis
+Lattice studies based on the 3D EFT approach have also been pursued for supersymmetric
+scenarios. Due to the wide range of possible spectra in SUSY models and the eﬀort that each
+lattice analysis requires, non-perturbative studies of the EWPT in the context of SUSY are
+Notice also that [137] evaluates α as the normalized latent heat. We thank Ligong Bian, Huai-Ke Guo and
+Jing Shu for communications about the benchmark scenarios used in their study [136].
+25For instance the so-called µ problem, which implies that heavy Higgsinos are not natural, is not a generic
+feature of SUSY embedding [154–156].
+33
+
+---PAGE BREAK---
+Figure 6: SUSY benchmark points in the (α, β/H) plane for the benchmark models listed in Table
+2, with T∗rounded to 80 GeV and g∗to 108.75. For the wall velocity we assume vw = 0.95.
+not exhaustive. Those that do exist, however, suﬃce to highlight some overall trends when
+comparing between perturbative and non-perturbative predictions.
+The structure of the MSSM 3D Lagrangian depends strongly on the assumed spectrum.
+The non-trivial dimensional reduction to 3D needs to be done on a case-by-case basis, de-
+pending on which degrees of freedom are assumed to be heavy. The MSSM 3D theory is
+therefore known only in a few regimes. The investigated regimes include the case in which all
+third generation squarks are light [94], the case where the right-handed stop is much lighter
+than all the other squarks [117, 157, 158], and the case where all the Higgs bosons are light
+(resembling the 2HDM) with or without a light slepton [157].
+In the MSSM, a 3D perturbative computation tends to ﬁnd stronger EWPTs than those
+obtained in the standard 4D approach. The same feature arises from lattice simulations run
+on the 3D theories [121,159]. In particular, under similar assumptions concerning the heavy
+degrees of freedom, the lattice results relax the upper bound on the right-handed stop by
+around 30% with respect to the 4D prediction (cf. [121,128]). This sizable diﬀerence is however
+not suﬃcient to circumvent the LHC constraints on light stops, so that the aforementioned
+experimental tension persists.
+Non-perturbative analyses of the EWPT in extensions of the MSSM have not been explic-
+itly performed. The 3D EFT of the singlet extension of the MSSM can be found e.g. in [157]
+but we are not aware of lattice simulations based on this framework. The results from sim-
+ulations run to explore other low-energy theories (see Sec. 6.1.1 and Sec. 6.2.1) could be
+reinterpreted in terms of the supersymmetric singlet extension. It is however unclear whether
+such an eﬀort would not be premature without any experimental hint favoring a particular
+MSSM extension instead of other SUSY or non-SUSY setups. In any case, only perturbative
+34
+
+---PAGE BREAK---
+results are currently available for predictions relevant for LISA.
+6.4
+EFT approach to extensions of the SM
+The models discussed in the previous subsections assumed the presence of new degrees of
+freedom present near the electroweak scale, however this need not be the case to obtain an
+observable signal at LISA. If the scale of new physics is suﬃciently high, the impact of the
+new states on the EWPT can be parametrized and studied by means of an EFT. In this SM
+Eﬀective Field Theory (SMEFT), the Higgs potential is augmented by terms of higher power
+in the Higgs ﬁeld, suppressed by the scale of new physics, which we denote by f (not to be
+confused with the GW frequency). This approach allows one to study the generic impact of
+new physics, in our case on the EWPT, without relying on speciﬁc models.
+We write the Higgs doublet as H = [0, (h + v)/
+√
+2]T, with h being the physical Higgs
+boson and v = 246 GeV the Higgs VEV. In the following we consider operators of mass
+dimension up to eight, so that the Higgs potential reads
+Vtree(h) = −µ2
+H|H|2 + λh|H|4 + c6
+f 2|H|6 + c8
+f 4|H|8
+= −1
+2µ2
+Hh2 + 1
+4λHh4 + c6
+8f 2h6 +
+c8
+16f 4h8 .
+(38)
+If the eﬀective theory is valid, operators with even higher mass dimension will not modify the
+results. Here the scale of new physics, f, is taken to be about a TeV, and the Wilson coeﬃ-
+cients, c6,8, are expected to be of order one. We take c6/f 2 and c8/f 4 as input parameters,.
+The remaining parameters, i.e. the mass squared term and quartic coupling, are then ﬁxed
+by requiring that the one-loop Higgs potential, V (h) = Vtree(h) + ∆VCW(h), has a minimum
+at ⟨h⟩= v, at which the physical Higgs mass is mh ≃125 GeV.
+To study the EWPT in this model, we include the one-loop thermal corrections from the
+W and Z bosons, and the top quark (the latter is the only particle that is relevant for the
+zero temperature corrections). It has been shown [116] that, to a good approximation, key
+properties of the PT, such as T∗, φ∗, α and β depend mostly on an eﬀective scale of new
+physics, f/√c, deﬁned by
+c
+f 2 ≡c6
+f 2 + 3
+2v2 c8
+f 4
+(39)
+rather than on f, c6 and c8 separately.
+So eﬀectively this model has only a single free
+parameter that governs the physics relevant for GW production.
+The ﬁrst study of the EWPT in the SMEFT goes back to the early 1990s [160], where it
+was realized that the EWPT can be strongly ﬁrst order if the scale of new physics is below
+a TeV, even for the observed Higgs mass. Later, the parameter space was mapped out in
+more detail [161,162]. It was realized in particular that this scenario leads to a considerably
+enhanced Higgs self coupling [161] and electroweak baryogenesis was investigated [163].
+A strong ﬁrst-order EWPT in the SMEFT is made possible by the presence of the extra
+operators in the potential, which can result in a barrier separating the origin from the Higgs
+35
+
+---PAGE BREAK---
+phase at zero temperature. For instance, the quartic coupling can be chosen to be negative,
+and the potential will be stabilized by the higher dimensional operators. There is an equivalent
+way of interpreting the mechanism of the PT. The higher dimensional operators break the
+link between the Higgs mass and the depth of the electroweak minimum [164]. As the eﬀective
+scale of new physics is lowered, the electroweak minimum becomes shallower. The transition
+then happens at lower temperature with a larger jump in the Higgs ﬁeld. This generally leads
+to stronger PTs, as is also observed in e.g. the 2HDM (see Sec, 6.2) or the singlet extension
+(see Sec. 6.1).
+It is interesting to ask whether or not the eﬀective theory correctly describes the impact
+of new physics on the PT in concrete models. This was done in [92] for the singlet extension,
+and it was found that the EFT correctly reproduces the PTs of the full model only in a small
+part of the parameter space. In [165] it was found that the eﬀective theory also has limited
+validity when computing the baryon asymmetry. Finally, it has been shown in [116] that
+only in special perturbative UV completions, such as a custodial electroweak quarduplet,
+it is possible to generate the necessary operators in the Higgs potential without violating
+phenomenological constraints, such as EW precision tests. Despite these caveats, the eﬀective
+theory is still a useful toy model to study properties of the EWPT in a simple manner.
+The SMEFT is amongst the few models where the bubble wall velocity has been computed.
+This was ﬁrst done in [166], using results from the SM. Reﬁned calculations were presented
+in [23,25]. The calculations show that, as the transition gets stronger, the velocity turns from
+sub- to supersonic, and eventually satisﬁes the “old” runaway criterion [27] before reaching
+the metastability region.
+GW production at the EWPT in the eﬀective theory has been studied initially in [11,162].
+It was recently revisited in [167] and [116], and most of the results presented below are taken
+from the latter reference. All of these studies show that the EWPT in this setup can generate
+GWs that can be probed by LISA.
+On the left hand side of Fig. 7 we show the PT temperature T∗, deﬁned by S3/T∗∼100;
+as well as the value of φ∗/T∗as a function of the eﬀective scale. In the right panel of the same
+ﬁgure we show a scatter plot of α and β generated by PTPlot, along with the corresponding
+LISA SNR curves. Since the PT temperature changes with f/√c, we plot sensitivities for
+two groups of points: “Scenario A”, for which T∗is closer to ∼50 GeV, and “Scenario B”,
+for which T∗= 100 GeV provides a more accurate description.
+As the eﬀective scale of new physics, f/√c, is lowered, the PT gets stronger, β becomes
+smaller and the wall velocity increases. At f/√c ∼540 GeV, the PT no longer completes,
+i.e. the symmetric phase becomes metastable. At even lower values f/√c < 480 GeV, the
+electroweak minimum ceases to be the global one. For f/√c ≲650 GeV the bubble expand as
+detonations. Larger values lead to deﬂagrations. At f/√c ≲580 GeV the bubble expansion
+satisﬁes the “old” runaway criterion of [27]. The relatively small value of f/√c justiﬁes the
+inclusion of operators of dimension larger than six.
+36
+
+---PAGE BREAK---
+500
+600
+700
+800
+f/√c [GeV]
+100
+101
+102
+T∗[GeV]
+φ∗/T∗
+Figure 7: LEFT: Values of T∗and φ∗/T∗as a function of the eﬀective scale f/√c (note that the
+parameter f appearing here should not be confused with the GW frequency). RIGHT: Scatter plot
+on the plane of α and β/H. The blue (orange) dots, labelled “Scenario A” (“Scenario B”), correspond
+to scenarios with T∗∼50 GeV (T∗∼100 GeV). The wall velocity is taken to be vw = 0.95.
+The eﬀective interactions also modify the Higgs trilinear coupling [116],
+λ3 ∼λ3,SM
+
+1 + v2
+m2
+h
+
+2c6
+v2
+f 2 + 4c8
+v4
+f 4
+
+.
+(40)
+Such modiﬁcations are potentially testable in double Higgs production at colliders. However,
+the still very small cross section makes all values compatible with a strong ﬁrst-order EWPT
+impossible to probe at the LHC. A sizable region of this parameter space could be instead
+tested at a future Higgs factory, such as the FCC-ee [168]. All values could be probed at a
+future 100 TeV hadron collider, such as the FCC-hh [169]. All in all, LISA will provide the
+ﬁrst actual test of the scalar potential of the SMEFT.
+6.5
+Models with warped extra dimensions
+The scenarios discussed thus far all rely on weakly-coupled new physics and polynomial scalar
+potentials which typically predict α signiﬁcantly smaller than 1. However, there exist com-
+pelling and well-motivated frameworks that can generically give rise to large signals at LISA
+featuring strong dynamics and non-polynomial potentials which are the subject of the next
+two subsections. We start with models involving warped extra dimensions.
+Five-dimensional warped models have attracted much attention in the literature as they
+provide a natural and well-motivated framework for a very strong ﬁrst-order PT [28–36,39,
+170]. In the eﬀective 4D language, this PT involves the radion scalar ﬁeld whose potential
+stabilizes the interbrane distance determining the size of the slice of Anti-de Sitter space
+37
+
+---PAGE BREAK---
+in Randall–Sundrum models. The VEV of the radion ﬁeld describes the position of the IR
+(i.e. TeV) brane emerging from inﬁnity. This class of models has been among the most popular
+solutions to the hierarchy problem. As the Higgs emerges together with the IR brane, the
+EW scale naturally emerges as the Planck scale suppressed by a geometric (warped) factor.
+The masses of the Kaluza–Klein resonances are around the TeV for solving the hierarchy
+problem. As a result, T∗is thus the TeV scale suppressed by some additional parametric
+factors. For T∗below the EW scale, the radion PT triggers EW symmetry breaking, with
+intriguing implications for EW baryogenesis and LISA.
+The study of these scenarios is connected to Composite Higgs (CH) models discussed
+in the next section.
+Actually, if the conjectured AdS/CFT duality could be extended to
+any warped scenario, the diﬀerentiation between Randall–Sundrum and CH models would
+be artiﬁcial. The radion PT could be studied in the 4D language and determined as the
+deconﬁnement/conﬁnement PT driven by the dilaton, the Goldstone boson of the conformal
+invariance of the 4D theory.
+As such, the radion is lighter than the other Kaluza–Klein
+resonances and it is a justiﬁed approximation to neglect the eﬀects of the latter in the zero-
+temperature 4D eﬀective scalar potential.
+The scalar potential of the radion exhibits two generic key features: it is very shallow
+due to near-conformal invariance, and the sizeable thermal barrier due to the large number
+of CFT degrees of freedom becoming massive during the conﬁnement PT leads to signiﬁcant
+supercooling and may even prevent the PT. These features are tightly connected, as observed
+in [28–35,39]: both can be relaxed by modulating the backreaction on the AdS metric induced
+by the conformality-breaking terms localized on the TeV brane. As a consequence, the PT
+parameters can take on a wide range of values. In particular, unless inducing extremely small
+or large backreactions on the metric, the hierarchy Tn ≪Tc arises, with Tc near the TeV scale
+and Tn some orders of magnitude below Tc.
+One may wonder whether the TeV-brane terms breaking conformality are necessary to
+guarantee the occurrence of the PT. As recently noticed in [36], such terms are not required.
+In all Randall-Sundrum models where the SM gauge ﬁelds, in particular the SU(3) gauge
+bosons, live in the bulk, the running of the QCD coupling is a function of the 5D radius. The
+QCD scale is therefore a function of the VEV of the radion. These eﬀects, which had been
+ignored in the previous literature, necessarily inﬂuence the radion potential and contribute to
+remove most of the thermal barrier at temperatures close to the QCD scale. The net result is
+that if the Universe is trapped in the conformal minimum, at some point the temperature of
+the (expanding) Universe reaches that of the QCD PT, the above eﬀect becomes sizeable and
+the radion is released from the false minimum. It follows that the parameter region leading to
+a strong radion PT is far larger than that obtained by overlooking the eﬀects of the radion on
+the QCD scale. In particular, the previously overlooked region of parameter space naturally
+exhibits a radion PT that is extremely supercooled (Tn ∼ΛQCD ≪Tc) and extraordinary
+strong [36]. In this framework, the EWPT is naturally induced by QCD conﬁnement and
+provides a compelling target for LISA.
+The preceding discussion suggests whether or not terms breaking conformality on the
+38
+
+---PAGE BREAK---
+Figure 8: Detection prospects for some illustrative benchmark points that arise in Randall-Sundrum
+models. The temperature T∗is rounded to 500 GeV and g∗matched the SM value. We set vw = 0.95.
+Note that the numerical simulations of sound wave production have never been tested for the huge
+values of α which occur in CH models.
+Here we present the result of a naive extrapolation of
+simulation results to huge α values, but it should be kept in mind that there are large uncertainties
+for the modelling of the GW power spectrum and that the formalism used to estimate the GW
+spectrum may no longer apply in that supercooled regime.
+TeV brane are present (i.e. whether Tn ∼ΛQCD or Tn ≫ΛQCD) has an important impact
+on the corresponding phenomenological predictions. In particular, the temperature at which
+the PT occurs, be it near the QCD-, EW-, or TeV-scale, can have signiﬁcant implications
+for e.g. baryogenesis or entropy conservation in the early Universe 26.
+However, diﬀerent
+nucleation temperatures do not lead to sizable diﬀerences in the GW predictions relevant for
+LISA, since the stochastic GW background signal is sensitive to T∗and not to Tn. Warped
+models, with or without the conformality-breaking TeV-brane terms, all lead to a powerful
+GW signal with a similar spectrum and peak frequency. We can therefore take the benchmark
+points quoted in Table 1 of [39] and consider them as representative of a wide range of
+warped setups. Their detection prospects are displayed in Fig. 8, where the GW predictions
+derived from the simulations at α ≲1 (see Sec. 3) have been extrapolated well beyond their
+regime of validity. However, the qualitative outcome of the ﬁgure is likely independent of the
+SNR uncertainties, and all benchmark points are expected to lie within the LISA sensitivity
+region 27.
+26For instance, if the EWPT occurs at QCD temperatures, cold EW baryogenesis can be realized with the
+CP violation sourced by the QCD axion [171]. A QCD-scale EWPT also impacts the predictions for the QCD
+axion relic abundance [40,171].
+27For LISA, the result is even more promising than the one obtained in [39,172] due to the updated LISA
+sensitivity curve and stochastic GW background predictions that we consider here.
+39
+
+---PAGE BREAK---
+6.6
+Composite Higgs models and conﬁning phase transitions
+Another class of models giving rise to signals at LISA with non-polynomial potentials are CH
+scenarios. CH models provide an alternative to SUSY for solving the hierarchy problem and
+are prime targets for LHC searches (see [173] for a review). In this context, the Higgs is a
+pseudo-Nambu Goldstone Boson (pNGB) arising from the global symmetry breaking pattern
+G →H in a new strongly coupled sector, characterised by the coupling eg and the conﬁnement
+scale f, whose currently preferred value is f ≃0.8 TeV [174]. To ensure a custodial sym-
+metry that suppresses oblique corrections to EW precision tests, the minimal possible coset
+is SO(5)/SO(4). Larger groups are also viable, such as SO(6)/SO(5) or SO(7)/SO(6), in
+which case the Higgs is accompanied by other light pNGBs, in particular SM singlets. Light
+scalars in addition to the Higgs are therefore natural in these constructions.
+The Higgs potential is generated from the explicit breaking of the global symmetry G by an
+elementary sector and communicated to the composite sector from which the Higgs originates
+through elementary/composite interactions. The scalar potential arises at one-loop, mainly
+from fermionic loops. Due to the pNGB nature of the Higgs, the potential is a trigonometric
+function of the ratio h/f, with the generic form for the minimal CH scenario given by [173]
+V [h] ∼f 4 
+α sin2(h/f) + β sin4(h/f)
+
+.
+(41)
+Imposing the correct EW symmetry breaking scale h = v and Higgs mass leads to
+α = −2β sin2(v/f) ,
+m2
+h ≈8f 2 sin2(v/f) β ,
+(42)
+meaning that |α/β| = 2 sin2(v/f). This quantity needs to be small since EW precision tests
+and Higgs coupling measurements constrain sin2(v/f) ≲0.1 −0.2 [174]. Therefore, contrary
+to the generic expectation α ≳β [175], α has to be suppressed with respect to β, which
+requires an accidental cancellation. This is the irreducible tuning of CH models [176].
+The EWPT in CH models has primarily been studied by following an EFT approach
+[161, 162, 177], by expanding (41) in h/f up to dimension-six operators. In this case, it is
+found that a ﬁrst-order EWPT suﬃciently strong for EW baryogenesis can occur provided
+than f is below ∼1 TeV, as discussed in Sec. 6.4 of this report. The accuracy of an EFT
+approach to the study of the EWPT in such scenarios is therefore limited. More recently,
+the EWPT in some speciﬁc CH realisations has been investigated. In CH models, since the
+Higgs arises only when a non-zero condensate χ forms, the conﬁnement PT and the EWPT
+are naturally linked. Nevertheless, until recently, past studies considered them separately,
+focusing either on the conﬁnement PT, described by the dynamics of a dilaton/radion and
+relying on a 5D description [28–36,39] as discussed in the previous subsection, or assumed that
+the EWPT takes place after the conﬁnement of the strongly-coupled sector [69,162,177,178].
+The conﬁnement PT is generically very strong, and is known to produce very large GW
+signals [29,32,39]. To study the EWPT in CH, there are therefore two approaches:
+• Assume that the conﬁnement PT happened well before the EWPT and study the two
+PTs independently. In this case, EW baryogenesis and GW production can occur by
+40
+
+---PAGE BREAK---
+Figure 9: Sketch of the diﬀerent possible PT trajectories in CH models.
+The ﬁeld χ sets the
+magnitude of the strong sector condensate (corresponding to f today) and h is the Higgs VEV. The
+blue points correspond to (meta)stable vacua of the theory, and the black lines show possible PT
+trajectories. Path (1) would correspond to the case where the reheat temperature after the new
+strongly-coupled sector conﬁnes is above the EWPT temperature. The EWPT then happens as in
+the standard case, after and independently of the strongly-coupled sector. In the other cases (2)
+and (3), the reheat temperature is low enough so that EW symmetry is broken at the same time
+as the strong-sector. While some early papers have implicitly assumed a path of the type (2) in
+Randall–Sundrum models, the calculation of the actual trajectory has been done only recently in
+[37,38] and follows (3). Figure taken from [38].
+invoking a non-minimal CH setup featuring an extra singlet [69, 178].
+This case is
+schematically displayed as (1) in Fig. 9.
+• Consider the light dilaton/radion window, in which case the conﬁnement and EW PTs
+can occur simultaneously. In this case, the EWPT is automatically strongly ﬁrst-order,
+and this scenario also features CP-violation from varying Yukawa couplings during the
+EWPT, allowing for viable EW baryogenesis even in minimal CH scenarios [37, 38].
+This case is schematically represented by paths (2) and (3) in Fig. 9.
+We brieﬂy discuss these two cases below in the context of LISA.
+6.6.1
+A strong ﬁrst-order EWPT from an extra singlet in non-minimal cosets
+In both the SO(6)/SO(5) [178,179] and SO(7)/SO(6) [69] CH models, the EWPT proceeds
+mainly in two steps, because the new singlet S is mostly pseudoscalar and consequently
+S →−S is an approximate accidental symmetry of the potential.
+The dynamics of the
+EWPT is therefore well captured by the simpliﬁed model of Sec. 6.1. The main diﬀerences
+with respect to the generic extra singlet case are:
+41
+
+---PAGE BREAK---
+1
+2
+5
+10
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+4
+6
+8
+10
+12
+14
+2.7
+3.0
+3.4
+4.0
+b
+a
+h/T
+N
+mχ (TeV)
+m*
+(TeV)
+Figure 10: PT strength (h/T) contours (dashed lines) in CH models for which the EWPT and the
+conﬁnement PT occur simultaneously, for a meson-like dilaton. Figure taken from [37]. In the red
+dashed region, no viable EW minimum can be found or the Higgs-dilaton mixing leads excessively
+large deviations in the Higgs couplings. In the blue region, the baryon asymmetry is washed out
+after reheating. The baryon asymmetry for benchmark point a (b) is |ηB| × 1010 ∼5–5.5 (4–4.5).
+(i) In CH scenarios, not all values of a2 and b4 are equally likely. Considering explicit mod-
+els, [69,180] showed that the most common values are in the range ∼0.1–0.5. This result
+can be roughly understood from a term in the scalar potential [eg2(Ncyt)δ/(4π)2]S2|H|2.
+Indeed, a2 ∼3eg2/(4π)2δ ≳0.2 for eg ≳3; the same reasoning applies for b4. Therefore,
+according to the results discussed in Sec. 6.1, only small S masses are expected to trigger
+a strong ﬁrst-order EWPT.
+(ii) Contrary to the elementary singlet model, in CH scenarios the presence of heavier
+fermionic resonances of mass m∗∼egf is unavoidable. This opens a complementary
+probe of these models in addition to GWs. Current direct searches exclude m∗< 1–1.4
+TeV, depending on the ﬁnal state [181]. Moreover, estimations of eg and f based on
+actual observables rather than on ﬁne-tuning arguments (e.g. in CH models with DM)
+hint to m∗≳2 TeV. Such values are likely out of the LHC reach, but accessible at
+future hadron colliders [180].
+The interactions between the new singlet and the SM fermions induce new sources of CP
+violation for EW baryogenesis which are constrained by EDMs (generated at two loops) and,
+to a lesser extent, from LEP data. They are phenomenologically viable provided that the
+new singlet is close enough in mass to the Higgs boson [178]. In summary, however, the
+prospects for exploring this class of CH models at LISA are essentially those of the singlet
+model, discussed in Sec. 6.1.
+42
+
+---PAGE BREAK---
+10
+1000
+1000000
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+4
+6
+8
+10
+12
+14
+2.7
+3.0
+3.4
+4.0
+α
+N
+mχ (TeV)
+m*
+(TeV)
+60
+100
+200
+200
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+4
+6
+8
+10
+12
+14
+2.7
+3.0
+3.4
+4.0
+β
+H
+N
+mχ (TeV)
+m*
+(TeV)
+3
+10
+100
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+4
+6
+8
+10
+12
+14
+2.7
+3.0
+3.4
+4.0
+Tc
+Tn
+N
+mχ (TeV)
+m*
+(TeV)
+Figure 11:
+PT parameters relevant for LISA in CH models with Higgs-dilaton interlinked
+dynamics. LEFT: Contours of α. CENTER: Contours of β/H. RIGHT: Ratio of the critical
+temperature to the nucleation temperature, for a glueball dilaton (ﬁgure taken from [38]).
+6.6.2
+A strong ﬁrst-order EWPT from Higgs-dilaton interlinked dynamics
+CH scenarios do not need to feature an additional singlet to give rise to signals at LISA.
+Instead, one can assume that the strongly-coupled sector is nearly conformal above the TeV
+scale as motivated by ﬂavour physics [182]. Conﬁnement is then associated with the spon-
+taneous breaking of conformal invariance. This gives rise to a pNGB, the dilaton, which we
+denote as χ. When the explicit breaking of conformal invariance is suﬃciently small, the
+dilaton can be signiﬁcantly lighter than the conﬁnement scale, and this justiﬁes studying the
+dynamics of χ and h together. This can be done by using a large N expansion of the un-
+derlying strongly-coupled gauge theory where N represents the number of colors. Below the
+scale of the heavy resonances m∗∼egf, the PTs can be studied as a function of two main
+parameters: N and mχ. As shown in Fig. 10, h/T can be signiﬁcantly larger than 1 in a large
+region of parameter space as the strength of the EWPT is inherited from the supercooled
+dynamics of the dilaton. Additionally, it can be shown that the Yukawa couplings vary across
+the bubble wall, providing suﬃcient CP-violation for EW baryogenesis [37,38]. If the dilaton
+is light enough, the reheat temperature can still be below the EW scale, such that the baryon
+asymmetry is not washed out.
+The key point that distinguishes these models from typical EWPT scenarios is the fact that
+a large number of degrees of freedom become massive during the conﬁnement PT. This pro-
+duces a large thermal barrier in the one-loop eﬀective potential when the tree-level potential
+is very shallow, making the PT naturally very supercooled [33]. In most of the corresponding
+region of parameter space, the values of α are very large and β/H can be quite small. This
+is illustrated in Fig. 11 corresponding to the case of a glueball-dilaton, for which α can be as
+large as 106. Note that these results can be easily generalised to conﬁning phase transitions
+not necessarily linked to the Higgs, leading to strong signals of GW at higher frequencies. We
+also stress that the bubble wall velocity has never been computed in this setup nor in its 5D
+dual. On the one hand, we expect it to be large due to the substantial supercooling. On the
+other hand, we also expect signiﬁcant friction eﬀects due to the large number of degrees of
+43
+
+---PAGE BREAK---
+Figure 12: SNR for speciﬁc benchmark points of CH models. The value of g∗is as in the SM while
+T∗∼150 GeV. We set vw = 0.95. Note that the numerical simulations of sound wave production
+have never been tested for the huge values of α which occur in CH models. Here we present the result
+of a naive extrapolation of simulation results to huge α values, but it should be kept in mind that
+there are large uncertainties for the modelling of the GW power spectrum and that the formalism
+used to estimate the GW spectrum may no longer apply in that supercooled regime.
+freedom acquiring a mass via strong coupling to the dilaton. The typical magnitude of the
+bubble wall velocity therefore remains an open question in these scenarios.
+In summary, CH models generically predict a strong PT at the TeV scale from conﬁnement,
+leading to large GW signals at LISA (see Fig. 12). In the light dilaton regime, the conﬁnement
+PT and the EWPT happen simultaneously, a scenario which opens new opportunities for
+baryogenesis and is testable at the LHC by searching for the light dilaton and also in electron
+EDM experiments. Non-minimal CH models predict light singlet scalars playing a role in
+baryogenesis with additional signatures at the LHC or EDM experiments.
+This section ends our overview of PTs tied to the EW scale. There is one qualitatively
+diﬀerent scenario which we have not discussed, and concerns the non-trivial possibility that
+the EWPT occurs at a temperature signiﬁcantly higher than the typical ∼160 GeV via
+a high-temperature symmetry non-restoration eﬀect: the Higgs, through the coupling to
+other scalar ﬁelds, gains a negative thermal mass squared and hence a VEV proportional to
+the temperature. This possibility has been discussed recently in [183–185]. The GW peak
+frequency associated with the EWPT would thus be shifted to frequencies higher than usual.
+Speciﬁc UV completions and their implications for GW signals still remain to be investigated
+in this context.
+44
+
+---PAGE BREAK---
+6.7
+First order PTs in a dark sector
+LISA can also probe sectors of new physics not tied to the EW scale. More than 95% of the
+energy density in our Universe today is invisible, in the form of DM and dark energy. It is
+therefore quite plausible that a dark or hidden sector exists which today is fully decoupled
+from the SM, and which might explain either or both phenomena. Hidden sectors are also
+ubiquitous in UV complete theories of quantum gravity such as string theory. Here we take
+a more pragmatic approach, and include in our deﬁnition of “dark sectors” all theories that
+are suﬃciently weakly coupled to the SM such that they remain undetected experimentally
+and leave the EWPT largely unaﬀected. A cosmological PT in such a hidden sector can in
+principle occur at any temperature, independent of the weak scale, i.e. the peak of the GW
+signal can be shifted almost arbitrarily (we will revisit this statement below).
+The possibility of detecting GWs from a PT in a dark sector was explored in [186] in models
+of composite dark sectors, and further explored in a variety of other DM scenarios in [69,187–
+198]. While of course any hidden sector could be engineered to feature a cosmological PT,
+scenarios in which the PT serves a speciﬁc purpose can yield speciﬁc predictions for GW
+signals at LISA. Examples include models where the baryon asymmetry is generated by a
+PT in the dark sector [189], scenarios with spontaneous breaking of a gauge symmetry that
+guarantees DM stability [195,196], scenarios where the PT is crucial for obtaining the correct
+relic abundance [199,200], or models explaining ﬂavour hierarchies [201]. Another interesting
+opportunity that arises in this context is the study of anisotropies in the stochastic GW
+background that could be detectable for the strongest PTs [202].
+If the stochastic GW
+background remains the only observable signal from the dark sector, it would furthermore
+be important to understand which of its properties can be inferred from the amplitude and
+shape of the signal in the future, which was explored for example in [194].
+While LISA is most sensitive in the frequency range corresponding to weak- to TeV-scale
+PTs, a suﬃciently strong signal can be detected for a large range of PT temperatures. In
+Fig. 13 we show the regions detectable by LISA with an SNR ≥10. Very strong signals arising
+from PTs occurring at temperatures from below the GeV scale up to the PeV scale (106 GeV)
+are detectable, with the highest sensitivity is to PTs around the weak scale, as expected.
+Shown in Fig. 13 are the predicted sensitivity considering only the envelope approximation,
+assuming that the PT exhibits runaway behaviour in the dark sector (red region) and the case
+of a very strong transition in a plasma (α = 0.1, vw = 1) with sound waves dominating the
+GW spectrum. Before discussing some concrete examples of models that fall in the detectable
+region, a few subtleties regarding PTs in the hidden sector should be noted.
+6.7.1
+Subtleties with dark sector PTs
+Fig. 13 includes the implicit assumption that the temperature of the hidden sector at the time
+of the PT is equal to that of the SM photons. While this is a reasonable assumption for most
+BSM scenarios, the dark sector might instead be thermally decoupled from the SM at the
+time of the PT. The ratio of temperatures rT = Tdark/Tγ, evaluated at Tdark = T∗, could in
+45
+
+---PAGE BREAK---
+102
+1
+10-2
+106
+104
+102
+1
+10
+103
+104
+105
+T* [GeV]
+β/H
+Figure 13: Sensitivity of LISA to PTs in a dark sector. Shown are regions with an SNR ≥10 in the
+T∗–β/H∗plane, assuming runaway vacuum bubbles (red, foreground) or sound wave contributions
+only (blue, background) with α = 0.1, and vw = 1 in both cases. Black dots show the location of
+the benchmark points. Note that in this ﬁgure slightly diﬀerent LISA sensitivities were used.
+principle take any value and is in general not conserved throughout the cosmic history. The
+eﬀect of rT ̸= 1 on the amplitude and frequency of the GW signal is somewhat subtle and
+was discussed for the ﬁrst time in [197] (see also [198]). Here we summarise the main results.
+Obviously in the limit rT →0 the energy density in the dark sector is negligible and thus
+no observable signal can be produced. In the limit of rT ≤1 and for hidden sectors a small
+number of new particles, one ﬁnds [197]
+α = α0r4
+T ,
+(43)
+β/H∗= (β/H∗)0 ,
+(44)
+where α0 and β0 are the values of α and β for rT = 1. The energy budget α scales with the
+energy density in the hidden sector, as one would expect. Note that while both β and H∗
+depend on rT, this dependence drops out of their ratio, i.e. the duration of the PT relative to
+the age of the Universe at the time of the transition remains unchanged. Overall this results
+in a strong suppression of the potential GW signal from a cold dark sector. These are only
+the leading eﬀects: further eﬀects, such as a typically small amount of additional redshifting,
+are discussed in [197] .
+Another source of uncertainty in predicting GW signals from dark sectors is the applicabil-
+ity of the sound wave and turbulence simulations of the GW signal to decoupled dark sectors.
+In this case, no turbulence or sound waves can be induced in the SM plasma, and it is unclear
+whether existing results can easily be applied to disturbances in the dark sector plasma after
+the PT (if a plasma exists at all). This is why in Fig. 13 we separately show the scalar ﬁeld
+and sound wave contributions to the GW spectrum. Depending on the concrete nature of
+the hidden sector, one or the other should be closer to the truth. In practice even a small
+46
+
+---PAGE BREAK---
+Figure 14: SNR plots for the data of [197]. LEFT: Benchmark points for a model with a spon-
+taneously broken U(1) gauge symmetry in a hidden sector. RIGHT: Results for a model with two
+gauge singlet scalars in a hidden sector. The expected LISA sensitivities correspond to T∗= 50 GeV
+for the dark photon model and to T∗= 100 GeV for the scalar dark sector. In all cases we take
+vw = 1. See text for further details.
+coupling between the dark and visible sectors is suﬃcient to maintain thermal equilibrium
+between the two sectors. Therefore if rT = 1 one can trust the existing simulations with the
+same level of conﬁdence as for most other BSM scenarios considered here.
+As a concrete application, in [197] two of the simplest hidden sector models featuring a
+ﬁrst-order PT were studied, namely a dark photon that receives its mass from spontaneous
+symmetry breaking, and a simple model of two real singlet scalars. These models are mini-
+mal in terms of particle content, while other models often require either higher-dimensional
+operators or additional ﬁelds in order to exhibit a ﬁrst order PT. In Fig. 14 the transition
+parameters α and β are shown for a random scan of model parameters. The expected SNR of
+LISA is evaluated for Tn = 50 GeV (dark photon) and Tn = 100 GeV (two singlet model). In
+total, 1000 points for which the transition is ﬁrst order were scanned, of which at most 5% are
+detectable. On the other hand a few points reach very high SNR values, which is somewhat
+uncommon for renormalisable and perturbative models. The temperature ratio in Fig. 14 is
+set to rT = 1, and the sensitivity for other values of rT can easily be obtained using (43)-(44).
+6.7.2
+DM and collider connection
+If the dark sector features a thermal DM candidate, it is safe to assume that both sectors were
+in equilibrium for most of the cosmic history. Furthermore, the WIMP miracle motivates DM
+masses, and therefore the scale of potentially relevant PTs, around the TeV scale, i.e. within
+the sensitivity range of LISA and, potentially, other present-day terrestrial experiments. It
+is therefore interesting to explore the complementarity with direct detection and collider
+experiments in searching for those models. We will here focus on one example where DM
+47
+
+---PAGE BREAK---
+0
+200
+400
+600
+800
+1000
+mφ [GeV]
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+mZ′ [TeV]
+⟨φ⟩0 = 0
+cross-over
+0
+200
+400
+600
+800
+1000
+mφ [GeV]
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+mZ′ [TeV]
+⟨φ⟩0 = 0
+cross-over
+sin θDM = 0.015
+sin θDM = 0.02
+sin θDM = 0.022
+sin θDM = 0.024
+Figure 15: Reach of LISA for gauged lepton number DM model (red shaded region), from [196].
+LEFT: Results for a pure abelian Higgs model with vΦ = 2 TeV. RIGHT: The Yukawa couplings are
+chosen such that the correct DM abundance is obtained. The region below the horizontal dashed
+lines will be probed by Xenon1T, for the indicated value of the DM mixing angle. Notice that in
+this ﬁgure slightly diﬀerent LISA sensitivities were used. For more details, see [196].
+arises in a model of gauged lepton number, and where the lepton number breaking PT is the
+source of the GWs [196,203]. Similar studies appeared recently in [69,195].
+The model features an additional U(1)L gauge symmetry under which all SM leptons
+carry unit charge. Additional leptons which are vector-like with respect to SM interactions,
+and which become massive after U(1)L is spontaneously broken by a VEV of a complex
+scalar Φ, have to be introduced to cancel anomalies. The lightest new neutrino becomes the
+DM candidate, stabilised by a residual global symmetry that remains after gauge symmetry
+breaking. LEP data constrains the L-symmetry breaking scale vΦ to be above 2 TeV, putting
+the PT within reach of LISA.
+In the simplest case, the eﬀects of the Yukawa couplings of Φ to the new leptons can be
+neglected, and the PT depends on only three parameters, which can be taken to be vΦ and
+the masses of the U(1)L gauge boson ZL and the real scalar φ. A PT suﬃciently strong so
+as to be detectable by LISA requires a sizeable hierarchy of masses mZL/mφ ≈4 −10, with
+mZL typically above a TeV, as can be seen in Fig. 15. Such a heavy leptophilic gauge boson
+is diﬃcult to detect at the LHC, but is certainly within reach of a high energy lepton collider
+such as CLIC or a future 100 TeV hadron collider like FCC-hh. Detectability of the scalar
+depends on its mixing with the SM Higgs, which here is assumed to be small in order to leave
+the EWPT unaﬀected.
+Including the lepton Yukawa couplings, and in particular setting the DM mass such that
+it reproduces the correct relic abundance, has an interesting eﬀect on the phenomenological
+predictions, namely the region in the mφ–mZL plane that can be probed by LISA is increased
+48
+
+---PAGE BREAK---
+Figure 16: SNR plot for a gauged lepton number DM model. See text for details on the scenarios
+A-D. The expected LISA sensitivities correspond to T∗= 500 GeV and vw = 1.
+signiﬁcantly, as shown in Fig. 15. While searches for leptophilic DM at colliders is notoriously
+diﬃcult, the whole parameter space is in principle detectable by Xenon1T [204] or other future
+direct detection experiments. As far as complementarity with LISA is concerned, here the
+PT is not essential for producing or setting the DM relic abundance, and as such one cannot
+conclusively probe the model with GWs alone. However, one could for example envision a
+scenario where ZL is found at a future collider but the corresponding scalar φ remains elusive.
+Observation of a signal in LISA could then point to the correct mass range for the scalar,
+and thus aid in its discovery. The SNR values for several benchmark scenarios are shown in
+Fig. 16. The diﬀerent scenarios are as follows: for case A, the eﬀects of the fermions in the
+model are neglected, while for B and C the fermion masses are ﬁxed, and in scenario D the
+fermion masses are chosen such that the correct DM relic abundance is obtained. LISA can
+in principle be sensitive to all of these cases.
+7
+Conclusions and outlook
+In this study, we have re-assessed the prospects for observing gravitational waves (GWs) from
+cosmological phase transitions (PTs) at LISA in light of several recent developments. Our
+analysis diﬀers in several important ways from that in our previous study [8]:
+• The scalar ﬁeld contribution to GW production is now known to be negligible in most
+cases of thermal PTs. This impacts the detectability of certain BSM scenarios.
+• The limited duration of the sound wave source when the timescale for shock formation
+is shorter than a Hubble time is accounted for in our updated projections. This reduces
+49
+
+---PAGE BREAK---
+the strength of the signal in many scenarios relative to the case where Hubble damping
+is assumed to cut oﬀthe source.
+• Our analysis conservatively neglects GW production from turbulent ﬂow, as current
+simulations cannot yet observe the onset of turbulent motion and the contribution from
+shocks is subject to quite large uncertainties, especially for large ﬂuid velocities. Note
+that these contributions, once included, will likely improve the detection prospects at
+LISA.
+• We have investigated a wider range of speciﬁc models, taking into account recent ex-
+perimental results and constraints that impact the parameter space relevant for LISA.
+As our understanding of GW production at cosmological PTs is rapidly evolving, we have
+presented an online tool, PTPlot, to allow the BSM community to accurately determine the
+detectability of a given model at LISA under the above assumptions. This tool was developed
+by D. Weir and will continue to be updated as new results become available.
+In addition to the advancements described above, we have attempted to clarify common
+misconceptions in the literature (e.g. the deﬁnition of α, the percolation temperature, deter-
+mination of β/H∗, appearance of runaway bubble walls, etc.) and identify important open
+questions relevant for LISA. Our analysis is mostly based on the GW spectrum as observed
+in hydrodynamic simulations. These simulations are the state-of-the-art when it comes to
+PTs with moderate wall velocities and latent heat. One open question is the form of the GW
+spectrum generated at very strong PTs, as well as the impact of turbulence and magnetic
+ﬁelds. Furthermore, when it comes to the dynamics of the bubble walls, the wall velocity in
+these simulations is determined from a phenomenological friction term. Ab initio calculations
+of this friction is in many models still lacking. The stability of the bubble wall front is also
+a topic that is debated in the literature [205–215]. Additionally, there remain several open
+questions regarding perturbative calculations of the PT parameters. Computations of α, β,
+and Tn relying on the conventional eﬀective potential approach can be subject to large un-
+certainties. Nonperturbative results are becoming available for more models, however PTs
+strong enough to be detected by LISA remain challenging to reliably simulate on the lattice.
+We stress that a large part of our discussions are not tight to the LISA frequency window
+and can be readily applied to other frequency bands.
+In fact, the strength of the phase
+transition does not depend on the energy scale of the PT but only on the shape of the scalar
+potential. Instead of the Higgs ﬁeld, one could consider other scalar ﬁelds responsible for
+symmetry breaking at higher energies. In particular, the strong signals predicted for instance
+from nearly-conformal potentials can be readily applied to higher energy scales and therefore
+translated to higher frequencies, as to be detectable at either LIGO or at future ground-based
+observatories Einstein Telescope and Cosmic Explorer.
+In light of these developments and uncertainties, we have argued that LISA remains a
+powerful tool for exploring BSM scenarios predicting ﬁrst-order cosmological PTs. The models
+we have considered are motivated by various compelling arguments (e.g. the existence of
+50
+
+---PAGE BREAK---
+dark matter, the hierarchy problem) and represent only a fraction of scenarios that can be
+probed by LISA. We have found that in some cases, LISA will be able to explore parameter
+space also accessible by future experiments, such as the high-luminosity LHC or dark matter
+searches, allowing for an exciting chance of simultaneous discovery at multiple experiments.
+In other models, LISA is likely to provide the most sensitive probe. Our results emphasize
+LISA’s importance for exploring the early Universe and BSM physics, as well as the Mission’s
+complementarity with other experimental eﬀorts.
+Acknowledgements
+MC was funded by the Royal Society under the Newton International Fellowship program.
+GD would like to thank CNPq (Brazil) for ﬁnancial support. MH was supported by the Sci-
+ence and Technology Facilities Council (grant number ST/P000819/1), and the Academy of
+Finland (grant number 286769). SJH was supported by the Science and Technology Facilities
+Council (grant number ST/P000819/1). The work of JK was supported by Department of
+Energy (DOE) grant DE-SC0019195 and NSF grant PHY-1719642. TK and GS are funded
+by the Deutsche Forschungsgemeinschaft under Germany‘s Excellence Strategy – EXC 2121
+”Quantum Universe” – 390833306. JMN is supported by Ram´on y Cajal Fellowship con-
+tract RYC-2017-22986, and also acknowledges support from the Spanish MINECO’s “Centro
+de Excelencia Severo Ochoa” Programme under grant SEV-2016-0597, from the European
+Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie
+grant agreements 690575 (RISE InvisiblesPlus) and 674896 (ITN ELUSIVES) and from the
+Spanish Proyectos de I+D de Generaci´on de Conocimiento via grant PGC2018-096646-A-I00.
+KR is funded by the Academy of Finland grants 308791, 319066 and 320123. PS is supported
+by the Cluster of Excellence “Precision Physics, Fundamental Interactions, and Structure of
+Matter” (PRISMA+ EXC 2118/1) funded by the German Research Foundation(DFG). PS
+would like to thank Moritz Breitbach and Eric Madge for providing the data for Figures (14),
+(15) and (16), and Eric Madge for checking the ptplot code. DJW (ORCID ID 0000-0001-
+6986-0517) was supported by an Science and Technology Facilities Council Ernest Rutherford
+Fellowship, grant no. ST/R003904/1, by the Research Funds of the University of Helsinki,
+and by the Academy of Finland, grant nos. 286769, 324882 and 328958.
+A
+Phase transition parameters from the lattice
+In this appendix, we discuss nonperturbative determinations of the PT parameters relevant
+for LISA. As mentioned in the main text, the starting point for nonperturbative studies of
+a ﬁnite temperature PT is dimensional reduction, in which a 4D theory is matched onto a
+corresponding 3D theory. This matching can be done perturbatively and has been performed
+at one to two loop accuracy in the SM and several other models to date [66,90,117,119–121,
+158,216,217]. In this procedure, a choice of 3D theory must also be made, specifying which
+51
+
+---PAGE BREAK---
+degrees of freedom should be integrated out, and which ﬁeld operators should be included.
+Once a model is dimensionally reduced, it can be studied either in 3D perturbation theory
+or, more accurately, on the lattice.
+The latter constitutes a completely non-perturbative
+approach, and allows a detailed (in principle exact) investigation of the phase diagram of the
+DR theory. This procedure involves the “constrained” eﬀective action
+e−Γ[{ ¯
+Oi}] =
+Z
+D{Φi}e−S3[{φi}]δ({Oi −¯Oi}),
+(45)
+where O({φi}) are now certain gauge-invariant operators used as approximate order param-
+eters of the transition (O = φ†φ, . . . ).
+The method allows us to compute the PT order
+and strength, the critical and nucleation temperatures28 (Hn), latent heat (α) and bubble
+nucleation rate (β). Once the phase diagram for a given 3D eﬀective model has been deter-
+mined, diﬀerent 4D models may be mapped onto it, allowing us to extract non-perturbative
+information about 4D PTs in a wide class of models from simulations of the same 3D theory.
+The EWPT in the SM was ﬁrst studied using these methods a few decades ago. For the
+SM, the 3D action is
+S3 =
+Z
+d3x
+1
+2Tr WrsW rs + (Drφ)†Drφ + m2
+3φ†φ + λ3(φ†φ)2
+
+(46)
+(here Wrs is the 3D SU(2) gauge ﬁeld strength and the “3” subscripts refer to 3D quantities).
+Through the matching procedure, the parameters g3 (in the covariant derivative), λ3 and m3
+can be expressed as functions of the 4D parameters and T. The eﬀective action in (46) ne-
+glects higher-dimensional operators, such as (φ†φ)3, introduced by the dimensional reduction
+because in the SM their eﬀects are small [217]. Deﬁning x = λ3/g2
+3 and y = m2
+3/g4
+3, lattice
+studies have shown that the 3D theory (46) features a ﬁrst order PT for y ≃0, 0 < x < 0.11,
+while it predicts an equilibrium cross-over elsewhere (y ≃0, x > 0.11.) [2]. In addition to
+the equilibrium properties of the PT (such as α and Tc), it is also possible to compute the
+nucleation rate non-perturbatively in a 3D DR theory. This was done some time ago for the
+SM with an unphysically light Higgs mass [218] and for the cubic anisotropy model (similar
+to a 2-scalar ﬁeld model) [219].
+For the observed value of the Higgs mass, x > 0.11 in the SM and the methods described
+above predict a smooth cross-over. However, in certain regions of parameter space, scenarios
+beyond the SM can be matched on to the 3D eﬀective theory described by (46). One can
+thereby extract information about the phase structure in BSM theories from existing SM
+lattice studies. In order for (46) to be an accurate description of the long distance physics,
+the new degrees of freedom introduced in the model should be heavy at the PT (so that
+they can be integrated out), new contributions to higher-dimensionalal operators induced by
+28Note that strictly speaking, existing lattice studies provide values of the nucleation temperature [218],
+not the transition temperature reﬂected in (5). However, for PTs that have been studied nonperturbatively
+to date, these temperatures are not expected to diﬀer signiﬁcantly. Therefore, in discussing nonperturbative
+results throughout our study, we do not distinguish between Tn and T∗.
+52
+
+---PAGE BREAK---
+integrating out the new ﬁelds should be small enough to neglect, and couplings should be
+small enough so that the perturbative matching procedure of DR accurately described the
+underlying theory. This matching onto the theory described by (46) has been performed for
+the singlet, doublet and triplet models (discussed further below) and existing lattice results
+used to study the phase structure in certain regions of parameter space. In each case, these
+studies [90,91,118–120] have found phenomenologically viable regions of the parameter space
+predicting a ﬁrst-order PT.
+The 3D theory described by (46) can only go so far in describing BSM scenarios. As
+emphasized in e.g. [91,120], requiring higher-dimensional operator eﬀects to be small and new
+light ﬁelds to not play a dynamical role at the PT limits the parameter space in extensions of
+the SM that can be accurately studied by (46). In fact, [91] recently argued that any model
+mapping on to the 3D description of (46) and for which higher-dimensional operators can be
+safely neglected results in PTs that are too weak to yield detectable GW signals at current and
+planned GW experiments. Instead, nonperturbative predictions for LISA require simulations
+of models involving either additional light dynamical ﬁelds or sizable modiﬁcations of (46)
+from higher-dimensional operators.
+To date very few 3D theories besides (46) have been studied nonperturbatively. Examples
+include the 2HDM, which introduces an additional SU(2) Higgs doublet ﬁeld to (46), and the
+MSSM, for which the 3D theory includes two SU(2) Higgs doublets and one SU(3) triplet,
+corresponding to the right-handed stop ﬁeld. In the 2HDM, [67] conﬁrmed that there are
+phenomenologically viable parameter space points predicting a relatively strong ﬁrst-order
+PT. The parameters considered in the latest non-perturbative MSSM study [121] also yielded
+a strong ﬁrst order PT, somewhat stronger than that indicated by a two-loop perturbative
+analysis, however, the parameters considered in [121] are already excluded by experimental
+data.
+Currently, no existing nonperturbative studies consider PTs strong enough to predict an
+observable signal at LISA. Virtually all BSM studies relevant for LISA have instead used the
+conventional 4D perturbative approach, which can yield signiﬁcant inaccuracies in the pre-
+dicted PT parameters. For example, the parameter space points in the singlet and doublet
+models studied nonperturbatively in [91,120] typically feature factor of 2-3 diﬀerences in the
+predicted values of α (deﬁned in terms of latent heat) between the 4D perturbative and 3D
+nonperturbative approaches. Some diﬀerences in the predictions stem from the treatment of
+IR divergences in the 4D theory and can therefore be cured by a 3D perturbative treatment.
+Inaccuracies can also arise from the neglect of higher-dimensional operators in 3D, or from
+large couplings limiting the accuracy of the perturbative matching procedure in DR [91]. How-
+ever, even predictions from the two-loop dimensionally reduced eﬀective potential of a given
+3D theory can diﬀer substantially from the corresponding lattice results. For example, [120]
+found a ∼20% discrepancy in the determination of α for one of the 2HDM benchmark points
+considered, while [91] found a similarly-sized discrepancy in the predicted value of β/H for a
+representative point in the singlet model.
+On the one hand, these comparisons suggest that perturbative approaches can give a
+53
+
+---PAGE BREAK---
+reasonable estimate of the PT parameters (at least at the order-of-magnitude level), which
+can in turn be used to roughly determine the prospects for observing GWs in a given model at
+LISA. On the other hand, more quantitatively accurate predictions for LISA will in many cases
+require new model-speciﬁc nonperturbative studies. Improving the accuracy of the predicted
+GW parameters will be important for constraining models in light of LISA data, and will
+become especially crucial for interpreting results if a stochastic GW background consistent
+with a cosmological PT is observed.
+References
+[1] LIGO Scientific, Virgo collaboration, B. P. Abbott et al., Binary Black Hole
+Mergers in the ﬁrst Advanced LIGO Observing Run, Phys. Rev. X6 (2016) 041015,
+[1606.04856].
+[2] K. Kajantie, M. Laine, K. Rummukainen and M. E. Shaposhnikov, The Electroweak
+phase transition: A Nonperturbative analysis, Nucl. Phys. B466 (1996) 189–258,
+[hep-lat/9510020].
+[3] F. Csikor, Z. Fodor and J. Heitger, Endpoint of the hot electroweak phase transition,
+Phys. Rev. Lett. 82 (1999) 21–24, [hep-ph/9809291].
+[4] M. A. Stephanov, QCD phase diagram: An Overview, PoS LAT2006 (2006) 024,
+[hep-lat/0701002].
+[5] LISA collaboration, H. Audley et al., Laser Interferometer Space Antenna,
+1702.00786.
+[6] N. Karnesis, M. Lilley and A. Petiteau, Assessing the detectability of a Stochastic
+Gravitational Wave Background with LISA, using an excess of power approach, Class.
+Quant. Grav. 37 (2020) 215017, [1906.09027].
+[7] C. Caprini, D. G. Figueroa, R. Flauger, G. Nardini, M. Peloso, M. Pieroni et al.,
+Reconstructing the spectral shape of a stochastic gravitational wave background with
+LISA, JCAP 11 (2019) 017, [1906.09244].
+[8] C. Caprini et al., Science with the space-based interferometer eLISA. II: Gravitational
+waves from cosmological phase transitions, JCAP 1604 (2016) 001, [1512.06239].
+[9] K. Enqvist, J. Ignatius, K. Kajantie and K. Rummukainen, Nucleation and bubble
+growth in a ﬁrst order cosmological electroweak phase transition, Phys. Rev. D45
+(1992) 3415–3428.
+[10] G. D. Moore and T. Prokopec, How fast can the wall move? A Study of the electroweak
+phase transition dynamics, Phys. Rev. D52 (1995) 7182–7204, [hep-ph/9506475].
+54
+
+---PAGE BREAK---
+[11] S. J. Huber and T. Konstandin, Production of gravitational waves in the nMSSM,
+JCAP 0805 (2008) 017, [0709.2091].
+[12] M. E. Carrington and J. I. Kapusta, Dynamics of the electroweak phase transition,
+Phys. Rev. D47 (1993) 5304–5315.
+[13] J. R. Espinosa, T. Konstandin, J. M. No and G. Servant, Energy Budget of
+Cosmological First-order Phase Transitions, JCAP 1006 (2010) 028, [1004.4187].
+[14] M. S. Turner, E. J. Weinberg and L. M. Widrow, Bubble nucleation in ﬁrst order
+inﬂation and other cosmological phase transitions, Phys. Rev. D46 (1992) 2384–2403.
+[15] S. J. Huber, T. Konstandin, T. Prokopec and M. G. Schmidt, Electroweak Phase
+Transition and Baryogenesis in the nMSSM, Nucl. Phys. B757 (2006) 172–196,
+[hep-ph/0606298].
+[16] A. Megevand and S. Ramirez, Bubble nucleation and growth in very strong
+cosmological phase transitions, Nucl. Phys. B919 (2017) 74–109, [1611.05853].
+[17] J. Ellis, M. Lewicki and J. M. No, On the Maximal Strength of a First-Order
+Electroweak Phase Transition and its Gravitational Wave Signal, JCAP 04 (2019)
+003, [1809.08242].
+[18] M. Kamionkowski, A. Kosowsky and M. S. Turner, Gravitational radiation from ﬁrst
+order phase transitions, Phys. Rev. D49 (1994) 2837–2851, [astro-ph/9310044].
+[19] M. Hindmarsh, S. J. Huber, K. Rummukainen and D. J. Weir, Numerical simulations
+of acoustically generated gravitational waves at a ﬁrst order phase transition, Phys.
+Rev. D92 (2015) 123009, [1504.03291].
+[20] M. Hindmarsh, S. J. Huber, K. Rummukainen and D. J. Weir, Shape of the acoustic
+gravitational wave power spectrum from a ﬁrst order phase transition, Phys. Rev. D96
+(2017) 103520, [1704.05871].
+[21] L. Leitao and A. Megevand, Hydrodynamics of phase transition fronts and the speed of
+sound in the plasma, Nucl. Phys. B891 (2015) 159–199, [1410.3875].
+[22] G. D. Moore and T. Prokopec, Bubble wall velocity in a ﬁrst order electroweak phase
+transition, Phys. Rev. Lett. 75 (1995) 777–780, [hep-ph/9503296].
+[23] T. Konstandin, G. Nardini and I. Rues, From Boltzmann equations to steady wall
+velocities, JCAP 1409 (2014) 028, [1407.3132].
+[24] J. Kozaczuk, Bubble Expansion and the Viability of Singlet-Driven Electroweak
+Baryogenesis, JHEP 10 (2015) 135, [1506.04741].
+55
+
+---PAGE BREAK---
+[25] G. C. Dorsch, S. J. Huber and T. Konstandin, Bubble wall velocities in the Standard
+Model and beyond, JCAP 1812 (2018) 034, [1809.04907].
+[26] D. Bodeker and G. D. Moore, Electroweak Bubble Wall Speed Limit, JCAP 1705
+(2017) 025, [1703.08215].
+[27] D. Bodeker and G. D. Moore, Can electroweak bubble walls run away?, JCAP 0905
+(2009) 009, [0903.4099].
+[28] P. Creminelli, A. Nicolis and R. Rattazzi, Holography and the electroweak phase
+transition, JHEP 03 (2002) 051, [hep-th/0107141].
+[29] L. Randall and G. Servant, Gravitational waves from warped spacetime, JHEP 05
+(2007) 054, [hep-ph/0607158].
+[30] G. Nardini, M. Quiros and A. Wulzer, A Conﬁning Strong First-Order Electroweak
+Phase Transition, JHEP 09 (2007) 077, [0706.3388].
+[31] B. Hassanain, J. March-Russell and M. Schvellinger, Warped Deformed Throats have
+Faster (Electroweak) Phase Transitions, JHEP 10 (2007) 089, [0708.2060].
+[32] T. Konstandin, G. Nardini and M. Quiros, Gravitational Backreaction Eﬀects on the
+Holographic Phase Transition, Phys. Rev. D82 (2010) 083513, [1007.1468].
+[33] T. Konstandin and G. Servant, Cosmological Consequences of Nearly Conformal
+Dynamics at the TeV scale, JCAP 1112 (2011) 009, [1104.4791].
+[34] D. Bunk, J. Hubisz and B. Jain, A Perturbative RS I Cosmological Phase Transition,
+Eur. Phys. J. C78 (2018) 78, [1705.00001].
+[35] B. M. Dillon, B. K. El-Menouﬁ, S. J. Huber and J. P. Manuel, Rapid holographic
+phase transition with brane-localized curvature, Phys. Rev. D98 (2018) 086005,
+[1708.02953].
+[36] B. von Harling and G. Servant, QCD-induced Electroweak Phase Transition, JHEP 01
+(2018) 159, [1711.11554].
+[37] S. Bruggisser, B. Von Harling, O. Matsedonskyi and G. Servant, Baryon Asymmetry
+from a Composite Higgs Boson, Phys. Rev. Lett. 121 (2018) 131801, [1803.08546].
+[38] S. Bruggisser, B. Von Harling, O. Matsedonskyi and G. Servant, Electroweak Phase
+Transition and Baryogenesis in Composite Higgs Models, JHEP 12 (2018) 099,
+[1804.07314].
+[39] E. Meg´ıas, G. Nardini and M. Quir´os, Cosmological Phase Transitions in Warped
+Space: Gravitational Waves and Collider Signatures, JHEP 09 (2018) 095,
+[1806.04877].
+56
+
+---PAGE BREAK---
+[40] P. Baratella, A. Pomarol and F. Rompineve, The Supercooled Universe, JHEP 03
+(2019) 100, [1812.06996].
+[41] J. Ellis, M. Lewicki, J. M. No and V. Vaskonen, Gravitational wave energy budget in
+strongly supercooled phase transitions, JCAP 1906 (2019) 024, [1903.09642].
+[42] Planck collaboration, P. A. R. Ade et al., Planck 2015 results. XIII. Cosmological
+parameters, Astron. Astrophys. 594 (2016) A13, [1502.01589].
+[43] J. C. Mather, D. J. Fixsen, R. A. Shafer, C. Mosier and D. T. Wilkinson, Calibrator
+design for the COBE far infrared absolute spectrophotometer (FIRAS), Astrophys. J.
+512 (1999) 511–520, [astro-ph/9810373].
+[44] A. Kosowsky, M. S. Turner and R. Watkins, Gravitational waves from ﬁrst order
+cosmological phase transitions, Phys. Rev. Lett. 69 (1992) 2026–2029.
+[45] A. Kosowsky and M. S. Turner, Gravitational radiation from colliding vacuum bubbles:
+envelope approximation to many bubble collisions, Phys. Rev. D47 (1993) 4372–4391,
+[astro-ph/9211004].
+[46] D. Cutting, M. Hindmarsh and D. J. Weir, Gravitational waves from vacuum
+ﬁrst-order phase transitions: from the envelope to the lattice, Phys. Rev. D97 (2018)
+123513, [1802.05712].
+[47] C. Caprini, R. Durrer and G. Servant, The stochastic gravitational wave background
+from turbulence and magnetic ﬁelds generated by a ﬁrst-order phase transition, JCAP
+0912 (2009) 024, [0909.0622].
+[48] C. Caprini and D. G. Figueroa, Cosmological Backgrounds of Gravitational Waves,
+Class. Quant. Grav. 35 (2018) 163001, [1801.04268].
+[49] C. Caprini, R. Durrer, T. Konstandin and G. Servant, General Properties of the
+Gravitational Wave Spectrum from Phase Transitions, Phys. Rev. D79 (2009) 083519,
+[0901.1661].
+[50] C. J. Hogan, Gravitational radiation from cosmological phase transitions, Mon. Not.
+Roy. Astron. Soc. 218 (1986) 629–636.
+[51] M. Hindmarsh, S. J. Huber, K. Rummukainen and D. J. Weir, Gravitational waves
+from the sound of a ﬁrst order phase transition, Phys. Rev. Lett. 112 (2014) 041301,
+[1304.2433].
+[52] L. D. Landau and E. M. Lifshitz, Fluid Mechanics, Second Edition: Volume 6 (Course
+of Theoretical Physics). Course of theoretical physics / by L. D. Landau and E. M.
+Lifshitz, Vol. 6. Butterworth-Heinemann, 2 ed., Jan., 1987.
+57
+
+---PAGE BREAK---
+[53] U.-L. Pen and N. Turok, Shocks in the Early Universe, Phys. Rev. Lett. 117 (2016)
+131301, [1510.02985].
+[54] M. Hindmarsh, Sound shell model for acoustic gravitational wave production at a
+ﬁrst-order phase transition in the early Universe, Phys. Rev. Lett. 120 (2018) 071301,
+[1608.04735].
+[55] D. Cutting, M. Hindmarsh and D. J. Weir, Vorticity, kinetic energy, and suppressed
+gravitational wave production in strong ﬁrst order phase transitions, Phys. Rev. Lett.
+125 (2020) 021302, [1906.00480].
+[56] P. Davidson, Turbulence: An Introduction for Scientists and Engineers. Oxford
+University Press, 2004.
+[57] R. H. Kraichnan, Approximations for Steady-State Isotropic Turbulence, The Physics
+of Fluids 7 (1964) 1163.
+[58] G. Gogoberidze, T. Kahniashvili and A. Kosowsky, The Spectrum of Gravitational
+Radiation from Primordial Turbulence, Phys. Rev. D76 (2007) 083002, [0705.1733].
+[59] P. Niksa, M. Schlederer and G. Sigl, Gravitational Waves produced by Compressible
+MHD Turbulence from Cosmological Phase Transitions, Class. Quant. Grav. 35 (2018)
+144001, [1803.02271].
+[60] A. Roper Pol, S. Mandal, A. Brandenburg, T. Kahniashvili and A. Kosowsky,
+Numerical simulations of gravitational waves from early-universe turbulence, Phys.
+Rev. D 102 (2020) 083512, [1903.08585].
+[61] J. T. Giblin and J. B. Mertens, Gravitional radiation from ﬁrst-order phase transitions
+in the presence of a ﬂuid, Phys. Rev. D90 (2014) 023532, [1405.4005].
+[62] M. Hindmarsh and M. Hijazi, Gravitational waves from ﬁrst order cosmological phase
+transitions in the Sound Shell Model, JCAP 12 (2019) 062, [1909.10040].
+[63] R. Jinno and M. Takimoto, Gravitational waves from bubble dynamics: Beyond the
+Envelope, JCAP 1901 (2019) 060, [1707.03111].
+[64] T. Konstandin, Gravitational radiation from a bulk ﬂow model, JCAP 1803 (2018)
+047, [1712.06869].
+[65] https://www.cosmos.esa.int/web/lisa/lisa-documents.
+[66] M. Laine, M. Meyer and G. Nardini, Thermal phase transition with full 2-loop
+eﬀective potential, Nucl. Phys. B920 (2017) 565–600, [1702.07479].
+58
+
+---PAGE BREAK---
+[67] K. Kainulainen, V. Keus, L. Niemi, K. Rummukainen, T. V. I. Tenkanen and
+V. Vaskonen, On the validity of perturbative studies of the electroweak phase transition
+in the Two Higgs Doublet model, JHEP 06 (2019) 075, [1904.01329].
+[68] D. Curtin, P. Meade and C.-T. Yu, Testing Electroweak Baryogenesis with Future
+Colliders, JHEP 11 (2014) 127, [1409.0005].
+[69] M. Chala, G. Nardini and I. Sobolev, Uniﬁed explanation for dark matter and
+electroweak baryogenesis with direct detection and gravitational wave signatures, Phys.
+Rev. D94 (2016) 055006, [1605.08663].
+[70] P. S. B. Dev, F. Ferrer, Y. Zhang and Y. Zhang, Gravitational Waves from
+First-Order Phase Transition in a Simple Axion-Like Particle Model, JCAP 1911
+(2019) 006, [1905.00891].
+[71] N. Craig, H. K. Lou, M. McCullough and A. Thalapillil, The Higgs Portal Above
+Threshold, JHEP 02 (2016) 127, [1412.0258].
+[72] D. E. Morrissey and M. J. Ramsey-Musolf, Electroweak baryogenesis, New J. Phys. 14
+(2012) 125003, [1206.2942].
+[73] F. P. Huang, Z. Qian and M. Zhang, Exploring dynamical CP violation induced
+baryogenesis by gravitational waves and colliders, Phys. Rev. D98 (2018) 015014,
+[1804.06813].
+[74] S. Profumo, M. J. Ramsey-Musolf and G. Shaughnessy, Singlet Higgs phenomenology
+and the electroweak phase transition, JHEP 08 (2007) 010, [0705.2425].
+[75] J. R. Espinosa, T. Konstandin and F. Riva, Strong Electroweak Phase Transitions in
+the Standard Model with a Singlet, Nucl. Phys. B854 (2012) 592–630, [1107.5441].
+[76] S. Profumo, M. J. Ramsey-Musolf, C. L. Wainwright and P. Winslow,
+Singlet-catalyzed electroweak phase transitions and precision Higgs boson studies, Phys.
+Rev. D91 (2015) 035018, [1407.5342].
+[77] T. Robens and T. Stefaniak, Status of the Higgs Singlet Extension of the Standard
+Model after LHC Run 1, Eur. Phys. J. C75 (2015) 104, [1501.02234].
+[78] G. Chalons, D. Lopez-Val, T. Robens and T. Stefaniak, The Higgs singlet extension at
+LHC Run 2, PoS ICHEP2016 (2016) 1180, [1611.03007].
+[79] C.-Y. Chen, J. Kozaczuk and I. M. Lewis, Non-resonant Collider Signatures of a
+Singlet-Driven Electroweak Phase Transition, JHEP 08 (2017) 096, [1704.05844].
+[80] C. L. Wainwright, CosmoTransitions: Computing Cosmological Phase Transition
+Temperatures and Bubble Proﬁles with Multiple Fields, Comput. Phys. Commun. 183
+(2012) 2006–2013, [1109.4189].
+59
+
+---PAGE BREAK---
+[81] D. Buttazzo, F. Sala and A. Tesi, Singlet-like Higgs bosons at present and future
+colliders, JHEP 11 (2015) 158, [1505.05488].
+[82] J. M. No and M. Ramsey-Musolf, Probing the Higgs Portal at the LHC Through
+Resonant di-Higgs Production, Phys. Rev. D89 (2014) 095031, [1310.6035].
+[83] C.-Y. Chen, S. Dawson and I. M. Lewis, Exploring resonant di-Higgs boson production
+in the Higgs singlet model, Phys. Rev. D91 (2015) 035015, [1410.5488].
+[84] T. Huang, J. M. No, L. Perni´e, M. Ramsey-Musolf, A. Safonov, M. Spannowsky et al.,
+Resonant di-Higgs boson production in the b¯bWW channel: Probing the electroweak
+phase transition at the LHC, Phys. Rev. D96 (2017) 035007, [1701.04442].
+[85] I. M. Lewis and M. Sullivan, Benchmarks for Double Higgs Production in the Singlet
+Extended Standard Model at the LHC, Phys. Rev. D96 (2017) 035037, [1701.08774].
+[86] P. Huang, A. J. Long and L.-T. Wang, Probing the Electroweak Phase Transition with
+Higgs Factories and Gravitational Waves, Phys. Rev. D94 (2016) 075008,
+[1608.06619].
+[87] A. Beniwal, M. Lewicki, J. D. Wells, M. White and A. G. Williams, Gravitational
+wave, collider and dark matter signals from a scalar singlet electroweak baryogenesis,
+JHEP 08 (2017) 108, [1702.06124].
+[88] G. Kurup and M. Perelstein, Dynamics of Electroweak Phase Transition In
+Singlet-Scalar Extension of the Standard Model, Phys. Rev. D96 (2017) 015036,
+[1704.03381].
+[89] D. Curtin, P. Meade and H. Ramani, Thermal Resummation and Phase Transitions,
+Eur. Phys. J. C78 (2018) 787, [1612.00466].
+[90] T. Brauner, T. V. I. Tenkanen, A. Tranberg, A. Vuorinen and D. J. Weir, Dimensional
+reduction of the Standard Model coupled to a new singlet scalar ﬁeld, JHEP 03 (2017)
+007, [1609.06230].
+[91] O. Gould, J. Kozaczuk, L. Niemi, M. J. Ramsey-Musolf, T. V. Tenkanen and D. J.
+Weir, Nonperturbative analysis of the gravitational waves from a ﬁrst-order electroweak
+phase transition, Phys. Rev. D 100 (2019) 115024, [1903.11604].
+[92] P. H. Damgaard, A. Haarr, D. O’Connell and A. Tranberg, Eﬀective Field Theory and
+Electroweak Baryogenesis in the Singlet-Extended Standard Model, JHEP 02 (2016)
+107, [1512.01963].
+[93] P. Huet and A. E. Nelson, CP violation and electroweak baryogenesis in extensions of
+the standard model, Phys. Lett. B355 (1995) 229–235, [hep-ph/9504427].
+60
+
+---PAGE BREAK---
+[94] J. M. Cline and P.-A. Lemieux, Electroweak phase transition in two Higgs doublet
+models, Phys. Rev. D55 (1997) 3873–3881, [hep-ph/9609240].
+[95] L. Fromme, S. J. Huber and M. Seniuch, Baryogenesis in the two-Higgs doublet model,
+JHEP 11 (2006) 038, [hep-ph/0605242].
+[96] J. M. Cline, K. Kainulainen and M. Trott, Electroweak Baryogenesis in Two Higgs
+Doublet Models and B meson anomalies, JHEP 11 (2011) 089, [1107.3559].
+[97] G. C. Dorsch, S. J. Huber and J. M. No, A strong electroweak phase transition in the
+2HDM after LHC8, JHEP 10 (2013) 029, [1305.6610].
+[98] G. C. Dorsch, S. J. Huber, K. Mimasu and J. M. No, Echoes of the Electroweak Phase
+Transition: Discovering a second Higgs doublet through A0 →ZH0, Phys. Rev. Lett.
+113 (2014) 211802, [1405.5537].
+[99] M. Kakizaki, S. Kanemura and T. Matsui, Gravitational waves as a probe of extended
+scalar sectors with the ﬁrst order electroweak phase transition, Phys. Rev. D92 (2015)
+115007, [1509.08394].
+[100] G. C. Dorsch, S. J. Huber, T. Konstandin and J. M. No, A Second Higgs Doublet in
+the Early Universe: Baryogenesis and Gravitational Waves, JCAP 1705 (2017) 052,
+[1611.05874].
+[101] P. Basler, M. Krause, M. Muhlleitner, J. Wittbrodt and A. Wlotzka, Strong First
+Order Electroweak Phase Transition in the CP-Conserving 2HDM Revisited, JHEP 02
+(2017) 121, [1612.04086].
+[102] G. C. Dorsch, S. J. Huber, K. Mimasu and J. M. No, The Higgs Vacuum Uplifted:
+Revisiting the Electroweak Phase Transition with a Second Higgs Doublet, JHEP 12
+(2017) 086, [1705.09186].
+[103] P. Basler, M. M¨uhlleitner and J. Wittbrodt, The CP-Violating 2HDM in Light of a
+Strong First Order Electroweak Phase Transition and Implications for Higgs Pair
+Production, JHEP 03 (2018) 061, [1711.04097].
+[104] J. Bernon, L. Bian and Y. Jiang, A new insight into the phase transition in the early
+Universe with two Higgs doublets, JHEP 05 (2018) 151, [1712.08430].
+[105] F. P. Huang and J.-H. Yu, Exploring inert dark matter blind spots with gravitational
+wave signatures, Phys. Rev. D98 (2018) 095022, [1704.04201].
+[106] G. C. Branco, P. M. Ferreira, L. Lavoura, M. N. Rebelo, M. Sher and J. P. Silva,
+Theory and phenomenology of two-Higgs-doublet models, Phys. Rept. 516 (2012)
+1–102, [1106.0034].
+61
+
+---PAGE BREAK---
+[107] ATLAS collaboration, T. A. collaboration, Combined measurements of Higgs boson
+production and decay using up to 80 fb−1 of proton–proton collision data at √s = 13
+TeV collected with the ATLAS experiment, .
+[108] CMS collaboration, V. Khachatryan et al., Search for neutral resonances decaying
+into a Z boson and a pair of b jets or τ leptons, Phys. Lett. B759 (2016) 369–394,
+[1603.02991].
+[109] ATLAS collaboration, M. Aaboud et al., Search for a heavy Higgs boson decaying into
+a Z boson and another heavy Higgs boson in the ℓℓbb ﬁnal state in pp collisions at
+√s = 13 TeV with the ATLAS detector, Phys. Lett. B783 (2018) 392–414,
+[1804.01126].
+[110] HL/HE WG2 group collaboration, M. Cepeda et al., Higgs Physics at the HL-LHC
+and HE-LHC, 1902.00134.
+[111] H. H. Patel and M. J. Ramsey-Musolf, Stepping Into Electroweak Symmetry Breaking:
+Phase Transitions and Higgs Phenomenology, Phys. Rev. D88 (2013) 035013,
+[1212.5652].
+[112] M. Chala, M. Ramos and M. Spannowsky, Gravitational wave and collider probes of a
+triplet Higgs sector with a low cutoﬀ, Eur. Phys. J. C79 (2019) 156, [1812.01901].
+[113] N. Blinov, J. Kozaczuk, D. E. Morrissey and C. Tamarit, Electroweak Baryogenesis
+from Exotic Electroweak Symmetry Breaking, Phys. Rev. D92 (2015) 035012,
+[1504.05195].
+[114] S. Inoue, G. Ovanesyan and M. J. Ramsey-Musolf, Two-Step Electroweak
+Baryogenesis, Phys. Rev. D93 (2016) 015013, [1508.05404].
+[115] N. Blinov, J. Kozaczuk, D. E. Morrissey and A. de la Puente, Compressing the Inert
+Doublet Model, Phys. Rev. D93 (2016) 035020, [1510.08069].
+[116] M. Chala, C. Krause and G. Nardini, Signals of the electroweak phase transition at
+colliders and gravitational wave observatories, JHEP 07 (2018) 062, [1802.02168].
+[117] M. Laine, Eﬀective theories of MSSM at high temperature, Nucl. Phys. B481 (1996)
+43–84, [hep-ph/9605283].
+[118] J. O. Andersen, T. Gorda, A. Helset, L. Niemi, T. V. I. Tenkanen, A. Tranberg et al.,
+Nonperturbative Analysis of the Electroweak Phase Transition in the Two Higgs
+Doublet Model, Phys. Rev. Lett. 121 (2018) 191802, [1711.09849].
+[119] T. Gorda, A. Helset, L. Niemi, T. V. I. Tenkanen and D. J. Weir, Three-dimensional
+eﬀective theories for the two Higgs doublet model at high temperature, JHEP 02 (2019)
+081, [1802.05056].
+62
+
+---PAGE BREAK---
+[120] L. Niemi, H. H. Patel, M. J. Ramsey-Musolf, T. V. I. Tenkanen and D. J. Weir,
+Electroweak phase transition in the real triplet extension of the SM: Dimensional
+reduction, Phys. Rev. D100 (2019) 035002, [1802.10500].
+[121] M. Laine, G. Nardini and K. Rummukainen, Lattice study of an electroweak phase
+transition at mH ≈126GeV, JCAP 1301 (2013) 011, [1211.7344].
+[122] M. Carena, M. Quiros and C. E. M. Wagner, Opening the window for electroweak
+baryogenesis, Phys. Lett. B380 (1996) 81–91, [hep-ph/9603420].
+[123] D. Delepine, J. M. Gerard, R. Gonzalez Felipe and J. Weyers, A Light stop and
+electroweak baryogenesis, Phys. Lett. B386 (1996) 183–188, [hep-ph/9604440].
+[124] M. Carena, G. Nardini, M. Quiros and C. E. M. Wagner, The Baryogenesis Window
+in the MSSM, Nucl. Phys. B812 (2009) 243–263, [0809.3760].
+[125] A. Menon and D. E. Morrissey, Higgs Boson Signatures of MSSM Electroweak
+Baryogenesis, Phys. Rev. D79 (2009) 115020, [0903.3038].
+[126] T. Cohen, D. E. Morrissey and A. Pierce, Electroweak Baryogenesis and Higgs
+Signatures, Phys. Rev. D86 (2012) 013009, [1203.2924].
+[127] D. Curtin, P. Jaiswal and P. Meade, Excluding Electroweak Baryogenesis in the
+MSSM, JHEP 08 (2012) 005, [1203.2932].
+[128] M. Carena, G. Nardini, M. Quiros and C. E. M. Wagner, MSSM Electroweak
+Baryogenesis and LHC Data, JHEP 02 (2013) 001, [1207.6330].
+[129] A. Katz, M. Perelstein, M. J. Ramsey-Musolf and P. Winslow, Stop-Catalyzed
+Baryogenesis Beyond the MSSM, Phys. Rev. D92 (2015) 095019, [1509.02934].
+[130] S. Liebler, S. Profumo and T. Stefaniak, Light Stop Mass Limits from Higgs Rate
+Measurements in the MSSM: Is MSSM Electroweak Baryogenesis Still Alive After
+All?, JHEP 04 (2016) 143, [1512.09172].
+[131] M. Pietroni, The Electroweak phase transition in a nonminimal supersymmetric model,
+Nucl. Phys. B402 (1993) 27–45, [hep-ph/9207227].
+[132] A. T. Davies, C. D. Froggatt and R. G. Moorhouse, Electroweak baryogenesis in the
+next-to-minimal supersymmetric model, Phys. Lett. B372 (1996) 88–94,
+[hep-ph/9603388].
+[133] R. Apreda, M. Maggiore, A. Nicolis and A. Riotto, Gravitational waves from
+electroweak phase transitions, Nucl. Phys. B631 (2002) 342–368, [gr-qc/0107033].
+[134] J. Kozaczuk, S. Profumo and C. L. Wainwright, Electroweak Baryogenesis And The
+Fermi Gamma-Ray Line, Phys. Rev. D87 (2013) 075011, [1302.4781].
+63
+
+---PAGE BREAK---
+[135] S. J. Huber, T. Konstandin, G. Nardini and I. Rues, Detectable Gravitational Waves
+from Very Strong Phase Transitions in the General NMSSM, JCAP 1603 (2016) 036,
+[1512.06357].
+[136] L. Bian, H.-K. Guo and J. Shu, Gravitational Waves, baryon asymmetry of the
+universe and electric dipole moment in the CP-violating NMSSM, Chin. Phys. C42
+(2018) 093106, [1704.02488].
+[137] S. V. Demidov, D. S. Gorbunov and D. V. Kirpichnikov, Gravitational waves from
+phase transition in split NMSSM, Phys. Lett. B779 (2018) 191–194, [1712.00087].
+[138] A. Menon, D. E. Morrissey and C. E. M. Wagner, Electroweak baryogenesis and dark
+matter in the nMSSM, Phys. Rev. D70 (2004) 035005, [hep-ph/0404184].
+[139] S. Akula, C. Bal´azs, L. Dunn and G. White, Electroweak baryogenesis in the Z3
+-invariant NMSSM, JHEP 11 (2017) 051, [1706.09898].
+[140] J. Kozaczuk, S. Profumo, L. S. Haskins and C. L. Wainwright, Cosmological Phase
+Transitions and their Properties in the NMSSM, JHEP 01 (2015) 144, [1407.4134].
+[141] S. V. Demidov, D. S. Gorbunov and D. V. Kirpichnikov, Split NMSSM with
+electroweak baryogenesis, JHEP 11 (2016) 148, [1608.01985].
+[142] ACME collaboration, V. Andreev et al., Improved limit on the electric dipole moment
+of the electron, Nature 562 (2018) 355–360.
+[143] G. Panico, A. Pomarol and M. Riembau, EFT approach to the electron Electric Dipole
+Moment at the two-loop level, JHEP 04 (2019) 090, [1810.09413].
+[144] T. A. W. Martin and D. Morrissey, Electroweakino constraints from LHC data, JHEP
+12 (2014) 168, [1409.6322].
+[145] C. Arina, M. Chala, V. Martin-Lozano and G. Nardini, Confronting SUSY models
+with LHC data via electroweakino production, JHEP 12 (2016) 149, [1610.03822].
+[146] T. Chupp, P. Fierlinger, M. Ramsey-Musolf and J. Singh, Electric Dipole Moments of
+the Atoms, Molecules, Nuclei and Particles, Rev. Mod. Phys. 91 (2019) 015001,
+[1710.02504].
+[147] GAMBIT collaboration, P. Athron et al., Combined collider constraints on
+neutralinos and charginos, Eur. Phys. J. C79 (2019) 395, [1809.02097].
+[148] F. Domingo, J. S. Kim, V. M. Lozano, P. Martin-Ramiro and R. Ruiz de Austri,
+Confronting the neutralino and chargino sector of the NMSSM with the multilepton
+searches at the LHC, Phys. Rev. D 101 (2020) 075010, [1812.05186].
+64
+
+---PAGE BREAK---
+[149] H. Georgi and M. Machacek, DOUBLY CHARGED HIGGS BOSONS, Nucl. Phys.
+B262 (1985) 463–477.
+[150] L. Cort, M. Garcia and M. Quiros, Supersymmetric Custodial Triplets, Phys. Rev.
+D88 (2013) 075010, [1308.4025].
+[151] M. Garcia-Pepin and M. Quiros, Strong electroweak phase transition from
+Supersymmetric Custodial Triplets, JHEP 05 (2016) 177, [1602.01351].
+[152] CMS collaboration, A. M. Sirunyan et al., Search for Charged Higgs Bosons Produced
+via Vector Boson Fusion and Decaying into a Pair of W and Z Bosons Using pp
+Collisions at √s = 13 TeV, Phys. Rev. Lett. 119 (2017) 141802, [1705.02942].
+[153] R. Vega, R. Vega-Morales and K. Xie, The Supersymmetric Georgi-Machacek Model,
+JHEP 03 (2018) 168, [1711.05329].
+[154] S. Dimopoulos, K. Howe and J. March-Russell, Maximally Natural Supersymmetry,
+Phys. Rev. Lett. 113 (2014) 111802, [1404.7554].
+[155] A. Delgado, M. Garcia-Pepin, G. Nardini and M. Quiros, Natural Supersymmetry from
+Extra Dimensions, Phys. Rev. D94 (2016) 095017, [1608.06470].
+[156] I. Garcia Garcia, K. Howe and J. March-Russell, Natural Scherk-Schwarz Theories of
+the Weak Scale, JHEP 12 (2015) 005, [1510.07045].
+[157] M. Losada, High temperature dimensional reduction of the MSSM and other
+multiscalar models, Phys. Rev. D56 (1997) 2893–2913, [hep-ph/9605266].
+[158] D. Bodeker, P. John, M. Laine and M. G. Schmidt, The Two loop MSSM ﬁnite
+temperature eﬀective potential with stop condensation, Nucl. Phys. B497 (1997)
+387–414, [hep-ph/9612364].
+[159] M. Laine and K. Rummukainen, The MSSM electroweak phase transition on the
+lattice, Nucl. Phys. B535 (1998) 423–457, [hep-lat/9804019].
+[160] X.-m. Zhang, Operators analysis for Higgs potential and cosmological bound on Higgs
+mass, Phys. Rev. D47 (1993) 3065–3067, [hep-ph/9301277].
+[161] C. Grojean, G. Servant and J. D. Wells, First-order electroweak phase transition in the
+standard model with a low cutoﬀ, Phys. Rev. D71 (2005) 036001, [hep-ph/0407019].
+[162] C. Delaunay, C. Grojean and J. D. Wells, Dynamics of Non-renormalizable
+Electroweak Symmetry Breaking, JHEP 04 (2008) 029, [0711.2511].
+[163] D. Bodeker, L. Fromme, S. J. Huber and M. Seniuch, The Baryon asymmetry in the
+standard model with a low cut-oﬀ, JHEP 02 (2005) 026, [hep-ph/0412366].
+65
+
+---PAGE BREAK---
+[164] C. P. D. Harman and S. J. Huber, Does zero temperature decide on the nature of the
+electroweak phase transition?, JHEP 06 (2016) 005, [1512.05611].
+[165] J. de Vries, M. Postma, J. van de Vis and G. White, Electroweak Baryogenesis and the
+Standard Model Eﬀective Field Theory, JHEP 01 (2018) 089, [1710.04061].
+[166] S. J. Huber and M. Sopena, An eﬃcient approach to electroweak bubble velocities,
+1302.1044.
+[167] F. P. Huang, Y. Wan, D.-G. Wang, Y.-F. Cai and X. Zhang, Hearing the echoes of
+electroweak baryogenesis with gravitational wave detectors, Phys. Rev. D94 (2016)
+041702, [1601.01640].
+[168] S. Di Vita, G. Durieux, C. Grojean, J. Gu, Z. Liu, G. Panico et al., A global view on
+the Higgs self-coupling at lepton colliders, JHEP 02 (2018) 178, [1711.03978].
+[169] A. Papaefstathiou and K. Sakurai, Triple Higgs boson production at a 100 TeV
+proton-proton collider, JHEP 02 (2016) 006, [1508.06524].
+[170] K. Fujikura, Y. Nakai and M. Yamada, A more attractive scheme for radion
+stabilization and supercooled phase transition, JHEP 02 (2020) 111, [1910.07546].
+[171] G. Servant, Baryogenesis from Strong CP Violation and the QCD Axion, Phys. Rev.
+Lett. 113 (2014) 171803, [1407.0030].
+[172] D. G. Figueroa, E. Megias, G. Nardini, M. Pieroni, M. Quiros, A. Ricciardone et al.,
+LISA as a probe for particle physics: electroweak scale tests in synergy with
+ground-based experiments, PoS GRASS2018 (2018) 036, [1806.06463].
+[173] G. Panico and A. Wulzer, The Composite Nambu-Goldstone Higgs, Lect. Notes Phys.
+913 (2016) pp.1–316, [1506.01961].
+[174] C. Grojean, O. Matsedonskyi and G. Panico, Light top partners and precision physics,
+JHEP 10 (2013) 160, [1306.4655].
+[175] G. Panico, M. Redi, A. Tesi and A. Wulzer, On the Tuning and the Mass of the
+Composite Higgs, JHEP 03 (2013) 051, [1210.7114].
+[176] C. Cs´aki, M. Geller and O. Telem, Tree-level Quartic for a Holographic Composite
+Higgs, JHEP 05 (2018) 134, [1710.08921].
+[177] B. Grinstein and M. Trott, Electroweak Baryogenesis with a Pseudo-Goldstone Higgs,
+Phys. Rev. D78 (2008) 075022, [0806.1971].
+[178] J. R. Espinosa, B. Gripaios, T. Konstandin and F. Riva, Electroweak Baryogenesis in
+Non-minimal Composite Higgs Models, JCAP 1201 (2012) 012, [1110.2876].
+66
+
+---PAGE BREAK---
+[179] L. Bian, Y. Wu and K.-P. Xie, Electroweak phase transition with composite Higgs
+models: calculability, gravitational waves and collider searches, JHEP 12 (2019) 028,
+[1909.02014].
+[180] M. Chala, R. Gr¨ober and M. Spannowsky, Searches for vector-like quarks at future
+colliders and implications for composite Higgs models with dark matter, JHEP 03
+(2018) 040, [1801.06537].
+[181] ATLAS collaboration, M. Aaboud et al., Combination of the searches for
+pair-produced vector-like partners of the third-generation quarks at √s = 13 TeV with
+the ATLAS detector, Phys. Rev. Lett. 121 (2018) 211801, [1808.02343].
+[182] R. Contino, The Higgs as a Composite Nambu-Goldstone Boson, in Physics of the
+large and the small, TASI 09, proceedings of the Theoretical Advanced Study Institute
+in Elementary Particle Physics, Boulder, Colorado, USA, 1-26 June 2009,
+pp. 235–306, 2011. 1005.4269. DOI.
+[183] I. Baldes and G. Servant, High scale electroweak phase transition: baryogenesis &
+symmetry non-restoration, JHEP 10 (2018) 053, [1807.08770].
+[184] A. Glioti, R. Rattazzi and L. Vecchi, Electroweak Baryogenesis above the Electroweak
+Scale, JHEP 04 (2019) 027, [1811.11740].
+[185] P. Meade and H. Ramani, Unrestored Electroweak Symmetry, Phys. Rev. Lett. 122
+(2019) 041802, [1807.07578].
+[186] P. Schwaller, Gravitational Waves from a Dark Phase Transition, Phys. Rev. Lett. 115
+(2015) 181101, [1504.07263].
+[187] J. Jaeckel, V. V. Khoze and M. Spannowsky, Hearing the signal of dark sectors with
+gravitational wave detectors, Phys. Rev. D94 (2016) 103519, [1602.03901].
+[188] A. Addazi, Limiting First Order Phase Transitions in Dark Gauge Sectors from
+Gravitational Waves experiments, Mod. Phys. Lett. A32 (2017) 1750049,
+[1607.08057].
+[189] I. Baldes, Gravitational waves from the asymmetric-dark-matter generating phase
+transition, JCAP 1705 (2017) 028, [1702.02117].
+[190] A. Addazi and A. Marciano, Gravitational waves from dark ﬁrst order phase
+transitions and dark photons, Chin. Phys. C42 (2018) 023107, [1703.03248].
+[191] K. Tsumura, M. Yamada and Y. Yamaguchi, Gravitational wave from dark sector with
+dark pion, JCAP 1707 (2017) 044, [1704.00219].
+67
+
+---PAGE BREAK---
+[192] M. Aoki, H. Goto and J. Kubo, Gravitational Waves from Hidden QCD Phase
+Transition, Phys. Rev. D96 (2017) 075045, [1709.07572].
+[193] D. Croon and G. White, Exotic Gravitational Wave Signatures from Simultaneous
+Phase Transitions, JHEP 05 (2018) 210, [1803.05438].
+[194] D. Croon, V. Sanz and G. White, Model Discrimination in Gravitational Wave spectra
+from Dark Phase Transitions, JHEP 08 (2018) 203, [1806.02332].
+[195] I. Baldes and C. Garcia-Cely, Strong gravitational radiation from a simple dark matter
+model, JHEP 05 (2019) 190, [1809.01198].
+[196] E. Madge and P. Schwaller, Leptophilic dark matter from gauged lepton number:
+Phenomenology and gravitational wave signatures, JHEP 02 (2019) 048, [1809.09110].
+[197] M. Breitbach, J. Kopp, E. Madge, T. Opferkuch and P. Schwaller, Dark, Cold, and
+Noisy: Constraining Secluded Hidden Sectors with Gravitational Waves, JCAP 1907
+(2019) 007, [1811.11175].
+[198] M. Fairbairn, E. Hardy and A. Wickens, Hearing without seeing: gravitational waves
+from hot and cold hidden sectors, JHEP 07 (2019) 044, [1901.11038].
+[199] M. J. Baker and J. Kopp, Dark Matter Decay between Phase Transitions at the Weak
+Scale, Phys. Rev. Lett. 119 (2017) 061801, [1608.07578].
+[200] M. J. Baker, M. Breitbach, J. Kopp and L. Mittnacht, Dynamic Freeze-In: Impact of
+Thermal Masses and Cosmological Phase Transitions on Dark Matter Production,
+JHEP 03 (2018) 114, [1712.03962].
+[201] A. Greljo, T. Opferkuch and B. A. Stefanek, Gravitational Imprints of Flavor
+Hierarchies, Phys. Rev. Lett. 124 (2020) 171802, [1910.02014].
+[202] M. Geller, A. Hook, R. Sundrum and Y. Tsai, Primordial Anisotropies in the
+Gravitational Wave Background from Cosmological Phase Transitions, Phys. Rev.
+Lett. 121 (2018) 201303, [1803.10780].
+[203] P. Schwaller, T. M. P. Tait and R. Vega-Morales, Dark Matter and Vectorlike Leptons
+from Gauged Lepton Number, Phys. Rev. D88 (2013) 035001, [1305.1108].
+[204] XENON collaboration, E. Aprile et al., Dark Matter Search Results from a One
+Ton-Year Exposure of XENON1T, Phys. Rev. Lett. 121 (2018) 111302, [1805.12562].
+[205] P. Y. Huet, K. Kajantie, R. G. Leigh, B.-H. Liu and L. D. McLerran, Hydrodynamic
+stability analysis of burning bubbles in electroweak theory and in QCD, Phys. Rev.
+D48 (1993) 2477–2492, [hep-ph/9212224].
+68
+
+---PAGE BREAK---
+[206] B. Link, Deﬂagration instability in the quark - hadron phase transition, Phys. Rev.
+Lett. 68 (1992) 2425–2428.
+[207] M. Abney, Hydrodynamic detonation instability in electroweak and QCD phase
+transitions, Phys. Rev. D49 (1994) 1777–1782, [astro-ph/9305021].
+[208] J. Ignatius, K. Kajantie, H. Kurki-Suonio and M. Laine, The growth of bubbles in
+cosmological phase transitions, Phys. Rev. D49 (1994) 3854–3868,
+[astro-ph/9309059].
+[209] H. Kurki-Suonio and M. Laine, Supersonic deﬂagrations in cosmological phase
+transitions, Phys. Rev. D51 (1995) 5431–5437, [hep-ph/9501216].
+[210] H. Kurki-Suonio and M. Laine, On bubble growth and droplet decay in cosmological
+phase transitions, Phys. Rev. D54 (1996) 7163–7171, [hep-ph/9512202].
+[211] L. Rezzolla, Stability of cosmological detonation front, Phys. Rev. D54 (1996)
+1345–1358, [astro-ph/9605033].
+[212] P. C. Fragile and P. Anninos, Hydrodynamic stability of cosmological quark hadron
+phase transitions, Phys. Rev. D67 (2003) 103010, [gr-qc/0303018].
+[213] A. Megevand and F. A. Membiela, Stability of cosmological deﬂagration fronts, Phys.
+Rev. D89 (2014) 103507, [1311.2453].
+[214] A. Megevand and F. A. Membiela, Stability of cosmological detonation fronts, Phys.
+Rev. D89 (2014) 103503, [1402.5791].
+[215] A. Megevand, F. A. Membiela and A. D. Sanchez, Lower bound on the electroweak
+wall velocity from hydrodynamic instability, JCAP 1503 (2015) 051, [1412.8064].
+[216] K. Farakos, K. Kajantie, K. Rummukainen and M. E. Shaposhnikov, 3-D physics and
+the electroweak phase transition: Perturbation theory, Nucl. Phys. B425 (1994)
+67–109, [hep-ph/9404201].
+[217] K. Kajantie, M. Laine, K. Rummukainen and M. E. Shaposhnikov, Generic rules for
+high temperature dimensional reduction and their application to the standard model,
+Nucl. Phys. B458 (1996) 90–136, [hep-ph/9508379].
+[218] G. D. Moore and K. Rummukainen, Electroweak bubble nucleation, nonperturbatively,
+Phys. Rev. D63 (2001) 045002, [hep-ph/0009132].
+[219] G. D. Moore, K. Rummukainen and A. Tranberg, Nonperturbative computation of the
+bubble nucleation rate in the cubic anisotropy model, JHEP 04 (2001) 017,
+[hep-lat/0103036].
+69
+
+---PAGE BREAK---

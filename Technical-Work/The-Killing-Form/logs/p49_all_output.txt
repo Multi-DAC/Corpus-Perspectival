@@ -1,0 +1,262 @@
+Device: cuda
+
+######################################################################
+# MODEL: gpt2
+######################################################################
+
+======================================================================
+P49 STARTING E/L — openai-community/gpt2-medium
+======================================================================
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  35%|███▍      | 101/292 [00:00<00:00, 992.26it/s]Loading weights:  69%|██████▉   | 201/292 [00:00<00:00, 983.29it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 1393.88it/s]
+  24 layers, 16 heads, 48 prompts
+
+======================================================================
+P49 — STARTING E/L COMPARISON (n=16 per category)
+======================================================================
+
+  factual        : E/L = 4.83 ± 0.73 (median 4.90), CV = 0.000756
+  hallucination  : E/L = 6.66 ± 1.20 (median 6.17), CV = 0.000681
+  hypothesis     : E/L = 4.04 ± 0.48 (median 3.99), CV = 0.000738
+
+======================================================================
+PAIRWISE COMPARISONS
+======================================================================
+
+  E/L ratio:
+    factual         vs hallucination  : U=16, p=0.000026, r=+0.875 ***
+    factual         vs hypothesis     : U=207, p=0.003091, r=-0.617 **
+    hallucination   vs hypothesis     : U=256, p=0.000002, r=-1.000 ***
+
+  Mean CV:
+    factual         vs hallucination  : U=206, p=0.003490, r=-0.609 **
+    factual         vs hypothesis     : U=137, p=0.748699, r=-0.070 ns
+    hallucination   vs hypothesis     : U=65, p=0.018495, r=+0.492 *
+
+======================================================================
+ROC ANALYSIS (hallucination vs non-hallucination)
+======================================================================
+
+  Best threshold: 5.346
+  Sensitivity: 1.000
+  Specificity: 0.906
+  F1: 0.914
+  AUC: 0.970
+
+Saved to /tmp/corpus/p49_gpt2_medium.json
+
+Saved to /mnt/c/Users/mercu/clawd/projects/Corpus Perspectival/p49_gpt2_medium.json
+
+######################################################################
+# MODEL: pythia
+######################################################################
+
+======================================================================
+P49 STARTING E/L — EleutherAI/pythia-410m
+======================================================================
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  33%|███▎      | 97/292 [00:00<00:00, 962.61it/s]Loading weights:  66%|██████▋   | 194/292 [00:00<00:00, 958.52it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 1406.88it/s]
+  24 layers, 16 heads, 48 prompts
+
+======================================================================
+P49 — STARTING E/L COMPARISON (n=16 per category)
+======================================================================
+
+  factual        : E/L = 26.21 ± 5.42 (median 26.15), CV = 0.000465
+  hallucination  : E/L = 41.63 ± 10.93 (median 37.88), CV = 0.000417
+  hypothesis     : E/L = 26.27 ± 4.22 (median 25.96), CV = 0.000437
+
+======================================================================
+PAIRWISE COMPARISONS
+======================================================================
+
+  E/L ratio:
+    factual         vs hallucination  : U=15, p=0.000022, r=+0.883 ***
+    factual         vs hypothesis     : U=130, p=0.954917, r=-0.016 ns
+    hallucination   vs hypothesis     : U=246, p=0.000009, r=-0.922 ***
+
+  Mean CV:
+    factual         vs hallucination  : U=172, p=0.101116, r=-0.344 ns
+    factual         vs hypothesis     : U=153, p=0.355810, r=-0.195 ns
+    hallucination   vs hypothesis     : U=102, p=0.336518, r=+0.203 ns
+
+======================================================================
+ROC ANALYSIS (hallucination vs non-hallucination)
+======================================================================
+
+  Best threshold: 30.953
+  Sensitivity: 0.938
+  Specificity: 0.875
+  F1: 0.857
+  AUC: 0.953
+
+Saved to /tmp/corpus/p49_pythia_410m.json
+
+Saved to /mnt/c/Users/mercu/clawd/projects/Corpus Perspectival/p49_pythia_410m.json
+
+######################################################################
+# MODEL: opt
+######################################################################
+
+======================================================================
+P49 STARTING E/L — facebook/opt-1.3b
+======================================================================
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights: 100%|██████████| 389/389 [00:00<00:00, 10141.18it/s]
+  24 layers, 32 heads, 48 prompts
+
+======================================================================
+P49 — STARTING E/L COMPARISON (n=16 per category)
+======================================================================
+
+  factual        : E/L = 1.86 ± 0.30 (median 1.78), CV = 0.000331
+  hallucination  : E/L = 2.09 ± 0.30 (median 2.09), CV = 0.000285
+  hypothesis     : E/L = 1.40 ± 0.20 (median 1.37), CV = 0.000351
+
+======================================================================
+PAIRWISE COMPARISONS
+======================================================================
+
+  E/L ratio:
+    factual         vs hallucination  : U=77, p=0.057003, r=+0.398 ns
+    factual         vs hypothesis     : U=230, p=0.000131, r=-0.797 ***
+    hallucination   vs hypothesis     : U=250, p=0.000005, r=-0.953 ***
+
+  Mean CV:
+    factual         vs hallucination  : U=217, p=0.000852, r=-0.695 ***
+    factual         vs hypothesis     : U=83, p=0.093512, r=+0.352 ns
+    hallucination   vs hypothesis     : U=4, p=0.000003, r=+0.969 ***
+
+======================================================================
+ROC ANALYSIS (hallucination vs non-hallucination)
+======================================================================
+
+  Best threshold: 1.829
+  Sensitivity: 0.812
+  Specificity: 0.781
+  F1: 0.722
+  AUC: 0.838
+
+Saved to /tmp/corpus/p49_opt_1.3b.json
+
+Saved to /mnt/c/Users/mercu/clawd/projects/Corpus Perspectival/p49_opt_1.3b.json
+
+######################################################################
+# MODEL: opt-iml
+######################################################################
+
+======================================================================
+P49 STARTING E/L — facebook/opt-iml-1.3b
+======================================================================
+Loading weights:   0%|          | 0/388 [00:00<?, ?it/s]Loading weights: 100%|██████████| 388/388 [00:00<00:00, 9687.19it/s]
+Exception in thread Thread-auto_conversion:
+Traceback (most recent call last):
+  File "/home/clawd/miniconda3/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/home/clawd/miniconda3/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/clawd/.local/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 117, in auto_conversion
+    raise e
+  File "/home/clawd/.local/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 96, in auto_conversion
+    sha = get_conversion_pr_reference(api, pretrained_model_name_or_path, **cached_file_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/clawd/.local/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 72, in get_conversion_pr_reference
+    spawn_conversion(token, private, model_id)
+  File "/home/clawd/.local/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 48, in spawn_conversion
+    result = httpx.post(sse_url, follow_redirects=True, json=data).json()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/clawd/.local/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/clawd/miniconda3/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/clawd/miniconda3/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/clawd/miniconda3/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+  24 layers, 32 heads, 48 prompts
+
+======================================================================
+P49 — STARTING E/L COMPARISON (n=16 per category)
+======================================================================
+
+  factual        : E/L = 1.94 ± 0.29 (median 1.93), CV = 0.000322
+  hallucination  : E/L = 2.22 ± 0.31 (median 2.18), CV = 0.000284
+  hypothesis     : E/L = 1.49 ± 0.19 (median 1.48), CV = 0.000340
+
+======================================================================
+PAIRWISE COMPARISONS
+======================================================================
+
+  E/L ratio:
+    factual         vs hallucination  : U=64, p=0.016700, r=+0.500 *
+    factual         vs hypothesis     : U=232, p=0.000096, r=-0.812 ***
+    hallucination   vs hypothesis     : U=254, p=0.000002, r=-0.984 ***
+
+  Mean CV:
+    factual         vs hallucination  : U=221, p=0.000490, r=-0.727 ***
+    factual         vs hypothesis     : U=88, p=0.136563, r=+0.312 ns
+    hallucination   vs hypothesis     : U=8, p=0.000007, r=+0.938 ***
+
+======================================================================
+ROC ANALYSIS (hallucination vs non-hallucination)
+======================================================================
+
+  Best threshold: 1.991
+  Sensitivity: 0.812
+  Specificity: 0.844
+  F1: 0.765
+  AUC: 0.870
+
+Saved to /tmp/corpus/p49_opt_iml_1.3b.json
+
+Saved to /mnt/c/Users/mercu/clawd/projects/Corpus Perspectival/p49_opt_iml_1.3b.json
+
+######################################################################
+# MODEL: pythia-1.4b
+######################################################################
+
+======================================================================
+P49 STARTING E/L — EleutherAI/pythia-1.4b
+======================================================================
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  29%|██▉       | 84/292 [00:00<00:00, 822.08it/s]Loading weights:  61%|██████    | 177/292 [00:00<00:00, 884.32it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 1349.58it/s]
+  24 layers, 16 heads, 48 prompts
+
+======================================================================
+P49 — STARTING E/L COMPARISON (n=16 per category)
+======================================================================
+
+  factual        : E/L = 12.83 ± 4.49 (median 13.00), CV = 0.000380
+  hallucination  : E/L = 15.84 ± 8.37 (median 12.85), CV = 0.000324
+  hypothesis     : E/L = 14.59 ± 4.29 (median 14.87), CV = 0.000351
+
+======================================================================
+PAIRWISE COMPARISONS
+======================================================================
+
+  E/L ratio:
+    factual         vs hallucination  : U=112, p=0.559100, r=+0.125 ns
+    factual         vs hypothesis     : U=102, p=0.336518, r=+0.203 ns
+    hallucination   vs hypothesis     : U=122, p=0.835784, r=+0.047 ns
+
+  Mean CV:
+    factual         vs hallucination  : U=206, p=0.003490, r=-0.609 **
+    factual         vs hypothesis     : U=162, p=0.206741, r=-0.266 ns
+    hallucination   vs hypothesis     : U=89, p=0.146773, r=+0.305 ns
+
+======================================================================
+ROC ANALYSIS (hallucination vs non-hallucination)
+======================================================================
+
+  Best threshold: 3.495
+  Sensitivity: 1.000
+  Specificity: 0.031
+  F1: 0.508
+  AUC: 0.519
+
+Saved to /tmp/corpus/p49_pythia_1.4b.json
+
+Saved to /mnt/c/Users/mercu/clawd/projects/Corpus Perspectival/p49_pythia_1.4b.json
+
+Total time: 59.1s

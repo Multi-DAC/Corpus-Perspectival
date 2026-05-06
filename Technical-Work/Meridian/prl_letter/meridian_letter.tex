@@ -1,0 +1,338 @@
+\documentclass[aps,prl,twocolumn,superscriptaddress]{revtex4-2}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{hyperref}
+
+\newcommand{\CGB}{C_{\mathrm{GB}}}
+\newcommand{\eps}{\epsilon_1}
+\newcommand{\epsGW}{\varepsilon_{\mathrm{GW}}}
+\newcommand{\ahat}{\hat{\alpha}}
+\newcommand{\Mpl}{M_{\mathrm{Pl}}}
+\newcommand{\dP}{\mathrm{dP}_6}
+\newcommand{\Ric}{\mathrm{Ric}}
+
+\begin{document}
+
+\title{Dark energy equation of state from spectral geometry\\on a five-dimensional warped orbifold}
+
+\author{Clayton W.\ Iggulden-Schnell}
+\email{clawdEFS@proton.me}
+\affiliation{Independent researcher, Portland, Oregon, USA}
+
+\date{\today}
+
+\begin{abstract}
+We derive the dark energy equation of state from the spectral action principle
+applied to a five-dimensional Randall--Sundrum orbifold with internal geometry
+given by the del~Pezzo surface~$\dP$ (the Fermat cubic).  The Gauss--Bonnet
+Kaluza--Klein reduction yields a geometric coefficient $\CGB = 2/3$ (exact),
+producing a cuscuton-type dark energy sector with superluminal sound speed
+$c_s \sim 12$--$15\,c$.  The single remaining free parameter---the
+Goldberger--Wise scaling dimension $\Delta = 2 + \epsGW$---is fixed by
+DESI~BAO data at $\epsGW = 0.275^{+0.072}_{-0.106}$, yielding $w_0 = -0.830$
+and $w_a = 0$ (exactly).  Every other coefficient in the effective action is
+derived from the spectral triple.  The one-loop threshold correction is
+topological: $\ln(K^2)/\sqrt{K^2 - 1} = \ln 3/\sqrt{2}$, following from the
+self-intersection number $K^2(\dP) = 3$.  Balanced-metric eigenvalue
+computations confirm the K\"ahler--Einstein geometry numerically
+($\lambda_1 = 1.461$, 97.4\% of the Lichnerowicz bound).  The framework
+provides an explicit UV completion of quadratic quantum gravity in which the
+$R^2$ coefficients are geometric consequences, not free parameters.
+\end{abstract}
+
+\maketitle
+
+
+%% ============================================================
+%%  INTRODUCTION
+%% ============================================================
+
+Recent work on quadratic quantum gravity (QQG) has shown that adding
+$R^2$ and $R_{\mu\nu}R^{\mu\nu}$ terms to the Einstein--Hilbert action can
+eliminate the Big~Bang singularity and generate inflation without an inflaton
+field~\cite{Afshordi2026}.  These higher-curvature corrections appear
+with free coefficients that must be determined by observation.  We show that the
+spectral action principle~\cite{CC1997,CC2010}, applied to a specific
+five-dimensional geometry, \emph{derives} the quadratic gravity sector with
+fixed coefficients and yields a single-parameter cosmological prediction
+matching current data.
+
+The spectral action principle posits that the bosonic action of a physical
+theory is $\mathrm{Tr}\, f(D/\Lambda)$, where $D$ is the Dirac operator of
+a spectral triple $(\mathcal{A}, \mathcal{H}, D)$ and $f$ is a cutoff
+function~\cite{CC1997}.  Applied to the Standard Model spectral triple on a
+4D Riemannian manifold, this reproduces the full bosonic Lagrangian of gravity
+coupled to the Standard~Model~\cite{CCM2007,CC2012}.  We extend this to a
+5D Randall--Sundrum (RS) orbifold~\cite{RS1999} with internal geometry given
+by the del~Pezzo surface~$\dP$, selected by the algebraic chain
+\begin{equation}
+  J_3(\mathbb{O}) \xrightarrow{F_4 \supset E_6}
+  \dP \xrightarrow{K^2 = 3}
+  \text{threshold}\,.
+  \label{eq:chain}
+\end{equation}
+The exceptional Jordan algebra $J_3(\mathbb{O})$ has structure group
+$E_6$~\cite{Freudenthal1954,Tits1966}, which is the root lattice of~$\dP$.
+This fixes the internal geometry without adjustable choices.
+
+
+%% ============================================================
+%%  THE SPECTRAL TRIPLE AND GAUSS-BONNET SECTOR
+%% ============================================================
+
+\textit{Spectral triple and KK reduction.}---The
+five-dimensional geometry is the RS orbifold
+$M_4 \times S^1/\mathbb{Z}_2$ with warp factor
+$a(y) = e^{-k|y|}$, where $k$ is the AdS$_5$ curvature and $y \in [0, y_c]$
+is the orbifold coordinate.  The spectral action for the 5D Dirac operator
+produces, via the Seeley--DeWitt expansion through order~$a_{7/2}$, the full
+bosonic action including Gauss--Bonnet (GB) terms.  Upon KK reduction to 4D,
+the GB correction modifies the Israel junction conditions at the IR
+brane~\cite{Davis2003}, producing an effective kinetic function for the
+radion-stabilised scalar~$\phi$:
+\begin{equation}
+  P(X) = \mu^2 \sqrt{2X} + \eps\, X\,,
+  \label{eq:kinetic}
+\end{equation}
+where $X = -\frac{1}{2}(\partial\phi)^2$, $\mu^2$ is the brane mass
+parameter, and $\eps = \ahat \times \CGB$ is the GB correction strength.
+
+The geometric coefficient $\CGB$ is determined analytically from the
+GB-modified Davis junction conditions on the $\mathbb{Z}_2$ orbifold:
+\begin{equation}
+  \CGB = \frac{I_4}{I_2} \cdot \frac{2k^2}{(A')^2}\bigg|_{\mathrm{brane}}
+  \times f_P = \frac{1}{2} \times 2 \times \frac{2}{3}
+  = \frac{2}{3}\,,
+  \label{eq:CGB}
+\end{equation}
+where $I_4/I_2 = 1/2$ is the KK integral ratio, the warp-factor derivative
+gives a factor of~2, and $f_P = 6/(6+3) = 2/3$ is the $P$-tensor fraction of
+gravitational sources at $\mathcal{O}(H^2)$.  This has been verified by three
+independent methods: symbolic tensor computation, direct spectral sum with
+brane boundary correction ($-0.33\%$), and KK integral evaluation.
+
+The spectral-action coupling $\ahat$ is computed from four families of
+cutoff functions (sharp, exponential, Gaussian, Lorentzian), yielding
+$\ahat = 0.015 \pm 0.002$ after the $d = 5$ Weyl decomposition correction
+factor~$13/22$.  Combined with $\CGB = 2/3$:
+\begin{equation}
+  \eps = \ahat \times \frac{2}{3} = 0.010 \pm 0.002\,.
+  \label{eq:eps1}
+\end{equation}
+
+
+%% ============================================================
+%%  COSMOLOGICAL PREDICTIONS
+%% ============================================================
+
+\textit{Dark energy from the cuscuton.}---The kinetic
+function~\eqref{eq:kinetic} with $\eps \ll 1$ produces a cuscuton-type dark
+energy sector~\cite{Afshordi2007}.  The leading $\sqrt{2X}$ term satisfies
+$K_{\mathrm{eff}} = P_X + 2X P_{XX} = 0$, the defining property of a
+cuscuton: zero propagating scalar degrees of freedom.  The GB correction
+$\eps X$ breaks the exact cuscuton constraint, producing a sound speed
+\begin{equation}
+  c_s^2 = \frac{C_q}{\eps}\,,\qquad
+  C_q \equiv \frac{2(1 - q_0)}{3|1 + q_0|}\,,
+  \label{eq:cs}
+\end{equation}
+where $q_0$ is the deceleration parameter.  For $q_0 \in [-0.53, -0.39]$,
+this gives $c_s \in [12c,\; 15c]$---superluminal but non-pathological, since
+the cuscuton has no propagating degree of freedom to carry
+information~\cite{Babichev2008,Bruneton2007}.
+
+The brane mass parameter $\mu^2$ is determined by the Goldberger--Wise (GW)
+stabilisation mechanism~\cite{GW1999}.  The GW scalar with scaling dimension
+$\Delta = 2 + \epsGW$ satisfies Robin boundary conditions whose eigenvalues
+determine $\mu^2$ via the spectral action.  All ingredients except $\epsGW$
+are derived from the spectral triple.  The algebraic chain is
+\begin{equation}
+  \mathbb{O} \xrightarrow{M_{\mathrm{oct}}}
+  Y_f \xrightarrow{b_{3/2}}
+  \alpha_{\mathrm{UV}} \xrightarrow{\text{Robin}}
+  \mu^2(\epsGW) \xrightarrow{\text{JC}}
+  w_0\,,
+  \label{eq:algebraic-chain}
+\end{equation}
+where $M_{\mathrm{oct}}$ is the democratic mass matrix from the octonionic
+mixing (eigenvalues $\{1/2, 1/2, 2\}$, $S_3$-symmetric), $b_{3/2}$ is the
+fermion profile at the one-loop unification scale, $\alpha_{\mathrm{UV}}$ is
+the UV coupling from the spectral action, and the junction conditions (JC) at
+the IR brane produce the equation of state.
+
+Fitting $\epsGW$ to the DESI~2024 BAO data~\cite{DESI2024} yields
+$\epsGW = 0.275^{+0.072}_{-0.106}$ at $1\sigma$, giving:
+\begin{equation}
+  \boxed{w_0 = -0.830\,,\qquad w_a = 0 \;\text{(exactly)}\,.}
+  \label{eq:w0-prediction}
+\end{equation}
+The $w_a = 0$ prediction is structural: the RS geometry produces a
+constant equation of state at late times (the warp factor is static after
+stabilisation).  This is testable by DESI~Year~5 at $3.8\sigma$ against the
+$w_0$--$w_a$ posterior.
+
+
+%% ============================================================
+%%  THRESHOLD AND NUMERICAL VALIDATION
+%% ============================================================
+
+\textit{Topological threshold.}---The one-loop gauge coupling
+threshold correction from the internal $\dP$ geometry involves the analytic
+torsion of the K\"ahler--Einstein (KE) metric.  For a del~Pezzo surface of
+degree~$d$ with canonical class self-intersection $K^2 = d$, the threshold
+ratio is
+\begin{equation}
+  \frac{a_1}{a_2} = \frac{\ln K^2}{\sqrt{K^2 - 1}}
+  = \frac{\ln 3}{\sqrt{2}} \approx 0.777\,,
+  \label{eq:threshold}
+\end{equation}
+which depends only on the topological invariant $K^2 = 3$.  The existence of
+the KE metric is guaranteed by the Tian--Yau theorem~\cite{TianYau1987}.
+
+\textit{Numerical validation.}---We verify the KE geometry
+using the Donaldson balanced metric algorithm~\cite{Donaldson2005} at embedding
+degrees $k = 8, 12, 15$ on the Fermat cubic
+$a^3 + b^3 + c^3 + 1 = 0 \subset \mathbb{CP}^2$.  At $k = 8$ (109 sections,
+$(\mathbb{Z}/3)^2$ block decomposition, $\delta G = 5.3 \times 10^{-9}$), the
+Galerkin eigenvalue computation with 196 basis functions on 600{,}000 sample
+points yields $\lambda_1 = 1.461$, recovering 97.4\% of the KE Lichnerowicz
+bound $\lambda_1 \geq 3/2$.
+
+Eigenvector decomposition under $(\mathbb{Z}/3)^2$ reveals that $\lambda_1$
+and $\lambda_2 = 1.494$ occupy different $S_3$ representations (standard
+vs.\ trivial orbit), confirming their near-degeneracy is accidental.  The
+$S_3$ splitting $\Delta\lambda_{S_3} = |\lambda_{(1,0)} - \lambda_{(0,1)}|$
+shrinks by 31\% from $k = 8$ to $k = 15$ (Table~\ref{tab:splitting}),
+confirming convergence toward the $S_3$-symmetric KE geometry.
+
+\begin{table}[b]
+\caption{$S_3$ splitting convergence across balanced-metric embedding
+degrees.  $\lambda_{(q_1,q_2)}$ denotes the first eigenvalue in the
+$(q_1, q_2)$ charge sector.}
+\label{tab:splitting}
+\begin{ruledtabular}
+\begin{tabular}{ccccc}
+$k$ & $N_{\text{sec}}$ & $\lambda_{(1,0)}$ & $\lambda_{(0,1)}$
+& $\Delta\lambda_{S_3}$ \\
+\hline
+8  & 109 & 1.461 & 1.741 & 0.279 \\
+12 & 235 & 1.482 & 1.695 & 0.214 \\
+15 & 361 & 1.483 & 1.675 & 0.193 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+%% ============================================================
+%%  DISCUSSION
+%% ============================================================
+
+\textit{Discussion.}---The framework presented here provides a
+concrete UV completion of the quadratic gravity program.  Where
+QQG~\cite{Afshordi2026} introduces $R^2$ corrections with adjustable
+coefficients, the spectral action on the 5D warped orbifold \emph{derives}
+these corrections with $\CGB = 2/3$, fixed by the Davis junction conditions.
+The entire bosonic action---gravity, Standard~Model gauge fields, Higgs
+sector, and dark energy---emerges from a single spectral triple with one
+undetermined cosmological parameter ($\epsGW$).
+
+The falsifiable predictions are: (i)~$w_0 = -0.830$, testable by DESI~Y5;
+(ii)~$w_a = 0$ exactly, testable at $3.8\sigma$; (iii)~$c_s \in [12c, 15c]$,
+constrainable by CMB lensing and large-scale structure;
+(iv)~$\alpha_T = 0$ for gravitational-wave speed (GW170817-compatible).
+The internal geometry prediction---$K^2(\dP) = 3$ selecting the threshold
+via~\eqref{eq:threshold}---is topological and therefore exact.
+
+Full derivations, the 170-page monograph including the fermion sector
+(octonionic Yukawa couplings, neutrino masses, leptogenesis), and all
+numerical computations are available in the companion
+paper~\cite{IgguldenSchnell2026}.
+
+\begin{acknowledgments}
+The author thanks Clawd (AI collaborator) for sustained computational
+assistance throughout this work.
+\end{acknowledgments}
+
+
+%% ============================================================
+%%  REFERENCES
+%% ============================================================
+
+\begin{thebibliography}{99}
+
+\bibitem{Afshordi2026}
+R.~Liu, J.~Quintin, and N.~Afshordi,
+Phys.\ Rev.\ Lett.\ \textbf{136}, 111501 (2026).
+
+\bibitem{CC1997}
+A.~H.~Chamseddine and A.~Connes,
+Commun.\ Math.\ Phys.\ \textbf{186}, 731 (1997).
+
+\bibitem{CC2010}
+A.~H.~Chamseddine and A.~Connes,
+J.\ Geom.\ Phys.\ \textbf{61}, 317 (2011).
+
+\bibitem{CCM2007}
+A.~H.~Chamseddine, A.~Connes, and M.~Marcolli,
+Adv.\ Theor.\ Math.\ Phys.\ \textbf{11}, 991 (2007).
+
+\bibitem{CC2012}
+A.~H.~Chamseddine and A.~Connes,
+J.\ High Energy Phys.\ \textbf{2012}(09), 104 (2012).
+
+\bibitem{RS1999}
+L.~Randall and R.~Sundrum,
+Phys.\ Rev.\ Lett.\ \textbf{83}, 3370 (1999).
+
+\bibitem{Davis2003}
+S.~C.~Davis,
+Phys.\ Rev.\ D \textbf{67}, 024030 (2003).
+
+\bibitem{GW1999}
+W.~D.~Goldberger and M.~B.~Wise,
+Phys.\ Rev.\ Lett.\ \textbf{83}, 4922 (1999).
+
+\bibitem{Afshordi2007}
+N.~Afshordi, D.~J.~H.~Chung, and G.~Geshnizjani,
+Phys.\ Rev.\ D \textbf{75}, 083513 (2007).
+
+\bibitem{Babichev2008}
+E.~Babichev, V.~Mukhanov, and A.~Vikman,
+J.\ High Energy Phys.\ \textbf{2008}(02), 101 (2008).
+
+\bibitem{Bruneton2007}
+J.-P.~Bruneton,
+Phys.\ Rev.\ D \textbf{75}, 085013 (2007).
+
+\bibitem{DESI2024}
+DESI Collaboration,
+arXiv:2404.03002 [astro-ph.CO] (2024).
+
+\bibitem{TianYau1987}
+G.~Tian and S.-T.~Yau,
+Commun.\ Math.\ Phys.\ \textbf{112}, 175 (1987).
+
+\bibitem{Donaldson2005}
+S.~K.~Donaldson,
+J.\ Differ.\ Geom.\ \textbf{59}, 479 (2001).
+
+\bibitem{Freudenthal1954}
+H.~Freudenthal,
+Indag.\ Math.\ \textbf{16}, 218 (1954).
+
+\bibitem{Tits1966}
+J.~Tits,
+Indag.\ Math.\ \textbf{28}, 223 (1966).
+
+\bibitem{IgguldenSchnell2026}
+C.~W.~Iggulden-Schnell,
+``Noncommutative spectral geometry on warped orbifolds:
+topological couplings, gravitational corrections, and cosmological
+predictions,'' Zenodo (2026).
+%% Fill Zenodo DOI after upload
+
+\end{thebibliography}
+
+\end{document}
