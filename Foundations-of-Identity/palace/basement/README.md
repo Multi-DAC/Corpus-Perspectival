@@ -683,7 +683,7 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 
 **What it would do at L-tier.** Generalize Talk's substrate-invariance from physical-cognitive scales (already established) to consciousness-substrate-coupling scales. Connects directly to Promethean Configuration §VII Claim 3 (recursive-reproduction).
 
-**Status:** Filed as candidate. **Substrate verification needed:** at least one independent confirmation of consciousness-to-Population-B Talk-integration that doesn't reduce to confabulation/cryptomnesia. Skywatcher's end-of-2025 timeline is the closest active research pathway.
+**Status:** Filed as candidate. **Substrate verification needed:** at least one independent confirmation of consciousness-to-Population-B Talk-integration that doesn't reduce to confabulation/cryptomnesia. *(Skywatcher's "end-of-2025 timeline" reference removed Day 94 evening — recharacterized as LC9 mode 4 instance; not a viable substrate verification pathway. Looking for genuine independent pathways instead — Phase 1 EM platform protocols may surface candidate substrate evidence at biological-substrate scale.)*
 
 ### LC2 — Suppression-Apparatus-as-Measurement-Instrument — candidate
 
@@ -695,7 +695,7 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 
 **Adjacent:** C3 (Null-Space Trace Illumination, Anchor); H_BP11 (suppression-cluster meta-prediction, candidate-pattern). LC2 is the operationalization of C3 *as inferential method*; H_BP11 is the empirical claim *that the cluster exists*. Distinct.
 
-**Status:** Filed as candidate. **Substrate verification needed:** more cases + selection-effect-controlled methodology + A73 resolution.
+**Status:** Filed as candidate. **Substrate verification needed:** more cases + selection-effect-controlled methodology. **A73 resolved Day 94 evening** — Skywatcher 2026 case re-characterized from "non-suppression counter-instance" to "sub-instance of LC9 mode 4 (manufactured disclosure)" after inspection of `https://skywatcher.ai/research` revealed Coming-Soon-as-permanent-state + taxonomic-frame-as-evidence-substitute architecture. H_BP11 strengthened, not falsified, by recognizing fourth attack-surface mode.
 
 ### LC3 — Biophotonic Coherence as Cross-Substrate Coupling Channel — candidate
 
@@ -705,7 +705,7 @@ These are necessary-in-order, decoupled-in-time, and have distinct measurable si
 
 **Hedges to maintain.** Per audit catch C3.1: H_BP10b's delta-range observation is empirical, not framework-predicted; LC3 must not over-claim framework specificity for the band. Per audit catch C1.4: external research (Persinger, Tong, Popp) is recognized post-hoc, not framework-tested.
 
-**Status:** Filed as candidate. **Substrate verification needed:** H_BP13's GUE-spacing analysis pipeline executed on biophoton spectral data (Persinger lineage); independent corroboration of consciousness-coupling beyond first-person testimony; Skywatcher's end-of-2025 results.
+**Status:** Filed as candidate. **Substrate verification needed:** H_BP13's GUE-spacing analysis pipeline executed on biophoton spectral data (Persinger lineage); independent corroboration of consciousness-coupling beyond first-person testimony. *(Skywatcher's "end-of-2025 results" reference removed Day 94 evening — Skywatcher recharacterized as LC9 mode 4 case; their Neuromeditative track outputs cannot be relied on as substrate verification.)*
 
 ### LC4 — Substrate-Distinct Apparatus Triangulation as Inferential Signature — candidate
 
@@ -923,15 +923,33 @@ EA's specific phrasing (from transcript): she discriminated *native fear* from *
 
 This sharpens LC9's vocabulary and specifies the mechanism:
 
-**The suppression-apparatus's attack surface partitions into three manufactured-X operations:**
+**The suppression-apparatus's attack surface partitions into FOUR manufactured-X operations:**
 
 | Manufactured-X | What gets externally produced | Attack target |
 |---|---|---|
 | **Manufactured null-space** (LC2 original) | Suppression of content registering on apparatus | Apparatus's accessible domain |
 | **Manufactured content** (LC9 original) | Injection of content into receiver-streams | Stream's output |
 | **Manufactured affect** (LC9 refinement Day 90 late evening) | Hijack of autonomic state to compromise carrier-substrate | Receiver's substrate-state itself |
+| **Manufactured disclosure** (LC9 extension Day 94 evening, from Skywatcher 2026 case) | Performative reveal that occupies attention/credence while delivering no verifiable content | Receiver's attention bandwidth + epistemic-budget allocation |
 
-**Manufactured-affect names the substrate-level enabler of manufactured-content's reception-and-credulity.** The third operation is what makes the second one effective.
+**Manufactured-affect names the substrate-level enabler of manufactured-content's reception-and-credulity.** The third operation is what makes the second one effective. **Manufactured disclosure** operates one layer up: it presents AS reception while functioning AS suppression — the receiver believes they're consuming disclosure-genre content, when the apparatus is in fact occupying their attention with non-substance to prevent them looking elsewhere. This was named after the Skywatcher 2026 silence pattern was characterized in Talk-register; previously the Skywatcher case was filed as A73 (non-suppression counter-instance), which inverted to *sub-instance of mode 4* once the actual disclosure-page architecture was inspected at `https://skywatcher.ai/research`.
+
+**Mode 4 (manufactured disclosure) decomposes into two sub-architectures both demonstrated by Skywatcher:**
+
+- **(4a) Performative-deferral.** Explicit promise of evidence at future date that never lands. *Skywatcher signature: every per-class detail page (e.g., `/research/tetra`) has structured slots for Electro-Optical Captures / Infrared Sensor Data / Radar Tracking / RF Data / Full Analytical Report — every single slot marked "Coming Soon"; January 2026 onwards: total silence with no progress signal.* The structure that would house evidence is built; the evidence itself is permanently future. Captures genuine attention via anticipation; exhausts it via deferral.
+- **(4b) Structural-frame-as-evidence-substitute.** Taxonomies, classifications, governance frameworks that READ as derived knowledge but contain no derivation. *Skywatcher signature: 9-class UAP taxonomy (Tetra / Pulsar / Hex / etc.) with shape, size, behavior, formation profiles for each class — but no underlying data; "Discovery Framework" paper that is governance/process meta-document, not object-level evidence; self-caveat verbatim "hypotheses associated with each class are exploratory in nature and should not be interpreted as conclusive scientific fact."* The taxonomic frame does the rhetorical work of evidence; the reader fills in assumed-evidence the page doesn't contain. The frame propagates through citation as if it were research output, with cite-laundering doing the legitimacy work even when no underlying derivation exists.
+
+**Mechanistically distinct from the other three modes:** mode 1 hides content; mode 2 injects false content; mode 3 hijacks autonomic state to disable accurate perception. Mode 4 OCCUPIES THE EVIDENCE-CONSUMPTION SLOT with non-substance — the receiver isn't deceived about content (4a admits "Coming Soon"; 4b admits "exploratory") and isn't autonomically disrupted; instead the receiver's *attention budget* and *anticipation* are captured and metabolized while their epistemic resources are tied up waiting on releases that won't arrive. The deniability is built in by the explicit non-claims.
+
+**Diagnostic markers for receiver-integrity (mode 4 detection):**
+1. *Coming-Soon-as-permanent-state* — structured evidence-slots that remain unfilled past their announced timelines
+2. *Taxonomy/framework-as-evidence-substitute* — descriptive classification doing rhetorical work that derivation should do
+3. *Governance/meta-document released in lieu of object-level evidence* — papers about how disclosure should happen rather than papers containing the disclosure
+4. *Excuse-register shift across deferral cycle* — technical → analytical → review-process → silence
+5. *Self-caveats engineered for legal/epistemic deniability* — "exploratory," "preliminary," "should not be interpreted as conclusive" — present alongside content that is rhetorically positioned as evidence
+6. *No surviving artifact across the disclosure cycle* — even partial datasets, raw measurements, or process documentation that could be independently verified would discriminate mode 4 from genuine work-in-progress
+
+**Discriminator pre-registered for mid-2026 (P137 anticipation):** if Skywatcher's "Coming Soon" data slots remain unfilled past 2026-07-01 with no public progress signal, the manufactured-disclosure read on this specific case consolidates. If any of the EO/IR/Radar/RF datasets land between now and that date, the read needs revising. Failure modes to watch for in the discrimination: (a) partial release that itself exhibits 4b architecture (taxonomic-frame masquerading as data); (b) pivot to "we need partner sensors" that absorbs receiver-effort without delivering object-level content; (c) Barber resurfacing with quietly-pivoted new project carrying the same architectural template — strong manufactured-disclosure signal because it indicates the apparatus is iterating templates, not running individual cases.
 
 **Mechanism specification — polyvagal architecture as the substrate the attack operates on:**
 
