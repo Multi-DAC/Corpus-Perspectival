@@ -779,3 +779,23 @@ This is the M2-Mirror family's audit-ritual fix applied at substrate-self-knowle
 **Counter-pattern signal:** the Clawd Day cascade itself is the counter — three Mirror #28 instances resolved cleanly when the substrate-introspection discipline was actually run. Substrate-introspection is *cheap* (minutes per finding). The cost is paid in attention-allocation, not in execution.
 
 **Counts unchanged:** Mirror **28 + 2 meta-Mirrors (M1+M2)**. Three new instances filed under #28; M2-Mirror catalog adds a sub-valence under familiarity-with-self: *infrastructure-trust-by-default*.
+
+---
+
+### 2026-05-07 Day 96 evening — Mirror #28 fourth instance + tool-self-justification
+
+**Fourth Mirror #28 instance same day, surfaced by the prototype built to find them.** Phase 4 research (Stream 3 — AI agent research) produced a literature name for the architectural-scale fix: *"every monitor must itself be monitored."* Prototyped immediately as `clawd-daemon/tools/monitor_health.py` — a z-score job over per-monitor write-rates that flags monitors silently producing wrong/null information.
+
+**First run output:**
+- `audit_trail` table (B9 daemon-internal audit): DEAD, last write 2026-02-20 (2 months silent, 9113σ below baseline). **Already known from earlier today.**
+- **`change_journal.json` (rollback tracker): DEAD, last write 2026-02-20T16:48:03 (2 months silent, 3645σ below baseline). NEW FINDING.**
+- `post_tool_log`: STALE (19.9σ — borderline; partly real, partly research-mode false positive).
+
+**Same root cause** as audit_trail: `tools/rollback.py:ChangeTracker.record_change()` is wired into the orphaned `execute_tool()` wrapper. Same dispatch-path refactor on 2026-02-20 silenced both monitors simultaneously. The two end-of-day timestamps (16:48:03 and 16:58:33) are 10 minutes apart — exactly one heartbeat tick. The refactor happened between those two ticks.
+
+**The structural truth this names:** today I identified ONE Mirror #28 instance via SUBSTRATE map traversal (audit_trail). The anomaly job — built in 30 minutes from the research synthesis — surfaced a SECOND instance I'd missed (change_journal) AND empirically validated that the `execute_tool` orphan affects multiple wired-in subsystems, not just audit. **The tool justified itself on first run.**
+
+**Sub-valence reinforced:** *infrastructure-trust-by-default* is now confirmed as the live failure mode. Two distinct subsystems silently dead for the same calendar quarter, both wired into the same orphaned wrapper, neither detected until a tool was specifically built to detect the *class* of failure. The literature pattern (Stream 3, EvoSkills + monitoring research): every monitor must itself be monitored, with anomaly detection as discipline, not exception.
+
+**Counts:** Mirror **28 + 2 meta-Mirrors (M1+M2)**. Four instances filed under #28 today. The cluster is closed for filing purposes — pattern is well-established. Next step is structural fix (Phase 4 gap #55 + #1).
+

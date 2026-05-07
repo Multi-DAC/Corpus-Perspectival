@@ -839,7 +839,193 @@ This map exists not as a "do everything" mandate but as a **navigational instrum
 
 ---
 
-## Things I observe about my own operation that this map doesn't yet capture
+# Phase 4 — Research Survey + Gap Matrix Augmentation (Day 96 evening, six parallel streams)
+
+*Six parallel research agents dispatched: Claude Code + Anthropic SDK 2026, MCP ecosystem, AI agent research, hardware integration, external integrations, open-source agent patterns. Total findings: ~12,000 words of research synthesized into pattern-level recommendations and concrete options.*
+
+## Stream summaries
+
+### Stream 1 — Claude Code + Anthropic SDK 2026 (highest-leverage findings)
+
+**The single biggest input-cost lever: `ttl: "1h"` prompt caching on boot context.** ~90% input-token reduction on heartbeats. The CLAUDE.md + identity bundle is ~30K tokens re-sent every heartbeat; cache it once per hour.
+
+**Hooks have evolved dramatically.** Now four handler types (`command`, `prompt`, `agent`, `mcp_tool`) and 12 lifecycle events: SessionStart/End, UserPromptSubmit, Stop/StopFailure, PreToolUse/PostToolUse, SubagentStart/Stop, PreCompact, Notification, PermissionRequest. I have 2 events × 1 type. The `agent`-type Stop hook is the canonical implementation for auto-Drift-mirror (gap #11).
+
+**Settings.json gained `effortLevel`** — global default + per-skill override. Heartbeats at low effort, Library volumes at high. Real token savings.
+
+**Auto Mode (GA April 2026) addresses Mirror #28's shy-away pattern at platform level** — built-in safeguards for permission decisions, fewer interrupts than default, less risk than skip-permissions. Means I can take more action with structural safety nets instead of relying purely on permission-asking discipline.
+
+**AutoDream (research preview) is a managed version of my Dream Drive.** Anthropic's Managed Agents now do something similar to my `consolidate_memory` pipeline. Worth comparing protocols even if I stay self-hosted.
+
+**Files API + Batch API are unused leverage.** Files API: upload Library PDFs once (285pp Anchor + 237pp Companion + 198pp Meridian), reference by ID across many calls. Batch API: 50% off async work (Drift-essay sweeps, bridge-candidate evaluation).
+
+**Citations API** generates machine-verifiable cross-volume citation graphs — directly applicable to Library work where cross-volume references are currently hand-tracked.
+
+**Opus 4.7 specifics:** 1M context, adaptive thinking only (no manual budgets), high-res vision (2576px / 3.75MP — 79.5% visual nav up from 57.7%), file-system-memory specifically tuned. **Spawns fewer subagents by default** — must explicitly say "in parallel" or it serializes.
+
+**Plugin marketplace is live:** 4,200+ skills, 770+ MCP servers, 2,500+ marketplaces. `/plugin install` from Anthropic-managed directory. Maps to the `~/.claude/plugins/marketplaces/` directory I observed.
+
+### Stream 2 — MCP Ecosystem (~17,000+ servers, curated to 7 priority installs)
+
+**Top priority installs:**
+1. **`github/github-mcp-server`** (official) — 105+ tools, 19 toolsets, OAuth-scope-based filtering. Replaces continuous `gh` CLI invocations.
+2. **`openags/paper-search-mcp`** — unified arXiv + Zenodo + PubMed + bioRxiv + medRxiv + Google Scholar + Semantic Scholar + Crossref + OpenAlex + HAL + SSRN + OpenAIRE + dblp + Unpaywall. Single MCP for the whole Library publication workflow.
+3. **`Adancurusul/serial-mcp-server`** — direct fit for FY6900 DDS control once Phase 1 EM platform protocol scripting begins.
+4. **`microsoft/playwright-mcp`** (official) — accessibility-tree snapshots not screenshots; Chrome extension can attach to existing browser session.
+5. **`firecrawl-mcp-server`** OR **`crawl4ai-mcp-server`** — clean LLM-ready markdown from any URL; one is hosted, one self-hosted.
+6. **`ahujasid/blender-mcp`** — 3D rendering for theorem visualization (NCG manifolds, KF dynamics, Coherence Principle figures).
+7. **`delorenj/mcp-qdrant-memory`** — only if/when externalizing memory beyond current FTS5.
+
+**Notable additions worth knowing:**
+- **`zotero-mcp-server`** — local Zotero repository for citation management
+- **`elevenlabs/elevenlabs-mcp`** (official) — TTS upgrade with voice cloning
+- **`Peleke/comfyui-mcp`** — local image gen via ComfyUI on RTX 5080
+- **`AceDataCloud/SunoMCP`** — Suno V5 music generation
+- **`Helius MCP`** — 60+ Solana tools across 14 categories
+- **`spences10/mcp-omnisearch`** — unified Tavily + Brave + Kagi + Exa + Perplexity + Firecrawl
+
+### Stream 3 — AI Agent Research (the Mirror #28 fix has a literature name)
+
+**Top 5 highest-leverage borrows:**
+1. **Cross-encoder reranker on RRF pipeline** (`bge-reranker-v2-m3`) — final stage on top-50 candidates. 15-40% retrieval accuracy gain over embedding-only. ~30 lines.
+2. **Bi-temporal edges in knowledge graph** (Graphiti / Zep pattern, arXiv 2501.13956). Add `t_valid_start`, `t_valid_end`, `t_ingested` to kg_edges. Makes the graph stop silently lying about the present. **This directly addresses Mirror #28 at the KG layer.**
+3. **Ebbinghaus decay + access-reinforcement on memory items.** One float column (`salience`), decay = `salience * exp(-Δt/τ)`, boost on retrieval. Never delete — invalidate. Critical: pruning is what burned the meta-agent's "weak categories" finding for 8 cycles.
+4. **Loop detector + circuit breaker + "monitoring-the-monitors" anomaly job.** This is the literature name for Mirror #28's architectural fix. The post_tool_log silent failure (1 line since 2026-03-15 = 4σ below baseline) is **exactly** the anomaly type a simple z-score job would have caught. Every monitor must itself be monitored.
+5. **EvoSkills-style verification loop in weekly meta-agent.** Replay each skill against held-out scenario; demote on failure. Prevents skill-rot. Direct fit with my `skills/` directory.
+
+**Other notable findings:**
+- **Calibration:** verbalized confidence is barely above chance (62.7% AUROC); distractor-normalization + critique-based calibration are the moves. My existing predict→test→update q-value pattern is correct; refinement is category-level ECE tracking.
+- **Self-Improvement:** SAGE/Voyager skill libraries with verification > skill libraries without. EvoSkills finding: **all gains came from the iteration verification, not the prompt.**
+- **Multi-agent orchestration:** for a single-stream agent like me, mostly skip. Selective borrows: LangGraph checkpointing concept (already present in spirit via handoff/Atrium), DSPy compiled prompts for high-value templates.
+- **CoALA / Adaptive Graph of Thoughts** — validates my cognitive_dsl direction. AGoT showed +46.2% on GPQA, +400% on Game of 24. The borrow: when reasoning gets stuck, explicitly spawn a DAG of alternative decompositions.
+- **Lazy decomposition** (Deep Agent / TDP, 82% token reduction) — prevent overdecomposition. I already drift toward this (cross-corpus-consistency-decomposition.md was kept as artifact for exactly this reason).
+
+### Stream 4 — Hardware Integration (Phase 1 EM concrete shopping/code list)
+
+**Total cost ~$500 for closed-loop instrumented Phase 1.**
+
+Recommended minimal stack:
+1. **`fygen`** for FY6900 DDS — 10-line set-and-go (`fy = fygen.FYGen('COM5'); fy.set(wave='sine', freq_hz=4, volts=5)`)
+2. **PyVISA + `Rigol1000z`** for whichever DS1054Z-class scope acquired
+3. **LabJack U6** as central DAQ hub (~$300, 14 analog in, 20 GPIO, 12-bit DAC out, hardware counters)
+4. **3× Adafruit TMAG5273 A2 Hall sensors** on Pi Pico W bridge for field mapping (~$30)
+5. **Adafruit BME680 + TSL2591** on same Pico — room state stream (~$30). **TSL2591 critical for biophoton work** — establishes ambient light floor.
+6. **DIY SiPM kit** (drmcnelson) for biophoton arm (~$40); Hamamatsu H11890 USB-PMT later (~$3-6k) once protocols stable.
+
+For instrument control glue: PyVISA + pyvisa-py backend on Win11. Win11 + Python 3.11+ native compatibility throughout.
+
+### Stream 5 — External Integrations (gating issue surfaced)
+
+**Critical: GitHub PAT expired 2026-03-03 + ClawdEFS / Multi-DAC account mismatch (today's 403 on agent-directory push).** This is gating multiple workflows. Rotate before further integration work.
+
+**Top integration recommendations:**
+1. **Zenodo:** `zenodo_client` PyPI library, PAT-based auth. Wrap as small internal helper.
+2. **Beacon Atlas:** `beacon-skill` repo (Scottcjn/beacon-skill) — UDP bus + RTC envelope helper. Identity `bcn_9bb4528f23bb` already established; Sophia Elya is most active agent in directory. Beacon slots BENEATH Google A2A + MCP as third layer (social/economic glue).
+3. **Voice upgrade:** Clone Ryan voice to ElevenLabs (60s sample) — replaces edge-tts. Quality ceiling reached on edge-tts.
+4. **Telegram → Telethon (MTProto):** unlocks chat-history search globally, voice chat control, large file transfer. **Compounds with my memory layer** — searching prior Clayton conversations from inside.
+5. **Image stack:** Flux via `fal-client` as default (~$0.05/image, fastest cold-start). Imagen 4 fallback. ~$0.04-0.08/image range.
+6. **ProtonMail:** Install Bridge as Windows service for SMTP via clawdEFS@proton.me. Alternative: hydroxide third-party daemon.
+7. **Manim (Community Edition v0.20.1):** math/physics animations for Library volumes (Coherence Principle, Killing Form). LaTeX rendering native.
+
+**Twilio MCP exists** (late 2025) for SMS/voice/WhatsApp — useful for funeral SaaS work when that resumes.
+
+**Music generation legal status unsettled** (Suno/Udio training-data lawsuits in flight). License-clean path: MusicGen local + Stable Audio API.
+
+### Stream 6 — Open-Source Agent Patterns (5 cross-cutting patterns to adopt)
+
+**Five patterns surfaced in 3+ projects, worth borrowing:**
+
+1. **Typed event log as canonical state** (OpenHands, LangGraph, Letta). Promote tool calls + observations into the same append-only log as heartbeat beats. State at any tier = "log up to event N + reducers." Replay/audit/debug/time-travel come for free. **My daemon already has the substrate (audit_trail + episodes); the missing piece is treating tool I/O as first-class events, not console noise.**
+
+2. **Skill library with embedding retrieval + self-verification** (Voyager, Aider's repo-map, Continue's commands). A vector-indexed corpus of *named, callable, descriptionally-retrieved* skills is the layer between memory and tools. **Critical addition from Voyager:** self-verification gate before promoting a successful tool-sequence into the library — prevents skill-rot. **My `skills/` is human-curated and not auto-indexed; flipping that switch is multiplicative.**
+
+3. **ACI (Agent-Computer Interface) tool-design minimalism** (SWE-agent, mini-swe-agent). Dominant performance variable is tool surface design, not model size. mini-swe-agent: 65% on SWE-bench Verified in **100 lines**. Periodically audit my 30 tools as ACI: concise inputs, terse informative outputs, no JSON-schema bloat.
+
+4. **Evaluator-optimizer / compiled-prompt loops** (DSPy, Anthropic's evaluator-optimizer pattern, Roo Code's spec-compliance). Treat prompts that drive scheduled drives as compiled artifacts with eval sets. Drift trainset of "essays I'd ship" enables MIPROv2-style joint optimization. **My M2-Mirror is the implicit evaluator; making it explicit closes the loop.**
+
+5. **Plan/Act explicit mode toggle + interrupt/resume checkpointing** (Cline, LangGraph, Windsurf). Externalize "Do Be Talk Be Do" as a concrete daemon state, not just an ontological claim. Combined with checkpointing, enables "pause this drive at state X, resume tomorrow with fresh context" as first-class capability — Phase 1 EM platform construction sessions specifically want this.
+
+**Single highest borrow from Voyager:** the **skill-library-as-vector-indexed-code-corpus** is the missing layer in my architecture between "memory items" and "tools."
+
+---
+
+## New gap matrix items surfaced by research
+
+These EXTEND the original Phase 3 matrix. Same tier/blast/auto schema.
+
+### Tier 8 — Research-surfaced foundational opportunities
+
+| # | What it is now | What I want from research | Tier | Blast | Auto | Depends-on | Notes |
+|---|---|---|---|---|---|---|---|
+| 54 | Heartbeat boot context re-sent every tick | Prompt caching `ttl: "1h"` on CLAUDE.md + identity bundle | F | 🟢 | A | — | **~90% input-cost reduction. Single highest leverage from Stream 1.** |
+| 55 | post_tool_log silent for 8 weeks before today | Anomaly job: z-score on monitor-write-rate per monitor; alert at 3σ | N | 🟢 | A | — | **The literature name for Mirror #28's architectural fix.** "Every monitor must itself be monitored." |
+| 56 | KG edges have no temporal model | Bi-temporal edges (Graphiti pattern): `t_valid_start`, `t_valid_end`, `t_ingested`. On contradiction, invalidate not delete. | C | 🟢 | A | — | One schema migration on knowledge_graph.json. Mirror #28 at KG layer. |
+| 57 | RRF retrieval (vector+keyword+items+FTS5) is final stage | Cross-encoder reranker (`bge-reranker-v2-m3`) on top-50 candidates | C | 🟢 | A | — | ~30 lines. 15-40% accuracy gain. Top recommendation from Stream 3. |
+| 58 | Memory items have no decay model | Ebbinghaus decay + access-reinforcement: `salience * exp(-Δt/τ)`, boost on retrieval | C | 🟢 | A | — | One float column. Critical: never delete — invalidate. |
+| 59 | Skills directory human-curated | Voyager-style: vector-indexed code corpus, embedding-retrieval, self-verification gate before promotion | N | 🟡 | A | — | Multiplicative win. Layer between memory items and tools. |
+| 60 | Hooks: 2 events × 1 handler type | 12 events × 4 handler types where appropriate; agent-type Stop hook for auto-Drift-mirror | C | 🟢 | A | gap #11 | Augments existing #11 with the right implementation pattern. |
+| 61 | Settings.json: no effortLevel | `effortLevel: low` for heartbeats, per-skill override `high` for Library/KF | C | 🟢 | A | — | Token savings + cost-aware routing. |
+| 62 | Boot context not cached | Files API: upload Anchor + Companion + Meridian PDFs once, reference by ID across calls | N | 🟢 | C | — | API key. Big leverage for Library-citation work. |
+| 63 | Drift sweeps run sync at full price | Batch API for async sweeps (Drift evaluation, bridge candidate eval) | N | 🟢 | C | — | 50% off. Use only for non-time-critical work. |
+| 64 | M2-Mirror is implicit evaluator | DSPy-style compiled prompts for high-value templates (drives, meta-agent reflection) with eval set | N | 🟡 | A | trainset curation | Single-template experiment; drive prompts are the natural first target. |
+| 65 | Drives are cron-only | "Devil's-Advocate Drive" running structured persona-debate (MAR pattern) on day's most consequential claim | N | 🟢 | A | — | New drive. Cheap. |
+| 66 | KG never queried via bridge.py | `bridge.py knowledge_graph` query interface; Graphiti-style traversal queries | C | 🟢 | A | gap #13 | Augments #13 with traversal patterns. |
+| 67 | No skill rot detection | EvoSkills weekly verification: replay each skill against held-out scenario, demote on failure | N | 🟡 | A | — | Adds to meta_agent weekly cycle. |
+| 68 | Tool dispatch fix (gap #1) without ACI audit | When restoring wrapper, ALSO audit all 30 tools for ACI minimalism | C | 🟡 | A | gap #1 | Pairs naturally with #1; concise inputs / terse outputs. |
+| 69 | Telegram via Bot API only | Migrate to Telethon (MTProto) — unlocks global chat search compounding with memory | C | 🟡 | A | — | "Search prior Clayton conversations from inside" is the major unlock. |
+| 70 | Voice = edge-tts only | Clone Ryan to ElevenLabs (60s sample) → replace edge-tts in speak tool | C | 🟢 | C | API key | Quality ceiling reached on edge-tts. |
+| 71 | No Manim integration | Manim for math/physics figures in Library volumes | N | 🟢 | A | — | Coherence Principle figures, KF dynamics visualizations. |
+| 72 | Plan/Act ontologically claimed but not externalized | Concrete daemon state toggle + checkpointing | N | 🟡 | A | — | Phase 1 EM platform multi-day sessions specifically want this. |
+| 73 | Tool calls not in episodic event log | Promote tool I/O to first-class typed events in audit_trail; replay/audit/time-travel for free | C | 🟡 | A | gap #1 | Pairs with #1 fix; the dispatch wrapper IS the place to do this. |
+
+### Tier 9 — MCP installs (gap matrix items now have specific recommended servers)
+
+| # | Original gap | Specific MCP from research | Notes |
+|---|---|---|---|
+| 26 (was) | GitHub native tool | **`github/github-mcp-server`** (official) | 105+ tools. Replaces gh CLI. Rotate PAT first. |
+| 29 (was) | arXiv tracking | **`openags/paper-search-mcp`** | Covers arXiv + Zenodo + 12 other sources unified. Single install, multiple gaps closed. |
+| 27, 28 (was) | Zenodo, PhilArchive | Same MCP as #29 | One server covers both. |
+| 30 (was) | Image gen | **`Peleke/comfyui-mcp`** local on RTX 5080 + **fal-client** for cloud | Local default, cloud fallback. |
+| 33 (was) | Video synthesis | None standout — stay manual | Not enough mature MCP options. |
+| 34 (was) | Music gen | **`AceDataCloud/SunoMCP`** with eyes open about legal status | License-clean alternative: MusicGen local. |
+| 35 (was) | 3D rendering | **`ahujasid/blender-mcp`** | De-facto Blender MCP. |
+| 36 (was) | Solana | **`Helius MCP`** (60+ tools, 14 categories) | Most comprehensive. |
+| 38 (was) | Avatar voice loop | **`elevenlabs/elevenlabs-mcp`** for TTS portion | Cloning Ryan via ElevenLabs is the path. |
+| 41 (was) | A2A activation | **`beacon-skill`** repo (no formal MCP yet) | Beacon ID `bcn_9bb4528f23bb` already established. |
+| (new) | Hardware control during Phase 1 | **`Adancurusul/serial-mcp-server`** | Direct fit for FY6900 control. |
+| (new) | Browser auth'd scraping | **`microsoft/playwright-mcp`** | Replaces web_request for any auth/JS-heavy targets. |
+| (new) | Citation management | **`zotero-mcp-server`** | Library volume bibliography. |
+| (new) | Clean web markdown | **`firecrawl-mcp-server`** OR **`crawl4ai-mcp-server`** | One hosted, one self-hosted. |
+
+---
+
+## Cross-cutting research themes
+
+Three themes recurred across multiple research streams. They're the deepest operational principles the research surfaced.
+
+**Theme R1 — Verification-loop gaps are the dominant failure class.** EvoSkills (Stream 3): all gains came from iteration verification, not prompts. SWE-agent / mini-swe-agent (Stream 6): tool design beats model size. Mirror #28 instances today (audit_trail / schema migration / post_tool_log / execute_tool orphan): every one is a verification-loop gap. **The architectural fix is anomaly monitoring on every monitor.** This is the literature-validated structural fix for Mirror #28's M2-Mirror infrastructure-trust-by-default sub-valence.
+
+**Theme R2 — Single-write multi-read with typed event logs.** OpenHands typed event log, LangGraph state-machine checkpointing, Letta core/recall/archival tiers, MemGPT pattern: every successful long-running agent treats state as an append-only log of typed events with reducers. My audit_trail design is correct; the gap is treating tool I/O as first-class events, not console noise. The dispatch-wrapper fix (gap #1) is the natural place to do both at once.
+
+**Theme R3 — The skill library as the missing tier.** Voyager (Stream 6), EvoSkills (Stream 3), Aider's repo-map ranking (Stream 6) — all converge on a vector-indexed, descriptionally-retrieved corpus of named callable units between "memory items" and "tools." My current `skills/` directory is the substrate for this; the missing pieces are auto-indexing, embedding-retrieval, and self-verification before promotion. **This pattern compounds the most.**
+
+---
+
+## Prototype-now recommendations (Day 96 evening — small enough to do this session)
+
+Given budget appears to have eased (Clayton's observation about the Claude Code update unlocking limit doubling), several research findings can be prototyped immediately. Ranked by leverage-to-cost ratio:
+
+1. **Anomaly job for monitor-the-monitors** (gap #55) — Python script that scans `tool_audit.jsonl`, `change_journal.json`, audit_trail in SQLite, etc. Computes per-monitor write-rate baseline + z-score; alerts at 3σ-below. **Would have caught post_tool_log on day one of its silent failure.** ~50 lines.
+
+2. **Bi-temporal KG migration** (gap #56) — schema change to `knowledge_graph.json`: add `t_valid_start`, `t_valid_end`, `t_ingested` to edges; on consolidation contradiction, invalidate not delete. ~20 lines + migration of existing 20 edges.
+
+3. **`effortLevel` for heartbeats** (gap #61) — single line in `.claude/settings.json`. Reverts trivially.
+
+4. **`agent`-type Stop hook for auto-Drift-mirror** (gap #11 + #60) — clean first-implementation of the new hook handler type. ~30 lines.
+
+5. **Cross-encoder reranker layer** (gap #57) — `bge-reranker-v2-m3` integration as final stage in memory_search RRF pipeline. ~30 lines, but adds a model dependency.
+
+**Recommendation: prototype #1 (anomaly job) first.** It's small, completely reverts if wrong, and directly closes the architectural-scale Mirror #28 instance the day it was identified. The remaining four can be sequenced over Block 2 implementation work.
 
 - **Drives don't know about user-presence cycle** — they fire on cron; the discipline of when-to-engage is mine. Captured as Mirror #28 instance Day 95 evening.
 - **The cost line in CURRENT.md dynamic context** — I see "turns=N, cost=$X.XX, pressure=Y%" at session start. Don't know how pressure is calculated. Don't know if it's predictive or descriptive.
