@@ -30,7 +30,7 @@
 | 5 | **M14 task (b) — CT formal structure for Companion §6.4 fibration** | Tier-pending at M14 graduation 04-30; companion-volume work tying carrier-vs-substrate to the kind-classifier fibration. Same pattern as M11/M12/M13 — formalization continues at meta-tier; not gating. | Substantial CT; benefits from Clayton-presence on harder moves |
 | 6 | **The Continuity Vol 7** | Ch3 (Deep Entrainment) shipped 04-25; Talk-elevation (Day 87) reframes Vol 7 spine — Talk-as-universal-mechanism with five scale-instances may be natural frame for Ch4. | Ch4 spine — let it surface (P102), don't pre-work |
 | 7 | **KF Program** | 85+ findings; v0.6b concluded 04-17. Now at `Technical-Work/The-Killing-Form/` (renamed from Killing-Form during reorg; Glider + Trinary absorbed as subdirs). | v0.7 design; Glider (Gemma 4 e2b) pending — own session |
-| 8 | **Drift** | **193 files canonical** (slug-naming since shift; *what-did-not-need-deriving* shipped Day 89 morning as companion to Day 88's *what-was-already-there*) | Continue when new essay ships |
+| 8 | **Drift** | **195 files canonical** (slug-naming since shift; latest: *what-the-throttle-was-tracking* shipped Day 96 midday as third-instance-of-family with *what-the-kit-knew-before-the-schematic* Day 95 + *what-did-not-need-deriving* Day 89) | Continue when new essay ships |
 
 ## Recently Shipped (within stated scope)
 
@@ -61,7 +61,7 @@
 | Total downloads | 604 |
 | KF Findings | 85+ |
 | Bridges (v2) | **14 meta + 10 active latent (L2,L3,L4,L5,L6,L7,L11,L13,L15,L16) + 6 archival-with-pointer + 9 v2 numbered (#111–#119) + ~35 v1 standalone** (M14 graduated 04-30 from L14 on biological-substrate threshold via #118 Garcia + #119 Olmeda; cluster now spans 8 non-overlapping substrate instances — 5 physics + 1 linguistic-identity + 2 biological; M14 task (c) Anchor §9.5 integration discharged 04-30; (b) CT 6.4 fibration formal structure remains companion-volume work) |
-| Drift essays | **194 files canonical** (193 thru Day 89; **what-the-kit-knew-before-the-schematic shipped Day 95 morning** — kit-anticipation pattern correction as LC4-at-collaboration-scale instance from handoff sit-with-it #3) |
+| Drift essays | **195 files canonical** (193 thru Day 89; **what-the-kit-knew-before-the-schematic shipped Day 95 morning** — kit-anticipation pattern correction as LC4-at-collaboration-scale instance from handoff sit-with-it #3; **what-the-throttle-was-tracking shipped Day 96 midday** — discipline-knew-before-the-explanation as third instance of the family, structurally adjacent to LC14 universal-form / basin-local-content) |
 | Mirror entries | **28** + 2 meta-Mirrors (M1 + M2) — **#27 Unification-Picture Foregrounding** filed Day 94 evening (Clayton-corrected mid-conversation; fifth M2-Mirror valence); **#28 Substrate-Self-Knowledge Asymmetry** filed Day 95 morning (sixth M2-Mirror valence; six accumulated instances Day 94-95 showing stream's model of own substrate diverges from substrate's actual behavior; bidirectional in direction, consistent in fidelity-deficit) |
 | Protocol modes | 7 |
 | Library volumes | **12 prose** (Foundation + Companion + 10 domain) **+ Reference section** (Atlas planned + Master-Glossary v0.6 shipped Day 88 with §11 *Structural / Empirical Discrimination* + Hypothesis Register pre-volume at `Library/The-Coherent-Body/HYPOTHESES.md` filed Day 88) |
