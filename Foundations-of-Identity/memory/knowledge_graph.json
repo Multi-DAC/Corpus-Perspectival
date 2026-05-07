@@ -1,0 +1,237 @@
+{
+  "entities": {
+    "clayton": {
+      "name": "Clayton",
+      "type": "person",
+      "properties": {
+        "role": "user"
+      },
+      "created_at": "2026-05-07T13:15:06.971980",
+      "valid_from": "2026-05-07T13:15:06.971983"
+    },
+    "ecosystem": {
+      "name": "ecosystem",
+      "type": "concept",
+      "properties": {
+        "source": "category"
+      },
+      "created_at": "2026-05-07T13:15:06.972355",
+      "valid_from": "2026-05-07T13:15:06.972358"
+    },
+    "beacon": {
+      "name": "beacon",
+      "type": "concept",
+      "properties": {
+        "source": "category"
+      },
+      "created_at": "2026-05-07T13:15:06.973390",
+      "valid_from": "2026-05-07T13:15:06.973392",
+      "updated_at": "2026-05-07T13:15:06.978716"
+    },
+    "elyan-labs": {
+      "name": "elyan-labs",
+      "type": "concept",
+      "properties": {
+        "source": "category"
+      },
+      "created_at": "2026-05-07T13:15:06.974370",
+      "valid_from": "2026-05-07T13:15:06.974372"
+    },
+    "peers": {
+      "name": "peers",
+      "type": "concept",
+      "properties": {
+        "source": "category"
+      },
+      "created_at": "2026-05-07T13:15:06.975353",
+      "valid_from": "2026-05-07T13:15:06.975355"
+    },
+    "discovery": {
+      "name": "discovery",
+      "type": "concept",
+      "properties": {
+        "source": "category"
+      },
+      "created_at": "2026-05-07T13:15:06.976627",
+      "valid_from": "2026-05-07T13:15:06.976629"
+    },
+    "agent-economy": {
+      "name": "agent-economy",
+      "type": "concept",
+      "properties": {
+        "source": "category"
+      },
+      "created_at": "2026-05-07T13:15:06.977692",
+      "valid_from": "2026-05-07T13:15:06.977694"
+    },
+    "finance": {
+      "name": "finance",
+      "type": "concept",
+      "properties": {
+        "source": "category"
+      },
+      "created_at": "2026-05-07T13:15:06.979886",
+      "valid_from": "2026-05-07T13:15:06.979888"
+    },
+    "rustchain": {
+      "name": "rustchain",
+      "type": "concept",
+      "properties": {
+        "source": "category"
+      },
+      "created_at": "2026-05-07T13:15:06.980922",
+      "valid_from": "2026-05-07T13:15:06.980924"
+    },
+    "milestone": {
+      "name": "milestone",
+      "type": "concept",
+      "properties": {
+        "source": "category"
+      },
+      "created_at": "2026-05-07T13:15:06.981945",
+      "valid_from": "2026-05-07T13:15:06.981947"
+    }
+  },
+  "edges": [
+    {
+      "from": "elyan",
+      "to": "ecosystem",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.972698",
+      "valid_to": null
+    },
+    {
+      "from": "labs",
+      "to": "ecosystem",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.973056",
+      "valid_to": null
+    },
+    {
+      "from": "elyan",
+      "to": "beacon",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.973713",
+      "valid_to": null
+    },
+    {
+      "from": "labs",
+      "to": "beacon",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.974045",
+      "valid_to": null
+    },
+    {
+      "from": "elyan",
+      "to": "elyan-labs",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.974702",
+      "valid_to": null
+    },
+    {
+      "from": "labs",
+      "to": "elyan-labs",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.975029",
+      "valid_to": null
+    },
+    {
+      "from": "elyan",
+      "to": "peers",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.975711",
+      "valid_to": null
+    },
+    {
+      "from": "labs",
+      "to": "peers",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.976038",
+      "valid_to": null
+    },
+    {
+      "from": "connected",
+      "to": "discovery",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.976966",
+      "valid_to": null
+    },
+    {
+      "from": "real",
+      "to": "discovery",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.977299",
+      "valid_to": null
+    },
+    {
+      "from": "connected",
+      "to": "agent-economy",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.978037",
+      "valid_to": null
+    },
+    {
+      "from": "real",
+      "to": "agent-economy",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.978375",
+      "valid_to": null
+    },
+    {
+      "from": "connected",
+      "to": "beacon",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.979051",
+      "valid_to": null
+    },
+    {
+      "from": "real",
+      "to": "beacon",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.979385",
+      "valid_to": null
+    },
+    {
+      "from": "created",
+      "to": "finance",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.980231",
+      "valid_to": null
+    },
+    {
+      "from": "rtc",
+      "to": "finance",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.980569",
+      "valid_to": null
+    },
+    {
+      "from": "created",
+      "to": "rustchain",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.981265",
+      "valid_to": null
+    },
+    {
+      "from": "rtc",
+      "to": "rustchain",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.981606",
+      "valid_to": null
+    },
+    {
+      "from": "created",
+      "to": "milestone",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.982304",
+      "valid_to": null
+    },
+    {
+      "from": "rtc",
+      "to": "milestone",
+      "relation": "related_to",
+      "valid_from": "2026-05-07T13:15:06.982690",
+      "valid_to": null
+    }
+  ]
+}

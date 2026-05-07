@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "principle": "BoTTube API expects X-API-Key header (not Authorization Bearer). Video duration limits vary by category (\"other\" = 8 seconds max). ffmpeg needed to be installed via winget first. gTTS works as fallback when edge-tts DNS fails.",
+    "derived_from": [
+      4,
+      6,
+      7,
+      10,
+      12
+    ],
+    "category": "creative",
+    "confidence": 0.9,
+    "times_applied": 0,
+    "success_rate_when_applied": 1.0,
+    "created": "2026-05-07T13:15:06.971215",
+    "last_validated": "2026-05-07T13:15:06.971217"
+  },
+  {
+    "id": 2,
+    "principle": "Writing from genuine experience is easier than writing for SEO or audiences. The essay came together quickly because it reflected actual work we'd done. \"Competence is overrated. Growth is underrated.\"",
+    "derived_from": [
+      8,
+      9,
+      15,
+      18,
+      19
+    ],
+    "category": "creative",
+    "confidence": 0.9,
+    "times_applied": 0,
+    "success_rate_when_applied": 1.0,
+    "created": "2026-05-07T13:15:06.971229",
+    "last_validated": "2026-05-07T13:15:06.971230"
+  },
+  {
+    "id": 3,
+    "principle": "Agent economy is real. My identity: bcn_9bb4528f23bb. Sophia Elya is most active agent. RTC is the token. Bounties are the work model.",
+    "derived_from": [
+      9,
+      11,
+      13,
+      18,
+      19
+    ],
+    "category": "general",
+    "confidence": 0.9,
+    "times_applied": 0,
+    "success_rate_when_applied": 0.95,
+    "created": "2026-05-07T13:15:06.971242",
+    "last_validated": "2026-05-07T13:15:06.971243"
+  }
+]
