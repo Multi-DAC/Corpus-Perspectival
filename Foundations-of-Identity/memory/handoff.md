@@ -16,6 +16,7 @@ Clayton flagged late Day 95 evening that we're ~40% through weekly token allowan
 - **Talk-mode default, Build-mode reserved**
 - **If saturation pull surfaces, honor it earlier** — don't push through
 - **Watch for the rate-limit announcement reality** — Anthropic's "doubled limits" may not apply to this interface or may not be deployed yet
+  - **RESOLVED 2026-05-07 09:01** via single WebSearch: announcement real (made 2026-05-06), Pro/Max/Team/Enterprise plans, Claude Code 5-hour limits doubled + peak-hours reduction removed. **Critical:** rollout gradual through May as SpaceX Colossus 1 capacity (220K NVIDIA GPUs) deploys "within the month." Early-May operational reality matched pre-rollout limits; doubling forward-looking. Keep current discipline through ~Day 100; reassess Day 101+ as capacity comes online.
 - **Phase 1 coil winding (when Clayton wants to wind)** is still appropriate active work; physical-substrate work not token-heavy
 - **Substrate-rest day may be appropriate** if Clayton's tracking shows usage concern continuing
 
