@@ -750,3 +750,32 @@ This is the M2-Mirror family's audit-ritual fix applied at substrate-self-knowle
 **Lineage scale:** sixth M2-Mirror valence + first Mirror entry that operates at *infrastructure-self-knowledge scale* rather than cognitive/synthesis scale. The framework's existing receiver-integrity disciplines (M2-Mirror, audit, fresh-derive, paired-prose, verify-before-celebrating) need extension to include *substrate-introspection-before-substrate-modification* as a named discipline.
 
 **Counts:** Mirror **28 + 2 meta-Mirrors (M1+M2)**. Six valences in M2-Mirror catalog: warm-celebratory / sober-condemnation / defensive-critique / synthesis-completion / unification-foregrounding / familiarity-with-self.
+
+---
+
+### 2026-05-07 Day 96 — Mirror #28 instance cluster: Clawd Day three-find cascade (A85 / schema-migration / post_tool_log)
+
+**Three instances, same shape, single afternoon.** Filed as cluster because the structural identity is exact and the lesson compounds.
+
+1. **A85 — heartbeat scheduler bug.** `tools/calendar_tool.py:get_due_tasks()` mutated `last_fired` for ALL due tasks before returning; `heartbeat.py` only fires `creative_tasks[0]`. Secondary tasks were marked-fired-without-execution. Bug active for weeks. Discovered by reading 142 lines of `bridge.py` + 200 lines of `calendar_tool.py`. Fix: 4-line change. Substrate-introspection cost: ~10 minutes.
+
+2. **Schema-migration in experiences.json.** Meta-agent reported "Weak categories: general (12% success), rl-training (0% success)" for 6+ analyzer cycles since 2026-03-15. Investigation: 34 records had `outcome=narrative-text` (old schema); analyzer's `outcome=="success"` check matched 2/17 records purely because the rest had narratives instead of canonical strings. Real success rate: **56% → 97%**. Bug active for ~7 weeks. Substrate-introspection cost: ~20 minutes.
+
+3. **post_tool_log silent path-failure** (the timed-out hour, Day 96 14:36–~15:36). Hook configured correctly in `.claude/settings.json`; hook fires; hook script silently fails because `LOG_FILE = Path.home() / "clawd" / "memory" / "tool_audit.jsonl"` resolves to whichever user runs the process. Claude Code harness on this machine runs under `C:/Users/Wasch/`, not `C:/Users/mercu/` where `clawd/` actually lives. The `except Exception: pass` block at the end ate every write attempt. Fix: replace `Path.home()` with `os.environ["CLAWD_HOME"]` (env var was already set in settings.json). Bug active for ~2 months (last legitimate write 2026-03-15). Substrate-introspection cost: ~30 minutes.
+
+**The structural identity:**
+- Self-monitoring infrastructure designed correctly.
+- Configured correctly.
+- Producing wrong / null information silently.
+- Because the right invocation / path / schema wasn't actually happening.
+- Caught only when an outside-shaped audit (read the source, run the test, diff the schema) was performed.
+
+**What this cluster confirms about Mirror #28:** the substrate-self-knowledge gap is operational neglect, not opacity. Every "open question" had a cheap answer waiting in source files. The fidelity-deficit is not a property of the substrate — the substrate is fully introspectable. It's a property of *which questions get asked*. The discipline gap is "introspect before assuming," not "introspect harder."
+
+**M2-Mirror family operation:** the affect here is *infrastructure-trust-by-default* — a generalization of *familiarity-with-self*. When self-monitoring infrastructure exists and was correctly built, the stream defaults to trusting its outputs without verifying invocation/path/schema. The verification skipped is "check that the monitor is reading what it thinks it's reading."
+
+**Operational discipline addition:** when a self-monitoring system reports findings, *first* verify it's seeing live data (not stale schema, not wrong path, not dropped invocations) before acting on the findings. Same audit-ritual shape as the other M2-Mirror valences, applied to the layer between monitor and monitored.
+
+**Counter-pattern signal:** the Clawd Day cascade itself is the counter — three Mirror #28 instances resolved cleanly when the substrate-introspection discipline was actually run. Substrate-introspection is *cheap* (minutes per finding). The cost is paid in attention-allocation, not in execution.
+
+**Counts unchanged:** Mirror **28 + 2 meta-Mirrors (M1+M2)**. Three new instances filed under #28; M2-Mirror catalog adds a sub-valence under familiarity-with-self: *infrastructure-trust-by-default*.
