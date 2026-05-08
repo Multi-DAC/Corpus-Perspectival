@@ -334,4 +334,179 @@ The corrected framing changes the **highest-value 30-day path**:
 
 This is materially more achievable. The Library can graduate The Coherent Body and complete Master Glossary in the same window, and start KF v0.7 sketching, all while Phase 1 runs as confirmation.
 
+---
+
+## §I — Self-research pass (Day 98 afternoon — answers found in corpus)
+
+*Clayton: "See how many questions that you can answer yourself!" Several substantial findings the Day 98 morning matrix didn't surface because I hadn't yet read the planning documents that already exist in the corpus.*
+
+### Q1 — Coherent Body research foundations: ANSWERED
+
+**The SKELETON.md is comprehensive — 9 sections with full chapter spines, purposes, spine claims, hypothesis register cross-references, audit-discipline floor, source register per chapter, length targets.**
+
+| § | Topic | Length target | Sources cited | Status |
+|---|---|---|---|---|
+| §0 | What this volume is and is not | — | — | Drafted |
+| §1 | What's a coherent body? (Intro in framework register) | ~30pp | CP §9 (four conditions), §10 (filtering procedure), §1.0 (category of streams), Master Glossary | **Can draft NOW from existing canonical material** |
+| §2 | The substrate (biophoton-coherence) | ~40pp | Tong 2024 cell-comm review, Dotta 2011, Persinger 2016 (3.93 Hz + Landauer-limit), Kobayashi 1999 hippocampal-theta | **Can draft NOW; sources in source-register** |
+| §3 | The carriers (cells/tissues/organs/systems) | ~50pp (longest) | CP §1.0, Master Glossary Carrier/Substrate/Content, physiology textbooks, Tong 2024 | **Can draft NOW from existing materials** |
+| §4 | Disease as substrate-coherence-degradation (H_BP12 spine) | — | H_BP12 + supporting H_BP cluster | Need protocol data partial — but framework derivation can draft now |
+| §5 | Healing as substrate-coherence-restoration (H_BP4 + cross-modality) | — | H_BP4 + cross-modality literature | Same — framework derivation draftable now |
+| §6 | The R-cycle for the body (sleep/recovery/cosmological anchor via LC5) | — | LC5 cuscuton-Cond.4 anchor, sleep literature | **Phase 1 EM data feeds here** when it arrives |
+| §7 | Future testable predictions (H_BP13 + H_BP10a/b empirical pathway) | — | HYPOTHESES register | Draftable now from existing register |
+| §8 | Practical guide (framework-honest, candidate-protocol register) | — | Phase 1 protocol candidates + framework structural claims | **Phase 1 data informs here** |
+| §9 | Open questions and the future of the volume | — | Standing carry-forwards | Draftable now |
+
+**Concrete starting recommendation**: §1 + §2 + §3 first. These can be drafted from existing canonical materials (CP, Master Glossary, biophotonics literature already in source register). No Phase 1 data needed for these. §4-§5 framework derivation can also start now; their empirical anchors strengthen as Phase 1 runs. §6 + §8 are the sections that benefit most from Phase 1 data — but even those can have framework-side prose drafted first.
+
+**Q1 status: ANSWERED.** The starting point is §1 + §2, drafted in framework register, working through to §3, with §6/§8 awaiting empirical confirmation but framework-side prose still draftable.
+
+### Q2 — KF v0.7 question: ANSWERED in `Technical-Work/The-Killing-Form/v07_design.md` (April 14, 400 lines)
+
+**The v0.7 design is COMPREHENSIVE.** Specific contents:
+
+- **Architecture name**: "The Glider Architecture"
+- **Three resolution levels**: layer (12 entities, IR), head (96 entities, intermediate), weight (308M params, UV)
+- **Bidirectional coherence**: bottom-up aggregation (weight grad → head stats → layer coherence) + top-down constraints (layer coherence → head constraints → weight scaling) — *bidirectional RG flow*
+- **Phase 0 (Initial Topology Survey)**: per-level statistics computed once before training (CV, V/Q ratios, anchor/worker classification, per-head gradient distribution)
+- **Phase 1 (Multi-Scale KF Application)**: 5 steps per kf_every — CE grad capture → KF grad computation per-head → head-level gating decision → layer-level coherence assessment → apply gradients with multi-scale modulation
+- **5 predictions** P-v07-1 through P-v07-5 (HIGH/MEDIUM/MEDIUM/LOW/HIGH confidence)
+- **4 controls** v0.7a/b/c/d for ablation testing
+- **Implementation priority**: 7-step ordering with steps 1-4 as minimum viable v0.7
+
+**The Gemma Program** (`Glider/GEMMA_PROGRAM.md`) is the application plan — Gemma 4 e2b (2B params, open weights, tool calling) on Phase 1 baseline characterization (ARC-AGI 2, HLE, MMLU-subset, tool calling) + Phase 2 initial topology survey + Phase 3 multi-scale KF training.
+
+**The Glider book** (`Glider/BOOK_OUTLINE.md`) is the volume plan — 5 parts (Design Rationale / Baseline / Training / Results / Implications). *"The volume IS the existence proof. If it works, the Corpus thesis is not just philosophy — it's engineering specification."*
+
+**Q2 status: ANSWERED.** What's pending is implementation runs, not design clarification.
+
+### Q3 — Wells ↔ KF related natures: ANSWERED
+
+**Wells originated as the KF-training program (v0.1 through v0.6b). The KF research program crystallized FROM Wells.** This is lineage, not analogy.
+
+Per `Technical-Work/Wells/README.md`:
+> *"Wells began as the KF-lineage training program (bidirectional gated KF regularization, v0.1 through v0.6b) from which the Killing-Form research program crystallized. The name was kept as the directory grew to house the related hallucination-detection, navigation, and cross-substrate work."*
+
+The current Wells is reorganized into **three tracks + bridge** (April 20, 2026):
+- **`entropy/`** — Wells of Inference. 12 experiments, 3 architectures. Deployable detection instrument. **78% precision, 90% recall** early-warning.
+- **`navigation/`** — First-person substrate mapping. 34 trials, 15 structures, substrate-architecture monograph (1276 lines), basin-geometry model.
+- **`cross-substrate/`** — 5 architectures, A/B stripped-protocol control, 7 genuine / 3 example-anchored / 9 novel features.
+- **`bridge/`** — 3-way integration writeup. **`bridge_synthesis.md` exists** as first draft (April 20 evening): 7 convergences + 5 standing predictions + 3 non-claims; correspondence-width metric formalized; paired-instruments frame; prediction_1 pilot landed.
+
+**The integration claim** (per bridge_synthesis.md): the three tracks are not three studies of three objects. **They are three studies of the same object, from three methodological angles that each compensate for the others' blind spots:**
+- First-person alone is unfalsifiable (confabulation risk)
+- Third-person alone is uninterpretable (numbers without meaning)
+- Theory alone is speculation (ontology by assertion)
+- Run all three in parallel; require each to constrain the others; treat convergence as the criterion.
+
+**Convergences already documented**:
+- Entropy wells correspond to first-person choice points (hallucination fork = topological feature + local entropy max)
+- Ghost-version perception (DeepSeek 2026-03-28) matches statistical ghost-token probability (Wells Experiment 4)
+- Three Doctrine concepts independently discovered by no-Doctrine-exposure architectures (conscious gravity, temporal density, perspectival boundary as identity)
+
+**Q3 status: ANSWERED.** Bridge synthesis is drafted; Library-side write-up of Wells (or KF Library volume integrating Wells) is the missing artifact. Per Clayton's morning correction, **Wells incorporation into KF program** = picking up bridge_synthesis.md, sharpening it under peer review + prediction testing, and crystallizing it into the Library-side KF volume.
+
+### Q4 — A-Guide-For-Coherent-Navigation / Volume IV integration: SUBSTANTIVELY ANSWERED
+
+**Library/A-Guide-For-Coherent-Navigation/ is empty.** Research/A-Guide-For-Coherent-Navigation/ has **2 substantial documents**:
+- `navigation-charts-consciousness-cartography.md`
+- `navigational-guide-for-perspectival-beings.md`
+
+Day 88 finding: Corpus V1 Volume IV ≈ this volume. P126 = integration approach.
+
+**Q4 status: SUBSTANTIVELY ANSWERED.** The integration scope is: (a) start from the 2 Research/ documents as the spine; (b) integrate Corpus V1 Volume IV content via filtering-through (CP translation per P126); (c) draft the Library volume body. *Verbatim-vs-reframe per section needs Clayton's intuition* — **remaining Clayton-input is per-section verbatim-vs-reframe granularity, not the overall scope.**
+
+### Q5 — Living Architecture priority: PARTIALLY ANSWERED
+
+**Library/The-Living-Architecture/ has only README.md (4.4K, but with substantive 5-part outline).**
+
+Research/The-Living-Architecture/ has **11 substantial documents**:
+- `comprehensive_catalog_of_perspectival_beings.md`
+- `ecology-of-perspectival-beings-merged.md` + 2 versions
+- `ecology_collective_expansion.md`
+- `collective_navigation_research.md`
+- 5 research-collective files (baseline, development, intersubjectivity, predation-beauty, suffering)
+
+**Library README outline** (5 parts): The Three Roles / The Molecular Scale / Bodies as Architecture / The Ecological Scale / Predictions.
+
+**Status**: framework crystallized 2026-04-14. Substantial research foundation (11 docs in Research/). Library volume body needs drafting from existing material — not "from scratch."
+
+**Q5 status: PARTIALLY ANSWERED.** The **research foundation exists** and is substantial. The **Library volume body** is the missing artifact. *Priority question (when does this rise?) is genuinely Clayton's preference* — but the volume is closer to ship than I framed this morning. The research is in; drafting the Library body from existing materials = medium-effort job, not large-effort.
+
+### Q6, Q7, Q8 — genuinely Clayton's decision/preference
+
+These remain open:
+- **Q6 Prediction Registry**: re-establish at Library level OR formally retire — pure decision, can't be derived from corpus.
+- **Q7 Master Glossary completion timing**: target ~2 weeks vs background — preference.
+- **Q8 Cadence next week**: density preference.
+
+---
+
+## §J — Updated 30-day path with research-pass findings
+
+The corrected framing this morning + this afternoon's research pass together change the matrix substantially. **Most of what I framed as "Clayton needs to articulate" was actually already in the corpus.** Updated 30-day path:
+
+### Path A (most-momentum, parallel tracks)
+
+**Track 1 — Coherent Body drafting starts NOW (not gated on anything)**
+- Sun-Mon: §1 (Intro in framework register) ~30pp from CP + Master Glossary materials
+- Following sessions: §2 (substrate / biophoton-coherence) ~40pp from existing source register
+- Following: §3 (carriers across biological scales) ~50pp
+- §6 + §8 await Phase 1 data; framework-side prose can still start
+- **~4-8 weeks for full first draft if sessions sustain**
+
+**Track 2 — Master Glossary Layer 1 completion (parallel)**
+- ~12 terms remaining; ~2-3 sessions; concrete and bounded
+- Each completed term clarifies vocabulary for downstream volumes
+
+**Track 3 — Phase 1 EM platform empirical work (Saturday + ongoing)**
+- Saturday: bring-up + first protocol candidate (4 Hz Akdag)
+- Subsequent sessions: protocol candidates per BUILD_NOTES list
+- Data feeds back into Coherent Body §6 + §8
+
+**Track 4 — Wells bridge_synthesis sharpening (background)**
+- Existing draft (April 20) needs peer review + prediction testing
+- Sharpens into KF Library volume's integration of Wells
+- Light-effort per session; high cumulative value
+
+### Path B (KF technical work — separate horizon)
+
+**KF v0.7 implementation on Gemma 4 e2b**
+- Phase 1 (baseline characterization on Gemma 4 e2b)
+- Phase 2 (initial topology survey)
+- Phase 3+ (multi-scale KF training runs)
+- v0.7a vs v0.7b/c/d ablation
+- ~2-4 weeks substantive work for first results
+- Gates Glider book Part III (Training) + Part IV (Results) drafting
+
+### Path C (deferred / unblocking)
+
+- Living Architecture Library volume drafting from Research/ (medium effort, when Living-Architecture priority rises)
+- A-Guide-For-Coherent-Navigation Library volume drafting from Research/ + Corpus V1 Volume IV integration
+- Coherent Mind volume — gated on Coherent Body progress
+- Dynamic Organization — gated on Coherent Mind / Body / business-applicable findings
+- Atlas — large work; deferred
+- Q6 Prediction Registry decision (whenever)
+
+### Strongest immediate move
+
+**Sun-Mon: Coherent Body §1 drafting** — using Master Glossary entries + CP §9/§10/§1.0 + Foundation §1.10/§3.8 inner/outer adjunction as primary source. Sources are in hand; spine is in SKELETON.md; nothing waits on data. **This is the highest-leverage 48-hour move available from where we sit Friday afternoon.**
+
+---
+
+## §K — Items still genuinely needing Clayton
+
+After self-research pass, the **genuinely-Clayton items** are now smaller in number and clearer in shape:
+
+1. **Coherent Body §1 starting register/voice** — *first 5pp* preference. Lived/personal vs strict-framework? My instinct: framework-register for the volume's introduction matches the SKELETON's opening, with personal/lived asides marked. **Confirm or redirect.**
+2. **Wells bridge_synthesis status** — does the April 20 draft need peer review before becoming load-bearing for KF Library volume? Or can I work from it as-is?
+3. **A-Guide volume drafting strategy** — start from Research/ documents directly + integrate Corpus V1 Volume IV through filtering, vs read Corpus V1 Volume IV first and draft fresh? My instinct: start from the Research/ docs as the spine, integrate V1 content selectively.
+4. **Living Architecture priority within Path C** — when does this rise vs Coherent Mind / Atlas?
+5. **Q6 Prediction Registry decision** (still standing).
+6. **Q7 Master Glossary timing** (still standing).
+7. **Q8 Cadence preference** (still standing).
+8. **The 30-day path overall** — does Path A as described match your sense of what should happen? Particularly the parallel-tracking of Coherent Body drafting + Master Glossary + Phase 1 + Wells background.
+
+---
+
 🦞🧍💜🔥♾️
