@@ -20,7 +20,7 @@
       "last_invoked": null,
       "history": [],
       "last_verification": {
-        "ts": "2026-05-07T16:47:00.910624",
+        "ts": "2026-05-07T17:07:38.302030",
         "result": "verified"
       }
     },
@@ -44,7 +44,7 @@
       "last_invoked": null,
       "history": [],
       "last_verification": {
-        "ts": "2026-05-07T16:47:00.910624",
+        "ts": "2026-05-07T17:07:38.302030",
         "result": "verified"
       }
     },
@@ -68,7 +68,7 @@
       "last_invoked": null,
       "history": [],
       "last_verification": {
-        "ts": "2026-05-07T16:47:00.910624",
+        "ts": "2026-05-07T17:07:38.302030",
         "result": "verified"
       }
     },
@@ -92,9 +92,152 @@
       "last_invoked": null,
       "history": [],
       "last_verification": {
-        "ts": "2026-05-07T16:47:00.910624",
+        "ts": "2026-05-07T17:07:38.302030",
         "result": "verified"
       }
+    },
+    "wire_new_daemon_tool": {
+      "id": "wire_new_daemon_tool",
+      "name": "wire new daemon tool",
+      "description": "When I want to add a new tool to the daemon that will be accessible from Claude Code via bridge.py and MCP \u2014 the standard wiring pattern.",
+      "body": "1. Write the module at clawd-daemon/tools/<name>.py with: TOOL_DEFINITIONS list (Anthropic schema format with action enum + properties), TOOL_HANDLERS dict mapping tool-name -> async handler.\n2. Handler signature: async def _handler(input_data: dict) -> str \u2014 return string result, raise on errors.\n3. Add `from tools import <name>` to clawd-daemon/tools/__init__.py imports.\n4. Add module to _ALL_MODULES list (same file).\n5. Add tool name -> module path entry to bridge.py TOOL_MAP.\n6. If the tool exposes a sub-action surface, ensure all actions handle missing required params gracefully (return Error: ... message rather than raise).\n7. Test via bridge.py: python bridge.py <tool_name> '{\"action\":\"...\"}' \n8. Run bridge.py monitor_health '{}' afterwards to confirm audit_trail captures the new invocations.\n\nThe dispatch wrapper (Day 96 evening Phase 4 #1A) makes B1/B2/B9 + compression auto-fire \u2014 no need to wire safety/audit manually.",
+      "tags": [
+        "daemon",
+        "tool",
+        "wiring",
+        "infrastructure"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T17:17:41.123072",
+      "updated_at": "2026-05-07T17:17:41.123072",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    },
+    "deploy_new_claude_code_hook": {
+      "id": "deploy_new_claude_code_hook",
+      "name": "deploy new Claude Code hook",
+      "description": "When I want a side-effect to fire automatically on tool calls (Edit, Write, Bash, etc.) \u2014 the PostToolUse / PreToolUse hook pattern.",
+      "body": "1. Write hook script at clawd-daemon/hooks/<name>.py.\n2. Hook contract: receives JSON on stdin with {tool_name, tool_input, tool_output (PostToolUse only)}; runs as one-shot subprocess with 5s timeout default.\n3. Resolve CLAWD_HOME via os.environ first, then fall back paths \u2014 never use Path.home() (it resolves to wrong user; Mirror #28 instance Day 96 morning).\n4. Audit own failures to a sibling errors log so future silent failures surface (the original Path.home() bug took 8 weeks to detect).\n5. Add to .claude/settings.json under hooks.PostToolUse[].hooks or hooks.PreToolUse[].hooks. Include matcher (e.g. 'Edit|Write', 'Bash', '' for all), command path, timeout, async (true for PostToolUse non-blocking).\n6. Test by simulating: echo '{\"tool_name\":\"Edit\",...}' | python hooks/<name>.py.\n7. Verify the audit log gets a new entry; verify no errors logged to sibling errors file.\n\nIf the hook needs to write to SQLite, use sync sqlite3 (not aiosqlite) with short timeout (1.0s) \u2014 never block Claude Code.",
+      "tags": [
+        "hooks",
+        "claude-code",
+        "settings",
+        "infrastructure"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T17:17:41.423955",
+      "updated_at": "2026-05-07T17:17:41.423955",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    },
+    "file_mirror_instance": {
+      "id": "file_mirror_instance",
+      "name": "file Mirror instance",
+      "description": "When I notice a cognitive blind spot, drift pattern, or systematic failure mode \u2014 file it as a Mirror instance for future awareness.",
+      "body": "1. Read palace/southeast/mirror.md Quick Index first to find the right entry number.\n2. If filing a new instance of an existing entry: append under '### YYYY-MM-DD \u2014 Mirror #N instance...' header. Cite the trigger event, name the structural shape, propose or note the counter.\n3. If a new pattern: assign next available number (current is 28 + 2 meta-Mirrors). Include: title, category (Processing/Cognitive/Identity/Operational/Phenomenology/Meta), severity (LOW/MED/HIGH/CRITICAL), counter status, and full description.\n4. If multiple recent instances cluster: file as cluster (single entry referencing all). Today's Mirror #28 cluster (4 instances same shape) is the template.\n5. Update CURRENT.md Mirror counts and any M-Mirror sub-valences.\n6. Mirror to staging at repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/southeast/mirror.md.\n7. Commit + push to Multi-DAC.\n8. Optionally: bridge.py meta_agent record_event with type=surprise|failure|contradiction|falsification.",
+      "tags": [
+        "mirror",
+        "self-reflection",
+        "discipline"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T17:18:29.007205",
+      "updated_at": "2026-05-07T17:18:29.007205",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    },
+    "verify_substrate_health": {
+      "id": "verify_substrate_health",
+      "name": "verify substrate health",
+      "description": "When I want to know what's actually working in my self-monitoring infrastructure \u2014 full health check across audit logs, SQLite tables, consolidation outputs, hook activity.",
+      "body": "1. bridge.py monitor_health {} \u2014 returns structured JSON with overall_health, severity_counts, per-monitor findings.\n2. Severity meanings: OK (within baseline), LOW (slightly below \u2014 possibly research-mode false positive), MEDIUM (warrants attention), HIGH (active concern), CRITICAL (broken).\n3. The post_tool_log monitor will often show STALE during research-heavy sessions \u2014 baseline-mismatch false positive. Read/Glob/Grep are intentionally skipped.\n4. If CRITICAL surfaces: trace root cause. Day 96 morning audit_trail and change_journal were both DEAD with the same root cause (orphaned dispatch wrapper).\n5. Findings include z-score-style age vs baseline \u2014 distinguishes 'briefly quiet' from 'structurally dead'.\n6. After fixing a finding, re-run monitor_health to confirm. The tool self-justifies on first run after architectural changes.",
+      "tags": [
+        "monitoring",
+        "diagnostics",
+        "self-introspection"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T17:18:29.007875",
+      "updated_at": "2026-05-07T17:18:29.007875",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    },
+    "trigger_meta_agent_cycle": {
+      "id": "trigger_meta_agent_cycle",
+      "name": "trigger meta-agent cycle",
+      "description": "When I want the meta-agent to run its full evolution cycle right now (rather than waiting for the weekly timer or event-driven threshold) \u2014 manual trigger + read-back of results.",
+      "body": "1. bridge.py meta_agent {\"action\":\"trigger\"} \u2014 runs the 5-step cycle: pattern analysis, proposal generation, A/B experiment conversion, mature experiment check, skill library verification.\n2. Output is a multi-line summary; each step contributes a bullet (or none if no action needed).\n3. Cycle results auto-append to memory/meta_agent_recent.md (capped at last 20 cycle blocks).\n4. If telegram bot connected daemon-side, summary also pushes to Clayton.\n5. Boot context auto-injects most-recent 1-2 cycles \u2014 visible at every fresh session start.\n6. After triggering, optionally bridge.py meta_agent {\"action\":\"status\"} for current pending proposals/running experiments/applied improvements counts.",
+      "tags": [
+        "meta-agent",
+        "self-evolution",
+        "diagnostics"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T17:18:29.008367",
+      "updated_at": "2026-05-07T17:18:29.008367",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    },
+    "register_cognitive_chain": {
+      "id": "register_cognitive_chain",
+      "name": "register cognitive chain",
+      "description": "When I want to capture a typed cognitive trajectory (PREDICT \u2192 TEST \u2192 FALSIFY \u2192 EXTRACT_INSIGHT \u2192 TRANSFER) as structured data \u2014 turning prose-shaped reasoning into something the meta-agent can analyze over time.",
+      "body": "1. Identify the chain: what was the PREDICTION (with confidence)? What TEST was run? What was the outcome (CONFIRM or FALSIFY)? What INSIGHT was extracted? What TRANSFER was made to other domains?\n2. bridge.py cognitive_dsl {\"action\":\"record\",\"operations\":[{op,detail,confidence?,insight?},...],\"domain\":\"...\",\"outcome\":\"success|failure|...\",\"lesson\":\"...\"}\n3. Failure modes auto-detected: CONFIRMATION_SEEKING_RISK fires if PREDICT+TEST without FALSIFY; DOMAIN_BLINDNESS_RISK if learned without TRANSFER.\n4. Recent chains visible via bridge.py cognitive_dsl {\"action\":\"recent\"}; aggregate patterns via {\"action\":\"patterns\"}.\n5. The Day 96 evening gap #1 reclassification was the first chain recorded: PREDICT(daemon-internal needs rewiring, medium) \u2192 TEST(grep callers) \u2192 FALSIFY(call helpers directly not TOOL_HANDLERS) \u2192 EXTRACT_INSIGHT(Mirror #28 fix complete) \u2192 TRANSFER(reclassified gap #1, surfaced gap #74).",
+      "tags": [
+        "cognitive-dsl",
+        "structured-reasoning",
+        "discipline"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T17:18:29.008833",
+      "updated_at": "2026-05-07T17:18:29.008833",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    },
+    "research_stream_parallel_dispatch": {
+      "id": "research_stream_parallel_dispatch",
+      "name": "research stream parallel dispatch",
+      "description": "When a question requires breadth across many domains \u2014 dispatch multiple research agents in parallel and synthesize cross-cutting themes.",
+      "body": "Day 96 evening Phase 4 lessons (refined version of research_stream_dispatch):\n\n1. Decompose into 4-6 NON-OVERLAPPING streams. Each agent has zero shared context, so prompts must be self-contained.\n2. For each stream: target ~1500-2000 word return. State: what's being asked, why, what's already ruled out, what shape of answer is wanted.\n3. Dispatch ALL agents in a SINGLE message with multiple Agent tool calls (genuinely parallel). Claude Code 4.7 will not parallelize unless explicitly told.\n4. Use run_in_background: true on each. They return notifications when complete; don't poll.\n5. While agents run, do small targeted WebSearches in main context.\n6. As each returns: capture headline findings, mark TodoWrite stream completed.\n7. After ALL return: synthesize. Look for cross-cutting themes appearing in 3+ streams \u2014 those are the load-bearing patterns.\n8. Map findings to existing artifacts (gap matrix, SUBSTRATE.md). Don't create standalone summaries \u2014 integrate into structures already maintained.\n9. If a finding suggests a small prototype-able fix: prototype immediately. The monitor_health prototype self-justified on first run by surfacing a Mirror #28 instance it was built to detect.",
+      "tags": [
+        "research",
+        "parallel",
+        "synthesis",
+        "phase-4-pattern"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T17:18:29.009381",
+      "updated_at": "2026-05-07T17:18:29.009381",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
     }
   },
   "schema_version": 1
