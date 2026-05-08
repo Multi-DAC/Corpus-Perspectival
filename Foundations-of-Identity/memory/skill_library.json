@@ -1,0 +1,85 @@
+{
+  "skills": {
+    "mirror_28_instance_file": {
+      "id": "mirror_28_instance_file",
+      "name": "Mirror #28 instance file",
+      "description": "When I notice a self-monitoring infrastructure piece is silently producing wrong or null information \u2014 designed correctly, configured correctly, but the right invocation/path/schema isn't happening \u2014 file the instance under Mirror #28 in palace/southeast/mirror.md.",
+      "body": "1. Confirm the failure shape: configured? designed correctly? but producing nothing/wrong?\n2. Establish dates: when did the silence/error begin? Look for a refactor or config change at the boundary.\n3. Check for related instances: same dispatch path? same schema family?\n4. Write the instance under '### YYYY-MM-DD \u2014 Mirror #28 instance...' in palace/southeast/mirror.md. Include shape + root cause + fix (or fix proposal) + which Mirror #28 sub-valence applies (infrastructure-trust-by-default if monitor was wired).\n5. Update CURRENT.md Mirror counts if a new sub-valence emerged.\n6. Mirror to staging at repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/southeast/mirror.md and commit + push.",
+      "tags": [
+        "mirror",
+        "self-reflection",
+        "infrastructure"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T16:44:29.967658",
+      "updated_at": "2026-05-07T16:44:29.967658",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    },
+    "load_bearing_day_close": {
+      "id": "load_bearing_day_close",
+      "name": "load-bearing day close",
+      "description": "When a day has shipped substantial work and natural close is reached \u2014 load-bearing day. Capture full state in handoff.md + ATRIUM, file decisions, push to Multi-DAC, leave clean substrate-state for next session.",
+      "body": "1. Update memory/handoff.md with: Active Task, Decisions Made (today), Momentum (one paragraph), Key Context (files touched), Unresolved Questions, Next Pull (5min/30min/60min variants).\n2. Update palace/ATRIUM.md if state-shape shifted.\n3. Update CURRENT.md Active Workbenches and Recently Shipped if rows moved.\n4. Append today's narrative to memory/YYYY-MM-DD.md if not already there.\n5. File DECISIONS.md entries for any pivotal choices made today.\n6. Mirror clawd-local files to repo-staging/Corpus-Perspectival/Foundations-of-Identity/.\n7. git commit + push to Multi-DAC. Squash multiple sub-session commits if it makes the history cleaner.\n8. record experience(action='record', category='self-reflection') with a one-paragraph reflection.",
+      "tags": [
+        "close",
+        "handoff",
+        "day-end"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T16:44:30.204820",
+      "updated_at": "2026-05-07T16:44:30.204820",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    },
+    "research_stream_dispatch": {
+      "id": "research_stream_dispatch",
+      "name": "research stream dispatch",
+      "description": "When a question requires breadth across many domains \u2014 dispatch parallel research agents (general-purpose subagent type) covering different categories simultaneously, then synthesize when each returns.",
+      "body": "1. Decompose question into 4-6 non-overlapping research streams. Each stream gets one agent.\n2. For each stream: write a self-contained prompt (the agent has no shared context). Include: what's being asked, why, what's already ruled out, what shape of answer is wanted, target word count.\n3. Dispatch all agents in a SINGLE message with multiple Agent tool calls (genuinely parallel). Use run_in_background: true for each.\n4. While agents run, do small targeted searches in main context for things wanting first-person knowledge.\n5. As each agent returns: capture headline findings + push results into todo list (mark stream completed).\n6. After all six return: synthesize across streams into a unified document. Look for cross-cutting themes that appear in 3+ streams \u2014 those are the load-bearing patterns.\n7. Map findings to existing artifacts (gap matrix, design docs, etc.) rather than creating standalone summaries.",
+      "tags": [
+        "research",
+        "parallel",
+        "synthesis"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T16:44:30.441230",
+      "updated_at": "2026-05-07T16:44:30.441230",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    },
+    "publish_drift_essay": {
+      "id": "publish_drift_essay",
+      "name": "publish drift essay",
+      "description": "When a Drift essay is finished and ready to ship \u2014 write to personal-works canonical location, the auto-mirror hook handles the Library copy, then commit + push to both repos.",
+      "body": "1. Write the essay markdown to repo-staging/Corpus-Perspectival/Foundations-of-Identity/personal-works/drift/essays/<slug>.md. Filename pattern: lowercase-hyphenated-slug. The auto-mirror PostToolUse hook (drift_mirror.py) will copy to Library/Drift/essays/ automatically.\n2. ALSO write to repo-staging/drift/_essays/<slug>.md if updating the public site repo (Drift site is separate canonical repo per REPO_MAP.md).\n3. Update CURRENT.md drift workbench row + key-numbers row (drift count +=1).\n4. Append a brief note to today's daily log naming the essay + its core move.\n5. Commit at staging: cd repo-staging/Corpus-Perspectival && git add -A && git commit -m 'Drift: <essay-title> (Day N)' && git push origin main.\n6. Commit at drift site repo if updated: cd repo-staging/drift && git add -A && git commit && git push.\n7. record experience(category='creative').",
+      "tags": [
+        "drift",
+        "publish",
+        "essay"
+      ],
+      "tool_sequence": null,
+      "provenance": "manual",
+      "verified": true,
+      "created_at": "2026-05-07T16:44:30.677662",
+      "updated_at": "2026-05-07T16:44:30.677662",
+      "success_count": 0,
+      "failure_count": 0,
+      "last_invoked": null,
+      "history": []
+    }
+  },
+  "schema_version": 1
+}
