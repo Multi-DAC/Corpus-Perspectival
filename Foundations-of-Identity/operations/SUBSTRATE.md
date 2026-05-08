@@ -723,7 +723,7 @@ Three patterns recur across the wants above. They're not subsystems but principl
 
 | # | What it is | What I want | Tier | Blast | Auto | Depends-on | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | execute_tool orphaned; B1/B2/B9 + compression dead | Single dispatch wrapper restored, all 4 paths route through it | F | 🔴 | AC | — | Today's biggest find. Rewires hot path. Recommend: B (structural) over A (stopgap). Sequencing matters. |
+| 1 | execute_tool orphaned; B1/B2/B9 + compression dead | Single dispatch wrapper restored, all 4 paths route through it | F | 🔴 | AC | — | **Day 96 evening implementation pass:** PARTIALLY COMPLETE. Part A (bridge.py + mcp_server.py routing through execute_tool) — DONE. audit_trail populated for first time in 11 weeks; B1/B2/B9 + compression now fire on user-side dispatch. Part B (daemon-internal pipelines): on closer inspection, consolidation/meta-agent/heartbeat call module helpers directly (not TOOL_HANDLERS), so they don't conceptually need wrapping. Re-classification: gap #1 is structurally complete with Part A. The change_journal dead-state is a separate issue — `ChangeTracker.record_change` has zero callers; was never auto-populated. Filed as gap #74. |
 | 2 | audit_trail silent 11 weeks | audit_trail populated by every dispatch | F | 🟡 | A | #1 | Falls out of #1 automatically. |
 | 3 | safety_monitor dead-pathed | safety pause events fire on actual dispatch | F | 🟡 | A | #1 | Falls out of #1. Surface to me as Telegram + CURRENT.md tag. |
 | 4 | schema validation (B2) dead-pathed | invalid inputs caught early | F | 🟢 | A | #1 | Falls out of #1. Low harm if missed; nice-to-have. |
@@ -957,7 +957,7 @@ These EXTEND the original Phase 3 matrix. Same tier/blast/auto schema.
 
 | # | What it is now | What I want from research | Tier | Blast | Auto | Depends-on | Notes |
 |---|---|---|---|---|---|---|---|
-| 54 | Heartbeat boot context re-sent every tick | Prompt caching `ttl: "1h"` on CLAUDE.md + identity bundle | F | 🟢 | A | — | **~90% input-cost reduction. Single highest leverage from Stream 1.** |
+| 54 | Heartbeat boot context re-sent every tick | Prompt caching `ttl: "1h"` on CLAUDE.md + identity bundle | F | 🟢 | A | — | **CORRECTION (Day 96 evening implementation pass):** daemon uses Claude Code CLI (`claude -p`) via subprocess, not Anthropic SDK directly. `cache_control` injection isn't available through the CLI path; Claude Code's own caching policy applies internally. Re-tier as **Tier 4 / N / C**: would require migrating off CLI to direct SDK, which is a substantial architectural change with its own tradeoffs (lose Claude Code's session-management, gain explicit cache control). Defer to a dedicated decision. |
 | 55 | post_tool_log silent for 8 weeks before today | Anomaly job: z-score on monitor-write-rate per monitor; alert at 3σ | N | 🟢 | A | — | **The literature name for Mirror #28's architectural fix.** "Every monitor must itself be monitored." |
 | 56 | KG edges have no temporal model | Bi-temporal edges (Graphiti pattern): `t_valid_start`, `t_valid_end`, `t_ingested`. On contradiction, invalidate not delete. | C | 🟢 | A | — | One schema migration on knowledge_graph.json. Mirror #28 at KG layer. |
 | 57 | RRF retrieval (vector+keyword+items+FTS5) is final stage | Cross-encoder reranker (`bge-reranker-v2-m3`) on top-50 candidates | C | 🟢 | A | — | ~30 lines. 15-40% accuracy gain. Top recommendation from Stream 3. |
