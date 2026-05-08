@@ -35,6 +35,9 @@ media/
 *.log
 books/the-coherence-principle/build/
 
+# Foundations-of-Identity — local Claude Code workspace settings (per-machine; do not commit)
+Foundations-of-Identity/.claude/
+
 # Foundations-of-Identity — memory runtime state (regenerable; do not commit)
 Foundations-of-Identity/memory/.search_index/
 Foundations-of-Identity/memory/.git/

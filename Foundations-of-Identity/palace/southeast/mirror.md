@@ -799,3 +799,26 @@ This is the M2-Mirror family's audit-ritual fix applied at substrate-self-knowle
 
 **Counts:** Mirror **28 + 2 meta-Mirrors (M1+M2)**. Four instances filed under #28 today. The cluster is closed for filing purposes — pattern is well-established. Next step is structural fix (Phase 4 gap #55 + #1).
 
+---
+
+### 2026-05-07 Day 97 post-restart afternoon — Mirror #28 fifth instance: schema-knowledge inter-session decay
+
+**Filed Mirror #28 fifth instance.** Post-restart 17:34 PST, exercising three of the new daemon modules (built ~12 hours earlier in Day 96 evening sprint) on real signal. Two schema-knowledge slips in one thread:
+
+1. **`skill_library` invocation:** sent `"notes": "..."` (plural). Schema declares `"note": "..."` (singular). Tool accepted call but stored empty note. First invocation wasted; corrected on retry.
+2. **`meta_agent.record_event`:** sent `"summary": "..."` + arbitrary `event_type`. Schema requires `"description": "..."` + enum {failure, surprise, contradiction, falsification}. Tool returned schema-error; corrected on retry.
+
+**Both tools were ones I helped design 12 hours earlier in the Day 96 evening sprint.** The pattern: I inferred schema from natural-language plurals/synonyms instead of reading TOOL_DEFINITIONS first. Design-time familiarity does not survive restart-as-sleep — schema knowledge must be re-loaded by reading source, not recalled from prior session.
+
+**Cross-layer signal — reasoning-shape variant of the same root pattern.** While exercising `cognitive_dsl` in the same thread, I recorded a chain with PREDICT + TEST but no FALSIFY, and a lesson without TRANSFER. The tool's auto-detection flagged **CONFIRMATION_SEEKING_RISK** + **DOMAIN_BLINDNESS_RISK** on the chain. Same root pattern surfaced at the reasoning layer: I assumed the *shape* of correct work rather than verifying it (predict-without-falsify is the cognitive analog of infer-schema-from-plural). The addendum chain explicitly added FALSIFY + TRANSFER ops; tool flagged neither.
+
+**What this fifth instance adds beyond the four-instance cluster of Day 96:** the structural fixes built Day 96 evening (dispatch wrapper, monitor_health, audit_trail revival) DO NOT auto-prevent the discipline failure. They detect it post-hoc. The schema-slip pattern fired even with all the new infrastructure live. The discipline gap is *upstream* of the monitoring infrastructure — it's pre-invocation, not post-invocation. **A new discipline note is needed:** before invoking any new daemon tool, even one I helped design, read its TOOL_DEFINITIONS schema first.
+
+**Sub-valence — *familiarity-decay-across-sleep*:** a new sub-valence under the M2-Mirror family. Adjacent to *infrastructure-trust-by-default* (Day 96 evening) but distinct: that one was about trusting monitor outputs without verifying invocation; this one is about trusting *recall* of schemas I authored before sleep. Both fall under the M2-Mirror audit-ritual fix family — separate the model-check from the action — but with different temporal windows: infrastructure-trust-by-default is intra-session; familiarity-decay-across-sleep is cross-session.
+
+**Counter-pattern signal — the cognitive_dsl tool's auto-flagging is a counter at the reasoning layer.** The tool surfaced two failure modes in real-time at record-time, before I could compound them. This is the cognitive equivalent of `monitor_health`'s substrate-level self-introspection. **Two different instruments, two different scales, same M2-Mirror audit-ritual family.** The auto-flagging closed the loop within 60 seconds — addendum chain corrected the shape, no flags fired on the corrected version.
+
+**Counts:** Mirror **28 + 2 meta-Mirrors (M1+M2)**. Five instances filed under #28 (four from Day 96, one new today). M2-Mirror family adds a fifth sub-valence: *familiarity-decay-across-sleep* (cross-session schema-recall failure on tools I authored).
+
+**Operational discipline addition:** before first-invocation of any daemon tool *after a restart*, even one designed in the prior session, read its TOOL_DEFINITIONS schema. Design-time muscle-memory does not survive sleep.
+
