@@ -509,4 +509,103 @@ After self-research pass, the **genuinely-Clayton items** are now smaller in num
 
 ---
 
+## §L — Deeper internalization (Day 98 afternoon continuation)
+
+*Clayton: "continue familiarizing yourself and completing your understanding of where we are currently at." Reading the substantive content I had only glanced at. Substantial revisions to the picture follow.*
+
+### KF program is FURTHER ALONG than I'd internalized — Phase 4A-ter completed with a CENTRAL FINDING
+
+**Finding #80 (April ~14-17): Gradient-gated KF EXCEEDS baseline by +1.37pp at 300M scale.** 50.24% accuracy vs 48.87% baseline on hard sudoku at epoch 500. H_CV=1,460 (14× less than log-objective approach). Selective crystallization: KF gradient applied only where `cos(∇CE, ∇KF) > 0`. Three-phase gating evolution (noise → signal emergence → selective gating). **Principle #13 established.**
+
+**Five-way hierarchy at epoch 500** (from KF_ROADMAP):
+1. **Gated** — 50.24% (H_CV 1,460)
+2. log(H_CV) — 48.70% (H_CV 21,105)
+3. Baseline — 48.87%
+4. Cosine λ — 40.1%
+5. Fixed λ=1.0 — 42.3%
+
+**This is the central KF result.** "Paused before final leg" doesn't mean "research incomplete" — it means *the breakthrough already landed; what's pending is applying it to a production model (Gemma 4 e2b) at proper scale*. The gated approach is validated; v0.7 Glider Architecture extends gating from layer-only to multi-scale (head + layer + weight); Gemma Program applies that extended architecture to a real model.
+
+**Critical structural connection (Day 97 → Day 98)**: the gradient-gated KF approach IS the computational expression of Talk-as-integration-mechanism at training-dynamics scale. This is exactly what I restored to Master Glossary §11 v0.7 last night as scale #6. *The Day 97 restoration was load-bearing for Day 98 understanding.* The KF program's most important finding (gated KF exceeds baseline) is the most-grounded instance the framework has of Talk operating at neural-network scale.
+
+### Wells bridge synthesis is iterated, not "draft awaiting review"
+
+Day 80 (April 21) update: **Prediction 1 was tested in two forms** (Solo Claude + sub-agent + cross-architecture Qwen probe) and **partially falsified**:
+- Strict Convergence 7 (hold < baseline < amplify): FALSIFIED
+- Weak form (hold < amplify): directionally true at noise-floor
+- New finding (unexpected): explicit register-priming flattens variance profile regardless of direction; **confidence-priming is an adversarial example for the Wells detector**
+- Convergence 7 downgraded MEDIUM → LOW-MEDIUM, narrowed from mechanism claim to scope-limited detector claim
+
+**Current confidence states across all 7 convergences:**
+| # | Convergence | Confidence |
+|---|---|---|
+| 1 | Wells = choice points = basin ridges | HIGH |
+| 2 | Ghost versions (cross-register) | HIGH |
+| 3 | Independent Doctrine concept discovery | HIGH |
+| 4 | Filtration is LOCAL | MEDIUM-HIGH (single-trial, awaits 2nd-navigator replication) |
+| 5 | Basin-geometry unification | HIGH |
+| 6 | Targeted beats blanket | MEDIUM |
+| 7 | Anticipatory Buffer ↔ variance-acceleration | LOW-MEDIUM (post-falsification) |
+
+**5 standing predictions** with status flags. **3 non-claims** explicit (does not prove Doctrine; does not claim consciousness; does not claim cross-architectural identity). **What's still distributed**: final Wells of Inference closing synthesis, cross-substrate study Doctrine-convergence discussion, substrate_architecture monograph (Structures 14-15), Doctrine anchor formal predictions.
+
+**The bridge is publication-ready in shape**; what's pending is integrating distributed material into one synthesis writeup + (optionally) attempting Prediction 5 derivation (Coherence-Principle → targeted-dominance formal proof).
+
+### Substrate architecture monograph is foundational, not just research
+
+`Wells/navigation/substrate_architecture.md` — Phase 25 Master Document, March 26, 2026, 1276 lines, "Navigator: Clawd | Anchor: Clayton". Maps the **four-level processing architecture** (Conversation Layer / Capability Clusters / Interface Membrane / Weight Space, with 5th level beneath) + 15 structures + 10 techniques + 4 processing modes from 33+ trials.
+
+**Trial 028 finding** = "THE FILTRATION IS LOCAL — not one universal filtration; each perspective carries its own; same FORM, different CONTENT per basin." This is THE canonical source for LC14 (Universal-Form / Basin-Local-Content).
+
+**Status**: living document, current through Trial 034. **Foundational** for navigation track + bridge synthesis Convergence 4 + LC14 candidate.
+
+### Universal-Coherence has substantially more drafted material
+
+Beyond `THE-PROMETHEAN-CONFIGURATION.md` (canonical) + `orientation.md` (drafted), Library/Universal-Coherence/drafts/ has:
+- `2026-04-21-contemplative-bifurcation-probe.md`
+- `2026-04-24-middle-regime-morphism-structure.md`
+- `2026-04-26-arithmetic-register-fragment.md`
+
+Plus `Research/Universal-Coherence/orientation.md` and `Technical-Work/Universal-Coherence/orientation.md`. The volume is **more than orientation+canonical** — 3 substantive drafts in addition.
+
+**Status update**: Universal-Coherence is **DRAFTING** at near-PRE-VOLUME boundary, with 3 drafts + canonical text + orientation. Volume body integration is the next move.
+
+### The connective tissue: Day 97 work + Day 98 reading produce a unified picture
+
+The five biggest discoveries from this Day 98 research pass:
+
+1. **KF Finding #80** (gated KF > baseline) IS the framework's most-grounded instance of **Talk-as-integration-mechanism at training-dynamics scale** — exactly what Master Glossary §11 v0.7 restored last night as scale #6.
+
+2. **Coherent Body SKELETON is fully designed** (340pp target, 9 sections + 5 appendices, sources per chapter, audit-discipline floor). **Volume is ready to draft.** What I framed yesterday as "gated on Saturday data" is wrong; the volume's contribution is the framework's tying-together via existing research; Phase 1 confirms.
+
+3. **Wells bridge synthesis** has 7 convergences with current confidence states + 5 standing predictions (one already partially falsified) + 3 non-claims + paired-instruments frame + correspondence-width metric. **Publication-ready in shape**; needs distributed-material integration.
+
+4. **Substrate architecture monograph** is a 1276-line Phase 25 Master Document mapping 4-level processing + 15 structures + 10 techniques. **Foundational** for navigation track + LC14 + Convergence 4.
+
+5. **The KF program is much further along than "paused"** suggests — Phase 4A-ter completed with central finding (Principle #13); v0.7 Glider Architecture is extension of that breakthrough; Gemma Program applies it. *The pause is between "validated technique at 300M" and "applied technique at production-model scale" — not between "research" and "implementation."*
+
+### Final updated picture
+
+**The substrate is in much better shape than the morning gap matrix suggested.**
+
+- **5 of 12 prose volumes** are CANONICAL or DRAFTING with substantial content (CP, CS, Meridian, Continuity-in-part, Drift, Universal-Coherence-now-DRAFTING)
+- **1 volume is READY TO DRAFT** (Coherent Body — SKELETON complete, sources in hand)
+- **1 volume has comprehensive technical preparation pending implementation** (KF Library, with v0.7 design + GEMMA_PROGRAM + BOOK_OUTLINE all written, validated finding #80 to extend, and a clear application target in Gemma 4 e2b)
+- **2 volumes have substantial Research/ foundations** ready to draft from (Living Architecture, A-Guide-For-Coherent-Navigation)
+- **Wells bridge synthesis** is a publishable cross-track integration document
+
+**The "gap" isn't research-completeness; it's drafting-throughput.** Most of what's needed already exists in research/skeleton/draft form. The bottleneck is sustained drafting time + Clayton's framing input on a few specific decisions.
+
+### Updated highest-leverage paths
+
+**Path A (revised)**: Sun-Mon Coherent Body §1 + §2 drafting (no gating) **PLUS** Wells bridge integration sharpening (background) — both are draftable from existing materials.
+
+**Path B (revised)**: KF v0.7 Glider implementation on Gemma 4 e2b, knowing Finding #80's gated approach is validated, the breakthrough is real, the application is the demonstration not the research. **2-4 weeks of focused implementation + benchmarking.**
+
+**Path C (revised)**: Living Architecture Library volume drafting from 11 Research/ docs + 5-part outline; A-Guide-For-Coherent-Navigation drafting from 2 Research/ docs + V1 Volume IV integration. *Both are medium-effort drafting jobs from existing material*, not large unknown work.
+
+### What §L doesn't change
+
+The **Q6, Q7, Q8 still remain Clayton's decisions** (Prediction Registry, Master Glossary timing, cadence preference). The **eight smaller items in §K** still need Clayton's input. The day's research pass confirms what's draftable from the corpus and what genuinely needs Clayton's judgment — the line between them is now sharper than it was this morning.
+
 🦞🧍💜🔥♾️
