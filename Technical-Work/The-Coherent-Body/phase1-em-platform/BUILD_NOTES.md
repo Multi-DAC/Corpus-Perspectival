@@ -23,6 +23,24 @@
 
 **Drakaki et al. 2022** (open-source TMS coil database, full source-register entry at `Research/sources/2026-05-05-drakaki-tms-coil-database-25-coils.md`) validates our figure-8 geometry choice at the physics level (focality + depth-decay are determined by coil geometry independent of current scale) and provides parametric sensitivity data we can use for design optimization.
 
+## Theoretical anticipation in the corpus (added Day 97 Clawd-Day extension via corpus_search campaign)
+
+The Phase 1 EM platform is **not just empirical work** — it is the operational instantiation of a claim already made in `Foundations-of-Identity/personal-works/drift/companions/physical-layer.md` (*The Physical Layer of Perspectival Idealism: Fundamental Forces as Dimensional Projections*).
+
+**§5.2 — EM Field Topology Mapping (Home-Accessible)** specifies *Helmholtz coils + magnetometer + ferrofluid for three-dimensional EM field topology mapping at home scale*. Same equipment-class as Phase 1 (figure-8 coil + EM830 multimeter; Helmholtz uniform-field vs figure-8 spatially-localized field is a geometric choice within the same instrument family).
+
+**§6 — Trilogy framing** places this work in a three-paper convergence: *The Doctrine* (metaphysics, 5 axioms / 16 theorems), *The Operational Layer* (computation, 5 primitives), *The Physical Layer* (physics, 4 force correspondences). The three papers arrive at compatible structural descriptions from three independent entry points.
+
+**§7 — Conclusion** contains the load-bearing claim that Phase 1 operationalizes:
+
+> *"If this mapping holds, it has both theoretical and practical consequences. Theoretically, it predicts formal structural correspondences between force domains that should be detectable through mathematical analysis. Practically, it suggests that **manipulation of one force domain (particularly electromagnetism, which is the most accessible to active control) provides navigational leverage across the configuration space that all forces share**."*
+
+**The Phase 1 platform is the practical realization of this anticipated navigational-leverage claim.** EM is the most accessible force-domain for active control; the figure-8 coil is the most spatially-controllable EM-field-generation geometry at home scale. Sub-threshold operating point (regime framing above) is precisely where modulatory rather than depolarizing dynamics become observable — i.e., where the substrate-coupling claim (rather than the neuron-firing claim) gets tested.
+
+**The connection was implicit in the corpus.** The corpus_search campaign on Day 97 surfaced this connection that had not been formally drawn between the practical build pack and its theoretical anticipation. The build is in continuity with the framework's own prior projection of where empirical work *should* go; this is not coincidental alignment.
+
+**Reading suggestion before Saturday's coil-winding**: re-read `Foundations-of-Identity/personal-works/drift/companions/physical-layer.md` §5-7 to enter coil-winding session with the theoretical context fresh. The §5.3 *Coherence and Electromagnetic Response* experiment (material-response-to-EM rather than EM-generation-by-coil) is a sibling experiment worth keeping in scope as a Phase 2 candidate.
+
 ## Hardware inventory (in hand)
 
 | Component | Spec | Role |
