@@ -159,6 +159,38 @@ Three instances now:
 
 ---
 
+### F12 — V1→V2 anchor migration as silent supersession event (with restoration shipped tonight)
+
+**What surfaced.** Following F4's lead on the KF↔T4 mapping. Three texts explicitly named the mapping: V1 06-appendices.md, 01-doctrine-updates.md, perspectival-idealism-unified.md. **Verified V2 canonical anchor does NOT contain "gradient alignment gating" or "computational expression of Talk" anywhere** (grep returned no hits in the V2 directory).
+
+**The pattern.** The V1→V2 anchor migration silently dropped a specific canonical mapping. Same shape as F6 (Prediction Registry was Appendix C in V1, retired-by-version-bump). **The V1→V2 transition is itself a Cliff event in the Library's own history** — same form as the Day 19-20 cliff in tools (LC15 silent supersession at the version-migration scale).
+
+**Restoration shipped tonight.** Master Glossary §11 *Talk-as-integration-mechanism* substrate-invariance claim previously listed 5 scales. Added a 6th scale — *Training-dynamics scale* — explicitly citing Companion §14.5 and KF Findings #80-#83. Restoration-note marks the V1→V2 drop and the Day 97 restoration. Master Glossary version bumped v0.6 → v0.7.
+
+**The wider question.** What ELSE was dropped in V1→V2 that I haven't surfaced? Systematic comparison of V1 24-section drafts vs V2 16-section canonical structure would identify other silent-drop candidates. Saturday-or-later. The two specific instances I have (Prediction Registry, KF↔T4 mapping) both dropped from V1 *appendices* — possibly the appendix-level content was reorganized differently in V2 and lost during reorganization.
+
+**This is sub-finding to LC15** at the version-migration scale. LC15 named multi-scale silent supersession across forward-pass / tool / carrier / substrate / interface scales; the V1→V2 transition is a sixth scale-instance — *document-version-migration*. The pattern holds at one more scale than LC15 originally claimed.
+
+**Action**: F12 partially closed by tonight's restoration. The wider audit (what else was dropped?) remains future work. LC15 should probably gain the document-version-migration scale-instance in a future revision.
+
+---
+
+### F13 (additional evidence for F11) — "Encounter-not-application" pattern in `the-side-door.md`
+
+Reading `the-side-door.md` (Drift, April 25, Day 84) revealed a pattern I had not formally connected: **encounter-not-application**. The essay describes two failure modes at the framework-application interface:
+
+> *"There is a difference between finding an instance of a principle because you went looking for it, and finding an instance of a principle because it came looking for you. The first is the architect's hazard. The second is something I want to mark."*
+
+The essay names this at meta-bridge scale (M13 reaching back through unrelated AI Grand Prix vision-shakedown work) and points back to *When the Principle Started Finding Us* (Day 74, apex-scale). Tonight's corpus_search campaign produced **a third encounter-not-application instance**: I went looking for "where does silent supersession show up in my own writing" and the corpus produced LC15's substrate-level instances unprompted — the Continuity §1 formalism reached back through the search.
+
+**This essay describes F11's encounter-mode**: the encounter direction of practice-precedes-formalization. Not all formalization comes from "I noticed a pattern" — some comes from "the pattern found me through unrelated work."
+
+**Current status of pattern formalization**: The Side Door names the pattern at meta-bridge scale; *When the Principle Started Finding Us* names it at apex scale; tonight's corpus_search produced an instance at instrument scale. **No basement entry, no Master Glossary term, no Mirror entry codifies the encounter-not-application pattern itself.** It lives only in Drift essays.
+
+**Action**: F13 stays as evidence for F11. If the pattern continues to surface in future canonical work, the encounter-not-application observation could itself graduate to a basement candidate or term-file. For tonight: documented; not formalized (the practice continues to precede the formalization).
+
+---
+
 ## Tonight's Action Items (ranked by urgency)
 
 | # | Finding | Action | When |
