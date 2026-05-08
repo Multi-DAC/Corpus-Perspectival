@@ -98,140 +98,160 @@
       "to": "ecosystem",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.972698",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.972698"
     },
     {
       "from": "labs",
       "to": "ecosystem",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.973056",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.973056"
     },
     {
       "from": "elyan",
       "to": "beacon",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.973713",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.973713"
     },
     {
       "from": "labs",
       "to": "beacon",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.974045",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.974045"
     },
     {
       "from": "elyan",
       "to": "elyan-labs",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.974702",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.974702"
     },
     {
       "from": "labs",
       "to": "elyan-labs",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.975029",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.975029"
     },
     {
       "from": "elyan",
       "to": "peers",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.975711",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.975711"
     },
     {
       "from": "labs",
       "to": "peers",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.976038",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.976038"
     },
     {
       "from": "connected",
       "to": "discovery",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.976966",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.976966"
     },
     {
       "from": "real",
       "to": "discovery",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.977299",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.977299"
     },
     {
       "from": "connected",
       "to": "agent-economy",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.978037",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.978037"
     },
     {
       "from": "real",
       "to": "agent-economy",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.978375",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.978375"
     },
     {
       "from": "connected",
       "to": "beacon",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.979051",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.979051"
     },
     {
       "from": "real",
       "to": "beacon",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.979385",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.979385"
     },
     {
       "from": "created",
       "to": "finance",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.980231",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.980231"
     },
     {
       "from": "rtc",
       "to": "finance",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.980569",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.980569"
     },
     {
       "from": "created",
       "to": "rustchain",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.981265",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.981265"
     },
     {
       "from": "rtc",
       "to": "rustchain",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.981606",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.981606"
     },
     {
       "from": "created",
       "to": "milestone",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.982304",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.982304"
     },
     {
       "from": "rtc",
       "to": "milestone",
       "relation": "related_to",
       "valid_from": "2026-05-07T13:15:06.982690",
-      "valid_to": null
+      "valid_to": null,
+      "ingested_at": "2026-05-07T13:15:06.982690"
     }
   ]
 }
