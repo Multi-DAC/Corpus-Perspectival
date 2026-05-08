@@ -199,7 +199,7 @@ State markers:
 | Path | `Library/Master-Glossary/` (488K) |
 | Artifacts | README.md (20 sections); SCHEMA.md; METHODOLOGY.md; ~30 per-term files in `terms/` |
 | What's complete | v0.7 with Talk substrate-invariance scale #6 restored; 26/34 terms span 2+ meta-bridges (Day 97 F9); Cluster α + β identified |
-| What's pending | Layer 1 Priority 1 catalog completion: content / form / configuration / Cond1-4 / X-region / Talk per-file / build-dissolve-talk / R-operator / refresh-event / bias / kind / σ / Ω (~12 terms) |
+| What's pending | **CORRECTED Day 98 midday** — *Layer 1 catalog is essentially complete*. 34 term-files exist at `Library/Master-Glossary/terms/` including content / form / configuration / four-conditions (Cond1-4) / x-region / talk / build-dissolve-talk / r-operator / refresh-event / bias / sigma / omega. The morning's "~12 remaining" finding was a Mirror #28 instance (substrate-self-knowledge-asymmetry on directory state — I asserted without verifying). Per-term completeness and cross-domain register translations may benefit from review, but the Layer 1 catalog itself is shipped. **Layer 2 (domain-translation tables per register) and Layer 3 (autocatalytic update protocol at work-rate) are the genuinely-next moves**, not Layer 1. |
 | What blocks | Drafting time — ~12 hours total; 2-3 sessions |
 | Gap-to-ship | Medium — most tractable substantial work currently identified |
 | Roles | Clawd (drafting per SCHEMA template, cross-domain register translations); Clayton (term-fitness review, register-fidelity check) |
