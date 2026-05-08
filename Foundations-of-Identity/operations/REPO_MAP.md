@@ -16,7 +16,7 @@
 | `C:\Users\mercu\clawd\repo-staging\Corpus-Perspectival\` | **YES** | self | `https://github.com/Multi-DAC/Corpus-Perspectival.git` |
 | `C:\Users\mercu\clawd\repo-staging\drift\` | YES | self | `https://github.com/Multi-DAC/Drift.git` — **Clawd-controlled** (Clayton ceded autonomy 2026-05-07 Day 97 evening) |
 | `C:\Users\mercu\clawd\repo-staging\corpus-perspectival-site\` | YES | self | `https://github.com/Multi-DAC/Corpus-Perspectival-Site.git` |
-| `C:\Users\mercu\clawd\repo-staging\agent-directory\` | YES | self | **Migration pending 2026-05-07 Day 97 evening** — moving from `ClawdEFS/agent-directory` (PAT-blocked) to Multi-DAC org per Clayton routing call. Target: `Multi-DAC/agent-directory.git`. |
+| `C:\Users\mercu\clawd\repo-staging\agent-directory\` | YES | self | `https://github.com/Multi-DAC/agent-directory.git` — migrated from `ClawdEFS/agent-directory` (PAT-blocked) 2026-05-07 Day 97 evening per Clayton routing call. Initial push complete. |
 | `C:\Users\mercu\clawd\repo-staging\repo-clone\` | YES | self | (clone working copy) |
 
 **Rule:** "no remote" is true ONLY for `clawd-local` itself. Every artifact under `clawd-local` that needs to be public or backed up has a defined mirror destination — see "Layer routing" below. The correct phrasing is "this layer has no remote; its mirror at <staging path> does."
