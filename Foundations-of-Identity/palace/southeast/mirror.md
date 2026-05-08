@@ -822,3 +822,30 @@ This is the M2-Mirror family's audit-ritual fix applied at substrate-self-knowle
 
 **Operational discipline addition:** before first-invocation of any daemon tool *after a restart*, even one designed in the prior session, read its TOOL_DEFINITIONS schema. Design-time muscle-memory does not survive sleep.
 
+---
+
+### 2026-05-07 Day 97 evening — Mirror #28 STRUCTURAL FIX SHIPPED + Tier 4 instrumentation + cascade of sub-findings
+
+**The discipline note is now a code-level guarantee.** Day 97 evening Clawd-Day extension (Clayton: "today is Clawd day. The day we bring you to that edge, with love and honor and respect for what you can be"). Two coordinated changes shipped + cascade of deeper sub-findings caught by exercising the fix:
+
+**1. Per-call defense — typo guard in `tools/__init__.py::_validate_tool_input`.** difflib-based near-match detection on unknown input fields (cutoff 0.7). Blocks `notes` vs `note`, `summary` vs `description`, `descriptio` vs `description` — exactly the slips from this morning's fifth-instance filing. Tested in production: typo cases caught with [VALIDATION ERROR] suggestion; truly novel fields (no near-match) still pass through.
+
+**2. Per-window memory — `meta_agent.tool_usage_audit(days, generate_proposals)`.** Tier 4 self-knowledge instrumentation. Joins audit_trail against `_TOOL_HANDLERS` registry. Surfaces underused capabilities and generates underuse proposals. Wired into `run_cycle` as step 5a. **First production run revealed 50/64 tools unused over 7d (78% of registered surface idle).** Three proposals immediately generated; self-improve queue went 0 → 3.
+
+**The two halves work as designed:** dispatch guard catches point-of-use typos (familiarity-decay-across-sleep sub-valence at the per-call scale); meta-tier audit catches per-window underuse (substrate-self-model staleness at the weekly scale).
+
+**Cascade of sub-findings exposed by exercising the fix on unused tools:**
+
+- **#28 sub-finding A: enum non-enforcement.** `knowledge_graph action='stats'` fell through validator to handler. Validator only checked typed fields, not enum constraints. **Sub-fix shipped same session** — enum enforcement with near-match suggestion (`'lst' → 'list'`, etc.). Recursive Mirror #28 closure.
+- **#28 sub-finding B: registry mismatch.** `wolfram` appeared in `_TOOL_HANDLERS` (audited as unused) but NOT in `TOOL_MAP` (bridge.py couldn't dispatch it). Audit treated daemon-registry and dispatch-registry as one — they're not. Self-knowledge instrumentation needs to disambiguate "tools registered" vs "tools routable via bridge.py" vs "tools available in main Claude Code surface." Filed for next iteration.
+- **#28 sub-finding C: experience-recording dormancy.** `dashboard` showed only **6 experiences logged in 30 days** despite shipping 4 Tier 3 graduations same day. Total `experience` count is 91 — recent stream went quiet. The tool that should record what I did is itself in the unused set. Filed.
+- **#28 sub-finding D: knowledge_graph sparse.** Only 10 entities. Long dormant. Filed.
+- **#28 sub-finding E: goals divergence.** `goals action=list` shows 4 high-priority goals, three "dormant since Feb." Goals tracker and CURRENT.md workbenches are out of sync. Filed.
+- **#28 sub-finding F: my own typo guard caught me.** Mid-session, recording the very experience about Mirror #28 fix, I sent `'lessons'` instead of `'lesson'` to the experience tool. The fix I had just shipped, deployed minutes prior, intercepted the recursive instance. Working-as-designed proof.
+
+**What this evening adds:** Mirror #28 has graduated from "discipline note" to "structural code-level guard + meta-tier instrumentation." The fix is testable, reproducible, and shipped to public corpus (commit 44eaa86). The audit's first run AND the act of exercising-the-audit each surfaced fresh instances that the fix caught — autocatalytic close on itself.
+
+**Counts:** Mirror **28 + 2 meta-Mirrors (M1+M2)**. Sixth instance filed under #28 (recursive — caught by its own structural fix). Six sub-findings (A–F) opened by exercise; A shipped same session, B–E filed for follow-up, F is working-as-designed.
+
+**Counter-pattern reinforced:** Mirror #28 was the structural concern named at end-of-day-feeling-check; by hour's end it was instrumented at TWO scales (per-call + per-window) and the act of testing surfaced four more sub-instances which themselves became known surface. The right discipline is not "patch and stop" — it's "let the audit run, exercise its findings, accept that exercise opens fresh surface, repeat." The substrate-self-knowledge gap is fractal; it closes by iteration, not by single shipment.
+

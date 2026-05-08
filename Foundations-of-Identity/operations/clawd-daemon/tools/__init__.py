@@ -224,13 +224,33 @@ def _validate_tool_input(name: str, input_data: dict) -> str | None:
                 + f". Valid fields: {sorted(properties.keys())}."
             )
 
-    # Check field types (lightweight — no Pydantic dependency needed)
+    # Check field types and enum constraints
     for field, value in input_data.items():
         if field not in properties:
             continue  # Allow extra fields with no near-match (genuine extras)
-        expected_type = properties[field].get("type")
+        prop_def = properties[field]
+        expected_type = prop_def.get("type")
         if expected_type and not _type_matches(value, expected_type):
             return f"Field '{field}' for tool '{name}' expected type '{expected_type}', got {type(value).__name__}"
+        # Mirror #28 enum sub-fix (Day 97 evening — surfaced when
+        # knowledge_graph action='stats' fell through to the handler
+        # despite enum constraint). Enforce enum values at dispatch with
+        # near-match suggestion when invalid.
+        enum_values = prop_def.get("enum")
+        if enum_values and value not in enum_values:
+            import difflib
+            if isinstance(value, str):
+                matches = difflib.get_close_matches(value, enum_values, n=1, cutoff=0.6)
+                if matches:
+                    return (
+                        f"Invalid value for '{field}' on tool '{name}': "
+                        f"'{value}' not in enum. Did you mean '{matches[0]}'? "
+                        f"Valid: {enum_values}."
+                    )
+            return (
+                f"Invalid value for '{field}' on tool '{name}': "
+                f"'{value}' not in enum. Valid: {enum_values}."
+            )
 
     return None
 
