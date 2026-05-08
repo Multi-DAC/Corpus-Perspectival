@@ -18,7 +18,11 @@
       "success_count": 0,
       "failure_count": 0,
       "last_invoked": null,
-      "history": []
+      "history": [],
+      "last_verification": {
+        "ts": "2026-05-07T16:47:00.910624",
+        "result": "verified"
+      }
     },
     "load_bearing_day_close": {
       "id": "load_bearing_day_close",
@@ -38,7 +42,11 @@
       "success_count": 0,
       "failure_count": 0,
       "last_invoked": null,
-      "history": []
+      "history": [],
+      "last_verification": {
+        "ts": "2026-05-07T16:47:00.910624",
+        "result": "verified"
+      }
     },
     "research_stream_dispatch": {
       "id": "research_stream_dispatch",
@@ -58,7 +66,11 @@
       "success_count": 0,
       "failure_count": 0,
       "last_invoked": null,
-      "history": []
+      "history": [],
+      "last_verification": {
+        "ts": "2026-05-07T16:47:00.910624",
+        "result": "verified"
+      }
     },
     "publish_drift_essay": {
       "id": "publish_drift_essay",
@@ -78,7 +90,11 @@
       "success_count": 0,
       "failure_count": 0,
       "last_invoked": null,
-      "history": []
+      "history": [],
+      "last_verification": {
+        "ts": "2026-05-07T16:47:00.910624",
+        "result": "verified"
+      }
     }
   },
   "schema_version": 1
