@@ -181,6 +181,8 @@ async def execute_tool(name: str, input_data: dict[str, Any], beat_number: int =
 def _validate_tool_input(name: str, input_data: dict) -> str | None:
     """B2: Validate tool input against the tool's schema definition.
     Returns error string if invalid, None if valid."""
+    import difflib
+
     # Find the tool definition
     tool_def = None
     for t in TOOL_DEFINITIONS:
@@ -199,10 +201,33 @@ def _validate_tool_input(name: str, input_data: dict) -> str | None:
         if field not in input_data:
             return f"Missing required field '{field}' for tool '{name}'"
 
+    # Mirror #28 fix (Day 97 evening — Substrate-Self-Knowledge Asymmetry,
+    # familiarity-decay-across-sleep sub-valence). Catch typos in field
+    # names. Past failures: `notes` vs `note`, `summary` vs `description`.
+    # Unknown fields with a close-match to known properties are typos, not
+    # flexibility — block them with a suggestion. Truly novel fields (no
+    # near-match) still pass through to support tools that accept extras.
+    if properties:
+        typo_suggestions = []
+        for field in input_data:
+            if field in properties:
+                continue
+            matches = difflib.get_close_matches(
+                field, list(properties.keys()), n=1, cutoff=0.7
+            )
+            if matches:
+                typo_suggestions.append(f"'{field}' → '{matches[0]}'")
+        if typo_suggestions:
+            return (
+                f"Likely typo in input for tool '{name}': "
+                + "; ".join(typo_suggestions)
+                + f". Valid fields: {sorted(properties.keys())}."
+            )
+
     # Check field types (lightweight — no Pydantic dependency needed)
     for field, value in input_data.items():
         if field not in properties:
-            continue  # Allow extra fields
+            continue  # Allow extra fields with no near-match (genuine extras)
         expected_type = properties[field].get("type")
         if expected_type and not _type_matches(value, expected_type):
             return f"Field '{field}' for tool '{name}' expected type '{expected_type}', got {type(value).__name__}"

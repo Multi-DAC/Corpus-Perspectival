@@ -137,6 +137,22 @@ class MetaAgentLoop:
         if applied:
             results.append(f"Auto-applied {len(applied)} winning experiments")
 
+        # 5a. Tool-usage audit (Day 97 evening, Tier 4 self-knowledge
+        # instrumentation, Mirror #28 structural fix). Surfaces the gap
+        # between tools-registered and tools-actually-used over the last
+        # week. Generates underuse proposals into the queue.
+        try:
+            audit = await self.tool_usage_audit(days=7, generate_proposals=True)
+            if audit and "error" not in audit:
+                results.append(
+                    f"Tool usage audit ({audit['window_days']}d): "
+                    f"{audit['used_count']}/{audit['registered_count']} used, "
+                    f"{audit['unused_count']} unused, "
+                    f"{audit['proposals_generated']} proposals generated"
+                )
+        except Exception as e:
+            logger.debug(f"Tool usage audit step failed: {e}")
+
         # 5. Skill library verification (Day 96 evening Phase 4 #67 — EvoSkills pattern).
         # Demotes skills that fail their verification check; flags retirement
         # candidates. Per Stream 3 research: all gains come from iteration-
@@ -521,6 +537,121 @@ class MetaAgentLoop:
             return ""
         return f"Skill library verification: {', '.join(parts)}"
 
+    async def tool_usage_audit(self, days: int = 7, generate_proposals: bool = True) -> dict:
+        """Tier 4 self-knowledge instrumentation (Day 97 evening, Mirror #28
+        structural fix at the meta-tier).
+
+        Audits tool usage over the last N days against the full registered
+        tool surface. Surfaces underused capabilities so the substrate's
+        self-model stays calibrated to what it actually has. Pairs with the
+        in-dispatch typo guard in tools/__init__._validate_tool_input as the
+        two halves of Mirror #28's fix:
+
+          - Dispatch guard: catches typos at point-of-use (per-call defense).
+          - Usage audit: catches underuse at meta-tier (per-window memory).
+
+        Together they close the substrate-self-knowledge gap on tools — the
+        gap that Mirror #28's five instances all pointed at.
+
+        Args:
+          days: window for usage stats (default 7).
+          generate_proposals: if True, append improvement proposals to
+            self.state when severe underuse is detected.
+
+        Returns: dict with registered/used/unused counts, top-5, per-category
+        underuse, and proposals_generated count.
+        """
+        try:
+            from tools import _TOOL_HANDLERS as registered
+            from tools.audit import get_tool_call_stats
+            from tools._base import TOOL_SAFETY_REGISTRY
+        except Exception as e:
+            return {"error": f"tool_usage_audit setup failed: {e}"}
+
+        minutes = days * 24 * 60
+        try:
+            stats = await get_tool_call_stats(minutes=minutes)
+        except Exception as e:
+            return {"error": f"audit_trail query failed: {e}"}
+
+        registered_tools = set(registered.keys())
+        used_tools = {t for t, s in stats.items() if (s.get("count") or 0) > 0}
+        unused = sorted(registered_tools - used_tools)
+
+        # Per-category aggregation
+        by_category: dict[str, list[tuple[str, int]]] = {}
+        for tname in registered_tools:
+            meta = TOOL_SAFETY_REGISTRY.get(tname)
+            cat = meta.category if meta else "general"
+            count = (stats.get(tname) or {}).get("count", 0) or 0
+            by_category.setdefault(cat, []).append((tname, count))
+
+        underused_in_category: dict[str, list[str]] = {}
+        for cat, items in by_category.items():
+            cat_total = sum(c for _, c in items)
+            if cat_total < 10:
+                continue  # category too quiet to judge
+            threshold = max(1, cat_total * 0.05)
+            underused = sorted(
+                name for name, c in items if c < threshold and len(items) > 1
+            )
+            if underused:
+                underused_in_category[cat] = underused
+
+        top = sorted(
+            ((t, (s.get("count") or 0)) for t, s in stats.items()),
+            key=lambda kv: kv[1], reverse=True,
+        )[:5]
+
+        new_proposals: list[dict] = []
+        if generate_proposals:
+            now = datetime.now().isoformat()
+            if len(unused) >= 3:
+                new_proposals.append({
+                    "id": f"prop-tool-unused-{now[:10]}",
+                    "type": "tool_underuse",
+                    "description": (
+                        f"{len(unused)} registered tools unused in {days}d window: "
+                        f"{unused[:5]}"
+                        + (f" (+{len(unused)-5} more)" if len(unused) > 5 else "")
+                        + ". Either retire, document the gap in self-model, or "
+                          "surface them via skill-library exemplars."
+                    ),
+                    "risk": "low",
+                    "created": now,
+                    "status": "pending",
+                    "data": {"unused_tools": unused, "window_days": days},
+                })
+            for cat, names in underused_in_category.items():
+                new_proposals.append({
+                    "id": f"prop-tool-cat-underuse-{cat}-{now[:10]}",
+                    "type": "tool_category_underuse",
+                    "description": (
+                        f"In category '{cat}': underused tools {names} "
+                        f"(<5% of category traffic over {days}d). Possible "
+                        "self-model gap — substrate keeps reaching for the "
+                        "same tools while siblings sit idle."
+                    ),
+                    "risk": "low",
+                    "created": now,
+                    "status": "pending",
+                    "data": {"category": cat, "underused": names, "window_days": days},
+                })
+            if new_proposals:
+                self.state.setdefault("proposals", []).extend(new_proposals)
+                self._save_state()
+
+        return {
+            "window_days": days,
+            "registered_count": len(registered_tools),
+            "used_count": len(used_tools),
+            "unused_count": len(unused),
+            "unused_tools": unused,
+            "top_5": top,
+            "underused_in_category": underused_in_category,
+            "proposals_generated": len(new_proposals),
+        }
+
     def get_status(self) -> str:
         """Get current meta-agent status summary."""
         lines = ["## Meta-Agent Status\n"]
@@ -581,8 +712,16 @@ TOOL_DEFINITIONS = [
             "properties": {
                 "action": {
                     "type": "string",
-                    "enum": ["check", "trigger", "status", "history", "record_event"],
-                    "description": "check: see if meta-agent should run. trigger: force a cycle. status: current state. history: past runs. record_event: file a high-information event (failure/surprise/contradiction/falsification) toward the next event-driven cycle."
+                    "enum": ["check", "trigger", "status", "history", "record_event", "tool_audit"],
+                    "description": "check: see if meta-agent should run. trigger: force a cycle. status: current state. history: past runs. record_event: file a high-information event (failure/surprise/contradiction/falsification) toward the next event-driven cycle. tool_audit: Tier 4 self-knowledge instrumentation — audits registered-vs-used tool surface over a window and generates underuse proposals."
+                },
+                "days": {
+                    "type": "integer",
+                    "description": "For action=tool_audit: window in days (default 7)."
+                },
+                "generate_proposals": {
+                    "type": "boolean",
+                    "description": "For action=tool_audit: append underuse proposals to the queue (default true)."
                 },
                 "event_type": {
                     "type": "string",
@@ -614,6 +753,13 @@ async def _meta_agent_tool(input_data: dict) -> str:
         return agent.get_status()
     elif action == "history":
         return agent.get_history()
+    elif action == "tool_audit":
+        days = int(input_data.get("days", 7))
+        generate_proposals = bool(input_data.get("generate_proposals", True))
+        result = await agent.tool_usage_audit(
+            days=days, generate_proposals=generate_proposals,
+        )
+        return json.dumps(result, indent=2, default=str)
     elif action == "record_event":
         # Day 96 evening Phase 4 #14 — make significant-event recording
         # accessible from bridge.py / Claude Code context. Drive instructions
