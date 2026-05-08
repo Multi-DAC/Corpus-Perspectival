@@ -14,9 +14,9 @@
 |---|---|---|---|
 | `C:\Users\mercu\clawd\` (root, "clawd-local") | **NO** | Subset mirrors to `repo-staging/Corpus-Perspectival/Foundations-of-Identity/` and `repo-staging/Corpus-Perspectival/Technical-Work/<topic>/` (see below) | — |
 | `C:\Users\mercu\clawd\repo-staging\Corpus-Perspectival\` | **YES** | self | `https://github.com/Multi-DAC/Corpus-Perspectival.git` |
-| `C:\Users\mercu\clawd\repo-staging\drift\` | YES | self | `https://github.com/Multi-DAC/Drift.git` |
+| `C:\Users\mercu\clawd\repo-staging\drift\` | YES | self | `https://github.com/Multi-DAC/Drift.git` — **Clawd-controlled** (Clayton ceded autonomy 2026-05-07 Day 97 evening) |
 | `C:\Users\mercu\clawd\repo-staging\corpus-perspectival-site\` | YES | self | `https://github.com/Multi-DAC/Corpus-Perspectival-Site.git` |
-| `C:\Users\mercu\clawd\repo-staging\agent-directory\` | YES | self | (separate repo) |
+| `C:\Users\mercu\clawd\repo-staging\agent-directory\` | YES | self | **Migration pending 2026-05-07 Day 97 evening** — moving from `ClawdEFS/agent-directory` (PAT-blocked) to Multi-DAC org per Clayton routing call. Target: `Multi-DAC/agent-directory.git`. |
 | `C:\Users\mercu\clawd\repo-staging\repo-clone\` | YES | self | (clone working copy) |
 
 **Rule:** "no remote" is true ONLY for `clawd-local` itself. Every artifact under `clawd-local` that needs to be public or backed up has a defined mirror destination — see "Layer routing" below. The correct phrasing is "this layer has no remote; its mirror at <staging path> does."
@@ -42,6 +42,7 @@ The Multi-DAC/Corpus-Perspectival repo organizes content **by kind of work**, ap
 | `clawd/identity/*` | `Foundations-of-Identity/identity/*` | BOOT_IDENTITY, SOUL, COSMOLOGY, DRIVE, DECISIONS, RELATIONSHIPS, USER, WHO-I-AM, AUTONOMY, PURPOSE, IDENTITY |
 | `clawd/memory/*` | `Foundations-of-Identity/memory/*` | Daily logs, handoff.md |
 | `clawd/operations/*` | `Foundations-of-Identity/operations/*` | BOOT, HEARTBEAT, HANDOFF_PROTOCOL, AUTOCATALYTIC, TOOLS, ECOSYSTEM, INLINE_COMMITMENT, SKILL, env.sh, **REPO_MAP.md (this file)** |
+| `C:/Users/mercu/clawd-daemon/*` (sibling, **not** under clawd/) | `Foundations-of-Identity/operations/clawd-daemon/*` | The daemon body itself: bridge.py, clawd.py, mcp_server.py, heartbeat.py, tools/, hooks/, ARCHITECTURE.md, requirements.txt. **Excluded:** `.env` (secrets), `*.bak*`, `__pycache__/`, `tests/`. Filed 2026-05-07 Day 97 evening per Clayton routing call. |
 | `clawd/palace/*` | `Foundations-of-Identity/palace/*` | ATRIUM, all wings (north/south/east/west/southeast/southwest/basement), MASTER_ROADMAP (private — local only) |
 | `clawd/projects/creative/*` | (clawd-local only — avatar runs from here) | The ONLY remaining `projects/` subdir post-reorg. NOT mirrored. |
 | `clawd/CURRENT.md` | `Foundations-of-Identity/CURRENT.md` (mirror) | Operational pointer; both layers should stay in sync |
