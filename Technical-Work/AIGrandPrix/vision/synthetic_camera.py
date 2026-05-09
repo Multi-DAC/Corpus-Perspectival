@@ -28,14 +28,25 @@ class SyntheticCamera:
 
     def __init__(self,
                  width: int = 640,
-                 height: int = 480,
+                 height: int = 360,
                  fov_deg: float = 90.0,
                  gate_width: float = 1.5,
-                 gate_height: float = 1.5):
+                 gate_height: float = 1.5,
+                 camera_tilt_deg: float = 0.0):
+        # DCL VQ1 spec defaults (VADR-TS-002 Issue 00.02, 2026-05-08):
+        #   width=640, height=360, fov_deg=90 (HFoV — fx=fy=320 matches spec [fx,fy]),
+        #   gate_width=1.5, gate_height=1.5 (inner-gate-boundary 1500x1500mm).
+        # camera_tilt_deg=0.0 retained as default for backward-compat with existing tests.
+        # For VQ1-spec-matched rendering, set camera_tilt_deg=20.0 — but the rendering
+        # projection in render_gate()/project_world_to_image() does NOT yet apply this
+        # rotation. TODO: thread tilt_deg through projection math (rotate camera-frame
+        # points by R_pitch(-tilt) before applying intrinsics) when vision-aware training
+        # opens. The inference-time inverse lives in adapter._cam_to_body_with_tilt.
         self.width = width
         self.height = height
         self.gate_width = gate_width
         self.gate_height = gate_height
+        self.camera_tilt_deg = camera_tilt_deg  # for future tilt-aware projection
 
         # Camera intrinsics from FOV
         fov_rad = np.radians(fov_deg)
