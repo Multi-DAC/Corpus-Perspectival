@@ -44,10 +44,21 @@ def load_policy(model_path: str):
 
 def create_pipeline(model_path: str,
                     image_width: int = 640,
-                    image_height: int = 480,
+                    image_height: int = 360,
                     fov_deg: float = 90.0,
                     command_rate_hz: float = 50.0) -> VisionPolicyBridge:
-    """Create the full vision-to-action pipeline."""
+    """Create the full vision-to-action pipeline.
+
+    DCL VQ1 spec (VADR-TS-002 Issue 00.02, 2026-05-08):
+      Image resolution: 640px x 360px
+      [cx,cy] = [320px, 180px]
+      [fx,fy] = [320, 320]
+      Camera tilted upwards by 20° (NED — handle in adapter for body-frame gate pose)
+      Vision stream: UDP port 5600, 30 Hz, JPEG-encoded with 24-byte chunked metadata header
+
+    HFoV convention: fov_deg=90 with image_width=640 yields fx=320 ✓ (matches spec)
+    Then image_height=360 yields cy=180 ✓ (matches spec).
+    """
 
     # 1. Gate detector
     config = GateDetectorConfig()
@@ -141,9 +152,10 @@ def run_competition(model_path: str,
             telemetry = mav_telemetry_to_adapter(mav_telem)
 
             # Get camera frame
-            # TODO: Replace with actual camera stream when vision spec drops
-            # For now, create a blank frame so the detector runs (returns no detection)
-            camera = np.zeros((480, 640, 3), dtype=np.uint8)
+            # TODO: Wire UDP vision stream per VQ1 spec §4.6 (port 5600, JPEG chunked,
+            # 24-byte metadata header per packet). Until UDP receiver lands, blank frame
+            # so the detector runs (returns no detection). Spec resolution: 640×360.
+            camera = np.zeros((360, 640, 3), dtype=np.uint8)
 
             # Run full pipeline: camera → gate detect → observation → policy → action
             action = bridge.step(telemetry, camera)

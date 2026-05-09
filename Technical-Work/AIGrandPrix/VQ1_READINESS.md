@@ -1,4 +1,36 @@
-# VQ1 Readiness Assessment — April 9, 2026
+# VQ1 Readiness Assessment — April 9, 2026 (Updated 2026-05-09 Day 99 with VADR-TS-002 Issue 00.02)
+
+## 2026-05-09 Day 99 Update — VQ1 Spec Dropped
+
+**DCL Virtual Qualifier 1 Technical Specification VADR-TS-002 Issue 00.02 (2026-05-08) released.** Saved at `docs/VQ1_TECHNICAL_SPEC_VADR-TS-002_Issue00.02.pdf`. Key facts:
+
+- **Camera:** 640×360, pinhole no-distortion, [fx,fy]=[320,320], [cx,cy]=[320,180], 90° HFoV (spec text says "VFoV=90°" but the numerics give HFoV=90° / VFoV~58.7° — the existing `set_camera_from_fov` HFoV convention matches the spec's [fx,fy] numerics exactly).
+- **Camera tilt:** 20° upward (spec §3.7).
+- **Drone chassis:** 280×280×160mm. **Gates:** 2700×2700×260mm outer / 1500×1500×260mm inner.
+- **Frames:** NED for body and local (`MAV_FRAME_BODY_NED`); coordinate-frame conversion to z-up internal convention happens in `mavsdk_client.py`.
+- **Comms:** UDP MAVSDK-compatible. Physics 120 Hz. Command rate <100 Hz. Heartbeat ≥2 Hz.
+- **Vision stream:** UDP port 5600, 30 Hz, 640×360 JPEG with chunked metadata header (frame_id, chunk_id, total_chunks, jpeg_size, payload_size, sim_time_ns, 24-byte little-endian).
+- **Runtime:** Python 3.14.2; Windows 11; 8GB+ VRAM (RTX 5080 well over).
+- **Round 1 Qualification:** 8-min max run duration. Completion-focused.
+- **Compliance:** No human interaction during timed runs (immediate DQ).
+
+### Day 99 Edits Shipped
+
+1. **`competition_agent.py::create_pipeline`** — image_height default 480→360 (matches spec). Spec citation added in docstring.
+2. **`competition_agent.py` placeholder camera** — `np.zeros((480, 640, 3))` → `np.zeros((360, 640, 3))` for correct shape against spec.
+3. **`adapter.py::_cam_to_body_with_tilt`** — new helper computing camera→body-frame conversion accounting for the 20° upward tilt. Math: pitch-up rotation about body left axis composed with the no-tilt swap. Sanity-tested: cam-forward(0,0,1)→body(0.940, 0, 0.342) [forward+slightly up]; cam-down(0,1,0)→body(0.342, 0, -0.940) [slightly forward, mostly down]. Wired through `VisionPolicyBridge` with `camera_tilt_deg=20.0` default.
+
+### Outstanding for VQ1 Sim Bring-Up
+
+1. **UDP vision-stream receiver** — `competition_agent.py` line 156 still uses `np.zeros((360, 640, 3))` placeholder. Need UDP receiver that reassembles chunked JPEG packets per spec §4.6 protocol (24-byte header + binary payload, port 5600).
+2. **MAVSDK telemetry → z-up adapter** — verify `mavsdk_client.py::get_telemetry()` correctly converts NED-body to z-up-body for the policy's expected frame.
+3. **Gate detector calibration** — capture actual VQ1 gate frames once sim runs; calibrate HSV/brightness thresholds against gate appearance (gates 2700×2700mm outer, 1500×1500mm inner — known geometry helps PnP).
+4. **Camera-tilt training-distribution check** — policy was trained without 20° tilt awareness in synthetic-camera rendering. The tilt-rotation in adapter handles the *inference-time* coordinate transform, but if the training environment's vision-input distribution differs substantively, fine-tuning may be needed. **Phase 2 anticipated.**
+5. **First end-to-end sim run** — get the policy through one start-to-finish sim run with real vision input; measure detection rate, PnP accuracy, observation quality.
+
+---
+
+# Original Assessment — April 9, 2026
 
 *Assessed against the April 9 competition update email. Simulator not yet available.*
 

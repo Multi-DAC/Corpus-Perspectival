@@ -262,6 +262,38 @@ class CompetitionAdapter:
         self._current_gate_pos_world = None
 
 
+def _cam_to_body_with_tilt(cam_xyz: np.ndarray, tilt_deg: float) -> np.ndarray:
+    """Convert PnP gate position from camera frame to body frame, accounting for tilt.
+
+    Camera frame (PnP/OpenCV convention): x=right, y=down, z=forward
+    Body frame (training z-up convention): x=forward, y=left, z=up
+
+    No-tilt: gate_pos_body = (cz, -cx, -cy)
+
+    With camera tilted upward by `tilt_deg` (DCL VQ1 spec §3.7: 20° upward):
+    The camera frame is body frame rotated by +tilt_deg about body's left axis (+y_body).
+    A vector v_cam expressed in body frame becomes:
+        v_body = R_pitch_up(tilt_deg) · (cz, -cx, -cy)
+    where R_pitch_up rotates body's +x toward +z by tilt_deg:
+        v_body[0] = cos(tilt)·cz + sin(tilt)·cy
+        v_body[1] = -cx                              (left axis unchanged)
+        v_body[2] = sin(tilt)·cz - cos(tilt)·cy
+
+    Sanity check at tilt_deg=20:
+      cam=(0,0,1) [camera-forward] → body≈(0.940, 0, 0.342) [forward + slightly up] ✓
+      cam=(0,1,0) [camera-down]    → body≈(0.342, 0, -0.940) [slightly forward, mostly down] ✓
+    """
+    if tilt_deg == 0.0:
+        return np.array([cam_xyz[2], -cam_xyz[0], -cam_xyz[1]])
+    a = np.deg2rad(tilt_deg)
+    cz, cx, cy = cam_xyz[2], cam_xyz[0], cam_xyz[1]
+    return np.array([
+        np.cos(a) * cz + np.sin(a) * cy,
+        -cx,
+        np.sin(a) * cz - np.cos(a) * cy,
+    ])
+
+
 class VisionPolicyBridge:
     """
     Complete pipeline: Camera Frame → Gate Detection → Observation → Policy → Action
@@ -269,16 +301,19 @@ class VisionPolicyBridge:
     This is the top-level class that connects everything.
     """
 
-    def __init__(self, policy, gate_detector, adapter):
+    def __init__(self, policy, gate_detector, adapter, camera_tilt_deg: float = 20.0):
         """
         Args:
             policy: Trained SB3 policy (PPO model) with .predict()
             gate_detector: GateDetector instance
             adapter: CompetitionAdapter instance
+            camera_tilt_deg: Camera upward tilt in degrees (DCL VQ1 spec §3.7: 20°).
+                Pass 0.0 if rendering simulator without tilt for sanity checks.
         """
         self.policy = policy
         self.detector = gate_detector
         self.adapter = adapter
+        self.camera_tilt_deg = camera_tilt_deg
 
         # Gate passage detection
         self._prev_gate_distance = None
@@ -306,19 +341,17 @@ class VisionPolicyBridge:
         next_gate_pos_body = None
 
         if primary.found and primary.position_3d is not None:
-            # PnP returns position in camera frame (x=right, y=down, z=forward)
-            # Convert to body frame (x=forward, y=left, z=up)
-            cam = primary.position_3d
-            gate_pos_body = np.array([cam[2], -cam[0], -cam[1]])
+            # PnP returns position in camera frame (x=right, y=down, z=forward).
+            # Convert to body frame (x=forward, y=left, z=up) with camera-tilt rotation
+            # (DCL VQ1 spec §3.7: camera tilted upward 20°). See _cam_to_body_with_tilt.
+            gate_pos_body = _cam_to_body_with_tilt(primary.position_3d, self.camera_tilt_deg)
             gate_distance = primary.distance
             # Same transform for bearing
-            cam_b = primary.bearing_body
-            gate_orient_body = np.array([cam_b[2], -cam_b[0], -cam_b[1]])
+            gate_orient_body = _cam_to_body_with_tilt(primary.bearing_body, self.camera_tilt_deg)
 
         # If we see a second gate, use it as lookahead
         if len(detections) > 1 and detections[1].found and detections[1].position_3d is not None:
-            cam2 = detections[1].position_3d
-            next_gate_pos_body = np.array([cam2[2], -cam2[0], -cam2[1]])
+            next_gate_pos_body = _cam_to_body_with_tilt(detections[1].position_3d, self.camera_tilt_deg)
 
         # 3. Detect gate passage (distance decreasing then suddenly increasing)
         if gate_distance is not None:
