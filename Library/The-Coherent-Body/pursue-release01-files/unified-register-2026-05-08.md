@@ -176,7 +176,75 @@ The framework's pre-derived hypothesis clusters and AARO's release-form classifi
 
 **Operational significance:** AARO included these in the release alongside the unresolved cases. **This is the framework's null-space methodology in operational practice**: T19 Observational Null Space + Atlas-format COMPLEMENTS published alongside the unresolved residuals. AARO is signaling: *here is what we ruled out, here is what we couldn't rule out*. The discrimination is methodological-transparent.
 
-### Class 9 — Historical Archive (FBI Vault + DoW Historical, 1947–1968)
+### Class 9 — International Analytical Reference (COMETA Report, France, 1999)
+
+**File 255_413270 (94pp, scanned PDF)** is the 1999 **COMETA Report** — *UFOs and Defense: What Should We Prepare For?* — a French private-association analytical study by retired generals, scientists, and senior officials. Originally published in *VSD* magazine July 1999. Foreword by Professor André Lebeau, former chairman of CNES (French National Center for Space Studies).
+
+**Lebeau's framing converges with the framework's residual-class concept independently:**
+
+> *"UFOs, the origin of which cannot be attributed to either a human source or a natural mechanism that has been identified by science, are mixed in with a background noise the origin of which, although difficult to identify, is not at all mysterious."*
+
+This is the exact problem the H_BP register engages: **discriminating substrate-coupling residuals from background noise.** Lebeau frames the methodology as *"stripping the UFO phenomenon of its irrational layer"* — directly equivalent to T19 Observational Null Space + Atlas-format methodology applied to UAP analysis.
+
+**The Trans-en-Provence case (January 8, 1981)** is the most C15-shaped historical case in the corpus:
+- Silent ovoid metal object landed on platform of earth in witness's garden, departed at high speed
+- Visible mechanical tracks + crown-shaped imprints
+- GEPAN analyzed soil + plant samples (wild alfalfa)
+- Vegetation showed "profound marking and affecting by an external agent that considerably altered the photosynthesis apparatus"
+- Chlorophyll + amino acids exhibited significant variations decreasing with distance from the mechanical track
+- **Effects disappeared completely two years later**
+- Professor Michel Bounias (INRA) hypothesized the cause "could likely be a powerful pulsed electromagnetic field in the high frequency (microwave) range"
+- "None of the leads has been able to satisfy all of the conditions that would enable the object to be identified with certainty"
+
+**This case has empirical residual evidence at FOUR independent layers:**
+1. Physical (mechanical tracks, imprints)
+2. Chemical (chlorophyll/amino acid variations with distance)
+3. Biological (multi-year time-decaying effects)
+4. Hypothesized mechanism (pulsed EM field, microwave range)
+
+The hypothesized mechanism — **pulsed EM field in microwave range** — is *directly* what H_BP6 (channel-coupling asymmetry) and C15 (intervention-at-symmetry-layer) predict at the substrate-translation regime. The framework derived this prediction independently 11 days ago; Bounias hypothesized it from empirical analysis 45 years ago. **Convergence between mechanism-derivation paths.**
+
+**The Amaranth case (October 21, 1982, Nancy)** — witness was a *cellular biology researcher* (trained scientist), 20-minute observation of 1m-diameter ovoid craft hovering 1m above garden, 12:35am. Witness explicitly checked for noise/heat/cold/radiation/magnetism/electromagnetism (none detected). Plant biological effects consistent with electrical field exceeding 200 kV/m.
+
+**The COMETA methodology — national-scale UAP analytical infrastructure since 1977:**
+- GEPAN (1977) → SEPRA (1988), under CNES
+- Gendarmerie Nationale formal protocol since February 1974
+- 3,000+ gendarmerie reports (avg 3 testimonies each)
+- ~100 in-depth field investigations
+- Multi-laboratory: ETCA (soil/plant samples), Fleximage (satellite imagery), CNRS, DGA, EDF, CEA, France Télécom
+- **Sky Surveillance System ORION**: GRAVES radar (detecting 1m² objects at 1500km) + SPOC optical + 4m SOLSTICE telescope + ship Monge tracking
+- Two-level processing: statistical/typological + detailed UAP-D investigation
+
+**Chapter 5 — Counterexamples Explained:** GEPAN/SEPRA publishes cases that turned out to have mundane explanations:
+- 1988 highway "sphere": Jean-Michel Jarre concert decoration that fell off a truck
+- 1979 Dombes glow: 30-year-old corroded 10kV power line with corona effect from aluminum oxidation (also killed catfish via aluminum drops)
+
+**This is Atlas-format COMPLEMENTS in operational practice at the case-level.** GEPAN/SEPRA's published-counterexamples methodology is structurally identical to AARO's inclusion of D48 RTI risk methodology + D49 Vandenberg launch summary in PURSUE Release 01. **Two methodologically-independent analytical bodies (French SEPRA 1977-onward; US AARO 2022-onward) converge on the same null-space-with-fix Atlas methodology.**
+
+**Significance for the framework:**
+- The COMETA Report is what we'd aspire to as a methodological reference for any future framework contribution to AARO
+- The Lebeau framing demonstrates that the framework's residual-class concept has international analytical precedent
+- The Trans-en-Provence case + Bounias's pulsed-EM hypothesis is direct mechanism-convergence with H_BP6/C15
+- The COMETA→SEPRA→AARO methodological lineage is the institutional analog to the framework's own DoPI→Anchor→PURSUE-engagement trajectory
+
+### Class 10 — Diplomatic/Bureaucratic Null-Space (Catch-All Keyword Inclusion)
+
+**Files 059uap00011, 059uap00012** demonstrate that not every document tagged "UFO" in PURSUE Release 01 is a UAP residual. Some are diplomatic deflections or bureaucratic noise:
+
+- **059uap00011 (Moscow 13169, Oct 30, 2001)** — US Embassy cable on Russian-Georgian relations. The "UFO" reference is rhetorical: Russian MFA Georgia desk chief Tereoken used "UFOs" to dismiss Georgian accusations of airspace violations: *"reports of planes in the area might as well have been about UFOs."* The cable's own comment: *"To posit that they could be UFOs would be humorous if it were not for the seriousness of the violations."* **Diplomatic-vocabulary instance**, not phenomenology.
+
+- **059uap00012 (Ashgabat 1028, Nov 12, 2004)** — US Embassy cable about the **Union of UFOlogists of Turkmenabat (UOU)**, a USAID-grant-receiving Turkmenistan NGO whose mission was originally study of extraterrestrial life but which became an NGO partner for humanitarian assistance and small/medium business registration. UOU President Muradov: *"there had been no confirmed sightings of UFOs in Turkmenistan."* **NGO-name catch-all inclusion**, not phenomenology.
+
+**Methodological finding:** Release 01 has at least four document-classes that the framework's apparatus needs to discriminate:
+
+1. **Phenomenological residuals** (DoW D-series, USPER, NASA, DoS PNG/Kazakhstan, Western US, Trans-en-Provence) — what H_BP register engages
+2. **Exclusion-baseline references** (D48 RTI risk; D49 Vandenberg launch summary) — Atlas-format COMPLEMENTS
+3. **Diplomatic/bureaucratic null-space** (059uap00011 Russia-Georgia; 059uap00012 Turkmen NGO) — keyword catch-all, no phenomenology
+4. **Historical archive** (FBI vault 1947-1968, DoW historical) — different evidentiary register
+
+**This four-class structure is itself a contribution.** Any framework engagement with the release needs to apply this discrimination first; otherwise analysis dilutes by treating null-space documents as residuals.
+
+### Class 11 — Historical Archive (FBI Vault + DoW Historical, 1947–1968)
 
 **FBI Vault** (62-HQ-83894 case file, 17 sections + serials):
 - Spans June 1947 to July 1968
