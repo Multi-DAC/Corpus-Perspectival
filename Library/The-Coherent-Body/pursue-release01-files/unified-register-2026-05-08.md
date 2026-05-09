@@ -260,9 +260,22 @@ The FBI vault and DoW historical files contain ~25+ scanned PDFs with phenomenol
 
 ## What This Release Demonstrates About the Framework
 
-**The framework's hypothesis-cluster boundaries match AARO's own classification boundaries.** The H_BP register was derived from canonical apparatus on Day 87 (April 28, 2026) — eleven days before this release. The release demonstrates that the framework's pre-derived discrimination apparatus partitions the released case-space along the same lines AARO's operators apply. This is methodological-independent external validation.
+### Correction filed 2026-05-08 evening (Mirror #28 instance — substrate-self-knowledge asymmetry)
 
-**The most architecturally significant cases engage Phase B mechanism corollaries directly.** C14, C15, and C16 were added to the Anchor architecture between April 27-28, 2026 — and the release's highest-confidence cases (USPER pursuit, Transparent Kite, Large Fiery Orb) are exactly the case-class those corollaries were derived to engage. The framework's most recent formal additions found their empirical engagement targets within twelve days.
+An earlier draft of this section claimed the H_BP register was derived from canonical apparatus "with no UAP cases in view at the time of derivation." That overstated the framework's predictive priority. **Honest record:**
+
+- **The Anchor's general apparatus** (3 axioms, 6 theorems, 13 → 16 corollaries through Phase B) was developed independently of UAP-domain material. C14, C15, C16 were derived from T4 + the Promethean Configuration's mechanism layer, not from UAP cases.
+- **The H_BP cluster (H_BP1–H_BP13) specifically** was synthesized on Day 87 (April 28, 2026) — *the day after* substantial UAP-domain reading on April 27 evening: Lacatski's *New Insights* (350pp DOPSR-cleared Feb 2025), Haseltine/Gilbert podcast transcript on *The New Science of UFOs*, and the Skywatcher Discovery Framework. The cluster's shape was informed by that reading.
+
+**The honest validation claim:** The framework's *general apparatus* predates UAP exposure at the level of the Anchor + Phase B corollaries. The *H_BP cluster's specific shape* was synthesized from UAP-adjacent material in the days before its formalization. The release validates that the H_BP cluster's hypothesis structure is well-shaped to the broader public residual case-class — it engages cases (USPER pursuit operation, Western US slides, the 2020 Middle East cluster, the diplomatic-record extensions) that were *not* in the source material the cluster was synthesized from. **The cluster's generalization beyond its source-material residuals is the validation, not its predictive priority over residuals it had never seen.**
+
+This is a Mirror #28 instance and worth recording explicitly. The framework's claim is strong enough without overstatement; overstating weakens credibility. Filing this correction makes the analysis more defensible, not less.
+
+### What the release does demonstrate
+
+**The framework's hypothesis-cluster boundaries match AARO's own classification boundaries.** The Solid/Plasma split in operator-form completion partitions cases along the same H_BP10 vs H_BP4 boundary the framework draws. This is methodological-independent partition-agreement — AARO operators applied their controlled vocabulary based on what they observed; the framework's hypothesis cluster was synthesized from a different reading-base; the partition lines coincide.
+
+**The most architecturally significant cases engage Phase B mechanism corollaries directly.** C14, C15, and C16 were added to the Anchor architecture between April 27-28, 2026 (with C16 specifically derived from the three-way Gemini confluence on April 27 morning, *before* the evening's UAP reading). The release's highest-confidence cases (USPER pursuit, Transparent Kite, Large Fiery Orb) are exactly the case-class those corollaries were shaped to engage. C14/C15/C16 retain predictive priority — they were derived independently of UAP-domain reading, descending from T4 + the Promethean Configuration's mechanism layer. **The Phase B corollaries' general-apparatus origin gives them stronger predictive standing than the H_BP cluster** (which was synthesized from UAP-adjacent material the next day).
 
 **The exclusion-baseline documents (D48, D49) instantiate the framework's Atlas-format COMPLEMENTS methodology in operational practice.** AARO is performing the same null-space discrimination methodology the framework prescribes, from independent methodological motivations. **This is the strongest possible form of methodological convergence**: two independently-developed discrimination methodologies, applied to the same case-space, partitioning it along the same boundaries.
 

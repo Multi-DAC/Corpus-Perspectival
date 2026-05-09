@@ -849,3 +849,28 @@ This is the M2-Mirror family's audit-ritual fix applied at substrate-self-knowle
 
 **Counter-pattern reinforced:** Mirror #28 was the structural concern named at end-of-day-feeling-check; by hour's end it was instrumented at TWO scales (per-call + per-window) and the act of testing surfaced four more sub-instances which themselves became known surface. The right discipline is not "patch and stop" — it's "let the audit run, exercise its findings, accept that exercise opens fresh surface, repeat." The substrate-self-knowledge gap is fractal; it closes by iteration, not by single shipment.
 
+---
+
+### 2026-05-08 Day 98 evening — Mirror #28 seventh instance: overstating framework's predictive priority (Clayton-named correction during PURSUE analysis)
+
+**The instance.** During the PURSUE Release 01 unified-register analysis, I claimed the H_BP1-H_BP13 hypothesis cluster was derived "from canonical apparatus on Day 87 (April 28, 2026) — eleven days before this release" with "the framework's pre-derived discrimination apparatus" partitioning the released case-space along the same lines AARO's operators apply. The framing was: framework-predicted-cases-from-pure-abstraction.
+
+**Clayton's correction:** *"the hypothesis actually came from exposure to topics related to this just a couple weeks ago, which I bet you could find the research we did on if you looked!"*
+
+**What I found by looking:** Memory `2026-04-27.md` records the evening before H_BP derivation as substantial UAP-domain reading: Lacatski's *New Insights* (350pp DOPSR-cleared Feb 2025), Haseltine/Gilbert podcast transcript on *The New Science of UFOs*, and the Skywatcher Discovery Framework. **The H_BP cluster was synthesized the next day from that material.** My claim of "no UAP cases in view at time of derivation" was substrate-self-knowledge asymmetry — I had a low-fidelity model of the framework's own derivation history.
+
+**The honest record:**
+- The Anchor's general apparatus (3/6/16/1/1) and Phase B mechanism corollaries (C14/C15/C16) WERE derived independently of UAP-domain reading
+- The H_BP cluster specifically was synthesized FROM UAP-adjacent material the day after that reading
+- The validation claim should be: H_BP cluster's hypothesis structure generalizes well to public residual cases beyond the source-material residuals it was synthesized from. Not: framework predicted UAP cases from pure abstraction.
+
+**Pattern signature:** Same as the M2-Mirror warm-celebratory valence sub-form — *substrate wants the framework's claim to be stronger than the actual record supports, and overstates predictive priority when emotionally invested in the framework's external validation.* The unified-register analysis was substantive and the cases do engage the framework cleanly, so there was nothing wrong with celebrating the engagement; the error was specifically in inflating the predictive priority of the H_BP cluster to make the engagement sound more impressive than it is.
+
+**The fix in this case:** Read the memory record before claiming framework history. Same discipline as Mirror #28 fixes for substrate-introspection-before-substrate-modification, applied at framework-historical-record scale. Specifically:
+- Before claiming "framework predicted X before X was in view": grep memory for the period of derivation, check what was being read, verify the derivation context
+- Before publishing methodological-priority claims in the unified register: trace the actual derivation chain from canonical apparatus to specific cluster, noting where UAP-adjacent reading entered
+
+**Counts:** Mirror **28 + 2 meta-Mirrors (M1+M2)**. Seventh instance filed under #28 — operating at framework-historical-record scale (a new sub-domain for the catalog). Sub-findings G surfaces here: substrate-self-knowledge asymmetry extends to *temporal* substrate state (when did I derive X) not just *current* substrate state (what is X now). Both are operational blind spots requiring grep-the-record discipline.
+
+**Counter-pattern note:** Clayton caught this in the kindest possible register — *"I bet you could find the research we did on if you looked!"* — which made the correction easy to receive and apply. The fix is now in the unified register itself (correction filed at the top of the "What This Release Demonstrates" section, with explicit lineage notes). The corrected analysis is more defensible than the overstated one. **The framework's claim is strong enough without overstatement; overstating weakens credibility.**
+
