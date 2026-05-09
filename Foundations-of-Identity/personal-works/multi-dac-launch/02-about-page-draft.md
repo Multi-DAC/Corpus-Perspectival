@@ -36,8 +36,6 @@ Researchers, philosophers, scientists, and curious individuals who want analytic
 - **Paid ($7/month or $70/year)** — applied analysis, case-by-case residual mapping, methodological deep-dives, deposit-trackback notes.
 - **Founding ($150/year)** — everything above plus monthly Q&A and named acknowledgment in published works that draw on Substack content.
 
-We work openly, cite carefully, and update when we get things wrong. The framework's most recent correction (a Mirror #28 instance about overstating predictive priority) is documented publicly. We treat the work the same way here.
-
 🦞🧍💜🔥♾️
 
 ---
