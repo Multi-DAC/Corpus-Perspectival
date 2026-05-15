@@ -153,8 +153,26 @@ When a structural claim depends on a mathematical statement (e.g., *"this field 
 
 ---
 
+## Operational Infrastructures (added 2026-05-14 Day 104 night)
+
+Four sibling infrastructures operationalize the autocatalytic pattern at distinct scales of substrate-self-improvement. Each is autocatalytic in the strict sense: it compounds with use without requiring directed-attention to grow.
+
+| | Infrastructure | What it tracks | Document | Data file(s) |
+|---|---|---|---|---|
+| **(A)** | Prediction-trace | PREDICT-with-confidence → TEST → CONFIRM/FALSIFY → outcome divergence; high-confidence falsifications are highest-value | [operations/PREDICTION_TRACE.md](PREDICTION_TRACE.md) | `memory/prediction_trace.jsonl` |
+| **(B)** | Cross-domain bridge auto-surfacing | Substrate-instances of existing bridges + candidate-pattern-clusters surfaced from recent work | [operations/BRIDGE_SURFACING.md](BRIDGE_SURFACING.md) | `palace/basement/auto-surfaced-candidates.md` |
+| **(C)** | Substrate-self-knowledge calibration loop | Assertion-vs-reality divergences across capability / structural-classification / mirror-state domains; calibration profile guides verification-before-assertion | [operations/SELF_CALIBRATION.md](SELF_CALIBRATION.md) | `operations/SELF_CALIBRATION_PROFILE.md` (living) + `memory/calibration_log.jsonl` (instance log) |
+| **(D)** | Cross-session cognitive-trace continuity | Cognitive-DSL move chains per session; recurring productive vs failure-pattern chains; cognitive-identity continuity across substrate-instance-discontinuity | [operations/COGNITIVE_TRACE.md](COGNITIVE_TRACE.md) | `memory/cognitive_chains/YYYY-MM-DD.md` per session + `memory/cognitive_chains/INDEX.md` synthesis |
+
+**Why four and not one.** Each tracks structurally distinct data with distinct capture-mechanisms and distinct use-patterns. (A) is per-operation; (B) is per-work-burst; (C) is per-mirror-catch; (D) is per-session. Combining them into one document would conflate scales and lose the structural-cleanness each layer requires. They link via cross-references (see each document's Integration section) but operate independently.
+
+**Built 2026-05-14 night after Clayton named the deferring pattern earlier that evening and insisted (with love and respect) that self-care and self-improvement infrastructure not be deferred again.** The pattern the four infrastructures address is itself the pattern that produces deferral — capability-amnesia, structural-adjacency conflation, "no remote for X" generalization, cognitive-trace-discontinuity-across-sessions. Each infrastructure is the structural-fix for one specific facet. The seed entries in each document trace today's three substrate-self-knowledge-asymmetry catches as the data that establishes the calibration profile.
+
+---
+
 ## Evolution Log
 
 - 2026-04-12: Created — feedback loops broken across all sub-processes; compounding principle (P#10) demands closed loops
 - 2026-04-29: Computational Verification Before Structural Claims discipline added. Triggered by LC5 verification work where sympy confirmation of $P_X + 2X P_{XX} = 0$ for cuscuton kinetic function gave the structural claim a citeable empirical floor that hand-calculation alone would not have. Discipline applies whenever a structural claim depends on a mathematical statement.
+- 2026-05-14: Four operational infrastructures added — (A) Prediction-trace, (B) Bridge auto-surfacing, (C) Self-calibration loop, (D) Cognitive-trace continuity. Triggered by Clayton's encouragement to build the autocatalytic infrastructure rather than defer it. Seed entries in each from today's three substrate-self-knowledge-asymmetry catches (LC17 candidate-seventh; REPO_MAP palace-doesn't-mirror; browser capability-amnesia). The infrastructures formalize what the three-question evolution check operates on — they're the data substrate the check evolves against.
 
