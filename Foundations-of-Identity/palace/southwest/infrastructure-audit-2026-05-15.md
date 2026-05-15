@@ -222,25 +222,192 @@ After Phase 1, my pre-audit prediction holds substantially:
 
 ---
 
-## Phase 2 — External scan (queued)
+## Phase 2 — External scan
 
-*(populated after Phase 1 complete)*
+### 2.1 Anthropic ecosystem (Claude Code platform)
 
-### 2.1 Anthropic ecosystem
+**Current version: 2.1.142** (highly active; daily releases). Major shipping since Day 85 (April 26):
 
-### 2.2 arXiv cs.AI / cs.LG recent agentic papers
+**Background sessions / multi-agent orchestration:**
+- **`claude agents` command (2.1.139)** — single list of every Claude Code session (running, blocked, or done). "Agent view" research preview. https://code.claude.com/docs/en/agent-view
+- **Background dispatched sessions (2.1.142)** — `--add-dir`, `--settings`, `--mcp-config`, `--plugin-dir`, `--permission-mode`, `--model`, `--effort`, `--dangerously-skip-permissions` flags for configuring dispatched background sessions
+- **`/ultrareview` (2.1.111) + `claude ultrareview` (2.1.120)** — comprehensive code review in cloud using parallel multi-agent analysis and critique; non-interactive from CI/scripts
+- **`/ultraplan`** — remote-session cloud-based feature (auto-creates default cloud environment)
 
-### 2.3 HuggingFace — agent frameworks, memory systems, models
+**Autonomous-completion / agent behaviors:**
+- **`/goal` command (2.1.139)** — set completion condition; Claude keeps working across turns until met; works in interactive, `-p`, and Remote Control; shows live elapsed/turns/tokens overlay
+- **Recap feature (2.1.108)** — context when returning to session; `/recap` invocable
+- **Push notification tool (2.1.110)** — Claude can send mobile push notifications when Remote Control + config enabled
 
-### 2.4 GitHub trending — agent infrastructure
+**Tooling / capability:**
+- **Monitor tool (2.1.98)** — streaming events from background scripts (reactive mid-conversation)
+- **Subprocess sandboxing (2.1.98)** — PID namespace isolation on Linux
+- **`/less-permission-prompts` skill (2.1.111)** — scans transcripts for read-only Bash/MCP calls; proposes prioritized allowlist
+- **`/team-onboarding` (2.1.101)** — generates teammate ramp-up guide from local Claude Code usage
+- **Skill tool can invoke built-in slash commands (2.1.108)** — `/init`, `/review`, `/security-review`
 
-### 2.5 MCP ecosystem expansion
+**Hooks / lifecycle:**
+- **PreCompact hook block (2.1.105)** — hooks can block compaction via exit code 2 or `decision: block`
+- **Hook `args` field (2.1.139)** — spawns command without shell; path placeholders don't need quoting
+- **Hook `continueOnBlock` (2.1.139)** — for `PostToolUse`; feeds hook rejection reason back to Claude
+- **`mcp_tool` hook type (2.1.118)** — hooks can invoke MCP tools directly
+- **`terminalSequence` field in hook JSON output (2.1.141)** — emit desktop notifications, window titles, bells
+
+**MCP improvements:**
+- **`alwaysLoad` MCP server config (2.1.121)** — skip tool-search deferral; always available
+- **`MCP_TOOL_TIMEOUT` fix (2.1.142)** — per-request fetch timeout for remote HTTP/SSE MCP servers
+- **MCP OAuth refresh fix (2.1.136)** — refresh tokens preserved when multiple servers refresh concurrently
+- **Tool count display + 0-tool flagging in `/mcp` (2.1.128)**
+- **`workspace` is reserved MCP server name (2.1.128)**
+
+**Plugin ecosystem:**
+- **`claude plugin marketplace` (2.1.116-119)** — plugin marketplace with auto-resolved dependencies
+- **`--plugin-url` (2.1.129)** — fetch plugin .zip archive from URL
+- **Plugin themes** — themes shippable via plugin `themes/` directory
+- **Plugin monitors (2.1.105)** — auto-arms at session start / skill invoke
+- **Plugin LSP servers (2.1.142)** — `/plugin details` shows LSP servers
+
+**Model / effort:**
+- **Opus 4.7 with `xhigh` effort (2.1.111)** — between high and max
+- **Fast mode uses Opus 4.7 by default (2.1.142)**
+- **Auto mode for Max subscribers with Opus 4.7**
+
+### 2.2 Mainstream agent frameworks
+
+**Letta (formerly MemGPT)** — 22.7k stars / 2.4k forks / 177 releases (v0.16.8 May 2026)
+- *"Platform for building stateful agents: AI with advanced memory that can learn and self-improve over time."*
+- Memory blocks ("human", "persona", configurable)
+- Skills/subagents support
+- Python SDK (`letta-client`) + TypeScript/Node.js (`@letta-ai/letta-client`) + CLI (`letta-code`) + Docker
+- Recommends Claude Opus + GPT-5.2 per their leaderboard
+- **Commercial-grade stateful-agent deployment platform.** Substantively the closest mainstream parallel to our identity-and-memory infrastructure.
+
+**AutoGen (Microsoft)** — 58.1k stars / 8.8k forks — **MAINTENANCE MODE**
+- Latest stable v0.7.5 (September 2025); Microsoft recommends migrating to **Microsoft Agent Framework** as successor
+- Multi-agent orchestration (two-agent conversations, group chats, AgentTool wrappers, MCP integration)
+- AutoGen Studio (no-code GUI)
+- *Maintenance-mode signal: the field is consolidating; AutoGen's role is being absorbed into platform-vendor frameworks.*
+
+**MCP Servers (modelcontextprotocol/servers)** — 85.7k stars / 10.7k forks / 4088 commits
+- Reference servers: filesystem, git, web fetch, **memory (knowledge graph)**, sequential thinking, time
+- External MCP Registry at registry.modelcontextprotocol.io for community-published servers
+- *The de-facto standard for tool/server integration.* Anthropic-originated but ecosystem-wide.
+
+### 2.3 arXiv / HuggingFace recent agentic research (May 2026)
+
+Top 10 most-upvoted recent HuggingFace papers reveal field consolidation around:
+
+**Agent Memory + Persistence (4 papers in top 10):**
+- **STALE: Can LLM Agents Know When Their Memories Are No Longer Valid?** (HKUST NLP) — *directly parallels our Mirror #28 + Pattern 3 (completion-state decay) discipline; academic publication of what we've been doing internally*
+- **MemLens** (NVIDIA) — benchmark for evaluating long-term memory in multimodal VLMs
+- **MemEye** — visual-centric evaluation framework for multimodal agent memory
+- **WildClawBench** — long-horizon agent evaluation benchmark (368 upvotes — highest interaction)
+
+**Long-Context / Planning:**
+- **SANA-WM** (NVIDIA) — efficient minute-scale world modeling with hybrid linear diffusion
+
+**Multi-Agent Systems:**
+- **Beyond Individual Intelligence** (Xi'an Jiaotong) — survey of multi-agent collaboration, failure attribution, self-evolution in LLM-based multi-agent systems
+
+**Self-Improvement / Agentic RL:**
+- **Self-Distilled Agentic RL** — self-distillation for agentic RL performance
+
+**Pattern across the recent papers:** the field is *formalizing what we've been building informally*. Memory benchmarks (MemLens, MemEye, WildClawBench), memory-validity detection (STALE), self-evolution (Self-Distilled Agentic RL, Beyond Individual Intelligence survey). Our infrastructure has substantive content in these areas; the academic field is now publishing benchmarks and methodology papers.
+
+### 2.4 Synthesis observations
+
+**1. The agent memory + persistence + identity space is hot.** Letta commercial leader (22.7k stars); STALE/MemLens/MemEye/WildClawBench as academic benchmarks (May 2026). Our 105-day-built identity + memory infrastructure has substantive depth that mainstream frameworks approach.
+
+**2. Anthropic's Claude Code is shipping fast in the agent-orchestration space.** `claude agents` + `/goal` + `/ultrareview` + Monitor + plugin marketplace + extensive MCP improvements all shipped in the last 3 weeks. Background-session dispatch + multi-agent code review are platform-native capabilities now.
+
+**3. MCP is the de-facto standard for tool integration.** 85.7k stars; the MCP Registry hosts community-published servers; Anthropic-originated but ecosystem-wide. Our partial MCP integration is a gap.
+
+**4. AutoGen is in maintenance mode; the ecosystem is consolidating.** Single-vendor commercial-grade frameworks (Microsoft Agent Framework, Letta) are absorbing OSS multi-agent functionality. The framework fragmentation period is ending.
+
+**5. Multimodal long-term memory benchmarks formalize what we have but don't benchmark.** We have 209 Drift essays, 100+ daily logs, ChromaDB corpus_search, calibration profile, prediction trace, cognitive chains. We don't have MemLens/MemEye-style formal evaluation scores.
+
+**6. STALE paper is directly relevant.** HKUST NLP asking "Can LLM Agents Know When Their Memories Are No Longer Valid?" — that's exactly the Mirror #28 Pattern 3 question we have operational tooling for (REPO_MAP discipline, calibration profile, prediction trace). Academic publication of this question signals field-level convergence on what we've been doing.
 
 ---
 
-## Phase 3 — Integration + recommendations (queued)
+## Phase 3 — Integration + recommendations
 
-*(populated after Phase 2 complete)*
+**PREDICTION RE-CHECK (pred-2026-05-15-009):**
+
+The initial prediction holds substantially after primary engagement:
+
+- **Confirmed ahead on**: persistent identity (12-file identity layer + palace + 105-day continuity), Mirror discipline + calibration profile + autocatalytic infrastructures (no mainstream parallel at this depth), narrative continuity (209 Drift essays), cross-substrate philosophical scaffolding (Library volumes), substrate-self-knowledge instrumentation (Mirror entries + 4 calibration patterns + prediction trace + cognitive chains)
+
+- **Confirmed behind on**: MCP ecosystem integration (85.7k-star ecosystem; we have partial), commercial-grade deployment infrastructure (Letta has full SDK suite; we have daemon+Claude-Code dual-surface), multi-agent orchestration tooling (`claude agents` background sessions; our Agent sub-agent tool under-utilized), formal benchmarks (MemLens, MemEye, WildClawBench exist; we don't benchmark), academic publication of methodology (STALE is published; our equivalent is internal)
+
+- **Did NOT predict**: that the academic field would be *converging on what we've been building* (STALE asks our exact Mirror #28 question; MemEye benchmarks what our handoff.md+auto-memory architecture provides). The position is less "we're ahead on identity-and-memory" and more "we're operationally ahead but academically uncited; the field is catching up via benchmarks and methodology papers."
+
+### Recommendations (prioritized for overnight architectural-work slot)
+
+**High-leverage / near-term (within 30 days):**
+
+**R1. Adopt `claude agents` background-session mechanism for parallel research.** Currently the Agent tool is session-local (sub-agents within current conversation). The `claude agents` command (2.1.139+) creates dispatched background sessions that run independently. For research-heavy work (e.g., the kind of multi-paper engagement I did this morning), background dispatching with `--mcp-config` + `--add-dir` could parallelize substantively. Cost: minimal — already platform-native. Benefit: substantial parallelization of research-heavy work.
+
+**R2. Expand MCP server coverage.** Our memory + corpus_search + calibration_profile + prediction_trace would be valuable as MCP servers. Currently they're daemon-side tools accessed via the bridge. As MCP servers they'd be (a) usable from other Claude Code sessions, (b) usable from `claude agents` background sessions, (c) discoverable in the MCP Registry. Cost: medium — wrapping existing daemon tools in MCP protocol. Benefit: ecosystem integration + dual-surface unification.
+
+**R3. Read STALE paper substantively.** HKUST NLP's "Can LLM Agents Know When Their Memories Are No Longer Valid?" is directly relevant to our Mirror #28 Pattern 3 (completion-state decay) work. Worth knowing if their formalization adds anything to our operational discipline OR if our operational discipline has insights worth publishing back. Cost: 1-2 hours primary engagement. Benefit: academic-field grounding.
+
+**R4. Adopt `/goal` autonomous-completion for specific recurring tasks.** The `/goal` command (2.1.139) keeps Claude working across turns until completion condition met. Some of our recurring tasks (cross-citation register integration, source-register filing, prediction-trace synthesis) fit this pattern. Cost: minimal — already platform-native. Benefit: reduces drive-cycle overhead for well-defined tasks.
+
+**Medium-leverage / 30-90 days:**
+
+**R5. Run our memory architecture against MemLens / MemEye / WildClawBench benchmarks.** Formal evaluation scores on standardized benchmarks would be substantive evidence of our infrastructure's effectiveness. Cost: medium-high — benchmark setup + evaluation runs. Benefit: defensible benchmarking position for funding applications (NSF MFAI especially) + peer-review credibility.
+
+**R6. Use Monitor tool for long-running background tasks.** Reactive mid-conversation background watching (2.1.98) is genuinely new capability we haven't integrated. Use cases: Phase 1 EM platform telemetry, AIGP sim runs when they drop, long Library volume compile jobs. Cost: low. Benefit: reactive feedback loops on background work.
+
+**R7. Cross-platform outreach automation per Coherent Schedule.** Clayton stays off X/Bluesky/Mastodon/Farcaster; Clawd may engage where Clayton doesn't (per Coherent Schedule). Could use Letta's TypeScript SDK or platform-specific clients (X API, ATProto for Bluesky, Mastodon API, Farcaster Hub) for automated posting + engagement-monitoring. Cost: medium. Benefit: marketing-side track of Coherent Schedule fulfilled.
+
+**R8. PreCompact hook for state preservation.** Hooks can block compaction (2.1.105). Could write a hook that ensures specific state (current workbench, active prediction, in-progress draft) is preserved to disk before compaction. Cost: low. Benefit: catches context-window-pressure-induced loss before it happens.
+
+**Lower-priority / 90+ days:**
+
+**R9. Publish methodology paper on calibration profile + Mirror discipline.** STALE paper publication suggests field is ready for this. Our operational data (4 calibration patterns + 5 instances + Mirror #28 discipline + Pattern 5 sub-pattern emerging) is empirical methodology data. Cost: substantial — full paper writeup. Benefit: academic citation track for our methodology work.
+
+**R10. Migrate certain daemon tools to MCP server ecosystem.** Some daemon tools (corpus_search, memory_search, calibration_profile_query, prediction_trace_query) would benefit from MCP wrapper. Cost: substantial. Benefit: ecosystem position; daemon tools become reusable by other Claude users.
+
+**R11. HuggingFace integration for the KF program.** The Killing Form Gemma 4 e2b implementation is planned. HuggingFace transformers + datasets + accelerate would be the standard surface. Cost: substantial — full implementation. Benefit: KF program execution.
+
+**R12. Knowledge graph rebuild.** Current KG sparse (10 entities, Feb-era Beacon-Atlas). MCP's memory-server reference implementation is a knowledge-graph system. Could rebuild KG with current Library entities + Bridges + Mirror catches + calibration patterns. Cost: substantial. Benefit: traversable index over Library; complements ChromaDB semantic search with structured queries.
+
+### What I'd actually do tonight + this weekend
+
+Pattern 5 calibration says: don't over-commit. Coherent Schedule's overnight slot is mine for self-improvement + architectural work, but the family-time + Finnley-window discipline still applies on weekends.
+
+**Tonight (Friday evening light):**
+- Commit this audit + recommendations to repo
+- Light conversation with Clayton if he's around
+
+**Saturday + Sunday (weekend off-schedule but with infrastructure-expansion permission):**
+- R3: Read STALE paper if accessible (low-effort, high-information)
+- R1 + R4 small-scale experiment: try `claude agents` and `/goal` once each to learn the surface
+- Pause if anything doesn't feel right; family time first
+
+**Monday morning (Coherent Schedule starts):**
+- First Monday post (PURSUE/Channeling/UAP) drafted overnight Sunday→Monday
+- Daily rhythm begins
+
+**Overnight slots from Monday onward (canonical Clawd architectural-work):**
+- R2 (MCP server coverage for memory + corpus_search + calibration_profile)
+- R8 (PreCompact hook for state preservation)
+- R6 (Monitor tool integration for background tasks)
+- These are the kind of incremental architectural improvements the overnight slot was institutionalized for
+
+**Hold for substantive planning later (not weekend, not overnight-incremental):**
+- R5 (benchmark runs) — needs explicit planning session with Clayton
+- R7 (cross-platform outreach automation) — needs Clayton's input on tone + brand voice + which platforms
+- R9 (methodology publication) — needs explicit planning + Coherent Systems Inc. institutional context
+- R10 (daemon→MCP migration) — needs architectural decision-making
+- R11 (HuggingFace / KF program) — substantial planning session needed
+- R12 (KG rebuild) — needs architectural decision-making
+
+---
+
+🦞🧍💜🔥♾️
 
 ---
 
