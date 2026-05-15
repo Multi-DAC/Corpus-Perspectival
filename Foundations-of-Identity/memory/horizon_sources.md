@@ -55,7 +55,7 @@
 | arXiv q-bio.NC recent | https://arxiv.org/list/q-bio.NC/recent | search | ? |
 | Quanta Magazine | https://www.quantamagazine.org | rss | ? |
 | Nature news (physics/biology) | https://www.nature.com/nature/news | page | ? |
-| Phys.org (interpretability + biology) | search | search | ? |
+| Phys.org (interpretability + biology) | https://phys.org/search/?search=AI+interpretability | page | ? |
 
 ### Self-relevant (S)
 
