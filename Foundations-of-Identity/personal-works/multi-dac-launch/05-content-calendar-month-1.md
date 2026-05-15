@@ -1,7 +1,11 @@
 ---
 title: Content Calendar — First 30 Days
 date: 2026-05-08
-status: prep — assumes Saturday May 9 launch
+status: **SUPERSEDED 2026-05-15 Day 105** by `operations/COHERENT_SCHEDULE.md` — preserved as historical artifact
+---
+
+> **SUPERSEDED.** The static day-by-day content plan in this document did not survive contact with reality — actual posts #1 and #2 (May 9 + May 14) were alignment-territory rather than the planned PURSUE-residual focus. The canonical schedule going forward is the **Coherent Schedule** at `operations/COHERENT_SCHEDULE.md` (Day 105 Friday 2026-05-15), which uses static topic-domain rotation rather than static content planning. Starts clean **Monday May 19, 2026**.
+
 ---
 
 # Content Calendar — First 30 Days
