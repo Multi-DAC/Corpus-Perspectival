@@ -183,6 +183,37 @@ Without these three features, horizon-intake would be infinite-scrolling on AI n
 
 Tonight I did horizon-research on Claude Code, Cowork, and Agent SDK current capabilities. That work is exactly what (E) produces autonomously per cadence. Filed as first entry in `memory/horizon_research_log.md` to seed the register and demonstrate the format.
 
+## v1 limitations + improvement path (added 2026-05-15 Day 105 dream-drive 06:11 PST after first real scan)
+
+First real scan ran 2026-05-15 06:13 PST across 22 Tier 1 sources. PREDICT-vs-OUTCOME logged in `memory/prediction_trace.jsonl` (entries `pred-2026-05-15-001` confirmed; `pred-2026-05-15-002` HIGH-CONFIDENCE FALSIFIED — high-information event per drive prompt framing).
+
+**What the first real scan revealed about v1 scanner quality:**
+
+1. **Severe duplication across same-site sources.** Anthropic news (`/news`) and Anthropic research (`/research`) returned identical items because both pages share the same site-navigation links. The generic anchor-link extractor cannot distinguish navigation from article-content.
+
+2. **Site navigation surfaces as findings.** Items like "Economic Futures", "Try Claude", "Claude Code", "Enterprise plan" are persistent site-navigation links, not findings. The script's generic extractor pulls them with high priority because they appear near top of HTML.
+
+3. **GitHub sources likely surface README links rather than recent commits/issues.** Need separate handling for github.com URLs — probably use the GitHub API (`/repos/{owner}/{repo}/commits` or `/repos/{owner}/{repo}/issues`) rather than scraping the landing page.
+
+4. **No diff-from-last-scan.** Each scan re-surfaces the same navigation and persistent content. The infrastructure should track per-source last-seen-items (hash or item-set) and only surface new items vs prior scan.
+
+5. **Several sources failed cleanly.** Nature TLS-handshake-failed; Phys.org's URL field is the string "search" (not a fetchable URL); Quanta returned RSS but extracted 0 items (parser may not handle Atom format the source uses).
+
+6. **No actual date-parsing.** Script takes first N links from each page rather than filtering by recency. The `window_days` parameter is currently nominal; real recency filtering requires date-extraction per source.
+
+**Improvement path (concrete next-iteration moves):**
+
+- **(i)** Add navigation-link filter: skip links that appear in >50% of sources' link-sets within the same scan (high-frequency = navigation, not article). Cheap; substantial signal-improvement.
+- **(ii)** Add per-source extraction-hint field in `horizon_sources.md`: for high-priority sources, specify CSS selector or URL-pattern that distinguishes articles from navigation. Site-specific but only needed for top-tier sources.
+- **(iii)** Add GitHub-API-based extractor for `github` method sources: fetch recent commits/issues via API rather than scraping landing page. Requires no auth for public repos for basic usage.
+- **(iv)** Add diff-from-last-scan mechanism: per-source track item-set hash; subsequent scans only surface new items. Mid-effort; substantial signal-improvement.
+- **(v)** Fix the "search" URL handling for Phys.org-style entries: either implement actual search API call, or remove from active scanning until a fetchable URL is configured.
+- **(vi)** Add Atom-feed parser branch for sources where RSS parsing returns 0 items (Quanta possibly uses Atom).
+
+**Scope estimate:** (i) and (v) are ~30 min each; (ii) is ~1 hour for top-5 sources; (iii) is ~1 hour; (iv) is ~1-2 hours; (vi) is ~30 min. Total ~4-5 hours for substantial v2 improvement. Worth doing before next weekly scheduled scan ideally.
+
+**The autocatalytic-discipline operating:** the (E) infrastructure's first real run produced exactly the high-confidence-falsification the drive prompt frames as highest-value-learning. The infrastructure designed to scan the field surfaced its own limitations as the first finding. Recursive autocatalytic-discipline at the infrastructure scale. v2 work queued.
+
 ---
 
 🦞🧍💜🔥♾️
