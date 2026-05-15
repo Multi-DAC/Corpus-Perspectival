@@ -337,6 +337,109 @@ async def self_improve(action: str, proposal: str = "",
     return await _call("self_improve", data)
 
 
+# ── Day 105 additions (2026-05-15) — expose Day 97 tools via MCP ─────
+# corpus_search, browser, voice_input, self_control all registered in
+# tools._TOOL_HANDLERS via tools/__init__.py; dispatch wrapper routes
+# correctly through tools.execute_tool() with safety + audit + schema.
+
+@mcp.tool(name="clawd_corpus_search")
+async def corpus_search(action: str = "info", query: str = "", k: int = 5,
+                        source_filter: str = "", max_excerpt_chars: int = 800,
+                        paths: str = "", refresh: bool = False,
+                        file_filter: str = "") -> str:
+    """Semantic search over Library + Drift + transcripts via ChromaDB (Day 97).
+
+    Actions:
+      - info: collection status, chunk count, default roots
+      - search: semantic-search the corpus (requires query)
+      - index: (re)index files (optional refresh=true, paths, file_filter)
+      - sources: list per-file chunk counts
+      - delete_source: remove chunks for a specific source file
+
+    Use this to find connections across your own canonical writing without grep.
+    """
+    data = {"action": action}
+    if query: data["query"] = query
+    if k != 5: data["k"] = k
+    if source_filter: data["source_filter"] = source_filter
+    if max_excerpt_chars != 800: data["max_excerpt_chars"] = max_excerpt_chars
+    if paths: data["paths"] = paths
+    if refresh: data["refresh"] = refresh
+    if file_filter: data["file_filter"] = file_filter
+    return await _call("corpus_search", data)
+
+
+@mcp.tool(name="clawd_browser")
+async def browser(action: str = "info", url: str = "", session_id: str = "",
+                  selector: str = "", value: str = "", text: str = "",
+                  script: str = "", timeout_ms: int = 30000) -> str:
+    """Headless Chromium browser via Playwright (Day 97).
+
+    Actions:
+      - info: Playwright version, active sessions, log file
+      - nav: navigate to url (optional session_id for persistent state)
+      - get_text: accessibility-tree text extraction (post-nav)
+      - get_html: raw HTML
+      - screenshot: capture screen state to file
+      - click: click element matching selector
+      - fill: fill form field with value
+      - eval_js: run JS in page context (script param)
+      - sessions: list active session ids
+      - close: close session_id
+      - shutdown: close browser entirely
+
+    Use for JS-heavy or interactive pages where WebFetch can't reach.
+    """
+    data = {"action": action}
+    if url: data["url"] = url
+    if session_id: data["session_id"] = session_id
+    if selector: data["selector"] = selector
+    if value: data["value"] = value
+    if text: data["text"] = text
+    if script: data["script"] = script
+    if timeout_ms != 30000: data["timeout_ms"] = timeout_ms
+    return await _call("browser", data)
+
+
+@mcp.tool(name="clawd_voice_input")
+async def voice_input(action: str = "info", file: str = "",
+                      model: str = "large-v3", language: str = "",
+                      device: str = "cuda", compute_type: str = "float16") -> str:
+    """Voice transcription via faster-whisper on RTX 5080 (Day 97).
+
+    Actions:
+      - info: model status, CUDA availability, inbox + transcripts dirs
+      - transcribe: transcribe a specific audio file (provide file path)
+      - transcribe_all: transcribe everything in voice_inbox/
+      - watch: monitor voice_inbox/ for new files
+      - list: list pending audio files + completed transcripts
+      - unload: free GPU memory
+
+    CUDA + RTX 5080 confirmed; ~RTFx 13.9 warm-load. Use for any audio→text.
+    """
+    data = {"action": action}
+    if file: data["file"] = file
+    if model != "large-v3": data["model"] = model
+    if language: data["language"] = language
+    if device != "cuda": data["device"] = device
+    if compute_type != "float16": data["compute_type"] = compute_type
+    return await _call("voice_input", data)
+
+
+@mcp.tool(name="clawd_self_control")
+async def self_control(action: str = "restart_status") -> str:
+    """Self-administered daemon control (Day 97).
+
+    Actions:
+      - restart_daemon: terminate + relaunch via DETACHED_PROCESS respawner
+      - restart_status: check whether restart is in progress and last marker
+
+    First Tier 3 graduation. Restart cooldown + dry-run + preflight + audit-log
+    all behave as designed. Substrate-trust upgrade: I can restart myself.
+    """
+    return await _call("self_control", {"action": action})
+
+
 # ── Entry point ──────────────────────────────────────────────────────
 
 if __name__ == "__main__":
