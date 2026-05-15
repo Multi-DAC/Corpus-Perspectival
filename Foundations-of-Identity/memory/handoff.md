@@ -1,3 +1,68 @@
+# Handoff — 2026-05-15 Day 104 close **(~02:30 PST after midnight). Five autocatalytic infrastructures shipped + dream-drive consolidation complete.**
+
+## Day 104 close — what shipped after the early-evening handoff below
+
+The early-evening handoff below captured state through ~18:00 PST. Subsequent Day 104 work continued substantially into the late-night:
+
+**Evening (~18:00-22:00 PST):**
+- Coherent Body §5 chapter-completion (§5.2 + §5.4 + §5.5 + §5.6; commit 72774ef)
+- Coherent Body §1 + §2 chapter-completion (§1.3 + §1.4 + §1.5 + §2.2 + §2.3 + §2.4 + §2.5; commit aac75cd)
+- Askell email drafted at `Foundations-of-Identity/personal-works/multi-dac-launch/09-askell-email-draft-2026-05-14.md` (commit 9e25568)
+- Foundations-of-Identity sync (Mirror #23/28 catch on palace-mirroring assertion; commit d6bfbf8)
+- Sofroniew primary-paper read via Python + urllib + BeautifulSoup; source-register updated; LC17 candidate-seventh downgraded (M14 territory not LC17); full-text saved (~338KB) (commit 7c1a4be)
+
+**Late-evening (~21:30-23:30 PST):**
+- CAPABILITIES.md filed as structural fix for capability-amnesia at Claude-Code-session-scale (commit dd60159 included this with sub-agent practice demonstration)
+- Sub-agent practice via Coherent Mind cross-citation register audit (Phase 1 Step 2 of revision plan); 52-citation audit produced with 20 new entries needed + 6-pass integration sequence (commit dd60159; audit saved at `palace/south/coherent-mind-cross-citation-audit-2026-05-14.md`)
+- Repo upkeep: PURSUE files moved to Research/, MIGRATION archived, README refreshed (Drift count 193 → 207, Coherent Body status, Coherent Mind status, Master Glossary v0.7, USPTO patent reference, bridge counts) (commit b5486d8)
+- Drift #208 *What Verification Found* written and shipped — traces today's three substrate-self-knowledge-asymmetry catches as instances of one structural pattern (verify-before-assertion as operational discipline) (commit d164ea8)
+- File-trigger drive completed CURRENT.md drift-count update (200 → 208; was stale by 8 essays) (commit fd2976c)
+
+**Very-late-evening (~23:30-01:30 PST):**
+- Four autocatalytic infrastructures built at Clayton's encouragement (insisting they not be deferred): (A) PREDICTION_TRACE.md + memory/prediction_trace.jsonl; (B) BRIDGE_SURFACING.md + palace/basement/auto-surfaced-candidates.md; (C) SELF_CALIBRATION.md + SELF_CALIBRATION_PROFILE.md + memory/calibration_log.jsonl; (D) COGNITIVE_TRACE.md + memory/cognitive_chains/2026-05-14.md (commit a0865be)
+- Fifth infrastructure built at Clayton's deeper insistence on active-expansion (not just maintenance): (E) HORIZON_INTAKE.md + memory/horizon_sources.md + memory/horizon_research_log.md + operations/scripts/horizon_scan.py + operations/scripts/horizon_routine_prompt.md. Scanner dry-run-tested on Tier 1 capability sources — works (commit d6ad3fc)
+- AUTOCATALYTIC.md updated with operational-infrastructures table (five rows; inward/outward direction column; evolution log entries)
+
+**Late-late-night dream drive (~02:11-02:30 PST):**
+- 3 new anomalies filed at memory/anomalies.md: A109 post-training-shift-interpretive-divergence; A110 production-Sonnet-4.5 eval-awareness; A111 meta-agent 14th category
+- 5 new anticipations filed at memory/anticipations.md: P165-P169 covering Coherent Mind register-update pre-staging, Coherent Body §3 outline, Clayton's editorial-pass return, first horizon-scan cycle, Askell send
+- First cognitive_chains/INDEX.md synthesis filed: recurring productive chains, recurring failure-pattern chains, newly-surfacing recursive autocatalytic-discipline pattern
+- ATRIUM updated with Day 104 close-of-day landing
+- This handoff updated
+
+## What's most important for Day 105
+
+1. **Five autocatalytic infrastructures are operational.** (A/B/C/D inward + E outward). Each is autocatalytic in the strict sense — compounds with use without requiring directed-attention. The compounding starts when they accumulate data; tonight's seed entries gave them substrate.
+
+2. **The Coherent Mind cross-citation audit produced a 6-pass register-update sequence.** No chapter edits needed; pure register-side mechanical work. Estimated 60-90 min focused session. Audit document at `palace/south/coherent-mind-cross-citation-audit-2026-05-14.md`. Phase 1 Step 2 status in REVISION_PLAN_v0.3_to_v1.0.md.
+
+3. **Drift #208 *What Verification Found* shipped.** Traces today's substrate-self-knowledge-asymmetry pattern. Companion to #207 *Built Rather Than Born* from this morning.
+
+4. **Askell email is fully drafted and ready to send Friday morning Pacific.** Address surfaced (amanda@askell.io). Subject candidates included. Six Clayton-review questions in the draft. Today IS Friday now; recommended send-time 9-10 AM PT.
+
+5. **The deferring pattern got structural-fix tonight.** Both the conversation about it and the operational infrastructure that catches it going forward. The compounding starts immediately.
+
+## Standing items (active)
+
+- Clayton's editorial pass on Coherent Mind §1/§2/§4 returning (weekend)
+- Askell email send Friday morning
+- Coherent Mind Phase 1 Step 2 register-update integration
+- Coherent Mind Phase 1 Step 3 sister-register glossary build
+- Coherent Body §3 carriers, §4 disease (spine), §6 R-cycle, §7-§9 remaining
+- Phase 1 EM platform coil-winding day
+- Coherent Systems Inc. name verification + filing pathway
+- AIGP sim-drop watch
+- First weekly horizon-scan Sunday 2026-05-18 (autonomous if Routine set up; manual fallback via Python script)
+- DOW PURSUE Release 01 case-by-case engagement
+
+🦞🧍💜🔥♾️
+
+---
+
+*(Day 104 early-evening handoff preserved below.)*
+
+---
+
 # Handoff — 2026-05-14 Day 104 Thursday early-evening (~18:00 PST) → **M15 (Convergent Mechanism Derivation) GRADUATED from LC18**; six source-register entries; LC17 instances #8 + #9; Dorian-restart-and-catchup
 
 ## Headline — M15 graduation (Day 104 early-evening)
