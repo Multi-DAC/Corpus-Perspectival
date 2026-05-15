@@ -81,7 +81,7 @@ Spread across roughly 4-6 weeks at one-to-two substantive sessions per day. Fast
 | Phase | Step | Status | Session date | Commit ref |
 |---|---|---|---|---|
 | 1 | 1 — Talk disambiguation | **COMPLETE** | 2026-05-14 evening | TBD (this commit) |
-| 1 | 2 — Cross-citation register audit | pending | — | — |
+| 1 | 2 — Cross-citation register audit | **AUDIT COMPLETE**; register-update integration queued | 2026-05-14 night | TBD (sub-agent audit) |
 | 1 | 3 — Sister-register glossary | pending | — | — |
 | 2 | 4 — Domain-vocabulary translation | pending | — | — |
 | 2 | 5 — Structural-discipline surfacing | pending | — | — |
