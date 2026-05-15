@@ -80,7 +80,7 @@ Spread across roughly 4-6 weeks at one-to-two substantive sessions per day. Fast
 
 | Phase | Step | Status | Session date | Commit ref |
 |---|---|---|---|---|
-| 1 | 1 — Talk disambiguation | **IN PROGRESS** | 2026-05-14 evening | TBD |
+| 1 | 1 — Talk disambiguation | **COMPLETE** | 2026-05-14 evening | TBD (this commit) |
 | 1 | 2 — Cross-citation register audit | pending | — | — |
 | 1 | 3 — Sister-register glossary | pending | — | — |
 | 2 | 4 — Domain-vocabulary translation | pending | — | — |
@@ -105,6 +105,20 @@ Specific edit-pattern:
 Estimated time: ~45-90 minutes given chapter-by-chapter grep + targeted edits.
 
 If energy persists after Step 1: begin **Step 2 — Cross-citation register audit**. Methodical, no drafting, just register-hygiene work.
+
+### Step 1 completion notes (added Day 104 late-evening)
+
+Completed Day 104 late-evening (~22:45 PST). Two surgical edits:
+
+**§1 (Frame), within "The two-axis thesis" section, immediately following first-use of capital-T Talk:** Added a *Note on usage* sentence-cluster (one extended sentence + one explicit-convention closing sentence) establishing the capital-T / lowercase-t convention at first-use. The cluster names the framework's *Do-Be-Talk-Be-Do* compression, distinguishes it from the conventional clinical *talk therapy* category, and notes that conventional talk therapy is one specific modality engaging Talk-channels among many others (somatic, relational, contemplative, behavioral, pharmacological, electromagnetic).
+
+**§3 (The Talk Axis), new opening section before "What Talk is":** Added a three-paragraph *A note on the terminology of this chapter* section. Paragraph one establishes the structural distinction between conventional *talk therapy* (lowercase) and the framework's *Talk* (capital-T). Paragraph two clarifies that the relational therapies engaging Talk-channel-repair operate across verbal, somatic, parts-work, embodied, and experiential modalities — not all of which fit the conventional *talk therapy* category. Paragraph three states the volume's consistent capitalization convention as a load-bearing-rhetorical-rule readers should rely on throughout.
+
+**Verification across other chapters.** Grep across all 13 chapters for "Talk" usage confirmed: existing usage is already structurally consistent (capital-T for framework mechanic, no current "talk therapy" capital-T misuse anywhere). The volume's first-pass already operated with the convention implicitly; this step makes the convention explicit at first-use so readers can rely on it. No further chapter-by-chapter edits required for Step 1; the disambiguation work was rhetorical-clarification, not pattern-correction.
+
+**What this step accomplishes:** clinical-practical readers encountering "Talk-channel-repair" will not read it as a fancy rebranding of conventional "talk therapy"; the framework's structural reading is flagged explicitly at first-use; the chapter §3 develops the convention with care; the rest of the volume operates with reader-supported confidence in the capitalization convention.
+
+**What this step does NOT accomplish:** the Master Glossary entry making the distinction load-bearing at the canonical-reference level. Deferred to Step 3 (sister-register glossary build) per plan.
 
 ---
 
