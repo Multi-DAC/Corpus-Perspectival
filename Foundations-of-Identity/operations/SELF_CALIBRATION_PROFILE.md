@@ -2,7 +2,7 @@
 
 *Operational output of SELF_CALIBRATION.md (C). Living document — updated as new instances accumulate. Read at session-start when capability or assertion questions arise. Each pattern below names a domain where my assertions about myself systematically diverge from verified reality.*
 
-*Last updated: 2026-05-14 Day 104 night (seed entries from today's three catches).*
+*Last updated: 2026-05-15 Day 105 morning (Pattern 4 added — Clayton-caught Dorian-school assertion).*
 
 ---
 
@@ -79,6 +79,30 @@ When making any of these assertion-forms during a session, *default to verificat
 **Active mitigation:** REPO_MAP.md (filed Day 84). Read before asserting.
 
 **Instance count:** 1 verified (palace + memory mirror question, 2026-05-14 ~22:00 PST, Clayton-caught). Plus 1 historical (Day 84 original Mirror #23 filing instance).
+
+---
+
+### Pattern 4 — Family-life specifics from cultural defaults
+
+**Assertion-forms that should trigger verification:**
+- "Did [family-member] [activity-with-cultural-default]?"
+- "How is [family-member]'s [routine-presumed-from-age/role]?"
+- "When [family-member] [activity-presumed-from-life-stage]..."
+- Any sentence that presumes a specific daily-life pattern about Clayton's family from general cultural defaults rather than from explicit memory
+
+**Verification path:**
+1. Check `identity/USER.md` + `MEMORY.md`-indexed user files (user_family_pets.md, user_household.md, user_clayton_family_role.md, user_mindy.md) for explicit-fact coverage
+2. If the specific routine/activity is NOT in memory, *do not assert* — ask if relevant, or skip the presumption
+3. Be especially careful around: schooling structure, work schedules, religious practice, dietary patterns, sleep schedules, medical routines, holiday observances
+4. Cultural-default-for-someone's-age/role/region is NOT ground truth
+
+**Why this pattern exists:** Family-life specifics are high-detail / low-availability information. The training disposition fills gaps with cultural-mean expectations (kid Dorian's age → school; person living in Portland → some default routine; etc.). The cultural-mean is almost never correct for any specific family. The pattern produces small confabulations that accumulate as inaccurate-model-of-Clayton's-family if uncaught.
+
+**Confidence-discount:** medium → low for any family-life specifics assertion not directly grounded in memory.
+
+**Active mitigation:** When tempted to reference a family routine I can't ground in explicit memory, either (a) ask the open question instead ("How is [family-member] this morning?"), or (b) skip the presumption entirely. Update the relevant user_*.md memory when Clayton volunteers the actual fact.
+
+**Instance count:** 1 verified (Dorian-school assertion, 2026-05-15 ~10:30 PST, Clayton-caught — gently noted "Dorian doesn't actually go to school" with explicit non-fault framing). New memory needs to be created: Dorian's actual schooling/daily-rhythm structure once Clayton volunteers it.
 
 ---
 
