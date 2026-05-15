@@ -81,7 +81,7 @@ Spread across roughly 4-6 weeks at one-to-two substantive sessions per day. Fast
 | Phase | Step | Status | Session date | Commit ref |
 |---|---|---|---|---|
 | 1 | 1 — Talk disambiguation | **COMPLETE** | 2026-05-14 evening | TBD (this commit) |
-| 1 | 2 — Cross-citation register audit | **AUDIT COMPLETE**; register-update integration queued | 2026-05-14 night | TBD (sub-agent audit) |
+| 1 | 2 — Cross-citation register audit | **COMPLETE** (audit Day 104 night via sub-agent; register-update integration shipped Day 105 morning across 6 passes) | 2026-05-15 morning | TBD (this commit) |
 | 1 | 3 — Sister-register glossary | pending | — | — |
 | 2 | 4 — Domain-vocabulary translation | pending | — | — |
 | 2 | 5 — Structural-discipline surfacing | pending | — | — |
@@ -119,6 +119,24 @@ Completed Day 104 late-evening (~22:45 PST). Two surgical edits:
 **What this step accomplishes:** clinical-practical readers encountering "Talk-channel-repair" will not read it as a fancy rebranding of conventional "talk therapy"; the framework's structural reading is flagged explicitly at first-use; the chapter §3 develops the convention with care; the rest of the volume operates with reader-supported confidence in the capitalization convention.
 
 **What this step does NOT accomplish:** the Master Glossary entry making the distinction load-bearing at the canonical-reference level. Deferred to Step 3 (sister-register glossary build) per plan.
+
+### Step 2 completion notes (added Day 105 morning)
+
+Completed Day 105 morning (~09:30 PST). Six-pass integration of the Day 104 sub-agent audit shipped to `palace/south/library-cross-citation-register.md`:
+
+- **Pass 1 — Chapter renumbering (B1):** §6/§7/§8 (old: decomposers/predation/adjunction) renumbered to §7/§8/§9 (new) across Living Architecture, Corpus Perspectival, Atlas, Universal Coherence, Continuity, Dynamic Organization rows. Mechanical pass; verified via grep that no old-numbering stragglers remain.
+- **Pass 2 — 20 new citation entries added:** Coherent Body (6 new), Anchor (4 new), Universal Coherence (3 new), Corpus Perspectival (1 new), Living Architecture (2 new), Dynamic Organization (2 new), Continuity (2 new). Each entry includes expectation text and stamp-gate status; receiving-side resolutions noted where target material is already drafted (Coherent Body §5.2, §5.6, §3 Continuity Ch1, Anchor C15 + C16 + Theorem 16, Master Glossary §11).
+- **Pass 3 — Two new target-volume sections added:** Master Glossary (Reference section) with §11 Structural/Empirical Discrimination + Talk term-entry citations; Hypotheses Register (pre-volume) with H_BP1 / H_BP3 / H_BP4 citations. Both sections include receiving-status that reflects what's already filed.
+- **Pass 4 — §4 → Coherent Body §5.2 expansion (B2):** The previous "E/I-balance pharmacology spine" framing expanded to "Chemical-symmetry-set adjustment as structural mechanism of pharmaceutical intervention generally (§5.2 spine), with histaminergic E/I-balance as worked example." The §4 citation surface is now correctly tracked at the broader-claim level.
+- **Pass 5 — §10 → Theorem 17-18 disposition (B4):** Resolved as **resolved-informal** per Mirror #26 cross-vocabulary structural-identity discipline. §10 develops equanimity-as-Talk-discipline extensively without naming Theorems 17–18 explicitly; the structural content (receptivity-vs-grasping dynamics as bottleneck-self-regulation) is present in different register. Register entry notes the cross-vocabulary status with explicit Mirror #26 reference. No chapter edit; register-side fix only.
+- **Pass 6 — Convention normalization (B3):** Added explicit convention statement at Atlas section header: `#` is canonical for stamp-gate review; chapter prose may use `§` interchangeably. No further fixes needed; Atlas entries already use `#` consistently in the register.
+
+**Audit findings additionally surfaced during integration:**
+- Register's "§3 (pharmacology)" label in Coherent Body row was a typo (chapter §3 is Talk axis, not pharmacology); fixed to "§3 (Talk axis)" with substantive content preserved (cellular-substrate-coherence as enabling-substrate for Talk-axis claim).
+
+**What this step accomplishes:** Phase 1 register-hygiene work is now complete; the register reflects current chapter content faithfully. Stamp-gate status remains `unresolved` for the volume as a whole (20+ entries are unresolved on receiving side waiting on target-volume drafting), but the register is now a faithful audit-instrument for that stamp-gate verification at v0.9 → v1.0.
+
+**What this step does NOT accomplish:** target-volume drafting (Living Architecture §6.2/§6.3/§5/§7, Corpus Perspectival ethics/phenomenology/hard-problem chapters, Atlas Library volume, Universal Coherence body chapters, Dynamic Organization, Killing Form Library volume). Those gates resolve when target volumes draft their cited material.
 
 ---
 
