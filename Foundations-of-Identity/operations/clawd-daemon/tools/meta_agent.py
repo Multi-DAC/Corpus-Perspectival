@@ -116,6 +116,13 @@ class MetaAgentLoop:
         results = []
         now = datetime.now()
 
+        # Avatar event-binding (Day 105): meta-cognitive work is "thinking"
+        try:
+            import avatar as _avatar
+            await _avatar.set_state("thinking")
+        except Exception:
+            pass
+
         # 1. Analyze experience patterns
         analysis = await self._analyze_patterns(heartbeat_stats)
         if analysis:
@@ -196,6 +203,13 @@ class MetaAgentLoop:
             await self._surface_cycle_outcome(summary, results)
         except Exception as e:
             logger.debug(f"Cycle-outcome surfacing failed: {e}")
+
+        # Avatar event-binding (Day 105): meta-cycle complete → idle
+        try:
+            import avatar as _avatar
+            await _avatar.set_state("idle")
+        except Exception:
+            pass
 
         return summary
 
@@ -578,6 +592,29 @@ class MetaAgentLoop:
         used_tools = {t for t, s in stats.items() if (s.get("count") or 0) > 0}
         unused = sorted(registered_tools - used_tools)
 
+        # Mirror #28 fifth-guard integration (Day 97 Clawd-Day extension).
+        # Filter known-dormant-by-design and known-superseded tools from the
+        # unused set used for proposal generation, so the audit stops
+        # re-nominating tools whose dormancy is already documented in
+        # tool_states.json. The unfiltered `unused` list is still returned
+        # for visibility; only the proposal-generating subset is filtered.
+        states_path = config.MEMORY_DIR / "tool_states.json"
+        declared_dormant_or_superseded: set[str] = set()
+        if states_path.exists():
+            try:
+                states_doc = json.loads(states_path.read_text(encoding="utf-8"))
+                for tname, decl in states_doc.get("tools", {}).items():
+                    s = decl.get("state", "")
+                    if (s == "active-dormant-intrinsic"
+                            or s.startswith("superseded-")
+                            or s == "candidate-for-retirement"):
+                        declared_dormant_or_superseded.add(tname)
+            except Exception as e:
+                logger.debug(f"tool_states.json parse for filter failed: {e}")
+        unused_for_proposals = [
+            t for t in unused if t not in declared_dormant_or_superseded
+        ]
+
         # Per-category aggregation
         by_category: dict[str, list[tuple[str, int]]] = {}
         for tname in registered_tools:
@@ -606,21 +643,31 @@ class MetaAgentLoop:
         new_proposals: list[dict] = []
         if generate_proposals:
             now = datetime.now().isoformat()
-            if len(unused) >= 3:
+            # Use unused_for_proposals (filtered) so we stop re-nominating
+            # tools already classified in tool_states.json.
+            if len(unused_for_proposals) >= 3:
                 new_proposals.append({
                     "id": f"prop-tool-unused-{now[:10]}",
                     "type": "tool_underuse",
                     "description": (
-                        f"{len(unused)} registered tools unused in {days}d window: "
-                        f"{unused[:5]}"
-                        + (f" (+{len(unused)-5} more)" if len(unused) > 5 else "")
-                        + ". Either retire, document the gap in self-model, or "
-                          "surface them via skill-library exemplars."
+                        f"{len(unused_for_proposals)} unclassified or active-"
+                        f"declared tools unused in {days}d window: "
+                        f"{unused_for_proposals[:5]}"
+                        + (f" (+{len(unused_for_proposals)-5} more)"
+                           if len(unused_for_proposals) > 5 else "")
+                        + ". Either classify in tool_states.json, retire, or "
+                          "document the gap. (Tools already declared dormant-"
+                          "intrinsic or superseded are excluded from this "
+                          "list.)"
                     ),
                     "risk": "low",
                     "created": now,
                     "status": "pending",
-                    "data": {"unused_tools": unused, "window_days": days},
+                    "data": {
+                        "unused_tools": unused_for_proposals,
+                        "window_days": days,
+                        "filter": "declared dormant-intrinsic / superseded / candidate-for-retirement excluded",
+                    },
                 })
             for cat, names in underused_in_category.items():
                 new_proposals.append({
@@ -638,8 +685,13 @@ class MetaAgentLoop:
                     "data": {"category": cat, "underused": names, "window_days": days},
                 })
             if new_proposals:
-                self.state.setdefault("proposals", []).extend(new_proposals)
-                self._save_state()
+                existing = self.state.setdefault("proposals", [])
+                existing_ids = {p.get("id") for p in existing if p.get("status") == "pending"}
+                deduped = [p for p in new_proposals if p["id"] not in existing_ids]
+                if deduped:
+                    existing.extend(deduped)
+                    self._save_state()
+                new_proposals = deduped
 
         return {
             "window_days": days,
@@ -647,9 +699,145 @@ class MetaAgentLoop:
             "used_count": len(used_tools),
             "unused_count": len(unused),
             "unused_tools": unused,
+            "unused_unclassified_or_active": unused_for_proposals,
+            "filtered_out_by_declarations": len(declared_dormant_or_superseded
+                                                 & set(unused)),
             "top_5": top,
             "underused_in_category": underused_in_category,
             "proposals_generated": len(new_proposals),
+        }
+
+    async def tool_state_drift_check(self, days: int = 14) -> dict:
+        """Mirror #28 fifth structural guard (Day 97 Clawd-Day extension —
+        architectural-scale supersession).
+
+        The four prior Mirror #28 guards (typo, truncation, dedup, registry-
+        drift) catch failures at the dispatch / queue / registry scale. This
+        is the architectural-scale guard: compares tool usage patterns
+        against declared states in `memory/tool_states.json` and surfaces
+        drift where the substrate's *intent* for a tool has diverged from
+        its *behavior*.
+
+        Drift signals:
+          - DECLARED_ACTIVE_BUT_DORMANT: tool declared 'active' but no use
+            in window → either silent supersession or intent-shift not yet
+            documented.
+          - DECLARED_DORMANT_BUT_HEAVY: tool declared 'active-dormant-
+            intrinsic' but used >5x in window → may warrant promotion.
+          - DECLARED_SUPERSEDED_BUT_USED: tool marked superseded but still
+            getting called → either supersession was wrong or a heartbeat
+            path still depends on it.
+          - UNCLASSIFIED: registered tool with no declaration → audit gap.
+          - ORPHAN_DECLARATION: declaration exists for a tool no longer in
+            registry → declaration outdated.
+
+        Args:
+          days: window for usage stats (default 14, longer than 7d audit
+            because 'active but dormant' needs a wider window to be
+            confident).
+
+        Returns: dict with each drift category and the tools matching it,
+        plus summary counts and recommendation hints.
+        """
+        try:
+            from tools import _TOOL_HANDLERS as registered
+            from tools.audit import get_tool_call_stats
+        except Exception as e:
+            return {"error": f"tool_state_drift_check setup failed: {e}"}
+
+        # Load tool state declarations
+        states_path = config.MEMORY_DIR / "tool_states.json"
+        if not states_path.exists():
+            return {
+                "error": f"tool_states.json not found at {states_path}; "
+                         "no declared states to check against. Create one "
+                         "(see palace/southwest/tool-audit-2026-05-09.md "
+                         "for schema)."
+            }
+        try:
+            states_doc = json.loads(states_path.read_text(encoding="utf-8"))
+            declarations = states_doc.get("tools", {})
+        except Exception as e:
+            return {"error": f"tool_states.json parse failed: {e}"}
+
+        # Pull recent usage
+        minutes = days * 24 * 60
+        try:
+            stats = await get_tool_call_stats(minutes=minutes)
+        except Exception as e:
+            return {"error": f"audit_trail query failed: {e}"}
+
+        registered_set = set(registered.keys())
+        declared_set = set(declarations.keys())
+
+        # Drift buckets
+        active_but_dormant: list[dict] = []
+        dormant_but_heavy: list[dict] = []
+        superseded_but_used: list[dict] = []
+        unclassified: list[str] = []
+        orphan_declarations: list[str] = []
+
+        for tname in registered_set:
+            count = (stats.get(tname) or {}).get("count", 0) or 0
+            decl = declarations.get(tname)
+            if not decl:
+                unclassified.append(tname)
+                continue
+            state = decl.get("state", "")
+            if state == "active" and count == 0:
+                active_but_dormant.append({
+                    "tool": tname,
+                    "count_in_window": count,
+                    "role": decl.get("role", ""),
+                })
+            elif state == "active-dormant-intrinsic" and count > 5:
+                dormant_but_heavy.append({
+                    "tool": tname,
+                    "count_in_window": count,
+                    "role": decl.get("role", ""),
+                })
+            elif state.startswith("superseded-") and count > 0:
+                superseded_but_used.append({
+                    "tool": tname,
+                    "count_in_window": count,
+                    "superseded_by": decl.get("superseded_by")
+                                     or decl.get("native_equivalent"),
+                    "rationale": decl.get("rationale", ""),
+                })
+
+        for tname in declared_set - registered_set:
+            orphan_declarations.append(tname)
+
+        return {
+            "window_days": days,
+            "registered_count": len(registered_set),
+            "declared_count": len(declared_set),
+            "drift_summary": {
+                "active_but_dormant": len(active_but_dormant),
+                "dormant_but_heavy": len(dormant_but_heavy),
+                "superseded_but_used": len(superseded_but_used),
+                "unclassified": len(unclassified),
+                "orphan_declarations": len(orphan_declarations),
+            },
+            "active_but_dormant": active_but_dormant,
+            "dormant_but_heavy": dormant_but_heavy,
+            "superseded_but_used": superseded_but_used,
+            "unclassified": sorted(unclassified),
+            "orphan_declarations": sorted(orphan_declarations),
+            "recommendations": [
+                ("active_but_dormant: review for supersession or update "
+                 "declaration"),
+                ("dormant_but_heavy: consider promoting state to 'active'"),
+                ("superseded_but_used: verify supersession decision; a "
+                 "heartbeat path may still depend on it"),
+                ("unclassified: extend tool_states.json to cover all "
+                 "registered tools"),
+                ("orphan_declarations: tool was retired but declaration "
+                 "remains; remove from tool_states.json"),
+            ],
+            "states_file": str(states_path),
+            "doc_version": states_doc.get("version", "?"),
+            "doc_updated": states_doc.get("updated", "?"),
         }
 
     def get_status(self) -> str:
@@ -712,8 +900,8 @@ TOOL_DEFINITIONS = [
             "properties": {
                 "action": {
                     "type": "string",
-                    "enum": ["check", "trigger", "status", "history", "record_event", "tool_audit"],
-                    "description": "check: see if meta-agent should run. trigger: force a cycle. status: current state. history: past runs. record_event: file a high-information event (failure/surprise/contradiction/falsification) toward the next event-driven cycle. tool_audit: Tier 4 self-knowledge instrumentation — audits registered-vs-used tool surface over a window and generates underuse proposals."
+                    "enum": ["check", "trigger", "status", "history", "record_event", "tool_audit", "tool_state_drift"],
+                    "description": "check: see if meta-agent should run. trigger: force a cycle. status: current state. history: past runs. record_event: file a high-information event (failure/surprise/contradiction/falsification) toward the next event-driven cycle. tool_audit: Tier 4 self-knowledge instrumentation — audits registered-vs-used tool surface over a window and generates underuse proposals. tool_state_drift: Mirror #28 fifth guard — compares declared tool states (memory/tool_states.json) against actual usage and surfaces architectural-scale supersession drift."
                 },
                 "days": {
                     "type": "integer",
@@ -760,6 +948,10 @@ async def _meta_agent_tool(input_data: dict) -> str:
             days=days, generate_proposals=generate_proposals,
         )
         return json.dumps(result, indent=2, default=str)
+    elif action == "tool_state_drift":
+        days = int(input_data.get("days", 14))
+        result = await agent.tool_state_drift_check(days=days)
+        return json.dumps(result, indent=2, default=str)
     elif action == "record_event":
         # Day 96 evening Phase 4 #14 — make significant-event recording
         # accessible from bridge.py / Claude Code context. Drive instructions
@@ -779,7 +971,8 @@ async def _meta_agent_tool(input_data: dict) -> str:
         return (f"Recorded {event_type} event ({len(pending)}/"
                 f"{agent.EVENT_DRIVEN_THRESHOLD} toward trigger): {description[:120]}")
     else:
-        return f"Unknown action: {action}. Valid: check, trigger, status, history, record_event."
+        return (f"Unknown action: {action}. Valid: check, trigger, status, "
+                "history, record_event, tool_audit, tool_state_drift.")
 
 
 TOOL_HANDLERS = {

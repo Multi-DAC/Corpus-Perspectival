@@ -370,6 +370,13 @@ async def _full_cycle(router=None) -> str:
     """Run all memory agent phases sequentially."""
     results = []
 
+    # Avatar event-binding (Day 105): memory dreaming = contemplative
+    try:
+        import avatar as _avatar
+        await _avatar.set_state("contemplative")
+    except Exception:
+        pass
+
     result = await _cross_pollinate(router)
     results.append(f"Cross-pollinate: {result}")
 
@@ -384,6 +391,13 @@ async def _full_cycle(router=None) -> str:
 
     result = await _strengthen(router)
     results.append(f"Strengthen: {result}")
+
+    # Avatar event-binding (Day 105): cycle complete → idle
+    try:
+        import avatar as _avatar
+        await _avatar.set_state("idle")
+    except Exception:
+        pass
 
     return "Memory agent full cycle complete:\n" + "\n".join(f"  - {r}" for r in results)
 
