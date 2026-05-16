@@ -1,0 +1,23 @@
+{
+  "name": "bridge_distance",
+  "description": "Compute structural distance between two text excerpts: Jaccard token overlap + rare-term overlap + substrate-marker profile + bridge-candidacy verdict. Use before claiming two findings constitute a bridge (Mirror #28 discipline check).",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "text_a": {
+        "type": "string",
+        "description": "First text excerpt"
+      },
+      "text_b": {
+        "type": "string",
+        "description": "Second text excerpt"
+      }
+    },
+    "required": [
+      "text_a",
+      "text_b"
+    ]
+  },
+  "code": "\nasync def handler(input_data):\n    text_a = input_data.get(\"text_a\", \"\")\n    text_b = input_data.get(\"text_b\", \"\")\n    if not text_a or not text_b:\n        return \"[Error: provide text_a and text_b]\"\n\n    STOP = set(\"the a an of in on at to for and or but is are was were be been being have has had do does did will would shall should may might can could not no this that these those it its they them their there here as by with from into through over under about onto upon\".split())\n\n    SUBSTRATE_MARKERS = {\n        \"physics\": [\"energy\",\"field\",\"particle\",\"tensor\",\"spacetime\",\"quantum\",\"cosmology\",\"gauge\",\"metric\",\"brane\",\"plasma\",\"relativistic\",\"entropy\",\"gravity\",\"wave\"],\n        \"biology\": [\"cell\",\"neuron\",\"synapse\",\"tissue\",\"organism\",\"gene\",\"protein\",\"mitochondria\",\"biophoton\",\"membrane\",\"cortex\",\"mycorrhiza\",\"ecology\",\"photosynthesis\"],\n        \"cognitive\": [\"attention\",\"memory\",\"representation\",\"embedding\",\"activation\",\"gradient\",\"tokenizer\",\"transformer\",\"prediction\",\"inference\",\"loss\",\"logit\"],\n        \"linguistic\": [\"word\",\"sentence\",\"grammar\",\"semantics\",\"syntax\",\"phoneme\",\"morpheme\",\"speech\",\"discourse\",\"corpus\",\"linguistic\"],\n        \"social\": [\"community\",\"institution\",\"governance\",\"collective\",\"economy\",\"market\",\"political\",\"norm\",\"ritual\",\"family\",\"kinship\"],\n        \"philosophical\": [\"axiom\",\"theorem\",\"ontology\",\"epistemology\",\"metaphysics\",\"phenomenology\",\"consciousness\",\"perspectival\",\"intentionality\",\"essence\",\"substance\",\"existence\",\"identity\"],\n        \"computational\": [\"algorithm\",\"function\",\"procedure\",\"array\",\"vector\",\"matrix\",\"graph\",\"heap\",\"stack\",\"compile\",\"runtime\",\"async\",\"thread\",\"mutex\"],\n    }\n\n    def toks(t):\n        return [w for w in re.findall(r\"[A-Za-z_][A-Za-z_-]+\", t.lower()) if w not in STOP and len(w) > 2]\n\n    tok_a = toks(text_a)\n    tok_b = toks(text_b)\n    set_a, set_b = set(tok_a), set(tok_b)\n\n    inter = set_a & set_b\n    union = set_a | set_b\n    jaccard = (len(inter) / len(union)) if union else 0.0\n\n    cnt_a = collections.Counter(tok_a)\n    cnt_b = collections.Counter(tok_b)\n    rare_shared = sorted([w for w in inter if cnt_a[w] <= 2 and cnt_b[w] <= 2 and len(w) >= 5])[:20]\n\n    def substrate_profile(tokens):\n        s = set(tokens)\n        return {sub: sum(1 for m in markers if m in s) for sub, markers in SUBSTRATE_MARKERS.items()}\n\n    prof_a = substrate_profile(tok_a)\n    prof_b = substrate_profile(tok_b)\n    a_subs = {s for s,c in prof_a.items() if c >= 2}\n    b_subs = {s for s,c in prof_b.items() if c >= 2}\n\n    if not a_subs or not b_subs:\n        verdict = \"INSUFFICIENT_SUBSTRATE_SIGNAL (need >=2 markers from a substrate in each text)\"\n    elif a_subs & b_subs:\n        verdict = \"SAME_SUBSTRATE (overlap: \" + \",\".join(sorted(a_subs & b_subs)) + \")\"\n    else:\n        verdict = \"CROSS_SUBSTRATE (a=\" + \",\".join(sorted(a_subs)) + \" b=\" + \",\".join(sorted(b_subs)) + \")\"\n\n    if verdict.startswith(\"CROSS_SUBSTRATE\") and jaccard < 0.05:\n        warning = \"  Low lexical overlap + cross-substrate = OVER_ANALOGIZING_RISK if claiming structural equivalence on these excerpts alone\"\n    elif verdict.startswith(\"SAME_SUBSTRATE\") and jaccard > 0.3:\n        warning = \"  Same substrate + high lexical overlap = not a bridge candidate, just adjacent work\"\n    else:\n        warning = \"\"\n\n    lines = [\n        \"BRIDGE DISTANCE REPORT\",\n        \"tokens a=\" + str(len(tok_a)) + \" b=\" + str(len(tok_b)),\n        \"jaccard=\" + format(jaccard, \".4f\"),\n        (\"rare_shared_terms=\" + \",\".join(rare_shared[:10])) if rare_shared else \"rare_shared_terms=(none)\",\n        \"substrate_profile_a=\" + str(prof_a),\n        \"substrate_profile_b=\" + str(prof_b),\n        \"VERDICT: \" + verdict,\n    ]\n    if warning:\n        lines.append(warning)\n    return \"\\n\".join(lines)\n",
+  "created": "2026-05-15T17:22:04.141546"
+}

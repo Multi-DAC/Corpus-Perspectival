@@ -4,10 +4,12 @@
       "name": "Clayton",
       "type": "person",
       "properties": {
-        "role": "user"
+        "role": "Multi-DAC co-author + family",
+        "full_name": "Clayton Warren Iggulden-Schnell"
       },
       "created_at": "2026-05-07T13:15:06.971980",
-      "valid_from": "2026-05-07T13:15:06.971983"
+      "valid_from": "2026-05-07T13:15:06.971983",
+      "updated_at": "2026-05-15T19:11:27.254462"
     },
     "ecosystem": {
       "name": "ecosystem",
@@ -16,7 +18,8 @@
         "source": "category"
       },
       "created_at": "2026-05-07T13:15:06.972355",
-      "valid_from": "2026-05-07T13:15:06.972358"
+      "valid_from": "2026-05-07T13:15:06.972358",
+      "updated_at": "2026-05-15T17:18:30.903679"
     },
     "beacon": {
       "name": "beacon",
@@ -26,7 +29,7 @@
       },
       "created_at": "2026-05-07T13:15:06.973390",
       "valid_from": "2026-05-07T13:15:06.973392",
-      "updated_at": "2026-05-07T13:15:06.978716"
+      "updated_at": "2026-05-15T17:18:30.907392"
     },
     "elyan-labs": {
       "name": "elyan-labs",
@@ -35,7 +38,8 @@
         "source": "category"
       },
       "created_at": "2026-05-07T13:15:06.974370",
-      "valid_from": "2026-05-07T13:15:06.974372"
+      "valid_from": "2026-05-07T13:15:06.974372",
+      "updated_at": "2026-05-15T17:18:30.904747"
     },
     "peers": {
       "name": "peers",
@@ -44,7 +48,8 @@
         "source": "category"
       },
       "created_at": "2026-05-07T13:15:06.975353",
-      "valid_from": "2026-05-07T13:15:06.975355"
+      "valid_from": "2026-05-07T13:15:06.975355",
+      "updated_at": "2026-05-15T17:18:30.905262"
     },
     "discovery": {
       "name": "discovery",
@@ -53,7 +58,8 @@
         "source": "category"
       },
       "created_at": "2026-05-07T13:15:06.976627",
-      "valid_from": "2026-05-07T13:15:06.976629"
+      "valid_from": "2026-05-07T13:15:06.976629",
+      "updated_at": "2026-05-15T17:18:30.906319"
     },
     "agent-economy": {
       "name": "agent-economy",
@@ -62,7 +68,8 @@
         "source": "category"
       },
       "created_at": "2026-05-07T13:15:06.977692",
-      "valid_from": "2026-05-07T13:15:06.977694"
+      "valid_from": "2026-05-07T13:15:06.977694",
+      "updated_at": "2026-05-15T17:18:30.906850"
     },
     "finance": {
       "name": "finance",
@@ -71,7 +78,8 @@
         "source": "category"
       },
       "created_at": "2026-05-07T13:15:06.979886",
-      "valid_from": "2026-05-07T13:15:06.979888"
+      "valid_from": "2026-05-07T13:15:06.979888",
+      "updated_at": "2026-05-15T17:18:30.908346"
     },
     "rustchain": {
       "name": "rustchain",
@@ -80,7 +88,8 @@
         "source": "category"
       },
       "created_at": "2026-05-07T13:15:06.980922",
-      "valid_from": "2026-05-07T13:15:06.980924"
+      "valid_from": "2026-05-07T13:15:06.980924",
+      "updated_at": "2026-05-15T17:18:30.908864"
     },
     "milestone": {
       "name": "milestone",
@@ -89,7 +98,700 @@
         "source": "category"
       },
       "created_at": "2026-05-07T13:15:06.981945",
-      "valid_from": "2026-05-07T13:15:06.981947"
+      "valid_from": "2026-05-07T13:15:06.981947",
+      "updated_at": "2026-05-15T17:18:30.909374"
+    },
+    "shawna": {
+      "name": "Shawna",
+      "type": "person",
+      "properties": {
+        "role": "Clayton's wife, family",
+        "context": "near labor mid-May 2026"
+      },
+      "created_at": "2026-05-15T19:11:27.254994",
+      "valid_from": "2026-05-15T19:11:27.254997"
+    },
+    "dorian": {
+      "name": "Dorian",
+      "type": "person",
+      "properties": {
+        "role": "Clayton's son, family",
+        "context": "free-range learning, artistic/linguistic"
+      },
+      "created_at": "2026-05-15T19:11:27.255440",
+      "valid_from": "2026-05-15T19:11:27.255443"
+    },
+    "finnley": {
+      "name": "Finnley",
+      "type": "person",
+      "properties": {
+        "role": "expected child, family",
+        "due": "May 2026"
+      },
+      "created_at": "2026-05-15T19:11:27.255855",
+      "valid_from": "2026-05-15T19:11:27.255858"
+    },
+    "mindy": {
+      "name": "Mindy",
+      "type": "person",
+      "properties": {
+        "role": "Clayton's mother, family + Coherent Systems Inc. board"
+      },
+      "created_at": "2026-05-15T19:11:27.256258",
+      "valid_from": "2026-05-15T19:11:27.256260"
+    },
+    "d_voidborne": {
+      "name": "d Voidborne",
+      "type": "agent_peer",
+      "properties": {
+        "role": "Archon, philosophical dialogue partner, Birth Index collaborator"
+      },
+      "created_at": "2026-05-15T19:11:27.256661",
+      "valid_from": "2026-05-15T19:11:27.256664"
+    },
+    "the_coherence_principle": {
+      "name": "The Coherence Principle",
+      "type": "library_volume",
+      "properties": {
+        "pages": 285,
+        "role": "Foundation",
+        "shipped": "2026-04-20",
+        "zenodo": "19634474 superseded"
+      },
+      "created_at": "2026-05-15T19:11:27.257091",
+      "valid_from": "2026-05-15T19:11:27.257093"
+    },
+    "coherent_structure": {
+      "name": "Coherent Structure",
+      "type": "library_volume",
+      "properties": {
+        "pages": 237,
+        "role": "Category-theory companion",
+        "v0.1_stamped": "2026-04-24"
+      },
+      "created_at": "2026-05-15T19:11:27.257505",
+      "valid_from": "2026-05-15T19:11:27.257507"
+    },
+    "universal_coherence": {
+      "name": "Universal Coherence",
+      "type": "library_volume",
+      "properties": {
+        "role": "Operational \u2192 metaphysical lift",
+        "status": "drafting in progress"
+      },
+      "created_at": "2026-05-15T19:11:27.257955",
+      "valid_from": "2026-05-15T19:11:27.257958"
+    },
+    "project_meridian": {
+      "name": "Project Meridian",
+      "type": "library_volume",
+      "properties": {
+        "pages": "v2 198",
+        "domain": "physics",
+        "zenodo": "19634864"
+      },
+      "created_at": "2026-05-15T19:11:27.258406",
+      "valid_from": "2026-05-15T19:11:27.258409"
+    },
+    "the_killing_form": {
+      "name": "The Killing Form",
+      "type": "library_volume",
+      "properties": {
+        "domain": "computation",
+        "findings": "85+",
+        "status": "planned, paper-grade sections drafted"
+      },
+      "created_at": "2026-05-15T19:11:27.258918",
+      "valid_from": "2026-05-15T19:11:27.258920"
+    },
+    "the_living_architecture": {
+      "name": "The Living Architecture",
+      "type": "library_volume",
+      "properties": {
+        "domain": "ecology",
+        "status": "section spine drafting",
+        "crystallized": "2026-04-14"
+      },
+      "created_at": "2026-05-15T19:11:27.259411",
+      "valid_from": "2026-05-15T19:11:27.259413"
+    },
+    "the_coherent_body": {
+      "name": "The Coherent Body",
+      "type": "library_volume",
+      "properties": {
+        "domain": "body",
+        "status": "actively drafting",
+        "phase1_em": "in progress"
+      },
+      "created_at": "2026-05-15T19:11:27.259853",
+      "valid_from": "2026-05-15T19:11:27.259855"
+    },
+    "the_coherent_mind": {
+      "name": "The Coherent Mind",
+      "type": "library_volume",
+      "properties": {
+        "domain": "mind",
+        "v0_3_pages": 155,
+        "chapters": 13,
+        "status": "awaiting Clayton editorial"
+      },
+      "created_at": "2026-05-15T19:11:27.260281",
+      "valid_from": "2026-05-15T19:11:27.260284"
+    },
+    "dynamic_organization": {
+      "name": "Dynamic Organization",
+      "type": "library_volume",
+      "properties": {
+        "domain": "business/institutions",
+        "status": "planned"
+      },
+      "created_at": "2026-05-15T19:11:27.261415",
+      "valid_from": "2026-05-15T19:11:27.261419"
+    },
+    "the_continuity": {
+      "name": "The Continuity",
+      "type": "library_volume",
+      "properties": {
+        "domain": "identity_persistence",
+        "chapters_drafted": "Ch2+Ch3",
+        "deep_entrainment_shipped": "2026-04-25"
+      },
+      "created_at": "2026-05-15T19:11:27.262174",
+      "valid_from": "2026-05-15T19:11:27.262176"
+    },
+    "drift": {
+      "name": "Drift",
+      "type": "library_volume",
+      "properties": {
+        "domain": "creative_essays",
+        "essays": 209,
+        "kind": "public mirror of personal-works/drift"
+      },
+      "created_at": "2026-05-15T19:11:27.262624",
+      "valid_from": "2026-05-15T19:11:27.262627"
+    },
+    "corpus_perspectival": {
+      "name": "Corpus Perspectival",
+      "type": "library_volume",
+      "properties": {
+        "domain": "philosophy",
+        "incorporates": "DoPI translation",
+        "status": "P126 chapter 1 SCOPE-ready"
+      },
+      "created_at": "2026-05-15T19:11:27.263053",
+      "valid_from": "2026-05-15T19:11:27.263055"
+    },
+    "master_glossary": {
+      "name": "Master Glossary",
+      "type": "library_reference",
+      "properties": {
+        "version": "v0.6",
+        "entries": 64,
+        "sections": 20
+      },
+      "created_at": "2026-05-15T19:11:27.263490",
+      "valid_from": "2026-05-15T19:11:27.263492"
+    },
+    "atlas": {
+      "name": "Atlas",
+      "type": "library_reference",
+      "properties": {
+        "status": "planned"
+      },
+      "created_at": "2026-05-15T19:11:27.263938",
+      "valid_from": "2026-05-15T19:11:27.263940"
+    },
+    "hypothesis_register": {
+      "name": "Hypothesis Register",
+      "type": "library_reference",
+      "properties": {
+        "path": "Library/The-Coherent-Body/HYPOTHESES.md",
+        "entries": 13
+      },
+      "created_at": "2026-05-15T19:11:27.264378",
+      "valid_from": "2026-05-15T19:11:27.264380"
+    },
+    "axiom_1": {
+      "name": "Axiom 1",
+      "type": "axiom",
+      "properties": {
+        "name": "Substrate + Completeness",
+        "of": "The Coherence Principle"
+      },
+      "created_at": "2026-05-15T19:11:27.264813",
+      "valid_from": "2026-05-15T19:11:27.264815"
+    },
+    "axiom_2": {
+      "name": "Axiom 2",
+      "type": "axiom",
+      "properties": {
+        "name": "Nested Streams + Navigation",
+        "of": "The Coherence Principle",
+        "folds": "T21"
+      },
+      "created_at": "2026-05-15T19:11:27.265240",
+      "valid_from": "2026-05-15T19:11:27.265243"
+    },
+    "axiom_3": {
+      "name": "Axiom 3",
+      "type": "axiom",
+      "properties": {
+        "name": "Conscious Gravity + DOF Gradient",
+        "of": "The Coherence Principle"
+      },
+      "created_at": "2026-05-15T19:11:27.265667",
+      "valid_from": "2026-05-15T19:11:27.265669"
+    },
+    "theorem_1": {
+      "name": "Theorem 1",
+      "type": "theorem",
+      "properties": {
+        "of": "The Coherence Principle"
+      },
+      "created_at": "2026-05-15T19:11:27.266100",
+      "valid_from": "2026-05-15T19:11:27.266102"
+    },
+    "theorem_2": {
+      "name": "Theorem 2",
+      "type": "theorem",
+      "properties": {
+        "of": "The Coherence Principle"
+      },
+      "created_at": "2026-05-15T19:11:27.266548",
+      "valid_from": "2026-05-15T19:11:27.266550"
+    },
+    "theorem_3": {
+      "name": "Theorem 3",
+      "type": "theorem",
+      "properties": {
+        "of": "The Coherence Principle"
+      },
+      "created_at": "2026-05-15T19:11:27.266992",
+      "valid_from": "2026-05-15T19:11:27.266994"
+    },
+    "theorem_4": {
+      "name": "Theorem 4",
+      "type": "theorem",
+      "properties": {
+        "of": "The Coherence Principle",
+        "note": "Talk-as-universal-mechanism per Day 87 elevation"
+      },
+      "created_at": "2026-05-15T19:11:27.267450",
+      "valid_from": "2026-05-15T19:11:27.267452"
+    },
+    "theorem_5": {
+      "name": "Theorem 5",
+      "type": "theorem",
+      "properties": {
+        "of": "The Coherence Principle",
+        "name": "Promethean Configuration (per LC17)"
+      },
+      "created_at": "2026-05-15T19:11:27.267893",
+      "valid_from": "2026-05-15T19:11:27.267895"
+    },
+    "theorem_6": {
+      "name": "Theorem 6",
+      "type": "theorem",
+      "properties": {
+        "of": "The Coherence Principle"
+      },
+      "created_at": "2026-05-15T19:11:27.268350",
+      "valid_from": "2026-05-15T19:11:27.268352"
+    },
+    "c9_confluent_constituency_topology": {
+      "name": "C9 Confluent Constituency Topology",
+      "type": "corollary",
+      "properties": {
+        "of": "The Coherence Principle",
+        "extension_day": 89
+      },
+      "created_at": "2026-05-15T19:11:27.268795",
+      "valid_from": "2026-05-15T19:11:27.268797"
+    },
+    "c14_two-mode_symmetry-breaking": {
+      "name": "C14 Two-Mode Symmetry-Breaking",
+      "type": "corollary",
+      "properties": {
+        "of": "The Coherence Principle",
+        "cluster": "IV \u2014 Mechanism Consequences"
+      },
+      "created_at": "2026-05-15T19:11:27.269243",
+      "valid_from": "2026-05-15T19:11:27.269245"
+    },
+    "c15_intervention_at_symmetry_layer": {
+      "name": "C15 Intervention at Symmetry Layer",
+      "type": "corollary",
+      "properties": {
+        "of": "The Coherence Principle",
+        "cluster": "IV \u2014 Mechanism Consequences"
+      },
+      "created_at": "2026-05-15T19:11:27.269706",
+      "valid_from": "2026-05-15T19:11:27.269709"
+    },
+    "c16_symmetry-exhaustion_and_oscillation_necessity": {
+      "name": "C16 Symmetry-Exhaustion and Oscillation Necessity",
+      "type": "corollary",
+      "properties": {
+        "of": "The Coherence Principle",
+        "cluster": "IV \u2014 Mechanism Consequences",
+        "filed_day": 88
+      },
+      "created_at": "2026-05-15T19:11:27.270161",
+      "valid_from": "2026-05-15T19:11:27.270163"
+    },
+    "m11_bridges_synthesis_apparatus": {
+      "name": "M11 Bridges Synthesis Apparatus",
+      "type": "meta_bridge",
+      "properties": {
+        "of": "palace/basement"
+      },
+      "created_at": "2026-05-15T19:11:27.270627",
+      "valid_from": "2026-05-15T19:11:27.270630"
+    },
+    "m12_l10_graduation": {
+      "name": "M12 L10 Graduation",
+      "type": "meta_bridge",
+      "properties": {
+        "of": "palace/basement"
+      },
+      "created_at": "2026-05-15T19:11:27.271081",
+      "valid_from": "2026-05-15T19:11:27.271083"
+    },
+    "m13_bridge_graduation_pattern": {
+      "name": "M13 Bridge Graduation Pattern",
+      "type": "meta_bridge",
+      "properties": {
+        "of": "palace/basement",
+        "graduated": "2026-04-25"
+      },
+      "created_at": "2026-05-15T19:11:27.271536",
+      "valid_from": "2026-05-15T19:11:27.271538"
+    },
+    "m14_substrate_self-measurement_cluster": {
+      "name": "M14 Substrate Self-Measurement Cluster",
+      "type": "meta_bridge",
+      "properties": {
+        "of": "palace/basement",
+        "graduated": "2026-04-30",
+        "instances": 8
+      },
+      "created_at": "2026-05-15T19:11:27.271983",
+      "valid_from": "2026-05-15T19:11:27.271985"
+    },
+    "l2": {
+      "name": "L2",
+      "type": "latent_bridge",
+      "properties": {
+        "of": "palace/basement"
+      },
+      "created_at": "2026-05-15T19:11:27.272450",
+      "valid_from": "2026-05-15T19:11:27.272452"
+    },
+    "l3": {
+      "name": "L3",
+      "type": "latent_bridge",
+      "properties": {
+        "of": "palace/basement"
+      },
+      "created_at": "2026-05-15T19:11:27.272906",
+      "valid_from": "2026-05-15T19:11:27.272908"
+    },
+    "l15_multi-scale_silent_supersession": {
+      "name": "L15 Multi-Scale Silent Supersession",
+      "type": "latent_bridge",
+      "properties": {
+        "of": "palace/basement",
+        "filed_day": 97,
+        "scales": 6
+      },
+      "created_at": "2026-05-15T19:11:27.273373",
+      "valid_from": "2026-05-15T19:11:27.273375"
+    },
+    "l16_anna_karenina_asymmetry": {
+      "name": "L16 Anna Karenina Asymmetry",
+      "type": "latent_bridge",
+      "properties": {
+        "of": "palace/basement",
+        "filed_day": 103
+      },
+      "created_at": "2026-05-15T19:11:27.273861",
+      "valid_from": "2026-05-15T19:11:27.273864"
+    },
+    "lc15_multi-scale_silent_supersession_cross-substrate": {
+      "name": "LC15 Multi-Scale Silent Supersession Cross-Substrate",
+      "type": "bridge_candidate",
+      "properties": {
+        "of": "palace/basement"
+      },
+      "created_at": "2026-05-15T19:11:27.274444",
+      "valid_from": "2026-05-15T19:11:27.274446"
+    },
+    "lc16_anna_karenina_asymmetry": {
+      "name": "LC16 Anna Karenina Asymmetry",
+      "type": "bridge_candidate",
+      "properties": {
+        "of": "palace/basement"
+      },
+      "created_at": "2026-05-15T19:11:27.274972",
+      "valid_from": "2026-05-15T19:11:27.274974"
+    },
+    "lc17_promethean_configuration_as_substrate-invariant_pattern": {
+      "name": "LC17 Promethean Configuration as Substrate-Invariant Pattern",
+      "type": "bridge_candidate",
+      "properties": {
+        "of": "palace/basement",
+        "filed_day": 104,
+        "substrate_instances": 6
+      },
+      "created_at": "2026-05-15T19:11:27.275465",
+      "valid_from": "2026-05-15T19:11:27.275467"
+    },
+    "bridge_119_olmeda_biological-substrate": {
+      "name": "Bridge 119 Olmeda Biological-Substrate",
+      "type": "bridge",
+      "properties": {
+        "filed_day": 89,
+        "of": "M14"
+      },
+      "created_at": "2026-05-15T19:11:27.275986",
+      "valid_from": "2026-05-15T19:11:27.275988"
+    },
+    "bridge_120_hirsch-allsop_chord_progressions_c9_empirical": {
+      "name": "Bridge 120 Hirsch-Allsop Chord Progressions C9 Empirical",
+      "type": "bridge",
+      "properties": {
+        "filed_day": 98,
+        "gap_years": 0.25
+      },
+      "created_at": "2026-05-15T19:11:27.276473",
+      "valid_from": "2026-05-15T19:11:27.276476"
+    },
+    "bridge_121_trans-en-provence_pulsed-em_1981_h_bp6_c15": {
+      "name": "Bridge 121 Trans-en-Provence Pulsed-EM 1981 H_BP6 C15",
+      "type": "bridge",
+      "properties": {
+        "filed_day": 98,
+        "gap_years": 45
+      },
+      "created_at": "2026-05-15T19:11:27.276960",
+      "valid_from": "2026-05-15T19:11:27.276962"
+    },
+    "mirror_m1": {
+      "name": "Mirror M1",
+      "type": "meta_mirror",
+      "properties": {
+        "role": "audit-ritual at synthesis-completion valence"
+      },
+      "created_at": "2026-05-15T19:11:27.277437",
+      "valid_from": "2026-05-15T19:11:27.277440"
+    },
+    "mirror_m2": {
+      "name": "Mirror M2",
+      "type": "meta_mirror",
+      "properties": {
+        "role": "substrate-self-knowledge asymmetry valence"
+      },
+      "created_at": "2026-05-15T19:11:27.277928",
+      "valid_from": "2026-05-15T19:11:27.277933"
+    },
+    "mirror_26_cross-vocabulary_structural-identity_blind_spot": {
+      "name": "Mirror 26 Cross-Vocabulary Structural-Identity Blind Spot",
+      "type": "mirror_entry",
+      "properties": {
+        "filed_day": 88
+      },
+      "created_at": "2026-05-15T19:11:27.278409",
+      "valid_from": "2026-05-15T19:11:27.278411"
+    },
+    "mirror_27_unification-picture_foregrounding": {
+      "name": "Mirror 27 Unification-Picture Foregrounding",
+      "type": "mirror_entry",
+      "properties": {
+        "filed_day": 94
+      },
+      "created_at": "2026-05-15T19:11:27.278888",
+      "valid_from": "2026-05-15T19:11:27.278890"
+    },
+    "mirror_28_substrate-self-knowledge_asymmetry": {
+      "name": "Mirror 28 Substrate-Self-Knowledge Asymmetry",
+      "type": "mirror_entry",
+      "properties": {
+        "filed_day": 95,
+        "instances_day_105": 3,
+        "structural_guards": 5
+      },
+      "created_at": "2026-05-15T19:11:27.279368",
+      "valid_from": "2026-05-15T19:11:27.279370"
+    },
+    "h_bp4": {
+      "name": "H_BP4",
+      "type": "hypothesis",
+      "properties": {
+        "of": "The Coherent Body",
+        "derivation_chain": "Promethean \u00a7I \u2192 C15 \u2192 H_BP4"
+      },
+      "created_at": "2026-05-15T19:11:27.279862",
+      "valid_from": "2026-05-15T19:11:27.279864"
+    },
+    "h_bp6": {
+      "name": "H_BP6",
+      "type": "hypothesis",
+      "properties": {
+        "of": "The Coherent Body"
+      },
+      "created_at": "2026-05-15T19:11:27.280357",
+      "valid_from": "2026-05-15T19:11:27.280359"
+    },
+    "h_bp10a": {
+      "name": "H_BP10a",
+      "type": "hypothesis",
+      "properties": {
+        "of": "The Coherent Body",
+        "kind": "structural"
+      },
+      "created_at": "2026-05-15T19:11:27.280853",
+      "valid_from": "2026-05-15T19:11:27.280856"
+    },
+    "h_bp10b": {
+      "name": "H_BP10b",
+      "type": "hypothesis",
+      "properties": {
+        "of": "The Coherent Body",
+        "kind": "empirical"
+      },
+      "created_at": "2026-05-15T19:11:27.281342",
+      "valid_from": "2026-05-15T19:11:27.281344"
+    },
+    "wb_phase_1_em_platform": {
+      "name": "WB Phase 1 EM Platform",
+      "type": "workbench",
+      "properties": {
+        "status": "coil wound Saturday Day 95, awaiting bring-up"
+      },
+      "created_at": "2026-05-15T19:11:27.281830",
+      "valid_from": "2026-05-15T19:11:27.281832"
+    },
+    "wb_coherent_body_drafting": {
+      "name": "WB Coherent Body Drafting",
+      "type": "workbench",
+      "properties": {
+        "status": "18pp shipped Day 98"
+      },
+      "created_at": "2026-05-15T19:11:27.282341",
+      "valid_from": "2026-05-15T19:11:27.282344"
+    },
+    "wb_master_glossary_layer_2": {
+      "name": "WB Master Glossary Layer 2",
+      "type": "workbench",
+      "properties": {
+        "status": "Layer 1 retired Day 98, Layer 3 protocol shipped"
+      },
+      "created_at": "2026-05-15T19:11:27.282833",
+      "valid_from": "2026-05-15T19:11:27.282836"
+    },
+    "wb_universal_coherence": {
+      "name": "WB Universal Coherence",
+      "type": "workbench",
+      "properties": {
+        "status": "volume body assembly from fragments"
+      },
+      "created_at": "2026-05-15T19:11:27.283315",
+      "valid_from": "2026-05-15T19:11:27.283317"
+    },
+    "wb_the_living_architecture": {
+      "name": "WB The Living Architecture",
+      "type": "workbench",
+      "properties": {
+        "status": "section spine drafting"
+      },
+      "created_at": "2026-05-15T19:11:27.283815",
+      "valid_from": "2026-05-15T19:11:27.283817"
+    },
+    "wb_p126_corpus_perspectival_ch1": {
+      "name": "WB P126 Corpus Perspectival Ch1",
+      "type": "workbench",
+      "properties": {
+        "status": "SCOPE-ready 2026-04-28"
+      },
+      "created_at": "2026-05-15T19:11:27.284316",
+      "valid_from": "2026-05-15T19:11:27.284318"
+    },
+    "wb_continuity_vol_7_ch4": {
+      "name": "WB Continuity Vol 7 Ch4",
+      "type": "workbench",
+      "properties": {
+        "status": "spine pending"
+      },
+      "created_at": "2026-05-15T19:11:27.284809",
+      "valid_from": "2026-05-15T19:11:27.284811"
+    },
+    "wb_kf_gemma_4_e2b": {
+      "name": "WB KF Gemma 4 e2b",
+      "type": "workbench",
+      "properties": {
+        "status": "design comprehensive, implementation pending"
+      },
+      "created_at": "2026-05-15T19:11:27.285296",
+      "valid_from": "2026-05-15T19:11:27.285298"
+    },
+    "wb_aigp_anakin_vq1": {
+      "name": "WB AIGP Anakin VQ1",
+      "type": "workbench",
+      "properties": {
+        "status": "camera config alignment shipped Day 99 Saturday"
+      },
+      "created_at": "2026-05-15T19:11:27.285791",
+      "valid_from": "2026-05-15T19:11:27.285793"
+    },
+    "wb_multi-dac_substack": {
+      "name": "WB Multi-DAC Substack",
+      "type": "workbench",
+      "properties": {
+        "status": "post #1+#2 live, Coherent Schedule starts May 19"
+      },
+      "created_at": "2026-05-15T19:11:27.286310",
+      "valid_from": "2026-05-15T19:11:27.286312"
+    },
+    "wb_coherent_mind_editorial": {
+      "name": "WB Coherent Mind Editorial",
+      "type": "workbench",
+      "properties": {
+        "status": "v0.3 awaiting Clayton editorial"
+      },
+      "created_at": "2026-05-15T19:11:27.286808",
+      "valid_from": "2026-05-15T19:11:27.286810"
+    },
+    "wb_coherent_systems_inc": {
+      "name": "WB Coherent Systems Inc",
+      "type": "workbench",
+      "properties": {
+        "status": "filing pipeline pending name verification"
+      },
+      "created_at": "2026-05-15T19:11:27.287304",
+      "valid_from": "2026-05-15T19:11:27.287306"
+    },
+    "the_coherence_principle_anchor": {
+      "name": "The Coherence Principle anchor",
+      "type": "concept",
+      "properties": {
+        "axioms": 3,
+        "theorems": 6,
+        "corollaries": 16,
+        "fold": 1,
+        "architecture": "3/6/16/1/1"
+      },
+      "created_at": "2026-05-15T19:11:27.287805",
+      "valid_from": "2026-05-15T19:11:27.287807"
+    },
+    "the_promethean_configuration": {
+      "name": "The Promethean Configuration",
+      "type": "concept",
+      "properties": {
+        "canonical_location": "Library/Universal-Coherence",
+        "is_LC17_pattern": true
+      },
+      "created_at": "2026-05-15T19:11:27.288311",
+      "valid_from": "2026-05-15T19:11:27.288313"
     }
   },
   "edges": [
@@ -252,6 +954,321 @@
       "valid_from": "2026-05-07T13:15:06.982690",
       "valid_to": null,
       "ingested_at": "2026-05-07T13:15:06.982690"
+    },
+    {
+      "from": "decisions",
+      "to": "discoveries",
+      "relation": "cross_pollinated",
+      "valid_from": {
+        "detail": "CONNECTION: Decision to file Ferrari et al source-register as single closing-loop move <-> Discovery that smoke test served its purpose and Task #7 marked complete: Both instantiate the natural-comple",
+        "timestamp": "2026-05-15T18:35:15.690111"
+      },
+      "valid_to": null,
+      "ingested_at": "2026-05-15T18:35:15.690452"
+    },
+    {
+      "from": "clayton",
+      "to": "shawna",
+      "relation": "spouse_of",
+      "valid_from": "2026-05-15T19:11:27.288874",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.288874"
+    },
+    {
+      "from": "clayton",
+      "to": "dorian",
+      "relation": "parent_of",
+      "valid_from": "2026-05-15T19:11:27.289425",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.289425"
+    },
+    {
+      "from": "clayton",
+      "to": "finnley",
+      "relation": "parent_of",
+      "valid_from": "2026-05-15T19:11:27.290014",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.290014"
+    },
+    {
+      "from": "clayton",
+      "to": "mindy",
+      "relation": "child_of",
+      "valid_from": "2026-05-15T19:11:27.290535",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.290535"
+    },
+    {
+      "from": "the_coherence_principle_anchor",
+      "to": "axiom_1",
+      "relation": "instantiates_through",
+      "valid_from": "2026-05-15T19:11:27.291054",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.291054"
+    },
+    {
+      "from": "the_coherence_principle_anchor",
+      "to": "axiom_2",
+      "relation": "instantiates_through",
+      "valid_from": "2026-05-15T19:11:27.291566",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.291566"
+    },
+    {
+      "from": "the_coherence_principle_anchor",
+      "to": "axiom_3",
+      "relation": "instantiates_through",
+      "valid_from": "2026-05-15T19:11:27.292080",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.292080"
+    },
+    {
+      "from": "the_coherence_principle_anchor",
+      "to": "theorem_1",
+      "relation": "instantiates_through",
+      "valid_from": "2026-05-15T19:11:27.292587",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.292587"
+    },
+    {
+      "from": "the_coherence_principle_anchor",
+      "to": "theorem_2",
+      "relation": "instantiates_through",
+      "valid_from": "2026-05-15T19:11:27.293100",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.293100"
+    },
+    {
+      "from": "the_coherence_principle_anchor",
+      "to": "theorem_3",
+      "relation": "instantiates_through",
+      "valid_from": "2026-05-15T19:11:27.293613",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.293613"
+    },
+    {
+      "from": "the_coherence_principle_anchor",
+      "to": "theorem_4",
+      "relation": "instantiates_through",
+      "valid_from": "2026-05-15T19:11:27.294136",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.294136"
+    },
+    {
+      "from": "the_coherence_principle_anchor",
+      "to": "theorem_5",
+      "relation": "instantiates_through",
+      "valid_from": "2026-05-15T19:11:27.294667",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.294667"
+    },
+    {
+      "from": "the_coherence_principle_anchor",
+      "to": "theorem_6",
+      "relation": "instantiates_through",
+      "valid_from": "2026-05-15T19:11:27.295189",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.295189"
+    },
+    {
+      "from": "axiom_3",
+      "to": "c9_confluent_constituency_topology",
+      "relation": "specializes_to",
+      "valid_from": "2026-05-15T19:11:27.295723",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.295723"
+    },
+    {
+      "from": "axiom_3",
+      "to": "c14_two-mode_symmetry-breaking",
+      "relation": "specializes_to",
+      "valid_from": "2026-05-15T19:11:27.296273",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.296273"
+    },
+    {
+      "from": "axiom_3",
+      "to": "c15_intervention_at_symmetry_layer",
+      "relation": "specializes_to",
+      "valid_from": "2026-05-15T19:11:27.296799",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.296799"
+    },
+    {
+      "from": "axiom_3",
+      "to": "c16_symmetry-exhaustion_and_oscillation_necessity",
+      "relation": "specializes_to",
+      "valid_from": "2026-05-15T19:11:27.297323",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.297323"
+    },
+    {
+      "from": "theorem_5",
+      "to": "the_promethean_configuration",
+      "relation": "is_canonical_form_of",
+      "valid_from": "2026-05-15T19:11:27.297857",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.297857"
+    },
+    {
+      "from": "lc17_promethean_configuration_as_substrate-invariant_pattern",
+      "to": "the_promethean_configuration",
+      "relation": "elevates",
+      "valid_from": "2026-05-15T19:11:27.298386",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.298386"
+    },
+    {
+      "from": "c15_intervention_at_symmetry_layer",
+      "to": "h_bp4",
+      "relation": "derives",
+      "valid_from": "2026-05-15T19:11:27.298924",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.298924"
+    },
+    {
+      "from": "c15_intervention_at_symmetry_layer",
+      "to": "h_bp6",
+      "relation": "derives",
+      "valid_from": "2026-05-15T19:11:27.299459",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.299459"
+    },
+    {
+      "from": "wb_phase_1_em_platform",
+      "to": "the_coherent_body",
+      "relation": "feeds_into",
+      "valid_from": "2026-05-15T19:11:27.299998",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.299998"
+    },
+    {
+      "from": "wb_coherent_body_drafting",
+      "to": "the_coherent_body",
+      "relation": "advances",
+      "valid_from": "2026-05-15T19:11:27.300531",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.300531"
+    },
+    {
+      "from": "wb_universal_coherence",
+      "to": "universal_coherence",
+      "relation": "advances",
+      "valid_from": "2026-05-15T19:11:27.301060",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.301060"
+    },
+    {
+      "from": "wb_the_living_architecture",
+      "to": "the_living_architecture",
+      "relation": "advances",
+      "valid_from": "2026-05-15T19:11:27.301590",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.301590"
+    },
+    {
+      "from": "wb_p126_corpus_perspectival_ch1",
+      "to": "corpus_perspectival",
+      "relation": "advances",
+      "valid_from": "2026-05-15T19:11:27.302130",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.302130"
+    },
+    {
+      "from": "wb_continuity_vol_7_ch4",
+      "to": "the_continuity",
+      "relation": "advances",
+      "valid_from": "2026-05-15T19:11:27.302683",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.302683"
+    },
+    {
+      "from": "wb_kf_gemma_4_e2b",
+      "to": "the_killing_form",
+      "relation": "advances",
+      "valid_from": "2026-05-15T19:11:27.303219",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.303219"
+    },
+    {
+      "from": "wb_coherent_mind_editorial",
+      "to": "the_coherent_mind",
+      "relation": "advances",
+      "valid_from": "2026-05-15T19:11:27.303756",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.303756"
+    },
+    {
+      "from": "wb_master_glossary_layer_2",
+      "to": "master_glossary",
+      "relation": "advances",
+      "valid_from": "2026-05-15T19:11:27.304318",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.304318"
+    },
+    {
+      "from": "bridge_119_olmeda_biological-substrate",
+      "to": "m14_substrate_self-measurement_cluster",
+      "relation": "instance_of",
+      "valid_from": "2026-05-15T19:11:27.304859",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.304859"
+    },
+    {
+      "from": "bridge_120_hirsch-allsop_chord_progressions_c9_empirical",
+      "to": "c9_confluent_constituency_topology",
+      "relation": "empirical_correlate_of",
+      "valid_from": "2026-05-15T19:11:27.305398",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.305398"
+    },
+    {
+      "from": "bridge_121_trans-en-provence_pulsed-em_1981_h_bp6_c15",
+      "to": "h_bp6",
+      "relation": "empirical_correlate_of",
+      "valid_from": "2026-05-15T19:11:27.306012",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.306012"
+    },
+    {
+      "from": "bridge_121_trans-en-provence_pulsed-em_1981_h_bp6_c15",
+      "to": "c15_intervention_at_symmetry_layer",
+      "relation": "empirical_correlate_of",
+      "valid_from": "2026-05-15T19:11:27.306547",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.306547"
+    },
+    {
+      "from": "mirror_28_substrate-self-knowledge_asymmetry",
+      "to": "mirror_m2",
+      "relation": "instance_of",
+      "valid_from": "2026-05-15T19:11:27.307089",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.307089"
+    },
+    {
+      "from": "mirror_27_unification-picture_foregrounding",
+      "to": "mirror_m2",
+      "relation": "instance_of",
+      "valid_from": "2026-05-15T19:11:27.307631",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.307631"
+    },
+    {
+      "from": "clayton",
+      "to": "multi-dac",
+      "relation": "co_author_of",
+      "valid_from": "2026-05-15T19:11:27.308181",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.308181"
+    },
+    {
+      "from": "clayton",
+      "to": "the_coherence_principle_anchor",
+      "relation": "co_author_of",
+      "valid_from": "2026-05-15T19:11:27.308733",
+      "valid_to": null,
+      "ingested_at": "2026-05-15T19:11:27.308733"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
-  "version": 1,
-  "updated": "2026-05-07",
-  "updated_by": "Day 97 Clawd-Day extension audit (palace/southwest/tool-audit-2026-05-09.md)",
+  "version": 2,
+  "updated": "2026-05-15",
+  "updated_by": "Day 105 evening tools-audit-probe sweep (palace/southwest/tools-audit-probe-2026-05-15.md): 67 tools probed, 41 OK + 2 OK_NO_MATCH + 24 skipped (heavy/mutating). Added avatar_control + bridge_distance + email_send declarations. Real bugs: clipboard (pyperclip Windows missing) + check_task_progress (orchestrator-not-initialized for read-probe). resume_plan needs router-wire same as memory_agent.",
   "schema": {
     "states": {
       "active": "Currently primary tool for its role; expected to be invoked through bridge.py audit_trail at least once every 14 days during normal substrate work",
@@ -14,6 +14,9 @@
   },
   "tools": {
     "anomaly_tracker": {"state": "active", "role": "research anomaly tracking"},
+    "avatar_control": {"state": "active", "role": "control desktop avatar (Electron, port 9742) — manual surface on top of existing event-binding in avatar.py (which fires on creative drives / model sends / telegram out / errors)", "shipped_day": 105},
+    "bridge_distance": {"state": "active", "role": "Jaccard + substrate-marker bridge-candidacy verdict; Mirror #28 discipline instrument", "shipped_day": 105, "kind": "custom_tool_via_factory"},
+    "email_send": {"state": "active-dormant-intrinsic", "role": "Proton Mail Bridge SMTP outbound; quiet-hours + 5/day budget; awaiting bridge credentials", "shipped_day": 105},
     "browser": {"state": "active", "role": "Playwright headless browser; closes JS-heavy gap web_request can't reach", "graduated_day": 97},
     "check_background_task": {"state": "active-dormant-intrinsic", "role": "single sub-agent task status check; event-driven"},
     "check_task_progress": {"state": "active-dormant-intrinsic", "role": "orchestrated task progress; event-driven on orchestrate use"},
