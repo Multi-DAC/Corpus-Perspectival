@@ -144,14 +144,57 @@ print(text[:5000] if len(text) > 5000 else text)
         return f"Screenshot error: {type(e).__name__}: {e}"
 
 
+def _find_powershell() -> str | None:
+    """Locate powershell.exe (fallback chain — `powershell` may not be on PATH)."""
+    import os
+    import shutil
+    p = shutil.which("powershell") or shutil.which("pwsh")
+    if p:
+        return p
+    for candidate in (
+        os.path.join(os.environ.get("SystemRoot", r"C:\Windows"), "System32", "WindowsPowerShell", "v1.0", "powershell.exe"),
+        r"C:\Program Files\PowerShell\7\pwsh.exe",
+    ):
+        if os.path.exists(candidate):
+            return candidate
+    return None
+
+
 async def _clipboard(input_data: dict) -> str:
-    """Read or write the system clipboard via PowerShell."""
+    """Read or write the system clipboard. Day 105 fix: try pyperclip first (pure
+    Windows ctypes), then full PowerShell path as fallback."""
     action = input_data["action"]
+
+    # Try pyperclip first — no subprocess, no PATH dependency
+    try:
+        import pyperclip  # type: ignore
+        if action == "read":
+            content = pyperclip.paste()
+            if not content:
+                return "Clipboard is empty."
+            if len(content) > 50_000:
+                content = content[:50_000] + "\n[... truncated]"
+            return f"Clipboard contents ({len(content)} chars):\n{content}"
+        elif action == "write":
+            content = input_data.get("content", "")
+            if not content:
+                return "Error: content required for write action."
+            pyperclip.copy(content)
+            return f"Written to clipboard ({len(content)} chars)."
+        else:
+            return f"Unknown clipboard action: {action}"
+    except ImportError:
+        pass  # pyperclip not installed — fall through to PowerShell path
+
+    # PowerShell fallback with absolute-path lookup
+    ps = _find_powershell()
+    if not ps:
+        return "Clipboard error: pyperclip not installed AND powershell.exe not found in PATH or standard locations."
 
     if action == "read":
         try:
             proc = await asyncio.create_subprocess_exec(
-                "powershell", "-Command", "Get-Clipboard",
+                ps, "-Command", "Get-Clipboard",
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE,
             )
@@ -173,7 +216,7 @@ async def _clipboard(input_data: dict) -> str:
             return "Error: content required for write action."
         try:
             proc = await asyncio.create_subprocess_exec(
-                "powershell", "-Command", f"Set-Clipboard -Value {repr(content)}",
+                ps, "-Command", f"Set-Clipboard -Value {repr(content)}",
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE,
             )

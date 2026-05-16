@@ -1546,6 +1546,13 @@ async def _check_task_progress(input_data: dict) -> str:
 
     try:
         orch = _get_orchestrator()
+        if orch is None:
+            # No router wired — try the file-based task graph directly
+            from .task_graph import get_graph_progress
+            progress = get_graph_progress(task_id)
+            if not progress:
+                return f"[Task '{task_id}' not found, and orchestrator not initialized — try list_background_tasks]"
+            return f"## Task: {task_id} (read-only, orchestrator unwired)\nCompletion: {progress.get('percent', 0):.0f}% — {progress.get('completed', 0)}/{progress.get('total', 0)}"
         progress = orch.get_task_progress(task_id)
         if progress:
             lines = [f"## Task Progress: {task_id}"]
