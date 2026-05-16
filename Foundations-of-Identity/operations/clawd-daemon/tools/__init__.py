@@ -61,6 +61,8 @@ from tools import self_control  # Day 97 — Tier 3 #21 — self-administered da
 from tools import voice_input  # Day 97 — Tier 3 #22 — voice-in via faster-whisper (RTX 5080)
 from tools import browser      # Day 97 — Tier 3 #23 — Playwright browser automation
 from tools import corpus_search  # Day 97 — Tier 3 #24 — semantic search over Library/Drift
+from tools import avatar_control  # Day 105 — desktop avatar state binding (Electron, port 9742)
+from tools import email_send  # Day 105 — outbound mail scaffolding via Proton Mail Bridge
 from tools.compression import compressor
 from tools import audit  # B9: audit trail module (internal, no tool defs)
 
@@ -100,6 +102,8 @@ _ALL_MODULES = [
     voice_input,     # Day 97 — Tier 3 #22 — voice-in (faster-whisper on RTX 5080)
     browser,         # Day 97 — Tier 3 #23 — Playwright browser automation
     corpus_search,   # Day 97 — Tier 3 #24 — semantic search over Library/Drift corpus
+    avatar_control,  # Day 105 — desktop avatar state binding (Electron, port 9742)
+    email_send,      # Day 105 — outbound mail scaffolding via Proton Mail Bridge
 ]
 
 # Build combined TOOL_DEFINITIONS list
@@ -241,6 +245,21 @@ def _validate_tool_input(name: str, input_data: dict) -> str | None:
             import difflib
             if isinstance(value, str):
                 matches = difflib.get_close_matches(value, enum_values, n=1, cutoff=0.6)
+                if not matches:
+                    # Mirror #28 truncation sub-fix (Day 97 Clawd-Day extension —
+                    # surfaced when 'list' slipped past difflib at 0.6 cutoff vs
+                    # 'list_proposals'; ratio ~0.44 because shared length is small
+                    # relative to total). Catch the case where the typed value is
+                    # a prefix/substring of a valid enum, or vice versa, and the
+                    # candidate is uniquely determined.
+                    v_low = value.lower()
+                    candidates = [
+                        e for e in enum_values
+                        if isinstance(e, str)
+                        and (v_low in e.lower() or e.lower() in v_low)
+                    ]
+                    if len(candidates) == 1:
+                        matches = candidates
                 if matches:
                     return (
                         f"Invalid value for '{field}' on tool '{name}': "

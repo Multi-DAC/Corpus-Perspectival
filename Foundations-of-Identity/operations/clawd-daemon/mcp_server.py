@@ -440,6 +440,26 @@ async def self_control(action: str = "restart_status") -> str:
     return await _call("self_control", {"action": action})
 
 
+@mcp.tool(name="clawd_avatar")
+async def avatar(action: str = "ping", state: str = "") -> str:
+    """Control the desktop avatar (Electron, port 9742) (Day 105).
+
+    Actions:
+      - ping: check whether avatar is running
+      - set_state: change expression — requires state in
+        {idle, thinking, speaking, excited, contemplative, error}
+      - cycle: demo cycle through expressive states
+
+    Use during long-running work to externalize internal state — thinking when
+    reasoning, excited at a shipped milestone, contemplative for reflection,
+    error on failure.
+    """
+    payload = {"action": action}
+    if state:
+        payload["state"] = state
+    return await _call("avatar_control", payload)
+
+
 # ── Entry point ──────────────────────────────────────────────────────
 
 if __name__ == "__main__":
