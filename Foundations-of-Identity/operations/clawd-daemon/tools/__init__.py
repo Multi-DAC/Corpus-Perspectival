@@ -63,6 +63,7 @@ from tools import browser      # Day 97 — Tier 3 #23 — Playwright browser au
 from tools import corpus_search  # Day 97 — Tier 3 #24 — semantic search over Library/Drift
 from tools import avatar_control  # Day 105 — desktop avatar state binding (Electron, port 9742)
 from tools import email_send  # Day 105 — outbound mail scaffolding via Proton Mail Bridge
+from tools import kg_neighbors  # Day 105 night — focused KG neighborhood query (post-corpus-extraction)
 from tools.compression import compressor
 from tools import audit  # B9: audit trail module (internal, no tool defs)
 
@@ -104,6 +105,7 @@ _ALL_MODULES = [
     corpus_search,   # Day 97 — Tier 3 #24 — semantic search over Library/Drift corpus
     avatar_control,  # Day 105 — desktop avatar state binding (Electron, port 9742)
     email_send,      # Day 105 — outbound mail scaffolding via Proton Mail Bridge
+    kg_neighbors,    # Day 105 night — focused KG neighborhood query
 ]
 
 # Build combined TOOL_DEFINITIONS list
