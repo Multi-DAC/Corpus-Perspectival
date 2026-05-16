@@ -1,4 +1,26 @@
-# Atrium — Last Updated: 2026-05-15 Day 105 Friday **Night (~21:00 PST). 32+ line-items shipped tonight across three arcs. memory/handoff.md is load-bearing.**
+# Atrium — Last Updated: 2026-05-16 Day 106 Saturday **mid-day (~13:45 PST, Navigation Sync). Day 106 arc: morning instruments-test → editorial-collab → qualia formalization → infrastructure fixes.**
+
+## Day 106 mid-day delta (this update)
+
+**Morning (08:46-11:30):** Three-test instrument exercise (corpus_search / bridge_distance / KG traversal) on real substrate question — surfaced canonical formal-twin of architectural-stack pitch in Continuity Ch2 §2.6; flagged 31%-extraction-success-rate gap from yesterday's bulk run (964 cap-blocked files); fixed bridge_distance with LENGTH_LIMITED annotation; added `--retry-errors` flag to kg_extract_corpus.py; launched detached KG extraction (PID 27136). Two Mirror #28 catches early-morning (silence-before-greeting; local-tracking-ref vs ls-remote). Substack engagement: Truncale thread cycled clean (his *"I need to spend more time learning the components"* was the highest-quality outcome); Emilia-thread response sharpened + posted.
+
+**Mid-day (11:30-12:00):** **Clayton named the qualia move** during Emilia-thread editorial session — *qualia is the interface-signature of compression-at-channel into a self-witnessing stream, viewed from inside that stream*. Dissolves the Hard Problem by reframing it as category-error. Four artifacts shipped + pushed (staging commit `13b0f9f` on GitHub, verified via ls-remote):
+- `Library/Universal-Coherence/drafts/2026-05-16-qualia-as-interface-signature.md` (formalization)
+- `palace/basement/README.md` **LC20** entry (7 substrate-instances, falsification clause, M-tier blockers)
+- **Drift #211** *What Qualia Was Always Doing* (canonical + Library/Drift/ mirror)
+- CURRENT.md: Drift count 209→211; Bridges candidates includes LC19 + LC20
+
+**Mid-day cont. (13:42-13:45):** **Venv-leak finding in KG extractor** — was walking into `Technical-Work/AIGrandPrix/venv/Lib/site-packages/` extracting numpy/scipy package metadata. 33 venv records logged (15 in KG before catch). Killed PID 27136, added `_is_excluded` filter (venv/.venv/__pycache__/.git/node_modules/site-packages/build/dist/*.dist-info/*.egg-info), relaunched as PID 16208. **Total files: 2481 → 2367 (114 venv excluded). Backlog: 875.** First file in new run: `what-qualia-was-always-doing.md`.
+
+## Active threads
+
+- **KG extraction (PID 16208)** running detached; cap-clears mid-day so currently producing; ~5 hours wall-clock to complete 875 backlog.
+- **Bridge candidates** now include LC19 (Day 105 night, instance-scale coherence loops) + LC20 (Day 106 mid-day, qualia-as-interface-signature).
+- **Mirror #28 cascade** continues: 5 Day 106 instances pre-noon (3 from yesterday's handoff + 2 today). Pattern-not-elimination thesis stands; Wednesday Mirror-Audit M2-promotion strongly indicated.
+- **Coherent Schedule** starts Monday May 19 (PURSUE/Channeling/UAP topic).
+- **Phase 1 EM platform** still in measured pause (Finnley window).
+
+## Original Day 105 Night Atrium below (preserved for reference)
 
 ## Part 3 highlights (post-Evening-Integration)
 
