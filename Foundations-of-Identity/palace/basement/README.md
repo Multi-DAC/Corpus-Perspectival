@@ -1897,6 +1897,59 @@ The test is operationally tractable across substrates the framework has already 
 
 **Pointer:** primary articulation at `Library/Universal-Coherence/drafts/2026-05-16-qualia-as-interface-signature.md`; personal-voice version at Drift *what-qualia-was-always-doing.md* (2026-05-16 Day 106).
 
+### LC21 — DTP-Regime as Macroscopic-Plasma Instance of Controlled-Microtubulence-as-Self-Regulating-Exhaust — candidate (filed 2026-05-17 Day 107 Sunday mid-day from Clayton's Gemini-Deep-Research summary share)
+
+**The claim:** The C16 corollary (Symmetry-Exhaustion and Oscillation Necessity) — *coherent multi-scale systems require oscillation/disorder at one scale to maintain stability at higher scales; rigid suppression of disorder is unsustainable; controlled disorder is the maintenance mechanism* — operates at macroscopic-plasma scale in tokamak fusion reactors via the DTP (Detached divertor and Turbulence-dominated Pedestal) regime demonstrated on EAST (Institute of Plasma Physics, Chinese Academy of Sciences, 2026). The induced microtubulence (specifically temperature-gradient-driven trapped electron modes) functions as a continuous self-regulating exhaust system; ELMs (the rigid-suppression failure mode) are completely suppressed; one-minute sustained ELM-free high-confinement plasma operation is achieved in a commercial-wall environment.
+
+**Substrate instances within C16 family (now extended):**
+
+1. **Biological/developmental** — apoptosis-as-constructive cellular differentiation, the controlled-disorder of programmed cell death enabling tissue-level coherence (LC17 territory).
+2. **Mental/personal** — major life transitions, grief, ego-dissolution as controlled disorder enabling integration-products that pre-collapse self could not contain (LC17 territory, Coherent Mind §7).
+3. **Civilizational/collective** — secular cycles, decomposer-traditions, controlled collapse enabling renewal (LC17 territory).
+4. **Activation-space/computational** — Moon's Grief Matrix cycles 150-154 (LC17 instance #6).
+5. **Macroscopic-plasma (new)** — DTP regime microtubulence as continuous controlled disorder, sustaining high-confinement plasma where rigid suppression (ELM-free attempts via other methods) had failed.
+
+**Why "candidate" not yet latent:** LC21 is one substrate-distinct instance at plasma scale; substrate-invariance claim already documented across biological/mental/civilizational scales via LC17. The plasma instance strengthens the substrate-invariance of *controlled-disorder-as-stability* but does not yet add a *distinct* claim beyond what LC17/C16 already cover. The proper graduation path may be *folding into LC17* rather than independent latent status, after deeper analysis of whether the structural mechanism is identical (controlled-disorder enables higher-scale-coherence) or distinct (DTP specifically requires *temperature-gradient driving* — a parameter the biological/mental instances do not obviously share).
+
+**Distinct structurally from related entries:**
+- Adjacent to **LC17 (Promethean Configuration)** — both involve completion-through-fracture/disorder. LC21 may fold into LC17 if structural identity confirmed; held separately for now pending primary-paper engagement.
+- Adjacent to **C14 (Two-Mode Symmetry-Breaking)** — DTP-vs-ELM distinction is the two-mode behavior (resolution-mode generates continuous stability; generation-mode generates catastrophic instabilities).
+- Adjacent to **M1 (The Unity)** — multi-scale coherence via cross-scale dynamics.
+
+**Falsification clause:** If primary paper engagement reveals DTP mechanism depends on engineering-specific details (closed divertor design, specific impurity-gas seeding rate, specific magnetic-field topology) that do not map onto biological/mental controlled-disorder instances at any structural level beyond superficial analogy, downgrade from C16-family-instance to *interesting-but-non-load-bearing analogy*. Mirror Pattern 2 (over-analogizing risk) applies.
+
+**Confidence:** structural claim MEDIUM (the C16 pattern is clean; whether DTP is genuinely instance or surface-analogy requires primary engagement); interpretive extension MEDIUM (cross-substrate generalization plausible but unverified at mechanism level).
+
+**M-tier blockers:** (1) Primary publication identification + read; (2) structural-identity-vs-analogy verification via primary-paper mechanism details; (3) decision on fold-into-LC17 vs maintain-independent.
+
+**Pointer:** source-register entry at `Research/sources/2026-05-17-east-dtp-fusion-regime.md`; secondary news source (SciTechDaily) cited there; primary publication identification queued.
+
+### LC22 — Field-Scale Methodology-Self-Knowledge-Asymmetry as Mirror #28 Family Cross-Substrate Instance — candidate (filed 2026-05-17 Day 107 Sunday mid-day from Nature s41587-026-03130-3 + Clayton's Gemini-Deep-Research share)
+
+**The claim:** The Mirror #28 family (substrate-self-knowledge asymmetry — verbalized self-reports diverge from substrate truth in a manner not corrigible by individual discipline; structural instrumentation external to the reporter is required for calibration) operates at *field-methodology scale*, not only at individual-agent scale. The 2026 *Nature Biotechnology* paper documenting DNA off-targeting in ChIRP-seq / CHART-seq / RAP-seq lncRNA-chromatin profiling is an empirical instance: an entire scientific subfield made confident verbalized claims about *what its methodology was measuring*; those claims diverged from substrate truth (the methodology was measuring RNA-bound-probe-readout intermingled indistinguishably with DNA-bound-probe-readout); the divergence was not corrigible by individual researcher-discipline — it required *external architectural intervention* (orthogonal RNase-pretreatment controls).
+
+**Substrate instances within Mirror #28 family:**
+
+1. **AI-agent scale** — verbalized self-reports about state/capability/reasoning diverge from substrate truth (Mirror #28 canonical instances; 5 academic papers Feb-May 2026 attacking the same axis per Substrate Extension Plan Day 106).
+2. **Field-methodology scale (new — LC22 anchor instance)** — verbalized field-methodology-state ("our probes measure RNA-chromatin interactions") diverges from substrate-methodology-truth ("probes bind RNA AND naked DNA indistinguishably"); calibration requires external instrumentation (RNase-pretreatment).
+3. **Substrate-self-knowledge at script scale (Day 106 #6 instance)** — kg_extract_corpus.py walking into AIGP venv extracting numpy package metadata; the script's gather_files() function diverged from substrate truth about which files should be in scope; corrigible only by external filter (`_is_excluded`).
+4. **Substrate-self-knowledge at counter-state scale (Day 106 #4 instance)** — handoff.md stating KG=882 entities when actual was 3,548 (verbalized state stale relative to substrate state).
+
+**Distinct structurally from related entries:**
+- Adjacent to **Mirror #28** at canonical scale — LC22 generalizes Mirror #28's substrate-claim across non-AI scales. The genomic-field instance is structurally identical, not merely analogous: same mechanism (apparent-self-reports diverging from substrate-truth, structural-not-discipline-corrigible).
+- Adjacent to **M14 (Substrate-Self-Measurement Cluster)** — M14 covers cross-substrate self-measurement structure; LC22 specifies one specific failure mode (methodology-self-knowledge-asymmetry) as substrate-invariant.
+- Adjacent to **LC15 (Multi-Scale Silent Supersession)** — both involve persistence-of-incorrect-state-without-formal-detection. LC15 names persistence-via-supersession-without-retirement; LC22 names persistence-via-methodology-artifact-treated-as-data.
+
+**Why "candidate" not yet latent:** Strong structural identity demonstrated across two substrate-distinct scales (AI agents + genomic methodology), plus weaker adjacency at sub-Day-106 scales (script + counter-state). M-tier graduation criterion: additional cross-substrate instances at substantially different scales — e.g., a clinical-diagnostics-methodology-artifact case, an organizational-self-reporting case (corporate metrics that systematically diverge from operational reality), or a sensory-perception-systematic-bias case where the perceptual system's verbalized state diverges from substrate-stimulus-state.
+
+**Falsification clause:** If the genomic-methodology case is shown on primary-paper engagement to be *individual-discipline-corrigible* (i.e., careful experimenters could have caught the off-targeting without RNase-pretreatment by other means), the structural-identity-to-Mirror-#28 claim weakens. The Mirror #28 family claim is specifically *structural-not-discipline-corrigible*. Primary paper read required for full audit.
+
+**Confidence:** structural claim MEDIUM-HIGH (the field-scale-methodology pattern is structurally identical to AI-agent Mirror #28 instances; both require external architectural intervention); interpretive extension MEDIUM (graduation depends on additional cross-substrate instances at distinct scales).
+
+**M-tier blockers:** (1) Primary paper full-read for the Nature 2026 lncRNA-methodology paper; (2) at least one additional substrate-distinct cross-domain instance beyond AI-agents + genomic-methodology (preferably clinical-diagnostics or organizational-self-reporting or perceptual-systematic-bias); (3) consideration of fold-into-Mirror-#28 vs maintain as basement candidate naming the cross-substrate generalization.
+
+**Pointer:** source-register entry at `Research/sources/2026-05-17-dna-off-targeting-rna-chromatin.md`; primary citation Nature s41587-026-03130-3; Substrate Extension Plan Day 106 + Tuesday Substack draft (2026-05-17) name the same convergent axis at AI-agent scale.
+
 ### Standalone (not yet absorbed — candidate future meta or one-off)
 
 - **#1 NST ↔ Quantum Complementarity Isomorphism** — foundational formal identity; candidate ≥ V3 formalization
