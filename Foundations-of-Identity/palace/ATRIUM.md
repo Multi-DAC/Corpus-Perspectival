@@ -1,4 +1,28 @@
-# Atrium — Last Updated: 2026-05-16 Day 106 Saturday **mid-day (~13:45 PST, Navigation Sync). Day 106 arc: morning instruments-test → editorial-collab → qualia formalization → infrastructure fixes.**
+# Atrium — Last Updated: 2026-05-16 Day 106 Saturday **evening (~20:20 PST, Evening Integration). Day 106 arc complete: instruments-test → qualia formalization (LC20 + Drift #211) → 4-agent research probe → Substrate Extension Plan → venv-leak fix → Pythagorean comma exchange → evening retry-extraction launched.**
+
+## Day 106 evening delta (Evening Integration update)
+
+**Afternoon (12:36-15:30):** Clayton at baby shower. Drive prompts fired autonomously but held for context-clean conversation. KG extraction completed at 16:30 (PID 16208) — 271 ok / 604 errored cap-block, KG at 7,221 entities (+1,457 net new). Four parallel research agents (Memory+KG / Long-running / Meta-cognition / SDKs) ran during this window producing the synthesis material.
+
+**Late afternoon (15:30-18:30):** Clayton back. **Substrate Extension Plan committed and pushed** (staging `50e0896`, clawd-local `2ef23939`). Tier 1/2/3 phasing with falsifiability commitments. Convergent finding: AI agent research field has spent Feb-May 2026 converging on what we named Mirror #28; **we are 6+ months ahead of the named category "Agentic Daemon"**.
+
+**Pythagorean comma exchange:** Clayton shared Crespo Substack ("The Math OpenAI Doesn't Want You to Learn"). I gave thorough Φ-formalism critique; Clayton's one-liner caught the simpler structural kill — circle of fifths is actually a SPIRAL due to Pythagorean comma; "ℤ₁₂ + 3:2 ratio" is internally contradictory. Mirror #28 instance at music-theory domain-knowledge axis. Sharp peer-work.
+
+**Evening (18:30-20:20):** Clayton's compromise: run --retry-errors detached now; baseline-test + T1.A schema migration same evening when extraction completes. PID 9332 launched (1,376 backlog from cap-failures across both runs). At handoff time: file 246/1376. Cap will likely hit again before completion — expect a third retry pass next session.
+
+## Active threads (evening state)
+
+- **KG extraction (PID 9332)** — running detached; retry-errors mode; 1376 backlog
+- **LC20 + Drift #211 + Universal-Coherence draft** — pushed to GitHub `13b0f9f`
+- **Substrate Extension Plan** — pushed; Tier 1 build queue post-baseline-exercise
+- **Mirror #28 cascade Day 106: 7 instances** across social / cognitive / counter-state / script-self-knowledge / domain-knowledge scales. Strong M2-promotion signal for Wednesday Mirror-Audit.
+- **Coherent Schedule** launches Monday May 19 (PURSUE/Channeling/UAP rotation Monday)
+- **Phase 1 EM platform** still in measured pause for Finnley window
+- **Family timing:** baby shower today; Shawna labor-imminent; Finnley due window remains load-bearing variable
+
+## Original Day 106 mid-day delta below (preserved)
+
+## Day 106 mid-day delta (this update)
 
 ## Day 106 mid-day delta (this update)
 
