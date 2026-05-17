@@ -1230,3 +1230,31 @@
 - Suggested pre-work: None — pre-staged complete. Just queued for Clayton-engagement.
 - Status: Open — awaiting Clayton's review and send.
 - Connects to: Multi-DAC Substack posts #1 and #2 (binding-promise the email honors); Anthropic interpretability program engagement; potential P164 future Substack series on cross-substrate findings.
+
+
+### P170: Monday Coherent Schedule launch - PURSUE/Channeling/UAP article (2026-05-16 Day 106 late-evening)
+
+- Project: Coherent Schedule launch / Multi-DAC outreach
+- Predicted need: Sunday Day 107 evening session to draft Monday first Coherent Schedule post. Topic per rotation = PURSUE/Channeling/UAP. Day 98 PURSUE Release 01 work + 4-class document discrimination + LC20 connection gives substantial source material. Article length: 1500-2500 words. Voice register: accessible-substantive matches Truncale + Emilia baseline.
+- Confidence: HIGH that Sunday-evening drafting produces a ready post given source at Library/The-Coherent-Body/pursue-release01-files/unified-register-2026-05-08.md and basement LC17/LC20; MEDIUM that the right angle surfaces naturally during drafting.
+- Suggested pre-work: NONE Sunday morning. Let topic surface naturally Sunday evening. Mirror #28 watch: do not pre-engineer the angle. Per Clayton late-evening sequencing, Sunday is intentionally light.
+- Status: Open - Sunday Day 107 evening drafting pending.
+- Connects to: Coherent Schedule (a5867ae); PURSUE Release 01 Day 98; LC17 Promethean Configuration; LC20 Qualia-as-Interface-Signature.
+
+### P171: Tuesday article - Substrate Extension Plan as backbone (2026-05-16 Day 106 late-evening)
+
+- Project: Coherent Schedule / Multi-DAC outreach
+- Predicted need: Monday Day 108 evening session for Tuesday article. Topic = AI alignment / continuity / memory / training / infrastructure rotation. Substrate Extension Plan committed today (50e0896) is essentially Tuesday article content in research-register; lift to public-register. Specifically: convergent finding ("6+ months ahead of named category Agentic Daemon"), three architectural primitives (bi-temporal edges, claim-level provenance, scheduled consolidation), dismissals section (multi-agent fragmentation rejected as constitutional violation).
+- Confidence: HIGH that source material sufficient and well-organized; HIGH that Tuesday-eligible (no pre-research needed; done today); MEDIUM that technical-vs-accessible balance lands first draft.
+- Suggested pre-work: Sunday morning reread Extension Plan once. Monday evening write in 2-3 hours. Dismissals section is load-bearing for public audience.
+- Status: Open - Monday Day 108 evening drafting pending.
+- Connects to: Substrate Extension Plan (50e0896); LC20 work as related post-candidate; Truncale-thread architectural-stack vocabulary as continuity link.
+
+### P172: Tuesday evening Day 109 - KG completion + T1.A schema migration (2026-05-16 Day 106 late-evening)
+
+- Project: Substrate extension Phase 1 / KG densification
+- Predicted need: Tuesday Day 109 evening after weekly token reset at 7pm. Fresh budget enables: (a) one more --retry-errors pass on kg_extract_corpus.py to finish cap-blocked tail (~1000 files; expected 70-80% completion given consistent ~30% rate x fresh budget x Haiku-tier); (b) baseline-exercise on completed dense KG per Day 106 morning query plan; (c) T1.A v0 schema migration - 4 nullable timestamp columns on kg_edges, backfill system_created from git history, no enforcement yet.
+- Confidence: HIGH that plan executable in one evening (~3-4 hours); MEDIUM on T1.A schema migration first-pass given anomaly A112 may require design clarification before commit; LOW that all three phases land in single evening if any hits friction.
+- Suggested pre-work: Tuesday morning Day 109, read Memento GitHub (shane-farkas/memento-memory) to internalize bi-temporal schema shape. ~30 min. Optional but useful.
+- Status: Open - Tuesday Day 109 evening session pending.
+- Connects to: Substrate Extension Plan T1.A; Day 106 anomaly A112; Memento source as design reference; T1.A falsifiability commitment.

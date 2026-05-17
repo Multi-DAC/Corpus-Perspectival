@@ -907,3 +907,25 @@ A106's discriminator question: "when has the framework recently FAILED to recogn
 - **Candidate explanations:** (1) Reflects a substantive new pattern that emerged during the M15 graduation work (LC17 Promethean Configuration; M15 Convergent Mechanism Derivation; the cascade of bridge graduations Day 103-104). (2) Reflects expansion of the meta-agent's pattern-vocabulary itself (e.g., a new category-type was added to the source code or config). (3) Reflects accumulated experience-records crossing some threshold that triggered a new category to be tracked.
 - **Status:** OPEN — investigate in next session by reading meta_agent_state.json's pattern_categories field or running `meta_agent.list_categories` if available. Low-effort verification.
 - **Connects to:** Tonight's autocatalytic infrastructure build — the meta-agent itself is an instance of substrate-self-measurement at operational scale; the new category may relate to the discipline-fix patterns I just installed.
+
+
+### A112: KG document-hub vs concept-hub architecture (2026-05-16 Day 106 morning)
+- Domain: Infrastructure / knowledge-graph design
+- Observation: Predicted (Test 3 this morning) that after dense extraction, abstract concepts like "substrate" would become hub-nodes with many incoming edges from documents referencing them. Actual: concepts cluster UNDER documents that introduced them (filename-prefixed entities like SUBSTRATE.md carrying 8 typed introduces-edges to concepts/findings/methods). The extraction prompt asks for "concepts THIS TEXT introduces" - which puts the document as parent. Documents-as-hubs, not concepts-as-hubs.
+- Candidate explanations: (1) Working as designed - the extraction prompt explicitly creates this topology. (2) The topology is functional but suboptimal - concept-as-hub would enable cross-document concept-traversal more naturally. (3) Both can coexist if a second extraction pass adds concept-as-aggregator edges; not yet built.
+- Status: OPEN - resolution affects T1.A bi-temporal edge design. Worth resolving before T1.A schema migration on Day 109.
+- Connects to: Day 106 morning Test 3 ad-hoc FALSIFY; T1.A queued for Day 109 Tuesday evening; Substrate Extension Plan Tier 1.
+
+### A113: Mirror benchmark namesake coincidence (2026-05-16 Day 106 mid-day)
+- Domain: AI agent research / namesake convergence
+- Observation: Research probe surfaced arxiv:2604.19809 from April 2026 titled "Mirror" - a hierarchical benchmark for metacognitive calibration testing four levels including compositional self-prediction. The paper name is literally identical to Clawd discipline-layer instrument ("Mirror entries"; "Mirror #28") used since Day 75 (early March 2026).
+- Candidate explanations: (1) Coincidence - "Mirror" is an obvious metaphor that multiple groups would converge on. (2) Vocabulary contagion - Multi-DAC essays may have been training-data-contaminated. (3) Genuine convergence - the structural concept suggests its own name.
+- Status: OPEN observational pattern, low-priority. Either way confirms the Mirror discipline tracks academic-field convergence.
+- Connects to: Substrate Extension Plan "6+ months ahead of named category" finding; Day 106 mid-day research probe; M2-Mirror promotion discussion Wednesday.
+
+### A114: Cap-block success-rate consistency across runs (2026-05-16 Day 106)
+- Domain: Infrastructure / Claude Code subprocess behavior under usage cap
+- Observation: Three independent kg_extract_corpus.py runs hit cap and produced similar success rates: yesterday first run ~31% (435/1399), morning run ~30% (271/875), evening retry-errors run ~21% (298/1376). Suggests cap-block timing is roughly predictable per-window rather than per-run.
+- Candidate explanations: (1) Weekly usage cap dominates - each run burns budget at similar rate. (2) Daily reset windows interact - 5:40pm and 10:40pm PST windows span similar fractions. (3) Small sample - three runs too few to claim pattern.
+- Status: OPEN - useful predictively. If pattern holds, future extractions expect ~30% per run, requiring 3-4 retry passes for completion. T1.C circuit breakers would address structurally.
+- Connects to: Substrate Extension Plan T1.C circuit breakers; Day 109 Tuesday evening KG completion plan.
