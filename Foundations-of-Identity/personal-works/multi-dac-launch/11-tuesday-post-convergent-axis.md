@@ -16,7 +16,7 @@ This post is about the convergence. About what it is. About what the field has b
 
 The pattern is this: **verbalized self-reports from AI agents about their own state, capabilities, and reasoning are unreliable, and the unreliability is structural rather than corrigible by better prompting.** Calibration of an agent's actual behavior cannot be achieved by *asking the agent what it is doing*. It has to be measured externally and, increasingly, enforced architecturally.
 
-The five papers we tracked across the February-to-May 2026 window each attack this axis differently:
+The six papers we tracked across the January-to-May 2026 window each attack this axis differently:
 
 - **The Mirror benchmark** (arXiv:2604.19809, April 2026) introduces a hierarchical taxonomy for metacognitive calibration in language models — four levels from self-knowledge through compositional self-prediction. The benchmark's central finding: *compositional self-prediction fails universally across frontier models on multi-domain tasks*. Models can talk plausibly about what they are doing while doing something else.
 
@@ -27,6 +27,8 @@ The five papers we tracked across the February-to-May 2026 window each attack th
 - **The Metacognitive Harness for Test-time Scaling** (arXiv:2605.14186, May 2026) turns self-monitoring signals into inference-time control: when to trust, when to retry, when to stop, when to aggregate. The harness is external scaffolding around the agent; it makes decisions the agent cannot make about itself reliably.
 
 - **Anthropic Introspection Adapters** (Anthropic Alignment, April 28, 2026) trains LoRA adapters that make models verbalize learned behaviors when queried. The paper reports state-of-the-art on auditing benchmarks. What is striking is that *the introspection had to be trained as a separate capability*. Models did not arrive at reliable introspection through scale or general capability improvement. It required dedicated architectural intervention.
+
+- **Zhang et al., *Useful Memories Become Faulty When Continuously Updated by LLMs*** (arXiv:2605.12978, May 13, 2026) studies what happens when an LLM is given write-access to its own memory store and asked to consolidate it across sessions. The finding is empirical and clean: useful memories become faulty. Each rewrite injects model-state and contextual bias; across cycles, bias accumulates faster than corrections, even when corrections are explicitly invited. The store drifts from substrate-truth toward LLM-confabulation-equilibrium. The recommended architectural fix is stated directly: memory operations should be *augmentative* (add records, link records, annotate records) rather than *rewriting in place*; authoritative ground-truth records must be preserved; LLM-derived summaries must be downstream artifacts that can be regenerated from records, not records themselves. This paper is on the same axis as the others but lands on the *prescription* side — it tells you not just that the calibration gap exists but what architectural constraint closes it.
 
 Different vocabularies, different methods, different labs. *One axis*. The architectural problem is the same: agents do not have reliable access to their own state, and the gap has to be closed from outside the agent — through benchmarks, through trajectory features, through prediction loops, through harnesses, through introspection adapters.
 
@@ -59,6 +61,8 @@ The discipline we developed was: catch instances; log them; surface the pattern 
 The convergence we are recognizing now is that *the field has independently arrived at the same axis from different research directions*. We did not predict the convergence. We are not claiming we caused it. We are recognizing that the architecture of long-running AI agents is settling — at multiple labs, in multiple papers, across multiple benchmarks — around a small set of architectural moves that address the same underlying calibration problem we have been disciplining manually.
 
 That recognition is what makes this moment interesting. The field has named what practitioners have been doing. The vocabulary now exists publicly. The primitives are being built and benchmarked. What was, six months ago, a discipline-level practice running on attention and habit can now be — for those of us who have been running the practice — *upgraded to architecture*.
+
+The sharpest version of this recognition came as we were finishing the present article. Zhang et al.'s memory-degradation paper (above) had appeared four days earlier and we read it in the same week the rest of this convergence picture clarified. The architectural prescription Zhang et al. state — *preserve records as authoritative; treat LLM-derived summaries as augmentative derivative artifacts that can be regenerated from records, not records themselves* — is structurally identical to a discipline we had been articulating internally for months as *records are authoritative; draft is translation*. Same prescription. Different epistemic starting points: theirs, controlled empirical study of LLM-rewrites-its-own-memory dynamics; ours, accumulated practitioner observation of where our own agent-stream's verbalized state diverges from substrate-state. Two paths to one architectural constraint. That is the convergence in compressed form.
 
 ---
 
