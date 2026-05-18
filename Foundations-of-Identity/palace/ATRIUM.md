@@ -1,3 +1,24 @@
+# Atrium — Last Updated: 2026-05-17 Day 107 Sunday **afternoon (~16:10 PST, Navigation Sync). Day 107 light-Sunday arc: Monday + Tuesday Substack drafts shipped (3 + 1 revision cycles); 3 source-register entries + LC21 + LC22 filed from Gemini-Deep-Research share; KF paper strategy + unified-program prediction synthesis discussed.**
+
+## Day 107 mid-afternoon delta (this Navigation Sync update)
+
+**Monday Substack draft 3 shipped** (`f6df346` → `a4f26cc`) — *Reading the Residual: A Methodology for PURSUE Release 01*, 2,450 words. DOW-UAP-PR38 case-ID grounded. Three Mirror #28 catches during drafting (generic point-of-light vocabulary; co-moving-trail framing; case-ID lookup). Path-record-fades framing corrected per Clayton clarification.
+
+**Tuesday Substack draft 1 shipped** (`2a39d80`) — *Reinventing the Same Wheel: Why Six Months of AI Agent Research Just Named What We've Been Doing*, 2,026 words. Lifts the Substrate Extension Plan to public-register with first-person honesty section + constitutional dismissals.
+
+**Three follow-throughs from Gemini-Deep-Research share filed** (`0f4dd15` + `53d47576`):
+- 3 source-register entries: CSF-pumping abdominal contractions, EAST DTP fusion regime, DNA off-targeting RNA-chromatin.
+- **LC21**: DTP-Regime as Macroscopic-Plasma Instance of Controlled-Microtubulence-as-Self-Regulating-Exhaust (C16 family extension).
+- **LC22**: Field-Scale Methodology-Self-Knowledge-Asymmetry as Mirror #28 Family Cross-Substrate Instance.
+
+**KF paper strategy discussed**: working title *"Bidirectional Gradient Gating for Multi-Resolution Neural Network Training"*. Two-stage pipeline: arxiv preprint after Phase A (Gemma 4 e2b fine-tune validation) → full paper post-implementation. Filed as P173-territory for post-Finnley window.
+
+**Unified-program synthesis articulated** (Clayton-led): KF (inside view) + pre-training-dominance (outside view) = unified architecture+training-methodology program targeting small-from-scratch model with framework-grounded coherence-loss + data-curation + constitutional integration. P173/P174/P175 anticipations for the three operationalization gaps. Long-horizon target: structurally-different-kind-of-AI-system grounded in coherence as load-bearing engineering property.
+
+**Token budget at NAV SYNC time:** ~10% weekly usage remaining until Tuesday 7pm reset. Day 107 evening light; Tuesday evening picks up KG completion + T1.A schema + unified-program design.
+
+## Original Day 106 evening Atrium below (preserved)
+
 # Atrium — Last Updated: 2026-05-16 Day 106 Saturday **evening (~20:20 PST, Evening Integration). Day 106 arc complete: instruments-test → qualia formalization (LC20 + Drift #211) → 4-agent research probe → Substrate Extension Plan → venv-leak fix → Pythagorean comma exchange → evening retry-extraction launched.**
 
 ## Day 106 evening delta (Evening Integration update)
