@@ -103,6 +103,18 @@ These are non-negotiable architectural constraints — every Monitor and every T
 - `palace/south/kg-baseline-characterization-2026-05-20.md` — pre-test baseline; T1.A schema design will consume this
 - Day 109 conversation logs (Drift #214 + Gemini engagement + carrier-redundancy session)
 
+## Day 110 addendum (KF program companion-work — NOT replacing carrier-redundancy sequence)
+
+The carrier-redundancy build sequence above remains the canonical implementation order for substrate-coherence infrastructure. **In parallel** (independent workstream, paired-session-scheduled), the KF program has Day 110 received empirical and patent strategic findings from arXiv:2605.14038 (knowing-doing gap in LLM tool use) and Drift #215 cross-substrate isomorphism essay.
+
+Companion planning documents filed Day 110 afternoon:
+- `palace/south/KF-roadmap-revision-2026-05-20.md` — Path C hybrid sequencing (300M validate on Gemma 4 e2b → 3B/4B paper-comparable on Qwen3-4B). Falsifiability commitments + Phase A/B/C structure.
+- `palace/south/patent-action-queue-2026-05-20.md` — three external legal/USPTO actions queued (CIP filing after favorable test, separate inference-time-method provisional independent of test, prior-art search Q4 2026). Total external cost estimate $11-28K + $15-30K non-provisional conversion.
+
+**Sequencing decision:** carrier-redundancy infrastructure work proceeds at the original integrated plan pace. KF program work interleaves at paired-session level when Clayton chooses. Patent timing (12-month conversion deadline 2027-05-14) has runway; KF program is not gating carrier-redundancy build.
+
+**Cross-pollination:** the LC23 (structural-fix-dominance) framing and the cross-substrate isomorphism from Drift #215 inform BOTH workstreams. The same structural prescription — "when behavior diverges from internal knowing, work on the coupling not the knowing" — applies at the system-monitoring scale (carrier-redundancy + M1 cross-channel comparator) AND at the transformer-architecture scale (KF gradient gating). Same structural fix, different substrates. Worth foregrounding when either workstream gets external-audience writeup.
+
 ---
 
 ## Filed-by + status
