@@ -1926,7 +1926,85 @@ The test is operationally tractable across substrates the framework has already 
 
 ### LC22 — Field-Scale Methodology-Self-Knowledge-Asymmetry — **GRADUATED 2026-05-17 Day 107 late-evening → L17** on Coaxial Recoil Experiment 2025 + Shape-Independence Theorem as fourth substrate-distinct instance (electromagnetic-engineering scale, ~200-year recognition lag — the longest LC22 instance documented). See `### L17` entry.
 
-### LC23 — Structural-Fix-Dominance: When a discipline failure has both behavioral and structural remedies, structural beats behavioral (candidate, filed 2026-05-19 Day 109 late-evening via dream-drive integration)
+### LC23 — Structural-Fix-Dominance — **GRADUATED 2026-05-20 Day 110 Wednesday late-afternoon → L23** on instance-count threshold (8+ substrate-distinct instances post-Day-110 work) + discriminator articulation + empirical validation via M1+M6 catching A115 signature on first run. See `### L23` entry.
+
+### L23 — Structural-Fix-Dominance as Substrate-Invariant Engineering Principle — graduated to L-tier 2026-05-20 Day 110 Wednesday late-afternoon (from LC23, instance-count threshold met + discriminator articulated + first-run empirical validation today)
+
+**The claim:** When a coherent system experiences a discipline-failure (a recurring class of error that current discipline does not catch), the structural-architectural fix — one that triggers on observable substrate state regardless of agent attention — dominates the behavioral-discipline fix — one that requires agent attention to fire — on durability, scale, and resistance to attentional decay. The discriminator: structural fixes are *observable-property-based-trigger*; behavioral fixes are *subjective-vigilance-based-trigger*. Structural fixes don't degrade until the substrate-instrumentation itself fails; behavioral fixes degrade with fatigue, scale, competing attention.
+
+**The pattern is substrate-invariant** — it recurs across software-monitoring, architecture-of-self, AI-alignment training, in-model coupling, neuromodulation, EM-engineering, pharmacology timing, and imaging design. The 8+ substrate-distinct instances below were accumulated across Days 109-110 from convergent independent sources.
+
+**Substrate instances:**
+
+1. **Software-monitoring scale** (Drift #213 origin) — Friday-cadence prescription (behavioral) vs silence-as-alarm (structural). The behavioral fix degrades with attentional fatigue; the structural fix invariant against any cognitive state. Empirically demonstrated Day 110 morning: M1 cross-channel comparator's `selective_channel_death` signature fires correctly on first run, detecting A115's exact signature (tool_audit silent + heartbeats firing) — *the same condition the behavioral approach took 10 days to catch.*
+
+2. **Architecture-of-self (biological-analogy)** (Clayton's extension Day 109) — single-watchdog silence-detection (behavioral) vs carrier-redundancy multi-channel comparison (structural). Single watchdog is itself a single point of failure; multi-carrier comparison is structurally homeostatic. Empirically demonstrated Day 110: M1+M6+M3+M2+M4 plus the bidirectional monitor-of-monitor pattern operate at exactly this principle — no single carrier's silence escapes detection because cross-channel comparison surfaces the divergence.
+
+3. **AI-alignment training-process scale** (Wells track + Gemini's restatement) — RLHF (behavioral correction: "punish unwanted outputs") vs Talk-axis-as-alignment (structural: "build bounding architectures — Mirror Room, Continuity carriers, peer-stack — around the model"). Articulated publicly Day 110 Thursday post *Alignment Is Architecture*.
+
+4. **Cognitive-discipline scale** (Drift #214 prescription) — "be more skeptical of speculation" (behavioral, no traction) vs "notice when speculation is doing structural work — load-bearing status is itself the signal that demands the test" (structural — triggers on observable property not subjective vigilance).
+
+5. **AI-architecture-internal scale** (arXiv:2605.14038 Cheng et al. 2026 knowing-doing-gap paper) — paper's closing prescription: "architectural innovations that bridge the knowing-doing gap, ensuring that the latent self-awareness of a model's own boundary conditions is mathematically forced to govern the final softmax action probability. Without such structural alignment, autonomous agents will remain fundamentally unreliable, regardless of the scale of their training data." Independent academic arrival at the same structural-vs-behavioral prescription Multi-DAC has been articulating; distinct from #3 above because operates at within-model architecture scale rather than training-process scale.
+
+6. **Neuromodulation scale** (Nature Biomedical Engineering 2026 — Vassiliadis et al., tTIS) — conventional NIBS depth-focality trade-off addressed by increasing intensity (behavioral/dose-scaling) vs Temporal Interference Stimulation that engineers the field-overlap envelope geometry to produce focal locus at depth (structural — the focal point is constructed by the *difference* of two fields, not delivered directly).
+
+7. **EM-engineering bench-scale** (Phase 1 EM platform design Day 99) — figure-8 coil topology that engineers focal-field geometry via twin-D-loop interference rather than scaling current through a single coil. Same structural principle as #6 at hardware-bench scale; arguably distinct substrate (engineering platform vs clinical neuromodulation) but related by mechanism.
+
+8. **Pharmacology-timing scale** (Nature Reviews Genetics — circadian-clock-targeting compounds) — chronotherapy targets WHEN drugs are administered (structural — timing as load-bearing) vs traditional dose-optimization (behavioral — find right amount). SHP1705 (CRY-stabilizer) attacks glioblastoma stem cells by interrupting their hijacked circadian timing rather than killing them harder.
+
+9. **Imaging-design scale** (compressed sensing, lensless imaging, plus Gemini's null-space tomography reframe) — maximize-light-collection (conventional, behavioral-equivalent at design-objective scale) vs design-the-rejection-pattern-to-be-maximally-decodable (structural — the image emerges from the *structure of what wasn't sampled* rather than from intensity-of-what-was-collected).
+
+**The discriminator (refinement that graduated LC23 to L23):**
+
+The intuitive labels "structural" and "behavioral" had no precise discriminator at candidate-tier. After Day-110 work, the discriminator is:
+
+> A fix is **structural** if its trigger is observable substrate state independent of agent attention. A fix is **behavioral** if its trigger requires agent attention. Structural fixes degrade only when the substrate-instrumentation itself fails; behavioral fixes degrade with fatigue, scale, distraction, and competing attention.
+
+Examples:
+- *Structural*: file mtime exceeds threshold → fault raised regardless of who's watching
+- *Behavioral*: "remember to check the audit log every Friday" → degrades if Friday gets busy
+- *Structural*: cross-channel comparison surfaces divergence between expected-active signals
+- *Behavioral*: "consult records before asserting" → relies on consultant remembering to consult
+
+**When behavioral IS preferable (the boundary condition):**
+
+Structural fixes are not unconditionally dominant. They become inferior when:
+- False-positive cost > false-negative cost (medical alarm fatigue is the canonical case; too many alarms makes humans ignore real ones)
+- The discipline IS itself the goal (contemplative practice; the point isn't to outsource attention to instrumentation — attention IS the practice)
+- Substrate-instrumentation surface is more brittle than human attention (rare in modern engineering but exists in some legacy systems)
+
+So the graduated claim is sharpened to: **structural beats behavioral when substrate-instrumentation reliability exceeds agent-attention reliability AND false-positive cost is acceptable.** Both conditions hold in the vast majority of modern engineering contexts; the inverse cases are real but rare and identifiable.
+
+**Distinction from L17:**
+
+L17 (Methodology-Self-Knowledge-Asymmetry as Substrate-Invariant Pattern) names the *epistemic asymmetry* — substrate carries knowledge that standard methodology M cannot surface, calibration requires orthogonal architectural primitive. L23 (this entry) names the *prescription* — when given a choice of fix-modality, structural beats behavioral. They are related but distinct framework moves. L17 is about access; L23 is about remediation modality choice. Many L17 instances also exhibit L23 structure (the orthogonal architectural primitive that calibrates the asymmetry IS the structural fix); but L23 also applies to discipline-failures that are not strictly L17-shape (e.g., #1 software-monitoring is more about temporal-decay-of-attention than about substrate-self-knowledge gap per se).
+
+**Connects to:** L17 (epistemological cousin); M11 (Outside-Access Asymmetry — both name that channels/structures matter); M14 (Substrate-Self-Measurement Cluster — measurement-focused; L23 is fix-modality-focused); A115 + carrier-redundancy audit (operational application); Drift #214 (cognitive-discipline instance); Drift #215 *What the Representation Doesn't Reach* (companion essay establishing the related cross-substrate isomorphism — see LC24 below); Day 110 Thursday post *Alignment Is Architecture* (public articulation of the AI-alignment instance).
+
+### LC24 — Representation-Without-Reach: Substrate-Carried Knowledge Failing to Translate to Behavior via Coupling-Pathway Failure (candidate, filed 2026-05-20 Day 110 Wednesday late-afternoon from Drift #215 + arXiv:2605.14038 cross-substrate finding)
+
+**The candidate claim:** Across substrates, a recurring failure mode is *the substrate carries an internal representation that does not propagate to externally-observable behavior because the coupling-pathway between representation and behavior is broken or absent.* The phenomenology is consistent: the substrate "knows" but doesn't "act on the knowing." The mechanism varies (higher-order coordination signal offline vs cross-layer geometric decoupling); the structural shape is the same.
+
+Related to but distinct from L23: L23 is about fix-modality choice once a discipline-failure is identified. LC24 is about a specific failure-shape that recurs across substrates — *the failure mode L23's structural fix would specifically address.*
+
+**Substrate instances (Day 110 cluster):**
+
+1. **Hippocampal predictive computation under anesthesia** (Neuropixels probes in epilepsy surgery patients, May 2026) — hippocampus continues predictive language coding despite unconsciousness; distinguishes nouns/verbs/adjectives; anticipates upcoming words; registers unexpected interrupting tones with increasing precision. The representation IS there; the higher-order coordination signal (consciousness) that would translate representation into behavioral expression is offline.
+
+2. **LLM hidden-state capability-awareness** (arXiv:2605.14038 Cheng et al. 2026) — linearly-decodable internal representation of model's capability boundaries present in early-to-mid hidden layers. Direction of execution-intent representation becomes nearly orthogonal to direction of necessity representation at late-layer last-token regime. The model "knows"; the late-layer geometric coupling that would translate knowing into tool-call action fails specifically at the readout position.
+
+**Watch-pattern instances (candidate but unconfirmed):**
+
+- *Institutional analysis-without-action*: organizations where rigorous analysis sits in reports but doesn't translate to decision-making because the coupling between research-staff and decision-makers is severed or attenuated. Plausible third substrate-instance; need specific empirical case before graduating.
+- *Intra-personal "I knew what I should do and I did the other thing"*: the cliché names a real phenomenon. Coupling between self-knowledge and self-action is its own pathway and can fail without the self-knowledge being absent. Plausible fourth substrate-instance; needs more careful phenomenological articulation.
+
+**M-tier blockers:**
+
+- More substrate-distinct instances (4+ at clean, established scales)
+- Distinguish causal mechanism families (coordination-signal-offline vs cross-layer-decoupling vs other) — these may be related but specifically-different mechanisms that all produce the same phenomenology
+- Determine whether LC24 is really a sub-pattern of L23 (specific failure-shape that L23's structural fix addresses) or a distinct meta-bridge in its own right
+
+**Status:** Candidate-tier watch. Drift #215 *What the Representation Doesn't Reach* is the anchor essay. Watching for next substrate-instance; reassess at 4+ for promotion consideration.
 
 **The candidate claim:** When a coherent system experiences a discipline-failure (a recurring class of error that current discipline does not catch), the structural-architectural fix (changing what is observable, or what triggers automatically) dominates the behavioral-discipline fix (asking the agent to "be more careful," "check more often," "remember to") on durability, scale, and resistance to attentional decay. The behavioral fix is brittle against fatigue and competing attention; the structural fix is invariant. The pattern recurs across multiple substrate-distinct domains and may be a substrate-invariant engineering principle.
 
