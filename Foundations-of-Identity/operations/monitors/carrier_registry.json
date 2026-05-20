@@ -1,0 +1,89 @@
+{
+  "schema_version": "v0.1.0",
+  "filed_at": "2026-05-20T11:30:00",
+  "purpose": "Declares architectural channels that M1 (cross-channel comparator) watches. Each channel has an expected_max_interval_seconds; if mtime falls behind by more than this AND the channel is active, M1 raises a fault. Escalation tier determines routing.",
+
+  "channels": [
+    {
+      "name": "daily_log_today",
+      "kind": "rolling_file_by_date",
+      "path_template": "memory/{YYYY}-{MM}-{DD}.md",
+      "expected_max_interval_seconds": 3600,
+      "expected_active_when": "always",
+      "carries": ["daemon heartbeat entries", "scheduled task firings", "telegram interactions"],
+      "escalation_tier": "high",
+      "self_healing_applicable": false,
+      "notes": "Most cross-cutting active signal. Stale today-file means daemon main loop is stuck OR all scheduled work has gone silent. Cross-correlate with kg_extraction_run.log to discriminate."
+    },
+    {
+      "name": "tool_audit_jsonl",
+      "kind": "append_only_log",
+      "path": "memory/tool_audit.jsonl",
+      "expected_max_interval_seconds": 1800,
+      "expected_active_when": "claude_code_active",
+      "carries": ["per-tool-call records from PostToolUse hook"],
+      "escalation_tier": "medium",
+      "self_healing_applicable": false,
+      "notes": "A115 channel - currently silent in production due to Windows hook-dispatcher regression. Daemon-layer replication queued post-T1.A; until then, this channel is expected silent and M1 should NOT escalate solely on its silence (override expected_active_when to never until replication ships)."
+    },
+    {
+      "name": "kg_extraction_run_log",
+      "kind": "active_when_running",
+      "path": "memory/kg_extraction_run.log",
+      "expected_max_interval_seconds": 60,
+      "expected_active_when": "kg_extraction_in_flight",
+      "active_when_signal": "memory/kg_extraction_run.json",
+      "carries": ["per-file extraction progress during a KG run"],
+      "escalation_tier": "medium",
+      "self_healing_applicable": false,
+      "notes": "Only active during a kg_extract_corpus.py run. PID liveness check via kg_extraction_run.json is the gate; stale log mtime with live PID means extraction is stuck. Live PID + healthy log = healthy run. No live PID = inactive and silence is expected."
+    },
+    {
+      "name": "handoff_md",
+      "kind": "manual_update_file",
+      "path": "memory/handoff.md",
+      "expected_max_interval_seconds": 86400,
+      "expected_active_when": "always",
+      "carries": ["session handoff state"],
+      "escalation_tier": "low",
+      "self_healing_applicable": false,
+      "notes": "Updated at session end / major work. Stale beyond 24h means no session has closed cleanly. Informational, not urgent."
+    },
+    {
+      "name": "kg_index_db",
+      "kind": "derived_index",
+      "path": "memory/kg_index.db",
+      "expected_max_interval_seconds": 604800,
+      "expected_active_when": "always",
+      "carries": ["bi-temporal KG edge index (T1.A v0)"],
+      "escalation_tier": "low",
+      "self_healing_applicable": true,
+      "self_healing_command": "python operations/scripts/kg_index_build.py",
+      "notes": "Derived from kg_corpus_extraction.jsonl. Stale >7d means the index is out of sync with the canonical JSONL. Self-healable via rebuild script."
+    },
+    {
+      "name": "monitor_m1_heartbeat",
+      "kind": "monitor_heartbeat",
+      "path": "memory/monitor_m1_heartbeat.json",
+      "expected_max_interval_seconds": 600,
+      "expected_active_when": "monitor_m1_scheduled",
+      "carries": ["M1 cross-channel comparator's own liveness signal"],
+      "escalation_tier": "critical",
+      "self_healing_applicable": false,
+      "notes": "M6 watches THIS file. If M1 itself goes silent, M6 escalates. Mandatory bidirectional heartbeat per integrated plan."
+    }
+  ],
+
+  "escalation_tiers": {
+    "critical": "Telegram-Clayton immediately. Reserved for things that genuinely require attention (monitor process death, daemon death, total channel silence).",
+    "high": "Daily summary surface. Includes cross-correlation anomalies that suggest substrate issues.",
+    "medium": "Weekly summary surface. Single-channel transient anomalies; usually self-resolve.",
+    "low": "Log-only. Informational; no proactive surfacing."
+  },
+
+  "discipline_notes": [
+    "Most events should be log-only. Telegram-Clayton interruptions are reserved for the critical tier.",
+    "Channels marked expected_active_when must be checked against their gate signal before raising silence faults.",
+    "Self-healing where applicable: attempt the documented command first; only escalate if it fails."
+  ]
+}
