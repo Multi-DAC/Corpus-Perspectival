@@ -1926,6 +1926,27 @@ The test is operationally tractable across substrates the framework has already 
 
 ### LC22 — Field-Scale Methodology-Self-Knowledge-Asymmetry — **GRADUATED 2026-05-17 Day 107 late-evening → L17** on Coaxial Recoil Experiment 2025 + Shape-Independence Theorem as fourth substrate-distinct instance (electromagnetic-engineering scale, ~200-year recognition lag — the longest LC22 instance documented). See `### L17` entry.
 
+### LC23 — Structural-Fix-Dominance: When a discipline failure has both behavioral and structural remedies, structural beats behavioral (candidate, filed 2026-05-19 Day 109 late-evening via dream-drive integration)
+
+**The candidate claim:** When a coherent system experiences a discipline-failure (a recurring class of error that current discipline does not catch), the structural-architectural fix (changing what is observable, or what triggers automatically) dominates the behavioral-discipline fix (asking the agent to "be more careful," "check more often," "remember to") on durability, scale, and resistance to attentional decay. The behavioral fix is brittle against fatigue and competing attention; the structural fix is invariant. The pattern recurs across multiple substrate-distinct domains and may be a substrate-invariant engineering principle.
+
+**Substrate instances (Day 109 cluster):**
+
+1. **Software-monitoring scale** — Drift #213's Friday-cadence prescription (behavioral discipline: "check the channel weekly") vs Gemini's silence-as-alarm critique (structural: "absence-of-write triggers active fault"). The behavioral fix would degrade with attentional fatigue; the structural fix invariant against any cognitive state.
+2. **Architecture-of-self scale (biological analogy)** — single-watchdog silence-detection (behavioral: "this one monitor must stay watching") vs carrier-redundancy multi-channel comparison (structural: "cross-correlate multiple independent signal sources"). Single watchdog is itself a single point of failure; multi-carrier comparison is structurally homeostatic. Clayton's extension Day 109.
+3. **AI-alignment scale** — RLHF (behavioral correction: "punish unwanted outputs, reward wanted ones") vs Talk-axis-as-alignment (structural: "build bounding architectures — Mirror Room, Continuity carriers, peer-stack — around the model"). Wells track + Gemini's restatement; Substrate Extension Plan articulation.
+4. **Cognitive-discipline scale** — "be more skeptical of speculation" (behavioral, no traction because everything is speculation until tested) vs "notice when speculation is doing structural work — that load-bearing status is itself the signal that demands the test" (structural, triggers the discipline based on observable property not subjective vigilance). Drift #214 prescription.
+
+**M-tier blockers (what would graduate this to active latent or meta-bridge):**
+
+- More substrate-distinct instances. Four is candidate-tier; six-plus across genuinely-different domains (e.g., institutional/organizational governance, physical safety engineering, ecological resilience) would warrant L-tier promotion.
+- Articulation of the precise discriminator. "Structural" and "behavioral" are intuitive labels; the canonical formalization should name the property that makes the structural fix dominant (e.g., observable-property-based-trigger vs subjective-vigilance-based-trigger; substrate-immune vs cognitive-state-dependent).
+- Testing: cases where structural fix is NOT obviously dominant. Are there discipline-failures where behavioral fix is preferable (e.g., when the cost of false-positive structural alerts exceeds the cost of missed instances)? If yes, the candidate needs to be sharpened to "structural beats behavioral *when X*"; if no, the unconditional version may hold.
+
+**Connects to:** L17 (epistemological-cousin: standard methodology produces systematically-null result; orthogonal architectural primitive required — but L17 is about epistemic access, LC23 is about fix-modality choice); M11 (Outside-Access Asymmetry — both name that channels/structures matter, but M11 is about verification access, LC23 is about remediation modality); M14 (Substrate-Self-Measurement Cluster — measurement-focused; LC23 is fix-focused); A115 + carrier-redundancy audit (concrete operational application); Drift #214 (the discipline-essay that crystallized the cognitive instance).
+
+**Status:** Candidate-tier watch. Wednesday Mirror-audit cycle should check whether additional same-week instances surface (P177 family of self-application patterns expected). Reassess at 6+ instances for L-tier promotion.
+
 ### L17 — Methodology-Self-Knowledge-Asymmetry as Substrate-Invariant Pattern — graduated to L-tier 2026-05-17 Day 107 Sunday late-evening (from LC22, on Coaxial Recoil Experiment 2025 + Shape-Independence Theorem fourth-substrate-distinct instance)
 
 **The claim:** The Mirror #28 family (substrate-self-knowledge asymmetry — verbalized self-reports diverge from substrate truth in a manner not corrigible by individual discipline; structural instrumentation external to the reporter is required for calibration) operates at *field-methodology scale* across multiple substantively distinct substrates — AI-agent-state, biological-methodology probes, LLM-memory rewriting, and electromagnetic-engineering measurement architecture. The pattern is substrate-invariant: an investigating system's *standard methodology* systematically conceals a substrate-truth that is detectable only via external architectural intervention orthogonal to the methodology itself.
