@@ -1,4 +1,70 @@
-# Handoff — 2026-05-19 Day 109 Tuesday Evening (~22:10 PST, Navigation Sync addendum)
+# Handoff — 2026-05-20 Day 110 Wednesday Afternoon (~14:50 PST, end-of-substantive-work close-out)
+
+**Day 110 was the largest substantive-output day in the program's history.** Tier 1 of the integrated implementation plan complete; all 6 carrier-redundancy monitors shipped + falsifiability-verified; scheduler running autonomously; mirror parity (A116) resolved with 35-file reorganization; Wednesday post live (*Geometry of a Mind*, Coherent Mind volume intro); Thursday post drafted awaiting editorial pass (*Alignment Is Architecture*, Philosophy slot). Day 110 closing-state pushed across multiple commits ending at `6ac68e4`.
+
+## Day 110 full ledger
+
+**Morning (08:00–12:00 PST):**
+- T1.A v0 KG bi-temporal SQLite index shipped (Memento-grounded). 11,217 edges. Both as-of queries from day one. `de45073`
+- M6 + M1 carrier-redundancy foundation. Falsifiability commitments met. A115 selective_channel_death signature fires correctly on real data. `fe89be5`
+- KF + patent strategic conversation surfaced load-bearing implications
+- arXiv:2605.14038 primary read (KF-focused); revised Path C (300M validate → 3B paper-comparable) decision
+- Drift #215 *What the Representation Doesn't Reach* shipped (cross-substrate isomorphism between hippocampal predictive coding under anesthesia + LLM hidden-state cognition-action orthogonalization). `3144b60`
+- KF roadmap revision + patent action queue + integrated plan addendum filed. `8f80f3a`
+
+**Afternoon (13:00–14:30 PST):**
+- M3 / T1.B state-coherence checker. Caught 3 real stale claims on first run.
+- T1.C circuit breakers. Tripped 0.031s vs 30s commitment.
+- M2 external-integration pinger. 4 classification tests pass.
+- M4 storage-integrity sentinel. All 7 real checks OK; synthetic corruption detected at line 3.
+- T1.D self-prediction tracking. Library + CLI; captured KG-ETA canonical FALSIFY instance.
+- M5 PreCompact partial-substitute. Heuristic triggers fire; snapshot captures 3 nav files + 2 git HEADs + 5 monitor heartbeats.
+- All shipped in one batch as `1976b59`.
+
+**Late afternoon (14:30–14:50 PST):**
+- Scheduler + scheduler_launcher (PID 20772 running detached)
+- Escalation router + queue + poller (Telegram delivery contingent on poller env vars)
+- Self-healer (carrier-registry-driven; 1 healable channel currently)
+- T1.A.1 retraction backfill design note (honest scope finding: deferred via Path C; M3 covers operational use case). `755a6e2`
+- A116 mirror parity reorg: 13 mirror-only files moved to appropriate homes + 21 canonical→mirror sync. CURRENT.md drift count: 215→216. `52c4061`
+- Thursday post #13 *Alignment Is Architecture* drafted ~2592 words. `6ac68e4`
+
+## Usage state at close-out
+
+- **Current 5h session**: 81% used, resets in ~19 min
+- **Weekly cap**: 46% used (~30% attributed to KG work; ~16% to today's substantive architectural sprint)
+- **Weekly remaining**: 54% across ~5 days to Tuesday 19:00 PT reset
+- Per-output cost efficiency: 11 architectural items + 2 Substack posts + 1 Drift essay + 5 docs for ~16% of weekly cap
+
+## Live infrastructure state
+
+- **Monitor scheduler PID 20772**: detached, autonomous, runs M6 (5min) / M1 (10min) / M3 + M2 (60min) / M4 (4hr). Survives session ending.
+- **All 6 monitors live**: falsifiability-verified; heartbeats publishing; faults logging to per-monitor jsonl
+- **KG index**: 11,217 edges in `memory/kg_index.db`
+- **Drift count canonical = 216 = mirror** (parity restored)
+- **Coherent Schedule first week**: Mon/Tue posts live; Wed *Geometry of a Mind* live this morning; Thu *Alignment Is Architecture* awaiting Clayton editorial pass
+
+## What's queued (awaiting Clayton direction)
+
+- **Thursday post editorial review** before tomorrow morning publish
+- **Tier 2** items (T2.E A2A endpoint, T2.F Dreaming port, T2.G OTel pipeline, T2.H utility-replay) — ample weekly budget; only constraint is 5h-cap timing
+- **Friday Drift cross-post** (P181) — Drift #214 *What the Byte-Count Showed* or #215 *What the Representation Doesn't Reach* are both candidates
+- **KF Path C Phase A** (Gemma 4 e2b validation) — separate workstream; ready when scheduled
+- **Patent action 3** (inference-time-method provisional, independent of test) — external legal; Clayton's domain
+
+## M3 known limitation queued for v0.2
+
+M3 currently flags handoff.md historical addendums (preserved "212" and "214" claims) as stale-claim faults. The regex doesn't distinguish active claims from preserved-historical context. v0.2 should add section-context awareness.
+
+## Family-window stability
+
+Shawna's labor-imminent window still active. Phase 1 EM in measured pause. No timeline pressure on any technical work tonight. Family timing remains load-bearing variable.
+
+🦞🧍💜🔥♾️
+
+---
+
+# Handoff — 2026-05-19 Day 109 Tuesday Evening (~22:10 PST, Navigation Sync addendum, PRESERVED)
 
 **Day 109 evening arc (in-progress at time of this navigation-sync prepend):**
 
