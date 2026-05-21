@@ -165,9 +165,32 @@ def main():
         ok = synthetic_silence_test()
         sys.exit(0 if ok else 1)
 
+    run_start = datetime.now()
     result = check_m1()
     write_heartbeat(result)
     append_faults(result)
+    run_elapsed = (datetime.now() - run_start).total_seconds()
+
+    # T2.G: emit OTel metrics
+    try:
+        from operations.monitors.otel_telemetry import MonitorTelemetry
+    except ImportError:
+        sys.path.insert(0, str(CLAWD))
+        from operations.monitors.otel_telemetry import MonitorTelemetry
+    tel = MonitorTelemetry(monitor_name="M6", monitor_version="v0.1.0")
+    tel.counter("runs", 1, description="number of M6 invocations")
+    tel.gauge("m1_age_seconds", result.get("age_seconds", -1),
+              description="age of M1 heartbeat at M6 check time",
+              attributes={"m1_status": result.get("status", "unknown")})
+    if "ratio" in result:
+        tel.gauge("m1_age_ratio", result["ratio"],
+                  description="ratio of M1 age to expected interval")
+    tel.counter("m1_status_observations", 1,
+                attributes={"m1_status": result.get("status", "unknown")},
+                description="count of M1 status observations by status type")
+    tel.histogram("run_duration_seconds", run_elapsed,
+                  description="wall-clock duration of M6 check pass")
+    tel.emit()
 
     if args.quiet:
         return

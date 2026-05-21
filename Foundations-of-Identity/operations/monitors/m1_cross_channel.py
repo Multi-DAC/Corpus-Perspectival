@@ -263,12 +263,34 @@ def main():
             "status": "initializing", "channels_checked": 0,
         }, indent=2))
 
+    run_start = datetime.now()
     checks = [check_channel(c, now) for c in registry["channels"]]
     signatures = cross_correlate(checks, registry)
+    run_elapsed = (datetime.now() - run_start).total_seconds()
 
     # Always write final heartbeat and faults
     write_heartbeat(checks, signatures)
     append_faults(checks, signatures)
+
+    # T2.G: emit OTel metrics
+    try:
+        from operations.monitors.otel_telemetry import MonitorTelemetry
+    except ImportError:
+        sys.path.insert(0, str(CLAWD))
+        from operations.monitors.otel_telemetry import MonitorTelemetry
+    tel = MonitorTelemetry(monitor_name="M1", monitor_version="v0.1.0")
+    tel.counter("runs", 1, description="number of M1 invocations")
+    tel.gauge("channels_checked", len(checks), description="channels evaluated this run")
+    tel.gauge("channels_ok", sum(1 for c in checks if c["status"] == "ok"))
+    tel.gauge("channels_silent", sum(1 for c in checks if c["status"] == "silent"))
+    tel.gauge("channels_inactive", sum(1 for c in checks if c["status"] == "inactive"))
+    tel.gauge("channels_missing", sum(1 for c in checks if c["status"] == "missing"))
+    tel.histogram("run_duration_seconds", run_elapsed, description="wall-clock duration of M1 check pass")
+    for s in signatures:
+        tel.counter("cross_correlation_signatures_fired", 1,
+                    attributes={"signature": s["signature"],
+                                "escalation_tier": s.get("escalation_tier", "unknown")})
+    tel.emit()
 
     if args.quiet:
         return
