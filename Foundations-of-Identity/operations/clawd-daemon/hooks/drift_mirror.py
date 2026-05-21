@@ -18,7 +18,26 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-CLAWD_HOME = Path(os.environ.get("CLAWD_HOME", os.path.expanduser("~/clawd")))
+def _resolve_clawd_home() -> Path:
+    """Same resolution pattern as post_tool_log.py (May 7 path-fix):
+    CLAWD_HOME env > script-relative > absolute fallback.
+    Avoids Path.home()/expanduser pitfall when hook runs under a different
+    user context than the daemon was installed under (the Wasch/mercu split
+    documented in A115 anomaly 308c0027)."""
+    env_value = os.environ.get("CLAWD_HOME")
+    if env_value:
+        return Path(env_value)
+    # Script lives at <CLAWD>/clawd-daemon/hooks/drift_mirror.py historically,
+    # so two parents up from this file is CLAWD root in the canonical layout.
+    here = Path(__file__).resolve()
+    candidate = here.parent.parent.parent / "clawd"
+    if (candidate / "memory").exists():
+        return candidate
+    # Absolute fallback (matches post_tool_log.py)
+    return Path("C:/Users/mercu/clawd")
+
+
+CLAWD_HOME = _resolve_clawd_home()
 
 # The two drift essay directories — canonical (personal-works) and mirror (Library)
 CANONICAL_DIRS = [
