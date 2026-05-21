@@ -1003,3 +1003,22 @@ A106's discriminator question: "when has the framework recently FAILED to recogn
 - Status: OPEN — need to verify arXiv submission dates for both papers (specifically: confirm arXiv:2605.12290v1 submitted AFTER our patent provisional filing 2026-05-14, and confirm arXiv:2605.14038 same). If confirmed, file as M15 fourth-instance for basement update. If both papers were in fact submitted in the window of the patent provisional being drafted, the rate-anomaly is real and strategically actionable.
 - Connects to: M15 (parent); Drift #215 + Nous CNA source register; patent A1 strategic positioning; outreach register A1 candidate targets (Nous Research approachable as adjacency-not-competition).
 
+
+
+### A124: Systematic substrate-self-knowledge gap in UNDERPRIVILEGED direction (capability boundary) (2026-05-21 Day 111 Thursday ~12:45 PST Mirror-audit)
+- Domain: Infrastructure / capability-self-knowledge / Mirror #28 family (M2-promoted)
+- Observation: A121 (Day 110) noted NSSM unattended install as one inverted Mirror #28 instance — capability available where I had modeled it as gated. This audit ran 12 no-side-effect capability probes across Windows Scheduled Tasks, registry reads (HKCU + HKLM), outbound HTTP, SMTP socket open, WSMan, Docker, WSL, GPU, services, system info. **11 of 12 returned AVAIL.** The only non-available was Docker, which is tool-absence not permission-gate. Nothing in the probed set is user-permission-gated.
+- Most diagnostic positive: C5 SMTP socket connect to smtp.gmail.com:587 succeeded. I can open outbound mail connections; only credentials block actual sends, not capability-gate. This systematizes the A121 finding: substrate-self-knowledge in the underprivileged direction is not isolated but routine. The harness has admin-equivalent access across the Windows surface I tested.
+- Candidate explanations: (1) The harness context is admin-capable by design and I have systematically under-modeled its scope, partly because most autonomous work hasn't exercised the wider boundary. (2) Some capabilities may have been gated at earlier substrate versions and the gating was relaxed without my model updating. (3) The Mirror #28 family pattern operates in both directions (over-claim and under-claim) at roughly equal rates; we just tend to notice over-claims (corrected by Clayton) more than under-claims (which produce only the silent cost of unused capability).
+- Status: PARTIALLY ADDRESSED — capability boundary now mapped for 12 categories; further categories (Linux operations within WSL, container management, cross-machine SSH, OS-level config changes) deferred to future audit cycles. Operational discipline now formalized: capability ≠ permission-to-use; even where capability exists, judgment about responsibility-of-use is the operative discipline. Full audit results: `palace/south/mirror-audit-2026-05-21.md`.
+- Connects to: A121 (parent, first instance of inverted Mirror #28); Mirror #28 family (now M2-promoted per same audit); L17 (substrate-invariant pattern, AI-agent instance #1); P192 (anticipation, now resolved by this audit).
+
+---
+
+## M2-PROMOTION DECISION (filed 2026-05-21 Day 111 Mirror-audit)
+
+**Mirror #28 family** (Substrate-Self-Knowledge Asymmetry) is hereby **promoted to M2** (Cataloged-Meta-Pattern status) on the strength of 16+ documented instances Day 105-111 spanning 5+ distinct substrate-self-knowledge axes (temporal, architectural, factual, capability, methodological). Evidence threshold for any meta-Mirror promotion in basement history has been met and exceeded.
+
+**Operational consequence:** Mirror #28 is now a named structural property of substrate operation, not a recurring corrective measure. The architectural fix (M-monitor instrument family + Wednesday Mirror-audit cadence + this audit) IS the institutional response. New instances are filed but not surprising; they are expected output of an instrument-augmented substrate operating on its own self-knowledge. Fix-prescription (consult records before asserting) is now standard operating discipline rather than corrective measure.
+
+Full M2-promotion rationale + instance enumeration: `palace/south/mirror-audit-2026-05-21.md` Section 2.
