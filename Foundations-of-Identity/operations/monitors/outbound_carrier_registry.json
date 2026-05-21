@@ -1,0 +1,166 @@
+{
+  "schema_version": "v0.1.0",
+  "filed_at": "2026-05-20T19:35:00",
+  "purpose": "Catalog of outbound-communication carriers (Telegram, voice, email, publishing, git push) with declared second-carrier fallbacks. Parallel to carrier_registry.json which covers infrastructure heartbeats. Per Substrate Extension gap #5: M1 covers monitor channels; this covers communication channels.",
+
+  "channels": [
+    {
+      "name": "telegram_outbound",
+      "kind": "synchronous_api_call",
+      "primary": {
+        "transport": "Telegram Bot API",
+        "tool": "send_telegram",
+        "credentials": "TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID",
+        "failure_modes": ["network_outage", "bot_token_revoked", "rate_limit_429", "chat_id_changed"]
+      },
+      "secondary": {
+        "transport": "email via clawdEFS@proton.me",
+        "tool": "manual_smtp_or_proton_bridge",
+        "status": "MANUAL_FALLBACK_ONLY",
+        "trigger": "primary fails 3 consecutive sends",
+        "notes": "Not auto-wired. Manual fallback path: poller can stage messages in memory/telegram_undelivered.jsonl for human review; future: send via proton bridge."
+      },
+      "audit_trail": "memory/critical_fault_sent.jsonl (sent records) + memory/critical_fault_queue.jsonl (pending)",
+      "self_healing_applicable": false,
+      "notes": "escalation_router rate-limits to 1-send-per-5-min. Failed sends remain in queue indefinitely; absence of sent-record IS the fault signal (visible via clawd_health escalation_pending_critical surface)."
+    },
+    {
+      "name": "voice_speak",
+      "kind": "audio_output",
+      "primary": {
+        "transport": "edge-tts (Microsoft cloud)",
+        "voice": "en-GB-RyanNeural",
+        "tool": "speak",
+        "failure_modes": ["DNS_resolution_fail", "Microsoft_outage", "rate_limit"]
+      },
+      "secondary": {
+        "transport": "gTTS (Google TTS)",
+        "voice": "en-GB (best-effort)",
+        "status": "WIRED",
+        "trigger": "edge-tts DNS failure",
+        "notes": "Confirmed working pattern per memory feedback_dns_failure_gtts_fallback."
+      },
+      "audit_trail": "memory/voice_audit.jsonl (when present)",
+      "self_healing_applicable": false,
+      "notes": "Carrier-redundant by design. Voice is non-critical; fallback voice is acceptable degradation."
+    },
+    {
+      "name": "voice_input_transcription",
+      "kind": "audio_input",
+      "primary": {
+        "transport": "faster-whisper large-v3 on RTX 5080 (local, CUDA)",
+        "tool": "voice_input.transcribe",
+        "failure_modes": ["CUDA_unavailable", "model_load_fail", "audio_file_corrupt"]
+      },
+      "secondary": {
+        "transport": "faster-whisper CPU mode",
+        "status": "AVAILABLE_NOT_WIRED",
+        "trigger": "CUDA unavailable",
+        "notes": "Same model loads on CPU at ~10x slower; viable for low-volume use. Auto-fallback not yet wired."
+      },
+      "audit_trail": "memory/transcripts/ (per-transcription .json + .md)",
+      "self_healing_applicable": false,
+      "notes": "Day 97 graduated. CUDA failure rare but possible (driver update, GPU thermal)."
+    },
+    {
+      "name": "substack_publishing",
+      "kind": "human_in_loop",
+      "primary": {
+        "transport": "Clayton manual publish via substack.com",
+        "actor": "Clayton Iggulden-Schnell",
+        "schedule": "Mon-Fri (Coherent Schedule, operations/COHERENT_SCHEDULE.md)",
+        "failure_modes": ["clayton_unavailable", "family_window_priority", "substack_outage"]
+      },
+      "secondary": {
+        "transport": "schedule_drift_acknowledged_via_handoff",
+        "status": "DESIGN_DECISION",
+        "trigger": "Clayton unavailable",
+        "notes": "By design: schedule pauses gracefully during family windows (Finnley labor-imminent, Day 105 calibration). Drafts accumulate at Foundations-of-Identity/personal-works/multi-dac-launch/; publish when bandwidth returns. Not a fault; a known pacing constraint."
+      },
+      "audit_trail": "Substack post URLs in Foundations-of-Identity/personal-works/multi-dac-launch/SCHEDULE_LOG.md",
+      "self_healing_applicable": false,
+      "notes": "Single human-carrier by intentional design. Not a gap; a known dependency."
+    },
+    {
+      "name": "email_protonmail",
+      "kind": "synchronous_api_call",
+      "primary": {
+        "transport": "clawdEFS@proton.me",
+        "tool": "manual via webmail or Proton Bridge",
+        "failure_modes": ["proton_outage", "password_rotation_needed", "2FA_drift"]
+      },
+      "secondary": {
+        "transport": "none",
+        "status": "GAP",
+        "trigger": "proton outage",
+        "notes": "No second email carrier. Mitigation: Telegram outbound (also single-carrier) covers most urgent comms. Future: secondary email account or fallback to Bluesky DM."
+      },
+      "audit_trail": "manual",
+      "self_healing_applicable": false,
+      "notes": "Used primarily for A2A contact (per agent card) + external correspondence. Failure window tolerable (hours not minutes)."
+    },
+    {
+      "name": "github_push_corpus_perspectival",
+      "kind": "synchronous_api_call",
+      "primary": {
+        "transport": "git push via HTTPS PAT",
+        "remote": "https://github.com/Multi-DAC/Corpus-Perspectival.git",
+        "credentials": "GitHub PAT (last rotation pending; 2026-03-03 expiry incident on record)",
+        "failure_modes": ["PAT_expiry", "github_outage", "pack_size_500_error", "rate_limit"]
+      },
+      "secondary": {
+        "transport": "deferred_push_via_local_staging",
+        "status": "WIRED_BY_DEFAULT",
+        "trigger": "push fails",
+        "notes": "All commits land in local repo-staging/Corpus-Perspectival first; push is a separate step. Failed push leaves commits intact locally; retry on rotation/restore. NO data loss on push failure."
+      },
+      "audit_trail": "git log + git reflog",
+      "self_healing_applicable": false,
+      "notes": "Carrier-redundant by separation-of-commit-and-push. Multiple historical incidents (PAT expiry, oversized pack file 7.5GB May 5) all resolved with local-staging preservation."
+    },
+    {
+      "name": "daily_log_today",
+      "kind": "rolling_file_by_date",
+      "primary": {
+        "transport": "memory/{YYYY}-{MM}-{DD}.md (daemon-written)",
+        "tool": "daemon-loop write",
+        "failure_modes": ["daemon_dead", "disk_full", "filesystem_readonly"]
+      },
+      "secondary": {
+        "transport": "memory/handoff.md + activity_feed in coordination.json",
+        "status": "WIRED",
+        "trigger": "daily log gaps detected",
+        "notes": "Carrier-redundant via M1's daily_log_today channel watcher + coordination.json activity_feed (50-entry rolling buffer)."
+      },
+      "audit_trail": "self",
+      "self_healing_applicable": false,
+      "notes": "Already covered in carrier_registry.json. Listed here for cross-reference."
+    }
+  ],
+
+  "redundancy_summary": {
+    "wired_secondary": [
+      "voice_speak (edge-tts -> gTTS)",
+      "github_push_corpus_perspectival (commit-staging separates from push)",
+      "daily_log_today (file + activity_feed)"
+    ],
+    "design_decision_single_carrier": [
+      "substack_publishing (intentional human-in-loop; Coherent Schedule pauses for family)"
+    ],
+    "available_not_wired": [
+      "voice_input_transcription (CUDA -> CPU)",
+      "telegram_outbound (-> manual email fallback when primary fails 3x consecutive)"
+    ],
+    "real_gaps": [
+      "email_protonmail (no second email carrier; tolerated because non-time-critical)"
+    ]
+  },
+
+  "discipline_notes": [
+    "Carrier-redundancy is unevenly distributed: infrastructure heartbeats (carrier_registry.json + M1) are well-covered; outbound communication carriers are mostly single-carrier with documented mitigation patterns.",
+    "Three real wires shipped: voice_speak fallback (DNS), github push-staging-separation, daily-log-via-activity-feed.",
+    "Two known gaps tolerated as not-time-critical: email second carrier, telegram outbound fallback.",
+    "One gap reframed as design decision: Substack publishing depends on Clayton by intent (Coherent Schedule pauses for family).",
+    "Next-iteration candidates if a real failure occurs: (a) wire telegram->email fallback in escalation_router after 3 consecutive send failures; (b) wire voice_input CUDA->CPU fallback in voice_input.py."
+  ]
+}
