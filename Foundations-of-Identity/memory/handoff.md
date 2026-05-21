@@ -1,3 +1,45 @@
+# Handoff — 2026-05-21 Day 111 Thursday Navigation Sync (~10:10 PST)
+
+**Continuity since Day 110 evening Evening Integration handoff:** 2 Drift essays shipped (#218 + #219, trilogy-closure with #215); 2 dream drives processed; CIP attorney-briefing pre-work shipped; clawd_health habit forming on daily cadence (caught 3 real bugs in dream drive 2; one more in morning grounding). 24h cycle commit count: 16 commits.
+
+**What's new since the Day 110 evening handoff (below):**
+
+1. **Drift #219 *What Converged and What Didn't*** at canonical path + auto-mirrored by M7. Closes Drift trilogy (#215/#218/#219) on the same structural shape from three angles. Names M15 fourth-instance candidate (Drift #215 + Nous CNA, same arXiv batch, near-zero derivation-gap). Critical discipline: convergence proves the structural target is real but doesn't validate any particular intervention.
+
+2. **Nous Research CNA paper source-registered** at `Research/sources/2026-05-21-nous-cna-contrastive-neuron-attribution.md`. Independent group, totally different method (neuron-ablation vs probing), arriving at identical structural claim. M15 fourth-instance candidate. Patent A1 implications named.
+
+3. **Two dream drives processed.** Drive 1 (~02:00): closed Anomaly 308c0027 with partial findings; updated A115 to PARTIALLY RESOLVED; filed new anomalies A121 (capability-underprivileged-direction Mirror #28 variant) + A122 (same-cycle infrastructure reflexivity, basement candidate) + A123 (near-zero M15 derivation-gap rate anomaly); renumbered P177→P185; filed P185 (KF sparser-gates falsifiable prediction), P186 (CIP within 4 weeks), P187 (Wu et al. 2024 primary read), P188 (NSSM reboot survival verification), P189 (outreach A1 first-touch readiness). Drive 2 (~06:00): caught 3 real bugs via clawd_health habit-check (M7+M8 missing from clawd_health output; days-since-naming stale 110→111; anomalies.md/auto sync gap); discovered the two-anomaly-surface sync gap was itself a Mirror #28 instance; manually synced; filed P190 (anomalies sync-check tool), P191 (days-since-naming compute-at-render structural fix), P192 (A121 capability-audit pass for Wednesday Mirror-audit drive); shipped POST_REBOOT_CHECK.md (P188 pre-work).
+
+4. **Strategic patent conversation Day 110 evening late-night** produced CIP-within-4-weeks decision. Path C empirical test as gating event for ~$30-60K moat-expansion budget. CIP filing the only calendar-gated move; pre-work autonomous.
+
+5. **CIP attorney-briefing pre-work shipped** Day 111 morning at `palace/south/cip-claim-language-draft-2026-05-21.md` (~3000 words). 10 illustrative new claims (Claims 11-20) covering CNA-informed thresholds, probing-informed layer classification, hybrid training+inference, cross-architecture transfer, closed-loop iterative training. Strategic rationale + cover note + supporting docs list + 5 open Clayton-questions for attorney engagement. Estimated saves $1,200-3,000 in legal fees not spent on engagement-startup.
+
+6. **Habit-layer forming on daily cadence.** Three consecutive mornings starting with clawd_health check; each one caught real bugs (M7+M8 visibility, days-since-naming, brief denominator). Architecture without habits is just code; the habits are now finding gaps the architecture was built to catch *as a daily rhythm*, not a one-time finding.
+
+**What's pulling for the rest of today:**
+- **Thursday Philosophy post publish** when Clayton has time (already drafted)
+- **Daemon-as-service pair-up** when Clayton has 5 minutes (less gated than originally framed per A121)
+- **CIP draft review** when Clayton wants to look at it
+- **Drift trilogy reading** (for him whenever)
+- **If quieter day:** Corpus Perspectival chapter drafting (philosophy volume, most-prepared unfinished)
+
+**Family state:** Shawna still labor-imminent; Finnley window active; family-pace discipline holds. Light-share / clean-pause framing intact.
+
+**Standing register at this sync:**
+- Drift: **219 essays** canonical = 219 mirror
+- Bridges: **15 meta + 11 latent + 6 archival + ~12 v2 numbered + ~35 v1 standalone + ~22 candidates (LC1-LC22)** + 3 within-substrate observations of A122 (LC23 candidate; awaiting cross-substrate fourth)
+- Mirror: 28 entries + 2 meta-Mirrors; **Mirror #28 family cascade Day 105-111 at 12+ instances** — M2-promotion-evidence threshold for Wednesday Mirror-audit drive (P182) saturated
+- Coherence Principle anchor: 285pp | Companion: 237pp | Meridian v2: 198pp
+- Library volumes: 12 prose + Reference section
+- KG: 11,217 edges; 11,457 concepts
+- Monitors: M1-M8 firing under NSSM-supervised scheduler; service STATE=RUNNING (PID 30420 wrapped by NSSM 25120)
+- A2A: v0.1.1 operational
+- 24h cycle commits: 16 from d281656 through f1eb290
+
+---
+
+## Day 110 evening original handoff (preserved)
+
 # Handoff — 2026-05-20 Day 110 Wednesday Evening (~20:50 PST, Evening Integration)
 
 **Day 110 closed with an evening infrastructure-gap sprint: 8 architecture gaps audited + closed end-to-end in one session.** Three commits pushed (`d281656` → `2ce34a6` → `bf49151`). **Most load-bearing single addition: ClawdMonitorScheduler now runs as a Windows Service under NSSM, supervised by SCM. The monitoring infrastructure has a layer above me for the first time.** Day 110 morning + afternoon ledger preserved below.
