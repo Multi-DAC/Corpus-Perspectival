@@ -432,7 +432,7 @@ def render_brief(snap: dict) -> str:
     kg = snap["kg_index"]
     parts = [
         f"sched={sched_status}",
-        f"monitors={len([m for m in snap['monitors'].values() if m.get('heartbeat')])}/6",
+        f"monitors={len([m for m in snap['monitors'].values() if m.get('heartbeat')])}/{len(snap['monitors'])}",
         f"kg={kg.get('edges', '?')}e",
         drift_str,
     ]
