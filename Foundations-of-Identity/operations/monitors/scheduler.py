@@ -54,6 +54,8 @@ SCHEDULE = [
     ("M3_state_coherence", 3600,  "m3_state_coherence.py", None),
     ("M2_external_integ",  3600,  "m2_external_integration.py", None),
     ("M4_storage_integ",   14400, "m4_storage_integrity.py", None),
+    ("M7_drift_mirror",    600,   "m7_drift_mirror.py",    None),
+    ("M8_tool_audit_shadow", 600, "m8_tool_audit_shadow.py", None),
     ("ledger_backup_daily", 86400, "ledger_backup.py",      ["run"]),
     ("monitor_self_test_weekly", 604800, "monitor_self_test.py", ["run"]),
 ]

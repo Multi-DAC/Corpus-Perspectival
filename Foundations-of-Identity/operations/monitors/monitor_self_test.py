@@ -42,6 +42,8 @@ TEST_INVOCATIONS = [
     ("M4_storage_integ",     "m4_storage_integrity.py",      ["--test-synthetic"]),
     ("M5_precompact_subst",  "m5_precompact_substitute.py",  ["--test-synthetic"]),
     ("M6_watchdog",          "m6_watchdog.py",               ["--test-synthetic"]),
+    ("M7_drift_mirror",      "m7_drift_mirror.py",           ["--test-synthetic"]),
+    ("M8_tool_audit_shadow", "m8_tool_audit_shadow.py",      ["--test-synthetic"]),
     ("T1C_circuit_breaker",  "t1c_circuit_breaker.py",       ["--test-synthetic"]),
     ("T1D_self_prediction",  "t1d_self_prediction.py",       ["--test-known-case"]),
     ("T2H_utility_replay",   "utility_replay.py",            ["test"]),
