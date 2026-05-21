@@ -226,6 +226,17 @@ def write_heartbeat() -> None:
     }
     M5_HEARTBEAT_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
+    # T2.G: emit OTel metrics
+    try:
+        from operations.monitors.otel_telemetry import MonitorTelemetry
+    except ImportError:
+        sys.path.insert(0, str(CLAWD))
+        from operations.monitors.otel_telemetry import MonitorTelemetry
+    tel = MonitorTelemetry(monitor_name="M5", monitor_version="v0.1.0")
+    tel.gauge("total_snapshots", state.get("total_snapshots", 0))
+    tel.gauge("activity_since_snapshot", state.get("activity_since_snapshot", 0))
+    tel.emit()
+
 
 def main():
     parser = argparse.ArgumentParser()

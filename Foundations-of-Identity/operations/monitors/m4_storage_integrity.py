@@ -224,9 +224,29 @@ def main():
             "pid": os.getpid(), "status": "initializing"
         }, indent=2))
 
+    run_start = datetime.now()
     checks = all_checks()
     write_heartbeat(checks)
     append_faults(checks)
+    run_elapsed = (datetime.now() - run_start).total_seconds()
+
+    # T2.G: emit OTel metrics
+    try:
+        from operations.monitors.otel_telemetry import MonitorTelemetry
+    except ImportError:
+        sys.path.insert(0, str(CLAWD))
+        from operations.monitors.otel_telemetry import MonitorTelemetry
+    tel = MonitorTelemetry(monitor_name="M4", monitor_version="v0.1.0")
+    tel.counter("runs", 1)
+    tel.gauge("checks_total", len(checks))
+    tel.gauge("checks_ok", sum(1 for c in checks if c["status"] == "ok"))
+    tel.gauge("checks_critical", sum(1 for c in checks if severity_of(c["status"]) == "critical"))
+    tel.gauge("checks_high", sum(1 for c in checks if severity_of(c["status"]) == "high"))
+    for c in checks:
+        tel.counter("check_status_observations", 1,
+                    attributes={"check": c["check"], "status": c["status"]})
+    tel.histogram("run_duration_seconds", run_elapsed)
+    tel.emit()
 
     if args.quiet:
         return

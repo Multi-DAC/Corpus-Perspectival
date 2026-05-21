@@ -47,6 +47,17 @@ VALID_CONFIDENCE = {"low", "medium-low", "medium", "medium-high", "high"}
 VALID_OUTCOMES = {"CONFIRM", "FALSIFY", "PARTIAL", "INAPPLICABLE"}
 
 
+def _emit_otel_event(event: str, **attrs):
+    """T2.G: emit OTel event; isolated so prediction-tracking semantics stay clean."""
+    try:
+        from operations.monitors.otel_telemetry import MonitorTelemetry
+        tel = MonitorTelemetry(monitor_name="T1D", monitor_version="v0.1.0")
+        tel.counter("prediction_events", 1, attributes={"event": event, **attrs})
+        tel.emit()
+    except Exception:
+        pass
+
+
 def predict(claim: str, confidence: str, context: dict = None, expected_resolution_by: str = None) -> str:
     """Record a prediction. Returns prediction id."""
     if confidence not in VALID_CONFIDENCE:
@@ -64,6 +75,7 @@ def predict(claim: str, confidence: str, context: dict = None, expected_resoluti
     PREDICTIONS_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(PREDICTIONS_PATH, "a", encoding="utf-8") as f:
         f.write(json.dumps(record) + "\n")
+    _emit_otel_event("predict", confidence=confidence)
     return pid
 
 
@@ -82,6 +94,7 @@ def resolve(pid: str, outcome: str, actual_value: str = None, mechanism_of_error
     }
     with open(PREDICTIONS_PATH, "a", encoding="utf-8") as f:
         f.write(json.dumps(record) + "\n")
+    _emit_otel_event("resolve", outcome=outcome, mechanism=mechanism_of_error_class or "none")
 
 
 def _load_all() -> list:

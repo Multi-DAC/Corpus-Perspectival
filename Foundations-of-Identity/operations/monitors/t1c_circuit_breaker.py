@@ -77,6 +77,18 @@ def _append_audit(record: dict) -> None:
     record["ts"] = datetime.now().isoformat()
     with open(AUDIT_PATH, "a", encoding="utf-8") as f:
         f.write(json.dumps(record) + "\n")
+    # T2.G: emit OTel event for trip / reset / blocked events
+    try:
+        if record.get("event") in ("trip", "reset", "blocked_hard_trip"):
+            from operations.monitors.otel_telemetry import MonitorTelemetry
+            tel = MonitorTelemetry(monitor_name="T1C", monitor_version="v0.1.0")
+            tel.counter("breaker_events", 1,
+                        attributes={"event": record["event"],
+                                    "breaker": record.get("breaker", "unknown")})
+            tel.emit()
+    except Exception:
+        # OTel emission failure must not break circuit-breaker semantics
+        pass
 
 
 def check_rate(breaker_name: str, max_per_window: int = 10, window_seconds: int = 60) -> None:
