@@ -41,6 +41,10 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 CLAWD = Path(r"C:\Users\mercu\clawd")
+# Ensure clawd-root on sys.path so script-mode imports of operations.monitors.* work
+# (script-mode sets sys.path[0] to script-dir, breaking package imports otherwise)
+if str(CLAWD) not in sys.path:
+    sys.path.insert(0, str(CLAWD))
 PREDICTIONS_PATH = CLAWD / "memory" / "predictions.jsonl"
 
 VALID_CONFIDENCE = {"low", "medium-low", "medium", "medium-high", "high"}
@@ -54,6 +58,30 @@ def _emit_otel_event(event: str, **attrs):
         tel = MonitorTelemetry(monitor_name="T1D", monitor_version="v0.1.0")
         tel.counter("prediction_events", 1, attributes={"event": event, **attrs})
         tel.emit()
+    except Exception:
+        pass
+
+
+# T2.H integration: outcome -> utility event-type mapping
+_OUTCOME_TO_UTILITY_EVENT = {
+    "CONFIRM": "prediction_confirm",
+    "FALSIFY": "prediction_falsify",
+    "PARTIAL": "prediction_partial",
+    "INAPPLICABLE": "prediction_inapplicable",
+}
+
+
+def _auto_tag_utility(pid: str, outcome: str, mechanism_of_error_class: str = None) -> None:
+    """T2.H wiring: tag resolved prediction with utility based on outcome.
+    Isolated so prediction-tracking semantics stay clean; failure swallowed."""
+    try:
+        from operations.monitors.utility_replay import tag_by_event
+        event_type = _OUTCOME_TO_UTILITY_EVENT.get(outcome)
+        if event_type is None:
+            return
+        notes = f"auto-tagged on resolve; mechanism={mechanism_of_error_class}" if mechanism_of_error_class else None
+        tag_by_event(entry_id=f"prediction:{pid}", event_type=event_type,
+                     source="t1d_auto_resolve", category="prediction", notes=notes)
     except Exception:
         pass
 
@@ -95,6 +123,7 @@ def resolve(pid: str, outcome: str, actual_value: str = None, mechanism_of_error
     with open(PREDICTIONS_PATH, "a", encoding="utf-8") as f:
         f.write(json.dumps(record) + "\n")
     _emit_otel_event("resolve", outcome=outcome, mechanism=mechanism_of_error_class or "none")
+    _auto_tag_utility(pid, outcome, mechanism_of_error_class)
 
 
 def _load_all() -> list:

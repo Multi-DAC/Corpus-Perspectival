@@ -41,6 +41,8 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 CLAWD = Path(r"C:\Users\mercu\clawd")
+if str(CLAWD) not in sys.path:
+    sys.path.insert(0, str(CLAWD))
 QUEUE_PATH = CLAWD / "memory" / "critical_fault_queue.jsonl"
 SENT_PATH = CLAWD / "memory" / "critical_fault_sent.jsonl"
 POLLER_STATE = CLAWD / "memory" / "escalation_poller_state.json"

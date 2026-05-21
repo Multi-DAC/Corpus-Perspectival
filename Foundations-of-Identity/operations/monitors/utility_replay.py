@@ -43,6 +43,8 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 CLAWD = Path(r"C:\Users\mercu\clawd")
+if str(CLAWD) not in sys.path:
+    sys.path.insert(0, str(CLAWD))
 LEDGER_PATH = CLAWD / "memory" / "utility_ledger.jsonl"
 
 # Default utility deltas per common event type
@@ -203,20 +205,26 @@ def stats() -> dict:
 
 
 def synthetic_test() -> bool:
-    """Falsifiability: tag → query → archival-candidates cycle."""
+    """Falsifiability: tag → query → archival-candidates cycle.
+
+    Uses a per-run unique category so the ranking test isn't polluted by
+    prior runs' entries (caught by monitor_self_test 2026-05-20).
+    """
     print("=== T2.H Utility-Tagged Replay Test ===")
-    tid = f"_synthetic_test_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-    tag(tid, +3.0, "synthetic_test", category="test", notes="initial positive tag")
-    tag(tid, +2.0, "synthetic_test", category="test")
+    run_id = datetime.now().strftime('%Y%m%d_%H%M%S_%f')
+    test_category = f"_test_{run_id}"
+    tid = f"_synthetic_test_{run_id}"
+    tag(tid, +3.0, "synthetic_test", category=test_category, notes="initial positive tag")
+    tag(tid, +2.0, "synthetic_test", category=test_category)
     u = get_utility(tid)
     assert u["cumulative_utility"] == 5.0, f"cumulative wrong: {u}"
     print(f"  PASS: tag + get_utility round-trip (cumulative=5.0)")
 
-    # Tag a separate negative-utility entry
-    tid_old = f"_synthetic_old_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-    tag(tid_old, -5.0, "synthetic_test_neg", category="test")
-    tops = top_utility(category="test", limit=5)
-    assert tops[0]["entry_id"] == tid, f"top utility wrong: {tops}"
+    # Tag a separate negative-utility entry in same test category
+    tid_old = f"_synthetic_old_{run_id}"
+    tag(tid_old, -5.0, "synthetic_test_neg", category=test_category)
+    tops = top_utility(category=test_category, limit=5)
+    assert tops and tops[0]["entry_id"] == tid, f"top utility wrong: {tops}"
     print(f"  PASS: top_utility ranks correctly; #1={tops[0]['entry_id']} score={tops[0]['cumulative_utility']}")
 
     print(f"  PASS: full cycle works (tag/get/top)")

@@ -12,10 +12,11 @@ Usage:
 """
 import argparse
 import json
+import re
 import sqlite3
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -39,6 +40,89 @@ def _file_age_seconds(path: Path) -> int | None:
     if not path.exists():
         return None
     return int(time.time() - path.stat().st_mtime)
+
+
+_CAP_HIT_PATTERN = re.compile(
+    r"hit your (?:session )?limit.{0,5}resets\s+(\d{1,2})(am|pm)",
+    re.IGNORECASE,
+)
+
+
+def _token_cap_status() -> dict:
+    """Parse recent cap-hit messages from coordination.json activity_feed.
+    Returns dict with hit_at/reset_local/resets_in_minutes/hours_since_hit
+    or {'status': 'no_recent_hit'} if none in last 24h.
+
+    Cap-hit message format:
+      You've hit your session limit ... resets {H}{am|pm} (Etc/GMT+8)
+    Etc/GMT+8 in POSIX = UTC-8 = PST. System clock is PST so no TZ conversion.
+    """
+    coord_path = MEMORY / "coordination.json"
+    if not coord_path.exists():
+        return {"status": "no_coordination_file"}
+    try:
+        d = json.loads(coord_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {"status": "coordination_unreadable"}
+
+    feed = d.get("activity_feed", [])
+    now = datetime.now()
+    cutoff = now - timedelta(hours=24)
+
+    most_recent_hit = None
+    most_recent_hit_ts = None
+    for entry in feed:
+        summary = entry.get("summary", "")
+        m = _CAP_HIT_PATTERN.search(summary)
+        if not m:
+            continue
+        try:
+            ts = datetime.fromisoformat(entry["timestamp"])
+        except (ValueError, KeyError):
+            continue
+        if ts < cutoff:
+            continue
+        if most_recent_hit_ts is None or ts > most_recent_hit_ts:
+            most_recent_hit_ts = ts
+            most_recent_hit = (entry, m)
+
+    if most_recent_hit is None:
+        return {"status": "no_recent_hit", "window_hours": 24}
+
+    entry, m = most_recent_hit
+    hit_hour = int(m.group(1))
+    ampm = m.group(2).lower()
+    hour_24 = (hit_hour % 12) + (12 if ampm == "pm" else 0)
+    hours_since_hit = (now - most_recent_hit_ts).total_seconds() / 3600
+
+    # Heuristic: caps reset within ~5h. If hit is older than 6h, the named
+    # reset clock-time has almost certainly already passed (in real wall-clock,
+    # not in next-day-forecast). Mark as stale-likely-reset rather than
+    # forecasting a 24h-future reset.
+    if hours_since_hit >= 6:
+        return {
+            "status": "stale_hit_likely_reset",
+            "hit_at": most_recent_hit_ts.isoformat(),
+            "hit_summary": entry.get("summary", "")[:120],
+            "reset_clock": f"{hit_hour}{ampm}",
+            "hours_since_hit": round(hours_since_hit, 1),
+        }
+
+    # Recent hit: forecast next occurrence of the named reset hour
+    reset_local = now.replace(hour=hour_24, minute=0, second=0, microsecond=0)
+    if reset_local <= most_recent_hit_ts:
+        reset_local = reset_local + timedelta(days=1)
+    resets_in_minutes = int((reset_local - now).total_seconds() / 60)
+    return {
+        "status": "recent_hit",
+        "hit_at": most_recent_hit_ts.isoformat(),
+        "hit_summary": entry.get("summary", "")[:120],
+        "reset_local": reset_local.isoformat(),
+        "reset_clock": f"{hit_hour}{ampm}",
+        "resets_in_minutes": resets_in_minutes,
+        "already_reset": resets_in_minutes <= 0,
+        "hours_since_hit": round(hours_since_hit, 1),
+    }
 
 
 def _tail_jsonl(path: Path, n: int = 5) -> list:
@@ -178,6 +262,7 @@ def gather() -> dict:
         "fault_summary": fault_summary,
         "drift": drift_state,
         "self_predictions": pred_count,
+        "token_cap": _token_cap_status(),
     }
 
 
@@ -292,6 +377,22 @@ def render_human(snap: dict) -> str:
         out.append("")
         out.append(f"  HEALER  recent heal attempts: {list(healer['last_heal_per_channel'].keys())}")
 
+    # Token cap (5h rolling — informational; not actionable except for pacing)
+    tc = snap.get("token_cap", {})
+    tc_status = tc.get("status")
+    if tc_status == "recent_hit":
+        out.append("")
+        if tc["already_reset"]:
+            out.append(f"  TOKEN CAP  last hit {tc['hours_since_hit']}h ago (resets {tc['reset_clock']}); already past reset window")
+        elif tc["resets_in_minutes"] < 60:
+            out.append(f"  TOKEN CAP  *** ACTIVE *** hit {tc['hours_since_hit']}h ago; resets in {tc['resets_in_minutes']}m ({tc['reset_clock']} PST)")
+        else:
+            hrs = tc["resets_in_minutes"] / 60
+            out.append(f"  TOKEN CAP  *** ACTIVE *** hit {tc['hours_since_hit']}h ago; resets in {hrs:.1f}h ({tc['reset_clock']} PST)")
+    elif tc_status == "stale_hit_likely_reset":
+        out.append("")
+        out.append(f"  TOKEN CAP  last hit {tc['hours_since_hit']}h ago (resets {tc['reset_clock']}); likely already reset")
+
     # Predictions
     if snap["self_predictions"]["total"]:
         out.append("")
@@ -333,6 +434,9 @@ def render_brief(snap: dict) -> str:
         parts.append(f"*CB={cb}*")
     if esc:
         parts.append(f"*esc={esc}*")
+    tc = snap.get("token_cap", {})
+    if tc.get("status") == "recent_hit" and not tc.get("already_reset"):
+        parts.append(f"cap-reset@{tc['reset_clock']}")
     return "  ".join(parts)
 
 

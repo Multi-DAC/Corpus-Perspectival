@@ -46,13 +46,16 @@ SCHEDULER_HEARTBEAT = CLAWD / "memory" / "monitor_scheduler_heartbeat.json"
 SCHEDULER_AUDIT = CLAWD / "memory" / "monitor_scheduler_audit.jsonl"
 SCHEDULER_PID_FILE = CLAWD / "memory" / "monitor_scheduler.pid"
 
-# (monitor_name, cadence_seconds, script_filename)
+# (monitor_name, cadence_seconds, script_filename, extra_args)
+# extra_args overrides the default ["--quiet"] when present.
 SCHEDULE = [
-    ("M6_watchdog",        300,   "m6_watchdog.py"),
-    ("M1_cross_channel",   600,   "m1_cross_channel.py"),
-    ("M3_state_coherence", 3600,  "m3_state_coherence.py"),
-    ("M2_external_integ",  3600,  "m2_external_integration.py"),
-    ("M4_storage_integ",   14400, "m4_storage_integrity.py"),
+    ("M6_watchdog",        300,   "m6_watchdog.py",        None),
+    ("M1_cross_channel",   600,   "m1_cross_channel.py",   None),
+    ("M3_state_coherence", 3600,  "m3_state_coherence.py", None),
+    ("M2_external_integ",  3600,  "m2_external_integration.py", None),
+    ("M4_storage_integ",   14400, "m4_storage_integrity.py", None),
+    ("ledger_backup_daily", 86400, "ledger_backup.py",      ["run"]),
+    ("monitor_self_test_weekly", 604800, "monitor_self_test.py", ["run"]),
 ]
 
 # Cycle period: scheduler loop wake-up interval. Should be <= shortest cadence.
@@ -78,15 +81,17 @@ def _write_heartbeat(state: dict) -> None:
     SCHEDULER_HEARTBEAT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
 
-def _run_monitor(script_name: str) -> dict:
-    """Invoke a monitor script with --quiet (heartbeat-only mode)."""
+def _run_monitor(script_name: str, extra_args=None) -> dict:
+    """Invoke a monitor script. Default arg ['--quiet'] suits the M* monitors;
+    extra_args overrides for scripts with a different CLI shape."""
     script = MONITORS_DIR / script_name
     if not script.exists():
         return {"script": script_name, "status": "missing"}
+    args = extra_args if extra_args is not None else ["--quiet"]
     start = time.time()
     try:
         r = subprocess.run(
-            [sys.executable, str(script), "--quiet"],
+            [sys.executable, str(script)] + args,
             capture_output=True, text=True, timeout=120, cwd=str(CLAWD),
         )
         elapsed = time.time() - start
@@ -106,10 +111,16 @@ def _run_monitor(script_name: str) -> dict:
 def run_due_monitors(last_run: dict) -> dict:
     """Run any monitors whose cadence has elapsed. Returns updated last_run dict."""
     now = time.time()
-    for name, cadence, script in SCHEDULE:
+    for entry in SCHEDULE:
+        # Support both 3-tuple (legacy) and 4-tuple (with extra_args) shapes
+        if len(entry) == 4:
+            name, cadence, script, extra_args = entry
+        else:
+            name, cadence, script = entry
+            extra_args = None
         last = last_run.get(name, 0)
         if now - last >= cadence:
-            result = _run_monitor(script)
+            result = _run_monitor(script, extra_args=extra_args)
             _audit({"event": "monitor_run", "monitor": name, "result": result})
             last_run[name] = now
     return last_run
