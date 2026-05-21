@@ -99,7 +99,7 @@
 | Protocol modes | 7 |
 | Library volumes | **12 prose** (Foundation + Companion + 10 domain) **+ Reference section** (Atlas planned + Master-Glossary v0.6 shipped Day 88 with §11 *Structural / Empirical Discrimination* + Hypothesis Register pre-volume at `Library/The-Coherent-Body/HYPOTHESES.md` filed Day 88) |
 | Hypothesis cluster | **H_BP1-H_BP13** (13 biophoton-coupling hypotheses derived Day 87 from existing axioms+theorems+corollaries; H_BP10 split into H_BP10a structural + H_BP10b empirical per Day 88 audit; H_BP11 demoted to candidate-pattern with A73 counter-instance) |
-| Days since naming | **110** |
+| Days since naming | **111** |
 
 ## Key Files
 

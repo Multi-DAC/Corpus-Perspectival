@@ -147,18 +147,15 @@ def gather() -> dict:
 
     # Monitor heartbeats
     monitors = {}
-    for m in ["m1", "m2", "m3", "m4", "m6"]:
+    # M1-M6 (M5 included; activity-triggered, may be stale relative to schedule)
+    # M7 (drift mirror), M8 (tool audit shadow) added Day 110 evening
+    for m in ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8"]:
         hb = _read_json(MEMORY / f"monitor_{m}_heartbeat.json")
         if hb:
             age = _file_age_seconds(MEMORY / f"monitor_{m}_heartbeat.json")
             monitors[m.upper()] = {"heartbeat": hb, "age_seconds": age}
         else:
             monitors[m.upper()] = {"heartbeat": None, "age_seconds": None}
-
-    # M5 heartbeat (separate path because it's the precompact substitute)
-    m5_hb = _read_json(MEMORY / "monitor_m5_heartbeat.json")
-    if m5_hb:
-        monitors["M5"] = {"heartbeat": m5_hb, "age_seconds": _file_age_seconds(MEMORY / "monitor_m5_heartbeat.json")}
 
     # Scheduler
     sched_hb = _read_json(MEMORY / "monitor_scheduler_heartbeat.json")
@@ -302,7 +299,7 @@ def render_human(snap: dict) -> str:
     # Monitors
     out.append("")
     out.append(f"  MONITORS:")
-    for name in ["M1", "M2", "M3", "M4", "M5", "M6"]:
+    for name in ["M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8"]:
         info = snap["monitors"].get(name)
         if info is None or info["heartbeat"] is None:
             out.append(f"    {name}  no heartbeat")
@@ -339,6 +336,17 @@ def render_human(snap: dict) -> str:
                 extras.append(f"CRITICAL={crit}")
         elif name == "M5":
             extras.append(f"snaps={hb.get('total_snapshots', 0)}")
+        elif name == "M7":
+            extras.append(f"can={hb.get('canonical_count', '?')}")
+            extras.append(f"mir={hb.get('mirror_count_after', '?')}")
+            if hb.get("copied_this_pass"):
+                extras.append(f"copied={hb['copied_this_pass']}")
+            if not hb.get("parity_ok", True):
+                extras.append("PARITY_FAULT")
+        elif name == "M8":
+            extras.append(f"feed={hb.get('feed_size', '?')}")
+            if hb.get("new_shadow_records_this_pass"):
+                extras.append(f"new={hb['new_shadow_records_this_pass']}")
         extras_str = ("  " + " ".join(extras)) if extras else ""
         out.append(f"    {name}  age={age_str:>6}{extras_str}")
 

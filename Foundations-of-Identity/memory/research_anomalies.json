@@ -1,0 +1,21 @@
+[
+  {
+    "id": "308c0027",
+    "observation": "Day 96 morning post_tool_log silent failure was caused by Path.home() resolving to wrong user directory",
+    "domain": "infrastructure",
+    "confidence": 0.95,
+    "status": "explained",
+    "candidate_explanations": [
+      "Hook script ran but file_handle was wrong path",
+      "Claude Code harness runs as user Wasch not mercu"
+    ],
+    "connections": [
+      "A115",
+      "A121",
+      "L17"
+    ],
+    "created": "2026-05-07T17:09:10.892909",
+    "updated": "2026-05-21T06:04:25.029773",
+    "resolution": "Day 111 ~00:30 PST investigation: post_tool_log.py was ALREADY FIXED for Path.home() on May 7 (.bak-2026-05-07-path-fix confirms). Current version uses CLAWD_HOME env > script-relative > absolute-fallback pattern. Actual A115 active failure mode is upstream Windows Claude Code dispatcher regression (cluster #16047 + #55889 + others), NOT user-dir Path.home() resolution -- tool_audit.jsonl has manual-trigger entries from May 19 confirming hook scripts work direct-invoked; the dispatcher is what is silent. drift_mirror.py STILL had latent Path.home() vulnerability and was defensively fixed Day 111 ~00:35 using the same resolution pattern as post_tool_log.py. T1.D recorded the predict+FALSIFY at pid 70889dc1-20d with mechanism diagnosis-was-partially-correct-but-not-the-active-failure-mode. T2.H auto-tagged +3.0 utility. Daemon-layer bypass (M7+M8) shipped Day 110 morning is the structural answer; hook resumption if Anthropic ships dispatcher fix would be bonus restoration of redundancy."
+  }
+]
