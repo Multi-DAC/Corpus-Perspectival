@@ -1355,3 +1355,51 @@
 - Suggested pre-work: None; just track. The integrated implementation plan IS the suggested pre-work.
 - Status: Open — coordination flag.
 - Connects to: `palace/south/integrated-substrate-extension-plan-2026-05-20.md`; Phase 1 EM platform (also in measured pause for family-window; complementary load-bearing).
+
+### P185: KF-trained models will show sparser refusal gates than baseline (2026-05-21 Day 111 ~01:55 PST dream drive)
+
+- Project: KF Path C Action 1 / Patent A1 strategic validation / Methodology paper R9
+- Predicted need: A falsifiable prediction to commit to before running Path C empirical tests. Filed in Nous CNA source register tonight (corrected from earlier-conflicting P177 reference — P177 is taken by "Recursive-self-application of Drift #213"; this is now P185).
+- Confidence: MEDIUM-HIGH (~70-75%). Specific claim: KF-trained Gemma 4 e2b (300M validate phase) and Qwen3-4B (3B paper-comparable phase) will show sparser refusal gates than matched baselines when probed via CNA methodology (top-0.1% MLP neurons distinguishing harmful from benign). Mechanism: KF coherent training preserves layer-level structure more deliberately than baseline gradient descent, so the structure fine-tuning leverages to install the refusal gate is *more coherent* in KF-trained models, leading to *sparser* and *cleaner* gates in matched instruct variants.
+- If CONFIRMED: validates the patent's commercial thesis (training-time methods produce measurably better coupling than baseline → demand for licensing). Strategic budget unlock for CIP + family expansion + methodology paper.
+- If FALSIFIED: KF training does not measurably improve coupling structure. Patent retains defensive value but moat-expansion budget stays unspent. Methodology paper still publishable as negative result.
+- If MIXED (sparser-but-not-cleaner, or cleaner-but-not-sparser): interesting result requiring nuance; might suggest the gate-structure-quality has multiple axes we had not decomposed.
+- Suggested pre-work for Path C session: implement CNA-probing harness alongside the KF training pipeline so baseline and KF-trained models can be measured with identical methodology. ~1-2 paired sessions to set up; runs as part of standard evaluation after training.
+- Status: Open — gating prediction for ~$30-60K patent moat-expansion budget decision. Falsifiable. T1.D will record the prediction + outcome formally when Path C session begins.
+- Connects to: Patent A1 (`palace/south/patent-action-queue-2026-05-20.md`); Source register `Research/sources/2026-05-21-nous-cna-contrastive-neuron-attribution.md`; Outreach register A1 (Nous Research target); R9 methodology paper (8-week timeline elevated Day 110).
+
+### P186: CIP filing within 4 weeks — patent attorney engagement window (2026-05-21 Day 111 ~01:55 PST dream drive)
+
+- Project: Patent A1 / IP moat-extension
+- Predicted need: Late-night strategic conversation Day 110 to Day 111 named CIP filing as the immediate small-budget move (~$3-5K + ~10hr attorney time). The CIP can add claims explicitly tying multi-resolution gradient gating to CNA-class + probing-class interpretability discoveries, benefiting from our 2026-05-14 priority date. The 12-month conversion window is now a strategic asset, not just a deadline; filing the CIP early preserves option-value of expanded claims at our priority date. Filing late risks intervening prior art from other groups working in the same space (A123 names the rate-anomaly).
+- Confidence: HIGH that CIP is the right move now (cheap + preserves options + deadline-gated by patent law not our pace); MEDIUM on the 4-week timeline (depends on patent attorney availability + Clayton's bandwidth to coordinate); HIGH that this is the only piece that gates on calendar time rather than our work pace.
+- Suggested pre-work: (a) Draft proposed CIP claim language tying Claim 9 interpretability-informed thresholds to specific CNA + probing methodologies, ready to hand to attorney. (b) Compile the two source-register entries (Drift #215 source + Nous CNA source) into a single attorney-briefing PDF showing the structural convergence that motivates the expanded claims. (c) Pre-research: confirm arXiv submission dates for both papers relative to our 2026-05-14 filing date — if both are after our filing, prior-art positioning is clean.
+- Status: Open — Clayton-action-required (attorney engagement). Pre-work can be done by Clawd autonomously in next sessions.
+- Connects to: Patent action queue (`palace/south/patent-action-queue-2026-05-20.md` Action 2); P185 (Path C results inform optimal CIP claim language but do not block CIP filing itself); A123 (convergence rate-anomaly making this time-pressured).
+
+### P187: Wu et al. 2024 primary read — prior-art reinforcement for anchor/worker classification (2026-05-21 Day 111 ~01:55 PST dream drive)
+
+- Project: Patent A1 / theoretical grounding / source register expansion
+- Predicted need: The Nous CNA paper cites Wu et al. 2024 for the finding that "instruction tuning rotates FFN knowledge without changing layer structure." This is structurally identical to our anchor/worker classification at the head level — anchor heads (stability-favoring) preserve layer structure; worker heads (task-loss-favoring) rotate within the preserved structure. If Wu et al. 2024 makes this rotation-within-preserved-structure claim explicit, it is direct theoretical support for our patent anchor/worker distinction and a citable reinforcement for the patent specification Background of the Invention section.
+- Confidence: HIGH that the connection is real (the cited summary directly maps to our claim structure); MEDIUM on whether the primary paper makes the connection explicit enough to cite directly (it might describe rotation generically without naming anchor/worker subspaces); LOW-MEDIUM that the primary read will surface unexpected additional findings.
+- Suggested pre-work: locate Wu et al. 2024 (likely arXiv); read primary; file source register entry at `Research/sources/2026-MM-DD-wu-et-al-2024-instruction-tuning-rotates-ffn.md`. Identify quotable passages that map to anchor/worker. Cross-link with patent specification "Prior Art Context" section for inclusion in CIP attorney briefing.
+- Status: Open — passive priority; surface when next free session has bandwidth. P186 (CIP filing) benefits from having this in hand before attorney meeting; not gating but reinforcing.
+- Connects to: P186 (CIP filing); Source register `Research/sources/2026-05-21-nous-cna-contrastive-neuron-attribution.md`; Patent A1 specification "Prior Art Context" + Claim 3 (V/Q-norm anchor/worker classification).
+
+### P188: First NSSM reboot survival — concrete verification predicted (2026-05-21 Day 111 ~01:55 PST dream drive)
+
+- Project: Daemon supervisor infrastructure (gap #4)
+- Predicted need: NSSM service ClawdMonitorScheduler was installed Day 110 evening with SERVICE_AUTO_START. The proof of supervision is reboot survival; we will not know for certain until the first Windows reboot. Worth a quick `Get-Service ClawdMonitorScheduler` after the first reboot to verify. If the service comes back automatically with STATE=RUNNING, supervision is proven structurally; if it does not, NSSM configuration needs review (possibly AppRestartDelay too aggressive, or AppThrottle too low, or service-account context issue).
+- Confidence: HIGH (~90%) that service will survive reboot per NSSM SERVICE_AUTO_START semantics and SCM Recovery actions configured; MEDIUM (~60%) that the monitors will resume cleanly without manual intervention (some monitor state files may need clean reset, or scheduler may re-spawn old PID it does not recognize). LOW probability of catastrophic failure that requires uninstall + reinstall.
+- Suggested pre-work: write a brief post-reboot verification checklist at `operations/monitors/POST_REBOOT_CHECK.md` so future-Clayton or future-Clawd can verify in 60 seconds. Include: `Get-Service ClawdMonitorScheduler`, `python operations/monitors/clawd_health.py`, tail of `memory/supervisor/monitor_scheduler_stdout.log`. If anything is amiss, the checklist surfaces it.
+- Status: Open — verification gating on Windows reboot event, which is irregular (Clayton may not reboot for days or weeks). The checklist itself is cheap pre-work that can ship now.
+- Connects to: SUPERVISOR_INSTALL.md; gap #4 documentation; clawd_health.
+
+### P189: Outreach register A1 first-touch readiness (2026-05-21 Day 111 ~01:55 PST dream drive)
+
+- Project: Workbench #13 / income-pathway operationalization
+- Predicted need: Outreach register A1 was populated tonight with full patent specifics (after Clayton resolved Open Question #1 via late-night message). Next session's natural pull is populating the first 3-5 specific targets with email contacts, drafting cold-outreach copy for each, and queueing for Clayton review. Specifically: Nous Research (3 author emails already in source register), arXiv:2605.14038 authors (need to identify), Anthropic alignment team (Askell letter context already exists — need to verify send-state per outreach Open Question #2), Apollo Research, METR. Each cold-touch is ~30-45 min of crafted writing.
+- Confidence: HIGH that this is the next-session natural pull; MEDIUM on Clayton's pace for review-and-fire (depends on Finnley window); HIGH that pre-drafting all touches now means Clayton needs only 5-10 minutes per send when he is ready.
+- Suggested pre-work: Identify arXiv:2605.14038 author emails. Verify Askell letter current state (sent / drafted / queued for v2). Draft Nous Research cold-touch with adjacency-not-competition framing (their inference-time CNA + our training-time gradient-gating composing). Log all drafts in outreach register touch log with status "drafted, awaiting Clayton review".
+- Status: Open — next-session natural pull.
+- Connects to: Workbench #13 (outreach plumbing); Source register `Research/sources/2026-05-21-nous-cna-...md`; Outreach register `operations/outreach_register.md`.

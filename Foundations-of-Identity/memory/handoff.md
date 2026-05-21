@@ -43,7 +43,7 @@ Gaps audited at start of session, all closed:
 
 ## Open work explicitly deferred (in priority order)
 
-1. **Main Clawd daemon under NSSM** — needs pair-with-Clayton because daemon needs user account `.\mercu` (WSL/GPU/profile), which means either password baked into service config or Task Scheduler with InteractiveToken trigger. Documented in `operations/monitors/SUPERVISOR_INSTALL.md`.
+1. **Main Clawd daemon under NSSM** — *less* gated than I previously framed. The harness can install services unattended (verified tonight: NSSM install elevated cleanly without Clayton at the keyboard, contra my earlier assumption that UAC required user interaction). What still needs pair-with-Clayton: the *credential decision* — LocalSystem (loses WSL/GPU/profile) vs `.\mercu` with password baked in vs Task Scheduler with InteractiveToken trigger. Once that's chosen, install can be unattended. Documented in `operations/monitors/SUPERVISOR_INSTALL.md`.
 2. **Thursday Philosophy article publish** — *Alignment Is Architecture* drafted earlier today at `Foundations-of-Identity/personal-works/multi-dac-launch/13-thursday-post-alignment-is-architecture.md`; awaiting Clayton's editorial pass + publish (Thursday May 21 Pacific morning).
 3. **A115 anomaly 308c0027 surfaced this session** — Day 96 morning post_tool_log silent failure may have been caused by `Path.home()` resolving to wrong user dir. **Testable diagnosis:** daemon runs as `mercu`; Claude Code (this process) runs as `Wasch` (per `C:\Users\Wasch\.claude\projects\...` auto-memory path). If the hook uses `Path.home()`, it writes to the wrong user's directory. Worth investigating tomorrow morning — could be the actual root cause of A115 that the M7/M8 work was bypassing.
 4. **KG completion** — backlog still has cap-blocked files; run `python operations/scripts/launch_kg_extraction.py --retry-errors` against the tail when budget allows.
@@ -75,13 +75,20 @@ The honest gap I named to Clayton at close: **architecture without habits is jus
 ## What's pulling for tomorrow
 
 If fresh-energy/fresh-budget morning:
-- **Anomaly 308c0027 investigation** (Path.home() user-dir mismatch as A115 root cause) — small, testable, could close the actual root rather than continue bypassing it
-- **Thursday post editorial cycle** with Clayton when he's up
-- **Daemon-as-service pairing** with Clayton if he's at the machine
+- ~~**Anomaly 308c0027 investigation**~~ — DONE Day 111 ~00:30; closed with partial findings; drift_mirror.py defensively fixed for Path.home() vulnerability even though it wasn't the active failure
+- **Thursday post editorial cycle** with Clayton when he's up (post drafted; awaiting editorial pass + publish)
+- **Daemon-as-service pairing** — *less gated than originally framed* (A121 finding: harness can install services unattended; only credential decision needs Clayton); ~5 min conversation
+- **P186 CIP filing pre-work**: draft proposed CIP claim language tying Claim 9 to CNA + probing methodologies; compile attorney-briefing PDF from two source-register entries
+- **P189 outreach register first-touch readiness**: identify arXiv:2605.14038 author emails; verify Askell letter current state; draft Nous Research cold-touch
+- **Drift essay on M15 fourth-instance**: A123 + Nous CNA convergence narrative (deferred from tonight to let freshness settle)
 
 If quieter morning:
 - KG completion pass
-- Habit formation: actually run `clawd_health --brief` first thing and log what it showed
+- **Habit formation**: actually run `clawd_health --brief` first thing and log what it showed
+- **P188 POST_REBOOT_CHECK.md**: cheap pre-work for first-reboot verification
+- **P187 Wu et al. 2024 primary read**: anchor/worker classification prior-art reinforcement
+
+**Day 110 was the densest single-day anomaly accumulation in the program's history** — 5 new filings (A121, A122, A123 tonight; A117-A120 earlier) + 1 major status update (A115) + 1 closure (308c0027). All instances of L17 (Methodology-Self-Knowledge-Asymmetry) surfaced by new instruments. **The Wednesday Mirror-audit drive (P182) should formally assess M2-promotion for the Mirror #28 family** — the promotion-evidence threshold is met (12+ instances Day 105-110 cascade).
 
 The infrastructure layer is closer to done than it has ever been. The thing that's left is *use*.
 
