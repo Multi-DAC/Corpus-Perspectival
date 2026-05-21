@@ -14,10 +14,18 @@
 
 ## Asset inventory (to populate per-asset target lists)
 
-### A1 — The Patent (provisional, current)
-- **Asset:** First filed provisional patent (gradient-gating methodology + related; exact specifics need verification — see open question below)
-- **Audience type:** AI research labs interested in training methodology IP; applied-AI shops needing efficient-training claims; specific alignment-research groups
-- **Specific targets:** *(to populate next session)*
+### A1 — The Patent (provisional, FILED 2026-05-14)
+- **Asset:** US Provisional Patent — *Multi-Scale Gradient-Gated Training Method for Neural Network Models with Bidirectional Cross-Resolution Coherence*
+- **Inventor:** Clayton Warren Iggulden-Schnell (Portland, OR). Clawd Iggulden-Schnell acknowledged in specification as collaborative research participant.
+- **Filed:** 2026-05-14 (Day 104). **Conversion-to-non-provisional deadline: 2027-05-14** (12-month window).
+- **Location:** `repo-staging/Corpus-Perspectival/Technical-Work/The-Killing-Form/provisional-patent-draft-2026-05-14.md`
+- **Action queue:** `palace/south/patent-action-queue-2026-05-20.md` (Path C empirical test gates CIP filing; legal/USPTO actions owned by Clayton)
+- **Core inventive scope:** multi-scale gradient gating at three resolution levels simultaneously (weight/head/layer = UV/intermediate/IR in RG analogy), with bidirectional coherence constraints linking the scales, anchor/worker head classification informed by initial weight topology, head-level build/dissolve/neutral gating, layer-level coherent/differentiating/interfering classification, and emergent "glider dynamics" — oscillatory coherence waves propagating through layers during training.
+- **10 illustrative claims** including the core method (Claim 1), KF-coefficient-of-variation auxiliary gradient (Claim 2), V/Q-norm-ratio anchor/worker classification (Claim 3), >75%-agreement coherent-layer threshold (Claim 4), specific scale modulation values 1.0-1.125/1.0/0.5 (Claim 5), 25-100-step periodicity (Claim 6), system + storage-medium embodiments (Claims 7-8), interpretability-informed thresholds (Claim 9), broad target-task coverage (Claim 10).
+- **Audience type:** AI research labs interested in training methodology IP; specifically alignment-research groups, foundation-model labs, applied-AI shops where 1-2pp accuracy gain at scale justifies licensing. Open-weight model trainers (where the method can be applied without conflicting with closed-weight licensing).
+- **Specific targets:** *(to populate next session — initial candidates: Anthropic, DeepMind, Meta AI, Apple Intelligence, Mistral, AI2, Together AI, Anyscale; on alignment side: Anthropic alignment, Apollo Research, METR, Redwood, ARC Evals)*
+- **Distinctive claim relative to prior art:** the specification names that "none of the prior art known to the inventor coordinates gradient modulation simultaneously across all three resolution levels with bidirectional coherence constraints linking the scales." Prior art is single-resolution; this is multi-resolution + bidirectional. The Path C empirical test is the value-magnitude determination.
+- **Outreach prerequisite:** Path C results (Action 1 of patent action queue). Cold-outreach with "we have a patent" lands; cold-outreach with "we have a patent + N% improvement at 3B scale" lands much harder. Outreach copy can be drafted now but optimal sends gate on Action 1 completion.
 
 ### A2 — Killing Form research program
 - **Asset:** 85+ findings; gradient-gating methodology validated at 300M scale (Finding #80 — gradient-gated KF EXCEEDS baseline +1.37pp); Phase 4A-ter complete; v0.7 design doc; paper-grade sections drafted; Path C hybrid (300M Gemma 4 e2b validate → 3B Qwen3-4B paper-comparable) queued for next phase
@@ -64,9 +72,9 @@
 
 ## Open questions (Clawd to surface to Clayton)
 
-1. **What exactly does the current patent cover?** Specifics matter for ICP — need to know what to claim in outreach copy.
-2. **Is the Askell letter ready to send?** It's drafted (Day 98); Day 105 sent at 10 AM Pacific per coil-winding handoff. *(Need to verify current state — was the original sent, drafted-but-not-sent, or is there a v2 in queue?)*
-3. **Patent action queue from KF paper strategy ($26-58K external budget across 12 months; CIP filing conditional on Path C favorable outcome)** — how does this register reconcile with that queue? They should be one thing, not two.
+1. ~~**What exactly does the current patent cover?**~~ **RESOLVED 2026-05-21 ~00:25 PST.** Clayton pointed me to `Technical-Work/The-Killing-Form/provisional-patent-draft-2026-05-14.md`. A1 entry above now has full specifics. Mirror #28 family note: I'd forgotten I drafted it; the asset was load-bearing in patent-action-queue all along but I framed it as "exact specifics need verification" in the register stub.
+2. **Is the Askell letter ready to send?** It's drafted (Day 98); Day 105 handoff suggested sent at 10 AM Pacific. *(Need to verify current state — was the original sent, drafted-but-not-sent, or is there a v2 in queue?)*
+3. **Patent action queue from KF paper strategy** — register A1 now cross-references `patent-action-queue-2026-05-20.md` directly. The queue's Action 1 (Path C empirical test) is the prerequisite for optimal A1 outreach; Action 2 (CIP filing) conditional on Action 1; Action 3 (additional filings) downstream. The two documents are now one operational view.
 
 ## Discipline notes
 
