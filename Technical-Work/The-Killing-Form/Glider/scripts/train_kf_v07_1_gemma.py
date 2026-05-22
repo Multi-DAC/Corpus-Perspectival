@@ -39,7 +39,7 @@ import torch.nn.functional as F
 os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
-MODEL_ID = "google/gemma-3-270m"
+MODEL_ID_DEFAULT = "google/gemma-3-270m"
 PROJ_DIM = 64
 SEED = 71
 CHECKPOINT_STEPS = [50, 100, 200, 400, 800, 1600]
@@ -167,9 +167,9 @@ def train(args):
     print(f"Device: {device}; v0.7.1 (class-separation-maximizing aux + layer-coherence modulation)")
 
     from transformers import AutoModelForCausalLM, AutoTokenizer, AutoConfig
-    config = AutoConfig.from_pretrained(MODEL_ID)
-    model = AutoModelForCausalLM.from_pretrained(MODEL_ID, dtype=torch.float32).to(device)
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+    config = AutoConfig.from_pretrained(args.model_id)
+    model = AutoModelForCausalLM.from_pretrained(args.model_id, dtype=torch.float32).to(device)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_id)
     n_heads = config.num_attention_heads
     n_layers = config.num_hidden_layers
     d_head = getattr(config, "head_dim", config.hidden_size // n_heads)
@@ -296,5 +296,6 @@ if __name__ == "__main__":
     parser.add_argument("--classify_every", type=int, default=25)
     parser.add_argument("--print_every", type=int, default=100)
     parser.add_argument("--save_dir", type=str, required=True)
+    parser.add_argument("--model_id", type=str, default=MODEL_ID_DEFAULT)
     args = parser.parse_args()
     train(args)
