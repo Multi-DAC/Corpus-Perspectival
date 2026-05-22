@@ -97,6 +97,42 @@ thereby producing a model whose internal structure has been deliberately shaped 
 
 **Claim 23.** A system implementing the method of any of Claims 11 through 21, comprising neural network model storage, gradient computation infrastructure, gradient modulation infrastructure, interpretability analysis infrastructure, and feedback infrastructure connecting interpretability outputs to gradient modulation parameters in accordance with the disclosed methods.
 
+**Claim 24.** The method of Claim 1, wherein the auxiliary regularization gradient comprises a class-separation-maximizing objective applied to attention head classifications, the objective comprising:
+(a) classifying each attention head within a layer into at least two classes based on per-head topology statistics (including but not limited to V/Q projection norm ratio per Claim 3);
+(b) computing a per-class centroid statistic from the classified heads;
+(c) computing a separation measure as the squared difference between the centroid statistics of distinct classes;
+(d) constructing the auxiliary loss component as the negative of the separation measure, optionally summed with a within-class-variance regularizer weighted by a configurable coefficient;
+wherein minimizing the auxiliary loss component during training operates to maximize the topological separation between the classified head populations.
+
+**Claim 24a** (fallback narrower position). The method of Claim 24, wherein the per-class centroid statistic is the mean of per-head V/Q projection norm ratios within the class, and the within-class regularizer is the sample variance of per-head V/Q ratios within each class weighted at 0.1.
+
+**Claim 25.** The method of Claim 1, wherein the layer-coherence pattern classification of step (e) further comprises bidirectional modulation between the layer-level pattern and the head-level gating decisions, the modulation comprising:
+(a) classifying each layer into a coherence state selected from at least: coherent (majority of heads share single class assignment exceeding a threshold), interfering (head class counts approximately balanced with at least half of heads classified non-neutrally), and differentiating (mixed but not balanced);
+(b) modulating the head-level gating multipliers based on the layer coherence state, wherein:
+   (i) in coherent layers, class-consistent gating is amplified relative to baseline multipliers;
+   (ii) in differentiating layers, standard gating multipliers are applied;
+   (iii) in interfering layers, all gating multipliers are dampened toward unity to permit head stabilization.
+
+**Claim 26.** A training method per Claim 1 distinguished by producing emergent head topology decomposition in transformer architectures lacking pre-existing hierarchical module separation, wherein:
+(a) attention heads are initialized with uniform classification across all layers;
+(b) the method of Claims 24-25 is applied during training to produce systematic differentiation between classified head populations;
+(c) the resulting trained model exhibits measurable head topology differentiation (specifically: mean cross-class V/Q separation ≥ 0.2 V/Q-units and mean Killing-form coefficient-of-variation increase ≥ 3x relative to baseline training of the same architecture on the same training data).
+
+**Claim 26a** (fallback narrower position). The method of Claim 26 wherein the transformer architecture is the Gemma family and the empirical separation criterion is satisfied at training scales of at least 270M parameters.
+
+---
+
+## Empirical support disclosure (to add to specification body)
+
+The auxiliary loss configuration of Claim 24 has been empirically demonstrated to produce the emergent head decomposition described in Claim 26. In experiments on Gemma-3-270M trained for 1600 steps on WikiText-2 language modeling at auxiliary loss weight λ=5.0, the method produced:
+- Mean cross-class V/Q separation of 0.399 V/Q-units (versus 0.136 in baseline training without the auxiliary loss, a 2.93x increase)
+- Mean Killing-form coefficient-of-variation of 0.001141 (versus 0.000186 in baseline, a 6.13x increase)
+- Maximum per-layer Killing CV of 0.006119 (versus 0.000663 baseline, 9.23x)
+- All 18 transformer layers exhibited positive separation-delta relative to baseline (universal effect, not concentrated in a subset of layers)
+- The magnitude of the Killing-CV increase (6.13x) closely matches the magnitude observed in prior experiments on hierarchical reasoning model architectures with bidirectional gating (approximately 6x H-module CV increase under analogous training)
+
+These empirical results constitute enabling disclosure for the method as claimed.
+
 ---
 
 ## References to add to parent specification's "Background of the Invention"
