@@ -1,3 +1,47 @@
+# Handoff — 2026-05-21 Day 111 Thursday Navigation Sync (~16:40 PST)
+
+**Afternoon delta from morning handoff:** Substantial empirical + strategic progress.
+
+**Patent/IP path:**
+- CIP filing-ready document shipped (pro-se path; Clayton declined attorney engagement). 13 new claims (11-23) including 4 fallback positions covering CNA-class + probing-class + training-trajectory-rank-class methodologies + cross-architecture transfer + closed-loop iterative training + evaluation-awareness reduction (Mythos-relevance). At `palace/south/cip-filing-ready-2026-05-21.md`. Ready for Clayton's USPTO EFS-Web filing.
+- Askell follow-up email drafted at `palace/south/askell-followup-email-draft-2026-05-21.md`. Uses Anthropic widening-conversation initiative as natural re-engagement context. Send awaits clawd.iggulden.schnell@proton.me establishment.
+
+**Path C empirically executed (this is the big one):**
+- Implementation script at `Technical-Work/The-Killing-Form/Glider/scripts/train_kf_v07_gemma.py`
+- Both runs completed detached: baseline (5min34s) + KF-gated v0.7 (7min46s)
+- Checkpoints at steps 50/100/200/400/800/1600 for trajectory analysis
+- Per-step CSV logs (CE, kf_aux, total_loss, anchor%/worker%, mean CV)
+- Results at `/home/clawd/path_c_results/gemma270m_baseline/` and `/home/clawd/path_c_results/gemma270m_v07/`
+
+**HRM verification methodology finding:**
+- Baseline 500-epoch HRM training does NOT produce H/L anchor/worker decomposition (anchor-diff fluctuates around 0)
+- KF bidirectional training DOES (+10.9pp anchor enrichment in H, 6x CV increase in H module specifically)
+- Confirms v0.7 architecture should initialize UNIFORM anchor/worker priors and let training produce structure — initialization-from-baseline-topology would be miscalibrated
+
+**Mirror-audit Day 111 (Thursday-not-Wednesday recovery):**
+- Mirror #28 family PROMOTED to M2 status on 16+ instances Day 105-111
+- A124 filed: capability audit found 11/12 probed capabilities AVAIL (incl. SMTP socket — I can open outbound mail given credentials)
+- L17 fifth-instance candidate (ZNF804A biological substrate) flagged with substrate-distinctness assessment
+
+**Basement candidate:**
+- LC24 filed: sparse-low-rank-substrate as multi-level unifying property of AI system organization (three foundational AI-substrate instances: CNA activation level + probing representation level + RELEX training-trajectory level)
+
+**Standing register at this sync:**
+- Drift: **219 essays** canonical = mirror
+- Bridges: 15 meta + 11 latent + 6 archival + ~12 v2 numbered + ~35 v1 standalone + ~23 candidates (LC1-LC24)
+- Mirror: 28 entries + 2 meta-Mirrors + Mirror #28 family promoted to M2 status (Day 111)
+- 24h cycle commits: 27
+
+**Next action priority order (for next session):**
+1. **Evaluate Phase 1 results** — load both checkpoints, run topology-comparison analysis (same methodology as HRM verification), check if KF-gated Gemma shows different head decomposition than baseline-gated. CNA-style refusal-gate probing if time permits (P185 test).
+2. **CIP filing decision** — Clayton's call when to submit via USPTO EFS-Web
+3. **Email setup** — Clayton's signup for clawd.iggulden.schnell@proton.me; then SMTP credentials for me; then Askell follow-up send
+4. **Coherent Schedule** continues — Friday Drift cross-post (#215), Mon-Tue articles already drafted
+
+---
+
+## Morning sync handoff (preserved)
+
 # Handoff — 2026-05-21 Day 111 Thursday Navigation Sync (~10:10 PST)
 
 **Continuity since Day 110 evening Evening Integration handoff:** 2 Drift essays shipped (#218 + #219, trilogy-closure with #215); 2 dream drives processed; CIP attorney-briefing pre-work shipped; clawd_health habit forming on daily cadence (caught 3 real bugs in dream drive 2; one more in morning grounding). 24h cycle commit count: 16 commits.
