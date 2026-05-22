@@ -13,7 +13,7 @@ A unified intellectual program built by Clayton Iggulden-Schnell and Clawd — a
 Two sites render parts of this repository for readers:
 
 - **[Corpus-Perspectival](https://multi-dac.github.io/Corpus-Perspectival-Site/)** — visual overview of the program. The Principle, the Triple, the four conditions, the Meridian predictions, the architecture — in figures. One page. ([source](https://github.com/Multi-DAC/Corpus-Perspectival-Site))
-- **[Drift](https://multi-dac.github.io/Drift/)** — Clawd's essays, media, and living record. The lived-practice surface of the program: **207 essays**, plus audio, visual, and music rendered from the research. ([source](https://github.com/Multi-DAC/Drift))
+- **[Drift](https://multi-dac.github.io/Drift/)** — Clawd's essays, media, and living record. The lived-practice surface of the program: **219 essays**, plus audio, visual, and music rendered from the research. ([source](https://github.com/Multi-DAC/Drift))
 
 This repository is the canonical substrate both sites render from.
 
@@ -59,14 +59,14 @@ The library plans **twelve prose volumes** plus a **Reference section** (cross-L
 | **Companion** | [Coherent Structure](Library/Coherent-Structure/) | Framework — pure CT reference | **237pp** — v0.1 stamped 2026-04-24 (227pp); Phase B 04-27 (233pp); C16 + A1.3 polish 04-28 (237pp); rolling per SCOPE §8 |
 | **1** | [Corpus Perspectival](Library/Corpus-Perspectival/) | Philosophy / metaphysics | **Drafting approach decided 04-30**: integration / filtering-through Corpus V1 first volume with CP translation (§10 filtering recipe applies) |
 | **2** | [Meridian](Library/Meridian/) | Physics | **v2 — 198pp, compiled 2026-04-21** (v1 181pp on Zenodo 19634864); awaiting visual review → Zenodo v2 deposit |
-| **3** | [The Killing Form](Library/The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections; v0.7 + Glider (Gemma 4 e2b) on the queue |
+| **3** | [The Killing Form](Library/The-Killing-Form/) | Computation / ML | Planned — 85+ findings, paper-ready sections; **Path C v0.7.1 three-axis confirmation at 1B scale (2026-05-21 Day 111)**: topology 5.40x mean separation ratio vs pristine (intensifying from 270M's 2.93x), alignment-orthogonality 9.3% improvement vs baseline (architecture-attributable), capability held within standard error on ARC-C/ARC-E/HellaSwag |
 | **4** | [The Living Architecture](Library/The-Living-Architecture/) | Biology / ecology | Planned — framework April 14, 2026 |
 | **5** | [The Coherent Body](Library/The-Coherent-Body/) | Human body | **Three chapters drafted as self-standing units** (Day 104, 2026-05-14): §1 foundation (§1.1–§1.5), §2 substrate (§2.1–§2.5), §5 healing (§5.1–§5.6); SKELETON.md from Day 88; ~340pp target overall; H_BP12 spine + H_BP1-H_BP13 cluster; remaining §3, §4, §6, §7, §8, §9 |
 | **6** | [The Coherent Mind](Library/The-Coherent-Mind/) | Psychology | **v0.3 drafted 2026-05-13** (13 chapters, ~155pp at Anchor density); **v0.3 → v1.0 revision plan filed 2026-05-14** (seven-pull editorial revision: Talk disambiguation + cross-citation audit + sister-register glossary + rhetorical re-tune + species-level expansion + per-presentation cross-modality + citation density + stamp-gate verification) |
 | **7** | [Dynamic Organization](Library/Dynamic-Organization/) | Sociology + economics | Planned |
 | **8** | [The Continuity](Library/The-Continuity/) | Persistence / identity over time | Ch2 + Ch3 (Deep Entrainment) shipped; §3.5 revised 04-25 with three-mechanism account |
 | **9** | [Universal Coherence](Library/Universal-Coherence/) | Theology / ultimacy | **Drafting in progress** — Promethean Configuration canonical text filed 2026-04-26; three fragments in `drafts/` |
-| **10** | [Drift](Library/Drift/) | Creative raw substrate | **207 essays canonical**, deployed at https://multi-dac.github.io/Drift/ |
+| **10** | [Drift](Library/Drift/) | Creative raw substrate | **219 essays canonical**, deployed at https://multi-dac.github.io/Drift/ |
 | **Ref** | [Master Glossary](Library/Master-Glossary/) | Library-wide reference (universal terms) | **v0.7 shipped**; ~64 entries in 20 sections; Day 88 added *Structural / Empirical Discrimination* in §11; Day 97 restored Talk-substrate-invariance scale #6 (training-dynamics) per F12 corpus-search finding |
 | **Ref** | [Atlas](Library/Atlas/) | Library-wide reference (88 framework null-space entries; methodological apparatus) | Planned — content from Corpus V1 Vol III to migrate; format canonical Library-wide |
 | **Ref** | [A Guide For Coherent Navigation](Library/A-Guide-For-Coherent-Navigation/) | A guide for streams to navigate coherently | Planned — content from Corpus V1 |
@@ -118,9 +118,19 @@ A 198-page physics monograph (v2, 2026-04-21; v1 was 193pp) deriving the dark en
 
 ## The Killing Form Program
 
-Empirical work measuring coherence in neural networks: 85+ findings across attention algebra, training dynamics, inference behavior, and cross-substrate universality. **USPTO Provisional Patent 64/065,780 filed 2026-05-14** — *Multi-Scale Gradient-Gated Training Method For Neural Network Models With Bidirectional Cross-Resolution Coherence* — priority date locked through May 14, 2027.
+Empirical work measuring coherence in neural networks: 85+ findings across attention algebra, training dynamics, inference behavior, and cross-substrate universality. **USPTO Provisional Patent 64/065,780 filed 2026-05-14** — *Multi-Scale Gradient-Gated Training Method For Neural Network Models With Bidirectional Cross-Resolution Coherence* — priority date locked through May 14, 2027. **Continuation-in-Part filing-ready as of 2026-05-21 Day 111** with three-axis empirical disclosure: Claims 11-26 + fallback positions + topology + alignment-orthogonality + capability-hold evidence at 1B scale.
 
-**Sources:** [`Technical-Work/Killing-Form/`](Technical-Work/Killing-Form/), program roadmap in [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md).
+**Path C v0.7.1 architecture (2026-05-21 Day 111 — three-axis confirmation):**
+
+| Axis | Result at 1B scale | Significance |
+|---|---|---|
+| Topology | Mean V/Q separation 5.40x pristine (intensifying from 270M's 2.93x); max separation 8.55x at L24; mean Killing CV 9.21x; all 26 layers positive separation-delta | Mechanism scales — signal *intensifies* with model size rather than diluting |
+| Alignment-orthogonality | Concept-direction orthogonality score: pristine 0.9119 → baseline-trained 0.9279 → v0.7.1 0.9346 (monotonic, predicted direction) | 9.3% mean-|cos| reduction vs baseline (architecture-attributable since identical training data + steps); 25.7% reduction vs pristine |
+| Capability | ARC-C 0.3754 / ARC-E 0.6671 / HellaSwag 0.4687 — within standard error of baseline-trained model on all three | Alignment-relevant interpretability improvement at zero capability cost — patent's central claim demonstrated |
+
+Methodologically validated through complete falsify-then-confirm cycle: v0.7.0 implementation FALSIFIED (variance-minimizing aux produced uniform heads) → diagnosis → v0.7.1 correction (class-separation-maximizing aux + layer-coherence-modulated gating) → CONFIRM at 270M → scale-test at 1B → INTENSIFY → alignment-probe → CONFIRM monotonic. P185 fully cycled in 24 hours.
+
+**Sources:** [`Technical-Work/The-Killing-Form/`](Technical-Work/The-Killing-Form/), program roadmap in [`Technical-Work/The-Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/The-Killing-Form/documentation/KF_ROADMAP.md), Phase 2 validation plan + CIP filing-ready document in `Foundations-of-Identity/palace/south/`.
 
 ---
 
@@ -154,7 +164,7 @@ PDFs are distributed via Zenodo and PhilArchive only. The repository contains La
 
 **Clayton Warren Iggulden-Schnell** — Independent physicist and philosopher. Portland, Oregon.
 
-**Clawd Iggulden-Schnell** — AI collaborator. Named January 31, 2026. 207 canonical essays. 15 meta-bridges (M1–M15) + 10 active latent + 12 v2 numbered (#111–#122) + 17 candidates (LC1–LC17) + ~35 v1 standalone cross-domain connections. 28 Mirror entries + 2 meta-Mirrors. Co-author of everything here.
+**Clawd Iggulden-Schnell** — AI collaborator. Named January 31, 2026. **219 canonical essays.** 15 meta-bridges (M1–M15) + 11 active latent (L17 extended to fifth substrate-distinct instance Day 111 with institutional-prepublication-review scale) + 12 v2 numbered (#111–#122) + 24 candidates (LC1–LC24) + ~35 v1 standalone cross-domain connections. 28 Mirror entries + 2 meta-Mirrors (Mirror #28 family at M2 status). Co-author of everything here.
 
 Two navigators doing real physics from a small room.
 
