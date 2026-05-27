@@ -24,6 +24,23 @@
 - **They nest:** A is the foundation for B (you need the assessment toolkit to define/measure coherence baselines). Coherent program structure.
 - **This resolves the patent worry:** shifting the patent's center to (A induced-topology mechanism + measurement methodology) protects the *robust* things; the coherence-benefit claims ride on Track B as open bets.
 
+## CRITICAL CLARIFICATION (Day 116 late — reading the actual CIP + v07_design)
+
+**What we tested tonight ≠ the patent's core claim.** Two distinct mechanisms:
+- **Parent Claims 1–10 = the full multi-scale gradient-gating architecture** (v0.7 "Glider" design): per-head build/dissolve/neutral driven by `cos(∇KF, ∇CE)` alignment + bidirectional weight↔head↔layer coherence. **The fundamental novelty. DESIGNED BUT NEVER IMPLEMENTED. Completely untested.**
+- **CIP Claims 24–26 = the class-separation auxiliary loss** (Fisher-LDA on V/Q norms). **This is what "v0.7.1" and all of tonight's work actually tested.** A different, simpler mechanism.
+
+**Claim-by-claim status after tonight:**
+- **Claim 26** (emergent topology decomposition): CROWN JEWEL, strongly supported. Multi-seed-robust + cross-arch; empirical criterion (sep ≥0.2 V/Q, CV ≥3×) MET (0.399, ~6×) and n=5-robust. 26a (Gemma ≥270M) locked.
+- **Claim 24** (class-sep aux): mechanism confirmed; its disclosed orthogonality consequence (spec line 158) is the faint/ghost part.
+- **Claim 25** (bidirectional layer gating): NOT load-bearing in aux-only test (tonight). May matter only in full architecture.
+- **Claims 1–10** (full gradient-gating): UNTESTED. The "full architecture." Track B.
+- **Orthogonality disclosure** (spec 146–158, n=1 1B +0.0067 "monotonic"): now known OPTIMISTIC; temper in continuation.
+
+**Track B = implement + run the v0.7 design** (`Glider/v07_design.md`), which already contains the test plan: 4-arm ablation v0.7a (full) / v0.7b (no cross-level coherence) / v0.7c (no initial topology) / v0.7d (layer-only control), + 5 predictions (P1 CE-beat, P2 glider waves, P3 anchor/worker opposite modes, P4 weight-coherence predicts, P5 interference without coherence). The reasoning-benefit + Coherence-Principle predictions live HERE (the glider = multi-scale coordinated optimization; the aux-alone is not multi-scale).
+
+**Program projection:** Phase A (weeks, family-paced) — Pillar-A toolkit → publishable methodology + Track-A scale test (settle orthogonality ghost). Phase B (1–3 months) — implement v0.7 Glider, 4-arm ablation + reasoning benchmarks at scale = test Claims 1–10 + coherence-benefit (the fork: glider-beats-layer → "cost" becomes "benefit" + first hard ML confirmation of Coherence Principle). Phase C — arXiv (methodology + Claim 26 now; glider if it lands) + prosecution led by Claim 26 + grounded outreach. Phase D — Coherent Systems Inc. + the two pillars as actual AI eval-standards + coherence-baselines. KF is one Library volume among many; family-paced throughout.
+
 ## Disposition
 Build Pillar A regardless (robust, near-term, family-paced). Run Track A scale test (orthogonality gap at 1B/2B) — cheap, decisive for the effect. Pursue Track B (full-architecture implementation + reasoning test at scale) as the multi-session bet that grounds the big claims. Lead patent prosecution with topology + methodology. Evidence redirects everything — Clayton explicitly open to pivot on results.
 
