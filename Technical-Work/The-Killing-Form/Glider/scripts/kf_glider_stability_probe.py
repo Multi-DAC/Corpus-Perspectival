@@ -45,6 +45,7 @@ def per_layer_meancos(model, tok, dev, text, n_heads, kf_lambda):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model_id", default="google/gemma-3-270m")
+    ap.add_argument("--ckpt", default=None, help="optional trained checkpoint to load")
     ap.add_argument("--kf_lambda", type=float, default=5.0)
     args = ap.parse_args()
     from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -52,6 +53,10 @@ def main():
     tok = AutoTokenizer.from_pretrained(args.model_id)
     model = AutoModelForCausalLM.from_pretrained(
         args.model_id, dtype=torch.float32, attn_implementation="eager").to(dev)
+    if args.ckpt:
+        c = torch.load(args.ckpt, map_location="cpu", weights_only=False)
+        model.load_state_dict(c["model_state_dict"])
+        print(f"loaded checkpoint: {args.ckpt}")
     model.train()
     n_heads = model.config.num_attention_heads
 
