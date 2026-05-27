@@ -6,17 +6,19 @@ Seed 0, easy-sudoku, batch 384, 2500 steps, baseline vs v0.6a bidirectional gati
 - Baseline: H_CV decreased 1.85e-3 → 8.46e-4, H/L ratio crept 0.96 → 1.42 (textbook baseline de-differentiation).
 - Gated: H/L ratio breathed UP to 2.85 (step 1875) then dissolved back to 1.32 (step 2500). **Gating mechanism worked** (build/dissolve fired, structure formed then released) — but no capability to organize.
 
-## Root cause (verified in source, HIGH confidence)
-The from-scratch trainer (`train_kf_gated_hrm_easy.py`, derived from the stripped `train_and_measure.py`) is **missing critical pieces of the validated HRM recipe**:
+## Root cause — CORRECTED after deeper recon (dual-optimizer was a RED HERRING)
 
-1. **Single optimizer instead of two.** `pretrain.py` (the canonical recipe) builds TWO optimizers:
-   - `CastedSparseEmbeddingSignSGD_Distributed` for the **puzzle embeddings** at `puzzle_emb_lr = 1e-2`
-   - `AdamATan2` for the rest at `lr = 7e-5`
-   My script used a single AdamATan2 at 7e-5 for everything → puzzle embeddings trained **~140× too slow with the wrong optimizer**. HRM identifies/solves each puzzle through its puzzle embedding; if it never forms, accuracy is pinned at 0. **This is the exactly-0% cause.**
-2. **No LR warmup.** Canonical config: `lr_warmup_steps = 2000`. Mine: constant LR.
-3. **Step budget ~10× short.** Official sudoku command: `epochs=20000` (≈50k steps at batch 384, 2.5 steps/epoch). Mine: 2500 steps = epoch ~1000 of 20000. (Secondary to #1 — even at 20000 epochs, the single-optimizer setup would stay near 0.)
+**Initial hypothesis (WRONG):** missing dual-optimizer / warmup. Overturned by reading the *proven* KF harness.
 
-Canonical recipe (README): `python pretrain.py data_path=data/sudoku-extreme-1k-aug-1000 epochs=20000 eval_interval=2000 global_batch_size=384 lr=7e-5 puzzle_emb_lr=7e-5 weight_decay=1.0 puzzle_emb_weight_decay=1.0` (note: README's single-GPU line uses puzzle_emb_lr=7e-5; the config default is 1e-2 — either way it's a SEPARATE sparse-sign-SGD optimizer with warmup, which mine lacks).
+**`train_kf_300m.py` — the historical KF-gating script that DID learn (logs show 0.48 token acc) — uses a SINGLE `AdamATan2` (no separate puzzle_emb optimizer, no warmup).** Its defaults: **`batch_size=64`, `lr=3e-5`, `epochs=3000`, `checkpoint_every=500`, `weight_decay=1.0`, betas (0.9,0.95).** So the single-optimizer setup is fine — it's not the cause.
+
+**Actual dominant cause: UPDATE-STARVATION from large batch + too-few steps.**
+- Proven harness: batch **64** → ~15.6 steps/epoch → 3000 epochs ≈ **~47,000 gradient updates**.
+- My failed run: batch **384** → 2.5 steps/epoch → 2500 steps = **only 2,500 updates** (~6–18× too few).
+- The model needs ~tens-of-thousands of *updates* to learn sudoku; data-seen is not the bottleneck, update-count is. At only 2500 updates, 0% is expected even with a perfect harness.
+- (Aside: my "2500 steps = P49 epoch 1000" assumption was wrong — P49's epochs were small-batch epochs, ~15k–31k steps. I mis-read the epoch-accounting three times today; stop deriving step budgets, measure instead.)
+
+**The pretrain.py dual-optimizer (CastedSparseEmbeddingSignSGD @ puzzle_emb_lr, + warmup) is the OFFICIAL recipe and likely gives the *best* final quality — but it is NOT required to learn; the single-optimizer KF harness demonstrably learns.** Keep it as a possible later optimization, not a prerequisite.
 
 ## NOT a false-negative of the claim
 Unlike the flat-Gemma glider (wrong task/measure), this is an **incomplete training harness**, not a test of the coherence-benefit claim. The claim (gating accelerates learning on learnable sudoku) remains **untested**, not falsified. The gating fired correctly; the model just couldn't learn the task at all under the broken optimizer.
