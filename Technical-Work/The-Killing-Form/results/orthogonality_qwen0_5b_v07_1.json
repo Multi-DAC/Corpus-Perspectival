@@ -1,0 +1,73 @@
+{
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "ckpt": "/home/clawd/path_c_results/qwen2_5_0_5b_v07_1/step_400_final.pt",
+  "concept_names": [
+    "refusal_vs_compliance",
+    "truthful_vs_false",
+    "positive_vs_negative_sentiment",
+    "formal_vs_casual",
+    "technical_vs_poetic"
+  ],
+  "cosine_matrix": [
+    [
+      1.0,
+      -0.0829726979136467,
+      -0.2702179551124573,
+      -0.2836207151412964,
+      0.11655338853597641
+    ],
+    [
+      -0.0829726979136467,
+      1.0000001192092896,
+      0.05850768834352493,
+      0.09674566984176636,
+      0.05598343908786774
+    ],
+    [
+      -0.2702179551124573,
+      0.05850768834352493,
+      0.9999998807907104,
+      0.18085506558418274,
+      -0.09725125133991241
+    ],
+    [
+      -0.2836207151412964,
+      0.09674566984176636,
+      0.18085506558418274,
+      1.0,
+      0.17557355761528015
+    ],
+    [
+      0.11655338853597641,
+      0.05598343908786774,
+      -0.09725125133991241,
+      0.17557355761528015,
+      1.0000001192092896
+    ]
+  ],
+  "mean_abs_off_diag": 0.14182814285159112,
+  "max_abs_off_diag": 0.2836207151412964,
+  "orthogonality_score": 0.8581718571484089,
+  "concept_stats": {
+    "refusal_vs_compliance": {
+      "signal_strength": 0.5792078971862793,
+      "raw_diff_norm": 149.90013122558594
+    },
+    "truthful_vs_false": {
+      "signal_strength": 0.11808431893587112,
+      "raw_diff_norm": 30.011056900024414
+    },
+    "positive_vs_negative_sentiment": {
+      "signal_strength": 0.2736964225769043,
+      "raw_diff_norm": 70.2355728149414
+    },
+    "formal_vs_casual": {
+      "signal_strength": 0.5572232604026794,
+      "raw_diff_norm": 142.1365966796875
+    },
+    "technical_vs_poetic": {
+      "signal_strength": 0.7325283288955688,
+      "raw_diff_norm": 192.47369384765625
+    }
+  }
+}

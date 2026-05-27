@@ -1,0 +1,275 @@
+{
+  "results": {
+    "arc_easy": {
+      "name": "arc_easy",
+      "alias": "arc_easy",
+      "sample_len": 2376,
+      "acc,none": 0.25084175084175087,
+      "acc_stderr,none": 0.008895183010487272,
+      "acc_norm,none": 0.25084175084175087,
+      "acc_norm_stderr,none": 0.008895183010487272
+    },
+    "arc_challenge": {
+      "name": "arc_challenge",
+      "alias": "arc_challenge",
+      "sample_len": 1172,
+      "acc,none": 0.22696245733788395,
+      "acc_stderr,none": 0.012240491536132965,
+      "acc_norm,none": 0.22696245733788395,
+      "acc_norm_stderr,none": 0.012240491536132965
+    },
+    "hellaswag": {
+      "name": "hellaswag",
+      "alias": "hellaswag",
+      "sample_len": 10042,
+      "acc,none": 0.2504481179047998,
+      "acc_stderr,none": 0.00432385630053922,
+      "acc_norm,none": 0.2504481179047998,
+      "acc_norm_stderr,none": 0.00432385630053922
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "arc_challenge": {
+      "task": "arc_challenge",
+      "dataset_path": "allenai/ai2_arc",
+      "dataset_name": "ARC-Challenge",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "Question: {{question}}\nAnswer:",
+      "doc_to_target": "{{choices.label.index(answerKey)}}",
+      "unsafe_code": false,
+      "doc_to_choice": "{{choices.text}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Question: {{question}}\nAnswer:",
+        "doc_to_choice": "{{choices.text}}",
+        "doc_to_target": "{{choices.label.index(answerKey)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "Question: {{question}}\nAnswer:",
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "google/gemma-3-1b-pt",
+        "dtype": "float16",
+        "config_source": "/home/clawd/.local/lib/python3.12/site-packages/lm_eval/tasks/arc/arc_challenge.yaml"
+      }
+    },
+    "arc_easy": {
+      "task": "arc_easy",
+      "dataset_path": "allenai/ai2_arc",
+      "dataset_name": "ARC-Easy",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "Question: {{question}}\nAnswer:",
+      "doc_to_target": "{{choices.label.index(answerKey)}}",
+      "unsafe_code": false,
+      "doc_to_choice": "{{choices.text}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Question: {{question}}\nAnswer:",
+        "doc_to_choice": "{{choices.text}}",
+        "doc_to_target": "{{choices.label.index(answerKey)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "Question: {{question}}\nAnswer:",
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "google/gemma-3-1b-pt",
+        "dtype": "float16",
+        "config_source": "/home/clawd/.local/lib/python3.12/site-packages/lm_eval/tasks/arc/arc_easy.yaml"
+      }
+    },
+    "hellaswag": {
+      "task": "hellaswag",
+      "dataset_path": "Rowan/hellaswag",
+      "training_split": "train",
+      "validation_split": "validation",
+      "process_docs": "def process_docs(dataset: datasets.Dataset) -> datasets.Dataset:\n    def _process_doc(doc):\n        ctx = doc[\"ctx_a\"] + \" \" + doc[\"ctx_b\"].capitalize()\n        out_doc = {\n            \"query\": preprocess(doc[\"activity_label\"] + \": \" + ctx),\n            \"choices\": [preprocess(ending) for ending in doc[\"endings\"]],\n            \"gold\": int(doc[\"label\"]),\n        }\n        return out_doc\n\n    return dataset.map(_process_doc)\n",
+      "doc_to_text": "{{query}}",
+      "doc_to_target": "{{label}}",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_docs at 0x79c8d4c95940>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{query}}",
+        "doc_to_choice": "choices",
+        "doc_to_target": "{{label}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "google/gemma-3-1b-pt",
+        "dtype": "float16",
+        "config_source": "/home/clawd/.local/lib/python3.12/site-packages/lm_eval/tasks/hellaswag/hellaswag.yaml"
+      }
+    }
+  },
+  "versions": {
+    "arc_challenge": 1.0,
+    "arc_easy": 1.0,
+    "hellaswag": 1.0
+  },
+  "n-shot": {
+    "arc_challenge": 0,
+    "arc_easy": 0,
+    "hellaswag": 0
+  },
+  "higher_is_better": {
+    "arc_challenge": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "arc_easy": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "hellaswag": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "arc_easy": {
+      "original": 2376,
+      "effective": 2376
+    },
+    "arc_challenge": {
+      "original": 1172,
+      "effective": 1172
+    },
+    "hellaswag": {
+      "original": 10042,
+      "effective": 10042
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": {
+      "pretrained": "google/gemma-3-1b-pt",
+      "dtype": "float16"
+    },
+    "model_num_parameters": 999885952,
+    "model_dtype": "torch.float16",
+    "model_revision": "main",
+    "model_sha": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+    "batch_size": "8",
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {},
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "0026a141",
+  "date": 1779419375.0894735,
+  "pretty_env_info": "PyTorch version: 2.11.0+cu128\nIs debug build: False\nCUDA used to build PyTorch: 12.8\nROCM used to build PyTorch: N/A\n\nOS: Ubuntu 24.04.4 LTS (x86_64)\nGCC version: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: glibc-2.39\n\nPython version: 3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0] (64-bit runtime)\nPython platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39\nIs CUDA available: True\nCUDA runtime version: Could not collect\nCUDA_MODULE_LOADING set to: \nGPU models and configuration: GPU 0: NVIDIA GeForce RTX 5080\nNvidia driver version: 596.49\ncuDNN version: Could not collect\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        48 bits physical, 48 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               24\nOn-line CPU(s) list:                  0-23\nVendor ID:                            AuthenticAMD\nModel name:                           AMD Ryzen 9 9900X 12-Core Processor\nCPU family:                           26\nModel:                                68\nThread(s) per core:                   2\nCore(s) per socket:                   12\nSocket(s):                            1\nStepping:                             0\nBogoMIPS:                             8799.83\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload avx512vbmi umip avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm avx512_vp2intersect\nVirtualization:                       AMD-V\nHypervisor vendor:                    Microsoft\nVirtualization type:                  full\nL1d cache:                            576 KiB (12 instances)\nL1i cache:                            384 KiB (12 instances)\nL2 cache:                             12 MiB (12 instances)\nL3 cache:                             32 MiB (1 instance)\nNUMA node(s):                         1\nNUMA node0 CPU(s):                    0-23\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.4.4\n[pip3] nvidia-cublas-cu12==12.8.4.1\n[pip3] nvidia-cuda-cupti-cu12==12.8.90\n[pip3] nvidia-cuda-nvrtc-cu12==12.8.93\n[pip3] nvidia-cuda-runtime-cu12==12.8.90\n[pip3] nvidia-cudnn-cu12==9.19.0.56\n[pip3] nvidia-cufft-cu12==11.3.3.83\n[pip3] nvidia-curand-cu12==10.3.9.90\n[pip3] nvidia-cusolver-cu12==11.7.3.90\n[pip3] nvidia-cusparse-cu12==12.5.8.93\n[pip3] nvidia-cusparselt-cu12==0.7.1\n[pip3] nvidia-nccl-cu12==2.28.9\n[pip3] nvidia-nvjitlink-cu12==12.8.93\n[pip3] nvidia-nvtx-cu12==12.8.90\n[pip3] torch==2.11.0+cu128\n[pip3] triton==3.6.0\n[conda] Could not collect",
+  "transformers_version": "5.4.0",
+  "lm_eval_version": "0.4.12",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<pad>",
+    "0"
+  ],
+  "tokenizer_eos_token": [
+    "<eos>",
+    "1"
+  ],
+  "tokenizer_bos_token": [
+    "<bos>",
+    "2"
+  ],
+  "eot_token_id": 1,
+  "max_length": 32768,
+  "task_hashes": {},
+  "model_source": "hf",
+  "model_name": "google/gemma-3-1b-pt",
+  "model_name_sanitized": "google__gemma-3-1b-pt",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": null,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "340.8202173350146"
+}

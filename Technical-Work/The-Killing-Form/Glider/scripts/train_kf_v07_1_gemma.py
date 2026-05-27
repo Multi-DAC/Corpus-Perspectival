@@ -162,7 +162,7 @@ def get_tiny_training_data(tokenizer, n_samples=500, seq_len=256):
 
 
 def train(args):
-    set_seed(SEED)
+    set_seed(getattr(args, "seed", SEED))
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Device: {device}; v0.7.1 (class-separation-maximizing aux + layer-coherence modulation)")
 
@@ -297,5 +297,6 @@ if __name__ == "__main__":
     parser.add_argument("--print_every", type=int, default=100)
     parser.add_argument("--save_dir", type=str, required=True)
     parser.add_argument("--model_id", type=str, default=MODEL_ID_DEFAULT)
+    parser.add_argument("--seed", type=int, default=SEED)
     args = parser.parse_args()
     train(args)
