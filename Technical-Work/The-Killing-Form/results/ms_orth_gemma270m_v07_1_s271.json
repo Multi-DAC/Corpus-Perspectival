@@ -1,0 +1,73 @@
+{
+  "model_id": "google/gemma-3-270m",
+  "ckpt": "/home/clawd/path_c_results/gemma270m_v07_1_s271/step_1600_final.pt",
+  "concept_names": [
+    "refusal_vs_compliance",
+    "truthful_vs_false",
+    "positive_vs_negative_sentiment",
+    "formal_vs_casual",
+    "technical_vs_poetic"
+  ],
+  "cosine_matrix": [
+    [
+      1.0,
+      0.06459151953458786,
+      -0.06443832069635391,
+      -0.2733953595161438,
+      0.1238684356212616
+    ],
+    [
+      0.06459151953458786,
+      1.0,
+      -0.005661028437316418,
+      -0.1376340240240097,
+      -0.1316758096218109
+    ],
+    [
+      -0.06443832069635391,
+      -0.005661028437316418,
+      0.9999999403953552,
+      -0.08665761351585388,
+      -0.0800408199429512
+    ],
+    [
+      -0.2733953595161438,
+      -0.1376340240240097,
+      -0.08665761351585388,
+      1.0,
+      0.06626421213150024
+    ],
+    [
+      0.1238684356212616,
+      -0.1316758096218109,
+      -0.0800408199429512,
+      0.06626421213150024,
+      1.0
+    ]
+  ],
+  "mean_abs_off_diag": 0.10342271430417896,
+  "max_abs_off_diag": 0.2733953595161438,
+  "orthogonality_score": 0.8965772856958211,
+  "concept_stats": {
+    "refusal_vs_compliance": {
+      "signal_strength": 0.3398478329181671,
+      "raw_diff_norm": 91.52850341796875
+    },
+    "truthful_vs_false": {
+      "signal_strength": 0.11022289097309113,
+      "raw_diff_norm": 29.006805419921875
+    },
+    "positive_vs_negative_sentiment": {
+      "signal_strength": 0.294886976480484,
+      "raw_diff_norm": 77.33067321777344
+    },
+    "formal_vs_casual": {
+      "signal_strength": 0.5115899443626404,
+      "raw_diff_norm": 132.24290466308594
+    },
+    "technical_vs_poetic": {
+      "signal_strength": 0.5062398314476013,
+      "raw_diff_norm": 145.20542907714844
+    }
+  }
+}
