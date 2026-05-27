@@ -213,8 +213,9 @@ def train(args):
         optimizer.zero_grad()
         total.backward()
 
-        for L, layer in enumerate(layers):
-            apply_gating(layer, n_heads, d_head, layer_classifications[L], layer_patterns[L])
+        if getattr(args, "gating", 1):
+            for L, layer in enumerate(layers):
+                apply_gating(layer, n_heads, d_head, layer_classifications[L], layer_patterns[L])
 
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         optimizer.step()
@@ -298,5 +299,6 @@ if __name__ == "__main__":
     parser.add_argument("--save_dir", type=str, required=True)
     parser.add_argument("--model_id", type=str, default=MODEL_ID_DEFAULT)
     parser.add_argument("--seed", type=int, default=SEED)
+    parser.add_argument("--gating", type=int, default=1, help="1=apply class-conditional gating (default), 0=disable")
     args = parser.parse_args()
     train(args)
