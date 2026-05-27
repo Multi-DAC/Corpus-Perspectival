@@ -97,6 +97,22 @@ KEY CODE FINDING: `apply_gating` is called *unconditionally* in the training loo
 
 **Simplification finding (patent/implementation-relevant):** the gating — the most heuristic, hardest-to-defend component of v0.7.1 (class-conditional ×0.6/×1.2 gradient modulation) — is **not load-bearing**: zero contribution to topology, slightly-negative-to-null on orthogonality. **v0.7.1 likely reduces to the Fisher-LDA aux alone.** A simpler mechanism is a cleaner, more defensible claim. Confirm with multi-seed before asserting; if it holds, drop the gating.
 
+## 6b. Effective-rank probe (#3) — NOT supported at multi-seed (2026-05-26)
+
+`effective_rank_probe.py` (participation ratio of hidden-state activation covariance, per layer; middle layers rank-collapsed ~1.0 by the massive-activation artifact, so the readout/last layer is the informative one). Seed-137 smoke test looked promising (readout PR pristine 21.1 → baseline 33.9 → v0.7.1 35.4, +1.5). **Multi-seed (n=5) killed it:**
+
+| | readout-PR (last layer) |
+|---|---|
+| baseline | 35.64 ± 1.28 |
+| v0.7.1 | 35.81 ± 0.53 |
+| gap | **+0.17 ± 1.25** (2/5 seeds positive, paired t=0.27, p≈0.8) |
+
+The single-seed +1.5 was noise. **Mechanism #3 not supported.** (Minor real finding: v0.7.1 readout-PR variance is lower — ±0.53 vs ±1.28 — i.e., more seed-consistent dimensionality; not the sought mechanism.) Textbook value of multi-seed: prevented reporting a noise spike as a mechanism.
+
+**Mechanism tally after tonight's hunt:** #2 OV-direction (ruled out), #4 gating-frame (ruled out), #3 effective-rank (not supported). #1 functional-specialization is the last untested survivor — but given 3/4 null and the effect's faintness, prior is toward null.
+
+**Meta-conclusion (the real result):** the orthogonality effect at 270m is **faint enough that its mechanism does not resolve** — three concrete structural pathways eliminated, effect borderline (+0.005, one seed reversal). This is a legitimate scientific endpoint, not a failure: *at this scale the effect is too small to localize.* If real, it should sharpen at larger scale (1B gap +0.0067 vs 270m +0.0051) and be studied there. **Forward stance: topology is the asset (robust, moat-grade, mechanism = Fisher-LDA aux, gating droppable); orthogonality is honestly bounded as small + mechanism-unresolved-at-270m + study-at-scale.**
+
 ## 7. Honest program-level consequence
 
 after tonight's deep dive, the **topology decomposition is the robust, moat-grade, mechanism-understood result** (it's Fisher-LDA on V/Q norms, working as designed, deterministically). The **orthogonality-at-zero-capability-cost claim — the CIP's headline — is FAINT** (small effect, one seed reversal, marginal significance) **and its simplest mechanism is now ruled out.** The alignment-axis claim needs either stronger evidence (more seeds/scale/probe-domains) or more conservative framing ("small, cross-scale-consistent" not "central result"). Better found by us than by a reviewer/licensee/Askell. This does not break the filed CIP (topology evidence is solid; orthogonality was disclosed as preliminary) but it must shape all forward framing.
