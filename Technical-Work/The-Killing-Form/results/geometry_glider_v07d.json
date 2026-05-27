@@ -1,0 +1,35 @@
+{
+  "model_id": "google/gemma-3-270m",
+  "ckpt": "/home/clawd/path_c_results/glider_v07d_s71/step_1600_final.pt",
+  "levels": {
+    "L1_weight": {
+      "ov_write_meancos": 0.16869328336583245
+    },
+    "L2_activation": {
+      "readout_effective_rank": {
+        "last_layer_PR": 36.503082275390625,
+        "mean_PR": 4.149838830295362
+      },
+      "functional_class_sep": 0.034719060187060835
+    },
+    "L3_attention_algebra": {
+      "killing_commutator_cv": {
+        "mean_commutator_cv": 0.0010514623718336225,
+        "n_layers": 18
+      }
+    },
+    "L4_gradient_dynamics": {
+      "glider_stability": {
+        "glider_cross_input_r": 0.17228510427284963,
+        "interpretation": "input-dependent (momentary)"
+      }
+    }
+  },
+  "errors": {},
+  "not_wired": {
+    "L1_head_class_topology": "needs pristine-vs-trained comparison (eval_v07_1_generic.py CLI)",
+    "L2_concept_orthogonality": "CLI-only (cosine_orthogonality_probing.py); wrap next",
+    "L4_gating_signal_split": "build/dissolve split (kf_gating_signal_probe.py); wrap next"
+  },
+  "coherence_placement": "L1 ov-meancos=0.169 | L2 readout-PR=36.5 | L4 glider-r=0.172 -> STATIC structure only (no dynamic-coherence signal at L4)"
+}
