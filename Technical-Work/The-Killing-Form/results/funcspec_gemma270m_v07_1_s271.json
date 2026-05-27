@@ -1,0 +1,11 @@
+{
+  "model_id": "google/gemma-3-270m",
+  "ckpt": "/home/clawd/path_c_results/gemma270m_v07_1_s271/step_1600_final.pt",
+  "n_heads": 4,
+  "d_head": 256,
+  "mean_abs_cos_within_class": 0.6335187265649438,
+  "mean_abs_cos_cross_class": 0.5980848279327918,
+  "class_sep_index": 0.03543389863215196,
+  "n_within_pairs": 16,
+  "n_cross_pairs": 39
+}
