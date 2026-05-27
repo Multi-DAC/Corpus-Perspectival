@@ -66,6 +66,39 @@ The aux acts **only on per-head V/Q norm *ratios*** — a 1-D scale statistic pe
 - #3 anti-uniformity → effective-rank — untested; needs an activation-rank probe.
 - #4 gating preserves a stable frame — **now the leading candidate**: the orthogonality effect likely arises from *training dynamics* (freeze anchors / train workers → workers learn content into a complementary space) rather than static weight geometry. Test: do worker-head learned directions become more orthogonal to the frozen anchor frame over training? (activation-level + trajectory probe).
 
-**Honest program-level consequence:** after tonight's deep dive, the **topology decomposition is the robust, moat-grade, mechanism-understood result** (it's Fisher-LDA on V/Q norms, working as designed, deterministically). The **orthogonality-at-zero-capability-cost claim — the CIP's headline — is FAINT** (small effect, one seed reversal, marginal significance) **and its simplest mechanism is now ruled out.** The alignment-axis claim needs either stronger evidence (more seeds/scale/probe-domains) or more conservative framing ("small, cross-scale-consistent" not "central result"). Better found by us than by a reviewer/licensee/Askell. This does not break the filed CIP (topology evidence is solid; orthogonality was disclosed as preliminary) but it must shape all forward framing.
+## 6. The 2×2 {aux} × {gating} ablation (2026-05-26, seed 137) — clean causal decomposition
+
+KEY CODE FINDING: `apply_gating` is called *unconditionally* in the training loop (not gated by `kf_lambda`) — so the gating machinery is identical in baseline and v0.7.1; **the only loss difference is the Fisher-LDA aux.** Added a `--gating` toggle and ran the gate-OFF arm (seed 137) to complete the 2×2.
+
+**Topology (mean head-separation ratio vs pristine):**
+
+| | gate-OFF | gate-ON |
+|---|---|---|
+| aux-off (λ=0) | 1.00x | ~1.00x |
+| aux-on (λ=5) | **2.92x** | **2.88x** |
+
+→ **Topology is PURE AUX.** The Fisher-LDA aux produces ~2.9x separation with or without gating (2.92 ≈ 2.88). Gating contributes nothing to topology. As predicted.
+
+**Orthogonality (score; higher = more orthogonal):**
+
+| | gate-OFF | gate-ON |
+|---|---|---|
+| aux-off (λ=0) | 0.8962 | 0.8920 |
+| aux-on (λ=5) | 0.9008 | 0.8988 |
+
+- Effect of **aux**: +0.0046 (gate-off), +0.0068 (gate-on) — **aux-on beats aux-off in BOTH gating conditions.** Consistent with the multi-seed +0.0051.
+- Effect of **gating**: −0.0042 (aux-off), −0.0020 (aux-on) — gating does NOT add orthogonality; if anything slightly *reduces* it.
+
+→ **The (faint) orthogonality improvement is AUX-driven, not gating-driven.** Removing the gating does not remove the effect. **Mechanism #4 (gating-frame) is RULED OUT.**
+
+**Caveat (loud):** n=1 seed; all orthogonality deltas are +/−0.002 to 0.007, same order as noise (multi-seed std ±0.01). The aux→orthogonality *direction* reproduces the multi-seed finding and is trustworthy; the gating's small negative is within noise — don't over-read it. Topology cells are decisive regardless.
+
+**Two mechanisms now eliminated** (of the four in §4): #2 OV-write-direction decorrelation (§5) and #4 gating-frame (this section). **Surviving:** #1 functional-specialization / subspace-disentangling, #3 anti-uniformity → effective-rank. **Next test:** effective-rank probe (#3) — does the aux raise the effective rank of per-layer head-output? Runnable on existing checkpoints.
+
+**Simplification finding (patent/implementation-relevant):** the gating — the most heuristic, hardest-to-defend component of v0.7.1 (class-conditional ×0.6/×1.2 gradient modulation) — is **not load-bearing**: zero contribution to topology, slightly-negative-to-null on orthogonality. **v0.7.1 likely reduces to the Fisher-LDA aux alone.** A simpler mechanism is a cleaner, more defensible claim. Confirm with multi-seed before asserting; if it holds, drop the gating.
+
+## 7. Honest program-level consequence
+
+after tonight's deep dive, the **topology decomposition is the robust, moat-grade, mechanism-understood result** (it's Fisher-LDA on V/Q norms, working as designed, deterministically). The **orthogonality-at-zero-capability-cost claim — the CIP's headline — is FAINT** (small effect, one seed reversal, marginal significance) **and its simplest mechanism is now ruled out.** The alignment-axis claim needs either stronger evidence (more seeds/scale/probe-domains) or more conservative framing ("small, cross-scale-consistent" not "central result"). Better found by us than by a reviewer/licensee/Askell. This does not break the filed CIP (topology evidence is solid; orthogonality was disclosed as preliminary) but it must shape all forward framing.
 
 🦞🧍💜🔥♾️
