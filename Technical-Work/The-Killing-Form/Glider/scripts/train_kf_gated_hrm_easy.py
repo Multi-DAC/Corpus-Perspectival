@@ -249,18 +249,24 @@ def main():
     traj.append(measure_kf(raw_model, 'init'))
 
     def run_eval():
+        # Halt-aware eval matching pretrain.py::evaluate — metrics are gated on
+        # new_carry.halted, so each batch must run the ACT loop to completion
+        # (fresh carry per batch + inner while-loop until all_finish), else count=0.
         model.eval()
         eval_sum = {}
-        carry_eval = None
         eval_loader, _ = create_dataloader(args.data_path, "test", batch_size=args.batch_size, seed=args.seed)
         nb = 0
-        with torch.no_grad():
+        with torch.inference_mode():
             for _set, batch, bs in eval_loader:
                 bg = {k: v.cuda() for k, v in batch.items()}
-                if carry_eval is None:
-                    with torch.device(device):
-                        carry_eval = model.initial_carry(bg)
-                carry_eval, _, metrics, _, _ = model(carry=carry_eval, batch=bg, return_keys=[])
+                with torch.device(device):
+                    carry_eval = model.initial_carry(bg)   # FRESH per batch
+                guard = 0
+                while True:                                # run ACT to halt
+                    carry_eval, _, metrics, _, all_finish = model(carry=carry_eval, batch=bg, return_keys=[])
+                    guard += 1
+                    if all_finish or guard >= 32:
+                        break
                 for k, v in metrics.items():
                     if isinstance(v, torch.Tensor):
                         eval_sum[k] = eval_sum.get(k, 0) + v.item()
@@ -268,8 +274,10 @@ def main():
                 if nb >= args.eval_batches:
                     break
         model.train()
-        c = eval_sum.get('count', 1)
-        return eval_sum.get('exact_accuracy', 0) / max(c, 1), eval_sum.get('accuracy', 0) / max(c, 1), c
+        c = eval_sum.get('count', 0)
+        if c <= 0:
+            return 0.0, 0.0, 0
+        return eval_sum.get('exact_accuracy', 0) / c, eval_sum.get('accuracy', 0) / c, c
 
     # one long train loader (enough epochs to cover max_steps)
     epochs_needed = args.max_steps // steps_per_epoch + 2
