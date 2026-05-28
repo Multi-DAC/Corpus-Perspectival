@@ -133,7 +133,7 @@ def compare_pair(base, gated):
 
 def main():
     print(f"Lead/lag analysis — {RESULTS}")
-    seeds = sorted({p.split('_s')[-1] for p in glob.glob(os.path.join(RESULTS, 'easy_baseline_s*'))})
+    seeds = sorted({p.split('_s')[-1] for p in glob.glob(os.path.join(RESULTS, 'easy_baseline_s*')) if os.path.isdir(p)})
     if not seeds:
         print("no runs found")
         return
