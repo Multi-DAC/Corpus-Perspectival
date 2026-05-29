@@ -3,7 +3,7 @@
 ## Morning queue, priority order
 
 1. **Read `palace/south/infrastructure-audit-2026-05-29.md`** — full punch-list from the 6-subagent infrastructure audit this drive. CRITICAL / HIGH / MEDIUM / LOW / STRATEGIC tiers. Below is the index.
-2. **Phase-3 Stage 2 v3h-prime pre-reg DRAFT** still awaits your ratification (from Day 118 handoff).
+2. ~~Phase-3 Stage 2 v3h-prime pre-reg ratification~~ **RATIFIED + EXECUTED + RESULTS LANDED 2026-05-29 ~09:38 PST.** Factorial attribution: **❌❌❌** (all 3 arms fail decisive). Pre-reg's locked reading: "Neither bug-fix nor combination rescues v3h. Either Read B is wrong, OR there's a third undiagnosed bug. Either way, do NOT advance to v3-x; rethink." Full diagnosis + 4 next-stage candidate decisions at pre-reg §8 (clawd-local IP-private). **Key sub-findings:** all 3 arms identical 0.6535 ceiling (vs no_mirror 0.897), halt collapses to cycle 1.0 across ALL arms → multi-cycle architecture never engaged → Mirror position structurally degenerate at this task/scale. Detach DOES improve calibration (Arm C +0.205 vs TD arms negative) but accuracy is locked. **The four candidate next-stage decisions need your call** — scope decision (which path: scale-up-task / reframe-to-Read-C / investigate-halt-collapse / accept-no_mirror-canonical).
 3. **Technical-alignment audit HIGH-severity items** (Actions 1+2+4) still awaiting.
 4. **Patent Claims 1-10 strategy call** still pending.
 5. **CURRENT.md Zenodo-state correction** still queued.
