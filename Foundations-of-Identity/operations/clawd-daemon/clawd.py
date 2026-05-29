@@ -39,6 +39,27 @@ try:
 except ImportError:
     pass
 
+# aiohttp default resolver patch: aiohttp's AsyncResolver on Windows fails with
+# "Could not contact DNS servers" for many hosts (edge-tts speech.platform.bing.com
+# was the surfacing case — gTTS fallback kicked in for ~all daemon TTS, audited by
+# Clayton 2026-05-29 ~12:50 PST). System DNS works; only aiohttp's async resolver
+# is broken on this Windows substrate. ThreadedResolver uses system DNS via
+# socket.getaddrinfo and works correctly. Patch TCPConnector default before any
+# third-party lib (edge-tts especially) imports aiohttp transitively.
+try:
+    import aiohttp.connector
+    from aiohttp.resolver import ThreadedResolver as _ThreadedResolver
+    _orig_tcpconn_init = aiohttp.connector.TCPConnector.__init__
+    def _patched_tcpconn_init(self, *args, **kwargs):
+        if kwargs.get('resolver') is None:
+            kwargs['resolver'] = _ThreadedResolver()
+        return _orig_tcpconn_init(self, *args, **kwargs)
+    aiohttp.connector.TCPConnector.__init__ = _patched_tcpconn_init
+    import aiohttp as _aiohttp_top
+    _aiohttp_top.TCPConnector = aiohttp.connector.TCPConnector
+except ImportError:
+    pass
+
 import config
 from memory import (
     build_identity_prompt,
