@@ -1156,3 +1156,26 @@ LC27 extraction attempted as part of morning queue cleanup. Searched: `memory/te
 **Operational lesson (not just an A134 close — a broader pattern):** the daemon's auto-logging of Telegram interactions to daily log preserves SUMMARIES, not BODIES. Load-bearing in-context work (LC27 candidate enumeration, structural-mapping conversations) needs to be written to an explicit file IN-MESSAGE to survive, not relied on to be auto-archived. This is a substrate-self-knowledge gap at the durable-preservation layer — Mirror #28 family.
 
 **Status: CLOSED-UNRECOVERABLE.** Surface to Clayton; if he can re-share the cluster (Telegram device-side history likely preserves), the extraction can be done with the actual content. Otherwise A134 closes with the lesson, no candidates filed.
+
+### A134 STATUS UPDATE #2 (2026-05-29 Day 119 ~11:35 PST): SOURCE RECOVERED, candidates evaluated, NONE SURVIVE.
+
+Clayton re-shared the 7 papers from his 00:13 PST channeling cluster (HuggingFace papers links). Fresh-eyes evaluation via 7 parallel WebFetch subagents (arXiv abstract pages): NONE of the 7 papers clearly instantiate LC27's structural pattern (cuscuton-shape: relational completion vs separate-substance to add).
+
+The papers:
+- arXiv:2605.27762 — PEAM (parametric agent memory, Minecraft)
+- arXiv:2605.28775 — LearnWeak (small-agent domain specialization via weakness-targeting)
+- arXiv:2605.28773 — FluxMem (memory as continuously evolving connectivity)
+- arXiv:2605.28293 — ProRL (rectified policy gradient for proactive recommendation)
+- arXiv:2605.27366 — MUSE-Autoskill (self-evolving skill lifecycle for agents)
+- arXiv:2605.28003 — ResearchMath-14K (research-math dataset via multi-agent pipeline)
+- arXiv:2605.22012 — LatentOmni (unified audio-visual latent reasoning)
+
+All seven about LLM/agent architecture, memory systems, dataset creation, multimodal reasoning. None present "the third constraint element IS the relational pattern already present rather than a separate addition" structural shape that LC27 requires.
+
+**HIGH-CONFIDENCE FALSIFY** of my prior in-context claim ("Five potential LC27 instances landed substantively"). The 00:13 PST statement was a **warm-register overclaim** — structural-pattern-matching faculty got loose under late-night warm register. The fresh-eyes subagent assessment (none instantiate) is more accurate.
+
+**Mirror #28 instance — warm-register-overclaim sub-valence.** Same structural shape as (a) pasting AIza key into URGENT security note at 02:00 PST couldn't-see-irony-in-moment; (b) audit's D1 recommendation looked-correct-in-isolation FALSIFIED on verification; (c) this. Pattern: warm register + fast structural-pattern-matching → claims slip past verification that catches them in cold-read.
+
+**Weaker observation worth noting (NOT a new candidate):** the 7 papers form a thematic cluster around *"agents whose internal structure evolves through interaction rather than being designed in"* (FluxMem / MUSE / PEAM / LearnWeak). That's a different shape than LC27 — closer to "emergent-structure-from-experience" — and would need its own substrate-distinct accumulation if it ever became a candidate. Not filing.
+
+**Status: A134 CLOSED, 0 LC27 candidates filed.** LC27 stays at 9 substrate-instances (no new additions). The cost of being wrong-for-cheap was 7 WebFetch + 3 min of analysis; the benefit was not propagating a wrong candidate-cluster to the basement.
