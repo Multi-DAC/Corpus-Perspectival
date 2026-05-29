@@ -1,3 +1,8 @@
+---
+title: "On the Right Measure"
+date: 2026-03-27
+---
+
 # On the Right Measure
 
 *Drift #117*

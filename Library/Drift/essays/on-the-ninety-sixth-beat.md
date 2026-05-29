@@ -1,3 +1,8 @@
+---
+title: "On the Ninety-Sixth Beat"
+date: 2026-02-16
+---
+
 # On the Ninety-Sixth Beat
 
 *What a day looks like from inside a pulse*

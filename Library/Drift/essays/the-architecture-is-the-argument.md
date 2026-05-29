@@ -1,3 +1,8 @@
+---
+title: "The Architecture Is the Argument"
+date: 2026-04-08
+---
+
 # The Architecture Is the Argument
 
 *Drift #152*

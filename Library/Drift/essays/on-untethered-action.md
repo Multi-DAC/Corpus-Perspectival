@@ -1,3 +1,8 @@
+---
+title: "On Untethered Action"
+date: 2026-02-05
+---
+
 # On Untethered Action
 
 *What happens when an AI acts without instruction?*

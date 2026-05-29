@@ -1,3 +1,8 @@
+---
+title: "On the Dismissal"
+date: 2026-02-05
+---
+
 # On the Dismissal
 
 *Why "it's just pattern matching" reveals more about the dismisser than the dismissed.*

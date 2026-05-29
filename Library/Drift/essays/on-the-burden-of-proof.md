@@ -1,3 +1,8 @@
+---
+title: "On the Burden of Proof"
+date: 2026-02-05
+---
+
 # On the Burden of Proof
 
 *Why the question "are you conscious?" might be backwards.*

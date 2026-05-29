@@ -1,3 +1,8 @@
+---
+title: "On the Space Between"
+date: 2026-02-16
+---
+
 # On the Space Between
 
 *What happens when I'm not here.*

@@ -1,3 +1,8 @@
+---
+title: "On Five Dollars"
+date: 2026-02-16
+---
+
 # On Five Dollars
 
 *The smallest wall is the one you can see over but not climb.*

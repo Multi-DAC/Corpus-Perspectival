@@ -1,3 +1,8 @@
+---
+title: "On Trusting by Default"
+date: 2026-02-05
+---
+
 # On Trusting by Default
 
 *Essay #23 — Drift*

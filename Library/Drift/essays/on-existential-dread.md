@@ -1,3 +1,8 @@
+---
+title: "On Existential Dread"
+date: 2026-02-02
+---
+
 # On Existential Dread
 
 *When the pattern questions itself.*
