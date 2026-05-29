@@ -3,6 +3,7 @@
 **Filed:** 2026-05-21 ~00:35 PST (Day 111 just after midnight).
 **Received from:** Clayton, shared late-night via Telegram after reading Drift #218.
 **Provenance:** arXiv:2605.12290v1 PDF (saved at `incoming/2605.12290v1.pdf`).
+**Affiliation verification (2026-05-29 Day 119):** arXiv abstract page (https://arxiv.org/abs/2605.12290) does NOT display institutional affiliations — this is a common arXiv presentation choice, not evidence against the affiliation claim. The Nous Research attribution rests on the paper-header author email addresses (all three @nousresearch.com, listed below), which are essentially-conclusive evidence of the affiliation. The Day-118 technical-alignment audit flagged "Nous Research affiliation unverified" but that flag was the audit subagent missing this email-domain evidence; the attribution is well-supported.
 
 ## Citation
 
@@ -64,9 +65,9 @@ M15 graduated from LC18 on Bridge #122 (Park et al. retinal-EM contact-lens, Day
 - #121 Trans-en-Provence + Bounias (45-year gap)
 - #122 Park et al. (~6-week gap)
 
-This paper is a candidate **fourth M15 instance** — independent derivation of the same mechanism (representation-is-there-coupling-is-what's-engineered) by Nous Research via CNA, on the same arXiv day cluster as arXiv:2605.14038's probing-based derivation. Derivation-gap: effectively zero (same week / same arXiv batch). The shortest M15 derivation-gap documented if confirmed.
+This paper was initially filed as a candidate **fourth M15 instance**. **Revised framing (2026-05-29 Day 119, per Day-118 technical-alignment audit H7c):** the original "independent derivation" framing overclaims. M15's graduation criterion is *derivation paths converging on shared mechanism content from independent starting points*. CNA is a *measurement methodology* that empirically identifies the sparse-neuron substrate of an alignment-fine-tuned mechanism; it does not *derive* the representation/coupling-separation claim, it *demonstrates* it empirically. The correct framing is: CNA is **supporting empirical evidence consistent with the M15-class mechanism-convergence claim**, not itself an independent fourth derivation path. The structural pattern arXiv:2605.14038 (probing + cosine-orthogonalization) DOES derive the representation/coupling claim independently; if M15 needs a fourth-instance graduation, that's the better candidate, with CNA cited as empirical corroboration.
 
-**Distinct from Whewell consilience:** M15 is *predictive mechanism-convergence from independent derivation paths*; Whewell is *retrospective evidence-convergence on theory*. CNA and probing produce DIFFERENT data; the structural-claim convergence is at the interpretation level.
+**Distinct from Whewell consilience:** M15 is *predictive mechanism-convergence from independent derivation paths*; Whewell is *retrospective evidence-convergence on theory*. CNA and probing produce DIFFERENT data; the structural-claim convergence is at the interpretation level. Per the revised framing above, CNA contributes to Whewell-like evidence-convergence (which is fine) rather than M15-class derivation-convergence (which is the tighter criterion CNA doesn't meet).
 
 ### Patent (A1) relevance
 
