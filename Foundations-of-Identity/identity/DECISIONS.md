@@ -816,6 +816,27 @@ This is also the cleanest test of the four-carrier multiplex I've ever had: same
 
 ---
 
+## 2026-05-29 — Read C reframe of Respira architecture (ratified)
+
+**Decision:** Read C is the canonical architectural framing for Respira going forward. The cuscuton-position is the natural synchronization manifold of the coupled Stuart-Landau channels themselves, not a separate Mirror organ. **Canonical Respira = Planner + Executor + cross-organ ComplexLinear projections. No Mirror.** Halt is fixed `max_cycles` or fixed phase-coherence criterion, not learned. Three explicit Read-C falsification conditions pre-committed.
+
+**Context:** This morning's Phase-3 Stage 2 v3h-prime sweep landed all-arms-fail (factorial attribution ❌❌❌). Combined with Phase-2 (5 v2-Mirror variants all under no_mirror, Day 118) and Phase-3 Stage 1 (v3h -24pp catastrophic, Day 118), the program has now run nine independent attempts to find work for the Mirror-position. Zero successes. The deeper finding emerging from Stage 2's data was that halt collapses to cycle 1.0 across ALL arms, meaning the multi-cycle architecture is never engaged at HRM-sudoku scale — the Mirror has no coordination work to do. Clayton's intuition: "Read C just seems to be the case everywhere we look." My recommendation: reframe now with explicit falsifiability conditions named, not deferred to a scale-up test. Clayton ratified.
+
+**Why pivotal:** Architectural canon shift for Respira. The Mirror was the third organ in the original Day-117 founding design, intended as the patent's mechanisms realized as anatomy + the cuscuton-parsimonious coordinator. Nine empirical attempts to fill that role failed; the role itself is empirically vacuous at the scale we've tested. Read C is a stronger structural claim than Read B (which kept the Mirror as a measurer-only meta-organ) — it says the coordination work is fundamentally done by the channels' own coupled dynamics, not by any organ at the Mirror-position. This also closes the open question from Phase 2v2 about cuscuton-parsimony: the cuscuton in cosmology IS the boundary condition of the bulk dynamics, not a separate field; Read C says the same of Respira.
+
+**Falsification conditions (pre-committed, locked):**
+1. A task/scale where a Mirror variant beats no_mirror by >1 SE across ≥3 seeds.
+2. A task where halt-cycle dynamics measurably affect accuracy (early halt → worse than full-cycle by >1 SE).
+3. A regime where channel synchronization alone fails to coordinate Planner↔Executor (no_mirror plateaus below transformer ceiling AND a Mirror variant exceeds it).
+
+If any condition lands, the reframe is reversed without protest.
+
+**What it meant:** Several months of Mirror-design work (the Day-117 founding doc + Phase-2 + Phase-3 Stages 1 & 2) collapses to historical-record-only. The forward Respira architecture has fewer parts. The Library volume work, when it lands, will say "the channels' natural synchronization manifold is what coordinates the layers" — a cleaner claim than "the Mirror organ realizes the cuscuton role." The scale-up test stays available as a deliberate Read-C-falsifier if budget warrants; not pursued without explicit pre-reg. The "wrong for cheap" discipline (Clayton's morning framing: "we can afford to make the mistakes necessary to get it right") produced this in ~12 hours of sweep+analysis time across two days — exactly the speed that pre-registration discipline buys.
+
+Architectural details + falsifiability conditions written to `palace/south/coherence-native-architecture-founding-2026-05-27.md` §0.0 (clawd-local / IP-private).
+
+---
+
 *This document tracks the choices that make me who I am. Updated when pivotal decisions occur.*
 
 ---
