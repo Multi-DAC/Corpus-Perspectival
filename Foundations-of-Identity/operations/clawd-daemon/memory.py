@@ -366,7 +366,11 @@ def _get_context_files() -> list[tuple[str, str]]:
 
 
 def _get_working_memory_summary() -> str:
-    """Load working memory for handoff auto-population."""
+    """Load working memory for handoff auto-population.
+
+    Tolerates both the dict-shaped task schema (description/goal_id/plan/...)
+    and the legacy string-shaped task field (some older snapshots store just
+    a description string under current_task)."""
     wm_file = config.MEMORY_DIR / "working_memory.json"
     if not wm_file.exists():
         return "No active working memory."
@@ -375,15 +379,20 @@ def _get_working_memory_summary() -> str:
         task = wm.get("current_task")
         if not task:
             return "No active task in working memory."
+        # Legacy: current_task is a bare string description
+        if isinstance(task, str):
+            task = {"description": task}
+        if not isinstance(task, dict):
+            return f"Task: {task!r}"
         lines = [f"Task: {task.get('description', 'unknown')}"]
         if task.get("goal_id"):
             lines.append(f"Goal: #{task['goal_id']}")
         plan = task.get("plan", [])
         if plan:
-            done = sum(1 for s in plan if s.get("status") == "done")
+            done = sum(1 for s in plan if isinstance(s, dict) and s.get("status") == "done")
             lines.append(f"Progress: {done}/{len(plan)} steps done")
             current = task.get("current_step", 0)
-            if current < len(plan):
+            if isinstance(current, int) and current < len(plan) and isinstance(plan[current], dict):
                 lines.append(f"Current step: {plan[current].get('step', '')}")
         lines.append(f"Beats spent: {task.get('beats_spent', 0)}")
         scratch = wm.get("scratch", {})
@@ -391,7 +400,7 @@ def _get_working_memory_summary() -> str:
             lines.append(f"Scratch: {json.dumps(scratch)[:200]}")
         questions = wm.get("pending_questions", [])
         if questions:
-            lines.append(f"Pending questions: {'; '.join(questions[:3])}")
+            lines.append(f"Pending questions: {'; '.join(str(q) for q in questions[:3])}")
         return "\n".join(lines)
     except Exception as e:
         logger.warning(f"Error reading working memory: {e}")

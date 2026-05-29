@@ -27,6 +27,18 @@ import os
 os.environ.setdefault("HF_HUB_OFFLINE", "1")
 os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
+# SSL trust store: this Windows machine runs Norton's HTTPS-interception
+# ("Norton Web/Mail Shield") which re-signs every TLS certificate with a Norton
+# root that lives in the Windows certificate store. certifi's Mozilla bundle
+# does not contain that root, so any httpx/telegram-bot connection fails with
+# SSL: CERTIFICATE_VERIFY_FAILED. truststore.inject_into_ssl() rewires
+# ssl.SSLContext to use Windows' native verifier, which finds the Norton root.
+try:
+    import truststore
+    truststore.inject_into_ssl()
+except ImportError:
+    pass
+
 import config
 from memory import (
     build_identity_prompt,

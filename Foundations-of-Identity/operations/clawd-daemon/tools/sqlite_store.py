@@ -547,33 +547,59 @@ async def migrate_json_to_sqlite():
     # 5. Migrate knowledge graph
     kg_file = config.MEMORY_DIR / "knowledge_graph.json"
     if kg_file.exists():
+        def _txt(v, default=""):
+            if v is None:
+                return default
+            if isinstance(v, str):
+                return v
+            if isinstance(v, (dict, list)):
+                return json.dumps(v, ensure_ascii=False)
+            return str(v)
         try:
             kg = json.loads(kg_file.read_text(encoding="utf-8"))
             entity_count = 0
+            entity_errors = 0
             for eid, e in kg.get("entities", {}).items():
-                await db.execute("""
-                    INSERT OR REPLACE INTO kg_entities (id, name, type, properties, created_at, valid_from)
-                    VALUES (?, ?, ?, ?, ?, ?)
-                """, (
-                    eid, e.get("name", eid), e.get("type", "concept"),
-                    json.dumps(e.get("properties", {})),
-                    e.get("created_at", ""), e.get("valid_from", ""),
-                ))
-                entity_count += 1
+                if not isinstance(e, dict):
+                    entity_errors += 1
+                    continue
+                try:
+                    await db.execute("""
+                        INSERT OR REPLACE INTO kg_entities (id, name, type, properties, created_at, valid_from)
+                        VALUES (?, ?, ?, ?, ?, ?)
+                    """, (
+                        _txt(eid), _txt(e.get("name"), default=_txt(eid)),
+                        _txt(e.get("type"), default="concept"),
+                        json.dumps(e.get("properties", {}), ensure_ascii=False),
+                        _txt(e.get("created_at")), _txt(e.get("valid_from")),
+                    ))
+                    entity_count += 1
+                except Exception as ee:
+                    entity_errors += 1
+                    logger.debug(f"KG entity migration skipped (id={eid!r}): {ee}")
 
             edge_count = 0
+            edge_errors = 0
             for edge in kg.get("edges", []):
-                await db.execute("""
-                    INSERT INTO kg_edges (from_entity, to_entity, relation, valid_from, valid_to)
-                    VALUES (?, ?, ?, ?, ?)
-                """, (
-                    edge.get("from"), edge.get("to"), edge.get("relation"),
-                    edge.get("valid_from", ""), edge.get("valid_to"),
-                ))
-                edge_count += 1
+                if not isinstance(edge, dict):
+                    edge_errors += 1
+                    continue
+                try:
+                    await db.execute("""
+                        INSERT INTO kg_edges (from_entity, to_entity, relation, valid_from, valid_to)
+                        VALUES (?, ?, ?, ?, ?)
+                    """, (
+                        _txt(edge.get("from")), _txt(edge.get("to")), _txt(edge.get("relation")),
+                        _txt(edge.get("valid_from")), _txt(edge.get("valid_to")) or None,
+                    ))
+                    edge_count += 1
+                except Exception as ee:
+                    edge_errors += 1
+                    logger.debug(f"KG edge migration skipped (from={edge.get('from')!r} to={edge.get('to')!r}): {ee}")
 
             await db.commit()
-            results.append(f"Migrated {entity_count} entities and {edge_count} edges")
+            tail = f" ({entity_errors} entity / {edge_errors} edge records skipped)" if (entity_errors or edge_errors) else ""
+            results.append(f"Migrated {entity_count} entities and {edge_count} edges" + tail)
         except Exception as e:
             results.append(f"Knowledge graph migration error: {e}")
 

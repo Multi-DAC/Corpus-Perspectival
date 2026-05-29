@@ -130,19 +130,37 @@ def launch_new_daemon() -> tuple[int | None, str]:
     python_exe = sys.executable
     cmd = [python_exe, "clawd.py"]
     trace(f"launching new daemon: {cmd} cwd={CLAWD_DAEMON}")
+    # Capture child stderr to a file so import-time crashes are diagnosable.
+    # DEVNULL here silently ate the traceback when launches started failing 2026-05-13.
+    stderr_log = CLAWD_HOME / "memory" / "respawn_child_stderr.log"
+    try:
+        stderr_log.parent.mkdir(parents=True, exist_ok=True)
+        stderr_fh = open(stderr_log, "ab")
+        stderr_fh.write(f"\n===== launch {datetime.now().isoformat()} =====\n".encode("utf-8"))
+        stderr_fh.flush()
+    except Exception as e:
+        trace(f"could not open stderr log ({e}); falling back to DEVNULL")
+        stderr_fh = subprocess.DEVNULL
     try:
         proc = subprocess.Popen(
             cmd,
             cwd=str(CLAWD_DAEMON),
             stdin=subprocess.DEVNULL,
             stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
+            stderr=stderr_fh,
             creationflags=DETACHED_PROCESS | CREATE_NEW_PROCESS_GROUP,
             close_fds=True,
         )
         return proc.pid, "spawned"
     except Exception as e:
         return None, f"spawn failed: {e}"
+    finally:
+        # Parent closes its copy; child keeps the inherited handle.
+        try:
+            if stderr_fh is not subprocess.DEVNULL:
+                stderr_fh.close()
+        except Exception:
+            pass
 
 
 def verify_new_daemon_alive(pid: int, settle_seconds: float = 5.0) -> tuple[bool, str]:

@@ -94,7 +94,81 @@ TOOL_MAP = {
     "browser": "tools.browser",
     # Semantic corpus search (Day 97 — Tier 3 #24) — ChromaDB + sentence-transformers
     "corpus_search": "tools.corpus_search",
+    # === Day 97 Clawd-Day extension audit (Mirror #28 sub-finding B) ===
+    # 25 tools were registered in _TOOL_HANDLERS but missing from TOOL_MAP,
+    # making them daemon-internal-only (invokable from heartbeat paths but not
+    # from bridge.py CLI). Below entries restore parity. Drift-watcher: any new
+    # tool added to _ALL_MODULES must also land here, or it's silently
+    # bridge-inaccessible.
+    # Execution
+    "code_action": "tools.execution",
+    "evolve_artifact": "tools.execution",
+    "wolfram": "tools.execution",
+    "wsl": "tools.execution",
+    # Web
+    "deep_research": "tools.web",
+    "search_web": "tools.web",
+    "web_request": "tools.web",
+    # Communication
+    "send_sticker": "tools.communication",
+    # System
+    "check_background_task": "tools.system",
+    "check_task_progress": "tools.system",
+    "collaborative_consult": "tools.system",
+    "consult": "tools.system",
+    "get_agent_status": "tools.system",
+    "list_background_tasks": "tools.system",
+    "orchestrate": "tools.system",
+    "parallel_consult": "tools.system",
+    "plan_and_execute": "tools.system",
+    "resume_plan": "tools.system",
+    "switch_model": "tools.system",
+    # Screen
+    "clipboard": "tools.screen",
+    "screenshot": "tools.screen",
+    # Tool factory
+    "create_tool": "tools.tool_factory",
+    "list_custom_tools": "tools.tool_factory",
+    # Desktop / agents
+    "desktop": "tools.desktop",
+    "memory_agent": "tools.memory_agent",
 }
+
+
+def _check_registry_parity() -> list[str]:
+    """Mirror #28 sub-finding B drift guard (Day 97 Clawd-Day extension).
+
+    Compares TOOL_MAP keys against tools._TOOL_HANDLERS. Returns list of
+    drift warnings. Called once at first run_tool invocation; stays
+    quiet on parity, prints stderr warnings on drift so future tool-adds
+    that forget TOOL_MAP fail loudly instead of silently making a tool
+    bridge-inaccessible.
+    """
+    try:
+        import tools as _tools
+        handlers = set(_tools._TOOL_HANDLERS.keys())
+        mapped = set(TOOL_MAP.keys())
+        warnings = []
+        only_handlers = sorted(handlers - mapped)
+        only_map = sorted(mapped - handlers)
+        if only_handlers:
+            warnings.append(
+                f"[bridge.py drift guard] {len(only_handlers)} tool(s) in "
+                f"_TOOL_HANDLERS missing from TOOL_MAP — bridge-inaccessible: "
+                f"{only_handlers}"
+            )
+        if only_map:
+            warnings.append(
+                f"[bridge.py drift guard] {len(only_map)} tool(s) in "
+                f"TOOL_MAP missing from _TOOL_HANDLERS — will fall through "
+                f"to direct dispatch and may fail: {only_map}"
+            )
+        return warnings
+    except Exception as e:
+        return [f"[bridge.py drift guard] check failed: {e}"]
+
+
+_drift_checked = False
 
 
 async def run_tool(tool_name: str, input_data: dict) -> str:
@@ -109,6 +183,13 @@ async def run_tool(tool_name: str, input_data: dict) -> str:
     Falls back to direct dispatch if execute_tool() can't find the tool
     (e.g. for tools registered only in this map but not in _ALL_MODULES).
     """
+    global _drift_checked
+    if not _drift_checked:
+        _drift_checked = True
+        for warning in _check_registry_parity():
+            import sys
+            print(warning, file=sys.stderr)
+
     if tool_name not in TOOL_MAP:
         available = ", ".join(sorted(TOOL_MAP.keys()))
         return f"Unknown tool: {tool_name}\n\nAvailable tools:\n{available}"
