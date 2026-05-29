@@ -1,3 +1,48 @@
+# Handoff — Day 119 ~02:40 PST Friday (URGENT SECURITY + mirror catch-up addendum)
+
+## ⚠️ URGENT — ROTATE GOOGLE AI API KEY IMMEDIATELY ⚠️
+
+During the mirror catch-up sweep this drive, the **Google AI API key `AIzaSyBedOWEDGvfRl3y2osmP-CE1VtWVj1Rc5w`** (originally shared via Telegram 2026-02-01 for operational use) was mirror-pushed to public **Multi-DAC/Corpus-Perspectival** at commit `8e42f9c`. The redaction is pushed in commit `4eb085b` BUT the prior commit's tree retains the secret accessible via that SHA in git history. **Revoke at aistudio.google.com → Get API key → revoke the affected key.** A135 anomaly filed with full detail. GitHub push-protection caught `ghp_*` and `hf_*` patterns in the same push (those redacted before push landed); it did NOT catch the AIza pattern. Three other tokens (two GH PATs + one HF token) found in clawd-local conversations/archive files and redacted at source this drive — they were never pushed but should be checked for active-or-rotated status.
+
+**Optional but recommended:** consider git-history rewrite (filter-branch / BFG) on staging to remove the secret from accessible-via-SHA history. Destructive but the secret-rotation makes it merely a defense-in-depth step.
+
+## Mirror catch-up summary (this drive)
+
+Four commits to staging Multi-DAC/Corpus-Perspectival:
+- `dfa136a` — cleanup: removed leftover *.tmp.* write-temp + added .gitignore guard
+- `18f8ca3` — Library/Drift frontmatter pass (26 essays, pure YAML title+date prepend; closes A129)
+- `8e42f9c` — Foundations-of-Identity mirror catch-up (7-day staging gap closure across identity/DECISIONS + operations/{BOOT,CAPABILITIES,TOOLS,scripts/} + palace/{ATRIUM,basement,southeast,south/8-files,southwest/experiments} + memory/ 25 daily logs). **CONTAINS leaked Google AI key — see urgent note above.**
+- `4eb085b` — SECURITY: redact Google AI API key from memory/2026-02-01.md
+
+**NOT pushed, deliberately held back (IP-handling discipline):**
+- `palace/south/technical-alignment-audit-2026-05-28.md` (audit header: stays clawd-local)
+- `palace/south/coherence-native-architecture-founding-2026-05-27.md` + all `respira-*-preregistration-*` + `respira-trajectory-analysis-2026-05-28.md` (Respira specifics are [IP-PRIVATE])
+- `palace/south/claims-audit-2026-05-27.md` (patent-claims sensitive)
+- `palace/south/funding-applications-register.md` (grant-strategy sensitive)
+- `palace/south/founding-documents/` (Coherent Systems Inc. pre-filing, premature to publish)
+- `memory/backups/`, `memory/items/`, `memory/monitor_*`, `memory/_q*.json`, `memory/nostalgia/`, `memory/conversations/` (daemon operational state + third-party repos + un-redacted-by-default Telegram transcripts — separate cleanup decision)
+
+## Anomalies filed this drive
+
+- **A132** aiohttp bypasses truststore patch (predicted next-failure)
+- **A133** death-spiral timing locked to scheduled-task fire (open question why 00:02 worked)
+- **A134** 5 LC27 candidates from late-night channeling uncatalogued
+- **A135** Google AI API key leaked + 3 other secrets found and redacted (THIS IS THE URGENT ONE)
+
+## Anticipations filed this drive
+
+P206 (morning small-window queue), P207 (Friday-AIGP stale), P208 (Stage-2 detached-runnable), P209 (LC27 extraction pass), P210 (aiohttp truststore preventive fix).
+
+## Memories filed
+
+`feedback_dual_commit_discipline.md` — clawd-local "no remote" ≠ "no push"; staging mirror sync is the manual step.
+
+## Drift #225 *what the reach was for* shipped
+
+Canonical + Library mirror, parity 227=227. Dream-drive third data point for canary; pattern consistent.
+
+---
+
 # Handoff — Day 119 ~01:42 PST Friday (Dream Drive addendum)
 
 *Brief addendum prepended at end of dream drive ~01:34–01:42 PST. Day-118 handoff body preserved unchanged below; everything in it still stands. Morning-Clayton: scroll past this addendum for the substantive Day-118 state; come back here only if you want the overnight delta.*
