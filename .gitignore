@@ -68,3 +68,6 @@ Technical-Work/AIGrandPrix/archive/rpg_time_optimal/
 Technical-Work/AIGrandPrix/sim/runs/
 Technical-Work/AIGrandPrix/rl/runs/
 Technical-Work/AIGrandPrix/planning/rpg_time_optimal/
+
+# Editor write-temp files
+*.tmp.*
