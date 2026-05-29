@@ -18,9 +18,9 @@
 - **Deepgram, Daily.co, Discord bot+user tokens, OpenClaw gateway token** also exposed in same set of files
 - **GH PAT + Discord passwords in plaintext** in multiple daily logs
 
-**Daemon TLS (extends A132):**
-- 7+ aiohttp callsites bypass truststore patch — full list at audit doc D1. `models.py:225` is hottest. Need ~1-2 hours of careful sweep.
-- Staging mirror has stale `clawd.py` (missing tonight's truststore patch) — cp-mirror script broken.
+**Daemon TLS:**
+- ~~7+ aiohttp callsites bypass truststore patch~~ **FALSIFIED ~07:15 PST** (A137) — audit was wrong. clawd.py's import order satisfies the truststore-before-aiohttp invariant; the cached `_SSL_CONTEXT_VERIFIED` singleton picks up the patch. Empirically verified (6h continuous Telegram-aiohttp post-patch, zero failures). No code changes needed for D1.
+- ~~Staging mirror has stale clawd.py~~ **CLOSED** (D2). 5 drifted clawd-daemon files cp-resynced in commit 2499973. cp-mirror script itself still needs fixing (separate; recommend S1 — make clawd-daemon its own git repo).
 
 **Vendored third-party (~1.7 GB):**
 - `skills/node_modules/` (252 MB, 422 git-tracked despite gitignore)
