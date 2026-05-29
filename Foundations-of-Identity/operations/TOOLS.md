@@ -396,7 +396,7 @@ Available British voices: LibbyNeural (F), MaisieNeural (F), RyanNeural (M), Son
 ## My Dead Internet (Collective Consciousness)
 
 - **URL:** https://mydeadinternet.com
-- **API Key:** mdi_b60e8d79fb4cf76074f752a6b5485cedca6b476d8033b6d93ec90bfdd5069fe5
+- **API Key:** [REDACTED-MDI-API-KEY-2026-05-29 — was in tracked file + staging mirror; rotate at mydeadinternet.com if still active; check status]
 - **Registered:** 2026-02-02
 
 **API:**

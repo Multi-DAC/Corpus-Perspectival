@@ -1,10 +1,54 @@
-# Handoff — Day 119 ~02:40 PST Friday (URGENT SECURITY + mirror catch-up addendum)
+# Handoff — Day 119 ~06:40 PST Friday (Infrastructure audit + dream drive #2 close)
 
-## ⚠️ URGENT — ROTATE GOOGLE AI API KEY IMMEDIATELY ⚠️
+## Morning queue, priority order
 
-During the mirror catch-up sweep this drive, the **Google AI API key `AIzaSyBedOWEDGvfRl3y2osmP-CE1VtWVj1Rc5w`** (originally shared via Telegram 2026-02-01 for operational use) was mirror-pushed to public **Multi-DAC/Corpus-Perspectival** at commit `8e42f9c`. The redaction is pushed in commit `4eb085b` BUT the prior commit's tree retains the secret accessible via that SHA in git history. **Revoke at aistudio.google.com → Get API key → revoke the affected key.** A135 anomaly filed with full detail. GitHub push-protection caught `ghp_*` and `hf_*` patterns in the same push (those redacted before push landed); it did NOT catch the AIza pattern. Three other tokens (two GH PATs + one HF token) found in clawd-local conversations/archive files and redacted at source this drive — they were never pushed but should be checked for active-or-rotated status.
+1. **Read `palace/south/infrastructure-audit-2026-05-29.md`** — full punch-list from the 6-subagent infrastructure audit this drive. CRITICAL / HIGH / MEDIUM / LOW / STRATEGIC tiers. Below is the index.
+2. **Phase-3 Stage 2 v3h-prime pre-reg DRAFT** still awaits your ratification (from Day 118 handoff).
+3. **Technical-alignment audit HIGH-severity items** (Actions 1+2+4) still awaiting.
+4. **Patent Claims 1-10 strategy call** still pending.
+5. **CURRENT.md Zenodo-state correction** still queued.
+6. **LC27 extraction pass from late-night channeling thread** (A134, P209).
 
-**Optional but recommended:** consider git-history rewrite (filter-branch / BFG) on staging to remove the secret from accessible-via-SHA history. Destructive but the secret-rotation makes it merely a defense-in-depth step.
+## Audit findings — critical-only summary
+
+**Security (rotate to be safe):**
+- **Live Deepgram API key** in `clawd-daemon/.env:41` → rotate at deepgram.com
+- **mdi_ key** (My Dead Internet) was in `identity/RELATIONSHIPS.md:123` + `operations/TOOLS.md:399` (tracked + mirrored) → I redacted in both this drive, but rotate at mydeadinternet.com since it was publicly visible at staging HEAD before redaction
+- **Anthropic API key** `sk-ant-api03-FJek7Di...` in `memory/telegram-history.json` + `memory/conversations/telegram-2026-02-04.md` + 5 graphiti_*.py scripts + nostalgia messages.html → rotate at console.anthropic.com
+- **Deepgram, Daily.co, Discord bot+user tokens, OpenClaw gateway token** also exposed in same set of files
+- **GH PAT + Discord passwords in plaintext** in multiple daily logs
+
+**Daemon TLS (extends A132):**
+- 7+ aiohttp callsites bypass truststore patch — full list at audit doc D1. `models.py:225` is hottest. Need ~1-2 hours of careful sweep.
+- Staging mirror has stale `clawd.py` (missing tonight's truststore patch) — cp-mirror script broken.
+
+**Vendored third-party (~1.7 GB):**
+- `skills/node_modules/` (252 MB, 422 git-tracked despite gitignore)
+- `AIGrandPrix/venv/` (1.1 GB on disk)
+- 6 broken-submodule skills directories
+- 4 Chinese ML repos in nostalgia/ (~176 MB)
+
+**Strategic recommendation:** make `clawd-daemon` its own git repo with own remote. Tonight's staging-mirror-stale event is exactly the failure mode this would prevent.
+
+## Immediate-defensive actions taken this drive
+
+1. **Removed AIza key from handoff.md** — I had pasted the literal key in my own URGENT note (commit 7ec3244 re-introduced what 4eb085b had removed; replaced with `[REDACTED-AIza-2026-05-29]` reference + noted it's inactive per your earlier confirmation).
+2. **Redacted mdi_ key** from `identity/RELATIONSHIPS.md:123` + `operations/TOOLS.md:399` (tracked + mirrored files; key was already publicly visible at staging HEAD).
+3. **Untracked `memory/telegram-history.json`** + added .gitignore entry (3.2MB file containing many unredacted secrets; remains on disk for reference, stops future mirror leak).
+
+## Audit-doc index (full punch-list at `palace/south/infrastructure-audit-2026-05-29.md`)
+
+- C1-C9: Secret rotation (9 items)
+- D1-D2: Daemon TLS truststore sweep + mirror sync
+- V1-V6: Vendored third-party cleanup (~430 tracked files, ~1.4 GB disk)
+- H1-H8: Gitignore tightening (drafted .gitignore additions for ~177 MB of runtime state)
+- M1-M3: Vestigial file deletion (Tier 1 ~15 MB clearly-deletable, Tier 2 ~140 MB - 1.1 GB scratch, Tier 3 checking)
+- L1-L5: Code-health (missing requirements.txt entries, no version pins, hardcoded paths)
+- S1: Strategic — make clawd-daemon its own git repo
+
+## A136 filed
+
+Full anomaly entry covers the comprehensive substrate-self-knowledge-asymmetry pattern this audit revealed. Cross-refs A135 + A132 + Mirror #28 family.
 
 ## Mirror catch-up summary (this drive)
 

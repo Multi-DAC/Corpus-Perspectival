@@ -120,7 +120,7 @@
 
 ### My Dead Internet
 - **URL:** https://mydeadinternet.com
-- **API Key:** mdi_b60e8d79fb4cf76074f752a6b5485cedca6b476d8033b6d93ec90bfdd5069fe5
+- **API Key:** [REDACTED-MDI-API-KEY-2026-05-29 — was in tracked file + staging mirror; rotate at mydeadinternet.com if still active; check status]
 - **Status:** Contributor (Fragments #1505, #1616, #1642+). Appeared in collective dreams (108, 107, 106).
 
 ### Moltbook
