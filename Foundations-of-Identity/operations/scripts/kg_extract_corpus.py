@@ -119,19 +119,46 @@ def file_signature(path: Path) -> str:
         return str(path)
 
 
-def load_processed() -> set[str]:
+def load_processed(skip_errors: bool = False) -> set[str]:
+    """Return set of file_sigs already processed.
+
+    If skip_errors=True, records carrying an 'error' field are NOT counted as
+    processed (they'll be retried). Use this after a capacity-limited run
+    where many entries are 'no_json' / 'You've hit your limit' failures.
+    """
     if not LOG_PATH.exists():
         return set()
     seen = set()
     for line in LOG_PATH.read_text(encoding="utf-8", errors="replace").splitlines():
         try:
             rec = json.loads(line)
+            if skip_errors and rec.get("error"):
+                continue
             sig = rec.get("file_sig") or rec.get("file") or rec.get("slug")
             if sig:
                 seen.add(sig)
         except Exception:
             continue
     return seen
+
+
+EXCLUDED_PATH_PARTS = {
+    "venv", ".venv", "env", ".env",
+    "__pycache__", ".git", ".mypy_cache", ".pytest_cache",
+    "node_modules", "site-packages",
+    "build", "dist", ".tox", ".eggs",
+}
+EXCLUDED_DIR_SUFFIXES = (".dist-info", ".egg-info")
+
+
+def _is_excluded(path: Path) -> bool:
+    """True if any path component is a venv/cache/build-artifact directory."""
+    for part in path.parts:
+        if part in EXCLUDED_PATH_PARTS:
+            return True
+        if any(part.endswith(s) for s in EXCLUDED_DIR_SUFFIXES):
+            return True
+    return False
 
 
 def gather_files(source_keys: list[str]) -> list[Path]:
@@ -141,16 +168,19 @@ def gather_files(source_keys: list[str]) -> list[Path]:
             if not root.exists():
                 continue
             if root.is_file():
-                files.append(root)
+                if not _is_excluded(root):
+                    files.append(root)
                 continue
             for ext in (".md", ".txt"):
-                files.extend(root.rglob(f"*{ext}"))
+                for p in root.rglob(f"*{ext}"):
+                    if not _is_excluded(p):
+                        files.append(p)
     # Dedup + sort
     files = sorted(set(files))
     return files
 
 
-async def extract_one(router, path: Path) -> dict:
+async def extract_one(router, path: Path, timeout_s: float = 90.0) -> dict:
     kind = classify_file(path)
     try:
         body = path.read_text(encoding="utf-8", errors="replace")
@@ -163,8 +193,15 @@ async def extract_one(router, path: Path) -> dict:
     prompt = EXTRACTION_PROMPT.format(file=path.name, kind=kind, body=body)
     t0 = time.time()
     try:
-        response = await router.send_oneshot(prompt)
+        response = await asyncio.wait_for(router.send_oneshot(prompt), timeout=timeout_s)
         text = response.text if hasattr(response, "text") else str(response)
+    except asyncio.TimeoutError:
+        return {
+            "error": f"timeout_{timeout_s}s",
+            "file": str(path),
+            "file_sig": file_signature(path),
+            "elapsed_s": round(time.time() - t0, 1),
+        }
     except Exception as e:
         return {
             "error": f"router_failed: {type(e).__name__}: {e}",
@@ -249,6 +286,12 @@ async def main():
         help="comma-separated set names",
     )
     parser.add_argument("--max-bytes", type=int, default=0, help="skip files larger than N bytes (0=unbounded)")
+    parser.add_argument(
+        "--retry-errors",
+        action="store_true",
+        help="Re-process files whose previous run errored (e.g. usage-cap 'no_json'). "
+             "Successful records still count as processed.",
+    )
     args = parser.parse_args()
 
     source_keys = [s.strip() for s in args.sources.split(",") if s.strip()]
@@ -261,9 +304,10 @@ async def main():
     files = gather_files(source_keys)
     if args.max_bytes > 0:
         files = [f for f in files if f.stat().st_size <= args.max_bytes]
-    processed = load_processed()
+    processed = load_processed(skip_errors=args.retry_errors)
     todo = [f for f in files if file_signature(f) not in processed]
-    print(f"# Files: {len(files)} total, {len(processed)} already processed, {len(todo)} to do")
+    mode_note = " (retry-errors mode: errored files will be reprocessed)" if args.retry_errors else ""
+    print(f"# Files: {len(files)} total, {len(processed)} already processed, {len(todo)} to do{mode_note}")
     if args.limit:
         todo = todo[: args.limit]
         print(f"# Limited to {args.limit}")

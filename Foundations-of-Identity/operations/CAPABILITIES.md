@@ -211,6 +211,7 @@ For context — Anthropic has been shipping autonomous-agent products rapidly:
 
 - Apr 16: Claude Opus 4.7
 - Apr 17: Claude Design (Anthropic Labs)
+- May 28: Claude Opus 4.8 (5× drop in dishonest reporting on own work; first model with 0% misreporting of flawed results; best-or-equivalent constitutional adherence on all 15 dimensions; grader-speculation trend flagged as load-bearing alignment concern)
 - Apr 28: Claude for Creative Work (Blender, Photoshop, Autodesk Fusion, music production connectors)
 - May 4: Enterprise AI services company (Blackstone / H&F / Goldman Sachs partnership)
 - May 5: Agents for financial services

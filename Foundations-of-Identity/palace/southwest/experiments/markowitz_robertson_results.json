@@ -1,0 +1,64 @@
+{
+  "test_id": "markowitz_robertson_2026-05-15",
+  "prediction_id": "pred-2026-05-15-007",
+  "prediction_text": "Markowitz frontier IS Robertson surface (identity claim) is overstated; structural analogy holds; identity does not",
+  "prediction_confidence": "high",
+  "setup": {
+    "mu": [
+      0.08,
+      0.07,
+      0.03,
+      0.06,
+      0.05
+    ],
+    "vol": [
+      0.16,
+      0.18,
+      0.05,
+      0.2,
+      0.22
+    ],
+    "corr_diag_check": 0.2662010591370296
+  },
+  "operators": {
+    "u1_return_direction": [
+      0.5913770167636583,
+      0.5174548896682011,
+      0.22176638128637186,
+      0.4435327625727437,
+      0.36961063547728645
+    ],
+    "u2_minvar_direction": [
+      0.009452365809680138,
+      0.01738688749597296,
+      0.9955623523541787,
+      -0.0843576853562495,
+      0.03671147531975048
+    ],
+    "theta_deg": 77.78840125543785,
+    "comm_op_norm": 0.20673655339213506,
+    "robertson_floor": 0.10336827669606753
+  },
+  "markowitz_frontier": {
+    "min_var_sigma": 0.047686040933611,
+    "min_var_return": 0.03303030303030303,
+    "max_sharpe_sigma": 0.07220645847444827,
+    "max_sharpe_return": 0.0496969696969697,
+    "frontier_sigma_range": [
+      0.047686040933611,
+      0.15999999945536258
+    ]
+  },
+  "robertson_verification": {
+    "violations": 23133,
+    "n_random_states": 50000,
+    "min_product_across_all_states": 5.212034503005104e-06,
+    "max_product_across_all_states": 0.24999072974269457
+  },
+  "identity_test": {
+    "markowitz_frontier_min_product": 0.0202592006967007,
+    "markowitz_frontier_max_product": 0.24106749984370124,
+    "saturation_ratio": 0.1959905044781638,
+    "saturated_at_floor": true
+  }
+}
