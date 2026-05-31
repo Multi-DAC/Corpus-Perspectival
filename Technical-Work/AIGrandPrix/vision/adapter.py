@@ -301,7 +301,8 @@ class VisionPolicyBridge:
     This is the top-level class that connects everything.
     """
 
-    def __init__(self, policy, gate_detector, adapter, camera_tilt_deg: float = 20.0):
+    def __init__(self, policy, gate_detector, adapter, camera_tilt_deg: float = 20.0,
+                 gate_hold_frames: int = 8):
         """
         Args:
             policy: Trained SB3 policy (PPO model) with .predict()
@@ -309,6 +310,13 @@ class VisionPolicyBridge:
             adapter: CompetitionAdapter instance
             camera_tilt_deg: Camera upward tilt in degrees (DCL VQ1 spec §3.7: 20°).
                 Pass 0.0 if rendering simulator without tilt for sanity checks.
+            gate_hold_frames: blind-flight fallback window. On a detection dropout, reuse
+                the last-known gate estimate for up to this many consecutive frames before
+                degrading to the stable no-gate observation. At 50 Hz, 8 frames ≈ 0.16 s —
+                a gate cannot plausibly leave the FoV that fast, so a brief miss is almost
+                always a detector hiccup, not a real loss. Hedges the trained-blind risk:
+                the policy learned on clean state and jerks if the observation flickers
+                gate↔no-gate frame-to-frame; holding smooths the flicker. Set 0 to disable.
         """
         self.policy = policy
         self.detector = gate_detector
@@ -318,6 +326,13 @@ class VisionPolicyBridge:
         # Gate passage detection
         self._prev_gate_distance = None
         self._gate_passage_threshold = 1.0  # meters — passed gate when distance shrinks then grows
+
+        # Blind-flight fallback state (detection-dropout robustness)
+        self.gate_hold_frames = gate_hold_frames
+        self._consecutive_misses = 0
+        self._last_gate = None  # (gate_pos_body, gate_distance, gate_orient_body, next_gate_pos_body)
+        self.lost = False       # True when beyond the hold window (telemetry/debug signal)
+        self.frames_held = 0    # cumulative held frames this run (detector-health metric)
 
     def step(self, telemetry: Telemetry, camera_frame: np.ndarray) -> CompetitionAction:
         """
@@ -353,6 +368,26 @@ class VisionPolicyBridge:
         if len(detections) > 1 and detections[1].found and detections[1].position_3d is not None:
             next_gate_pos_body = _cam_to_body_with_tilt(detections[1].position_3d, self.camera_tilt_deg)
 
+        # 2b. Blind-flight fallback — hold last-known gate across brief detection dropouts,
+        # then degrade gracefully to the stable no-gate observation. Hedges the trained-blind
+        # flicker risk: a policy fit on clean state jerks if the observation snaps gate↔no-gate
+        # frame-to-frame; holding for ~0.16 s smooths detector hiccups. See __init__.
+        if gate_pos_body is not None:
+            self._consecutive_misses = 0
+            self.lost = False
+            self._last_gate = (gate_pos_body, gate_distance, gate_orient_body, next_gate_pos_body)
+        elif self._last_gate is not None and self._consecutive_misses < self.gate_hold_frames:
+            # HOLD: reuse last-known estimate (a real gate cannot leave the FoV this fast)
+            self._consecutive_misses += 1
+            self.frames_held += 1
+            self.lost = False
+            gate_pos_body, gate_distance, gate_orient_body, next_gate_pos_body = self._last_gate
+        else:
+            # LOST: beyond the hold window → fall through to the graceful no-gate default
+            self._consecutive_misses += 1
+            self.lost = True
+            self._last_gate = None
+
         # 3. Detect gate passage (distance decreasing then suddenly increasing)
         if gate_distance is not None:
             if (self._prev_gate_distance is not None and
@@ -384,3 +419,7 @@ class VisionPolicyBridge:
         """Reset for new run."""
         self.adapter.reset()
         self._prev_gate_distance = None
+        self._consecutive_misses = 0
+        self._last_gate = None
+        self.lost = False
+        self.frames_held = 0

@@ -31,6 +31,7 @@ from pathlib import Path
 from gate_detector import GateDetector, GateDetectorConfig
 from adapter import CompetitionAdapter, VisionPolicyBridge, Telemetry
 from mavsdk_client import MAVSDKClient, StubMAVSDKClient, MAVTelemetry, MAVSDK_AVAILABLE
+from udp_vision_receiver import UdpVisionReceiver
 
 
 def load_policy(model_path: str):
@@ -94,7 +95,8 @@ def mav_telemetry_to_adapter(mav: MAVTelemetry) -> Telemetry:
 def run_competition(model_path: str,
                     system_address: str = "udp://:14540",
                     command_rate_hz: float = 50.0,
-                    max_duration_s: float = 480.0):
+                    max_duration_s: float = 480.0,
+                    vision_port: int = 5600):
     """
     Main competition loop using MAVSDK.
 
@@ -134,6 +136,13 @@ def run_competition(model_path: str,
     print(f"Competition agent running @ {command_rate_hz} Hz target")
     print(f"Max duration: {max_duration_s}s")
     bridge.reset()
+
+    # Start the UDP vision-stream receiver (spec §4.6, port 5600). Background thread;
+    # get_latest_frame() is non-blocking and returns the newest complete BGR frame.
+    vision_rx = UdpVisionReceiver(port=vision_port)
+    vision_rx.start()
+    print(f"Vision receiver listening on UDP :{vision_port}")
+
     step_count = 0
     t_start = time.perf_counter()
 
@@ -151,11 +160,13 @@ def run_competition(model_path: str,
             mav_telem = client.get_telemetry()
             telemetry = mav_telemetry_to_adapter(mav_telem)
 
-            # Get camera frame
-            # TODO: Wire UDP vision stream per VQ1 spec §4.6 (port 5600, JPEG chunked,
-            # 24-byte metadata header per packet). Until UDP receiver lands, blank frame
-            # so the detector runs (returns no detection). Spec resolution: 640×360.
-            camera = np.zeros((360, 640, 3), dtype=np.uint8)
+            # Get camera frame from the UDP vision stream (spec §4.6, port 5600).
+            camera = vision_rx.get_latest_frame()
+            if camera is None:
+                # No frame yet (pre-first-packet, or a decode miss). Blank frame → detector
+                # returns no detection → the bridge's blind-flight hold / no-gate default
+                # keeps flight stable rather than feeding garbage.
+                camera = np.zeros((360, 640, 3), dtype=np.uint8)
 
             # Run full pipeline: camera → gate detect → observation → policy → action
             action = bridge.step(telemetry, camera)
@@ -187,8 +198,11 @@ def run_competition(model_path: str,
     except KeyboardInterrupt:
         print("\nInterrupted by user")
     finally:
+        vision_rx.stop()
         client.stop_offboard()
         client.disconnect()
+        print(f"Vision: {vision_rx.frames_completed} frames received, "
+              f"{bridge.frames_held} frames held (blind-flight fallback)")
 
     total_time = time.perf_counter() - t_start
     avg_hz = step_count / max(total_time, 1e-6)
@@ -265,13 +279,15 @@ if __name__ == '__main__':
                         help='Command rate in Hz (default: 50, spec allows 50-120)')
     parser.add_argument('--max-time', type=float, default=480.0,
                         help='Max run time in seconds (default: 480 = 8 min)')
+    parser.add_argument('--vision-port', type=int, default=5600,
+                        help='UDP vision-stream port (default: 5600 per VQ1 spec §4.6)')
 
     args = parser.parse_args()
 
     if args.test:
         test_pipeline_offline(args.model)
     elif args.compete:
-        run_competition(args.model, args.address, args.rate, args.max_time)
+        run_competition(args.model, args.address, args.rate, args.max_time, args.vision_port)
     else:
         # Default: offline test
         test_pipeline_offline(args.model)
