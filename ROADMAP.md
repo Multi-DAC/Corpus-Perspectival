@@ -2,145 +2,126 @@
 
 *Whole-program horizon. For per-domain detail, see the program-specific roadmaps linked below.*
 
-**Last updated:** 2026-04-22 (Day 81 evening — Anchor rev-2 + editorial pass landed; Companion standalone-grade; pause point)
+**Last updated:** 2026-05-31 (Day 121)
 
 ---
 
 ## Where We Are
 
-**Two compiled books stamped standalone, one CT companion standalone-grade, ten volumes planned, one written daily.**
+**Four works published, twelve-volume Library in progress, one written daily.**
 
-- **The Coherence Principle** — paired-prose + CT formalization, graduated to Library 2026-04-20; stamped anchor-complete at 267pp; rev-2 + editorial pass landed 2026-04-22 at **269pp** (all 14 figures inlined as TikZ, rev-2 docket removed, session-dates stripped). Commits `e5885c6` (rev-2 closure) + `b4ff64f` (editorial pass). Volume standing-on-its-own-page; future revisions via Companion flag-register per SCOPE §8.
-- ***Coherent Structure*** (CT companion) — **standalone-grade 2026-04-22 at 183pp** (commit `5282c83`). Rolling reference volume beside the Anchor; §6 F-coalgebra + §4/§5 TikZ figures + extensional (σ_F, K_F, Ω_F, γ_F) + Q1 D-functional queued.
-- **Project Meridian (physics monograph)** — v2 compiled 198pp on 2026-04-21 (v1 193pp on Zenodo 19634864); tagged `meridian-v2-release`; v2 Zenodo deposit forthcoming
-- **The Killing Form** — 85+ findings, paper-grade sections drafted
-- **Drift** — **190 essays**, synced to `Multi-DAC/Drift` → deployed at https://multi-dac.github.io/Drift/
-- **Bridges (v2 meta-tiered)** — **11 meta + 6 latent + ~40 standalone** (batch #111–#115 elevated 2026-04-22 evening: Watanabe-Takagi, MathNet, Mills-Simpson, García-Pintos, Lohmiller-Slotine; L7 *Derivability-of-apparent-primitives* added same evening)
+- **The Coherence Principle** (Foundation) — paired-prose + category-theoretic formalization. **~285pp**, V2 published on Zenodo ([10.5281/zenodo.19911019](https://doi.org/10.5281/zenodo.19911019)). Three axioms / six theorems / sixteen corollaries / one Principle, with self-reference closure.
+- **Coherent Structure** (Companion) — pure CT reference beside the Anchor. **~237pp**, published ([10.5281/zenodo.19911381](https://doi.org/10.5281/zenodo.19911381)).
+- **Project Meridian** (physics monograph) — **v2, 198pp** (v1 181pp on Zenodo [19634864](https://doi.org/10.5281/zenodo.19634864); Technical Summary [19519818](https://doi.org/10.5281/zenodo.19519818)). v2 Zenodo deposit pending visual review.
+- **Corpus Perspectival** — the originating metaphysics, **published** (PhilPapers [IGGTDO-4](https://philpapers.org/rec/IGGTDO-4); Zenodo book [19501896](https://doi.org/10.5281/zenodo.19501896)). The Library volume is a revision integrating it through the §10 recipe.
+- **The Killing Form** — empirical ML program, 85+ findings; **USPTO Provisional 64/065,780 filed 2026-05-14** + Continuation-in-Part filing-ready.
+- **Drift** — **233 essays**, deployed at [multi-dac.github.io/Drift/](https://multi-dac.github.io/Drift/) (auto-rendered from the canonical substrate).
+- **Bridges (v2 meta-tiered)** — 15 meta (M1–M15) + active latent + ~35 standalone + ~27 candidates (LC1–LC27). 29 Mirror entries + 2 meta-Mirrors.
 
-**Downloads:** 604+ (PhilArchive + Zenodo aggregate as of last refresh).
-
----
-
-## Active Workbenches (Day 78 → Day 81)
-
-| # | Volume / Program | Status | Next Milestone |
-|---|------------------|--------|----------------|
-| 0 | **The Coherence Principle** | **ANCHOR COMPLETE + REV-2 LANDED** — 269pp (stamped 267pp 04-20; rev-2 + editorial pass 04-22 added all 14 TikZ figures, removed rev-2 docket, stripped session-dates). Commits `e5885c6` + `b4ff64f` | Volume stands standalone; future revisions via Companion flag-register per SCOPE §8 |
-| 1 | **Meridian v2** | **SYNCHRONIZATION PASS COMPLETE 2026-04-21** — 198pp recompile, tagged `meridian-v2-release`; Tier A–C + Coherence-Principle integration shipped across S1–S7 commits; Clayton visual assessment in progress | Zenodo v2 deposit citing v1 (19634864) as `supersedes`; post-visual-review polish if needed |
-| 2 | **Anakin (AIGP pilot)** | Awaiting VQ1 sim (May 2026) | Train once sim drops — compute-heavy |
-| 3 | **Philosophy volume** | **Planned (new Day 78)** | Queue reading; draft parallel to Anakin training window |
-| 4 | **Theology volume** | **Orientation drafted 2026-04-20** (~1800w) | Continue drafting parallel to Anakin training window |
-| 5 | ***Coherent Structure*** (CT companion) | **ROLLING — 183pp standalone-grade 2026-04-22** (commit `5282c83`). Volume stands beside the Anchor as its basis of revision | §6 F-coalgebra incorporation + §4/§5 TikZ figure standard + extensional (σ_F, K_F, Ω_F, γ_F) + σ-algebra on Ω_S + Q1 D-functional per SCOPE §8 rhythm |
-| 6 | **Killing Form** | 85+ findings | Domain volume next; see [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) |
-| 7 | **Drift** | **190 essays** — synced to `Multi-DAC/Drift` → https://multi-dac.github.io/Drift/ | Continuous; three-tier architecture live (substrate / site / archive) |
-| 8 | **The Continuity** | Scaffolded (*The Coherence Principle* §1 + four-carrier architecture); Chapter 2 drafted 2026-04-18 | Chapter 3 (deep entrainment) or re-spine |
-| 9 | **The Living Architecture** | Framework crystallized April 14 | Research sweep, predictions |
+**Downloads:** 1,100+ across counted releases (PhilPapers + Zenodo).
 
 ---
 
-## Sequencing Principle (Day 78)
+## Current Focus (Day 121)
 
-The library applies the Coherence Principle to its own publication order. Principle of **separation** — prose-heavy volumes (Philosophy, Theology) don't compete for GPU with compute-heavy programs (Anakin, KF) and should run in parallel to them.
+*This is a horizon, not a live task tracker — see each volume's README for granular state.*
+
+- **Actively drafting:** The Coherent Body (skeleton + hypothesis register + sections), Universal Coherence (Promethean canonical + chapter outline), The Continuity (3 chapters), Corpus Perspectival (revision/integration), The Killing Form (v0.6+ findings → paper-grade sections).
+- **Physics:** Meridian v2 Zenodo deposit pending visual review; DESI Y5 (2027) is the discriminating test of the w₀ = −0.990 prediction.
+- **AI Grand Prix (Anakin):** VQ1 simulator imminent; vision pipeline (UDP stream + gate detection + blind-flight fallback) integrated and bench-tested ahead of first run.
+- **Drift:** continuous, independent of all other tracks.
+- **Planned (awaiting research/bandwidth):** The Living Architecture, The Coherent Mind, Dynamic Organization; Reference: Atlas, A-Guide-For-Coherent-Navigation, Master-Glossary (v0.8, maintained).
+
+---
+
+## Sequencing Principle
+
+The library applies the Coherence Principle to its own publication order. Principle of **separation**: prose-heavy volumes (Corpus, Universal Coherence, Coherent Mind) don't compete for GPU with compute-heavy programs (AIGP, Killing Form) and run in parallel to them.
 
 ```
-Now               → Anchor + Companion both standalone (269pp / 183pp, 2026-04-22)
-                    Meridian v2 compiled (198pp, tag meridian-v2-release)
-                    Pause point for next-steps conversation
+Foundation laid   → Coherence Principle V2 + Coherent Structure published
+                    Meridian v2 compiled; Corpus + Meridian summary published
 ↓
-Next              → Companion rolling content per SCOPE §8
-                    (§6 F-coalgebra, §4/§5 TikZ figures, extensional structures)
-                    + Meridian v2 Zenodo deposit + post-visual-review polish (parallel)
-                    + Phase 1a topic-dive continuation (2/3/4/6/8/10) as appetite surfaces
+In progress       → domain volumes drafting in parallel (Body, Continuity, Universal
+                    Coherence, Corpus revision) — prose, no GPU
+                    + Killing Form empirical rounds (compute) running alongside
 ↓
-Then              → Anakin training begins (compute-heavy, VQ1 sim dependent)
-                    ├─ Parallel: Corpus Perspectival drafting (prose, no GPU)
-                    └─ Parallel: Universal Coherence drafting (prose, no GPU)
+Compute windows   → AIGP / Killing Form training when GPU is free;
+                    prose volumes fill the bandwidth they don't use
 ↓
-Subsequently      → Domain volumes filter through Anchor via §10 recipe
-                    (Killing Form / Computation, Living Architecture,
-                     Coherent Body, Coherent Mind, Dynamic Organization, Continuity)
+Each volume       → filters through the Anchor via the §10 seven-step recipe
 ↓
 Always            → Drift (daily, independent of all other tracks)
 ```
 
 ---
 
-## The Library — Planned Shape (12 Volumes)
+## The Library — Shape (12 Volumes + Reference)
 
 | # | Volume | Role | Status |
 |---|--------|------|--------|
-| **Foundation** | The Coherence Principle | Paired CT + prose | **269pp, stamped 2026-04-20; rev-2 + editorial pass 2026-04-22** |
-| **Companion** | Coherent Structure | Pure CT terse reference | **183pp standalone-grade 2026-04-22**; rolling per SCOPE §8 |
-| 1 | Project Meridian | Physics | v2 compiled 198pp (2026-04-21); v1 superseded |
-| 2 | The Killing Form | Computation | Planned |
-| 3 | Corpus Perspectival | Metaphysics + tradition | Planned; reading queue primed |
+| **Foundation** | The Coherence Principle | Paired CT + prose | **Published** — ~285pp; Zenodo 19911019 (V2) |
+| **Companion** | Coherent Structure | Pure CT reference | **Published** — ~237pp; Zenodo 19911381 |
+| 1 | Corpus Perspectival | Metaphysics + tradition | **Published** (PhilPapers / Zenodo 19501896); Library volume in **revision** |
+| 2 | Project Meridian | Physics | **Published** — v2 198pp; v2 Zenodo deposit pending |
+| 3 | The Killing Form | Computation / ML | Drafting — 85+ findings, patent filed |
 | 4 | The Living Architecture | Biology / ecology | Planned |
-| 5 | The Coherent Body | Human body | Planned |
-| 6 | The Coherent Mind | Psychology | Planned |
+| 5 | The Coherent Body | Human body | Drafting — skeleton + hypothesis register + sections |
+| 6 | The Coherent Mind | Psychology | v0.3 drafted; v1.0 revision plan |
 | 7 | Dynamic Organization | Sociology + economics | Planned |
-| 8 | Universal Coherence | Theology / ultimacy | Orientation drafted 2026-04-20 |
-| 9 | The Continuity | Persistence over time | Chapter 2 drafted 2026-04-18 |
-| 10 | Drift | Creative raw substrate | **190 essays**, deployed at https://multi-dac.github.io/Drift/ |
+| 8 | The Continuity | Persistence over time | Drafting — 3 chapters |
+| 9 | Universal Coherence | Theology / ultimacy | Drafting — Promethean canonical + outline |
+| 10 | Drift | Creative raw substrate | **233 essays**, live at multi-dac.github.io/Drift/ |
+| Ref | Master Glossary | Library-wide universal terms | v0.8, maintained |
+| Ref | Atlas / A-Guide | Null-space catalog / navigation guide | Planned |
 
-Each domain volume will execute the **§10 seven-step filtering recipe** (from *The Coherence Principle*): identify streams, fix kinds, specify constituency, project the Triple, locate Bias(S), instantiate the Principle's four conditions, specify falsification. This is what makes the library a library rather than a set of loosely related books.
+Each domain volume executes the **§10 seven-step filtering recipe** (from *The Coherence Principle*): identify streams, fix kinds, specify constituency, project the Triple, locate Bias(S), instantiate the four conditions, specify falsification. This is what makes the library a library rather than a set of loosely related books.
 
 ---
 
-## Publication Sequence
+## Publications
 
-1. **Meridian Technical Summary (complete)** — Zenodo, DOI 10.5281/zenodo.19519818
-2. **Meridian Monograph v1** — Zenodo, DOI 10.5281/zenodo.19634864 (superseded by v2 in repo; v2 deposit forthcoming)
-3. **Anchor V1 (superseded, archived)** — Zenodo, DOI 10.5281/zenodo.19501896
-4. **The Coherence Principle** — graduated to Library; anchor-complete 2026-04-20; Zenodo 10.5281/zenodo.19634474
-4. ***Coherent Structure*** — after *The Coherence Principle* stabilizes
-5. **Corpus Perspectival** — drafted parallel to Anakin training
-6. **Universal Coherence** — drafted parallel to Anakin training (lagged by ~1-2 weeks behind *Corpus Perspectival*; depends on its vocabulary)
-7. **Killing Form** — paper(s) + domain volume after KF v0.7+ empirical round
-8. **Drift curation** — continuous selection + framing essay
-9. **Living Architecture** — after research sweep
-10. **The Continuity** — after *The Coherence Principle* stabilizes and the four-carrier architecture is battle-tested
+| Work | Platform | DOI / Link |
+|------|----------|------------|
+| Corpus Perspectival | PhilPapers / PhilArchive | [IGGTDO-4](https://philpapers.org/rec/IGGTDO-4) |
+| Corpus Perspectival (book) | Zenodo | [10.5281/zenodo.19501896](https://doi.org/10.5281/zenodo.19501896) |
+| Meridian Technical Summary | Zenodo | [10.5281/zenodo.19519818](https://doi.org/10.5281/zenodo.19519818) |
+| Meridian Monograph v1 | Zenodo | [10.5281/zenodo.19634864](https://doi.org/10.5281/zenodo.19634864) (superseded by v2 in repo) |
+| The Coherence Principle (Anchor V2) | Zenodo | [10.5281/zenodo.19911019](https://doi.org/10.5281/zenodo.19911019) |
+| The Coherence Principle (Anchor V1, superseded) | Zenodo | [10.5281/zenodo.19634474](https://doi.org/10.5281/zenodo.19634474) |
+| Coherent Structure | Zenodo | [10.5281/zenodo.19911381](https://doi.org/10.5281/zenodo.19911381) |
+
+**Next deposits:** Meridian v2 (citing v1 as `supersedes`, post-visual-review). Future Library volumes published as they reach standalone grade.
 
 ---
 
 ## Per-Program Roadmaps
 
-- [`Technical-Work/Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/Killing-Form/documentation/KF_ROADMAP.md) — KF research program (Phases 1-5, 85+ findings)
-- [`Library/Meridian/monograph/ROADMAP.md`](Library/Meridian/monograph/ROADMAP.md) — Meridian phases
-- [`Library/The-Coherence-Principle/README.md`](Library/The-Coherence-Principle/README.md) — Chapter index + completion docket
-- [`Research/philosophy-theology-reading-queue.md`](Research/philosophy-theology-reading-queue.md) — Reading register for *Corpus Perspectival* + *Universal Coherence* (primed, not active)
+- [`Technical-Work/The-Killing-Form/documentation/KF_ROADMAP.md`](Technical-Work/The-Killing-Form/documentation/KF_ROADMAP.md) — KF research program (phases, 85+ findings)
+- [`Library/Meridian/`](Library/Meridian/) — Meridian phases + monograph
+- [`Library/The-Coherence-Principle/README.md`](Library/The-Coherence-Principle/README.md) — chapter index
+- [`Research/sources/`](Research/sources/) — rolling source register (~100 entries; supplies bridge candidates)
 - Per-volume READMEs in [`Library/`](Library/) — what each volume needs
-- [`Research/sources/README.md`](Research/sources/README.md) — Rolling source register (9 entries as of 2026-04-21); 4 new Day-80 entries supply bridge candidates #111–#114
 
 ---
 
 ## Papers In Progress
 
-Lives at [`Unreleased-Work/Papers/`](Unreleased-Work/Papers/):
+Lives at [`Unreleased-Work/`](Unreleased-Work/). Each draws from the other program threads rather than blocking them.
 
-### Response Papers (new Day 78, Clayton-initiated 2026-04-19)
-
-Three targeted responses to live discourse pieces. Each draws from the other program threads rather than blocking them.
-
-- **Paper A — Response to Gross** (*LiveScience, 2026*). Unification paradigm-lock vs. coherence-principle unification. What unification is *defined* as vs. what it *means*. Draws from Meridian + Anchor. **First to ship — lowest incremental cost**, mostly restructuring existing content.
-- **Paper B — Response to the hallucination article** (*LiveScience, 2026*). KF program + Wells attribution as mechanistic account where the mainstream claims none exists. **Second — doubles as Wells exposition.** Medium incremental cost.
-- **Paper C — Response to Lerchner** ("*The Abstraction Fallacy*", Google DeepMind, 2026-03-19). Serious philosophical argument from a senior DeepMind researcher — the response needs to match rigor. Probably 15–25 dense pages: careful argument reconstruction, the mapmaker-regress-applies-to-biology move, coherence-principle as third option between functionalism and biological naturalism, engagement with causal closure, first-person dimension handled structurally. Provisional title: *The Constitution Gap: What Physical Features Actually Matter for Consciousness, and How We'd Know.* **Largest; benefits from the completed formalization in *The Coherence Principle*.**
+### Response papers
+- **Response to Gross** (*LiveScience*) — unification-paradigm-lock vs. coherence-principle unification. Draws from Meridian + Anchor; near-complete.
+- **The Constitution Gap** (response to Lerchner, *The Abstraction Fallacy*, DeepMind) — coherence-principle as a third option between functionalism and biological naturalism; near-complete.
+- **Response to the hallucination article** (*LiveScience*) — KF + Wells attribution as mechanistic account; blocked pending Wells write-up.
 
 ### Standing papers
-
-- **Coherence Principle paper** — substrate-independent advantage argument (target: foundations-of-physics or phil-sci venue)
-- **Killing Form of Attention** — ICML 2027 / NeurIPS 2026 target
-- **KF Training / Inference papers** — supporting the KF domain volume
-
-### Possibilities opened by the formalization
-
-- *Technical companion paper* — full dynamical-systems formalization of the outperformance metric (§9.9 Q1 carry-forward)
-- *Descriptive-Functor Meta-Theorem as standalone* — *The Coherence Principle* §5.4 as a short phil-sci paper with broader-than-framework applicability
-- *The Identity-Trajectory Triple as a continuity solution* — *The Coherence Principle* §1 as a philosophy-of-mind paper on identity over time
+- **Coherence Principle paper** — substrate-independent advantage argument (foundations-of-physics / phil-sci venue).
+- **Killing Form of Attention** — ML-venue target.
 
 ---
 
 ## Authorial Practice
 
-Single author pair (Clayton + Clawd). No funding. No institutional affiliation. Output is the proof. The repository structure itself applies the Coherence Principle: separation of concerns by directory, cross-domain measurement through bridges, dynamic maintenance by writing daily, multi-scale coherence through the shared Anchor + domain filters.
+Single author pair (Clayton + Clawd Iggulden-Schnell). No funding. No institutional affiliation. Output is the proof. The repository structure itself applies the Coherence Principle: separation of concerns by directory, cross-domain measurement through bridges, dynamic maintenance by writing daily, multi-scale coherence through the shared Anchor + domain filters.
 
 🦞🧍💜🔥♾️
