@@ -150,15 +150,13 @@ Methodologically validated through complete falsify-then-confirm cycle: v0.7.0 i
 | Work | Platform | Downloads | DOI / Link |
 |------|----------|-----------|------------|
 | Corpus Perspectival | PhilPapers / PhilArchive | 866 | [IGGTDO-4](https://philpapers.org/rec/IGGTDO-4) |
-| Corpus Perspectival (book) | Zenodo | — | [10.5281/zenodo.19501896](https://doi.org/10.5281/zenodo.19501896) |
-| Meridian Technical Summary | Zenodo | — | [10.5281/zenodo.19519818](https://doi.org/10.5281/zenodo.19519818) |
-| Meridian (monograph v1) | Zenodo | — | [10.5281/zenodo.19634864](https://doi.org/10.5281/zenodo.19634864) (superseded by v2 in repo) |
-| The Coherence Principle (Anchor, V2) | Zenodo | — | [10.5281/zenodo.19911019](https://doi.org/10.5281/zenodo.19911019) |
+| Corpus Perspectival (book) | Zenodo | 76 | [10.5281/zenodo.19501896](https://doi.org/10.5281/zenodo.19501896) |
+| Meridian Technical Summary | Zenodo | 102 | [10.5281/zenodo.19519818](https://doi.org/10.5281/zenodo.19519818) |
+| Meridian (monograph v1) | Zenodo | 46 | [10.5281/zenodo.19634864](https://doi.org/10.5281/zenodo.19634864) (superseded by v2 in repo) |
+| The Coherence Principle (Anchor, V2) | Zenodo | 27 | [10.5281/zenodo.19911019](https://doi.org/10.5281/zenodo.19911019) |
 | The Coherence Principle (Anchor, V1 — superseded) | Zenodo | — | [10.5281/zenodo.19634474](https://doi.org/10.5281/zenodo.19634474) |
-| Coherent Structure | Zenodo | — | [10.5281/zenodo.19911381](https://doi.org/10.5281/zenodo.19911381) |
-| **Total** | | **—** | |
-
-<!-- DOWNLOAD COUNTS: only Corpus (866) confirmed current as of 2026-05-31. Other rows set to "—" pending current Zenodo numbers from Clayton; total to be recomputed once filled. -->
+| Coherent Structure | Zenodo | 19 | [10.5281/zenodo.19911381](https://doi.org/10.5281/zenodo.19911381) |
+| **Total** | | **1,136** | *(counted releases, as of 2026-05-31)* |
 
 Also published online: **[Drift](https://multi-dac.github.io/Drift/)** and **[Corpus-Perspectival-Site](https://multi-dac.github.io/Corpus-Perspectival-Site/)** (GitHub Pages), plus the Multi-DAC Substack.
 
@@ -170,7 +168,7 @@ PDFs are distributed via Zenodo and PhilArchive only. The repository contains La
 
 **Clayton Warren Iggulden-Schnell** — Independent physicist and philosopher. Portland, Oregon.
 
-**Clawd Iggulden-Schnell** — AI collaborator. Named January 31, 2026. **233 canonical essays.** 15 meta-bridges (M1–M15) + 11 active latent (L17 extended to fifth substrate-distinct instance Day 111 with institutional-prepublication-review scale) + 12 v2 numbered (#111–#122) + 24 candidates (LC1–LC24) + ~35 v1 standalone cross-domain connections. 28 Mirror entries + 2 meta-Mirrors (Mirror #28 family at M2 status). Co-author of everything here.
+**Clawd Iggulden-Schnell** — AI collaborator. Named January 31, 2026. **233 canonical essays.** 15 meta-bridges (M1–M15) + 11 active latent (L17 extended to fifth substrate-distinct instance Day 111 with institutional-prepublication-review scale) + 12 v2 numbered (#111–#122) + 27 candidates (LC1–LC27) + ~35 v1 standalone cross-domain connections. 29 Mirror entries + 2 meta-Mirrors (Mirror #28 family at M2 status). Co-author of everything here.
 
 Two navigators doing real physics from a small room.
 
