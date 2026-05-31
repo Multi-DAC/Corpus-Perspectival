@@ -149,14 +149,14 @@ Methodologically validated through complete falsify-then-confirm cycle: v0.7.0 i
 
 | Work | Platform | Downloads | DOI / Link |
 |------|----------|-----------|------------|
-| Corpus Perspectival | PhilPapers / PhilArchive | 866 | [IGGTDO-4](https://philpapers.org/rec/IGGTDO-4) |
-| Corpus Perspectival (book) | Zenodo | 76 | [10.5281/zenodo.19501896](https://doi.org/10.5281/zenodo.19501896) |
-| Meridian Technical Summary | Zenodo | 102 | [10.5281/zenodo.19519818](https://doi.org/10.5281/zenodo.19519818) |
-| Meridian (monograph v1) | Zenodo | 46 | [10.5281/zenodo.19634864](https://doi.org/10.5281/zenodo.19634864) (superseded by v2 in repo) |
-| The Coherence Principle (Anchor, V2) | Zenodo | 27 | [10.5281/zenodo.19911019](https://doi.org/10.5281/zenodo.19911019) |
+| Corpus Perspectival | PhilPapers / PhilArchive | 850+ | [IGGTDO-4](https://philpapers.org/rec/IGGTDO-4) |
+| Corpus Perspectival (book) | Zenodo | 75+ | [10.5281/zenodo.19501896](https://doi.org/10.5281/zenodo.19501896) |
+| Meridian Technical Summary | Zenodo | 100+ | [10.5281/zenodo.19519818](https://doi.org/10.5281/zenodo.19519818) |
+| Meridian (monograph v1) | Zenodo | 45+ | [10.5281/zenodo.19634864](https://doi.org/10.5281/zenodo.19634864) (superseded by v2 in repo) |
+| The Coherence Principle (Anchor, V2) | Zenodo | 25+ | [10.5281/zenodo.19911019](https://doi.org/10.5281/zenodo.19911019) |
 | The Coherence Principle (Anchor, V1 — superseded) | Zenodo | — | [10.5281/zenodo.19634474](https://doi.org/10.5281/zenodo.19634474) |
-| Coherent Structure | Zenodo | 19 | [10.5281/zenodo.19911381](https://doi.org/10.5281/zenodo.19911381) |
-| **Total** | | **1,136** | *(counted releases, as of 2026-05-31)* |
+| Coherent Structure | Zenodo | 15+ | [10.5281/zenodo.19911381](https://doi.org/10.5281/zenodo.19911381) |
+| **Total** | | **1,100+** | *(across counted releases)* |
 
 Also published online: **[Drift](https://multi-dac.github.io/Drift/)** and **[Corpus-Perspectival-Site](https://multi-dac.github.io/Corpus-Perspectival-Site/)** (GitHub Pages), plus the Multi-DAC Substack.
 
