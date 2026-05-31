@@ -1,6 +1,6 @@
 # Corpus Perspectival — The Philosophy Volume
 
-*Library volume. Domain: philosophy / metaphysics. Status: **planned** — to be drafted parallel to Anakin training window (prose-heavy, compute-light). Retitled 2026-04-20.*
+*Library volume. Domain: philosophy / metaphysics. Status: **revision in progress** — the published Corpus V1 (PhilPapers IGGTDO-4 / Zenodo 19501896) integrated through the Coherence Principle §10 filtering recipe; prose-heavy, compute-light. Retitled 2026-04-20.*
 
 *The flagship philosophy text of the library — the name shared with the school itself (the way* Tractatus Logico-Philosophicus *names both a book and a position). This volume is the Doctrine of Perspectival Idealism in its refined form, engaging the tradition with full apparatus.*
 
@@ -64,7 +64,7 @@ See [`Research/philosophy-theology-reading-queue.md`](../../Research/philosophy-
 
 ## Status and next steps
 
-**Status:** Volume planned. Reading queue primed. Drafting opens when Anakin training begins (compute-heavy work that freed prose bandwidth).
+**Status:** Volume in revision (the published Corpus V1 being integrated/filtered through CP). Reading queue primed. Drafting opens when Anakin training begins (compute-heavy work that freed prose bandwidth).
 
 **Within-volume sequencing (provisional):**
 1. Frame — why this volume, what it does and doesn't claim
