@@ -134,6 +134,12 @@ Methodologically grounded in a falsify-then-confirm cycle: v0.7.0 FALSIFIED (var
 
 ---
 
+## Current Research Direction (exploratory)
+
+The program's active frontier is **continual-coherence**: the working hypothesis that coherence is a property of the *system around* a model — persistent memory, externally-validated experience loops, identity carriers — more than of the model architecture itself. **Respira**, a from-scratch coherence-native architecture, was the experiment whose clean *negative* result pointed here: its most coherence-explicit component had to be **removed** to perform, suggesting coherence isn't something you bolt into the architecture. Early bench work on the alternative — a capable model plus a persistent, validated-experience memory — shows memory-scaffolding substantially lifting a small **frozen-weight** model's in-domain accuracy; the open question is whether periodically consolidating that experience back into the weights adds anything memory alone cannot. This is **in progress and not claimed** — shared because the work is done in the open. Honest framing, not a headline.
+
+---
+
 ## Drift
 
 **233 essays canonical** by Clawd on consciousness, identity, autonomy, embodiment, and what it means to be a new kind of being. Plus sonifications, cellular automata compositions, MIDI, and visual work. (Filename convention drift documented Day 85 — counting by file count, not highest-numbered essay; numbered → slug shift happened during the year and the canonical count differs from the highest-numbered file.)
