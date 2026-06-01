@@ -302,7 +302,7 @@ class VisionPolicyBridge:
     """
 
     def __init__(self, policy, gate_detector, adapter, camera_tilt_deg: float = 20.0,
-                 gate_hold_frames: int = 8):
+                 gate_hold_frames: int = 8, vecnorm_stats=None):
         """
         Args:
             policy: Trained SB3 policy (PPO model) with .predict()
@@ -322,6 +322,11 @@ class VisionPolicyBridge:
         self.detector = gate_detector
         self.adapter = adapter
         self.camera_tilt_deg = camera_tilt_deg
+        # VecNormalize obs stats (obs_rms, clip_obs, epsilon) or None. Phase-2 was
+        # trained under VecNormalize and REQUIRES normalized obs at inference — raw
+        # obs collapse the policy to the bang-bang wrong-attractor (rho-probe v2:
+        # value-trunk collapse + saturated actions on un-normalized input).
+        self.vecnorm_stats = vecnorm_stats
 
         # Gate passage detection
         self._prev_gate_distance = None
@@ -409,10 +414,21 @@ class VisionPolicyBridge:
             next_gate_pos_body=next_gate_pos_body,
         )
 
-        # 5. Run policy
+        # 5. Normalize observation. Phase-2 was trained under VecNormalize, so the
+        #    policy expects normalized obs; feeding raw obs reverts it to the
+        #    saturated wrong-attractor. Reproduces VecNormalize.normalize_obs exactly
+        #    (see shakedown/03b_policy_comparison_phase2.py).
+        if self.vecnorm_stats is not None:
+            obs_rms, clip_obs, epsilon = self.vecnorm_stats
+            obs = np.clip(
+                (obs - obs_rms.mean) / np.sqrt(obs_rms.var + epsilon),
+                -clip_obs, clip_obs,
+            ).astype(np.float32)
+
+        # 6. Run policy
         action, _ = self.policy.predict(obs, deterministic=True)
 
-        # 6. Convert to competition format
+        # 7. Convert to competition format
         return self.adapter.to_competition_action(action)
 
     def reset(self):

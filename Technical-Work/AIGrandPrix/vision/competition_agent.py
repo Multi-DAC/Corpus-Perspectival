@@ -43,11 +43,25 @@ def load_policy(model_path: str):
     return model
 
 
+def load_vecnorm_stats(vecnorm_path: str):
+    """Load VecNormalize obs stats for inference-time normalization.
+
+    Returns (obs_rms, clip_obs, epsilon). The Phase-2 policy was trained under
+    VecNormalize and REQUIRES normalized obs; raw obs collapse it to the
+    bang-bang wrong-attractor. Mirrors shakedown/03b_policy_comparison_phase2.py.
+    """
+    import pickle
+    with open(vecnorm_path, 'rb') as f:
+        vn = pickle.load(f)
+    return vn.obs_rms, float(vn.clip_obs), float(vn.epsilon)
+
+
 def create_pipeline(model_path: str,
                     image_width: int = 640,
                     image_height: int = 360,
                     fov_deg: float = 90.0,
-                    command_rate_hz: float = 50.0) -> VisionPolicyBridge:
+                    command_rate_hz: float = 50.0,
+                    vecnorm_path: str = None) -> VisionPolicyBridge:
     """Create the full vision-to-action pipeline.
 
     DCL VQ1 spec (VADR-TS-002 Issue 00.02, 2026-05-08):
@@ -72,8 +86,21 @@ def create_pipeline(model_path: str,
     # 3. Policy
     policy = load_policy(model_path)
 
+    # 3b. VecNormalize obs stats — REQUIRED for the Phase-2 policy (trained under
+    #     VecNormalize). Auto-derive from the model path if not supplied:
+    #     ppo_phase2_<N>_steps.zip -> ppo_phase2_<N>_steps_vecnorm.pkl
+    if vecnorm_path is None:
+        vecnorm_path = model_path.replace('.zip', '_vecnorm.pkl')
+    if Path(vecnorm_path).exists():
+        vecnorm_stats = load_vecnorm_stats(vecnorm_path)
+        print(f"VecNormalize stats loaded: {vecnorm_path}")
+    else:
+        vecnorm_stats = None
+        print(f"WARNING: no vecnorm.pkl at {vecnorm_path} — obs will NOT be "
+              f"normalized. A VecNormalize-trained policy WILL fly badly.")
+
     # 4. Bridge
-    bridge = VisionPolicyBridge(policy, detector, adapter)
+    bridge = VisionPolicyBridge(policy, detector, adapter, vecnorm_stats=vecnorm_stats)
 
     return bridge
 
@@ -231,8 +258,15 @@ def test_pipeline_offline(model_path: str, n_episodes: int = 3):
     print("Offline Pipeline Test")
     print("=" * 60)
 
-    # Load policy
+    # Load policy + paired VecNormalize stats (Phase-2 requires normalized obs)
     model = PPO.load(model_path)
+    vecnorm_path = model_path.replace('.zip', '_vecnorm.pkl')
+    if Path(vecnorm_path).exists():
+        vecnorm_stats = load_vecnorm_stats(vecnorm_path)
+        print(f"VecNormalize stats loaded: {vecnorm_path}")
+    else:
+        vecnorm_stats = None
+        print("WARNING: no vecnorm.pkl found — obs unnormalized; policy will underperform.")
 
     # Create env
     env = InfiniteGateEnv(
@@ -250,7 +284,14 @@ def test_pipeline_offline(model_path: str, n_episodes: int = 3):
         gates = 0
 
         for step in range(10000):
-            action, _ = model.predict(obs, deterministic=True)
+            pobs = obs
+            if vecnorm_stats is not None:
+                obs_rms, clip_obs, epsilon = vecnorm_stats
+                pobs = np.clip(
+                    (obs - obs_rms.mean) / np.sqrt(obs_rms.var + epsilon),
+                    -clip_obs, clip_obs,
+                ).astype(np.float32)
+            action, _ = model.predict(pobs, deterministic=True)
             obs, reward, terminated, truncated, info = env.step(action)
             total_reward += reward
             gates = info.get('gates_passed', gates)
