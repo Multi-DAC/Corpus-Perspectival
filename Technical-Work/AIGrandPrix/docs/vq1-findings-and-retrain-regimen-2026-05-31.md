@@ -90,8 +90,17 @@ All tiers migrate from state → vision observation across Phase 1 → Phase 2.
 4. Coordinate-rule for scored runs (is absolute state withheld?).
 
 ## Immediate next actions (next focused session)
-1. **Obs-vs-training validation** (resolves the frame question, ~30 min, offline).
-2. **Sim dynamics calibration probe** (Phase 0 start).
-3. **Add takeoff to the curriculum + retrain the state baseline** (Phase 1).
+1. ~~Obs-vs-training validation~~ **DONE (§1.8): no obs/frame bug.**
+2. ~~Sim dynamics calibration probe~~ **DONE — first run captured (§1.9), `vq1_pilot/calib_log_2026-05-31.csv`.**
+3. **Fit `drone_env_v2` to the calib log** (mass/T_max from thrust→climb; rate gains/signs; drag from coast).
+4. **Fix the command-path rate signs** (see §1.9) in `state_pilot`/the action mapping + add a synthetic command-frame unit test.
+5. **Add takeoff to the curriculum + retrain the state baseline** in the calibrated sim (Phase 1).
+
+## 1.9 Phase-0 first calibration (2026-05-31) — DYNAMICS DATA + a command-path root cause
+Ran `calibrate_dynamics.py` against the live sim: 8 known-input segments, **1,468 samples → `calib_log_2026-05-31.csv`**. The drone responded to every input (climbed to ~120 m, peaked 32.7 m/s) — commands take once racing.
+- **Thrust:** strong/light platform — thr=0.5 already climbs hard (vz→−18 m/s NED); hover thrust is well below 0.5. Clean thrust→vertical-accel data for mass/T_max.
+- **🚨 Body-rate command signs are INVERTED on all three axes:** cmd **+4** roll → measured **−16.3** rad/s; +4 pitch → −16.2; +1 yaw → −2.4. Opposite sign on every axis; the large magnitude is consistent with sign-induced divergence (controller fighting itself).
+- **Why this matters / revises §1.8:** the obs path is frame-correct (validated), but the **command path** rate-sign convention is **wrong** — our `zup_to_ned_rates([r,−p,−y])` guess does not match the sim. The obs-vs-training validation structurally could not catch this (it checks the observation we *read*, not the action we *send*). **This is a major cause of tonight's tumble, alongside the no-takeoff off-distribution start.** Both now concretely identified.
+- **Next:** derive the exact per-axis command→response sign+gain from `calib_log` (steady-state, accounting for divergence), fix the action mapping, add a command-frame unit test, then retrain.
 
 🦞🧍💜🔥♾️
