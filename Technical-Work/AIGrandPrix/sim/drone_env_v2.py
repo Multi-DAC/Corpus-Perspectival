@@ -70,11 +70,18 @@ class QuadParams:
         self.inertia_inv = np.linalg.inv(self.inertia)
         self.g = 9.801              # gravity
         self.T_min = 0.0            # min thrust per motor [N]
-        self.T_max = 0.85 * 9.81 * 3.3 / 4  # TWR_max=3.3 → per motor
+        self.T_max = 0.85 * 9.81 * 3.85 / 4  # TWR_max=3.85 — measured vs competition sim
+                                              # (calib from-rest onset: thr 0.50 -> +9.24 m/s^2
+                                              #  => T/m~19 at half-throttle => TWR~3.85, hover~0.26;
+                                              #  CALIB_FIT_2026-06-01.md). Was 3.3.
         self.omega_max_xy = 15.0    # max body rate xy [rad/s]
-        self.omega_max_z = 0.3      # max body rate z [rad/s] — yaw limited
+        self.omega_max_z = 0.3      # max body rate z [rad/s] — yaw limited; likely too tight for
+                                    # racing, revisit at retrain (NOT a calib match — this is the
+                                    # training action scale, comp sim takes raw rad/s)
         self.ctau = 0.05            # thrust-to-torque coefficient
-        self.cd = 0.3               # linear drag coefficient (realistic for racing quad)
+        self.cd = 0.3               # linear drag — NOT cleanly identifiable from this calib run
+                                    # (no true thrust-cut coast; tilt/attitude coupling dominates
+                                    # the joint fit). Needs a dedicated drag probe. Kept at 0.3.
     
     def randomize(self, rng: np.random.Generator, scale: float = 0.1):
         """Domain randomization. Returns a copy with perturbed params."""

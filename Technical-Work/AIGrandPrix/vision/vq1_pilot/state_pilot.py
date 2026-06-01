@@ -53,8 +53,13 @@ def ned_to_zup_quat(q):     # q=[w,x,y,z]: negate y,z
     return np.array([q[0], q[1], -q[2], -q[3]])
 def ned_to_zup_omega(o):    # body rates FRD->FLU: flip pitch,yaw (geometrically consistent)
     return np.array([o[0], -o[1], -o[2]])
-def zup_to_ned_rates(r):    # body rates FLU->FRD for sending
-    return np.array([r[0], -r[1], -r[2]])
+def zup_to_ned_rates(r):    # body rates FLU->set_attitude_target send convention
+    # FIXED 2026-06-01: tonight's [r,-p,-y] gave a sign-INVERTED closed loop (positive
+    # feedback -> tumble). The competition sim measures ODOMETRY = -(sent rate) per axis
+    # (calib_log_2026-05-31, CALIB_FIT_2026-06-01.md). Holding the validated obs path
+    # (ned_to_zup_omega) fixed, honest negative-feedback control requires the negation:
+    # [-r, +p, +y]. Locked by test_command_frame.py (4/4).
+    return np.array([-r[0], r[1], r[2]])
 
 
 class SharedState:
