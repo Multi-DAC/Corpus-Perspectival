@@ -133,7 +133,8 @@ def train(args):
             env = InfiniteGateEnv(
                 gate_radius=0.75, max_steps=30000, dt=0.002, substeps=1,
                 domain_rand=True, domain_rand_scale=0.15,
-                adaptive_curriculum=True, seed=seed,
+                adaptive_curriculum=True, ground_start_prob=args.ground_start_prob,
+                seed=seed,
             )
             return Monitor(env)
         return _init
@@ -198,6 +199,8 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--total-steps', type=int, default=200_000)
     p.add_argument('--n-envs', type=int, default=4)
+    p.add_argument('--ground-start-prob', type=float, default=0.0,
+                   help='fraction of episodes starting at far ground rest (takeoff curriculum)')
     p.add_argument('--base-seed', type=int, default=17)
     p.add_argument('--tag', type=str, default='validation')
     p.add_argument('--grad-log-freq', type=int, default=20_000)
