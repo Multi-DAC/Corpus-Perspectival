@@ -26,7 +26,7 @@ from pathlib import Path
 # Add parent paths
 sys.path.insert(0, str(Path(__file__).parent.parent / 'sim'))
 
-from obs_encoding import bound_vec, bound_scalar  # shared bounded-distance encoding (deploy==training)
+from obs_encoding import unit_dir, bound_scalar  # shared encoding: gate dirs=unit, dist=bounded (A150)
 
 import gymnasium as gym
 from gymnasium import spaces
@@ -224,12 +224,12 @@ class ImprovedObsWrapper(gym.ObservationWrapper):
             *vel_body,           # 3: body-frame velocity
             *omega,              # 3: angular velocity
             *g_body,             # 3: gravity in body frame (attitude encoding)
-            *bound_vec(rel_gate_body),   # 3: next gate in body frame (BOUNDED dir+tanh mag)
-            bound_scalar(dist_to_gate),  # 1: distance to next gate (BOUNDED tanh)
-            *bound_vec(rel_next_body),   # 3: next-next gate in body frame (BOUNDED)
+            *unit_dir(rel_gate_body),    # 3: next gate dir in body frame (UNIT — A150)
+            bound_scalar(dist_to_gate),  # 1: distance to next gate (BOUNDED tanh — carries magnitude)
+            *unit_dir(rel_next_body),    # 3: next-next gate dir in body frame (UNIT — A150)
             speed,               # 1: scalar speed
             progress,            # 1: course progress
-            *bound_vec(rel_gate_world),  # 3: next gate in world frame (BOUNDED)
+            *unit_dir(rel_gate_world),   # 3: next gate dir in world frame (UNIT — A150)
             *forward_world,      # 3: forward direction
             time_since_gate,     # 1: time since last gate pass
             speed_toward,        # 1: closing speed on gate

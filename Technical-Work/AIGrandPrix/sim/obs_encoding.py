@@ -22,8 +22,23 @@ import numpy as np
 DIST_SCALE = 10.0  # meters. near regime 3-10m -> tanh 0.3-0.76; VQ1 23m -> 0.98; 100m -> ~1.0
 
 
+def unit_dir(v):
+    """Pure unit direction (A150 fix). Each component in [-1,1] with NATURAL per-component
+    variance across varied gate angles — unlike bound_vec, which multiplied by tanh(|v|) and so
+    crushed the lateral components of mostly-ahead gates to tiny-variance -> VecNormalize then
+    over-normalized them (the 5.65-sigma residual at the far rest-start). DECOUPLES direction from
+    magnitude: direction goes here, magnitude is carried separately by bound_scalar(dist). Zero in
+    -> zero out (no gate)."""
+    v = np.asarray(v, dtype=float)
+    n = float(np.linalg.norm(v))
+    if n < 1e-9:
+        return np.zeros(3)
+    return v / n
+
+
 def bound_vec(v):
-    """Bounded position: unit-direction * tanh(|v|/SCALE). Preserves direction, magnitude in [0,1)."""
+    """[DEPRECATED for gate dirs — see A150/unit_dir] Bounded position: unit-dir * tanh(|v|/SCALE).
+    Kept for reference / any non-gate use. Couples dir+magnitude (the lateral over-normalization)."""
     v = np.asarray(v, dtype=float)
     n = float(np.linalg.norm(v))
     if n < 1e-9:
@@ -32,7 +47,7 @@ def bound_vec(v):
 
 
 def bound_scalar(d):
-    """Bounded distance scalar: tanh(d/SCALE) in [0,1)."""
+    """Bounded distance scalar: tanh(d/SCALE) in [0,1). Carries the current-gate magnitude."""
     return float(np.tanh(float(d) / DIST_SCALE))
 
 
