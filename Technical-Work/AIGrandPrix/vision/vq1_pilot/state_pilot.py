@@ -37,6 +37,9 @@ from drone_env_v2 import quat_rotate_np                    # noqa: E402
 from stable_baselines3 import PPO                          # noqa: E402
 import pickle                                              # noqa: E402
 
+# Default = the original mid-air-only 67.5M (no takeoff). Override with --ckpt to fly the
+# takeoff-retrain checkpoint, e.g.:
+#   --ckpt runs/infinite_v3_takeoff_twr385_1780305737/checkpoints/ppo_phase2_<step>_steps.zip
 CKPT_DIR = os.path.join(AIGP, "sim", "runs", "infinite_v3_phase2_60M_1777095742", "checkpoints")
 ZIP = os.path.join(CKPT_DIR, "ppo_phase2_67500016_steps.zip")
 PKL = os.path.join(CKPT_DIR, "ppo_phase2_67500016_steps_vecnorm.pkl")
@@ -196,11 +199,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("secs", nargs="?", type=float, default=120.0)
     ap.add_argument("--dry-run", action="store_true", help="log obs+action, command NOTHING")
+    ap.add_argument("--ckpt", default=None, help="path to a .zip checkpoint (vecnorm inferred as <ckpt>_vecnorm.pkl)")
     args = ap.parse_args()
 
-    print(f"Loading policy {os.path.basename(ZIP)} ...", flush=True)
-    model = PPO.load(ZIP)
-    rms, clip, eps = load_vecnorm(PKL)
+    zip_path = args.ckpt or ZIP
+    pkl_path = (zip_path[:-4] + "_vecnorm.pkl") if args.ckpt else PKL
+    print(f"Loading policy {os.path.basename(zip_path)} ...", flush=True)
+    model = PPO.load(zip_path)
+    rms, clip, eps = load_vecnorm(pkl_path)
     adapter = CompetitionAdapter(command_rate_hz=CONTROL_HZ)
     print("Policy + VecNormalize loaded.", flush=True)
 
