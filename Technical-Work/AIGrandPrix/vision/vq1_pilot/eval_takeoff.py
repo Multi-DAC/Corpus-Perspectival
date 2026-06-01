@@ -13,21 +13,24 @@ from infinite_gate_env import InfiniteGateEnv
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 
-CKPT = os.path.join(SIM, "runs", "infinite_v3_takeoff_twr385_1780305737", "checkpoints")
+DEFAULT_RUN = "infinite_v3_farstart_twr385_1780313973"
 TAKEOFF_ALT = 1.0  # m above start; clearing this from z=0.2 = a real liftoff
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--step", type=int, default=75000032)
+    ap.add_argument("--step", type=int, default=95000048)
+    ap.add_argument("--run", default=DEFAULT_RUN, help="run dir name under sim/runs/")
     ap.add_argument("--episodes", type=int, default=20)
+    ap.add_argument("--ground-prob", type=float, default=1.0, help="0.0=airborne near-gate (general skill); 1.0=far ground start")
     args = ap.parse_args()
 
-    zip_path = os.path.join(CKPT, f"ppo_phase2_{args.step}_steps.zip")
-    pkl_path = os.path.join(CKPT, f"ppo_phase2_{args.step}_steps_vecnorm.pkl")
+    ckpt = os.path.join(SIM, "runs", args.run, "checkpoints")
+    zip_path = os.path.join(ckpt, f"ppo_phase2_{args.step}_steps.zip")
+    pkl_path = os.path.join(ckpt, f"ppo_phase2_{args.step}_steps_vecnorm.pkl")
     print(f"checkpoint: {os.path.basename(zip_path)}")
 
-    raw = DummyVecEnv([lambda: InfiniteGateEnv(ground_start_prob=1.0, seed=999)])
+    raw = DummyVecEnv([lambda: InfiniteGateEnv(ground_start_prob=args.ground_prob, seed=999)])
     venv = VecNormalize.load(pkl_path, raw)
     venv.training = False
     venv.norm_reward = False
