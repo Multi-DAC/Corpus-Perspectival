@@ -184,8 +184,13 @@ def train(args):
         for i in range(args.n_envs)
     ])
 
-    # Load VecNormalize from resume path — preserves running mean/var
-    train_envs = VecNormalize.load(args.resume_vecnorm, raw_envs)
+    # VecNormalize: resume (preserve running mean/var) OR fresh (obs space changed — e.g.
+    # the 2026-06-01 bounded-distance encoding makes old raw-distance stats meaningless).
+    if args.fresh_vecnorm:
+        print('  VecNormalize: FRESH (obs space changed; old stats discarded)')
+        train_envs = VecNormalize(raw_envs, norm_obs=True, norm_reward=True, clip_obs=10.0)
+    else:
+        train_envs = VecNormalize.load(args.resume_vecnorm, raw_envs)
     train_envs.training = True
     train_envs.norm_reward = True
 
@@ -245,8 +250,10 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--resume-policy', required=True,
                    help='Path to PPO checkpoint .zip to resume from')
-    p.add_argument('--resume-vecnorm', required=True,
-                   help='Path to vec_normalize.pkl matching the checkpoint')
+    p.add_argument('--resume-vecnorm', default=None,
+                   help='Path to vec_normalize.pkl matching the checkpoint (not needed with --fresh-vecnorm)')
+    p.add_argument('--fresh-vecnorm', action='store_true',
+                   help='Start VecNormalize fresh (use when the obs space changed, e.g. bounded encoding)')
     p.add_argument('--total-steps', type=int, default=60_000_000,
                    help='Additional steps to train (continues, not from zero)')
     p.add_argument('--n-envs', type=int, default=16)
