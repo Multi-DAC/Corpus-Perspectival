@@ -64,8 +64,24 @@ Distinguish two kinds of "the look", and treat them oppositely:
 ⟹ Almost everything (gates AND decor) is RUNTIME procedural in the training GameMode, not static
   editor authoring. The static scenes I built are visualization/prototyping only.
 
+## C++ PHASE LOG (2026-06-01 PM, post-restart)
+- **ADronePawn DONE + VALIDATED.** `Source/AnakinFlightSchool/DronePawn.{h,cpp}` (mirrored to
+  `ue5_sim/cpp/`). CTBR `Step(coll,wx,wy,wz,dt)` ported **bit-identical** to the numpy reference
+  (QuatMul + RotVec + semi-implicit Euler, double-precision state, G=981/TWR=3.85/CD=0.3).
+  UFUNCTIONs: `Step`, `ResetState`, `GetStateVector`, `SyncVisual` (all BlueprintCallable →
+  drivable from editor Python / the bridge).
+- **Compile note:** Live Coding COMPILES a new UCLASS but **cannot link-patch it** ("failed to
+  link patch") — expected. Fix = close editor, clean rebuild from CLI:
+  `Build.bat AnakinFlightSchoolEditor Win64 Development -Project=<uproject> -WaitMutex`
+  (~13s incremental; `[xx/78] Link UnrealEditor-AnakinFlightSchool.dll` = our module). Reopen.
+  Helper: `clawd/build_anakin.bat`. (Future new UCLASSes: same close→rebuild→reopen loop.)
+- **Validation (`scripts/validate_drone.py` → `cpp_validation.json`):** spawns ADronePawn, runs
+  climb + 3 axis tests through the C++ Step, diffs vs numpy. MATCH to float precision:
+  climb z 200→615.28 (vz 784.80); pitch wy=2→+X 253.01; roll wx=2→−Y 253.01; yaw wz=2→+114.59° CCW.
+  Teacher↔student transfer preserved. (Left a cyan drone + climb trail in-editor as the visible proof.)
+
 ## Next
-1. Drone pawn + calibrated CTBR dynamics (C++).
+1. ~~Drone pawn + calibrated CTBR dynamics (C++).~~ **DONE 2026-06-01.**
 2. Socket training bridge / GameMode: per-episode procedural gates + collision-aware decor +
    domain randomization (gate appearance, lighting, optional-path-absence); gym reset/step/obs/reward.
 3. Throughput benchmark (the go/no-go gate).
