@@ -144,7 +144,7 @@ class PerManeuverMasteryLogger(BaseCallback):
         return True
 
 
-def make_infinite_env(seed: int):
+def make_infinite_env(seed: int, ground_start_prob: float = 0.0):
     def _init():
         env = InfiniteGateEnv(
             gate_radius=0.75,
@@ -154,6 +154,7 @@ def make_infinite_env(seed: int):
             domain_rand=True,
             domain_rand_scale=0.15,
             adaptive_curriculum=True,
+            ground_start_prob=ground_start_prob,
             seed=seed,
         )
         return Monitor(env)
@@ -178,7 +179,8 @@ def train(args):
 
     # Build env stack
     raw_envs = DummyVecEnv([
-        make_infinite_env(seed=i * 42 + args.base_seed)
+        make_infinite_env(seed=i * 42 + args.base_seed,
+                          ground_start_prob=args.ground_start_prob)
         for i in range(args.n_envs)
     ])
 
@@ -253,6 +255,8 @@ def main():
     p.add_argument('--device', type=str, default='cpu')
     p.add_argument('--save-every', type=int, default=2_500_000,
                    help='Save (policy + vecnorm) every N env steps')
+    p.add_argument('--ground-start-prob', type=float, default=0.0,
+                   help='Fraction of episodes starting at ground rest (TAKEOFF curriculum)')
     p.add_argument('--grad-log-freq', type=int, default=100_000)
     p.add_argument('--mastery-log-freq', type=int, default=100_000)
     args = p.parse_args()
