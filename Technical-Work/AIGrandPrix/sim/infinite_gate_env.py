@@ -272,9 +272,10 @@ class InfiniteGateEnv(gym.Env):
                  domain_rand=False,
                  domain_rand_scale=0.15,
                  adaptive_curriculum=True,
+                 ground_start_prob=0.0,   # fraction of episodes that start at ground rest
                  seed=None):
         super().__init__()
-        
+
         self.gate_radius = gate_radius
         self.max_steps = max_steps
         self.dt = dt
@@ -282,6 +283,7 @@ class InfiniteGateEnv(gym.Env):
         self.domain_rand = domain_rand
         self.domain_rand_scale = domain_rand_scale
         self.adaptive_curriculum = adaptive_curriculum
+        self.ground_start_prob = ground_start_prob
         
         self.rng = np.random.default_rng(seed)
         self.library = ManeuverLibrary()
@@ -454,7 +456,16 @@ class InfiniteGateEnv(gym.Env):
         # Initial position: behind first gate
         init_pos = g0 - 3.0 * dir0
         init_pos[2] = max(init_pos[2], 0.5)
-        
+
+        # TAKEOFF curriculum (2026-06-01): with ground_start_prob, start at ground rest
+        # (z=0.2, just clear of the z<0 crash floor) so the policy must take off and climb
+        # to the elevated gate 0. The 67.5M policy never learned takeoff (trained mid-air,
+        # idled thrust->0 on the VQ1 pad). g0 stays at current_alt (1.5-4.0m) so the
+        # ground start forces a real climb. Base env already resets vel=0, level attitude.
+        self.ground_start = self.rng.random() < self.ground_start_prob
+        if self.ground_start:
+            init_pos[2] = 0.2
+
         return init_pos
     
     def reset(self, **kwargs):
