@@ -32,6 +32,7 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'sim'))
 from drone_env_v2 import quat_rotate_np
+from obs_encoding import bound_vec, bound_scalar  # shared bounded-distance encoding (deploy==training)
 
 
 @dataclass
@@ -207,12 +208,12 @@ class CompetitionAdapter:
             *vel_body,              # 3: body-frame velocity
             *omega,                 # 3: angular velocity
             *g_body,                # 3: gravity in body frame
-            *rel_gate_body,         # 3: next gate in body frame
-            dist,                   # 1: distance to next gate
-            *rel_next_body,         # 3: next-next gate in body frame
+            *bound_vec(rel_gate_body),   # 3: next gate in body frame (BOUNDED dir+tanh mag)
+            bound_scalar(dist),          # 1: distance to next gate (BOUNDED tanh)
+            *bound_vec(rel_next_body),   # 3: next-next gate in body frame (BOUNDED)
             speed,                  # 1: scalar speed
             progress,               # 1: course progress
-            *rel_gate_world,        # 3: next gate in world frame
+            *bound_vec(rel_gate_world),  # 3: next gate in world frame (BOUNDED)
             *forward_world,         # 3: forward direction
             time_since_gate,        # 1: time since last gate pass
             speed_toward,           # 1: closing speed

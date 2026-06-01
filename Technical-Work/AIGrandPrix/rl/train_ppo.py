@@ -26,6 +26,8 @@ from pathlib import Path
 # Add parent paths
 sys.path.insert(0, str(Path(__file__).parent.parent / 'sim'))
 
+from obs_encoding import bound_vec, bound_scalar  # shared bounded-distance encoding (deploy==training)
+
 import gymnasium as gym
 from gymnasium import spaces
 from drone_env_v2 import (
@@ -222,12 +224,12 @@ class ImprovedObsWrapper(gym.ObservationWrapper):
             *vel_body,           # 3: body-frame velocity
             *omega,              # 3: angular velocity
             *g_body,             # 3: gravity in body frame (attitude encoding)
-            *rel_gate_body,      # 3: next gate in body frame
-            dist_to_gate,        # 1: distance to next gate
-            *rel_next_body,      # 3: next-next gate in body frame
+            *bound_vec(rel_gate_body),   # 3: next gate in body frame (BOUNDED dir+tanh mag)
+            bound_scalar(dist_to_gate),  # 1: distance to next gate (BOUNDED tanh)
+            *bound_vec(rel_next_body),   # 3: next-next gate in body frame (BOUNDED)
             speed,               # 1: scalar speed
             progress,            # 1: course progress
-            *rel_gate_world,     # 3: next gate in world frame
+            *bound_vec(rel_gate_world),  # 3: next gate in world frame (BOUNDED)
             *forward_world,      # 3: forward direction
             time_since_gate,     # 1: time since last gate pass
             speed_toward,        # 1: closing speed on gate
