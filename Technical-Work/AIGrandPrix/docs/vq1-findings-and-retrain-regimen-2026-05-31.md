@@ -48,6 +48,15 @@ Pipeline fully live: connected, armed, received pose + 6 gates + active-gate ind
 ## 1.7 Diagnosis
 The 67.5M policy was trained in a **different** environment (`InfiniteGateEnv`/`drone_env_v2`), never learned takeoff, and may be subtly frame-mismatched at inference against the real sim. **Patching frame signs on this policy is polishing the wrong artifact.** The correct fix is a retrain aligned to the competition sim's dynamics/frames/controls, including takeoff, and ultimately vision-based.
 
+## 1.8 Obs-vs-training validation — RESOLVED: off-distribution, not a frame bug
+Compared the `state_pilot` observation path against `ImprovedObsWrapper` (`rl/train_ppo.py:147`, the actual training wrapper) **term by term**:
+- **10 of 13 term-groups reproduce training exactly** when fed the same state — `vel_body`, `omega`, `g_body`, `rel_gate_body`, `dist`, `rel_next_body`, `speed`, `rel_gate_world`, `forward_world`, `speed_toward`. → `adapter.build_observation` is a **faithful** reproduction of the training obs; **no gross frame/obs bug.**
+- **3 discrepancies, all minor, none the cause of the no-takeoff failure:**
+  1. **`progress`** hardcoded to 0 in the adapter; training uses `current/n_gates`. =0 at gate 0 → no effect tonight. **FIXED** in `state_pilot` (`obs[17]`).
+  2. **Gate orientation** — pilot passed `None` → adapter approximated it as direction-to-gate; training uses the gate's real fly-through normal. **FIXED** with a convention-free course-flow proxy (gate→next-gate); the sim's per-gate orientation quat is now captured (`st.gate_orient`) for an exact version once its local-normal convention is unit-tested (Phase 1).
+  3. **Body-rate frame** — the training env uses a *z-forward* body convention; our FRD→FLU rate conversion (`[r,-p,-y]`) needs a synthetic unit-test (≈0 at rest, matters in flight). **Phase-1 task.**
+- **Conclusion:** the dominant failure (no takeoff) is the **training-distribution gap, not frames.** The observation is sound; the regimen stands. (Resolves Open Question #1.)
+
 ---
 
 # PART 2 — VISION RETRAIN REGIMEN (built on the findings)

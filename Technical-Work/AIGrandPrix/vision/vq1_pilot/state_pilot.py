@@ -66,6 +66,7 @@ class SharedState:
         self.omega_body = np.zeros(3)
         self.have_pose = False
         self.gates = {}        # gate_id -> np.array(pos_ned xyz)
+        self.gate_orient = {}  # gate_id -> orient quat [w,x,y,z] NED (captured for Phase-1 exact gate-normal; convention needs unit-test)
         self.num_gates = 0
         self.active_gate = 0
         self.race_started = False
@@ -123,13 +124,15 @@ def rx_loop(conn, st, stop):
 def _parse_track(payload, st):
     (num_gates,) = struct.unpack_from("<H", payload)
     payload = payload[2:]
-    gates = {}
+    gates = {}; orients = {}
     for _ in range(num_gates):
         vals = struct.unpack_from("<Hfffffffff", payload)
         gate_id = vals[0]
-        gates[gate_id] = np.array([vals[1], vals[2], vals[3]])  # pos_ned xyz
+        gates[gate_id] = np.array([vals[1], vals[2], vals[3]])             # pos_ned xyz
+        orients[gate_id] = np.array([vals[4], vals[5], vals[6], vals[7]])  # orient quat [w,x,y,z] NED
         payload = payload[38:]
     st.gates = gates
+    st.gate_orient = orients
     st.num_gates = num_gates
     print(f"  [TRACK] received {num_gates} gates", flush=True)
 
@@ -163,10 +166,24 @@ def build_obs(st, adapter):
 
     nxt = active + 1
     next_gate_pos_body = None
+    gate_orient_body = None
     if nxt in gates:
-        next_gate_pos_body = quat_rotate_np(q_conj, ned_to_zup_vec(gates[nxt]) - pos)
+        nxt_zup = ned_to_zup_vec(gates[nxt])
+        next_gate_pos_body = quat_rotate_np(q_conj, nxt_zup - pos)
+        # Fix #2 (obs-vs-training): training uses the gate's fly-through orientation,
+        # not direction-to-gate. The sim ships a per-gate orientation quat (st.gate_orient)
+        # but its local-normal convention is unverified offline; the course flow
+        # (this gate -> next gate) is a convention-free proxy for the fly-through
+        # direction. Exact-quat version is a Phase-1 task gated on a synthetic unit test.
+        course_dir = nxt_zup - gate_zup
+        n = np.linalg.norm(course_dir)
+        if n > 1e-6:
+            gate_orient_body = quat_rotate_np(q_conj, course_dir / n)
 
-    obs = adapter.build_observation(telem, gate_pos_body, gate_dist, None, next_gate_pos_body)
+    obs = adapter.build_observation(telem, gate_pos_body, gate_dist, gate_orient_body, next_gate_pos_body)
+    # Fix #1 (obs-vs-training): adapter hardcodes progress=0; training uses
+    # current_gate / n_gates (index 17 of the 30-dim layout).
+    obs[17] = float(active) / float(max(num, 1))
     return obs, gate_pos_body, gate_dist, active
 
 
