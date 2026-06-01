@@ -248,6 +248,7 @@ def main():
     last_log = 0.0
     last_active = -1
     steps = 0
+    obs_dumped = 0  # diagnostic: dump first few flying obs (raw + normalized + action + pose)
     while time.time() - t0 < args.secs:
         loop_t = time.time()
         res = build_obs(st, adapter)
@@ -262,6 +263,28 @@ def main():
             ca = adapter.to_competition_action(action)
             rates_ned = zup_to_ned_rates(np.array([ca.roll_rate_rad_s, ca.pitch_rate_rad_s, ca.yaw_rate_rad_s]))
             steps += 1
+
+            # DIAGNOSTIC (2026-06-01): dump first 5 flying obs so we can compare the LIVE
+            # observation the policy consumes against the training obs for the same state.
+            # Decides obs-construction-bug (tonight-fixable) vs dynamics/geometry (retrain).
+            if obs_dumped < 5:
+                obs_dumped += 1
+                import json as _json
+                with st.lock:
+                    pose = {"pos_ned": st.pos_ned.tolist(), "vel_ned": st.vel_ned.tolist(),
+                            "q_ned": st.q_ned.tolist(), "omega_body": st.omega_body.tolist(),
+                            "active": int(st.active_gate),
+                            "gate_active_ned": st.gates.get(st.active_gate, np.zeros(3)).tolist()}
+                with open("flight_obs_dump.jsonl", "a") as _f:
+                    _f.write(_json.dumps({
+                        "step": steps, "t": round(time.time() - t0, 2),
+                        "obs_raw": [round(float(x), 4) for x in obs],
+                        "obs_norm": [round(float(x), 4) for x in obs_n],
+                        "action": [round(float(x), 4) for x in action],
+                        "rates_ned_sent": [round(float(x), 4) for x in rates_ned],
+                        "throttle": round(float(ca.throttle), 4),
+                        "pose": pose,
+                    }) + "\n")
 
             if not args.dry_run:
                 conn.mav.set_attitude_target_send(

@@ -464,6 +464,13 @@ class InfiniteGateEnv(gym.Env):
         # ground start forces a real climb. Base env already resets vel=0, level attitude.
         self.ground_start = self.rng.random() < self.ground_start_prob
         if self.ground_start:
+            # VQ1 fix (2026-06-01, Day 121): VQ1 places gate 0 ~23 m from the pad, but the
+            # default init (g0 - 3*dir0) trained gate 0 at ~3-5 m. Live diagnosis showed the
+            # gate-distance obs hit ~6 sigma at the 23 m start (training max was 2.9 sigma) ->
+            # the policy saturated the sticks. So ground-start spawns FAR (15-28 m) at ground
+            # rest, training the distant-first-gate-from-standstill case VQ1 actually presents.
+            gs_dist = self.rng.uniform(15.0, 28.0)
+            init_pos = g0 - gs_dist * dir0
             init_pos[2] = 0.2
 
         return init_pos
