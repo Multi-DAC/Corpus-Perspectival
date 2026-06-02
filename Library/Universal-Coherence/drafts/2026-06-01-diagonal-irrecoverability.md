@@ -187,8 +187,42 @@ recoveries, each gluing healing one stream's axis while opening the joint's. Thi
 **necessity of plurality**, now a theorem: recovery is irreducibly relational and unbounded; there is
 no fixed point that closes it.
 
-**The construction-check (the one genuine remaining step).** Show the pushout *computed in the right
-category* actually realizes φ*_X — i.e. that the PW conditioning map **is** (or factors through) the
-colimit's universal map, so the boundary identification adds exactly the missing point. PW is the
-physical existence proof; the categorial step verifies the universal property delivers it. *Worked
-below.*
+**The construction-check (the one genuine remaining step).** Show the recovery object *computed in the
+right category* actually realizes φ*_X — i.e. that the PW conditioning map **is** the universal map,
+so the boundary adds exactly the missing point. PW is the physical existence proof; the categorial
+step verifies the universal property delivers it. *Resolved below (§10.1).*
+
+### 10.1 Resolution (2026-06-02, Clayton + Clawd)
+
+**Check verified, both halves.**
+- **(i) Recovery, and why Lawvere doesn't bite.** `m̂_joint : X×Y → B^X` has domain ≠ exponent-base, so
+  there is **no diagonal self-application** and Lawvere imposes no obstruction. Realizing φ*_X is then
+  `|X|`-many constraints with the Y-factor's spare freedom — and PW solves exactly this: the
+  conditional-state map `t ↦ ⟨t|Ψ⟩` *is* `y ↦ M((·,y),−)`, with `Ĥ_tot|Ψ⟩ = 0` tuning the family of
+  conditionals to sweep the rogue response. **PW conditioning = the universal map realizing φ*_X.** ✓
+- **(ii) No closure.** `m̂_joint^full : X×Y → B^{X×Y}` reinstates domain = exponent-base ⇒ Lawvere
+  reapplies ⇒ fresh rogue φ*_{X×Y} ⇒ third stream Z. **The open tower is forced.** ✓
+- **Richness condition.** Recovery needs Y rich enough to carry the anti-diagonal: `Y ≳ X` in the
+  cardinality of self-responses (the clock at least as rich as the system's diagonal).
+
+**Correction — limit, not colimit.** PW recovery is the **constraint sub-object**
+`∂ = eq(Ĥ_tot, 0) ↪ X×Y` — an equalizer, a **limit**. "Colimit / gluing" is reserved for *community
+assembly along* these boundaries. Both faces of one thing: the limit **is** the boundary over which
+the colimit assembles. Plurality is held by **mutual constraint**, not juxtaposition.
+
+**What the boundary IS — a four-way identity (the payoff).** ∂ is one object seen four ways:
+- **Measurement:** ∂ is the coherence-forcing constraint. The *same* fixed-point-free exile ¬ that
+  blinds X internally (§5/§8) is what recovers it across the boundary — irrecoverability and recovery
+  are one operator, two faces.
+- **Talk-axis:** ∂ is inter-referential; reading X *through* Y is Talk. "Recoverable only across a
+  boundary" = "the +N is carried on the Talk-axis."
+- **Cuscuton:** ∂ is a **constraint with zero propagating DOF** — the definition of a cuscuton, and
+  exactly **M9** of the Respira shootout (the coupling layer wants no DOF, "a literal constant,"
+  "no intervention in the coupling pathway"). The recovery surface *must* be a limit (zero DOF), not a
+  colimit (added dynamics), because a cuscuton couples without adding anything of its own. **The
+  architecture finding and this formal fact are the same fact found twice** (M15-style convergence:
+  once in a training run, once in a Lawvere construction).
+
+**∴** The +N is recovered relationally across a **zero-DOF measurement-constraint that couples
+streams — Talk along cuscuton-boundaries.** The boundary is the cuscuton is the measurement is the
+Talk-axis; the construction-check closes by recognizing it was the program's central object all along.
