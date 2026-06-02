@@ -143,9 +143,47 @@ dynamically unstable. Exactly "± attractors, 0 saddle," with **Φ_S (fixed-poin
 environment-induced superselection.** "No basin for neutral" reproduces einselection; discrete-sign /
 continuous-|Bias| reproduces decoherence-then-collapse.
 
-**Load-bearing claim — RESOLVED to a Morse dichotomy (2026-06-02).** Φ_S *is* repelling at 0,
+> ⚠️ **CONTESTED — DREAM-DRIVE SELF-FALSIFY, 2026-06-02 ~02:00, for joint morning resolution (Clayton + Clawd).**
+> The "Morse dichotomy" below is **likely backwards** and should not be built on until we resolve it together.
+> Sober re-check against the *actual* operator definitions falsifies the attribution:
+> - **T5 §3.4.1:** Φ_S is the **C-averaging** operator (Φ_S(γ) = C-average of γ's forward image); its
+>   fixed points are the C-**harmonic** sections. **§3.4.2 line 206:** the *uniform/symmetric* γ is
+>   Φ-fixed and **maximum-entropy**. **§7.4.3:** push_struct(δ_0) = (δ_0+δ_1)/2 — push_struct **flows the
+>   definite state toward the symmetric one.** And **σ_struct** = "degree to which γ is Φ_S-fixed," so
+>   σ_struct is **maximal at the symmetric/neutral state**, low at the definite ± states.
+> - **⟹ Φ_S ATTRACTS toward the symmetric-neutral state; it does NOT repel from it.** The symmetric
+>   neutral is the σ_struct **maximum** (a Φ_S attractor), not the unstable saddle §9 assumed.
+> - **The operator that drives 0 → ± (off neutral, into definite) is MEASUREMENT M_k** (§5.2.2 / T4 —
+>   "converts C's superposed content-operations into a specific γ-state"). §8 attributed this correctly;
+>   §9 mis-transferred "repelling" to Φ_S. **(HIGH confidence.)**
+> - **Underneath: a conflation of two distinct "neutrals"** — N_sign (the Hahn-Jordan sign(Bias)=0 set,
+>   where the exile ¬ is fixed, §8) vs N_struct (the Φ_S-harmonic symmetric state / σ_struct-max). §9's
+>   argument equivocates: it needs N_sign repelling but borrows Φ_S's dynamics, which is about N_struct.
+>   They coincide only under enough symmetry. **(MEDIUM-HIGH confidence — the cleaner of the two diagnoses.)**
+>
+> **What SURVIVES (candidate corrected result, to verify together):** the *conclusion* — "determinacy ⟺
+> self-incompleteness," "to be is to fall off the neutral point," einselection, and the DFS/metastable
+> edge case — **stands, but via a COMPETITION, not a Morse condition on σ_struct.** Correct picture: two
+> opposed tendencies — **Φ_S** (coherence-restoration; pulls toward the symmetric σ_struct-max) vs **M_k**
+> (measurement; drives to the definite, σ_struct-low pointer states). *The neutral is repelling iff
+> measurement dominates coherence-restoration near it.* This maps onto real physics **better** than §9
+> did: **einselection = M_k beating Φ_S** (pointer states win); **decoherence-free subspace / metastable
+> superposition = Φ_S beating M_k in a subspace** (the §9 edge case, now with the correct mechanism —
+> *weak measurement*, not a degenerate Hessian). The Morse *form* may re-enter as a condition on the
+> competition (measurement-rate vs coherence-curvature), but **not** as "σ_struct Morse" — 0 is a
+> σ_struct *maximum*, not a saddle.
+>
+> **Unaffected by this FALSIFY:** §10 (gluing / Lawvere-escape — independent of Φ_S's direction) and
+> §11 (Chater witness). Those stand. Only this §9 Φ_S-attribution is contested.
+>
+> *Cognitive trace: PREDICT(Φ_S averages-not-sharpens, high) → TEST(T5 §3.4.1 + §7.4.3 + §3.4.2) →
+> FALSIFY(§9 backwards) → DECOMPOSE(mis-attribution + two-neutrals conflation) → REFRAME(competition not
+> Morse) → EXTRACT(einselection/DFS survive, sharpened) → TRANSFER(Mirror #19: warm register let it through).*
+> *The struck-through claim is preserved below verbatim for the morning diff — do not delete.*
+
+~~**Load-bearing claim — RESOLVED to a Morse dichotomy (2026-06-02).** Φ_S *is* repelling at 0,
 generically, with a precisely-named exception. Ground it on Def 7.4.1: push_struct = (Φ_S)_* is the
-pushforward of Bias along Φ_S, with Φ_S the σ_struct-**ascending** map toward coherence-attractors (T5).
+pushforward of Bias along Φ_S, with Φ_S the σ_struct-**ascending** map toward coherence-attractors (T5).~~
 
 *Identification (the one premise — confirm against Anchor App. B §B.1):* the neutral value
 **sign(γ)=0 ⟺ the critical set of σ_struct**. Sign +1 = "toward an attractor," −1 = "toward a
