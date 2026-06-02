@@ -168,25 +168,33 @@ def train(args):
     raw_envs = DummyVecEnv([make_infinite_env(seed=i*42 + args.base_seed)
                             for i in range(args.n_envs)])
 
-    # F1: VecNormalize — obs and reward both normalized. Default clip_obs=10
-    # prevents extreme values from dominating; gamma-matched running mean for reward.
-    train_envs = VecNormalize(
-        raw_envs,
-        norm_obs=True,
-        norm_reward=True,
-        clip_obs=10.0,
-        clip_reward=10.0,
-        gamma=0.999,
-    )
+    # F1: VecNormalize — obs and reward both normalized. On --resume, load the paired vecnorm
+    # stats (saved per-checkpoint by CheckpointWithVecNormalize) so the resilient loop continues
+    # with correct normalization — NOT fresh stats (the latent bug in the old train_infinite.py).
+    if args.resume and os.path.exists(args.resume.replace('.zip', '') + '_vecnorm.pkl'):
+        vp = args.resume.replace('.zip', '') + '_vecnorm.pkl'
+        train_envs = VecNormalize.load(vp, raw_envs)
+        train_envs.training = True
+        train_envs.norm_reward = True
+        print(f'  Resumed VecNormalize stats from {vp}')
+    else:
+        train_envs = VecNormalize(
+            raw_envs, norm_obs=True, norm_reward=True,
+            clip_obs=10.0, clip_reward=10.0, gamma=0.999,
+        )
 
-    model = PPO(
-        'MlpPolicy', train_envs,
-        learning_rate=3e-4, clip_range=0.2, ent_coef=0.01,
-        n_steps=4096, batch_size=512, n_epochs=8,
-        gamma=0.999, gae_lambda=0.95, max_grad_norm=0.5, vf_coef=0.5,
-        policy_kwargs=dict(net_arch=dict(pi=[512, 512], vf=[512, 512])),
-        verbose=0, device='cpu',
-    )
+    if args.resume:
+        model = PPO.load(args.resume, env=train_envs, device='cpu')
+        print(f'  RESUMED policy from {args.resume}')
+    else:
+        model = PPO(
+            'MlpPolicy', train_envs,
+            learning_rate=3e-4, clip_range=0.2, ent_coef=0.01,
+            n_steps=4096, batch_size=512, n_epochs=8,
+            gamma=0.999, gae_lambda=0.95, max_grad_norm=0.5, vf_coef=0.5,
+            policy_kwargs=dict(net_arch=dict(pi=[512, 512], vf=[512, 512])),
+            verbose=0, device='cpu',
+        )
     print(f'  Model params: {sum(p.numel() for p in model.policy.parameters()):,}')
 
     ckpt_cb = CheckpointWithVecNormalize(
@@ -230,6 +238,8 @@ def main():
                    help='fraction of episodes starting at far ground rest (takeoff curriculum)')
     p.add_argument('--perception-obs', action='store_true',
                    help='W5: train on perception-grade obs (W3-calibrated detector noise) not privileged state')
+    p.add_argument('--resume', type=str, default=None,
+                   help='resume policy + paired vecnorm from a checkpoint .zip (resilient-loop use)')
     p.add_argument('--base-seed', type=int, default=17)
     p.add_argument('--tag', type=str, default='validation')
     p.add_argument('--grad-log-freq', type=int, default=20_000)
