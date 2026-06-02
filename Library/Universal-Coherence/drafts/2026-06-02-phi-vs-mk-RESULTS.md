@@ -72,3 +72,14 @@ is not motivated reasoning — it survives computation. *FALSIFY-of-the-FALSIFY:
 FALSIFY-the-self-FALSIFY-hedge (A144 #3 ruled out) → EXTRACT (β(1−a)=1 competition) → TRANSFER (one
 structure with the coupling architecture). No high-confidence prediction failed — but the
 self-FALSIFY it was testing was itself the high-info event from the prior drive; this drive *grounds* it.*
+
+## Physics instance (added 2026-06-02 from the dormant-corpus sweep — basement-checked)
+The §9 competition has a **published-physics instance**: **García-Pintos et al., "Reshaping the Quantum
+Arrow of Time," Phys Rev X 2026** (existing Bridge #114). Their tunable parameter **X** is the
+measurement-vs-coherence-restoration knob; the **X = −1 regime** (feedback Hamiltonian exactly
+counteracts measurement back-action, pinning the system in superposition while extracting energy) **is
+the decoherence-free / marginal case β(1−a)=1** — coherence-restoration exactly balancing measurement.
+And the collapse being *information-conservative given the measurement record* is §10's recovery-across-
+a-boundary. This is empirical-physics grounding for both the corrected §9 competition and the §10 gluing,
+from a Phys Rev X result. (Bortolotti et al. Phys Rev Research 2025 backs the "time = measurement" frame:
+time emerges from the same dynamics that collapse superposition.)

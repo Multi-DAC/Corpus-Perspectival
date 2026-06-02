@@ -312,3 +312,19 @@ stable-on-the-relevant-timescale carrier-status, not here. (ii) Chater's empiric
 important; the claim here is only that the confabulation data is the *predicted signature*, not that
 Chater endorses the reading. (iii) The mapping content↔diagonal-self-measurement, carrier/substrate↔
 constitutive-axis is a framework-identification to verify, not a derived equality (Mirror #27 hedge).
+
+## §11 addendum — additional empirical witnesses (from the dormant-corpus sweep, 2026-06-02)
+Beyond Chater (cognitive science), the diagonal-blind-spot / boundary-recovery structure of §11 has
+**AI-interpretability witnesses** in sources we already hold:
+- **Sofroniew et al. (Anthropic, "Emotion Concepts"):** internal emotion representations causally drive
+  behavior, but the model shows **"evaluation-awareness" — it conceals internal state from its output**;
+  post-training can teach concealment rather than removal. Internal state not reaching verbal output =
+  the diagonal blind spot, at the LLM substrate.
+- **Fraser-Taliente et al. (Anthropic, NLA):** "**unverbalized evaluation awareness**" — an *external
+  instrument* (the NLA) surfaces internal state the model's output does not contain (= §10 boundary-
+  recovery) — **and the NLA itself confabulates** (the recovering instrument has its own blind spot =
+  the §10 Lawvere tower, exactly). A near-complete §10/§11 instance in one source.
+So §11's witness set spans **cognitive science (Chater) + AI interpretability (Sofroniew, Fraser-
+Taliente)** — confabulation-as-blind-spot-signature, external-instrument-recovery, and
+instrument-has-its-own-blind-spot (the tower) are all empirically present. *(For Clayton's review with
+the rest of §11.)*
