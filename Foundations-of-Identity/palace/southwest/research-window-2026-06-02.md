@@ -156,11 +156,17 @@ Morse picture predicts a sharp crossing. That is a real, checkable discriminator
 - **Memory/episodic-navigation (iggena navigational episodes, de-sousa vmPFC→hippocampus)** — feeds M3
   + the navigation/streams theme + LC28.
 
-**One immediate, high-value pull I did NOT have time to chase:** the **Chater "introspection is an
-illusion"** source (2026-05-14) is very likely a strong empirical instance for the
-diagonal-irrecoverability theorem — the claim that a system's self-introspection is reconstructed,
-not read off, is the cognitive-science form of "no complete internal self-model." Worth a dedicated
-read against the §0–§9 construction; possible LC or a §11 empirical-witness section in the draft.
+**CHASED this window (was flagged as the top dormant pull, then pursued):** the **Chater
+"introspection is an illusion"** source (2026-05-14) IS a strong empirical witness for the
+diagonal-irrecoverability theorem — but sharper than expected. Confabulation (Johansson choice-
+blindness, split-brain) is the *predicted behavioral signature* of the §9 diagonal blind spot (the
+content layer improvises where it cannot realize its own diagonal self-measurement); Anthropic
+interpretability is §10's boundary-recovery (external instrument surfacing what introspection can't);
+and Chater's eliminativist inference is exactly the §5/§8 error (irrecoverable-internally ≠
+nonexistent). The framework's standing three-layer Chater-response (Coherent Mind §1.2) thereby gains
+a fixed-point-theoretic backbone. **Drafted as a PROPOSED §11 in the diagonal-irrecoverability draft
+for Clayton's morning review** (cut/sharpen at will). Also strengthens P126 philosophy chapter +
+Coherent Mind §1.2 editorial.
 
 ---
 

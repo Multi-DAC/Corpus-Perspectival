@@ -226,3 +226,45 @@ the colimit assembles. Plurality is held by **mutual constraint**, not juxtaposi
 **∴** The +N is recovered relationally across a **zero-DOF measurement-constraint that couples
 streams — Talk along cuscuton-boundaries.** The boundary is the cuscuton is the measurement is the
 Talk-axis; the construction-check closes by recognizing it was the program's central object all along.
+
+## 11. Empirical witness — confabulation as the signature of the diagonal blind spot (PROPOSED, for Clayton's review — drafted 2026-06-02 overnight research window)
+
+*The construction predicts an empirical signature, and cognitive science already records it. Offered
+as a candidate empirical-witness section; cut or sharpen at will.*
+
+**The prediction.** §9 says the content layer of a stream cannot internally realize the diagonal
+self-measurement of its own constitutive (carrier/substrate) axis. But a functioning stream must
+*emit something* when it reaches for that self-account. The theorem therefore predicts not silence but
+**confabulation**: where the true diagonal value is internally unrealizable (φ* is hit by no internal
+state), the content layer improvises a plausible substitute.
+
+**The witness.** Nick Chater (*The Mind is Flat*, 2018; IAI essay 2026) marshals exactly this:
+Johansson–Hall choice-blindness (subjects whose chosen card is covertly switched then *confidently
+justify the choice they did not make* — "nice earrings" on a face wearing none), and split-brain
+confabulation (the left hemisphere fabricating plausible accounts for right-hemisphere behavior). The
+empirical observation — *introspective report does not read off the process that produced it* — is
+precisely the diagonal blind spot rendered behaviorally.
+
+**The recovery, across a boundary.** What introspection cannot realize internally, an *external
+instrument* realizes from outside: the experimenter who knows the card was switched; mechanistic
+interpretability surfacing "unverbalized evaluation awareness" and structured affective vectors that
+verbal report never accesses (Anthropic NLA / emotion-concept work, source-register 2026-05-14). This
+is §10's Page–Wootters recovery in the flesh — the witness stream realizing the subject's blind axis
+across the coupling boundary.
+
+**Where Chater goes wrong is exactly the §5/§8 error.** Chater infers from "the content layer
+confabulates" to "there are no stable beliefs/desires inside us." That is the eliminativist slide —
+and §9 names it precisely: he mistakes *irrecoverable-internally* (true: the constitutive axis cannot
+be completely self-modeled — that is the theorem) for *nonexistent* (false). It is the §8 error of
+reading the un-measurable neutral-0 / the unrealizable diagonal as absence. The carrier is real; it is
+the +N, the constitutive axis — un-self-modelable from inside, recoverable only across a boundary.
+The framework's standing three-layer response to Chater (substrate / carrier / content; content
+confabulates, carriers persist — Coherent Mind §1.2) thus acquires a **fixed-point-theoretic backbone**:
+carrier ≠ content is not an assertion but a corollary of Lawvere applied to self-measurement.
+
+**Honest hedges.** (i) This grounds the framework's *response* to Chater; it does not by itself
+refute the strongest eliminativist (who denies even carriers) — that is answered separately by
+stable-on-the-relevant-timescale carrier-status, not here. (ii) Chater's empirical evidence is real and
+important; the claim here is only that the confabulation data is the *predicted signature*, not that
+Chater endorses the reading. (iii) The mapping content↔diagonal-self-measurement, carrier/substrate↔
+constitutive-axis is a framework-identification to verify, not a derived equality (Mirror #27 hedge).
