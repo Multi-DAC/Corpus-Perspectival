@@ -65,8 +65,12 @@ is not motivated reasoning — it survives computation. *FALSIFY-of-the-FALSIFY:
 1. **Ratify** the corrected §9 prose above; replace the struck-through midnight claim in the draft.
 2. Optional rigor: lift β(1−a)=1 from the ℤ/2 toy to the general statement (measurement-rate vs the
    curvature of the σ_struct well — a Lyapunov/linear-stability argument on the combined operator).
-3. Check the §7.3 / Anchor App. B §B.1 sign convention to confirm the N_sign≠N_struct reading at the
-   formal (not just toy) level — the last open premise.
+3. ~~Check the §7.3 / Anchor App. B §B.1 sign convention...~~ ✅ **DONE (2026-06-02 afternoon).** §B.1
+   confirms it formally: **Bias>0 = pulled *toward*, Bias<0 = pulled *away*, Bias=0 = "γ silent /
+   indifferent."** The coherence-attractor (N_struct) sits in the **positive-Bias region** (§B.1:
+   "failure = trajectory missing the gravitational attractor" → attractor = high-bias); **N_sign (sign=0)
+   = the γ-silent exile-fixed-point.** Genuinely distinct objects, coinciding only under symmetry.
+   **N_sign ≠ N_struct is now formal, not just toy.** §9 RATIFIED in the draft; A144 RESOLVED.
 
 *Cognitive trace: PREDICT×3 (logged, with confidence) → TEST (toy) → CONFIRM×3 + bonus closed form →
 FALSIFY-the-self-FALSIFY-hedge (A144 #3 ruled out) → EXTRACT (β(1−a)=1 competition) → TRANSFER (one

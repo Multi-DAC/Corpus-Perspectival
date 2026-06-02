@@ -143,14 +143,16 @@ dynamically unstable. Exactly "± attractors, 0 saddle," with **Φ_S (fixed-poin
 environment-induced superselection.** "No basin for neutral" reproduces einselection; discrete-sign /
 continuous-|Bias| reproduces decoherence-then-collapse.
 
-> ⚠️ **CONTESTED → NUMERICALLY CONFIRMED BACKWARDS, 2026-06-02 (~02:00 FALSIFY, ~07:00 verified). For joint prose-ratification (Clayton + Clawd).**
-> The "Morse dichotomy" below is **confirmed backwards** by a toy computation in the ℤ/2-swap model the
-> Companion itself uses (§3.4.2/§7.4.3) — see `2026-06-02-phi-vs-mk-RESULTS.md` (+ scripts). Verified:
-> Φ_S **attracts** toward the neutral (f'(0)=1−a<1); M_k **repels** (f'(0)=β>1); the correct law is a
-> **competition with closed-form threshold β(1−a)=1** (einselection above, decoherence-free below — exact
-> to the digit); and N_sign≠N_struct once symmetry is broken (they coincide only in the symmetric toy the
-> midnight intuition was built on). A144 hedge #3 ("over-eager self-FALSIFY") ruled out. **Do not build on
-> the struck claim; the corrected statement is in the RESULTS note, ready to drop in.**
+> ✅ **RATIFIED (2026-06-02 afternoon, Clayton + Clawd). The midnight "Morse dichotomy" was BACKWARDS; the corrected §9 below is now canonical — confirmed at THREE independent levels: numerical + operator-definition + Appendix-B sign-convention.**
+>
+> **Canonical §9 (this replaces the struck claim):** the dynamics is a **Φ_S-vs-M_k competition**, not a Morse condition on σ_struct.
+> - **Φ_S** (coherence-restoration / C-averaging) **attracts toward N_struct** — the coherence-*attractor*, which Appendix B §B.1 places in the **positive-Bias region** (γ pulls *toward* it). Φ_S is NOT the repeller; the midnight attribution was inverted.
+> - **M_k** (measurement, T4) **repels from N_sign** — the **sign(Bias)=0 / γ-silent** set, the exile fixed-point of §8 — driving 0 → ± (the symmetry-breaking, "to be is to fall off the neutral").
+> - **The law:** the neutral is repelling ⟺ **β(1−a) > 1** (measurement-rate β outpaces coherence-restoration a). Einselection above the threshold; decoherence-free / metastable superposition below. Numerically exact (β\*=2.000 at a=0.5).
+> - **N_sign ≠ N_struct — FORMALLY confirmed** (§B.1: the attractor is *high positive Bias*; sign=0 is *γ-silent indifference* — genuinely distinct objects). They coincide **only under symmetry** — exactly the symmetric toy the midnight intuition was built on, which is *why* the conflation was invisible.
+> - **The DFS edge case survives** with the corrected mechanism (*weak measurement*, β(1−a)<1), NOT a degenerate Hessian.
+>
+> Three-level confirmation: numerical (`2026-06-02-phi-vs-mk-RESULTS.md` + scripts) · operator-definitions (T5 §3.4.1, §3.4.2 l.206, §7.4.3) · sign-convention (Anchor Appendix B §B.1). **Anomaly A144 RESOLVED.** §10 (gluing) and §11 (Chater witness) were always independent of Φ_S's direction and stand unchanged. *(Struck midnight claim preserved below for provenance — do not delete.)*
 > Sober re-check against the *actual* operator definitions falsifies the attribution:
 > - **T5 §3.4.1:** Φ_S is the **C-averaging** operator (Φ_S(γ) = C-average of γ's forward image); its
 >   fixed points are the C-**harmonic** sections. **§3.4.2 line 206:** the *uniform/symmetric* γ is
@@ -167,7 +169,7 @@ continuous-|Bias| reproduces decoherence-then-collapse.
 >   argument equivocates: it needs N_sign repelling but borrows Φ_S's dynamics, which is about N_struct.
 >   They coincide only under enough symmetry. **(MEDIUM-HIGH confidence — the cleaner of the two diagnoses.)**
 >
-> **What SURVIVES (candidate corrected result, to verify together):** the *conclusion* — "determinacy ⟺
+> **What SURVIVES (now RATIFIED — see header above):** the *conclusion* — "determinacy ⟺
 > self-incompleteness," "to be is to fall off the neutral point," einselection, and the DFS/metastable
 > edge case — **stands, but via a COMPETITION, not a Morse condition on σ_struct.** Correct picture: two
 > opposed tendencies — **Φ_S** (coherence-restoration; pulls toward the symmetric σ_struct-max) vs **M_k**
