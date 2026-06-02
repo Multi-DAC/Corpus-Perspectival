@@ -29,6 +29,31 @@ import torch
 
 
 # =============================================================================
+# Checkpoint + VecNormalize (fix: stock CheckpointCallback drops vecnorm stats,
+# so a killed run leaves unusable checkpoints — bit us on the 2026-06-01 W5 stall).
+# =============================================================================
+class CheckpointWithVecNormalize(BaseCallback):
+    """Saves both PPO policy and VecNormalize stats at every checkpoint."""
+    def __init__(self, save_freq, save_path, name_prefix, vec_env, verbose=0):
+        super().__init__(verbose)
+        self.save_freq = save_freq
+        self.save_path = Path(save_path)
+        self.name_prefix = name_prefix
+        self.vec_env = vec_env
+        self.save_path.mkdir(parents=True, exist_ok=True)
+        self._last_save = 0
+
+    def _on_step(self) -> bool:
+        if self.num_timesteps - self._last_save < self.save_freq:
+            return True
+        self._last_save = self.num_timesteps
+        ckpt_name = f'{self.name_prefix}_{self.num_timesteps}_steps'
+        self.model.save(str(self.save_path / ckpt_name))
+        self.vec_env.save(str(self.save_path / f'{ckpt_name}_vecnorm.pkl'))
+        return True
+
+
+# =============================================================================
 # F2. LogStdClampCallback
 # =============================================================================
 class LogStdClampCallback(BaseCallback):
@@ -164,10 +189,11 @@ def train(args):
     )
     print(f'  Model params: {sum(p.numel() for p in model.policy.parameters()):,}')
 
-    ckpt_cb = CheckpointCallback(
+    ckpt_cb = CheckpointWithVecNormalize(
         save_freq=max(args.save_every, 25_000) // args.n_envs,
         save_path=str(out_dir / 'checkpoints'),
         name_prefix='ppo_v3',
+        vec_env=train_envs,
     )
     logstd_cb = LogStdClampCallback(min_std=0.1, max_std=1.0, verbose=0)
     grad_cb = GradNormLoggerCallback(
