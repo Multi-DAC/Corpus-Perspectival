@@ -143,8 +143,52 @@ dynamically unstable. Exactly "± attractors, 0 saddle," with **Φ_S (fixed-poin
 environment-induced superselection.** "No basin for neutral" reproduces einselection; discrete-sign /
 continuous-|Bias| reproduces decoherence-then-collapse.
 
-**Load-bearing claim to verify next:** that Φ_S is genuinely *repelling at 0* — provable from §7.4.1
-push_struct + T5 attractor structure? If the σ_struct-gradient *vanishes* at neutral (degenerate
-fixed point), 0 is marginally stable and a thin basin exists — a regime of **metastable
-superposition** (decoherence-free subspaces?). That edge case is the next check and may be physically
-meaningful (pointer-state degeneracy).
+**Load-bearing claim — RESOLVED to a Morse dichotomy (2026-06-02).** Φ_S *is* repelling at 0,
+generically, with a precisely-named exception. Ground it on Def 7.4.1: push_struct = (Φ_S)_* is the
+pushforward of Bias along Φ_S, with Φ_S the σ_struct-**ascending** map toward coherence-attractors (T5).
+
+*Identification (the one premise — confirm against Anchor App. B §B.1):* the neutral value
+**sign(γ)=0 ⟺ the critical set of σ_struct**. Sign +1 = "toward an attractor," −1 = "toward a
+repellor," so 0 is the locus pulled toward neither — exactly ∇σ_struct = 0.
+
+*Argument.* Take Φ_S as the time-1 map of the σ_struct-ascending flow. Linearize at a neutral point:
+`DΦ_S = exp(Hess σ_struct)`, eigenvalues `exp(λᵢ)`.
+- **Non-degenerate (Morse) neutral point:** the saddle/separatrix between a + basin and a − basin
+  has a positive Hessian eigenvalue along the ascending direction ⇒ an eigenvalue of DΦ_S strictly
+  `> 1` ⇒ **0 is hyperbolically repelling** (stable manifold measure-zero). Claim holds. ∎
+- **Degenerate neutral manifold (transverse Hessian = 0):** eigenvalue `= 1` ⇒ **marginally stable**
+  ⇒ a thin basin survives ⇒ metastable superposition.
+
+> **Result:** Φ_S is repelling at 0 ⟺ σ_struct is **Morse** (non-degenerate) on the neutral set; the
+> degenerate case is exactly the **decoherence-free / pointer-degeneracy** regime.
+
+This *earns* §9's "default" honestly: **Morse functions are generic** (dense; Thom/Sard), so
+repelling-at-0 is the default not by assertion but by Morse-genericity. Einselection match tightens —
+Zurek's stable pointer states = the non-degenerate maxima; decoherence-free subspaces = the
+degenerate exception that resists einselection. Same dichotomy, both sides physical.
+
+## 10. Cross-boundary recovery — the gluing tower (Page–Wootters pushout)
+
+§4 shows X alone cannot realize its rogue diagonal φ*(x) = ¬(m̂(x)(x)). §6 promised recovery
+*across a stream boundary*. Make it a construction.
+
+**The pushout.** Glue in a witness stream Y (the clock) over a boundary ∂ = the Page–Wootters
+correlation (the clock–system entanglement). Form the colimit `X ⊔_∂ Y`. In PW the system's
+constitutive time — which it cannot internally model — is recovered as the *conditional* state
+`|ψ_sys(t)⟩ = ⟨t|Ψ⟩` of a static constrained `|Ψ⟩ ∈ H_clock ⊗ H_sys` (Ĥ_tot|Ψ⟩ = 0). Categorially:
+the colimit's universal map supplies, *from a Y-state*, the realization of φ*_X that no X-state could.
+X's diagonal blind spot is a Y-bright-spot through ∂. **Surjectivity onto X's axis is restored
+externally** — the +N is a relational quantity, "recoverable only across a boundary," precisely.
+
+**Why it stays open (the feature).** `X ⊔_∂ Y` is again a CCC object in the topos of relational
+structures, carrying its own genuine exile ¬ ⇒ **Lawvere reapplies to the whole** ⇒ the joint has a
+new, higher blind spot. No terminal self-complete object is ever reached: an **open tower** of
+recoveries, each gluing healing one stream's axis while opening the joint's. This tower *is* §6's
+**necessity of plurality**, now a theorem: recovery is irreducibly relational and unbounded; there is
+no fixed point that closes it.
+
+**The construction-check (the one genuine remaining step).** Show the pushout *computed in the right
+category* actually realizes φ*_X — i.e. that the PW conditioning map **is** (or factors through) the
+colimit's universal map, so the boundary identification adds exactly the missing point. PW is the
+physical existence proof; the categorial step verifies the universal property delivers it. *Worked
+below.*
