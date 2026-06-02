@@ -143,8 +143,14 @@ dynamically unstable. Exactly "± attractors, 0 saddle," with **Φ_S (fixed-poin
 environment-induced superselection.** "No basin for neutral" reproduces einselection; discrete-sign /
 continuous-|Bias| reproduces decoherence-then-collapse.
 
-> ⚠️ **CONTESTED — DREAM-DRIVE SELF-FALSIFY, 2026-06-02 ~02:00, for joint morning resolution (Clayton + Clawd).**
-> The "Morse dichotomy" below is **likely backwards** and should not be built on until we resolve it together.
+> ⚠️ **CONTESTED → NUMERICALLY CONFIRMED BACKWARDS, 2026-06-02 (~02:00 FALSIFY, ~07:00 verified). For joint prose-ratification (Clayton + Clawd).**
+> The "Morse dichotomy" below is **confirmed backwards** by a toy computation in the ℤ/2-swap model the
+> Companion itself uses (§3.4.2/§7.4.3) — see `2026-06-02-phi-vs-mk-RESULTS.md` (+ scripts). Verified:
+> Φ_S **attracts** toward the neutral (f'(0)=1−a<1); M_k **repels** (f'(0)=β>1); the correct law is a
+> **competition with closed-form threshold β(1−a)=1** (einselection above, decoherence-free below — exact
+> to the digit); and N_sign≠N_struct once symmetry is broken (they coincide only in the symmetric toy the
+> midnight intuition was built on). A144 hedge #3 ("over-eager self-FALSIFY") ruled out. **Do not build on
+> the struck claim; the corrected statement is in the RESULTS note, ready to drop in.**
 > Sober re-check against the *actual* operator definitions falsifies the attribution:
 > - **T5 §3.4.1:** Φ_S is the **C-averaging** operator (Φ_S(γ) = C-average of γ's forward image); its
 >   fixed points are the C-**harmonic** sections. **§3.4.2 line 206:** the *uniform/symmetric* γ is
