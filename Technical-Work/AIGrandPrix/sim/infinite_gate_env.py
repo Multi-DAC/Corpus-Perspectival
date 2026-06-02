@@ -273,6 +273,7 @@ class InfiniteGateEnv(gym.Env):
                  domain_rand_scale=0.15,
                  adaptive_curriculum=True,
                  ground_start_prob=0.0,   # fraction of episodes that start at ground rest
+                 perception_obs=False,    # W5: train on perception-grade obs (detector noise) not privileged
                  seed=None):
         super().__init__()
 
@@ -346,8 +347,14 @@ class InfiniteGateEnv(gym.Env):
         from train_ppo import CTBRActionWrapper, ImprovedObsWrapper
         
         self._ctbr = CTBRActionWrapper(self._base_env)
-        self._obs_wrapper = ImprovedObsWrapper(self._ctbr)
-        
+        if perception_obs:
+            # W5: train on perception-grade obs (W3-calibrated detector noise/dropout/latency on
+            # gate-derived terms; telemetry terms exact) so train-obs == deploy-obs.
+            from perception_obs import PerceptionObsWrapper
+            self._obs_wrapper = PerceptionObsWrapper(self._ctbr, randomize=True, seed=seed)
+        else:
+            self._obs_wrapper = ImprovedObsWrapper(self._ctbr)
+
         self.observation_space = self._obs_wrapper.observation_space
         self.action_space = self._obs_wrapper.action_space
         
