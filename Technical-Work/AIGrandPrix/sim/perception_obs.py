@@ -35,14 +35,16 @@ from drone_env_v2 import quat_rotate_np
 from train_ppo import ImprovedObsWrapper
 
 
-# Provisional detector error model (ranges = per-episode domain-randomization spans).
-# REPLACE with W3-measured values from the auto-labeled real-frame dataset.
+# W3-CALIBRATED detector error model (measured on real VQ1 frames, 2026-06-01; ranges =
+# per-episode domain-randomization spans around the measurements). See vq1_pilot/w3_*.
+# Headline W3 result: BEARING is reliable (~1–3°) everywhere; RANGE is the weak axis
+# (~1% when well-framed, 10–20%+ otherwise) — so direction is trusted, distance is noisy.
 DEFAULT_ERROR_MODEL = {
-    "bearing_sigma_rad": (0.005, 0.035),   # ~0.3°–2° angular error on gate direction
-    "range_sigma_frac":  (0.03, 0.15),     # 3%–15% fractional range error (PnP weak axis)
-    "fov_halfangle_rad": (0.70, 0.90),     # detection cone half-angle (VFoV 90° => ~0.785 rad)
-    "max_range_m":       (25.0, 45.0),     # beyond this the gate is too small to detect
-    "dropout_prob":      (0.0, 0.10),      # per-frame random missed detection
+    "bearing_sigma_rad": (0.010, 0.040),   # measured ~0.018 (≈1°); span ~0.6°–2.3°
+    "range_sigma_frac":  (0.10, 0.25),     # measured ~0.19 — PnP-from-square weak axis
+    "fov_halfangle_rad": (0.70, 0.90),     # VFoV 90° => ~0.785 rad
+    "max_range_m":       (24.0, 32.0),     # reliable detection falls off past ~25 m (W3 det%)
+    "dropout_prob":      (0.02, 0.12),     # measured ~0.05 when framed; rises when clipped/far
     "latency_steps":     (0, 2),           # perception lag in control steps
     "next_gate_extra_dropout": 0.5,        # the look-ahead gate is usually not in view
 }
