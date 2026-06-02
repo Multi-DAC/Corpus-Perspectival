@@ -35,7 +35,13 @@ def run_chunk(steps, resume):
     if resume:
         cmd += ['--resume', resume]
     print(f"\n{'='*64}\n[loop] chunk: {steps:,} steps | resume={resume}\n{'='*64}", flush=True)
-    return subprocess.run(cmd, cwd=str(HERE)).returncode
+    try:
+        # Per-chunk timeout: a 2M chunk runs ~13 min; 30 min catches a HANG (which would
+        # otherwise block the loop forever — subprocess.run kills the process on timeout).
+        return subprocess.run(cmd, cwd=str(HERE), timeout=1800).returncode
+    except subprocess.TimeoutExpired:
+        print("[loop] chunk TIMED OUT (>1800s) — killed; resuming from latest checkpoint", flush=True)
+        return 124
 
 
 def main():
