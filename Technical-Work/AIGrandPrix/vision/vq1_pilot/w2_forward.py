@@ -15,11 +15,13 @@ import threading
 # W1-calibrated command transform: measured_rate = G * sent  ->  send = rate_des / G
 G_RP, G_YAW = -2.56, -2.40
 HOVER = 0.26
-KP_ATT, KP_YAW = 3.0, 2.0          # attitude / heading P gains (rate response is ~unit after /G)
-KALT, KVZ = 0.020, 0.020           # altitude hold (thrust frac per m, per m/s)
-TILT = 0.16                        # forward tilt magnitude (rad, ~9 deg) -> gentle approach
-SPEED_CAP = 7.0                    # m/s horizontal; above this, level off
-DIST_STOP = 3.0                    # m to active gate -> consider it reached
+KP_ATT, KP_YAW = 3.0, 1.5          # attitude / heading P gains (3.0 flew a controlled approach in run 2)
+KALT, KVZ = 0.05, 0.06             # altitude hold — stronger (thrust frac per m, per m/s)
+TILT = 0.06                        # VERY gentle forward lean (~3.4 deg) -> slow creep, tiny vert loss
+SPEED_CAP = 2.5                    # m/s horizontal -> slow hover-forward
+ALT_BAND = 1.5                     # m: if altitude error exceeds this, level off & recover first
+DIST_STOP = 4.0
+H_TARGET = 8.0                     # working altitude (margin + ~level with the ~7m-high gate)
 
 
 def angles_from_q(q):
@@ -52,20 +54,21 @@ def control_step(st, tilt_sign, h_target):
     g = np.array(g, dtype=float)
     d = g[:2] - pos[:2]; dist = float(np.linalg.norm(g - pos)); hdist = float(np.linalg.norm(d))
     roll, pitch, yaw = angles_from_q(q)
-    # heading toward gate
-    psi_des = math.atan2(d[1], d[0])
-    yaw_rate_des = max(-1.5, min(1.5, KP_YAW * wrap(psi_des - yaw)))
-    # forward tilt toward gate, easing off when close or too fast
+    h = -pos[2]; vz_up = -vel[2]; alt_err = h_target - h
     hspeed = float(np.linalg.norm(vel[:2]))
-    ease = 0.0 if (hdist < 4.0 or hspeed > SPEED_CAP) else 1.0
+    # heading toward gate (gentle)
+    psi_des = math.atan2(d[1], d[0])
+    yaw_rate_des = max(-1.0, min(1.0, KP_YAW * wrap(psi_des - yaw)))
+    # ALTITUDE HAS PRIORITY: only lean forward when altitude is well-held, we're slow, and not close.
+    alt_ok = abs(alt_err) < ALT_BAND
+    ease = 1.0 if (alt_ok and hspeed < SPEED_CAP and hdist > 5.0) else 0.0
     pitch_des = tilt_sign * TILT * ease
-    pitch_rate_des = max(-1.5, min(1.5, KP_ATT * (pitch_des - pitch)))
-    roll_rate_des = max(-1.5, min(1.5, KP_ATT * (0.0 - roll)))
-    # altitude hold (h = -z up)
-    h = -pos[2]; vz_up = -vel[2]
-    thr = HOVER + KALT*(h_target - h) - KVZ*vz_up
-    thr = max(0.18, min(0.45, thr))
-    # calibrated transform: send = rate_des / G
+    pitch_rate_des = max(-1.2, min(1.2, KP_ATT * (pitch_des - pitch)))
+    roll_rate_des  = max(-1.2, min(1.2, KP_ATT * (0.0 - roll)))
+    # collective: feed-forward tilt compensation (HOVER/vertical-fraction) + altitude PD damping
+    vfrac = max(0.6, math.cos(roll) * math.cos(pitch))   # world-up component of body thrust
+    thr = HOVER / vfrac + KALT*alt_err - KVZ*vz_up
+    thr = max(0.18, min(0.42, thr))
     return thr, roll_rate_des/G_RP, pitch_rate_des/G_RP, yaw_rate_des/G_YAW, dist
 
 
@@ -113,21 +116,21 @@ def main():
     t_end = time.time() + 3.0
     while time.time() < t_end:
         cmd_to(conn, boot, 0.0, 0, 0, 0); time.sleep(dt)
-    # patient liftoff: apply thrust and WAIT for climb (countdown/hold can persist a moment).
-    print("liftoff (patient — waiting past any countdown hold)...", flush=True)
-    t_end = time.time() + 12.0; h_after = 0.0
+    # patient liftoff + climb with PURE THRUST, zero rates (proven stable — the attitude
+    # controller at release tumbled & dove). Gentle thrust just above hover to reach altitude.
+    print(f"liftoff + climb to ~{H_TARGET:.0f} m (pure thrust, stable)...", flush=True)
+    t_end = time.time() + 16.0; h = 0.0
     while time.time() < t_end:
-        cmd_to(conn, boot, 0.42, 0,0,0)
-        with st.lock: h_after = -st.pos[2]
-        if h_after > 2.0: break
+        cmd_to(conn, boot, 0.34, 0, 0, 0)   # net ~+3.6 m/s^2 up; no attitude commands
+        with st.lock: h = -st.pos[2]
+        if h > H_TARGET - 1.5: break
         time.sleep(dt)
-    if h_after < 1.0:
-        print(f"  WARNING: still on pad after 12s (h={h_after:.2f}) — commands not taking; abort.", flush=True)
+    if h < 1.0:
+        print(f"  WARNING: still on pad (h={h:.2f}) — commands not taking; abort.", flush=True)
         stop.set(); return
-    print(f"  airborne (h={h_after:.1f} m after {time.time()-(t_end-12.0):.1f}s).", flush=True)
-    # wait for gates (broadcast ~30s after race start); hold altitude meanwhile
-    with st.lock: h0 = -st.pos[2]
-    print(f"holding for gate broadcast (h0={h0:.1f} m)...", flush=True)
+    print(f"  at altitude (h={h:.1f} m); engaging attitude controller for creep.", flush=True)
+    h0 = H_TARGET   # hold the working altitude for probe + creep (not the instantaneous value)
+    print(f"holding for gate broadcast (target h={h0:.1f} m)...", flush=True)
     t_end = time.time() + 35.0
     while time.time() < t_end:
         with st.lock: have = st.num_gates > 0
@@ -148,14 +151,18 @@ def main():
     d1 = cur_dist()
     tilt_sign = +1 if (d0 and d1 and d1 < d0) else -1
     print(f"  dist1={d1} -> tilt_sign={tilt_sign}", flush=True)
-    # approach cruise (up to 20 s, stop when close)
-    print("approach...", flush=True)
-    t_end = time.time() + 20.0
+    # slow forward hover (altitude-priority): creep toward the gate while holding altitude
+    print("slow forward hover (altitude-priority)...", flush=True)
+    t_end = time.time() + 18.0; last_print = 0.0
     while time.time() < t_end:
         thr, rr, pr, yr, dist = control_step(st, tilt_sign, h0)
         cmd_to(conn, boot, thr, rr, pr, yr)
-        if dist is not None and dist < DIST_STOP:
-            print(f"  reached active gate (dist={dist:.1f}); continuing to next.", flush=True)
+        with st.lock: h = -st.pos[2]; sp = float(np.linalg.norm(st.vel[:2]))
+        if h < 1.0:
+            print(f"  altitude lost (h={h:.1f}m) — stopping early.", flush=True); break
+        if time.time() - last_print > 2.0:
+            dstr = f"{dist:5.1f}" if dist is not None else "  n/a"
+            print(f"  h={h:4.1f}m  dist={dstr}m  hspeed={sp:4.1f} m/s", flush=True); last_print = time.time()
         time.sleep(dt)
     stop.set(); time.sleep(0.5)
     with st.lock: ng = st.num_gates
