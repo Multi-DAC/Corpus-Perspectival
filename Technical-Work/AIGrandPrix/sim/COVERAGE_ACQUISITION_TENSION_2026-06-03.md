@@ -148,3 +148,23 @@ The original design trained A2 at a *fixed* `max_reckon_steps=2` (fallback 5). T
 
 **Honest scope of the sweep.** n=8, single seed, and — critically — these are all checkpoints that were *never trained to acquire*. The flatness describes *these policies'* total crutch-dependence; it does **not** predict whether gaze is *trainable* under the dial. That remains the A2 *training* arm. The sweep's job was to kill the "pick a gentle knee" plan, and it did: the knee isn't there, so the dial must be a curriculum.
 
+## A0 / A2 dial-arm RESULT — mechanism confirmed, payoff FALSIFIED (2026-06-03 Day 123 afternoon)
+
+Ran `train_gaze_dial.py`: **A2** = dial annealed `inf→20→10→5→2`; **A0** = control, dial pinned `inf`. Both warm-start the 80M teacher, RAW, fixed difficulty, lr=3e-5, 1M steps, **single seed**, in-loop deterministic eval at deploy(inf) + stress(2). Then a reckon-sweep on each arm's best-by-stress (750k) checkpoint.
+
+**In-loop (1M):** A2 deploy gates 2.75 / A0 2.00; A2 stress-gaze ~0.51 & in-view ~49% / A0 ~0.19 & ~29%; **stress gates both ~0.25** (the reckon=2 floor).
+
+**Reckon-sweep on the 750k bests (the metric that escapes the floor):**
+
+| gates/ep @ reckon | inf | 2 | 5 | 10 | 20 |
+|---|---|---|---|---|---|
+| **A2 (dial)** | 2.50 | 0.25 | 0.25 | 0.12 | 0.50 |
+| **A0 (control)** | 2.62 | 0.25 | **0.62** | **0.75** | 0.12 |
+| gaze-score A2 / A0 | .28/.02 | .53/.09 | .51/.12 | .56/.19 | .54/.21 |
+
+**Verdict (two halves, opposite signs):**
+1. **Mechanism CONFIRMED.** The dial grew gaze with **no gaze reward** — A2 looks ~3× more than the control at every stress level (gaze ~0.53 vs ~0.12; in-view ~50% vs ~25%), and its deploy gaze is positive-and-rising where the control's drifts *negative* (nose drifting away). The "missing gradient" the existing-checkpoint sweep couldn't find **does exist** and bounding the crutch surfaces it. P-A2's *surprising* half (gaze learnable from gate reward alone) holds.
+2. **Payoff FALSIFIED.** That looking did **not** convert to gates — and *worse*, at the gentle stress where the cliff stops flooring (reckon 5/10) the **control passes more gates** (0.62/0.75) than the dial arm (0.25/0.12). The dial-forced gaze came **unmoored from the goal**: it learned to point at the gate at the cost of flying through it (the quadrotor attitude↔thrust tension). Looking became an end in itself.
+
+**Implication / next.** The dial alone is **not sufficient** (revises the Day-123-morning P224 optimism). Gaze must be *coupled to gate-passing*, which re-opens the A1/A3 arms — but now correctly aimed: not "reward looking" (the dial already produces looking) but **reward looking-in-service-of-passing** (e.g. heading-align reward gated on gate-progress), and/or much longer training to let look+fly re-integrate. Single seed, 1M steps — confirm the FALSIFY at ≥3 seeds before treating it as settled, but the direction (control ≥ dial on gates) is clean enough to act on. Frozen-Anakin + odometry crutch remains the best *deploy* policy; this arm advanced the *understanding*, not the leaderboard.
+
