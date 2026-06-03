@@ -47,3 +47,9 @@ curriculum) HOLDS in the current env.
    whether to fold those settings forward.
 
 Tools added today: `eval_teacher.py` (privileged-obs eval). The raw-eval one-liner is in the daily log.
+
+## ✅ CONFIRMATION EVAL (n=50, seed=2026, 2026-06-02) — HOLDS
+gates/ep **10.96** (median 11, max 21, ≥1 gate 94%) · takeoff **100%** (50/50) · reward 1108 ·
+**maneuver-avg 81%** (chicane 98, climb 92, threading 90, spiral 88, gentle_arc 81, hard_turn 79,
+dive 78, hairpin 77, diagonal 77, sprint 72, speed_trap 64). The n=12 result was not a fluke —
+robust across 4× sample + fresh seed. **Teacher = 80M pilot, CONFIRMED. Proceed to distill harness.**
