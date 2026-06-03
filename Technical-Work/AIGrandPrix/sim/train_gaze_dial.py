@@ -39,8 +39,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE); sys.path.insert(0, str(Path(HERE).parent / "rl"))
 
 import torch
+import gymnasium as gym
 from infinite_gate_env import InfiniteGateEnv
 from perception_deadreckon import DeadReckonPerceptionObsWrapper
+from drone_env_v2 import quat_rotate_np
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
 from stable_baselines3.common.monitor import Monitor
@@ -175,8 +177,71 @@ class EvalGazeDial(BaseCallback):
         return True
 
 
+# ---------------------------------------------------------------- coupled gaze reward (A3)
+class CoupledGazeReward(gym.Wrapper):
+    """Gaze bonus that pays ONLY when looking-at-the-gate coincides with closing on it.
+
+    A2's finding (2026-06-03): the dial grows looking but UNMOORS it from flying — the policy
+    learns to point at the gate at the cost of passing it, so the control (no dial) out-flies it
+    at gentle stress. Fix: reward looking *in service of progress*, not looking per se.
+
+        bonus = weight * max(cos<cam_axis, bearing_to_gate>, 0) * max(progress_this_step, 0) * progress_scale
+
+    Staring while stalling or veering pays nothing (progress<=0 or align<=0). Only looking WHILE
+    advancing pays. weight=0.5 => a perfectly-aimed approach earns +50% of that step's progress
+    reward (env progress_scale=2.0). This makes gaze instrumental to passing by construction.
+    Active only when weight>0 (A3); A0/A2 leave it off and are byte-for-byte unchanged.
+    """
+    def __init__(self, env, weight=0.5, cam=None, progress_scale=2.0):
+        super().__init__(env)
+        self._base = env._base_env
+        self._w = float(weight)
+        c = np.asarray(cam if cam is not None else CAM_NOSE_TILT, float)
+        self._cam = c / (np.linalg.norm(c) + 1e-9)
+        self._psc = float(progress_scale)
+        self._prev_d = None
+        self._prev_g = None
+
+    def __getattr__(self, name):
+        # forward everything (incl. underscore attrs like _obs_wrapper) to the wrapped env,
+        # overriding gymnasium.Wrapper's underscore-blocking so the dial hook reaches through.
+        if name == "env":
+            raise AttributeError(name)
+        return getattr(self.env, name)
+
+    def _cur(self):
+        g = self._base.current_gate
+        if g >= len(self._base.gates):
+            return None, None, g
+        rel = np.asarray(self._base.gates[g], float) - self._base.state[0:3]
+        return float(np.linalg.norm(rel)), rel, g
+
+    def reset(self, **kw):
+        out = self.env.reset(**kw)
+        self._prev_d, _, self._prev_g = self._cur()
+        return out
+
+    def step(self, action):
+        obs, reward, term, trunc, info = self.env.step(action)
+        if self._w > 0:
+            d, rel, g = self._cur()
+            if d is not None and d > 1e-6:
+                if g == self._prev_g and self._prev_d is not None:
+                    progress = self._prev_d - d
+                    cam_w = quat_rotate_np(self._base.state[6:10], self._cam)
+                    cam_w = cam_w / (np.linalg.norm(cam_w) + 1e-9)
+                    align = float(np.dot(cam_w, rel / d))
+                    bonus = self._w * max(align, 0.0) * max(progress, 0.0) * self._psc
+                    reward = reward + bonus
+                    info["gaze_bonus"] = bonus
+                self._prev_d, self._prev_g = d, g
+            else:
+                self._prev_d, self._prev_g = d, g
+        return obs, reward, term, trunc, info
+
+
 # ---------------------------------------------------------------- env
-def make_env(seed, ground_prob, init_reckon):
+def make_env(seed, ground_prob, init_reckon, gaze_reward_weight=0.0):
     def _init():
         env = InfiniteGateEnv(gate_radius=0.75, max_steps=30000, dt=0.002, substeps=1,
                               domain_rand=True, domain_rand_scale=0.15,
@@ -186,6 +251,8 @@ def make_env(seed, ground_prob, init_reckon):
             env._ctbr, cam_axis_body=CAM_NOSE_TILT, deadreckon=True,
             max_reckon_steps=init_reckon, randomize=True, seed=seed + 7)
         env.observation_space = env._obs_wrapper.observation_space
+        if gaze_reward_weight > 0:
+            env = CoupledGazeReward(env, weight=gaze_reward_weight, cam=CAM_NOSE_TILT)
         return Monitor(env)
     return _init
 
@@ -198,6 +265,9 @@ def main():
     p.add_argument("--lr", type=float, default=3e-5)                 # gentle (1e-4 drifted gaze1)
     p.add_argument("--save-every", type=int, default=250_000)
     p.add_argument("--eval-episodes", type=int, default=8)
+    p.add_argument("--gaze-reward-weight", type=float, default=0.0,
+                   help="A3: couple looking to progress. bonus = w*max(align,0)*max(progress,0)*2.0. "
+                        "0 = off (A0/A2 unchanged); 0.5 = aimed approach earns +50%% of progress reward.")
     p.add_argument("--tag", default="a2")
     p.add_argument("--dial-schedule", default=DEFAULT_SCHEDULE,
                    help="comma 'value:frac' phases; 'inf'=None. A0 control = 'inf:0'.")
@@ -221,11 +291,14 @@ def main():
     print(f"  warm-start: {None if args.scratch else os.path.basename(args.warmstart)}  "
           f"lr={args.lr}  steps={args.total_steps:,}")
     print(f"  dial schedule: {sched}  (init reckon = {'inf' if init_reckon is None else init_reckon})")
+    print(f"  gaze-reward-weight: {args.gaze_reward_weight}  "
+          f"({'COUPLED gaze reward ON (A3)' if args.gaze_reward_weight > 0 else 'off (A0/A2)'})")
     if not args.scratch and os.path.abspath(args.warmstart) != os.path.abspath(TEACHER):
         print("  WARNING: non-default warm-start — if VecNormalize-trained, obs will MISMATCH this "
               "RAW env. Validated path is the RAW 80M teacher.", flush=True)
 
-    venv = DummyVecEnv([make_env(seed=i * 42, ground_prob=args.ground_prob, init_reckon=init_reckon)
+    venv = DummyVecEnv([make_env(seed=i * 42, ground_prob=args.ground_prob, init_reckon=init_reckon,
+                                 gaze_reward_weight=args.gaze_reward_weight)
                         for i in range(args.n_envs)])
 
     if args.scratch:
