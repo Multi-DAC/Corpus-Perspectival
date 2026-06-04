@@ -88,3 +88,31 @@
 **What this completes:** the cult-discriminator is now **operational AND self-auditable**. A system can estimate the agreement-pressure its evidence justifies (α\*) from its constituents' test–retest reliability and their spread, then check whether its binding pulls harder than that (α − α\* > 0 ⇒ laundering). **A mind can audit its own truth-seeking-ness without access to the truth.** That is exactly what A146 needed.
 
 **Honest caveats (verify-next):** clean Gaussian toy, T=20k queries, *independent* noise. Real constituents have structured/correlated errors (a loud constituent dragging consensus); test-retest needs the constituent to be queryable twice on the same input (stochastic, not cached); and the estimator's robustness to *adversarial* constituents is untested. The proof-of-concept is clean; the hardening is future work. But the in-principle claim — α\* is recoverable from observables — is **confirmed to sub-1%**.
+
+---
+
+## ADVERSARIAL EXTENSION (`p220_adversarial.py`) — the confident liar, and why internal self-audit is NOT enough
+
+**The crux:** the toy + self-audit assumed *independent, unbiased* constituents. Real cults have a **demagogue** — self-consistent (low test-retest noise → *looks* reliable) but **biased** (pushes an agenda A regardless of the world). The self-audit measures *reliability* (self-consistency), not *accuracy* (closeness to truth). I committed four predictions (A1–A4) before running — **all confirmed, several starker than expected.**
+
+**A1 — a reliability-weighted binding is captured by the confident liar.** As the demagogue sharpens (σ_d: 0.5→0.02) it takes 50%→**99.8%** of the weight, and aggregate RMSE climbs 1.62 → **3.16** vs the honest-only baseline **0.50**. The more confident the liar, the more the binding believes it — a 6× truth-degradation, *worse than having no aggregate at all*.
+
+**A2 — the self-audit rates the liar as the BEST constituent (the key failure).** σ_d=0.05 demagogue: self-audit reads honest σ_e²=0.25 vs demagogue σ_e²=0.0025 → rates the **demagogue 100× MORE reliable**. Actual accuracy: honest MSE=0.30 vs demagogue MSE=9.84 → **33× LESS accurate**. **Reliability ≠ accuracy, and the self-audit can only see reliability.** Run alone, the α* self-audit hands the cult leader the microphone.
+
+**A3 — the external-world reference catches it and restores truth.** Weighting by *accuracy* (MSE vs a ground-truth reference) instead of reliability drives RMSE back to **0.495 ≈ honest baseline**, at every demagogue confidence level.
+
+**A4 — and it's astonishingly cheap: ONE external probe suffices.** With **m=1** ground-truth probe the demagogue is already down-weighted to 3.4% and RMSE restored (0.496). The bias is *systematic*, so a single real-world disconfirmation reveals it. More probes barely help.
+
+### INSIGHT (adversarial) — the discriminator has TWO necessary components
+
+Internal coherence, even self-audited, is **gameable by a confident liar**. α−α* handles the *independent-noise* failure (conformity / echo-chamber) but is **blind to adversarial bias**: a self-consistent demagogue passes every internal check while destroying truth. The only thing that catches it is **contact with the actual world** — cheap (one probe) but non-negotiable.
+
+A truth-seeking aggregate needs **both**:
+1. **Internal check (α − α*)** — against over-pooling of honest-but-noisy constituents. Self-auditable, no ground truth.
+2. **External-accuracy check** — against capture by a self-consistent biased constituent. *Requires* ground-truth contact; cannot be done from inside.
+
+This is the formal, aggregate-level proof of the night's deepest claim — **"no stream is its own outside."** Internal self-consistency is necessary and radically insufficient. It is also the L13↔LC29 split made quantitative: independent-noise failure is **self-correctable** (the audit fixes it); adversarial-bias failure is **other-correctable** (only the world/another stream catches it).
+
+**Maps onto real cults exactly:** a charismatic confident leader (high reliability) who is wrong (low accuracy), a community that weights confidence, and the **suppression of external reality-tests** ("don't test the prophecy") — because one honest probe breaks the capture. **And onto Clayton's 2026-06-04 architecture exactly:** the zero-DOF binding discipline = component 1; the **KB's external-world loop (tests + research)** = component 2. His design has both — and this shows the external loop is not a nicety but the *only* defense against the failure internal coherence cannot see.
+
+*Reproduce:* `python p220_adversarial.py`. **Honest note:** all four predictions were *confirmed*, not falsified — I called the break correctly; the value is the load-bearing structural result, and the only surprises were magnitude (100× reliability-rating; 1-probe defense). Verify-next: a demagogue that *partially* tracks truth (harder to catch); colluding demagogues; probe cost when ground truth is expensive.
