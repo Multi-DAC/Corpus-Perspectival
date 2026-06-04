@@ -506,7 +506,29 @@ class InfiniteGateEnv(gym.Env):
         self._base_env.n_gates = len(self.gates)
         self._base_env.gate_orientations = list(self.gate_orientations)
         self._base_env.initial_position = init_pos.copy()
-        
+
+        # Spawn ATTITUDE (2026-06-03 fix). Training previously spawned LEVEL + facing +X
+        # (identity quat), but the real VQ1 drone spawns FACING the gate and ~18deg tilted on
+        # the pad — the level-only training froze on the tilted start (STARTPOSE_FREEZE finding).
+        # Fix: face gate 0 (yaw), and on ground-starts add a random +/-20deg pitch/roll tilt so
+        # the policy is robust to the pad attitude. Mid-air starts stay level-but-gate-facing.
+        d0 = self.gates[0] - init_pos
+        yaw = float(np.arctan2(d0[1], d0[0]))
+        if getattr(self, 'ground_start', False):
+            pitch = float(self.rng.uniform(-0.35, 0.35))   # +/-20 deg
+            roll = float(self.rng.uniform(-0.35, 0.35))
+        else:
+            pitch = 0.0; roll = 0.0
+        cy, sy = np.cos(yaw / 2), np.sin(yaw / 2)
+        cp, sp = np.cos(pitch / 2), np.sin(pitch / 2)
+        cr, sr = np.cos(roll / 2), np.sin(roll / 2)
+        self._base_env.initial_attitude = np.array([      # ZYX yaw-pitch-roll -> [w,x,y,z]
+            cr * cp * cy + sr * sp * sy,
+            sr * cp * cy - cr * sp * sy,
+            cr * sp * cy + sr * cp * sy,
+            cr * cp * sy - sr * sp * cy,
+        ], dtype=float)
+
         obs, info = self._obs_wrapper.reset(**kwargs)
         return obs, info
     

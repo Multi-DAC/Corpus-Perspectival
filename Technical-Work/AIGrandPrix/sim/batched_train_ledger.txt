@@ -1,0 +1,472 @@
+[2026-06-03 02:44:05] === batched trainer start (from batch 0, total 0, target 200,000,000) ===
+[2026-06-03 02:44:05] batch 1 START (resume=scratch)
+[2026-06-03 02:56:25] === batched trainer start (from batch 0, total 0, target 200,000,000) ===
+[2026-06-03 02:56:25] batch 1 START (resume=scratch)
+[2026-06-03 03:32:17]   ppo_v3_1250016_steps.zip: gates=0.10 takeoff=70%
+[2026-06-03 03:32:24]   ppo_v3_1562520_steps.zip: gates=0.20 takeoff=80%
+[2026-06-03 03:32:30]   ppo_v3_1875024_steps.zip: gates=0.10 takeoff=40%
+[2026-06-03 03:32:37]   ppo_v3_2187528_steps.zip: gates=0.00 takeoff=20%
+[2026-06-03 03:32:43]   ppo_v3_2500032_steps.zip: gates=0.00 takeoff=60%
+[2026-06-03 03:32:49]   ppo_v3_2812536_steps.zip: gates=0.20 takeoff=40%
+[2026-06-03 03:32:56]   ppo_v3_3125040_steps.zip: gates=0.20 takeoff=40%
+[2026-06-03 03:33:02]   ppo_v3_312504_steps.zip: gates=0.00 takeoff=50%
+[2026-06-03 03:33:15]   ppo_v3_3437544_steps.zip: gates=0.90 takeoff=60%
+[2026-06-03 03:33:35]   ppo_v3_3750048_steps.zip: gates=2.00 takeoff=70%
+[2026-06-03 03:34:05]   ppo_v3_4062552_steps.zip: gates=4.70 takeoff=60%
+[2026-06-03 03:34:46]   ppo_v3_4375056_steps.zip: gates=7.50 takeoff=90%
+[2026-06-03 03:35:02]   ppo_v3_4687560_steps.zip: gates=2.10 takeoff=90%
+[2026-06-03 03:35:16]   ppo_v3_5000064_steps.zip: gates=2.20 takeoff=50%
+[2026-06-03 03:35:24]   ppo_v3_625008_steps.zip: gates=0.00 takeoff=80%
+[2026-06-03 03:35:31]   ppo_v3_937512_steps.zip: gates=0.20 takeoff=100%
+[2026-06-03 03:35:31] batch 1 BEST -> ppo_v3_4375056_steps.zip (gates=7.50)
+[2026-06-03 03:35:31]   state: batch=1 best=ppo_v3_4375056_steps.zip total=5,000,000
+[2026-06-03 03:35:31] batch 2 START (resume=ppo_v3_4375056_steps.zip)
+[2026-06-03 04:10:44]   ppo_v3_1250016_steps.zip: gates=11.80 takeoff=80%
+[2026-06-03 04:11:19]   ppo_v3_1562520_steps.zip: gates=9.30 takeoff=90%
+[2026-06-03 04:11:49]   ppo_v3_1875024_steps.zip: gates=8.50 takeoff=80%
+[2026-06-03 04:12:28]   ppo_v3_2187528_steps.zip: gates=10.90 takeoff=70%
+[2026-06-03 04:13:16]   ppo_v3_2500032_steps.zip: gates=15.90 takeoff=100%
+[2026-06-03 04:13:36]   ppo_v3_2812536_steps.zip: gates=4.60 takeoff=80%
+[2026-06-03 04:14:07]   ppo_v3_3125040_steps.zip: gates=8.30 takeoff=90%
+[2026-06-03 04:14:49]   ppo_v3_312504_steps.zip: gates=8.80 takeoff=80%
+[2026-06-03 04:15:14]   ppo_v3_3437544_steps.zip: gates=7.10 takeoff=80%
+[2026-06-03 04:15:48]   ppo_v3_3750048_steps.zip: gates=10.60 takeoff=70%
+[2026-06-03 04:16:18]   ppo_v3_4062552_steps.zip: gates=8.20 takeoff=80%
+[2026-06-03 04:16:46]   ppo_v3_4375056_steps.zip: gates=8.90 takeoff=80%
+[2026-06-03 04:17:43]   ppo_v3_4687560_steps.zip: gates=18.90 takeoff=80%
+[2026-06-03 04:18:20]   ppo_v3_5000064_steps.zip: gates=12.40 takeoff=100%
+[2026-06-03 04:18:56]   ppo_v3_625008_steps.zip: gates=7.30 takeoff=80%
+[2026-06-03 04:19:34]   ppo_v3_937512_steps.zip: gates=9.60 takeoff=100%
+[2026-06-03 04:19:34] batch 2 BEST -> ppo_v3_4687560_steps.zip (gates=18.90)
+[2026-06-03 04:19:34]   state: batch=2 best=ppo_v3_4687560_steps.zip total=10,000,000
+[2026-06-03 04:19:34] batch 3 START (resume=ppo_v3_4687560_steps.zip)
+[2026-06-03 04:54:40]   ppo_v3_1250016_steps.zip: gates=8.00 takeoff=50%
+[2026-06-03 04:55:06]   ppo_v3_1562520_steps.zip: gates=8.10 takeoff=50%
+[2026-06-03 04:55:30]   ppo_v3_1875024_steps.zip: gates=7.90 takeoff=70%
+[2026-06-03 04:56:07]   ppo_v3_2187528_steps.zip: gates=13.10 takeoff=80%
+[2026-06-03 04:56:38]   ppo_v3_2500032_steps.zip: gates=11.00 takeoff=40%
+[2026-06-03 04:56:53]   ppo_v3_2812536_steps.zip: gates=4.60 takeoff=40%
+[2026-06-03 04:57:04]   ppo_v3_3125040_steps.zip: gates=2.90 takeoff=40%
+[2026-06-03 04:57:48]   ppo_v3_312504_steps.zip: gates=15.60 takeoff=60%
+[2026-06-03 04:58:06]   ppo_v3_3437544_steps.zip: gates=5.10 takeoff=60%
+[2026-06-03 04:58:41]   ppo_v3_3750048_steps.zip: gates=12.80 takeoff=90%
+[2026-06-03 04:59:11]   ppo_v3_4062552_steps.zip: gates=10.00 takeoff=90%
+[2026-06-03 04:59:47]   ppo_v3_4375056_steps.zip: gates=14.30 takeoff=80%
+[2026-06-03 05:00:29]   ppo_v3_4687560_steps.zip: gates=14.10 takeoff=90%
+[2026-06-03 05:01:06]   ppo_v3_5000064_steps.zip: gates=12.60 takeoff=100%
+[2026-06-03 05:01:23]   ppo_v3_625008_steps.zip: gates=4.70 takeoff=40%
+[2026-06-03 05:01:58]   ppo_v3_937512_steps.zip: gates=11.70 takeoff=60%
+[2026-06-03 05:01:58] batch 3 BEST -> ppo_v3_312504_steps.zip (gates=15.60)
+[2026-06-03 05:01:58]   state: batch=3 best=ppo_v3_312504_steps.zip total=15,000,000
+[2026-06-03 05:01:58] batch 4 START (resume=ppo_v3_312504_steps.zip)
+[2026-06-03 05:37:32]   ppo_v3_1250016_steps.zip: gates=16.00 takeoff=70%
+[2026-06-03 05:38:09]   ppo_v3_1562520_steps.zip: gates=11.30 takeoff=90%
+[2026-06-03 05:38:58]   ppo_v3_1875024_steps.zip: gates=16.50 takeoff=80%
+[2026-06-03 05:39:35]   ppo_v3_2187528_steps.zip: gates=11.60 takeoff=90%
+[2026-06-03 05:40:00]   ppo_v3_2500032_steps.zip: gates=8.40 takeoff=50%
+[2026-06-03 05:40:32]   ppo_v3_2812536_steps.zip: gates=10.00 takeoff=80%
+[2026-06-03 05:40:47]   ppo_v3_3125040_steps.zip: gates=5.00 takeoff=40%
+[2026-06-03 05:41:24]   ppo_v3_312504_steps.zip: gates=11.20 takeoff=80%
+[2026-06-03 05:42:02]   ppo_v3_3437544_steps.zip: gates=13.60 takeoff=70%
+[2026-06-03 05:42:24]   ppo_v3_3750048_steps.zip: gates=8.00 takeoff=70%
+[2026-06-03 05:42:57]   ppo_v3_4062552_steps.zip: gates=11.60 takeoff=40%
+[2026-06-03 05:43:24]   ppo_v3_4375056_steps.zip: gates=9.30 takeoff=50%
+[2026-06-03 05:44:02]   ppo_v3_4687560_steps.zip: gates=13.20 takeoff=70%
+[2026-06-03 05:44:22]   ppo_v3_5000064_steps.zip: gates=6.50 takeoff=30%
+[2026-06-03 05:44:47]   ppo_v3_625008_steps.zip: gates=7.70 takeoff=60%
+[2026-06-03 05:45:25]   ppo_v3_937512_steps.zip: gates=12.60 takeoff=70%
+[2026-06-03 05:45:25] batch 4 BEST -> ppo_v3_1875024_steps.zip (gates=16.50)
+[2026-06-03 05:45:25]   state: batch=4 best=ppo_v3_1875024_steps.zip total=20,000,000
+[2026-06-03 05:45:25] batch 5 START (resume=ppo_v3_1875024_steps.zip)
+[2026-06-03 06:21:40]   ppo_v3_1250016_steps.zip: gates=15.30 takeoff=90%
+[2026-06-03 06:22:19]   ppo_v3_1562520_steps.zip: gates=12.80 takeoff=90%
+[2026-06-03 06:22:44]   ppo_v3_1875024_steps.zip: gates=8.70 takeoff=70%
+[2026-06-03 06:23:20]   ppo_v3_2187528_steps.zip: gates=11.60 takeoff=60%
+[2026-06-03 06:23:55]   ppo_v3_2500032_steps.zip: gates=10.90 takeoff=80%
+[2026-06-03 06:24:36]   ppo_v3_2812536_steps.zip: gates=14.30 takeoff=100%
+[2026-06-03 06:25:08]   ppo_v3_3125040_steps.zip: gates=10.80 takeoff=70%
+[2026-06-03 06:25:48]   ppo_v3_312504_steps.zip: gates=13.00 takeoff=90%
+[2026-06-03 06:26:12]   ppo_v3_3437544_steps.zip: gates=7.60 takeoff=60%
+[2026-06-03 06:26:31]   ppo_v3_3750048_steps.zip: gates=5.60 takeoff=50%
+[2026-06-03 06:26:56]   ppo_v3_4062552_steps.zip: gates=7.90 takeoff=50%
+[2026-06-03 06:27:14]   ppo_v3_4375056_steps.zip: gates=5.90 takeoff=40%
+[2026-06-03 06:27:32]   ppo_v3_4687560_steps.zip: gates=5.30 takeoff=40%
+[2026-06-03 06:27:44]   ppo_v3_5000064_steps.zip: gates=2.60 takeoff=20%
+[2026-06-03 06:28:36]   ppo_v3_625008_steps.zip: gates=17.20 takeoff=100%
+[2026-06-03 06:29:13]   ppo_v3_937512_steps.zip: gates=12.90 takeoff=70%
+[2026-06-03 06:29:13] batch 5 BEST -> ppo_v3_625008_steps.zip (gates=17.20)
+[2026-06-03 06:29:13]   state: batch=5 best=ppo_v3_625008_steps.zip total=25,000,000
+[2026-06-03 06:29:13] batch 6 START (resume=ppo_v3_625008_steps.zip)
+[2026-06-03 07:05:32]   ppo_v3_1250016_steps.zip: gates=11.00 takeoff=70%
+[2026-06-03 07:05:58]   ppo_v3_1562520_steps.zip: gates=8.20 takeoff=70%
+[2026-06-03 07:06:27]   ppo_v3_1875024_steps.zip: gates=10.60 takeoff=40%
+[2026-06-03 07:07:16]   ppo_v3_2187528_steps.zip: gates=18.60 takeoff=80%
+[2026-06-03 07:07:42]   ppo_v3_2500032_steps.zip: gates=8.40 takeoff=60%
+[2026-06-03 07:08:23]   ppo_v3_2812536_steps.zip: gates=14.20 takeoff=70%
+[2026-06-03 07:09:02]   ppo_v3_3125040_steps.zip: gates=14.30 takeoff=90%
+[2026-06-03 07:09:45]   ppo_v3_312504_steps.zip: gates=14.30 takeoff=100%
+[2026-06-03 07:10:17]   ppo_v3_3437544_steps.zip: gates=11.20 takeoff=70%
+[2026-06-03 07:10:42]   ppo_v3_3750048_steps.zip: gates=8.10 takeoff=80%
+[2026-06-03 07:11:16]   ppo_v3_4062552_steps.zip: gates=12.70 takeoff=80%
+[2026-06-03 07:11:48]   ppo_v3_4375056_steps.zip: gates=10.50 takeoff=50%
+[2026-06-03 07:12:14]   ppo_v3_4687560_steps.zip: gates=8.70 takeoff=70%
+[2026-06-03 07:13:07]   ppo_v3_5000064_steps.zip: gates=14.20 takeoff=70%
+[2026-06-03 07:14:03]   ppo_v3_625008_steps.zip: gates=11.90 takeoff=100%
+[2026-06-03 07:14:48]   ppo_v3_937512_steps.zip: gates=9.50 takeoff=70%
+[2026-06-03 07:14:48] batch 6 BEST -> ppo_v3_2187528_steps.zip (gates=18.60)
+[2026-06-03 07:14:48]   state: batch=6 best=ppo_v3_2187528_steps.zip total=30,000,000
+[2026-06-03 07:14:48] batch 7 START (resume=ppo_v3_2187528_steps.zip)
+[2026-06-03 07:51:08]   ppo_v3_1250016_steps.zip: gates=9.20 takeoff=40%
+[2026-06-03 07:51:34]   ppo_v3_1562520_steps.zip: gates=8.80 takeoff=60%
+[2026-06-03 07:51:52]   ppo_v3_1875024_steps.zip: gates=5.80 takeoff=40%
+[2026-06-03 07:52:14]   ppo_v3_2187528_steps.zip: gates=6.80 takeoff=90%
+[2026-06-03 07:52:44]   ppo_v3_2500032_steps.zip: gates=8.40 takeoff=60%
+[2026-06-03 07:53:23]   ppo_v3_2812536_steps.zip: gates=14.50 takeoff=90%
+[2026-06-03 07:53:58]   ppo_v3_3125040_steps.zip: gates=11.60 takeoff=80%
+[2026-06-03 07:54:22]   ppo_v3_312504_steps.zip: gates=7.80 takeoff=60%
+[2026-06-03 07:54:55]   ppo_v3_3437544_steps.zip: gates=12.10 takeoff=80%
+[2026-06-03 07:55:29]   ppo_v3_3750048_steps.zip: gates=11.60 takeoff=80%
+[2026-06-03 07:56:12]   ppo_v3_4062552_steps.zip: gates=15.20 takeoff=90%
+[2026-06-03 07:56:37]   ppo_v3_4375056_steps.zip: gates=8.80 takeoff=60%
+[2026-06-03 07:57:11]   ppo_v3_4687560_steps.zip: gates=10.80 takeoff=90%
+[2026-06-03 07:57:51]   ppo_v3_5000064_steps.zip: gates=14.20 takeoff=90%
+[2026-06-03 07:58:27]   ppo_v3_625008_steps.zip: gates=13.40 takeoff=80%
+[2026-06-03 07:59:09]   ppo_v3_937512_steps.zip: gates=14.60 takeoff=80%
+[2026-06-03 07:59:09] batch 7 BEST -> ppo_v3_4062552_steps.zip (gates=15.20)
+[2026-06-03 07:59:09]   state: batch=7 best=ppo_v3_4062552_steps.zip total=35,000,000
+[2026-06-03 07:59:09] batch 8 START (resume=ppo_v3_4062552_steps.zip)
+[2026-06-03 08:35:39]   ppo_v3_1250016_steps.zip: gates=17.90 takeoff=100%
+[2026-06-03 08:36:14]   ppo_v3_1562520_steps.zip: gates=12.00 takeoff=100%
+[2026-06-03 08:36:33]   ppo_v3_1875024_steps.zip: gates=6.90 takeoff=90%
+[2026-06-03 08:37:04]   ppo_v3_2187528_steps.zip: gates=10.20 takeoff=80%
+[2026-06-03 08:37:36]   ppo_v3_2500032_steps.zip: gates=11.70 takeoff=90%
+[2026-06-03 08:38:19]   ppo_v3_2812536_steps.zip: gates=15.80 takeoff=90%
+[2026-06-03 08:38:54]   ppo_v3_3125040_steps.zip: gates=11.80 takeoff=90%
+[2026-06-03 08:39:21]   ppo_v3_312504_steps.zip: gates=8.60 takeoff=80%
+[2026-06-03 08:39:53]   ppo_v3_3437544_steps.zip: gates=10.90 takeoff=100%
+[2026-06-03 08:40:31]   ppo_v3_3750048_steps.zip: gates=14.10 takeoff=90%
+[2026-06-03 08:41:03]   ppo_v3_4062552_steps.zip: gates=12.00 takeoff=70%
+[2026-06-03 08:41:27]   ppo_v3_4375056_steps.zip: gates=8.40 takeoff=60%
+[2026-06-03 08:42:01]   ppo_v3_4687560_steps.zip: gates=12.20 takeoff=100%
+[2026-06-03 08:42:34]   ppo_v3_5000064_steps.zip: gates=12.00 takeoff=90%
+[2026-06-03 08:43:00]   ppo_v3_625008_steps.zip: gates=9.00 takeoff=50%
+[2026-06-03 08:43:35]   ppo_v3_937512_steps.zip: gates=11.40 takeoff=80%
+[2026-06-03 08:43:35] batch 8 BEST -> ppo_v3_1250016_steps.zip (gates=17.90)
+[2026-06-03 08:43:35]   state: batch=8 best=ppo_v3_1250016_steps.zip total=40,000,000
+[2026-06-03 08:43:35] batch 9 START (resume=ppo_v3_1250016_steps.zip)
+[2026-06-03 09:19:50]   ppo_v3_1250016_steps.zip: gates=8.50 takeoff=60%
+[2026-06-03 09:20:21]   ppo_v3_1562520_steps.zip: gates=10.20 takeoff=90%
+[2026-06-03 09:21:04]   ppo_v3_1875024_steps.zip: gates=13.90 takeoff=100%
+[2026-06-03 09:21:39]   ppo_v3_2187528_steps.zip: gates=11.50 takeoff=80%
+[2026-06-03 09:22:18]   ppo_v3_2500032_steps.zip: gates=13.30 takeoff=90%
+[2026-06-03 09:22:52]   ppo_v3_2812536_steps.zip: gates=11.10 takeoff=80%
+[2026-06-03 09:23:21]   ppo_v3_3125040_steps.zip: gates=9.50 takeoff=100%
+[2026-06-03 09:24:00]   ppo_v3_312504_steps.zip: gates=14.20 takeoff=80%
+[2026-06-03 09:24:36]   ppo_v3_3437544_steps.zip: gates=11.90 takeoff=90%
+[2026-06-03 09:24:58]   ppo_v3_3750048_steps.zip: gates=6.40 takeoff=90%
+[2026-06-03 09:25:32]   ppo_v3_4062552_steps.zip: gates=12.40 takeoff=100%
+[2026-06-03 09:26:04]   ppo_v3_4375056_steps.zip: gates=10.00 takeoff=60%
+[2026-06-03 09:26:17]   ppo_v3_4687560_steps.zip: gates=3.30 takeoff=60%
+[2026-06-03 09:26:32]   ppo_v3_5000064_steps.zip: gates=4.90 takeoff=40%
+[2026-06-03 09:27:10]   ppo_v3_625008_steps.zip: gates=13.60 takeoff=70%
+[2026-06-03 09:27:49]   ppo_v3_937512_steps.zip: gates=13.80 takeoff=90%
+[2026-06-03 09:27:49] batch 9 BEST -> ppo_v3_312504_steps.zip (gates=14.20)
+[2026-06-03 09:27:49]   state: batch=9 best=ppo_v3_312504_steps.zip total=45,000,000
+[2026-06-03 09:27:49] batch 10 START (resume=ppo_v3_312504_steps.zip)
+[2026-06-03 10:04:23]   ppo_v3_1250016_steps.zip: gates=13.00 takeoff=80%
+[2026-06-03 10:05:27]   ppo_v3_1562520_steps.zip: gates=22.30 takeoff=90%
+[2026-06-03 10:06:00]   ppo_v3_1875024_steps.zip: gates=10.50 takeoff=90%
+[2026-06-03 10:06:45]   ppo_v3_2187528_steps.zip: gates=15.70 takeoff=90%
+[2026-06-03 10:07:11]   ppo_v3_2500032_steps.zip: gates=7.50 takeoff=70%
+[2026-06-03 10:07:41]   ppo_v3_2812536_steps.zip: gates=9.20 takeoff=100%
+[2026-06-03 10:08:11]   ppo_v3_3125040_steps.zip: gates=9.70 takeoff=60%
+[2026-06-03 10:08:52]   ppo_v3_312504_steps.zip: gates=13.50 takeoff=100%
+[2026-06-03 10:09:22]   ppo_v3_3437544_steps.zip: gates=9.10 takeoff=80%
+[2026-06-03 10:09:50]   ppo_v3_3750048_steps.zip: gates=8.70 takeoff=80%
+[2026-06-03 10:10:30]   ppo_v3_4062552_steps.zip: gates=13.00 takeoff=80%
+[2026-06-03 10:10:59]   ppo_v3_4375056_steps.zip: gates=9.90 takeoff=60%
+[2026-06-03 10:11:19]   ppo_v3_4687560_steps.zip: gates=5.00 takeoff=90%
+[2026-06-03 10:12:01]   ppo_v3_5000064_steps.zip: gates=13.50 takeoff=90%
+[2026-06-03 10:12:27]   ppo_v3_625008_steps.zip: gates=6.70 takeoff=80%
+[2026-06-03 10:12:55]   ppo_v3_937512_steps.zip: gates=8.00 takeoff=100%
+[2026-06-03 10:12:55] batch 10 BEST -> ppo_v3_1562520_steps.zip (gates=22.30)
+[2026-06-03 10:12:55]   state: batch=10 best=ppo_v3_1562520_steps.zip total=50,000,000
+[2026-06-03 10:12:55] batch 11 START (resume=ppo_v3_1562520_steps.zip)
+[2026-06-03 10:49:19]   ppo_v3_1250016_steps.zip: gates=9.80 takeoff=80%
+[2026-06-03 10:49:59]   ppo_v3_1562520_steps.zip: gates=13.10 takeoff=90%
+[2026-06-03 10:50:27]   ppo_v3_1875024_steps.zip: gates=8.90 takeoff=70%
+[2026-06-03 10:50:53]   ppo_v3_2187528_steps.zip: gates=8.80 takeoff=90%
+[2026-06-03 10:51:33]   ppo_v3_2500032_steps.zip: gates=12.50 takeoff=90%
+[2026-06-03 10:51:56]   ppo_v3_2812536_steps.zip: gates=7.30 takeoff=50%
+[2026-06-03 10:52:27]   ppo_v3_3125040_steps.zip: gates=9.90 takeoff=70%
+[2026-06-03 10:53:12]   ppo_v3_312504_steps.zip: gates=14.60 takeoff=90%
+[2026-06-03 10:53:48]   ppo_v3_3437544_steps.zip: gates=12.90 takeoff=70%
+[2026-06-03 10:54:21]   ppo_v3_3750048_steps.zip: gates=10.90 takeoff=80%
+[2026-06-03 10:54:43]   ppo_v3_4062552_steps.zip: gates=6.30 takeoff=50%
+[2026-06-03 10:55:09]   ppo_v3_4375056_steps.zip: gates=8.70 takeoff=60%
+[2026-06-03 10:55:44]   ppo_v3_4687560_steps.zip: gates=11.00 takeoff=80%
+[2026-06-03 10:55:54]   ppo_v3_5000064_steps.zip: gates=2.50 takeoff=40%
+[2026-06-03 10:56:29]   ppo_v3_625008_steps.zip: gates=11.80 takeoff=90%
+[2026-06-03 10:57:02]   ppo_v3_937512_steps.zip: gates=11.90 takeoff=60%
+[2026-06-03 10:57:02] batch 11 BEST -> ppo_v3_312504_steps.zip (gates=14.60)
+[2026-06-03 10:57:02]   state: batch=11 best=ppo_v3_312504_steps.zip total=55,000,000
+[2026-06-03 10:57:02] batch 12 START (resume=ppo_v3_312504_steps.zip)
+[2026-06-03 11:33:11]   ppo_v3_1250016_steps.zip: gates=7.50 takeoff=70%
+[2026-06-03 11:33:20]   ppo_v3_1562520_steps.zip: gates=1.80 takeoff=30%
+[2026-06-03 11:33:50]   ppo_v3_1875024_steps.zip: gates=9.60 takeoff=60%
+[2026-06-03 11:34:30]   ppo_v3_2187528_steps.zip: gates=12.60 takeoff=80%
+[2026-06-03 11:35:01]   ppo_v3_2500032_steps.zip: gates=9.90 takeoff=70%
+[2026-06-03 11:35:32]   ppo_v3_2812536_steps.zip: gates=10.60 takeoff=80%
+[2026-06-03 11:36:06]   ppo_v3_3125040_steps.zip: gates=11.40 takeoff=70%
+[2026-06-03 11:36:42]   ppo_v3_312504_steps.zip: gates=11.60 takeoff=100%
+[2026-06-03 11:37:25]   ppo_v3_3437544_steps.zip: gates=13.80 takeoff=90%
+[2026-06-03 11:38:06]   ppo_v3_3750048_steps.zip: gates=13.30 takeoff=80%
+[2026-06-03 11:38:36]   ppo_v3_4062552_steps.zip: gates=10.20 takeoff=70%
+[2026-06-03 11:39:06]   ppo_v3_4375056_steps.zip: gates=9.50 takeoff=80%
+[2026-06-03 11:39:39]   ppo_v3_4687560_steps.zip: gates=10.50 takeoff=80%
+[2026-06-03 11:40:19]   ppo_v3_5000064_steps.zip: gates=13.10 takeoff=80%
+[2026-06-03 11:40:51]   ppo_v3_625008_steps.zip: gates=10.50 takeoff=70%
+[2026-06-03 11:41:16]   ppo_v3_937512_steps.zip: gates=7.50 takeoff=90%
+[2026-06-03 11:41:16] batch 12 BEST -> ppo_v3_3437544_steps.zip (gates=13.80)
+[2026-06-03 11:41:16]   state: batch=12 best=ppo_v3_3437544_steps.zip total=60,000,000
+[2026-06-03 11:41:16] batch 13 START (resume=ppo_v3_3437544_steps.zip)
+[2026-06-03 12:17:26]   ppo_v3_1250016_steps.zip: gates=14.20 takeoff=80%
+[2026-06-03 12:17:34]   ppo_v3_1562520_steps.zip: gates=1.30 takeoff=40%
+[2026-06-03 12:18:04]   ppo_v3_1875024_steps.zip: gates=8.10 takeoff=80%
+[2026-06-03 12:18:27]   ppo_v3_2187528_steps.zip: gates=6.00 takeoff=60%
+[2026-06-03 12:19:03]   ppo_v3_2500032_steps.zip: gates=11.80 takeoff=80%
+[2026-06-03 12:19:30]   ppo_v3_2812536_steps.zip: gates=8.70 takeoff=80%
+[2026-06-03 12:19:55]   ppo_v3_3125040_steps.zip: gates=8.60 takeoff=40%
+[2026-06-03 12:20:32]   ppo_v3_312504_steps.zip: gates=11.40 takeoff=80%
+[2026-06-03 12:20:58]   ppo_v3_3437544_steps.zip: gates=8.10 takeoff=70%
+[2026-06-03 12:21:15]   ppo_v3_3750048_steps.zip: gates=0.00 takeoff=0%
+[2026-06-03 12:32:01] === batched trainer start (from batch 12, total 60,000,000, target 200,000,000) ===
+[2026-06-03 12:32:01] batch 13 START (resume=ppo_v3_3437544_steps.zip)
+[2026-06-03 13:06:40]   ppo_v3_1250016_steps.zip: gates=6.20 takeoff=50%
+[2026-06-03 13:07:24]   ppo_v3_1562520_steps.zip: gates=12.00 takeoff=70%
+[2026-06-03 13:07:56]   ppo_v3_1875024_steps.zip: gates=9.50 takeoff=50%
+[2026-06-03 13:08:25]   ppo_v3_2187528_steps.zip: gates=8.40 takeoff=90%
+[2026-06-03 13:09:05]   ppo_v3_2500032_steps.zip: gates=12.30 takeoff=80%
+[2026-06-03 13:09:42]   ppo_v3_2812536_steps.zip: gates=11.10 takeoff=90%
+[2026-06-03 13:10:19]   ppo_v3_3125040_steps.zip: gates=11.10 takeoff=90%
+[2026-06-03 13:10:59]   ppo_v3_312504_steps.zip: gates=12.20 takeoff=100%
+[2026-06-03 13:11:44]   ppo_v3_3437544_steps.zip: gates=13.90 takeoff=100%
+[2026-06-03 13:12:07]   ppo_v3_3750048_steps.zip: gates=6.50 takeoff=90%
+[2026-06-03 13:12:38]   ppo_v3_4062552_steps.zip: gates=9.00 takeoff=80%
+[2026-06-03 13:13:17]   ppo_v3_4375056_steps.zip: gates=12.00 takeoff=90%
+[2026-06-03 13:14:01]   ppo_v3_4687560_steps.zip: gates=14.50 takeoff=100%
+[2026-06-03 13:14:38]   ppo_v3_5000064_steps.zip: gates=11.00 takeoff=90%
+[2026-06-03 13:15:21]   ppo_v3_625008_steps.zip: gates=13.60 takeoff=90%
+[2026-06-03 13:16:03]   ppo_v3_937512_steps.zip: gates=13.30 takeoff=90%
+[2026-06-03 13:16:03] batch 13 BEST -> ppo_v3_4687560_steps.zip (gates=14.50)
+[2026-06-03 13:16:03]   state: batch=13 best=ppo_v3_4687560_steps.zip total=65,000,000
+[2026-06-03 13:16:03] batch 14 START (resume=ppo_v3_4687560_steps.zip)
+[2026-06-03 13:50:45]   ppo_v3_1250016_steps.zip: gates=12.40 takeoff=90%
+[2026-06-03 13:51:31]   ppo_v3_1562520_steps.zip: gates=12.00 takeoff=90%
+[2026-06-03 13:52:23]   ppo_v3_1875024_steps.zip: gates=14.50 takeoff=90%
+[2026-06-03 13:52:54]   ppo_v3_2187528_steps.zip: gates=9.30 takeoff=60%
+[2026-06-03 13:53:25]   ppo_v3_2500032_steps.zip: gates=9.40 takeoff=90%
+[2026-06-03 13:53:58]   ppo_v3_2812536_steps.zip: gates=12.00 takeoff=90%
+[2026-06-03 13:54:30]   ppo_v3_3125040_steps.zip: gates=10.40 takeoff=80%
+[2026-06-03 13:55:07]   ppo_v3_312504_steps.zip: gates=12.10 takeoff=90%
+[2026-06-03 13:55:52]   ppo_v3_3437544_steps.zip: gates=14.50 takeoff=100%
+[2026-06-03 13:56:25]   ppo_v3_3750048_steps.zip: gates=12.20 takeoff=60%
+[2026-06-03 13:57:07]   ppo_v3_4062552_steps.zip: gates=15.90 takeoff=90%
+[2026-06-03 13:57:47]   ppo_v3_4375056_steps.zip: gates=15.40 takeoff=100%
+[2026-06-03 13:58:20]   ppo_v3_4687560_steps.zip: gates=10.50 takeoff=90%
+[2026-06-03 13:58:57]   ppo_v3_5000064_steps.zip: gates=12.80 takeoff=80%
+[2026-06-03 13:59:30]   ppo_v3_625008_steps.zip: gates=10.10 takeoff=100%
+[2026-06-03 14:00:17]   ppo_v3_937512_steps.zip: gates=15.10 takeoff=100%
+[2026-06-03 14:00:17] batch 14 BEST -> ppo_v3_4062552_steps.zip (gates=15.90)
+[2026-06-03 14:00:17]   state: batch=14 best=ppo_v3_4062552_steps.zip total=70,000,000
+[2026-06-03 14:00:17] batch 15 START (resume=ppo_v3_4062552_steps.zip)
+[2026-06-03 14:34:17]   ppo_v3_1250016_steps.zip: gates=13.30 takeoff=80%
+[2026-06-03 14:34:53]   ppo_v3_1562520_steps.zip: gates=11.20 takeoff=90%
+[2026-06-03 14:35:26]   ppo_v3_1875024_steps.zip: gates=10.60 takeoff=100%
+[2026-06-03 14:36:09]   ppo_v3_2187528_steps.zip: gates=15.00 takeoff=90%
+[2026-06-03 14:36:55]   ppo_v3_2500032_steps.zip: gates=15.70 takeoff=90%
+[2026-06-03 14:37:45]   ppo_v3_2812536_steps.zip: gates=17.00 takeoff=90%
+[2026-06-03 14:38:30]   ppo_v3_3125040_steps.zip: gates=13.00 takeoff=100%
+[2026-06-03 14:39:12]   ppo_v3_312504_steps.zip: gates=14.20 takeoff=100%
+[2026-06-03 14:39:57]   ppo_v3_3437544_steps.zip: gates=14.60 takeoff=90%
+[2026-06-03 14:40:32]   ppo_v3_3750048_steps.zip: gates=10.60 takeoff=80%
+[2026-06-03 14:41:21]   ppo_v3_4062552_steps.zip: gates=15.20 takeoff=100%
+[2026-06-03 14:42:12]   ppo_v3_4375056_steps.zip: gates=17.80 takeoff=100%
+[2026-06-03 14:43:10]   ppo_v3_4687560_steps.zip: gates=19.90 takeoff=100%
+[2026-06-03 14:43:52]   ppo_v3_5000064_steps.zip: gates=13.90 takeoff=100%
+[2026-06-03 14:44:37]   ppo_v3_625008_steps.zip: gates=14.50 takeoff=90%
+[2026-06-03 14:45:16]   ppo_v3_937512_steps.zip: gates=12.80 takeoff=80%
+[2026-06-03 14:45:16] batch 15 BEST -> ppo_v3_4687560_steps.zip (gates=19.90)
+[2026-06-03 14:45:16]   state: batch=15 best=ppo_v3_4687560_steps.zip total=75,000,000
+[2026-06-03 14:45:16] batch 16 START (resume=ppo_v3_4687560_steps.zip)
+[2026-06-03 15:20:47]   ppo_v3_1250016_steps.zip: gates=15.20 takeoff=100%
+[2026-06-03 15:21:36]   ppo_v3_1562520_steps.zip: gates=15.50 takeoff=100%
+[2026-06-03 15:22:27]   ppo_v3_1875024_steps.zip: gates=16.10 takeoff=100%
+[2026-06-03 15:23:07]   ppo_v3_2187528_steps.zip: gates=12.10 takeoff=100%
+[2026-06-03 15:24:06]   ppo_v3_2500032_steps.zip: gates=19.00 takeoff=100%
+[2026-06-03 15:24:41]   ppo_v3_2812536_steps.zip: gates=10.60 takeoff=90%
+[2026-06-03 15:25:31]   ppo_v3_3125040_steps.zip: gates=15.00 takeoff=100%
+[2026-06-03 15:26:24]   ppo_v3_312504_steps.zip: gates=17.60 takeoff=100%
+[2026-06-03 15:27:08]   ppo_v3_3437544_steps.zip: gates=14.10 takeoff=100%
+[2026-06-03 15:27:52]   ppo_v3_3750048_steps.zip: gates=13.30 takeoff=100%
+[2026-06-03 15:28:42]   ppo_v3_4062552_steps.zip: gates=15.60 takeoff=80%
+[2026-06-03 15:29:39]   ppo_v3_4375056_steps.zip: gates=18.40 takeoff=90%
+[2026-06-03 15:30:22]   ppo_v3_4687560_steps.zip: gates=13.10 takeoff=90%
+[2026-06-03 15:31:03]   ppo_v3_5000064_steps.zip: gates=13.20 takeoff=90%
+[2026-06-03 15:31:41]   ppo_v3_625008_steps.zip: gates=11.60 takeoff=100%
+[2026-06-03 15:32:13]   ppo_v3_937512_steps.zip: gates=10.10 takeoff=90%
+[2026-06-03 15:32:13] batch 16 BEST -> ppo_v3_2500032_steps.zip (gates=19.00)
+[2026-06-03 15:32:13]   state: batch=16 best=ppo_v3_2500032_steps.zip total=80,000,000
+[2026-06-03 15:32:13] batch 17 START (resume=ppo_v3_2500032_steps.zip)
+[2026-06-03 16:07:11]   ppo_v3_1250016_steps.zip: gates=16.20 takeoff=100%
+[2026-06-03 16:08:05]   ppo_v3_1562520_steps.zip: gates=18.90 takeoff=100%
+[2026-06-03 16:08:47]   ppo_v3_1875024_steps.zip: gates=14.00 takeoff=100%
+[2026-06-03 16:09:23]   ppo_v3_2187528_steps.zip: gates=11.10 takeoff=100%
+[2026-06-03 16:10:05]   ppo_v3_2500032_steps.zip: gates=12.30 takeoff=100%
+[2026-06-03 16:10:49]   ppo_v3_2812536_steps.zip: gates=14.20 takeoff=100%
+[2026-06-03 16:11:30]   ppo_v3_3125040_steps.zip: gates=11.80 takeoff=90%
+[2026-06-03 16:12:20]   ppo_v3_312504_steps.zip: gates=15.50 takeoff=100%
+[2026-06-03 16:13:02]   ppo_v3_3437544_steps.zip: gates=13.30 takeoff=100%
+[2026-06-03 16:13:46]   ppo_v3_3750048_steps.zip: gates=13.60 takeoff=100%
+[2026-06-03 16:14:36]   ppo_v3_4062552_steps.zip: gates=15.70 takeoff=100%
+[2026-06-03 16:15:28]   ppo_v3_4375056_steps.zip: gates=15.80 takeoff=100%
+[2026-06-03 16:16:15]   ppo_v3_4687560_steps.zip: gates=14.90 takeoff=90%
+[2026-06-03 16:16:50]   ppo_v3_5000064_steps.zip: gates=10.20 takeoff=100%
+[2026-06-03 16:17:36]   ppo_v3_625008_steps.zip: gates=15.90 takeoff=100%
+[2026-06-03 16:18:19]   ppo_v3_937512_steps.zip: gates=13.90 takeoff=100%
+[2026-06-03 16:18:19] batch 17 BEST -> ppo_v3_1562520_steps.zip (gates=18.90)
+[2026-06-03 16:18:19]   state: batch=17 best=ppo_v3_1562520_steps.zip total=85,000,000
+[2026-06-03 16:18:19] batch 18 START (resume=ppo_v3_1562520_steps.zip)
+[2026-06-03 16:52:26]   ppo_v3_1250016_steps.zip: gates=17.60 takeoff=100%
+[2026-06-03 16:53:22]   ppo_v3_1562520_steps.zip: gates=19.60 takeoff=90%
+[2026-06-03 16:54:19]   ppo_v3_1875024_steps.zip: gates=18.40 takeoff=100%
+[2026-06-03 16:54:53]   ppo_v3_2187528_steps.zip: gates=10.80 takeoff=100%
+[2026-06-03 16:55:47]   ppo_v3_2500032_steps.zip: gates=20.10 takeoff=100%
+[2026-06-03 16:56:24]   ppo_v3_2812536_steps.zip: gates=11.60 takeoff=100%
+[2026-06-03 16:57:07]   ppo_v3_3125040_steps.zip: gates=13.90 takeoff=100%
+[2026-06-03 16:57:35]   ppo_v3_312504_steps.zip: gates=9.30 takeoff=90%
+[2026-06-03 16:58:25]   ppo_v3_3437544_steps.zip: gates=16.50 takeoff=100%
+[2026-06-03 16:59:07]   ppo_v3_3750048_steps.zip: gates=14.90 takeoff=100%
+[2026-06-03 16:59:50]   ppo_v3_4062552_steps.zip: gates=13.60 takeoff=100%
+[2026-06-03 17:00:27]   ppo_v3_4375056_steps.zip: gates=12.40 takeoff=90%
+[2026-06-03 17:01:12]   ppo_v3_4687560_steps.zip: gates=15.40 takeoff=100%
+[2026-06-03 17:01:43]   ppo_v3_5000064_steps.zip: gates=9.40 takeoff=90%
+[2026-06-03 17:02:19]   ppo_v3_625008_steps.zip: gates=12.40 takeoff=100%
+[2026-06-03 17:03:09]   ppo_v3_937512_steps.zip: gates=17.00 takeoff=100%
+[2026-06-03 17:03:09] batch 18 BEST -> ppo_v3_2500032_steps.zip (gates=20.10)
+[2026-06-03 17:03:09]   state: batch=18 best=ppo_v3_2500032_steps.zip total=90,000,000
+[2026-06-03 17:03:09] batch 19 START (resume=ppo_v3_2500032_steps.zip)
+[2026-06-03 17:38:33]   ppo_v3_1250016_steps.zip: gates=17.10 takeoff=90%
+[2026-06-03 17:39:21]   ppo_v3_1562520_steps.zip: gates=17.10 takeoff=100%
+[2026-06-03 17:40:02]   ppo_v3_1875024_steps.zip: gates=14.00 takeoff=90%
+[2026-06-03 17:40:51]   ppo_v3_2187528_steps.zip: gates=16.50 takeoff=100%
+[2026-06-03 17:41:34]   ppo_v3_2500032_steps.zip: gates=14.60 takeoff=100%
+[2026-06-03 17:42:25]   ppo_v3_2812536_steps.zip: gates=16.20 takeoff=100%
+[2026-06-03 17:43:11]   ppo_v3_3125040_steps.zip: gates=14.80 takeoff=100%
+[2026-06-03 17:43:49]   ppo_v3_312504_steps.zip: gates=13.70 takeoff=100%
+[2026-06-03 17:44:47]   ppo_v3_3437544_steps.zip: gates=19.30 takeoff=100%
+[2026-06-03 17:45:26]   ppo_v3_3750048_steps.zip: gates=11.90 takeoff=100%
+[2026-06-03 17:46:07]   ppo_v3_4062552_steps.zip: gates=13.80 takeoff=100%
+[2026-06-03 17:46:32]   ppo_v3_4375056_steps.zip: gates=6.30 takeoff=100%
+[2026-06-03 17:47:21]   ppo_v3_4687560_steps.zip: gates=13.80 takeoff=100%
+[2026-06-03 17:48:04]   ppo_v3_5000064_steps.zip: gates=12.50 takeoff=100%
+[2026-06-03 17:48:38]   ppo_v3_625008_steps.zip: gates=11.00 takeoff=100%
+[2026-06-03 17:49:19]   ppo_v3_937512_steps.zip: gates=14.30 takeoff=100%
+[2026-06-03 17:49:19] batch 19 BEST -> ppo_v3_3437544_steps.zip (gates=19.30)
+[2026-06-03 17:49:19]   state: batch=19 best=ppo_v3_3437544_steps.zip total=95,000,000
+[2026-06-03 17:49:19] batch 20 START (resume=ppo_v3_3437544_steps.zip)
+[2026-06-03 18:23:40]   ppo_v3_1250016_steps.zip: gates=12.20 takeoff=100%
+[2026-06-03 18:25:11]   ppo_v3_1562520_steps.zip: gates=18.40 takeoff=100%
+[2026-06-03 18:26:22]   ppo_v3_1875024_steps.zip: gates=15.10 takeoff=100%
+[2026-06-03 18:27:05]   ppo_v3_2187528_steps.zip: gates=9.70 takeoff=100%
+[2026-06-03 18:27:46]   ppo_v3_2500032_steps.zip: gates=12.30 takeoff=100%
+[2026-06-03 18:28:23]   ppo_v3_2812536_steps.zip: gates=11.10 takeoff=100%
+[2026-06-03 18:29:14]   ppo_v3_3125040_steps.zip: gates=14.40 takeoff=100%
+[2026-06-03 18:30:00]   ppo_v3_312504_steps.zip: gates=14.70 takeoff=90%
+[2026-06-03 18:30:41]   ppo_v3_3437544_steps.zip: gates=13.00 takeoff=100%
+[2026-06-03 18:31:27]   ppo_v3_3750048_steps.zip: gates=13.50 takeoff=100%
+[2026-06-03 18:32:05]   ppo_v3_4062552_steps.zip: gates=11.00 takeoff=90%
+[2026-06-03 18:32:49]   ppo_v3_4375056_steps.zip: gates=13.30 takeoff=90%
+[2026-06-03 18:33:25]   ppo_v3_4687560_steps.zip: gates=10.50 takeoff=100%
+[2026-06-03 18:34:16]   ppo_v3_5000064_steps.zip: gates=15.10 takeoff=100%
+[2026-06-03 18:35:11]   ppo_v3_625008_steps.zip: gates=18.60 takeoff=100%
+[2026-06-03 18:35:54]   ppo_v3_937512_steps.zip: gates=13.40 takeoff=100%
+[2026-06-03 18:35:54] batch 20 BEST -> ppo_v3_625008_steps.zip (gates=18.60)
+[2026-06-03 18:35:54]   state: batch=20 best=ppo_v3_625008_steps.zip total=100,000,000
+[2026-06-03 18:35:54] batch 21 START (resume=ppo_v3_625008_steps.zip)
+[2026-06-03 19:10:37]   ppo_v3_1250016_steps.zip: gates=18.10 takeoff=100%
+[2026-06-03 19:11:20]   ppo_v3_1562520_steps.zip: gates=14.00 takeoff=100%
+[2026-06-03 19:12:18]   ppo_v3_1875024_steps.zip: gates=18.30 takeoff=90%
+[2026-06-03 19:12:56]   ppo_v3_2187528_steps.zip: gates=10.20 takeoff=100%
+[2026-06-03 19:13:45]   ppo_v3_2500032_steps.zip: gates=14.50 takeoff=100%
+[2026-06-03 19:15:00]   ppo_v3_2812536_steps.zip: gates=24.90 takeoff=100%
+[2026-06-03 19:15:35]   ppo_v3_3125040_steps.zip: gates=9.70 takeoff=100%
+[2026-06-03 19:16:25]   ppo_v3_312504_steps.zip: gates=15.50 takeoff=100%
+[2026-06-03 19:17:01]   ppo_v3_3437544_steps.zip: gates=9.80 takeoff=90%
+[2026-06-03 19:17:45]   ppo_v3_3750048_steps.zip: gates=13.20 takeoff=100%
+[2026-06-03 19:18:26]   ppo_v3_4062552_steps.zip: gates=11.20 takeoff=100%
+[2026-06-03 19:19:00]   ppo_v3_4375056_steps.zip: gates=11.10 takeoff=90%
+[2026-06-03 19:19:59]   ppo_v3_4687560_steps.zip: gates=17.70 takeoff=100%
+[2026-06-03 19:20:45]   ppo_v3_5000064_steps.zip: gates=12.70 takeoff=100%
+[2026-06-03 19:21:19]   ppo_v3_625008_steps.zip: gates=9.70 takeoff=80%
+[2026-06-03 19:22:01]   ppo_v3_937512_steps.zip: gates=11.50 takeoff=100%
+[2026-06-03 19:22:01] batch 21 BEST -> ppo_v3_2812536_steps.zip (gates=24.90)
+[2026-06-03 19:22:01]   state: batch=21 best=ppo_v3_2812536_steps.zip total=105,000,000
+[2026-06-03 19:22:01] batch 22 START (resume=ppo_v3_2812536_steps.zip)
+[2026-06-03 19:56:34]   ppo_v3_1250016_steps.zip: gates=12.20 takeoff=100%
+[2026-06-03 19:57:19]   ppo_v3_1562520_steps.zip: gates=13.50 takeoff=100%
+[2026-06-03 19:58:00]   ppo_v3_1875024_steps.zip: gates=12.80 takeoff=100%
+[2026-06-03 19:58:41]   ppo_v3_2187528_steps.zip: gates=12.00 takeoff=100%
+[2026-06-03 19:59:09]   ppo_v3_2500032_steps.zip: gates=7.40 takeoff=90%
+[2026-06-03 19:59:54]   ppo_v3_2812536_steps.zip: gates=13.20 takeoff=100%
+[2026-06-03 20:00:27]   ppo_v3_3125040_steps.zip: gates=9.20 takeoff=100%
+[2026-06-03 20:01:03]   ppo_v3_312504_steps.zip: gates=10.00 takeoff=90%
+[2026-06-03 20:01:51]   ppo_v3_3437544_steps.zip: gates=13.50 takeoff=100%
+[2026-06-03 20:02:28]   ppo_v3_3750048_steps.zip: gates=10.30 takeoff=90%
+[2026-06-03 20:03:06]   ppo_v3_4062552_steps.zip: gates=10.90 takeoff=90%
+[2026-06-03 20:03:49]   ppo_v3_4375056_steps.zip: gates=11.90 takeoff=100%
+[2026-06-03 20:04:27]   ppo_v3_4687560_steps.zip: gates=11.10 takeoff=100%
+[2026-06-03 20:05:13]   ppo_v3_5000064_steps.zip: gates=12.80 takeoff=100%
+[2026-06-03 20:05:55]   ppo_v3_625008_steps.zip: gates=12.40 takeoff=100%
+[2026-06-03 20:06:43]   ppo_v3_937512_steps.zip: gates=13.60 takeoff=100%
+[2026-06-03 20:06:43] batch 22 BEST -> ppo_v3_937512_steps.zip (gates=13.60)
+[2026-06-03 20:06:43]   state: batch=22 best=ppo_v3_937512_steps.zip total=110,000,000
+[2026-06-03 20:06:43] batch 23 START (resume=ppo_v3_937512_steps.zip)
+[2026-06-03 20:39:57]   ppo_v3_1250016_steps.zip: gates=13.40 takeoff=100%
+[2026-06-03 20:40:36]   ppo_v3_1562520_steps.zip: gates=12.40 takeoff=100%
+[2026-06-03 20:41:22]   ppo_v3_1875024_steps.zip: gates=15.30 takeoff=100%
+[2026-06-03 20:42:02]   ppo_v3_2187528_steps.zip: gates=14.30 takeoff=90%
+[2026-06-03 20:42:40]   ppo_v3_2500032_steps.zip: gates=10.80 takeoff=100%
+[2026-06-03 20:43:29]   ppo_v3_2812536_steps.zip: gates=16.80 takeoff=100%
+[2026-06-03 20:44:02]   ppo_v3_3125040_steps.zip: gates=10.20 takeoff=100%
+[2026-06-03 20:44:32]   ppo_v3_312504_steps.zip: gates=7.10 takeoff=90%
+[2026-06-03 20:45:06]   ppo_v3_3437544_steps.zip: gates=10.60 takeoff=100%
+[2026-06-03 20:45:56]   ppo_v3_3750048_steps.zip: gates=13.50 takeoff=100%
+[2026-06-03 20:46:34]   ppo_v3_4062552_steps.zip: gates=11.90 takeoff=90%
+[2026-06-03 20:47:24]   ppo_v3_4375056_steps.zip: gates=17.30 takeoff=100%
+[2026-06-03 20:47:59]   ppo_v3_4687560_steps.zip: gates=10.90 takeoff=100%
+[2026-06-03 20:48:30]   ppo_v3_5000064_steps.zip: gates=9.40 takeoff=100%
+[2026-06-03 20:49:05]   ppo_v3_625008_steps.zip: gates=10.60 takeoff=100%
+[2026-06-03 20:49:39]   ppo_v3_937512_steps.zip: gates=10.90 takeoff=90%
+[2026-06-03 20:49:39] batch 23 BEST -> ppo_v3_4375056_steps.zip (gates=17.30)
+[2026-06-03 20:49:39]   state: batch=23 best=ppo_v3_4375056_steps.zip total=115,000,000
+[2026-06-03 20:49:39] batch 24 START (resume=ppo_v3_4375056_steps.zip)
+[2026-06-03 21:17:05]   ppo_v3_1250016_steps.zip: gates=11.70 takeoff=90%
+[2026-06-03 21:17:49]   ppo_v3_1562520_steps.zip: gates=12.40 takeoff=100%
+[2026-06-03 21:18:24]   ppo_v3_1875024_steps.zip: gates=11.20 takeoff=100%
+[2026-06-03 21:19:01]   ppo_v3_2187528_steps.zip: gates=11.50 takeoff=100%
+[2026-06-03 21:19:32]   ppo_v3_2500032_steps.zip: gates=8.60 takeoff=100%
+[2026-06-03 21:20:13]   ppo_v3_2812536_steps.zip: gates=13.20 takeoff=100%
+[2026-06-03 21:20:37]   ppo_v3_3125040_steps.zip: gates=6.10 takeoff=100%
+[2026-06-03 21:21:09]   ppo_v3_312504_steps.zip: gates=9.20 takeoff=100%
+[2026-06-03 21:21:51]   ppo_v3_3437544_steps.zip: gates=13.20 takeoff=100%
+[2026-06-03 21:22:26]   ppo_v3_3750048_steps.zip: gates=9.30 takeoff=100%
+[2026-06-03 21:23:05]   ppo_v3_4062552_steps.zip: gates=12.00 takeoff=90%
+[2026-06-03 21:23:41]   ppo_v3_4375056_steps.zip: gates=9.30 takeoff=100%
+[2026-06-03 21:24:10]   ppo_v3_4687560_steps.zip: gates=7.60 takeoff=100%
+[2026-06-03 21:24:34]   ppo_v3_5000064_steps.zip: gates=7.10 takeoff=100%
+[2026-06-03 21:25:10]   ppo_v3_625008_steps.zip: gates=10.90 takeoff=90%
+[2026-06-03 21:26:03]   ppo_v3_937512_steps.zip: gates=17.40 takeoff=100%
+[2026-06-03 21:26:03] batch 24 BEST -> ppo_v3_937512_steps.zip (gates=17.40)
+[2026-06-03 21:26:03]   state: batch=24 best=ppo_v3_937512_steps.zip total=120,000,000
+[2026-06-03 21:26:03] batch 25 START (resume=ppo_v3_937512_steps.zip)

@@ -17,9 +17,18 @@
 # pass) and far gates saturate gracefully instead of blowing up. Bounded to [0,1) by
 # construction, so no value can ever be a multi-sigma outlier regardless of VecNormalize.
 #
+import os
 import numpy as np
 
 DIST_SCALE = 10.0  # meters. near regime 3-10m -> tanh 0.3-0.76; VQ1 23m -> 0.98; 100m -> ~1.0
+
+# Raw-compat toggle (diagnostic, 2026-06-02). The pre-A150 STATE checkpoints (e.g. the 67.5M
+# takeoff in infinite_v3_takeoff_twr385, trained ~01:00 — BEFORE A150 was added at ~06:15)
+# expect RAW gate positions (meters) + RAW distance. Feeding them A150 unit-dirs + bounded dist
+# makes the policy read directions as ~1-meter positions -> tumble (confirmed by vecnorm means
+# >1, impossible for unit vectors). Set OBS_RAW_COMPAT=1 to pass raw values through and MATCH
+# those checkpoints. Default (unset) = A150 bounded encoding (the correct forward design).
+_RAW_COMPAT = os.environ.get("OBS_RAW_COMPAT") == "1"
 
 
 def unit_dir(v):
@@ -30,6 +39,8 @@ def unit_dir(v):
     magnitude: direction goes here, magnitude is carried separately by bound_scalar(dist). Zero in
     -> zero out (no gate)."""
     v = np.asarray(v, dtype=float)
+    if _RAW_COMPAT:
+        return v  # raw passthrough for pre-A150 checkpoints
     n = float(np.linalg.norm(v))
     if n < 1e-9:
         return np.zeros(3)
@@ -48,6 +59,8 @@ def bound_vec(v):
 
 def bound_scalar(d):
     """Bounded distance scalar: tanh(d/SCALE) in [0,1). Carries the current-gate magnitude."""
+    if _RAW_COMPAT:
+        return float(d)  # raw distance (meters) for pre-A150 checkpoints
     return float(np.tanh(float(d) / DIST_SCALE))
 
 

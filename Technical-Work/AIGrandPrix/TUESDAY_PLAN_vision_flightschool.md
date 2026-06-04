@@ -27,6 +27,27 @@ The competition sim is **Unreal Engine** (`AIGP_3364/FlightSim.exe`, `Engine/`,
   millions-of-cheap-steps. Pure vision-RL-from-scratch on Unreal at RL step counts would crawl.
 - **⟹ STAGED pipeline, not pure-on-their-engine.**
 
+## WINDFALL SCOUT UPDATE (2026-06-01, token reset) — engine ACCESS resolved; pivot reshaped
+**FALSIFY (high conf) of "build our flight school ON their engine":** the competition sim is a
+**closed, auth-gated, real-time, single-instance Unreal SERVER** — you log in with account
+credentials, and the ONLY interface (PyAIPilotExample/main.py) is a real-time UDP CLIENT:
+telemetry+vision in (ports 14550/5600), commands out. **No reset / no step / no timestep
+acceleration / no headless / no SDK / no parallel.** It is NOT an engine we can build on; it's a
+finished product behind a login. So it cannot be a bulk-RL training surface.
+
+**Reshaped architecture (cleaner than it sounds):**
+- **Their sim's role = real-time VALIDATION + the actual scored qualifier runs** (drive via UDP as
+  we do now). Plus: a source of real vision frames (port 5600) to *collect* for offline training.
+- **ALL bulk training is in OUR OWN sims:**
+  - State: our numpy fast-sim (have it).
+  - **Vision: WE build a lightweight vision sim.** KEY ENABLER: VQ1 is per the README "Simple,
+    high-contrast, desaturated gate environment" — that's CHEAP to render ourselves (high-contrast
+    gate shapes on a desaturated background); no Unreal needed for VQ1 vision-RL. (VQ2 = "high-
+    fidelity 3D-scanned" is the hard one — defer; collect-frames-from-their-sim + domain-rand is the
+    likely VQ2 path.)
+- Net: we do NOT reverse-engineer their Unreal (impossible anyway). We build our own VQ1-visual
+  flight school + use their sim to validate. Everything we built stays the spec.
+
 ## The two-stage pipeline
 **Stage 0 (pre-req, do FIRST):** fold the **A150 lateral-decoupling** into `obs_encoding.py`.
 Current `bound_vec = unit_dir × tanh(|v|/10)` couples direction+magnitude → lateral components

@@ -834,6 +834,42 @@ class ModelRouter:
                 elif etype == "error":
                     diag_info = f"stream_error: {event.get('error', {}).get('message', str(event))[:300]}"
 
+            # Transient connection/network error: retry with bounded exponential backoff.
+            # A brief internet blip shouldn't kill an autonomous drive — telegram's poll
+            # loop already self-heals; this gives the session path the same resilience.
+            # (2026-06-02: an internet cut during a creative drive returned ConnectionRefused
+            # here with no retry, forcing a manual restart. See palace/south daemon finding.)
+            _combined = f"{diag_info} {stderr_text}".lower()
+            _transient_markers = (
+                "unable to connect", "connectionrefused", "connection refused",
+                "getaddrinfo", "connecterror", "connection error",
+                "temporarily unavailable", "network is unreachable", "name resolution",
+            )
+            _is_rate_limit = "rate_limit" in _combined or diag_info.startswith("rate_limit")
+            if (not _is_rate_limit) and any(m in _combined for m in _transient_markers):
+                _n = getattr(self, "_claude_code_conn_retries", 0)
+                _MAX_CONN_RETRIES = 6  # 2+4+8+16+32+60s ≈ up to ~2 min of outage
+                if _n < _MAX_CONN_RETRIES:
+                    _delay = min(2.0 * (2 ** _n) + random.uniform(0, 1), 60)
+                    self._claude_code_conn_retries = _n + 1
+                    logger.warning(
+                        f"Claude Code transient connection error "
+                        f"(retry {_n + 1}/{_MAX_CONN_RETRIES}) — waiting {_delay:.1f}s: "
+                        f"{(diag_info or stderr_text)[:200]}"
+                    )
+                    try:
+                        await asyncio.sleep(_delay)
+                        return await self._send_claude_code(
+                            message, persistent=persistent,
+                            interrupt_event=interrupt_event, model_id=model_id)
+                    finally:
+                        self._claude_code_conn_retries = 0
+                else:
+                    logger.error(
+                        f"Claude Code connection retries exhausted "
+                        f"({_MAX_CONN_RETRIES}) — giving up; drive can be re-triggered.")
+                    self._claude_code_conn_retries = 0
+
             error_detail = stderr_text[:500] if stderr_text else diag_info or "(no stderr or diagnostic info)"
             logger.error(f"Claude Code exited {proc.returncode}: {error_detail}")
             return AgentResponse(

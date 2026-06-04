@@ -244,6 +244,28 @@ def main():
 
     boot_ms = int(time.time() * 1000)
     dt = 1.0 / CONTROL_HZ
+
+    # THROTTLE-DOWN gate (Clayton 2026-06-01): commanding thrust before the countdown release
+    # pins the drone on the pad (flight_final.log never moved, 180s @ gate 0). Wait for race
+    # start, then hold thr=0 for 3s to satisfy the gate before the policy (which commands
+    # thrust) takes over. The takeoff-retrain checkpoint then lifts from the ground.
+    if not args.dry_run:
+        print("waiting for race start (PRESS RACE)...", flush=True)
+        _tw = time.time()
+        while time.time() - _tw < 90:
+            with st.lock: _started = st.race_started
+            if _started: break
+            time.sleep(0.05)
+        with st.lock: _started = st.race_started
+        print(f"race_started={_started}; throttle-idle settle (3s, satisfy THROTTLE-DOWN)...", flush=True)
+        _ts = time.time() + 3.0
+        while time.time() < _ts:
+            conn.mav.set_attitude_target_send(
+                int(time.time() * 1000) - boot_ms, conn.target_system, conn.target_component,
+                RATES_MASK, [1.0, 0.0, 0.0, 0.0], 0.0, 0.0, 0.0, 0.0)   # zero rates, thr=0
+            time.sleep(dt)
+        print("settle done; engaging policy.", flush=True)
+
     t0 = time.time()
     last_log = 0.0
     last_active = -1
@@ -301,10 +323,15 @@ def main():
                     started = st.race_started; num = st.num_gates
                 g_body = obs[6:9]
                 vel_body = obs[0:3]
+                # Saturation readout (Clayton's FARSTART_FALSIFY): max|obs_norm| hits the
+                # VecNorm clip ceiling at the 23m far-start -> the policy starts distance-blind.
+                mxn = float(np.max(np.abs(obs_n)))
+                nclip = int(np.sum(np.abs(obs_n) >= clip - 1e-3))
                 print(f"t={now:5.1f} race={started} gate={active}/{num} dist={gdist:5.1f}m "
                       f"| gate_body(F,L,U)=({gpb[0]:+.1f},{gpb[1]:+.1f},{gpb[2]:+.1f}) "
                       f"g_body=({g_body[0]:+.1f},{g_body[1]:+.1f},{g_body[2]:+.1f}) "
                       f"v_body=({vel_body[0]:+.1f},{vel_body[1]:+.1f},{vel_body[2]:+.1f}) "
+                      f"| max|obs_n|={mxn:4.1f} clip={nclip:2d} "
                       f"| act thr={ca.throttle:.2f} r/p/y=({action[1]:+.2f},{action[2]:+.2f},{action[3]:+.2f})",
                       flush=True)
         else:
