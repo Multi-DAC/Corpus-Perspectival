@@ -79,5 +79,9 @@ Three composable pieces, all numpy/torch, vectorizable, headless, thousands of s
 - **Reference:** `../vision/synthetic_camera.py` + `../vision/domain_randomization/` (renderer), `../ue5_sim/DRONE_DYNAMICS.md` (dynamics), `../vision/udp_vision_receiver.py` (already built to the 5600 chunked-JPEG spec — reuse for deploy), the CTBR calibration + L17#6 sign-convention finding (avoid the command-sign bug).
 - **Drop:** UE5 bridge, the PPO/gaze/dial trainers.
 
+## Progress
+- **Phase 0.1 — DONE** (2026-06-04, commit `ae1c1535`): CUDA verified on the 5080 — `torch 2.11.0+cu128`, `cuda.is_available()=True`, GPU matmul OK, on Python 3.14 (no 2nd interpreter). venv at `.venv` (gitignored).
+- **Phase 1.1 — DONE** (`sim/dynamics.py`): CTBR kinematic dynamics, GPU-vectorized, FlightSim-calibrated (TWR=3.95, CD=0.3). Validated: hover holds to 0.000 m, climb/fall correct, pitch→+X/roll→−Y matches the sign table, 0.9M env-steps/s.
+
 ## Immediate next action
-**Phase 0.1 — stand up the CUDA training env and prove `torch.cuda.is_available()` on the 5080.** Nothing downstream is real until that's green. Then 0.2 (dreamerv3-torch), then start Phase 1.1 (dynamics).
+**Phase 1.2 — the renderer (`sim/render.py`).** Fast GPU-vectorized 64×64 FPV camera (20° down-tilt, VQ1 intrinsics, desaturated high-contrast gates). **Reference `../vision/synthetic_camera.py` first.** Then Phase 1.3 (gym env) → Phase 0.2 (`pip install numpy gymnasium dreamerv3-torch`) → Phase 2 (smoke run). See `memory/handoff.md` top for the full resume block.
