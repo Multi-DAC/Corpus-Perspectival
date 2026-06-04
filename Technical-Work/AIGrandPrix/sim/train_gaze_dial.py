@@ -44,7 +44,7 @@ from infinite_gate_env import InfiniteGateEnv
 from perception_deadreckon import DeadReckonPerceptionObsWrapper
 from drone_env_v2 import quat_rotate_np
 from stable_baselines3 import PPO
-from stable_baselines3.common.vec_env import DummyVecEnv
+from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.callbacks import BaseCallback
 
@@ -103,9 +103,18 @@ class DialSchedule(BaseCallback):
     _UNSET = object()
     def __init__(self, sched, total):
         super().__init__(); self.sched = sched; self.total = total; self._cur = self._UNSET
+    def _envs(self):
+        # reach the underlying env list whether training_env is a DummyVecEnv or a VecNormalize(DummyVecEnv)
+        te = self.training_env
+        if hasattr(te, "envs"):
+            return te.envs
+        v = getattr(te, "venv", None)
+        if v is not None and hasattr(v, "envs"):
+            return v.envs
+        return []
     def _set(self, val):
         n = 0
-        for e in self.training_env.envs:
+        for e in self._envs():
             w = _find_wrapper(e)
             if w is not None:
                 w._obs_wrapper.max_reckon_steps = val
@@ -143,10 +152,10 @@ class GatesLogger(BaseCallback):
 class EvalGazeDial(BaseCallback):
     """At each interval: save ckpt, run DETERMINISTIC eval at deploy(inf) AND stress(reckon=2).
     Track best-by-acquisition-stress (the metric that sees the debt). Append to ledger."""
-    def __init__(self, every, ckpt_dir, ledger, best_file, n_eval=8):
+    def __init__(self, every, ckpt_dir, ledger, best_file, n_eval=8, vec_env=None):
         super().__init__()
         self.every = every; self.dir = Path(ckpt_dir); self.ledger = ledger
-        self.best_file = best_file; self.n = n_eval
+        self.best_file = best_file; self.n = n_eval; self.vec_env = vec_env
         self._last = 0; self.best_stress = -1.0; self.best_path = None
     def _log(self, msg):
         print(msg, flush=True)
@@ -158,10 +167,19 @@ class EvalGazeDial(BaseCallback):
         self._last = self.num_timesteps
         ck = self.dir / f"gd_{self.num_timesteps}_steps"
         self.model.save(str(ck))
+        vp = None
+        if self.vec_env is not None:                       # per-checkpoint vecnorm (or eval breaks silently)
+            vp = str(ck) + "_vecnorm.pkl"
+            self.vec_env.save(vp)
         try:
-            from gaze_eval import run
-            rd = run(self.model, max_reckon_steps=None, episodes=self.n, seed=2026)   # deploy
-            rs = run(self.model, max_reckon_steps=2, episodes=self.n, seed=2026)      # stress
+            if self.vec_env is not None:
+                from gaze_eval import run_vn
+                rd = run_vn(str(ck) + ".zip", vp, max_reckon_steps=None, episodes=self.n, seed=2026)
+                rs = run_vn(str(ck) + ".zip", vp, max_reckon_steps=2, episodes=self.n, seed=2026)
+            else:
+                from gaze_eval import run
+                rd = run(self.model, max_reckon_steps=None, episodes=self.n, seed=2026)   # deploy
+                rs = run(self.model, max_reckon_steps=2, episodes=self.n, seed=2026)      # stress
             ts = time.strftime("%H:%M:%S")
             self._log(f"[{ts}] {self.num_timesteps:>9,}  deploy(inf): gates={rd['gates']:.2f} "
                       f"gaze={rd['gaze']:.3f} iv={rd['inview']:.0f}%  |  stress(2): "
@@ -275,6 +293,10 @@ def main():
                    help="policy to warm-start from. DEFAULT = RAW 80M teacher (validated). A "
                         "VecNormalize-trained navigator (v3 batched) needs its obs normalized — this "
                         "RAW env would feed it unnormalized obs (mismatch); validate before trusting.")
+    p.add_argument("--warmstart-vecnorm", default=None,
+                   help="VecNormalize .pkl paired with --warmstart (navigator warm-start). When set, the "
+                        "env is VecNormalize-wrapped (stats loaded from this file, training=True to adapt "
+                        "from privileged→perception obs), checkpoints save paired vecnorm, eval uses run_vn.")
     p.add_argument("--scratch", action="store_true", help="train from scratch (no warm-start)")
     args = p.parse_args()
 
@@ -293,13 +315,23 @@ def main():
     print(f"  dial schedule: {sched}  (init reckon = {'inf' if init_reckon is None else init_reckon})")
     print(f"  gaze-reward-weight: {args.gaze_reward_weight}  "
           f"({'COUPLED gaze reward ON (A3)' if args.gaze_reward_weight > 0 else 'off (A0/A2)'})")
-    if not args.scratch and os.path.abspath(args.warmstart) != os.path.abspath(TEACHER):
-        print("  WARNING: non-default warm-start — if VecNormalize-trained, obs will MISMATCH this "
-              "RAW env. Validated path is the RAW 80M teacher.", flush=True)
+    if (not args.scratch and os.path.abspath(args.warmstart) != os.path.abspath(TEACHER)
+            and not args.warmstart_vecnorm):
+        print("  WARNING: non-default warm-start WITHOUT --warmstart-vecnorm — if VecNormalize-trained, "
+              "obs will MISMATCH this RAW env.", flush=True)
 
     venv = DummyVecEnv([make_env(seed=i * 42, ground_prob=args.ground_prob, init_reckon=init_reckon,
                                  gaze_reward_weight=args.gaze_reward_weight)
                         for i in range(args.n_envs)])
+
+    vec_env = None
+    if args.warmstart_vecnorm:
+        venv = VecNormalize.load(args.warmstart_vecnorm, venv)
+        venv.training = True            # adapt running stats from privileged -> perception obs distribution
+        venv.norm_reward = True
+        vec_env = venv
+        print(f"  VecNormalize loaded from {os.path.basename(args.warmstart_vecnorm)} "
+              f"(training=True — stats adapt to perception obs; per-ckpt vecnorm saved; eval via run_vn)")
 
     if args.scratch:
         model = PPO("MlpPolicy", venv, learning_rate=args.lr, clip_range=0.2, ent_coef=0.01,
@@ -316,12 +348,15 @@ def main():
     cbs = [LogStdClamp(),
            DialSchedule(sched, args.total_steps),
            GatesLogger(),
-           EvalGazeDial(args.save_every, out / "checkpoints", ledger, best_file, args.eval_episodes)]
+           EvalGazeDial(args.save_every, out / "checkpoints", ledger, best_file, args.eval_episodes,
+                        vec_env=vec_env)]
 
     t0 = time.time()
     model.learn(total_timesteps=args.total_steps, progress_bar=False, reset_num_timesteps=True,
                 callback=cbs)
     model.save(str(out / "final_model"))
+    if vec_env is not None:
+        vec_env.save(str(out / "vec_normalize.pkl"))
     print(f"\n  done in {(time.time()-t0)/60:.1f} min -> {out}/final_model.zip")
     if os.path.exists(best_file):
         print("  BEST (by acquisition-stress):")
