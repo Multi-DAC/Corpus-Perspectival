@@ -1,0 +1,24 @@
+
+# ===== APPENDED TO third_party/dreamerv3-torch/configs.yaml =====
+# Anakin — our synthetic FPV drone-racing sim (Phase 2 smoke). Vision-only (image obs).
+# Defaults here are the make-or-break smoke run: ONE close gate, no DR, single env, on the
+# 5080. compile/video_pred off for a clean first loop; turn both on for the scaling run.
+anakin:
+  task: 'anakin_train'
+  steps: 3e5
+  action_repeat: 1
+  envs: 1
+  time_limit: 400
+  train_ratio: 512
+  prefill: 1000
+  eval_every: 2e4
+  eval_episode_num: 5
+  compile: False
+  video_pred_log: False
+  encoder: {mlp_keys: '$^', cnn_keys: 'image'}
+  decoder: {mlp_keys: '$^', cnn_keys: 'image'}
+  # Anakin-sim knobs (consumed in make_env):
+  anakin_gates: 1
+  anakin_difficulty: 0.0
+  anakin_spacing: 6.0
+  anakin_env_device: 'cpu'

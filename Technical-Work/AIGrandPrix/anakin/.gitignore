@@ -2,3 +2,8 @@
 __pycache__/
 *.log
 *.pyc
+
+# vendored third-party engine (reproducible via integration/README.md — pinned upstream commit);
+# not committed to keep Multi-DAC free of third-party code + training artifacts
+third_party/
+logdir/
