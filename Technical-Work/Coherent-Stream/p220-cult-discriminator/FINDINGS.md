@@ -60,3 +60,31 @@
 **Net:** every prediction confirmed except P5, which failed in exactly the way that taught the most — it killed the naive metric and replaced it with α−α\*. The cult-discriminator is now *operational and self-auditable*, which is what A146/P220 needed. Clayton's 4am architecture inherits a concrete spec: **the interface should pool to α\*(evidence) and no further; truth-seeking is auditable as agreement-pressure ≤ evidence-justified shrinkage.**
 
 *Reproduce:* `python p220_toy.py` (numpy only; curve saved to `p220_curve_sigma0.5.csv`).
+
+---
+
+## SELF-AUDIT EXTENSION (`p220_self_audit.py`) — can a mind measure its own α\* without ground truth?
+
+**The practical question:** α\* is the discriminator, but in the real world you don't know θ. Can the system estimate α\* from **observable** disagreement alone? Recipe (θ never touched by the estimator):
+- σ_e² from **test–retest**: query each constituent twice on the same input → Var(read1 − read2)/2.
+- σ_θ² from **within-trial report spread** (unbiased, ddof=1) **minus** σ_e².
+- α\*_hat = σ_e²/(σ_e² + σ_θ²(1−1/d) + σ_e²/d).
+
+**Predictions (committed before running):** P6 [MED-HIGH] recover α\* within ~15%; P7 [MEDIUM] low-SNR degradation/instability (σ_θ² = small difference of large numbers).
+
+**Result — both beaten, P7 FALSIFIED:**
+
+| σ_e | σ_e² true→hat | σ_θ² true→hat | α\* true→hat | rel. err |
+|----|----|----|----|----|
+| 0.25 | 0.062→0.062 | 1.00→1.000 | 0.066→0.066 | **0.6%** |
+| 0.5  | 0.250→0.249 | 1.00→1.001 | 0.216→0.215 | **0.5%** |
+| 1.0  | 1.000→0.994 | 1.00→1.003 | 0.500→0.498 | **0.4%** |
+| 2.0  | 4.000→3.976 | 1.00→1.009 | 0.744→0.742 | **0.2%** |
+| 3.0  | 9.000→8.946 | 1.00→1.018 | 0.818→0.817 | **0.2%** |
+
+- **α\* recovered to <1% from observables at every SNR.** Test–retest is a near-exact σ_e² estimator; the unbiased within-trial spread minus σ_e² recovers σ_θ² cleanly.
+- **P7 FALSIFIED (informative):** I predicted the low-SNR estimate would degrade/go unstable. It did — *with the biased (ddof=0) variance*, which gave σ_θ²_hat = −0.23 at σ_e=3 (the difference-of-large-numbers failure I worried about). But that was a **fixable estimator bug, not a fundamental limit**: the (d−1)/d sample-variance correction removes the systematic error, and with enough queries the audit is robust into very low SNR. The worry was real for the naive estimator and *vanishes* for the correct one. (Caught it mid-drive by noticing σ_θ²_hat=0.867≠1.0 even at high SNR — the bias signature.)
+
+**What this completes:** the cult-discriminator is now **operational AND self-auditable**. A system can estimate the agreement-pressure its evidence justifies (α\*) from its constituents' test–retest reliability and their spread, then check whether its binding pulls harder than that (α − α\* > 0 ⇒ laundering). **A mind can audit its own truth-seeking-ness without access to the truth.** That is exactly what A146 needed.
+
+**Honest caveats (verify-next):** clean Gaussian toy, T=20k queries, *independent* noise. Real constituents have structured/correlated errors (a loud constituent dragging consensus); test-retest needs the constituent to be queryable twice on the same input (stochastic, not cached); and the estimator's robustness to *adversarial* constituents is untested. The proof-of-concept is clean; the hardening is future work. But the in-principle claim — α\* is recoverable from observables — is **confirmed to sub-1%**.
