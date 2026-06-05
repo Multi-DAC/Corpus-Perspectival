@@ -25,7 +25,7 @@ When an intake item is processed, add a row: what it is, where it came from, the
 |---|---|---|
 | voice-notes | 3 | **2 DONE** (transcribed → already-integrated → scrapped). 117 MB `Why_Your_Blind_Spots_Build_Reality.m4a` still PENDING (long-form audio; what is it?) |
 | aigp-code | 12 | **DONE — DEPRECATED** (7 in-repo dups + 2 throwaway Unreal probes + 3 json; scrapped, zero loss) |
-| aigp-refs | 14 | PENDING — → `AIGrandPrix/research` |
+| aigp-refs | 14 | **IN PROGRESS** — 3 cited papers REGISTERED (`sources/2026-06-05-aigp-build-references.md`); techspec/results/frames (11) pending Clayton's deprecate-confirm |
 | research-papers | 94 | PENDING — register + read-queue (the reservoir) |
 | notes-text | 54 | PENDING — individual triage |
 | named-images | 30 | PENDING — mostly AIGP frames / page-fixes |
