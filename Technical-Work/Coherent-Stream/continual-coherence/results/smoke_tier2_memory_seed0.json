@@ -1,0 +1,16 @@
+{
+  "arm": "tier2_memory",
+  "seed": 0,
+  "in_domain_trajectory": [
+    0.375,
+    0.6875
+  ],
+  "held_out_trajectory": [
+    1.0,
+    1.0
+  ],
+  "store_sizes": [
+    0,
+    8
+  ]
+}

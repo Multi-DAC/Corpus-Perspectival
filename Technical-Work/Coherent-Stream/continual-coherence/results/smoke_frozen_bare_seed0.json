@@ -1,0 +1,16 @@
+{
+  "arm": "frozen_bare",
+  "seed": 0,
+  "in_domain_trajectory": [
+    0.125,
+    0.125
+  ],
+  "held_out_trajectory": [
+    0.4375,
+    0.4375
+  ],
+  "store_sizes": [
+    0,
+    0
+  ]
+}

@@ -2,6 +2,8 @@
 
 *85+ findings measuring the Coherence Principle in neural network algebraic structure, training dynamics, inference behavior, and cross-substrate universality.*
 
+> **Part of the [Coherent Stream](../Coherent-Stream/README.md) program** — KF is its *consolidation-gate facet* (waypoint 2 of the path): how a coherent stream consolidates experience into weights coherently, and the build/dissolve oscillation's signature at the training-dynamics scale.
+
 ## Status: Drafting — 85+ findings, paper-grade sections exist, v0.6b running
 
 ## What This Book Is

@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "started_at": "2026-05-30T03:23:25.453610+00:00",
+    "seeds": [
+      0
+    ],
+    "steps": 100,
+    "batch_size": 64,
+    "lr": 0.0003,
+    "eval_batches": 20,
+    "arms": [
+      "v23_stiefel"
+    ],
+    "arm_configs": {
+      "v23_stiefel": {
+        "mode": "stiefel_constrained"
+      }
+    },
+    "pre_registration": "palace/south/respira-phase4-stage1-v21-fixed-preregistration-2026-05-29.md",
+    "ratified_by": "Clayton",
+    "ratified_at": "2026-05-29 evening",
+    "elapsed_total_s": 12.06534481048584
+  },
+  "runs": [
+    {
+      "arm": "v23_stiefel",
+      "seed": 0,
+      "elapsed_s": 3615.354001522064,
+      "mode": "stiefel_constrained",
+      "mode_info": {
+        "original_p_to_e_params": 4096,
+        "original_e_to_p_params": 4096,
+        "new_p_to_e_params": 4096,
+        "new_e_to_p_params": 4096,
+        "p_to_e_isometry_kind": "columns_orthonormal (E>P)",
+        "e_to_p_isometry_kind": "rows_orthonormal (P<E)"
+      },
+      "checkpoints": {},
+      "first_task_loss": 2.409329652786255,
+      "last_task_loss": 2.317427158355713,
+      "aborted": false
+    }
+  ]
+}
