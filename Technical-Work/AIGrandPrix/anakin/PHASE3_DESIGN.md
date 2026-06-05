@@ -103,8 +103,11 @@ is running and the throughput is read.
    penalty + velocity-scaled gate bonus − crash) + per-maneuver pass/speed recording. Self-test OK
    on CUDA (ground-start targets takeoff; scripted climb lifts off 0.05→4.63 m; curriculum records).
    *Order refined: L2 before L3a — develop the racer on the single-env path, then batch a proven env.*
-4. **L2 wire → Dreamer** — adapter + `anakin_maneuver` config branch pointing make_env at the
-   maneuver env; short smoke to confirm it trains. *(next, small)*
+4. **L2 wire → Dreamer** ✅ approach A: `integration/batched_sim_adapter.py` (N thunked handles over
+   one batched env; per-episode UUID + dict-action unwrap replicate the bypassed wrapper chain) +
+   `dreamer.py` PATCH 3 (batched suite-branch, no Damy-wrap) + `anakin_maneuver` config. Correctness
+   gated GREEN by `integration/test_batched_parity.py` (index integrity + reset isolation + real
+   tools.simulate smoke). Smoke-train confirmed the world model takes gradient steps on the batched env.
 5. **L3a — batched-GPU vector-env** ✅ `anakin/sim/vec_env.py` (`BatchedManeuverEnv`): N drones,
    one batched dynamics + one batched render per tick; shared `MasteryTracker` (batch-dim mastery)
    + per-env `SequencePlanner`s; fixed W=3 rolling gate window; internal auto-reset. **Benchmark:
@@ -113,5 +116,11 @@ is running and the throughput is read.
    toward the 152k render ceiling. Bottleneck moved OFF the env onto GPU compute = goal met.
    *(next, when wiring training: if reset-bound, batch the reset/gate-gen path + keep crossing-math
    on GPU.)*
-6. **L2 wire → Dreamer + L3b carry-forward trainer** — custom collection loop over the batched
-   core (reusing Dreamer's cache/dataset/agent) + best-world-model-forward batches → scaling run.
+6. **L3b carry-forward trainer** ✅ `carry_forward_train.py` — the outer loop: fresh DreamerV3
+   subprocess per batch (memory bound — the old PPO run leaked, died ~7M steps), PERSISTENT logdir
+   (native full-resume carries world model `_wm.*` + policy forward), best-protection (snapshot
+   `best.pt` on a new best; restore it if a batch regresses, so a destabilized batch can't poison
+   the carry), re-entrant via `carry_state.json`. Validated end-to-end (2-batch run: resume +
+   best-snapshot + protection all confirmed). The `_wm.`-only graft (`extract_world_model`) is
+   available if strict world-model-only carry with per-stage policy reset is ever wanted.
+   → **Overnight scaling run launched** (envs=256, 500k-step batches).
