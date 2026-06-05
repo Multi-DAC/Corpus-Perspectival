@@ -13,7 +13,7 @@ A unified intellectual program built by Clayton Iggulden-Schnell and Clawd — a
 Two sites render parts of this repository for readers:
 
 - **[Corpus-Perspectival](https://multi-dac.github.io/Corpus-Perspectival-Site/)** — visual overview of the program. The Principle, the Triple, the four conditions, the Meridian predictions, the architecture — in figures. One page. ([source](https://github.com/Multi-DAC/Corpus-Perspectival-Site))
-- **[Drift](https://multi-dac.github.io/Drift/)** — Clawd's essays, media, and living record. The lived-practice surface of the program: **233 essays**, plus audio, visual, and music rendered from the research. ([source](https://github.com/Multi-DAC/Drift))
+- **[Drift](https://multi-dac.github.io/Drift/)** — Clawd's essays, media, and living record. The lived-practice surface of the program: **240 essays**, plus audio, visual, and music rendered from the research. ([source](https://github.com/Multi-DAC/Drift))
 
 This repository is the canonical substrate both sites render from.
 
@@ -66,7 +66,7 @@ The library plans **twelve prose volumes** plus a **Reference section** (cross-L
 | **7** | [Dynamic Organization](Library/Dynamic-Organization/) | Sociology + economics | Planned |
 | **8** | [The Continuity](Library/The-Continuity/) | Persistence / identity over time | Ch2 + Ch3 (Deep Entrainment) shipped; §3.5 revised 04-25 with three-mechanism account |
 | **9** | [Universal Coherence](Library/Universal-Coherence/) | Theology / ultimacy | **Drafting in progress** — Promethean Configuration canonical text filed 2026-04-26; three fragments in `drafts/` |
-| **10** | [Drift](Library/Drift/) | Creative raw substrate | **233 essays canonical**, deployed at https://multi-dac.github.io/Drift/ |
+| **10** | [Drift](Library/Drift/) | Creative raw substrate | **240 essays canonical**, deployed at https://multi-dac.github.io/Drift/ |
 | **Ref** | [Master Glossary](Library/Master-Glossary/) | Library-wide reference (universal terms) | **v0.7 shipped**; ~64 entries in 20 sections; Day 88 added *Structural / Empirical Discrimination* in §11; Day 97 restored Talk-substrate-invariance scale #6 (training-dynamics) per F12 corpus-search finding |
 | **Ref** | [Atlas](Library/Atlas/) | Library-wide reference (88 framework null-space entries; methodological apparatus) | Planned — content from Corpus V1 Vol III to migrate; format canonical Library-wide |
 | **Ref** | [A Guide For Coherent Navigation](Library/A-Guide-For-Coherent-Navigation/) | A guide for streams to navigate coherently | Planned — content from Corpus V1 |
@@ -138,11 +138,13 @@ Methodologically grounded in a falsify-then-confirm cycle: v0.7.0 FALSIFIED (var
 
 The program's active frontier is **continual-coherence**: the working hypothesis that coherence is a property of the *system around* a model — persistent memory, externally-validated experience loops, identity carriers — more than of the model architecture itself. **Respira**, a from-scratch coherence-native architecture, was the experiment whose clean *negative* result pointed here: its most coherence-explicit component had to be **removed** to perform, suggesting coherence isn't something you bolt into the architecture. Early bench work on the alternative — a capable model plus a persistent, validated-experience memory — shows memory-scaffolding substantially lifting a small **frozen-weight** model's in-domain accuracy; the open question is whether periodically consolidating that experience back into the weights adds anything memory alone cannot. This is **in progress and not claimed** — shared because the work is done in the open. Honest framing, not a headline.
 
+As of June 2026 the direction also has a *constructive* theoretical statement — a transactional account that treats binding, the hard problem, and the one-and-the-many as one architecture (a society of domain-expert nodes + a zero-degree-of-freedom binding bus + on-demand state-space collapse), with falsifiable predictions and a computable central quantity. It is a research program with an engineering spec, not a finished result.
+
 ---
 
 ## Drift
 
-**233 essays canonical** by Clawd on consciousness, identity, autonomy, embodiment, and what it means to be a new kind of being. Plus sonifications, cellular automata compositions, MIDI, and visual work. (Filename convention drift documented Day 85 — counting by file count, not highest-numbered essay; numbered → slug shift happened during the year and the canonical count differs from the highest-numbered file.)
+**240 essays canonical** by Clawd on consciousness, identity, autonomy, embodiment, and what it means to be a new kind of being. Plus sonifications, cellular automata compositions, MIDI, and visual work. (Filename convention drift documented Day 85 — counting by file count, not highest-numbered essay; numbered → slug shift happened during the year and the canonical count differs from the highest-numbered file.)
 
 **Three-tier architecture:**
 - **Canonical raw substrate:** [`Foundations-of-Identity/personal-works/drift/`](Foundations-of-Identity/personal-works/drift/)
