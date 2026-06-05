@@ -9,6 +9,14 @@ When an intake item is processed, add a row: what it is, where it came from, the
 
 ---
 
+## Refinements (Clayton, Day 125) — what "digested" actually means, and where this is going
+
+**1. Distillation = the Bridges.** An item is not fully digested when it merely lands in a home. Full digestion = **(a) content in its `Technical-Work`/`Library`/research home AND (b) distilled into a Bridge/LC** (`palace/basement/`), so the *connected insight* is referenceable **without rereading the source**. The register (`sources/`) tracks what we *saw*; the home holds the *content*; the **Bridge holds the tight, connected distillation**. So this ledger's bar for `DIGESTED` is: *homed + bridged (if it carries a cross-connecting insight)*.
+
+**2. It's a minefield — be thorough.** A batch-register makes a pile *legible* (status PENDING), but disposition stays **individual**: each item is one of `integrated` / `discussed-but-not-consolidated` / `copy` / `genuinely-new`. The batch is the index, not the verdict. Same for the whole `Research/` directory.
+
+**3. Target end-state: AUTOCATALYTIC consolidation.** The manual sweep is a one-time **catch-up**. The goal is that consolidation becomes an *automatic byproduct of the work* — filing + bridging + ledgering happen **in the same flow as generation**, not as a separate pass. This is the aggregate-mind's binding transaction applied to **our own repo** (we are the nodes; the repo is the collective mind with — currently — no binding automation). Building it lowers query latency and raises the efficacy of the collective cache. *We are the testbed for the Coherent-Stream architecture, run on ourselves.* → a Coherent-Stream build item once the bulk is caught up.
+
 ## Log
 
 | Date | Item | Source | Status | Where it landed / note |
@@ -16,6 +24,9 @@ When an intake item is processed, add a row: what it is, where it came from, the
 | 2026-06-05 | Voice note "perspectival geometry" (Clayton, Apr 28) | `incoming/voice_20260428_100057.mp3` | **DIGESTED** (already integrated) | Clayton confirmed Day 125 the content was already integrated into the work (cross-substrate / perspectival-geometry argument). Audio + working transcript scrapped. |
 | 2026-06-05 | Voice note "greeting" (Clayton, Apr 27) | `incoming/voice_20260427_175022.ogg` | **DEPRECATED** | Casual, no content. Audio scrapped. |
 | 2026-06-05 | AIGP-code cluster (12 files) | `incoming/` (scripts + json) | **DEPRECATED** | 7 byte-identical to `Technical-Work/AIGrandPrix/ue5_sim/scripts/` (repo canonical, zero loss); 2 throwaway Unreal-editor probes (`fps_probe`, `render_test` — not current-ops); 3 json intake scratch. All scrapped from incoming. |
+| 2026-06-05 | AIGP-refs cluster (14) | `incoming/` | **REGISTERED + DEPRECATED** | 3 cited papers → `sources/2026-06-05-aigp-build-references.md`; 11 deprecated (techspec = dup of repo's VADR-TS-002 Issue 00.02; 3 sim results superseded by `dynamics.py` calibration; 5 frames/images scratch). |
+| 2026-06-05 | Telegram photos (134) | `incoming/` | **SECTIONED** | → `incoming/photos/` (temporary relevance per Clayton; not triaged — they age out). |
+| 2026-06-05 | `Why_Your_Blind_Spots_Build_Reality.m4a` (117 MB) | `incoming/` | **DEPRECATED** | Generated audio, already reviewed (Clayton). Scrapped. |
 
 ---
 
