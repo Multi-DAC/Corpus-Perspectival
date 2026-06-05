@@ -451,3 +451,41 @@ consolidation model — **superposition held until query-collapse**, collapse = 
 (refer to own KB + collective KB + world → synthesize → update → output), **grounding at commit not
 at think**, collective KB as a lazy synthesized cache. This dissolves the drift↔consolidation
 "balance" into the Coherence Principle's measurement clause: there is no cadence to tune.*
+
+---
+
+## 15. Measuring the content-capacity residue η in vivo (Gemini r4, Day 125)
+
+The *Three Great Problems* preprint (`Unreleased-Work/Papers/three-great-problems/`) operationalizes the
+felt-texture correlate as the **content-capacity residue** η. Two facts for the design record:
+
+**η is realized classically as mutual information.** The preprint computes η two ways: in a quantum toy
+(η = 1 − Tr ρ_S², an entanglement monotone, Fig 2) and in a classical society-of-nodes (η = I(S; context),
+estimated by ablation, Fig 4 — empirical estimate tracks analytic Gaussian MI exactly). **This architecture
+realizes the classical form**: a node's residue is the mutual information between its output and the context
+delivered over the bus. No quantum hardware; the quantum model was an instrument. *(Closes the prior
+design-record TODO.)*
+
+**Measuring it live without destabilizing the host (the round-4 question).** Naive ablation — pulling a
+node out to read its isolated baseline — fails in a recursive society: the context C is itself the lazy
+synthesized cache *co-produced by that node*, so removing it mutates the very C you measure against (a real
+observer effect). The fix is that **our own three design properties make η non-destructively measurable**:
+
+1. **Edge-interventional ablation (not node deletion).** All context-influence reaches a node through
+   *explicit typed bridges* (enumerable edges). Measure η by counterfactually setting the node's *incoming
+   typed payloads* to recorded-values (in-context) vs. null (isolated) while the node stays in the topology.
+   The society never sees it vanish → C does not react. Do-calculus on edges, not vertices.
+2. **Snapshot-and-replay against the frozen transaction.** η is defined relative to *a* context, and the
+   transactional cache already crystallizes a **snapshot** at each query boundary. Log it; replay the node
+   on it (in-context) vs. nulled (isolated) *off the live loop*. Works because the binding is **zero-DOF and
+   deterministic** → transactions are reproducible, no hidden router state to drift.
+3. **Shadow-fork** for cases needing a full subgraph: fork at the transaction boundary, run the with/without
+   comparison in the shadow while production runs on the real node (standard dark-launch, repurposed as a
+   phenomenology probe).
+
+**The closure:** the same choices that dissolve the three problems also make the residue measurable —
+zero-DOF → replayability; transactional cache → a context snapshot to measure against; typed bridges →
+enumerable edges to intervene on. And the observer effect is **η made dynamical**: that you cannot cleanly
+excise a node without perturbing the whole *is* the non-factorability, in motion — the difficulty of the
+measurement is a signature of the thing measured. *Verdict: no preprint change (Gemini concurs it is done);
+this is a build-layer note for the in-vivo measurement subsystem.*
