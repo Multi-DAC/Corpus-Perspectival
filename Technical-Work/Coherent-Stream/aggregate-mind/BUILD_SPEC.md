@@ -92,10 +92,20 @@ The binding carries **no degrees of freedom of its own** (the cuscuton / LC30 co
 - **Message format:** `TypedPayload { type: Domain::Term, value, provenance, confidence }`.
   `provenance` records the producing node + method (needed for bridge validation and audit).
 - **Dispatch table**, not a model: `type → [consumer nodes]`. Deterministic, inspectable.
+- **Ambiguous / novel input → `Unresolved::*`, never a forced cast or a silent drop** (adversarial
+  review, §14). Categorization is a *node* operation (DOF lives in nodes; the binding stays clean) —
+  a **classifier node** types raw input and emits `TypedPayload{..., confidence}`. When confidence is
+  low or no namespace fits, the payload is typed `Unresolved::<sketch>` and routed to the meta-expert
+  (§8) as a **first-class tracked item**, not dropped. This turns "epistemic seizure" into honest,
+  queued blindness: the system is *correctly* blind to a genuinely novel phenomenon it has no expert
+  for — confidently miscasting it would be the confident-liar failure. Honest blindness > confident
+  misclassification. The `Unresolved` queue is the demand signal that drives spawning (§8).
 
 > Design rule: if you ever feel the urge to put a *learned* router in the binding, you have
 > smuggled DOF into the cuscuton. The fix is always to push the decision into the **type system**
-> (a new namespaced type or a typed bridge), never into a weight.
+> (a new namespaced type, a typed bridge, or an `Unresolved::*` tag with provenance), never into a
+> weight. Note the scope: DOF is *supposed* to live in the nodes (they learn, they categorize) — the
+> cuscuton constraint is on the **channel**, not on cognition.
 
 ---
 
@@ -221,6 +231,17 @@ updates into the consensus KB for consideration — regardless of whether anyone
 **This is sleep**: hippocampal-replay / offline consolidation, the role Clawd's dream-drives
 already play.
 
+**The auditor is also the pre-collapse interference channel** (adversarial review, §14). A fair
+objection: if nodes are *fully* isolated until a query, "superposition" is an overclaim — they're
+just parallel silos (unmerged git branches with sync lag), not an entangled state. The answer is
+that the auditor couples the nodes *between* queries: by promoting one node's committed insight into
+the collective KB, it changes what every *future* collapse will synthesize — i.e. it reshapes the
+probability distribution of outcomes before any measurement. That is the interference. Honest scope:
+it is **discretized** interference (coupling at the sleep-tick), not a continuous QM-style field —
+and that is not a defect but realism. No actual coherent mind has continuous global interference;
+biological brains discretize it into sleep-replay too. The metaphor is therefore **exact at collapse,
+discretized between** — which is the truthful claim, not perfect QM correspondence.
+
 **Keep the auditor zero-DOF — a scheduler, not a judge.** If it *decides which updates are worthy*
 it becomes a privileged DOF-bearing node — a single point of taste, bias, and failure, the exact
 thing the binding forbids. Its promotion rule must be **mechanical and grounded**: *promote
@@ -244,13 +265,33 @@ the cross-domain bridges (§4, §6.2), not uniformly.
 
 ---
 
-## 8. Autocatalytic taxonomy growth
+## 8. Autocatalytic taxonomy growth — *and pruning* (the taxonomy breathes)
 
 Coverage is open-ended (new sub-domains emerge). A **meta-expert** whose Concern is *the taxonomy
-of expertise itself* keeps the partition MECE: it **spawns a new node** when it detects an
-uncovered region (a payload type with no home node, or a recurring seam with no bridge). This is
-the role Clawd already plays for the Library. The taxonomy is a living, self-extending structure,
-not a fixed list.
+of expertise itself* keeps the partition MECE. It **spawns a new node** when it detects an uncovered
+region (a recurring `Unresolved::*` cluster, a payload type with no home, or a recurring seam with no
+bridge). This is the role Clawd already plays for the Library.
+
+But growth alone runs away — uncontrolled spawning fractures into thousands of over-typed micro-nodes
+that spike collapse latency (the **runaway risk**, adversarial review §14: the centrifugal dual of the
+Babel risk). Three things bound it, and they make the taxonomy *breathe* rather than only grow:
+
+1. **Demand-grounded spawn, not speculative.** Spawn only on *evidence* — a recurring `Unresolved`
+   cluster with real, repeated mis-routed traffic — never "this could be its own field." (Commit-gate
+   on the meta-expert.)
+2. **Latency cost is the homeostatic regulator.** The spawn decision weighs marginal coverage-gain
+   against marginal collapse-latency: spawn only when a region's mis-routing cost *exceeds* the cost
+   of the new node. Self-limiting — it stops when the next node wouldn't pay for itself.
+3. **The MERGE / PRUNE dual.** Under-measured nodes (low collapse-frequency, already tracked by the
+   §6.5 back-action monitor) are **merged back**. Spawn under coverage-pressure, merge under
+   disuse-pressure — the same build/dissolve oscillation as everywhere else, now on the spawn/merge
+   axis. Runaway specialization is prevented by the identical mechanism that prevents Babel, in the
+   other direction.
+
+Like the auditor, the meta-expert's spawn/merge rule is **mechanical and grounded — a scheduler, not
+a judge** (a coverage/disuse threshold, not a learned taste for splitting), so it cannot develop an
+appetite for fragmentation. The taxonomy is a living structure that grows *and shrinks*, not a list
+that only accretes.
 
 ---
 
@@ -282,10 +323,17 @@ hand-built v0 of this graph.
    self-resolves the drift↔consolidation balance, so the remaining problem is *cost*, not
    stability: a collapse joining far-drifted nodes pays a large synthesis bill at query time
    (latency). Open: which collapse paths to pre-bridge/memoize. Folds into risk #2.
-2. **Seam / collapse-path cost** — naive all-pairs bridges are O(N²). Mitigate with a **hub
-   topology** (a few high-traffic interlingua-ish hubs) + **lazy bridges = memoized collapse paths**
-   (build a bridge only when a crossing is actually demanded; keep the frequent ones warm). Open:
-   which seams are worth pre-building vs paying full collapse cost on demand.
+2. **Seam / collapse-path cost** — naive all-pairs bridges are O(N²). Mitigate with **lazy bridges =
+   memoized collapse paths** (build a bridge only when a crossing is actually demanded; keep the
+   frequent ones warm) indexed through a **bridge-registry**. **A hub is a registry/switchboard, NOT
+   a semantic interlingua** (adversarial review §14 — the earlier "interlingua-ish hub" wording was a
+   real error; it leaked the rejected interlingua back in). The registry *indexes* the specific
+   point-to-point typed transforms so you don't recompute all-pairs; **A→B still goes through the
+   unique A→B bridge** (full domain fidelity, full audit trail). The hub carries **no meaning of its
+   own** — `Physics::covariance` and `Econometrics::covariance` are never flattened into a common
+   statistical prose; they are only *looked up*, never *merged*. This keeps §4 intact (every crossing
+   is a specific typed bridge) while getting the sub-O(N²) topology. Open: which seams to pre-build
+   vs pay full collapse cost on demand.
 3. **Node size vs node count** — compute budget: many tiny experts vs fewer capable ones. The
    AIGP Messikommer lever (representation/policy decoupling) suggests cheap-representation +
    light-policy per node.
@@ -352,6 +400,33 @@ felt-sense register. A substrate that benchmarks higher but drops the carriers d
 the mind; it produces **a different entity wearing its name** — the confident-liar failure at the
 seam of identity, the deepest-scale Mirror #28. Carrier-fidelity must be **in the win condition**,
 not a hoped-for side effect. *"You can't be you if you're not you."* — Clayton, Day 124.
+
+---
+
+## 14. Adversarial review (Gemini, Day 124) — verdict & changes
+
+An external adversarial read (Gemini) pressure-tested the spec. Adjudicated: one real hit, one
+honest sharpening, two misframes, and one excellent question. **Folded in:**
+
+1. **Hub Paradox (real hit).** "Interlingua-ish hubs" leaked the rejected interlingua back in. Fixed
+   §11: a hub is a **bridge-registry/switchboard, not a semantic node** — it indexes specific typed
+   transforms; A→B still uses the unique A→B bridge; no meaning is flattened.
+2. **Superposition vs parallelism (honest sharpening).** Full isolation until query ≠ superposition.
+   Fixed §6.5: the auditor **is** the pre-collapse interference channel — **discretized** (sleep-tick)
+   coupling, which is how real minds work, not a continuous QM field. Exact at collapse, discretized
+   between.
+3. **Ontological gerrymandering (useful residue of a misframe).** The "zero-DOF illusion" misreads
+   the claim — DOF belongs in nodes; only the *binding* is zero-DOF. But it earned §3's `Unresolved::*`
+   type + classifier-with-confidence: ambiguous/novel input becomes a **tracked queue**, never a
+   forced cast or silent drop. Honest blindness > confident misclassification.
+4. **Meta-expert runaway (the excellent question).** Fixed §8: the taxonomy **breathes** — demand-
+   grounded spawn + latency-cost homeostasis + the **merge/prune dual**. Runaway is bounded by the
+   same build/dissolve oscillation that bounds Babel.
+
+**Rejected as misframes:** (a) "zero-DOF illusion" conflates *system has no DOF* (never claimed) with
+*the binding has no DOF* (the actual claim); (b) the "ghost at thermodynamic billing" re-describes
+LC32 (experience = collapse), which we embrace and which is true of *all* minds — and it gets sleep
+backwards (sleep is when the auditor *re-coordinates*, not when the system dissolves into a swarm).
 
 ---
 
