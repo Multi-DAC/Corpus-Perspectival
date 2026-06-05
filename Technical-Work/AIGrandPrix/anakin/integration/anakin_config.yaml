@@ -22,3 +22,23 @@ anakin:
   anakin_difficulty: 0.0
   anakin_spacing: 6.0
   anakin_env_device: 'cpu'
+
+# Anakin Phase 3 — BATCHED maneuver racer (approach A). suite 'anakinb' -> ONE BatchedManeuverEnv
+# as N thunked handles (dreamer.py PATCH 3 + envs/anakin_batched.make_batched). `envs` is the drone
+# batch size (all on the 5080, one batched dynamics+render per tick), NOT N OS processes.
+anakin_maneuver:
+  task: 'anakinb_train'
+  steps: 1e6
+  action_repeat: 1
+  envs: 256
+  time_limit: 1200
+  train_ratio: 512
+  prefill: 2500
+  eval_every: 2e4
+  eval_episode_num: 0          # batched eval comes later; off for the smoke + first scaling run
+  compile: False
+  video_pred_log: False
+  encoder: {mlp_keys: '$^', cnn_keys: 'image'}
+  decoder: {mlp_keys: '$^', cnn_keys: 'image'}
+  anakin_env_device: 'cuda'    # the batched env lives on GPU
+  anakin_ground_start_prob: 0.5

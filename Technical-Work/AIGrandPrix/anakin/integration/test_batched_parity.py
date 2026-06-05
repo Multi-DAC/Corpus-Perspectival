@@ -94,23 +94,33 @@ def test_simulate_smoke():
         def write(self, *a, **k):
             pass
 
-    N = 8
-    ad = BatchedSimAdapter(n_envs=N, device=DEV, seed=0, ground_start_prob=0.3, max_steps=300)
+    N, MAXS = 8, 200
+    ad = BatchedSimAdapter(n_envs=N, device=DEV, seed=0, ground_start_prob=0.3, max_steps=MAXS)
     cache = collections.OrderedDict()
     tmp = Path(tempfile.mkdtemp(prefix="anakin_sim_smoke_"))
 
+    # faithful agent: returns a DICT of torch tensors, exactly like DreamerV3's actor / random_actor
+    # (exercises wrappers.SelectAction unwrap + .detach().cpu() in simulate's dict path).
     def agent(obs, done, state):
         assert obs["image"].shape == (N, 64, 64, 3), f"agent got obs {obs['image'].shape}"
-        return np.random.uniform(-1.0, 1.0, (len(done), 4)).astype(np.float32), None
+        n = len(done)
+        return {"action": torch.rand(n, 4) * 2 - 1, "logprob": torch.zeros(n)}, None
 
     dreamer_tools.simulate(agent, ad.handles, cache, tmp, _FakeLogger(),
-                           is_eval=False, limit=50_000, steps=400)
+                           is_eval=False, limit=200_000, steps=4800)   # ~600 ticks -> real turnover
 
     assert len(cache) >= 1, "tools.simulate collected no episode caches"
     good = [k for k, ep in cache.items()
             if "image" in ep and "action" in ep and len(ep["reward"]) > 1]
     assert good, "collected caches are malformed (missing image/action/reward)"
-    print(f"  [D] simulate smoke   — tools.simulate collected {len(cache)} caches over 400 steps  OK")
+    # turnover happened (more episodes than slots) ...
+    assert len(cache) > N, f"expected episode turnover (>{N} ids), got {len(cache)}"
+    # ... and the per-episode UUID prevented cross-episode concatenation: NO cache entry can be
+    # longer than one episode (a fixed-id bug would glue many episodes into one >> max_steps).
+    longest = max(len(ep["reward"]) for ep in cache.values())
+    assert longest <= MAXS + 2, f"cache concatenated episodes (len {longest} > max_steps {MAXS}) — UUID broken"
+    print(f"  [D] simulate smoke   — dict-action agent, {len(cache)} distinct episodes, "
+          f"longest {longest}<= {MAXS} (no concat)  OK")
 
 
 if __name__ == "__main__":

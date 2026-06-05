@@ -17,14 +17,26 @@ Obs/info contract mirrors `anakin_env_adapter.Anakin` exactly (the proven Phase-
 integration): obs = Dict({"image"}), done = terminated|truncated, is_terminal = terminated
 (timeout is NOT terminal), discount = 1.0 (Dreamer's cont-head consumes is_terminal).
 """
+import datetime
 import os
 import sys
+import uuid
 
 import gym
 import numpy as np
 
-# anakin/sim holds the batched env + kernels
-_SIM = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "sim"))
+# anakin/sim holds the batched env + kernels. This file is tracked in integration/ (../sim) but
+# COPIED into the vendored repo at third_party/dreamerv3-torch/envs/ (../../../sim) — resolve both.
+def _find_sim():
+    here = os.path.dirname(os.path.abspath(__file__))
+    for rel in (("..", "sim"), ("..", "..", "..", "sim")):
+        cand = os.path.abspath(os.path.join(here, *rel))
+        if os.path.exists(os.path.join(cand, "vec_env.py")):
+            return cand
+    raise ImportError(f"anakin sim/ (vec_env.py) not found relative to {here}")
+
+
+_SIM = _find_sim()
 if _SIM not in sys.path:
     sys.path.insert(0, _SIM)
 
@@ -40,7 +52,13 @@ class _Handle:
     def __init__(self, adapter, i):
         self._ad = adapter
         self._i = i
-        self.id = f"anakin{i}"
+        self._new_id()
+
+    def _new_id(self):
+        # fresh per-episode id (replicates wrappers.UUID): keeps tools.simulate from concatenating
+        # successive episodes of the same slot into one cache entry.
+        ts = datetime.datetime.now().strftime("%Y%m%dT%H%M%S")
+        self.id = f"anakin{self._i}-{ts}-{uuid.uuid4().hex}"
 
     @property
     def observation_space(self):
@@ -51,6 +69,7 @@ class _Handle:
         return self._ad.action_space
 
     def reset(self):
+        self._new_id()
         self._ad._mark_reset(self._i)
         return lambda: self._ad._resolve_reset(self._i)
 
@@ -103,6 +122,8 @@ class BatchedSimAdapter:
 
     # -- step phase: simulate calls step(a_i) on all N, then resolves all thunks -------------------
     def _mark_step(self, i, action):
+        if isinstance(action, dict):      # replicate wrappers.SelectAction(key="action")
+            action = action["action"]
         self._action[i] = np.asarray(action, dtype=np.float32).reshape(4)
         self._step_out = None             # invalidate; the batch is recomputed on first resolve
 
@@ -119,3 +140,18 @@ class BatchedSimAdapter:
     def close(self):
         for h in self.handles:
             h.close()
+
+
+def make_batched(config, seed_offset=0):
+    """Build a BatchedSimAdapter from a DreamerV3 config — approach A's replacement for the
+    `[make_env(...) for i in range(envs)]` + Damy list. Returns the adapter; pass `.handles` to
+    tools.simulate(envs=...). `seed_offset` separates train from eval streams."""
+    size = tuple(config.size)
+    assert size == (IMG, IMG), f"anakin batched env renders {IMG}x{IMG}; config.size={size}"
+    return BatchedSimAdapter(
+        n_envs=config.envs,
+        device=getattr(config, "anakin_env_device", "cuda"),
+        max_steps=config.time_limit,
+        ground_start_prob=getattr(config, "anakin_ground_start_prob", 0.5),
+        seed=config.seed + seed_offset,
+    )
