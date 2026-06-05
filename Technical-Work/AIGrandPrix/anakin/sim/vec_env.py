@@ -55,12 +55,16 @@ class BatchedManeuverEnv:
     """N-drone batched maneuver curriculum env (custom vector API: reset()->obs[N], step(a[N])->...)."""
 
     def __init__(self, n_envs=256, max_steps=1200, dt=0.02, device="cuda",
-                 ground_start_prob=0.5, seed=0):
+                 ground_start_prob=0.5, seed=0, auto_reset=True):
         self.N = int(n_envs)
         self.max_steps = int(max_steps)
         self.dt = float(dt)
         self.device = device
         self.ground_start_prob = float(ground_start_prob)
+        # auto_reset=True keeps the batch full (custom-loop / benchmark use). auto_reset=False hands
+        # reset-ownership to the caller (DreamerV3 tools.simulate, approach A): a done env holds its
+        # terminal state until reset_one(i) is called. See PHASE3_DESIGN.md §70 + integration/.
+        self.auto_reset = bool(auto_reset)
         self.rng = np.random.default_rng(seed)
         self.lib = ManeuverLibrary()
 
@@ -200,15 +204,27 @@ class BatchedManeuverEnv:
         done = terminated | truncated
         self.ep_return += reward
 
-        # auto-reset done envs (keep the batch full); planner episode close
+        # episode close + reset. auto_reset=True re-seeds done envs to keep the batch full; with
+        # auto_reset=False the done envs hold their terminal state for the caller to reset.
         for i in np.nonzero(done)[0]:
             if truncated[i]:
                 outcomes[i] = "timeout"
-            self.planners[i].on_episode_end()
-            self._reset_env(i, im)
+            if self.auto_reset:
+                self.planners[i].on_episode_end()
+                self._reset_env(i, im)
 
-        infos = [{"outcome": outcomes[i], "speed": float(speed[i])} for i in range(self.N)]
+        infos = [{"outcome": outcomes[i], "speed": float(speed[i]),
+                  "terminated": bool(terminated[i])} for i in range(self.N)]
         return self._obs(), reward.astype(np.float32), done, infos
+
+    def reset_one(self, i):
+        """Re-seed env i (approach-A reset-ownership: tools.simulate resets a done slot itself)."""
+        self.planners[i].on_episode_end()
+        self._reset_env(i, self._in_flight_masteries())
+
+    def obs_numpy(self):
+        """Current batched observation as a CPU numpy array [N, IMG, IMG, 3] uint8."""
+        return self._obs().detach().cpu().numpy()
 
     def report(self):
         stats = self.tracker.get_stats()
