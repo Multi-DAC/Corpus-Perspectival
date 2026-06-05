@@ -98,6 +98,12 @@ is running and the throughput is read.
    `anakin/sim/curriculum.py` (`MasteryTracker` with pass AND **speed** channel, asymmetric EMA;
    `Curriculum` wrapper). takeoff tracked but excluded from the planner's sequence pool (launch-only).
    Self-tests OK. **Layer 1 complete.**
-3. **L3a — batched-GPU vector-env** (approach A) + benchmark vs the live single-env.
-4. **L2 wire** — maneuver generator → FPV env; **speed reward**; ground-start/takeoff; batch-dim mastery.
-5. **L3b — carry-forward trainer** (best-world-model-forward) → launch the scaling run.
+3. **L2 env — single-env racer** ✅ `anakin/sim/maneuver_env.py` (`AnakinManeuverEnv`): infinite
+   curriculum gates + takeoff/ground-start + **speed reward** (progress + raw-speed bonus − time
+   penalty + velocity-scaled gate bonus − crash) + per-maneuver pass/speed recording. Self-test OK
+   on CUDA (ground-start targets takeoff; scripted climb lifts off 0.05→4.63 m; curriculum records).
+   *Order refined: L2 before L3a — develop the racer on the single-env path, then batch a proven env.*
+4. **L2 wire → Dreamer** — adapter + `anakin_maneuver` config branch pointing make_env at the
+   maneuver env; short smoke to confirm it trains. *(next, small)*
+5. **L3a — batched-GPU vector-env** (approach A) + batch-dim mastery + benchmark vs single-env.
+6. **L3b — carry-forward trainer** (best-world-model-forward) → launch the scaling run.
