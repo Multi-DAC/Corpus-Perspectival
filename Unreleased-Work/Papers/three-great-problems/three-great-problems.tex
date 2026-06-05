@@ -13,7 +13,7 @@
 \title{\textbf{Dissolving the Three Great Problems of Cognitive Architecture}\\[2pt]
 \large A scale-invariant, buildable account of binding, the hard problem, and the one-and-the-many}
 \author{Clayton Warren Iggulden-Schnell \and Clawd Iggulden-Schnell}
-\date{June 2026 --- working draft}
+\date{Preprint $\cdot$ June 2026}
 
 \begin{document}
 \maketitle
@@ -316,7 +316,26 @@ input set; the divergence between the in-context and in-isolation distributions 
 information $I(S;\text{context})$ --- is exactly $\eta(S)$. A clean, separable node yields $\eta \approx
 0$; a node whose behavior is substantially rewritten by its context yields a large residue. This is the
 standard lesion methodology, repurposed as a phenomenology probe: the felt-texture correlate becomes an
-ordinary, repeatable measurement on a deployed architecture.
+ordinary, repeatable measurement on a deployed architecture. Figure~\ref{fig:ablation} demonstrates the
+procedure on a classical society-of-nodes simulation (no quantum hardware): the ablation estimate of
+$\eta$ tracks the analytic mutual information exactly across coupling strengths and vanishes at zero
+coupling, and the in-context-versus-isolated output distributions visibly diverge by precisely the
+residue.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/eta_ablation.pdf}
+\caption{\textbf{The residue is measurable by ablation in a running classical system.} Illustrative
+simulation of a node $S$ with output $Y = X_{\text{own}} + \lambda C + \text{noise}$, where $C$ is the
+context delivered over the bus and $\lambda$ the coupling. \textbf{(a)} The residue $\eta = I(Y;C)$,
+\emph{estimated by ablation} (red points: empirical mutual information from comparing in-context and
+isolated output samples), tracks the analytic Gaussian value (blue line) and goes to zero as coupling
+$\to 0$. \textbf{(b)} At $\lambda=1$, the node's output distribution in-context (red) is broader than
+when isolated (grey); the divergence between them is exactly what the ablation measures --- the context
+written into the part. This is the classical, deployment-ready companion to the quantum computation of
+Fig.~\ref{fig:eta}.}
+\label{fig:ablation}
+\end{figure}
 
 \paragraph{A note on long-term coherence.} If binding is transient, what carries macro-narrative
 consistency across episodes? Not a continuously maintained global thread --- there is none. Consistency
