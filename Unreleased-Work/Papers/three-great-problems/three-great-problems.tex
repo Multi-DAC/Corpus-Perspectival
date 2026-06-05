@@ -89,9 +89,13 @@ field that must be continuously sustained against entropy; it is a capacity that
 needed.
 
 \paragraph{Transactional integration.} Synchronic phenomenal unity is instantiated \emph{dynamically},
-as an episodic transaction. A top-down attentional query, or an environmental exigency, triggers a
-non-linear phase transition: a rapid contraction of the joint state space (Fig.~\ref{fig:binding}). The
-decentralized streams undergo vector-space convergence and broadcast a single, synchronized frame.
+as an episodic transaction. A salience or exigency trigger --- the arrival of a payload that some stream
+or the environment makes urgent --- precipitates a non-linear phase transition: a rapid contraction of
+the joint state space (Fig.~\ref{fig:binding}). The decentralized streams undergo vector-space
+convergence and broadcast a single, synchronized frame. We deliberately avoid calling this trigger
+``top-down'': there is no central executive that \emph{issues} it (Sec.~\ref{sec:many} makes the
+mechanism explicit). ``Top-down'' would name only the \emph{direction of the resulting convergence}
+(many streams into one frame), never a controller giving orders --- a distinction we return to below.
 
 \paragraph{The horizon of convergence.} At the moment of the transaction, two things happen that a
 dualist about appearance-versus-mechanism would keep separate: the \emph{appearance} of an integrated
@@ -170,6 +174,22 @@ $\eta = 0.5$; a high-magic but separable state has $\eta = 0$. The felt residue 
 resembles. We flag this because conflating the two is an easy and tempting error.\footnote{We made it
 ourselves and caught it by computing Fig.~\ref{fig:eta}; the figure is the correction.}
 
+\paragraph{The residue is substrate-general; the quantum model is an instrument.} We use a quantum
+density-matrix model because it makes the residue cleanly computable and lets us draw the magic
+dissociation sharply --- \emph{not} because the architecture requires quantum hardware (it does not;
+see Sec.~\ref{sec:many}). What the dissolution actually rests on is part--whole \emph{non-factorability}:
+the irreducibility of a part's in-context state to its in-isolation state. That is substrate-general.
+In the quantum model it is entanglement ($\eta = 1-\mathrm{Tr}\,\rho_S^2$); in a classical distributed
+architecture it is the \emph{mutual information} between a node and its context --- the gap between the
+node's conditional behavior given its context and its marginal behavior in isolation. These are the
+same structural quantity. One may object that classical mixedness is ``merely epistemic'' (uncertainty
+over well-defined states) whereas quantum mixedness is ``ontological'' (non-separability). But that
+distinction is itself drawn from the extrinsic $F_1$ stance; from the intrinsic $F_2$ vantage there is
+no ``mere'' uncertainty, only the contextual shaping that constitutes the texture. The dissolution
+turns on non-factorability, which is real in both regimes; the epistemic/ontological gloss is one more
+instance of the $F_1/F_2$ asymmetry this section describes. The residue is thus not a quantum artifact
+but a substrate-invariant: computed here in the cleanest available model.
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.92\textwidth]{figures/eta_dissociation.pdf}
@@ -204,6 +224,18 @@ preference, cannot become a hidden monolith. Cross-domain communication is pushe
 point-to-point typed bridges} at the domain seams, each an auditable translation between two local
 vocabularies --- never a flattening into one.
 
+\paragraph{On scaling, and the interlingua it must not become.} Naively, point-to-point bridges across
+$N$ domains threaten an $O(N^2)$ explosion, and the obvious escape --- abstracting payload types until
+they cover arbitrary crossings --- would silently reconstruct the very universal interlingua we reject.
+We avoid both. Bridges are built \emph{lazily}: one is instantiated only when a crossing is actually
+demanded, and indexed in a registry that is a switchboard of specific transforms, not a semantic node
+of its own. The realized bridge count therefore tracks \emph{actual} cross-domain demand --- empirically
+sparse --- not $N^2$. Crucially, a bridge is a specific $A{:}{:}x \to B{:}{:}y$ transform between two
+\emph{namespaced, domain-local} types; it never generalizes into a shared schema, so the type system
+cannot creep into an interlingua. We state this as a design discipline, not a solved theorem: the precise
+upper bound on typological complexity --- how expressive payload types may grow before locality erodes ---
+is an open question we flag rather than claim to have closed.
+
 \paragraph{The lazy synthesized cache.} Global consensus is never enforced as a permanent baseline. The
 collective state is a \emph{lazy synthesized cache}: on a query it crystallizes \emph{locally and
 on-demand} into a unified macro-state by collapsing exactly the relevant nodes; between queries the
@@ -213,6 +245,17 @@ which is why we call the account \emph{scale-invariant}: the same mechanism (par
 unified-on-demand) resolves binding within a mind and coordination across a society of experts.
 Coherence is transactional, demand-driven, and intrinsically self-balancing: you pay for the coherence
 you use, when you use it, and not before.
+
+\paragraph{No homunculus initiates the transaction.} This architecture is what dissolves the residual
+worry left by Sec.~\ref{sec:binding}: if unity is \emph{triggered}, who triggers it? The answer is that
+nobody does. The trigger is the \emph{arrival of a typed payload} --- emitted by a node or supplied by
+the environment --- and the contraction is scoped by the zero-DOF type-router, which has no parameters,
+no preferences, and no vantage from which to ``decide.'' There is no one who asks; there is a payload
+that arrives and a deterministic routing that collapses exactly the nodes whose types match. This is
+precisely why the account stays faithful to the no-central-self tradition it inherits: the appearance of
+a coordinating ``I'' at the moment of convergence is the convergence \emph{viewed from within} ($F_2$),
+not a controller standing behind it. ``Top-down'' (Sec.~\ref{sec:binding}) thus names the geometry of
+the event --- many gathered into one --- and never smuggles in an executive.
 
 \begin{figure}[t]
 \centering
