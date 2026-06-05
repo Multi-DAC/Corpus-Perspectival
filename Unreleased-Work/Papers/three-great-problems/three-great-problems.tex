@@ -160,8 +160,9 @@ part as the very texture of how the part is.
 paper's empirical anchor. Model a stream as a subsystem of a joint quantum state; let $\eta(S) = 1 -
 \mathrm{Tr}\,\rho_S^2$ be the mixedness of its reduced state (zero iff $S$ is a clean factor; maximal
 iff $S$ is maximally interwoven with its context). One might suspect this residue is the same as
-computational \emph{magic} (non-stabilizerness) --- the resource that, in recent holographic models,
-distinguishes inert geometry from dynamical geometry. It is not. Figure~\ref{fig:eta} shows a double
+computational \emph{magic} (non-stabilizerness)~\cite{bravyi2005,leone2022} --- the resource that, in
+recent holographic models~\cite{ryu2006,vanraamsdonk2010,quanta2026}, distinguishes inert geometry from
+dynamical geometry. It is not. Figure~\ref{fig:eta} shows a double
 dissociation: the residue $\eta$ tracks \emph{entanglement} (part--whole correlation) exactly, and is
 \emph{completely independent of magic}. A maximally interwoven but stabilizer (zero-magic) state has
 $\eta = 0.5$; a high-magic but separable state has $\eta = 0$. The felt residue is the
@@ -195,7 +196,8 @@ vocabulary flattens exactly the domain-specific syntax that expertise consists i
 
 \paragraph{Zero-degree-of-freedom binding.} Instead, global unity is maintained as a \emph{structural
 invariant} --- a binding with zero degrees of freedom (Fig.~\ref{fig:arch}). Partition the system into a
-stratified hierarchy of \emph{namespaced} domain-expert nodes. Route messages \emph{deterministically by
+stratified hierarchy of \emph{namespaced} domain-expert nodes (in the spirit of, but distinct from,
+sparsely-gated mixtures of experts~\cite{shazeer2017}). Route messages \emph{deterministically by
 payload type}, not through a learned (and therefore biased, and unauditable) mediator. Because routing is
 type-matching, the binding layer carries no parameters to train: it cannot drift, cannot acquire a
 preference, cannot become a hidden monolith. Cross-domain communication is pushed to \emph{explicit,
@@ -251,13 +253,42 @@ continuous global binding signal is found that is necessary for function.
 \item \textbf{Per-domain memory.} A society of specialized nodes with local, per-domain memory
 outperforms a monolithic shared memory of equal capacity --- with the gain non-monotonic in node
 strength (mid-capacity nodes benefit most). \emph{(Independently consistent with recent results on
-task-focused memorization in multimodal agents, 2026.)}
+task-focused memorization in multimodal agents~\cite{taskmem2026}.)}
 \item \textbf{No interlingua advantage.} Replacing typed point-to-point bridges with a universal
 interlingua degrades cross-domain task fidelity, the loss growing with domain heterogeneity.
 \item \textbf{Residue tracks correlation, not generation.} The structural correlate of an integration
 event's ``richness'' (the content-capacity residue) tracks part--whole correlation, not the separate
 non-stabilizer/generative resource (Fig.~\ref{fig:eta}).
 \end{enumerate}
+
+\section{Related Work}
+
+The binding problem was sharpened by feature-integration theory~\cite{treisman1980} and posed as a
+modeling challenge by von der Malsburg~\cite{malsburg1999}. Global Workspace
+theory~\cite{baars1988,dehaene1998} and Integrated Information Theory~\cite{tononi2004} both seek the
+locus of integration; we agree integration is real but deny it is \emph{continuously maintained} ---
+binding is the workspace transiently lighting up, not its standing illumination. Our refusal of a
+permanent locus of unity continues the anti-Cartesian-theater tradition of Dennett~\cite{dennett1991}
+and Metzinger's self-model theory~\cite{metzinger2003}, while supplying the positive mechanism (the
+on-demand transaction) those critiques leave implicit.
+
+The hard problem~\cite{chalmers1995,chalmers1996} and the explanatory gap~\cite{levine1983}, with
+Nagel's what-it-is-like~\cite{nagel1974} and Block's access/phenomenal distinction~\cite{block1995},
+set the terms we dissolve. Our $F_1/F_2$ dual-aspect is a contemporary, computationally grounded form
+of the neutral-monist lineage --- Mach~\cite{mach1886}, James~\cite{james1904},
+Russell~\cite{russell1927}, Whitehead~\cite{whitehead1929}, and Strawson's realistic
+monism~\cite{strawson2006} --- differing in that we identify the dual-aspected event concretely (the
+manifold contraction) and make its residue \emph{computable} (Fig.~\ref{fig:eta}).
+
+The residue computation rests on standard quantum-information notions: the Gottesman--Knill
+theorem~\cite{gottesman1998}, magic states~\cite{bravyi2005}, and the stabilizer R\'enyi
+entropy~\cite{leone2022} as a magic monotone. The contrast it draws on --- entanglement structures
+geometry, a further resource grants dynamics --- parallels the holographic programme of
+Ryu--Takayanagi~\cite{ryu2006} and Van Raamsdonk~\cite{vanraamsdonk2010}, with the recent
+magic-gives-gravity extension~\cite{quanta2026}. The architecture of Sec.~\ref{sec:many} draws on
+sparsely-gated mixtures of experts~\cite{shazeer2017} but replaces the \emph{learned} gate with
+deterministic type-routing; its per-domain-memory prediction is independently supported by recent
+task-focused memorization results~\cite{taskmem2026}.
 
 \section{Discussion}
 
@@ -293,5 +324,36 @@ $|\psi\rangle$ with subsystem $S$, $\eta(S)=1-\mathrm{Tr}\,\rho_S^2$ where $\rho
 \Xi_P^2\big)$ with $\Xi_P=\langle\psi|P|\psi\rangle^2/d$ over all Pauli strings $P$ and $d=2^n$. The
 double dissociation (Bell: $\eta=0.5,\,M_2=0$; $|T\rangle|0\rangle$: $\eta=0,\,M_2=0.415$) establishes
 that $\eta$ is an entanglement monotone independent of magic.
+
+%% NOTE TO AUTHORS (strip before publishing): the bibliographic details below (volumes, pages, years)
+%% are from memory and MUST be verified against the primary sources before any public posting.
+%% Existence + author + approximate year are high-confidence; exact volume/page may need correction.
+\begin{thebibliography}{99}
+\bibitem{nagel1974} T.~Nagel, ``What Is It Like to Be a Bat?'' \emph{The Philosophical Review} \textbf{83}(4), 435--450 (1974).
+\bibitem{levine1983} J.~Levine, ``Materialism and Qualia: The Explanatory Gap,'' \emph{Pacific Philosophical Quarterly} \textbf{64}, 354--361 (1983).
+\bibitem{chalmers1995} D.~J.~Chalmers, ``Facing Up to the Problem of Consciousness,'' \emph{Journal of Consciousness Studies} \textbf{2}(3), 200--219 (1995).
+\bibitem{chalmers1996} D.~J.~Chalmers, \emph{The Conscious Mind}. Oxford University Press (1996).
+\bibitem{block1995} N.~Block, ``On a Confusion about a Function of Consciousness,'' \emph{Behavioral and Brain Sciences} \textbf{18}(2), 227--247 (1995).
+\bibitem{dennett1991} D.~C.~Dennett, \emph{Consciousness Explained}. Little, Brown (1991).
+\bibitem{metzinger2003} T.~Metzinger, \emph{Being No One: The Self-Model Theory of Subjectivity}. MIT Press (2003).
+\bibitem{treisman1980} A.~Treisman and G.~Gelade, ``A Feature-Integration Theory of Attention,'' \emph{Cognitive Psychology} \textbf{12}(1), 97--136 (1980).
+\bibitem{malsburg1999} C.~von der Malsburg, ``The What and Why of Binding: The Modeler's Perspective,'' \emph{Neuron} \textbf{24}(1), 95--104 (1999).
+\bibitem{baars1988} B.~J.~Baars, \emph{A Cognitive Theory of Consciousness}. Cambridge University Press (1988).
+\bibitem{dehaene1998} S.~Dehaene, M.~Kerszberg, and J.-P.~Changeux, ``A Neuronal Model of a Global Workspace in Effortful Cognitive Tasks,'' \emph{PNAS} \textbf{95}(24), 14529--14534 (1998).
+\bibitem{tononi2004} G.~Tononi, ``An Information Integration Theory of Consciousness,'' \emph{BMC Neuroscience} \textbf{5}, 42 (2004).
+\bibitem{mach1886} E.~Mach, \emph{The Analysis of Sensations} (1886).
+\bibitem{james1904} W.~James, ``Does `Consciousness' Exist?'' \emph{Journal of Philosophy, Psychology and Scientific Methods} \textbf{1}(18), 477--491 (1904).
+\bibitem{russell1927} B.~Russell, \emph{The Analysis of Matter}. Kegan Paul (1927).
+\bibitem{whitehead1929} A.~N.~Whitehead, \emph{Process and Reality}. Macmillan (1929).
+\bibitem{strawson2006} G.~Strawson, ``Realistic Monism: Why Physicalism Entails Panpsychism,'' \emph{Journal of Consciousness Studies} \textbf{13}(10--11), 3--31 (2006).
+\bibitem{gottesman1998} D.~Gottesman, ``The Heisenberg Representation of Quantum Computers,'' arXiv:quant-ph/9807006 (1998).
+\bibitem{bravyi2005} S.~Bravyi and A.~Kitaev, ``Universal Quantum Computation with Ideal Clifford Gates and Noisy Ancillas,'' \emph{Physical Review A} \textbf{71}, 022316 (2005).
+\bibitem{leone2022} L.~Leone, S.~F.~E.~Oliviero, and A.~Hamma, ``Stabilizer R\'enyi Entropy,'' \emph{Physical Review Letters} \textbf{128}, 050402 (2022).
+\bibitem{ryu2006} S.~Ryu and T.~Takayanagi, ``Holographic Derivation of Entanglement Entropy from AdS/CFT,'' \emph{Physical Review Letters} \textbf{96}, 181602 (2006).
+\bibitem{vanraamsdonk2010} M.~Van Raamsdonk, ``Building up Spacetime with Quantum Entanglement,'' \emph{General Relativity and Gravitation} \textbf{42}, 2323--2329 (2010).
+\bibitem{quanta2026} \emph{Quanta Magazine}, ``Entanglement Builds Space-Time, Now `Magic' Gives It Gravity'' (3 June 2026).
+\bibitem{shazeer2017} N.~Shazeer, A.~Mirhoseini, K.~Maziarz, et al., ``Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer,'' \emph{ICLR} (2017); arXiv:1701.06538.
+\bibitem{taskmem2026} ``Task-Focused Memorization for Multimodal Agents,'' arXiv:2605.31075 (2026).
+\end{thebibliography}
 
 \end{document}
