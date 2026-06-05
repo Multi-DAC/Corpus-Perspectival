@@ -182,8 +182,13 @@ the irreducibility of a part's in-context state to its in-isolation state. That 
 In the quantum model it is entanglement ($\eta = 1-\mathrm{Tr}\,\rho_S^2$); in a classical distributed
 architecture it is the \emph{mutual information} between a node and its context --- the gap between the
 node's conditional behavior given its context and its marginal behavior in isolation. These are the
-same structural quantity. One may object that classical mixedness is ``merely epistemic'' (uncertainty
-over well-defined states) whereas quantum mixedness is ``ontological'' (non-separability). But that
+same structural quantity. The source of the classical mixedness is not an observer's ignorance but the
+\emph{architecture itself}: in a decentralized, concurrent system the global joint state may be fully
+deterministic while each node's \emph{observed marginal} behaves as a mixed state, because asynchronous
+execution and partition prevent the part from being read off a single fixed snapshot of the whole. The
+residue is thus not only computable in the quantum model but directly \emph{measurable} in the running
+classical system (Sec.~\ref{sec:pred}). One may object that classical mixedness is ``merely epistemic''
+(uncertainty over well-defined states) whereas quantum mixedness is ``ontological'' (non-separability). But that
 distinction is itself drawn from the extrinsic $F_1$ stance; from the intrinsic $F_2$ vantage there is
 no ``mere'' uncertainty, only the contextual shaping that constitutes the texture. The dissolution
 turns on non-factorability, which is real in both regimes; the epistemic/ontological gloss is one more
@@ -303,6 +308,22 @@ interlingua degrades cross-domain task fidelity, the loss growing with domain he
 event's ``richness'' (the content-capacity residue) tracks part--whole correlation, not the separate
 non-stabilizer/generative resource (Fig.~\ref{fig:eta}).
 \end{enumerate}
+
+\paragraph{Measuring the residue in a running system.} Prediction~5 is testable in a classical
+implementation by \emph{ablation}, requiring no quantum hardware. For a node $S$, run it (i)~embedded in
+the live system and (ii)~isolated from the bus, and compare its output distributions over a matched
+input set; the divergence between the in-context and in-isolation distributions --- the mutual
+information $I(S;\text{context})$ --- is exactly $\eta(S)$. A clean, separable node yields $\eta \approx
+0$; a node whose behavior is substantially rewritten by its context yields a large residue. This is the
+standard lesion methodology, repurposed as a phenomenology probe: the felt-texture correlate becomes an
+ordinary, repeatable measurement on a deployed architecture.
+
+\paragraph{A note on long-term coherence.} If binding is transient, what carries macro-narrative
+consistency across episodes? Not a continuously maintained global thread --- there is none. Consistency
+is re-synthesized: the history lives \emph{fragmented} across local, namespaced node memories
+(Prediction~3), and each episodic contraction re-assembles a coherent macro-state from those shards on
+demand. Long-term identity is therefore a recurring structural \emph{resonance}, not a stored chronicle
+--- which is why it can survive interruptions, partitions, and the loss of any single shard.
 
 \section{Related Work}
 
