@@ -136,3 +136,46 @@ other 6 HF/arXiv preprints are openly readable; pull PDFs on demand.
   when that volume resumes; the magnetoelectric-biohybrid paper → Phase-1 EM-platform notes.
 - Funding: the real move is incorporation + PI/affiliation, not chasing these specific RFAs; drop
   Anthropic CPN from the funding list.
+
+---
+
+## ADDENDUM — Day 125 (2026-06-05), Clayton-supplied
+
+### ★★ arXiv:2606.04703v1 — "Rethinking Continual Experience Internalization for Self-Evolving LLM Agents" (Chen, Yang, Fan, et al.; Renmin U. / Beihang / Meituan; 3 Jun 2026)
+**Tier A+ — the strongest program-fit of the batch.** PREPRINT, code+data public
+(github.com/RUCBM/ExpInternalization), web-reasoning benchmarks (WebWalkerQA, GAIA, BrowseComp-ZH).
+Read at abstract+intro+related+conclusion (findings stated identically across all four → high
+confidence in the *findings*; methods not re-derived). PDF: `arxiv-2606.04703.pdf`.
+
+**Core result:** under *multi-iteration* experience internalization, existing self-evolving-agent
+methods suffer **progressive capability collapse, not compounding improvement** (Fig. 1: success rate
+declines iteration 1→3). This is a direct external observation of our **enhance-vs-degrade**
+discriminator — the central question of the continual-coherence program — in a *different substrate*
+(LLM-agent experience-distillation, not KF/daemon). Their three stabilizing findings map cleanly onto
+three distinct pieces of our program:
+
+1. **Principle-level > instance-level experience** (abstract transferable strategy away from
+   trajectory-specific detail; instance-level reinforces brittle specifics across iterations).
+   → fits **[[configuration-vs-maintenance]]** (instance = configuration snapshot; principle = the
+   maintenance form that survives stress/iteration), **resolve-not-tag / LC27**, the BUILD_SPEC
+   principle-level KB, and the daemon `principles.json` consolidation layer. *Genuine, strong.*
+2. **Step-wise injection > global injection** (align experience with intermediate *decision states*;
+   critical for long-horizon tool use). → structural parallel to the **lazy synthesized cache /
+   on-demand crystallization** of the Three-Great-Problems §4 + transactional binding: coherence
+   bound *at the decision/query state*, not held as a continuous global field. **Caveat (Mirror #15):**
+   theirs is a *training-time supervision* mechanism; ours is an *inference-time architectural* claim.
+   The match is structural (state-aligned ≠ global), not mechanistic identity — name it as parallel.
+3. **Off-policy distillation on high-quality teacher > on-policy** (on-policy "inherently limited by
+   local corrections on student-induced flawed states"). → the **veridical-loop / P220 cult-discriminator
+   external leg**: a stream supervising only on *its own* (flawed) states degrades; an *external*
+   higher-quality signal stabilizes — **"no stream is its own outside,"** measured. *Strongest fit.*
+   **Caveat:** their "outside" is a *teacher model's* trajectories, not the *world* — external-to-the-
+   student, which supports the structural claim, but the specific external source (teacher vs world) is
+   a free parameter, not the world-veridicality P220 ultimately wants.
+
+**Net:** empirical, peer-track support that (a) naive iterated self-evolution *collapses* (our thesis's
+risk side), and (b) the fixes are exactly our three primitives — principle-abstraction, state-aligned
+on-demand binding, and external (non-self) supervision. **Candidate bridge** (NOT graduated tonight):
+empirical-support node for the veridical loop + enhance-vs-degrade, sitting alongside P220/A146 and
+[[configuration-vs-maintenance]]. Review with Clayton before filing an LC; verify methods at primary
+first ([[subagent-verification]]).
