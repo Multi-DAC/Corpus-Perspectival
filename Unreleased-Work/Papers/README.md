@@ -4,8 +4,9 @@ Drafts under development, grouped by the **program** they belong to. Nothing her
 
 | Group | Belongs to | Status |
 |---|---|---|
-| `killing-form/` — Coherence Principle paper, *Killing Form of Attention* (inference + training), outline, §6/§6.5 | [The Killing Form](../../Technical-Work/The-Killing-Form/) (Coherent Stream waypoint 2) | drafting |
 | `response-papers/` — responses to Gross, the hallucination article, the constitution-gap | (alignment / commentary) | drafting |
+
+**KF papers are NOT here** — they live canonically with their program at [`Technical-Work/The-Killing-Form/paper/`](../../Technical-Work/The-Killing-Form/paper/). (A stale April duplicate set was removed from this directory Day 125; the May-revised versions in the program dir are canonical. If KF papers reappear here, it's a re-leak — point them home.)
 
 ## Graduated (pointer left behind)
 
