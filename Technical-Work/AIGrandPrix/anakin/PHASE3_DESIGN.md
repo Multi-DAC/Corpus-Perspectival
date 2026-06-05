@@ -105,5 +105,13 @@ is running and the throughput is read.
    *Order refined: L2 before L3a — develop the racer on the single-env path, then batch a proven env.*
 4. **L2 wire → Dreamer** — adapter + `anakin_maneuver` config branch pointing make_env at the
    maneuver env; short smoke to confirm it trains. *(next, small)*
-5. **L3a — batched-GPU vector-env** (approach A) + batch-dim mastery + benchmark vs single-env.
-6. **L3b — carry-forward trainer** (best-world-model-forward) → launch the scaling run.
+5. **L3a — batched-GPU vector-env** ✅ `anakin/sim/vec_env.py` (`BatchedManeuverEnv`): N drones,
+   one batched dynamics + one batched render per tick; shared `MasteryTracker` (batch-dim mastery)
+   + per-env `SequencePlanner`s; fixed W=3 rolling gate window; internal auto-reset. **Benchmark:
+   4.0k/15.5k/41.5k env-steps/s @ N=64/256/1024 — ~8000× the single-env run.** Worst-case
+   (random-action reset churn dominates the Python path); real training keeps envs alive → climbs
+   toward the 152k render ceiling. Bottleneck moved OFF the env onto GPU compute = goal met.
+   *(next, when wiring training: if reset-bound, batch the reset/gate-gen path + keep crossing-math
+   on GPU.)*
+6. **L2 wire → Dreamer + L3b carry-forward trainer** — custom collection loop over the batched
+   core (reusing Dreamer's cache/dataset/agent) + best-world-model-forward batches → scaling run.
