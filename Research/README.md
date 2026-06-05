@@ -22,7 +22,7 @@ A first-pass **digestion-status** label per room, inferred from freshness + stru
 | `The-Coherence-Principle/` | anchor-volume notes | 2026-04-21 | 9 | **DIGESTED?** — anchor published (Zenodo) |
 | `Universal-Coherence/` | theology/ultimacy notes | 2026-04-20 | 7 | **NOTES** — volume drafting |
 | `Atlas/` | Atlas reference notes | 2026-05-05 | 7 | **NOTES** — Atlas planned |
-| `The-Killing-Form/` | KF research notes | 2026-04-14 | 6 | **DIGESTED?** — KF has its own large Technical-Work dir; verify no leak/dup |
+| ~~`The-Killing-Form/`~~ | (was KF research notes) | — | — | **RESOLVED Day 125** — was a stale, diverged dup of `Technical-Work/The-Killing-Form/` (a Day-94-reorg leftover). Archived to `_archive/The-Killing-Form-research-superseded/`; canonical KF research lives with the program. |
 | `notebooklm-2026-04-27/` | one-off NotebookLM export | 2026-04-28 | 5 | **RAW (one-off)** — mine for value or archive |
 | `Meridian/` | physics notes | 2026-04-21 | 4 | **DIGESTED?** — Meridian published |
 | `A-Guide-For-Coherent-Navigation/` | navigation-guide notes | 2026-05-05 | 2 | **NOTES** — planned |
@@ -34,6 +34,6 @@ A first-pass **digestion-status** label per room, inferred from freshness + stru
 - **`sources/` backlog** — 121 register entries; how much has been pulled into a volume vs. read-and-forgotten is unknown. The reading register tracks *what we saw*; it does not track *what we digested*. That gap is where value leaks.
 - ~~**`Misc/` (RAW)** — triage candidate #1.~~ ✅ **Done Day 125** — dissolved into volume homes; the live thread was the reception/channeling cluster (now `The-Coherent-Body/reception/`), which may warrant its own program-level treatment later (like Coherent Stream got).
 - **No `Coherent-Stream/` room** — the Coherent Stream program's research (η–magic probes, architecture drafts) currently lives split across `palace/south/` (clawd-local), `speculation/`, and `sources/`. A `Research/Coherent-Stream/` room (or clear pointers) would match the program now existing in `Technical-Work/`.
-- **`DIGESTED?` rooms** — verify per-room that the notes were actually absorbed into the published/drafting volume and aren't a stale second copy (the KF-paper leak pattern).
+- **`DIGESTED?` rooms** — verify per-room that the notes were actually absorbed into the published/drafting volume and aren't a stale second copy (the KF-paper leak pattern). **Systemic note (Day 125):** the leak pattern is specifically a *Day-94-reorg leftover* — when a domain became a `Technical-Work/` **program** (KF), its old `Research/` room was left as a stale dup. KF was the main case (now resolved). The remaining `Research/` rooms mirror **Library volumes** (not Technical-Work programs), so they are legitimate volume-research notes, not dups — but still verify digestion before assuming current.
 
 *Triage discipline: when we work a room, confirm its status, pull the live value forward, archive or mark the rest, and update its row. Additive — keep the trace; label, don't prune blindly.*
