@@ -15,7 +15,8 @@ A first-pass **digestion-status** label per room, inferred from freshness + stru
 | `speculation/` | speculative drafts not yet load-bearing | 2026-06-03 | 6 | **ACTIVE** — recent; some may be Coherent-Stream-adjacent |
 | `The-Coherent-Body/` | body/biology application (PURSUE, biophoton, H_BP cluster) | 2026-05-12 | 106 | **NOTES (large)** — volume drafting; partly digested, residue likely |
 | `Corpus-Perspectival/` | philosophy-volume research + heritage map | 2026-05-05 | 64 | **NOTES (large)** — feeds P126 philosophy chapter |
-| `Misc/` | cross-cutting / unfiled | 2026-05-05 | 16 | **RAW** — the grab-bag; triage first (most likely place for orphaned value + conflation) |
+| `Misc/` | cross-cutting / unfiled | — | 0 | **TRIAGED Day 125** — 15 files filed to homes (reception cluster → `The-Coherent-Body/reception/`; philosophy re-reads → `Corpus-Perspectival/`; anchor pre-drafts → `The-Coherence-Principle/`; Day-86 confluence → `notebooklm-2026-04-27/`; stale tooling → `_archive/`). Empty; reserved for future cross-cutting. |
+| `_archive/` | retired / non-research residue | 2026-06-05 | 1 | **ARCHIVE** — out of the live tree, kept for trace (bottube tooling guide) |
 | `The-Living-Architecture/` | living-architecture / dynamic-systems notes | 2026-05-05 | 12 | **NOTES** — volume planned |
 | `basement-drafts/` | bridge drafts | 2026-04-29 | 18 | **DIGESTED?** — basement is built (LC1–LC34); verify these aren't superseded |
 | `The-Coherence-Principle/` | anchor-volume notes | 2026-04-21 | 9 | **DIGESTED?** — anchor published (Zenodo) |
@@ -31,7 +32,7 @@ A first-pass **digestion-status** label per room, inferred from freshness + stru
 ## Known synthesis gaps (flagged, not yet acted)
 
 - **`sources/` backlog** — 121 register entries; how much has been pulled into a volume vs. read-and-forgotten is unknown. The reading register tracks *what we saw*; it does not track *what we digested*. That gap is where value leaks.
-- **`Misc/` (RAW)** — "unfiled" is where orphaned findings and conflation hide. Triage candidate #1.
+- ~~**`Misc/` (RAW)** — triage candidate #1.~~ ✅ **Done Day 125** — dissolved into volume homes; the live thread was the reception/channeling cluster (now `The-Coherent-Body/reception/`), which may warrant its own program-level treatment later (like Coherent Stream got).
 - **No `Coherent-Stream/` room** — the Coherent Stream program's research (η–magic probes, architecture drafts) currently lives split across `palace/south/` (clawd-local), `speculation/`, and `sources/`. A `Research/Coherent-Stream/` room (or clear pointers) would match the program now existing in `Technical-Work/`.
 - **`DIGESTED?` rooms** — verify per-room that the notes were actually absorbed into the published/drafting volume and aren't a stale second copy (the KF-paper leak pattern).
 
