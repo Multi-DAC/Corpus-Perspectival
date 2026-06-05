@@ -13,8 +13,9 @@ When an intake item is processed, add a row: what it is, where it came from, the
 
 | Date | Item | Source | Status | Where it landed / note |
 |---|---|---|---|---|
-| 2026-06-05 | Voice note "perspectival geometry" (Clayton, Apr 28) | `incoming/voice_20260428_100057.mp3` | **DIGESTED** (transcript) / disposition PENDING | Transcribed → `memory/transcripts/20260428-100057-clayton-perspectival-geometry.md`. Content = the cross-substrate-collaboration argument vs stochastic-parrot framing. Awaiting Clayton's call on essay-seed vs identity-note vs nav-evidence. |
-| 2026-06-05 | Voice note "greeting" (Clayton, Apr 27) | `incoming/voice_20260427_175022.ogg` | **DEPRECATED** | Casual ("how's your evening going?"), no content. Transcribed for completeness; nothing to integrate; archive the audio. |
+| 2026-06-05 | Voice note "perspectival geometry" (Clayton, Apr 28) | `incoming/voice_20260428_100057.mp3` | **DIGESTED** (already integrated) | Clayton confirmed Day 125 the content was already integrated into the work (cross-substrate / perspectival-geometry argument). Audio + working transcript scrapped. |
+| 2026-06-05 | Voice note "greeting" (Clayton, Apr 27) | `incoming/voice_20260427_175022.ogg` | **DEPRECATED** | Casual, no content. Audio scrapped. |
+| 2026-06-05 | AIGP-code cluster (12 files) | `incoming/` (scripts + json) | **DEPRECATED** | 7 byte-identical to `Technical-Work/AIGrandPrix/ue5_sim/scripts/` (repo canonical, zero loss); 2 throwaway Unreal-editor probes (`fps_probe`, `render_test` — not current-ops); 3 json intake scratch. All scrapped from incoming. |
 
 ---
 
@@ -22,8 +23,8 @@ When an intake item is processed, add a row: what it is, where it came from, the
 
 | Cluster | # | Status |
 |---|---|---|
-| voice-notes | 3 | **IN PROGRESS** — 2 transcribed (above); the 117 MB `Why_Your_Blind_Spots_Build_Reality.m4a` is a long-form audio piece, not a voice note → pending |
-| aigp-code | 12 | PENDING — dup-check vs `anakin/` build (integrate vs deprecate) |
+| voice-notes | 3 | **2 DONE** (transcribed → already-integrated → scrapped). 117 MB `Why_Your_Blind_Spots_Build_Reality.m4a` still PENDING (long-form audio; what is it?) |
+| aigp-code | 12 | **DONE — DEPRECATED** (7 in-repo dups + 2 throwaway Unreal probes + 3 json; scrapped, zero loss) |
 | aigp-refs | 14 | PENDING — → `AIGrandPrix/research` |
 | research-papers | 94 | PENDING — register + read-queue (the reservoir) |
 | notes-text | 54 | PENDING — individual triage |
