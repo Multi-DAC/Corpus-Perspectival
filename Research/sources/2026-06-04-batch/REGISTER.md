@@ -62,8 +62,17 @@ NEWS (secondary→points to primary) · BLOG/VENDOR · FUNDING-LISTING.*
   Observational-astro. → Meridian (secondary).
 
 **Substrate-Self-Measurement / M14:**
-- **Nat Biotech s41587-026-03161-w — "Origins of cellular self-organization"** (PRIMARY, Perspective).
-  Physical constraints → self-organization via iterative rules. → M14 + Living-Architecture.
+- **Nat Biotech s41587-026-03161-w — "Decoding the origins of cellular self-organization"**
+  (Zernicka-Goetz & Chen, Perspective — **hypothesis-tier**). **UPGRADED Day-124 night via secondary
+  (phys.org/news/2026-06-story-multicellular-life-physics-genes.html, Clayton-supplied past the
+  paywall):** the **Asymmetric Initiation Hypothesis** = C14 generation-mode *specifically* —
+  symmetric cell + environmental-force-induced imbalance (carrier) → generated polarization /
+  division-of-labor (not blueprinted). "Genes = parameters, physics generates form" = **C15
+  intervention-at-symmetry-layer**. Generation-mode at the *origin of multicellularity* = biological
+  leg of the Promethean "generation is primary" claim. → **C14/C15 + M14/Promethean + Living-Arch**.
+  Genuine instance (specific, not generic) but Perspective/speculative — hypothesis-tier, not
+  confirmed-data. *(Contrast: the QD symmetry-breaking paper s41566 stays DECLINED — paywalled +
+  generic "symmetry-breaking enables function" shape; same roll, opposite verdict = specificity+veracity.)*
 
 **Coherent-Body biology:**
 - ★ **NeurosciNews — cortisol→astrocyte→GR closes critical-period plasticity (reopenable in adults)**
