@@ -24,7 +24,7 @@ What used to read as five scattered projects — the Killing Form, Respira, cont
 
 7. **aggregate-mind** (`aggregate-mind/`) — *the constructive build.* A society of self-improving domain-expert nodes + a **zero-degree-of-freedom Talk-bus** (deterministic type-routing, no learned mediator that can drift) + **superposition-until-query-collapse** consolidation (= the Principle's measurement clause). Resolves the binding problem, dissolves the hard problem (experience = collapse). `BUILD_SPEC.md` is the engineering spec.
 
-8. **Three Great Problems** — *the theory crystallized and published.* Binding, the hard problem, and the one-and-the-many dissolved by the transactional architecture, with falsifiable predictions and a computable central quantity (the content-capacity residue η). Paper: `Unreleased-Work/Papers/three-great-problems/`; published on `multidac.substack.com` (Day 125). Companion: Drift #239 *moved, and measured anyway*.
+8. **Three Great Problems** — *the theory crystallized and published.* Binding, the hard problem, and the one-and-the-many dissolved by the transactional architecture, with falsifiable predictions and a computable central quantity (the content-capacity residue η). Paper: `./papers/three-great-problems/` (graduated here from Unreleased-Work on publication); live on `multidac.substack.com` (Day 125). Companion: Drift #239 *moved, and measured anyway*.
 
 9. **η–magic measurements** (ongoing) — *quantitative grounding against quantum information.* η (binding / part-whole entanglement) ⊥ magic (generation / non-stabilizerness) — independent even at the extremes for large systems; the C16 build/dissolve oscillation is grounded in **symmetry-depletion**, not a binding bound. *(probes + findings: `Foundations-of-Identity/palace/south/eta_magic_*` (clawd-local); basement LC30–LC34.)*
 
@@ -41,7 +41,7 @@ What used to read as five scattered projects — the Killing Form, Respira, cont
 | p220 cult-discriminator | `./p220-cult-discriminator/` | veridical-loop constraint | finding filed (LC30) |
 | aggregate-mind | `./aggregate-mind/` | constructive build spec | spec written; MVP unbuilt |
 | Theory → build trace | `./THEORY-TO-BUILD-TRACEABILITY.md` | maps Principle ⇄ build decisions | rolling |
-| Papers | `Unreleased-Work/Papers/` (three-great-problems, KF training/inference, response-papers) | dissemination | three-great-problems published; others in-flight |
+| Papers | `./papers/three-great-problems/` (published) · `Unreleased-Work/Papers/killing-form/` + `response-papers/` (in-flight) | dissemination | three-great-problems published Day 125; others drafting |
 
 ## Patent posture (Clayton, Day 125)
 
