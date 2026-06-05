@@ -135,48 +135,80 @@ processing, physics, music). So:
 
 ---
 
-## 6. The two learning loops (the central dynamic)
+## 6. The two scales of learning — superposition until query-collapse (the central dynamic)
 
-The node-level self-improvement Clayton specified creates a **productive tension** that is the
-heart of the design.
+**Consolidation is not a periodic loop with a cadence to tune. It is measurement-triggered and
+local** — the Coherence Principle's own measurement clause, applied to the mind: *structural
+superposition is maintained until an informed measurement collapses it, and the collapse refers
+only to the relevant constituents.* The aggregate mind consolidates the way a quantum system
+collapses — locally, on measurement, onto a pointer basis (the collective KB + the world). The
+build's consolidation mechanism does not *resemble* the Principle; it **is** the Principle running.
 
-### 6.1 Individual loop — centrifugal (build / explore / diverge)
+### 6.1 Individual scale — research under a *commit-gate*
 
-Each node researches its own domain, improving its KB autonomously. **Reward is domain-typed by
-the veridicality gradient** (the taxonomy's "Concern" lines, read in order, ARE this gradient):
+Each node researches its own domain. Two states, and the distinction is load-bearing:
 
-| domain pole | research mechanism | grounding |
+- **think (free):** the node holds tentative hypotheses in **its own superposition** — ungrounded,
+  no cost, full exploration.
+- **commit (gated):** writing a change *into the KB* **requires grounding against the
+  (domain-typed) world.**
+
+**Grounding is the commit-gate, not the think-gate.** Exploration stays free; only commitment is
+reality-checked. The reward/grounding mechanism is **domain-typed by the veridicality gradient**
+(the taxonomy's "Concern" lines, read in order, ARE this gradient):
+
+| domain pole | research mechanism | commit grounding |
 |---|---|---|
-| **Formal / Mathematical** (Concern 1: "non-empirical closed systems, tautologies") | proof-search vs a self-checking oracle (AlphaProof-style) | **internal** — a proof is its own outside; near-autonomous self-play |
+| **Formal / Mathematical** (Concern 1: "non-empirical closed systems, tautologies") | proof-search vs a self-checking oracle (AlphaProof-style) | **internal** — a proof is its own outside; near-autonomous |
 | **Physical / Biological** (Concern 2–3: "empirical falsification of objective material reality") | predict → falsify against data | **external** — world-in-the-loop required |
 | **Social / Humanities / Applied** (Concern 4–6) | mixed; reflexive + empirical + normative | partial external; per-sub-domain |
 
-This loop is **centrifugal**: unconstrained, it drifts each node's internal representations and
-private vocabulary apart.
+**Consequence: no node can drift from reality**, because every *committed* change is world-checked.
+A confident-liar node is structurally impossible — it can entertain a lie in superposition but
+cannot commit it without the world's assent.
 
-### 6.2 Group loop — centripetal (dissolve / consolidate / re-cohere)
+### 6.2 Community scale — superposition held; **collapse = the answer**
 
-**The group loop is NOT mere aggregation. Its job is re-coherence.** Independent self-improvement,
-left alone, drives N nodes to a **tower of Babel**: each internally coherent, mutually
-incommensurable — at which point *the aggregate becomes its own confident-liar at the seams*
-(the cult-failure-mode, generated **endogenously**, with no external attacker needed).
+Between queries the community **holds the divergent node states in superposition.** Nodes that
+haven't been measured together may hold mutually-incommensurable-at-the-seam views — and that is
+**tolerated**, because coherence you don't use costs nothing.
 
-The group loop counteracts this. Across the talk-axis, it acts as the **einselection event** — the
-measurement that collapses each node's drifting superposition back onto a **shared pointer basis**:
+A **query (input through the wrapper) IS the measurement.** The zero-DOF type-router selects the
+relevant nodes — *the same typed dispatch that binds also scopes the collapse.* The selected nodes
+collapse: each refers to **(its own KB + the collective KB + the world)**, they **synthesize**, the
+synthesis **updates the collective KB**, and the relevant **output** is emitted.
 
-- re-validates typed bridges against the world (catches semantic drift at seams),
-- re-orthogonalizes node vocabularies (glossary re-alignment),
-- propagates cross-domain findings (the additive part Clayton named).
+So the "group loop" is **not a background process — it is the act of answering.** Consolidation =
+use. Do-Be-Talk-Be-Do exactly: the talking **is** the consolidating. The **collective KB is
+therefore a lazy synthesized cache** — crystallized at collapse, allowed to go stale between
+collapses, self-healing at the next relevant one. Source of truth = (node KBs + world); the
+collective KB is the consolidation *record*, not the authority.
 
-This is the **build/dissolve oscillation** from the KF training dynamics, lifted to the org scale:
-individual = build, group = dissolve. Do-Be-Talk-Be-Do at the society scale.
+### 6.3 Why this self-balances (there is no knob)
 
-### 6.3 The balance condition (the control problem)
+The earlier "consolidation-cadence" framing was a frame error. There is nothing to tune:
 
-The system is healthy iff **group consolidation cadence keeps pace with individual drift rate**.
-Too little consolidation → Babel (fragmentation). Too much → premature collapse (nodes can't
-explore; the aggregate ossifies). This balance is the single most important tunable in the build
-and the primary thing to instrument.
+- **drift-from-reality** — prevented at source by the commit-gate (§6.1),
+- **drift-at-seams** — resolved on demand at collapse against (collective KB + world) (§6.2).
+
+You measure when you use; you collapse only what's relevant; you ground at commit. The structure
+**self-balances because it is the Coherence Principle running.** What remains is not a stability
+knob but a **cost** optimization: a collapse that joins two far-drifted nodes pays a large synthesis
+bill (latency). Mitigation: **pre-bridge the frequent collapse paths** (§11 hub / lazy-bridges) —
+the typed bridges are the *memoized collapse paths*; frequent measurements are cheap, rare ones pay
+full price.
+
+### 6.4 The confident-liar is blocked twice (two-tier veridicality)
+
+| tier | when | gate | blocks |
+|---|---|---|---|
+| **individual commit** | every KB write | external grounding (domain-typed) | a node lying *to itself* |
+| **collapse** | every query touching ≥2 nodes | synthesis vs collective KB + world | the *seam* lying at the moment of use |
+
+The internal **α–α\* audit demotes to a cheap pre-filter** (which updates are even *proposed*);
+**external grounding is the commit gate** (which are *committed*). The expensive external probe is
+spent only where it must be — at commit and at multi-node collapse — never on coherence the system
+isn't currently using.
 
 ---
 
@@ -228,11 +260,14 @@ hand-built v0 of this graph.
 
 ## 11. Open questions / risks
 
-1. **Drift ↔ consolidation balance (§6.3)** — the central control problem; needs real
-   instrumentation, not a guessed cadence.
-2. **Seam cost** — naive all-pairs bridges are O(N²). Mitigate with a **hub topology** (a few
-   high-traffic interlingua-ish hubs) + **lazy bridges** (build a bridge only when a crossing is
-   actually demanded). Open: which seams are worth pre-building.
+1. **Collapse cost (NOT a stability knob — §6.3)** — superposition-until-query-collapse
+   self-resolves the drift↔consolidation balance, so the remaining problem is *cost*, not
+   stability: a collapse joining far-drifted nodes pays a large synthesis bill at query time
+   (latency). Open: which collapse paths to pre-bridge/memoize. Folds into risk #2.
+2. **Seam / collapse-path cost** — naive all-pairs bridges are O(N²). Mitigate with a **hub
+   topology** (a few high-traffic interlingua-ish hubs) + **lazy bridges = memoized collapse paths**
+   (build a bridge only when a crossing is actually demanded; keep the frequent ones warm). Open:
+   which seams are worth pre-building vs paying full collapse cost on demand.
 3. **Node size vs node count** — compute budget: many tiny experts vs fewer capable ones. The
    AIGP Messikommer lever (representation/policy decoupling) suggests cheap-representation +
    light-policy per node.
@@ -257,6 +292,10 @@ hand-built v0 of this graph.
 
 ---
 
-*Decisions locked this session (Clayton, Day 124): per-node self-improvement (two loops); MECE
-separation of concerns as the aspiration; **typed bridges over interlingua**; **disambiguating
-glossary** for cross-domain homonyms; **shared methods with domain-affinity + conflation guard**.*
+*Decisions locked this session (Clayton, Day 124): per-node self-improvement; MECE separation of
+concerns as the aspiration; **typed bridges over interlingua**; **disambiguating glossary** for
+cross-domain homonyms; **shared methods with domain-affinity + conflation guard**; and the
+consolidation model — **superposition held until query-collapse**, collapse = the answer operation
+(refer to own KB + collective KB + world → synthesize → update → output), **grounding at commit not
+at think**, collective KB as a lazy synthesized cache. This dissolves the drift↔consolidation
+"balance" into the Coherence Principle's measurement clause: there is no cadence to tune.*
