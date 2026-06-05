@@ -1,5 +1,7 @@
 # Digestion Ledger
 
+*Paired with the **[Consolidation Protocol](CONSOLIDATION_PROTOCOL.md)** — that's the procedure (how we file/bridge/ledger every unit of work); this is the record. The missing accounting layer.*
+
 *The missing accounting layer. The reading register (`sources/`) tracks what we **saw**; this tracks what we **digested** — so value stops leaking and we never re-derive digestion status. Rolling log: append as we process intake (`incoming/`), sources, and work. Started Day 125 (2026-06-05) during the incoming/ synthesis sweep.*
 
 **Statuses:** `DIGESTED` (pulled into a named home/volume) · `PENDING` (logged, awaiting read/decision) · `DEPRECATED` (superseded/junk, archived) · `REFERENCE` (kept as a citation, no further action).
