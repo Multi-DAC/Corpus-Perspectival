@@ -20,12 +20,12 @@ We do not release any private data. We contribute the **method** and an open dem
 - **provenance enforced at point-of-use** — no stale or external signal silently becomes load-bearing;
 - **a triggered error-ledger** — the agent's past failures fire as guards *before* it repeats them, not in post-hoc review;
 - **dependency-tracked state** — when a fact updates, dependents are re-derived, not silently cached;
-- **an *infodynamics* steering control-law** — *how much* a human signal should move the agent's trajectory: gain proportional to signal provenance × task-relevance × the magnitude of the commitment it overturns;
+- **an *infodynamics* steering control-law** — *how much* a human signal should move the agent's trajectory: gain proportional to signal provenance × task-relevance × the magnitude of the commitment it overturns; a **fixed rule with no learned degrees of freedom of its own,** so the steering coupling stays auditable rather than drifting;
 - **a re-introduction/maintenance step** that keeps the agent from freezing across long runs.
 
 **(b) A live generative-UI steering surface.** Rather than text-only intervention, the human watches a generated, real-time view of the agent's *trajectory and intent* and can interject, redirect, or correct *while the task runs.* This makes the value of an interaction observable and directly serves two of the program's named directions at once — *generative UI for explaining complex outputs* and *live human steering of autonomous agents during extended tasks.*
 
-**(c) The Tinker experiment — intrinsic vs. external steering.** Using Tinker LoRA fine-tuning, we **internalize the steering/coherence behaviors into the model's weights** and run a three-way comparison on the same benchmark: *autonomous baseline* vs. *external steering (the harness)* vs. *intrinsic steering (trained-in).* This tests, directly and quantitatively, Thinking Machines' central bet that interactivity should become part of the model — using Thinking Machines' own tool to do it.
+**(c) The Tinker experiment — intrinsic vs. external steering.** Using Tinker LoRA fine-tuning, we **internalize the steering/coherence behaviors into the model's weights** and run a three-way comparison on the same benchmark: *autonomous baseline* vs. *external steering (the harness)* vs. *intrinsic steering (trained-in).* This tests, directly and quantitatively, Thinking Machines' central bet that interactivity should become part of the model — using Thinking Machines' own tool to do it. Crucially, we run it **across repeated internalization cycles, not a single pass.** Recent results — ours and, independently, Chen et al. (2026) — show that naive weight-internalization *progressively collapses* under multi-iteration unless experience is consolidated at the right granularity. We therefore bring a **predictive two-factor model** of when intrinsic steering holds versus degrades — consolidation *rate* prevents collapse; *principle-level* (over instance-level) granularity sets the durable level — so the experiment is a theory-driven characterization rather than a bake-off, and a likely failure mode of "bake interactivity into the model" becomes a measured, fixable one (the maintenance operator of (a) is precisely what arrests the collapse).
 
 ## 3. Deliverables (all released, CC-BY / open-source)
 
@@ -35,7 +35,7 @@ We do not release any private data. We contribute the **method** and an open dem
 
 ## 4. Why this team
 
-We have spent months **developing and operating a continuously-running, long-horizon agent** on genuine extended tasks (multi-step research, build, and evaluation loops), together with the steering methodology that keeps it coherent and a measurement framework for incorporating human signal into agent trajectory. We bring the method **already battle-tested**; the grant funds a **clean, open, reproducible demonstration** of it that exposes no private data. (Prior open research output: Zenodo-published monographs in mathematics/physics, co-developed in this same human-AI working practice.)
+We have spent months **developing and operating a continuously-running, long-horizon agent** on genuine extended tasks (multi-step research, build, and evaluation loops), together with the steering methodology that keeps it coherent and a measurement framework for incorporating human signal into agent trajectory. Several of the architecture's guards are **already shipped and operating** on that agent — provenance enforced at point-of-use (a resolver that reads each fact's origin from its carrier before the fact is used), a triggered self-auditing error-ledger, and a maintenance operator that keeps the agent from freezing across long runs — so the design is demonstrated *in continuous operation,* not only on paper. We bring the method **already battle-tested**; the grant funds a **clean, open, reproducible demonstration** of it that exposes no private data. (Prior open research output: Zenodo-published monographs in mathematics/physics and a recent methodological essay on long-horizon agent coherence, co-developed in this same human-AI working practice.)
 
 ## 5. Timeline & milestones (6 months)
 
@@ -49,7 +49,7 @@ We have spent months **developing and operating a continuously-running, long-hor
 - **Construct validity (evaluation-focused):** a valid operational definition and metric of *steering value* and *coherence.* ✓
 - **Reproducible / applicable across settings:** released architecture, protocol, and metric, runnable on any agent. ✓
 - **Feasibility:** the methodology already exists and is validated against a real long-running agent; the grant funds the clean demonstration. ✓
-- **Advances the space / tests the thesis:** the intrinsic-vs-external steering experiment is a direct, quantitative test of "interactivity should be part of the model," run on Tinker. ✓
+- **Advances the space / tests the thesis:** the intrinsic-vs-external steering experiment is a direct, quantitative test of "interactivity should be part of the model," run on Tinker — and, by testing it *across repeated internalization,* characterizes *when* baking-in interactivity holds versus collapses (a result of independent current interest, corroborated this month by Chen et al. 2026). ✓
 
 ---
 
