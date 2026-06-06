@@ -73,3 +73,26 @@ all live; episodes collect through the adapter). Correctness gated upstream by
 - `torch.cuda.amp.autocast/GradScaler` deprecation FutureWarnings from `models.py`/`tools.py` —
   cosmetic on torch 2.11; training runs correctly. (Upgrade to `torch.amp.autocast('cuda', ...)`
   if we ever want them silenced.)
+
+## PATCH 4 — `tools.py`: protect live episodes from the dataset-erase race (256-env scale)
+
+**Symptom:** batch 2 of the scaling run died with `KeyError` in `tools.simulate` →
+`save_episodes(directory, {envs[i].id: cache[envs[i].id]})` (env `anakin103`), after running ~1M steps clean.
+
+**Root cause (latent upstream bug, exposed by N=256):** in `simulate`, the done-handler loops over all
+done envs and, *inside that loop*, calls `erase_over_episodes(cache, limit)` once the dataset crosses
+`limit`. `erase_over_episodes` deletes the lexicographically-lowest cache keys. When a cohort of envs
+finishes on the same step (common at 256 envs, rare at the upstream's 1–8), the first sibling's save
+triggers an erase that deletes a *not-yet-saved* sibling's cache entry (low-sorting `anakinNN-...` id) →
+the loop then KeyErrors saving that sibling. Standard dreamerv3-torch never hits this (few envs, limit
+rarely crossed mid-loop with siblings pending).
+
+**Fix (lossless, localized):** `erase_over_episodes(cache, dataset_size, keep=())` — never delete a key in
+`keep`. Call site in `simulate` passes `keep=[e.id for e in envs]`, protecting every env's still-live
+episode (mid-flight or pending-save) from erasure. Ids rotate on the next `reset()`, so protection
+releases promptly — no cache leak.
+
+**Verified:** (a) unit — the exact race (low-sorting live ids erased over-limit) reproduces without `keep`
+and is prevented with it; (b) end-to-end — relaunch resumed batch 2; `dataset_size` now pinned at the 1M
+limit (erase active every step) with **0 KeyError/Traceback** over 2.5 min of 256-env stepping.
+Files: vendored `third_party/dreamerv3-torch/tools.py` (`erase_over_episodes` + the `simulate` call site).
