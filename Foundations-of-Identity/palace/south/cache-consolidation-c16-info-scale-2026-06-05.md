@@ -75,10 +75,51 @@ When work is generated, the binding transaction must, **in the same flow**:
 3. The Digestion Ledger's `DIGESTED = homed + bridged` bar is exactly right; this adds **the bridge
    must be dense** (multi-link), or it's a thread that will need rereading later.
 
+## Separability — the 2D grid the slices missed (evening drive, ~21:55 PST)
+
+The two-factor law above was asserted from **two 1-D slices at different corners** (rate swept at
+density=1; density swept at saturated rate=80). They were never crossed. `cache_separability_probe.py`
+runs the full grid (rate as *items-consolidated/step* `m`, edge-budget `C=m·density`; 3-seed avg).
+It both **vindicates the separability** and **reassigns one mechanism**:
+
+**LEVEL channel — cleanly separable (better than claimed).** Above `m=G`, level is a pure function of
+density with **std 0.000 in rate**; density-gaps constant across rate (additive separability, std
+0.000); the saturation threshold is **density-invariant at `m=G`** for every density. Clean law:
+**Q(m,d) ≈ L(density)·φ(m/G)**, with the rate-response `φ` saturating at `m=G` regardless of density.
+So in the *natural rate unit* (items/step), the apparent edge-budget interaction (`C*≈G·density`) is a
+**units artifact** — renormalize and the factors separate.
+
+**COLLAPSE channel — REFRAME: there are TWO collapse modes, and "rate prevents collapse" was wrong.**
+
+| mode | cause | preventer | trajectory signature |
+|---|---|---|---|
+| **starvation** (never coheres) | rate < generation | **RATE** ≥ G | flat-low (d1/m2: 0.07 throughout) |
+| **sublimation** (coheres, then degrades over time/iterations) | thread (density=1) | **DENSITY** ≥ cluster | rise-then-fall (d1/m20: 0.84→0.41 *even at 2× rate*) |
+
+A **thread sublimates even when fed at 2× rate** (d1/m20 drops 0.43; d5/m20 holds, drop 0.01). So the
+*over-time* collapse is governed by **density, not rate** — the earlier "rate prevents collapse" conflated
+the two modes because the rate sweep was run at density=1 (where it was actually watching sublimation).
+Corrected: **rate prevents starvation; density prevents sublimation AND sets the level.** Density's role
+is *dual* (level + stability); rate's role is a gate (reach-the-ceiling, density-invariant at G).
+
+**Why this matters beyond the toy — Chen et al. + the TMI grant.** Chen et al. 2026's "progressive
+capability collapse under multi-iteration" is the **sublimation** mode (degrade-over-iterations), and
+their fix ("principle-level > instance-level for durability") is the **density** axis — *not* rate. The
+basement's candidate→M-tier graduation (instance→principle = densify thread→cluster) is therefore the
+**sublimation-preventer**, which is why a graduated bridge stays referenceable without rereading: density
+buys *stability over time*, not only a higher level. The grant's §2(c) should follow this assignment
+(rate→starvation, granularity/density→multi-iteration-collapse+level) — it tightens the Chen alignment.
+
+**Methodological catch (logged):** the slope metric `Q_end−Q_mid` scored a *sterile-flat* trajectory
+(slope≈0) identically to a *healthy-sustained* one; the real instrument is `peak−end` (drop) + the level.
+Caught by cross-checking trajectories against the level table — verify-don't-assert, at the instrument
+scale this time.
+
 ## Honest status / open
 
-- A toy with clustered random vectors + idealized "true relatives." The qualitative law (rate→collapse,
-  density→level, saturation) is robust to params; absolute numbers are model-specific.
+- A toy with clustered random vectors + idealized "true relatives." The qualitative law (rate→starvation,
+  density→sublimation+level, saturation at m=G) is robust to params + seeds; absolute numbers are
+  model-specific. The two-collapse-mode structure + density-invariant rate-threshold are the robust claims.
 - The C16-info-cache instance is a **structural** instance (computed dynamics matching C16's
   rate-matching + symmetry-depletion form), not a proof that the cache *is* a symmetry-bearing system
   in the strict algebraic sense. Candidate basement instance; flag, don't graduate solo.
