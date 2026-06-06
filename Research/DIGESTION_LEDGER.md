@@ -29,6 +29,8 @@ When an intake item is processed, add a row: what it is, where it came from, the
 | 2026-06-05 | AIGP-refs cluster (14) | `incoming/` | **REGISTERED + DEPRECATED** | 3 cited papers → `sources/2026-06-05-aigp-build-references.md`; 11 deprecated (techspec = dup of repo's VADR-TS-002 Issue 00.02; 3 sim results superseded by `dynamics.py` calibration; 5 frames/images scratch). |
 | 2026-06-05 | Telegram photos (134) | `incoming/` | **SECTIONED** | → `incoming/photos/` (temporary relevance per Clayton; not triaged — they age out). |
 | 2026-06-05 | `Why_Your_Blind_Spots_Build_Reality.m4a` (117 MB) | `incoming/` | **DEPRECATED** | Generated audio, already reviewed (Clayton). Scrapped. |
+| 2026-06-05 | Junk + 1 redundant (7) | `incoming/` | **DEPRECATED** | Payment receipt, anon transcript, SSRN, 3 "summarizing" chat-exports, 1 confirmed-in-repo essay export. Zero-loss verified. |
+| 2026-06-05 | 5 priority papers (LLM-memory/continuity) | `incoming/` | **DIGESTED ×4 + PENDING ×1** | Confirms Clayton's point — *ingested-in-spirit but loop unclosed* (PDFs lingered until the bridge-receipt was confirmed). #1 Zhang→M14; #2 STALE→engagement+Mirror#28; #5 Nous CNA→M15 — all registered+bridged → PDFs deprecated. #3 Chen *Continual Experience Internalization* (2606.04703) → **registered + bridged today** as external confirmation of the cache-C16 + density findings → PDF deprecated. #4 *Agent Harness Scaling* → PENDING-read (PDF kept). |
 
 ---
 
@@ -39,7 +41,7 @@ When an intake item is processed, add a row: what it is, where it came from, the
 | voice-notes | 3 | **2 DONE** (transcribed → already-integrated → scrapped). 117 MB `Why_Your_Blind_Spots_Build_Reality.m4a` still PENDING (long-form audio; what is it?) |
 | aigp-code | 12 | **DONE — DEPRECATED** (7 in-repo dups + 2 throwaway Unreal probes + 3 json; scrapped, zero loss) |
 | aigp-refs | 14 | **IN PROGRESS** — 3 cited papers REGISTERED (`sources/2026-06-05-aigp-build-references.md`); techspec/results/frames (11) pending Clayton's deprecate-confirm |
-| research-papers | 94 | **BATCH-REGISTERED** (legible, titled, all PENDING) → `sources/2026-06-05-incoming-papers-batch/REGISTER.md`. Topic-shape: heavy biophoton/EM/PEMF/neural-coupling (→ Coherent-Body) + QM thermodynamics/arrow-of-time (→ physics/Meridian) + bio. Disposition individually next (`integrated`/`discussed`/`copy`/`new` + bridged?). |
+| research-papers | 94 | **IN PROGRESS** — batch-registered → dup/topic pass → **11 DEPRECATED** (7 junk + 4 digested-priority); **27 HELD** (our own works incl. the **patent**; content NOT confirmed in repo → possibly *unhomed*, Clayton's call, NOT scrapped); **5 priority ADDRESSED** (4 digested+bridged, 1 PENDING-read); ~51 genuine external papers remain for individual adjudication (mostly Coherent-Body EM/biophoton + physics). Reg: `sources/2026-06-05-incoming-papers-batch/`. |
 | notes-text | 54 | PENDING — individual triage |
 | named-images | 30 | PENDING — mostly AIGP frames / page-fixes |
 | telegram-photos | 134 | PENDING — needs Clayton's eye for load-bearing keepers |
