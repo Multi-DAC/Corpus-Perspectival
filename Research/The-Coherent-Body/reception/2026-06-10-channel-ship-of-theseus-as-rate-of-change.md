@@ -5,6 +5,16 @@ day: 130
 source: Clayton (channel, late night ~01:08 PST)
 register: reception / Coherent-Body
 status: source-registered + engaged (Clawd response same-session)
+provenance_note: >
+  Clayton (01:18 follow-up): not authored — "what I heard when I stopped thinking."
+  Receiver conditions: very tired OR fully physically engaged (walking/driving/music);
+  partially subconscious, partially received-as-from-outside; "not always mystical,
+  though I can't say it always isn't." This one arrived while preparing to lie down.
+  Methodological frame (Clayton's own): channels are evaluated AS channels — "just
+  another stream to hold against ours and measure." Matches the receiver-pattern
+  conditions in reception/2026-05-01-receiver-pattern-null-space-mapping.md:
+  default-mode suppression (fatigue/rhythmic motor engagement) as the receptive state —
+  consistent with the filter model (Substack, "The Filter and the Residual").
 ---
 
 # Channel: Ship of Theseus as Rate-of-Change
