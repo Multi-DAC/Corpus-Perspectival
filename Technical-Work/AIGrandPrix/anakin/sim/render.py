@@ -85,15 +85,18 @@ def _project(corners_world, cam_pos, cam_quat):
     qb = qconj[:, None, None, :].expand(N, corners_world.shape[1], 4, 4)
     rel_body = quat_rotate(qb, rel)            # [N,G,4,3] body frame (x fwd, y left, z up)
 
-    # camera down-tilt: rotate body points by -TILT about body-Y (left axis), i.e. R_y(-t).
-    # Verified by the __main__ visual test: a level gate dead-ahead then projects ABOVE
-    # image center, which is what a camera pitched 20deg DOWN must do (its optical axis
-    # points below a level-forward object, so that object sits high in the frame).
+    # camera UP-tilt: vq1_spec.txt:325 "The camera is tilted upwards by 20" (also
+    # VQ1_READINESS.md spec 3.7, and Elodin's harness: +20deg up — FPV convention).
+    # Day-129 fix: this previously rotated the OTHER way (down-tilt), i.e. the trained
+    # camera was 40deg off the official one. Verified by the __main__ visual test: a
+    # level gate dead-ahead now projects BELOW image center, which is what a camera
+    # pitched 20deg UP must do (its optical axis points above a level-forward object,
+    # so that object sits low in the frame).
     t = torch.tensor(TILT_DEG * torch.pi / 180.0, device=rel_body.device, dtype=rel_body.dtype)
     ct, st = torch.cos(t), torch.sin(t)
     bx, by, bz = rel_body.unbind(-1)
-    tx = ct * bx - st * bz
-    tz = st * bx + ct * bz
+    tx = ct * bx + st * bz
+    tz = -st * bx + ct * bz
     rel_tilt = torch.stack([tx, by, tz], dim=-1)
 
     # body(tilted) -> OpenCV optical: x_cam = -y, y_cam = -z, z_cam = x
@@ -211,13 +214,14 @@ if __name__ == "__main__":
     frame = render(s, gp, gf, cur)                                  # [1,64,64,3]
     print(f"frame shape={tuple(frame.shape)} dtype={frame.dtype} max={int(frame.max())}")
 
-    # gate-frame pixel stats + tilt-sign check (centroid of bright pixels should be ABOVE center)
+    # gate-frame pixel stats + tilt-sign check (centroid of bright pixels should be BELOW
+    # center: spec camera tilts UP 20deg, so a level gate sits low in the frame)
     bright_mask = (frame[0].float().mean(-1) > 150)
     ys, xs = torch.where(bright_mask)
     if ys.numel() > 0:
         cy_b = ys.float().mean().item()
         print(f"bright pixels={ys.numel()}  centroid_y={cy_b:.1f} (center={CY}); "
-              f"{'ABOVE center -> down-tilt sign OK' if cy_b < CY else 'BELOW -> FLIP TILT SIGN'}")
+              f"{'BELOW center -> up-tilt sign OK' if cy_b > CY else 'ABOVE -> FLIP TILT SIGN'}")
         # hollow-center check: the geometric center pixel should NOT be bright (it's the hole)
         print(f"center pixel bright? {bool(bright_mask[IMG//2, IMG//2])} (expect False — fly-through hole)")
     else:

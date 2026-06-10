@@ -96,3 +96,27 @@ releases promptly — no cache leak.
 and is prevented with it; (b) end-to-end — relaunch resumed batch 2; `dataset_size` now pinned at the 1M
 limit (erase active every step) with **0 KeyError/Traceback** over 2.5 min of 256-env stepping.
 Files: vendored `third_party/dreamerv3-torch/tools.py` (`erase_over_episodes` + the `simulate` call site).
+
+## PATCH 5 — `envs/anakin_batched.py` + `configs.yaml`: competition-camera VFoV band mask (Day 129)
+
+**Why:** `integration/translation_rehearsal.py` (paired ablation, 10 eps/condition) localized the
+sim-to-sim translation cost of the competition feed: vertical-FoV crop (we trained 90deg, the
+640x360 feed at fx=fy=320 sees ~59deg) costs **-68% return**; the resample round-trip is free
+(+17%, noise). Fix = train through the camera the pilot will actually have.
+
+**What:** `BatchedSimAdapter(vfov_mask=...)` — when set, `_band()` grays (BG 40) the rows outside
+[14:50] on both batched-obs production points (`_resolve_reset`, `_resolve_step`). Constants
+`BAND_TOP/BAND_BOT/BAND_GRAY` must stay in lockstep with `integration/dreamer_pilot.to_training_frame`
+(640x360/10 -> 36 content rows, centered). `make_batched` reads `config.anakin_vfov_mask`
+(default False — all pre-Day-129 configs unchanged). New `anakin_band` OVERLAY block in
+`configs.yaml` sets only `anakin_vfov_mask: True`; pass `--configs anakin_maneuver anakin_band`
+(carry_forward_train.py now splits its `--config` string to support overlays).
+
+**Verified:** config overlay merges (anakin_vfov_mask=True); 2-env batched reset+step obs both
+show gray rows [0:14)+[50:64) with live content band.
+
+**Companion sim fix (not third_party, but same finding-cluster):** `sim/render.py` camera tilt was
+20deg DOWN; `docs/vq1_spec.txt:325` + VQ1_READINESS 3.7 + Elodin's harness all say 20deg **UP**
+(the trained camera was 40deg off the official one). Rotation sign flipped; self-check now asserts
+a level dead-ahead gate projects BELOW center. The `maneuver_band_ft` fine-tune trains both fixes
+together off `maneuver_scale_2/best.pt` (+256.28).

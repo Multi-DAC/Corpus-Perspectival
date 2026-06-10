@@ -77,7 +77,7 @@ def run_batch(args, target_steps, logfile):
     """One fresh-process DreamerV3 batch: resume from latest.pt, train up to target_steps, exit."""
     cmd = [
         str(args.python), "-u", "dreamer.py",
-        "--configs", args.config,
+        "--configs", *args.config.split(),
         "--logdir", str(Path(args.logdir).resolve()),
         "--envs", str(args.envs),
         "--steps", str(int(target_steps)),

@@ -1,4 +1,21 @@
-# VQ1 Readiness Assessment — April 9, 2026 (Updated 2026-05-09 Day 99 with VADR-TS-002 Issue 00.02)
+# VQ1 Readiness Assessment — April 9, 2026 (Updated 2026-05-09 Day 99 with VADR-TS-002 Issue 00.02; Day-129 camera-truth addendum below)
+
+## 2026-06-09 Day 129 Update — Adapter built; two camera-truth defects found and in repair
+
+- **DreamerV3 competition adapter EXISTS** (`anakin/integration/dreamer_pilot.py`): best.pt behind
+  act(frame), strict load, 4.0 ms/step. Closed-loop rehearsal harness: `translation_rehearsal.py`.
+- **Defect 1 — vertical FoV (rehearsal-measured):** policy trained square 90° VFoV; the 640×360 feed
+  sees ~59°. Paired ablation: **-68% return from the crop alone**; resampling free. Fix: `anakin_band`
+  training overlay (PATCHES.md PATCH 5).
+- **Defect 2 — tilt sign (recon-caught, worse):** `sim/render.py` trained the camera 20° DOWN; spec
+  §3.7 + `vq1_spec.txt:325` + Elodin's harness say 20° **UP** — the trained camera was 40° off the
+  official one. render.py fixed Day 129; the old item-4 "tilt awareness" concern was real and
+  understated.
+- **In flight:** `maneuver_band_ft` fine-tune (both fixes, off best.pt +256.28, 4×500k steps,
+  exam-condition eval). Next: re-run translation rehearsal off the fine-tuned checkpoint, then the
+  official-sim end-to-end test (the item-56 submission-format unknown still needs the portal).
+- **Public timeline (recon 6/09):** virtual qualification May–July, Round-2 cutoff ~end July,
+  physical qualifier Sept (SoCal), final Nov (Ohio). Exact VQ1/VQ2 submission dates: check team portal/email.
 
 ## 2026-05-09 Day 99 Update — VQ1 Spec Dropped
 
