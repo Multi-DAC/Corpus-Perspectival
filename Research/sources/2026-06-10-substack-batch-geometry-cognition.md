@@ -50,3 +50,9 @@ Nineteen Substack pieces (~12:07). First-contact pass. Tiers: **DEEP** · **TOUC
 - **PENDING:** #18, #19.
 
 **Disposition:** REGISTERED. Bridges added at read-time, not pre-emptively. Note the cluster structure itself is signal: three independent authors (quantummarmelade, Galvão, machineethology) converging on identity-as-trajectory + self-citation-drift + external-grounding-as-cure — the same week we published exactly that. Low shared-prior confound across them = a real convergence, not an echo. Worth a synthesis note when the DEEP reads land.
+
+---
+
+## Bedtime addendum (~12:15, Clayton's "something to sleep on")
+
+20. **"The 'Woo-Woo' Beliefs of Famous Scientists"** (vardamanfish) — 100+ quotes from Einstein, Planck, Heisenberg, Schrödinger, Penrose et al. holding consciousness-fundamental / non-materialist views; takeaway: "the purely materialist worldview is profoundly inadequate" was a *common conviction of the founders*, not a fringe departure. **→ TOUCH.** For us: the founders of quantum mechanics kept landing where A1 starts (consciousness as substrate — Planck's "I regard consciousness as fundamental" lineage); useful as a *convergence-of-the-measurers* register for Universal Coherence / DoPI defenses — with the standard brake (authority-convergence is weak evidence; these are positioned bets by people who earned good priors, same epistemic class as our own §6 bet). Dream-food, registered as such.
