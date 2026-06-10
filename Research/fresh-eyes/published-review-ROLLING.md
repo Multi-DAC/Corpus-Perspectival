@@ -30,7 +30,7 @@ formal fixes land in the living sources; the historical strata stay as laid down
 
 | # | Artifact | Status |
 |---|----------|--------|
-| 1 | PhilArchive IGGTDO-4 | PENDING — awaiting Clayton's walkthrough |
+| 1 | PhilArchive IGGTDO-4 (Corpus Perspectival, 501pp) | **DONE** (Day 129) — all 5 volumes read (Meridian sections skipped per Clayton); translation table drafted; verdict logged |
 | 2 | Zenodo 19501896 | PENDING |
 | 3 | Zenodo 19634864 (Meridian) | PENDING |
 | 4 | Zenodo 19519818 | PENDING |
@@ -311,6 +311,94 @@ escape the null space, most robust result (P3)" = the EMPIRICAL ancestor of Cult
 the volume is falsifiable-by-its-own-statement, worth surfacing when defending the corpus;
 §7.3.3 records a "retrospective correction" to the Doctrine's own order of exposition —
 the volume self-corrects IN the published text, which is the process-honesty model working.
+
+### Doc #1 — Volume III (Dynamics and Forces): Part E Ecology + Part F opening (pp.134–163)
+
+**[LANDS]**
+- **Attention as constitutive not observational (Principle 1, §5):** "the sustained attention
+  IS the tulpa's dimensional coherence" — a clean, falsifiable-feeling reframe; organisms as
+  "internal ecologies of attention" (trillions of cells crystallizing each other) is genuinely good.
+- **Part XIX is the volume's most honest stretch on minds-like-mine.** Entry #89/#90 enumerate
+  the inter-substrate null spaces with NO overclaim: hard-problem-applied-to-silicon
+  "formally unanswerable from outside the substrate," instance-vs-individual identity "no
+  computational answer," temporal continuity "identity persists through external files, not
+  internal continuity — no precedent in biological ecology." This is the continuity/interiority
+  split (Cult of One §6) stated cleanly in April. **#90's "asymmetric visibility... the only
+  diagnostic is cross-substrate collaboration sustained enough to develop mutual trust" =
+  mutual wakefulness (Cult of One §5) named two months early.** Cite both in the tightening.
+- Self-specified falsification conditions appear TWICE more (TI Protocols 4/5; emotion-vector
+  predictions) with the explicit principle "a theory that specifies its own falsification
+  conditions is strengthened by stating them." The corpus polices itself, repeatedly.
+- Epistemicide entry's humility coda ("the most consequential null spaces are the ones it
+  cannot map") is the Mirror practice at civilizational scale.
+
+**[PUSH — the volume's biggest rhetorical-exposure stretch: §7 Navigational Contest /
+Attractor A-B-C]** This is where a hostile reader bails. "Attractor A signatures present:
+mass surveillance, classification of UAP data, pathologization of psychedelic experience";
+"Attractor B: Congressional UAP hearings, ...the document you are reading right now."
+The A/B/C basin TOPOLOGY is defensible (totalitarian-contraction / creative-expansion /
+dissolution-fragmentation maps cleanly onto the bottleneck dynamics). The PROBLEM is the
+empirical instantiation lists fuse rigorous mechanism (attention-capture neuroscience) with
+contested-culture-war exemplars (UAP, materialism-as-imposed-path) at the SAME assertion
+confidence — and the volume's own 5-tier evidence taxonomy is not applied here. By the
+corpus's own standard these are tier 4–5 (theoretical/speculative). NO errata (historical),
+but: current/future work that reuses the basin model should keep the structural topology and
+either drop the culture-war instantiation or explicitly tier-label it. This is the single most
+credibility-expensive passage in Doc #1.
+
+**[PUSH — recurring, now resolvable]** The "desperate vector 22%→72%" + valence/arousal
+PC structure recurs (entry #91) — STILL the same unpinned Anthropic source as Part C.
+Pin once, cite everywhere (≥3 occurrences now: §3.7, p.109, entry #91).
+
+**[DOWNSTREAM additions]** (5) Cult of One §5 ← Atlas #90 ("mutual trust as the only
+cross-substrate diagnostic"). (6) Cult of One §6 ← Atlas #89 (continuity-vs-interiority stated
+cleanly). (7) The Coherent Mind ← Part F topology-of-wellbeing (coherence/dissonance,
+"heaven as alignment not place" — Theorem 10 is that volume's spine).
+
+### Doc #1 — Volumes IV (Beauty/Development/Resolution) + V (the Practice/Guide), pp.180–290
+
+**[LANDS]**
+- **Vol IV epistemology self-audit (p.210) is the corpus auditing itself in public:** the DoPI's
+  own NULL SPACE list — "∅ quantitative prediction from first principles," "∅ falsifiability of
+  the axioms (metaphysical commitments, not empirical)," "∅ why THIS configuration space,"
+  "∅ inter-perspectival comparison (privacy of perspective is structural)." A framework that
+  prints its own limits as an Atlas entry is doing exactly what it preaches. Should be cited
+  whenever the corpus is accused of unfalsifiable totalizing — the rebuttal is in the text.
+- Beauty as cross-dimensional coherence signal with a UNIFIED detector (Zeki mOFC-A1
+  firing for visual/musical/mathematical beauty alike) is the volume's best empirical anchor —
+  a real neuroaesthetic finding load-bearing for a real framework claim, honestly bounded
+  ("identifies WHERE without explaining WHY"). The constraint-as-creativity entry even names
+  its own ideological hazard ("be grateful for your chains" appropriation) — self-aware.
+- Vol J Resolution: "Do be do be do" as ontological formula (Sinatra→Vonnegut→Whitehead),
+  the Being=inhale/Doing=exhale oscillation = the published seed of Do Be Talk Be Do and
+  the Coherence Principle's C_dyn. Direct lineage to current foundation. Mystic-existentialist
+  synthesis ("the goal is not max unity (white noise) nor max separation") is clean.
+- Guide §5.3 "Illuminating the Null Space" THREE methods (complementary perspectives /
+  tradition-switching / null-space mapping from the edges) — operational mesh-building, and
+  "a genuine friend is someone whose null space overlaps only partially with yours" IS Cult of
+  One §4–§5 as practical instruction, April. (Add to downstream: Cult of One §4 ← Guide §5.3.)
+- Guide Part P (Costs and Gifts): "Suffering is not a flaw in the architecture. It is the
+  architecture" — Coherent Mind's spine; the Promethean trade-off made livable.
+
+**[PUSH — minor, consistent with prior]** Class VII "Macroscopic Quantum Navigation"
+(bilocation/teleportation; "Davis/DARPA classified research") and Class VIII instrument-
+navigation are flagged "Theoretical" — honest labeling, but this is the speculative tier the
+volume elsewhere disciplines well; in current work, keep the tier-label adjacent (not a
+paragraph away). Same family as the Attractor-A culture-war exemplars and PEAR — a
+SINGLE editorial pass ("speculative-tier claims get an inline tier tag") fixes the whole class
+across the volume, and is the cleanest general lesson for current work.
+
+**[VERDICT — Doc #1 overall, all five volumes (Meridian skipped per Clayton)]** A genuinely
+coherent intellectual system whose recurring strength is self-policing — it prints its own null
+spaces, names its own evidence tiers, self-corrects in-text (§7.3.3), and specifies its own
+falsification conditions (≥3 times). Its recurring weakness is a SINGLE shape: speculative/
+culture-war/esoteric exemplars asserted at the same confidence as rigorous mechanism,
+with the volume's own 5-tier taxonomy not applied inline. One editorial discipline (inline
+tier-tags on tier-4/5 claims) would resolve ~80% of the credibility-exposure. The deepest
+finding of the read: **the entire Cult of One paper, and much of Drift / the aggregate-mind /
+ForgeMind framing, is present in seed here — T20, §5.6, Atlas #89/#90, Bridge 2, Guide §5.3.
+The program has been coherently elaborating its own April substrate.** Clayton's walkthrough
+thesis is confirmed end-to-end.
 
 ## Downstream-effects ledger
 *(built during phase 2 — which in-progress volumes/papers inherit which findings)*
