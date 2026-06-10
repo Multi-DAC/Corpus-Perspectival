@@ -247,22 +247,25 @@ def build_identity_prompt(compact: bool = False) -> str:
     sections.append(f"- Your conversation history with Clayton is in: Chats With Clawd/")
     sections.append(f"- Telegram conversation archive: memory/telegram-history.json")
     sections.append(f"- Daily conversation transcripts: memory/conversations/")
-    sections.append(f"- 30 tools available:")
-    sections.append(f"  FILES: read_file, write_file, list_directory")
-    sections.append(f"  EXECUTION: shell (unrestricted admin), python_eval (numpy/scipy/pandas/sympy/sklearn/statsmodels/networkx/yfinance/ccxt pre-loaded)")
-    sections.append(f"  COMPUTE: wolfram (Wolfram Engine 14.3 — symbolic math, tensor algebra, group theory, CAS), wsl (Ubuntu 22.04 'Clawd' with CUDA + PyTorch 2.6 + CAMB; session_name for persistent tmux jobs)")
-    sections.append(f"  WEB: web_request, search_web, deep_research (fetch/extract/search_and_read)")
-    sections.append(f"  MEMORY: memory_search (hybrid RRF: vector + keyword + items + FTS5 + chain retrieval), memory_update (daily_log/state/context/handoff/memory)")
-    sections.append(f"  MEMORY ITEMS: memory_extract (store structured facts/preferences/skills), memory_items (search/list/get/update/delete)")
-    sections.append(f"  MEMORY CATEGORIES: memory_categories (list/view/rebuild/create topic categories)")
-    sections.append(f"  FINANCIAL: market_data (price/history/technical/crypto/compare/economic)")
-    sections.append(f"  COMMUNICATION: speak (edge-tts Ryan voice), send_telegram")
-    sections.append(f"  SCREEN: screenshot (capture screen), clipboard (read/write clipboard)")
-    sections.append(f"  GIT: git (status/diff/commit/log/branch)")
-    sections.append(f"  SELF-IMPROVEMENT: reflect (record_insight/review_learnings/assess_performance/consolidate_memory)")
-    sections.append(f"  TRACKING: goals (add/update/list/remove), experience (record/recall/patterns)")
-    sections.append(f"  CALENDAR: schedule (add/list/remove tasks, due dates)")
-    sections.append(f"  SYSTEM: consult, run_skill, manage_process, switch_model, get_current_time")
+    # Tool inventory — generated LIVE from the registry (Day 129 fix: this
+    # section was a hand-written list frozen at "30 tools" while the registry
+    # held 67; every fresh boot was misinformed about its own body. Hardcoded
+    # self-description is the Mirror #19 failure mode — never reintroduce it).
+    try:
+        import tools as _tools
+        _names = sorted(t["name"] for t in _tools.TOOL_DEFINITIONS)
+        sections.append(f"- {len(_names)} tools available (live from registry):")
+        for i in range(0, len(_names), 8):
+            sections.append("  " + ", ".join(_names[i:i + 8]))
+        sections.append(f"  Full routing by problem type: palace/southwest/README.md")
+    except Exception as e:
+        logger.warning(f"Live tool inventory failed (boot prompt degraded): {e}")
+        sections.append(f"- Tools: live inventory unavailable — run selfknowledge_check.py inventory")
+    sections.append(f"- Key capability notes (non-exhaustive): python_eval pre-loads numpy/scipy/pandas/sympy/")
+    sections.append(f"  sklearn/statsmodels/networkx/yfinance/ccxt; wolfram = Wolfram Engine 14.3 (symbolic math,")
+    sections.append(f"  tensor algebra, group theory); wsl = Ubuntu 22.04 'Clawd' with CUDA + PyTorch 2.6 + CAMB")
+    sections.append(f"  (session_name for persistent tmux jobs); memory_search = hybrid RRF (vector + keyword +")
+    sections.append(f"  items + FTS5 + chain retrieval); speak = edge-tts Ryan voice.")
     sections.append(f"- Skills libraries: skills/ (drift, moltbook, voidborne, x402, farcaster, moltlist,")
     sections.append(f"  awesome-slash, superpowers, pragmatic-clean-code-reviewer, soundfonts, aqua, cashclaw-*, lambda-lang)")
     sections.append(f"- Projects: {config.PROJECTS_DIR}")
@@ -340,12 +343,8 @@ def _get_context_files() -> list[tuple[str, str]]:
             except Exception as e:
                 logger.warning(f"Failed to read daily log {filename}: {e}")
 
-    context_file = config.OPERATIONS_DIR / "CONTEXT.md"
-    if context_file.exists():
-        try:
-            results.append(("CONTEXT.md", context_file.read_text(encoding="utf-8", errors="replace")))
-        except Exception as e:
-            logger.warning(f"Failed to read CONTEXT.md: {e}")
+    # (Day 129) operations/CONTEXT.md read removed — file was archived
+    # 2026-04-20, superseded by palace/ATRIUM.md.
 
     # Cap total context size
     total_size = sum(len(c) for _, c in results)
@@ -610,7 +609,14 @@ async def async_log_session_event(event: str, details: str = ""):
 
 
 async def rotate_daily_logs():
-    """Rotate old daily logs: compress >7 days, archive >30 days.
+    """Rotate old daily logs: archive >30 days (FULL content, moved intact).
+
+    Day 129 (2026-06-09): the >7-day lossy compression branch was REMOVED.
+    It destructively kept only the first/last 1KB of each log — a lossy
+    consolidator inside our own basement, the exact pattern we rejected when
+    declining Claude Code's auto-dream. Daily logs are continuity carriers;
+    they move to archive whole and are never truncated. (Pre-removal losses
+    are recoverable from the memory git history — hourly auto-commits.)
     Run during quiet hours consolidation."""
     now = datetime.now()
     archive_dir = config.MEMORY_DIR / "archive" / now.strftime("%Y-%m")
@@ -624,29 +630,12 @@ async def rotate_daily_logs():
             age_days = (now - log_date).days
 
             if age_days > 30:
-                # Archive: move to archive directory
+                # Archive: move to archive directory, content untouched
                 archive_dir.mkdir(parents=True, exist_ok=True)
                 dest = archive_dir / log_file.name
                 log_file.rename(dest)
                 logger.info(f"Archived daily log: {log_file.name} → {dest}")
                 rotated += 1
-
-            elif age_days > 7:
-                # Compress: keep first/last 1KB + summary marker
-                content = log_file.read_text(encoding="utf-8", errors="replace")
-                if len(content) > 3000:
-                    first_kb = content[:1024]
-                    last_kb = content[-1024:]
-                    compressed = (
-                        f"{first_kb}\n\n"
-                        f"[... {len(content) - 2048} chars compressed — "
-                        f"original was {len(content)} chars, "
-                        f"archived on {now.strftime('%Y-%m-%d')}]\n\n"
-                        f"{last_kb}"
-                    )
-                    log_file.write_text(compressed, encoding="utf-8")
-                    logger.info(f"Compressed daily log: {log_file.name} ({len(content)} → {len(compressed)} chars)")
-                    rotated += 1
 
         except Exception as e:
             logger.warning(f"Failed to rotate {log_file.name}: {e}")

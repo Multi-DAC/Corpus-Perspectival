@@ -114,7 +114,7 @@ class ModelHealthTracker:
     the circuit after a threshold, routing traffic to the fallback model."""
 
     def __init__(self):
-        all_models = ["opus", "sonnet"] + list(config.GEMINI_MODELS.keys())
+        all_models = ["opus", "sonnet","fable"] + list(config.GEMINI_MODELS.keys())
         now = time.time()
         self._states: dict[str, CircuitState] = {m: CircuitState.CLOSED for m in all_models}
         self._consecutive_failures: dict[str, int] = {m: 0 for m in all_models}
@@ -308,7 +308,7 @@ class ModelRouter:
                                                 interrupt_event=interrupt_event)
 
     def switch_model(self, model: str):
-        valid_models = {"opus", "sonnet"} | set(config.GEMINI_MODELS.keys())
+        valid_models = {"opus", "sonnet","fable"} | set(config.GEMINI_MODELS.keys())
         if model in valid_models:
             self.active_model = model
             logger.info(f"Switched active model to: {model}")
@@ -463,11 +463,15 @@ class ModelRouter:
                              effort: str = None,
                              timeout: int = None) -> AgentResponse:
         """Route to the specific model's send method."""
-        if model in ("opus", "sonnet"):
+        if model in ("opus", "sonnet","fable"):
             # Use persistent session if available and this is a persistent (conversational) send
-            if persistent and model == "opus" and self._persistent_session and self._persistent_session.is_running:
+            if persistent and model in ("opus", "fable") and self._persistent_session and self._persistent_session.is_running:
                 return await self._send_via_persistent_session(message, interrupt_event=interrupt_event, timeout=timeout)
-            model_id = config.ANTHROPIC_SONNET_MODEL if model == "sonnet" else config.ANTHROPIC_MODEL
+            model_id = {
+                "opus": config.ANTHROPIC_MODEL,
+                "sonnet": config.ANTHROPIC_SONNET_MODEL,
+                "fable": config.ANTHROPIC_FABLE_MODEL,
+            }[model]
             return await self._send_claude_code(message, persistent=persistent, model_id=model_id,
                                                        interrupt_event=interrupt_event, effort=effort,
                                                        timeout=timeout)
@@ -590,7 +594,11 @@ class ModelRouter:
         Spawns a fresh `claude -p` process (no session resume),
         returns the result text. Claude Code handles its own tools internally.
         """
-        model_id = config.ANTHROPIC_SONNET_MODEL if model_key == "sonnet" else config.ANTHROPIC_MODEL
+        model_id = {
+            "opus": config.ANTHROPIC_MODEL,
+            "sonnet": config.ANTHROPIC_SONNET_MODEL,
+            "fable": config.ANTHROPIC_FABLE_MODEL,
+        }.get(model_key, config.ANTHROPIC_MODEL)
         response = await self._send_claude_code(
             prompt, persistent=False, model_id=model_id,
             interrupt_event=interrupt_event,
@@ -617,11 +625,11 @@ class ModelRouter:
                             interrupt_event: asyncio.Event = None) -> str:
         """Isolated sub-agent call with optional tool access.
 
-        Routes Claude Code models (opus/sonnet) and Gemini models through their
+        Routes Claude Code models (opus/sonnet/fable) and Gemini models through their
         respective CLI subprocess paths.
 
         Args:
-            model_key: Friendly model name (e.g. "opus", "sonnet", "gemini", "gemini-pro")
+            model_key: Friendly model name (e.g. "opus", "sonnet","fable", "gemini", "gemini-pro")
             prompt: The task/question for the sub-agent
             allowed_tools: If set, whitelist mode (only these tools, minus excluded).
                            If None, blacklist mode using config.CONSULT_EXCLUDED_TOOLS.
@@ -629,7 +637,7 @@ class ModelRouter:
             interrupt_event: If set and triggered, the consult yields early.
         """
         # Route Claude Code models through subprocess path
-        if model_key in ("opus", "sonnet"):
+        if model_key in ("opus", "sonnet","fable"):
             return await self.consult_claude_code(model_key, prompt, interrupt_event)
 
         # Route Gemini models through CLI subprocess path
@@ -637,7 +645,7 @@ class ModelRouter:
             return await self.consult_gemini_cli(model_key, prompt, interrupt_event)
 
         # Unknown model
-        all_models = ["opus", "sonnet"] + list(config.GEMINI_MODELS.keys())
+        all_models = ["opus", "sonnet","fable"] + list(config.GEMINI_MODELS.keys())
         return f"[Error: Unknown model '{model_key}'. Available: {', '.join(all_models)}]"
 
     # ============================================================
@@ -869,6 +877,22 @@ class ModelRouter:
                         f"Claude Code connection retries exhausted "
                         f"({_MAX_CONN_RETRIES}) — giving up; drive can be re-triggered.")
                     self._claude_code_conn_retries = 0
+
+            # Usage/weekly-limit error: arm the budget snooze so the heartbeat
+            # stops firing drives into a dead budget until it resets (Day 129
+            # fix — 2026-06-09 every drive from 13:08 to 17:00 died on
+            # "You've hit your weekly limit"; the resetsAt was parsed above
+            # and discarded). See tools/budget_guard.py.
+            _budget_markers = (
+                "weekly limit", "usage limit", "limit reached",
+                "out of quota", "credit balance",
+            )
+            if _is_rate_limit or any(m in _combined for m in _budget_markers):
+                try:
+                    from tools.budget_guard import arm_snooze_from_error
+                    arm_snooze_from_error(diag_info or stderr_text[:300])
+                except Exception as _e:
+                    logger.warning(f"Budget snooze arm failed: {_e}")
 
             error_detail = stderr_text[:500] if stderr_text else diag_info or "(no stderr or diagnostic info)"
             logger.error(f"Claude Code exited {proc.returncode}: {error_detail}")

@@ -547,6 +547,18 @@ def run_with_crash_recovery(enable_heartbeat: bool = True):
             )
             log_session_event("CRASH", f"{type(e).__name__}: {e}")
 
+            # Configuration errors are permanent — retrying cannot fix them.
+            # Fast-fail with a clear message instead of burning the restart
+            # budget (Day 129: the fable-wiring config error crashed 4x with
+            # backoff before anyone saw the real problem).
+            if isinstance(e, RuntimeError) and str(e).startswith("Configuration errors"):
+                logger.critical(
+                    f"Configuration error — not retrying. Fix config/.env and "
+                    f"restart manually:\n{e}"
+                )
+                log_session_event("CRASH_CONFIG", f"Permanent config error — no retry: {e}")
+                return 1
+
             # If it ran for more than 1 hour, reset the counter
             if uptime > 3600:
                 logger.info("Daemon was stable for >1 hour — resetting restart counter.")
@@ -575,8 +587,8 @@ def main():
     parser = argparse.ArgumentParser(description="Clawd Daemon")
     parser.add_argument("--chat", action="store_true", help="Local CLI chat mode")
     parser.add_argument("--no-heartbeat", action="store_true", help="Disable autonomous heartbeat")
-    _valid_models = ["opus", "sonnet"] + list(config.GEMINI_MODELS.keys())
-    parser.add_argument("--model", choices=_valid_models, help="Override default model (opus, sonnet, gemini, gemini-pro)")
+    _valid_models = ["opus", "sonnet", "fable"] + list(config.GEMINI_MODELS.keys())
+    parser.add_argument("--model", choices=_valid_models, help="Override default model (opus, sonnet, fable, gemini, gemini-pro)")
     args = parser.parse_args()
 
     setup_logging()

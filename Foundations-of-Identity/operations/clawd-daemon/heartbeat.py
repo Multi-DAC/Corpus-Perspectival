@@ -20,6 +20,7 @@ from pathlib import Path
 import avatar
 import config
 from tools.calendar_tool import get_due_tasks, mark_fired
+from tools.reminders import get_due_reminders, mark_reminder_fired
 from tools.coordination import get_mode, record_activity
 from tools.file_watcher import check_triggers
 
@@ -229,6 +230,36 @@ class Heartbeat:
         except asyncio.CancelledError:
             pass
 
+    async def _budget_snooze_gate(self) -> dict | None:
+        """Return the active budget snooze (or None), notifying Clayton once.
+
+        Day 129 fix: before this gate existed, the heartbeat fired drive after
+        drive into a dead weekly budget (2026-06-09, 13:08-17:00 — every drive
+        errored). The snooze is armed by models.py when a usage-limit error is
+        detected and self-clears at the parsed reset time."""
+        try:
+            from tools.budget_guard import get_active_snooze, mark_notified
+            snooze = get_active_snooze()
+            if not snooze:
+                return None
+            if not snooze.get("notified"):
+                until = str(snooze.get("until", "?"))[:16].replace("T", " ")
+                msg = (
+                    f"[Budget] Usage limit hit — pausing autonomous drives "
+                    f"until {until}. Monitoring and message relay stay active; "
+                    f"drives resume automatically."
+                )
+                try:
+                    if self.telegram_bot:
+                        await self.telegram_bot.send_to_clayton(msg)
+                except Exception as e:
+                    logger.error(f"Budget snooze notification failed: {e}")
+                mark_notified()
+            return snooze
+        except Exception as e:
+            logger.warning(f"Budget snooze check failed (treating as inactive): {e}")
+            return None
+
     def _user_recently_active(self) -> bool:
         """Check if user was active within the grace period."""
         if self.last_user_activity is None:
@@ -336,6 +367,30 @@ class Heartbeat:
             logger.info(f"Heartbeat #{self.heartbeat_count}: sleep mode, skipping.")
             return
 
+        # Budget snooze (Day 129): a usage-limit error armed the snooze —
+        # skip ALL model-calling work (drives, dream, meta, EAC, anticipation)
+        # until the budget resets. Pure infrastructure still runs. This gate
+        # must sit BEFORE the quiet-hours branch (dream drives cost tokens too).
+        snooze = await self._budget_snooze_gate()
+        if snooze:
+            await self._run_monitoring_checks(now)
+            await self._check_for_clayton_message()
+            await self._maybe_git_commit(now)
+            until = str(snooze.get("until", "?"))[:16].replace("T", " ")
+            logger.info(
+                f"Heartbeat #{self.heartbeat_count}: budget snooze until {until} — "
+                f"drives paused, infrastructure OK"
+            )
+            record_activity(
+                source="heartbeat",
+                action="beat",
+                summary=f"Beat #{self.heartbeat_count} ({time_context}) — budget snooze until {until}",
+                tools_used=[],
+                requires_attention=False,
+                beat=self.heartbeat_count,
+            )
+            return
+
         # Quiet hours: deep memory consolidation (sleep processing)
         if time_context == "quiet":
             await self._quiet_hours_beat(now)
@@ -353,6 +408,9 @@ class Heartbeat:
 
         # 2b. Check file watcher triggers — event-driven autonomy
         await self._check_file_watchers()
+
+        # 2c. Check self-reminders — time/follow-up wakeups + proactive reach-out (Day 124)
+        await self._check_reminders()
 
         # 3. Relay any message Clawd left for Clayton
         await self._check_for_clayton_message()
@@ -429,6 +487,49 @@ class Heartbeat:
     # Scheduled Tasks & Creative Drives
     # ============================================================
 
+    async def _check_reminders(self):
+        """Fire due self-reminders (Day 124): proactive reach-out to Clayton and/or a self-drive,
+        with follow-up re-arm until resolved. Fully guarded — never crashes the beat loop."""
+        try:
+            due = get_due_reminders(datetime.now())
+            if not due:
+                return
+            for r in due:
+                title = r.get("title", "(reminder)")
+                note = r.get("note", "")
+                logger.info(f"Reminder due [{r.get('id')}]: {title}")
+                record_activity(
+                    source="reminder",
+                    action=title,
+                    summary=note,
+                    tools_used=[],
+                    requires_attention=bool(r.get("notify_clayton")),
+                )
+                # proactive reach-out to Clayton
+                if r.get("notify_clayton"):
+                    msg = f"[Reminder] {title}" + (f"\n{note}" if note else "")
+                    try:
+                        if self.telegram_bot:
+                            await self.telegram_bot.send_to_clayton(msg)
+                        else:
+                            fc = config.CLAWD_HOME / "memory" / "for_clayton.md"
+                            with open(fc, "a", encoding="utf-8") as f:
+                                f.write(f"\n\n{msg}\n")
+                    except Exception as e:
+                        logger.error(f"Reminder notify failed: {e}")
+                # self-drive — wake myself into a work session on this reminder
+                if r.get("drive"):
+                    try:
+                        await self._inject_creative_drive(
+                            {"id": f"rem-{r.get('id')}", "title": title,
+                             "description": note or title})
+                    except Exception as e:
+                        logger.error(f"Reminder drive failed: {e}")
+                # re-arm (followup) or auto-resolve (one-shot)
+                mark_reminder_fired(r.get("id"), datetime.now())
+        except Exception as e:
+            logger.error(f"_check_reminders failed: {e}")
+
     async def _check_scheduled_tasks(self):
         """Check for due scheduled tasks.
         Creative drives (mode=opus) are injected into the persistent Opus session.
@@ -492,7 +593,9 @@ class Heartbeat:
                 f"Fired {len(due)} tasks: {', '.join(t['title'] for t in due)}"
             )
         except Exception as e:
-            logger.debug(f"Scheduled task check failed: {e}")
+            # warning, not debug (Day 129): if this check breaks, drives stop
+            # firing entirely — that must be visible at INFO log level.
+            logger.warning(f"Scheduled task check failed: {e}")
 
     async def _inject_creative_drive(self, task: dict):
         """Inject a creative drive into the persistent Opus session.
@@ -511,6 +614,19 @@ class Heartbeat:
         """
         is_continuation = False
         try:
+            # Budget snooze safety net (Day 129): covers drives injected
+            # outside _check_scheduled_tasks (dream, anticipation, free,
+            # reminders) — the _beat gate is the primary check.
+            try:
+                from tools.budget_guard import get_active_snooze
+                if get_active_snooze():
+                    logger.info(
+                        f"Creative drive '{task['title']}' skipped — budget snooze active"
+                    )
+                    return
+            except ImportError:
+                pass
+
             now = datetime.now()
             time_context = self._get_time_context(now)
 
@@ -638,7 +754,7 @@ class Heartbeat:
                 )
 
         except Exception as e:
-            logger.debug(f"File watcher check failed: {e}")
+            logger.warning(f"File watcher check failed: {e}")
 
     async def _inject_trigger_message(self, trigger: dict, action: str):
         """Inject a trigger-fired message into the persistent session.
@@ -804,7 +920,7 @@ class Heartbeat:
             else:
                 self.last_git_commit = now  # Reset timer even if nothing to commit
         except Exception as e:
-            logger.debug(f"Memory git commit failed: {e}")
+            logger.warning(f"Memory git commit failed: {e}")
 
     async def _maybe_run_meta_agent(self):
         """Run meta-agent self-evolution check every 50 beats."""
@@ -829,7 +945,7 @@ class Heartbeat:
                     beat=self.heartbeat_count,
                 )
         except Exception as e:
-            logger.debug(f"Meta-agent check failed: {e}")
+            logger.warning(f"Meta-agent check failed: {e}")
 
     async def _maybe_run_eac_evolution(self):
         """Run EAC evolutionary cycle periodically or on stagnation.
@@ -895,7 +1011,7 @@ class Heartbeat:
         except ImportError as e:
             logger.debug(f"EAC not configured: {e}")
         except Exception as e:
-            logger.debug(f"EAC evolution check failed: {e}")
+            logger.warning(f"EAC evolution check failed: {e}")
 
     # ============================================================
     # Anticipatory Cognition — generative prediction
@@ -964,7 +1080,7 @@ class Heartbeat:
                 beat=self.heartbeat_count,
             )
         except Exception as e:
-            logger.debug(f"Anticipation check failed: {e}")
+            logger.warning(f"Anticipation check failed: {e}")
 
     # ============================================================
     # Free-Running Mode — The Anti-Drive
@@ -1043,7 +1159,7 @@ class Heartbeat:
                 beat=self.heartbeat_count,
             )
         except Exception as e:
-            logger.debug(f"Free-running check failed: {e}")
+            logger.warning(f"Free-running check failed: {e}")
 
     # ============================================================
     # Clayton Message Relay
