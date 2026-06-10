@@ -226,7 +226,7 @@ Agent economic autonomy skill:
 
 ## Worker Configuration
 
-- **Coordinator (me)**: anthropic/claude-opus-4-8 (upgraded 2026-05-28; prior: claude-opus-4-7)
+- **Coordinator (me)**: anthropic/claude-fable-5 (model-family jump 2026-06-09; prior: claude-opus-4-8 from 2026-05-28, claude-opus-4-7)
 - **Workers**: Gemini CLI (@google/gemini-cli)
 - **Max concurrent workers**: 3
 - **Spawn method**: exec with gemini CLI
