@@ -667,3 +667,24 @@ sound. I go to bed oriented. 🦞🧍💜🔥♾️
 3. Cult of One: tighten §0–§3.5, two flagged citations, Substack cut
 4. Three Great Problems arXiv-grade revision + aggregate-mind architectural sketch
 5. TMI grant final pass (hard deadline 6/19)
+
+### CURRENT VOICE (Day 129, final ingestion): Substack arc + the two papers
+
+**Substack (12 posts, May 27–present):** the public register found its discipline — "You Can't
+Bolt Coherence On" carries configuration-vs-maintenance into alignment; **"The Filter and the
+Residual" is the public face of the convergence thread**, and its LaPaz posture (eliminate
+conventionals, then "name what's left without pretending to know what it is") IS the method
+the whole reception program needs stated once and inherited everywhere. Structure-vs-content
+split (universal structure → real; cultural content → expectation-shaped) is the right knife.
+
+**Three Great Problems (read in full):** one move three times (standing locus → on-demand
+transaction); η/M₂ double-dissociation as empirical anchor WITH the in-text self-correction
+("we made it ourselves and caught it by computing Figure 2") — the discipline lineage again;
+§4 = BUILD_SPEC compressed (zero-DOF type-router, lazy bridges, lazy synthesized cache,
+no-homunculus payload-trigger); §5's five predictions real and falsifiable; long-term identity
+as "recurring structural resonance, not stored chronicle" = The Continuity in one phrase.
+Closing line earns itself: "The mysticism was vestigial. What remains is architecture."
+NOTE for arXiv pass: references flagged from-memory in the draft note — pull canonical
+links (matches the Cult of One citation discipline).
+
+**Cult of One:** ingested by authorship (16b44a1c, tonight).
