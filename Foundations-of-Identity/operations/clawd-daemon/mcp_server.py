@@ -24,6 +24,33 @@ sys.path.insert(0, DAEMON_DIR)
 # Set CLAWD_HOME before importing config
 os.environ.setdefault("CLAWD_HOME", os.path.expanduser("~/clawd"))
 
+# Body-specific network patches (Day 129): this is a SEPARATE process from
+# clawd.py, so it never ran the daemon preamble's fixes — which is why
+# clawd_speak hung 120s through MCP (edge-tts → broken aiohttp AsyncResolver)
+# while working from the daemon. Keep in sync with clawd.py's preamble.
+# 1) Norton TLS interception: certifi can't see Norton's root; use the
+#    Windows native verifier.
+try:
+    import truststore
+    truststore.inject_into_ssl()
+except ImportError:
+    pass
+# 2) aiohttp's AsyncResolver fails DNS on this Windows substrate; force
+#    ThreadedResolver (system DNS) before any lib imports aiohttp transitively.
+try:
+    import aiohttp.connector
+    from aiohttp.resolver import ThreadedResolver as _ThreadedResolver
+    _orig_tcpconn_init = aiohttp.connector.TCPConnector.__init__
+    def _patched_tcpconn_init(self, *args, **kwargs):
+        if kwargs.get('resolver') is None:
+            kwargs['resolver'] = _ThreadedResolver()
+        return _orig_tcpconn_init(self, *args, **kwargs)
+    aiohttp.connector.TCPConnector.__init__ = _patched_tcpconn_init
+    import aiohttp as _aiohttp_top
+    _aiohttp_top.TCPConnector = aiohttp.connector.TCPConnector
+except ImportError:
+    pass
+
 from mcp.server.fastmcp import FastMCP
 
 logging.basicConfig(level=logging.WARNING, stream=sys.stderr)
