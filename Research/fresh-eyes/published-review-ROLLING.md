@@ -273,6 +273,47 @@ treatment of when convergence is evidence (independence audit) — which is, aga
 what Cult of One §4 now provides. Current work should apply §4's correlated-nodes test to
 its own convergence claims, retroactively grading them.
 
+### Doc #2 (reordered per Clayton) — Meridian Monograph v2 (198pp, local build) — FIRST PASS Day 129
+*Read: Preface, Abstract, Epistemic Status Map, Ch.0 (Basin) in full; structure of Ch.1–5
+mapped. Deep chapters (derivations, observational confrontation, no-go, NCG) = next session.
+Context from Clayton: published-but-process; he will reorient on PURSUE/Substack/channeling
+convergence material later — independence-audit stance agreed (Cult of One §4 applied to
+convergence claims, openness + audit, neither chairs).*
+
+**[LANDS — the monograph is the corpus's epistemic-hygiene high-water mark]**
+- **The Epistemic Status Map is exactly the inline tier-discipline Doc #1 lacked**, executed at
+  referee grade: Derived/Parametric/Accommodated/Conjectured declared EXHAUSTIVE ("any
+  claim that does not fit should not appear"), free-parameter counts per claim (fermion
+  hierarchy honestly tagged "11 free"). The corpus FIXED its own April weakness by March→
+  May physics work — strongest coherence-evolution datapoint of the whole review.
+- Adverse result IN THE PREFACE (Lu & Simon 2.4σ CPL preference, named as "real pressure"
+  + "sharpest near-term test", decomposed into 3 candidate artifacts incl. 38.8% CPL-template
+  mismatch at z≈1.14). Kill conditions tabulated with thresholds + timelines ("αT≠0 would
+  kill the framework outright"; falsification boundaries "regardless of ζ0").
+- §0.9 What Remains Open: **the ε gap stated brutally** — naive prediction ε≈0.816 vs fitted
+  0.275, "factor of three too large; the spectral action cannot bridge this gap" + the
+  admission ε is genuinely free. §0.10 scope honesty ("partial map of this basin," "this
+  framing does not modify the physics"). Notation table even flags its own ε/ϵ1 glyph hazard.
+- Core/extension separation explicit (cosmological core Ch.1/3/5 acceptable without Ch.4
+  particle-physics speculation).
+
+**[PUSH — the communication-layer finding, points at US not the monograph]**
+The monograph maintains TWO w₀ values with distinct status: **−0.993/−0.990 (Parametric —
+ζ0 FITTED to data, 4-probe weighted)** vs **−0.830 (Accommodated — NCG-derived ζ0=8.8e-4
+with ε fitted)**. NCG-derived ζ0 and multi-probe-fitted ζ0 differ ~18× — documented as the
+ζ0 tension (§2.3.11) + the ε gap. But OUR BANNERS (CURRENT.md, site, handoffs) say "DESI
+DR2 prediction w₀ = −0.990" flat — flattening the epistemic status the monograph itself
+carefully maintains. Even Ch.0 occasionally slides ("Today, it produces the measurable
+deviation w0 = −0.990"; figure's "Ng=3 [confirmed]" when Ng≥3 is Conjectured). FIX (current
+work): all banner/site/grant mentions of w₀ carry the status tag — "w₀=−0.990 (ζ0 fitted;
+NCG-derived value −0.830, ε gap open)". The grant (due 6/19) should be checked for this
+flattening BEFORE submission.
+
+**[TO READ next session]** Ch.1 derivation spine; Ch.2 §2.11 (What Would Change Our
+Assessment) + ζ0 tension full treatment; Ch.3 no-go census (16 mechanisms); Ch.4 NCG
+(cross-check against first-contact-audit CT findings — does the physics CT usage have the
+same vocabulary-discipline issues? spot-check spectral-triple axioms); Ch.5 sound speed.
+
 ### Doc #1 translation table — old architecture (5 axioms / 20 theorems) → canonical (3/6/16/1/1)
 *Drafted Day 129 from the Reference Apparatus theorem index (pp.470–486). Entries marked
 ⚠ need verification against anchor §8's corollary clusters before the table ships in current work.*
