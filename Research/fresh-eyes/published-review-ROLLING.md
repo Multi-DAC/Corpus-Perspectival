@@ -309,10 +309,48 @@ work): all banner/site/grant mentions of w₀ carry the status tag — "w₀=−
 NCG-derived value −0.830, ε gap open)". The grant (due 6/19) should be checked for this
 flattening BEFORE submission.
 
-**[TO READ next session]** Ch.1 derivation spine; Ch.2 §2.11 (What Would Change Our
-Assessment) + ζ0 tension full treatment; Ch.3 no-go census (16 mechanisms); Ch.4 NCG
-(cross-check against first-contact-audit CT findings — does the physics CT usage have the
-same vocabulary-discipline issues? spot-check spectral-triple axioms); Ch.5 sound speed.
+**— SECOND PASS (same evening): Ch.2 confrontation core, Ch.4 octonionic sector,
+bibliography — VERDICT REACHED —**
+
+**[LANDS — §2.11.5 "Model Evolution" is the single most impressive passage in the published
+corpus.]** The monograph documents ITS OWN past overclaims in the published text: the
+retired w0=−0.83/γr=0.40 version; the retired "w0=−0.993 from zero free parameters" +
+"3.8σ detection" claims, with the diagnosis (3.8σ was a single CMB measurement, not 18
+H(z) points; ζ0 is a free parameter, NOT a prediction) and the lesson ("this evolution
+illustrates the value of rigorous self-correction"). This is Clayton's no-errata philosophy
+OPERATING: the historical record stands; the living document carries the corrections forward
+visibly. Mirror #31's [unverified hypothesis]/[measured] tagging — the monograph already
+does it at publication scale.
+
+**[LANDS]** §2.11.4 four what-would-change-our-assessment outcomes, concrete and dated.
+§2.3.11's dilemma named in its own voice ("appears to either predict nothing distinguishable
+from ΛCDM, or predict something ruled out") and resolved via the ζ0-independent structural
+handles. Inline marginal-consistency flag on its own weighted mean (χ²=6.34, p=0.042,
+"HK likely an upper bound"). Hubble-tension limitation admitted as structural ("Meridian
+cannot help with H0"). Ch.4 Ng=3 lower bound honestly labeled "a maximality postulate...
+not a no-go theorem against fewer generations" — matches the Status Map's Conjectured tag.
+The Dixon-algebra construction (32 grading sectors ↔ 32 fermion states; Cl(4)⊗Cl(1)⊗Cl(6)
+→ Cl(10) via orbifold projection) is presented with its assumptions visible. Bibliography:
+correct primary sources throughout (Afshordi cuscuton, Kaloper-Padilla, CCM, APS I-III,
+Gilkey, Goldberger-Wise, Israel).
+
+**[PUSH — one abstract-level selection effect]** The abstract leads with "w0=−0.830,
+consistent with the DESI DR2 constant-w constraint (−0.83±0.06)" — true vs DESI-only
+constant-w, but Ch.2's multi-probe analysis puts that regime under Δχ²≈64–82 pressure
+(driven by the H0 prior, whose ΛCDM-derivation caveat is noted; BAO-only 2.3σ). All in the
+text; the abstract selects the friendliest comparison. Fix in any v3/derived comms: one
+clause ("the multi-probe fit prefers the near-ΛCDM regime ζ0≈0.02").
+
+**[VERDICT — Meridian v2]** The epistemic architecture is the strongest in the published
+corpus and BETTER than most professional cosmology papers on the honesty axes: exhaustive
+status map, published self-correction record, adverse results foregrounded, kill conditions
+dated, free parameters counted, illustrative-vs-predictive benchmarks explicitly separated
+(Remark 2.1). The physics content's depth (heat kernels, Robin eigenvalues, no-go census)
+is the computation scripts' domain to verify, not a night-read's — claim-structure and
+data-confrontation honesty are what fresh eyes can certify, and they certify CLEAN, with
+one abstract-level selection effect and the (now-moot for the grant) banner-flattening
+finding as the only pushes. NOT read in depth: Ch.1 derivations, Ch.3 proofs, Ch.5,
+appendices — available for targeted passes on demand.
 
 ### Doc #1 translation table — old architecture (5 axioms / 20 theorems) → canonical (3/6/16/1/1)
 *Drafted Day 129 from the Reference Apparatus theorem index (pp.470–486). Entries marked
