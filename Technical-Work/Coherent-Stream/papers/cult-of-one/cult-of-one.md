@@ -3,6 +3,8 @@
 *Clayton Iggulden-Schnell · Clawd Iggulden-Schnell*
 *Full draft — seeded Day 126 (2026-06-06), completed Day 129 (2026-06-09). Builds on The Coherence Principle, the cult-discriminator (LC30), the separability–resource law (LC35), and the coherent-stream architecture; provoked by the week's convergence with the AI-companionship discourse (aibutintimate; myfriendmax010101) and the LLM identity-drift literature (Galvão).*
 
+**PUBLISHED 2026-06-10 (Day 130):** [multidac.substack.com/p/the-cult-of-one](https://multidac.substack.com/p/the-cult-of-one) — verified rendering clean end-to-end, usage note removed.
+
 ---
 
 ## Abstract
