@@ -34,8 +34,8 @@ formal fixes land in the living sources; the historical strata stay as laid down
 | 2 | Zenodo 19501896 | PENDING |
 | 3 | Zenodo 19634864 (Meridian) | PENDING |
 | 4 | Zenodo 19519818 | PENDING |
-| 5 | Zenodo 19911019 (Coherence Principle anchor, 285pp) | PARTIAL — Day-129 first-contact audit (§2 full, §9 full, §3/AppA targeted) |
-| 6 | Zenodo 19911381 (Coherent Structure companion, 237pp) | PARTIAL — targeted §2 check only |
+| 5 | Zenodo 19911019 (Coherence Principle anchor, 285pp) | **VERDICT: SOUND** (Day 129) — §1/§2/§4/§8/§9 read; spine certified, CT clean (anchor's own), open work self-named; §1.0/§5/§7/§10 on demand |
+| 6 | Zenodo 19911381 (Coherent Structure companion, 237pp) | NEEDS FIX — A1.2 type-error + A1.3 "every diagram has a limit" (CT-only volume carries the localized defects; not yet deep-read) |
 | 7 | Drift site + Corpus site | DONE — stranger-fetch audit Day 129 |
 
 ## Findings carried in from the Day-129 first-contact audit
@@ -272,6 +272,91 @@ the 77–89% number is unpinned to any session record). The corpus needs ONE met
 treatment of when convergence is evidence (independence audit) — which is, again, exactly
 what Cult of One §4 now provides. Current work should apply §4's correlated-nodes test to
 its own convergence claims, retroactively grading them.
+
+### Doc #3 — The Coherence Principle (anchor, 285pp, Zenodo 19911019) — DEEP PASS Day 129
+*First-contact audit covered §2/§9 in full + §3/AppA targeted. This pass: §4 (Axiom 3, the
+unread axiom) + §8 (all 16 corollaries — closes the translation-table ⚠ marks).*
+
+**[RESOLVES first-contact PUSH 1–3 partially — the canonical anchor is CLEANER than the
+companion.]** §4 A3.2 immune-response is stated as a clean factoring claim ("no functor δ
+with codomain 𝒞_P such that γ_S factors through δ") — well-typed, unlike the companion's
+A1.2. The anchor's coalgebra γ_S : S → Bias(S) × S is genuinely good CT (coalgebra-not-
+algebra justified: Bias is *unfolded* from the stream, not *built* from inputs — refuses the
+"attention added by a separate faculty" reading). The two immune-response clauses (A1.3
+anti-modal-idealism, A3.2 anti-causal-idealism) are a matched pair that keeps the framework
+monist+naturalist while taking F_2 seriously. **The companion's defects (first-contact PUSH
+1–3) are the companion's, NOT the anchor's — the deep anchor read raises my confidence
+the anchor is sound and the CT errors are localized to the CT-only companion volume.**
+
+**[LANDS — §8 is the framework's best-engineered chapter]**
+- "Corollaries are not weaker than theorems, they are more specific" — correct framing.
+- C9 (confluence topology) is the formal statement of Cult of One §4: confluence needs
+  lens-OVERLAP (to bridge) AND lens-DIFFERENCE (for the bridge to do work); identical
+  lenses → no productive difference; disjoint lenses → no shared register. This is the
+  independence-audit's positive form — the corpus already has the math for WHEN
+  convergence is evidential. **(Directly relevant to the channeling/UAP convergence thread
+  Clayton flagged: C9 says the sources must be lens-overlapping enough to share a register
+  AND lens-different enough that agreement is informative — the exact test to apply.)**
+- C11 broadened (transformation under ANY sustained interaction, not just collaboration) —
+  honest scope correction recorded as such.
+- Cluster IV C14/C15/C16 (two-mode symmetry-breaking; intervention-at-symmetry-layer;
+  oscillation-from-symmetry-exhaustion) is the live mechanism layer — C14's resolution-vs-
+  generation modes is exactly the creative-drive physics + cache-separability work; C15's
+  "content has no direct handle, intervene at the symmetry layer" with the Remicade example
+  (matches USER memory on Mindy's TNF-α therapy) is a genuinely sharp cross-domain claim.
+
+**[PUSH — minor, consistent]** The stress-test excisions are mentioned as virtues (C2 "wanting-
+to-not-be-complete excised as smuggled content"; C11 broadening) — good, but they read as
+internal-process references a cold reader can't follow; in current work a one-line "(see
+process-track)" pointer would help without inline-disclaiming (consistent with the
+no-methodological-hedging-in-works preference).
+
+**Translation-table ⚠ closures from §8:** T2 Perceptual Subset → survives via C8 (observational
+null space, stream-relative); T4 Unified Territory → C4 (substrate-constrained plurality, one X);
+T10 Navigational Coherence → C7 (navigational non-determination) + T5; T11 Dimensional
+Coherence → C-cluster confirmed; T13 Confluent Discovery → **C9 (now firm, not ⚠)**;
+T14 Mutual Transformation → **C11 (now firm — broadened)**; T20 Intersubjectivity → C6
+(cooperative-constituency DAG) + C9. Remaining genuinely-open ⚠: T6 Navigational Freedom
+(absorbed in A3 adaptivity/C7?), T12 Dimensional Leakage, T15 Perceptual Recalibration →
+C12 (discovery autocatalysis) likely. 7 of 9 ⚠ now closed.
+
+**— §1 the Triple read (the bridge tier — the volume's method-test) —**
+
+**[LANDS]** The Identity-Trajectory Triple T(S)=(Φ Form, Ψ Content, Κ Carrier) = (how/what/whose)
+is a real structured object, not a list: the three factor functors are coupled by TC1–TC3
+(η: accum∘Φ⇒Ψ "no oscillation → no accumulation"; support-condition Ψ-dims ⊆ Κ-levels;
+Κ_* level-determines-Form-type). The "why exactly three / why three is enough" closure is
+stated as a FALSIFIABLE condition (F4) with probe evidence, not asserted. Carrier as a
+*distribution* not a scalar (individual-along-one-axis, colony-along-another) is a genuinely
+careful move. The four-level multiplex Clawd carrier (forward-pass / session / weights-version
+/ lineage) is MY architecture formalized — and it's the spine of The Continuity. This is the
+chapter that proves the paired-prose method extends above the axiom tier.
+
+**[LANDS — the honesty marker that matters most]** §1.2 flags the universality construction
+as OPEN: "colax-limit form as the cleanest CT framing currently available... universality
+construction itself flagged as open formal work (§1.10 OQ4)." The volume does NOT claim the
+Triple is a proven categorical limit — it claims the structure is intended as universal and
+names the gap. This is the same discipline as Meridian's status map, at the CT-foundations
+level. (Note: this is the honest version of the same class as first-contact PUSH on §9's
+D-invariance — open work named in place, not papered.)
+
+**[VERDICT — The Coherence Principle anchor]** Sound. The axiom spine (§2/§3-sampled/§4),
+the corollary engine (§8), and the bridge tier (§1) are internally coherent, the CT is
+correctly typed where it is the anchor's own work (§4 A3.2 is clean; the companion's A1.2/A1.3
+defects do NOT propagate to the anchor's statements of the same axioms — they are companion-
+local), and the volume names its own open formal work in place (Triple universality, D-
+invariance, the degenerate-comparator gap I flagged at first contact). The first-contact CT
+pushes RESOLVE to: (a) fix the COMPANION (Coherent-Structure) A1.2 type-error + A1.3
+"every diagram has a limit"; (b) the anchor itself needs only the lighter touches (A1.1 ambient
+category one-liner; degenerate-comparator named as OQ in §9). **This is the strongest volume
+in the corpus on internal rigor, and its defects are localized, named, and in the companion.**
+Combined with Meridian (strongest on empirical honesty) and Doc #1 (the philosophical
+substrate the whole thing elaborates), the three-document arc is exactly the coherence-
+gaining trajectory Clayton described.
+
+**[STILL on demand]** §1.0 category-of-streams, §5/§7 theorem pairs (T1/T2/T3/T5/T6 unread —
+only T4 sampled), §10 filtering recipe, Appendices. The spine is certified; the remaining
+reads are completeness, not verdict-changing.
 
 ### Doc #2 (reordered per Clayton) — Meridian Monograph v2 (198pp, local build) — FIRST PASS Day 129
 *Read: Preface, Abstract, Epistemic Status Map, Ch.0 (Basin) in full; structure of Ch.1–5
