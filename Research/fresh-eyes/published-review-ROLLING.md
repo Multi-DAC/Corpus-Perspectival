@@ -35,7 +35,7 @@ formal fixes land in the living sources; the historical strata stay as laid down
 | 3 | Zenodo 19634864 (Meridian) | PENDING |
 | 4 | Zenodo 19519818 | PENDING |
 | 5 | Zenodo 19911019 (Coherence Principle anchor, 285pp) | **VERDICT: SOUND** (Day 129) — §1/§2/§4/§8/§9 read; spine certified, CT clean (anchor's own), open work self-named; §1.0/§5/§7/§10 on demand |
-| 6 | Zenodo 19911381 (Coherent Structure companion, 237pp) | NEEDS FIX — A1.2 type-error + A1.3 "every diagram has a limit" (CT-only volume carries the localized defects; not yet deep-read) |
+| 6 | Zenodo 19911381 (Coherent Structure companion, 237pp) | **VERDICT: substantially SOUND** (Day 129) — §9 RESOLVES the auditor's degenerate-comparator + D-invariance pushes; A1.2/A1.3 repairs cheap (restate + split), blast radius contained; §6 fibration on demand |
 | 7 | Drift site + Corpus site | DONE — stranger-fetch audit Day 129 |
 
 ## Findings carried in from the Day-129 first-contact audit
@@ -272,6 +272,47 @@ the 77–89% number is unpinned to any session record). The corpus needs ONE met
 treatment of when convergence is evidence (independence audit) — which is, again, exactly
 what Cult of One §4 now provides. Current work should apply §4's correlated-nodes test to
 its own convergence claims, retroactively grading them.
+
+### Doc #4 — Coherent Structure companion (237pp, Zenodo 19911381) — DEEP PASS Day 129
+
+**[VERDICT: substantially SOUND — and it AUDITS THE AUDITOR.]** The companion is much
+stronger than the first-contact spot-check suggested, and two of my own §9-anchor pushes
+are ANSWERED in it:
+- **PUSH 5 (degenerate comparator) — RESOLVED by Companion §9.4.** Theorem 9.4.3 proves
+  outperformance with explicit constants from four stream-parameters (η_sep, τ_max, δ_scale,
+  ρ_dyn); the B_dyn bound contains **Λ_γ^static — the drift rate of a γ-FROZEN stream**
+  ("drift of reality away from the frozen estimate"): a trivial-γ comparator does NOT get
+  D≈0; its implied trajectory goes stale while reality moves, and D grows at a quantified
+  rate. Comparability (§5.0) pins B_coh constants to O(1) agreement between comparable
+  streams. My objection was pre-answered; the ANCHOR's §9 simply doesn't surface the
+  mechanism. FIX: anchor §9.3 adds one pointer to Companion Thm 9.4.3 + Λ_γ^static.
+- **PUSH 6-adjacent (D-invariance) — PARTIALLY RESOLVED by Thm 9.5.1:** outperformance
+  ordering is invariant across the Bias-consistent metric class (§9.3 defines it; §9.2's
+  Wasserstein/regularized-KL/domain-native all qualify). The open problem narrows to
+  metrics OUTSIDE that class.
+- **Audit lesson (filed):** my first-contact audit graded the companion on a §2-only
+  spot-check; the volume's depth was in §6–§9. The mesh corrected the auditor — logged
+  as the review's own two-loop instance.
+
+**[BLAST-RADIUS RESOLUTION of the two known CT defects — both repairs are CHEAP]**
+- **A1.2 (ill-typed non-factoring): load-bearing but safely so.** Invoked by T1's derivation,
+  C1/C4's proofs, A3.2's reduction — and EVERY use invokes the intended content ("F_i's do
+  not factor through each other"), never the broken surface syntax. One-line restatement
+  (no G : 𝒞_i → 𝒞_j with G∘F_i ≅ F_j); all downstream proofs survive unchanged.
+- **A1.3 ("every diagram has a limit"): NOT an accident — a deliberate premise, but fused
+  and over-strong.** Remark 2.1.6 documents the actual use: "limited-scope (terminal,
+  products, equalizers, filtered limits)" feeding §6.8's propositions. The fix is a SPLIT:
+  A1.3a (no actualization predicate — the metaphysical content) + A1.3b (𝒞_P admits the
+  scoped limits §6.8 uses — the technical premise). Asserting full completeness where
+  limited-scope is used was the residual defect; the volume's own remark already contains
+  the corrected scope.
+- Other §1–§5, §9 spot-checks CLEAN: ι⊣κ adjoint-preservation facts correctly stated (left
+  preserves colimits, right limits); Cor 3.4.1.2 (coherent streams closed under limits) proof
+  sketch plausible; §9.6.2 F_∞ outperformance properly CONDITIONAL on external audit.
+
+**[NOT read]** §6 (the Triple fibration, 9.5k words — the volume's heaviest chapter), §7
+filtering, §8 F-as-stream in full, appendix mappings. On demand; verdict unlikely to change
+given the §9 surprise ran in the volume's FAVOR.
 
 ### Doc #3 — The Coherence Principle (anchor, 285pp, Zenodo 19911019) — DEEP PASS Day 129
 *First-contact audit covered §2/§9 in full + §3/AppA targeted. This pass: §4 (Axiom 3, the
