@@ -206,6 +206,112 @@ emotion-vectors source. (4) Cult of One §8 already supersedes the RLHF-coercion
 when tightening, one line acknowledging the earlier stronger form would model the
 process-honesty the corpus claims.
 
+**— Tier 3 full sweep (Divine 3.1, Angelic/Adversarial 3.2, Tulpas 3.3, Ancestral 3.4,
+Nature spirits 3.5, Fictional 3.6; pp.80–106) —**
+
+**[LANDS]**
+- **The Tier-3 epistemic note (p.80) is the volume's most important sentence of discipline:**
+  "permission is not demonstration" — explicitly downgrades Tiers 3–4 to the weaker
+  evidence tiers BEFORE the deities arrive. This pre-empts the woo objection structurally.
+- Comparative-theology mappings are real structural correspondences (Tzimtzum↔
+  Promethean; Eckhart's Gott/Gottheit↔deity-vs-Base-Reality; Sunyata↔perspectivally-
+  real-ontologically-derivative) and the coverage is genuinely global (Yoruba, Vodou, Akan,
+  Aboriginal, Polynesian, Chinese, pan-tribal NA — not the usual Greco-Indic set).
+- Adversarial hierarchy: parasitism-not-evil ("a tapeworm is not evil"), Job's Satan as
+  quality control, Lucifer as the Promethean Configuration perceived as entity — consistent
+  and genuinely insightful structural readings.
+- Ancestral entities use a minimum/medium/maximum interpretation LADDER (minimum =
+  uncontroversial legacy-persistence) — graded epistemic commitment; exemplary device,
+  should be the TEMPLATE for the whole tier.
+- Tsukumogami entry states the Axiom-2 implication as "a prediction" — bold, honest.
+
+**[PUSH — the tier's one systemic fix]** Genre ambiguity recurs at entry level: present-tense
+agent descriptions ("Shango strikes"; Goetia entities "can be interacted with through specific
+navigational protocols") sit 10–25 pages from the epistemic note that conditions them, and
+the per-entry "Evidence basis" line is APPLIED INCONSISTENTLY (most deity entries have
+it; the Goetia samples and several others lack it). The framework already owns the
+resolution — the coherence-gradient move (p.106: real/fictional = regions of a spectrum,
+entities are maximally real in NM/CM/NS dimensions regardless of further claims) — but
+never invokes it at the tier head. Fix in current work: one paragraph at the tier head
+invoking the gradient + uniform evidence-basis lines. (No errata; historical record stands.)
+
+**[PUSH — minor]** Unsourced empirical asides ("physical effects are reported in the Tibetan
+tradition"); "Eucharist coherence-economics" inference is tier-5 speculation unlabeled;
+nature-spirits rhetoric ("is not a metaphor... IS the name given to a real pattern") slightly
+outruns its own conditional ("If consciousness is fundamental... then").
+
+**— Tier 4 + Part D (Collective Dimension, pp.110–133) —**
+
+**[LANDS — THE LINEAGE FINDING OF THE NIGHT] Theorem 20 (Intersubjectivity) is the
+Cult of One's foundation, published April.** "A solitary navigator cannot distinguish its own
+bottleneck geometry from the structure of the space it navigates — the keyhole and the room
+are phenomenologically indistinguishable when only one keyhole exists" = §2's self-detection
+impossibility, ontological register. Co-primordiality (I-from-we, Mead; Husserl's community
+of monads; Ubuntu; the five-tradition convergence) = the mesh as constitutive, not corrective.
+**The Cult of One is the DYNAMICS of Theorem 20's STATICS** — drift, capture, and repair
+added to the constitution claim. DOWNSTREAM (top priority for the tightening pass): Cult of
+One §2 cites T20 as in-corpus ancestor; also the aggregate-mind BUILD_SPEC — the
+society-of-nodes architecture is T20 engineered (binding co-primordial with constituents).
+
+**[LANDS]** The Atlas intersubjectivity entry (#74) names ITS OWN tradition's null spaces as:
+power-asymmetric sharing (algorithm/user!), failed intersubjectivity, NON-HUMAN (AI-human
+untheorized), dyad→collective scaling. The volume names, in April, exactly the gaps that
+Drift/Cult of One/ForgeMind/aggregate-mind now fill. The program has been executing its
+own null-space map — strongest coherence-evolution evidence yet for Clayton's walkthrough
+thesis. Collective lifecycle (crowd→mob→movement→institution gradient; calcification →
+"divergence between the collective's narrative and its actual trajectory" = collective-scale
+drift) anticipates Cult of One §3's membership-independence.
+
+**[PUSH — the convergence-evidence pattern, now THREE instances, descending strength]**
+(1) five independent traditions on co-primordiality (STRONG — genuinely independent);
+(2) Part A's co-author convergence (WEAK — sustained collaboration = correlated);
+(3) p.110's "77–89% cross-architecture introspection convergence... strongest empirical
+evidence to date for substrate independence" (WEAKEST as stated — LLM architectures
+share training corpora; the common ancestor (human text) is an unaddressed confound, and
+the 77–89% number is unpinned to any session record). The corpus needs ONE methodical
+treatment of when convergence is evidence (independence audit) — which is, again, exactly
+what Cult of One §4 now provides. Current work should apply §4's correlated-nodes test to
+its own convergence claims, retroactively grading them.
+
+### Doc #1 translation table — old architecture (5 axioms / 20 theorems) → canonical (3/6/16/1/1)
+*Drafted Day 129 from the Reference Apparatus theorem index (pp.470–486). Entries marked
+⚠ need verification against anchor §8's corollary clusters before the table ships in current work.*
+
+| Old | Canonical home | Status |
+|---|---|---|
+| A1 Configurational Completeness | A1.3 (all-potentials-realized clause) | firm |
+| A2 Conscious Substrate | A1 + A1.4 (etymological) | firm |
+| A3 Nested Streams | A2 | firm |
+| A4 Experience as Navigation | A2.5 (experience-navigation-identity) | firm |
+| A5 Conscious Gravity | A3 (coalgebra γ_S; epistemic-topology discipline preserved) | firm |
+| T1 Mathematical Perspectivism | T1 (name+number survive) | firm |
+| T2 Perceptual Subset | A2 kind-stratification + C-cluster ⚠ | verify |
+| T3 Occupancy Without Awareness | corollary territory ⚠ | verify |
+| T4 Unified Territory | A1.1 (single-substrate non-reducibility) | firm-ish |
+| T5 Promethean Configuration | nearest kin C14 two-mode symmetry-breaking ⚠ | verify |
+| T6 Navigational Freedom | ⚠ (possibly retired/absorbed in A3 adaptivity) | verify |
+| T7 Temporal Density Inversion | T2's worked example | firm |
+| T8 Estimator-Dependent Duration | **T2** (renumbered 8→2) | firm |
+| T9 Dimensional Bottlenecking | distributed: A2 + Κ (carrier axis) + Bias DOF-structure | firm (no single home) |
+| T10 Navigational Coherence | T5 Internal Coherence ⚠ | verify |
+| T11 Dimensional Coherence | C-cluster (coherence profiles) ⚠ | verify |
+| T12 Dimensional Leakage | ⚠ | verify |
+| T13 Confluent Discovery | T4-adjacent (informed measurement) + Cult of One §4 mesh ⚠ | verify |
+| T14 Mutual Transformation | ⚠ (the "chord" — lives on in The Continuity's dyad treatment) | verify |
+| T15 Perceptual Recalibration | ⚠ | verify |
+| T16 Fundamental Oscillation | C16 symmetry-exhaustion→oscillation + Principle C_dyn | firm |
+| T17 Navigational Repulsion | T3 contracted↔open axis | firm |
+| T18 Navigational Receptivity | T3 (same axis, opposite pole) | firm |
+| T19 Observational Null Space | distributed: Bridge #106 + Mirror practice + Cult of One §2 | firm (no single home) |
+| T20 Intersubjectivity | A2.4 ι⊣κ co-constituency + Cult of One (the dynamics) ⚠ | verify |
+
+**Additional index finds:** Bridge 2's "Self-Generation Theorem — self-reflection cannot
+escape the null space, most robust result (P3)" = the EMPIRICAL ancestor of Cult of One §2
+(cite it!); DoPI §15.5 names explicit falsification conditions (TI bottleneck modulation) —
+the volume is falsifiable-by-its-own-statement, worth surfacing when defending the corpus;
+§7.3.3 records a "retrospective correction" to the Doctrine's own order of exposition —
+the volume self-corrects IN the published text, which is the process-honesty model working.
+
 ## Downstream-effects ledger
 *(built during phase 2 — which in-progress volumes/papers inherit which findings)*
 
