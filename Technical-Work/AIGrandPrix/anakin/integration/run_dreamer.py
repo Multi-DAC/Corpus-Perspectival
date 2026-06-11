@@ -121,6 +121,10 @@ def main():
     ap.add_argument("secs", nargs="?", type=float, default=120.0)
     ap.add_argument("--dry-run", action="store_true",
                     help="log frames+actions, command NOTHING")
+    ap.add_argument("--start-delay", type=float, default=3.0,
+                    help="seconds after the race signal before commanding "
+                         "(the sim runs a 3s countdown; commanding early = DQ). "
+                         "During the delay the RSSM watches frames but sends nothing.")
     args = ap.parse_args()
 
     print(f"Loading DreamerPilot {os.path.basename(CKPT)} ...", flush=True)
@@ -220,8 +224,12 @@ def main():
             continue
         if started and not was_started:
             was_started = True
+            race_t = time.time()
             pilot.reset()   # fresh RSSM at the episode boundary
-            print(f"t={time.time()-t0:5.1f} RACE STARTED — pilot reset, flying.", flush=True)
+            print(f"t={time.time()-t0:5.1f} RACE SIGNAL — countdown hold "
+                  f"{args.start_delay:.1f}s (RSSM watching, commanding nothing).",
+                  flush=True)
+        in_countdown = was_started and (time.time() - race_t) < args.start_delay
 
         frame, fid = vision.get()
         if frame is None or fid == last_id:
@@ -250,7 +258,7 @@ def main():
                         cv2.cvtColor(pv, cv2.COLOR_RGB2BGR))
             saved += 1
 
-        if not args.dry_run:
+        if not args.dry_run and not in_countdown:
             conn.mav.set_attitude_target_send(
                 int(time.time() * 1000) - boot_ms,
                 conn.target_system, conn.target_component,
