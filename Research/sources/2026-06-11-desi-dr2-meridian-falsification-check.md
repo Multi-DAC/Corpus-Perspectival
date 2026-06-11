@@ -1,35 +1,42 @@
 # External Measurement Check: Meridian w₀/wₐ vs DESI DR2 (the real falsification test)
 
-**Day 131, ~12:50. Clayton's directive: "look to the external world... see if there is evidence, or invalidation." This is the highest-value check we can run — Meridian's dark-energy prediction is our most falsifiable claim against real data. Verdict: MIXED — qualitative concordance on BOTH signs, significant quantitative tension on amplitude, with the data currently trending AGAINST us. Held honestly; this is a place the world can say no.**
+**Day 131, ~12:50; ⚠CORRECTED ~13:10 after Clayton's catch (#8 of the week). First version of this entry MISSTATED Meridian's prediction: I extracted a "w(z) evolution" from an appendix table that is actually a PARAMETER-SENSITIVITY SCAN (its first column is a scan axis, not redshift), fabricated wₐ≈−0.008 from it, and attributed a "quintom-B/phantom-crossing shape" to a model whose claims table explicitly DERIVES no phantom crossing. Mirror-#32 signature: the canonical claim was in the claims table; I reconstructed from the wrong artifact. Corrected analysis below.**
 
-## What Meridian predicts (from the monograph, verified)
+## What Meridian ACTUALLY predicts (claims table, monograph — Clayton's photo, verified)
 
-`appendix_computations.tex` w(z) table (corrected Φ₀=0.076 benchmark):
-- z=0: **w₀ = −0.9927** ; z=0.5: −0.9941 ; z=1: −0.9967
-- In CPL (w = w₀ + wₐ(1−a)): **w₀ ≈ −0.993, wₐ ≈ −0.008** (and the CMB-constraint benchmark gives w₀ = −0.996; the JC constant-w benchmark −0.865).
-- **Shape:** w₀ > −1 today, getting MORE negative into the past (phantom-crossing from below), i.e. a *quintom-B / phantom-crossing* behavior — but with a TINY amplitude (essentially ΛCDM with a whisper of evolution).
+- **wₐ = 0 IDENTICALLY — Derived (cuscuton kinetic suppression), 0 free parameters.** Constant equation of state. No evolution. Period.
+- **No phantom crossing — Derived: w₀ > −1 for all ζ₀ > 0.**
+- **Best-fit w₀ = −0.993 (parametric, 1 fitted parameter ζ₀** via multi-probe fit; the w₀(ζ₀) = −1 + C_KK/ζ₀ form is derived, C_KK derived from Planck+ε₁).
+- Also derived, zero-free: α_T = 0 exactly (GW speed = light), μ = Σ = 1 (GR growth), self-tuning.
 
 ## What DESI DR2 measures (2025, strengthening)
 
 - **2.8–4.2σ preference for evolving dark energy with w₀ > −1, wₐ < 0** over ΛCDM (BAO+CMB+SNe; DESI DR2 Results II, arXiv 2503.14738, PRD 112 083515). DR2-only favors w₀ > −1, wₐ < 0 — explicitly "consistent with a quintom-B-like scenario." Preference did NOT diminish DR1→DR2; it grew.
 - Best-fit central values (dataset-dependent, from the DR2 analyses): **w₀ ≈ −0.75 to −0.84, wₐ ≈ −0.6 to −0.9** — a LARGE evolution.
 
-## The honest verdict — concordance and tension, separated
+## The CORRECTED verdict — the apples-to-apples comparison
 
-**CONCORDANCE (non-trivial, 3 ways):**
-1. **Sign of w₀:** Meridian w₀ > −1. DESI prefers w₀ > −1. Pure ΛCDM (w₀=−1 exactly) is the thing BOTH exclude. Meridian is NOT ΛCDM and lands on the empirically-preferred side. A model had no a-priori obligation to land there.
-2. **Sign of wₐ:** Meridian wₐ < 0. DESI prefers wₐ < 0. Both signs match.
-3. **Shape:** Meridian's phantom-crossing/quintom-B behavior is the *named* shape DESI DR2 calls its preferred scenario. The qualitative morphology matches.
+Meridian is a CONSTANT-w model, so the right DESI comparison is the **wCDM fit**, not the CPL fit:
 
-**TENSION (real, and the data is moving the wrong way for us):**
-- **Amplitude is ~100× off.** Meridian wₐ ≈ −0.008; DESI central wₐ ≈ −0.8. Meridian predicts a near-cosmological-constant; DESI increasingly prefers a *strongly* dynamical DE. On magnitude, Meridian sits much closer to ΛCDM than to DESI's best fit.
-- **Trend direction:** the evolving-DE preference STRENGTHENED DR1→DR2. If it continues to 5σ discovery at DESI's central amplitude, **Meridian's near-Λ prediction is falsified on amplitude.**
+**CONCORDANCE (now sharper than the botched version):**
+1. **DESI BAO-alone wCDM: w = −0.99 (+0.15/−0.13)** ([EPJ C 2025](https://link.springer.com/article/10.1140/epjc/s10052-025-14720-x) / arXiv 2510.09074). **Meridian's −0.993 sits at the CENTER of the constraint.** Dead center, with the value produced by one fitted parameter and the constancy produced by zero.
+2. w₀ > −1 (no phantom): the wCDM BAO fit is on Meridian's side of −1.
+3. α_T = 0: GW170817-class constraints (|c_GW/c − 1| < 10⁻¹⁵) — Meridian derives exactly 0. Standing pass.
 
-## The falsification condition, pre-registered
+**TENSION (two real ones, restated correctly):**
+- **BAO+CMB wCDM pulls to w = −1.122 (+0.062/−0.054)** — Meridian's −0.993 is ~2σ HIGH against that combination. Mild, dataset-combination-dependent.
+- **The CPL fit prefers (w₀ > −1, wₐ < 0) at 2.8–4.2σ and strengthened DR1→DR2.** This is the live threat — IF the evolution is physical. **Clayton's CPL-artifact hypothesis is the crux and is a recognized position in the literature** (the "mirage of Λ" discussion cuts both directions: a constant w can masquerade as evolving in CPL fits when datasets in mild tension — BAO vs CMB vs SNe calibration — are combined; several 2025/26 papers argue the wₐ signal is parametrization- and SN-sample-sensitive). The field has NOT settled whether DESI's evolving preference is physics or fitting artifact.
 
-- **Meridian DIES if:** DESI(+Euclid/DESI-DR3) firms up wₐ ≈ −0.8 (large evolution) at ≥5σ. Meridian's wₐ ≈ −0.008 cannot be stretched to −0.8 without breaking the self-tuning mechanism that produces the near-Λ value in the first place.
-- **Meridian SURVIVES / looks prescient if:** the strong-evolution signal is substantially SN-systematic-driven (a live debate — several 2025/2026 papers argue the wₐ signal is sensitive to the SNe sample) and the true amplitude shrinks toward |wₐ| ≲ 0.05 while keeping w₀ > −1. Then Meridian's "w₀ > −1 with tiny evolution" was the right call and the large-wₐ fits were systematics.
-- **Neither model is pure ΛCDM-confirmed:** if DE turns out to be exactly w=−1, BOTH Meridian (w₀=−0.993) and DESI's evolving fit are wrong; Meridian is closer but still excluded.
+## The falsification condition, pre-registered (CORRECTED — sharper than before)
+
+**Meridian has ZERO freedom on wₐ.** "wₐ = 0 identically, derived, 0 free" is maximal exposure:
+- **Meridian DIES if:** ANY confirmed wₐ ≠ 0 — at any amplitude — survives the parametrization/systematics debate (e.g., model-independent reconstruction or DR3+Euclid showing genuine evolution at ≥5σ). No retreat is possible; the cuscuton suppression that derives wₐ=0 is load-bearing.
+- **Meridian looks STRONG if:** the evolving signal resolves as CPL-artifact + SN systematics and the field settles on constant w ≈ −0.99: Meridian called both the constancy (zero-free derivation) and the value (−0.993, center of the BAO wCDM band) in print, pre-data.
+- **Watch items:** (1) model-independent w(z) reconstructions (no CPL imposed); (2) the SN-calibration debate; (3) DESI DR3 / Euclid; (4) the BAO+CMB wCDM pull below −1 (if THAT firms up, Meridian is ~2σ+ high and that's its own slow problem).
+
+## Note on the original error (kept for the record)
+
+The first version of this entry derived "wₐ ≈ −0.008, quintom-B shape" from `appendix_computations.tex` lines 182–190 — a table whose first column I read as redshift. The claims table states wₐ = 0 identically and no-phantom-crossing as derived results. Error class: reconstruction-from-wrong-artifact (Mirror #32); caught by Clayton within 20 minutes (week catch #8). The corrected analysis materially CHANGED the verdict: from "mixed, trending against on amplitude" to "centered on the right comparison, maximally exposed on a crisp binary the field hasn't settled."
 
 ## Honest self-check on MY bias here
 
