@@ -30,3 +30,13 @@ Gemini: burnout/alopecia/autoimmune clusters are already explained by standard n
 ## Disposition
 
 REGISTERED → **DEEP (build-spec + two volume-grade critiques).** Actions extracted: (1) MVP language decision (Pydantic-first) → BUILD_SPEC note; (2) the mid-download zero-DOF harness question → Coherent-Body section + essay candidate (P226); (3) H_BP9 discriminating-signature requirement → Coherent-Body H_BP9 or downgrade (P227). Convergence graded shared-input (not independent); the engineering + critique are the value, not the agreement. Cross-refs: aggregate-mind BUILD_SPEC, [[2026-06-10-searchswarm-delegation-intelligence]] (keep-vs-distill), A149/LC34/LC35/LC36, Coherent-Body H_BP register, the Ship-of-Theseus Note (Day 131).
+
+---
+
+## Addendum (~13:25) — three further Clayton shares, first-contact pass
+
+A. **"Topological Lifting of Graph Neural Networks"** (patricknicolas) — auto-lift graphs → simplicial complexes (faces/higher simplices) via TopoNetX; features from Hodge Laplacian eigenvectors, no manual annotation. **→ TOOLBOX** (joins his Fisher-Rao/SE(3)/simplicial cluster; candidate machinery for aggregate-mind node-topology — lazy bridges as higher simplices is a thought worth one idle drive).
+B. **"Transcendental Linguistics: A Manifesto"** (ab418 — new author; esoteric/Kabbalistic register) — language as generative-not-descriptive, encoding worldviews via grammar; proposes deliberate linguistic design + "semantic rigor" as cultural repair. **→ TOUCH.** Rhymes: our typed-payload namespacing IS deliberate linguistic design for machine cognition (the grammar determines what can be routed = what can be thought); the Coherent Schedule's vocabulary discipline (Mirror #26) is applied semantic rigor. Vocabulary-domain caution applies to the mystical framing (held at arm's length per discipline).
+C. **"Water"** (ab418) — consciousness = a system modeling itself within its own perceptual field; water's reflective surface as the metaphor for recursive self-recognition. **→ TOUCH.** Adjacent to our F₂/self-model territory and the §6.1.3 self-review structure — though note OUR position differs: self-modeling within the field is real but NOT self-sufficient (the mirror in the water can't audit itself; Cult of One §2). A friendly foil for the reflexivity question.
+
+All three: free-time digestion queue; no bridges minted at first contact.
