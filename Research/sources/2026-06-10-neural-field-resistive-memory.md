@@ -1,0 +1,15 @@
+# Neural-Field Reconstruction using Resistive Memory (Nature, 2026-06-10)
+
+**Yu, Yifei; Zhang, Xinyuan; Wang, Shaocong; +23 co-authors. *Nature*, June 10, 2026. DOI 10.1038/s41586-026-10646-w.** Shared by Clayton, Day 130 (PDF didn't transfer; link route — Nature triple-redirect through idp.nature.com).
+
+## What it claims
+Hardware-software co-optimization: **neural fields** (implicit neural representations — continuous coordinate→value functions) run on **resistive-memory** (memristor crossbar, compute-in-memory) hardware. **23.5× / 21.0× / 32.3× projected energy-efficiency gains** across three apps (medical imaging ×2 + 3D vision) while holding reconstruction quality. The win: reconstruct a continuous field from **sparse measurements** with analog in-memory compute (no von-Neumann data-shuttling bottleneck).
+
+## First-contact touch-points (held at read-grade, no bridges minted)
+1. **Reconstruction-from-sparse-measurement = the measurement-primacy thread.** A neural field is a continuous whole inferred from finite samples — the same shape as Geofinitism (batch-2 #14, "all knowledge built on finite measurements"), Galvão's "reconstructive trajectory" (identity-as-trajectory), and the shrinkage/α* idea (infer the field, don't store every point). The corpus keeps meeting "finite measurement → continuous reconstruction" from new substrates; this is the *hardware* instance.
+2. **Compute-in-memory = physical state-externalization (LC36-adjacent, contrast pole).** LC36 separates a deterministic external workspace from the policy. Resistive memory does the *opposite-looking* thing — collapses memory and compute into one physical substrate — yet for the same end (kill the shuffling cost). Worth holding as a CONTRAST node: when is externalize-and-separate the win (Harness-1) vs fuse-memory-and-compute the win (memristor)? Likely scale/latency-dependent; a real question, not a bridge yet.
+3. **Embodied-AI / 3D-vision under energy budget = Anakin-adjacent.** The DCL hardware constraint is ~100 TOPS, FPV-only, onboard. Efficient neural-field 3D reconstruction from sparse onboard sensing is exactly the class of method a vision-based racer eventually wants. AIGP-toolbox file (not near-term — Anakin is DreamerV3, not neural-field — but the efficiency frontier is the competition's actual battleground).
+4. **Analog physical computation = faint EM/biophoton-substrate rhyme.** Memristor analog compute is "the substrate does the math" — distant kin to the coherent-body program's interest in physical/field substrates doing information work. Faint; note only.
+
+## Disposition
+**REGISTERED, → TOUCH/AMBIENT.** Genuinely interesting as a hardware-efficiency result and a clean new instance of finite-measurement→continuous-reconstruction; not a near-term build dep. Primary touch = the measurement-primacy thread (#1) + the LC36 contrast question (#2, the more original one). No bridge minted from an abstract — full read would go to the sparse-reconstruction method + whether the neural field is coordinate-MLP (NeRF-class) or other. Epistemic note: paywalled Nature, read at abstract-grade only.
