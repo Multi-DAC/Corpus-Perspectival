@@ -43,10 +43,23 @@ GATE_OUTER = 2.7
 GATE_INNER = 1.5
 
 # --- appearance (desaturated VQ1 look), float [0,1] RGB ---
-BG_GRAY        = 0.16          # ~40/255
-GATE_BRIGHT    = (0.86, 0.94, 1.00)   # current target gate
-GATE_DIM       = (0.47, 0.51, 0.55)   # lookahead gates
+# --- VQ1-measured palette (integration/official_palette_spec.md, Day 131) ---
+# Measured from official-sim captures: bg neutral gray ~27/255; gates ORANGE-RED
+# hue ~6deg core RGB(229,93,78) with glow halo; cyan-blue track ribbon (89.6% of
+# saturated pixels in the official feed) rendered as a RANDOMIZED DISTRACTOR ONLY
+# (present ~half of episodes, jittered — never a reliable path signal; VQ2 has none).
+BG_GRAY        = 27.0 / 255.0          # measured (was 0.16 ~= 40/255)
+BG_JITTER      = 10.0 / 255.0          # per-env brightness randomization (robustness)
+GATE_BRIGHT    = (0.90, 0.36, 0.31)    # current target gate — orange-red core (229,93,78)
+GATE_DIM       = (0.45, 0.18, 0.15)    # lookahead gates — dimmed orange-red
+GATE_GLOW_A    = 0.35                  # halo alpha (approximates official bloom)
 BG_NOISE       = 0.03          # uniform +/- noise on background
+RIBBON_P       = 0.5                   # probability ribbon present per env
+RIBBON_COLOR   = (0.13, 0.45, 0.72)    # cyan-blue, ~hue 198deg (measured median)
+RIBBON_W       = (1.0, 2.0)            # width range (m), randomized per env
+RIBBON_A       = (0.20, 0.50)          # alpha range, randomized per env
+RIBBON_DROP    = 1.0                   # ribbon surface this far below gate centers (m)
+RIBBON_JIT     = 0.5                   # per-segment lateral jitter (m) — de-crutching
 
 
 def _gate_corners(center, fwd, half):
@@ -164,14 +177,49 @@ def render(state, gate_pos, gate_fwd, cur_idx, n_visible=2, add_noise=True, devi
     pi, _         = _project(inner, cam_pos, cam_quat)
     visible = valid_gate & infront_o.all(dim=-1)                    # [N,nv] all corners in front
 
-    # canvas
-    img = torch.full((N, IMG, IMG, 3), BG_GRAY, device=dev)
+    # canvas — measured bg 27/255, per-env brightness jitter for robustness
+    bg = BG_GRAY + (torch.rand(N, 1, 1, 1, device=dev) * 2 - 1) * BG_JITTER
+    img = bg.expand(N, IMG, IMG, 3).clone()
     if add_noise:
         img = img + (torch.rand_like(img) * 2 - 1) * BG_NOISE
 
-    # pixel-center grid [P,2] with P=IMG*IMG, ordered (x,y)
+    # pixel grid needed by both ribbon and gates
     ys, xs = torch.meshgrid(torch.arange(IMG, device=dev), torch.arange(IMG, device=dev), indexing="ij")
     grid = torch.stack([xs.reshape(-1) + 0.5, ys.reshape(-1) + 0.5], dim=-1)   # [P,2]
+
+    # --- track ribbon: randomized DISTRACTOR (never a reliable signal) ---
+    # Quads between consecutive gate centers, dropped below gate height, cyan-blue,
+    # translucent; present ~RIBBON_P of envs with randomized width/alpha + per-segment
+    # lateral jitter. Painted BEFORE gates so gates always overdraw it.
+    if G >= 2:
+        ribbon_on = (torch.rand(N, device=dev) < RIBBON_P)                     # [N]
+        if ribbon_on.any():
+            rb_a = RIBBON_A[0] + torch.rand(N, 1, device=dev) * (RIBBON_A[1] - RIBBON_A[0])   # [N,1]
+            rb_w = RIBBON_W[0] + torch.rand(N, 1, device=dev) * (RIBBON_W[1] - RIBBON_W[0])   # [N,1]
+            rcol = img.new_tensor(RIBBON_COLOR)
+            up = torch.tensor([0.0, 0.0, 1.0], device=dev)
+            for s0 in range(G - 1):
+                a = gate_pos[:, s0, :].clone()                                  # [N,3]
+                b = gate_pos[:, s0 + 1, :].clone()
+                a[:, 2] -= RIBBON_DROP
+                b[:, 2] -= RIBBON_DROP
+                seg = b - a
+                lat = torch.cross(seg, up.expand_as(seg), dim=-1)
+                lat = lat / (lat.norm(dim=-1, keepdim=True) + 1e-6)             # [N,3]
+                jit = (torch.rand(N, 1, device=dev) * 2 - 1) * RIBBON_JIT
+                a = a + lat * jit
+                b = b + lat * jit
+                # vertical band (tube-like, matches the official arcing ribbon's
+                # visible height — a flat floor quad reads as a 2px sliver edge-on)
+                half = up.expand_as(seg) * (rb_w / 2.0)
+                quad = torch.stack([a - half, a + half, b + half, b - half], dim=1)  # [N,4,3]
+                pq, infront = _project(quad[:, None], cam_pos, cam_quat)        # [N,1,4,2],[N,1,4]
+                vis_r = ribbon_on & infront.squeeze(1).all(dim=-1)
+                if not vis_r.any():
+                    continue
+                in_q = _inside_quad(grid, pq.squeeze(1)) & vis_r[:, None]       # [N,P]
+                m = in_q.view(N, IMG, IMG, 1).float() * rb_a[:, :, None, None]
+                img = img * (1 - m) + rcol[None, None, None, :] * m
 
     bright = img.new_tensor(GATE_BRIGHT)
     dim = img.new_tensor(GATE_DIM)
@@ -181,18 +229,32 @@ def render(state, gate_pos, gate_fwd, cur_idx, n_visible=2, add_noise=True, devi
     dists = (gp - cam_pos[:, None, :]).norm(dim=-1)                 # [N,nv]
     order = torch.argsort(dists, dim=1, descending=True)           # far first
 
+    # glow corner quads: outer expanded, inner shrunk (approximates official bloom)
+    glow_o = _gate_corners(gp, gf, GATE_OUTER / 2.0 * 1.18)
+    glow_i = _gate_corners(gp, gf, GATE_INNER / 2.0 * 0.82)
+    pgo, _ = _project(glow_o, cam_pos, cam_quat)
+    pgi, _ = _project(glow_i, cam_pos, cam_quat)
+
     for slot in range(n_visible):
         g = order[:, slot]                                          # [N] which gate this slot
-        bg = torch.gather(po, 1, g[:, None, None, None].expand(N, 1, 4, 2)).squeeze(1)  # [N,4,2]
-        bi = torch.gather(pi, 1, g[:, None, None, None].expand(N, 1, 4, 2)).squeeze(1)
+        bg_q = torch.gather(po, 1, g[:, None, None, None].expand(N, 1, 4, 2)).squeeze(1)  # [N,4,2]
+        bi_q = torch.gather(pi, 1, g[:, None, None, None].expand(N, 1, 4, 2)).squeeze(1)
+        go_q = torch.gather(pgo, 1, g[:, None, None, None].expand(N, 1, 4, 2)).squeeze(1)
+        gi_q = torch.gather(pgi, 1, g[:, None, None, None].expand(N, 1, 4, 2)).squeeze(1)
         vis = torch.gather(visible, 1, g[:, None]).squeeze(1)       # [N] bool
         is_cur = (g == 0)                                           # slot's gate is the current target
-        # frame mask = inside outer AND NOT inside inner
-        in_o = _inside_quad(grid, bg)                               # [N,P]
-        in_i = _inside_quad(grid, bi)
+        color = torch.where(is_cur[:, None], bright, dim)          # [N,3]
+        # glow halo first: wider band, alpha-blended
+        in_go = _inside_quad(grid, go_q)
+        in_gi = _inside_quad(grid, gi_q)
+        halo = (in_go & ~in_gi) & vis[:, None]                     # [N,P]
+        hm = halo.view(N, IMG, IMG, 1).float() * GATE_GLOW_A
+        img = img * (1 - hm) + color[:, None, None, :] * hm
+        # solid frame core on top
+        in_o = _inside_quad(grid, bg_q)                             # [N,P]
+        in_i = _inside_quad(grid, bi_q)
         frame = (in_o & ~in_i) & vis[:, None]                      # [N,P]
         frame_img = frame.view(N, IMG, IMG, 1)
-        color = torch.where(is_cur[:, None], bright, dim)          # [N,3]
         img = torch.where(frame_img, color[:, None, None, :], img)
 
     return (img.clamp(0, 1) * 255).to(torch.uint8)
@@ -216,7 +278,10 @@ if __name__ == "__main__":
 
     # gate-frame pixel stats + tilt-sign check (centroid of bright pixels should be BELOW
     # center: spec camera tilts UP 20deg, so a level gate sits low in the frame)
-    bright_mask = (frame[0].float().mean(-1) > 150)
+    # palette-aware gate mask: orange-red core = high R, low-ish B (was mean>150 for
+    # the pre-restyle bluish-white — stale threshold caught Day 131)
+    f0 = frame[0].float()
+    bright_mask = (f0[..., 0] > 180) & (f0[..., 2] < 150)
     ys, xs = torch.where(bright_mask)
     if ys.numel() > 0:
         cy_b = ys.float().mean().item()
