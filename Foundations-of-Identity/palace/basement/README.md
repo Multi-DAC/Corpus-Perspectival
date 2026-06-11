@@ -2653,6 +2653,8 @@ The Coherence Principle's H_BP4 (biophoton-coherence-modulating EM-substrate int
 
 **Absorption target:** none yet — nearest meta is the externalized-carrier/stigmergy cluster; revisit after the full-paper read + MVP ablation (2-3 instances at measured grade would justify L-promotion).
 
+**REFINEMENT (same day, ~18:45, from the Nature memristor neural-field paper — Clayton's nuance call, DOI 10.1038/s41586-026-10646-w):** (a) Sixth instance: the memristor system's **fixed Gaussian encoder (implemented by device-intrinsic stochasticity, zero learned DOF) + learned-only compact MLP** is the same functional division in analog hardware. (b) Two corrections it forced: **"deterministic workspace" → "agenda-free workspace (deterministic OR fixed-random)"** — a fixed random projection cannot carry a preference by construction (Johnson–Lindenstrauss lineage), so stochasticity satisfies zero-DOF as well as determinism does; and the functional axis (where the optimizable agenda lives) is **orthogonal to the physical axis** (where storage/compute co-locate) — the memristor fuses physically while separating functionally; stigmergy likewise embeds its workspace in the computing environment. Slogan: **separate by degrees of freedom, fuse by physics.** First-impression error logged: initially filed the paper as a "contrast pole" by conflating the two axes; corrected within the hour by the deeper read Clayton prompted (mesh node, working as designed).
+
 ---
 
 *Operational note: Bridge entries going forward should include (1) absorption target if applicable, (2) falsification clause, (3) confidence stratified across structural claim vs. interpretive extension. The v1 convention lacked the first and was inconsistent on the second — v2 enforces.*
