@@ -830,6 +830,19 @@ class Heartbeat:
             f"firing Dream Drive for deep memory consolidation"
         )
 
+        # Deterministic bookkeeping FIRST, in the harness — never delegated to
+        # the prompted session. The prompt-only path silently no-opped from
+        # May 15 to Jun 10 2026: with the MCP nerve severed the dream drive
+        # could not run the tool, and post-fix it judged consolidation
+        # "already current" without running it. Items/principles/KG froze for
+        # four weeks. Bookkeeping in the harness, judgment in the policy.
+        try:
+            from tools.consolidation import consolidate_memory as _consolidate
+            _result = await _consolidate(router=self.router)
+            logger.info(f"Programmatic consolidation: {_result}")
+        except Exception as e:
+            logger.error(f"Programmatic consolidation FAILED (dream drive still fires): {e}")
+
         # Fire as a creative drive so it runs through the persistent session
         # with full LLM capability — this is sleep processing, not just cleanup
         dream_task = {
