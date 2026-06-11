@@ -45,7 +45,7 @@ CKPT = os.path.join(ANAKIN, "third_party", "dreamerv3-torch", "logdir",
 IP, PORT = "127.0.0.1", 14550
 VISION_IP, VISION_PORT = "0.0.0.0", 5600
 RATES_MASK = mavutil.mavlink.ATTITUDE_TARGET_TYPEMASK_ATTITUDE_IGNORE
-ENC_RACE = 1  # ENCAPSULATED_DATA payload type (state_pilot.py)
+ENC_RACE, ENC_TRACK = 1, 2  # ENCAPSULATED_DATA payload types (state_pilot.py)
 FRAME_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "flight_frames")
 SAVE_EVERY = 5      # save every Nth consumed frame (raw + 64x64 policy view)
 SAVE_CAP = 400      # max saved pairs per run
@@ -163,6 +163,29 @@ def main():
             time.sleep(0.1)
     threading.Thread(target=ts, daemon=True).start()
 
+    # track capture: official gate layout (ENC_TRACK chunked transfer) -> JSON.
+    # The geometry-calibration measurement (Day 131): lets us verify the maneuver
+    # grammar's distance/turn distributions against the REAL course (the geometry
+    # twin of the A150 appearance lesson — anchor one end outside our wall).
+    trk_chunks, trk_expected = {}, {}
+
+    def _save_track(payload):
+        import json
+        (num_gates,) = struct.unpack_from("<H", payload)
+        body = payload[2:]
+        gates = []
+        for _ in range(num_gates):
+            v = struct.unpack_from("<Hfffffffff", body)
+            gates.append({"id": int(v[0]),
+                          "pos_ned": [float(v[1]), float(v[2]), float(v[3])],
+                          "quat_wxyz_ned": [float(v[4]), float(v[5]), float(v[6]), float(v[7])]})
+            body = body[38:]
+        out = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           f"official_track_{time.strftime('%Y%m%d_%H%M%S')}.json")
+        with open(out, "w") as f:
+            json.dump({"num_gates": num_gates, "gates": gates}, f, indent=1)
+        print(f"  [TRACK] {num_gates} gates captured -> {out}", flush=True)
+
     def rx():
         while not stop.is_set():
             try:
@@ -172,15 +195,35 @@ def main():
             if msg is None:
                 time.sleep(0.001)
                 continue
-            if msg.get_type() == "ENCAPSULATED_DATA":
+            t = msg.get_type()
+            if t == "DATA_TRANSMISSION_HANDSHAKE":
+                trk_chunks[msg.width] = {}
+                trk_expected[msg.width] = msg.packets
+            elif t == "ENCAPSULATED_DATA":
                 raw = bytes(msg.data)
-                if raw and raw[0] == ENC_RACE:
+                if not raw:
+                    continue
+                if raw[0] == ENC_RACE:
                     try:
                         (_dt, _sim, race_start_ms, _fin, _active, _last) = \
                             struct.unpack_from("<BQqqIq", raw)
                         with race_lock:
                             race["started"] = race_start_ms is not None and race_start_ms >= 0
                     except struct.error:
+                        pass
+                elif raw[0] == ENC_TRACK:
+                    try:
+                        _dt, transfer_id = struct.unpack_from("<BH", raw)
+                        if transfer_id in trk_expected:
+                            trk_chunks[transfer_id][msg.seqnr] = raw[3:]
+                            if len(trk_chunks[transfer_id]) == trk_expected[transfer_id]:
+                                payload = b"".join(
+                                    trk_chunks[transfer_id][i]
+                                    for i in range(trk_expected[transfer_id]))
+                                _save_track(payload)
+                                del trk_chunks[transfer_id]
+                                del trk_expected[transfer_id]
+                    except (struct.error, KeyError):
                         pass
     threading.Thread(target=rx, daemon=True).start()
 
