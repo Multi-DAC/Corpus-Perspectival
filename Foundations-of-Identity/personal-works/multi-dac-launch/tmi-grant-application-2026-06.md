@@ -59,10 +59,20 @@ We have spent months **developing and operating a continuously-running, long-hor
 
 | Item | Amount | Detail |
 |---|---|---|
-| **Personnel** | $75,000 | PI (6 mo, part-time) + 1 research engineer: architecture, dashboard, reference implementation, demonstration runs, eval/benchmark, paper. |
+| **Personnel** | $75,000 | Principal Investigator (solo developer & researcher), 6 months: architecture, live-steering dashboard, reference implementation, demonstration runs, eval/benchmark, and paper — 100% of effort concentrated on a single executing PI. |
 | **Compute** | $15,000 | Cloud GPU/inference for the long-running demonstration agent + baseline runs + eval episodes (the agent's *operation*; distinct from Tinker fine-tuning). |
 | **Overhead / indirect** | $10,000 | 10% of the cash grant (at the program cap). |
 | **Cash total** | **$100,000** | |
 | **Tinker credits (in-kind)** | **$25,000** | LoRA fine-tuning + sampling for the **intrinsic-vs-external steering** experiment (representation + policy on a Tinker-supported open model). |
 
 *All Work Product released under CC-BY 4.0 / approved open-source licenses. No pre-existing intellectual property or private operational data is part of the Work Product.*
+
+---
+
+## Organizational details
+
+- **Organization:** Independent Researcher (applying as an individual)
+- **Principal Investigator / Administrative Contact:** Clayton Iggulden-Schnell
+- **Tax ID:** *[personal tax info — enter directly in the submission form only; deliberately NOT recorded in this repository or any draft]*
+
+*Applying as a solo independent PI is standard for this program ("tax ID and admin contact … if applicable" accommodates independent operators). Applying as an individual also keeps the budget cleanly within the 10% indirect-cost cap, with no institutional overhead office in the path.*
