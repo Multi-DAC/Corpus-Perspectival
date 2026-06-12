@@ -147,6 +147,10 @@ def main():
               f"recon_mse: official={recon_mse(pilot, official)}  "
               f"restyled={recon_mse(pilot, restyled)}")
         del pilot
+        import gc, torch
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()  # two 19M-param pilots back-to-back; free VRAM between
 
     old_fd, new_fd = results["band-ft (pre-restyle)"], results["restyle-ft"]
     ratio = new_fd / max(old_fd, 1e-9)
