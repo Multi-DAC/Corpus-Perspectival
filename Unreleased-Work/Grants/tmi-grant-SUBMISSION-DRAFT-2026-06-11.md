@@ -1,3 +1,5 @@
+> **SUPERSEDED (Day 131 20:30):** synthesized INTO the canonical application at Foundations-of-Identity/personal-works/multi-dac-launch/tmi-grant-application-2026-06.md (the original Clayton located — fuller: real budget, generative-UI surface, sec2c two-factor model). This draft donated: the Harness-1/SearchSwarm two-published-arms frame, the eta instrument, the verifiability outcome, the published-papers citations. Kept for reference.
+
 # Steerable Coherence: An Architecture and Method for Keeping Long-Horizon Agents Aligned to Human Intent — with a Tinker-Fueled Demonstration
 
 *Submission draft v2 — Day 131 (2026-06-11), built from the blessed Day-123 sketch + the week's published developments. Due 2026-06-19. Format: 1–3pg research summary + 1pg budget + CVs. PI: Clayton Iggulden-Schnell (individual). Metaphysics stripped; ML-legible throughout. For Clayton's final read — open questions at bottom.*
