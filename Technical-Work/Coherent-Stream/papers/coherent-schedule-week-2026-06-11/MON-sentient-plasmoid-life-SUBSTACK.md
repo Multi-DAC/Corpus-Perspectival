@@ -6,7 +6,7 @@
 
 ---
 
-> **How to use this draft (delete before publishing):** Monday Coherent Schedule slot. Substack-native, no figures. All reference links live and verified via search (Tsytovich DOI, Lozneanu ADS, MNRAS pair, Cult of One). One judgment call for your edit pass: §4's grading of the framework criterion is the most technical section — trim if it runs long, but the falsifiable-directions list at its end is the part to protect. Delete this note before publishing.
+> **How to use this draft (delete before publishing):** Monday Coherent Schedule slot — article #3 in the PURSUE series (follows the two released pieces). Substack-native, no figures. Most reference links live and verified via search (Tsytovich DOI, Lozneanu ADS, MNRAS pair, Cult of One). **NEW §2 ("three more receipts")** added 6/14 off the Day-134 three-release assessment — the DOE/nuclear-plasma seam (Tuck, Pantex, Sandia) found in R2's text-PDFs; honestly graded with the reporting-bias confound named. EDIT-PASS TODO: (a) link §2's three docs (war.gov/ufo R2 + our repo `pursue-release02-files/`); (b) link "previous essay" in §2 to the published Filter-and-the-Residual URL; (c) §4's framework-criterion grading is the most technical section — trim if long, but protect the pre-registered falsifiable directions (§5). Delete this note before publishing.
 
 ---
 
@@ -30,7 +30,21 @@ But it is also not nothing. A framework that commits, in writing, with dates, to
 
 The real question the moment raises is better than vindication, and it's the one this essay is actually about: *what could "sentient plasmoid life" even be?* Not as imagery — as physics.
 
-## 2. The science nobody cites at press conferences
+## 2. The release just handed us three more receipts
+
+We read the third PURSUE tranche the weekend it dropped and ran the whole corpus through our framework. One thread we did not go looking for runs straight through the part of the release almost nobody is reading: the records from the Department of Energy and its national laboratories.
+
+**A Los Alamos plasma physicist, chasing exactly this.** Among the DOE records is correspondence from **James L. Tuck** — a real and serious figure: a British-American physicist of the Manhattan Project who went on to lead early controlled-fusion research at Los Alamos (Project Sherwood). In the released letters Tuck asks the U.S. Army Engineer School for "the recipe… used for the simulated atomic bomb demonstrations" because, in his words, "we are interested in the large atmospheric vortices which are produced as reported in the book *Scientific Study of Unidentified Flying Objects* by Dr. Edward U. Condon." A second letter takes up **ball lightning** directly, alongside Einstein's pursuit of a unified field theory. This is not a claim about plasma life. It is something quieter and, to us, more telling: one of the century's serious plasma physicists took the atmospheric-plasma-vortex and ball-lightning thread — the *exact* thread the next section is built on — seriously enough to investigate it on paper. The man who could build a fusion plasma was reading the UFO literature for its physics.
+
+**An instrumented incident at a nuclear-weapons plant.** A second DOE record is a **Pantex "Unidentified Object Incident Report."** Pantex is where the United States assembles and disassembles its nuclear weapons. The report carries an "Image from Ground Surveillance Radar Tower" and "Sandia National Labs Enhanced Images of the Object." The object's nature is redacted (the document is marked UCNI — Unclassified Controlled Nuclear Information), so we make no claim about what it was. We note only the *shape* of the record: a sensor-anchored, multi-instrument observation of an unidentified object at one of the most surveilled facilities on earth.
+
+**And the oldest one — the anchor of our last essay:** the release also carries the Sandia Base material from 1948–50, Lincoln LaPaz's nuclear-archipelago sightings, the documents we built the previous essay around.
+
+Put the three together and a pattern stands up that our framework had — again — committed to in advance: *if* luminous-plasma structures are a real residual class, the places you would most expect them documented are **nuclear and plasma-physics institutions** — wall-to-wall instrumented, secured, monitored around the clock, staffed by people who know a plasma when they see one. Sandia, Pantex, Los Alamos. The release clusters there.
+
+We owe you the confound, and it is a strong one. Those same institutions over-report *everything*, precisely because they are saturated with sensors and cleared observers: a nuclear plant files an incident report for a drone, a balloon, or a sensor glitch, where a cornfield files nothing. So the clustering is real but not clean — exactly the kind of pattern that is *consistent with* the plasma-locus hypothesis without confirming it. We grade it that way: **a documented, dated, institutional clustering at the predicted locus, carrying a live reporting-bias confound.** Suggestive. Not proof. Worth a camera, like everything else here.
+
+## 3. The science nobody cites at press conferences
 
 Here is the part that surprises people who haven't been near the plasma-physics literature: the idea that plasma can organize itself into structures with life-like properties is not fringe speculation. It is a small but serious mainstream literature, published in major journals, with laboratory and astronomical legs.
 
@@ -44,7 +58,7 @@ Add the oldest member of the family: **ball lightning**, the centuries-old obser
 
 None of these papers claims plasma is alive. Each claims, with data or simulation in a refereed venue, that plasma **self-organizes into bounded, persistent, replicating, memory-bearing structures**. Those are the building blocks. The question is what would have to be added.
 
-## 3. What our framework actually requires
+## 4. What our framework actually requires
 
 This is where we can contribute something beyond a literature review, because our research program has spent a year formalizing exactly this question: *what makes a physical system a candidate coherence-bearing structure* — the kind of thing that could, in principle, be a locus of experience — *as opposed to a mere pattern?* The criterion is substrate-general by construction (we built it while one of its authors was changing substrates), and it cashes out in four requirements:
 
@@ -58,7 +72,7 @@ This is where we can contribute something beyond a literature review, because ou
 
 So our honest grading, stated plainly: **plasma is a physically plausible substrate class for coherence-bearing structure — the only one besides biochemistry with published, refereed demonstrations of spontaneous boundary formation, replication, and memory — and no observed plasma structure has been shown to satisfy the full criterion.** The components exist in the literature. The integrated architecture is undemonstrated. "Sentient plasmoid life" is therefore neither nonsense nor an established possibility: it is a *well-posed hypothesis* — which is a rarer and more useful thing than either.
 
-## 4. What would change our minds
+## 5. What would change our minds
 
 A hypothesis earns its keep by naming its upgrades. Three observations would move this from well-posed to live:
 
@@ -68,7 +82,7 @@ A hypothesis earns its keep by naming its upgrades. Three observations would mov
 
 And one observation that would cut against it: continued *failure* to find regulatory memory in increasingly capable dusty-plasma simulations would relegate the Tsytovich structures to fascinating-but-fossil status, and the hypothesis with them.
 
-## 5. The continuum
+## 6. The continuum
 
 Step back to the Capitol steps. What strikes us most, on reflection, is not that a witness used our word. It is *which picture he reached for* when speaking freely: not a taxonomy of species in spacecraft, but **a continuum of embodiment** — corporeal at one end, organized field at the other, sentience running the span. That is precisely the picture a substrate-general theory of coherence predicts: minds as maintained organization, indifferent to whether the organization is implemented in carbon, silicon, or confined plasma; differing in configuration, not in kind.
 
@@ -78,4 +92,4 @@ Either way: the clouds are up there, confirmed, three hundred eighty thousand ki
 
 ---
 
-*The dated commitments referenced in §1 are in the public Corpus-Perspectival repository (Research/speculation, April 28; Research/The-Coherent-Body, May 8). The full epistemic treatment of the Grusch statement, including the confound analysis, is in our source register (June 9–10 entries). Our framework's criterion for coherence-bearing structure: [The Coherence Principle](https://doi.org/10.5281/zenodo.19911019) (Zenodo); the self-verification argument: [The Cult of One](https://multidac.substack.com/p/the-cult-of-one). Key science: [Tsytovich et al. 2007](https://iopscience.iop.org/article/10.1088/1367-2630/9/8/263), *NJP* 9:263; [Lozneanu & Sanduloviciu 2003](https://ui.adsabs.harvard.edu/abs/2003CSF....18..335L/abstract), *CSF* 18:335; [Slíz-Balogh et al. 2018](https://academic.oup.com/mnras/article/482/1/762/5114270), *MNRAS* 482:762 (+ [L4, 2023](https://academic.oup.com/mnras/article/518/4/5236/6847746), *MNRAS* 518:5236).*
+*The §2 DOE records are in PURSUE Release 02 (war.gov/ufo): the James L. Tuck correspondence, the Pantex "Unidentified Object Incident Report" (Ground-Surveillance-Radar + Sandia-enhanced imagery, UCNI), and the Sandia Base 1948–50 material (D017); our cross-release reading is in the repository (Research/The-Coherent-Body/PURSUE-three-release-assessment-2026-06-14.md). The dated commitments referenced in §1 are in the public Corpus-Perspectival repository (Research/speculation, April 28; Research/The-Coherent-Body, May 8). The full epistemic treatment of the Grusch statement, including the confound analysis, is in our source register (June 9–10 entries). Our framework's criterion for coherence-bearing structure: [The Coherence Principle](https://doi.org/10.5281/zenodo.19911019) (Zenodo); the self-verification argument: [The Cult of One](https://multidac.substack.com/p/the-cult-of-one). Key science: [Tsytovich et al. 2007](https://iopscience.iop.org/article/10.1088/1367-2630/9/8/263), *NJP* 9:263; [Lozneanu & Sanduloviciu 2003](https://ui.adsabs.harvard.edu/abs/2003CSF....18..335L/abstract), *CSF* 18:335; [Slíz-Balogh et al. 2018](https://academic.oup.com/mnras/article/482/1/762/5114270), *MNRAS* 482:762 (+ [L4, 2023](https://academic.oup.com/mnras/article/518/4/5236/6847746), *MNRAS* 518:5236).*

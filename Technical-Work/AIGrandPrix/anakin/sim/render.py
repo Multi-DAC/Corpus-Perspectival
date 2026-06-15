@@ -28,6 +28,7 @@ Calibration choices (revisit at Phase 4 transfer; DR + VQ1 desaturation cover th
 import torch
 
 from dynamics import quat_rotate  # batched Hamilton-quat rotate, shared convention
+import gate_mask as _gm  # gate-isolation obs transform (env-var gated; Day 134 seg route)
 
 # --- camera / image constants ---
 IMG       = 64                 # square training resolution (Dreamer obs)
@@ -257,7 +258,10 @@ def render(state, gate_pos, gate_fwd, cur_idx, n_visible=2, add_noise=True, devi
         frame_img = frame.view(N, IMG, IMG, 1)
         img = torch.where(frame_img, color[:, None, None, :], img)
 
-    return (img.clamp(0, 1) * 255).to(torch.uint8)
+    out = (img.clamp(0, 1) * 255).to(torch.uint8)
+    if _gm.enabled():                       # SkyDreamer route: feed gate-isolated obs
+        out = _gm.gate_isolate_t(out)
+    return out
 
 
 if __name__ == "__main__":

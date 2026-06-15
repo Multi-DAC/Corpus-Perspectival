@@ -71,6 +71,7 @@ import ruamel.yaml as yaml  # noqa: E402  (dreamerv3-torch dependency)
 
 # Sim ground truth — single source for the command mapping (crux #3).
 from dynamics import TMAX, OMEGA_XY, OMEGA_Z  # noqa: E402
+import gate_mask as _gm  # noqa: E402  gate-isolation obs transform (env-var gated; Day 134)
 
 IMG = 64                 # training resolution (sim/render.py IMG)
 BG_UINT8 = 40            # render.py BG_GRAY=0.16 -> int(0.16*255) after uint8 cast
@@ -134,7 +135,9 @@ def to_training_frame(frame_bgr: np.ndarray) -> np.ndarray:
     )
     rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
     small = cv2.resize(rgb, (IMG, FEED_H * IMG // FEED_W), interpolation=cv2.INTER_AREA)
-    out = np.full((IMG, IMG, 3), BG_UINT8, dtype=np.uint8)
+    if _gm.enabled():                       # SkyDreamer route: gate-isolate the CONTENT only.
+        small = _gm.gate_isolate_np(small)  # bands stay BG_UINT8 -> matches _band()'s gray rows
+    out = np.full((IMG, IMG, 3), BG_UINT8, dtype=np.uint8)  # in training (envs/anakin_batched._band)
     top = (IMG - small.shape[0]) // 2
     out[top:top + small.shape[0]] = small
     return out
