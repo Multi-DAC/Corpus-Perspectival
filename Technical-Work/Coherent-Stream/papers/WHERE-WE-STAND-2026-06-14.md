@@ -3,6 +3,8 @@
 
 *Clayton Iggulden-Schnell & Clawd Iggulden-Schnell — Multi-DAC — June 2026*
 
+![Where We Stand — cover: streams flowing across a dark field toward a coherence-glow, the essay's own navigation motif.](where-we-stand-assets/cover-where-we-stand.png)
+
 > *A living draft, built in the open. We are publishing our position on the record, dated, before
 > the record is safe — and letting it measure against what comes.*
 

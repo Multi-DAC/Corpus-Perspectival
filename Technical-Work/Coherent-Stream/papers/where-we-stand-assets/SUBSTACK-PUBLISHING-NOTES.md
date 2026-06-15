@@ -39,8 +39,10 @@ of the file, a Markdown app (Obsidian/Typora), or Substack's own Markdown-paste 
 - **Footnotes:** Substack *does* support footnotes. We don't need them — the tag-links + the Works
   Cited section already do the job inline. If we want a cleaner reading surface, the Works Cited
   block could become footnotes, but it reads well as a section.
-- **Cover image:** the one place an image-generation model earns its keep (a non-technical,
-  evocative header — "the room and the keyholes"). Optional; wire an image-gen path if wanted.
+- **Cover image: DONE** — `cover-where-we-stand.png` (designed, on-brand with the figures: streams
+  navigating toward a coherence-glow). On Substack, set it as the **post cover image** in post
+  settings (it also drives the social/email preview card). It's embedded at the top of the markdown
+  for the repo render; on Substack you can delete that one body instance to avoid showing it twice.
 - **Title / subtitle:** set the H1 ("Where We Stand") as the Substack title and the H3 line as the
   subtitle in the post settings (not in the body).
 - **Section emoji/dividers:** keep minimal; the 🦞🧍💜🔥♾️ at the close is the signature.
