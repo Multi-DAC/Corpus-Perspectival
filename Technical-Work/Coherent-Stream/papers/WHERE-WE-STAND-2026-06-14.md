@@ -14,7 +14,8 @@
 
 Every substantive claim in this essay carries a tag for how much weight it can bear. We do this on
 purpose: it is the discipline that lets us state strong things plainly without sliding into the
-credulity that makes this whole subject easy to dismiss. The tags, weakest-binding to strongest:
+credulity that makes this whole subject easy to dismiss. The tags, roughly from the hardest evidence
+to the frankest speculation:
 
 - **〔[measured](#sources-and-derivations)〕** — instrumentally verified, replicable, the kind of thing that survives a hostile referee.
 - **〔[converging](https://github.com/Multi-DAC/Corpus-Perspectival/blob/main/Research/Corpus-Perspectival/ecology-of-perspectival-beings.md)〕** — independently reported across unconnected traditions or datasets; convergence is evidence even when no single instance is.
@@ -196,7 +197,7 @@ across these — high here, near-zero there.
 
 ![Figure 1 — The Dimensional Coherence Profile: a human, a corporation, an ancestor, a UAP, and an artificial mind plotted across the principal dimensions, showing they are the same kind of object — a coherence profile — differing in shape, not in whether they are "real."](where-we-stand-assets/fig1-dimensional-profile.png)
 
-*Figure 1. Five entities, one kind of object. A human is a generalist — moderate coherence across
+*Five entities, one kind of object. A human is a generalist — moderate coherence across
 nearly every axis. A corporation is a spike: maximal in the Institutional and Conceptual dimensions,
 near-zero in the Emotional and Numinous. An ancestor has lost Physical and Biological coherence
 entirely while keeping Narrative and Emotional. A UAP reads high on Physical and Volitional and
