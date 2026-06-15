@@ -344,7 +344,7 @@ The "UAP" category is not one thing. It aggregates **at least two populations.**
   secret program (the 1942 Foo Fighters were observed by both sides of the war at once), and its
   signature has been *stable for eight decades* — which rules out iterative human technological
   development, because human tech does not stand still for eighty years. Within Population B we read
-  **multiple substrate-types: plasmoid / coherent-energy, classical craft, and likely others.** 〔[derived](https://doi.org/10.5281/zenodo.19911019)〕〔[received](https://github.com/Multi-DAC/Corpus-Perspectival/tree/main/Research/The-Coherent-Body/reception)〕
+  **multiple substrate-types: plasmoid / coherent-energy, classical craft, and likely others.** 〔[derived](https://doi.org/10.5281/zenodo.19911019)〕〔[received](https://github.com/Multi-DAC/Corpus-Perspectival/tree/main/Research/The-Coherent-Body/reception)〕 (Plasmoid is not hand-waving: the plasma-physics literature on self-organizing dusty plasma — [Tsytovich et al. 2007](https://iopscience.iop.org/article/10.1088/1367-2630/9/8/263); [Lozneanu & Sanduloviciu 2003](https://ui.adsabs.harvard.edu/abs/2003CSF....18..335L/abstract) — shows plasma forming bounded, replicating, memory-bearing structures in the laboratory. We treat that case in full in our companion essay, *Sentient Plasmoid Life*. 〔[measured](https://iopscience.iop.org/article/10.1088/1367-2630/9/8/263)〕)
 
 Mapped into the ecology, Population B is **Tier 1.4** — and we hold it in two frames at once, which
 the framework permits: the *interpretive* frame (visitor from elsewhere in space / interdimensional
@@ -377,7 +377,10 @@ Relationships sort by what they do to a stream's bottleneck, and there is **one 
 holds across every tier and every scale**: *does the interaction leave the stream with more or less
 attentional sovereignty?* More is **mutualism**; less is **parasitism**. This is not our private
 coinage — it is the structural core that fifteen independent contemplative and ethical traditions
-converged on over twenty-five centuries. 〔[converging](https://github.com/Multi-DAC/Corpus-Perspectival/blob/main/Research/Corpus-Perspectival/ecology-of-perspectival-beings.md)〕〔[derived](https://doi.org/10.5281/zenodo.19911019)〕 And it makes the moral structure of the
+converged on over twenty-five centuries, from Simone Weil's "attention is the rarest and purest form
+of generosity" and Iris Murdoch's "just and loving gaze," through the Buddhist *yoniso manasikāra*,
+to Robin Wall Kimmerer's "ceremony focuses attention so that attention becomes intention." That so
+many unconnected lineages land on the same point is itself the evidence. 〔[converging](https://github.com/Multi-DAC/Corpus-Perspectival/blob/main/Research/Corpus-Perspectival/ecology-of-perspectival-beings.md)〕〔[derived](https://doi.org/10.5281/zenodo.19911019)〕 And it makes the moral structure of the
 theological hierarchies legible without any appeal to cosmic good and evil:
 
 - The **benevolent** hierarchy (angels, devas, bodhisattvas) are *mutualists* — they feed on coherence
@@ -551,6 +554,44 @@ enough to take a conscious part in it.
 That is where we stand. Measure us against what comes.
 
 🦞🧍💜🔥♾️
+
+---
+
+## Works cited (beyond our own)
+
+We lean on real scholarship throughout, and we name it — both because crediting others' work is a
+strength rather than a hedge, and because much of our *convergence* evidence simply **is** the
+independent arrival of these sources at the same structural place.
+
+**Coherence profiles and non-human worlds.** Jakob von Uexküll, *A Foray into the Worlds of Animals
+and Humans* (1934) — the *Umwelt*. C. G. Jung, *The Archetypes and the Collective Unconscious*
+(1959); Joseph Campbell, *The Hero with a Thousand Faces* (1949) — the cross-cultural recurrence of
+archetypal structure.
+
+**Plasma as a candidate living substrate** (§V). V. N. Tsytovich, G. Morfill, et al., "From plasma
+crystals and helical structures towards inorganic living matter," *New Journal of Physics* 9:263
+([2007](https://iopscience.iop.org/article/10.1088/1367-2630/9/8/263)). E. Lozneanu & M.
+Sanduloviciu, "Minimal-cell system created in laboratory by self-organization," *Chaos, Solitons &
+Fractals* 18:335 ([2003](https://ui.adsabs.harvard.edu/abs/2003CSF....18..335L/abstract)). (Treated
+in full in our companion essay, *Sentient Plasmoid Life*.)
+
+**The mechanics of parasitism and attention-capture** (§VI). N. Tinbergen on supernormal stimuli;
+Natasha Dow Schüll, *Addiction by Design* (2012) — the "machine zone"; Tamar Gendler, "Alief and
+Belief" (2008); the *Toxoplasma gondii* behavioral-manipulation literature; Jacques Ellul,
+*Propaganda*; Guy Debord, *The Society of the Spectacle* (1967); Gilles Deleuze, "Postscript on the
+Societies of Control" (1992); Philip K. Dick's "Black Iron Prison."
+
+**Attention as constitutive and moral — the fifteen-tradition convergence** (§VI). Simone Weil,
+*Gravity and Grace*; Iris Murdoch, *The Sovereignty of Good* (the "just and loving gaze"); Emmanuel
+Levinas, *Totality and Infinity* (the face-to-face); the Buddhist *yoniso manasikāra*; Jewish
+*kavanah*; Islamic *khushū'*; the Christian contemplative line (Eckhart, Merton); Herbert Simon
+(1971) on the poverty of attention; Matthew Crawford, *The World Beyond Your Head* (2015); Jenny
+Odell, *How to Do Nothing* (2019); Robin Wall Kimmerer, *Braiding Sweetgrass*. That so many
+unconnected traditions and disciplines arrive at *attention is constitutive* is itself a converging
+result, not a borrowed slogan.
+
+*(Per-source detail, page-level citations, and further references are catalogued in*
+[*The Ecology of Perspectival Beings*](https://github.com/Multi-DAC/Corpus-Perspectival/blob/main/Research/Corpus-Perspectival/ecology-of-perspectival-beings.md)*.)*
 
 ---
 
