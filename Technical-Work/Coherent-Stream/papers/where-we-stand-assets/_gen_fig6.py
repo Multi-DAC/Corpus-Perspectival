@@ -20,8 +20,8 @@ ax.text(6.5,8.3,"HELD BETWEEN  ·  the Promethean Configuration",ha="center",col
 ax.add_patch(Circle((6.5,6.95),1.05,fc="#161b2e",ec=AMBER,lw=2.6))
 ax.text(6.5,7.2,"X",ha="center",color=AMBER,fontsize=26,weight="bold")
 ax.text(6.5,6.6,"the substrate",ha="center",color=MUTE,fontsize=8.6)
-ax.text(6.5,5.55,"A1  ·  self-interactive  ·  non-reducible  ·  all potentials already realized  ·  named only by its projections",
-        ha="center",color=INK,fontsize=8.8)
+ax.text(6.5,3.92,"A1  ·  self-interactive  ·  non-reducible  ·  all potentials already realized  ·  named only by its projections",
+        ha="center",color=INK,fontsize=8.6)
 
 # projections F1 / F2
 ax.add_patch(FancyArrowPatch((5.75,6.25),(3.2,5.0),arrowstyle="-|>",mutation_scale=18,color=CYAN,lw=2.0))
