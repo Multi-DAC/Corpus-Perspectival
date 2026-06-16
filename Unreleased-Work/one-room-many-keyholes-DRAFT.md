@@ -11,6 +11,16 @@ The human record of the uncanny — folklore, religion, the occult, channeled ma
 
 ---
 
+## Introduction: three reports that should not rhyme
+
+In 1970 a Los Alamos fusion physicist named James Tuck wrote to the U.S. Army asking for the recipe used to make simulated atomic-blast effects — because he wanted to compare the **large atmospheric vortices** they produced to the luminous objects people kept reporting over the mesa. In a Soviet directed-energy range in 1973, a technician stepped outside and watched a **green sphere widen into concentric rings** and fade without a sound. In a Newfoundland bedroom — and a Thai one, and a medieval German one — a sleeper wakes unable to move, certain a presence is pressing on their chest. These reports share no culture, no instrument, no incentive, and no century. They should not rhyme. They do.
+
+The usual responses are two, and both are reflexes. The **credulous** reflex takes each report as a literal encounter with an autonomous being — a craft, a fairy, a demon, a god — and assembles them into a secret history. The **dismissive** reflex takes them as noise: misperception, hoax, pathology, the brain's pattern-hunger dressed in local myth. Each reflex is partly right and wholly insufficient, and each has spent a century unable to explain the other's strongest evidence: the credulous cannot say why the "literal beings" keep changing costume with the culture, and the dismissive cannot say why people with no exposure to the story report its precise structure anyway.
+
+This paper takes a third route, and tries to make it disciplined enough to be wrong. We read the record as the **navigation of one shared configuration-space topology by perspectives of differing bottleneck geometry** — the framework of *The Coherence Principle* and *Corpus Perspectival*. We do not ask "are these reports real?" (the question that traps both reflexes). We ask a structural question: **if the framework is tracking something real, what must the record look like — and does it?** We state the answer in advance, as seven falsifiable predictions, before we present the evidence. Then we audit roughly forty-six channels against them, grade every claim, name every miss, and let the shape decide.
+
+---
+
 ## 1. The pre-registration (stated before the data)
 
 If the framework tracks a real topology — one room, seen through many keyholes — then the anomalous record is *forced* to exhibit the following. Each is falsifiable; we mark, for each, what the two default readings predict instead.
