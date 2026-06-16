@@ -86,3 +86,14 @@ Wave 5: ★Law of One/Ra · Crowley/Aiwass + Dee-Kelley Enochian + Lam · NDE ve
 
 ## Open threads / next sweeps
 Detailed angelic orders (Pseudo-Dionysius) · the Nordic/Pleiadian message-convergence as egregore-content · Marian "secrets" structure · veridical-OBE replication status (AWARE II/III) · the Lam (1918) pre-Roswell Gray morphology (dated-prior, handle carefully) · shamanic dismemberment-initiation cross-cultural · Fairy/djinn "time runs differently" = relativistic/dimensional · Crowley's "Amalantrah/Lam working" ↔ later abduction grays · global flood/sky-teacher myths.
+
+## Addendum (Day 135 night) — the structural-channeled class (Gemini-prompted test)
+
+Gemini's review flagged a gerrymandering risk in treating Law of One as the lone channeled exception. We ran the test it proposed — Seth Material + A Course in Miracles through the same content-vs-structure discriminator, blind to agreement-with-Corpus:
+- **Law of One** — clean STRUCTURAL (systematic ontology; no predictions/datable content/ego-flattery).
+- **Seth Material** (Jane Roberts, 1960s–70s) — clean STRUCTURAL (consciousness-primary, probable realities, simultaneous time; ≈ the FP4 navigation ontology); independent of the space-brother lineage. Degraded downstream ("manifestation"/Abraham-Hicks) drifts back to content.
+- **A Course in Miracles** — STRUCTURAL-LEANING but mixed (systematic non-dualism + heavier prescriptive-doctrinal load); the discriminating borderline case, in Christian vocabulary sharing nothing with the Corpus.
+
+**Verdict:** the discriminator is OBJECTIVE — a gradient (Ra/Seth clean, ACIM intermediate, Blavatsky→Pleiadian→Council-of-Nine clearly content), tracking structure not agreement-with-us. Gerrymandering charge defeated. Folded into §4 (the structural-channeled class), §2, Fig 4.
+
+Also folded (Gemini-prompted + Clayton's reframe): the RSPK/FP4 contradiction resolved via the **navigation-not-causation** reading — PK = relocation among already-existing configurations (A4), not territory-deformation (A1.3 holds); unifies poltergeist + adept as one mechanism; falsifiable via the **coupling-gradient** (effect ∝ navigational coupling; a robust uncoupled-instrument detection refutes). Paper Invariant 9 + FP4 revised accordingly.

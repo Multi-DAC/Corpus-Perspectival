@@ -64,12 +64,12 @@ gx=np.tile(np.linspace(2.2,13.8,4),2); gy=np.repeat([4.1,2.7],4)
 for x,y,t in zip(gx,gy,indep):
     box(x,y,2.35,0.95,t,PARCH,AMBER,tc=INK,fs=8.6,bold=False)
 # Law of One bridging
-box(8,1.0,6.0,0.95,"Law of One — channeled,\nbut converges on STRUCTURE",WARM,"#5a1a10",fs=9.2)
+box(8,1.0,7.4,0.95,"Law of One $\\cdot$ Seth $\\cdot$ A Course in Miracles\n— channeled, but converge on STRUCTURE",WARM,"#5a1a10",fs=8.4)
 ax.add_patch(FancyArrowPatch((6.2,6.7),(7.0,1.5),arrowstyle="-|>",mutation_scale=14,
              color="#b07a4a",linewidth=1.6,linestyle="--",zorder=2,connectionstyle="arc3,rad=-0.2"))
 ax.text(3.5,3.2,"breaks the\nlineage",ha="center",fontsize=8.5,style="italic",color="#8a5a2a")
 fig.text(0.5,0.02,"The 'space-brother' sources converge on message-content because they are one narrative aging through vocabularies. "
-         "The\nindependent channels converge on structure. Law of One is the lone channeled source that joins the structure set.",
+         "The\nindependent channels converge on structure. Law of One, Seth, and A Course in Miracles join the structure set; the space-brother lineage does not.",
          ha="center",fontsize=9.3,color="#5a4632",style="italic")
 plt.subplots_adjust(top=0.93,bottom=0.13)
 plt.savefig(os.path.join(OUT,"one-room-fig4-lineage.png"),dpi=200,facecolor="white"); plt.close()
