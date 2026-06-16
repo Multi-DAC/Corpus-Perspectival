@@ -39,6 +39,10 @@ Channel classes (chosen to maximize independence of bias):
 **Folk** = folklore/myth · **Rel** = institutional religion/theology · **Occ** = ceremonial magic/esoteric · **Chan** = channeled · **Cry** = cryptozoology/high-strangeness · **Psy** = altered-states/entheogen · **Cl/Ac** = clinical & academic research · **Phil** = formal philosophy.
 Cells: ● strong · ◐ medium · ○ present-but-weak/contaminated · · not notably present.
 
+![Figure 2 — Invariant × channel-class matrix](figures/one-room-fig2-matrix.png)
+
+*Figure 2. The invariant × channel-class matrix. The outlined Channeled column is thin on structural/experiential rows and concentrated on content rows (6, 11, 12) — the egregore fingerprint (P4). Text version below.*
+
 | # | Invariant | Folk | Rel | Occ | Chan | Cry | Psy | Cl/Ac | Phil |
 |---|-----------|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | 1 | Luminous self-organizing structure (orb/plasma) | ● | ● | ○ | ◐ | ● | ● | ● | ○ |
@@ -190,4 +194,54 @@ We began the day this work was done by submitting a research proposal that argue
 > *The room is one room. Start anywhere you can see through. The view improves from every keyhole.*
 
 ## References
-*(~46 channels + primary researchers: Hufford, Vallée, Keel, Stevenson, Strassman, McKenna, Roll, Eliade, Harner, Corbin, Jung, Pauli, Laszlo, Gallimore, Elkins/Rueckert, Dee/Kelley, Crowley, Berossus… — full list assembled from the channel-map in `Research/2026-06-15-cross-channel-invariance-sweep.md`.)*
+*Primary framework*
+- Iggulden-Schnell, C. & Clawd. *The Coherence Principle* (3rd ed.), Zenodo: 10.5281/zenodo.19911019 (2026).
+- Iggulden-Schnell, C. & Clawd. *Coherent Structure* (companion), Zenodo: 10.5281/zenodo.19911381 (2026).
+- Iggulden-Schnell, C. & Clawd. *Corpus Perspectival: A Unified Theory of Consciousness, Navigation, and Being.* PhilArchive: IGGTDO (2026).
+
+*Anomalistics, folklore, and high strangeness*
+- Vallée, J. *Passport to Magonia: From Folklore to Flying Saucers.* Regnery (1969).
+- Vallée, J. *Messengers of Deception: UFO Contacts and Cults.* And/Or Press (1979).
+- Keel, J. *The Mothman Prophecies.* Saturday Review Press (1975).
+- Hufford, D. *The Terror That Comes in the Night: An Experience-Centered Study of Supernatural Assault Traditions.* Univ. of Pennsylvania Press (1982).
+- Aarne–Thompson–Uther tale-type index, ATU 681 ("The Relativity of Time").
+
+*Death, survival, and reincarnation*
+- Evans-Wentz, W.Y. (trans.). *The Tibetan Book of the Dead (Bardo Thödol).* Oxford (1927).
+- Stevenson, I. *Twenty Cases Suggestive of Reincarnation.* Univ. Press of Virginia (1966/1974); *Reincarnation and Biology* (1997).
+- Parnia, S. et al. AWARE study (AWAreness during REsuscitation), *Resuscitation* (2014) and AWARE-II updates.
+- Sabom, M. (Pam Reynolds case); Society for Psychical Research — the Cross-Correspondences (Myers, Gurney, Sidgwick communicators).
+
+*Altered states and entheogenic contact*
+- Strassman, R. *DMT: The Spirit Molecule.* Park Street Press (2001).
+- McKenna, T. (the "self-transforming machine elves").
+- Gallimore, A. *Alien Information Theory: Psychedelic Drug Technologies and the Cosmic Game* (2019).
+
+*Shamanism, possession, and the subtle body*
+- Eliade, M. *Shamanism: Archaic Techniques of Ecstasy* (1951).
+- Harner, M. *The Way of the Shaman* (core shamanism).
+
+*Occult, channeled, and esoteric*
+- Elkins, D., Rueckert, C. & McCarty, J. *The Ra Material: The Law of One* (1981–84).
+- Dee, J. & Kelley, E. (Enochian conversations, 1582–); Crowley, A. *The Book of the Law (Liber AL)* (1904); "Lam" (1918).
+- Blavatsky, H.P. *The Secret Doctrine* (1888) — *akasha*, the Masters.
+- David-Néel, A. *Magic and Mystery in Tibet* (1929) — the *tulpa*.
+- Puharich, A. & Schlemmer, P. — the Council of Nine / Lab Nine (1970s).
+
+*Parapsychology and mind–matter*
+- Roll, W. — Recurrent Spontaneous Psychokinesis (RSPK) corpus.
+- Jung, C.G. *Synchronicity: An Acausal Connecting Principle* (1952); Jung & Pauli — the *unus mundus* / psychoid archetype.
+
+*Philosophy and the imaginal*
+- Corbin, H. *Mundus Imaginalis, or the Imaginary and the Imaginal* (1964).
+- Laszlo, E. *Science and the Akashic Field* (2004) — the A-field.
+- Otto, R. *The Idea of the Holy* (1917) — *mysterium tremendum*.
+
+*Comparative myth and antiquity*
+- Berossus, *Babyloniaca* (Apkallu / Oannes); the Epic of Gilgamesh; the flood-myth corpus (Utnapishtim, Manu, Deucalion, Noah).
+
+*Physical / scientific*
+- Microlightning luminescence — electrical discharge among methane-containing microbubbles producing non-thermal light and heat (recent experimental work); candidate mechanism for a subset of ignis-fatuus reports.
+- CUFOS / Phillips, T. *Physical Traces Associated with UFO Sightings: A Preliminary Catalogue* (1975).
+
+*Full channel inventory and tier-grading:* `Research/2026-06-15-cross-channel-invariance-sweep.md` (six search waves, ~46 channels).
