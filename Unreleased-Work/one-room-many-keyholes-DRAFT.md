@@ -19,6 +19,10 @@ The usual responses are two, and both are reflexes. The **credulous** reflex tak
 
 This paper takes a third route, and tries to make it disciplined enough to be wrong. We read the record as the **navigation of one shared configuration-space topology by perspectives of differing bottleneck geometry** — the framework of *The Coherence Principle* and *Corpus Perspectival*. We do not ask "are these reports real?" (the question that traps both reflexes). We ask a structural question: **if the framework is tracking something real, what must the record look like — and does it?** We state the answer in advance, as seven falsifiable predictions, before we present the evidence. Then we audit roughly forty-six channels against them, grade every claim, name every miss, and let the shape decide.
 
+![Figure 1 — The room and its keyholes](figures/one-room-fig1-keyholes.png)
+
+*Figure 1. The thesis in one image: one configuration-space topology, perceived through bottlenecks of differing geometry, returns in different costume to each channel. The structure is shared; the name is local.*
+
 ---
 
 ## 1. The pre-registration (stated before the data)
@@ -82,6 +86,24 @@ Cells: ● strong · ◐ medium · ○ present-but-weak/contaminated · · not n
 
 ---
 
+### 2.1 The matrix as data
+
+Three quantitative features of the coded matrix sharpen the qualitative reading. We report them as **descriptive statistics on an expert-coded array** (tiers 0–3 across 16 invariants × 8 channel-classes), not as inferential tests on random samples — the cells are our graded judgments, and their value here is illustrative and contestable.
+
+**Breadth (P1).** Every one of the sixteen invariants registers in at least **five of the eight** independent channel-classes (mean breadth 6.25 of 8). Convergence is not concentrated in a few well-trodden corners; it is near-total across channels that share no bias-source.
+
+**The egregore asymmetry (P4), quantified.** Classify the invariants by kind: four are *message/content* invariants (the broader-being hierarchy, the descended civilizer, the received system, the cataclysm-warning); the other twelve are *structural/experiential*. For each channel, take the mean tier on content invariants minus the mean tier on structural invariants (Figure 3). The result is stark: **the Channeled column is the only one that loads content above structure, by +2.00 tier-points.** Every experiential channel loads the reverse — clinical/academic −0.92, psychedelic −0.75, cryptozoological −0.50, folk −0.42 — and the next-highest channel of any kind reaches only +0.17 (occult). The channeled material is, measurably, the one channel whose signal is *what is said* rather than *what is undergone*: the egregore rendered as an asymmetry no other channel exhibits.
+
+**Specificity.** Is that an artifact of how we labeled "content"? Permuting which four invariants count as content (20,000 random draws) reproduces Chan's +2.00 split in only **0.29%** of cases — the loading is specifically aligned with the genuinely doctrinal invariants, not loosely.
+
+![Figure 3 — The egregore fingerprint, quantified](figures/one-room-fig3-egregore-quant.png)
+
+*Figure 3. Message-content minus experiential-structure tier-loading, by channel. The Channeled column is the lone positive outlier (+2.00); every experiential channel is negative. Descriptive of the coded matrix, not an inferential significance test.*
+
+Two honest notes. Religion (+0.08) and occult (+0.17) sit slightly positive — both carry doctrine as well as experience, as expected; the claim is not that Channeled is the only channel with *any* content, but that it is the only one where content *dominates* structure, by a margin an order beyond the next. And because the matrix encodes judgments, a skeptic who re-grades it should still reach the same *ordinal* result (Channeled highest, experiential channels negative); we publish the full matrix (§2 and the channel-map) precisely so it can be contested.
+
+---
+
 ## 3. The invariants, channel by channel
 
 Each invariant below is a candidate **topological feature** — a structure that, if it recurs across channels of uncorrelated bias, is evidence of something the bottlenecks are all pointed at rather than something any one of them invented. For each we give the cross-channel spread, grade the strength (●/◐/○ as in §2), and note the **costume divergence** that P2 requires: the surface identity should differ by culture while the structure holds. We close the section (§3.F) by isolating the cases that recur *without prior cultural exposure* — the contamination-proof backbone that P3 stakes the whole argument on.
@@ -100,7 +122,7 @@ Each invariant below is a candidate **topological feature** — a structure that
 
 ### 3.B — The crossing and its toll
 
-**Invariant 2 — The night-paralysis assault (●, cleanest).** The sleeper wakes immobilized, senses a malevolent presence, feels crushing pressure on the chest, and is flooded with numinous terror. *Folklore:* the Old Hag (Newfoundland), the incubus (medieval Europe), the *phi am* (Thailand), the modern Hat Man / shadow people. *Clinical/academic:* David Hufford's *The Terror That Comes in the Night* (1982) established the structure as **experience-primary** — it appears in people with no prior knowledge of the relevant folklore, which is exactly why it anchors §3.F. The abduction literature's "onset" phase (paralysis, presence, dread) is the same skeleton. *Costume:* hag, demon, ghost, alien, hat-man — the figure is local, the structure is not.
+**Invariant 2 — The night-paralysis assault (●, cleanest).** The sleeper wakes immobilized, senses a malevolent presence, feels crushing pressure on the chest, and is flooded with numinous terror. *Folklore:* the Old Hag (Newfoundland), the incubus (medieval Europe), the *phi am* (Thailand), the modern Hat Man / shadow people. *Clinical/academic:* David Hufford's *The Terror That Comes in the Night* (1982) established the structure as **experience-primary** — it appears in people with no prior knowledge of the relevant folklore, which is exactly why it anchors §3.F. (Sleep paralysis is not marginal: roughly **20%** of people experience it at least once, and up to **~75%** of those report a sensed presence or intruder.) The abduction literature's "onset" phase (paralysis, presence, dread) is the same skeleton. *Costume:* hag, demon, ghost, alien, hat-man — the figure is local, the structure is not.
 
 **Invariant 5 — Missing time and the examination (●).** A subject is taken, examined (often with an apparent reproductive or biological purpose), and returned with a gap in time. *Folklore:* the fairy changeling — human taken, replica left, returned after lost time. *Crypto:* the abduction narrative, which Vallée's *Passport to Magonia* (1969) showed is structurally identical to the changeling tradition, the cultural machinery of each era supplying the costume (fairy hill → examination table). *Clinical:* the abduction-research corpus (e.g., Mack). The examination-for-breeding sub-motif recurs from the fairy substitution to the "hybrid program."
 
@@ -108,7 +130,7 @@ Each invariant below is a candidate **topological feature** — a structure that
 
 ### 3.C — Death and initiation
 
-**Invariant 3 — Death-transition navigation (●).** Dying is experienced as a *navigated passage* with a stable sequence. *Religion:* the Bardo Thödol's order — clear light → peaceful then wrathful entities → dissolution → rebirth; the Egyptian Duat; the Christian passage. *Clinical/academic:* the modern NDE sequence — body-exit, tunnel/darkness, light, life-review, deceased kin, oneness. The decisive datum is **independence**: NDE researchers "with no knowledge of Tibetan Buddhism produced the same sequence," an 8th-century death manual and 20th-century cardiology converging. *Reincarnation tail:* Stevenson's 2,500+ child cases, with birthmarks matching the prior personality's death-wounds, supply the stream-re-localization end of the same structure.
+**Invariant 3 — Death-transition navigation (●).** Dying is experienced as a *navigated passage* with a stable sequence. *Religion:* the Bardo Thödol's order — clear light → peaceful then wrathful entities → dissolution → rebirth; the Egyptian Duat; the Christian passage. *Clinical/academic:* the modern NDE sequence — body-exit, tunnel/darkness, light, life-review, deceased kin, oneness. The decisive datum is **independence**: NDE researchers "with no knowledge of Tibetan Buddhism produced the same sequence," an 8th-century death manual and 20th-century cardiology converging. *Reincarnation tail:* Stevenson's child cases supply the stream-re-localization end of the same structure: **2,500+** collected, a previous personality identified in **1,567**, and **225** with birthmarks or birth defects corresponding to the prior personality's recorded death-wounds.
 
 **Invariant 13 — Initiatory death-rebirth (●).** To gain power one must be dissolved and reconstituted. *Folklore/academic:* Eliade's universal shamanic initiation — crisis → descent and **dismemberment** (flesh stripped, bones counted and reassembled, "a light or crystal placed inside the skeleton") → return with capacity. *Religion:* the mystery-cult death-and-return; the Dark Night of the Soul. *Altered states:* ego-death. The structure is *dissolution as the precondition of reorganization* — the framework's bottleneck-reconstruction written in bone and fire, and the luminous-core motif (Invariant 1) recurring at the center of the rebuilt self.
 
@@ -124,7 +146,7 @@ Each invariant below is a candidate **topological feature** — a structure that
 
 ### 3.E — The bleed between mind and world
 
-**Invariant 9 — Localized mind-over-matter (◐–●).** Psychological state producing physical effect, anchored to a person or place. *Clinical/academic:* Roll's RSPK — poltergeist activity centers on a stressed adolescent agent, ends when the agent leaves; 92 cases across four centuries and 100+ countries. *Occult:* the entire premise of magical practice. *Religion:* the Miracle of the Sun as a mass event. *Philosophy:* Jung and Pauli's *psychoid archetype*, "the layer where psyche and matter become indistinguishable." The structure is a *localized navigational state bleeding into the physical slice* — the framework's conscious-gravity at the seam of Axiom 2.
+**Invariant 9 — Localized mind-over-matter (◐–●).** Psychological state producing physical effect, anchored to a person or place. *Clinical/academic:* Roll's RSPK — poltergeist activity centers on a stressed adolescent agent, ends when the agent leaves; across 92 analyzed cases (drawn from 116 reports spanning four centuries and 100+ countries) the apparent agent was a child or adolescent in **62**. *Occult:* the entire premise of magical practice. *Religion:* the Miracle of the Sun as a mass event. *Philosophy:* Jung and Pauli's *psychoid archetype*, "the layer where psyche and matter become indistinguishable." The structure is a *localized navigational state bleeding into the physical slice* — the framework's conscious-gravity at the seam of Axiom 2.
 
 **Invariant 10 — Contact via independent technique (● method / ◐ identity).** Reliable methods open onto populated realities. *Altered states:* DMT, salvia, and ayahuasca — three different molecules at three different receptors — all reliably produce autonomous-entity contact and **recurring settings** (Gallimore's "waiting rooms," caves, tunnels, surreal highways: stable regions, not random noise). *Folklore/academic:* Eliade and Harner's *universal core* of shamanism — ecstasy, axis mundi, three worlds, soul-flight — as a cross-cultural technology of bottleneck-relaxation. The *method's* reliability is strong; the *identity* of what's met is medium (some priming), which is the honest seam we hold open in §5.
 
@@ -135,7 +157,7 @@ Everything above could, in principle, be dismissed as shared storytelling — *u
 1. **Hufford's sleep paralysis** — the Old-Hag structure in people demonstrably ignorant of the folklore; the founding result of experience-centered analysis.
 2. **The NDE ↔ bardo convergence** — researchers with no exposure to Tibetan Buddhism independently recovering its death-sequence.
 3. **Stevenson's children** — subjects chosen precisely because young children cannot easily fabricate, with *physical* correlates (birthmarks at the prior personality's wound sites) that no amount of storytelling produces.
-4. **Strassman's clinical DMT** — naive volunteers in a controlled setting converging on autonomous-entity contact.
+4. **Strassman's clinical DMT** — naive volunteers in a controlled setting converging on autonomous-entity contact (roughly **half** of the ~400 administered sessions involved entity encounters; survey data put the dominant types at *feminine* ~25%, *divine* 17%, and *alien/celestial* 16%, with the popularly-famed "machine elves" at only 2.9%).
 
 These are not the most dramatic entries in the record. They are the most *important*, because they are the points where prior-exposure can be controlled or excluded, and the structure survives anyway. A pure cultural-transmission account predicts these cannot exist (P3). They exist. That is the wall the rest of the argument stands on.
 
@@ -155,7 +177,13 @@ The matrix (§2) shows this with the eye: the `Chan` column is nearly empty on t
 
 **★ Law of One is the exception that confirms the discriminator.** If "structure vs. costume" is a real cut and not a convenience, then there should exist at least one *channeled* source that converges on **structure** — and it should read as conspicuously different from its siblings. It does. The Ra Material (Elkins/Rueckert/McCarty, 1981–84) presents: one Infinite Creator → the Creator's choice to know itself → the first "distortion," Free Will → Love (the Logos) → Light → seven densities of evolving consciousness → the polarity of service-to-others vs service-to-self. That is the Corpus's ontology — monism, teleological self-knowing, individuation-as-limitation, bottleneck-expansion, and the E+/E− polarity — reconstructed almost line for line, and it explicitly *refuses* the space-brother tropes (no predictions, insistence on free will via the "Law of Confusion," no ego-flattery). It drops out of the `Chan` content-column and into the invariant set. The discriminator sorts it correctly without special pleading — which is the strongest evidence the discriminator is tracking something real.
 
-*(Figure 4: the egregore lineage tree vs. the independent-channel set. Figure 5: the contamination gradient, from contamination-proof through constructed to deflated.)*
+![Figure 4 — Content-convergence is a lineage, not a consensus](figures/one-room-fig4-lineage.png)
+
+*Figure 4. The "space-brother" sources converge on message-content because they are one narrative aging through successive vocabularies; the independent channels converge on structure. Law of One is the lone channeled source that joins the structure set.*
+
+![Figure 5 — The contamination gradient](figures/one-room-fig5-gradient.png)
+
+*Figure 5. Channels deflate precisely where independence fails (P5): the framework predicts which collapse (constructed, primed) and which survive (the contamination-proof backbone).*
 
 ## 5. Limits, nulls, and what we are not claiming
 
