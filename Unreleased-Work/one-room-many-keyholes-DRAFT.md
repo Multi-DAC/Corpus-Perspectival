@@ -25,6 +25,26 @@ This paper takes a third route, and tries to make it disciplined enough to be wr
 
 ---
 
+## The framework: the room and its keyholes
+
+The argument rests on a prior framework — the one developed across *The Coherence Principle* and *Corpus Perspectival*. A reader meeting it here needs only its spine, and the spine is this.
+
+Begin with one claim, which is the whole foundation: **there is a single substrate, and it is of the nature of consciousness** (the framework's first axiom, A1). This is not "mind over matter." It is something prior to that split — a neutral ground that does not factor into thinking-stuff and extended-stuff, because those are two ways it is *perceived*, not two things it is *made of*. Call it the room. Everything that follows is the room, seen from somewhere inside it.
+
+A perspective inside the room is a **stream** (A2). A stream is not a separate substance; it is the room localized — a whirlpool is not water added to the river but a pattern the river is doing. What makes a stream a particular *someone* is its **bottleneck**: the finite set of dimensions it can perceive, out of the room's unbounded set. Your eyes take a sliver of the electromagnetic; your concepts take a sliver of the thinkable; the rest is there, unperceived. The bottleneck is not a defect. It is what makes you *a* perspective rather than the whole — and so what makes experience, and love, and choice possible at all. To be someone is to not-see almost everything.
+
+The framework calls the unseen remainder your **observational null space** (corollary C8), and it proves you can never close it from the inside. Refine your instrument and you sharpen what it already sees; you do not add the dimensions it structurally omits. Only a *different* bottleneck — another stream, another instrument, another tradition — sees into your blind spot. *This is why truth needs more than one keyhole.* Hold that sentence; the entire paper is its consequence.
+
+How does a stream move? By **conscious gravity** (A3): attention, intention, and belief do not reshape the room — the room's configurations are fixed — but they reshape the *navigator*, carving paths of least resistance toward some configurations and away from others. One consequence will recur throughout: grasping, contracted attention generates a *restoring force* — the harder you fixate on a target, the more you push it away — while open, receptive attention lets the room's own structure draw you in. The mystics who said *seek without grasping* were not moralizing. They were reporting a mechanic.
+
+Two last pieces. First, the framework's stance on what is real: a configuration navigated by some stream **is real for that stream**, even when it is incoherent to another's instruments — a dream, a vision, a god. So we hold every report in a **dual frame**: literal (an autonomous being was met) and archetypal (a stable feature of the room's structure was met), *both valid at once* — because under A1 an archetype is not "merely psychological," it is a real topological feature of the one substrate. We do not always have to choose between the two readings; often we cannot, and the framework says so plainly.
+
+Second, the operational heart — the **Coherence Principle** itself: coherent multi-scale systems that hold structural superposition until *informed measurement* collapses them outperform systems that collapse early or incoherently (theorem T4 makes the measurement-event load-bearing). A mind, a cell, a civilization, a séance — each is such a system, and each becomes determinate only when measured, including when it measures itself.
+
+That is the room. The rest of the paper walks its keyholes — the folklore, the clinic, the ritual, the trip — and asks one question of what we find through them: is it the furniture of a single room, or the noise of many? The framework makes a precise prediction about the answer, and we turn to it now.
+
+---
+
 ## 1. The pre-registration (stated before the data)
 
 If the framework tracks a real topology — one room, seen through many keyholes — then the anomalous record is *forced* to exhibit the following. Each is falsifiable; we mark, for each, what the two default readings predict instead.
@@ -90,13 +110,13 @@ Cells: ● strong · ◐ medium · ○ present-but-weak/contaminated · · not n
 
 ### 2.1 The matrix as data
 
-Three quantitative features of the coded matrix sharpen the qualitative reading. We report them as **descriptive statistics on an expert-coded array** (tiers 0–3 across 16 invariants × 8 channel-classes), not as inferential tests on random samples — the cells are our graded judgments, and their value here is illustrative and contestable.
+Two features of the coded matrix sharpen the qualitative reading — offered as an **illustrative tally, not a statistical test.** The cells are our graded judgments; the matrix's job is to make a pattern *legible*, not to certify it. The paper's empirical weight sits elsewhere: on the external studies cited throughout — sleep-paralysis epidemiology, Stevenson's reincarnation corpus, the AWARE cardiac-arrest trial, the Ganzfeld and RNG meta-analyses, Project Hessdalen — and on the falsifiable predictions of §8 and §8.5. Never on numbers computed from our own coding.
 
 **Breadth (P1).** Every one of the sixteen invariants registers in at least **five of the eight** independent channel-classes (mean breadth 6.25 of 8). Convergence is not concentrated in a few well-trodden corners; it is near-total across channels that share no bias-source.
 
-**The egregore asymmetry (P4), quantified.** Classify the invariants by kind: four are *message/content* invariants (the broader-being hierarchy, the descended civilizer, the received system, the cataclysm-warning); the other twelve are *structural/experiential*. For each channel, take the mean tier on content invariants minus the mean tier on structural invariants (Figure 3). The result is stark: **the Channeled column is the only one that loads content above structure, by +2.00 tier-points.** Every experiential channel loads the reverse — clinical/academic −0.92, psychedelic −0.75, cryptozoological −0.50, folk −0.42 — and the next-highest channel of any kind reaches only +0.17 (occult). The channeled material is, measurably, the one channel whose signal is *what is said* rather than *what is undergone*: the egregore rendered as an asymmetry no other channel exhibits.
+**The egregore asymmetry (P4).** Classify the invariants by kind: four are *message/content* invariants (the broader-being hierarchy, the descended civilizer, the received system, the cataclysm-warning); the other twelve are *structural/experiential*. For each channel, take the mean tier on content invariants minus the mean tier on structural invariants (Figure 3). The result is stark: **the Channeled column is the only one that loads content above structure, by +2.00 tier-points.** Every experiential channel loads the reverse — clinical/academic −0.92, psychedelic −0.75, cryptozoological −0.50, folk −0.42 — and the next-highest channel of any kind reaches only +0.17 (occult). The channeled material is, measurably, the one channel whose signal is *what is said* rather than *what is undergone*: the egregore rendered as an asymmetry no other channel exhibits.
 
-**Specificity.** Is that an artifact of how we labeled "content"? Permuting which four invariants count as content (20,000 random draws) reproduces Chan's +2.00 split in only **0.29%** of cases — the loading is specifically aligned with the genuinely doctrinal invariants, not loosely.
+**Why we stop here.** We deliberately run *no* significance test on these numbers. A permutation test on a matrix we coded ourselves would be exactly the borrowed scientism this paper warns against — the costume of inference draped over our own judgments. The asymmetry above is a *visible feature of the tally*, published in full so it can be re-graded and contested; it is not a statistical claim, and we will not dress it as one.
 
 ![Figure 3 — The egregore fingerprint, quantified](figures/one-room-fig3-egregore-quant.png)
 
