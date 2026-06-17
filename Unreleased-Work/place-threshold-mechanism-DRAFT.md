@@ -23,7 +23,7 @@ working parts are standard physics — Derrick's theorem, chameleon/symmetron sc
 magnetohydrodynamics, magnetic-helicity conservation. The framework supplies the *setting* (a light scalar, a
 dark-energy scale) and the motivation; it does not carry the load-bearing steps. The answer it points to is a
 single object — **a coherent-plasma-stabilized defect of a screened, dark-energy-scale scalar field** — and we
-place it on every axis with eleven computed, individually-graded results:
+place it on every axis with twelve computed, individually-graded results:
 
 - **It can exist.** Derrick's theorem forbids a bare lump of the radion field; but a coherent plasma (a gauged
   soliton) evades the no-go, existing exactly when a virial balance E_EM = E_grad + 3E_pot holds. *Plasma is
@@ -232,8 +232,10 @@ In other words the soliton's own preferred size *is* the wall scale, five to sev
 the macroscopic carrier of §5. That is exactly as it must be: a single-field configuration can only know about
 its own field's length, so a macroscopic extent has to come from somewhere else — the carrier's coherence
 domain (§3). Had the preferred size instead landed at metres, it would have *contradicted* the
-field-sets-the-wall / carrier-sets-the-size split. It doesn't; the two-scale structure quietly checks out. What matters for the argument is settled: the bare lump was forbidden, and a plasma
-makes it not merely allowed but bound.
+field-sets-the-wall / carrier-sets-the-size split. It doesn't; the two-scale structure quietly checks out.
+
+Stepping back, §2's load-bearing result is simple: the bare lump was forbidden, and a coherent plasma makes
+the localized portal not merely allowed but *bound*.
 
 ![**Fig. 2 — The gauged dilatonic Q-ball, exhibited (R12).** (a) The energy E(R) diverges at both ends — the charge-kinetic binding term (~Q²/R³) stops dispersal, the electromagnetic term (~Q²/R) stops collapse — leaving a genuine soliton minimum. (b) The soliton energy grows linearly with charge, E ∝ Q^{1.1}, the Q-ball stability signature. (c) The radion sags (σ_in) and lowers the soliton energy by up to ~21 % as the dilatonic coupling a increases — the dark-energy-scale field actively binds the configuration.](figures/portal-fig6-soliton.png)
 
