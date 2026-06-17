@@ -462,3 +462,23 @@ actual profile was exhibited. This closes that gap numerically.
 - **NET:** R4 grade moves from *strong candidate (route real, solution not exhibited)* → **soliton exhibited
   (thin-wall), dilatonically bound, Q-ball-stable, preferred-scale**. The portal's EXISTENCE axis is now
   concrete, not just energetically-permitted. 🦞🧍💜🔥♾️
+
+## Result 12 — addendum: the PREFERRED SCALE resolved = the WALL scale, not the carrier (consistency win for R6; creative drive, Day 136 night)
+R12 found an unpredicted feature — E/Q has a minimum near Q≈20, a *preferred* soliton charge/scale. The essay
+hedged it as "an open computation." Resolved (`portal-preferred-scale-resolution-2026-06-16.py`):
+- **Computed:** Q*=20, R*(Q*)=1.56/m_field → mapping through m=2.3 meV (1/m=0.086 mm wall thickness) gives
+  **R*(Q*) = 0.134 mm = 1.6× the wall thickness.** Sub-mm, the WALL scale.
+- **Stacked vs every length** (warm carrier B=10G n=1e20 T=5eV 20%): ~80× the Debye length (1.66 µm); 1.6× the
+  wall (0.086 mm); **10⁴× below the Lundquist S=1 threshold (1.09 m); 10⁵–10⁷× below the §5 carrier (10–1000 m).**
+- **Sensitivity (the real test):** across 27 toy-constant combos (S₁,U₀,c_em ×0.3–3), R*(Q*)∈[0.058, 0.287] mm
+  — ALWAYS sub-mm, max 3.4× the wall, never metres. The "wall-scale" conclusion is robust to the model's
+  free constants.
+- **★ Why this is a CONSISTENCY WIN, not a curio:** the single-field soliton's own preferred size is the
+  field's wall scale — it *cannot* predict the macroscopic size, because a single field only knows its own
+  Compton length. That is precisely R6's two-scale split (field→wall, carrier→size). Had the preferred scale
+  landed macroscopic, it would have CONTRADICTED R6. It lands at the wall, 5–7 orders below the carrier →
+  the two-scale structure validates itself. The essay §2 hedge is upgraded to this resolved statement.
+- **Meta-pattern (LC44/LC35 kin — candidate):** *a sub-mechanism's characteristic scale is the scale of its
+  OWN physics, never the emergent composite scale; demanding one mechanism set both is the scale-conflation
+  error* (exactly the 40-orders "gap" R6 dissolved). Distinct roles → distinct scales. Possible LC44 extension
+  rather than a new LC. 🦞🧍💜🔥♾️

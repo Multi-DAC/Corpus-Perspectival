@@ -223,11 +223,16 @@ coupled-field-equation profile is the next computation.**)
 And the radion is not a bystander in this. When we let the radion field respond, it **sags** inside the
 configuration in just the way that lowers the electromagnetic energy — and that lowering is real, up to about
 20 % of the soliton's energy at moderate coupling. The dark-energy-scale field actively *binds* the portal; it
-is a participant, not a backdrop. One more feature appears, which we flag as preliminary rather than lean on:
-in the model's own units the binding is most efficient at a particular charge, hinting that the configuration
-may have a *characteristic* scale rather than an arbitrary one (Fig. 6c). Whether that dimensionless optimum
-maps to a real physical size — and whether it agrees with the carrier scale of §5 — is an open computation, not
-a result we claim here. What matters for the argument is settled: the bare lump was forbidden, and a plasma
+is a participant, not a backdrop. One more feature appears, and it turns out to be a quiet consistency check on
+the whole argument. In the model's own units the binding is most efficient at a particular charge (Fig. 6c) —
+the configuration has a *preferred* size, not an arbitrary one. Map that optimum through the dark-energy mass
+and it lands at about 1.6 times the wall thickness: **sub-millimetre**, and robustly so — across a wide sweep
+of the model's free constants it never strays more than a few-fold from the wall, and never approaches metres.
+In other words the soliton's own preferred size *is* the wall scale, five to seven orders of magnitude below
+the macroscopic carrier of §5. That is exactly as it must be: a single-field configuration can only know about
+its own field's length, so a macroscopic extent has to come from somewhere else — the carrier's coherence
+domain (§3). Had the preferred size instead landed at metres, it would have *contradicted* the
+field-sets-the-wall / carrier-sets-the-size split. It doesn't; the two-scale structure quietly checks out. What matters for the argument is settled: the bare lump was forbidden, and a plasma
 makes it not merely allowed but bound.
 
 ![**Fig. 6 — The gauged dilatonic Q-ball, exhibited (R12).** (a) The energy E(R) diverges at both ends — the charge-kinetic binding term (~Q²/R³) stops dispersal, the electromagnetic term (~Q²/R) stops collapse — leaving a genuine soliton minimum. (b) The soliton energy grows linearly with charge, E ∝ Q^{1.1}, the Q-ball stability signature. (c) The radion sags (σ_in) and lowers the soliton energy by up to ~21 % as the dilatonic coupling a increases — the dark-energy-scale field actively binds the configuration.](figures/portal-fig6-soliton.png)
