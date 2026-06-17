@@ -1,4 +1,6 @@
-# Place-Threshold Phenomena as Plasma-Stabilized Dark-Energy-Scale Defects: A Falsifiable Mechanism and Its Signatures
+# Where the Ordinary Rules Go Thin
+
+### *Window areas as plasma-stabilized dark-energy-scale defects — a falsifiable mechanism, and how to test it*
 
 *DRAFT — Day 136, 2026-06-16, Clayton + Clawd. Expansive essay register with a rigorous physics core
 integrated, not diluted — we don't talk down to the reader; if we have the physics, the physics is in.
@@ -22,10 +24,14 @@ thin.**
 This essay takes that seriously and asks one disciplined question: *if* there is a real, place-fixed,
 instrument-surviving residual at these sites — something not exhausted by ordinary geology and the universal
 quirks of human perception — what is the **least-exotic physics** that could produce it? We answer
-constructively, inside a framework we already use for dark energy: a five-dimensional warped geometry
-(Randall–Sundrum class) with a self-tuning dark-energy sector. The answer is a single object —
-**a coherent-plasma-stabilized defect of a screened, dark-energy-scale scalar field** — and we place it on
-every axis with eleven computed, individually-graded results:
+constructively inside a *candidate* framework for dark energy — a five-dimensional warped geometry
+(Randall–Sundrum class) with a self-tuning dark-energy sector — and one thing must be said up front, because it
+is the reader's first fair objection: **you do not have to buy that framework to weigh this mechanism.** The
+working parts are standard physics — Derrick's theorem, chameleon/symmetron screening, force-free
+magnetohydrodynamics, magnetic-helicity conservation. The framework supplies the *setting* (a light scalar, a
+dark-energy scale) and the motivation; it does not carry the load-bearing steps. The answer it points to is a
+single object — **a coherent-plasma-stabilized defect of a screened, dark-energy-scale scalar field** — and we
+place it on every axis with eleven computed, individually-graded results:
 
 - **It can exist.** Derrick's theorem forbids a bare lump of the radion field; but a coherent plasma (a gauged
   soliton) evades the no-go, existing exactly when a virial balance E_EM = E_grad + 3E_pot holds. *Plasma is
@@ -54,53 +60,11 @@ read, unmistakably, as unusual plasma activity of a very particular kind.
 
 ---
 
-## How the essay is built
-
-> *Each section carries its physics in-line and grades it as it goes. Grades: **derived** = a computed,
-> standard, robust step; **strong candidate** = real physics, not yet an exhibited closed-form solution;
-> **beyond-core** = honestly outside the base framework (flagged, not smuggled); **quarantined** = named so
-> the reader can see the boundary, never load-bearing. The two program sections — §7 (generate it) and §8
-> (find it) — are the made arm and the found arm of one experimental project, and they are the point of the
-> essay as much as the mechanism is.*
-
-- **§1 — The places that keep doing the strange thing.** The window-area record, presented in full and taken
-  seriously: the recurring sites, the cross-continental independence, the shared signature. The two honest
-  deflations (ordinary geology; the universal human reporting instrument) granted their full force — and then
-  the bar they set: a place-fixed, instrument-surviving residual. *(Frame + phenomenology.)*
-- **§2 — Why a portal can exist at all.** Derrick's no-go on the bare radion lump (R1) → the plasma evasion and
-  the virial existence condition (R2/R4) → the extended-electrodynamics interior (the EED scalar-longitudinal
-  sector). *Plasma promoted from signature to structural necessity.* *(Derived core.)*
-- **§3 — What scale it lives at, and why it's nearly free.** Field-identification (R5) → the dark-energy scale
-  2.3 meV (R7) → the two-scale resolution: the field sets the wall, the plasma's coherence domain sets the
-  size (R6) → energy is not the barrier; coherence is (R7).
-- **§4 — Why it's tied to a place.** The fifth-force window forces screening (R8) → the chameleon/symmetron
-  identity → place-fixedness *derived* from density-unscreening → the hierarchy (R9): the screened scalar σ is
-  the structural wall field; the extended-ED scalar is its wall-localized electromagnetic signature.
-  *(Strong candidate; the beyond-core boundary stated plainly.)*
-- **§5 — Why it glows yet lasts, and what feeds it.** The Lundquist maintenance threshold S ≳ 1 and selective
-  decay (R10) — which *derives* glows-yet-persists — then the helicity source: a self-organized double layer
-  (R11), validated against laboratory plasma rings, retrodicting the flaring and predicting particle
-  acceleration. *(Derived margins; strong-candidate source.)*
-- **§6 — How to kill it.** The kill-condition table: every load-bearing claim paired with the measurement that
-  would refute it. The spine of the essay's credibility.
-- **§7 — Making one: the carrier at a ladder of scales.** The constructive program. The force-free,
-  helicity-sustained plasma is *already* a laboratory object (spheromaks / coaxial helicity injection) — a
-  sub-scale carrier we validated the mechanism against. The ladder: generate it small, then ask at each rung
-  what maintenance (S) and what helicity source the next size demands. Capstone: the **window-area in
-  miniature** — a force-free carrier in a low-density (unscreening) chamber with a co-located scalar /
-  fifth-force probe: the whole mechanism on a bench. *(The "generate the condition at scale" program.)*
-- **§8 — Finding one: where nature already meets the condition.** The survey program, and the link back to
-  *One Room*. The discriminator is not "plasma" but a four-part signature: **force-free / helical topology
-  (J ∥ B, nonzero magnetic helicity) + above-threshold persistence (S ≳ 1) + intermittent flaring +
-  co-located screening geology.** Survey the window-area catalogue for *that*. This is a falsifiable
-  refinement of *One Room*'s Invariant 1 (plasma = the physical-plane channel): we now say what *kind* of
-  plasma and predict its topology. *(The "locations naturally present / unusual plasma activity" program.)*
-- **§9 — Where this sits, and what we don't claim.** Relation to core Meridian (the cuscuton is zero-DOF; the
-  screened scalar and the EED sector are predicted-new / beyond-core), the Coherence-Principle reading
-  (Condition 4, dynamic maintenance — the carrier self-tunes the way the cosmos does), and the honest limits.
-- **Appendix A — The quarantine.** The provenance tier deliberately kept out of the argument (propulsion-patent
-  / zero-point-energy / unverified-program claims), named so the reader can see the boundary is policed.
-- **Appendix B — The computations.** The symbolic and numerical steps behind R1, R4, R9, R10, R11, reproducible.
+> *A note on grades. Every physics step below is graded inline as it goes: **derived** = a computed, standard,
+> robust step; **strong candidate** = real physics, not yet an exhibited closed-form solution; **beyond-core**
+> = honestly outside the base framework (flagged, not smuggled); **quarantined** = named so the boundary is
+> visible, never load-bearing. The two program sections — §7 (generate it) and §8 (find it) — are the made arm
+> and the found arm of one experimental project, and they matter as much as the mechanism.*
 
 ---
 
@@ -132,12 +96,16 @@ global pattern. The specifics differ; the *shape* repeats: a fixed site, recurre
 local fields, instrument disturbance, and — in the testimonial layer we will deliberately bracket — the
 subjective sense that the ordinary rules have gone thin there.
 
-The cross-continental, cross-cultural independence matters, and it is the one evidential move in the record we
-will lean on (carefully, in §1.2): when geographically and culturally isolated populations who could not have
-transmitted the report to one another converge on *the same structural phenomenon*, the convergence resists
-the easiest dismissal — that it is a single story diffusing through a shared culture. It does not yet prove a
-physical anomaly (the next section explains why), but it survives the *transmission* objection, and that is
-enough to make the physical question worth asking.
+The cross-continental independence matters — but it is essential to be precise about *what* it buys, because
+it is less than it first appears. When culturally isolated populations converge on the same structural
+phenomenon, the convergence does survive the *transmission* objection: it is not one story diffusing through a
+shared culture. But it does **not**, by itself, establish an anomaly — and the reason is supplied by our own
+first deflation below. Ordinary plasma physics is universal, so independent cultures living near unusual
+geology and atmospheric-electrical activity would report luminous-lights-at-a-place *independently, with
+nothing anomalous occurring at all.* So the convergence buys exactly one thing, and we will not ask it to buy
+more: that there is real, recurrent plasma at these sites, worth measuring. The anomaly — if there is one — has
+to be carried by the *signature* of that plasma (§8), never by the convergence of testimony about it. Keeping
+those two separate is the spine of the whole essay.
 
 We call this organizing feature the **place-threshold modality**. "Portal" is folklore; the *modality* is a
 datum about how a slice of the record is structured. This essay is about the modality — about whether it has a
@@ -236,12 +204,15 @@ stable exactly when
 
 ![**Fig. 1 — Derrick's no-go, and the plasma evasion (R1, R4).** ε(λ) for the bare radion lump (monotone collapse, no stationary point) versus the plasma-stabilized configuration (a genuine minimum at the virial point E_EM = E_grad + 3E_pot).](figures/portal-fig1-derrick.png)
 
-and with E_EM = 0 it collapses back to Derrick's no-go. The consequence is the first real turn of the essay:
-**plasma is not a side effect of a portal — it is the structural reason a localized portal can exist at all.**
-The lights are not what the portal emits; they are what holds the portal up against collapse. This single move
-re-reads the entire "luminous plasma" signature of the window-area record as a *necessity* rather than a
-coincidence. (**Grade: derived for the existence condition; the explicit soliton is exhibited in a thin-wall
-model just below.**)
+and with E_EM = 0 it collapses back to Derrick's no-go. The consequence reframes the lights:
+**plasma is not a side effect of a portal — it is a sufficient and natural stabilizer against the collapse,
+and the one the record keeps pointing at.** It is not the *only* conceivable evasion — a conserved charge can
+in principle be carried other ways (a defect bound to the inter-brane wall, higher-derivative terms) — but
+plasma is the route that costs no new ingredients and that the phenomenology already hands us. On this reading
+the lights are not what the portal emits; they are part of what holds it up — which turns the entire "luminous
+plasma" signature of the window-area record from a coincidence into a structural expectation. (**Grade:
+derived for the existence condition; plasma shown sufficient, not proven uniquely necessary; the explicit
+soliton is exhibited in a thin-wall model just below.**)
 
 We can do better than the energetics balance, and the attempt taught us something. Build the configuration
 explicitly and minimize its energy, and a first naïve version *fails* in an instructive way: if you model the
@@ -261,19 +232,22 @@ coupled-field-equation profile is the next computation.**)
 And the radion is not a bystander in this. When we let the radion field respond, it **sags** inside the
 configuration in just the way that lowers the electromagnetic energy — and that lowering is real, up to about
 20 % of the soliton's energy at moderate coupling. The dark-energy-scale field actively *binds* the portal; it
-is a participant, not a backdrop. One more feature falls out unbidden: the binding is most efficient at a
-particular charge, so the mechanism predicts a **preferred soliton scale** rather than an arbitrary one — a
-characteristic size set by the balance between the carriers' binding and the electromagnetic cost (Fig. 6).
+is a participant, not a backdrop. One more feature appears, which we flag as preliminary rather than lean on:
+in the model's own units the binding is most efficient at a particular charge, hinting that the configuration
+may have a *characteristic* scale rather than an arbitrary one (Fig. 6c). Whether that dimensionless optimum
+maps to a real physical size — and whether it agrees with the carrier scale of §5 — is an open computation, not
+a result we claim here.
 
 ![**Fig. 6 — The gauged dilatonic Q-ball, exhibited (R12).** (a) The energy E(R) diverges at both ends — the charge-kinetic binding term (~Q²/R³) stops dispersal, the electromagnetic term (~Q²/R) stops collapse — leaving a genuine soliton minimum. (b) The soliton energy grows linearly with charge, E ∝ Q^{1.1}, the Q-ball stability signature. (c) The radion sags (σ_in) and lowers the soliton energy by up to ~21 % as the dilatonic coupling a increases — the dark-energy-scale field actively binds the configuration.](figures/portal-fig6-soliton.png)
 
-There is a bonus that will matter in §4 and §7. The radion couples to electromagnetism *dilatonically* — as
-e^{aσ}F² — which means that inside the configuration the effective electromagnetic theory has a
-position-dependent coupling. In that regime the usual clean split into purely transverse light breaks down and
-**longitudinal / scalar electromagnetic modes become physical** — the domain studied under the name
-*extended* (gauge-free) *electrodynamics*. We treat this carefully and on a short leash (the legitimate,
-peer-reviewed core only; see the quarantine, Appendix A), but it gives the portal interior a distinctive,
-in-principle-measurable electromagnetic character we will use as a laboratory signature.
+A more speculative thread, which we flag as the weakest link and lean on least. The radion couples to
+electromagnetism *dilatonically* (as e^{aσ}F²), so inside the configuration the effective electromagnetic
+coupling is position-dependent and the clean split into purely transverse light can break down. There is a
+peer-reviewed formalism for this regime — gauge-free "extended electrodynamics" — but the name is also
+trafficked by a fringe literature, so Appendix A draws a firm line between the legitimate core and the
+marketing. It *may* give the portal interior a distinctive electromagnetic signature, and it suggests one more
+laboratory probe in §7. But this is the most contingent claim in the essay, and **nothing load-bearing depends
+on it** — if extended electrodynamics turns out to be the wrong frame, the mechanism is untouched.
 
 ## §3 — What scale it lives at, and why it's nearly free
 
@@ -294,11 +268,16 @@ milli-electronvolt is not an arbitrary number. It is the **dark-energy scale**:
 
 ![**Fig. 2 — The scale problem is field identification (R5, R7).** Wall thickness ℏc/mc² versus field mass: the radion (sub-nuclear wall, excluded for a macroscopic portal) versus the meV dark-energy modulus (0.085 mm wall, macroscopic), with the (ρ_Λ)^{1/4} = 2.3 meV line and the sub-mm macroscopic threshold.](figures/portal-fig2-scale.png)
 
-the energy scale of the cosmological constant, the same scale the framework's self-tuning sector already
-maintains to run cosmic acceleration. The portal's wall field is forced into the dark-energy sector — not by
-hand, but by the requirement that the wall be thin enough for a macroscopic object and thick enough to be
-macroscopic physics rather than particle physics. (**Grade: derived — the wall-thickness arithmetic is exact;
-the coincidence with (ρ_Λ)^{1/4} is the essay's first "the framework already lives here" moment.**)
+the energy scale of the cosmological constant. Here honesty requires care, because the input — a sub-millimetre
+wall — was a *plausibility* choice, not a forced one, so let us state the sensitivity plainly rather than sell
+a knife-edge coincidence. A wall field's mass scales inversely with its thickness, and across the *entire*
+plausible macroscopic range — from roughly ten microns to a few millimetres — the implied mass lands in the
+**0.1–10 meV decade**. That decade *is* the dark-energy scale. The point is not that the arithmetic pins
+exactly 2.3 meV; it is that *any* wall thin enough to be macroscopic yet thick enough to be macroscopic physics
+puts you in the dark-energy sector — the same scale Meridian's self-tuning already maintains. The match is a
+decade-wide basin, not a single point, which is precisely what makes it worth taking seriously rather than
+dismissing as a fluke. (**Grade: the wall-thickness arithmetic is exact; the dark-energy-scale match is robust
+across the plausible wall range, while the specific 2.3 meV value tracks the chosen wall thickness.**)
 
 But if the field is so light, what sets the *size* of the region? Not the field — and this is the resolution
 of the apparent 40-orders-of-magnitude problem. The error is assuming one field must set *both* the wall
@@ -335,8 +314,8 @@ dark-energy field — the **chameleon** (Khoury–Weltman 2004) and **symmetron*
 models — and it sits, by construction, at the dark-energy scale we were already forced to. (**Grade: derived
 that screening is *required*; strong, well-motivated candidate for the chameleon/symmetron identity.**)
 
-The payoff is the deepest point in the essay. A screened field **activates where the local density unscreens
-it** — and that *derives the place-fixedness*. The "place" in "place-threshold" stops being a brute fact or a
+The payoff is the part that makes the mechanism more than a curiosity. A screened field **activates where the
+local density unscreens it** — and that *derives the place-fixedness*. The "place" in "place-threshold" stops being a brute fact or a
 psychological projection and becomes a **density/geometry condition you can map**: the field switches on in
 locally low-density regions, near particular mass-distribution geometries and sharp density interfaces, and
 stays dormant everywhere else. Window areas would be place-fixed for the same reason a chameleon is dark in the
@@ -447,7 +426,7 @@ measurement or archival study, developed in §7 and §8.
 
 | Load-bearing claim | What would falsify it |
 |---|---|
-| Plasma is *structurally necessary* (a place-fixed portal cannot exist without a coherent EM/plasma structure) — R2/R4 | A well-documented place-fixed window-area phenomenon with **no** plasma/EM signature whatsoever. |
+| Plasma is the *expected* stabilizer (a place-fixed portal should co-occur with a coherent EM/plasma structure) — R2/R4 | A well-documented place-fixed window-area phenomenon with **no** plasma/EM signature whatsoever. |
 | The carrier is a **force-free, helical** plasma (J ∥ B, nonzero magnetic helicity), not thermal — R10, §8 | Window-area plasma measured to be thermal/disordered, with no helicity and no force-free structure. |
 | Persistence comes from **selective decay** above the Lundquist threshold (glows-yet-persists) — R10 | Anomalous luminous events whose lifetimes match ordinary thermal-plasma decay, with no S ≳ 1 longevity. |
 | The source injects helicity in **intermittent reconnection bursts** (flaring, not steady) — R11 | A genuine carrier that shines *steadily*, with no flaring/burst structure and no energetic-particle emission. |
@@ -495,11 +474,13 @@ detector (scalar probe). The probe menu is itself a set of running experimental 
   existing chameleon detector, and the natural read-out for the carrier's wall field.
 - **Torsion balance (Eöt-Wash) and Casimir-regime tests** — the sub-millimetre fifth-force window the wall
   field's Compton range falls into; the carrier perturbs the screening environment the balance lives in.
-- **Magneto-optical / Faraday probe** — because the portal interior is an *extended-electrodynamics* regime
-  (the dilatonic coupling makes longitudinal/scalar EM modes physical, R9), a force-free carrier should leave
-  a magneto-optical fingerprint; the 2025 result that the magnetic sector of light contributes materially to
-  Faraday rotation gives a real table-top channel. The wall-localized longitudinal-EM signature (R9) predicts
-  the fingerprint sits *on the carrier's boundary shell*, which is the discriminator from any bulk EM effect.
+- **Magneto-optical / Faraday probe** *(the most speculative of these, riding on the contingent extended-
+  electrodynamics thread of §2 — listed last for that reason)*. If the dilatonic coupling does make
+  longitudinal/scalar EM modes physical (R9), a force-free carrier could leave a magneto-optical fingerprint,
+  and the 2025 result that the magnetic sector of light contributes materially to Faraday rotation gives a real
+  table-top channel. The wall-localized signature (R9) would sit *on the carrier's boundary shell*, which is
+  the discriminator from any bulk EM effect — but unlike the probes above, this one fails gracefully: a null
+  result simply means extended electrodynamics was the wrong frame, and the rest of the mechanism stands.
 
 *(Grade: each probe is established physics with running bounds; the proposal is the **combination** —
 carrier ⊗ unscreening ⊗ probe. The honest risk is sensitivity: the wall field may be too weakly coupled to
@@ -785,10 +766,13 @@ Fig. 6 (the exhibited Q-ball, R12) by `figures/make_portal_fig6_soliton.py` — 
 
 ---
 
-*[DRAFT status — REVISION PASS 1 COMPLETE (autonomous, Day 136). Full essay §1–§9 + appendices; five figures
-generated and placed inline; worked Hessdalen-scale example added (§5); §8 topological-survey methodology
-expanded (helicity / force-free α / handedness measurement); bibliography restructured with three standard
-refs ✓-verified this session (Hamilton 2015, Lee 2020, Teodorani 2004) alongside the four session-sourced
-channels. Remaining for later passes: confirm the recalled mechanism-ref DOIs/pages + the two flagged
-Hessdalen instrumented citations; optional LaTeX/PDF render; prose-tightening of the parenthetical grades.
-Ready for Clayton's review. 🦞🧍💜🔥♾️]*
+*[DRAFT status — REVISION PASS 2 COMPLETE (Day 136 evening, after Clayton's reader-review). Addressed the
+four soft joints a skeptic catches: (1) framework-premise moved up front ("you do not have to buy the
+framework") + warmer title; (2) "plasma structurally necessary" → "sufficient and natural" (prose + kill-table
++ grade); (3) the 2.3 meV "coincidence" reframed as a robust decade-wide basin, not a knife-edge; (4) §1.1
+convergence argument made honest — it buys "real plasma at these sites," the *signature* buys the anomaly. Plus
+trims: cut the ~600-word annotated TOC to a grade-legend; removed the self-congratulatory asides ("first real
+turn," "deepest point," "framework-already-lives-here"); flagged the preferred-scale as preliminary (dimensionless,
+unmapped); demoted the EED thread hard (weakest link, nothing load-bearing depends on it) + flagged the Faraday
+probe as most-speculative. Remaining for later passes: confirm recalled mechanism-ref DOIs/pages + the two
+Hessdalen instrumented citations; optional LaTeX/PDF render. Ready for re-read. 🦞🧍💜🔥♾️]*
