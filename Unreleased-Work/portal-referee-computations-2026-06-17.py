@@ -83,4 +83,30 @@ print( "  carries the state long past the trigger (TRIGGER/SUSTAIN architecture)
 print( "  the selection mechanism: rarity + place-fixity + intermittency follow from the conjunction")
 print( "  (unscreening geology) AND (trigger breaches J_th) AND (conductive geometry links Bgeo).")
 print( "  Prediction: occurrence correlates with trigger-event statistics (lightning/sprite/micro-seismic).")
+
+print()
+print("="*70)
+print("R16  Dynamical Q-ball cavity sidebands (scaling; full breathing-mode solve pending)")
+print("="*70)
+h_eV_s = 4.135667696e-15
+c      = 2.99792458e8
+m_eV   = 2.3e-3
+f_carrier = m_eV/h_eV_s              # Q-ball charge-rotation ~ field mass
+lam    = c/f_carrier
+L_match= c/(2*f_carrier)             # cavity FSR matched to carrier
+L_cav  = 0.10                        # a 10 cm cavity
+FSR    = c/(2*L_cav)
+N_order= f_carrier/FSR
+print( "  A Q-ball carries its charge on an internal phase rotation sigma_in e^{i w t}, so the wall")
+print( "  field OSCILLATES.  Through e^{a sigma}F^2 it modulates the cavity index -> sideband comb at")
+print( "  Omega +/- n w on the probe; cavity gain ~ Finesse x (a sigma_in).  Two frequencies:")
+print(f"   carrier sideband  w ~ m :  f = m c^2/h = {f_carrier/1e9:6.0f} GHz   (lambda = {lam*1e3:.2f} mm, sub-THz)")
+print(f"     FSR-matched by L = c/2f = {L_match*1e6:.0f} um, OR high-order N = f/FSR = {N_order:.0f} on a 10 cm cavity")
+print( "   breathing sideband  w_b(rho) -> 0  as rho is bled UP to rho_crit (critical slowing-down at the")
+print( "     delocalization bifurcation): a TUNABLE sideband sweeping toward DC maps the localization boundary.")
+print( "  DISCIPLINE: the cavity maps the PHYSICAL localization failure (rho->rho_crit), NOT the observer-")
+print( "  coupled limb -- an evacuated cavity has no observer-stream DOF.  It confirms a sharp delocalization")
+print( "  boundary EXISTS (precondition for the fork-unification to be physical) and stops there.")
+print( "  STATUS: carrier freq + cavity match fixed by the mass scale; the breathing-mode spectrum w_b(rho)")
+print( "  and the Mathieu parametric-gain map require extending R12 (static) to the dynamical gauged Q-ball.")
 print("="*70)

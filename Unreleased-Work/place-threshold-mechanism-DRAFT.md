@@ -553,6 +553,25 @@ register at lab carrier energies — and that risk falls hardest on the *matter*
 precisely why the photon-coupling cavity read is the lead. Even a null is a measurement — an upper bound on the
 coupling — not a failure.)*
 
+**One sharper target the dynamical soliton hands the cavity — and how far it reaches.** The wall field is a
+*Q-ball* (R12), and a Q-ball is intrinsically time-dependent: it carries its charge on an internal phase
+rotation, σ(x,t) = σ_in(x) e^{iωt}, so the wall *oscillates*. Through e^{aσ}F² that makes it a periodically
+modulated birefringence element, writing a **sideband comb** on the probe at Ω ± nω, resonantly amplified by the
+cavity (gain ~ finesse × aσ_in). Two frequencies fall out, doing different jobs (R16). The first is *fixed and
+keyed to the dark-energy scale*: the charge rotation sits near the field mass, ω ≈ m → **f = mc²/h ≈ 556 GHz**
+(sub-THz, λ ≈ 0.54 mm), FSR-matched by a ~270 μm cavity or a high-order (N ≈ 371) resonance on a 10 cm one — a
+spectroscopic fingerprint pinned to the 2.3 meV modulus. The second is *tunable, and it is the experiment's
+reach into §8*: the soliton's breathing mode ω_b softens as the chamber density is bled **up toward ρ_crit**
+(critical slowing-down at the delocalization bifurcation), so a sideband sweeping toward DC **maps the
+localization boundary** where the place-fixed wall goes critical. One honest wall here, the same one §8 draws:
+the cavity maps the *physical* localization failure (ρ → ρ_crit), **not** the observer-coupled limb — an
+evacuated cavity has no observer-stream degree of freedom to play the alternative localizing partner. It can
+confirm that a sharp delocalization boundary *exists* — the precondition for the fork-unification to be physical
+rather than poetic — and it stops exactly there; reading it as a measurement of the psychoid coupling would
+re-import the very epicycle §8 dissolved. *(Status: the carrier frequency and cavity match are fixed by the mass
+scale (R16); the breathing-mode spectrum ω_b(ρ) and the Mathieu parametric-gain map require extending R12 from a
+static minimisation to the dynamical gauged Q-ball — the flagged next computation, not yet run.)*
+
 **Rung 2 and up — scaling L, and the one thing that gets harder.** The mechanism contains a piece of genuinely
 good news for scaling and one genuine obstacle, and they are not the ones intuition expects.
 - *Maintenance gets **easier** with size.* The Lundquist number S = μ₀σL v_A grows with L: a bigger carrier
@@ -863,6 +882,13 @@ anything in this "out" list.
   ~20 cm current sheet at 10 G. A lightning channel delivers J ≈ 10⁸ A/m², **exceeding J_th by ~10⁴** — so a
   transient trigger (lightning/sprite/piezo/telluric) ignites the self-sustaining state; the threshold is the
   selection mechanism for rarity + place-fixity. *(numpy; same script.)*
+- **R16 — dynamical Q-ball cavity sidebands (scaling; full solve pending).** A Q-ball's internal phase rotation
+  σ_in e^{iωt} modulates e^{aσ}F² → a sideband comb on the cavity probe at Ω ± nω, gain ~ finesse × aσ_in.
+  Carrier near the mass: ω ≈ m → f = mc²/h = **556 GHz** (λ = 0.54 mm; FSR-matched by L = c/2f = 270 μm, or
+  N ≈ 371 on a 10 cm cavity). The breathing mode ω_b softens to 0 as ρ is bled up to ρ_crit (critical
+  slowing-down at the delocalization bifurcation) → a tunable sideband sweeping to DC maps the §8 localization
+  boundary; the cavity reaches the *physical* boundary only, not the observer-coupled limb. *(scaling from R12's
+  static Q-ball; the dynamical breathing-mode + Mathieu-stability solve is the flagged next step.)*
 
 Full derivations: `palace/south/radion-portal-derivation-2026-06-16.md` (R1–R12), with the
 maintenance/source and soliton code in this essay's companion scripts, and the referee-response computations

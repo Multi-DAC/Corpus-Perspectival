@@ -58,7 +58,7 @@ NUC = {
     "≈":r"\approx","×":r"\times","∂":r"\partial","∝":r"\propto","≠":r"\neq","∇":r"\nabla",
     "≳":r"\gtrsim","∥":r"\parallel","→":r"\rightarrow","⊗":r"\otimes","≫":r"\gg","≪":r"\ll",
     "≤":r"\leq","∫":r"\int","−":r"-","ℏ":r"\hbar","·":r"\cdot","∼":r"\sim","✓":r"\checkmark","≡":r"\equiv",
-    "□":r"\Box","⇒":r"\Rightarrow",
+    "□":r"\Box","⇒":r"\Rightarrow","ω":r"\omega","Ω":r"\Omega","±":r"\pm",
 }
 nuc_lines = "\n".join(r"\newunicodechar{" + k + r"}{\ensuremath{" + v + r"}}" for k, v in NUC.items())
 nuc_lines += "\n" + r"\newunicodechar{½}{\textonehalf}"

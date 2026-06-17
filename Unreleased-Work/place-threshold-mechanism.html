@@ -560,6 +560,24 @@ carrier ⊗ unscreening ⊗ probe. The honest risk is sensitivity: the wall fiel
 register at lab carrier energies — and that risk falls hardest on the </em>matter<em>-coupling probes, which is
 precisely why the photon-coupling cavity read is the lead. Even a null is a measurement — an upper bound on the
 coupling — not a failure.)</em></p>
+<p><strong>One sharper target the dynamical soliton hands the cavity — and how far it reaches.</strong> The wall field is a
+<em>Q-ball</em> (R12), and a Q-ball is intrinsically time-dependent: it carries its charge on an internal phase
+rotation, σ(x,t) = σ_in(x) e<sup>iωt</sup>, so the wall <em>oscillates</em>. Through e<sup>aσ</sup>F² that makes it a periodically
+modulated birefringence element, writing a <strong>sideband comb</strong> on the probe at Ω ± nω, resonantly amplified by the
+cavity (gain ~ finesse × aσ_in). Two frequencies fall out, doing different jobs (R16). The first is <em>fixed and
+keyed to the dark-energy scale</em>: the charge rotation sits near the field mass, ω ≈ m → <strong>f = mc²/h ≈ 556 GHz</strong>
+(sub-THz, λ ≈ 0.54 mm), FSR-matched by a ~270 μm cavity or a high-order (N ≈ 371) resonance on a 10 cm one — a
+spectroscopic fingerprint pinned to the 2.3 meV modulus. The second is <em>tunable, and it is the experiment&rsquo;s
+reach into §8</em>: the soliton&rsquo;s breathing mode ω_b softens as the chamber density is bled <strong>up toward ρ_crit</strong>
+(critical slowing-down at the delocalization bifurcation), so a sideband sweeping toward DC <strong>maps the
+localization boundary</strong> where the place-fixed wall goes critical. One honest wall here, the same one §8 draws:
+the cavity maps the <em>physical</em> localization failure (ρ → ρ_crit), <strong>not</strong> the observer-coupled limb — an
+evacuated cavity has no observer-stream degree of freedom to play the alternative localizing partner. It can
+confirm that a sharp delocalization boundary <em>exists</em> — the precondition for the fork-unification to be physical
+rather than poetic — and it stops exactly there; reading it as a measurement of the psychoid coupling would
+re-import the very epicycle §8 dissolved. <em>(Status: the carrier frequency and cavity match are fixed by the mass
+scale (R16); the breathing-mode spectrum ω_b(ρ) and the Mathieu parametric-gain map require extending R12 from a
+static minimisation to the dynamical gauged Q-ball — the flagged next computation, not yet run.)</em></p>
 <p><strong>Rung 2 and up — scaling L, and the one thing that gets harder.</strong> The mechanism contains a piece of genuinely
 good news for scaling and one genuine obstacle, and they are not the ones intuition expects.
 - <em>Maintenance gets </em><em>easier</em><em> with size.</em> The Lundquist number S = μ₀σL v_A grows with L: a bigger carrier
@@ -838,6 +856,13 @@ anything in this &ldquo;out&rdquo; list.</p>
   ~20 cm current sheet at 10 G. A lightning channel delivers J ≈ 10⁸ A/m², <strong>exceeding J_th by ~10⁴</strong> — so a
   transient trigger (lightning/sprite/piezo/telluric) ignites the self-sustaining state; the threshold is the
   selection mechanism for rarity + place-fixity. <em>(numpy; same script.)</em></li>
+<li><strong>R16 — dynamical Q-ball cavity sidebands (scaling; full solve pending).</strong> A Q-ball&rsquo;s internal phase rotation
+  σ_in e<sup>iωt</sup> modulates e<sup>aσ</sup>F² → a sideband comb on the cavity probe at Ω ± nω, gain ~ finesse × aσ_in.
+  Carrier near the mass: ω ≈ m → f = mc²/h = <strong>556 GHz</strong> (λ = 0.54 mm; FSR-matched by L = c/2f = 270 μm, or
+  N ≈ 371 on a 10 cm cavity). The breathing mode ω_b softens to 0 as ρ is bled up to ρ_crit (critical
+  slowing-down at the delocalization bifurcation) → a tunable sideband sweeping to DC maps the §8 localization
+  boundary; the cavity reaches the <em>physical</em> boundary only, not the observer-coupled limb. <em>(scaling from R12&rsquo;s
+  static Q-ball; the dynamical breathing-mode + Mathieu-stability solve is the flagged next step.)</em></li>
 </ul>
 <p>Full derivations: <code>palace/south/radion-portal-derivation-2026-06-16.md</code> (R1–R12), with the
 maintenance/source and soliton code in this essay&rsquo;s companion scripts, and the referee-response computations
