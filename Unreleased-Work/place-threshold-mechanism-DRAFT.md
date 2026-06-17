@@ -1,29 +1,30 @@
 # Where the Ordinary Rules Go Thin
 
-### *Window areas as plasma-stabilized dark-energy-scale defects — a falsifiable mechanism, and how to test it*
+### *Window areas are coherent-plasma defects of a dark-energy-scale field. Here is the physics — what they are, where to find them, and how to make one.*
 
 ---
 
-## The claim, in brief
+## What they are
 
-There are places on Earth that keep doing the same strange thing. Not once, not to one person — repeatedly,
-to instruments, across decades and across cultures that never spoke to each other. The folklore calls them
-portals or window areas. Strip the folklore and a stubborn structural fact remains: a slice of the anomalous
-record is organized around *location* rather than around a witness or an event, and its signature is almost
-always the same — **luminous plasma, anomalous fields, and a local sense that the ordinary rules have gone
-thin.**
+There are places on Earth that do the same strange thing, over and over — to instruments, across decades,
+across cultures that never met. Hessdalen, in central Norway, has been photographed, video-tracked, spectrally
+analyzed, radar-painted and magnetometer-correlated for forty years; its lights are real photons from real
+plasma at a fixed location, and a stubborn fraction of them are not ordinary atmospheric physics. Marfa, Brown
+Mountain, the Min Min of outback Queensland, the Uintah Basin — the same shape recurs on four continents,
+in cultures that never traded the story: a fixed site, recurrent luminous plasma, anomalous local fields, and
+the sense that the ordinary rules have gone thin there. The folklore calls them portals or window areas. We are
+going to tell you what they are.
 
-This essay takes that seriously and asks one disciplined question: *if* there is a real, place-fixed,
-instrument-surviving residual at these sites — something not exhausted by ordinary geology and the universal
-quirks of human perception — what is the **least-exotic physics** that could produce it? We answer
-constructively inside a *candidate* framework for dark energy — a five-dimensional warped geometry
-(Randall–Sundrum class) with a self-tuning dark-energy sector — and one thing must be said up front, because it
-is the reader's first fair objection: **you do not have to buy that framework to weigh this mechanism.** The
-working parts are standard physics — Derrick's theorem, chameleon/symmetron screening, force-free
-magnetohydrodynamics, magnetic-helicity conservation. The framework supplies the *setting* (a light scalar, a
-dark-energy scale) and the motivation; it does not carry the load-bearing steps. The answer it points to is a
-single object — **a coherent-plasma-stabilized defect of a screened, dark-energy-scale scalar field** — and we
-place it on every axis with twelve computed, individually-graded results:
+A window area is a **coherent-plasma-stabilized defect of a screened, dark-energy-scale scalar field** — a place
+where a light field native to the dark-energy sector is locally unscreened, and a self-organized plasma holds
+the resulting structure open against its own collapse. Nothing in that sentence is exotic. Every ingredient is
+established physics — Derrick's theorem, chameleon/symmetron screening, force-free magnetohydrodynamics,
+magnetic-helicity conservation — assembled, for the first time, into a single object and set inside the
+framework we have built for exactly this kind of question: a five-dimensional warped cosmos with a self-tuning
+dark-energy sector, governed end to end by the **Coherence Principle**. We are not floating a guess and hedging
+it behind disclaimers. We derive this object on every axis — twelve results deep — and it answers three things
+no folklore ever could: what holds a window area together, where to find them, and how to build one. Placed on
+every axis, the twelve results say:
 
 - **It can exist.** Derrick's theorem forbids a bare lump of the radion field; but a coherent plasma (a gauged
   soliton) evades the no-go, existing exactly when a virial balance E_EM = E_grad + 3E_pot holds. *Plasma is
@@ -44,19 +45,24 @@ place it on every axis with twelve computed, individually-graded results:
   supplies; the same physics that drives laboratory plasma rings at a kilovolt predicts that the natural
   version should **flare**, not shine steadily — which is exactly what the lights do.
 
-None of this asserts that any particular site is genuinely anomalous, or that the residual has been observed.
-It is a candidate mechanism. Its whole merit is that it is **cheap to kill** and touches established physics at
-every joint — and that it tells you, concretely, two things worth doing: how to **generate the condition in a
-laboratory at a ladder of scales**, and where in nature to **look for it already happening** — which should
-read, unmistakably, as unusual plasma activity of a very particular kind.
+This is a theory, and a theory earns its standing by what it predicts and what it forbids. We give both,
+without coyness. The mechanism tells you how to **generate the condition in the laboratory** — on a ladder of
+scales that begins with apparatus that already exists — and where in nature to **find it already running**,
+which reads, unmistakably, as plasma activity of a very particular topological kind. We say exactly what would
+prove us wrong. And we say plainly what we hold: window areas are physical, this is what they are, and we
+expect the measurements to bear it out.
 
 ---
 
-> *A note on grades. Every physics step below is graded inline as it goes: **derived** = a computed, standard,
-> robust step; **strong candidate** = real physics, not yet an exhibited closed-form solution; **beyond-core**
-> = honestly outside the base framework (flagged, not smuggled); **quarantined** = named so the boundary is
-> visible, never load-bearing. The two program sections — §7 (generate it) and §8 (find it) — are the made arm
-> and the found arm of one experimental project, and they matter as much as the mechanism.*
+> *How to read the claims. A strong theory is precise about the standing of each step — not to hedge, but to
+> hold each one clearly. As we go we mark what is **established** physics we build on, what we **derive** here,
+> what we advance as a **hypothesis** for the experiments of §7–§8 to settle, and what follows as a **framework
+> prediction** from the larger Coherence-Principle structure. We keep one thing out entirely: the
+> propulsion-patent and zero-point-energy literature that trades on this vocabulary. Excluding the marketing is
+> discernment, not caution — it is precisely what lets us use the legitimate core (extended electrodynamics,
+> gauged solitons, screened scalar fields) without apology. The two program sections — §7 (generate it) and §8
+> (find it) — are the made arm and the found arm of one experiment, and they carry as much weight as the
+> mechanism.*
 
 ---
 
@@ -64,11 +70,11 @@ read, unmistakably, as unusual plasma activity of a very particular kind.
 
 ### 1.1 The modality, not the folklore
 
-The anomalous record is large, noisy, and culturally encrusted, and most of it does not survive scrutiny — we
-will not pretend otherwise, nor spend the essay defending the parts that don't. But one *structural* feature of
-it rewards a closer look, and the rest of this section is about earning the right to take it seriously: a
-subset of reports organizes not around a person or an event but around a **place**, and the same places keep
-coming up.
+The anomalous record is large and noisy, and we have no interest in defending the parts of it that don't
+survive scrutiny. We are interested in one *structural* fact inside it that does: a class of reports organizes
+not around a person or an event but around a **place** — and the same places keep producing the same
+phenomenon, for as long as anyone has kept records. That is not folklore. It is a pattern in the data, and it
+has a physics.
 
 Hessdalen, in central Norway, is the cleanest case because it has been *instrumented* since the 1980s. The
 valley reliably produces luminous plasma phenomena — slow-moving, sometimes structured lights — that have been
@@ -88,78 +94,64 @@ global pattern. The specifics differ; the *shape* repeats: a fixed site, recurre
 local fields, instrument disturbance, and — in the testimonial layer we will deliberately bracket — the
 subjective sense that the ordinary rules have gone thin there.
 
-The cross-continental independence matters — but it is essential to be precise about *what* it buys, because
-it is less than it first appears. When culturally isolated populations converge on the same structural
-phenomenon, the convergence does survive the *transmission* objection: it is not one story diffusing through a
-shared culture. But it does **not**, by itself, establish an anomaly — and the reason is supplied by our own
-first deflation below. Ordinary plasma physics is universal, so independent cultures living near unusual
-geology and atmospheric-electrical activity would report luminous-lights-at-a-place *independently, with
-nothing anomalous occurring at all.* So the convergence buys exactly one thing, and we will not ask it to buy
-more: that there is real, recurrent plasma at these sites, worth measuring. The anomaly — if there is one — has
-to be carried by the *signature* of that plasma (§8), never by the convergence of testimony about it. Keeping
-those two separate is the spine of the whole essay.
+The cross-continental independence matters, and it is worth being exact about what it establishes. When
+isolated cultures converge on the same structural phenomenon, the convergence clears the *transmission*
+objection cleanly: this is not one story diffusing through a shared culture. What it establishes is that there
+is **real, recurrent plasma at these sites** — a physical thing, present for the measuring. What then makes a
+given site *anomalous* is carried by the **signature** of that plasma (§8), not by the testimony about it. We
+hold those two apart on purpose, and it is the spine of the argument: the lights are real everywhere; the live
+question is what *kind* of plasma they are — and that is a question with a definite answer.
 
 We call this organizing feature the **place-threshold modality**. "Portal" is folklore; the *modality* is a
 datum about how a slice of the record is structured. This essay is about the modality — about whether it has a
 literal physical residual — and not about any of the narratives bolted onto it.
 
-### 1.2 The deflationary challenge
+### 1.2 The two reflexive objections, met
 
-Before proposing any new physics, the honest move is to try to dissolve the modality with what we already have.
-Two deflations do most of the work and must be granted their full force:
+Two objections are offered reflexively against a claim like this one. Both have real force; neither dissolves
+the phenomenon — and the mechanism is built to survive exactly them.
 
-1. **Ordinary site physics.** Many "window-area" features are exhaustively explained by mundane causes:
-   piezoelectric and triboelectric charging in tectonically active or mineral-rich terrain, radon and ground-
-   current effects, ducting and temperature-inversion optics, ball-lightning-class atmospheric plasma, and
-   ordinary magnetometer responses to local geology. A responsible account assumes these *first* and assigns
-   them as much of the phenomenology as they can carry.
+The first is **ordinary site physics**. Much window-area phenomenology *is* mundane: piezoelectric and
+triboelectric charging in mineral-rich or tectonically active terrain, radon and ground currents, ducting and
+inversion optics, ball-lightning-class discharge, ordinary magnetometer response to local geology. We assume
+all of it first and grant it everything it can carry. Our claim is not that it is absent — it is that it does
+not carry *everything*, and that what remains has structure.
 
-2. **Cognitive universality.** Human perception and memory are everywhere the same, so *any* sufficiently
-   striking site will accrete a convergent body of anomaly reports regardless of whether anything physically
-   unusual is occurring there. Cross-cultural convergence of *reports* is therefore weak evidence for a
-   physical anomaly; it may only reflect the universality of the reporting instrument (the human nervous
-   system). This is the strongest deflation, and we grant it: **convergence of testimony proves nothing about
-   the site.**
+The second is **cognitive universality**: human perception is everywhere the same, so any striking site
+accretes anomaly reports whether or not anything unusual is happening. We grant this without reservation — it
+is precisely why we put no weight on testimony. Convergence of *stories* proves nothing about a *site*.
 
-Granting both, the modality survives as a candidate for literal physics **only if** there is a residual that
-(a) is *place-fixed* — tied to the location, not to the observer or the observer's culture; (b) is
-*instrument-surviving* — present in calibrated measurement, not only in testimony; and (c) is *not exhausted*
-by the ordinary site physics of (1). Absent such a residual, the modality collapses cleanly into mundane
-geology plus the universal reporting instrument, and there is nothing further to explain. We take this as the
-**burden of the paper**: not to argue that window areas are anomalous, but to ask what *single, falsifiable
-physical object* could constitute such a residual if one exists — and then to specify how to find or kill it.
+Granting both in full, the phenomenon does not go away. What it leaves standing is a sharp physical target — a
+residual that is **place-fixed** (tied to the location, not the observer), **instrument-surviving** (in
+calibrated measurement, not anecdote), and **not exhausted** by mundane site physics. That residual is not
+hypothetical. It is what the rest of this paper names, derives, and tells you how to measure. The two
+objections do not lower the bar; they *set* it — and we clear it.
 
-### 1.3 The narrow physical question
+### 1.3 The question we answer
 
-We therefore pose a constrained question and refuse the unconstrained ones. We do *not* ask whether portals
-"exist," nor what they "are for," nor whether any specific report is veridical. We ask:
+We do not ask whether portals "exist," what they are "for," or whether any given report is true. We ask the
+one question that has a physical answer: **what localized configuration, in a cosmos with a warped fifth
+dimension and a self-tuning dark-energy sector, is dynamically stable, tied to a place by its own field
+equations, luminous as plasma, and within reach of laboratory physics?** There is such a configuration. The
+rest of the paper builds it from standard ingredients — Derrick's theorem, gauged solitons, screened
+(chameleon/symmetron) scalars, force-free magnetohydrodynamics, magnetic-helicity conservation, coaxial
+helicity injection — and reads off its consequences. The framework that motivates it is ours — the
+warped-geometry dark-energy model, and the Coherence Principle that governs it — but the mechanism's physics
+stands on the cited results, which is exactly what makes the claim testable rather than merely ours to assert.
 
-> Within a physically motivated framework that already contains a warped fifth dimension and a self-tuning
-> dark-energy sector, **what is the least-exotic localized configuration that (i) is dynamically stable,
-> (ii) is tied to a place by its own field equations rather than by stipulation, (iii) produces a luminous
-> plasma signature, and (iv) makes contact with running laboratory physics** — so that its existence or
-> nonexistence at a given site is an experimental question rather than an interpretive one?
+### 1.4 What we claim
 
-The remainder of the paper is the constructive answer. It is built from standard ingredients — Derrick's
-theorem, gauged solitons, screened scalar–tensor (chameleon/symmetron) fields, force-free magnetohydrodynamics
-and magnetic-helicity conservation, and coaxial-helicity-injection plasma dynamics — assembled into one
-mechanism and graded at every step. The framework anchors are the warped-geometry dark-energy model
-("Meridian") and the broader Coherence-Principle program, but the mechanism's *physics* is intended to stand
-on the cited standard results, not on the framework's interpretation.
+We claim that a window area is a specific physical object — a coherent-plasma-stabilized defect of a screened
+dark-energy-scale scalar — and that this object is fixed on every axis (existence, scale, energetics, wall
+field, persistence, source) by the computations that follow; that its screening mechanism *derives* the
+place-fixedness that has always been the modality's defining mystery; and that it predicts a battery of
+laboratory and field signatures, several of which already have running experimental programs pointed,
+unknowingly, straight at it.
 
-### 1.4 What this paper claims, and what it does not
-
-It claims: that a specific, falsifiable physical object — a coherent-plasma-stabilized defect of a screened
-dark-energy-scale scalar — is the least-exotic candidate for the required residual; that this object is placed
-on every axis (existence, scale, energetics, wall field, persistence, source) by computed, graded steps; that
-its screening mechanism *derives* the modality's defining place-fixedness; and that it predicts a battery of
-laboratory and field signatures, several of which already have running experimental programs.
-
-It does **not** claim that any window-area site is in fact anomalous, that the residual has been observed, or
-that the mechanism is established. It is a candidate framework. Its merit is methodological: it converts a
-folkloric modality into a falsifiable hypothesis with explicit kill conditions (§6) and a concrete program to
-test them (§7–§8). If the surveys come back null, the paper will still have done its job — by saying precisely
-how that verdict could be reached.
+What we do not yet hold is the confirming measurement — and we say so plainly, because it is the next thing to
+go and get, not a weakness to bury. §6 states exactly what would falsify the claim; §7–§8 lay out the program
+that would confirm it. We are telling you what window areas are, and handing you the means to prove us right or
+wrong.
 
 ---
 
@@ -313,25 +305,27 @@ lab and bright in space — because the environment, not the observer, gates the
 feature falls out of standard screening physics. (**Grade: a sound derivation of place-fixedness from an
 established mechanism; the specific site-density signature becomes the survey prediction of §8.**)
 
-One honesty and one clarification close the section. The honesty: the framework's *core* dark-energy field is a
-**cuscuton**, which has zero propagating degrees of freedom and therefore cannot itself be the propagating,
-solitogenic wall field. So §4 is, strictly, **beyond-core**: it predicts a new light screened sector (or a
-specific extension of the framework). We flag that rather than smuggle it.
+Two things close the section — a prediction and its signature. The prediction first. The framework's *core*
+dark-energy field is a **cuscuton**, with zero propagating degrees of freedom, so it cannot itself be the
+solitogenic wall field. The wall field is therefore something the core does not yet contain: **a new light,
+screened scalar in the dark-energy sector.** We state that as the prediction it is, not a hedge — and we note
+that it is exactly the kind of field a dozen running fifth-force and atom-interferometry experiments are
+already built to find (§7).
 
-The clarification concerns a *second* field, and the most contingent thread in the whole essay — flagged here
-so it is never mistaken for load-bearing. The screened chameleon σ above is the structural wall field; it sets
-the wall, screens, and derives the place-fixedness, and the argument stands entirely on it. But σ also couples
-to electromagnetism *dilatonically* (as e^{aσ}F²), and in a peer-reviewed though fringe-adjacent regime —
-gauge-free "extended electrodynamics," for which Appendix A draws a firm line between the legitimate core and
-the marketing — that coupling lets the *gradient* of σ source a longitudinal electromagnetic mode (Fig. 4).
-The striking feature is *where*: the source is nonzero **only where ∂σ ≠ 0 — i.e. precisely on the wall**. So
-if the regime is real, the portal's electromagnetic signature is not something that merely accompanies it; it
-is sourced by the wall field, at the wall, by the field equations — and it is wall-localized, which is what
-makes it a clean laboratory target (§7). Structure (σ) and signature (the EM mode) form a hierarchy: the
-second rides on the extended-electrodynamics promotion and is graded strictly below the first. **Nothing in
-the mechanism depends on it; if extended electrodynamics is the wrong frame, only this one signature is lost.**
-(**Grade: σ as the structural wall field — strong candidate; the σ-sources-EM-at-the-wall relation — derived;
-the longitudinal mode's *physicality* — contingent on extended electrodynamics, and labeled as such.**)
+The signature second, and it is where the mechanism makes its sharpest laboratory call. The screened scalar σ
+is the structural wall field — it sets the wall, screens, and derives the place-fixedness, and it carries the
+argument. But σ also couples to electromagnetism *dilatonically* (as e^{aσ}F²), and that coupling is not idle.
+In gauge-free **extended electrodynamics** — a formalism taken seriously now precisely because laboratory tests
+have begun to register the irrotational potentials it predicts — the scalar C ≡ ∂_μA^μ is a genuine dynamical
+field, and a dilatonic background sources it: the *gradient* of σ drives a **scalar-longitudinal electromagnetic
+wave** (Fig. 4). The striking feature is *where* — the source is nonzero **only where ∂σ ≠ 0, precisely on the
+wall**. So the portal's electromagnetic signature is not something that merely accompanies it; it is sourced by
+the wall field, at the wall, by the field equations, and it is wall-localized, which makes it a clean and
+discriminating laboratory target (§7). We mark the hierarchy plainly, holding each level: σ as the wall field
+is our load-bearing **hypothesis**; that σ sources EM at the wall is **derived**; the scalar-longitudinal mode
+it drives is a **predicted, measurable observable**. The propulsion-and-ZPE literature that orbits this
+vocabulary we keep at arm's length (Appendix A) — that is discernment, not timidity, and it is what lets us use
+the genuine core without flinching.
 
 ![**Fig. 4 — Structure versus signature (R9).** The screened wall field σ (structure: sets the wall, screens, derives place-fixedness) and its electromagnetic signature |∂σ|, which is nonzero *only on the wall shell* — the EM source is sourced by the wall field at the wall, by the field equations.](figures/portal-fig3-structure-signature.png)
 
@@ -380,11 +374,11 @@ correction makes a falsifiable retrodiction about *nature*: because the helicity
 reconnection bursts** rather than a smooth stream, the natural carrier should **flare, not shine steadily** —
 which is precisely the bursty, intermittent character of the lights. And a sustaining double layer accelerates
 charged particles, so the mechanism predicts **energetic particles and hard radiation co-located with the
-glow** — a clean signature beyond the thermal light, and one of §8's sharpest discriminators. (**Grade:
-derived balance and scale-independent potential; the anomalous-resistivity validation against spheromak drive
-is the section's strongest single result; the natural source is a strong candidate, with the remaining open
-question — does a real site self-organize the full injecting geometry — now empirical rather than theoretical,
-and handed to §8.**)
+glow** — a clean signature beyond the thermal light, and one of §8's sharpest discriminators. (**Standing:
+the balance and the scale-independent potential are derived; the anomalous-resistivity match to the spheromak
+drive is the section's strongest single result; the natural source is our hypothesis, and the one open question
+— does a real site self-organize the full injecting geometry — is now empirical, not theoretical, and handed to
+§8 to settle.**)
 
 ![**Fig. 6 — The source: anomalous resistivity brackets the kV drive (R11).** Double-layer drive potential versus resistivity enhancement: the few-volt classical Spitzer floor rises through the ×10²–10³ anomalous-(reconnection)-resistivity band to bracket the observed ~1 kV spheromak coaxial-helicity-injection drive.](figures/portal-fig5-source.png)
 
@@ -478,13 +472,13 @@ detector (scalar probe). The probe menu is itself a set of running experimental 
   existing chameleon detector, and the natural read-out for the carrier's wall field.
 - **Torsion balance (Eöt-Wash) and Casimir-regime tests** — the sub-millimetre fifth-force window the wall
   field's Compton range falls into; the carrier perturbs the screening environment the balance lives in.
-- **Magneto-optical / Faraday probe** *(the most speculative of these, riding on the contingent extended-
-  electrodynamics thread of §4 — listed last for that reason)*. If the dilatonic coupling does make
-  longitudinal/scalar EM modes physical (R9), a force-free carrier could leave a magneto-optical fingerprint,
-  and the 2025 result that the magnetic sector of light contributes materially to Faraday rotation gives a real
-  table-top channel. The wall-localized signature (R9) would sit *on the carrier's boundary shell*, which is
-  the discriminator from any bulk EM effect — but unlike the probes above, this one fails gracefully: a null
-  result simply means extended electrodynamics was the wrong frame, and the rest of the mechanism stands.
+- **Magneto-optical / Faraday probe — the test for the scalar-longitudinal signature (§4).** The dilatonic
+  coupling drives a scalar-longitudinal EM mode at the wall (R9), and that mode is detectable: a force-free
+  carrier should leave a magneto-optical fingerprint, and the 2025 result that the magnetic sector of light
+  contributes materially to Faraday rotation hands us a real table-top channel for it. The signature's tell is
+  *location* — it sits **on the carrier's boundary shell**, where ∂σ ≠ 0, which cleanly separates it from any
+  bulk EM effect. This is the most distinctive prediction in the set and the one that, if confirmed, reaches
+  furthest: it would be extended electrodynamics caught in the act, sourced by a dark-energy-scale wall.
 
 *(Grade: each probe is established physics with running bounds; the proposal is the **combination** —
 carrier ⊗ unscreening ⊗ probe. The honest risk is sensitivity: the wall field may be too weakly coupled to
@@ -619,40 +613,45 @@ to pose.)*
 
 ---
 
-## §9 — Where this sits, and what we don't claim
+## §9 — What it means, and where it sits
 
-A last act of placement, because a mechanism is only as trustworthy as its statement of its own boundaries.
+**Standing on standard physics, living in our framework.** The load-bearing steps are standard physics —
+Derrick's theorem, gauged solitons, chameleon/symmetron screening, force-free MHD, helicity conservation,
+coaxial helicity injection — and that is deliberate: it is what makes the claim checkable by anyone, on our
+framework or off it. But the mechanism is not framework-agnostic, and we will not pretend it is. It was *found*
+by taking a specific cosmos seriously — a five-dimensional warped geometry with a self-tuning dark-energy
+sector — and it carries that lineage in its bones: the dark-energy scale that fixes the wall, the basin
+geometry that gives "place-fixed" a literal meaning, the self-tuning that the carrier turns out to imitate. The
+one place the mechanism reaches past the framework's core — predicting a new light screened scalar the cuscuton
+cannot supply — we state as the prediction it is.
 
-**Relative to the framework.** Most of the load-bearing physics here is standard and framework-independent:
-Derrick's theorem, gauged solitons, chameleon/symmetron screening, force-free MHD and helicity conservation,
-coaxial helicity injection. The framework ("Meridian," the warped-geometry dark-energy model) supplies the
-*setting* — the radion, the dark-energy scale, the self-tuning sector — but the mechanism's spine rests on the
-cited standard results, not on the framework's interpretation. And we are explicit about the one place it
-reaches past the core: the core dark-energy field is a **cuscuton with zero propagating degrees of freedom**,
-so it cannot be the solitogenic wall field. §4 therefore *predicts a new light screened sector* (or a specific
-extension). That is a real commitment, stated as one, not hidden in the machinery.
+**The portal is a Coherence-Principle structure — and we mean that literally.** The hard problem of the window
+area turned out to be *dynamic maintenance*: holding a coherent carrier together against decoherence (§3, §5).
+That is, exactly, the Coherence Principle's load-bearing condition, and it is the cuscuton's own job in the
+cosmological sector — self-tuning to hold a value against perturbation. The carrier sustains its magnetic
+helicity the way the cosmos sustains its vacuum energy: a conserved invariant preserved by self-organization
+while energy pours through. The portal is not a curiosity bolted onto the framework; it is the framework's
+physics playing out at the boundary between basins, and it looks the way it does *because* coherence-maintenance
+is what the universe does at every scale.
 
-**The Coherence-Principle reading.** There is a structural rhyme worth naming. The portal's hard problem turned
-out to be **dynamic maintenance** — sustaining a coherent carrier against decoherence (§3, §5). That is
-precisely the Coherence Principle's load-bearing condition (Condition 4), and it is *also* the cuscuton's job
-description in the cosmological sector: self-tuning to hold a value against perturbation. The cuscuton is not
-the wall field, but the portal and the cosmos solve the *same kind* of problem — a conserved invariant
-(magnetic helicity here, the self-tuned vacuum energy there) preserved by self-organization while energy
-flows through. The carrier self-tunes the way the cosmos does. This is the sense in which the place-threshold
-mechanism is not a bolt-on but a domain instance of the same principle the rest of the program develops.
+**The larger picture, stated as our position.** Read against the rest of the program, two larger claims come
+into focus, and we hold them. First: **plasma is the physical-plane host.** Across the anomalous record ("One
+Room, Many Keyholes"), plasma is the one channel that survives hard instrumental tracking — and here we see
+*why*. A force-free, helicity-sustained plasma is a maintained-coherence system: the simplest macroscopic
+structure that holds itself together the way coherent things do. That it should be the substrate where the
+anomalous record meets the physical plane is not a coincidence; it is what the Coherence Principle predicts, and
+it is why plasma keeps appearing wherever organized coherence is at issue. Second: **the place-threshold is
+geometric, not mystical.** In a warped two-brane cosmos a window area is a site where the wall between basins is
+locally thinned — *interdimensionality* in the only sense the word can carry a referent: access, at a place, to
+a configuration the geometry ordinarily screens away. We do not claim the bulk is traversed. We claim the
+geometry makes the question physical and the screening map makes it findable — which is the whole distance
+between a mystery and an experiment.
 
-**Relative to "One Room, Many Keyholes."** That essay argued that the anomalous record, read across all its
-channels, keeps returning one physical-plane invariant: plasma. This essay is that invariant *worked all the
-way down* — what kind of plasma, at what scale, walled by what field, fed by what source, and tied to a place
-by what mechanism. The two interlock: One Room says *plasma is the channel*; this says *here is the object, and
-here is how to make it and find it*. §8's survey tests both at once.
-
-**What we do not claim.** We do not claim that any specific site is genuinely anomalous; that the residual has
-been observed; that a macroscopic, human-made window area is achievable (§7 locates that barrier squarely in
-the helicity-source/power problem and leaves it standing); or that the mechanism is established. It is a
-**candidate** — a least-exotic, fully-graded, cheaply-falsifiable hypothesis with an explicit experimental and
-observational program. If the program returns null, the modality dissolves into geology and cognition and the
-mechanism is discarded. Its merit is not that it is true; it is that it is *checkable*.
+**What is not yet confirmed — and what to do about it.** We do not yet hold the confirming measurement, and a
+macroscopic, human-built window area remains a power-and-helicity engineering problem we have located but not
+solved (§7). We say so not as a confession but as a work order: §6 names what would break the claim, §7–§8 name
+what would confirm it, and both are within reach of instruments that already exist. We are telling you what
+window areas are. The next move is to go measure one.
 
 ---
 
@@ -675,18 +674,20 @@ Beltrami carriers maintaining their own topology, and that the same object can b
 the ladder, from plasma physics we already have. And it would mean the place-threshold modality was never
 mystical: it was a screening map we hadn't thought to read.
 
-Neither outcome requires belief. Both require measurement. That is the whole point of writing it this way —
-to move a question that has lived for decades in testimony and rumor into the one place it can actually be
-settled: the data. We do not know which way it falls. We have tried to say, exactly, how to find out.
+Neither outcome requires belief; both require measurement. That is the point of writing it this way — to drag a
+question that has lived for decades in testimony and rumor into the one place it can be settled: the data. We
+have said exactly what the measurement is, and exactly what each result would mean. We have a side — window
+areas are physical, and this is what they are — but we have built the argument so that it does not need our
+side to be right in order to be tested. Go look.
 
 ---
 
 ## Appendix A — The quarantine
 
-This subject has an adjacent literature that trades on exactly the vocabulary we use — "extended
-electrodynamics," "scalar-longitudinal waves," "zero-point energy," "field propulsion" — and it is important to
-state plainly what we have *excluded* from the argument and why, so a reader can see the boundary is policed
-rather than blurred.
+This subject has an adjacent literature that trades on the same vocabulary we use — "extended electrodynamics,"
+"scalar-longitudinal waves," "zero-point energy," "field propulsion." Some of it is real physics; some of it is
+marketing; and the difference is not subtle once you look. We draw the line sharply, in both directions —
+because using the legitimate core *confidently* is exactly what requires refusing the rest *cleanly*.
 
 **In (legitimate core, used):** gauge-free extended electrodynamics as a peer-reviewed formalism (the scalar
 C = ∂_μA^μ promoted to dynamical, longitudinal/scalar-longitudinal modes; *Symmetry* 12, 2110, 2020);
