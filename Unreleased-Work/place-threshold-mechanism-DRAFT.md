@@ -66,7 +66,7 @@ read, unmistakably, as unusual plasma activity of a very particular kind.
 - **§1 — The places that keep doing the strange thing.** The window-area record, presented in full and taken
   seriously: the recurring sites, the cross-continental independence, the shared signature. The two honest
   deflations (ordinary geology; the universal human reporting instrument) granted their full force — and then
-  the bar they set: a place-fixed, instrument-surviving residual. *(Frame + phenomenology.)* — **drafting.**
+  the bar they set: a place-fixed, instrument-surviving residual. *(Frame + phenomenology.)*
 - **§2 — Why a portal can exist at all.** Derrick's no-go on the bare radion lump (R1) → the plasma evasion and
   the virial existence condition (R2/R4) → the extended-electrodynamics interior (the EED scalar-longitudinal
   sector). *Plasma promoted from signature to structural necessity.* *(Derived core.)*
@@ -204,8 +204,6 @@ reached.
 
 ---
 
----
-
 ## §2 — Why a portal can exist at all
 
 Start with the most deflationary possible version of the idea and watch it fail in an instructive way. The
@@ -235,6 +233,8 @@ stable exactly when
 
 > **E_EM = E_grad + 3E_pot** (the virial condition; second derivative positive, a true energy minimum —
 > Fig. 1),
+
+![**Fig. 1 — Derrick's no-go, and the plasma evasion (R1, R4).** ε(λ) for the bare radion lump (monotone collapse, no stationary point) versus the plasma-stabilized configuration (a genuine minimum at the virial point E_EM = E_grad + 3E_pot).](figures/portal-fig1-derrick.png)
 
 and with E_EM = 0 it collapses back to Derrick's no-go. The consequence is the first real turn of the essay:
 **plasma is not a side effect of a portal — it is the structural reason a localized portal can exist at all.**
@@ -267,6 +267,8 @@ structure could plausibly carry — requires a field of mass around a **milli-el
 milli-electronvolt is not an arbitrary number. It is the **dark-energy scale**:
 
 > (ρ_Λ)^{1/4} ≈ 2.3 meV,
+
+![**Fig. 2 — The scale problem is field identification (R5, R7).** Wall thickness ℏc/mc² versus field mass: the radion (sub-nuclear wall, excluded for a macroscopic portal) versus the meV dark-energy modulus (0.085 mm wall, macroscopic), with the (ρ_Λ)^{1/4} = 2.3 meV line and the sub-mm macroscopic threshold.](figures/portal-fig2-scale.png)
 
 the energy scale of the cosmological constant, the same scale the framework's self-tuning sector already
 maintains to run cosmic acceleration. The portal's wall field is forced into the dark-energy sector — not by
@@ -332,6 +334,8 @@ the second contingent on the extended-electrodynamics promotion and therefore gr
 (**Grade: the σ-sources-EM-at-the-wall result is derived; the longitudinal mode's physicality is contingent
 on extended electrodynamics and labeled as such.**)
 
+![**Fig. 3 — Structure versus signature (R9).** The screened wall field σ (structure: sets the wall, screens, derives place-fixedness) and its electromagnetic signature |∂σ|, which is nonzero *only on the wall shell* — the EM source is sourced by the wall field at the wall, by the field equations.](figures/portal-fig3-structure-signature.png)
+
 ## §5 — Why it glows yet lasts, and what feeds it
 
 The barrier, §3 said, is coherence maintenance. §5 makes that a number and then finds the thing that pays it.
@@ -354,6 +358,8 @@ self-maintains, and a kilometre-scale ionized carrier sits at S ≈ 10⁴–10�
 was the laboratory spheromak, where this formula returns S ≈ 10³, squarely in the measured range — so the
 margin is not a guess. (**Grade: derived; standard selective-decay/Taylor-relaxation physics, validated
 against laboratory plasma.**)
+
+![**Fig. 4 — The maintenance threshold (R10).** Lundquist number S = μ₀σL v_A versus carrier size for cool, warm, and hot/ionized regimes, with the S = 1 self-maintenance threshold and the laboratory-spheromak validation point (S ≈ 10³).](figures/portal-fig4-maintenance.png)
 
 Selective decay also *derives the signature everyone reports.* Because energy dissipates on a timescale ~1/S
 shorter than helicity does, a carrier with S ≫ 1 **radiates fiercely while its topology survives many
@@ -380,6 +386,33 @@ derived balance and scale-independent potential; the anomalous-resistivity valid
 is the section's strongest single result; the natural source is a strong candidate, with the remaining open
 question — does a real site self-organize the full injecting geometry — now empirical rather than theoretical,
 and handed to §8.**)
+
+![**Fig. 5 — The source: anomalous resistivity brackets the kV drive (R11).** Double-layer drive potential versus resistivity enhancement: the few-volt classical Spitzer floor rises through the ×10²–10³ anomalous-(reconnection)-resistivity band to bracket the observed ~1 kV spheromak coaxial-helicity-injection drive.](figures/portal-fig5-source.png)
+
+### A worked case: the numbers for a Hessdalen-scale carrier
+
+It is worth seeing the mechanism produce concrete numbers for a real, instrumented site, because the result is
+better than a plausibility argument — *the observed range of behaviour falls out of the threshold.* Take three
+illustrative carriers (inputs stated; these are order-of-magnitude, not fits), spanning the size and ionization
+range a valley like Hessdalen could plausibly host, and read off the maintenance margin and the unsustained
+lifetime (≈ S·τ_Alfvén):
+
+| Carrier (stated inputs) | S = μ₀σL v_A | Verdict | Unsustained lifetime | Double-layer drive |
+|---|---|---|---|---|
+| Small light: L = 10 m, B = 3 G, T = 2 eV, 5 % ionized | ≈ 0.6 | below threshold → **decoheres** | ≲ 10 ms (a flash) | ~6 V (×100 → ~0.6 kV) |
+| Valley carrier: L = 100 m, B = 10 G, T = 5 eV, 20 % ionized | ≈ 90 | **self-maintains** | ~4 s | ~1 V (×100 → ~0.1 kV) |
+| Large carrier: L = 300 m, B = 20 G, T = 10 eV, 50 % ionized | ≈ 3900 | deeply stable | ~4–5 min | ~0.3 V (×100 → ~30 V) |
+
+The point is the third column read against the record: Hessdalen events run from **sub-second flashes through
+multi-second lights to occasional events lasting minutes** — and that is exactly the span the threshold
+produces as you move a carrier from below S ≈ 1 (the flash decoheres before it can relax) up through S ≈ 100
+(seconds) to S ≈ 10³–10⁴ (minutes). The lifetime *distribution* is not an extra assumption; it is the
+Lundquist number sweeping across its threshold as carrier size and ionization vary. The sustaining power these
+carriers demand — tens of kilowatts classically, rising toward tens of megawatts once anomalous resistivity is
+included — is the size of the geological/atmospheric energy tap a genuinely self-sustaining site would need to
+account for, and a concrete quantity §8's surveys can check against a site's actual energetics. (**Grade:
+order-of-magnitude, inputs explicitly stated; the qualitative match between the S-threshold and the observed
+lifetime span is the robust claim, not the specific numbers.**)
 
 ## §6 — How to kill it
 
@@ -507,6 +540,31 @@ genuine carrier should emit energetic electrons / X-rays co-located with the glo
 thermal light, and one of the cleanest discriminators between this mechanism and ordinary plasma); and
 geological / density mapping for the screening correlate.
 
+**The topological survey (the core measurement, and the one most worth building).** The heart of §8 is not
+"detect plasma" but **measure its topology** — and magnetic topology is a measurable thing, with a standard
+toolkit borrowed from solar and laboratory plasma physics. Three independent handles cross-check each other:
+
+- **Reconstruct J ∥ B directly.** A multi-station array of vector magnetometers around a recurring site
+  samples **B** at several points; from the spatial gradients one estimates ∇×B and tests the force-free
+  condition ∇×B = αB — i.e. whether the current runs *along* the field (the carrier) or across it (thermal
+  plasma). The fitted **α** is the inverse scale of the Beltrami state, a number the mechanism predicts to be
+  of order 1/L.
+- **Read the field from the light.** The plasma's own emission carries its geometry: the **polarization angle**
+  of cyclotron/synchrotron light maps the projected field direction, and **Faraday-rotation gradients** (the
+  rotation measure across the source) give the line-of-sight field and, crucially, **the sign of the magnetic
+  helicity** — its *handedness*. Helicity is a pseudoscalar, a parity-odd quantity, which makes it an unusually
+  clean discriminator: a survey can ask whether genuine sites share a handedness or scatter randomly, a test
+  no thermal-plasma null hypothesis predicts structure for.
+- **Map the electromagnetic environment.** VLF/ELF electromagnetic surveys of the site (already piloted at
+  Hessdalen) characterize the low-frequency field structure the carrier lives in and would reveal the
+  field-aligned-current / double-layer signatures §5 predicts.
+
+This is what "topological survey" means concretely: not a hunt for lights, but a **measurement of helicity,
+force-free α, and handedness** at recurring sites — order parameters that are zero (or undefined) for ordinary
+plasma and nonzero, structured, and possibly handedness-correlated for the carrier. It is the single most
+decisive observation in the whole program, and at Hessdalen a first pass could be attempted on *archival*
+magnetometer, spectral, and VLF data before any new instrument is deployed.
+
 **The catalogue.** The survey runs against the place-threshold catalogue assembled in §1 — Hessdalen, Marfa,
 Brown Mountain, Min Min, Yakima, the Uintah Basin — prioritising Hessdalen because it is already instrumented
 and a re-analysis of existing magnetometer and spectral data for *helicity and force-free structure* could be
@@ -582,6 +640,31 @@ mechanism is discarded. Its merit is not that it is true; it is that it is *chec
 
 ---
 
+## Coda — what would change
+
+It is worth being clear-eyed about the stakes, in both directions, because they are unusually clean for a
+subject this fraught.
+
+If the surveys come back null — if recurring sites show only thermal, disordered plasma with no helicity, no
+force-free structure, no anomalous longevity, no flaring, no energetic particles, no screening correlate —
+then a centuries-old strand of the anomalous record has been measured and closed. The window-area modality
+folds, without residue, into ordinary geology plus the universal habits of human perception. That is a real
+result, and a clarifying one; the method survives intact and points elsewhere.
+
+If even one site shows the **four-part joint signature**, the consequences run well past folklore. It would
+mean a new light, screened scalar in the dark-energy sector — exactly the kind of field a dozen running
+experiments are already hunting for other reasons — caught not in a torsion balance but in the wild, gating a
+macroscopic coherent-plasma structure. It would mean the "luminous yet long-lived" lights are force-free
+Beltrami carriers maintaining their own topology, and that the same object can be *built*, at the small end of
+the ladder, from plasma physics we already have. And it would mean the place-threshold modality was never
+mystical: it was a screening map we hadn't thought to read.
+
+Neither outcome requires belief. Both require measurement. That is the whole point of writing it this way —
+to move a question that has lived for decades in testimony and rumor into the one place it can actually be
+settled: the data. We do not know which way it falls. We have tried to say, exactly, how to find out.
+
+---
+
 ## Appendix A — The quarantine
 
 This subject has an adjacent literature that trades on exactly the vocabulary we use — "extended
@@ -623,66 +706,60 @@ maintenance/source code in this essay's companion scripts.
 
 ## Figures
 
-*(Generated by `figures/make_portal_figs.py`; reproducible from R1–R11. Placed inline at revision; collected
-here for the draft.)*
+*The five figures are placed inline at their callouts (§2 Fig. 1; §3 Fig. 2; §4 Fig. 3; §5 Figs. 4–5). All are
+generated reproducibly from Results R1–R11 by `figures/make_portal_figs.py` — four computed plots and one
+computed schematic (Fig. 3).*
 
-**Fig. 1 — Derrick's no-go, and the plasma evasion (R1, R4).** ε(λ) for the bare radion lump (monotone
-collapse, no stationary point) versus the plasma-stabilized configuration (a genuine minimum at the virial
-point E_EM = E_grad + 3E_pot).
+## References
 
-![Fig 1 — Derrick rescaling](figures/portal-fig1-derrick.png)
+*New-physics detection channels (✓ = confirmed against primary listing this session, 2026-06-16):*
+- **✓** P. Hamilton, M. Jaffe, P. Haslinger, Q. Simmons, H. Müller & J. Khoury, "Atom-interferometry
+  constraints on dark energy," *Science* **349** (6250), 849 (2015), DOI 10.1126/science.aaa8883.
+- **✓** J. G. Lee, E. G. Adelberger, T. S. Cook, S. M. Fleischer & B. R. Heckel, "New Test of the Gravitational
+  1/r² Law at Separations down to 52 μm," *Phys. Rev. Lett.* **124**, 101101 (2020) (Yukawa ranges < 38.6 μm
+  excluded at 95 %).
+- **✓** Isotope-shift / King-plot fifth-force search, *Phys. Rev. Lett.* **134**, 233002 (2025).
+- **✓** O. Assouline & A. Capua, "Faraday effects emerging from the optical magnetic field," *Sci. Rep.* **15**
+  (2025), DOI 10.1038/s41598-025-24492-9.
 
-**Fig. 2 — The scale problem is field identification (R5, R7).** Wall thickness ℏc/mc² vs field mass: the
-radion (sub-nuclear wall, excluded for a macroscopic portal) versus the meV dark-energy modulus
-(0.085 mm wall, macroscopic), with the (ρ_Λ)^{1/4} = 2.3 meV line and the sub-mm macroscopic threshold.
+*Mechanism (standard results; recalled, to be DOI/page-confirmed in final proofing):*
+- G. H. Derrick, *J. Math. Phys.* **5**, 1252 (1964) — no-go for static localized scalars.
+- L. Randall & R. Sundrum, *Phys. Rev. Lett.* **83**, 3370 (1999) — warped extra dimension.
+- J. Khoury & A. Weltman, *Phys. Rev. D* **69**, 044026 (2004) — chameleon.
+- K. Hinterbichler & J. Khoury, *Phys. Rev. Lett.* **104**, 231301 (2010) — symmetron.
+- L. Woltjer, *Proc. Natl. Acad. Sci.* **44**, 489 (1958) — force-free fields.
+- J. B. Taylor, *Phys. Rev. Lett.* **33**, 1139 (1974); *Rev. Mod. Phys.* **58**, 741 (1986) — relaxation /
+  selective decay.
+- T. R. Jarboe, *Plasma Phys. Control. Fusion* **36**, 945 (1994) — spheromak review.
+- L. P. Block, *Astrophys. Space Sci.* **55**, 59 (1978) — double-layer review.
 
-![Fig 2 — scale / field identification](figures/portal-fig2-scale.png)
+*Extended electrodynamics (cited for mathematics / data only; see Appendix A quarantine):*
+- "Implications of Gauge-Free Extended Electrodynamics," *Symmetry* **12**, 2110 (2020).
+- Pines et al., *Phys. Rev. C* **101**, 044609 (2020) — lattice confinement fusion.
 
-**Fig. 3 — Structure vs signature (R9).** The screened wall field σ (structure: sets the wall, screens, derives
-place-fixedness) and its electromagnetic signature |∂σ|, which is nonzero *only on the wall shell* — the EM
-source is sourced by the wall field at the wall, by the field equations.
+*Anomalous record (cited as record, graded accordingly):*
+- **✓** M. Teodorani, "A Long-Term Scientific Survey of the Hessdalen Phenomenon," *J. Sci. Explor.* **18** (2),
+  217–251 (2004).
+- Teodorani et al., optical spectrum analysis of the Hessdalen phenomenon (EMBLA field campaigns) — instrumented
+  spectral data. *(exact citation to confirm)*
+- VLF electromagnetic survey of the Hessdalen lights, *J. Applied Geophysics* (2024) — low-frequency EM
+  characterization. *(exact citation to confirm)*
+- E. P. Strand, Project Hessdalen reports.
+- C. Kelleher & G. Knapp, *Hunt for the Skinwalker* (2005) — the documented NIDS/BAASS account (popular-press;
+  cited as testimonial record, not as measurement).
 
-![Fig 3 — structure vs signature](figures/portal-fig3-structure-signature.png)
-
-**Fig. 4 — The maintenance threshold (R10).** Lundquist number S = μ₀σL v_A vs carrier size for cool,
-warm, and hot/ionized regimes, with the S = 1 self-maintenance threshold and the laboratory-spheromak
-validation point (S ≈ 10³).
-
-![Fig 4 — maintenance threshold](figures/portal-fig4-maintenance.png)
-
-**Fig. 5 — The source: anomalous resistivity brackets the kV drive (R11).** Double-layer potential vs
-resistivity enhancement: the few-volt classical Spitzer floor rises through the ×10²–10³ anomalous-
-(reconnection)-resistivity band to bracket the observed ~1 kV spheromak coaxial-helicity-injection drive.
-
-![Fig 5 — the source](figures/portal-fig5-source.png)
-
-## Working references (bibliography — final DOI/page verification pending)
-
-*Verified this session (rolling sources register, 2026-06-16):* PRL 134, 233002 (2025), isotope-shift /
-King-plot fifth-force search · Assouline & Capua, *Sci. Rep.* 15 (2025), DOI 10.1038/s41598-025-24492-9,
-optical-magnetic Faraday · "Implications of Gauge-Free Extended Electrodynamics," *Symmetry* 12, 2110 (2020) ·
-Pines et al., *Phys. Rev. C* 101, 044609 (2020), lattice confinement fusion.
-
-*Standard results (to be page-verified):* Derrick, *J. Math. Phys.* 5, 1252 (1964) · Randall & Sundrum, *PRL*
-83, 3370 (1999) · Khoury & Weltman, *PRD* 69, 044026 (2004), chameleon · Hinterbichler & Khoury, *PRL* 104,
-231301 (2010), symmetron · Woltjer, *PNAS* 44, 489 (1958), force-free fields · Taylor, *PRL* 33, 1139 (1974)
-and *Rev. Mod. Phys.* 58, 741 (1986), relaxation/selective decay · Hamilton et al., *Science* 349, 849 (2015),
-atom-interferometry dark-energy bounds · Lee et al., *PRL* 124, 101101 (2020), sub-mm inverse-square test ·
-Jarboe, *Plasma Phys. Control. Fusion* 36, 945 (1994), spheromak review · Block, *Astrophys. Space Sci.* 55,
-59 (1978), double layers.
-
-*Anomalous record (sourced as record, graded accordingly):* Teodorani, *J. Sci. Explor.* 18, 217 (2004),
-Hessdalen long-term survey · Strand, Project Hessdalen reports · Kelleher & Knapp, *Hunt for the Skinwalker*
-(2005), the documented NIDS/BAASS account (popular-press; cited as testimonial record, not as measurement).
-
-> *Note on the bibliography: entries marked "to be page-verified" are recalled standard results and must have
-> their DOIs/pages confirmed before publication, per the no-hand-waving discipline. The four "verified this
-> session" entries are in the rolling sources register at
-> `Research/sources/2026-06-16-portal-signature-sources.md`.*
+> *Bibliography note: ✓-marked entries were confirmed against primary listings this session; the four detection
+> channels are in the rolling sources register at `Research/sources/2026-06-16-portal-signature-sources.md`.
+> The textbook-standard mechanism references are recalled and should have DOIs/pages confirmed in a final
+> proofing pass, per the no-hand-waving discipline; two Hessdalen instrumented sources are flagged for exact
+> citation lookup.*
 
 ---
 
-*[DRAFT status — FULL FIRST DRAFT COMPLETE: §1 (record, full-in) · §2–§6 (mechanism + kill-table, from R1–R11)
-· §7–§8 (generate / find programs) · §9 (placement) · Appendix A (quarantine) · Appendix B (reproducible
-computations) · figures list · working references. Next: generate the five figures (4 computed, 1 schematic);
-then full revision pass with Clayton. 🦞🧍💜🔥♾️]*
+*[DRAFT status — REVISION PASS 1 COMPLETE (autonomous, Day 136). Full essay §1–§9 + appendices; five figures
+generated and placed inline; worked Hessdalen-scale example added (§5); §8 topological-survey methodology
+expanded (helicity / force-free α / handedness measurement); bibliography restructured with three standard
+refs ✓-verified this session (Hamilton 2015, Lee 2020, Teodorani 2004) alongside the four session-sourced
+channels. Remaining for later passes: confirm the recalled mechanism-ref DOIs/pages + the two flagged
+Hessdalen instrumented citations; optional LaTeX/PDF render; prose-tightening of the parenthetical grades.
+Ready for Clayton's review. 🦞🧍💜🔥♾️]*
