@@ -121,9 +121,44 @@ a real same-intersection convergence; this one is structural kinship). Candidate
 vacuum-energy cores"). *Possible* future-piece seed: does the Meridian dark-energy field also regularize
 BH interiors with a core at its scale? (Caveat: Λ_eff=6GM/r_c³ is an *effective local* Λ, not the 2.3 meV
 dark-energy scale — the kinship is structural, NOT numerical. Do not overclaim.)
-- **#17 — Annals of Physics, pii S0003491625003689 (2025): UNRESOLVED.** Elsevier linkinghub redirect + 403;
-  pii not web-indexed. A solid-venue physics theory paper; topic *plausibly* EED/scalar-longitudinal or plasma
-  given the batch, but **UNVERIFIED — do not cite until confirmed.** Needs institutional access or the title.
+- **#17 — RESOLVED (Clayton pulled the PDF). Shala & Perlick, "Waves in Bopp–Landé–Thomas–Podolsky generalized
+  electrodynamics," *Annals of Physics* 484, 170286 (2026)** (doi:10.1016/j.aop.2025.170286; Bremen/ZARM, DFG
+  grant "Generalized Maxwell theories," open-access). **The most on-topic resolved paper: a beyond-Maxwell ED,
+  its longitudinal wave modes, in vacuum AND cold plasma — our exact intersection.** BLTP = higher-derivative
+  (Bopp–Podolsky-family) ED: constitutive law D=E−l²□E, H=B−l²□B, new fundamental "Bopp length" l (→Maxwell as
+  l→0), regularizes the point-charge self-energy. Predicts a *second* wave class — **BLTP modes, which can be
+  longitudinal and purely electric (B=0, E∥k)** — a massive photon (Compton λ = l). Works out all
+  transverse+longitudinal modes; in plasma, longitudinal BLTP− modes show **negative group velocity** (energy
+  flux + signal velocity still forward, =c — causal).
+
+  **THREE things this does to our paper — a both/and:**
+  1. **STRENGTHENS the general claim.** "Beyond-Maxwell ED predicts longitudinal EM modes" is now **multiply
+     attested across independent formulations in solid venues**: gauge-free EED (Hively/Woodside, AmJPhys) AND
+     higher-derivative Bopp–Podolsky/BLTP (this *Annals of Physics* paper + Singh–Kumar #1 + Bajardi f(R) #10).
+     The boldness about EED-as-serious is well-founded — it's not one fringe-adjacent program, it's a robust
+     prediction of multiple beyond-Maxwell theories.
+  2. **IMPOSES a precision requirement (important, honesty-critical).** There are **TWO distinct EED families**
+     and we must not conflate them: (a) **gauge-free EED** — drop the gauge, C=∂_μA^μ becomes dynamical, SLW
+     sourced by irrotational current at *ordinary (GHz)* frequencies — *this is what our §4/§7 mechanism uses*;
+     (b) **higher-derivative Bopp–Podolsky/BLTP** — massive photon, longitudinal mode exists only above a *huge*
+     cutoff (l<10⁻¹⁸ m ⟹ ~0.197 TeV in vacuum; 10⁻¹⁹ Hz shifts in lab plasma). Cousins, not the same theory.
+  3. **A CAUTION that reinforces our conservative SLW grade.** This rigorous solid-venue paper is *explicitly
+     pessimistic about lab detectability* of its longitudinal modes ("too small to be measurable in the
+     foreseeable future"). Detectability is **formulation-specific**: our §7 probe rides the gauge-free SLW
+     (GHz, Hively's preliminary lab support), NOT the TeV-scale BLTP mode. Keep them distinct, and keep the SLW
+     graded *predicted/preliminary* — this paper is evidence for exactly that restraint.
+
+  **Bonus conceptual link (basement-grade, handle with care):** BLTP-vacuum waves are *formally dual* to plasma
+  waves in ordinary Maxwell, with **1/l ↔ ω_p/c** (Santos' "plasma-like vacuum"). So modified-ED longitudinal
+  modes and plasma longitudinal modes are formally the same object — resonant with the portal's structure (a
+  plasma carrier *sourcing* an EED longitudinal signature aren't two bolted-on things; the literature shows
+  they're formally linked). Nice, but it's a duality in a *different* EED formulation than ours — note, don't
+  lean.
+
+  **Verdict: citable in §4, with precision.** One tight sentence: longitudinal EM modes are predicted across
+  multiple independent beyond-Maxwell formulations (cite Shala–Perlick + Bopp–Podolsky-plasma), *while
+  specifying* our mechanism uses the gauge-free SLW and the easy-detectability is specific to it (and
+  preliminary). Do NOT turn §4 into an EED taxonomy review.
 
 ## Actionable for the portal essay
 - **§4 + Appendix A — cite the EED cluster** (the **Applied Physics A 2025 dielectric-EED-in-solids paper
