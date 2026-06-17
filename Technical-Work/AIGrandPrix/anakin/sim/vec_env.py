@@ -21,6 +21,8 @@ stepping; `done[N]` is still returned so a downstream replay/collection loop cut
 Reward shape = the maneuver_env racing reward (progress + speed bonus - time + velocity-scaled gate
 bonus - crash); Day-124 minimum-time mandate.
 """
+import os
+
 import numpy as np
 import torch
 
@@ -60,6 +62,16 @@ class BatchedManeuverEnv:
         self.max_steps = int(max_steps)
         self.dt = float(dt)
         self.device = device
+        # CONTROL-RATE randomization (Day 137, the control-rate-cliff fix): per-env decision dt,
+        # resampled each episode, so the policy becomes invariant to the deploy clock (train 50 Hz /
+        # deploy 30 Hz killed transfer — CONTROL_RATE_FINDING_2026-06-17.md). Env-var gated so OFF ==
+        # byte-identical (scalar self.dt). Default range covers the 30 Hz deploy clock with margin:
+        # 0.020..0.040 s = 50..25 Hz. The world model infers the effective rate from observed motion.
+        self._rate_rand = os.environ.get("ANAKIN_RATE_RANDOM") == "1"
+        self._dt_min = float(os.environ.get("ANAKIN_DT_MIN", "0.020"))
+        self._dt_max = float(os.environ.get("ANAKIN_DT_MAX", "0.040"))
+        self.dt_vec = np.full(self.N, self.dt, dtype=np.float64)                 # per-env dt (reward)
+        self._dt_t = torch.full((self.N, 1), self.dt, dtype=torch.float32, device=device)  # dynamics
         self.ground_start_prob = float(ground_start_prob)
         # auto_reset=True keeps the batch full (custom-loop / benchmark use). auto_reset=False hands
         # reset-ownership to the caller (DreamerV3 tools.simulate, approach A): a done env holds its
@@ -100,8 +112,16 @@ class BatchedManeuverEnv:
         self.heading[i], self.alt[i] = new_head, new_alt
         return new_pos, fwd
 
+    def _sample_dt(self, i):
+        """Per-episode control dt for env i (control-rate randomization). No-op when disabled."""
+        if self._rate_rand:
+            d = float(self.rng.uniform(self._dt_min, self._dt_max))
+            self.dt_vec[i] = d
+            self._dt_t[i, 0] = d
+
     def _reset_env(self, i, im):
         """Re-seed env i: ground (takeoff) or air start, fill the W-gate window."""
+        self._sample_dt(i)
         self.heading[i] = float(self.rng.uniform(-np.pi, np.pi))
         ground = self.rng.random() < self.ground_start_prob
         if ground:
@@ -153,7 +173,10 @@ class BatchedManeuverEnv:
         """actions: [N,4] (np or torch). Returns obs[N,...], reward[N] np, done[N] np, infos(list)."""
         a = torch.as_tensor(np.asarray(actions, dtype=np.float32), device=self.device).reshape(self.N, 4)
         p_prev = self.state[:, 0:3].detach().cpu().numpy().astype(np.float64)
-        self.state = step(self.state, a, dt=self.dt)
+        # per-env dt when rate-randomizing (byte-identical scalar path when off)
+        dt_arg = self._dt_t if self._rate_rand else self.dt
+        dt_np = self.dt_vec if self._rate_rand else self.dt
+        self.state = step(self.state, a, dt=dt_arg)
         p_cur = self.state[:, 0:3].detach().cpu().numpy().astype(np.float64)
         speed = self.state[:, 3:6].norm(dim=-1).detach().cpu().numpy()
         self.t += 1
@@ -161,8 +184,8 @@ class BatchedManeuverEnv:
         c = self.gpos[:, 0, :]; n = self.gfwd[:, 0, :]
         d_cur = np.linalg.norm(c - p_cur, axis=-1)
         reward = PROGRESS_SCALE * (self.prev_dist - d_cur)
-        reward += SPEED_BONUS_SCALE * self.dt * speed
-        reward -= TIME_PENALTY * self.dt
+        reward += SPEED_BONUS_SCALE * dt_np * speed
+        reward -= TIME_PENALTY * dt_np
         self.prev_dist = d_cur
 
         s_prev = np.einsum("ij,ij->i", p_prev - c, n)

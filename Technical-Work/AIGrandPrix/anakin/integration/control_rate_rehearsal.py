@@ -78,18 +78,26 @@ def run_rate(pilot, dt, n_eps=N_EPS, device="cuda"):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--checkpoint", default=CKPT)
+    ap.add_argument("--episodes", type=int, default=N_EPS)
+    args = ap.parse_args()
+    n_eps = args.episodes
+
     from dreamer_pilot import DreamerPilot
-    assert os.path.exists(CKPT), f"checkpoint missing: {CKPT}"
-    pilot = DreamerPilot(CKPT)
-    print(f"\ncheckpoint: {CKPT}")
-    print(f"horizon {HORIZON_S:.0f}s, {N_EPS} eps/rate, same seeds+tracks across rates, "
+    ckpt = args.checkpoint
+    assert os.path.exists(ckpt), f"checkpoint missing: {ckpt}"
+    pilot = DreamerPilot(ckpt)
+    print(f"\ncheckpoint: {ckpt}")
+    print(f"horizon {HORIZON_S:.0f}s, {n_eps} eps/rate, same seeds+tracks across rates, "
           f"appearance identical (clean renderer)\n")
     print(f"{'rate':>16} {'dt':>7} {'mean_ret':>9} {'std':>7} {'gates/ep':>9} {'vs TRAIN':>9}")
     print("  " + "-" * 64)
     base = None
     rows = []
     for name, dt in RATES:
-        rets, gates = run_rate(pilot, dt)
+        rets, gates = run_rate(pilot, dt, n_eps)
         m = float(rets.mean())
         if base is None:
             base = m
