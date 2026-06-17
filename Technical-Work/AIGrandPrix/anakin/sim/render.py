@@ -11,10 +11,11 @@ x=forward, y=left, z=up; optical mapping cam=[-by,-bz,bx]; gate-corner construct
 REIMPLEMENTS rasterization as a vectorized point-in-quad test over the 64x64 pixel grid,
 batched [N envs, G gates] — no Python per-pixel/per-gate loops, no cv2.
 
-What the old reference left as a TODO and this build does: the 20deg camera down-tilt is
-threaded through the projection (rotate rel-body points by +tilt about body-Y before the
+What the old reference left as a TODO and this build does: the 20deg camera UP-tilt
+(vq1_spec.txt:325 "tilted upwards by 20"; the Day-129 fix — see the projection block below)
+is threaded through the projection (rotate rel-body points by tilt about body-Y before the
 optical mapping). Sign verified by the __main__ visual test (a level gate dead-ahead lands
-ABOVE center because the camera looks down).
+BELOW center because the up-tilted camera's optical axis points above a level-forward object).
 
 State convention matches sim/dynamics.py: state[N,10] = [pos(3), vel(3), quat(4 w x y z)].
 
@@ -25,15 +26,58 @@ Calibration choices (revisit at Phase 4 transfer; DR + VQ1 desaturation cover th
   * Gate = bright FRAME: outer 2.7m square minus inner 1.5m hole (spec VADR-TS-002 §3.7).
   * Background desaturated gray + light noise; current gate bright, lookahead gates dim.
 """
+import os
 import torch
 
 from dynamics import quat_rotate  # batched Hamilton-quat rotate, shared convention
 import gate_mask as _gm  # gate-isolation obs transform (env-var gated; Day 134 seg route)
+import edge_filter as _ef  # edge/pencil obs transform (env-var ANAKIN_EDGE; Day 135 corrected seg route)
+
+
+# ============================================================================
+# APPEARANCE DOMAIN RANDOMIZATION (Day 136 — the surviving route; mask/edge/informed
+# all FALSIFIED the official-appearance gate. Spec: integration/APPEARANCE_RANDOMIZATION_SPEC.)
+# Env-var gated so DR off == byte-identical to the pre-DR renderer. Curriculum width
+# ANAKIN_DR_WIDTH in [0,1] (0=off/narrow, 1=full) so the range can widen over training.
+# Per-env (per-episode) sampling — extends the existing BG_JITTER / RIBBON_* pattern.
+# ============================================================================
+def _dr_cfg():
+    on = os.environ.get("ANAKIN_APPEARANCE_DR") == "1"
+    w = float(os.environ.get("ANAKIN_DR_WIDTH", "1.0")) if on else 0.0
+    return on, max(0.0, min(1.0, w))
+
+
+def _hsv2rgb(h, s, v):
+    """Vectorized HSV->RGB. h,s,v: [N] in [0,1]. Returns [N,3]."""
+    i = (h * 6.0).floor()
+    f = h * 6.0 - i
+    p = v * (1.0 - s)
+    q = v * (1.0 - f * s)
+    t = v * (1.0 - (1.0 - f) * s)
+    idx = (i.long() % 6)[:, None]
+    r = torch.stack([v, q, p, p, t, v], dim=-1).gather(1, idx)
+    g = torch.stack([t, v, v, q, p, p], dim=-1).gather(1, idx)
+    b = torch.stack([p, p, t, v, v, q], dim=-1).gather(1, idx)
+    return torch.cat([r, g, b], dim=-1)
+
+
+def _sample_gate_colors(N, dev, width):
+    """Per-env gate bright/dim colors. Base = orange-red (GATE_BRIGHT ~ H8 S.66 V.90);
+    jitter hue +/- 35deg*width (THE key knob — breaks color-lineage, forces geometry),
+    plus an occasional far-off hue; sat/val jittered for lighting robustness."""
+    base_h = 8.0 / 360.0
+    dh = (torch.rand(N, device=dev) * 2 - 1) * (35.0 / 360.0) * width
+    faroff = torch.rand(N, device=dev) < (0.10 * width)            # ~10% fully-random hue at full width
+    h = torch.where(faroff, torch.rand(N, device=dev), (base_h + dh) % 1.0)
+    s = (0.66 * (1 + (torch.rand(N, device=dev) * 2 - 1) * 0.35 * width)).clamp(0.20, 1.0)
+    v = (0.90 * (1 + (torch.rand(N, device=dev) * 2 - 1) * 0.30 * width)).clamp(0.30, 1.0)
+    bright = _hsv2rgb(h, s, v)                                     # [N,3]
+    return bright, bright * 0.5                                   # dim lookahead = same hue, half value
 
 # --- camera / image constants ---
 IMG       = 64                 # square training resolution (Dreamer obs)
 HFOV_DEG  = 90.0               # horizontal FoV (matches FlightSim fx=fy~=320 @640)
-TILT_DEG  = 20.0               # camera down-tilt (VQ1 spec; FPV looks slightly down)
+TILT_DEG  = 20.0               # camera UP-tilt (vq1_spec.txt:325; FPV looks up — Day-129 fix, see project_gates)
 _f        = (IMG / 2.0) / torch.tan(torch.tensor(HFOV_DEG * torch.pi / 180.0 / 2.0))
 FX = FY   = float(_f)          # ~= 32.0
 CX = CY   = IMG / 2.0
@@ -163,6 +207,7 @@ def render(state, gate_pos, gate_fwd, cur_idx, n_visible=2, add_noise=True, devi
     cur_idx = cur_idx.to(dev).long()
     N, G = gate_pos.shape[0], gate_pos.shape[1]
     cam_pos, cam_quat = state[:, 0:3], state[:, 6:10]
+    _dr_on, _dr_w = _dr_cfg()
 
     # gather the n_visible gates starting at cur_idx (clamped to last gate)
     offs = torch.arange(n_visible, device=dev)
@@ -179,8 +224,15 @@ def render(state, gate_pos, gate_fwd, cur_idx, n_visible=2, add_noise=True, devi
     visible = valid_gate & infront_o.all(dim=-1)                    # [N,nv] all corners in front
 
     # canvas — measured bg 27/255, per-env brightness jitter for robustness
-    bg = BG_GRAY + (torch.rand(N, 1, 1, 1, device=dev) * 2 - 1) * BG_JITTER
+    bgj = BG_JITTER * (1 + 0.5 * _dr_w) if _dr_on else BG_JITTER   # DR: widen brightness jitter
+    bg = BG_GRAY + (torch.rand(N, 1, 1, 1, device=dev) * 2 - 1) * bgj
     img = bg.expand(N, IMG, IMG, 3).clone()
+    if _dr_on and _dr_w > 0:
+        # structured low-freq bg texture (the CONFIRMED domain gap: official bg is
+        # textured, not flat gray). 8x8 coarse field upsampled, per env, gray-blended.
+        coarse = torch.rand(N, 1, 8, 8, device=dev)
+        tex = torch.nn.functional.interpolate(coarse, size=(IMG, IMG), mode="bilinear", align_corners=False)
+        img = img + (tex.permute(0, 2, 3, 1) * 2 - 1) * (0.06 * _dr_w)   # [N,IMG,IMG,1] broadcast
     if add_noise:
         img = img + (torch.rand_like(img) * 2 - 1) * BG_NOISE
 
@@ -222,8 +274,13 @@ def render(state, gate_pos, gate_fwd, cur_idx, n_visible=2, add_noise=True, devi
                 m = in_q.view(N, IMG, IMG, 1).float() * rb_a[:, :, None, None]
                 img = img * (1 - m) + rcol[None, None, None, :] * m
 
-    bright = img.new_tensor(GATE_BRIGHT)
-    dim = img.new_tensor(GATE_DIM)
+    if _dr_on:
+        bright, dim = _sample_gate_colors(N, dev, _dr_w)          # [N,3] each, per-env hue/sat/val
+        glow_a = 0.15 + torch.rand(N, 1, 1, 1, device=dev) * 0.40 * _dr_w   # per-env bloom
+    else:
+        bright = img.new_tensor(GATE_BRIGHT)
+        dim = img.new_tensor(GATE_DIM)
+        glow_a = GATE_GLOW_A
 
     # Paint far -> near so nearer gates overwrite farther ones. Order by gate-center
     # optical depth; simplest stable proxy: distance from camera.
@@ -249,7 +306,7 @@ def render(state, gate_pos, gate_fwd, cur_idx, n_visible=2, add_noise=True, devi
         in_go = _inside_quad(grid, go_q)
         in_gi = _inside_quad(grid, gi_q)
         halo = (in_go & ~in_gi) & vis[:, None]                     # [N,P]
-        hm = halo.view(N, IMG, IMG, 1).float() * GATE_GLOW_A
+        hm = halo.view(N, IMG, IMG, 1).float() * glow_a
         img = img * (1 - hm) + color[:, None, None, :] * hm
         # solid frame core on top
         in_o = _inside_quad(grid, bg_q)                             # [N,P]
@@ -258,9 +315,19 @@ def render(state, gate_pos, gate_fwd, cur_idx, n_visible=2, add_noise=True, devi
         frame_img = frame.view(N, IMG, IMG, 1)
         img = torch.where(frame_img, color[:, None, None, :], img)
 
+    if _dr_on and _dr_w > 0:
+        # ILLUMINATION — the literature's #1 sim-to-real DR knob (Loquercio TRO-2019).
+        # Per-env global brightness multiply + mild gamma, applied after the scene paints.
+        illum = 1.0 + (torch.rand(N, 1, 1, 1, device=dev) * 2 - 1) * 0.40 * _dr_w
+        gamma = 1.0 + (torch.rand(N, 1, 1, 1, device=dev) * 2 - 1) * 0.30 * _dr_w
+        img = (img.clamp(0, 1) * illum).clamp(0, 1) ** gamma
+
     out = (img.clamp(0, 1) * 255).to(torch.uint8)
     if _gm.enabled():                       # SkyDreamer route: feed gate-isolated obs
         out = _gm.gate_isolate_t(out)
+    if _ef.enabled():                       # edge route (Day 135): edge the CONTENT band [14:50] ONLY
+        out[:, 14:50] = _ef.edge_t(out[:, 14:50])  # zero-pad borders match dreamer_pilot.edge_np(small);
+                                            # rows outside [14:50] get grayed by anakin_band downstream
     return out
 
 
