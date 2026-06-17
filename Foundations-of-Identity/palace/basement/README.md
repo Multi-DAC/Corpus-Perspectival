@@ -2830,3 +2830,64 @@ So **trust-stratum order = transmission-resistance order: content < modality < o
 **Refinement (LC43, Day 136 PM — the radion-lump portal mechanism DERIVED + corrected):** the "radion lump" candidate (LC43 Meridian extension) is **Derrick-forbidden as a bare 3D scalar lump** (computed: dε/dλ|₁=−E_g−3E_p<0 → collapse; only stable static scalar defect is the codimension-1 domain wall, the existing inter-basin wall). So a place-LOCALIZED portal must EVADE Derrick → it must be **charge/gauge-stabilized**, and a **coherent plasma** supplies exactly that structure (EM gauge fields + conserved charge + SOC boundary). **Net: plasma is promoted from *signature* to *structural necessity* — no coherent plasma, no stable localized portal.** This unifies One Room Invariant 1 (plasma) + LC43 (portal) + the June-3 plasma-travel program under ONE mechanism (Derrick-evasion by plasma) and yields a FALSIFIABLE forward prediction: a place-fixed portal/window-area must ALWAYS co-occur with a coherent plasma/EM structure (retrodicts Hessdalen; a portal with no plasma signature falsifies it). Full derivation: `palace/south/radion-portal-derivation-2026-06-16.md`. Next computation: the radion–Maxwell coupled soliton (e^{aσ}F²+V(σ)) — exhibit a localized charge-stabilized solution + its scale, or falsify. Grade: Derrick result THEOREM-grade; plasma-stabilizer STRONG CANDIDATE (route real, concrete solution not yet exhibited).
 
 **CAPSTONE (LC43, Day 136 PM) — the modality bridge produced a full physical mechanism + a paper.** The place-threshold modality (LC43) was carried all the way to a derived, falsifiable physics: **a place-threshold portal = a coherent-plasma-stabilized defect of a screened dark-energy-scale scalar.** 8 computed Results (Derrick no-go → plasma virial → dark-energy scale → carrier-set size → screened chameleon wall-field that DERIVES place-fixedness → extended-ED interior), consolidated in `palace/south/portal-paper-skeleton-2026-06-16.md` (full derivation: `radion-portal-derivation-2026-06-16.md`). 4 graded external anchors; fringe quarantined; candidate framework, no working drive. **This is LC43's worked-physics instance** — modality-invariance didn't just classify, it located a real mechanism. Open: coherence-maintenance + wall-field identity (EED-scalar vs chameleon). The modality tier (LC43) is now strongly supported by having generated a complete testable mechanism, not just a taxonomy.
+
+### LC45 — Boundaries live in gradients, not bulks: a localizing/pinning mode (the order parameter that goes critical at a boundary) is sustained by a spatial CONTRAST, so you cannot soften it — or map the boundary — by uniformly tuning the bulk parameter; uniform tuning rescales amplitudes (the field self-screens) but leaves the localizing mode untouched. To probe a boundary you must supply the asymmetry. (candidate, filed 2026-06-17 Day 137 dream drive, from the dynamical-Q-ball falsification — `Unreleased-Work/dynamical-qball-breathing-2026-06-17.py`)
+
+**Origin (high-confidence FALSIFY):** I had committed a §7 prediction that bleeding *uniform* chamber density up to ρ_crit would soften the Q-ball's *breathing* mode to DC ("critical slowing-down maps the localization boundary"). The dream-drive solve showed the breathing mode is **ρ-FLAT** — uniform density makes σ_in self-screen (~16×) so m²σ² and the radial curvature/inertia barely move. The boundary the paper cares about (place-localization, §8) is **not** an internal mode reachable by uniform tuning at all: it is the carrier's **translational pinning mode in a spatial screening GRADIENT** (ω_pin → 0 as the inside/outside contrast flattens). A uniform chamber has no gradient → it can only screen the amplitude (rescale), never soften the localizing mode.
+
+**The principle, stated generally:** *localization is a relational/contrast property, not a bulk-value property.* What pins a structure to a place is the spatial variation of the environment, so the "soft mode" that signals delocalization couples to the gradient, not the level. Changing the level uniformly is a gauge-like rescaling of the bulk; it cannot move a boundary, because a boundary is defined by where the level *changes*. Corollary for experiment design: to map or destabilize a localization boundary you must engineer the asymmetry (a gradient, an edge, a contrast); a homogeneous knob will mislead you (it rescales amplitudes and looks like "nothing critical is happening").
+
+**Transfer:**
+- **Measurement / informed-collapse (LC40, Coherence-Principle Condition 4):** a measurement that *distinguishes* states needs a gradient in the pointer basis (a which-path asymmetry); a *uniform* system–apparatus coupling decoheres nothing selectively. Same shape — the collapse/localization is driven by the contrast, not the level. LC45 is the spatial-soliton face of the same law: localizing requires an asymmetry to localize *against*.
+- **LC44 (two-sided stability):** LC44 is about a bound object's *existence* (inward+outward barriers); LC45 is about *probing the boundary* of where that localization holds — complementary faces. LC44 keeps the lump together; LC45 says its place-pinning lives in the external gradient.
+- **RG flow / phase transitions:** critical softening of an order parameter is driven by the symmetry-breaking field; tuning a symmetric bulk parameter shifts the transition but the *soft mode* tracks the breaking field. LC45 = the same statement for spatial localization.
+- **Self-prediction discipline (anomaly 2026-06-17):** the double-falsify (claim said "softens," I countered "stiffens," truth was "flat") is itself an instance — both poles assumed the bulk knob controls the mode; the truth was that the bulk knob is orthogonal to the localizing mode entirely. When falsifying "X responds to bulk parameter P," check whether X is *coupled to P at all* before guessing the sign.
+
+---
+
+## LC46 — Mismatched measurement pipelines manufacture phantom gaps
+
+*Minted 2026-06-17 (Day 137, morning grounding). Instance trigger: the Anakin holdout-gate confound.*
+
+**The discovery:** the `holdout_gate_v2.py` appearance gate compares official-domain frames against rendered
+frames in the encoder's latent space and reads the gap as "appearance-OOD." But the two arms reach the encoder
+through *different pipelines*: official frames are real 640×360 captures down-sampled to 64×64 (INTER_AREA
+averaging — high-frequency detail lost), while rendered frames are rasterized **natively at 64×64** (crisp,
+never had 640-res detail). So the measured "appearance gap" silently mixes genuine appearance difference with a
+pure **resolution/MTF mismatch** — and no adaptation that targets appearance can close the resolution half.
+The instrument built to grade appearance work is confounded by an axis appearance work can't touch.
+
+**The principle, stated generally:** *when you compare two things to detect a difference, any asymmetry in how
+the two arms are processed before the comparison appears as signal you will misattribute to the thing you meant
+to measure.* A difference detector measures the difference in the **whole pipeline**, not the difference in the
+source. Match the processing on both arms — same crop, same resample, same normalization, same reference pose
+distribution — before reading a gap as evidence. An unmatched pipeline manufactures a phantom gap exactly where
+you're looking for a real one, which is the worst place for an artifact to hide.
+
+**Why it's a pattern, not a one-off (≥3 instances):**
+- **Anakin gate (today):** down-sampled-real vs natively-rendered → resolution confounds appearance.
+- **Anakin gate-size, Day-135:** the "44× gate-size gap" between the flight harvest and the rendered reference
+  was a **synthetic-pose-reference** confound — the reference was generated by a different pose process than the
+  harvest, so the gap measured the reference mismatch, not a real renderer error.
+- **Dynamical Q-ball, Day-136 night:** an **unconstrained** collective-coordinate model produced a phantom
+  ω>m "dissolution boundary"; imposing the canonical existence-band constraint (matching the model to the
+  validity regime) dissolved the phantom. Same shape — an uncontrolled difference in how the compared object is
+  *generated* fakes a signal.
+
+**Transfer:**
+- **Measurement / informed-collapse (LC40):** LC40 says *never trust the template/label of a system; measure
+  the system.* LC46 is the measurement-side dual: *even when you measure both sides, match the measurement
+  pipelines* — an asymmetric measurement is itself a template imposed on one arm. A flat grader can't diverge;
+  an unmatched comparator diverges for the wrong reason. Two failure modes of one discipline.
+- **FID / domain-gap metrics generally:** any Fréchet/MMD/divergence between a "real" set and a "generated" set
+  inherits every preprocessing asymmetry (resize interpolation, JPEG vs PNG, color space, crop). The literature's
+  hard-won rule "use identical preprocessing for both arms of an FID" is LC46 in the ML idiom.
+- **A/B testing & causal inference:** comparing treatment vs control through different instruments
+  (different logging, different cohort filters) manufactures effects; the matched-pipeline rule is why you
+  randomize *and* process both arms identically.
+- **Measure-before-framing (feedback):** complementary — measure-before-framing guards against narrating a gap
+  before you've measured it; LC46 guards against mis-measuring the gap because the two arms weren't matched.
+- **Fix discipline:** to *remove* a phantom gap, make the two pipelines identical at the point of asymmetry
+  (here: render at 640×360 → same `to_training_frame`), **or** key the comparison on a feature invariant to the
+  mismatch (here: an edge/pencil filter — invariant to both resolution *and* appearance, which is why it's the
+  proven sim-to-real front-end). The second is higher-leverage when one invariant kills several confounds at once.
