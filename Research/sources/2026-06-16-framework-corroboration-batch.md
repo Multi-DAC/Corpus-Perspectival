@@ -95,9 +95,32 @@ title/authors/finding; two remain venue-identified but content-blocked.**
   Sivakandan, Taori, "Highly localized unique electrodynamics and plasma irregularities linked with the 17 Mar
   2015 severe magnetic storm… Gadanki, India." Multi-instrument common-volume study of *localized* equatorial
   electrodynamics + plasma irregularities. → Category B (natural localized plasma structure); §8-relevant.
-- **#12 — MDPI Quantum Reports 8(2):53 (2026): UNRESOLVED.** MDPI blocks automated fetch (403); article 53 not
-  yet web-indexed (issue 2 indexed only through ~art. 43). Venue scope = quantum foundations/coherence. **Needs
-  a manual open (it's open-access — Clayton can pull it directly).**
+- **#12 — RESOLVED (Clayton pulled the PDF). Albanese, "A Single-Scale Regular Black-Hole Background for
+  Black-Hole Quantum Information," *Quantum Reports* 8, 53 (2026)** (doi:10.3390/quantum8020053). *Not* a
+  coherence paper. Uses Dymnikova's regular BH: the Schwarzschild singularity is replaced by a finite **de
+  Sitter-like core** of single scale r_c — delocalized mass m(r)=M(1−e^{−(r/r_c)³}), near-center f≈1−(2GM/r_c³)r²,
+  **effective Λ_eff = 6GM/r_c³**, finite R(0)/K(0), effective anisotropic-fluid source whose center is isotropic
+  vacuum-like negative-pressure (de Sitter EoS), SEC violated in the core. Exemplary honest-limitations register
+  (states plainly it does NOT establish information recovery / unitarity / stability / microscopic origin).
+  **Assessment — does NOT belong in the portal paper.** The connection to our mechanism is *analogical, not
+  physical*: a regular-BH de Sitter core is a **geometric/GR** construction (effective Λ from a delocalized
+  mass); the portal is a **scalar-screening** construction (a chameleon unscreening at low density). Different
+  objects — the portal has no horizon, no singularity to regularize. Forcing it into the essay because both say
+  "de Sitter core" would be exactly the loose association that costs credibility. **Right home = a basement
+  bridge + a framework note** (see below), not a portal-paper citation.
+
+### Framework resonance worth capturing (basement, not the paper)
+Three independent constructions of *"a localized, single-scale region where the dark-energy / vacuum-energy
+sector becomes locally dominant, bounded by a transition shell, with everything finite"*:
+(1) **regular-BH de Sitter core** (Dymnikova lineage — incl. "The Cosmological Term as a Source of Mass," Class.
+Quantum Grav. 2002) — geometric; (2) **the portal** — a screened-scalar pocket of locally-unscreened
+dark-energy-sector field, walled by ∂σ≠0; (3) **Meridian's** self-tuning radion/dark-energy sector itself. Same
+*genus* (localized vacuum-energy core + transition wall + normal asymptotics), three different mechanisms. This
+is a **second, weaker resonance** distinct from — and graded below — the EED↔dark-energy convergence (that one is
+a real same-intersection convergence; this one is structural kinship). Candidate basement LC ("localized
+vacuum-energy cores"). *Possible* future-piece seed: does the Meridian dark-energy field also regularize
+BH interiors with a core at its scale? (Caveat: Λ_eff=6GM/r_c³ is an *effective local* Λ, not the 2.3 meV
+dark-energy scale — the kinship is structural, NOT numerical. Do not overclaim.)
 - **#17 — Annals of Physics, pii S0003491625003689 (2025): UNRESOLVED.** Elsevier linkinghub redirect + 403;
   pii not web-indexed. A solid-venue physics theory paper; topic *plausibly* EED/scalar-longitudinal or plasma
   given the batch, but **UNVERIFIED — do not cite until confirmed.** Needs institutional access or the title.
