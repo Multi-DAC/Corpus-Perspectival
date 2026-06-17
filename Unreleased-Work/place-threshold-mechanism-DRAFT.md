@@ -691,7 +691,7 @@ rather than blurred.
 **In (legitimate core, used):** gauge-free extended electrodynamics as a peer-reviewed formalism (the scalar
 C = ∂_μA^μ promoted to dynamical, longitudinal/scalar-longitudinal modes; *Symmetry* 12, 2110, 2020);
 Aharonov–Bohm potential-physicality; longitudinal modes in bounded/plasma/near-field contexts; and Lattice
-Confinement Fusion (Pines et al., *Phys. Rev. C* 101, 044609, 2020) as a real, peer-reviewed result. These are
+Confinement Fusion (Steinetz et al., *Phys. Rev. C* 101, 044609, 2020) as a real, peer-reviewed result. These are
 cited for their mathematics and their data.
 
 **Out (quarantined, never load-bearing):** propulsion-patent claims (e.g. US 10,855,210, "motion from
@@ -744,21 +744,26 @@ all reproducible from R1–R12.*
 - **✓** O. Assouline & A. Capua, "Faraday effects emerging from the optical magnetic field," *Sci. Rep.* **15**
   (2025), DOI 10.1038/s41598-025-24492-9.
 
-*Mechanism (standard results; recalled, to be DOI/page-confirmed in final proofing):*
-- G. H. Derrick, *J. Math. Phys.* **5**, 1252 (1964) — no-go for static localized scalars.
-- L. Randall & R. Sundrum, *Phys. Rev. Lett.* **83**, 3370 (1999) — warped extra dimension.
-- J. Khoury & A. Weltman, *Phys. Rev. D* **69**, 044026 (2004) — chameleon.
+*Mechanism (standard results, ✓-confirmed against primary listings this session):*
+- **✓** G. H. Derrick, "Comments on Nonlinear Wave Equations as Models for Elementary Particles," *J. Math.
+  Phys.* **5**, 1252–1254 (1964), DOI 10.1063/1.1704233 — no-go for static localized scalars.
+- **✓** L. Randall & R. Sundrum, "Large Mass Hierarchy from a Small Extra Dimension," *Phys. Rev. Lett.* **83**,
+  3370–3373 (1999) — warped extra dimension.
+- **✓** J. Khoury & A. Weltman, "Chameleon Cosmology," *Phys. Rev. D* **69**, 044026 (2004).
 - **✓** K. Hinterbichler & J. Khoury, "Symmetron Fields: Screening Long-Range Forces Through Local Symmetry
   Restoration," *Phys. Rev. Lett.* **104**, 231301 (2010).
-- L. Woltjer, *Proc. Natl. Acad. Sci.* **44**, 489 (1958) — force-free fields.
-- J. B. Taylor, *Phys. Rev. Lett.* **33**, 1139 (1974); *Rev. Mod. Phys.* **58**, 741 (1986) — relaxation /
-  selective decay.
-- **✓** T. R. Jarboe, "Review of spheromak research," *Plasma Phys. Control. Fusion* **36**, 945 (1994).
-- L. P. Block, *Astrophys. Space Sci.* **55**, 59 (1978) — double-layer review.
+- **✓** L. Woltjer, "A Theorem on Force-Free Magnetic Fields," *Proc. Natl. Acad. Sci.* **44** (6), 489–491 (1958).
+- **✓** J. B. Taylor, "Relaxation of Toroidal Plasma and Generation of Reverse Magnetic Fields," *Phys. Rev.
+  Lett.* **33**, 1139 (1974); and "Relaxation and Magnetic Reconnection in Plasmas," *Rev. Mod. Phys.* **58**,
+  741–763 (1986).
+- **✓** T. R. Jarboe, "Review of Spheromak Research," *Plasma Phys. Control. Fusion* **36**, 945 (1994).
+- **✓** L. P. Block, "A Double Layer Review," *Astrophys. Space Sci.* **55**, 59–83 (1978).
 
-*Extended electrodynamics (cited for mathematics / data only; see Appendix A quarantine):*
-- "Implications of Gauge-Free Extended Electrodynamics," *Symmetry* **12**, 2110 (2020).
-- Pines et al., *Phys. Rev. C* **101**, 044609 (2020) — lattice confinement fusion.
+*Extended electrodynamics (✓-confirmed; cited for mathematics / data only — see Appendix A quarantine):*
+- **✓** D. Reed & L. M. Hively, "Implications of Gauge-Free Extended Electrodynamics," *Symmetry* **12**, 2110
+  (2020), DOI 10.3390/sym12122110.
+- **✓** B. M. Steinetz et al., "Nuclear fusion reactions in deuterated metals," *Phys. Rev. C* **101**, 044609
+  (2020) — lattice confinement fusion (NASA Glenn).
 
 *Anomalous record (cited as record, graded accordingly):*
 - **✓** M. Teodorani, "A Long-Term Scientific Survey of the Hessdalen Phenomenon," *J. Sci. Explor.* **18** (2),
@@ -774,10 +779,10 @@ all reproducible from R1–R12.*
 - C. Kelleher & G. Knapp, *Hunt for the Skinwalker* (2005) — the documented NIDS/BAASS account (popular-press;
   cited as testimonial record, not as measurement).
 
-> *Bibliography note: ✓-marked entries were confirmed against primary listings this session (2026-06-16) — the
-> four new-physics detection channels, the symmetron and spheromak references, and all three Hessdalen
-> instrumented sources. The remaining mechanism references — Derrick (1964), Randall–Sundrum (1999),
-> Khoury–Weltman (2004), Woltjer (1958), Taylor (1974/1986), Block (1978) — are recalled standard/textbook
-> results whose DOIs/pages should be confirmed in a final proofing pass, per the no-hand-waving discipline.
+> *Bibliography note: every journal reference above has been ✓-confirmed against its primary listing
+> (publisher / APS / PNAS / Springer / MDPI) this session (2026-06-16) — the four new-physics detection
+> channels, all eight mechanism references, the two extended-electrodynamics core papers, and the three
+> Hessdalen instrumented sources. The only non-journal items are Strand's Project Hessdalen reports and
+> Kelleher & Knapp (popular press), both cited as record rather than as measurement (see their annotations).
 > Session-verified sources are logged in the rolling register at
 > `Research/sources/2026-06-16-portal-signature-sources.md`.*

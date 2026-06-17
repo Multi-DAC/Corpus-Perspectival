@@ -46,3 +46,15 @@ Both feed the paper skeleton's signature sections (`palace/south/portal-paper-sk
 Also re-confirmed this session: Hinterbichler & Khoury symmetron (PRL 104, 231301, 2010); Jarboe spheromak
 review (PPCF 36, 945, 1994); Hamilton et al. atom-interferometry (Science 349, 849, 2015); Lee et al. Eöt-Wash
 (PRL 124, 101101, 2020); Teodorani Hessdalen survey (JSE 18(2), 217, 2004).
+
+---
+## Mechanism + EED references — verified against primary listings (2026-06-16 late, publish-ready pass)
+All web-confirmed (volume/page/year exact): Derrick J.Math.Phys. 5, 1252–1254 (1964) DOI 10.1063/1.1704233 ·
+Randall–Sundrum PRL 83, 3370–3373 (1999) · Khoury–Weltman "Chameleon Cosmology" PRD 69, 044026 (2004) ·
+Hinterbichler–Khoury "Symmetron Fields" PRL 104, 231301 (2010) · Woltjer "A Theorem on Force-Free Magnetic
+Fields" PNAS 44(6), 489–491 (1958) · Taylor PRL 33, 1139 (1974) + RMP 58, 741–763 (1986) · Jarboe "Review of
+Spheromak Research" PPCF 36, 945 (1994) · Block "A Double Layer Review" Ap&SS 55, 59–83 (1978) ·
+Reed–Hively "Implications of Gauge-Free Extended Electrodynamics" Symmetry 12, 2110 (2020) DOI 10.3390/sym12122110 ·
+**CORRECTION:** PRC 101, 044609 (2020) lead author is **Steinetz et al.** ("Nuclear fusion reactions in
+deuterated metals"), NOT Pines (Pines is the co-author theorist) — fixed in the essay. Every journal ref in the
+paper is now primary-confirmed; only Strand reports + Kelleher-Knapp (popular) remain as cited-record.
