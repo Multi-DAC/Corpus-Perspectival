@@ -62,7 +62,7 @@ ax[2].set_title("(c) The radion actively binds (≈−21% by a=3)")
 ax[2].tick_params(axis="y",labelcolor=GREEN); ax2.tick_params(axis="y",labelcolor=PUR)
 ls=l1+l2; ax[2].legend(ls,[x.get_label() for x in ls],frameon=False,fontsize=8.5,loc="lower left")
 
-fig.suptitle("Fig. 6 — The gauged dilatonic Q-ball, exhibited (R12): the portal's existence made concrete",
+fig.suptitle("Fig. 2 — The gauged dilatonic Q-ball, exhibited (R12): the portal's existence made concrete",
              fontsize=12,fontweight="bold")
 fig.tight_layout(rect=[0,0,1,0.96]); fig.savefig("portal-fig6-soliton.png"); plt.close(fig)
 print(f"wrote portal-fig6-soliton.png   (E~Q^{pE:.3f})")

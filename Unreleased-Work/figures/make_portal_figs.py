@@ -52,7 +52,7 @@ ax.axhline(1e-3, color=GOLD, ls="--", lw=1.5)
 # "sub-mm" label sits ABOVE the dashed line (was sitting on it)
 ax.text(1e8, 1.5e-3, "sub-mm: macroscopic wall", color=GOLD, fontsize=9, ha="right", va="bottom")
 ax.set_xlabel("wall-field mass  (eV)"); ax.set_ylabel("wall thickness  $\\hbar c/mc^2$  (m)")
-ax.set_title("Fig. 2  The scale problem is field identification (R5, R7)")
+ax.set_title("Fig. 3  The scale problem is field identification (R5, R7)")
 fig.tight_layout(); fig.savefig("portal-fig2-scale.png"); plt.close(fig)
 
 # ---- Fig 3: structure (sigma) vs signature (d sigma sources EM at the wall) ----
@@ -67,7 +67,7 @@ ax.text(R, 1.05, "the wall shell\n($\\partial\\sigma\\neq0$)", color=GOLD, ha="c
 ax.text(0.10, 0.90, "interior\n(unscreened)", color=COOL, fontsize=9, va="top")
 ax.text(1.72, 0.10, "exterior\n(screened)", color=INK, fontsize=9, ha="center")
 ax.set_xlabel("radius  $r$  (carrier units)"); ax.set_ylabel("normalized amplitude")
-ax.set_title("Fig. 3  Structure vs signature (R9)")
+ax.set_title("Fig. 4  Structure vs signature (R9)")
 ax.legend(frameon=False, fontsize=9, loc="center right"); ax.set_ylim(-0.05, 1.20)
 fig.tight_layout(); fig.savefig("portal-fig3-structure-signature.png"); plt.close(fig)
 
@@ -87,7 +87,7 @@ ax.plot(0.3, S_sph, "*", color=GREEN, ms=16); ax.annotate("lab spheromak\n$S\\ap
         xy=(0.3, S_sph), xytext=(0.5, 2e5), color=GREEN, fontsize=9.5,
         arrowprops=dict(arrowstyle="->", color=GREEN))
 ax.set_xlabel("carrier size  $L$  (m)"); ax.set_ylabel("Lundquist number  $S=\\mu_0\\sigma L v_A$")
-ax.set_title("Fig. 4  The maintenance threshold (R10)")
+ax.set_title("Fig. 5  The maintenance threshold (R10)")
 ax.legend(frameon=False, fontsize=9, loc="lower right"); ax.set_ylim(1e-3, 1e8)
 fig.tight_layout(); fig.savefig("portal-fig4-maintenance.png"); plt.close(fig)
 
@@ -104,7 +104,7 @@ ax.plot(1, V_classical, "o", color=HOT, ms=9); ax.annotate("classical Spitzer fl
 ax.axvspan(1e2, 1e3, color=GOLD, alpha=0.12); ax.text(1.3e2, 8, "anomalous (reconnection)\nresistivity ×$10^2$–$10^3$",
         color=GOLD, fontsize=9)
 ax.set_xlabel("resistivity enhancement  $\\eta_{anom}/\\eta_{Spitzer}$"); ax.set_ylabel("double-layer drive  $V_{DL}$  (V)")
-ax.set_title("Fig. 5  Anomalous resistivity brackets the kV drive (R11)")
+ax.set_title("Fig. 6  Anomalous resistivity brackets the kV drive (R11)")
 ax.set_ylim(0.1, 1e4); fig.tight_layout(); fig.savefig("portal-fig5-source.png"); plt.close(fig)
 
 print("wrote portal-fig1..5")

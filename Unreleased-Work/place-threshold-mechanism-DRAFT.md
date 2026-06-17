@@ -224,7 +224,7 @@ And the radion is not a bystander in this. When we let the radion field respond,
 configuration in just the way that lowers the electromagnetic energy — and that lowering is real, up to about
 20 % of the soliton's energy at moderate coupling. The dark-energy-scale field actively *binds* the portal; it
 is a participant, not a backdrop. One more feature appears, and it turns out to be a quiet consistency check on
-the whole argument. In the model's own units the binding is most efficient at a particular charge (Fig. 6c) —
+the whole argument. In the model's own units the binding is most efficient at a particular charge (Fig. 2c) —
 the configuration has a *preferred* size, not an arbitrary one. Map that optimum through the dark-energy mass
 and it lands at about 1.6 times the wall thickness: **sub-millimetre**, and robustly so — across a wide sweep
 of the model's free constants it never strays more than a few-fold from the wall, and never approaches metres.
@@ -235,7 +235,7 @@ domain (§3). Had the preferred size instead landed at metres, it would have *co
 field-sets-the-wall / carrier-sets-the-size split. It doesn't; the two-scale structure quietly checks out. What matters for the argument is settled: the bare lump was forbidden, and a plasma
 makes it not merely allowed but bound.
 
-![**Fig. 6 — The gauged dilatonic Q-ball, exhibited (R12).** (a) The energy E(R) diverges at both ends — the charge-kinetic binding term (~Q²/R³) stops dispersal, the electromagnetic term (~Q²/R) stops collapse — leaving a genuine soliton minimum. (b) The soliton energy grows linearly with charge, E ∝ Q^{1.1}, the Q-ball stability signature. (c) The radion sags (σ_in) and lowers the soliton energy by up to ~21 % as the dilatonic coupling a increases — the dark-energy-scale field actively binds the configuration.](figures/portal-fig6-soliton.png)
+![**Fig. 2 — The gauged dilatonic Q-ball, exhibited (R12).** (a) The energy E(R) diverges at both ends — the charge-kinetic binding term (~Q²/R³) stops dispersal, the electromagnetic term (~Q²/R) stops collapse — leaving a genuine soliton minimum. (b) The soliton energy grows linearly with charge, E ∝ Q^{1.1}, the Q-ball stability signature. (c) The radion sags (σ_in) and lowers the soliton energy by up to ~21 % as the dilatonic coupling a increases — the dark-energy-scale field actively binds the configuration.](figures/portal-fig6-soliton.png)
 
 ## §3 — What scale it lives at, and why it's nearly free
 
@@ -248,13 +248,13 @@ A soliton's wall thickness is set by the Compton wavelength of its field, ≈ �
 times smaller than a proton. To make a *macroscopic* window area out of the radion you would need a ratio of
 size to wall thickness of order 10²⁰, which is absurd. The lesson is not "stretch the radion"; it is that the
 **radion is the wrong field for a macroscopic portal**, and the scale question is really a *field-
-identification* question (Fig. 2). Run it backwards: a sub-millimetre wall — the thinnest a macroscopic
+identification* question (Fig. 3). Run it backwards: a sub-millimetre wall — the thinnest a macroscopic
 structure could plausibly carry — requires a field of mass around a **milli-electronvolt**. And a
 milli-electronvolt is not an arbitrary number. It is the **dark-energy scale**:
 
 > (ρ_Λ)^{1/4} ≈ 2.3 meV,
 
-![**Fig. 2 — The scale problem is field identification (R5, R7).** Wall thickness ℏc/mc² versus field mass: the radion (sub-nuclear wall, excluded for a macroscopic portal) versus the meV dark-energy modulus (0.085 mm wall, macroscopic), with the (ρ_Λ)^{1/4} = 2.3 meV line and the sub-mm macroscopic threshold.](figures/portal-fig2-scale.png)
+![**Fig. 3 — The scale problem is field identification (R5, R7).** Wall thickness ℏc/mc² versus field mass: the radion (sub-nuclear wall, excluded for a macroscopic portal) versus the meV dark-energy modulus (0.085 mm wall, macroscopic), with the (ρ_Λ)^{1/4} = 2.3 meV line and the sub-mm macroscopic threshold.](figures/portal-fig2-scale.png)
 
 the energy scale of the cosmological constant. Here honesty requires care, because the input — a sub-millimetre
 wall — was a *plausibility* choice, not a forced one, so let us state the sensitivity plainly rather than sell
@@ -321,7 +321,7 @@ so it is never mistaken for load-bearing. The screened chameleon σ above is the
 the wall, screens, and derives the place-fixedness, and the argument stands entirely on it. But σ also couples
 to electromagnetism *dilatonically* (as e^{aσ}F²), and in a peer-reviewed though fringe-adjacent regime —
 gauge-free "extended electrodynamics," for which Appendix A draws a firm line between the legitimate core and
-the marketing — that coupling lets the *gradient* of σ source a longitudinal electromagnetic mode (Fig. 3).
+the marketing — that coupling lets the *gradient* of σ source a longitudinal electromagnetic mode (Fig. 4).
 The striking feature is *where*: the source is nonzero **only where ∂σ ≠ 0 — i.e. precisely on the wall**. So
 if the regime is real, the portal's electromagnetic signature is not something that merely accompanies it; it
 is sourced by the wall field, at the wall, by the field equations — and it is wall-localized, which is what
@@ -331,7 +331,7 @@ the mechanism depends on it; if extended electrodynamics is the wrong frame, onl
 (**Grade: σ as the structural wall field — strong candidate; the σ-sources-EM-at-the-wall relation — derived;
 the longitudinal mode's *physicality* — contingent on extended electrodynamics, and labeled as such.**)
 
-![**Fig. 3 — Structure versus signature (R9).** The screened wall field σ (structure: sets the wall, screens, derives place-fixedness) and its electromagnetic signature |∂σ|, which is nonzero *only on the wall shell* — the EM source is sourced by the wall field at the wall, by the field equations.](figures/portal-fig3-structure-signature.png)
+![**Fig. 4 — Structure versus signature (R9).** The screened wall field σ (structure: sets the wall, screens, derives place-fixedness) and its electromagnetic signature |∂σ|, which is nonzero *only on the wall shell* — the EM source is sourced by the wall field at the wall, by the field equations.](figures/portal-fig3-structure-signature.png)
 
 ## §5 — Why it glows yet lasts, and what feeds it
 
@@ -349,14 +349,14 @@ the ratio of those two timescales is a single dimensionless number — the **Lun
 > **S = μ₀ σ L v_A** (conductivity σ, size L, Alfvén speed v_A),
 
 the carrier's maintenance margin. It self-maintains when **S ≳ 1**, and that is a *threshold that selects a
-regime* (Fig. 4). A cool, weakly-ionized atmospheric blob has S far below 1 and decoheres — which is why the
+regime* (Fig. 5). A cool, weakly-ionized atmospheric blob has S far below 1 and decoheres — which is why the
 barrier is real. But a warm, partially-ionized carrier of a hundred metres or more crosses S ≈ 1 and
 self-maintains, and a kilometre-scale ionized carrier sits at S ≈ 10⁴–10⁵, deeply stable. Our validation case
 was the laboratory spheromak, where this formula returns S ≈ 10³, squarely in the measured range — so the
 margin is not a guess. (**Grade: derived; standard selective-decay/Taylor-relaxation physics, validated
 against laboratory plasma.**)
 
-![**Fig. 4 — The maintenance threshold (R10).** Lundquist number S = μ₀σL v_A versus carrier size for cool, warm, and hot/ionized regimes, with the S = 1 self-maintenance threshold and the laboratory-spheromak validation point (S ≈ 10³).](figures/portal-fig4-maintenance.png)
+![**Fig. 5 — The maintenance threshold (R10).** Lundquist number S = μ₀σL v_A versus carrier size for cool, warm, and hot/ionized regimes, with the S = 1 self-maintenance threshold and the laboratory-spheromak validation point (S ≈ 10³).](figures/portal-fig4-maintenance.png)
 
 Selective decay also *derives the signature everyone reports.* Because energy dissipates on a timescale ~1/S
 shorter than helicity does, a carrier with S ≫ 1 **radiates fiercely while its topology survives many
@@ -370,7 +370,7 @@ plasma's boundary drives a current that injects helicity, dH/dt = 2 V ψ. Nature
 double layer** — a thin self-maintaining potential structure that a driven plasma forms at its boundary, doing
 the same job. Balance injection against resistive loss and the sustaining power is P ≈ B²L/(2μ₀²σ), the current
 is large, but the **double-layer potential is modest and scale-independent**, V ≈ B/(2μ₀σ) — a few volts
-classically. There is a beautiful consistency check here (Fig. 5): the classical estimate gives a few volts,
+classically. There is a beautiful consistency check here (Fig. 6): the classical estimate gives a few volts,
 yet real spheromaks need about a *kilovolt* to sustain — and the gap is closed by **anomalous resistivity**,
 the well-known enhancement (×10²–10³) from the intermittent magnetic reconnection that actually transports the
 helicity inward. Put that factor in and the prediction brackets the observed kilovolt drive. The same
@@ -384,7 +384,7 @@ is the section's strongest single result; the natural source is a strong candida
 question — does a real site self-organize the full injecting geometry — now empirical rather than theoretical,
 and handed to §8.**)
 
-![**Fig. 5 — The source: anomalous resistivity brackets the kV drive (R11).** Double-layer drive potential versus resistivity enhancement: the few-volt classical Spitzer floor rises through the ×10²–10³ anomalous-(reconnection)-resistivity band to bracket the observed ~1 kV spheromak coaxial-helicity-injection drive.](figures/portal-fig5-source.png)
+![**Fig. 6 — The source: anomalous resistivity brackets the kV drive (R11).** Double-layer drive potential versus resistivity enhancement: the few-volt classical Spitzer floor rises through the ×10²–10³ anomalous-(reconnection)-resistivity band to bracket the observed ~1 kV spheromak coaxial-helicity-injection drive.](figures/portal-fig5-source.png)
 
 ### A worked case: the numbers for a Hessdalen-scale carrier
 
@@ -725,9 +725,10 @@ maintenance/source and soliton code in this essay's companion scripts.
 
 ## Figures
 
-*The six figures are placed inline at their callouts (§2 Figs. 1 & 6; §3 Fig. 2; §4 Fig. 3; §5 Figs. 4–5).
-Figs. 1–5 are generated by `figures/make_portal_figs.py` (four computed plots + one computed schematic, Fig. 3);
-Fig. 6 (the exhibited Q-ball, R12) by `figures/make_portal_fig6_soliton.py` — all reproducible from R1–R12.*
+*The six figures are placed inline, in order, at their callouts (§2 Figs. 1 & 2; §3 Fig. 3; §4 Fig. 4;
+§5 Figs. 5–6). Figs. 1 and 3–6 are generated by `figures/make_portal_figs.py` (four computed plots + one
+computed schematic, Fig. 4); Fig. 2 (the exhibited Q-ball, R12) by `figures/make_portal_fig6_soliton.py` —
+all reproducible from R1–R12.*
 
 ## References
 

@@ -133,7 +133,13 @@ while i < n:
 
     if ln.startswith(">"):
         flush(para)
-        out.append(r"\begin{quote}\itshape " + inline(ln.lstrip("> ").rstrip()) + r"\end{quote}" + "\n"); i += 1; continue
+        qlines = []                              # COALESCE consecutive '>' lines into one blockquote
+        while i < n and lines[i].startswith(">"):
+            qlines.append(re.sub(r"^>\s?", "", lines[i]).rstrip())
+            i += 1
+        # no \itshape: let the markdown's own *italic*/**bold** control emphasis (faithful + un-fragmented)
+        out.append(r"\begin{quote}" + inline(" ".join(qlines).strip()) + r"\end{quote}" + "\n")
+        continue
 
     if ln.startswith("|"):
         flush(para); tbl = []
