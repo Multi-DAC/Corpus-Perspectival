@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 from scipy.optimize import minimize
-rcParams.update({"font.size": 10.5, "axes.titlesize": 11, "axes.titleweight": "bold",
+rcParams.update({"font.size": 11, "axes.titlesize": 11.5, "axes.titleweight": "bold",
                  "figure.dpi": 140, "savefig.dpi": 140, "axes.grid": True, "grid.alpha": 0.25,
                  "axes.axisbelow": True})
 INK="#1a2b3c"; HOT="#c0392b"; COOL="#2471a3"; GOLD="#b9770e"; GREEN="#1e8449"; PUR="#6c3483"
@@ -20,20 +20,20 @@ def sol(Q,a,x0=(2,0.2)):
     r=minimize(Etot,x0,args=(Q,a),method="Nelder-Mead",options=dict(xatol=1e-6,fatol=1e-9,maxiter=8000))
     return r.x[0], r.x[1], sum(parts(r.x[0],r.x[1],Q,a))
 
-fig,ax=plt.subplots(1,3,figsize=(13.5,4.3))
+fig,ax=plt.subplots(1,3,figsize=(14.4,5.0))
 
 # (a) E(R) well with components, Q=10,a=0.5,sig=0.15
 R=np.linspace(0.3,5,300); s=0.15; Q=10; a=0.5
 P=np.array([parts(r,s,Q,a) for r in R]); tot=P.sum(1)
 ax[0].plot(R,tot,color=INK,lw=2.6,label="total E(R)")
-ax[0].plot(R,P[:,2],color=HOT,lw=1.6,ls="--",label="charge-kinetic ~Q²/R³ (binds; v1 lacked this)")
-ax[0].plot(R,P[:,1]+P[:,4],color=GREEN,lw=1.6,ls="--",label="volume+radion ~R³ (stops dispersal)")
-ax[0].plot(R,P[:,3],color=GOLD,lw=1.6,ls=":",label="EM ~Q²/R (stops collapse)")
+ax[0].plot(R,P[:,2],color=HOT,lw=1.6,ls="--",label="charge-kinetic ~Q²/R³ (binds)")
+ax[0].plot(R,P[:,1]+P[:,4],color=GREEN,lw=1.6,ls="--",label="volume+radion ~R³ (anti-disperse)")
+ax[0].plot(R,P[:,3],color=GOLD,lw=1.6,ls=":",label="EM ~Q²/R (anti-collapse)")
 Rm=R[np.argmin(tot)]; ax[0].plot(Rm,tot.min(),"o",color=PUR,ms=10,zorder=5)
-ax[0].annotate("exhibited soliton",xy=(Rm,tot.min()),xytext=(2.2,tot.min()+18),
-               color=PUR,fontsize=9.5,arrowprops=dict(arrowstyle="->",color=PUR))
-ax[0].set_xlabel("bubble radius R (1/m)"); ax[0].set_ylabel("energy E"); ax[0].set_ylim(0,80)
-ax[0].set_title("(a) Both ends diverge → a real minimum"); ax[0].legend(frameon=False,fontsize=7.6,loc="upper center")
+ax[0].annotate("exhibited\nsoliton",xy=(Rm,tot.min()),xytext=(1.95,tot.min()+15),
+               color=PUR,fontsize=9.5,ha="center",arrowprops=dict(arrowstyle="->",color=PUR))
+ax[0].set_xlabel("bubble radius R (1/m)"); ax[0].set_ylabel("energy E"); ax[0].set_ylim(0,92)
+ax[0].set_title("(a) Both ends diverge → a real minimum"); ax[0].legend(frameon=False,fontsize=8.5,loc="upper center",ncol=1)
 
 # (b) E* ~ Q (Q-ball signature)
 Qs=np.array([5,10,20,40,80,160,320]); Es=[]; Rs=[]

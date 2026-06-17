@@ -778,16 +778,3 @@ Fig. 6 (the exhibited Q-ball, R12) by `figures/make_portal_fig6_soliton.py` — 
 > results whose DOIs/pages should be confirmed in a final proofing pass, per the no-hand-waving discipline.
 > Session-verified sources are logged in the rolling register at
 > `Research/sources/2026-06-16-portal-signature-sources.md`.*
-
----
-
-*[DRAFT status — REVISION PASS 3 COMPLETE (Day 136 evening; flow pass after a full reader re-read). Pass 1:
-figures, worked example, survey methodology, citations. Pass 2: the four soft joints (framework premise up
-front + warmer title; plasma sufficient-not-necessary; 2.3 meV as a decade-wide basin; convergence buys plasma,
-signature buys the anomaly). Citation pass: all uncertain refs verified, two content wins (real Hessdalen
-sizes/durations + 19 kW consistency check; 2024 VLF survey confirms signature 4). Pass 3 (this one): cut the
-internal draft-note header; ended §2 on the soliton (moved the EED thread into §4 where the σ/signature
-hierarchy lives, hedged hard); trimmed the null/kill refrain from four occurrences to two (§6 table + Coda);
-tightened §1.1's opening; merged §8's two "how to measure" heads into one. Remaining before public release:
-cut this status footer; confirm the six recalled textbook-ref DOIs; final proof of the typeset PDF.
-🦞🧍💜🔥♾️]*
