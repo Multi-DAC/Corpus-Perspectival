@@ -24,6 +24,13 @@ a chameleon density-dependent mass m²(ρ), found:
 Phases A–D below stay as the *plan*, but B must target the BdG spectrum AND the translational mode in a gradient;
 the VK-on-breathing route is closed. The carrier-frequency (A) and amplitude-screening results are banked.
 
+**UPDATE #2 (same night, dream drive #2 ~07:00):** also ruled OUT a competing *uniform-density existence-closure*.
+A canonical chameleon Q-ball (`canonical-qball-existence-2026-06-17.py`) has band width g²/2λ = CONST in ρ → the
+existence band slides up rigidly and never closes; soliton exists at every ρ (σ(0) identical — U_ω is ρ-invariant
+at fixed band-position). So there is **no rival dissolution boundary** — the §8 place-localization boundary is
+unambiguously the **translational pinning ω_pin in a spatial gradient**, and it is about the carrier's EXTERIOR
+coupling/reach (screened outside the basin), NOT its existence. Build V_pin(x) from the exterior field cost.
+
 ## Why this is the next move
 
 R16 already fixes the *carrier* sideband from the mass scale alone: a Q-ball carries its charge on an internal
