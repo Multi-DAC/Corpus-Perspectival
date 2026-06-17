@@ -93,6 +93,34 @@ Two public GIS layers would pin it to raster precision:
 2. **Blakely et al. 2011/2014 Bouguer gravity grid** — the exact gravity-low contour (the low-density
    extremum geometry). Pull as a raster, contour, intersect with the fault polylines + the C1/C2 points.
 
+## 7. Raster-precision attempt — infrastructure boundary + the QGIS recipe (2026-06-17)
+
+Pushed for in-chat raster precision; hit a tooling wall (not a precision wall): USGS Quaternary-fault
+ArcGIS endpoints have moved (404; the live `eq/map_faults` is realtime-quake-only); WA DNR REST folders
+don't enumerate through the fetch tool; the DNR Mill Creek fault PDF is image-only and this box has no
+poppler/`pdftoppm` to rasterize; and the Blakely Bouguer **grid** is a raster file needing GDAL/rasterio
++ the actual `.grd` in hand. **Conclusion: true raster precision = a short QGIS session, not chat.**
+
+**QGIS recipe (≈20 min, all free layers):**
+1. **Faults:** USGS Quaternary Fault & Fold Database — load the WA faults (interactive map
+   `usgs.gov/tools/interactive-us-fault-map`; download via ScienceBase item `589097b1e4b072a7ac0cae23`,
+   or the cfusion report for the Toppenish Ridge / Mill Creek fault). Gives the exact scarp polylines.
+2. **Gravity / density:** Blakely et al. 2014 isostatic/Bouguer gravity grid for the YFTB (USGS data
+   release accompanying the JGR paper); contour it → the gravity-LOW polygon = low-density extremum.
+3. **Geology backup:** WA DNR 1:100k surface geology (Geologic Information Portal) — the Quaternary
+   sediment-fill polygon north of the ridge is the basin (low-density) outline if the grid is hard to get.
+4. **Overlay:** intersect (gravity-low ∩ Quaternary-fault buffer ∩ Satus-Peak viewshed). The few cells
+   that survive = the raster-precise C1 pins. Drop the verified C2 point (46.2575, −120.7535) as a marker.
+
+**Verified-coordinate refinement (what stands without the raster):**
+- **C2 — Satus Peak / Starvation Flats: 46.2575, −120.7535** (tight; the documented Vogel vantage). Camp + overnight log here.
+- **C1 — north-flank Mill Creek thrust band: ~46.30–46.32 N, −120.70→−120.55 W** (the ridge-base
+  segment in the Satus viewshed where the active thrust meets the basin fill). The exact scarp polyline
+  is the one thing the QGIS fault layer pins; treat this as a ~2 km search corridor until then.
+
+*Next session / QGIS: if a fault/gravity layer is exported to GeoJSON, it can be parsed + intersected
+with plain Python here (no GIS suite needed for GeoJSON). The gravity raster still needs GDAL.*
+
 *Discipline wall (from the paper): this maps the physical place-threshold; it tests whether a sharp
 recurring anomaly with the derived signatures exists, and stops there. A null is the expected, honest
 outcome and is itself worth recording.*
