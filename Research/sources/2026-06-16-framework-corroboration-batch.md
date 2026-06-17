@@ -68,10 +68,46 @@ claims into cited facts.*
 12. **Quantum Reports (MDPI) 8(2):53 (2026; 403).** Quantum coherence/entanglement likely. To read.
 3. **Applied Physics A, s00339-025-08458-2 (2025; 403).** Materials/applied; topic TBD. To read.
 
+## RESOLUTIONS (2026-06-17 — paywall/403 hunt, per Clayton)
+
+Ran a DOI/identifier hunt on the eight I couldn't fetch first pass. **Six resolved with real
+title/authors/finding; two remain venue-identified but content-blocked.**
+
+- **#3 = #14 — SAME paper, and it's the upgrade.** "Dielectric and conductive properties of solids:
+  **classical versus extended electrodynamics**," **Applied Physics A 131, 369 (2025)**, doi:10.1007/
+  s00339-025-08458-2 (recv 10 Jan, acc 17 Mar, pub 14 Apr 2025). The ResearchGate link [#14] and the Springer
+  link [#3] are one article. **Finding:** at a dielectric/conductor interface, classical ED with *static*
+  conductivity cannot match the Fresnel reflection-coefficient/phase-shift data; agreement needs *optical*
+  conductivity (≈2 orders of magnitude different) — examined through the classical-vs-extended-ED lens. → A
+  **testable EED-in-matter signature in a mainstream Springer journal** — materially better venue than Physics
+  Essays. **This is the strongest citable EED-experimental anchor in the whole batch.**
+- **#4 — Nature Physics s41567-026-03342-z (pub 15 Jun 2026): "Strong coupling of a microwave photon to an
+  electron on helium."** Single electron on superfluid He ↔ superconducting-resonator cavity photon, strong
+  coupling for charge/spin qubits. → Category C (single-quantum-system coherence); moderate relevance.
+- **#9 — PRAB 29 (2026), doi:10.1103/ggd1-pt1y: "Longitudinal dynamics of extreme plasma-based compression of
+  electron beams,"** Swanson, Dalichaouch, Marinelli, O'Shea et al. (SLAC). Plasma-based compression of
+  ultrashort high-current e-beams. → Category B (plasma engineering); moderate.
+- **#11 — KTH thesis (diva2:217435): Sónia Liléo, "Auroral electrodynamics of plasma boundary regions," PhD
+  (2009).** Magnetosphere–ionosphere coupling across *sharp plasma boundaries*; subauroral ion drifts, intense
+  auroral E-fields. → Category B; **the "plasma boundary region with sharp fields" framing is a natural-analog
+  touchpoint for the portal wall + §8 natural survey.**
+- **#13 — JGR Space Physics 121(11), 11518 (2016), doi:10.1002/2016JA023384:** Patra, Chaitanya, Dashora,
+  Sivakandan, Taori, "Highly localized unique electrodynamics and plasma irregularities linked with the 17 Mar
+  2015 severe magnetic storm… Gadanki, India." Multi-instrument common-volume study of *localized* equatorial
+  electrodynamics + plasma irregularities. → Category B (natural localized plasma structure); §8-relevant.
+- **#12 — MDPI Quantum Reports 8(2):53 (2026): UNRESOLVED.** MDPI blocks automated fetch (403); article 53 not
+  yet web-indexed (issue 2 indexed only through ~art. 43). Venue scope = quantum foundations/coherence. **Needs
+  a manual open (it's open-access — Clayton can pull it directly).**
+- **#17 — Annals of Physics, pii S0003491625003689 (2025): UNRESOLVED.** Elsevier linkinghub redirect + 403;
+  pii not web-indexed. A solid-venue physics theory paper; topic *plausibly* EED/scalar-longitudinal or plasma
+  given the batch, but **UNVERIFIED — do not cite until confirmed.** Needs institutional access or the title.
+
 ## Actionable for the portal essay
-- **§4 + Appendix A — cite the EED cluster** (Bajardi 2026 f(R)-EED [#10], Singh–Kumar Bopp–Podolsky-plasma 2025
-  [#1], the dielectric-EED solids paper [#14]) to convert the bold "extended electrodynamics — a formalism
-  taken seriously now" from an assertion into a *cited* fact. Highest-leverage upgrade.
+- **§4 + Appendix A — cite the EED cluster** (the **Applied Physics A 2025 dielectric-EED-in-solids paper
+  [#3=#14] — mainstream venue, now the lead EED-experimental cite**; Bajardi 2026 f(R)-EED [#10]; Singh–Kumar
+  Bopp–Podolsky-plasma 2025 [#1]) to convert the bold "extended electrodynamics — a formalism taken seriously
+  now" from an assertion into a *cited* fact. Highest-leverage upgrade — and the App. Phys. A venue lets us lean
+  harder than Physics Essays did.
 - **§7 — add CFS/ARC [#15]** beside the spheromak as a second proof that confined-plasma carriers are buildable.
 - **§9 — footnote the macroscopic-entanglement result [#7]** under "plasma is the physical-plane host" — the
   cm-scale-coherence-in-matter datum makes "maintained coherence is macroscopic and physical" empirical, not
