@@ -336,7 +336,17 @@ and fall off as 1/r² (Hively & Loebl 2019). That evidence is early and from a s
 as exactly that — promising, not settled. One precision matters and we state it plainly: the mode our §7 probe
 targets is the *gauge-free* SLW, sourced at ordinary frequencies; the higher-derivative theories' longitudinal
 photon sits at a far higher cutoff and is **not** the laboratory target here. Conflating the two would be a
-mistake, and a tempting one, because both wear the name "longitudinal wave." The propulsion-and-ZPE literature
+mistake, and a tempting one, because both wear the name "longitudinal wave." And we name the real price of the
+gauge-free choice rather than hide it. Promoting C to a dynamical field relaxes strict local charge
+conservation, ∂_μJ^μ = −ε₀□C — which sounds fatal, because charge conservation is tested to extraordinary
+precision. But those bounds (Borexino's limit on *irreversible* electron decay, τ_e > 6.6×10²⁸ yr) constrain
+charge *permanently disappearing*, and the EED term is neither permanent nor global: it is sourced only where
+∂σ ≠ 0 (the ~86 μm wall), it is a static field-redistribution for a standing wall — a reshuffle of Gauss's law,
+like bound-charge polarization, conserving net charge in any volume — and its radiative part is an oscillatory C
+that reverses each cycle. Reversible and wall-localized, it never touches the irreversible-decay bounds
+(Appendix B, R13). The ghost states that afflict *higher-derivative* electrodynamics are a separate matter
+entirely — they live in the Bopp–Podolsky sector, not the first-order gauge-free one, which is exactly why the
+two-families discipline is load-bearing and not pedantry. The propulsion-and-ZPE literature
 that orbits this same vocabulary we keep at arm's length (Appendix A) — that is discernment, not timidity, and
 it is what lets us use the genuine core without flinching.
 
@@ -394,6 +404,31 @@ drive is the section's strongest single result; the natural source is our hypoth
 §8 to settle.**)
 
 ![**Fig. 6 — The source: anomalous resistivity brackets the kV drive (R11).** Double-layer drive potential versus resistivity enhancement: the few-volt classical Spitzer floor rises through the ×10²–10³ anomalous-(reconnection)-resistivity band to bracket the observed ~1 kV spheromak coaxial-helicity-injection drive.](figures/portal-fig5-source.png)
+
+The source raises two fair questions — *how does it light, and what refuels it* — and both have numbers
+(Appendix B, R14–R15). **Ignition first.** The kilovolt drive needs anomalous resistivity, which needs the
+micro-turbulence of a sharp current sheet, which needs a current density above the ion-acoustic onset
+J_th ≈ n e c_s ≈ 4×10³ A/m² (a decimetre-thick sheet at ~10 G). A *cold* geological background may never breach
+that — and that is a feature, not a bug: the threshold is the **selection mechanism** that makes carriers rare
+and place-fixed rather than ubiquitous. Ignition comes from a transient **trigger** — lightning, a sprite, a
+piezo-discharge from tectonic stress, a telluric surge — that locally drives the current density far past
+threshold (a lightning channel exceeds J_th by ~10⁴), after which helicity conservation carries the
+self-organized state long past the spark. That **trigger/sustain architecture** is itself falsifiable:
+occurrence should track trigger-event statistics (lightning, sprites, micro-seismicity), not appear at random.
+**Refuelling second**, and this is the sharpest of the open questions: a natural coaxial-helicity loop needs not
+just the double-layer voltage V but a *linked bias flux* ψ, and geology is static — so what supplies ψ? The
+answer is the **geomagnetic field threading the conductive structure**, with V supplied by the telluric /
+atmospheric-electric potential across it. The budget closes with room to spare: a 10 m, ~19 kW carrier leaks
+helicity at ~1 Wb²/s, the geomagnetic bias flux through it is ψ ≈ B_geo L² ≈ 5×10⁻³ Wb, so the sustaining
+voltage required is only **V ≳ 100 V** — which atmospheric and telluric sources clear by one to three orders.
+And because the bias flux is *geomagnetic*, the refuelling answer **sharpens two predictions**: the carrier's
+helicity handedness should anchor to the local geomagnetic orientation (giving §8's parity test a geophysical
+reference), and the screening geology (signature 4) must not merely *be* conductive but must **link** the
+geomagnetic field — an unlinked, stochastic topology accelerates particles without injecting helicity and lets
+the carrier decohere. (**Standing: the ignition threshold, the trigger sufficiency, and the natural-CHI budget
+are all order-of-magnitude computations with stated inputs (R14–R15); they convert "does a site self-organize
+the injecting geometry?" from an open worry into a *budgeted* claim with a sharpened, testable geology
+requirement.**)
 
 ### A worked case: the numbers for a Hessdalen-scale carrier
 
@@ -499,11 +534,24 @@ detector (scalar probe). The probe menu is itself a set of running experimental 
   distinctive prediction in the set; if confirmed it would be the gauge-free SLW caught in the act, sourced by a
   dark-energy-scale wall. *(We grade the existing SLW evidence as preliminary and specialist-venue — see §4 —
   and the higher-derivative theories' far-higher-cutoff longitudinal mode is not what this probe targets.)*
+- **Resonant optical-cavity birefringence — the highest-S/N read against the screening problem.** The "honest
+  risk" below is real and specific: a chameleon's coupling *to matter* is thin-shell-suppressed in any dense
+  detector — which is exactly why torsion balances and atom interferometers fight the screening. But the
+  dilatonic coupling is to the **photon** (e^{aσ}F²), and in the unscreening chamber that channel is *not*
+  thin-shell-screened, because no dense body sits in the beam. So the read-out we calculate as highest-S/N is a
+  high-finesse optical cavity looking for **vacuum birefringence / light-shining-through-a-wall** — the mature
+  ALPS-II / PVLAS / OSQAR toolkit — with the carrier supplying the σ-gradient source. It wins three ways:
+  it bypasses the matter-screening that limits the mechanical probes; it converts the weak coupling into a
+  *resonantly enhanced* optical phase shift (scaling with cavity finesse and B²); and it carries a cleaner
+  systematic null than direct SLW detection — which matters given the SLW evidence is still preliminary. The
+  Faraday channel above is the field-deployable sibling of this same photon-coupling family; the cavity is its
+  lab-grade form.
 
 *(Grade: each probe is established physics with running bounds; the proposal is the **combination** —
 carrier ⊗ unscreening ⊗ probe. The honest risk is sensitivity: the wall field may be too weakly coupled to
-register at lab carrier energies. That is itself a measurement — an upper bound on the coupling — not a
-failure.)*
+register at lab carrier energies — and that risk falls hardest on the *matter*-coupling probes, which is
+precisely why the photon-coupling cavity read is the lead. Even a null is a measurement — an upper bound on the
+coupling — not a failure.)*
 
 **Rung 2 and up — scaling L, and the one thing that gets harder.** The mechanism contains a piece of genuinely
 good news for scaling and one genuine obstacle, and they are not the ones intuition expects.
@@ -552,7 +600,11 @@ show *all four*:
 4. **Co-located screening geology** — the environmental condition that unscreens a chameleon wall field:
    locally low ambient density (altitude, large air or water cavities, deep valleys), sharp density gradients
    (rock/air and water/air interfaces), and seeding mineralogy (magnetite, piezoelectric or highly conductive
-   bodies) that can source and structure the plasma. The "place" should be readable as a screening map.
+   bodies) that can source and structure the plasma. The "place" should be readable as a screening map. One
+   refinement the source budget (§5, R14) adds: the conductive body should not merely *be* conductive but be
+   shaped to **link the geomagnetic field**, since that linkage is what supplies the bias flux a natural
+   helicity loop needs — so the sharper prediction is a correlation between carrier occurrence and
+   *flux-linking* crustal structure, not conductivity alone.
 
 **And one leg is already partly confirmed — by instruments, before this mechanism asked for it.** A 2024 VLF
 electromagnetic survey of Hessdalen (Vargemezis, Zlotnicki, Hauge & Strand) mapped the conductive near-surface
@@ -585,7 +637,9 @@ from solar and laboratory plasma physics. Three independent handles cross-check 
   rotation measure across the source) give the line-of-sight field and, crucially, **the sign of the magnetic
   helicity** — its *handedness*. Helicity is a pseudoscalar, a parity-odd quantity, which makes it an unusually
   clean discriminator: a survey can ask whether genuine sites share a handedness or scatter randomly, a test
-  no thermal-plasma null hypothesis predicts structure for.
+  no thermal-plasma null hypothesis predicts structure for. And the source budget (§5, R14) gives that test a
+  *reference*: if the sustaining bias flux is geomagnetic, the carrier's handedness should anchor to the local
+  geomagnetic orientation rather than fall where it pleases — a sharper null than "shared handedness" alone.
 - **Map the electromagnetic environment.** VLF/ELF electromagnetic surveys of the site (already piloted at
   Hessdalen) characterize the low-frequency field structure the carrier lives in and would reveal the
   field-aligned-current / double-layer signatures §5 predicts.
@@ -630,6 +684,23 @@ Honest practice is to keep the site, separate the two signatures operationally �
 discriminator above tests only the place-fixed component — and let the survey report which parts of the
 phenomenology each fork can and cannot carry. Conflating them is what has historically made the site
 un-discussable; separating them is what makes it tractable.
+
+One caution about that separation, because our own framework forbids the lazy version of it. Treating the
+place-fixed and person-bound forks as two *unrelated* phenomena that merely co-occur would be a dualistic
+epicycle — and in a framework where coherence-maintenance is the load-bearing principle, it would also be wrong.
+The cleaner reading is that they are **two localizing limits of one mechanism**: what holds a coherent carrier
+against decoherence is *what measures it*, and the place-fixed fork is a carrier localized by the geological
+screening geometry, while the person-bound fork would be one localized by coupling to an observer's stream —
+same coherence-maintenance, different localizing partner. The operational bracketing above is then a claim about
+*observables* (magnetometer-detectable-regardless-of-observer versus tracks-the-observer), not about ontological
+kinds. And that unification is not a hand-wave but a **prediction**: if the two forks are screening-limit
+endpoints of one mechanism, there should be a continuous deformation between them governed by the screening
+margin — person-bound behaviour concentrating where the geological screening is *marginal* (ρ near the
+unscreening threshold, weak place-localization) and place-fixed behaviour dominating where it is strong. On that
+reading Skinwalker, where both forks are reported, is a *marginal-screening site by prediction* — a correlation
+a survey can test, and one that dissolves the dualism rather than enshrining it. The person-bound fork remains
+the least-instrumented limb of the program, and we keep it labelled as such; but the framework's own logic says
+it is the same coherence story read at the boundary where localization is failing.
 
 **The honest kill.** This section is the one most able to end the whole hypothesis cheaply, and that is a
 feature. A thorough survey that finds only thermal, disordered plasma — no force-free topology, no helicity, no
@@ -775,9 +846,27 @@ anything in this "out" list.
   (no binding term); adding the charge-kinetic Q²/2V f₀² (Q-ball binding) gives a finite soliton: **E\* ∝ Q^{1.1}**
   (Q-ball-stable), R\* ∝ Q^{0.4}, σ_in sags to lower E by ≤21 % (dilatonic binding), E/Q minimum near Q≈20
   (preferred scale). *(scipy; `portal-qball-soliton-v2-2026-06-16.py`)*
+- **R13 — EED charge-(non)conservation does not bind.** Gauge-free EED gives ∂_μJ^μ = −ε₀□C, sourced only where
+  ∂σ ≠ 0 — the wall, thickness 1/m = ħc/(2.3 meV) = **86 μm**. For a *static* wall this is a static
+  redistribution of Gauss's law (net charge conserved in any volume, as for bound-charge polarization); the
+  radiative part is an oscillatory C with zero cycle-average. The tight bounds (Borexino, τ_e > 6.6×10²⁸ yr)
+  constrain *irreversible* charge loss; the EED term is reversible, wall-localized, and secular-free for a
+  standing defect → **the bound does not apply.** The first-order gauge-free sector also carries no Bopp–Podolsky
+  ghost (that pathology is higher-derivative).
+- **R14 — natural-CHI budget closes.** Resistive helicity decay dH/dt|_decay = 2B²L²/(μ₀σ); fixing B²/σ from the
+  luminosity (R11: P = B²L/2μ₀²σ, P = 19 kW, L = 10 m → B²/σ = 6×10⁻⁹) gives dH/dt|_decay ≈ **0.96 Wb²/s**. The
+  geomagnetic bias flux ψ = B_geo L² = **5×10⁻³ Wb**, so dH/dt|_inject = 2Vψ offsets the leak for a sustaining
+  **V ≳ 96 V** — cleared by atmospheric/telluric sources by 1–3 orders. Bias flux being geomagnetic ⇒ handedness
+  anchors to B_geo and signature 4 sharpens to *flux-linking* geology. *(numpy; `portal-referee-computations-2026-06-17.py`)*
+- **R15 — ignition threshold and trigger sufficiency.** Anomalous resistivity needs micro-turbulence, onset at
+  the ion-acoustic drift J_th = n e c_s ≈ **4×10³ A/m²** (Te = 1 eV, n = 10¹⁹ m⁻³, c_s ≈ 2.5 km/s), i.e. a
+  ~20 cm current sheet at 10 G. A lightning channel delivers J ≈ 10⁸ A/m², **exceeding J_th by ~10⁴** — so a
+  transient trigger (lightning/sprite/piezo/telluric) ignites the self-sustaining state; the threshold is the
+  selection mechanism for rarity + place-fixity. *(numpy; same script.)*
 
 Full derivations: `palace/south/radion-portal-derivation-2026-06-16.md` (R1–R12), with the
-maintenance/source and soliton code in this essay's companion scripts.
+maintenance/source and soliton code in this essay's companion scripts, and the referee-response computations
+(R13–R15) in `portal-referee-computations-2026-06-17.py`.
 
 ## Figures
 
@@ -842,6 +931,18 @@ two formulations are kept distinct):*
   longitudinal modes in vacuum and cold plasma (open access).
 - **✓** B. M. Steinetz et al., "Nuclear fusion reactions in deuterated metals," *Phys. Rev. C* **101**, 044609
   (2020) — lattice confinement fusion (NASA Glenn).
+
+*Referee-response physics (added 2026-06-17 for the R13–R15 computations):*
+- M. Agostini et al. (Borexino Collaboration), "Test of Electric Charge Conservation with Borexino," *Phys. Rev.
+  Lett.* **115**, 231802 (2015) — τ(e → νγ) > 6.6×10²⁸ yr; the *irreversible* charge-loss bound that R13 shows
+  does not constrain the reversible, wall-localized EED term.
+- F. Della Valle et al. (PVLAS), "The PVLAS experiment: measuring vacuum magnetic birefringence...," *Eur. Phys.
+  J. C* **76**, 24 (2016); R. Ballou et al. (OSQAR), "New exclusion limits on scalar and pseudoscalar
+  axionlike particles from light shining through a wall," *Phys. Rev. D* **92**, 092002 (2015) — the
+  optical-cavity vacuum-birefringence / light-shining-through-wall toolkit invoked as Rung-1's photon-coupling
+  read-out (§7).
+- K. Papadopoulos, "A review of anomalous resistivity for the ionosphere," *Rev. Geophys.* **15**, 113 (1977) —
+  current-driven micro-turbulence and the ion-acoustic onset underlying the R15 ignition threshold.
 
 *Anomalous record (cited as record, graded accordingly):*
 - **✓** M. Teodorani, "A Long-Term Scientific Survey of the Hessdalen Phenomenon," *J. Sci. Explor.* **18** (2),

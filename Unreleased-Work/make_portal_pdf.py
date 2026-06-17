@@ -54,10 +54,11 @@ def inline(s):
 # Greek + operators -> math via newunicodechar (works in text and math mode)
 NUC = {
     "σ":r"\sigma","μ":r"\mu","λ":r"\lambda","ε":r"\varepsilon","ν":r"\nu","ρ":r"\rho",
-    "Λ":r"\Lambda","α":r"\alpha","τ":r"\tau","η":r"\eta","π":r"\pi","ψ":r"\psi",
+    "Λ":r"\Lambda","α":r"\alpha","τ":r"\tau","η":r"\eta","π":r"\pi","ψ":r"\psi","γ":r"\gamma",
     "≈":r"\approx","×":r"\times","∂":r"\partial","∝":r"\propto","≠":r"\neq","∇":r"\nabla",
     "≳":r"\gtrsim","∥":r"\parallel","→":r"\rightarrow","⊗":r"\otimes","≫":r"\gg","≪":r"\ll",
     "≤":r"\leq","∫":r"\int","−":r"-","ℏ":r"\hbar","·":r"\cdot","∼":r"\sim","✓":r"\checkmark","≡":r"\equiv",
+    "□":r"\Box","⇒":r"\Rightarrow",
 }
 nuc_lines = "\n".join(r"\newunicodechar{" + k + r"}{\ensuremath{" + v + r"}}" for k, v in NUC.items())
 nuc_lines += "\n" + r"\newunicodechar{½}{\textonehalf}"
