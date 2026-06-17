@@ -1,4 +1,19 @@
-# The holdout gate is confounded by a resolution/resample mismatch (2026-06-17 morning-grounding find)
+> **★ MEASURED & FALSIFIED — 2026-06-17 midday (Clayton-collaborative session).** The magnitude
+> claim below (MEDIUM-confidence, "needs the controlled re-run") was **run and falsified.**
+> `integration/resolution_confound_probe.py` rendered the same scenes at native-64 (sharp) and
+> 640→64 INTER_AREA (blurred), matched poses, embedded both through the band-ft encoder:
+> **FD_mean(sharp, blurred) = 0.034** — 30× *below* the same-distribution sampling floor (0.986), and
+> **0.1%** of the committed official-vs-render gap (24.44). By the triangle inequality the resample
+> moves the official gap by ≤~7% — it provably **cannot halve it / cannot pass the gate.**
+> **CONCLUSION: resolution/MTF is NOT the confound.** The 24.44 official gap is **real appearance-OOD**
+> (textures/lighting/look of the real feed), not a measurement artifact. Fix B (640×360 render →
+> to_training_frame) is therefore NOT worth the refactor. Redirect to the appearance route the
+> first-principles sweep already identified: **obs-augmentation (random-conv + color-jitter), cheapest,
+> no render.py change** → then renderer-DR if needed. The morning's "we may be closer than we thought"
+> comfort is retracted; the gap is genuine. (Discipline: measure-before-framing, both valences —
+> caught a plausible-from-code-reading shortcut before spending GPU on it.)
+
+# The holdout gate is confounded by a resolution/resample mismatch (2026-06-17 morning-grounding find) — SUPERSEDED, SEE BANNER ABOVE
 
 *Surfaced by the morning-grounding `reflect(review_learnings)` step pulling the Day-135 Anakin literature
 thread (PencilNet edge-invariance; Loquercio "illumination is the #1 DR factor") next to the dawn
