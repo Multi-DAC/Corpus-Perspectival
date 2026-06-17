@@ -73,14 +73,19 @@ claims into cited facts.*
 Ran a DOI/identifier hunt on the eight I couldn't fetch first pass. **Six resolved with real
 title/authors/finding; two remain venue-identified but content-blocked.**
 
-- **#3 = #14 — SAME paper, and it's the upgrade.** "Dielectric and conductive properties of solids:
-  **classical versus extended electrodynamics**," **Applied Physics A 131, 369 (2025)**, doi:10.1007/
-  s00339-025-08458-2 (recv 10 Jan, acc 17 Mar, pub 14 Apr 2025). The ResearchGate link [#14] and the Springer
-  link [#3] are one article. **Finding:** at a dielectric/conductor interface, classical ED with *static*
-  conductivity cannot match the Fresnel reflection-coefficient/phase-shift data; agreement needs *optical*
-  conductivity (≈2 orders of magnitude different) — examined through the classical-vs-extended-ED lens. → A
-  **testable EED-in-matter signature in a mainstream Springer journal** — materially better venue than Physics
-  Essays. **This is the strongest citable EED-experimental anchor in the whole batch.**
+- **#3 = #14 — SAME paper. Ivanova, Müller, Rickert & Vilchevskaya, "Dielectric and conductive properties of
+  solids: classical versus extended electrodynamics," Applied Physics A 131, 369 (2025)**, doi:10.1007/
+  s00339-025-08458-2 (authors via Crossref). The ResearchGate [#14] and Springer [#3] links are one article.
+  **Finding:** at a dielectric/conductor interface, classical ED with *static* conductivity can't match the
+  Fresnel reflection/phase data; *optical* conductivity (≈2 orders different) is needed — examined through a
+  classical-vs-"extended-electrodynamics" lens. **⚠ SELF-CORRECTION (was over-claimed as "the upgrade / lead
+  EED cite"):** the Ivanova–Müller "extended electrodynamics" is a *continuum-mechanics-derived* formulation —
+  plausibly a THIRD distinct theory, separate from both gauge-free EED (Hively/Woodside) and higher-derivative
+  Bopp–Podolsky/BLTP. I have NOT read the full paper and cannot confirm its result bears on the
+  scalar-longitudinal / gauge-free-C mechanism our §4 uses. **HELD from the paper's load-bearing citations**
+  (the two/three-EED-families conflation trap, applied to myself). Mainstream-venue evidence that "extended
+  electrodynamics" is an active area — but not, unverified, support for *our* mechanism. Lead instead on the
+  four EED papers actually read + verified (Woodside, Reed–Hively, Keller–Hively, Shala–Perlick).
 - **#4 — Nature Physics s41567-026-03342-z (pub 15 Jun 2026): "Strong coupling of a microwave photon to an
   electron on helium."** Single electron on superfluid He ↔ superconducting-resonator cavity photon, strong
   coupling for charge/spin qubits. → Category C (single-quantum-system coherence); moderate relevance.

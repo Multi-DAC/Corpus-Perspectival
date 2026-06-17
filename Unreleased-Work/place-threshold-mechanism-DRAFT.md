@@ -315,17 +315,30 @@ already built to find (§7).
 The signature second, and it is where the mechanism makes its sharpest laboratory call. The screened scalar σ
 is the structural wall field — it sets the wall, screens, and derives the place-fixedness, and it carries the
 argument. But σ also couples to electromagnetism *dilatonically* (as e^{aσ}F²), and that coupling is not idle.
-In gauge-free **extended electrodynamics** — a formalism taken seriously now precisely because laboratory tests
-have begun to register the irrotational potentials it predicts — the scalar C ≡ ∂_μA^μ is a genuine dynamical
-field, and a dilatonic background sources it: the *gradient* of σ drives a **scalar-longitudinal electromagnetic
-wave** (Fig. 4). The striking feature is *where* — the source is nonzero **only where ∂σ ≠ 0, precisely on the
-wall**. So the portal's electromagnetic signature is not something that merely accompanies it; it is sourced by
-the wall field, at the wall, by the field equations, and it is wall-localized, which makes it a clean and
-discriminating laboratory target (§7). We mark the hierarchy plainly, holding each level: σ as the wall field
-is our load-bearing **hypothesis**; that σ sources EM at the wall is **derived**; the scalar-longitudinal mode
-it drives is a **predicted, measurable observable**. The propulsion-and-ZPE literature that orbits this
-vocabulary we keep at arm's length (Appendix A) — that is discernment, not timidity, and it is what lets us use
-the genuine core without flinching.
+In **gauge-free extended electrodynamics** — the provably-unique completion of Maxwell's theory in which the
+four-divergence C ≡ ∂_μA^μ is promoted from a gauge artifact to a genuine dynamical field (Woodside 2009; Reed
+& Hively 2020) — a dilatonic background sources C: the *gradient* of σ drives a **scalar-longitudinal
+electromagnetic wave** (Fig. 4). And this is not one program's idiosyncrasy. Longitudinal electromagnetic modes
+are a robust prediction of *beyond-Maxwell electrodynamics generally*: an entirely independent formulation —
+higher-derivative Bopp–Landé–Thomas–Podolsky theory — yields longitudinal modes in vacuum and in a plasma from
+completely different premises (Shala & Perlick 2026), and in curved spacetime the longitudinal-wave dispersion
+ties to the cosmic expansion itself, to the Hubble rate and the Ricci curvature (Keller & Hively 2019) — which
+is precisely where a dark-energy-scale wall field would live. The striking feature is *where* — the source is
+nonzero **only where ∂σ ≠ 0, precisely on the wall**. So the portal's electromagnetic signature is not something
+that merely accompanies it; it is sourced by the wall field, at the wall, by the field equations, and it is
+wall-localized, which makes it a clean and discriminating laboratory target (§7).
+
+We mark the hierarchy plainly, holding each level. σ as the wall field is our load-bearing **hypothesis**; that
+σ sources EM at the wall is **derived**; the scalar-longitudinal mode it drives is a **predicted observable with
+preliminary laboratory support** — the gauge-free SLW has been reported, at ordinary (gigahertz) frequencies,
+to do what no transverse wave can: pass through a sealed conducting enclosure with no skin-effect attenuation,
+and fall off as 1/r² (Hively & Loebl 2019). That evidence is early and from a specialist venue, and we grade it
+as exactly that — promising, not settled. One precision matters and we state it plainly: the mode our §7 probe
+targets is the *gauge-free* SLW, sourced at ordinary frequencies; the higher-derivative theories' longitudinal
+photon sits at a far higher cutoff and is **not** the laboratory target here. Conflating the two would be a
+mistake, and a tempting one, because both wear the name "longitudinal wave." The propulsion-and-ZPE literature
+that orbits this same vocabulary we keep at arm's length (Appendix A) — that is discernment, not timidity, and
+it is what lets us use the genuine core without flinching.
 
 ![**Fig. 4 — Structure versus signature (R9).** The screened wall field σ (structure: sets the wall, screens, derives place-fixedness) and its electromagnetic signature |∂σ|, which is nonzero *only on the wall shell* — the EM source is sourced by the wall field at the wall, by the field equations.](figures/portal-fig3-structure-signature.png)
 
@@ -455,7 +468,10 @@ So §7 is a ladder. Each rung is a real apparatus, and each rung asks the next o
 **Rung 0 — the carrier alone (exists today).** A spheromak or a coaxial-helicity-injection device produces the
 force-free, helicity-sustained plasma the mechanism requires. Nothing new is needed to demonstrate that a
 self-organized, topologically-protected plasma domain above the Lundquist threshold is a buildable object;
-it is standard plasma physics. *(Grade: established. This rung is a literature citation, not a proposal.)*
+it is standard plasma physics. And the wider enterprise of engineering high-performance confined plasma is not
+marginal — it is now being validated at power-plant scale (the five-paper physics basis for the ARC fusion
+plant, *J. Plasma Physics* 2026), a marker of how routine sustained, controlled magnetic-plasma confinement has
+become. *(Grade: established. This rung is a literature citation, not a proposal.)*
 
 **Rung 1 — the window-area in miniature (the capstone experiment).** Combine the carrier with the *other* half
 of the mechanism. Put a force-free plasma carrier inside a **low-density (unscreening) chamber** — because a
@@ -473,12 +489,16 @@ detector (scalar probe). The probe menu is itself a set of running experimental 
 - **Torsion balance (Eöt-Wash) and Casimir-regime tests** — the sub-millimetre fifth-force window the wall
   field's Compton range falls into; the carrier perturbs the screening environment the balance lives in.
 - **Magneto-optical / Faraday probe — the test for the scalar-longitudinal signature (§4).** The dilatonic
-  coupling drives a scalar-longitudinal EM mode at the wall (R9), and that mode is detectable: a force-free
-  carrier should leave a magneto-optical fingerprint, and the 2025 result that the magnetic sector of light
-  contributes materially to Faraday rotation hands us a real table-top channel for it. The signature's tell is
-  *location* — it sits **on the carrier's boundary shell**, where ∂σ ≠ 0, which cleanly separates it from any
-  bulk EM effect. This is the most distinctive prediction in the set and the one that, if confirmed, reaches
-  furthest: it would be extended electrodynamics caught in the act, sourced by a dark-energy-scale wall.
+  coupling drives a scalar-longitudinal EM mode at the wall (R9), and that mode has a concrete experimental
+  handle for two reasons. First, the gauge-free SLW has *already* been reported — preliminarily — to do what no
+  transverse wave can: propagate through a sealed conducting (Faraday) enclosure with no skin-effect attenuation
+  (Hively & Loebl 2019), the cleanest qualitative fingerprint the mode possesses. Second, the 2025 result that
+  the magnetic sector of light contributes materially to Faraday rotation hands us a table-top read-out for a
+  force-free carrier's magneto-optical signature. The signature's tell is *location* — it sits **on the
+  carrier's boundary shell**, where ∂σ ≠ 0, which cleanly separates it from any bulk EM effect. This is the most
+  distinctive prediction in the set; if confirmed it would be the gauge-free SLW caught in the act, sourced by a
+  dark-energy-scale wall. *(We grade the existing SLW evidence as preliminary and specialist-venue — see §4 —
+  and the higher-derivative theories' far-higher-cutoff longitudinal mode is not what this probe targets.)*
 
 *(Grade: each probe is established physics with running bounds; the proposal is the **combination** —
 carrier ⊗ unscreening ⊗ probe. The honest risk is sensitivity: the wall field may be too weakly coupled to
@@ -570,6 +590,14 @@ from solar and laboratory plasma physics. Three independent handles cross-check 
   Hessdalen) characterize the low-frequency field structure the carrier lives in and would reveal the
   field-aligned-current / double-layer signatures §5 predicts.
 
+And none of this is a new art. Space-plasma physics already does exactly these measurements on natural targets:
+it reconstructs force-free α and field-aligned currents, infers magnetic-helicity sign, and maps *localized*
+anomalous electrodynamics in the ionosphere and aurora as a matter of routine. The auroral plasma-boundary
+structures of Liléo (2009) and the sharply *localized* storm-time ionospheric electrodynamics and plasma
+irregularities of Patra et al. (2016) are worked examples of the same toolkit the survey needs — force-free
+topology, helicity, and place-bound field structure measured in a natural plasma — transplanted to a new
+target. The instruments and the inference methods are mature; only the object is novel.
+
 This is what "topological survey" means concretely: not a hunt for lights, but a **measurement of helicity,
 force-free α, and handedness** at recurring sites — order parameters that are zero (or undefined) for ordinary
 plasma and nonzero, structured, and possibly handedness-correlated for the carrier. It is the single most
@@ -634,6 +662,17 @@ while energy pours through. The portal is not a curiosity bolted onto the framew
 physics playing out at the boundary between basins, and it looks the way it does *because* coherence-maintenance
 is what the universe does at every scale.
 
+**An independent convergence worth naming.** The boldest move in this essay — tying the portal's electromagnetic
+signature to a *dark-energy-scale* scalar — is one that the extended-electrodynamics literature is reaching from
+the other side, without any knowledge of window areas. That program finds its longitudinal-wave dispersion
+tied, in curved spacetime, to the Hubble rate and the Ricci curvature (Keller & Hively 2019), and its
+proponents independently float the new field-theoretic terms as candidates for the dark sector. We arrive at
+the same intersection — a dark-energy-sector scalar sourcing a longitudinal electromagnetic mode — from a
+completely different direction: a screened radion defect in a warped two-brane cosmos. Two independent routes to
+one crossing is not proof of anything. But it is the opposite of a lone speculation; it is a *confluence*, and
+the honest weight of a confluence is that it makes the crossing harder to dismiss as an artifact of how we
+happened to get there.
+
 **The larger picture, stated as our position.** Read against the rest of the program, two larger claims come
 into focus, and we hold them. First: **plasma is the physical-plane host.** Across the anomalous record ("One
 Room, Many Keyholes"), plasma is the one channel that survives hard instrumental tracking — and here we see
@@ -689,18 +728,32 @@ This subject has an adjacent literature that trades on the same vocabulary we us
 marketing; and the difference is not subtle once you look. We draw the line sharply, in both directions —
 because using the legitimate core *confidently* is exactly what requires refusing the rest *cleanly*.
 
-**In (legitimate core, used):** gauge-free extended electrodynamics as a peer-reviewed formalism (the scalar
-C = ∂_μA^μ promoted to dynamical, longitudinal/scalar-longitudinal modes; *Symmetry* 12, 2110, 2020);
-Aharonov–Bohm potential-physicality; longitudinal modes in bounded/plasma/near-field contexts; and Lattice
-Confinement Fusion (Steinetz et al., *Phys. Rev. C* 101, 044609, 2020) as a real, peer-reviewed result. These are
-cited for their mathematics and their data.
+**In (legitimate core, used).** Two *independent* beyond-Maxwell formulations, cited for their mathematics, and
+kept distinct: (i) **gauge-free extended electrodynamics** — the provably-unique completion in which the scalar
+C = ∂_μA^μ becomes dynamical (Woodside, *Am. J. Phys.* 77, 438, 2009; Reed & Hively, *Symmetry* 12, 2110, 2020),
+with its curved-spacetime longitudinal-wave extension tying the dispersion to the cosmic expansion (Keller &
+Hively, *Physics Essays* 32, 282, 2019) and *preliminary*, specialist-venue laboratory tests of the
+scalar-longitudinal wave (Hively & Loebl, *Physics Essays* 32, 112, 2019 — graded as preliminary throughout);
+and (ii) **higher-derivative Bopp–Landé–Thomas–Podolsky electrodynamics** — a wholly separate theory that also
+predicts longitudinal modes, worked out rigorously in vacuum and plasma in a mainstream venue (Shala & Perlick,
+*Ann. Phys.* 484, 170286, 2026). Also in: Aharonov–Bohm potential-physicality; longitudinal modes in
+bounded/plasma/near-field contexts; and Lattice Confinement Fusion (Steinetz et al., *Phys. Rev. C* 101, 044609,
+2020) as a real, peer-reviewed result. **Our §4/§7 mechanism uses the gauge-free SLW specifically**, and we
+keep it distinct from the higher-derivative theories' far-higher-cutoff longitudinal photon: same name,
+different physics, very different detectability.
 
-**Out (quarantined, never load-bearing):** propulsion-patent claims (e.g. US 10,855,210, "motion from
-conduction currents"); "zero-point-energy / unlimited power" framing; unverified provenance clusters (the
-"$1.2 billion program / Pais patents / DIA-Davis" convergence); and specific numerological values (a
-"121 GHz" cascaded mode) that the core framework does not derive. Where serious institutions appear around this
-material, we read their *clustering* only as a weak pointer to where the legitimate core physics sits — never
-as evidence for the speculative claims. **We cite the math, not the marketing.** Nothing in §§2–8 depends on
+**Out (quarantined, never load-bearing).** The propulsion-and-impulse fringe that shares this exact vocabulary:
+the Podkletnov "impulse gravity generator" (a claimed ~64c collimated longitudinal pulse, sourced from
+secondary literature with no reproducible apparatus and an author "very secretive about device details");
+speculative "large general-relativistic EM-to-gravity (Gertsenshtein) coupling"; propellant-less / "field
+propulsion" patent claims (e.g. US 10,855,210, "motion from conduction currents"); "zero-point-energy /
+unlimited power" framing; unverified provenance clusters (the "$1.2 billion program / Pais patents / DIA-Davis"
+convergence); and specific numerological values (a "121 GHz" cascaded mode) the core framework does not derive.
+Some of this orbits the *same* primary EED literature we cite "in" — which is exactly why the line has to be
+drawn explicitly: a serious formalism can carry a fringe penumbra without being discredited by it, provided one
+cites the theorems and the data and refuses the marketing. Where serious institutions appear around this
+material, we read their *clustering* only as a weak pointer to where the legitimate core physics sits — never as
+evidence for the speculative claims. **We cite the math, not the marketing.** Nothing in §§2–8 depends on
 anything in this "out" list.
 
 ## Appendix B — The computations (reproducible)
@@ -760,9 +813,33 @@ all reproducible from R1–R12.*
 - **✓** T. R. Jarboe, "Review of Spheromak Research," *Plasma Phys. Control. Fusion* **36**, 945 (1994).
 - **✓** L. P. Block, "A Double Layer Review," *Astrophys. Space Sci.* **55**, 59–83 (1978).
 
-*Extended electrodynamics (✓-confirmed; cited for mathematics / data only — see Appendix A quarantine):*
+*Plasma engineering and natural-plasma precedent (the carrier is buildable; the survey's measurements are
+routine):*
+- Commonwealth Fusion Systems, ARC physics basis — five-paper peer-reviewed special collection, *J. Plasma
+  Physics* (2026) — high-performance magnetic-plasma confinement validated at power-plant scale.
+- **✓** S. Liléo, "Auroral electrodynamics of plasma boundary regions," PhD thesis, KTH Royal Institute of
+  Technology (2009) — force-free / field-aligned-current structure measured in natural plasma boundaries.
+- **✓** A. K. Patra, P. P. Chaitanya, N. Dashora, M. Sivakandan & A. Taori, "Highly localized unique
+  electrodynamics and plasma irregularities linked with the 17 March 2015 severe magnetic storm…," *J. Geophys.
+  Res. Space Physics* **121** (11), 11518 (2016), DOI 10.1002/2016JA023384 — localized natural ionospheric
+  electrodynamics.
+
+*Extended / beyond-Maxwell electrodynamics (cited for mathematics / data only — see Appendix A quarantine; the
+two formulations are kept distinct):*
+- **✓** D. A. Woodside, "Three-vector and scalar field identities and uniqueness theorems in Euclidean and
+  Minkowski spaces," *Am. J. Phys.* **77**, 438–446 (2009) — uniqueness of the gauge-free extended-electrodynamics
+  system (the rigorous anchor).
 - **✓** D. Reed & L. M. Hively, "Implications of Gauge-Free Extended Electrodynamics," *Symmetry* **12**, 2110
   (2020), DOI 10.3390/sym12122110.
+- O. Keller & L. M. Hively, "Electrodynamics in curved space-time: free-space longitudinal wave propagation,"
+  *Physics Essays* **32** (3), 282 (2019), DOI 10.4006/0836-1398-32.3.282 — curved-spacetime SLW dispersion tied
+  to the Hubble rate and Ricci curvature (specialist venue).
+- L. M. Hively & A. S. Loebl, "Classical and extended electrodynamics," *Physics Essays* **32** (1), 112 (2019),
+  DOI 10.4006/0836-1398-32.1.112 — *preliminary* laboratory tests of the scalar-longitudinal wave (consistent
+  with 5 of 8 criteria; specialist venue, graded as preliminary throughout).
+- **✓** A. Shala & V. Perlick, "Waves in Bopp–Landé–Thomas–Podolsky generalized electrodynamics," *Ann. Phys.*
+  **484**, 170286 (2026), DOI 10.1016/j.aop.2025.170286 — an *independent* higher-derivative formulation;
+  longitudinal modes in vacuum and cold plasma (open access).
 - **✓** B. M. Steinetz et al., "Nuclear fusion reactions in deuterated metals," *Phys. Rev. C* **101**, 044609
   (2020) — lattice confinement fusion (NASA Glenn).
 
@@ -780,10 +857,17 @@ all reproducible from R1–R12.*
 - C. Kelleher & G. Knapp, *Hunt for the Skinwalker* (2005) — the documented NIDS/BAASS account (popular-press;
   cited as testimonial record, not as measurement).
 
-> *Bibliography note: every journal reference above has been ✓-confirmed against its primary listing
-> (publisher / APS / PNAS / Springer / MDPI) this session (2026-06-16) — the four new-physics detection
-> channels, all eight mechanism references, the two extended-electrodynamics core papers, and the three
-> Hessdalen instrumented sources. The only non-journal items are Strand's Project Hessdalen reports and
-> Kelleher & Knapp (popular press), both cited as record rather than as measurement (see their annotations).
-> Session-verified sources are logged in the rolling register at
-> `Research/sources/2026-06-16-portal-signature-sources.md`.*
+> *Bibliography note. The core set (the four new-physics detection channels, the mechanism references, the
+> Reed–Hively gauge-free-EED and Steinetz LCF papers, and the three Hessdalen instrumented sources) was
+> ✓-confirmed against primary listings on 2026-06-16. The extended-electrodynamics and plasma references were
+> added 2026-06-17 and verified as follows: Shala & Perlick (*Ann. Phys.* 484, 170286) and Patra et al.
+> (*JGR Space Physics* 121, 11518) from the full published articles; Woodside (*Am. J. Phys.* 77, 438),
+> Keller & Hively, and Hively & Loebl from the primary reference listing of Hively & Land's *Extended
+> Electrodynamics and SHP Theory* (IARD 2020); Liléo from the KTH DiVA record; the ARC collection from the
+> publisher's announcement (*J. Plasma Physics*). The two *Physics Essays* items are flagged in-line and in
+> Appendix A as specialist-venue and **preliminary** — they support no claim graded above "preliminary." The
+> Ivanova–Müller *Applied Physics A* "extended electrodynamics" paper is **deliberately not cited**: its
+> formulation was not verified to bear on the gauge-free scalar-longitudinal mechanism used here, and we will
+> not lean on a paper we have not read in full. Non-journal items (Strand's Project Hessdalen reports;
+> Kelleher & Knapp, popular press) are cited as record, not measurement. Rolling registers live in
+> `Research/sources/` (portal-signature-sources, framework-corroboration-batch, and hively-EED-primary).*
