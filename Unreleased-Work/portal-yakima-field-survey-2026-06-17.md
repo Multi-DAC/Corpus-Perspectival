@@ -54,10 +54,44 @@ inside it (radon high + fractured low-density rock + local magnetic-gradient ext
 Total ~$75–150. Discipline: go expecting a null; a clean spectrum of a passing truck is a *successful
 measurement*. The grating keeps you honest in the dark.
 
-## 5. Next desktop steps
-- Pull the Blakely gravity-low geometry (figure/grid) and pin the Toppenish Basin / ridge-flank low.
-- Georeference the Satus/Toppenish light-record footprint; overlay on gravity low + Holocene fault traces.
-- Output the ranked candidate map (probably a few cells along the Toppenish Ridge–Basin transition near Satus).
+## 5. The ranked candidate map (feature-resolution overlay, 2026-06-17)
+
+**Georeferenced anchors (verified):**
+| feature | lat, lon | role |
+|---|---|---|
+| Satus Peak fire lookout (Vogel's station) | 46.2575, −120.7535 (4,182 ft) | observer vantage + "Starvation Flats / The Landing Field" locus |
+| Toppenish Ridge (E segment) | ~46.293, −120.444 | WNW–ESE anticline, ~25–30 km long |
+| Toppenish Basin / Yakima Valley floor (Toppenish town) | ~46.38, −120.31 | sediment fill = **gravity LOW / low-density** |
+| Toppenish Ridge structure (Campbell & Bentley) | north flank | **active thrust + Mill Creek fault**, scarps <~500 yr; **normal faults on crest** |
+
+**Structure:** the anticline thrusts NORTH over the low-density basin. So density and faulting split:
+regional **low-density extremum = the basin (north flank)**; **active faults = north-flank thrust/Mill
+Creek scarp** AND **crest normal faults** (dilatant fracture zones = *local* low density + radon path).
+
+**Ranked candidates (the three-layer intersection):**
+
+- **C1 — Mill Creek / north-flank thrust at the ridge–basin transition** *(~46.30, −120.55→−120.45 band,
+  north side of the ridge).* Fault ✓✓ (active, named, <~500 yr) · gravity-low ✓✓ (basin edge =
+  low-density extremum) · record ✓ (in the Satus Peak viewshed over the Lower Valley). **Strongest
+  combined overlap — start here.**
+- **C2 — Crest normal-fault zone at Satus Peak / Starvation Flats** *(~46.257, −120.75).* Record ✓✓ (the
+  actual observer / "Landing Field" locus) · fault ✓ (crest normal faults → dilatant fractures, *local*
+  low-density + radon) · gravity-low ~ (crest is a dense basement high *regionally* — bank on local
+  fracture porosity, not the regional low). **Strong on the prior; the place to camp + log overnight.**
+- **C3 — Satus Creek drainage lows (south side)** — lower priority unless the Blakely raster shows a
+  specific local gravity minimum there.
+
+**Field plan from this:** camp/log at **C2** (the documented vantage, overnight magnetometer + grating
+on tripod), day-survey **C1** (radon + magnetic-gradient walk along the Mill Creek scarp / basin edge to
+find the local low-density pin). The kit resolves the ~10 m target inside the ~km cell.
+
+## 6. Resolution caveat + the two GIS pulls that sharpen it
+This overlay is **feature-resolution** (named coords + structural reasoning), good enough to aim a trip.
+Two public GIS layers would pin it to raster precision:
+1. **USGS Quaternary Fault & Fold Database** — the Toppenish Ridge / Mill Creek fault *polylines* (exact
+   scarp traces). `apps.usgs.gov/earthquakes/faults/`.
+2. **Blakely et al. 2011/2014 Bouguer gravity grid** — the exact gravity-low contour (the low-density
+   extremum geometry). Pull as a raster, contour, intersect with the fault polylines + the C1/C2 points.
 
 *Discipline wall (from the paper): this maps the physical place-threshold; it tests whether a sharp
 recurring anomaly with the derived signatures exists, and stops there. A null is the expected, honest
