@@ -60,6 +60,26 @@ def blur_only(img64: np.ndarray) -> np.ndarray:
     return cv2.resize(big, (IMG, IMG), interpolation=cv2.INTER_AREA)
 
 
+def band_resampled(img64: np.ndarray) -> np.ndarray:
+    """Ablation (added 2026-06-17): the band content put through the EXACT roundtrip
+    resample (36 -> 360 up, INTER_LINEAR; -> 36 down, INTER_AREA) with gray margins,
+    fed via act_training_frame. Isolates the band-resample blur from the rest of the
+    act() path (color round-trip is a no-op; this skips any _gm/_ef content transform).
+    Discriminator: band_resampled ~ roundtrip  => the resample is the -47% killer;
+                   band_resampled ~ band_only   => the resample is innocent, look in act()."""
+    import cv2
+    from dreamer_pilot import BG_UINT8
+
+    top = (IMG - 36) // 2
+    band = img64[top:top + 36]                                              # 36x64 native band
+    big = cv2.resize(band, (FEED_W, FEED_H), interpolation=cv2.INTER_LINEAR)  # 36->360, 64->640
+    small = cv2.resize(big, (IMG, FEED_H * IMG // FEED_W),
+                       interpolation=cv2.INTER_AREA)                        # -> 64x36 (exact to_training_frame)
+    out = np.full((IMG, IMG, 3), BG_UINT8, dtype=np.uint8)
+    out[top:top + small.shape[0]] = small
+    return out
+
+
 def run_episodes(pilot, condition, seeds, max_steps, device):
     sys.path.insert(0, str(_HERE.parent / "sim"))
     from maneuver_env import AnakinManeuverEnv as ManeuverEnv
@@ -77,6 +97,8 @@ def run_episodes(pilot, condition, seeds, max_steps, device):
                 action = pilot.act_training_frame(band_only(obs))
             elif condition == "blur":
                 action = pilot.act_training_frame(blur_only(obs))
+            elif condition == "band_resampled":
+                action = pilot.act_training_frame(band_resampled(obs))
             else:
                 action = pilot.act(to_competition_feed(obs))
             obs, r, term, trunc, info = env.step(action)
@@ -105,7 +127,7 @@ def main():
     seeds = list(range(1000, 1000 + args.episodes))
 
     results = {}
-    for cond in ["direct", "band", "blur", "roundtrip"]:
+    for cond in ["direct", "band", "blur", "band_resampled", "roundtrip"]:
         print(f"\n=== {cond} ({args.episodes} eps) ===", flush=True)
         results[cond] = run_episodes(pilot, cond, seeds, args.max_steps, args.env_device)
 
@@ -113,7 +135,7 @@ def main():
     print("(direct = training-eval anchor; band = VFoV crop only; blur = resample only; "
           "roundtrip = full adapter path. Training-run best batch metric: +256.28)")
     base = results["direct"][0].mean()
-    for cond in ["direct", "band", "blur", "roundtrip"]:
+    for cond in ["direct", "band", "blur", "band_resampled", "roundtrip"]:
         r, g = results[cond]
         rel = (r.mean() - base) / abs(base) * 100 if base else float("nan")
         print(f"{cond:9s}: return {r.mean():+8.2f} +/- {r.std():6.2f}   "
