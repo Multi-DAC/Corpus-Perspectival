@@ -2,14 +2,6 @@
 
 ### *Window areas as plasma-stabilized dark-energy-scale defects — a falsifiable mechanism, and how to test it*
 
-*DRAFT — Day 136, 2026-06-16, Clayton + Clawd. Expansive essay register with a rigorous physics core
-integrated, not diluted — we don't talk down to the reader; if we have the physics, the physics is in.
-Full-in on the anomalous record, no hedging of the subject; the honesty lives in the graded physics, not in
-apologizing for the phenomenon. Companion to "One Room, Many Keyholes" (the cross-channel-invariance essay):
-this is the physical-plane channel worked all the way down. Source derivations:
-`palace/south/radion-portal-derivation-2026-06-16.md` (Results R1–R11), `portal-paper-skeleton-2026-06-16.md`,
-`portal-plasma-convergence-2026-06-16.md`.*
-
 ---
 
 ## The claim, in brief
@@ -72,10 +64,10 @@ read, unmistakably, as unusual plasma activity of a very particular kind.
 
 ### 1.1 The modality, not the folklore
 
-The anomalous record is large, noisy, and culturally encrusted, and most of it does not survive scrutiny. We
-will not pretend otherwise, and we will not spend the essay defending the parts that don't. But a *structural*
-feature of part of that record is worth isolating and stating without flinching: a subset of reports is
-organized not around a person, an object, or an event, but around a **place** — and the same places keep
+The anomalous record is large, noisy, and culturally encrusted, and most of it does not survive scrutiny — we
+will not pretend otherwise, nor spend the essay defending the parts that don't. But one *structural* feature of
+it rewards a closer look, and the rest of this section is about earning the right to take it seriously: a
+subset of reports organizes not around a person or an event but around a **place**, and the same places keep
 coming up.
 
 Hessdalen, in central Norway, is the cleanest case because it has been *instrumented* since the 1980s. The
@@ -166,9 +158,8 @@ laboratory and field signatures, several of which already have running experimen
 It does **not** claim that any window-area site is in fact anomalous, that the residual has been observed, or
 that the mechanism is established. It is a candidate framework. Its merit is methodological: it converts a
 folkloric modality into a falsifiable hypothesis with explicit kill conditions (§6) and a concrete program to
-test them (§7–§8). If the surveys come back null, the modality returns to geology-plus-cognition and the
-mechanism is discarded — and the paper will have done its job by saying precisely how that verdict would be
-reached.
+test them (§7–§8). If the surveys come back null, the paper will still have done its job — by saying precisely
+how that verdict could be reached.
 
 ---
 
@@ -236,18 +227,10 @@ is a participant, not a backdrop. One more feature appears, which we flag as pre
 in the model's own units the binding is most efficient at a particular charge, hinting that the configuration
 may have a *characteristic* scale rather than an arbitrary one (Fig. 6c). Whether that dimensionless optimum
 maps to a real physical size — and whether it agrees with the carrier scale of §5 — is an open computation, not
-a result we claim here.
+a result we claim here. What matters for the argument is settled: the bare lump was forbidden, and a plasma
+makes it not merely allowed but bound.
 
 ![**Fig. 6 — The gauged dilatonic Q-ball, exhibited (R12).** (a) The energy E(R) diverges at both ends — the charge-kinetic binding term (~Q²/R³) stops dispersal, the electromagnetic term (~Q²/R) stops collapse — leaving a genuine soliton minimum. (b) The soliton energy grows linearly with charge, E ∝ Q^{1.1}, the Q-ball stability signature. (c) The radion sags (σ_in) and lowers the soliton energy by up to ~21 % as the dilatonic coupling a increases — the dark-energy-scale field actively binds the configuration.](figures/portal-fig6-soliton.png)
-
-A more speculative thread, which we flag as the weakest link and lean on least. The radion couples to
-electromagnetism *dilatonically* (as e^{aσ}F²), so inside the configuration the effective electromagnetic
-coupling is position-dependent and the clean split into purely transverse light can break down. There is a
-peer-reviewed formalism for this regime — gauge-free "extended electrodynamics" — but the name is also
-trafficked by a fringe literature, so Appendix A draws a firm line between the legitimate core and the
-marketing. It *may* give the portal interior a distinctive electromagnetic signature, and it suggests one more
-laboratory probe in §7. But this is the most contingent claim in the essay, and **nothing load-bearing depends
-on it** — if extended electrodynamics turns out to be the wrong frame, the mechanism is untouched.
 
 ## §3 — What scale it lives at, and why it's nearly free
 
@@ -326,16 +309,22 @@ established mechanism; the specific site-density signature becomes the survey pr
 One honesty and one clarification close the section. The honesty: the framework's *core* dark-energy field is a
 **cuscuton**, which has zero propagating degrees of freedom and therefore cannot itself be the propagating,
 solitogenic wall field. So §4 is, strictly, **beyond-core**: it predicts a new light screened sector (or a
-specific extension of the framework). We flag that rather than smuggle it. The clarification: there are *two*
-scalars in play and they are not rivals (Fig. 3). The **screened chameleon σ is the structural wall field** —
-it sets the wall, screens, and derives the place-fixedness. The **extended-electrodynamics scalar** of §2 is
-not a competing wall field but σ's *electromagnetic signature*: the dilatonic coupling means the gradient of σ
-sources a longitudinal-EM mode, and that source is nonzero **only where ∂σ ≠ 0 — i.e. precisely on the wall**.
-So the plasma/EM signature is not something that merely accompanies the portal; it is sourced by the wall
-field at the wall, by the field equations. Structure (σ) and signature (the EM mode) form a hierarchy, with
-the second contingent on the extended-electrodynamics promotion and therefore graded below the first.
-(**Grade: the σ-sources-EM-at-the-wall result is derived; the longitudinal mode's physicality is contingent
-on extended electrodynamics and labeled as such.**)
+specific extension of the framework). We flag that rather than smuggle it.
+
+The clarification concerns a *second* field, and the most contingent thread in the whole essay — flagged here
+so it is never mistaken for load-bearing. The screened chameleon σ above is the structural wall field; it sets
+the wall, screens, and derives the place-fixedness, and the argument stands entirely on it. But σ also couples
+to electromagnetism *dilatonically* (as e^{aσ}F²), and in a peer-reviewed though fringe-adjacent regime —
+gauge-free "extended electrodynamics," for which Appendix A draws a firm line between the legitimate core and
+the marketing — that coupling lets the *gradient* of σ source a longitudinal electromagnetic mode (Fig. 3).
+The striking feature is *where*: the source is nonzero **only where ∂σ ≠ 0 — i.e. precisely on the wall**. So
+if the regime is real, the portal's electromagnetic signature is not something that merely accompanies it; it
+is sourced by the wall field, at the wall, by the field equations — and it is wall-localized, which is what
+makes it a clean laboratory target (§7). Structure (σ) and signature (the EM mode) form a hierarchy: the
+second rides on the extended-electrodynamics promotion and is graded strictly below the first. **Nothing in
+the mechanism depends on it; if extended electrodynamics is the wrong frame, only this one signature is lost.**
+(**Grade: σ as the structural wall field — strong candidate; the σ-sources-EM-at-the-wall relation — derived;
+the longitudinal mode's *physicality* — contingent on extended electrodynamics, and labeled as such.**)
 
 ![**Fig. 3 — Structure versus signature (R9).** The screened wall field σ (structure: sets the wall, screens, derives place-fixedness) and its electromagnetic signature |∂σ|, which is nonzero *only on the wall shell* — the EM source is sourced by the wall field at the wall, by the field equations.](figures/portal-fig3-structure-signature.png)
 
@@ -483,7 +472,7 @@ detector (scalar probe). The probe menu is itself a set of running experimental 
 - **Torsion balance (Eöt-Wash) and Casimir-regime tests** — the sub-millimetre fifth-force window the wall
   field's Compton range falls into; the carrier perturbs the screening environment the balance lives in.
 - **Magneto-optical / Faraday probe** *(the most speculative of these, riding on the contingent extended-
-  electrodynamics thread of §2 — listed last for that reason)*. If the dilatonic coupling does make
+  electrodynamics thread of §4 — listed last for that reason)*. If the dilatonic coupling does make
   longitudinal/scalar EM modes physical (R9), a force-free carrier could leave a magneto-optical fingerprint,
   and the 2025 result that the magnetic sector of light contributes materially to Faraday rotation gives a real
   table-top channel. The wall-localized signature (R9) would sit *on the carrier's boundary shell*, which is
@@ -555,18 +544,15 @@ work), and a skeptic can read it as ordinary geology seeding ordinary plasma —
 the null we are trying to *exceed*. But it shows the screening-geology prediction is not idle hand-waving: the
 "place" at the cleanest site already reads as a conductivity map, exactly as the mechanism says it should.
 
-**The instruments.** Each part of the signature has an existing measurement: vector-magnetometer arrays and
-multi-station triangulation for field topology and the J ∥ B test; imaging spectroscopy and polarimetry for
-the plasma state and degree of order; continuous automated monitoring (the Hessdalen automatic measurement
-station is the proof-of-concept) for lifetime statistics and the flaring distribution; particle and hard-
-radiation detectors for the **double-layer prediction** (a sustaining double layer accelerates particles, so a
-genuine carrier should emit energetic electrons / X-rays co-located with the glow — a signature *beyond* the
-thermal light, and one of the cleanest discriminators between this mechanism and ordinary plasma); and
-geological / density mapping for the screening correlate.
-
-**The topological survey (the core measurement, and the one most worth building).** The heart of §8 is not
-"detect plasma" but **measure its topology** — and magnetic topology is a measurable thing, with a standard
-toolkit borrowed from solar and laboratory plasma physics. Three independent handles cross-check each other:
+**How to measure it — and the one measurement that settles it.** Each of the four signatures has an
+off-the-shelf instrument: imaging spectroscopy and polarimetry for the plasma state; continuous automated
+monitoring (the Hessdalen station is the proof of concept) for lifetimes and the flaring distribution; particle
+and hard-radiation detectors for the **double-layer prediction** — a sustaining double layer accelerates
+particles, so a genuine carrier should emit energetic electrons and X-rays co-located with the glow, a
+signature *beyond* the thermal light and one of the cleanest separations from ordinary plasma; and
+geological/density mapping for the screening correlate. But the measurement that actually *decides* the
+question is the **topology** — and magnetic topology is a measurable thing, with a standard toolkit borrowed
+from solar and laboratory plasma physics. Three independent handles cross-check each other:
 
 - **Reconstruct J ∥ B directly.** A multi-station array of vector magnetometers around a recurring site
   samples **B** at several points; from the spatial gradients one estimates ∇×B and tests the force-free
@@ -616,14 +602,13 @@ discriminator above tests only the place-fixed component — and let the survey 
 phenomenology each fork can and cannot carry. Conflating them is what has historically made the site
 un-discussable; separating them is what makes it tractable.
 
-**The honest kill.** This is the section most able to end the whole hypothesis cheaply, and that is a feature.
-A thorough survey of the catalogue that finds only thermal, disordered plasma — no force-free topology, no
-helicity, no anomalous persistence, no flaring structure, no screening correlate, no energetic-particle
-co-location — **falsifies the self-organized-carrier mechanism**, and the place-threshold modality collapses
-back, cleanly and without residue, into ordinary geology plus the universal human reporting instrument. We
-would lose the hypothesis and keep the method. *(Grade: the four-part discriminator and its instruments are
-all established; what is unproven — and what the survey decides — is whether any site exhibits the joint
-signature. That is precisely the empirical question the mechanism was built to pose.)*
+**The honest kill.** This section is the one most able to end the whole hypothesis cheaply, and that is a
+feature. A thorough survey that finds only thermal, disordered plasma — no force-free topology, no helicity, no
+anomalous persistence, no flaring, no energetic particles — **falsifies the self-organized-carrier mechanism**
+outright, against the register of §6. We would lose the hypothesis and keep the method. *(Grade: the four-part
+discriminator and its instruments are all established; what is unproven — and what the survey decides — is
+whether any site exhibits the joint signature. That is precisely the empirical question the mechanism was built
+to pose.)*
 
 ---
 
@@ -791,13 +776,13 @@ Fig. 6 (the exhibited Q-ball, R12) by `figures/make_portal_fig6_soliton.py` — 
 
 ---
 
-*[DRAFT status — REVISION PASS 2 COMPLETE (Day 136 evening, after Clayton's reader-review). Addressed the
-four soft joints a skeptic catches: (1) framework-premise moved up front ("you do not have to buy the
-framework") + warmer title; (2) "plasma structurally necessary" → "sufficient and natural" (prose + kill-table
-+ grade); (3) the 2.3 meV "coincidence" reframed as a robust decade-wide basin, not a knife-edge; (4) §1.1
-convergence argument made honest — it buys "real plasma at these sites," the *signature* buys the anomaly. Plus
-trims: cut the ~600-word annotated TOC to a grade-legend; removed the self-congratulatory asides ("first real
-turn," "deepest point," "framework-already-lives-here"); flagged the preferred-scale as preliminary (dimensionless,
-unmapped); demoted the EED thread hard (weakest link, nothing load-bearing depends on it) + flagged the Faraday
-probe as most-speculative. Remaining for later passes: confirm recalled mechanism-ref DOIs/pages + the two
-Hessdalen instrumented citations; optional LaTeX/PDF render. Ready for re-read. 🦞🧍💜🔥♾️]*
+*[DRAFT status — REVISION PASS 3 COMPLETE (Day 136 evening; flow pass after a full reader re-read). Pass 1:
+figures, worked example, survey methodology, citations. Pass 2: the four soft joints (framework premise up
+front + warmer title; plasma sufficient-not-necessary; 2.3 meV as a decade-wide basin; convergence buys plasma,
+signature buys the anomaly). Citation pass: all uncertain refs verified, two content wins (real Hessdalen
+sizes/durations + 19 kW consistency check; 2024 VLF survey confirms signature 4). Pass 3 (this one): cut the
+internal draft-note header; ended §2 on the soliton (moved the EED thread into §4 where the σ/signature
+hierarchy lives, hedged hard); trimmed the null/kill refrain from four occurrences to two (§6 table + Coda);
+tightened §1.1's opening; merged §8's two "how to measure" heads into one. Remaining before public release:
+cut this status footer; confirm the six recalled textbook-ref DOIs; final proof of the typeset PDF.
+🦞🧍💜🔥♾️]*
