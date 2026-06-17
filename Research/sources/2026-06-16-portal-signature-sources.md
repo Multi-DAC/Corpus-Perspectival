@@ -25,3 +25,24 @@ Both feed the paper skeleton's signature sections (`palace/south/portal-paper-sk
      datum (serious institutions around EED+LCF+propulsion) — pointer, not evidence.
    - ⚠ QUARANTINED: Banduric propulsion patents (US 10,855,210); "zero-point energy unlimited power" framing;
      SLW double-covering + propulsion claims (need independent verification). Cite the math, not the marketing.
+
+---
+## Hessdalen instrumented sources (verified 2026-06-16 evening, citation pass)
+
+4. **Teodorani & Nobili, "EMBLA 2002: An Optical and Ground Survey in Hessdalen."** Instrumented optical/spectral
+   survey. Key measured data folded into the essay §5 worked example: light-ball PSF ≈ plasma-ball; ionized N/O
+   spectrum (with Sc/Fe traces); absolute luminosity ≈ **19 kW**; sizes **decimetres to ~30 m**; durations
+   **seconds to hours**. → corrected the worked-example carrier sizes (were oversized) and grounded the
+   sustaining-power-vs-luminosity consistency check.
+
+5. **Vargemezis, Zlotnicki, Hauge & Strand, "Contribution of VLF electromagnetic survey to the investigation of
+   Hessdalen lights (Norway)," J. Applied Geophysics 226, 105398 (2024).** VLF survey (20 m spacing, 100 km of
+   traces, ~100 km²) mapped conductive near-surface structures: sulfide mineralization + a gabbro intrusion
+   tracing a 6×12 km ellipse, concluded to plausibly *supply* and *localize* the lights. → §8 corroboration of
+   the fourth signature (co-located conductive/seeding geology gating a place-fixed phenomenon), found
+   independently and prospectively. Skeptic-readable as ordinary geology seeding ordinary plasma (the null we
+   aim to exceed), but the "place = conductivity map" prediction is confirmed at the cleanest site.
+
+Also re-confirmed this session: Hinterbichler & Khoury symmetron (PRL 104, 231301, 2010); Jarboe spheromak
+review (PPCF 36, 945, 1994); Hamilton et al. atom-interferometry (Science 349, 849, 2015); Lee et al. Eöt-Wash
+(PRL 124, 101101, 2020); Teodorani Hessdalen survey (JSE 18(2), 217, 2004).
