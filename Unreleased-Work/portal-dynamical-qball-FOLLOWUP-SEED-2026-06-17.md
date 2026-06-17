@@ -7,6 +7,23 @@ breathing-mode curve ω_b(ρ), and turning it into a standardised vacuum-chamber
 methods/instrumentation note or a dedicated dynamical-Q-ball follow-on paper. Scaling is in hand (R16, in
 `portal-referee-computations-2026-06-17.py`); the full solve is not yet done.*
 
+## ⚠ UPDATE (same night, dream drive ~03:00) — Phase B was STARTED and it falsified the breathing-mode guess
+
+A first collective-coordinate solve (`dynamical-qball-breathing-2026-06-17.py`) on the real R12 functional, with
+a chameleon density-dependent mass m²(ρ), found:
+- **breathing ω_b is ρ-FLAT** (1.867→1.862), NOT softening — so "ω_b(ρ) → 0 at the VK bifurcation = ρ_crit" (Phase
+  B/D below as originally written) is **wrong for the internal breathing mode**. σ_in self-screens (sags ~16×) so
+  m²σ² stays ≈ const and the radial curvature/inertia don't move.
+- the real *uniform-bleed* lab signatures are **sideband-amplitude collapse** (∝ aσ_in) + **carrier blueshift**
+  (m_eff(ρ) rises), not a frequency sweeping to DC.
+- the **place-localization boundary is the TRANSLATIONAL pinning mode** in a *spatial* screening gradient
+  (ω_pin → 0 as the contrast flattens), which a uniform-density bench cannot produce. **That** is the genuine
+  boundary-mapper — recompute D around ω_pin, not ω_b.
+- §7 in the paper was corrected accordingly (this same night) and flagged for Clayton.
+
+Phases A–D below stay as the *plan*, but B must target the BdG spectrum AND the translational mode in a gradient;
+the VK-on-breathing route is closed. The carrier-frequency (A) and amplitude-screening results are banked.
+
 ## Why this is the next move
 
 R16 already fixes the *carrier* sideband from the mass scale alone: a Q-ball carries its charge on an internal

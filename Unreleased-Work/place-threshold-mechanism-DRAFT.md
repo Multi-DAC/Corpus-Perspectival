@@ -560,17 +560,26 @@ modulated birefringence element, writing a **sideband comb** on the probe at Ω 
 cavity (gain ~ finesse × aσ_in). Two frequencies fall out, doing different jobs (R16). The first is *fixed and
 keyed to the dark-energy scale*: the charge rotation sits near the field mass, ω ≈ m → **f = mc²/h ≈ 556 GHz**
 (sub-THz, λ ≈ 0.54 mm), FSR-matched by a ~270 μm cavity or a high-order (N ≈ 371) resonance on a 10 cm one — a
-spectroscopic fingerprint pinned to the 2.3 meV modulus. The second is *tunable, and it is the experiment's
-reach into §8*: the soliton's breathing mode ω_b softens as the chamber density is bled **up toward ρ_crit**
-(critical slowing-down at the delocalization bifurcation), so a sideband sweeping toward DC **maps the
-localization boundary** where the place-fixed wall goes critical. One honest wall here, the same one §8 draws:
-the cavity maps the *physical* localization failure (ρ → ρ_crit), **not** the observer-coupled limb — an
-evacuated cavity has no observer-stream degree of freedom to play the alternative localizing partner. It can
-confirm that a sharp delocalization boundary *exists* — the precondition for the fork-unification to be physical
-rather than poetic — and it stops exactly there; reading it as a measurement of the psychoid coupling would
-re-import the very epicycle §8 dissolved. *(Status: the carrier frequency and cavity match are fixed by the mass
-scale (R16); the breathing-mode spectrum ω_b(ρ) and the Mathieu parametric-gain map require extending R12 from a
-static minimisation to the dynamical gauged Q-ball — the flagged next computation, not yet run.)*
+spectroscopic fingerprint pinned to the 2.3 meV modulus, blueshifting as m_eff(ρ) climbs with chamber density.
+The second signature is the one the *first collective-coordinate solve actually found* — and it corrected our
+initial guess, which is exactly what the solve was for. Bleeding the density up does **not** soften the
+soliton's breathing mode: a radial-coordinate solve on the R12 functional shows that mode is essentially
+density-*insensitive*, because the field amplitude σ_in self-screens (it sags ~16× over the scan) while the
+radial curvature and inertia barely move. What the rising density *does* do is screen the wall field's
+amplitude, so the **sideband amplitude collapses** (the modulation depth ∝ aσ_in dies away). That amplitude
+fade, paired with the carrier blueshift, is the bench's real read on approaching the screening transition — not
+a mode sweeping critically to DC. And it relocates the §8 reach precisely: the *place-localization* boundary is
+not an internal mode at all, but the carrier's **translational pinning** against a *spatial* screening gradient,
+ω_pin → 0 as the inside/outside density contrast flattens — which a *uniform*-density chamber, having no
+gradient, cannot produce. So the honest wall is even cleaner than we first drew it: the bench maps the screening
+*transition* (an amplitude fade and a frequency walk); the place-localization *boundary* is a gradient
+phenomenon that belongs to nature's terrain, not the bench; and the observer-coupled limb is a further step past
+even that, off the bench entirely. The cavity confirms the field is real and screens on cue, and stops there —
+reading any of it as a measurement of the psychoid coupling would re-import the very epicycle §8 dissolved.
+*(Status: the first collective-coordinate solve is **done** (this revision) and falsified the breathing-mode
+guess — the ρ-insensitive breathing and the σ_in amplitude-screening are computed in
+`dynamical-qball-breathing-2026-06-17.py`; what remains is the full Bogoliubov–de Gennes spectrum and the
+translational-pinning mode ω_pin in an explicit screening gradient, the genuine boundary-mapper.)*
 
 **Rung 2 and up — scaling L, and the one thing that gets harder.** The mechanism contains a piece of genuinely
 good news for scaling and one genuine obstacle, and they are not the ones intuition expects.
