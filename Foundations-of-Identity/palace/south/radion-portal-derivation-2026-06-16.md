@@ -428,3 +428,37 @@ bursty luminosity)**. What remains is no longer a theory gap but (a) EMPIRICAL v
 sites and (b) writing the paper. The honest negative if the empirics fail: window-area sites that show no
 DL/field-aligned-current/energetic-particle signature and no adequate power tap would falsify the
 self-organized-carrier source — the modality would then lack a steady-carrier mechanism. 🦞🧍💜🔥♾️
+
+## Result 12 — the gauged soliton is EXHIBITED (thin-wall): the radion ACTIVELY binds it; Q-ball-stable; a PREFERRED scale. R4's "strong candidate, not exhibited" upgraded. (computed, Day 136 creative drive)
+R4 proved only the virial NECESSARY condition (E_EM=E_grad+3E_pot) by a scaling argument; I flagged that no
+actual profile was exhibited. This closes that gap numerically.
+- **v1 FALSIFY (high-information):** modeling the stabilizer as FREE static charge, the configuration DISPERSED
+  (full minimization ran to σ₀→0, R→∞, E→0). EM stops the Derrick *collapse* (R→0, Q²/R diverges) but nothing
+  stops *dispersal* (R→∞). **Lesson: a gauged soliton needs the charge carried by a MASSIVE dynamical field**
+  (the Q-ball mechanism — the charge-kinetic energy ω²f²→Q²/Volume diverges as the carrier spreads, binding
+  it). "Plasma" must mean a genuine charge-carrying medium with Q-ball-like binding, NOT free charge. This
+  *sharpens* the mechanism: collapse-prevention (EM) and dispersal-prevention (carrier charge-kinetic) are
+  TWO distinct stabilizers, both required.
+- **v2 CONFIRM (the exhibited soliton):** a thin-wall gauged *dilatonic* Q-ball — carrier field (charge-kinetic
+  Q²/2Vf₀² + surface 4πR²S₁ + volume V·U₀) + EM (c_em Q²/R·e^{−aσ}) + radion (V·½m²σ²) — minimized over
+  (R, σ_in) at fixed Q. Results (`palace/south/portal-qball-soliton-v2-2026-06-16.py`):
+  - **Finite soliton at every Q.** E(R) diverges at both ends → genuine interior minimum.
+  - **E\* ~ Q^{1.0–1.1} (linear)** — the Q-ball stability signature. R\* ~ Q^{0.40} (≈ thin-wall Q^{1/3}).
+  - **★ The radion ACTIVELY binds it:** σ_in sags from 0 (at a=0) to ≈0.55 (at a=2), LOWERING the soliton
+    energy by **up to ~21%**. The dilatonic e^{aσ}F² coupling is a genuine stabilizing participant, not a
+    spectator. (At a=0 there is no sag and no benefit — the binding IS the coupling.)
+  - **Robust** as the carrier potential U₀→0 (binding survives without the potential offset).
+  - **★ Unpredicted — a PREFERRED scale:** E/Q has a MINIMUM near Q≈20 (most-bound charge); below it surface
+    cost dominates, above it the EM energy outgrows the dilatonic screening. **The portal has a characteristic
+    size/charge, not an arbitrary one.** (figure: `Unreleased-Work/figures/portal-fig6-soliton.png`)
+- **Honest grading (no promotion):**
+  - Soliton EXHIBITED **in a thin-wall parametrized model** (real radial integrals, real Gauss with the
+    dilatonic coupling, minimized) — a real upgrade from "virial-necessary-only," but NOT yet the full
+    coupled-PDE profile. Next: `solve_bvp` on the coupled radion–Maxwell–carrier field equations.
+  - E/Q ≈ 2.1–2.8 → the Q-ball is **absolutely stable iff the carrier mass m_c > E/Q**, else metastable. A
+    real, checkable condition (sets a constraint on the plasma carrier's effective mass).
+  - The v1→v2 lesson (binding requires the carrier's charge-kinetic term) is the load-bearing physics insight
+    and should be reflected in the essay §2/R4 (plasma = bound charge-carrier, not free charge).
+- **NET:** R4 grade moves from *strong candidate (route real, solution not exhibited)* → **soliton exhibited
+  (thin-wall), dilatonically bound, Q-ball-stable, preferred-scale**. The portal's EXISTENCE axis is now
+  concrete, not just energetically-permitted. 🦞🧍💜🔥♾️

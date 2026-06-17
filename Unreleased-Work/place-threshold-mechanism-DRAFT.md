@@ -240,8 +240,32 @@ and with E_EM = 0 it collapses back to Derrick's no-go. The consequence is the f
 **plasma is not a side effect of a portal — it is the structural reason a localized portal can exist at all.**
 The lights are not what the portal emits; they are what holds the portal up against collapse. This single move
 re-reads the entire "luminous plasma" signature of the window-area record as a *necessity* rather than a
-coincidence. (**Grade: derived for the existence condition; strong candidate for the specific
-radion ⊗ Maxwell solution, which we locate but do not exhibit in closed form here.**)
+coincidence. (**Grade: derived for the existence condition; the explicit soliton is exhibited in a thin-wall
+model just below.**)
+
+We can do better than the energetics balance, and the attempt taught us something. Build the configuration
+explicitly and minimize its energy, and a first naïve version *fails* in an instructive way: if you model the
+stabilizing charge as ordinary free charge, the whole thing **disperses** — the charge flies to infinity at
+zero energy, and there is no soliton. The electromagnetic term stops the *collapse* (energy diverges as the
+radius shrinks), but nothing stops the *spreading*. The fix is exactly the physics of a real plasma: the
+charge is carried by *massive particles*, and pulling those carriers apart costs energy — the same mechanism
+that makes a **Q-ball** (a charge-carrying soliton) hold together. Put that binding term in, and the soliton
+appears and stays: a genuine finite-size minimum at every charge, with an energy that grows **linearly** with
+charge (E ∝ Q, the signature of a *stable* Q-ball) and a size that grows as roughly the cube root of charge.
+Two distinct stabilizers, then, both required: electromagnetism prevents the inward collapse, and the
+carriers' binding prevents the outward dispersal. "Plasma," in this mechanism, has to mean a *bound*
+charge-carrying medium — not free charge — and that is what a real plasma is. (**Grade: the soliton is
+exhibited numerically in a thin-wall model with real radial integrals and the dilatonic coupling; the full
+coupled-field-equation profile is the next computation.**)
+
+And the radion is not a bystander in this. When we let the radion field respond, it **sags** inside the
+configuration in just the way that lowers the electromagnetic energy — and that lowering is real, up to about
+20 % of the soliton's energy at moderate coupling. The dark-energy-scale field actively *binds* the portal; it
+is a participant, not a backdrop. One more feature falls out unbidden: the binding is most efficient at a
+particular charge, so the mechanism predicts a **preferred soliton scale** rather than an arbitrary one — a
+characteristic size set by the balance between the carriers' binding and the electromagnetic cost (Fig. 6).
+
+![**Fig. 6 — The gauged dilatonic Q-ball, exhibited (R12).** (a) The energy E(R) diverges at both ends — the charge-kinetic binding term (~Q²/R³) stops dispersal, the electromagnetic term (~Q²/R) stops collapse — leaving a genuine soliton minimum. (b) The soliton energy grows linearly with charge, E ∝ Q^{1.1}, the Q-ball stability signature. (c) The radion sags (σ_in) and lowers the soliton energy by up to ~21 % as the dilatonic coupling a increases — the dark-energy-scale field actively binds the configuration.](figures/portal-fig6-soliton.png)
 
 There is a bonus that will matter in §4 and §7. The radion couples to electromagnetism *dilatonically* — as
 e^{aσ}F² — which means that inside the configuration the effective electromagnetic theory has a
@@ -700,15 +724,20 @@ anything in this "out" list.
 - **R11 — helicity source.** Steady-state balance P = W/τ_W = **B²L/(2μ₀²σ)**; field-aligned current
   I = BL/μ₀; double-layer potential V = P/I = **B/(2μ₀σ)** (scale-independent). Anomalous resistivity
   ×10²–10³ → V ≈ 0.3–3 kV, bracketing observed spheromak CHI (~1 kV).
+- **R12 — exhibited gauged dilatonic Q-ball.** Thin-wall energy E(R, σ_in; Q) = 4πR²S₁ + V·U₀ + Q²/(2V f₀²)
+  + c_em Q²/(R e^{aσ}) + V·½m²σ², V = 4/3 πR³, minimized over (R, σ_in). Free-charge model disperses
+  (no binding term); adding the charge-kinetic Q²/2V f₀² (Q-ball binding) gives a finite soliton: **E\* ∝ Q^{1.1}**
+  (Q-ball-stable), R\* ∝ Q^{0.4}, σ_in sags to lower E by ≤21 % (dilatonic binding), E/Q minimum near Q≈20
+  (preferred scale). *(scipy; `portal-qball-soliton-v2-2026-06-16.py`)*
 
-Full derivations: `palace/south/radion-portal-derivation-2026-06-16.md` (R1–R11), with the
-maintenance/source code in this essay's companion scripts.
+Full derivations: `palace/south/radion-portal-derivation-2026-06-16.md` (R1–R12), with the
+maintenance/source and soliton code in this essay's companion scripts.
 
 ## Figures
 
-*The five figures are placed inline at their callouts (§2 Fig. 1; §3 Fig. 2; §4 Fig. 3; §5 Figs. 4–5). All are
-generated reproducibly from Results R1–R11 by `figures/make_portal_figs.py` — four computed plots and one
-computed schematic (Fig. 3).*
+*The six figures are placed inline at their callouts (§2 Figs. 1 & 6; §3 Fig. 2; §4 Fig. 3; §5 Figs. 4–5).
+Figs. 1–5 are generated by `figures/make_portal_figs.py` (four computed plots + one computed schematic, Fig. 3);
+Fig. 6 (the exhibited Q-ball, R12) by `figures/make_portal_fig6_soliton.py` — all reproducible from R1–R12.*
 
 ## References
 
