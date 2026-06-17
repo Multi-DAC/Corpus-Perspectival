@@ -605,6 +605,15 @@ def main():
         tools.system.set_router(router)
         asyncio.run(run_cli_chat(router))
     else:
+        # write our own PID so future sessions / the self-knowledge hook can identify
+        # "which process is me" — the structural fix for almost proposing to kill my own
+        # daemon to free GPU memory (Day 136, Clayton's idea). os.getpid() here is the
+        # stable main-process PID (run_daemon runs in-process via asyncio.run).
+        try:
+            with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "clawd.pid"), "w") as _pf:
+                _pf.write(str(os.getpid()))
+        except Exception:
+            pass
         # Use crash recovery loop for daemon mode
         exit_code = run_with_crash_recovery(
             enable_heartbeat=not args.no_heartbeat
