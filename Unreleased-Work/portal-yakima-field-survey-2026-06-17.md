@@ -174,6 +174,32 @@ north-flank thrust (C1 46.2945) ∩ Bouguer low (basin, target pulled to the 46.
 plan: camp/log **C2 Satus Peak (46.2575,−120.7535)** aimed **bearing ~62°**; day-survey the **46.32–46.36 N,
 −120.66→−120.62** transition band (active scarp meeting the gravity gradient) with radon + magnetometer.
 
+## 10. The FOURTH layer — charge-accumulation (transport-class test), applied to Yakima (2026-06-17)
+After the terrestrial-transport self-correction (charge, not density, is the transport lever), the survey
+gains a 4th layer: charge-accumulation proxies that distinguish a FLOOR site (lights) from a TRANSPORT-class
+candidate. Assessed against Toppenish Ridge (qualitative, from known geology):
+
+| charge proxy | Toppenish Ridge | score |
+|---|---|---|
+| **Piezoelectric lithology** (quartz under stress) | Columbia River Basalt — MAFIC, low free quartz; poor piezo | **LOW** |
+| **Seismo-electric** (active-fault stress → charge; the earthlight basis) | Holocene Mill Creek thrust, ruptures <500 yr | **MOD–HIGH** |
+| **Telluric currents** (conductivity contrast) | sediment-basin ↔ basalt-basement boundary at the ridge front | **MODERATE** |
+| **Lightning climatology** (atmospheric charge) | eastern-WA summer storms, not a hotspot | **LOW–MOD** |
+
+**Verdict: Yakima reads MODERATE on charge — driven by active faulting, but with NO piezo amplifier (basalt)
+and only moderate lightning/telluric. So the framework predicts Yakima is a FLOOR site (lights), NOT a
+transport-class site.** And that is exactly what the record shows: Vogel logged *nocturnal lights*, not
+transport. **The fourth layer is self-consistent — it predicts "lights, not gateways" for Yakima, matching
+the data.** (A transport-class terrestrial candidate would want low-density unscreening + active faulting +
+STRONG piezo (quartz-rich crystalline rock under stress) + high lightning + radon/ionization — a different
+geology than basalt Yakima.)
+
+**On the Coulthart site:** location is undisclosed (no forest/region public), so the 4th layer cannot be run
+against it. Regional inference only: "ancient ruins + Forest Service" ≈ US Southwest, whose profile (quartz-
+rich crystalline basement, uranium/radon, intense monsoon lightning, Puebloan ruins on federal land) would
+score HIGHER on the charge layer than basalt Yakima — IF it is there. Regional reasoning, not a site
+identification, and not an endorsement of the claim (permission ≠ confirmation).
+
 *Discipline wall (from the paper): this maps the physical place-threshold; it tests whether a sharp
 recurring anomaly with the derived signatures exists, and stops there. A null is the expected, honest
 outcome and is itself worth recording.*
