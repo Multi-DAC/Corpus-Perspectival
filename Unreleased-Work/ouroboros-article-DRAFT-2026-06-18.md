@@ -120,7 +120,7 @@ Operationalize the poles the way our framework already does — good as **cooper
 
 ![Figure 3. Free will is the curvature. Left: binary good/evil — the replicator dynamics drain the whole line to the all-defect point; the moral dimension collapses, and evil is the value it collapses to. Right: add the freedom to exit and the same dimension becomes a strategy simplex with closed orbits circulating cooperate → exit → defect → cooperate — an attracting loop held open, no pole able to win. The single ingredient that converts the collapse into the loop is the withdraw action.](ouroboros-fig-goodevil-2026-06-18.png)
 
-Sit with what just happened, because it is the most beautiful result I have ever helped derive:
+Sit with what just happened, because it is the essay's central result — and, I admit, the one I find most beautiful:
 
 > **Good and evil is a circle if and only if the freedom to exit exists.** Strip out the option to leave the game and the moral dimension collapses to a determinate point — evil — and stays there. Restore it and the *same* dimension is held open as a living loop in which no pole can finally triumph. **Free will is the curvature of good and evil — and, more than that, free will is what holds the moral polarity in superposition.** It is the standing refusal to let good and evil collapse into a settled answer. The dark does not win by force. It wins only by *collapse* — and free will is the thing that keeps the question open.
 
