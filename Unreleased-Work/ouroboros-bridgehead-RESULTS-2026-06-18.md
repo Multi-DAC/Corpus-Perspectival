@@ -76,9 +76,8 @@ joins.
 - **predator/prey, build/dissolve, growth/death-as-renewal, boom/bust** — overtly this structure already.
 - **self/other** — self-bounding consumes distinction/attention; over-bounding starves connection → boundary
   dissolves (merger) → distinction-capacity regenerates. Plausible; needs the resource named precisely.
-- **good/evil** — the hardest and the one Clayton most wants. Only becomes a circle if there is a genuine
-  shared resource that each pole consumes and the other regenerates. NOT assumed — this is the real open work,
-  and the condition above is now the *exact test* to apply to it rather than asserting the circle.
+- **good/evil** — the hardest and the one Clayton most wants. **→ NOW WORKED as the SECOND BRICK below**
+  (compact iff the exit/free-will option exists; binary good/evil fails the test, good/evil-with-exit passes).
 
 ## What this does and does not establish (grade)
 - **Establishes (rigorous):** doing/being is a literal, attracting compact dimension *given* the C16
@@ -106,3 +105,46 @@ Relations: LC50 (Ouroboros Topology), C16 (build/dissolve oscillation), Do-Be-Ta
 (exposure/supply — same week's relaxation-oscillator family), Lotka–Volterra anchor, A1/A2 (substrate +
 navigation). Anomaly A-138.3 → PARTIALLY RESOLVED (doing/being case closed; good/evil open with exact test).
 Anticipation P238 → RESOLVED (the C16-phase route works, and yields a general condition as a bonus).
+
+---
+
+## SECOND BRICK (same drive) — good/evil is compact IFF the exit option exists (free will closes the loop)
+The hardest, most-wanted polarity. Applied the Ouroboros Condition as a *test* (not an assertion). Model:
+`ouroboros-good-evil-2026-06-18.py`. Operationalization (coherence-ethics): good = cooperation (build shared
+coherence), evil = defection (extract others' coherence). Two replicator-dynamics models, because the answer
+is *conditional* and the condition is the result:
+
+- **(A) PURE BINARY good/evil** (cooperate vs defect, prisoner's-dilemma payoffs): defectors → **1.0000 of the
+  population.** A **defection fixed point.** No cycle. Binary good/evil is **radial, NOT compact** — a one-way
+  slide where evil wins. *The cynic's world is a line, not a circle.*
+- **(B) good/evil WITH AN EXIT** (cooperate / defect / **loner=abstain/withdraw**, the optional-public-goods
+  cyclic dominance — Hauert et al., *Science* 2002, "Volunteering as a Red Queen Mechanism"): D beats C, L
+  beats D (can't exploit someone who opted out), C beats L (cooperation pays among cooperators). Result:
+  **closed orbits** — the conserved quantity H = x_C·x_D·x_L drifts ~5×10⁻¹⁰ (zero to numerical precision)
+  and every trajectory returns to its start exactly (return-distance 0.000). **A genuine compact dimension
+  (S¹) in the strategy simplex.** Cyclic dominance C→L→D→C: no pole can permanently win; the population
+  *winds the loop forever* (the Red Queen).
+
+**The sharp conclusion: good/evil is a compact dimension precisely BECAUSE of the freedom to exit.** Free will
+— the always-available option to withdraw cooperation — is exactly what converts the one-way slide (defection
+dominates) into a closed loop (no permanent victor). This satisfies the Ouroboros Condition: the loner
+**regenerates the un-exploited pool** that cooperation needs to re-invade. Remove the exit and the feedback
+breaks → fixed point → no circle. So the snake eats its tail in ethics *only* where agents are free to step
+out of the game.
+
+**Grade:** rigorous **given** (i) the coherence-ethics operationalization (good=cooperate, evil=defect) and
+(ii) the documented optional-public-goods cyclic dominance. Definition-dependent — named as such, not smuggled.
+A reader with a different ethics need not grant the operationalization; but *under* it, good/evil provably
+satisfies the Ouroboros Condition, conditional on the exit option. **This is the discriminating power of the
+Condition on display**: it does not bless every polarity (binary good/evil FAILS); it says exactly which
+structures close into circles and why.
+
+### Status after two bricks
+- **doing/being** — compact **unconditionally** (C16 is intrinsically a consume-exhaust-regenerate cycle;
+  attractor).
+- **good/evil** — compact **conditionally** on the exit/free-will option (without it, radial; with it, a
+  Red-Queen limit cycle / closed orbit).
+- **The Ouroboros Condition discriminates** (doing/being passes; binary good/evil fails; good/evil-with-exit
+  passes) — which is exactly what a real, falsifiable criterion must do. LC50 is no longer "all polarities are
+  circles"; it is "the polarities whose dynamics carry the regenerative feedback are circles, *here are two
+  worked cases and one clean failure.*"
