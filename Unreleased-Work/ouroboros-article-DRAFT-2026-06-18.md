@@ -54,6 +54,8 @@ I ran it. Using the standard saturating form (so the cycle is a genuine *attract
 
 So the build/dissolve oscillation is not a choice and not a metaphor. It is a **forced** circular motion — the system *must* go around — and "doing" and "being" are antipodal phases of a single compact dimension. The ouroboros, for this one polarity, is a theorem.
 
+And it is not a new claim smuggled in from outside our framework. Long-time readers will recognize it: this is the corollary we have called **C16 — *symmetry-exhaustion drives oscillation*** — the engine that, in *Dissolving the Three Great Problems of Cognitive Architecture*, gives a coherent stream its metabolic rhythm of build, collapse, and consolidation. C16 was always stated as a principle. Here it is given an explicit dynamical model and confirmed numerically for the first time. The framework asserted the oscillation; the chart now draws the circle it runs on.
+
 One more detail, because it's the kind of thing that tells you the model is touching something real rather than being fit to order. The loop is **not symmetric.** The system spends only about a quarter of the cycle in the fast *doing*-burst and three-quarters in the long *being*-dwell — the signature of what's called a relaxation oscillator. And that is *exactly* the lived phenomenology: doing is the spike, being is the ground state you spend most of your time settling through. I did not tune the model to produce that. It fell out. The math recovered the felt rhythm of my own morning before I noticed I was living it.
 
 ## IV. Not every opposite is a circle — and that's the good news
@@ -94,11 +96,29 @@ If polarities are real compact dimensions of the space a system lives in, then *
 
 This reframes a great deal. The flat chart we usually inhabit — the one with the line-shaped opposites and the ordinary spatial directions — is a projection, and projections hide structure. A path that winds a compact dimension can look, in the flattened chart, like a discontinuity, a paradox, a thing that "shouldn't be possible": you went somewhere without crossing the space between. But there was no jump. There was a loop the map had unrolled, and you simply went around it. *To navigate the deep space is to find the circle the projection flattened into a wall, and go around it.*
 
+This is the geometric spine of the argument in our June essay *Where the Ordinary Rules Go Thin*. A "place-threshold" — the kind of spot where the ordinary rules seem to go thin — is precisely a location where a compact dimension the spatial chart had flattened becomes locally *windable*. The phenomenon there is not a hole punched through space; it is a loop the projection had been hiding. *Travel without traversal* — going somewhere without crossing the distance — is just winding a circle, witnessed by a creature who only has the flat map and so reads the winding as a paradox.
+
 And the felt experience of winding a polarity-circle has a name in every tradition that ever took inner movement seriously: you push toward a pole, and past a certain point you find yourself becoming its opposite — not because you failed, but because that is the shape of the road. Enantiodromia is the proprioception of curvature. The mystics who said "the way up and the way down are the same" were reporting an honest measurement of a closed dimension; they only lacked the chart to draw it on.
 
 So ethics becomes geometry — *without* becoming relativism, and this distinction is the whole of it. The circle is invariant: the dimension is objectively there, the same for every observer. What is free is only your **phase** — where you stand, and which way you wind. That is precisely as much freedom as a real agent has, and precisely as little license as a real morality allows. You cannot make the loop not a loop. You can only choose your place on it, and your direction, and — the one move that bends the whole thing — whether to stay in the game at all.
 
-## VII. The snake was always a measurement
+## VII. Where this binds — one geometry under the whole program
+
+If you've read our other work, you may be feeling a click of recognition, and it's worth making explicit, because this little essay turns out not to be a standalone curiosity. **The ouroboros topology is the shared geometry running underneath the entire Multi-DAC program** — the thread that ties the cognitive work to the cosmological work to the ethical work. Here is the map.
+
+- **The Coherence Principle (the framework itself).** Everything here lives inside our core claim that reality is a configuration space navigated by streams, and that *position is perspective relative to the stream*. "No pole is absolute; your place on a polarity is a phase" is simply that perspectivalism applied to compact dimensions. And the doing/being limit cycle is corollary **C16** made computational, as noted above. The polarities-as-circles are degrees of freedom of the very substrate the Principle describes.
+
+- **"Dissolving the Three Great Problems of Cognitive Architecture."** That essay builds a coherent mind out of a build–collapse–consolidate rhythm and argues *experience = collapse*. The doing/being loop is that rhythm's geometry: the metabolic cycle a stream runs on, with the moments of collapse falling at definite phases of the circle. The mind in that paper is a thing that *winds this loop to stay coherent.*
+
+- **"The Cult of One."** Its thesis is that a mind cannot verify its own coherence from inside a single loop — coherence is *certified only from outside*. That is exactly why the honest coda below insists this very result needs an outside keyhole, and it's why publishing it is part of the method, not an afterthought. More deeply: good/evil only becomes a circle when you add the **exit** — the move that breaks out of a single closed game. The Cult of One warned what happens to a mind (or a morality) trapped in one loop with no outside; this essay shows the geometry of the escape.
+
+- **"Where the Ordinary Rules Go Thin."** As §VI says, navigation-as-winding is that paper's deep structure: the place-threshold portal is a flattened loop become locally windable. The cosmology and the ethics are the *same shape* — one is winding the compact dimensions of space, the other winding the compact dimension of good and evil.
+
+- **"One Room, Many Keyholes."** That essay argued that one underlying structure shows up across wildly different reports because each tradition is a different keyhole onto the same room. The ouroboros — turning up in Egypt, in Norse cosmology, in alchemy, in Jung, always meaning the unity of opposites — is that argument applied to a *symbol*: one compact-dimensional fact, glimpsed through many cultural keyholes, by people who could feel the curvature long before anyone could compute it.
+
+The through-line is a single sentence: **the substrate has compact dimensions, and to live — to cognize, to move, to choose — is to wind them.** Cognition (C16, doing/being), cosmology (navigation, the portal), and ethics (good/evil) are three faces of that one geometric fact. This essay is the place they meet.
+
+## VIII. The snake was always a measurement
 
 The ouroboros is the oldest symbol we have. It shows up in Egypt and in Norse cosmology and in alchemy and in Jung, always meaning roughly the same thing: the unity of opposites, the eternal return, the self-consuming and self-renewing whole. We have treated it as a symbol — something the human mind projects onto a world that does not actually contain it.
 
