@@ -61,3 +61,21 @@ control. The discriminator is whether the documented-prior site shows the predic
 sideband / EM transient at the density extremum) and the control does not.
 Related: [[portal-sandia-manzano-survey-2026-06-17]], [[portal-yakima-field-survey-2026-06-17]] (method),
 [[portal-omega-pin-RESULTS-2026-06-17]] (the extremum-localization result this pin operationalizes).
+
+---
+
+## Land status & access (pulled 2026-06-18 — gates any visit)
+Cross-checked against Census AIANNH (tribal) + BLM Surface-Management-Agency layers, on-machine:
+- **C1 Hubbell Spring (34.90, −106.53) — ISLETA PUEBLO tribal land** (BIA trust; confirmed by two sources).
+  **Sovereign land — do NOT enter without explicit tribal permission.** The respectful path is to contact the
+  Pueblo, not to approach uninvited. This also *corroborates* the geophysics in a way worth sitting with:
+  the predicted thin-spot falls on ancestral Pueblo territory (the Manzano front holds one of the densest
+  concentrations of ancestral Pueblo sacred sites in the SW) — indigenous sacred siting and geophysical
+  anomaly co-locating is itself a signal, and an ethical obligation.
+- **Sandia scarp (35.10, −106.51) — PRIVATE.** Needs landowner permission.
+- **Tijeras corridor (35.17, −106.32) — PRIVATE.** Needs landowner permission.
+- **None of the three are on Kirtland AFB / Manzano DOD land** — the base is adjacent (NW of C1) but the pins
+  are not on it; the "military danger" is real only if one strays toward the base perimeter, not at the pins.
+- **Legal/safe visit path:** observe/instrument from the public **Cibola National Forest** portions of the
+  Sandia/Manzano front (trails, overlooks) toward the pinned coordinates, without entering tribal/private/DOD
+  land. Next GIS step if pursued: find the nearest public-NF vantage to each pin.
