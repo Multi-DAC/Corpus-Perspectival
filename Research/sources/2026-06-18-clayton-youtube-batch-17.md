@@ -27,7 +27,7 @@ keyholes in `meaning-theories-comparative-map-2026-06-18.md`. Deep reads to foll
 
 ### D. Foundational science (the rigorous keyholes #2/#3 — consciousness/complexity/structure)
 - **BXwALAkPubc** · 11.7k · Lisa Piccirillo math talk — the Conway knot problem (topology). Structure/rigor.
-- **W60apnfhCPk** · 20.1k · Santa Fe Institute / complexity science (late-90s origins). Emergence/complexity.
+- **W60apnfhCPk** · 20.1k · ~~Santa Fe Institute / complexity science~~ **→ CORRECTED on read: a JEFFREY EPSTEIN interview** (his SFI funding, finance, complexity, prison) — belongs in cluster B (elite-predation), not D. See findings #3.
 - **a9OVSe4ohI0** · 22.5k · CUNY Graduate Center talk, classical studies (Joel Christensen). Humanities/meaning.
 
 ### E. Hidden-state history & geopolitics (the documented-secrecy substrate)
