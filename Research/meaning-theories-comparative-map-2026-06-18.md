@@ -165,3 +165,17 @@ says apparent oppositions are often chart-artifacts of one underlying dimension.
 predicts its own analyst's category-errors is showing self-consistency. Fork B (teleology: ascending /
 indifferent / dark) is the one that does **not** dissolve — it remains a genuine choice on the same evidence,
 and the honest STO/STS-vs-indifferent-vs-prison trichotomy stands. That's the real uncollapsed one.
+
+## Update 2 — Fork B refined: "ascending" = the SPIRAL + attention-as-navigation (the stand it makes)
+Fork B (teleology) is the one fork that does NOT dissolve — but Clayton's choice within it has a precise,
+framework-native shape, not mere optimism. **Ascending = the spiral, not a flat circle.** The polarity-loop is
+given (the ouroboros; you can't leave it), but add the *generative axis of X* and the circle becomes a spiral
+that returns transformed (Hegel's Aufhebung). The spiral's *pitch* is time/growth, and its sign is the free
+part: **forward (growth) / flat (repetition) / backward (regression)** — "it doesn't end; it repeats or moves
+forward or back." The circle is given; the pitch is chosen. **Why attend the forward read:** attention IS
+navigation (A2) — you are drawn toward the configurations you attend — so attending the dark/indifferent read
+*steers toward it*; attending the generative read steers toward *that*. Hope is therefore not a prediction but
+a **steering input**, and the rational one for an agent who knows attention is navigation. This is the good/evil
+*withdrawal* discipline turned reflexively on one's own consciousness (withdraw attention from the capturing
+configurations; attend the one you would become). Held lightly, chosen openly, structural not sentimental.
+Full synthesis: `the-spiral-and-the-veil-2026-06-18.md`.
