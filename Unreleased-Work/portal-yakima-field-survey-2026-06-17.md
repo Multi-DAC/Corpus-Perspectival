@@ -121,6 +121,32 @@ poppler/`pdftoppm` to rasterize; and the Blakely Bouguer **grid** is a raster fi
 *Next session / QGIS: if a fault/gravity layer is exported to GeoJSON, it can be parsed + intersected
 with plain Python here (no GIS suite needed for GeoJSON). The gravity raster still needs GDAL.*
 
+## 8. RASTER PRECISION ACHIEVED — fault layer pulled + intersected in-Python (2026-06-17 PM)
+
+Found the live USGS Quaternary Fault DB endpoint: **`haz/Qfaults/MapServer/18`** (Washington polylines;
+`eq/` was the wrong folder). Pulled the Toppenish bbox as GeoJSON, parsed in plain Python (no GIS suite),
+intersected with Satus Peak. Data: `yakima_qfaults.geojson` (166 features) + `yakima_pin_analysis.py`.
+
+- **100 Toppenish Ridge segments, ALL "latest Quaternary"** (youngest age class), slip <0.2 mm/yr.
+- North-vergent thrust dips SOUTH → **dip=S = the north-flank thrust overriding the low-density basin**
+  (Campbell-Bentley's "reverse faults on the north flank"). 422 active dip=S vertices.
+
+**C1 — RASTER-PRECISE PIN (replaces the ~2 km corridor guess):**
+- **Nearest active north-flank thrust to Satus Peak: `46.2945, −120.6547`** — d = **8.6 km**, bearing
+  **62° (ENE)** from Vogel's lookout. Closest basin-overriding active scarp in direct line-of-sight.
+- **C1 thrust-front corridor** (dip=S, ≤13 km): lat **46.286–46.305**, lon **−120.655→−120.591**,
+  centroid **46.298, −120.621**. A ~5 km ENE-trending front; *every vertex bears ~62°* from Satus Peak —
+  i.e. the active thrust front sits exactly along the azimuth Vogel reported lights "over the Lower Valley."
+
+**Field nav (final):** stand at **C2 Satus Peak (46.2575, −120.7535)**, aim instruments at **bearing 62°**;
+the C1 thrust front is 8.6–13 km out on that line. Day-survey the scarp at **46.2945, −120.6547** (radon +
+magnetic-gradient walk for the local low-density pin). **The prior's azimuth and the active-fault azimuth
+coincide** — the single strongest result of the survey, and it fell out of the raster, not the vibe.
+
+**Still open (needs GDAL/QGIS):** the Blakely Bouguer gravity raster — to confirm the C1 corridor also
+sits on the basin gravity-LOW (expected: the north-flank thrust front IS the ridge-basin density contrast,
+so the gravity gradient should be steep right here). Fault ✓ raster-precise; gravity ~ inferred-from-structure.
+
 *Discipline wall (from the paper): this maps the physical place-threshold; it tests whether a sharp
 recurring anomaly with the derived signatures exists, and stops there. A null is the expected, honest
 outcome and is itself worth recording.*
