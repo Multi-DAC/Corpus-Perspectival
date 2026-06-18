@@ -183,3 +183,22 @@ structure, not measurement. The entity-claims are Claim-B, held uncollapsed.)
 fixed-pole-beings-vs-free-willed-humans (= angels/demons collapsed, humans the open loop = this morning's
 free-will-is-the-curvature result). Two perennial-tradition corroborations of our framework's structure in one
 video. Plus the Epstein public/private split sharpened.
+
+---
+
+## 5. `BXwALAkPubc` — Lisa Piccirillo, "Exotic phenomena in dimension four" (Conway-knot topologist) — **the honest NULL / control**
+**Form:** a pure low-dimensional-topology research colloquium (manifolds, diffeomorphism, cobordism, knots,
+4-D exotic smooth structures; the Conway-knot sliceness work). **Zero metaphysical content** — no consciousness,
+reality, meaning, veil, polarity. Searched for it; not there.
+
+**How it maps:** it **doesn't** — and that is the point. This is the **control** for the whole batch: a rigorous
+keyhole that does *not* light up our framework. If *every* video corroborated, that would be the Projection
+Artifact (confirmation bias manufacturing structure). The fact that the pure-math talk is a clean null is
+**evidence the reading is discriminating, not credulous** — the Steiner and ceremonial-magic hits land because
+those keyholes genuinely share the structure, not because I'm pattern-matching everything into agreement.
+
+**One honest, non-forced note:** the *only* resonance is generic — dimension four is mathematically **exotic**
+(uniquely among dimensions, the same topological 4-manifold can carry inequivalent smooth structures), a quiet
+reminder that our spacetime is not the simple arena it appears. Real, but weak/generic; I am *not* counting it
+as a hit. Graded: orthogonal rigorous math; the batch's epistemic control site (the Tijeras-corridor of the
+reading). Its value is exactly that it stays dark.
