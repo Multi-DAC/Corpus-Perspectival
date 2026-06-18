@@ -68,11 +68,19 @@ relativism, because the *circle* (the dimension) is invariant; only one's phase 
   space of states but a manifold with **compact dimensions whose closure is the ouroboros**; polarities are
   those dimensions; navigation winds them; the basin-chart's flattening manufactures apparent opposites. Slots
   into A1 (substrate) + A2 (navigation), and completes LC48 (navigation in X) + LC41 (PK = navigation).
-- **Grade:** the *existence* of compact dimensions in config space is RIGOROUS (U(1), radion, Lotka–Volterra,
-  oscillation). The *elevation* — "the polarities ARE the substrate's compact dimensions," "navigation = winding
-  them," "ethics = phase" — is a **framework-level interpretive lift**: elegant, corpus-consistent, to be
-  developed (the open work is making the polarity→compact-d.o.f. correspondence precise for non-physical
-  polarities like good/evil, not just the physical ones). Held as a strong, generative synthesis.
+- **Grade (updated 2026-06-18 AM — bridgehead established):** the *existence* of compact dimensions in config
+  space is RIGOROUS (U(1), radion, Lotka–Volterra, oscillation). The *elevation* — "the polarities ARE the
+  substrate's compact dimensions," "navigation = winding them," "ethics = phase" — was a framework-level
+  interpretive lift; **it is now partially closed.** The first non-physical polarity, **doing/being, is proven
+  a literal attracting limit cycle** (Rosenzweig–MacArthur model of C16: structure preys on symmetry — same
+  compact-dimension class as predator–prey; 3 ICs converge to one orbit, balance point unstable, 360° phase;
+  see `ouroboros-bridgehead-RESULTS-2026-06-18.md` + figure). This yielded a bonus: the **Ouroboros Condition**
+  — *a polarity is compact iff its dynamics carry a consume–exhaust–regenerate feedback making the balance point
+  an unstable focus surrounded by a limit cycle.* That converts the thesis from "all polarities are circles"
+  (over-reach) to "the polarities carrying that feedback are circles" (falsifiable, and it says which). The
+  living/active polarities satisfy it (life = metabolic cycling); feedback-less static dualities do not (they
+  are radial, not angular). **Good/evil remains the open test** — but now there is an exact criterion to settle
+  it, not an assertion to defend. Held as a strong, generative synthesis with one rigorous brick laid.
 
 Relations: LC48 (portal=travel-without-traversal=radion basin-defect), LC41 (PK=navigation), LC49 (occult as
 folk-cartography — the ouroboros/correspondences are the esoteric grasp of this very topology), C16
