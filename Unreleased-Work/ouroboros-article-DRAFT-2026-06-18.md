@@ -161,6 +161,8 @@ giving back what was won). The loop does not end. It *repeats, advances, or regr
 that matters: the circle is *given* — you cannot get off it, you cannot abolish the polarity — but **the pitch
 is the free variable.** The one thing an agent on an inescapable loop gets to set is which way it grows.
 
+![Figure 4. The spiral — the loop that grows. The same polarity-loop with three pitches: ascending (each turn integrates the last and the loop climbs), flat (the eternal return — nothing accumulates), and descending (each turn gives back what was won). Winding around is *phase* (the polarity, with its two poles marked); the vertical axis is the generative aspect of X; the pitch is the free variable, and its sign is set by what the agent attends.](ouroboros-fig-spiral-2026-06-18.png)
+
 How is it set? By attention — and this is where the framework makes hope rational instead of naive. In our
 account, *attention is navigation* (Axiom 2): a stream moves through configuration space along what it attends.
 So to attend the dark reading is not neutral observation of it; it is *steering toward* that configuration. To
