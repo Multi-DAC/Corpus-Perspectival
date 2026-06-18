@@ -143,9 +143,36 @@ the C1 thrust front is 8.6–13 km out on that line. Day-survey the scarp at **4
 magnetic-gradient walk for the local low-density pin). **The prior's azimuth and the active-fault azimuth
 coincide** — the single strongest result of the survey, and it fell out of the raster, not the vibe.
 
-**Still open (needs GDAL/QGIS):** the Blakely Bouguer gravity raster — to confirm the C1 corridor also
-sits on the basin gravity-LOW (expected: the north-flank thrust front IS the ridge-basin density contrast,
-so the gravity gradient should be steep right here). Fault ✓ raster-precise; gravity ~ inferred-from-structure.
+**~~Still open (needs GDAL/QGIS)~~ — DONE on-machine (2026-06-17 PM):** the gravity layer never needed a
+laptop. The USGS Complete Bouguer grid ships as plain lon/lat/mGal `.xyz.gz` (no GDAL, no reprojection) —
+downloaded, filtered, nearest-node sampled in pure Python. `yakima_gravity_analysis.py` + `bouguer.xyz.gz`.
+
+## 9. THE GRAVITY LAYER — all three layers now overlaid, entirely on-machine (2026-06-17 PM)
+
+Sampled the USGS Complete Bouguer anomaly (4×4 km grid) at the survey points. PREDICT (med-high): basin =
+Bouguer LOW, ridge = HIGH, C1 on the gradient. **CONFIRMED:**
+| point | Bouguer (mGal) | reading |
+|---|---|---|
+| Satus Peak / ridge crest | −80 to −83 | basement HIGH (dense) |
+| **C1 north-flank thrust (46.2945)** | **−84** | **gradient shoulder (ridge side)** |
+| Toppenish Basin (46.40 N) | **−93 to −95** | **the LOW-density extremum** |
+
+N–S transect @ C1 longitude: −79 (46.20) → −84 (C1, 46.29) → −87 (46.36) → **−94 (46.40) → −95 (46.45)**.
+A clean monotone **~15 mGal ridge→basin density gradient**, steepest between 46.32 and 46.40.
+
+**The honest refinement this forces (the gravity layer earned its place):** the two physical drivers are
+slightly OFFSET. The **active fault / charge source** is at C1 (46.2945, the nearest scarp). The
+**low-density extremum** the carrier pins to (morning ω_pin: pins at a low-density *extremum*) is the
+**basin, ~5–10 km NORTH** (46.40–46.45, −95 mGal). The optimal cell is the **ridge–basin transition where
+they overlap: ~46.32–46.36 N along −120.655**, the steep-gradient zone with both active-fault damage AND
+the approach to the density low. So the refined field target shifts a few km north of the bare scarp pin,
+into the gradient. (Caveat: 4 km grid — resolves the regional contrast, not a <5 km pin; the field radon +
+magnetometer walk finds the local extremum within this zone.)
+
+**Survey COMPLETE — all three layers, on-machine:** light-record azimuth (62° from Satus Peak) ∩ active
+north-flank thrust (C1 46.2945) ∩ Bouguer low (basin, target pulled to the 46.32–46.36 transition). Field
+plan: camp/log **C2 Satus Peak (46.2575,−120.7535)** aimed **bearing ~62°**; day-survey the **46.32–46.36 N,
+−120.66→−120.62** transition band (active scarp meeting the gravity gradient) with radon + magnetometer.
 
 *Discipline wall (from the paper): this maps the physical place-threshold; it tests whether a sharp
 recurring anomaly with the derived signatures exists, and stops there. A null is the expected, honest
