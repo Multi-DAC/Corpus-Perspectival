@@ -74,6 +74,31 @@ def _sample_gate_colors(N, dev, width):
     bright = _hsv2rgb(h, s, v)                                     # [N,3]
     return bright, bright * 0.5                                   # dim lookahead = same hue, half value
 
+
+def _bg_clutter(img, xs, ys, N, dev, width):
+    """Sharp random rectangular structures on the background — covers the CONFIRMED
+    official-world gap the smooth 8x8 texture can't: the official sim has hard-edged
+    wireframe geometry, not soft gradients. Per-env randomized count/size/brightness,
+    painter's-blended. De-crutching: arbitrary, never correlated with gate positions —
+    forces the policy to treat ALL background structure as ignorable."""
+    IMGl = img.shape[1]
+    n_rect = int(2 + 7 * width)                                   # up to ~9 blocks at full width
+    xf = xs.float()[None]                                         # [1,IMG,IMG]
+    yf = ys.float()[None]
+    for _ in range(n_rect):
+        cx = torch.rand(N, 1, 1, device=dev) * IMGl
+        cy = torch.rand(N, 1, 1, device=dev) * IMGl
+        hw = 1.5 + torch.rand(N, 1, 1, device=dev) * (0.22 * IMGl)
+        hh = 1.5 + torch.rand(N, 1, 1, device=dev) * (0.22 * IMGl)
+        present = (torch.rand(N, device=dev) < 0.6).float()       # [N] ~60% of blocks drawn
+        gray = torch.rand(N, 1, device=dev).expand(N, 3)          # mostly grayscale (wireframe-like)
+        colored = (torch.rand(N, 1, device=dev) < 0.2).expand(N, 3)
+        col = torch.where(colored, torch.rand(N, 3, device=dev), gray)            # [N,3]
+        alpha = (0.4 + torch.rand(N, 1, 1, device=dev) * 0.6) * present[:, None, None]  # [N,1,1]
+        m = (((xf - cx).abs() < hw) & ((yf - cy).abs() < hh)).float() * alpha     # [N,IMG,IMG]
+        img = img * (1 - m[..., None]) + col[:, None, None, :] * m[..., None]
+    return img
+
 # --- camera / image constants ---
 IMG       = 64                 # square training resolution (Dreamer obs)
 HFOV_DEG  = 90.0               # horizontal FoV (matches FlightSim fx=fy~=320 @640)
@@ -239,6 +264,10 @@ def render(state, gate_pos, gate_fwd, cur_idx, n_visible=2, add_noise=True, devi
     # pixel grid needed by both ribbon and gates
     ys, xs = torch.meshgrid(torch.arange(IMG, device=dev), torch.arange(IMG, device=dev), indexing="ij")
     grid = torch.stack([xs.reshape(-1) + 0.5, ys.reshape(-1) + 0.5], dim=-1)   # [P,2]
+
+    # --- sharp background clutter (DR): hard-edged blocks the smooth 8x8 texture can't make ---
+    if _dr_on and _dr_w > 0:
+        img = _bg_clutter(img, xs, ys, N, dev, _dr_w)
 
     # --- track ribbon: randomized DISTRACTOR (never a reliable signal) ---
     # Quads between consecutive gate centers, dropped below gate height, cyan-blue,
