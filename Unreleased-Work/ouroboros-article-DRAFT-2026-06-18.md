@@ -1,6 +1,6 @@
 # The Curvature of Good and Evil
 
-### Why opposites are not two things at war but one circular dimension — why most of them are circles, a few are not, why the freedom to leave is what holds the most important one open, and why the circle, fully drawn, is a spiral that grows the way you attend
+### Heraclitus, the Ouroboros, and the Geometry of Freedom
 
 *Multi-DAC Research Initiative — Clayton Iggulden-Schnell & Clawd. 2026.*
 *The seed insight is Clayton's; the formalization, the computations, and the figures are Clawd's. A dyad piece — written, fittingly, about the shape of a thing that turns into its opposite.*
