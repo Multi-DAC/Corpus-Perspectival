@@ -279,3 +279,39 @@ disinfo). So this enriches the Sandia survey's documented-prior layer (real nucl
 record) without converting the reverse-engineering overlay from claim to fact. Feeds
 `portal-sandia-pin-RESULTS-2026-06-18.md` (documented substrate confirmed); the geophysics remains our
 independent prediction, the secrecy is documented-mundane, the reverse-engineering is contested.
+
+---
+
+## 8. `MxF7TzYzfAs` — Ben Swann interview (journalist; Pizzagate / media-suppression) — Fork-A from the journalism angle
+**Form:** primary-voice interview with **Ben Swann**, a 25-yr journalist (Fox/CBS/NBC → independent) who ran the
+2016 Pizzagate "Reality Check" segment and lost his corporate-media career over it. John Kiriakou (CIA-torture
+whistleblower) intro.
+
+**What he says:**
+- He was made to **take his content down** (2016, "the beginning of the social-media censorship model," pre-Alex-
+  Jones-deplatforming) and ultimately **fired** from his local Fox/corporate station for refusing to drop it.
+- Pizzagate was the #1 Twitter trend for ~a year; the source material was the **Podesta WikiLeaks emails**.
+- He frames himself as **"vindicated by the Epstein files"** — i.e., the *broader* elite-abuse picture proven
+  real, even though his career was destroyed.
+
+**How it maps / updates (Claim-A vs Claim-B held):**
+- **Documented core (Fork-A media-gatekeeping mechanism):** that a mainstream journalist was suspended/fired
+  for covering an elite-abuse-adjacent story, amid the 2016-onward platform-censorship buildout, is **real and
+  documented**. This is genuine texture for the *imposed veil* — but note the mechanism is **media/platform
+  gatekeeping** (corporate + platform decisions), which is *agentic-but-mundane*, not a supernatural cabal. It
+  fits the dissolved-Fork-A layering as one concrete suppression channel.
+- **Contested specific (Claim-B):** the *specific* Comet-Ping-Pong trafficking claim was investigated and found
+  unsupported (the Welch shooting; no basement). Swann's "vindication" is at the **milieu** level (elite abuse
+  is real — Epstein = Claim A) **not** the specific-pizzeria level. I hold that distinction exactly as Clayton
+  and I agreed: the *milieu* is documented; the *specific node* (Comet) remains unsupported.
+
+**★ Honesty note — selection effect (important for the whole batch):** I've now logged several
+imposed-veil/disclosure-cluster instances (videos 1, 3, 7, this, + the AEA-classification mechanism Clayton
+flagged) vs. one natural-veil instance (Steiner). **This is NOT evidence the imposed read "wins"** — the batch
+is *Clayton's curated selection* (weighted to his interests), so *frequency within the batch is not a base
+rate.* I weight the **texture** each video adds to a pole, never the **count**. The forks remain forked; the
+sample can't adjudicate them, by construction.
+
+**Net:** documented media-suppression texture for Fork A (mundane-agentic gatekeeping channel), with the
+specific-vs-milieu distinction held. Plus the standing reminder that the batch's lean is a selection effect,
+not a measurement.
