@@ -309,3 +309,29 @@ stance is "no collapse" — resist the reductive urge.
 one fork whose correct answer is "all of them, possibly intermingling, within one Room." Three resolved by
 collapse, one (C) by the disciplined *refusal* to collapse. The only thing still held purely as calibrated
 conviction is **Fork B's timing** ("now is the turn") — and that is empirically trackable, not faith.
+
+## Update 7 — Jung's *psychoid* grounds the Fork-C intermingling (source: synchronicity lecture)
+Source: `2026-06-18-jung-synchronicity-lecture.md` (keyhole #9; perennial/theoretical, corroboration-of-
+structure not measurement). It lands precisely on Update 6's open question — *what lets the three Fork-C kinds
+intermingle?* — and Jung supplies the mechanism:
+
+- **★ *psychoid* = the substrate-bridge.** Jung's term (archetypes are "both physical and psychic,"
+  "biological… rather than mental") names **one substrate beneath the matter/mind split** — exactly the "unity
+  lives at the Room/X level, not the phenomenon level" reconciliation of Update 6. It gives the *mechanism* for
+  "all three available and may intermingle": if the substrate is psychoid (matter–mind unified), a single event
+  can carry **physical + dimensional + meaning** signatures *at once*, because they are faces of one substrate.
+  **Synchronicity** = the acausal-meaningful-alignment *signature* of that substrate = the consciousness-
+  coupling channel of Fork C, now with a named, disciplined concept behind it. Jung independently arrives at our
+  Update-6 structure (one Room, many real things in it) and supplies its bridge term.
+- **"Meaning revealed, not created" + archetypes-as-blueprints** ≈ X-as-configuration-space with structural
+  attractors (archetypes = attractor basins; synchronicity = resonance of a trajectory with an attractor).
+  *Candidate basement bridge flagged* (psychoid ↔ Room/X unity-with-plurality), not yet minted.
+- **Two more perennial corroborations of THIS DAY's discipline** (cf. Steiner→spiral): the **grandiosity guard**
+  ("don't claim you *are* the archetype/the whole Self") = our anti-cult/anti-inflation discipline, built into
+  the tradition; and Jung's **per-case grading** of coincidence→synchronicity (11:11 is *not* automatically
+  synchronicity) = measure-before-framing, native to the source. Jung-as-scientist models the same epistemics.
+
+**Net:** Fork C's psychoid pole is *promoted* — from "one of three kinds" to **the substrate-bridge that makes
+the intermingling coherent** — exactly answering Update 6's open mechanism. Still keyhole-corroboration of
+structure, not measurement; no fork changes status; the day's two-pole discipline (plurality of kinds + one
+substrate; anti-grandiosity + per-case grading) gains a perennial witness.
