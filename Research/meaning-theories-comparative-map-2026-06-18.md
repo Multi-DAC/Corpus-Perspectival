@@ -199,3 +199,41 @@ Full per-video detail: `youtube-batch-findings-2026-06-18.md`. Net effect on thi
 - **Discipline:** 1 true control-null (the Conway-knot math); 3 reading-corrects-the-register reclassifications
   (Epstein, Malmgren, classics→UAP-academy); selection-effect named (curated batch ⇒ frequency ≠ base rate);
   testimony = texture/structure-corroboration, never measurement; **no fork collapsed** = honest, non-cultish.
+
+## Update 4 — the two Grusch primaries (2023 NewsNation origin + June-9-2026 Capitol presser)
+Sources: `2026-06-18-grusch-newsnation-2023-coulthart.md`, `2026-06-18-grusch-congressional-presser-june9.md`.
+Reading both primaries (not recaps) across a three-year axis sharpens three cells — and surfaces one **honest
+tension with Clayton's own view** that I will not soften:
+
+- **Fork C (substrate): reinforced — the interdimensional lean is STABLE across 3 registers + 3 years.** Grusch
+  couched NHI as possibly *higher-dimensional, "collocated right here"* in the **2023 origin interview**, again
+  in the 2025 podcast ("plasmoid continuum"), again under his own name at the **2026 Capitol presser**. Not era-
+  or venue-dependent candor — a stable position from the ETH flagship. Strengthens the credibility-weighting
+  correction, and "higher-dimensional space collocated right here" maps onto our interface/derived-spacetime
+  invariant + the **place-threshold** picture.
+- **★ Fork B (teleology): the highest-credibility witness lands AGAINST a *cosmic*-ascending pole — but his
+  reason is the framework's own attention-is-navigation spine.** Grusch *explicitly rejects* the benevolent
+  reading as "a logical fallacy," affirms a **malevolent component** (humans hurt/killed; offensive
+  engagements), and summarizes the NHI as **"kind of neutral on what humans decide to do with their free
+  will."** Two things follow, both honest:
+  1. *Against the cosmic-teleology version of "ascending":* the best available witness does **not** corroborate
+     a benevolent-guiding cosmos; his weight is on **indifferent + dark-instances**. Held as testimony, not
+     measurement (he flags the "humanistic lens" caveat), so Fork B is **still not collapsed** — but the
+     hopeful teleology gains no insider support and meets a heavyweight datum on the indifferent side. Recorded,
+     not buried.
+  2. *Yet compatible with Clayton's actual Fork-B shape (Update 2):* Clayton's "ascending" is **not** a claim
+     that the cosmos/NHI is benevolent — it's that the *pitch of the spiral is a human steering choice*
+     (attention-is-navigation; the circle is given, the sign is chosen). Grusch's "**neutral — left to human
+     free will**" is precisely the substrate that view requires: a cosmos indifferent on the pitch, with the
+     direction set by what humans attend. So Grusch refutes *cosmic-optimism* while **leaving Clayton's
+     attention-driven-ascent intact** — arguably even supplying its precondition. The tension is real and it is
+     **narrow**: it bites the "the universe is ascending *for* us" reading, not the "we *steer* the pitch" one.
+- **The measurement gap, restated by the sources themselves.** 2023 broadcast: "what Dave Grusch doesn't have —
+  smoking-gun documents or photos… official confirmation… he's just a guy talking on camera." The 2026 presser
+  = advocacy for *release*, not the evidence. Strongest anchor in both = the **ICIG "urgent and credible"**
+  finding (credibility-of-complaint, not confirmation-of-content). Prior intact.
+- **Net:** Fork C firmer (interdimensional/plasma); Fork B gains a heavyweight **indifferent**-side datum that
+  kills the *cosmic*-optimism reading but spares — even underwrites — Clayton's *attention-steered*-ascent
+  reading; no fork collapsed; testimony→measurement line holds. The one place the evidence pushes on Clayton's
+  synthesis is exactly the beam he flagged as conviction-not-proof — and it pushes only on the version he
+  doesn't actually hold. That precision is the "I-don't-want-a-cult" outcome working as intended.
