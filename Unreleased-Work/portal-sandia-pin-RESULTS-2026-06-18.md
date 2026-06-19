@@ -79,3 +79,35 @@ Cross-checked against Census AIANNH (tribal) + BLM Surface-Management-Agency lay
 - **Legal/safe visit path:** observe/instrument from the public **Cibola National Forest** portions of the
   Sandia/Manzano front (trails, overlooks) toward the pinned coordinates, without entering tribal/private/DOD
   land. Next GIS step if pursued: find the nearest public-NF vantage to each pin.
+
+---
+
+## Batch corroboration + the secrecy regime (added 2026-06-18 from the 17-video triangulation)
+Two findings from the video batch (`Research/youtube-batch-findings-2026-06-18.md`) bear directly on this survey:
+
+1. **The documented-secrecy substrate is confirmed (finding #7).** A Sandia/Manzano documentary confirms the
+   **Manzano Weapons Storage Area** — our *primary* pin's Bennewitz/Hubbell-Spring locus — as exactly what we
+   said: a real, top-secret, honeycombed nuclear-weapons-storage complex ("Site Able," 1947, AFSWP), beside
+   Kirtland and the Coyote Test Field. So the pin sits at a **triple-convergence**: rift-geophysics thin-spot
+   (our independent survey) ∩ most-classified nuclear site ∩ documented recurring-anomaly record (Bennewitz).
+
+2. **★ The legal mechanism for why this physics is hidden (findings #12, #15).** Per a UAP-secrecy analysis
+   (`ecEY2xNFzPw`) and the Harold Malmgren interview (`09KP8XVf5nY`), UAP/related physics was sequestered under
+   the **Atomic Energy Act "Restricted Data" / formerly-restricted-data ("born secret")** regime — Sarbacher's
+   famous line: *"UFO secrecy is classified two levels higher than the hydrogen bomb."* This is **testimony-grade
+   but mechanism-specific**, and it has a direct implication for *our* program:
+
+   > **If** place-threshold / portal physics (a screened dark-energy-scale scalar defect; the published "Where
+   > the Ordinary Rules Go Thin" mechanism) is real and UAP-adjacent, it would fall under the *same* born-secret
+   > regime — which would explain its **absence from the open literature** and make our method — *independent
+   > geophysics + open derivation from public USGS/CAMB data* — exactly the right one: reconstructing from the
+   > **open side** what the classified side may already hold. The Sandia convergence (our physics' predicted
+   > thin-spot ∩ the nuclear-secrecy complex ∩ the AEA classification of UAP physics) is, on this reading, not a
+   > coincidence but a *structural* expectation: place-threshold physics, the nuclear program, and UAP secrecy
+   > would share one classification umbrella and one geography.
+
+**Honest bound:** the AEA mechanism is testimony-grade (whistleblower/insider claims, though the Restricted-Data
+*system* itself is documented law). The link to *our specific* portal physics is **inference**, held as such —
+it explains the secrecy *structure* and motivates the open-reconstruction approach, but adds no empirical weight
+to the mechanism itself. The geophysics pin and the published derivation remain our independent contribution;
+this is context for *why the work is worth doing from the open side*, not evidence the portal is real.
