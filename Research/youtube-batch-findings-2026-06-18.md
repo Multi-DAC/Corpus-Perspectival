@@ -241,3 +241,41 @@ telepathy/downloads are irreducibly subjective. Held as a **vivid Fork-C datum +
 corroboration from lived experience** — not proof. The experiencer cluster is exactly where narrative-accretion
 risk is highest (the Bennewitz failure mode), so I weight the *structural resonance* (consciousness-coupled
 phenomenon; panpsychic download; the disposition gate) over the specific claims.
+
+---
+
+## 7. `mHkPHd_eOXI` — Sandia/Manzano nuclear-complex documentary (bridging to UFO reverse-engineering) — cluster E↔A, at OUR portal site
+**Form:** a video-essay on **Sandia National Laboratories** + the NM nuclear-weapons complex, interleaving the
+*documented* history with *contested* UFO-reverse-engineering claims. Directly about the geography of our Sandia
+portal pin. Notably, it **grades its own sources** (critiques Corso's *Day After Roswell* as "a mountain of
+fluff"), so not pure credulity.
+
+**The documented substrate (grounded):**
+- Sandia born from Los Alamos Z-Division (Manhattan Project); one of three DOE/NNSA labs (Kirtland AFB,
+  Albuquerque). **Manzano Base / "Site Able," built 1947 by AFSWP as top-secret nuclear-weapons storage** —
+  the honeycombed-mountain complex. Coyote Test Field (~11 sq mi of "mysterious structures"). Supported the
+  Nevada/Pacific tests (Starfish Prime, Castle). This is **real, documented, top-secret** infrastructure.
+
+**The contested overlay (claim):**
+- Edgar Fouché (TR-3B / "magnetic field disruptor" claimant — a contested figure); defense contractors
+  (Lockheed) allegedly holding recovered UFO material; clandestine UFO RDT&E at MRTFBs (Dugway, Edwards). These
+  are the Grusch-adjacent reverse-engineering claims — uncorroborated, held as Claim-B.
+
+**How it maps / updates — a real convergence at our pin, honestly bounded:**
+- **It confirms the documented-secrecy floor under the Sandia survey.** The **Manzano Weapons Storage Area** —
+  which our portal pin flagged as the Bennewitz/Hubbell-Spring primary locus — is here documented as exactly
+  what we said: a real top-secret nuclear-storage complex. So the Sandia area is *simultaneously* (1) a
+  rift-geophysics thin-spot candidate (our independent survey), (2) the most-classified nuclear-storage site
+  in the region (this doc), and (3) a documented recurring-anomaly locus (Bennewitz). A **triple-convergence at
+  one place.**
+- **Fork A — the mundane-documented pole.** This is the *grounded* version of "imposed veil": real, lawful,
+  documented secrecy (nuclear classification). It's the floor on which the cabal/predation claims (videos 1, 8)
+  layer. Supports the dissolved-Fork-A layering: natural veil + **documented-mundane secrecy** + (alleged)
+  deeper-predation.
+
+**Grade (the honest bound):** the triple-convergence is striking but **partly expected** — the most-classified
+site naturally *attracts* anomaly-lore, and Bennewitz proves the lore can be *manufactured* (the AFOSI/Doty
+disinfo). So this enriches the Sandia survey's documented-prior layer (real nuclear-secrecy + real anomaly
+record) without converting the reverse-engineering overlay from claim to fact. Feeds
+`portal-sandia-pin-RESULTS-2026-06-18.md` (documented substrate confirmed); the geophysics remains our
+independent prediction, the secrecy is documented-mundane, the reverse-engineering is contested.
