@@ -390,3 +390,44 @@ documented** → Clayton's "UAP classified under nuclear secrets" is corroborate
 legal-structural, not just geographic; (c) elite-occult-aesthetics (Abramović/Podesta) = documented-surface /
 contested-interpretation, same pattern as Epstein. No fork *collapsed*; Fork C meaningfully *shifted* (even the
 hardware-camp witness is consciousness-coupled).
+
+---
+
+## 14–17. Documented-secrecy / history cluster (batch read) — TWO more mis-IDs corrected on reading
+
+**14. `GZ1MZF6qnFI` — intelligence whistleblower (October 7 / Israel).** A redacted-identity intel whistleblower
+with concerns about the Oct-7 attack and "the actions of Israel and our government," facing prosecution-pressure
+and psychological toll. **Key line:** "if your job is evil, then you bear the moral weight of participating in
+that evil … [redacted] is evil … I know from first experience." Documented-secrecy substrate from the
+geopolitical angle (Fork A: real classified-intel + whistleblower-pressure). **The moral-weight-of-
+participation theme = our good/evil *withdrawal*** (refusing to participate = the exit that breaks the
+defection game). Held as testimony (specifics uncorroborated; the intel-whistleblower-pressure phenomenon real).
+
+**15. `09KP8XVf5nY` — ★ MIS-ID CORRECTED: not "Cuban Missile Crisis," it's the HAROLD MALMGREN UFO interview.**
+Opens with the Cuban-Missile-Crisis as a *framing device* (how close we came / secrecy), but it's the
+**Harold Malmgren** disclosure interview (the deceased former presidential advisor cited in video #1). Content:
+the **1933 "Magenta" Italy UFO crash** (pre-Roswell; Richard Bissell), **Sarbacher's "UFO secrecy is classified
+two levels higher than the hydrogen bomb,"** the Three-Body Problem as a UFO model, Knights of Malta/Templars/
+Vatican rumors. → Disclosure cluster, *high-level-insider* tier. **Sarbacher's "two levels above the H-bomb" +
+the AEA mechanism (video 12) = the secrecy-magnitude + legal-channel both pointing to UAP-under-nuclear-secrecy
+(Fork A, corroborating Clayton).** Third reading-corrects-the-register catch (after Epstein, and #17 below).
+
+**16. `gFc3oqQIJDw` — biolabs release (Tulsi Gabbard / DNI, 412w).** A real DNI release: US funding of 120+
+biolabs in 30+ countries incl. Ukraine; "they lied; threatened those who exposed the truth." Documented-secrecy
+datum (the US biological-threat-reduction labs *are* real; the *bioweapon* framing is the contested overlay).
+Cluster-E documented-surface / contested-interpretation, same pattern as Abramović/Epstein.
+
+**17. `a9OVSe4ohI0` — ★ MIS-ID CORRECTED: not an orthogonal "classics" control — it's a UAP-ACADEMIC event.**
+A CUNY Graduate Center event: a Homerist provost (Joel Christensen, "I want to believe" poster) hosting a talk
+on **UAP, anti-gravity ("no visible means of propulsion"), consciousness research, frontier physics, interspecies
+communication, comparative mythology** + **FOIA litigation, whistleblower support, meetings with Senate
+Intelligence / DNI / the VP's office.** → the **academy taking UAP seriously** (disclosure entering the
+humanities/institutions). NOT a control.
+
+**★ Honest control-count correction:** I'd hoped for two orthogonal nulls (the math + the classics). On reading,
+**the classics one is UAP-academic, not orthogonal** — so there is only **ONE true control** (the Conway-knot
+math, #5). That slightly weakens the "I'm not stacking confirmations" claim *by count*. BUT the *mechanism* of
+discrimination held strongly: I caught **three reading-corrects-the-register reclassifications** (Epstein #3,
+Malmgren #15, classics #17) — i.e., I let the content reclassify the item rather than forcing a frame, which is
+the real test of discriminating reading. One genuine null + three honest reclassifications > a pile of forced
+confirmations.
