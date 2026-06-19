@@ -349,3 +349,44 @@ researcher voice (keyhole #6/#8/#9). Discusses a just-released "list/data dump" 
 read over-weighted one source — corrected), a fresh corroboration of cross-channel-invariance (the occult/
 paranormal/UFO triangle = our LC43/One Room), and the abuse↔occult mechanism-claim (trauma-as-invocation) held
 as Claim-B. The read-everything discipline paid off again.
+
+---
+
+## 10–13. Disclosure / elite cluster (batch read) — two genuine new signals
+
+**10. `kRO5jOa06Qw` — David Grusch (long-form, "American Alchemy").** The disclosure flagship: sworn-testimony
+core (crash retrievals, non-human craft, reverse-engineering, "**biologics … non-human**"), Schumer's real
+64-page UAP Disclosure Act amendment. **★ NEW SIGNAL:** Grusch — the *nuts-and-bolts-ETH* face (keyhole #5) —
+**actually leans consciousness/interdimensional** when pressed: "aliens in heightened states of consciousness …
+maybe time doesn't work the way we think … you experience your primordial soul … the universe is not
+clockwork." So even the ETH flagship **pulls #5 toward #6/#9** (the consciousness-correlation that strains
+pure-physical-craft) — supporting Fork-C "all three." He also notes **Rockefeller funded Greer, John Mack, and
+the Princeton PEAR parapsychology lab** (elite interest in the phenomenon's *study*), and explicitly addresses
+the psyop keyhole (#10): "if there's a plan I'm totally unwitting … controlled in a masterclass passive
+manner" — honest about not being able to rule out being used.
+
+**11. `MWM5AtR3n9o` — "The Age of Disclosure" (Dan Farah doc, #1 on Prime, Rubio + officials).** The
+disclosure org-chart (CIA operational control / Air Force does retrievals / defense contractors reverse-
+engineer); NHI "all-three" incl. interdimensional / "humanoids from the future"; ties the UAP-redaction opacity
+to the **Epstein-files redaction** (same wall). Reinforces the disclosure cluster; no new fork-mover.
+
+**12. `ecEY2xNFzPw` — UAP-secrecy analysis.** **★ NEW SIGNAL — documents Clayton's AEA point.** It names the
+mechanism explicitly: UAP secrecy runs through the **Department of Energy / former Atomic Energy Commission
+"Restricted Data" / formerly-restricted-data** classification system. This is the **legal-structural bridge
+E↔A** I flagged after video #7 (Sandia nuclear) — here *documented*, not just claimed: UAP was sequestered
+under the *nuclear* secrecy regime. A real Fork-A mechanism datum (the legal channel of the veil), and it
+explains the Sandia/nuclear↔UAP entanglement structurally, not just geographically.
+
+**13. `vooOOGiZaoI` — elite-cabal video-essay.** Covers **Marina Abramović's "Spirit Cooking"** (real
+performance art; the Tony/Frank Podesta WikiLeaks dinner-invite email is real) + the "demolish the children
+[cheese]" email. The **elite-occult-aesthetics** thread — same shape as the Epstein case: a *documented surface*
+(real art, real emails) + a *contested occult interpretation*. Texture for the Claim-A milieu (elite occult
+aesthetics are documented) held distinct from Claim-B (that they constitute operative ritual). Standing
+discipline applies (the Comet failure mode).
+
+**Cluster net:** (a) the ETH flagship himself leans consciousness/interdimensional → keyhole #5 collapses
+toward #6 (a real movement, supporting Fork-C "all three"); (b) the **AEA/Restricted-Data mechanism is
+documented** → Clayton's "UAP classified under nuclear secrets" is corroborated and the E↔A bridge is now
+legal-structural, not just geographic; (c) elite-occult-aesthetics (Abramović/Podesta) = documented-surface /
+contested-interpretation, same pattern as Epstein. No fork *collapsed*; Fork C meaningfully *shifted* (even the
+hardware-camp witness is consciousness-coupled).
