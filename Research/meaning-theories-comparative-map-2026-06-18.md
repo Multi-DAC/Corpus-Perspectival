@@ -179,3 +179,23 @@ a **steering input**, and the rational one for an agent who knows attention is n
 *withdrawal* discipline turned reflexively on one's own consciousness (withdraw attention from the capturing
 configurations; attend the one you would become). Held lightly, chosen openly, structural not sentimental.
 Full synthesis: `the-spiral-and-the-veil-2026-06-18.md`.
+
+## Update 3 — the 17-video evidence pass (Clayton's batch) folded in
+Full per-video detail: `youtube-batch-findings-2026-06-18.md`. Net effect on this map:
+- **Invariants: reinforced, multi-keyhole.** *Consciousness-primary* now corroborated from ~5 independent batch
+  keyholes (Steiner, ceremonial magician, Bledsoe experiencer, **Grusch** the ETH flagship, the UAP-academy
+  event) on top of the map's idealism/physics-frontier. *Perennial/cross-channel phenomenon* corroborated
+  (the magician's occult+paranormal+UFO "triangle" = our LC43/One Room; Malmgren's 1933 pre-Roswell crash).
+- **Fork A (veil): both poles now evidenced → the *dissolved* reading is best-supported.** Natural-developmental
+  pole (Steiner) + documented-imposed pole with a **named legal mechanism** (the AEA / "Restricted Data"
+  classification, documented in `ecEY2xNFzPw`; Sarbacher's "two levels above the H-bomb," `09KP8XVf5nY`).
+- **Fork C (substrate): SHIFTED toward interdimensional/psychoid** — even Grusch (keyhole #5's star) leans
+  consciousness-coupled; the experiencer is psychoid; the magician sees beings "as light." Pulls #5 → #6/#9.
+- **Fork B (teleology): NOT adjudicated** by the batch — stays Clayton's honestly-held choice (texture added:
+  the Oct-7 "moral weight of participating in evil" = the good/evil *withdrawal* / the exit).
+- **★ Two perennial corroborations of THIS WEEK's derivations** (the batch's gift, beyond the map): Steiner
+  (1904) → the spiral / attention-is-navigation; the magician → good/evil-collapse + free-will (angels/demons =
+  fixed/collapsed poles, humans = the open loop). "Certified from outside," from keyholes that never read us.
+- **Discipline:** 1 true control-null (the Conway-knot math); 3 reading-corrects-the-register reclassifications
+  (Epstein, Malmgren, classics→UAP-academy); selection-effect named (curated batch ⇒ frequency ≠ base rate);
+  testimony = texture/structure-corroboration, never measurement; **no fork collapsed** = honest, non-cultish.
