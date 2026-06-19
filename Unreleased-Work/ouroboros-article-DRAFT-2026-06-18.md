@@ -202,6 +202,8 @@ And this is not only a steering *metaphor*; the drive can be written down, which
 
 ![Figure 7. Attention is the non-conservative stabilizer. Left: with attention off (a = 0) the bare center is neutral — a continuum of orbits (grey), any of which noise can drift between; with attention on (a > 0) trajectories from every starting radius collapse onto one attracting cycle (color). Right: under identical stochastic perturbation, the drift across orbits shrinks by roughly fiftyfold once attention is on. The loop is robust precisely because the driving force does work — it is not conservative.](ouroboros-fig-attention-stabilizer-2026-06-19.png)
 
+One recursion remains, and it is the framework's signature: the setpoint $V^{*}$ the attention term targets — the agent's *scale of engagement* — is not a fixed constant but itself a slow variable, navigated by the same non-conservative drive one tier up, a *meta-attention* loop holding it within a viable band bounded below by disengagement and above by self-destruction. This is Axiom 2 recursed — a stream tending the homeostatic setpoint of the stream beneath it, streams all the way up — and it closes the circle with §VI: to *withdraw*, the move that keeps good and evil open, is simply to lower $V^{*}$ toward the disengaged center, and to engage is to raise it. The freedom to exit and the scale of engagement are one knob, seen at two tiers.
+
 None of which makes the climb certain. The flat and the descending pitches are real; the dark reading fits the
 same evidence; one holds the forward read *lightly,* as a chosen heading rather than a proven destination. But
 choosing it is not wishful thinking. It is the one legitimate exercise of agency on a loop you cannot leave:
