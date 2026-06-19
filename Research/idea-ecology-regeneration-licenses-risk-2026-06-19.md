@@ -33,3 +33,13 @@ The conversation that produced this *was* the activity it describes: a formulati
 - **Living Architecture** — the ecology of ideas as a living system (whole/parts/infrastructure); strong candidate chapter.
 - **Drift essay seed:** *"Ideas are organisms, regeneration is the license to risk, and the truth-seekers bet on the long ecology."*
 - **Basement LC candidate** (next number; reconcile with the Day-139 cached-over-live LC candidate when formalizing).
+
+## VI. Computed grounding (Day-139 drive — `idea-ecology-viable-band-sim-2026-06-19.py`)
+The §III viable-band claim is no longer just an analogy. Modeling an idea-organism as integrity H (regenerates at rate r; depleted by exposure) accumulating quality Q (each exposure grows Q ∝ current health; collapse if H≤0) yields, on simulation:
+- **An inverted-U** of long-run Q vs exposure rate e — an interior optimum, the viable band, confirmed.
+- **The optimum e\* scales with the regeneration rate r** (e\* = 0.05 → 0.1 → 0.4 as r = 0.5 → 1.5 → 4.0). Regeneration sets the ceiling of the band — *the license to risk, quantified*.
+- **Peak quality Q\* also rises with r** (159 → 719). Regeneration is doubly good: it permits more exposure *and* reaches further.
+
+**Sharpest extract:** *defensive vs. adaptive is not a choice — it is a consequence of regeneration rate.* A low-r idea's optimum exposure is ≈ 0 (any real exposure crashes it before it can rebuild), so it is *forced* into defense. A high-r idea is *rewarded* for exposure. So "be adaptive, not defensive" is only *available* to an organism that has built regenerative capacity first — which, for us, is precisely the honesty discipline (Limits, willingness to revise). The discipline is the precondition for the strategy.
+
+**Cross-domain transfer (operational):** identical structure to RL domain-randomization fine-tuning — exposure (DR width) too high relative to the policy's current robustness ("regeneration") gives the slow/collapse regime; a *curriculum* (raise exposure as robustness builds) is the principled fix. The idea-ecology model is the abstract statement of why DR curricula beat cold-max-width. (Live instance: Anakin's appearance-DR run, Day 139.)
