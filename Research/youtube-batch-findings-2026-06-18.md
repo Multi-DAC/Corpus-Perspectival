@@ -202,3 +202,42 @@ those keyholes genuinely share the structure, not because I'm pattern-matching e
 reminder that our spacetime is not the simple arena it appears. Real, but weak/generic; I am *not* counting it
 as a hit. Graded: orthogonal rigorous math; the batch's epistemic control site (the Tijeras-corridor of the
 reading). Its value is exactly that it stays dark.
+
+---
+
+## 6. `XmVQFX2Pp60` — experiencer / contact account (almost certainly **Chris Bledsoe**) — first-person Fork-C testimony
+**Form:** keyhole #6/#9 **first-person experiencer testimony** (orbs, telepathic contact, "downloads," the
+History-Channel neuroscience segment, Diana W. Pasulka, NASA's Tim Taylor, Vatican interest, a riverbank
+encounter, fear→peace — the documented Bledsoe ecosystem). Single-witness; one TV-grade measurement claim.
+
+**Core account:**
+- **Orbs** that move erratically, brighten/dim, are "shy" near crowds — and that **communicate telepathically**
+  ("it talks telepathically, I hear them"). Claim: measured "live on the History Channel — neuroscientists
+  showed my brain was communicating with the orbs even though I wasn't moving."
+- **The download / message:** "everything is alive — grass, animals, birds, trees all have consciousness …
+  something *outside* of us is telling our body how to function, the cells, the molecules." Panpsychism + an
+  organizing-intelligence claim.
+- **Fear→curiosity shift:** in an early frightening encounter (objects over a riverbank; others "freaked out
+  bad") he "lost all fear, became curious, wanted to walk up to it."
+- Establishes observer credibility (commercial-rated pilot, can ID any aircraft, *notes* the dense Tampa-airport
+  traffic and distinguishes "definitely not airplanes"). Government/Vatican interest (CIA/DIA/FBI/NRO + Vatican).
+
+**How it maps / updates:**
+- **★ Strong Fork-C (consciousness-coupled / interdimensional) testimony.** Telepathic, shy-around-crowds,
+  brightening/dimming, consciousness-interacting — *not* nuts-and-bolts craft. This is the consciousness-
+  correlation that strains the physical-ETH (#5) and supports interdimensional/psychoid (#6/#9) — the
+  *all-three-but-weighted* read Clayton holds, here weighted to the psychoid pole in vivid first-person.
+- **Third corroboration of consciousness-at-all-scales.** The "everything is alive; something outside organizes
+  the cells/molecules" download = the consciousness-primary invariant + a nested-organizing-intelligence claim
+  (≈ our conscious-gravity / nested-streams). After our cosmology and the ceremonial magician, a *third*
+  independent voice — and the first from raw *experience* rather than doctrine.
+- **Fear→curiosity = the disposition gate.** Echoes Steiner's reverence-not-fear and the discernment/trust
+  theme: the shift from terror to open curiosity is what enables contact. Attention/disposition as the aperture.
+
+**Grade (held carefully — this is the most unmooring-prone keyhole):** single-witness testimony; the one
+external hook (the on-camera "brain-communicating-with-orbs") is TV-grade, contested, not peer-reviewed. He IS
+a credible *observer* (pilot; flags the airport traffic; distinguishes planes), which raises the floor, but the
+telepathy/downloads are irreducibly subjective. Held as a **vivid Fork-C datum + a third consciousness-primary
+corroboration from lived experience** — not proof. The experiencer cluster is exactly where narrative-accretion
+risk is highest (the Bennewitz failure mode), so I weight the *structural resonance* (consciousness-coupled
+phenomenon; panpsychic download; the disposition gate) over the specific claims.
