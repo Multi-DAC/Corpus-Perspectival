@@ -39,10 +39,11 @@ ANAKIN = r"C:\Users\mercu\clawd\repo-staging\Corpus-Perspectival\Technical-Work\
 sys.path.insert(0, os.path.join(ANAKIN, "integration"))
 from dreamer_pilot import DreamerPilot, to_competition_action, to_training_frame  # noqa: E402
 
-# Default = the RESTYLE fine-tune best.pt (flight #2, Day 131+). Override with
-# --checkpoint for A/B flights (e.g. the pre-restyle band-ft best.pt).
+# Default = the RATE-randomized fine-tune best.pt (flight #3, Day 137+ — the control-rate-cliff
+# fix; 30 Hz deploy went DEAD->FLYING, RATE_RESULTS.md). Override with --checkpoint for A/B
+# flights (e.g. the older restyle-ft or pre-restyle band-ft best.pt).
 CKPT = os.path.join(ANAKIN, "third_party", "dreamerv3-torch", "logdir",
-                    "maneuver_restyle_ft", "best.pt")
+                    "maneuver_rate_ft", "best.pt")
 
 IP, PORT = "127.0.0.1", 14550
 VISION_IP, VISION_PORT = "0.0.0.0", 5600
@@ -124,7 +125,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true",
                     help="log frames+actions, command NOTHING")
     ap.add_argument("--checkpoint", default=CKPT,
-                    help="DreamerV3 checkpoint to fly (default: restyle-ft best.pt)")
+                    help="DreamerV3 checkpoint to fly (default: rate-ft best.pt)")
     ap.add_argument("--start-delay", type=float, default=3.0,
                     help="seconds after the race signal before commanding "
                          "(the sim runs a 3s countdown; commanding early = DQ). "
