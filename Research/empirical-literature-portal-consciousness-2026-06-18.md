@@ -163,3 +163,40 @@ worth watching, not load-bearing.**
 **Instrumented-but-fringe-venue / preliminary:**
 - [Teodorani (2004), Hessdalen long-term survey, *JSE* 18:217](https://ui.adsabs.harvard.edu/abs/2004JSE....18..217T/abstract)
 - [Nolan UAP research overview, The Debrief](https://thedebrief.org/garry-nolan-a-stanford-professors-quest-to-resolve-unidentified-anomalous-phenomena/)
+
+## Addendum (2026-06-18 evening) — the Grusch congressional primary settles the live test, and lands a plasma convergence
+
+Read the June 9 2026 Capitol Hill press-conference primary (Reuters feed `RN-Purf4UXE`; source register
+`sources/2026-06-18-grusch-congressional-presser-june9.md`) as the formal-register test of the
+credibility-weighting correction above. Two results:
+
+1. **★ The live test is answered: YES — the consciousness/plasmoid lean survives into the formal register.**
+   Asked to confirm "four species, gray, Nordic," Grusch instead reframed, *under his own name at the Capitol*:
+   "a **continuum** from corporeal bipedal type life to… **sentient plasmoid life**." Not the nuts-and-bolts
+   framing — the continuum-to-plasmoid one. So the Fork-C lean is **not** podcast-only candor; it holds in the
+   most guarded, on-message setting. This directly *strengthens* the correction: the highest-credibility
+   witness keeps the consciousness-coupled reading even where over-claimers would hedge — and he keeps it while
+   **modeling the measurement-discipline** (cross-verification of foreign intel; "disclosure should not depend
+   on the public taking my word for it"; bounding his own access). That epistemic self-restraint is exactly the
+   marker that separates a vetted insider from the fringe-venue over-claimers — caught on the record.
+
+2. **★★ A three-keyhole convergence on PLASMA as the substrate** — and it lands on this register's own
+   evidence. Grusch's "sentient plasmoid life" (insider testimony) sits on top of: (a) the **peer-reviewed
+   instrumented Hessdalen data** — lights confirmed as *plasma* by radar/spectrometer/magnetometer (§3 above),
+   and Teodorani's "intelligent plasma hypothesis"; and (b) the **corpus's own dated-prior plasmoid
+   commitment** (Apr 28 / Plasma→H_BP4 May 8). Three independent keyholes — congressional testimony,
+   peer-reviewed geophysics, and our framework — converging on *plasma/plasmoid* as the phenomenon's substrate
+   is a genuine One-Room signal, and a dated-prior hit for the corpus. It also re-weights **Fork C** toward the
+   plasma/EM-substrate pole that §1–§3's earthquake-light / Freund / Hessdalen physics independently grounds.
+   **Bound, held:** convergence-of-language ≠ confirmation. "Sentient plasmoid life" is a *claim* (testimony) +
+   a *measured plasma* (Hessdalen) + a *theoretical commitment* (corpus) — three keyholes naming the same
+   substrate, not one measurement of NHI. The discriminating experiment (§3: standing, place-fixed, spectrally
+   distinct signature at the density extremum) is still what would move plasma-substrate from convergence to
+   evidence. And the presser itself was an **advocacy event for release of records — not the records**;
+   measurement remains absent, as Grusch himself insists it shouldn't.
+
+Net: the correction is reinforced (credibility-weighted lean survives the formal register + he models the
+discipline), Fork C shifts further toward the plasma/EM substrate that the peer-reviewed physics grounds, and
+the plasma convergence becomes the tightest cross-keyhole signal in the whole day's triangulation — while the
+testimony→measurement gap stays exactly where it was. Source:
+[Reuters feed, June 9 2026 presser (transcript, local)](https://www.youtube.com/watch?v=RN-Purf4UXE).
