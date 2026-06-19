@@ -315,3 +315,37 @@ sample can't adjudicate them, by construction.
 **Net:** documented media-suppression texture for Fork A (mundane-agentic gatekeeping channel), with the
 specific-vs-milieu distinction held. Plus the standing reminder that the batch's lean is a selection effect,
 not a measurement.
+
+---
+
+## 9. `xNE1RXsio2c` — Steve Mera (paranormal researcher) on industry-ritual + the occult/paranormal/UFO "triangle"
+**Form:** interview with **Steve Mera** (UK paranormal researcher, MAPIT/Phenomenon Magazine). Practitioner/
+researcher voice (keyhole #6/#8/#9). Discusses a just-released "list/data dump" (Epstein-context, names avoided).
+
+**Three things — including a real correction to finding #3:**
+1. **★ EPSTEIN-SOUL CROSS-REFERENCE — revises my "rationalist Epstein" counter-texture (#3).** Mera points to
+   the **Epstein–Bannon interview**: *"did you catch the part about the soul? When Epstein starts talking about
+   what he thought the soul is, whether or not people had a soul, and described the mechanism of the soul…"*
+   This is exactly the cross-source surprise Clayton predicted. In finding #3 I logged Epstein's
+   *science-interview* persona as scientistic-rationalist (dismissing the occult as "conmen"). **A second
+   Epstein source shows him speculating metaphysically on the soul — and "whether people have souls" is a
+   chilling, dehumanization-adjacent framing consistent with the predation theme.** So my #3 counter-texture is
+   **weakened**: the rationalism was the *science-interview* mask; elsewhere (Bannon) and privately (Clayton's
+   documented occult texts/petroglyphs/art) he engaged metaphysics. The public/private split is real and the
+   "rationalist" read was over-weighted on one curated source. **Corrected.** (This is the value of reading
+   everything — cross-video falsification, exactly as Clayton said.)
+2. **★ Modality-convergence (occult + paranormal + UFO = one "triangle").** Mera: "there's three aspects all
+   intertwined — the occult, [the paranormal/demonic], and the UFO stuff." A paranormal researcher independently
+   asserting **one phenomenon, many modalities** — which is our **LC43 / One-Room cross-channel-invariance** and
+   Vallée's interdimensional thesis. A fresh-keyhole corroboration of the perennial-phenomenon invariant + our
+   own published *One Room* result.
+3. **Industry-ritual + trauma-as-invocation (Claim-B, the dark thread).** "Immobilize a song through ritual …
+   you will be rewarded; only for people in the know"; channeling/possession "at many levels"; **"trauma and
+   stress … the fast route" to invocation** (the dark path). These are practitioner *claims* (Claim-B), but the
+   **trauma→invocation mechanism is the explicit link between abuse and the occult** that Clayton has pointed
+   at — held as testimony, the mechanism noted, not endorsed.
+
+**Net:** delivers a genuine cross-source correction (Epstein engaged the soul metaphysically → my #3 rationalist
+read over-weighted one source — corrected), a fresh corroboration of cross-channel-invariance (the occult/
+paranormal/UFO triangle = our LC43/One Room), and the abuse↔occult mechanism-claim (trauma-as-invocation) held
+as Claim-B. The read-everything discipline paid off again.
