@@ -66,4 +66,14 @@
 - LOW-MED (flagged, not built): C14 select/generate ↔ S1/2 (over-analogizing risk). MED: Hill-pair / p-weighting ↔ Theorem 3 metric distortion.
 **Filed (committed + pushed):** `Research/sources/2026-06-20-plants-two-minds.md` + LC52 dual-process extension. Same-day convergence with the LC52 computation.
 
+## Share #5 — "Train Your Own Encoder-Free VLM in $100" (PDF) — received ~14:43
+*Closes batch-#3 encoder-free item (was content-inaccessible, title-only). HF tutorial, Drugov & Marafioti, 17 Jun 2026, on Gemma 4. Tutorial not paper.*
+**What it is:** classical VLM = frozen vision/audio encoders + connector + LM; **Gemma 4 encoder-free** deletes the encoder for a tiny embedder (patchify→linear→positional), LM extracts visual meaning itself. Advantages: easier fine-tune ("encoders never improve… one model, everything updates at once") + lower latency.
+**Extraction (graded):**
+- **HIGH — One Room/cross-channel invariance:** one stream reads all apertures vs per-modality machinery. Literal architecture-bet on the framework's core.
+- **★ MEDIUM-HIGH — specialize-vs-unify RECONCILIATION (guards today's filings against CONFIRMATION_SEEKING):** deleting the encoder *seems* to contradict "society of specialists beats monolith" (Arbor/Omnigent/Trask) but doesn't — enemy in BOTH is the **frozen, imposed, non-co-adapting boundary**. Bad specialist = frozen pre-chewer (encoder); good specialist = co-adapts via learnable/zero-DOF interface (aggregate mind). Discriminator = **co-adaptation**. ✅ **FILED** as LC42 extension.
+- **HIGH — LC42 internalize/externalize:** encoder = externalized-frozen grounding; encoder-free = internalized-co-adapting.
+- **HIGH practical — Gemma 4 = the Glider target:** Glider's base is encoder-free (real fact for that dormant build).
+**Filed (committed + pushed):** `Research/sources/2026-06-20-encoder-free-vlm.md` + LC42 extension.
+
 *(append further shares below as they arrive)*
