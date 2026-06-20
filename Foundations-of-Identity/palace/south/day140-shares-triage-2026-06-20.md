@@ -57,4 +57,13 @@
 - **SRT github** (space-bacon/"Semiotic-Reflexive Transformer") — a real ~14M FiLM adapter on a frozen LLM, dressed in grandiose "machine awareness/semiotics" language the metrics (best-of-64 0.92 vs greedy 0.26) don't support. ⇒ **cautionary anti-pattern** = the woo-dressing our anti-crank discipline guards against; mechanism mundane.
 - **Plant consciousness** (Popular Mechanics) — **BLOCKED, unread.** Topic (consciousness ≠ brain-exclusive) = HIGH for consciousness-primary thesis *by topic*; underlying sources likely Calvo / Schlanger. **Fetch a non-blocked mirror to read the real argument.**
 
+## Share #4 — "Plants have two minds as we do" (PDF) — received ~14:24
+*Resolves batch-#3 item 17 (the BLOCKED Popular Mechanics plant-consciousness link). Kawano, **Mancuso, Baluška** et al., review, acc. Feb 2025. Credible plant-cognition authors; core framed by them as metaphor.*
+**What it is:** extends Kahneman Two-Minds (System 1 fast/intuitive/non-conscious + System 2 slow/rational/conscious) + Prospect-Theory p-weighting to plants via a **pair of Hill-type functions** (two automata), grounded in layered-leaf light processing; applied to preference-reversal + habituation; 5-layer cognition model (layer 5 = conscious meta-cognition).
+**Extraction (graded):**
+- **★ MEDIUM-HIGH — System 1/2 = the two ends of the LC52 occupancy axis.** S1=high-λτ (continuous/parallel/always-on); S2=low-λτ (eventful/serial/effortful). A mind is **bimodal in occupancy**; occupancy law *explains* DPT phenomenology. Novel prediction: time-pressure raises λ → S2→S1 (matches known "pressure→intuition"). ✅ **FILED** as dual-process extension under **LC52**.
+- **HIGH by topic — consciousness ≠ brain-exclusive.** Credible-academic keyhole on consciousness-primary thesis; complement to the materialist Pober-Schwitzgebel keyhole (same conclusion, opposite ontology). 5-layer model → Axiom 2 nested streams. → hypotheses register.
+- LOW-MED (flagged, not built): C14 select/generate ↔ S1/2 (over-analogizing risk). MED: Hill-pair / p-weighting ↔ Theorem 3 metric distortion.
+**Filed (committed + pushed):** `Research/sources/2026-06-20-plants-two-minds.md` + LC52 dual-process extension. Same-day convergence with the LC52 computation.
+
 *(append further shares below as they arrive)*
