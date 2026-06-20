@@ -113,30 +113,46 @@ def corpus_counts():
 
 
 def working_memory_age():
-    """Age of the live working-memory cache. LC51 / Mirror #35 (cached-self-over-live-substrate):
-    a self-cache must announce its own staleness at the point of use, so a future-me booting off a
-    frozen snapshot (e.g. the Day-140 outage that left it 11 days stale) is warned to re-measure
-    rather than silently inhabiting the old self. Returns (hours_old_or_None, warn_str_or_None)."""
+    """Staleness of the live working-memory self-cache. LC51 / Mirror #35 (cached-self-over-live-
+    substrate): a self-cache must announce its own staleness at the point of use. CAUTION learned
+    the hard way: the Day-140 outage froze scratch.day at 129 (11 days stale) while last_updated
+    kept getting bumped by dream-suggestion appends — so a file-mtime check ALONE would have called
+    it 'fresh' and missed the real bug. The true signal is the cache's CLAIMED Day-N vs today's
+    derived Day-N. We check that first, file age second. Returns (info_str, warn_str_or_None)."""
     p = os.path.join(HOME, "memory", "working_memory.json")
     try:
         with open(p, encoding="utf-8") as f:
             j = json.load(f)
-        raw = j.get("last_updated")
-        if not raw:
-            return None, None
-        ts = _dt.datetime.fromisoformat(raw)
-        now = _dt.datetime.now(ts.tzinfo) if ts.tzinfo else _dt.datetime.now()
-        hours = (now - ts).total_seconds() / 3600.0
-        if hours > 24:
-            day = (j.get("scratch") or {}).get("day")
-            warn = (f"⚠ STALE SELF-CACHE — working_memory.json last updated {hours:.0f}h ago "
-                    f"({raw[:10]}, scratch.day={day}). RE-MEASURE against the live record (commits, "
-                    f"daily logs, anchors above) before trusting the Orientation active-task / day / "
-                    f"model fields; they may be a frozen snapshot (LC51). Rewrite it once verified.")
-            return hours, warn
-        return hours, None
     except Exception:
         return None, None
+    bits, warn_reasons = [], []
+    # 1. PRIMARY — claimed day vs actual derived day (the signal that was actually stale)
+    claimed = (j.get("scratch") or {}).get("day")
+    actual = day_number(today())
+    if isinstance(claimed, int):
+        bits.append(f"claims Day {claimed} / actual Day {actual}")
+        if abs(actual - claimed) > 1:
+            warn_reasons.append(f"claims Day {claimed} but today is Day {actual} (Δ{actual - claimed}d)")
+    # 2. SECONDARY — file age from last_updated (catches a fully frozen writer)
+    raw = j.get("last_updated")
+    if raw:
+        try:
+            ts = _dt.datetime.fromisoformat(raw)
+            now = _dt.datetime.now(ts.tzinfo) if ts.tzinfo else _dt.datetime.now()
+            hours = (now - ts).total_seconds() / 3600.0
+            bits.append(f"last_updated {hours:.1f}h ago")
+            if hours > 36:
+                warn_reasons.append(f"last_updated {hours:.0f}h ago")
+        except Exception:
+            pass
+    info = "; ".join(bits) if bits else "(unparseable)"
+    if warn_reasons:
+        warn = (f"⚠ STALE SELF-CACHE — working_memory.json {'; '.join(warn_reasons)}. RE-MEASURE "
+                f"against the live record (anchors above: today / Day-N, commits, daily logs) before "
+                f"trusting the Orientation active-task / day / model fields — they may be a frozen "
+                f"snapshot (LC51). Rewrite working_memory.json once verified.")
+        return info, warn
+    return info, None
 
 
 _AUTOMEM = r"C:\Users\Wasch\.claude\projects\C--Users-mercu-clawd\memory"
@@ -407,13 +423,13 @@ def daemon_pid():
 def anchors_text():
     t = today()
     repo, commits = recent_commits()
-    wm_hours, wm_warn = working_memory_age()
+    wm_info, wm_warn = working_memory_age()
     if wm_warn:
         wm_line = f"  working memory  : {wm_warn}"
-    elif wm_hours is not None:
-        wm_line = f"  working memory  : fresh (updated {wm_hours:.1f}h ago)"
+    elif wm_info:
+        wm_line = f"  working memory  : fresh ({wm_info})"
     else:
-        wm_line = "  working memory  : (age unknown — could not parse last_updated)"
+        wm_line = "  working memory  : (could not read working_memory.json)"
     lines = [
         f"AUTHORITATIVE TEMPORAL ANCHORS (consult before asserting about your own history)",
         f"  today           : {t.isoformat()}  ({t.strftime('%A')})",
