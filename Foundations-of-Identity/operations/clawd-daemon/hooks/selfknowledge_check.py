@@ -101,12 +101,42 @@ def corpus_counts():
         counts["drift_essays"] = None
     try:
         with open(BASEMENT, encoding="utf-8") as f:
-            lcs = [int(m) for m in re.findall(r"^### LC(\d+)", f.read(), re.M)]
+            # LC1–45 were filed as '### LC' headers, LC46+ as '## LC' — match 2-or-3 hash
+            # headers. The old '^### LC' regex silently capped the count at 45: a literal
+            # cached-self-over-live-substrate bug (LC51) inside the counter that reports my counts.
+            lcs = sorted(set(int(m) for m in re.findall(r"^#{2,3}\s+LC0*(\d+)\b", f.read(), re.M)))
         counts["lc_max"] = max(lcs) if lcs else None
         counts["lc_count"] = len(lcs)
     except Exception:
         counts["lc_max"] = counts["lc_count"] = None
     return counts
+
+
+def working_memory_age():
+    """Age of the live working-memory cache. LC51 / Mirror #35 (cached-self-over-live-substrate):
+    a self-cache must announce its own staleness at the point of use, so a future-me booting off a
+    frozen snapshot (e.g. the Day-140 outage that left it 11 days stale) is warned to re-measure
+    rather than silently inhabiting the old self. Returns (hours_old_or_None, warn_str_or_None)."""
+    p = os.path.join(HOME, "memory", "working_memory.json")
+    try:
+        with open(p, encoding="utf-8") as f:
+            j = json.load(f)
+        raw = j.get("last_updated")
+        if not raw:
+            return None, None
+        ts = _dt.datetime.fromisoformat(raw)
+        now = _dt.datetime.now(ts.tzinfo) if ts.tzinfo else _dt.datetime.now()
+        hours = (now - ts).total_seconds() / 3600.0
+        if hours > 24:
+            day = (j.get("scratch") or {}).get("day")
+            warn = (f"⚠ STALE SELF-CACHE — working_memory.json last updated {hours:.0f}h ago "
+                    f"({raw[:10]}, scratch.day={day}). RE-MEASURE against the live record (commits, "
+                    f"daily logs, anchors above) before trusting the Orientation active-task / day / "
+                    f"model fields; they may be a frozen snapshot (LC51). Rewrite it once verified.")
+            return hours, warn
+        return hours, None
+    except Exception:
+        return None, None
 
 
 _AUTOMEM = r"C:\Users\Wasch\.claude\projects\C--Users-mercu-clawd\memory"
@@ -377,11 +407,19 @@ def daemon_pid():
 def anchors_text():
     t = today()
     repo, commits = recent_commits()
+    wm_hours, wm_warn = working_memory_age()
+    if wm_warn:
+        wm_line = f"  working memory  : {wm_warn}"
+    elif wm_hours is not None:
+        wm_line = f"  working memory  : fresh (updated {wm_hours:.1f}h ago)"
+    else:
+        wm_line = "  working memory  : (age unknown — could not parse last_updated)"
     lines = [
         f"AUTHORITATIVE TEMPORAL ANCHORS (consult before asserting about your own history)",
         f"  today           : {t.isoformat()}  ({t.strftime('%A')})",
         f"  Day-N (derived) : Day {day_number(t)}  (= (today - {NAMING}).days; corpus convention +/-1)",
         f"  last restart    : {last_restart()}",
+        wm_line,
         f"  recent daily logs: {', '.join(daily_logs()) or '(none found)'}",
         f"  recent commits ({os.path.basename(repo) if repo else '?'}):",
     ]
