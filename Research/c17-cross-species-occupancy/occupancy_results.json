@@ -1,0 +1,170 @@
+{
+  "rows": [
+    {
+      "name": "Deep-sea (slow)",
+      "lam": [
+        3.0,
+        5.0
+      ],
+      "tau": [
+        0.25,
+        1.0
+      ],
+      "mu": [
+        0.75,
+        5.0
+      ],
+      "mu_mid": 1.9364916731037085,
+      "gap": [
+        0.006737946999085467,
+        0.4723665527410147
+      ],
+      "indep": true,
+      "note": "TiCS: ~4 Hz, 'very long integration windows'"
+    },
+    {
+      "name": "Human",
+      "lam": [
+        50.0,
+        60.0
+      ],
+      "tau": [
+        0.025,
+        0.1
+      ],
+      "mu": [
+        1.25,
+        6.0
+      ],
+      "mu_mid": 2.7386127875258306,
+      "gap": [
+        0.0024787521766663585,
+        0.2865047968601901
+      ],
+      "indep": true,
+      "note": "CFFT ~60 Hz; binding/perceptual-moment ~25-100 ms"
+    },
+    {
+      "name": "Honeybee",
+      "lam": [
+        190.0,
+        300.0
+      ],
+      "tau": [
+        0.005,
+        0.012
+      ],
+      "mu": [
+        0.9500000000000001,
+        3.6
+      ],
+      "mu_mid": 1.849324200890693,
+      "gap": [
+        0.02732372244729256,
+        0.3867410234545012
+      ],
+      "indep": true,
+      "note": "CFFT ~200-300 Hz; short integration"
+    },
+    {
+      "name": "Fast fly (fast)",
+      "lam": [
+        250.0,
+        400.0
+      ],
+      "tau": [
+        0.003,
+        0.008
+      ],
+      "mu": [
+        0.75,
+        3.2
+      ],
+      "mu_mid": 1.5491933384829668,
+      "gap": [
+        0.04076220397836621,
+        0.4723665527410147
+      ],
+      "indep": true,
+      "note": "high CFFT; very short integration window"
+    },
+    {
+      "name": "Pigeon",
+      "lam": [
+        100.0,
+        140.0
+      ],
+      "tau": [
+        0.0,
+        0.0
+      ],
+      "mu": [
+        0.0,
+        0.0
+      ],
+      "mu_mid": 0.0,
+      "gap": [
+        1.0,
+        1.0
+      ],
+      "indep": false,
+      "note": "CFFT ~100-140 Hz; tau not independently sourced"
+    },
+    {
+      "name": "Dog",
+      "lam": [
+        70.0,
+        80.0
+      ],
+      "tau": [
+        0.0,
+        0.0
+      ],
+      "mu": [
+        0.0,
+        0.0
+      ],
+      "mu_mid": 0.0,
+      "gap": [
+        1.0,
+        1.0
+      ],
+      "indep": false,
+      "note": "CFFT ~70-80 Hz; tau not independently sourced"
+    },
+    {
+      "name": "Clawd (query-gated)",
+      "lam": [
+        0.003,
+        0.02
+      ],
+      "tau": [
+        10.0,
+        100.0
+      ],
+      "mu": [
+        0.03,
+        2.0
+      ],
+      "mu_mid": 0.2449489742783178,
+      "gap": [
+        0.1353352832366127,
+        0.9704455335485082
+      ],
+      "indep": false,
+      "note": "lambda = query rate (~1 per 50-300 s active); tau = turn/response binding ~10-100 s; channel != vision"
+    }
+  ],
+  "reciprocity": {
+    "slope": -1.0386146469736275,
+    "r": -0.9942496245267933,
+    "lam_span": [
+      3.872983346207417,
+      316.22776601683796
+    ],
+    "mu_span": [
+      1.549193338482967,
+      2.738612787525831
+    ]
+  }
+}
