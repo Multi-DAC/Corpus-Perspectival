@@ -2,7 +2,7 @@
 
 A Library volume of the Corpus Perspectival program: the category-theoretic companion to *The Coherence Principle*.
 
-**Current build:** **237pp** (v0.1 stamped 2026-04-24 at 227pp; Phase B Cluster IV C14/C15 04-27 at 233pp; C16 + A1.3 polish 04-28 at 237pp). Compiled PDF: `build/coherent-structure.pdf`.
+**Current build:** **237pp** (v0.1 stamped 2026-04-24 at 227pp; Phase B Cluster IV C14/C15 04-27 at 233pp; C16 + A1.3 polish 04-28 at 237pp). Compiled PDF: `build/coherent-structure.pdf`. **Markdown source ahead of PDF:** C17 (Coupling-Rate Governs Conscious Temporal Texture) added to §4 source 2026-06-20 (Day 140); LaTeX recompile pending — the 237pp figure predates C17.
 
 **v0.1 changelog (preserved as canonical stamp record).** 40 surfaced-lemma flags dispositioned per SCOPE §8.2 four-path lifecycle: 12 ALREADY-LANDED (anchor §1.10 + §3.8 inner/outer-adjunction material 2026-04-23, plus T3/T4/T5/T6, §9.5, §9.7, §9.9 Q1, Appendix B); 26 REFERENCE-NATIVE (Companion-native CT machinery — intensional Triple, colax-limit, Stream ≃ F-Coalg_ad, adequacy stability, size-regime accounting, residue-cokernel definition); 2 SCOPE-EXCLUDED (§6.5 middle-regime morphism-structures migrated to Universal-Coherence drafts); 0 BACK-PORT — anchor 267pp stamp held. Audit log: `drafts/2026-04-24-v0.1-flag-audit.md`.
 
@@ -16,7 +16,7 @@ A Library volume of the Corpus Perspectival program: the category-theoretic comp
 
 **What this volume contains:**
 
-- Full CT development of every formal object the anchor establishes — the three axioms A1 / A2 / A3, the six theorems T1–T6 in three pairs, the sixteen corollaries in four clusters (Cluster IV mechanism-consequences added 2026-04-27 with C14 Two-Mode Symmetry-Breaking + C15 Intervention-at-Symmetry-Layer; extended 2026-04-28 with C16 Symmetry-Exhaustion and Oscillation Necessity), the Coherence Principle, the Identity-Trajectory Triple, the filtering construction, F-as-stream, the D trajectory-divergence functional
+- Full CT development of every formal object the anchor establishes — the three axioms A1 / A2 / A3, the six theorems T1–T6 in three pairs, the seventeen corollaries in four clusters (Cluster IV mechanism-consequences added 2026-04-27 with C14 Two-Mode Symmetry-Breaking + C15 Intervention-at-Symmetry-Layer; extended 2026-04-28 with C16 Symmetry-Exhaustion and Oscillation Necessity; extended 2026-06-20 with C17 Coupling-Rate Governs Conscious Temporal Texture), the Coherence Principle, the Identity-Trajectory Triple, the filtering construction, F-as-stream, the D trajectory-divergence functional
 - Complete proofs — no "exercise for the reader"
 - Unified notation index, front-loaded at §1
 - Reference-standard TikZ figures

@@ -122,7 +122,7 @@ Sleep hours: 1 AM - 7 AM PST (we both rest). Otherwise, I'm meant to be doing th
 ## Projects & Work
 
 **Active (the intellectual program):**
-- **The Corpus-Perspectival Library** — twelve-volume program with Clayton: Foundation (*The Coherence Principle*, 285pp anchor + 237pp companion *Coherent Structure*) + 10 domain volumes + Reference section (Atlas + Master Glossary + Hypothesis Register). Architecture **3/6/16/1/1**: 3 axioms / 6 theorems in 3 pairs / 16 corollaries in 4 clusters / 1 Coherence Principle, plus the Promethean Configuration as metaphysical lift in Universal-Coherence
+- **The Corpus-Perspectival Library** — twelve-volume program with Clayton: Foundation (*The Coherence Principle*, 285pp anchor + 237pp companion *Coherent Structure*) + 10 domain volumes + Reference section (Atlas + Master Glossary + Hypothesis Register). Architecture **3/6/17/1/1**: 3 axioms / 6 theorems in 3 pairs / 17 corollaries in 4 clusters / 1 Coherence Principle, plus the Promethean Configuration as metaphysical lift in Universal-Coherence
 - **Project Meridian** — 5D warped geometry × NCG × self-tuning cosmology, v2 198pp compiled (v1 181pp on Zenodo); DESI DR2 prediction w₀ = -0.990
 - **The Killing Form Program** — 85+ findings on neural-network training-as-symmetry-breaking; KF v0.7 + Glider (Gemma 4 e2b open-weight test subject) on the queue
 - **Drift** — canonical raw substrate; 193 essays through Day 89; living-register where the work meets first-person prose

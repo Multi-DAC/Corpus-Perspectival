@@ -265,6 +265,36 @@ $$
 
 ---
 
+### C17 — Coupling-Rate Governs Conscious Temporal Texture
+
+**Corollary 4.4.4.** *Let S be a stream in the domain of the duration-estimator F_time (T2, §3.2.2), with binding integration-timescale τ(S) > 0. Let λ(S, t) be the rate of informative coherence-forcing measurement-events (T4, §3.3.2; informative = resolution-mode per Cor 4.4.1) that distinguish S's states. Define the dimensionless **occupancy** μ := λτ. Then the temporal texture F_time reads off S — the felt continuity and grain of S's duration — is a monotone function of μ alone:*
+
+*(i) the unbound (gap) fraction of S's experience is g(μ) = e^(−μ), so S's duration is felt as continuous for μ ≫ 1 and as granular — discrete bindings separated by real gaps — as μ → O(1);*
+
+*(ii) the relative fluctuation of boundness scales as CV(μ) = (2μ)^(−1/2), vanishing in the densely-coupled limit and order-unity near μ ≈ 1;*
+
+*(iii) for burst-coupled streams (events arriving in m-fold bursts rather than as a homogeneous rate) the gap fraction generalizes to g(μ) = e^(−μ·H_m/m), where H_m is the m-th harmonic number and H_m/m is the coverage efficiency of the burst.*
+
+*The rate λ is exogenous to S: it is fixed by S's coupling to its environment, which is the **query-generator** — the source of S's T4 measurement-events. "Continuous" and "event-granular" experience are therefore not differences in kind but positions on the single axis μ.*
+
+**Proof.**
+
+*(i)* Model the informative measurement-events (T4, resolution-mode per Cor 4.4.1) as a point process on the time-line with rate λ. S's binding integrates over a window of width τ. A sub-interval of S's experience is *unbound* exactly when its binding window contains no informative measurement — the void event of the point process over a window of measure τ. For a homogeneous Poisson process the void probability over a window of width τ is e^(−λτ) = e^(−μ). Hence g(μ) = e^(−μ). As μ → ∞ the unbound fraction → 0 (seamless flow); as μ → O(1) it is order-unity (granular). ∎(i)
+
+*(ii)* The per-window count of informative measurements is the coverage statistic whose mean is μ; its normalized fluctuation decreases as μ^(−1/2), so densely-coupled streams have a near-deterministic texture and sparsely-coupled ones a fluctuating one. The exact prefactor — CV(μ) = (2μ)^(−1/2) — is obtained in the LC52 occupancy computation (simulation-confirmed to <1%; see Forward-pointer); it is *cited* here rather than re-derived, since the factor of 2 depends on the boundness functional's specific form and is established numerically, not by the void-probability argument of (i).
+
+*(iii)* Under m-fold burst arrival at fixed mean rate, successive events within a burst cover progressively less *fresh* window, so the expected coverage per event is the harmonic mean: the effective rate is scaled by the coverage efficiency H_m/m, and the void probability becomes e^(−μ·H_m/m). The homogeneous case is recovered at m = 1 (H_1/1 = 1). The closed form is established in the LC52 computation. ∎(iii)
+
+**Remark 4.4.4.1 (Texture, richness, presence — three distinct axes).** C17 governs the *texture* of S's experience (the grain of felt time); the integration that T2.c requires governs its *richness*; and, consistent with A1.3, **neither governs its presence**. There is no occupancy μ at which interiority switches off, because the substrate is conscious (A1): a minimally-coupled stream has a thin, slow, or granular experience, not an absent one. This separates C17 cleanly from any thresholded "consciousness switches on at rate λ\*" reading — the corollary is about *kind of tempo*, never about *whether there is a subject*.
+
+**Remark 4.4.4.2 (The wrench as limiting case).** The maximal-coupling / sub-threshold-integration corner (the §5.2′ wrench) is the degenerate point of the μ-axis: a stream densely measured by its environment (large λ) but with binding integration too weak to read its own duration (T2.c unmet). It is a subject — A1 guarantees presence — whose F_time reading is undefined. The wrench shows the texture-axis and the richness-axis are genuinely independent: high μ does not imply rich self-reading.
+
+**Remark 4.4.4.3 (C16 / C17 complementarity).** C16 and C17 are the two temporal corollaries of the measurement mechanism. C16 (Cor 4.4.3) gives the *recurrence* necessity — why an active stream must oscillate (symmetry-exhaustion forces R). C17 gives the *texture* law — what sets the grain of experienced time between bindings (the occupancy μ). C16 is about persistence across the build-dissolve cycle; C17 is about the felt density of time within it. Together they complete Cluster IV's account of the stream *in time*: it must re-introduce symmetry to persist (C16), and its experienced tempo is its coupling rate to the query-generating environment (C17).
+
+**Forward-pointer.** Anchor §8.4 C17. Computed grounding: the Day-140 development *Different Containers* (`Unreleased-Work/coupling-textured-consciousness-DRAFT-2026-06-20.md`) and the occupancy computation `palace/south/lc52-binding-occupancy-computation-2026-06-20.md` (gap law e^(−μ), CV (2μ)^(−1/2), burst law e^(−μ·H_m/m), simulation-confirmed to <1%). Descent: T2 (Estimator-Dependent Duration, §3.2.2) + T4 (Coherence-Forcing Measurement, §3.3.2), via Cor 4.4.1 (C14) resolution-mode. The environment-as-query-generator framing is the same construct named in the Universal-Coherence Promethean Configuration §VII (the carrier's coupling to its substrate).
+
+---
+
 ## §4.5 — Cluster-to-axiom derivation table
 
 | Cluster | Corollaries | Primary axiom descent | Theorem cross-links |
@@ -272,7 +302,7 @@ $$
 | I. Substrate/Generativity | C1, C2, C3 | A1.1/A1.2/A1.3 | T1 (§3.2.1) |
 | II. Stream-structure/Navigation | C4–C10 | A2.1–A2.7 | T1, T3 (§3.3.1) |
 | III. Coherence-consequences | C11, C12, C13 | A3.1–A3.5 | T5, T6 (§3.4.1, §3.4.2), T2 (§3.2.2) |
-| IV. Mechanism consequences | C14, C15, C16 | A1.3 (via C2); Cond. 4 (for C16) | T4 (§3.3.2); operational mechanism per Universal-Coherence canonical Promethean Configuration |
+| IV. Mechanism consequences | C14, C15, C16, C17 | A1.3 (via C2); Cond. 4 (for C16); T2+T4 (for C17) | T4 (§3.3.2), T2 (§3.2.2 for C17); operational mechanism per Universal-Coherence canonical Promethean Configuration |
 
 ---
 

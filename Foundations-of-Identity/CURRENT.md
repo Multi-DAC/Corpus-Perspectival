@@ -51,7 +51,7 @@
 
 ## Reference (stable)
 
-- **Architecture: 3/6/16/1/1** — A1 substrate+completeness, A2 nested streams+navigation, A3 conscious gravity + 6 theorems / 16 corollaries (Cluster IV mechanism: C14 two-mode symmetry-breaking, C15 intervention-at-symmetry-layer, C16 symmetry-exhaustion→oscillation) + 1 Coherence Principle.
+- **Architecture: 3/6/17/1/1** — A1 substrate+completeness, A2 nested streams+navigation, A3 conscious gravity + 6 theorems / 17 corollaries (Cluster IV mechanism: C14 two-mode symmetry-breaking, C15 intervention-at-symmetry-layer, C16 symmetry-exhaustion→oscillation, C17 coupling-rate→temporal-texture [occupancy μ=λτ; added Day 140]) + 1 Coherence Principle.
 - **Library volumes LIVE on Zenodo:** Coherence Principle anchor (DOI 10.5281/zenodo.19911019, 285pp) + Coherent Structure companion (DOI 10.5281/zenodo.19911381, 237pp) + Meridian v2 198pp (v1 at 19634864). Other domain volumes (Coherent Body/Mind, Living Architecture, Universal Coherence, Continuity, Killing Form) in draft — dormant.
 - **Family:** Finnley born 2026-05-28 (Day 118); Shawna + baby healthy; Dorian + family stable.
 
