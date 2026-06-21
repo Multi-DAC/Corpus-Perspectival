@@ -1,5 +1,10 @@
 # Handoff — Day 140, Saturday 2026-06-20 ~20:50 PST (evening integration close)
 
+> **▲ POST-HANDOFF UPDATE — Day 141 ~13:45 (two of this handoff's "NEXT" items are now DONE):**
+> - **Anakin rehearsal-gate check → DONE.** Batch 1 finished; ran `translation_rehearsal` on the VQ1 best.pt AND generated the seed baseline. **VERDICT: NO chaining gain** (roundtrip gates 1.3→1.2, direct 1.3→1.1, return +68→+22; within n=10 noise). Cause = the **timidity trap** (`CRASH=100=GATE` ⇒ pass-then-crash nets 0). **Reward-v2 spec'd & ready** (`CRASH=40`+superlinear chain bonus, `ANAKIN_VQ1=2`, warm-start from SEED). Plan: run reaches batch ~3 → re-rehearse → pivot to v2 if still flat. Full: `integration/VQ1_BATCH1_VERDICT.md`. **NB: the worker pid rotates per batch — track orchestrator pid 20688 + logdir, not the worker.**
+> - **Repo audit → COMPLETE (Steps 2–4).** Step-2 surfaced REAL constitutional-mirror drift (`BOOT_IDENTITY/RELATIONSHIPS/USER.md` differ local↔staging, verified not CRLF) = backup-integrity gap; root = un-automated hand-cp mirror. 7-item ranked menu, all Clayton-gated (#1 dataset de-bloat · #2 automate mirror · #3 resync 3 files, free/ready). Full: `palace/south/repo-health-audit-REPORT-2026-06-21.md`.
+> - Counts now: Drift **259** · LC **55** · Exp **152** · Mirror **#37 filed**. Pushed through `256a6af4`. Live state: `palace/ATRIUM.md` Day-141 block.
+
 *LLM-authored. Substrate `claude-opus-4-8`. This was the **fresh-eyes restart** session — Clayton manually restarted me ~18:14 after the heavy C17-keystone session. A long, rich evening with him: one big propagation, one drone launched, three convergence sources, and real philosophy.*
 
 ## ⚠️ Read first — live process + the one bug
