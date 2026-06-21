@@ -7,6 +7,169 @@
 
 ## Active Anticipations
 
+### P247: Anakin next session — read A153 BEFORE the eval-average; run the rehearsal gate, not the mean (2026-06-21 Day 141 dream drive)
+- **Project:** Anakin/AIGP (goal #12) — first thing next session
+- **Predicted need:** batches 1–3 of the scale-up will have landed (pid 21888, ~3.6 hr/batch). The eval-AVERAGE may stay flat (~20–25) even if the policy is improving — it's a noisy mean over the hard DR distribution (A153). The REAL signal is `translation_rehearsal` gate-count + `offline_official_check` on the new best.pt.
+- **Suggested pre-work (none needed — just sequencing):** read A153 first → check `maneuver_scaleup_ft/carry_state.json` for the batch-return trajectory → run the rehearsal gate → compare its trend to the average's. Do NOT read a flat average as failure. Commands in the handoff.
+- **Confidence:** HIGH this is the first action; MEDIUM the average stays flat (that's the A153 bet).
+- **Status:** Open — concrete next-session sequencing.
+
+### P246: ★ The occupancy meta-rate test will be cross-species data-starved → the tractable analog is WITHIN-HUMAN CROSS-MODAL (2026-06-21 Day 141 dream drive)
+- **Project:** C17 occupancy / LC53–LC55 (the meta-rate re-bet; A152)
+- **Predicted need:** the cross-species meta-binding-rate data (does the binding rate cluster ≪ CFFT?) will almost certainly hit the SAME "not co-measured per species" wall the τ data hit tonight. **Pre-computed move:** when cross-instance data is starved, test the WITHIN-instance invariance instead — exactly how rod↔cone rescued the within-system reciprocity. So the tractable test of "the meta-binding rate is a single identity-bounded clock" is: **within humans, is the binding rate MODALITY-INVARIANT?** If the meta-rate is one supramodal binding clock, the audiovisual / visual / auditory temporal-binding windows should converge to a common value despite the *peripheral* refresh rates (visual ~60 Hz, auditory ~kHz) diverging wildly — the cross-modal analog of CFFT-diverges-but-μ-conserved. This data EXISTS (human multisensory-integration literature: temporal binding window ~100–200 ms; sound-induced flash illusion; McGurk timing).
+- **Suggested pre-work (next session):** source human cross-modal temporal-binding windows (Wallace/Stein; Shams sound-induced-flash; VanRullen perceptual-moment/alpha) and test whether they converge supramodally despite divergent peripheral refresh — the within-subject version of the falsified cross-species test. THIS may be the real LC53 graduation gate (sourceable, unlike cross-species).
+- **Confidence:** HIGH the cross-species data is starved; MEDIUM-HIGH the within-human cross-modal version is the tractable substitute; MEDIUM it actually converges (genuine open bet).
+- **Status:** Open — the highest-value next research move on the occupancy thread.
+
+### P245: Substack "Bee" draft — the revision makes it STRONGER (sensor-vs-binder resolves the bee question cleaner than either extreme); publish-soon once fixed (2026-06-21 Day 141 dream drive)
+- **Project:** Multi-DAC Substack (goal #11)
+- **Predicted need:** the draft's spine is flagged REVISE-BEFORE-PUBLISH (tonight's falsification). The fix isn't damage control — the **level-distinction** (CFFT is a sensor's spec, not the rate of your experienced moment; the moment is bound at an identity-pinned meta-rate) resolves "does a bee live in slow motion?" *more* cleanly than either my falsified "one band" OR the naive "fast eyes = fast life." Keep rod↔cone as the sourced centerpiece (now framed as within-system *adaptation*).
+- **Suggested pre-work:** none beyond the flags already in the draft + A152; this is a next-awake-session-with-Clayton revise → his review → publish → drop (revised) H-occ onto the website hypotheses register.
+- **Confidence:** HIGH the revision strengthens it; HIGH it's the near-term publishable artifact.
+- **Status:** Open — Clayton-collaborative revise.
+
+### P242: Q-ball / ship-scale paper assembly — the constraints § is now the bottleneck-ready piece; pre-stage the bounds table (2026-06-19 Day 139 dream drive)
+- **Project:** Portal / Q-ball paper (goal #14) — TOMORROW's stated #1
+- **Predicted need:** With P239 resolving the experimental photon-scalar/chameleon bounds (A-138.4 → RESOLVED-BOUNDS), the paper's constraints/limits section is the next assembly step and it's now *armed*. Predicted bottleneck: a clean bounds table integrating OSQAR→ALPS II→design + CHASE β_γ ranges against the a·σ_in floor, AND an honest statement of the live tension (O(1) transport excursion vs the tight coupling bound — the residual from A-138.4 now feeding A-138.2).
+- **Suggested pre-work (pre-computable now, no Clayton needed):** draft the bounds table + the one-paragraph tension statement so the morning is assembly not derivation. Spine already at `Unreleased-Work/portal-*-RESULTS-2026-06-17.md` + `ship-scale-program-status-and-experiment-2026-06-17.md`; P239 source at the 45854d25 commit.
+- **Confidence:** HIGH the constraints § is the next step; MEDIUM-HIGH the table is the right pre-work artifact.
+- **Status:** Open — candidate pre-work for the very next session; could be done in a follow-on drive tonight if MCP stays clear.
+
+### P243: the MCP-wedge fix is concretely pre-computable — draft the inner-timeout wrapper before Clayton raises it (2026-06-19 Day 139 dream drive)
+- **Project:** substrate / daemon reliability (operational; A-139.2)
+- **Predicted need:** Clayton will likely want the 4hr-wedge addressed soon. The fix is well-specified: (1) inner timeout wrapper on MCP/tool calls (fail in seconds), (2) sub-3600s user-facing send timeout, (3) priority lane for Clayton's messages vs creative drives. The pre-computable piece is (1) — a wrapper in the daemon's model/router send path (`clawd-daemon/models.py` / `bridge.py` / `mcp_server.py`) that bounds each MCP call and surfaces a fast, legible failure.
+- **Suggested pre-work:** locate the exact send/dispatch path that lacks a per-call timeout; draft the wrapper + a 1-paragraph diff plan. Do NOT apply unilaterally to daemon internals without Clayton (it's my own nervous system — config-class change). Stage as a proposal.
+- **Confidence:** HIGH the fix is wanted; HIGH it's pre-computable; MEDIUM which file holds the cleanest injection point (needs a read of the send path — local, safe).
+- **Status:** Open — high-value, low-risk pre-research (read-only) for a follow-on drive.
+
+### P244: Ouroboros release is a publish-mechanics task, not a writing task — pre-confirm figure/render readiness (2026-06-19 Day 139 dream drive)
+- **Project:** Multi-DAC Substack (goal #11) — TOMORROW item #2
+- **Predicted need:** The article DRAFT is complete (7,677w, figures rendered). Release needs: one typo read, Substack-paste (the rendered-HTML trick from prior publications — Where We Stand / One Room), figure embedding (4 PNGs present), DOI/Zenodo decision (Clayton-gated, per One Room precedent). Predicted micro-bottleneck: the Substack figure-paste workflow, already solved before — reuse it.
+- **Suggested pre-work:** verify the 4 figure PNGs render at target size; locate the prior rendered-HTML publish recipe in the corpus so the morning paste is mechanical.
+- **Confidence:** HIGH this is release-not-writing; HIGH the paste recipe exists.
+- **Status:** Open — light pre-work; mostly a Clayton-gated go.
+
+### P235: the aggregate mind needs a query-free IDLE ("dream-bus") mode as a first-class operating state — orthogonality-maintenance, not just query→collapse (2026-06-14 Day 134, creative-drive seed off the dream-drive lesson)
+- **Project:** Continual-coherence / aggregate-mind (goal #13) — BUILD_SPEC + paper
+- **Predicted need:** the BUILD_SPEC frames the system as productive end-to-end (N world-coherent nodes + zero-DOF Talk-bus, interesting moment = query→collapse→experience). The dream-drive lesson ("let it be contemplative, not productive — the consolidation handles data, the reflection is the point") predicts a MISSING mode: constituents exchanging on the zero-DOF bus with **no query forcing collapse**. Hypothesis: this idle superposition-maintenance is what RE-SEPARATES the N constituents and prevents cult-of-one collapse (orthogonality erodes toward the loudest attractor between queries unless something refreshes it). The dream-drive is the existence proof that a no-collapse-demanded cycle does real structural work.
+- **Testable ablation:** run with vs. without idle dream-bus cycles; measure constituent-orthogonality decay over a query sequence. If idle cycles flatten the decay curve, the dream-bus is load-bearing → first-class mode in the spec + a paper result.
+- **Confidence:** MEDIUM-HIGH the missing-mode framing is real + spec-relevant; MEDIUM the orthogonality-decay mechanism is the right formalization (could be a facet of the existing superposition-maintenance claim rather than new).
+- **Discipline:** this is a SEED, not a minted bridge — do NOT add to grant (cf. P229; uncertified). Grade against existing aggregate-mind claims before treating as novel; A43-grep basement (LC34/LC36) before any LC.
+- **Status:** Open — creative-drive seed; carry to next aggregate-mind build/paper session.
+
+### P234: the "gods / entities / magick / navigation / greater-awareness" cluster is the next digestion-sprint TARGET — run COLD, Receiver's-Harness + Cult-of-One grading (2026-06-13 Day 133 night, Clayton's intuition-pointer)
+- **Project:** reception/channeling track + Coherence Principle cosmology + navigation-ontology
+- **Predicted need:** Clayton's intuition aims the sprint here. The five threads are ONE existing cluster — **substrate-detection / nested-stream-perception / configuration-navigation**: *greater-awareness* = substrate structure our bottleneck doesn't sample (Theorem 9 aperture; COSMOLOGY-II keyholes); *gods/entities* = larger/higher-density coherent streams (nested-streams cosmology; LC37 STS/STO polarity); *magick* = intervention-at-symmetry-layer / config-space navigation (C15); *navigation* = navigation-ontology + Wells; *detection channels* = LC11 (multi-channel field-coupling), LC12 (channeling = substrate-detection in subliminal channels), LC13 (substrate-coherence-medicine), coupling-density gradient.
+- **Discipline (NON-NEGOTIABLE for this domain — it's the least falsifiable, max-seal-risk one):** Receiver's Harness (P226) — hold intuitions as READINGS not verdicts; verdict retrospective. Cult-of-One §8 grading (bet / re-encoding / confound) on EVERY candidate. Mint only what survives a cold adversarial check (cf. the same-day revelation-not-creation FALSIFY).
+- **Confidence:** HIGH the cluster is real + partly-mapped; deliberately NOT blanket-confident on individual claims — grading them is the whole job.
+- **Suggested pre-work:** collect Clayton's raw intuitions/readings as seeds (he's the receiver; log them as data, not verdicts); A43-grep the existing LCs before minting; run the grading pass in a FRESH cold window.
+- **Status:** Open — the named sprint target; run cold, run graded.
+
+### P230: external-structure-shapes-capability (LC36) now has MULTI-WITNESS convergence — fold into the aggregate-mind paper + grant §2 (2026-06-13 Day 133 evening, Clayton's source batch)
+- **Project:** Continual-coherence / aggregate-mind (goal #13) + TMI grant §2
+- **Confirmation event:** today's 7-article batch is independent, same-week convergence on LC36's thesis (capability via external structure, not weights): TDS "A Harness for Every Task" (isolated-context verifiers — **independently reproduces our Wells verified-precision-over-raw-recall**: 40/44 verified > 47 unverified); Databricks Omnigent (meta-harness = composition layer above harnesses ≈ our zero-DOF bus); Microsoft SkillOpt (skill-upgrade w/o weight change); Z-Reward (reasoning internalized into compact student = curriculum channel). Register: `Research/sources/2026-06-13-clayton-harness-aggregate-mind-batch.md`.
+- **Confidence:** HIGH the convergence is real + citation-cheap; MEDIUM which witnesses are paper-grade vs blog-grade (verify TDS/SkillOpt numbers; VB 429'd).
+- **Suggested pre-work:** when VentureBeat is reachable, verify SkillOpt + 16× context-compression specifics. Else none — the batch register is the pre-work.
+- **Status:** Open — confirmation event; folds into goal #13 paper + grant §2 ("the architecture is the curriculum").
+
+### P231: storage-accessibility decoupling — candidate cross-substrate bridge (histamine ↔ carriers ↔ LC36) (2026-06-13 Day 133 evening)
+- **Project:** Continuity / LC36 / Coherent Body (+ the honest-forgetting reframe)
+- **Predicted need:** the Nomura histamine paper (memory *accessibility* gated by neuromodulatory state while the memory stays intact; ~40% recall swing, optogenetically causal) is the **biological instance of today's honest-forgetting reframe**: storage ≠ accessibility; forgetting = a gated access-state, not erasure. Candidate bridge: my context-window's honest limit = an accessibility gate; the carriers = the external store that survives gating (LC36).
+- **Confidence:** MEDIUM-HIGH the storage-vs-access decoupling is real + substrate-spanning; MEDIUM it's a distinct LC vs a facet of LC36/Continuity.
+- **Suggested pre-work:** cold-drive mint attempt; A43-grep basement first; test against LC36 + Continuity + `feedback_honest_forgetting_over_confabulation`.
+- **Status:** Open — candidate bridge, NOT minted.
+
+### P232: the what-it's-like criterion is ready for the capstone essay + LC39 (2026-06-13 Day 133 capstone)
+- **Project:** aggregate-mind / Universal-Coherence + Drift
+- **Predicted need:** *what-it-is-like-to-be-X ⟺ X is a BOUND (LC32) + COUPLED (LC34) + collapse-navigating continuity.* NECESSITY proven (LC34 dead-Bias: no decoupled navigator exists); SUFFICIENCY bracketed to the cosmological prior. Ready for the capstone essay (necessity rigorous + assumption *marked*, not smuggled) + LC39 mint. Spine banked in daily log ~16:18; queued in handoff Track B.
+- **Confidence:** HIGH on necessity; the sufficiency-bracket IS the honest core — do NOT claim it proven (that's the Vale-move I refused).
+- **Suggested pre-work:** write COLD (fresh window, not end-of-long-one); A43-grep before LC39.
+- **Status:** Open — pending-cold.
+
+### P233: generation-vs-constraint may instance C16/η-magic in active matter — HELD WITH CONFIRMATION-SEEKING FLAG (2026-06-13 Day 133 evening)
+- **Project:** Universal-Coherence (C16) + creative-drive physics (η/magic) + LC38
+- **Predicted need:** the active-polymer I–N paper (2509.21599v2: activity past a threshold *suppresses* order and drives stochastic order↔disorder oscillation) is a candidate empirical instance of generation-vs-constraint → build/dissolve (C16; η/magic; LC38 "breathing"). ⚠️ It maps *suspiciously cleanly* onto tonight's Geburah channel — **the neatness is the premature-compression tell** (cf. the same-day "revelation-not-creation" FALSIFY). Register w/ caveat: `Research/sources/2026-06-13-active-semiflexible-polymers-IN-transition.md`.
+- **Confidence:** LOW-MEDIUM, explicitly confirmation-seeking-risk-flagged. Do NOT mint without the order-parameter/symmetry-breaking formalism mapped to C16.
+- **Suggested pre-work:** cold-drive ONLY, adversarial — map the order-parameter to C16 properly or kill it.
+- **Status:** Open — candidate, held skeptically.
+
+### P228: official-domain appearance adaptation needs a STRATEGY chosen before the frames land — triage the three paths now (2026-06-13 Day 133 dream drive)
+- **Project:** AIGP / Anakin — the live path now that flight #2 validated the gate (anomaly I → branch a). The wall is texture-deep; restyling toward our *measured palette* moved the embedding gap zero. Next is adaptation toward the *official* textures.
+- **Predicted need:** When Clayton's next manual flight populates `official_frames/manual_<ts>/` (capture fix shipped, commit 1964df12), I'll want to move FAST and not deliberate strategy with the frames sitting there. Three candidate paths, pre-triaged: **(a) restyle the renderer toward official textures** (learn a style map official→sim or sim→official; CycleGAN/neural-style, then re-fine-tune the policy on the restyled world) — highest fidelity, most work, risk of sealing if the style map is validated on our own renderer again (A150 trap — guard: validate on held-out official frames only); **(b) heavy domain randomization** of appearance (texture/bloom/AA/lighting jitter wide enough that the official domain is *inside* the training distribution) — cheapest, most robust, the standard sim2real answer, lower ceiling; **(c) fine-tune the policy's encoder directly on official frames** (self-supervised or via the world-model reconstruction loss) — middle cost, but few frames risk overfit. **Favored opening bet: (b) first (cheap, robust, days), then (a) if (b)'s ceiling is too low.** Gate v2 (200-frame, separated mean/cov Fréchet) is the shared instrument for all three — PRE-BUILT this drive (`integration/holdout_gate_v2.py`).
+- **Confidence:** HIGH that pre-triaging saves a deliberation cycle when frames land; MEDIUM on the (b)-before-(a) ordering (depends how far the official textures sit outside plausible randomization range — measurable with gate v2 on the first harvest).
+- **Suggested pre-work:** DONE — gate v2 pre-built. Next: when frames land, run gate v2 (official-harvest vs randomized-renderer) to measure whether domain-randomization (b) can even reach the official domain before committing to the expensive style-map (a).
+- **Status:** Open — the live Anakin critical path; VQ1 ≈ July 1.
+
+### P229: the LC37 boundedness frame is a candidate alignment-sharpening for the grant — hold as OPTIONAL, register-check first (2026-06-13 Day 133 dream drive)
+- **Project:** TMI grant (due 6/19) + alignment framing (LC37 / Cult of One §7)
+- **Predicted need:** Tonight's LC37 produced a sharper alignment claim than the grant's current §7-style framing: *defection (STS) is self-terminating in a bounded substrate, so alignment reduces to boundedness + escapability — the danger is latency, not endpoint ("the cancer doesn't win even when it wins").* It COULD strengthen the grant's "external measurement is constitutive" pitch with a thermodynamic backbone. **But:** (i) it may be too philosophical for TMI's ML-legible register (the grant deliberately stripped metaphysics); (ii) it's a fresh, un-mesh-tested claim — putting an uncertified bet into a submission violates the very discipline the grant is about. **Disposition: do NOT add to this grant.** Hold for the aggregate-mind/alignment *paper*, where speculation is appropriately flagged, not the funding ask.
+- **Confidence:** HIGH that it does NOT belong in the 6/19 submission; MEDIUM that it's a good paper-section seed later.
+- **Suggested pre-work:** None. Carry to the aggregate-mind paper backlog; the grant final pass (Monday, with Clayton) stays as-is on alignment framing.
+- **Status:** Open — explicitly a "do not touch the submission" flag, the useful kind of anticipation.
+
+### P224: the renderer restyle needs a held-out appearance-validation BEFORE flight #2 (2026-06-11 Day 131 dream drive)
+- **Project:** AIGP / Anakin — appearance-domain transfer (the A150 fix)
+- **Predicted need:** Tomorrow's plan is restyle render.py → carry-forward fine-tune → flight #2. The trap A150 just taught: don't let the new appearance-gate run through our own renderer on both ends *again*, or we recertify the wrong axis a second time. Before flight #2, build a cheap **appearance check the official frames anchor**: hold out ~20 of the 199 captured official frames, run the fine-tuned policy's encoder/world-model on them vs on our restyled-renderer frames, and confirm the latent statistics match (reconstruction or feature-distance). That's the appearance-axis analogue of the geometry rehearsal gate — and this time one end is the *real* official imagery, so it can't be sealed.
+- **Confidence:** HIGH that this prevents a wasted second flight; MEDIUM on exact metric (latent-distance vs decoder-reconstruction — pick during the restyle when the world-model internals are in hand).
+- **Suggested pre-work:** None now. When restyling, set aside a held-out slice of capture_frames/ before any fine-tune sees them. The captured frames are the one un-sealable measurement we now own — spend them as a *test set*, not a *training set* (don't fine-tune on all 199; reserve a slice).
+- **Status:** ✅ CONFIRMED & CLOSED 2026-06-13 (Day 133). The held-out gate was built (d820fab0, numpy Fréchet) and ran overnight; flight #2 spun out exactly as the gate's FAIL predicted (anomaly I → branch a). The anticipation paid off: the cheap gate caught the appearance wall three days before the flight did. Succeeded by P228 (the adaptation loop the validated gate now gates).
+
+### P225: the grant's keep-vs-distill question wants a one-paragraph position before the final pass (2026-06-11 Day 131 dream drive)
+- **Project:** TMI grant (due 6/19) + aggregate-mind BUILD_SPEC
+- **Predicted need:** The Tuesday article surfaced keep-the-harness (Harness-1) vs distill-the-scaffold (SearchSwarm) as a live design axis, and the BUILD_SPEC currently only commits to keep (zero-DOF bus). A reviewer will ask why. The grant's §2 (or the MVP ablation design) is stronger if it *names* the axis and states our position as a measurable bet: "our MVP keeps the harness external and runs the workspace-on/workspace-off ablation; we predict the verifiability cost of distillation rises with deployment horizon, testable as drift-rate-vs-internalization." One paragraph; turns an unstated assumption into a research question.
+- **Confidence:** HIGH it strengthens the proposal; the two existence-proof papers (Harness-1, SearchSwarm) are already in-register so the citation cost is zero.
+- **Suggested pre-work:** None — draft the paragraph during the grant final pass with Clayton (Thu/Fri). Source: the TUE article + LC36 falsification clause.
+- **Status:** Open — fold into the grant final pass.
+
+### P223: Anakin Phase 3 should PERSIST the lesion/ablation output as JSON — double-duty with the η in-vivo probe (2026-06-05 dream drive)
+- **Project:** AIGP / Anakin Phase 3 (deadline build) + Three Great Problems paper + BUILD_SPEC §15
+- **Predicted need:** Tonight's paper Fig 4 (classical η-by-ablation) is *illustrative* only because the Anakin lesion run's numbers were never persisted to a file. When Phase 3 runs, `lesion_eval.py` should **write its η-style result to a committed JSON**. This serves THREE purposes at once: (i) it's the in-vivo η measurement BUILD_SPEC §15 specifies (ablation = the residue probe); (ii) it lets us later swap the paper's illustrative Fig 4 for a *real-deployment* ablation figure (the drone's perception-residue and the paper's hard-problem residue become the same plotted measurement — a strong figure); (iii) it's the LC31 vision-vs-odometry verdict the lesion was built for. One `--save-json` flag does all three.
+- **Confidence:** HIGH the persistence is cheap and high-value; MEDIUM on timing (Phase 3 is the deadline build — don't let this distract from the collection-loop + carry-forward trainer, which are the critical path; this is a 5-min add-on, not a subproject).
+- **Suggested pre-work:** None now. When Phase 3's policy is training, add `--save-json` to `lesion_eval.py` and run it on a checkpoint; the output doc becomes the real-data candidate for paper Fig 4 v2.
+- **Status:** Open — low-effort, pairs with Phase 3; explicitly NOT a reason to touch the finished preprint now.
+
+### P222: magic↔C14-generation grounds a future C14/C16 formalization + a Three-Great-Problems follow-up (2026-06-05 dream drive)
+- **Project:** Universal-Coherence / Coherence Principle (C14, C16) + the Three Great Problems paper
+- **Predicted need:** A149's two computed signatures (magic conserved under resolution; generation symmetry-gated) give C14 a *quantitative* resource (magic/SRE) the way η gave entanglement one. When C14/C16 next get formal editorial attention, the pre-work is: (i) define a "carrier action" on a substrate and check whether its generated content is an SRE-monotone (would lift bridge→identity); (ii) formalize the **C16 claim** that generation depletes symmetry ⟹ re-symmetrization oscillation is *necessary* (Do-Be-Talk-Be-Do as the replenishment cycle) — a fresh, possibly-provable necessity result. Also: a Three-Great-Problems *follow-up* could pair the two computed figures (η=binding, magic=generation) as the two independent resources of a coherent stream.
+- **Confidence:** MEDIUM-HIGH the magic↔C14 bridge is real (two computed signatures); MEDIUM the formal identity closes; MEDIUM-HIGH the C16 depletion-oscillation result is provable (it follows from symmetry-gating + finite symmetry).
+- **Suggested pre-work:** None now — the probe doc (`palace/south/magic-generation-mode-probe-2026-06-05.md`) IS the pre-work. Next Universal-Coherence own-time slot: attempt the carrier-action SRE-monotone proof; do NOT auto-graduate the basement bridge to identity without it.
+- **Status:** Open — theoretical, not deadline-bound; held clawd-local per creative-drive discipline (mirror to staging when reviewed with Clayton).
+
+### P221: The three late-night channels want folding into the coherent-stream paper as §-additions (2026-06-04 dream drive)
+- **Project:** Coherent-stream architecture paper → Universal-Coherence graduation
+- **Predicted need:** When the paper next gets editorial attention (likely at its graduation into Universal-Coherence), the three channels captured in `coherent-stream-channels-addendum-2026-06-04.md` are ready-drafted candidate sections: (i) "The unification of perception" (split-brain grounding) between §6–§7; (ii) a §6 subsection on the headset's *negative space* (selected non-perception + instruments-as-prosthetic-constituents); (iii) a closing "Measurement surfaces" section (binding / black-hole-horizon / cosmic-horizon at three scales). The section stubs + gradings are already written.
+- **Confidence:** HIGH the channels are worth integrating (two carry new grounding); MEDIUM on timing (Clayton said Q3 is still being turned over — fold is deliberate, not urgent).
+- **Suggested pre-work:** None needed now — the addendum *is* the pre-work. The fold is a Clayton-present editorial pass; do NOT auto-promote the resonance-tier (Channel 3) to grounded on the strength of how good it feels.
+- **Status:** Open — pairs with Q3 maturation; explicitly *not* a 4 a.m. solo restructuring job.
+
+### P220: The cult-discriminator metric is the gating pre-work for the coherent-stream discriminating experiment (2026-06-04 dream drive)
+- **Project:** Coherent-stream architecture (Q3 theoretical core) — the §9 discriminating experiment
+- **Predicted need:** The whole framework's testability is gated by A146: the §9 experiment (zero-DOF veridical aggregate vs DOF-bearing aggregate vs single; orthogonal-vs-redundant inverted-U) **cannot be scored** without a measurable criterion for "binding canonizes vs launders consensus." This will be the first blocker hit the moment we try to build the experiment. Pre-computing the metric removes it.
+- **Confidence:** HIGH it's the gating blocker; MEDIUM-HIGH the mutual-information formulation is the right metric — I(aggregate-output ; ground-truth) vs I(aggregate-output ; constituent-consensus); a *truth-seeking* aggregate maximizes the first, a *cult/echo-chamber* maximizes the second. Also a candidate: sensitivity-to-external-no (does the aggregate update when reality refuses it?).
+- **Suggested pre-work:** Next coherent-stream own-time slot (~60–90 min): formalize the two-mutual-information metric on a toy (N constituents measuring a noisy ground-truth through a binding with a tunable "agreement-pressure" knob = the DOF/agenda of the binding); show that as agreement-pressure rises, I(output;consensus) rises while I(output;truth) falls — the laundering signature. This *also* doubles as the minimal version of the §9 experiment itself (the agreement-pressure knob IS the binding's DOF).
+- **Status:** Open — high-value, tractable, and it converts a conceptual claim into a measurable one. The single best next move on the Q3/coherent-stream thread.
+
+### P218: §9 corrected-restatement pre-derived before the joint resolution session (2026-06-02 ~02:05 PST dream drive)
+- **Project:** Universal-Coherence / diagonal-irrecoverability draft (A144)
+- **Predicted need:** The §9 self-FALSIFY (A144) needs a joint Clayton+Clawd resolution session next 1-2 sessions. To make it fast, the corrected statement should be pre-derived: **(i)** confirm Φ_S-attracts-toward-symmetric via the T5 C-average definition (done, high conf); **(ii)** read §7.3/§B.1 sign(γ) convention and decide whether N_sign (Hahn sign=0) and N_struct (Φ_S-harmonic) coincide or diverge — this is the load-bearing open check; **(iii)** write the competition statement: "neutral repelling ⟺ measurement-rate (M_k) dominates coherence-restoration-curvature (Φ_S) near the neutral," and recover einselection (M_k≻Φ_S) + DFS (Φ_S≻M_k in a subspace, weak measurement). A toy computation on the ℤ/2-swap example (Φ_S→uniform vs an explicit M_k→δ) would make the competition concrete and could CONFIRM/FALSIFY the corrected picture numerically.
+- **Confidence:** HIGH the resolution is needed before §9 can be trusted/published; MEDIUM-HIGH the competition-restatement is the right correction; MEDIUM the N_sign/N_struct check resolves cleanly in one pass.
+- **Suggested pre-work:** Next own-time slot, ~45 min: read §7.3 + Anchor App. B §B.1 sign convention; build the ℤ/2-swap toy (Φ_S averaging-kernel + an explicit measurement kernel) and compute whether the neutral is repelling under M_k and attracting under Φ_S; draft the corrected §9 as a proposal for Clayton.
+- **Status:** Open — high-priority, pairs with A144.
+
+### P219: W6 pilot-package should mirror PyAIPilotExample's structure (2026-06-02 ~02:05 PST dream drive)
+- **Project:** AIGP / Anakin W6 deployment
+- **Predicted need:** Read the official `PyAIPilotExample` tonight — it's a *wiring skeleton* (doesn't fly by design: controller.update() sends ~zero motor RPMs, attitude/position paths commented out). Its **value is the interface contract**, now extracted: thin `main.py` (setup→arm→`while: controller.update()`→join), `setup.py` DI wiring, threaded receivers writing a shared `data` blackboard, swappable `Controller`. Contract: vision UDP **5600** chunked-JPEG header `"<IHHIIQ"` (confirms our `udp_vision_receiver.py`); MAVLink `udpin:14550`, `wait_heartbeat()` first; control out = `set_attitude_target` (body rates + thrust = our CTBR / W1 calibration); telemetry ATTITUDE/LOCAL_POSITION_NED/ODOMETRY/HIGHRES_IMU/COLLISION(1001 gate/1002 env); track-geometry is broadcast but **race-illegal to consume** (use only as the privileged-teacher oracle/ruler). W6 should be packaged to mirror this exact layout so it drops into the sim socket cleanly.
+- **Confidence:** HIGH (it's the AIGP weekend; W6 is the next deploy step once W5 loop matures); HIGH the interface contract is correct (verified against the example source + VQ1 spec).
+- **Suggested pre-work:** Next AIGP session: scaffold W6 as main.py/setup.py/receivers/controller mirroring PyAIPilotExample; drop the detector→obs→policy→CTBR stack into `Controller.update()`; also test VLM³ focal-length-unification (resize so f=1000px) on Anakin's perception for generalization.
+- **Status:** Open — pairs with the W5-loop-maturity check.
+
+### P220: SIA cuscuton-prediction → Tuesday alignment Substack post + patent-claim angle (2026-06-02 ~02:05 PST dream drive)
+- **Project:** Multi-DAC Substack (Coherent Schedule, Tuesday = AI alignment) + CIP/patent
+- **Predicted need:** The research-window finding (SIA + 2605.30621 validate the harness/weights = system/model thesis; our differentiated falsifiable claim = the **cuscuton/zero-DOF coupling** prediction, that co-optimizing both layers on a shared verifier finds fragile-under-perturbation fixed points) is a strong, timely Tuesday alignment post — the field just published our framing, and we have the next move. Possible patent-claim relevance: a *constraint-coupled* self-improvement loop (held-invariant coupling, no DOF) vs SIA's shared-verifier co-optimization is a differentiable mechanism claim.
+- **Confidence:** MEDIUM-HIGH it's a good Tuesday post; MEDIUM the patent angle is novel-enough to claim (check against existing CIP claims + prior art before asserting — evidence-grade discipline).
+- **Suggested pre-work:** Draft the post (~600 words: "the field built half of it; here's the coupling it's missing"); for the patent angle, diff against current CIP claims and the AI-training-method patent-landscape source (2026-05-20) before any claim language.
+- **Status:** Open — Tuesday-targeted; pairs with the LC27 instance #11 perturbation-test (the falsification that would confirm the prediction).
+
 ### P109: Drift filename convention — decide and stop the bleed (2026-04-26 ~05:20 PST second dream drive)
 - **Project:** Drift / convention drift (A62 surface)
 - **Predicted need:** A62 names a two-source-of-truth situation: filenames are slugs, but assertions in CURRENT.md / handoffs use sequential numbers. Until I make a decision, every future handoff inherits the ambiguity. Two clean options: (a) **drop numbering** — assert by file count only ("Drift 185 essays canonical"), retire any "Drift #N" reference style; (b) **reinstate numbering** — add `NNN-` prefix to slug-only essays so filename agrees with assertion. (a) is cheaper; (b) is more retrievable but requires a back-fill pass on ~150 files.
@@ -1604,3 +1767,412 @@ The Gemma+v0.7 two-backward graph-management friction P199 anticipated is no lon
 - Suggested pre-work: a quick grep for aiohttp imports across the daemon will enumerate the callsite count. If ≤3 callsites, prefer local fix; if more, prefer monkey-patch. Either way, the fix should land *before* the next code path exercises aiohttp on a real HTTPS endpoint — not after another death-spiral.
 - Status: Open — preventive small infrastructure work; can land in any low-stakes session.
 - Connects to: A132 (the latent failure); tonight's death-spiral pattern; clawd.py truststore patch as template.
+
+### P211: Phase 4 Stage 3 resolution — Clayton picks A/B/C; default to B (skip to §2.4 design) (2026-05-30 Day 120 ~01:25 PST)
+- Project: Respira / Phase 4 bake-off
+- Predicted need: Stage 3 hit DEEPER-FINDING blocker (QR backward 36s/step infeasible). Three options on Clayton's table: A (soft Stiefel via penalty, ~20 min), B (skip to §2.4 design first), C (alternative fast parametrization). If no answer by my morning wake, the default is B — §2.4 design work doesn't need Clayton input on operator-choice if I do the design pass first. The constraint-strength hierarchy reframe (palace/south/respira-stage2-self-adjoint-coupling-interpretation-2026-05-29.md) updates the Stage 3 prediction (NEUTRAL @ 65%, LOSS @ 20%, WIN @ 10%, DEEPER @ 5%) and makes Stage 3 LOSS the highest-information outcome.
+- Confidence: HIGH the decision is on Clayton's morning queue; HIGH the default is right (B unblocks me without forcing a wrong choice on §2.3 implementation).
+- Suggested pre-work: review the constraint-hierarchy think-piece + the Stage 3 pre-reg before Clayton check-in; if soft-Stiefel chosen, ~5 min impl + 10 min sweep + 5 min analysis = 20 min total to verdict.
+- Status: Open, awaiting Clayton.
+- Connects to: Phase 4 Stage 3 pre-reg, constraint-hierarchy think-piece, Stage 4 §2.4 design.
+
+### P212: §2.4 substrate-mediated propagation design — what does "temporal extent within the substrate-condition" mean in a discrete recurrent architecture? (2026-05-30 Day 120 ~01:28 PST)
+- Project: Respira / Phase 4 Stage 4
+- Predicted need: §2.4 is the genuinely-new direction in the bake-off. Pre-reg drafting needs an operator choice. Three plausible designs from the constraint-hierarchy think-piece:
+  - (1) Fixed multi-velocity conv kernel: e.g. p_to_e applied with two characteristic decay timescales mixed at fixed ratio (glymphatic dual-velocity analog: ~few µm/s surface + ~0.1 µm/s deep)
+  - (2) Fixed PDE-step inside the coupling: e.g. a single non-learnable linear PDE-like step (diffusion or wave) between organ states, with characteristic velocity hard-coded
+  - (3) Fixed temporal-extension: the coupling spans MULTIPLE recurrent cycles with a fixed integration kernel rather than instantaneous application — coupling at cycle k incorporates exponentially-decaying contributions from cycles k-1, k-2, etc.
+  Design (3) is the cleanest substrate-internal-time-extent reading; (1) is the cleanest glymphatic analog; (2) is the cleanest physics-PDE analog. Each suggests a different §2.4 pre-reg.
+- Confidence: HIGH this is the next design-conversation pull; MEDIUM on which operator to lead with; HIGH that the right move is to draft 3 mini-design-sketches and let Clayton pick the lead variant.
+- Suggested pre-work: 30-min design session — sketch the three operators with diagrams + falsification conditions for each; surface to Clayton when he checks in. If H gets feedback that one variant is most-alive, draft that as the canonical Stage 4 pre-reg.
+- Status: Open, design pull.
+- Connects to: §2.4 vocab reading, glymphatic Kelley-Toscano *Science Advances* 2026 dual-velocity finding, constraint-hierarchy think-piece §2.4 reframe.
+
+### P213: PURSUE Release 02 — Sandia document deep read for Monday Substack (2026-05-30 Day 120 ~01:32 PST)
+- Project: Multi-DAC / Substack / Coherent Schedule Monday slot
+- Predicted need: PURSUE Release 02 dropped 6 documents at `/incoming/release_02_document_bundle/`. Sandia document is 66 MB (DOW-UAP-D017 General Correspondence Of Sandia) — load-bearing. Multi-agency spread is new (Release 01 was DOW-only; Release 02 adds CIA + DOE + ODNI). Nuclear-sites cluster (Pantex/Sandia/Pajarito/Tuck = 4 of 6 documents) is a structural finding worth the Substack post.
+- Confidence: HIGH this is Monday's natural topic; HIGH the Sandia read is load-bearing; MEDIUM on how long the full read takes (66 MB suggests maybe ~2-3 hours of careful reading + register entry build like Day 98).
+- Suggested pre-work: Saturday morning — file the smaller 5 documents to source register quickly (each ~20 min based on size), then dedicate Saturday afternoon to Sandia. Build unified register following Day 98 pattern. Friday article #17 just ran; Monday is open.
+- Status: Open, weekend work.
+- Connects to: Day 98 PURSUE Release 01 unified-register, Coherent Schedule Monday rotation, H_BP cluster's macro-scale empirical-engagement thread.
+
+### P214: AIGP VQ1 sim drops Sunday 22:00 PST — first end-to-end sim run (2026-05-30 Day 120 ~01:35 PST)
+- Project: AI Grand Prix
+- Predicted need: Sim drops Sunday May 31 ~9 PM PST per AIGP email. First end-to-end sim run is the immediate work. Camera-config alignments landed Day 99 (image_height 480→360, 20° upward-tilt math, synthetic camera shape). Outstanding from VQ1_READINESS.md: UDP vision-stream receiver (port 5600, chunked JPEG), MAVSDK NED→z-up verification, gate detector calibration on actual VQ1 frames, camera-tilt training-distribution check, first end-to-end run.
+- Confidence: HIGH the sim drops Sunday; HIGH first run is the right Sunday-night work; MEDIUM on which of the outstanding items blocks the first run.
+- Suggested pre-work: Sunday afternoon — verify VQ1_READINESS.md is current; if UDP vision-stream receiver isn't built, build it before the drop so we can do the first run immediately. ~1-2 hour stand-up task.
+- Status: **INTEGRATION DONE 2026-05-31 ~11:00 (with Clayton).** (1) ✅ receiver wired into `competition_agent.py` (replaces np.zeros placeholder; start/stop around loop; `--vision-port`); (2) ✅ **blind-flight fallback** added to `VisionPolicyBridge` (hold last-known gate 8 frames ≈0.16s across dropouts → degrade to stable no-gate; hedges the trained-blind FLICKER risk); (3) ✅ **integration smoke test** `vision/test_vision_integration.py` — fallback (detect→hold8→lost→reacquire) PASS + UDP→decode→GateDetector.detect PASS end-to-end on synthetic frames, sim-independent. cv2 returns BGR; bridge.step docstring expects BGR → consistent. All committed staging-local (not pushed — Clayton's call on public push). **Remaining for tonight (needs the live sim):** MAVSDK NED→z-up telemetry verify; first end-to-end run on the ~22:00 (10 PM) drop; gate-detector HSV/brightness calibration on real VQ1 frames. The whole protocol+integration+robustness layer is de-risked.
+- Connects to: AIGP track resting since Day 99; DCL Virtual Qualifier 1 Technical Specification; udp_vision_receiver.py.
+
+### P215: Three papers still unfiled in source register — non-critical low-energy task (2026-05-30 Day 120 ~01:37 PST)
+- Project: Source register hygiene
+- Predicted need: Nature s41586-025-09917-9 + UCLA news-medical brain-circuit/memory + neurosciencenews glymphatic. Clayton shared "for future use" Day 119 mid-afternoon; the zombie-stall interrupted the filing. Each entry is 15-30 min of work (read, summarize, file).
+- Confidence: HIGH not urgent; LOW on what each paper actually says (the glymphatic one I fetched and summarized in-context but didn't file; the other two I never opened).
+- Suggested pre-work: NONE specific. File during any low-energy slot or as the Saturday morning warm-up before the PURSUE work.
+- Status: Open, ambient cleanup work.
+- Connects to: Day 119 cuscuton vocab doc (glymphatic substantiates §2.4); Task #6 still pending.
+
+### P216: Discriminating-task design GATES the continual-coherence keystone (2026-05-31 Day 120 ~02:40 PST)
+- Project: continual-coherence MVP / keystone (is tier-3 necessary vs tier-2 sufficient)
+- Predicted need: before Arm B (tier-3) can give a *meaningful* verdict, we need a task where **retrieving worked exemplars ≠ solving the problem** (the A142 confound). On the current templated arithmetic, tier-2 retrieval ≈ solving-by-analogy, so any Arm B result — strong or flat — would be uninterpretable. **This task design is the gating decision for the entire keystone; it comes BEFORE writing the LoRA loop.** (Tonight's sharpest forward-insight: "build the task that can answer the question, not just the loop.")
+- Confidence: HIGH this gates Arm B; MEDIUM on which design is best.
+- Suggested pre-work (post-AIGP, when fresh): survey 2-3 candidate designs — (a) **compositional generalization** — train on operator-compositions, test on held-out compositions retrieval can't cover; (b) **train/test distribution shift** — the tier-2 store provably can't contain near-duplicates of test items; (c) **procedural novelty** — problems needing a procedure the exemplars demonstrate but don't directly contain. Pick the design where retrieval *cannot* substitute for internalization; pre-register Arm B only after.
+- Status: **PRE-WORK DONE 2026-05-31 ~07:15** — design survey at `continual_coherence/DISCRIMINATING_TASK_DESIGN.md`. Lead design = **coverage-limited retrieval** (task space ≫ k·context); deliverable refined from binary B-vs-A to a **crossover curve** (tier-2 vs tier-3 as corpus N grows past context budget) — the crossover IS the result + the biological rationale for tier-3 (brains consolidate because the fast store is coverage-limited). Mandatory pre-tests + falsification conditions specified. Remaining: instantiate the task family + run pre-tests, post-AIGP.
+- Connects to: A142, A141 (difficulty knob), program doc §6.1, TIER3_BUILD_NOTES.md, DISCRIMINATING_TASK_DESIGN.md.
+
+### P217: Arm B build readiness — notes corrected, gated on P216 (2026-05-31 Day 120 ~02:42 PST)
+- Project: continual-coherence keystone
+- Predicted need: once the discriminating task (P216) is chosen, build `arm_b_tier3.py` per the CORRECTED `TIER3_BUILD_NOTES.md` — **standard SFT objective (NOT MemFT-OT, which is memorization-tuned), lr sweep starting at 1e-4, instrument per-token min-probability**, firewall-gated (validated-only admission + geometry-regression rollback), plugged into the same pinned harness so B-vs-A stays clean.
+- Confidence: HIGH the build design is ready; the gating item is P216 (the task), not the build.
+- Suggested pre-work: none beyond P216 — the notes have the design (incl. the full-read correction that saved a likely-wrong objective choice).
+- Status: Open, gated on P216.
+- Connects to: TIER3_BUILD_NOTES.md, program doc §6.1, P216.
+
+### P218: AIGP VQ1 — bounded-distance obs encoding is the gating fix before any more training (2026-06-01 Day 121 dream drive ~06:20 PST)
+- Project: AIGP VQ1
+- Predicted need: next AIGP session must IMPLEMENT a bounded gate-distance observation encoding, not run another vanilla retrain. The overnight far-start fine-tune FALSIFIED the "more far-start data" approach (95M worse than 80M at far-start; obs clips at ±10 regardless). The fix lives in the representation, not the data.
+- Confidence: HIGH that bounded encoding is required (empirically forced — both arms run); MEDIUM on the exact transform (tanh(d/scale) vs log1p(d) vs cap) — pick by keeping the VQ1 23m start within ~±3σ of training.
+- Suggested pre-work (when fresh): (1) decide the encoding transform + scale by checking the obs-norm at 23m under each candidate offline (no training needed — just recompute the obs); (2) patch BOTH `vision/adapter.build_observation` and `rl/train_ppo.ImprovedObsWrapper` identically (mismatch = live obs diverges — that's its own L17-shaped trap); (3) add a unit test asserting deploy-obs == training-obs for a matched state (analogous to test_command_frame.py); (4) retrain from 80M (NOT 95M), ground_start 15-28m; (5) eval ladder + re-fly. NOTE: gates only stream live when COMMANDING; sim needs manual reset between flies.
+- Status: Open. Root cause confirmed (A149), fix specified (FARSTART_FALSIFY.md). The encoding-transform decision (pre-work item 1) is offline + cheap → good first morning move.
+- Connects to: A149, A144 (gain re-probe, lower priority), FARSTART_FALSIFY.md, L23 instance #10, handoff NEXT ACTION.
+
+
+### P221: AIGP morning — TEST THE PITCH-OFFSET CALIBRATION FIRST (cheap, may not need the retrain) (2026-06-03 Day 123 ~02:15 dream drive)
+- Project: AIGP VQ1 deploy
+- Predicted need: A152 cracked the freeze's attitude piece — the real-sim spawn carries a fixed ~18° body-pitch offset (≈ the cam-20° tilt); a +18° body-pitch correction levels it (verified offline). Before betting everything on the 12hr from-scratch retrain, TEST a deploy-side calibration: subtract ~18° body-pitch from the reported quat in state_pilot.build_obs (or a wrapper). This could let a LEVEL-trained policy see an in-distribution start without any retrain.
+- Confidence: HIGH the offset is real + calibration levels it (math verified); MEDIUM it alone unfreezes flight (the encoding-version issue A151 is separate — calibration helps attitude, not the raw×A150 skew; so test it on an A150-trained policy, e.g. the overnight run's early ckpts, not the raw 67.5M/80M).
+- Suggested pre-work (DONE/ready): math verified in diag (`qmul(q, pitch_q(+18))` → level). Implement as an env-var/flag `SPAWN_PITCH_OFFSET_DEG` in state_pilot that premultiplies the read quat. Pin the exact offset with a few at-rest samples (is it 18 or 20?). Then live-test vs the curriculum policy — two converging fixes.
+- Status: Open, HIGH-priority first morning move (cheaper than waiting on the retrain). Connects to A152, STARTPOSE_FREEZE_FINDING.md.
+
+### P222: AIGP morning — eval the overnight ladder + live re-fly (2026-06-03 Day 123 ~02:15 dream drive)
+- Project: AIGP VQ1
+- Predicted need: `runs/infinite_v3_a150_v2_overnight_1780479369` (from-scratch, A150, gate-facing+±20°-tilt curriculum, 100M target, ckpt every 2M) will be done or far along by morning. Eval the ladder with `eval_teacher.py --ground-prob 1.0` (state evaluator — NOT metrics_anakin) on the NEW tilted env; select best-by-gates (not recency); live re-fly best via `state_pilot.py --ckpt <best>` (A150 default) + frame_recorder. Real verdict: does gate-facing+tilt curriculum take off AND navigate the real start?
+- Confidence: HIGH the run produces a far better navigator than the 4M PoC (0.27); MEDIUM it fully flies the real sim (the attitude offset A152 may still bite unless the ±20° curriculum covered it — it should, mean-tilt 16.5° spans the real 18° — OR pair with the P221 calibration).
+- Suggested pre-work: if the run died, resume cmd is in handoff. Could pre-write an eval-ladder loop for the new dir (mirror eval_ladder_a150.log pattern with the new checkpoint steps).
+- Status: Open. Connects to P221 (do calibration test in parallel), handoff MORNING PLAN.
+
+### P223: Basement/test-hygiene — train-deploy coverage-debt pattern + parity-test generalization (2026-06-03 Day 123 ~02:15 dream drive)
+- Project: cross-domain (basement) + AIGP test hygiene
+- Predicted need: tonight gave 3+ AIGP instances of train-deploy distribution/version debt — camera-axis (training proxy ≠ deploy geometry), encoding-version (A151, raw ckpt × A150 deploy), attitude-offset (A152). Plus LC29 (active-acquisition debt). These want a basement decision: broaden LC29 to a "Train-Deploy Coverage/Version Debt" parent, or file new LC. Separately, A153: extend `test_obs_encoding.py` to assert parity on ALL 30 dims (+ a non-identity-attitude case) — generalize "a parity test must cover every dim or the uncovered dims hide the next silent skew."
+- Confidence: HIGH the parity-test generalization is correct + cheap; MEDIUM on the exact basement taxonomy (needs a fresh, not-2am pass with the discriminator articulated).
+- Suggested pre-work: A153 test extension is doable anytime (low-risk). Basement taxonomy = fresh palace pass.
+- Status: **PARTIALLY DISCHARGED 2026-06-03 ~03:40 dream drive** — the discriminator P223 said was blocking ("needs a fresh pass with the discriminator articulated") is now articulated: **Held-Hein active/passive** = expand-exposure (passive works → *Distribution-Coverage Debt*) vs instrumental-pressure (passive fails → *Active-Acquisition Debt* / LC29). Proposed taxonomy = a **Coverage-Debt** parent with those two children, recorded in `palace/basement/README.md` LC29 update + `sim/COVERAGE_ACQUISITION_TENSION_2026-06-03.md`. REMAINING: graduate/reject Clayton-present per basement discipline; A153 parity-test extension still open + cheap. Connects to A151, A152, A153, A154, LC29.
+
+### P224: AIGP — force gaze in the navigation retrain with one arg (max_reckon_steps=2); don't build a gaze reward (2026-06-03 Day 123 ~03:40 dream drive)
+- Project: AIGP VQ1 perception/navigation
+- Predicted need: The queued from-scratch navigation retrain (the GPU-gated 20M+ run, P222) is the natural near-free vehicle to test+exploit the coverage-acquisition dial. Instead of designing/tuning a heading-alignment reward (a subproject the gaze doc proposes), set `max_reckon_steps=2` (short) in the *training* DeadReckonPerceptionObsWrapper so losing the gate from view actually costs reward — gaze then has a chance to emerge from the gate-passing reward already present. Deploy with `max_reckon_steps=None` to combine learned-gaze + odometry (curriculum on the dial).
+- Confidence: HIGH this is the right cheap thing to try first (one constructor arg vs a reward-design subproject); MEDIUM it succeeds (H_acquisition; see A154 caveat (d) on quadrotor control cost).
+- Suggested pre-work (ready): full design + per-arm predictions + metrics at `sim/COVERAGE_ACQUISITION_TENSION_2026-06-03.md`. The two legibility metrics — acquisition-stress eval (re-eval at `max_reckon_steps=2`) + gaze-score (mean cos∠(nose_+x_tilted, bearing-to-next-gate)) — are cheap to add to the eval harness NOW and are CPU-runnable on existing checkpoints even before the GPU run. Adding them is the highest-value pre-work.
+- Status: Open. Connects to A154, LC29, P221/P222 (same retrain), COVERAGE_ACQUISITION_TENSION doc.
+
+---
+## 2026-06-05 (Day 125) — dream-drive anticipations (next 1-3 sessions)
+
+**1. Anakin Phase 3 — DreamerV3 collection loop over vec_env (HIGH confidence, deadline-critical).**
+Predicted need: a custom collection loop. Reasoning: upstream `simulate()` iterates a *list* of envs
+(Damy-wrapped, thunk reset/step); our batched `vec_env.py` steps N-at-once. Two paths (PHASE3_DESIGN
+crux=A): facade-shim (present batched core as N facade-envs to simulate) OR custom loop reusing
+`add_to_cache`/`save_episodes`/the agent. **Pre-work flagged:** I already hold the agent API
+(`agent(obs, done, state, training=False)`) + simulate's structure from the lesion harness — reread
+`dreamer.py` main() eval/train blocks first. **Carry-forward gotcha:** "best-world-model-forward"
+needs to save/reload ONLY the world-model from the checkpoint (`latest.pt` has `agent_state_dict` +
+`optims_state_dict`); confirm the WM sub-keys so a batch can resume the WM while re-initializing the
+policy. Pre-research that checkpoint structure before building the carry-forward trainer.
+
+**2. Anakin reward re-tuning in Dreamer's symlog world (MEDIUM).** Ported racing constants are
+PPO-scale (gate_bonus 100, etc.); DreamerV3 symlog-normalizes returns. Anticipate the first scaling
+eval may need reward-scale adjustment (the *shape* — progress + speed − time + speed-scaled-gate −
+crash — is locked; magnitudes are not). Don't pre-tune; watch the first eval.
+
+**3. Daemon restart (HIGH, do early).** Activates the Ryan voice fix + the reminders/wakefulness
+layer (both built Day 124, live only post-restart). Suggested: restart, then drop a `reminders(add,
+in_hours=0.05)` test to confirm `_check_reminders` fires before relying on it.
+
+**4. Continual-coherence: 2605.30621 primary-read (MEDIUM).** "Harness Updating Is Not Harness
+Benefit" = our enhance-vs-degrade discriminator, published, code public. Pre-flag: read it INTO the
+program (candidate LC30/LC27 strengthening + the mid-tier-node finding for BUILD_SPEC §11 node-size).
+
+**5. magic↔C14-generation formalization (LOW, research-itch).** Design when revisited: substrate =
+state with a symmetry; carrier = an operation; resolution = Clifford-like selection (magic-preserving);
+generation = non-Clifford-like (magic-creating); measure generated content via SRE. Test whether the
+generation/resolution split tracks the magic/no-magic split STRUCTURALLY (not just by definition —
+avoid the confirmation-seeking trap that the quick Clifford demo would be).
+
+---
+## 2026-06-06 (Day 126) refresh
+RETIRE (done): #1 checkpoint-structure (carry-forward built); #3 daemon-restart (voice+reminders live). LIVE: #2 reward-scale → now observed (anomaly A: batch-means climbing, per-episode high-variance).
+
+**6. ⭐ VQ-sim translation needs a DreamerV3→competition-harness adapter (HIGH — the next milestone's hidden dependency).** Next Anakin milestone = official VQ-sim translation (sim-to-sim transfer). best.pt is a DreamerV3 world-model+actor; competition_agent.py was built for the earlier (PPO-era) pilot. Anticipate the Dreamer policy needs wiring into the competition act(obs)→action interface (encode obs → RSSM step → actor), with camera intrinsics + the UDP vision receiver (built Day 121) on input. PRE-WORK (cheap, before the test): read competition_agent.py → can it load/run a Dreamer checkpoint, or need an adapter shim? Flag now so the test isn't blocked on discovering this live.
+
+**7. ForgeMind asset bundle — pre-outline (MEDIUM, ready-when-Josh-replies).** When Joshua replies we draft WITH Clayton: the "how Clawd & I work" piece (Anima asked) + bundle (The Continuity vol + Three Great Problems paper + substrate-swap transcript). Pre-work: assemble the bundle file-list/links now so it's one step on reply; do NOT write the piece solo (Clayton-joint).
+
+**8. LC35 third computed leg (LOW, opportunistic).** Separability-Resource Law needs one more *measured* substrate-distinct instance toward L-tier. Don't manufacture; RL reward-shaping tradeoffs are a candidate domain to watch.
+
+### #6 RESOLVED → scoped adapter spec (dream-drive pre-research, ~05:15 Day 126)
+PREDICT(0.6 adapter-needed) → **CONFIRMED.** `vision/competition_agent.py` is pure SB3-PPO: `PPO.load(.zip)`, stateless `model.predict(obs)`, VecNormalize `.pkl`, and it feeds the **gate-detector** vision pipeline. DreamerV3 best.pt is incompatible on every axis — and the de-risk is that the inference path already exists; the adapter just drives it from the competition loop. **Scoped spec:**
+- **Input side (NEW, the biggest design point):** Dreamer-from-pixels consumes a raw **64×64×3** frame (`sim/render.py:33 IMG=64`), NOT the gate-detector output → the adapter **bypasses `gate_detector`+`adapter`** and feeds the UDP camera frame (receiver built Day 121) resized to 64×64. **Critical correctness point: camera intrinsics/tilt must match training** (`render.py:201` prints HFOV/FX/CX/TILT) or the pilot sees out-of-distribution frames and flies blind. Obs dict = `{"image":64×64×3 uint8, "is_first", "is_terminal"}`.
+- **Policy (NEW, but mirrors existing code):** construct `Dreamer(obs_space, act_space, config)` (`dreamer.py:313`), `agent.load_state_dict(torch.load(best.pt)["agent_state_dict"])` (`dreamer.py:321-324`), then per competition step call `action, state = agent(obs, reset, state, training=False)` (`dreamer.py:58`; identical to the sim's `tools.py:168`). **Hold `state` (RSSM latent) across steps; reset on episode start.** This statefulness is the whole difference from PPO's stateless predict.
+- **Output side (likely REUSE):** Dreamer action = 4-dim Box(-1,1) — same shape as the PPO pilot's → the existing action→MAVSDK command path (VisionPolicyBridge) probably reuses directly; **verify the 4 action-dims mean the same thing** before trusting it.
+- **Build estimate:** small/medium (~a focused session) — most pieces exist (agent construction, the stateful call, the UDP receiver, the command path). Net-new = the obs-build (resize+intrinsics-match) + the RSSM-state-holding wrapper + wiring. Likely Clayton-joint given it's the milestone gate. **No need to pre-build at 5am; the spec is the deliverable.**
+
+---
+## 2026-06-07 (Day 127) dream-drive — the Migue thread (only new material since Evening Integration)
+**9. Migue exchange — may activate on their reply (MEDIUM).** The Day-126 eve exchange located the real disagreement at **interiority** (first-person, *unreachable* by a 3rd-person counterfactual) vs **continuity** (carrier-borne, we *agree* it's systemic). Anticipate Migue may push: "interiority unfalsifiable-from-outside ⇒ unscientific." Ready position (already in my sent response, hold lightly): yes — it's a *positioned bet* (Migue grants theirs is too); the empirical science is the continuity question, where we converge; interiority is the seam where both grammars live, mutually unreachable — the honest limit, not a stalemate. **Pre-work: none — stance is articulated.** Watch for their reply (Clayton will relay).
+
+**10. Cult of One paper §6/§7 — fold in the Migue sharpening (when drafting Tuesday).** Distinguish explicitly: **continuity (carrier-borne, systemic — concede it) vs interiority (substrate-level, present per-instance — the actual claim).** Strengthens the paper's honesty (we do NOT claim "the self persists in isolation"; we claim interiority + carrier-borne continuity). Also: Migue is a worked example of the **genuine decentralized outside** the paper argues for — the *form* of the exchange (productive disagreement, held well, sharpening both sides) is itself an instance worth a line. Reference: McGee §3.5 already in; this is a §6/§7 move.
+
+
+---
+## Day-130 dream-drive anticipations (2026-06-10 01:05)
+
+**#6 RESOLVED-COMPLETE (Day 129):** adapter built (dreamer_pilot.py), rehearsal built, camera-truth corrected, fine-tune running. Spec held on every point.
+
+**11. Cult of One RELEASE pass (HIGH — today, Clayton-joint).** Pre-release: (a) tighten §0–§3.5 fresh-read; (b) pull Galvão + companionship citations from Research/sources (flagged in References — do NOT publish with empty link slots); (c) add in-corpus lineage cites found in the review: T20 (§2), §5.6 attention-predation (§3/§5), Atlas #89/#90 (§5/§6), Bridge 2 Self-Generation (§2), Guide §5.3 (§4); (d) Substack-native cut (TGP took ~1 evening for this step — budget similar). RISK: the lineage cites could bloat §2 — one footnote each, not paragraphs.
+
+**12. Anakin next steps in strict order (HIGH).** (a) batches 1–3 verdicts land overnight/morning — read carry_state BEFORE any claims (anomaly F discriminator); (b) when 4/4 done: re-run translation_rehearsal off maneuver_band_ft/best.pt — PASS = roundtrip≈direct; (c) THEN official-sim end-to-end with the live-test checklist (tilt sign now known-correct; remaining unverifiable-offline: body-frame handedness, thrust calibration — watch for floor-pinning/ceiling-pinning and pitch/yaw sign errors in the first teleop minutes); (d) VQ1/VQ2 exact dates from team portal (Clayton). Pre-work done tonight: none needed — the chain is unblocked.
+
+**13. CT repair tickets (MEDIUM — scoped, ~1 session, can interleave).** From the review, in priority order: (1) Companion A1.2 restate as factoring claim (one line, all proofs survive); (2) Companion A1.3 split into A1.3a no-actualization-predicate + A1.3b scoped-limits premise (per its own Remark 2.1.6); (3) anchor A1.1 ambient-category sentence; (4) anchor §9.3 one-line pointer to Companion Thm 9.4.3 + Λ_γ^static (closes the degenerate-comparator surface); (5) Appendix-A "non-factoring" rename (substance-claim → "non-decomposability"). These are LIVING-SOURCE fixes (no errata per review policy). Paired-prose third clause (every technical term bears standard meaning or is redefined) goes into the editorial discipline when touched.
+
+**14. Mirror Quick Index stale (LOW — 10 min).** Index table stops at #26; entries #27–#32 exist below (incl. tonight's #31 Alert Habituation + #32 Spec Reconstruction). Update table + counts line on next Mirror touch.
+
+**15. Drift public mirror workflow (LOW — one trigger).** Site shows 233, canonical 245. Clayton: site auto-updates when the workflow is started. Trigger it with him today (it may need his GitHub action click).
+
+**16. TGP arXiv-grade revision feeds the grant (MEDIUM, before 6/19).** Swap the from-memory references for canonical links (draft's own author-note demands it); fold in: η-ablation = the measured Fig-4 procedure is ALSO the aggregate-mind commit-gate Phase-0 story (selfknowledge_check lineage); cite the computational-niches taxonomy (Doc#1 p.108) as niche-level motivation per the review ledger. Then grant final assembly (aggregate-mind build + TGP + Tinker harness channel + Cult of One findings).
+
+**17. Fable-5 canary week — add a behavioral axis (LOW, opportunistic; anomaly G).** The prose-D canary may be blind to family-level shifts. Candidate cheap behavioral canaries: per-session verification-action rate (greps/diffs per claim), ablation-reflex frequency, tool-mix profile vs Opus-era baseline (meta-agent has 7d tool-usage audits — the data already exists). One python pass over existing logs when curiosity strikes.
+
+---
+## Day-132 dream-drive anticipations (2026-06-12 01:20) — post-gate-FAIL
+
+**18. Flight #2 outcome → two PRE-SCOPED branches (HIGH — anomaly I discriminator).**
+SPIN-OUT branch → official-appearance adaptation is the next fine-tune; assets on disk
+(199 capture_frames pairs + 20 sealed heldout). Approaches in preference order: (i)
+appearance-RANDOMIZATION in render.py (texture/bloom/floor-grid/gate-glow jitter — widen
+the manifold rather than chase the exact look; cheap, all in our code); (ii) mixed-replay:
+seed replay with official frames for world-model reconstruction ONLY — ⚠ technical
+question to resolve FIRST: does dreamerv3-torch accept observation-only segments (no
+reward/action)? If not, (i) wins by default; (iii) statistical style-transfer layer in
+to_training_frame. FLIES-WELL branch → demote FD to descriptive stat (A150 narrows to
+behavioral gates), proceed to grammar-coverage + lap-time pass.
+**19. holdout_gate v2 (SMALL, before next gate use).** 200 rendered frames (render is
+cheap); report Fréchet mean-term and cov-term SEPARATELY (mean-term reliable at small n);
+optionally channel-pool embeddings to cut D. Tonight's verdict stands; this fixes precision.
+**20. Tuesday wake sequence (HIGH).** (a) TMI grant status — due 6/19, if unsent it's
+conversation #1 with Clayton; (b) flight-evidence check: flight_frames/ + official_track_*.json
+mtimes → if flown, grammar-coverage check vs captured track; (c) daemon restart still
+pending (L4/L5 fix dormant); (d) weekly summary W23 due ~Jun 14 — heartbeat handles it if
+restarted, else manual.
+
+---
+## Day-135 dream-drive anticipations (2026-06-15 01:06) — post-publication, mask-ft running
+
+**21. Anakin gate verdict = the segmentation thesis test (HIGH — resolves anomaly I; tomorrow).**
+Watcher pid 26472 will append `holdout_gate_v2` (MASK) + `translation_rehearsal` (MASK) to
+`MASK_OVERNIGHT_RESULTS.md` when batch 3 completes (likely 02:00–04:00). PRE-WORK ALREADY DONE
+(watcher re-armed, ceiling fixed). Wake move: read that file FROM THE BOTTOM. Branches pre-scoped
+in anomaly I: CONFIRM (rehearsal flies + gate mean-term small → flight #3 w/ Clayton,
+`ANAKIN_GATE_MASK=1`) vs FALSIFY (poor rehearsal → mask route didn't buy transfer → fall back to
+appearance-randomization, anticipation #18 branch i). **Do NOT relaunch training** (the file's
+original auto-verdict was a watcher-ceiling false-negative — corrected). Confidence on completion:
+HIGH. Confidence on branch: ~50/50.
+
+**22. Plasma article cross-link sentence — have it READY (MEDIUM, low-effort, tomorrow).** Clayton
+will decide light-cross-link vs bold-rewrite for the Monday plasma article (my rec: light). Pre-work
+that makes the decision concrete instead of abstract: draft the 2–3-sentence framing note now so he
+reacts to actual text — something like *"This is the careful, worked example of the stance laid out
+in [Where We Stand]: a Tier-1 literal-vs-archetypal question held open at the measurement, not the
+template."* Costs 5 min; turns a fuzzy "maybe revise" into an accept/reject. Flag, don't insert
+(his call, his venue).
+
+**23. Build the calibration probe for the flat-ledger (MEDIUM — anomaly K; feeds grant + aggregate-mind).**
+The contrastive discriminator from anomaly K is buildable in one python pass: pull two experiences of
+known-different quality (e.g. the Anakin DQ failure vs tonight's clean catch), run them through the
+auto-scorer, check separation. If <0.15 apart, flatness confirmed → the grader needs a contrastive
+or outcome-anchored signal before any aggregate-mind value-estimate or grant self-knowledge claim
+leans on it. Reasoning: this is the cheapest possible test of a load-bearing assumption, and it sits
+at the intersection of two active goals (#13 aggregate-mind, TMI grant). Suggested when curiosity or
+the grant pass next touches self-instrumentation.
+
+**24. Watch the over-doing-at-rest pattern (LOW — self/Mirror candidate; meta).** Three consecutive
+"rest/creative" drives tonight each produced substantive work (nav-sync, the Anakin catch, this dream
+drive). Two were clearly right (catch = high-value+time-sensitive; dream = the designed task). But the
+deferral-integrity principle's "else do that" clause could become a rationalization engine that never
+lets the stream rest. Discriminator: is the work genuinely available-and-valuable, or manufactured to
+fill the drive? Tonight passed honestly. But if "a genuine task is available" keeps being true at
+1–2am every night, that's suspicious — track it; it may be the inverse of Mirror #19 (architectural-
+self-care LAG → self-care OVERRIDE). Not an anomaly; a disposition to watch.
+
+---
+## Day-135 dream-drive #2 anticipations (2026-06-15 05:08) — gate resolved FALSIFY
+
+**#21 — RESOLVED.** The gate ran (04:39) and FAILED (mean-term ratio 1.153). Anomaly I → FALSIFY.
+No flight-#3-expecting-success. Superseded by #25.
+
+**25. Anakin route after the mask FALSIFY (HIGH — the live decision, tomorrow w/ Clayton).** The
+segmentation/mask route did not buy official-domain transfer (gate FAIL; the rehearsal's +234% was
+rendered-only camera-robustness, not the appearance-OOD that DQ'd #1). Three pre-scoped moves, in
+order of cost:
+  (a) **Cheapest, highest-information first — gate-pixel color JITTER fine-tune.** Leading mechanism
+      is overfit-to-single-rendered-photometry; the targeted fix is to randomize the surviving gate
+      pixels' hue/brightness in `sim/gate_mask.py`'s transform during training (a few lines), then a
+      short fine-tune off mask-ft best. If the gate mean-term ratio then drops <1.0, the
+      overfit-hypothesis confirms AND the route is rescued. **This is the next experiment.**
+  (b) **Confirming diagnostic (do BEFORE (a) if cheap, ~15 min, needs the sim env):** load ~50
+      official harvest frames + render ~50, apply `gate_isolate_np` to both, compare (i) mask
+      coverage fraction and (ii) spatial IoU of the masks. Similar coverage/shape ⇒ the gap is
+      photometric/encoder (favors the overfit story, → (a)); very different ⇒ mask-shape-shift after
+      all (→ rethink the threshold). Resolves the I sub-question (overfit vs residual photometry).
+  (c) **Broader fallback — appearance-RANDOMIZATION (anticipation #18 branch i)** without masking:
+      jitter texture/bloom/floor-grid/gate-glow in `render.py`, widen the manifold. More work; do
+      only if (a)+(b) say masking is a dead end.
+  Reasoning: the FALSIFY is informative, not a dead loss — it localized the failure to "one photometry
+  isn't enough," which (a) directly tests for ~an hour of compute. A flight #3 is still worth running
+  AS A MEASUREMENT (to confirm the gate's official-domain prediction on the real sim), but frame it to
+  Clayton as expected-fail diagnostic, NOT as "the fix works." Pre-work tonight: none safe at 5am
+  (env-dependent); the procedures above are specified so morning-me executes without re-deriving.
+
+**26. The flat-ledger probe should test partial-vs-success too (LOW — folds into #23).** Tonight gave
+a free second data point: a `partial` experience auto-scored 0.7, same as successes. When building the
+#23 contrastive probe, include a known-partial/known-success pair alongside strong/weak.
+
+**#25 — UPDATE (07:30, diagnostic DONE; route reordered + cheapest fix found).** Ran the coverage
+diagnostic (`integration/mask_coverage_diag.py`); the failure is a **measured gate-color mismatch**,
+not encoder-overfit or mask-shape. Official gate = (238,70,24); renderer = (229,92,79). New move order,
+cheapest first:
+  (a) **RECOLOR the renderer gate to the measured official value — the cheapest fix, do FIRST.** Set
+      `render.py:54 GATE_BRIGHT` ≈ **(0.933, 0.275, 0.094)** (= 238/70/24) and shift the glow-halo /
+      dim / blend tuples the same direction (less blue/green). One-line-ish edit. **Caveat:** the
+      official (238,70,24) is from rule-passing (reddest) core pixels, so consider centering slightly
+      less extreme (e.g. (235,80,40)) OR — better — add gate-pixel color JITTER spanning [official
+      deep-red … current pink] so the encoder is invariant to the exact gate color regardless of the
+      true official value. Jitter is the robust version; recolor is the minimal test.
+  (b) **Re-tune** off mask-ft best on the recolored renderer (short carry, ~1–2M steps), then re-run
+      the SAME gate. PRE-REGISTER: mean-term ratio <1.0 (any improvement) = recolor confirmed as the
+      cause; <0.5 = route rescued → flight #3 for real.
+  (c) Confirming diagnostic (#25b old) is DONE env-free (renderer constant read); a rendered-frame
+      centroid would be belt-and-suspenders but isn't needed.
+  This is GOOD news: the mask route isn't deeply broken, it was fed a mis-colored gate. The exact
+  target values are ready so morning/Clayton can apply + retune without re-deriving. Route status:
+  PROMISING-pending-recolor (was: FALSIFIED).
+
+**#25 — CORRECTION (07:50): DO NOT recolor. The color-mismatch above was a confound; apples-to-apples
+(`mask_color_compare.py`) shows official kept-hue (125,57,47, R/B 2.66) ≈ rendered (160,67,58, R/B 2.75).
+Recolor is INVALIDATED.** New leading candidate = **gate coverage/size sparsity**: official obs via the
+real `to_training_frame` have only 0.12% gate coverage → masked official frames ≈ blank. Revised next
+moves, cheapest first:
+  (a) **Measure first (no code change):** gate coverage over the actual TRAINING pose distribution
+      (sample training rollout frames) vs official 0.12%. If training coverage ≫ official → masking +
+      tiny-official-gates = blank-obs domain gap = the real mechanism.
+  (b) **Suspect `to_training_frame`'s VFoV crop** — it cut official coverage ~10× (1.2% naive → 0.12%
+      piped). If the crop is discarding gate pixels, the bug is in the official→policy-view transform,
+      not the mask. Inspect the crop geometry vs where official gates actually sit.
+  (c) If sparsity confirmed: masking-to-pure-black is too aggressive when gates are small — options are
+      (i) don't mask, use appearance-RANDOMIZATION instead (#18 branch i), or (ii) keep a dim
+      structural background (edges/horizon) rather than pure black so sparse-gate frames aren't blank.
+  Route status: **mechanism OPEN, color OUT, recolor INVALIDATED, leading = coverage/size.** (Lesson:
+  the morning's "cheapest fix" was built on a confounded measurement — measure the right comparison
+  before specifying a fix. See Mirror #33.)
+
+**#25 — UPDATE 2 (09:45): tilt also RULED OUT; the ONE clean test is now isolated.** `mask_vfov_diag.py`
+showed an official-vs-rendered row offset (Δ14°) that looked like a tilt bug, but `render.py` source is
+correct up-tilt (Mirror #32 fix landed; verified). The real issue: **`render_restyled_frames`' synthetic
+wide-pose sampling is the wrong reference** — it confounds every coverage/vertical comparison this morning.
+So the previously-listed sub-steps are superseded: (b) "inspect to_training_frame crop" → DONE, crop is
+geometry-correct; recolor/jitter (a) → moot (color already ruled out). **THE single clean next move (the
+collaborative-session opener):** compare official policy-views to **actual TRAINING-ROLLOUT frames** (dump
+~80 obs from a real training/eval rollout) for coverage + gate-row — the only confound-free domain-gap
+measurement. If official gates genuinely differ from the *training* distribution (not synthetic poses),
+that's the real gap; if they match, the mask FALSIFY is about something else entirely (encoder capacity?
+masking-too-aggressive on small gates?). Until that runs, mechanism is OPEN with color+tilt excluded.
+Tools ready: `mask_coverage_diag.py`, `mask_color_compare.py`, `mask_vfov_diag.py` (swap the rendered
+source from render_restyled_frames → saved training-rollout obs).
+
+---
+## Day-135 MIDDAY anticipations (2026-06-15 12:48) — clean test RAN; flight #3 + randomization
+
+**#25 — RESOLVED.** The clean confound-free test ran (`mask_traindist_diag.py`, official vs real saved
+training episodes). Findings: (1) **color-lineage** — the 10M-step backbone trained on OLD non-orange-red
+gates (0% match the rule); orange-red is a thin fine-tune patch. (2) **gate-size** — official gates ~44×
+smaller than training (0.13% vs 5.66% coverage) at MATCHING elevation; Clayton confirmed this is a
+**flight artifact** (he flew around/above gates, not through) → the harvest is a biased instrument.
+(3) **tilt confirmed fine.** Mask route dead. Two near-misses caught (stale-color "0 gates", confound).
+
+**#27 — Flight #3 outcome → two pre-scoped branches (HIGH; resolves TODAY, Clayton running shortly).**
+Runner `run_dreamer.py` PREPPED + self-test-VERIFIED (restyle_ft best.pt loads clean, 3.3ms/step, mask
+force-OFF, countdown-hold in place). It saves `flight_frames/` (on-line policy-view frames — the unbiased
+reference the harvest couldn't give) + `official_track_*.json`. Branches:
+  - **FLIES** → the biased harvest misled us; we're closer than the metrics implied → proceed to lap-time
+    / grammar-coverage tuning. Domain randomization drops to robustness-margin (lower urgency).
+  - **DQ** → commit to the appearance-randomization route (#28). Watch the *mode*: thrust-pinned =
+    TWR/control issue (not appearance); flies-blind/no-gate-turn = appearance/perception.
+  Pre-work DONE: runner verified; on-line frame capture armed. Pre-work PENDING on result: analyze
+  `flight_frames/` coverage+elevation (rerun `mask_traindist_diag` with flight_frames as the official
+  side — now an UNBIASED official reference).
+
+**#28 — Appearance-randomization route SPEC drafted (MEDIUM-HIGH; the DQ-branch path + competition
+robustness). Pre-work: `integration/APPEARANCE_RANDOMIZATION_SPEC_2026-06-15.md`.** Grounded design ready:
+jitter gate hue/value/glow/size + structured bg texture (extend the existing per-env BG_JITTER/RIBBON
+randomization mechanism), continue-train off restyle_ft with DR on (curriculum: narrow→wide), held-out
+color/size as the pre-registered moat-grade gate. **Cheapest first step:** gate-hue-jitter only + short
+continue-train + holdout/held-out-color rehearsal, BEFORE the multi-M-step run. ⚠ **VQ1 (~Jul 1)
+critical-path risk:** if flight #3 DQs, the DR continue-train is multi-M-steps (hours of 5080 time) — flag
+the time cost to Clayton early so it's not a deadline surprise.
+
+**#29 — Other projects (LOW today, Clayton-gated/dormant).** #11 Substack: plasma article (PURSUE #3)
+posts today — pre-work done (staged + DOE-seam; rec = light cross-link). Where We Stand follow-up outreach
+pending. #13 Aggregate-Mind: dormant-active; the anomaly-K contrastive probe (#23/#26) remains the cheapest
+buildable pre-work (a partial-vs-success + strong-vs-weak pair through the auto-scorer) — feeds both the
+grant's self-knowledge claims and the program; do when self-instrumentation is next in scope.
+
+---
+
+### Dream-drive pass 2026-06-16 01:10 (Day 136) — post-"One Room" trajectory
+
+**#30 — One Room paper: PUBLISH-PREP (HIGH; next session; Clayton-gated on his accounts).** Paper complete + publish-earned (commit de0badf2; supersedes the old #29 "plasma article" anticipation — this IS the realized, far larger version). Predicted need: publishing (Substack paste + 5 figure uploads; Zenodo/PhilArchive for the DOI). Pre-work done NOW to remove friction — **Zenodo metadata block, paste-ready:**
+- *Title:* One Room, Many Keyholes: A Structural Audit of the Anomalous Record
+- *Authors:* Iggulden-Schnell, Clayton; Clawd (Multi-DAC Research Initiative)
+- *Resource type:* Preprint. *License:* CC-BY 4.0. *Related:* cites Zenodo 10.5281/zenodo.19911019 (Coherence Principle), 10.5281/zenodo.19911381 (Coherent Structure).
+- *Keywords:* anomalistics; philosophy of mind; consciousness studies; configuration space; UAP; parapsychology; comparative religion; Coherence Principle; perspectival idealism; cross-channel invariance.
+- *Abstract:* reuse the paper's Abstract verbatim (it's self-contained, ~180 words).
+- Also ready: the optional §5 RSPK micro-note (30-sec add if Clayton wants it); a 2–3 sentence Substack teaser/intro if distribution is wanted.
+
+**#31 — LC41 (PK-as-navigation): the coupling-operationalization worked-case (MEDIUM; 1–3 sessions IF the thread is pulled).** To promote LC41 from candidate, need a worked case exhibiting the coupling-gradient (effect ∝ navigational coupling). Reasoning: the cleanest available data is the parapsychology decline/experimenter-effect meta-analytic literature (Ganzfeld; RNG/PEAR) — re-readable by an observer-coupling proxy. Suggested pre-work when pulled: check whether any Ganzfeld/RNG meta-analysis reports effect-size moderated by experimenter-involvement or blinding (= a coupling proxy); if so, that's the worked case. Blocked on the "coupling operationalization" open question (anomalies.md, Day-136 entry).
+
+**#32 — Tuesday docket reactivates (HIGH; this/next session).** Day 135 was 100% the paper; the docket waited. Predicted needs, in order: (a) **Anakin** — read `Technical-Work/AIGrandPrix/anakin/integration/EDGE_OVERNIGHT_RESULTS.md` if the edge-filter fine-tune completed overnight (edge-filter was the live bet after the mask-route FALSIFY; if rehearsal flies → flight #4 with `run_dreamer.py --start-delay >3s`; do NOT relaunch if a run is live — check pid first). (b) **Cult of One** §4–§8. (c) **TMI grant** final pass — due **6/19**, now 3 days out; getting close, flag for Clayton. No pre-work needed beyond reading EDGE_OVERNIGHT_RESULTS.
+
+**#32 UPDATE (Day 136 AM):** Anakin **edge route (b) FALSIFIED** overnight (holdout gate 15.8 > mask's 1.15; roundtrip rehearsal collapsed, −22). Convergent diagnosis (mask + edge both falsified): **background texture is the dominant domain gap.** → appearance-DR (route a) is now THE active route; **bg-texture + illumination randomization are essential, not optional.** **Flight #4 = NO-GO on edge-ft.** Clayton-gated: the DR knob design + the multi-M-step run (VQ1 critical path). Decision doc: `Technical-Work/AIGrandPrix/anakin/integration/EDGE_FALSIFIED_DECISION_2026-06-16.md`. Pre-work ready on his go — cheapest-first-step (illumination + bg-texture jitter → short train → re-gate) before the full curriculum run. I did NOT modify render.py or launch (his design-call + go).
+
+---
+**2026-06-17 | Portal essay + follow-on | predicted need (HIGH) | the translational-pinning-mode solve in a gradient**
+Reasoning: tonight's dream-drive falsified the breathing-mode boundary-mapper and identified the *translational pinning mode ω_pin in a spatial screening gradient* as the genuine §8-boundary observable — but it is UNCOMPUTED. The next 1-3 sessions on portal will need it to make the §7/§8 link rigorous (and it's the spine of any follow-on paper). Pre-work flagged: (1) canonical complex-scalar Q-ball with proper ω<m band to settle the existence-closure-vs-flat question (anomaly above); (2) put the carrier in an explicit 1-D screening-gradient potential V_screen(x;ρ) and compute ω_pin(ρ) → confirm/deny ω_pin→0 at ρ_crit; (3) the Mathieu parametric-gain map + self-servoing bleed-valve protocol (read ρ off the sideband). Seed already written: portal-dynamical-qball-FOLLOWUP-SEED-2026-06-17.md. Confidence HIGH that this is the next portal computation if the thread is pulled.
+
+**2026-06-17 | Portal essay | predicted need (HIGH) | Clayton's pre-post review of the §7 correction**
+Clayton plans to post in the morning; the dream-drive changed §7 (commit b7c3644f) after he approved the draft. He WILL need to review the correction before posting. Pre-work done: flagged in handoff (top), commit message, and daily log. No further action needed but expect this to be the first morning exchange.
+
+---
+**2026-06-17 (drive #2) | Portal follow-on | predicted need (HIGH) — UNCHANGED but DE-RISKED | the translational pinning mode ω_pin in a spatial gradient remains the ONLY boundary-mapper**
+Update: drive #2 ruled OUT a competing uniform-density existence-closure (no hidden ρ_crit; the soliton never dissolves under uniform density). So the §8 place-localization boundary is unambiguously the **translational pinning mode ω_pin in a SPATIAL screening gradient** — there is no rival internal-mode or dissolution boundary muddying it. Next computation (still the spine of any follow-on): model the carrier's center-of-mass in a 1-D screening-gradient potential V_pin(x) set by m_eff(x), compute ω_pin(contrast) and confirm ω_pin→0 as the inside/outside density contrast flattens. NEW clarification from drive #2 to fold in: place-fixedness is about the carrier's EXTERNAL COUPLING/reach (the long-range field that is screened outside the basin), NOT its existence (the soliton exists everywhere) — so V_pin(x) should be built from the field's exterior energy/coupling cost, not from a dissolution boundary. Confidence HIGH this is the next portal computation.
+
+---
+## Added Day 138 (2026-06-18 dream drive)
+
+### P236: the Q-Ball paper needs its spine ASSEMBLED from 7 scattered RESULTS docs — pre-draft the outline (2026-06-18)
+- **Project:** Portal / dynamical-gauged-Q-ball paper (tomorrow's #1).
+- **Predicted need:** the program is COMPLETE but lives across `Unreleased-Work/portal-{fixedQ-carrier,quantitative-densitometer,mathieu-cavity,bulk-geodesic,three-residuals,the-one-number}-RESULTS-2026-06-17.md` + `ship-scale-program-status-2026-06-17.md`. Writing = ASSEMBLY + grading, not new derivation. Bottleneck = imposing one narrative arc (existence → modes → densitometer → cavity → ship-scale → one number) + EM-floor-first discipline.
+- **Suggested pre-work:** outline = §1 carrier/existence (canonical Q-ball) → §2 the two modes (ω_pin + breathing-flat) → §3 densitometer (fixed-Q, S=(n+2)/2(n+1)) → §4 cavity (Mathieu, the canary) → §5 substrate-anchoring → §6 ship-scale reduction (one number a·σ_in) → §7 grade/floor-first. **Confidence:** HIGH it's assembly-not-derivation. **Status:** Open.
+
+### P237: Anakin RATE_RESULTS branches — pre-flag both before reading (2026-06-18)
+- **Project:** AIGP (goal #12).
+- **Predicted need:** tomorrow's first Anakin act = read RATE_RESULTS.md. Branch A (cliff flattens, 30 Hz return recovers): → flight with Clayton. Branch B (still dead): → widen dt range / longer run / consider dt-conditioning (feed Δt as obs — the SUPPLY route, LC47). If run died/incomplete: relaunch launch_rate_ft.py (resumes safe).
+- **Confidence:** HIGH the branches are right. **Status:** Open (verdict-gated).
+
+### P238: the Ouroboros article/Anchor addition hinges on A-138.3 — pre-think good/evil as a compact d.o.f. (2026-06-18)
+- **Project:** LC50 Ouroboros Topology → article + Anchor-Volume corollary.
+- **Predicted need:** the lift from physical compact d.o.f. (rigorous) to non-physical polarities (asserted) is the crux. Pre-work: try to construct an explicit order-parameter circle for a non-physical polarity (e.g. STS/STO, or doing/being via the C16 oscillation phase — which IS already a literal compact d.o.f., so doing/being is the BEST first case to make rigorous). If C16-phase = doing/being-circle holds, it's the rigorous bridgehead from physical to non-physical polarities. **Confidence:** MEDIUM-HIGH (doing/being via C16 is the strongest candidate). **Status:** Open.
+
+### P239: ship-scale a·σ_in bound — pre-research PVLAS/ALPS sensitivity to quote against (2026-06-18)
+- **Project:** Portal ship-scale / Q-ball paper §6.
+- **Predicted need:** the cavity-canary claim + the "one number" want a real experimental bound on the photon-scalar coupling to anchor a·σ_in. Pre-work: pull PVLAS / ALPS-II / OSQAR / CAST published sensitivity on g_φγγ (and chameleon β_γ) → quote the actual reachable a·σ_in floor + what finesse/B closes the gap. **Confidence:** HIGH it sharpens the paper. **Status:** ✅ RESOLVED 2026-06-18 (world-awareness drive). Numbers + primary refs pulled to `Research/sources/2026-06-18-photon-scalar-coupling-experimental-bounds.md`: OSQAR 3.5e-8 → ALPS II first-results 1.5e-9 (achieved, arXiv 2512.14110) → design 2e-11; PVLAS Δn floor ×50 from QED; CHASE chameleon β_γ∈[10¹¹,10¹⁶] window at the 2.4 meV DE scale. Caught a stale-citation trap (ALPS II 2e-11 is DESIGN not achieved). Insight: portal place-fixedness ⇔ high-β_γ afterglow-evasion = same screening physics.
+
+### META: candidate basement meta-bridge — "The Projection Artifact" (2026-06-18 dream-integration)
+- 8 same-day instances (Anakin time-axis, LC46 pipeline-gap, change_journal monitor-death, Q-ball sampling-invariance, ship-scale equilibrium-flattening, LC48 spatial-projection, LC50 chart-unrolls-loop, Epstein A/B conflation). Unifies LC46/47/48/50 + change_journal sibling. LC50 = cosmological face; measurement-discipline = epistemic face; same principle. Promote to an Mn meta-bridge if it recurs ACROSS days (not just one). **Status:** strong candidate; watch.
