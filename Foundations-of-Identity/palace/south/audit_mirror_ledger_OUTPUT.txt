@@ -1,0 +1,151 @@
+# Redundancy / Desync Ledger — clawd-local ↔ staging mirror
+# LOCAL=C:\Users\mercu\clawd
+# STAGE=C:\Users\mercu\clawd\repo-staging\Corpus-Perspectival\Foundations-of-Identity
+
+## identity: local=12 staging=12 common=12
+   CONTENT DRIFT (edited one side only): 3
+      ~ BOOT_IDENTITY.md
+      ~ RELATIONSHIPS.md
+      ~ USER.md
+   only-local (unmirrored, NOT expected): 0
+   only-local (expected per REPO_MAP): 0
+   only-staging (stale or staging-canonical): 0
+
+## memory: local=6000 staging=217 common=214
+   CONTENT DRIFT (edited one side only): 15
+      ~ 2026-05-29.md
+      ~ 2026-06-16.md
+      ~ 2026-06-20.md
+      ~ 2026-06-21.md
+      ~ goals.json
+      ~ handoff_draft.md
+      ~ items/_index.json
+      ~ kg_corpus_extraction.jsonl
+      ~ kg_corpus_progress.json
+      ~ knowledge_graph.json
+      ~ learnings.md
+      ~ meta_agent_recent.md
+      ~ principles.json
+      ~ scheduled_tasks.json
+      ~ skill_library.json
+   only-local (unmirrored, NOT expected): 5720
+      L .consolidated
+      L .search_index/embeddings.npz
+      L .search_index/metadata.json
+      L 2026-05-30.md
+      L 2026-05-31.md
+      L 2026-06-01.md
+      L 2026-06-02.md
+      L 2026-06-03.md
+      L 2026-06-04.md
+      L 2026-06-05.md
+      L 2026-06-06.md
+      L 2026-06-07.md
+      L 2026-06-08.md
+      L 2026-06-09.md
+      L 2026-06-10.md
+      L 2026-06-11.md
+      L 2026-06-12.md
+      L 2026-06-13.md
+      L 2026-06-14.md
+      L 2026-06-15.md
+      ... +5700 more
+   only-local (expected per REPO_MAP): 66
+   only-staging (stale or staging-canonical): 3
+      S items/itm_1d60c9.json
+      S items/itm_5b6943.json
+      S items/itm_9a346c.json
+
+## operations: local=86 staging=165 common=84
+   CONTENT DRIFT (edited one side only): 1
+      ~ outreach_register.md
+   only-local (unmirrored, NOT expected): 2
+      L ACTION_TRIGGERS.md
+      L detach.sh
+   only-local (expected per REPO_MAP): 0
+   only-staging (stale or staging-canonical): 81
+      S clawd-daemon/.env.example
+      S clawd-daemon/ARCHITECTURE.md
+      S clawd-daemon/PLAN.md
+      S clawd-daemon/a2a_server.py
+      S clawd-daemon/api_server.py
+      S clawd-daemon/avatar.py
+      S clawd-daemon/bridge.py
+      S clawd-daemon/clawd.py
+      S clawd-daemon/config.py
+      S clawd-daemon/cost_tracker.py
+      S clawd-daemon/gui_bridge.py
+      S clawd-daemon/health.py
+      S clawd-daemon/heartbeat.py
+      S clawd-daemon/hooks/drift_mirror.py
+      S clawd-daemon/hooks/post_tool_log.py
+      S clawd-daemon/hooks/pre_bash_check.py
+      S clawd-daemon/hooks/pre_compact_checkpoint.py
+      S clawd-daemon/hooks/selfknowledge_check.py
+      S clawd-daemon/mcp_server.py
+      S clawd-daemon/memory.py
+      ... +61 more
+
+## palace: local=167 staging=109 common=109
+   CONTENT DRIFT (edited one side only): 4
+      ~ south/day140-shares-triage-2026-06-20.md
+      ~ south/orthogonal-coupling-coherence-principle-2026-05-31.md
+      ~ south/patent-action-queue-2026-05-20.md
+      ~ southwest/research-window-2026-06-02.md
+   only-local (unmirrored, NOT expected): 58
+      L basement/LC-direction-magnitude-anchor.md
+      L south/COLD_SPRINT_BRIEF-2026-06-14.md
+      L south/audit_mirror_ledger.py
+      L south/audit_mirror_ledger_OUTPUT.txt
+      L south/claims-audit-2026-05-27.md
+      L south/coherence-native-architecture-founding-2026-05-27.md
+      L south/continual-coherence-coupling-patent-angle-2026-06-02.md
+      L south/continual-coherence-mvp-preregistration-2026-05-30.md
+      L south/continual-coherence-program-positioning-2026-05-30.md
+      L south/control-rate-fix-litcheck-2026-06-17.md
+      L south/daemon-connection-retry-finding-2026-06-02.md
+      L south/eta-magic-region-binding-generation-tradeoff-2026-06-05.md
+      L south/eta_magic_collective_binding.py
+      L south/eta_magic_n6.py
+      L south/eta_magic_region.png
+      L south/eta_magic_region_figure.py
+      L south/eta_magic_region_probe.py
+      L south/eta_magic_region_scaling.py
+      L south/forgemind-bundle-manifest-2026-06-06.md
+      L south/founding-documents/00-cover-notes.md
+      ... +38 more
+   only-local (expected per REPO_MAP): 0
+   only-staging (stale or staging-canonical): 0
+
+## clawd-daemon: local=102 staging=80 common=80
+   CONTENT DRIFT (edited one side only): 11
+      ~ .env.example
+      ~ ARCHITECTURE.md
+      ~ bridge.py
+      ~ config.py
+      ~ cost_tracker.py
+      ~ heartbeat.py
+      ~ telegram_bot.py
+      ~ tools/__init__.py
+      ~ tools/communication.py
+      ~ tools/monitor_health.py
+      ~ tools/system.py
+   only-local (unmirrored, NOT expected): 14
+      L archive/tools/browser.py
+      L archive/tools/files.py
+      L archive/tools/git_tool.py
+      L archive/tools/vision.py
+      L clawd.pid
+      L hooks/notify_telegram.py
+      L hooks/post_tool_failure_log.py
+      L hooks/session_end_log.py
+      L hooks/session_orient.py
+      L hooks/statusline.py
+      L hooks/stop_handoff_refresh.py
+      L hooks/user_prompt_log.py
+      L tools/drift_detector.py
+      L tools/reminders.py
+   only-local (expected per REPO_MAP): 8
+   only-staging (stale or staging-canonical): 0
+
+# TOTAL CONTENT-DRIFT FILES ACROSS ALL MIRRORS: 34

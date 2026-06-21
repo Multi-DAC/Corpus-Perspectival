@@ -1,0 +1,82 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {}
+C:\Users\mercu\clawd\repo-staging\Corpus-Perspectival\Technical-Work\AIGrandPrix\anakin\third_party\dreamerv3-torch\tools.py:749: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
+Optimizer model_opt has 15686787 variables.
+Optimizer actor_opt has 1054728 variables.
+Optimizer value_opt has 1181439 variables.
+[DreamerPilot] ignoring 51 extra ckpt keys (e.g. informed priv_state head): ['_wm.heads.decoder._mlp.layers.Decoder_linear0.weight', '_wm.heads.decoder._mlp.layers.Decoder_norm0.weight', '_wm.heads.decoder._mlp.layers.Decoder_norm0.bias']
+DreamerPilot: third_party/dreamerv3-torch/logdir/maneuver_appearance_ft/best.pt loaded on cuda:0 (19,104,393 params)
+
+=== direct (10 eps) ===
+  [direct] seed=1000  return=  -25.06  gates=1  steps=55
+  [direct] seed=1001  return= +238.24  gates=2  steps=61
+  [direct] seed=1002  return= +276.25  gates=2  steps=66
+  [direct] seed=1003  return=   +3.63  gates=1  steps=40
+  [direct] seed=1004  return= +202.27  gates=2  steps=66
+  [direct] seed=1005  return=   +9.95  gates=1  steps=51
+  [direct] seed=1006  return=  +10.84  gates=1  steps=51
+  [direct] seed=1007  return=   -0.73  gates=1  steps=60
+  [direct] seed=1008  return=  -24.48  gates=1  steps=59
+  [direct] seed=1009  return=  -11.26  gates=1  steps=34
+
+=== band (10 eps) ===
+  [band] seed=1000  return=   -9.10  gates=1  steps=38
+  [band] seed=1001  return= +246.31  gates=2  steps=59
+  [band] seed=1002  return= +282.68  gates=2  steps=66
+  [band] seed=1003  return=   +3.77  gates=1  steps=40
+  [band] seed=1004  return= +237.12  gates=2  steps=64
+  [band] seed=1005  return=   +9.47  gates=1  steps=49
+  [band] seed=1006  return=   +4.53  gates=1  steps=85
+  [band] seed=1007  return=   +0.81  gates=1  steps=60
+  [band] seed=1008  return=   -9.89  gates=1  steps=47
+  [band] seed=1009  return= +221.80  gates=2  steps=82
+
+=== blur (10 eps) ===
+  [blur] seed=1000  return= +249.10  gates=2  steps=61
+  [blur] seed=1001  return=  -11.09  gates=1  steps=31
+  [blur] seed=1002  return= +283.34  gates=2  steps=67
+  [blur] seed=1003  return=   +3.81  gates=1  steps=40
+  [blur] seed=1004  return= +208.26  gates=2  steps=64
+  [blur] seed=1005  return=   +6.55  gates=1  steps=61
+  [blur] seed=1006  return=  -28.41  gates=1  steps=60
+  [blur] seed=1007  return=   -5.06  gates=1  steps=51
+  [blur] seed=1008  return=  -14.05  gates=1  steps=98
+  [blur] seed=1009  return=  -11.84  gates=1  steps=34
+
+=== band_resampled (10 eps) ===
+  [band_resampled] seed=1000  return=   +4.91  gates=1  steps=40
+  [band_resampled] seed=1001  return= +227.93  gates=2  steps=54
+  [band_resampled] seed=1002  return= +282.26  gates=2  steps=66
+  [band_resampled] seed=1003  return=   +3.30  gates=1  steps=42
+  [band_resampled] seed=1004  return= +215.69  gates=2  steps=67
+  [band_resampled] seed=1005  return=   +8.13  gates=1  steps=52
+  [band_resampled] seed=1006  return=   -3.85  gates=1  steps=48
+  [band_resampled] seed=1007  return=   -1.79  gates=1  steps=57
+  [band_resampled] seed=1008  return=  -20.39  gates=1  steps=65
+  [band_resampled] seed=1009  return= +202.17  gates=2  steps=88
+
+=== roundtrip (10 eps) ===
+  [roundtrip] seed=1000  return=   -8.75  gates=1  steps=38
+  [roundtrip] seed=1001  return=  -11.68  gates=1  steps=31
+  [roundtrip] seed=1002  return= +276.71  gates=2  steps=69
+  [roundtrip] seed=1003  return=   +2.93  gates=1  steps=41
+  [roundtrip] seed=1004  return= +223.05  gates=2  steps=65
+  [roundtrip] seed=1005  return=   +7.09  gates=1  steps=55
+  [roundtrip] seed=1006  return=   +8.83  gates=1  steps=58
+  [roundtrip] seed=1007  return=   -3.72  gates=1  steps=52
+  [roundtrip] seed=1008  return=   -9.48  gates=1  steps=46
+  [roundtrip] seed=1009  return= +201.69  gates=2  steps=91
+
+=== TRANSLATION REHEARSAL SUMMARY ===
+(direct = training-eval anchor; band = VFoV crop only; blur = resample only; roundtrip = full adapter path. Training-run best batch metric: +256.28)
+direct   : return   +67.97 +/- 113.74   gates   1.3   delta-vs-direct   +0.0%
+band     : return   +98.75 +/- 121.98   gates   1.4   delta-vs-direct  +45.3%
+blur     : return   +68.06 +/- 118.63   gates   1.3   delta-vs-direct   +0.1%
+band_resampled: return   +91.84 +/- 116.28   gates   1.4   delta-vs-direct  +35.1%
+roundtrip: return   +68.67 +/- 109.68   gates   1.3   delta-vs-direct   +1.0%
