@@ -4,6 +4,8 @@
 
 *Draft — Day 140, 2026-06-20. Evidence tags: 〔sourced〕 measured & cited · 〔derived〕 follows from the framework · 〔open〕 stated, testable, not yet run. Honest about which is which.*
 
+> **⚠️ REVISE BEFORE PUBLISH (Day-140 late-drive finding).** The "experiment nobody has run" got *partly run* — I sourced 3 solid insect (λ=CFFT, τ=photoreceptor time) pairs and the strong claim **FAILED**: across species μ *tracks* λ (corr +0.91), it does not cancel it. So **the cross-species spine here — "they share one band / the snail doesn't stutter" — is overclaimed and must be softened.** The TRUE story is better and subtler: (1) the rod↔cone within-system result stays the clean centerpiece — *one eye* holds its texture ~constant across bright↔dim (μ-conservation is an *adaptation* mechanism = a homeostatic setpoint for texture); (2) *across* species the gradient is REAL but **compressed** (λ ~75× → μ maybe ~5–10×), so the dragonfly does have a more seamless now than the cricket — just far less than refresh rate alone implies. Naive "fast eyes = proportional slow-motion" is still wrong; strong "all animals share one now" is also wrong; the truth is the compressed middle. Also surface the **method-confound** (it's why this is hard) as part of the honesty. See `Research/c17-cross-species-occupancy/cross_species_attempt.md`.
+
 ---
 
 A bee's eye refreshes the world about four times faster than yours. A housefly's, faster still — flicker a light at three hundred flashes a second and the fly still sees it strobing where you see a steady glow. So the obvious thought, the one nearly everyone has, is that the fly must live in slow motion: a blur to us, a leisurely ballet to it, every swatting hand arriving like a slow tide it has all the time in the world to slip.
