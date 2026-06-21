@@ -1,2 +1,5 @@
 w2_dataset_*/
 w2_forward_*/
+
+# raw camera frames — superseded PPO+detector era (June 1-2); findings live in the .md files
+*.jpg
