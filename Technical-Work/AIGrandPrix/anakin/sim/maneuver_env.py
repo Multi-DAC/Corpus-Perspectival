@@ -70,6 +70,14 @@ if os.environ.get("ANAKIN_VQ1") == "1":
     SPEED_BONUS_SCALE = 0.0     # no fly-fast incentive (was 0.15)
     CRASH_PENALTY     = 100.0   # = GATE_BONUS → chaining required to net positive (was 15)
     TIME_PENALTY      = 1.0     # deliberate, anti-hover only (was 5.0)
+elif os.environ.get("ANAKIN_VQ1") == "2":
+    # reward-v2 — timidity-trap fix (LC56). v1's CRASH=GATE made cross-then-crash net ZERO ⇒
+    # "one gate is enough" absorbing. CRASH<GATE de-absorbs it (cross-then-crash nets +60);
+    # chaining threshold p* drops 0.50→0.29. SINGLE-VARIABLE vs v1 (only crash changes). Sync w/ vec_env.py.
+    GATE_SPEED_SCALE  = 0.0     # flat +100/gate (VQ1 = no speed)
+    SPEED_BONUS_SCALE = 0.0     # no fly-fast incentive
+    CRASH_PENALTY     = 40.0    # < GATE_BONUS(100): cross-then-crash nets +60 → trap de-absorbed
+    TIME_PENALTY      = 1.0     # anti-hover only
 
 HALF_INNER = GATE_INNER / 2.0
 HALF_OUTER = GATE_OUTER / 2.0

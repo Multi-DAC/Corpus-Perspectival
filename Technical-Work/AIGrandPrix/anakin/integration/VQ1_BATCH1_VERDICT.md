@@ -32,6 +32,9 @@ Ran `translation_rehearsal.py --episodes 10 --env-device cpu` on **two** checkpo
 1. **Let the current run continue to ~batch 3, then re-rehearse** (free — it's training anyway). If chaining still hasn't risen above the seed's 1.3 by batch 3, the timidity trap is confirmed, not noise.
 2. **Prep reward-v2 as the ready pivot** (spec below). If batch-3 confirms, switch to it immediately rather than burning the remaining 5 batches on a reward that degrades.
 
+### ✅ Reward-v2 BUILT (Day 141 ~15:40, not launched) — single-variable
+`ANAKIN_VQ1=2` branch added + verified in `sim/vec_env.py` + `sim/maneuver_env.py` (env-var test: default CRASH=15 / v1=100 / **v2=40**, speed zeroed). Launcher ready: **`launch_vq1_v2_ft.py`** (separate logdir `maneuver_vq1_v2_ft`, warm-starts from the SEED, same robustness stack). **NOT launched** — gated on Clayton + the batch-3 v1 re-rehearse. **Refinement vs the original spec:** v2 = **CRASH=40 ALONE** (single-variable), NOT CRASH=40 + superlinear bonus. Reason: test the one load-bearing change (LC56 says crash<gate is what de-absorbs the trap) cleanly; the superlinear consecutive-gate bonus becomes **v3** only if v2 still stalls. Bundling both would confound which fixed it.
+
 ### Reward-v2 spec (the fix) — now with a quantified threshold
 **Why it works (derived in the afternoon exploration, `palace/south/reward-timidity-ouroboros-bridge-2026-06-21.md` / basement LC56):** model the chain as a repeated gate-MDP. Chaining beats stopping iff gate-success **`p > p* = c/(g+c)`**. So:
 - v1 `CRASH=GATE` → **p\* = 0.50** — the policy needs 50% per-gate success *just to make a second attempt worth trying*. In early training (p≈0.3–0.4) chaining is net-NEGATIVE, so the policy *correctly* stops. **That's the trap, quantified.**

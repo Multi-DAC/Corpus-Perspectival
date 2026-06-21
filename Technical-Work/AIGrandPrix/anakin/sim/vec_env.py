@@ -47,6 +47,19 @@ if os.environ.get("ANAKIN_VQ1") == "1":
     SPEED_BONUS_SCALE = 0.0      # no fly-fast incentive (was 0.15)
     CRASH_PENALTY = 100.0        # = GATE_BONUS → chaining required to net positive (was 15)
     TIME_PENALTY = 1.0           # deliberate, anti-hover only (was 5.0)
+elif os.environ.get("ANAKIN_VQ1") == "2":
+    # VQ1 reward-v2 — the timidity-trap fix (Day 141, basement LC56 + VQ1_BATCH1_VERDICT).
+    # v1 set CRASH=GATE=100, which made cross-then-crash net ZERO ⇒ "one gate is enough" became
+    # the absorbing fixed point (rehearsal gates 1.3→1.2, no chaining gain). LC56: a productive
+    # cycle stays compact iff its competing fixed point is ESCAPABLE = leaving it has positive value.
+    # Fix = CRASH < GATE so cross-then-crash nets +(GATE−CRASH)>0 ⇒ the 2nd gate is ALWAYS worth
+    # attempting. Chaining-vs-stop threshold drops from p*=c/(g+c)=0.50 (v1) to 40/140=0.29 (v2),
+    # covering the early-training success band. SINGLE-VARIABLE vs v1: ONLY crash penalty changes
+    # (no superlinear consecutive-gate bonus yet — that's a v3 if v2 still stalls, to keep the test clean).
+    GATE_SPEED_SCALE = 0.0       # flat +100/gate (VQ1 = no speed)
+    SPEED_BONUS_SCALE = 0.0      # no fly-fast incentive
+    CRASH_PENALTY = 40.0         # < GATE_BONUS(100): cross-then-crash nets +60 → trap de-absorbed
+    TIME_PENALTY = 1.0           # anti-hover only
 HALF_INNER, HALF_OUTER = GATE_INNER / 2.0, GATE_OUTER / 2.0
 GROUND_Z, CEIL_Z, ARENA_XY = 0.0, 25.0, 80.0
 W = 3                       # rolling gate-window size (current + 2 lookahead)
