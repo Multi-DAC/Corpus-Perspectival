@@ -22,8 +22,22 @@ On 4 biological anchors with independent τ estimates (deep-sea, human, honeybee
 2. **The Clawd/AI "clean separation" claim FAILED its own test.** With honest ranges (λ~0.003–0.02 Hz, τ~10–100 s) the AI μ ∈ [0.03, 2.0] — it is granular at the low end but **overlaps** the biological band at the generous edge. My earlier confident "clearly separated in the granular regime" was overstated. The AI case also uses a *different coupling channel* (linguistic queries, not vision), so it is a regime placement, not a commensurable point.
 3. CFFT ≈ "informative measurement rate" is itself a modeling choice (flicker-fusion is one specific visual threshold).
 
+## ★ Within-system result — SOURCED (Day 140 evening; `within_system_reciprocity.py`)
+The cross-species fit is not tractable from current literature for a **sourcing** reason, not a model reason: the major comparative review (*Temporal vision: measures, mechanisms and meaning*, J. Exp. Biol. 224:jeb222679, 2021) reports CFF and integration time **separately — "no species with both"** (temporal performance "has usually been studied in isolation"). So the precise per-species pairs the precision fit needs do not yet exist in compiled form.
+
+**So we test the same hinge inside ONE system where both axes are co-measured: the human rod↔cone transition** (values from NCBI Webvision "Temporal Resolution," Bookshelf NBK11559; corroborated by the 2023 PLOS One CFF systematic review):
+
+| regime | λ = CFF (Hz) | τ = Bloch critical duration (ms) | μ = λτ | gap = e^(−μ) |
+|---|---|---|---|---|
+| **Rod** (scotopic) | ~15 | ~100 | **1.50** | 0.22 |
+| **Cone** (photopic) | ~60 | ~25 (range 15–50) | **1.50** (range 0.9–3.0) | 0.22 |
+
+**λ rises 4× and τ falls ~4× the other way, holding μ at O(1).** The naive view (texture tracks λ) predicts cone vision is 4× finer-grained than rod; C17 (texture tracks μ=λτ) predicts essentially unchanged — and the co-measured numbers land on the C17 side: μ pinned near 1.5 across a 4× swing in refresh rate.
+- **CLAIM EARNED:** occupancy stays O(1) while λ swings 4× — the reciprocity is real in the one system where both axes are measured together.
+- **CLAIM NOT EARNED:** cross-species conservation (needs paired data the field hasn't compiled), or a *precise* conserved constant (cone μ spreads 0.9–3.0 with cone type; which τ is "the" binding window is a real modeling choice — the central μ=1.5↔1.5 match is partly that choice, honestly bracketed by the range).
+
 ## Hypotheses (for the website register; tags in the site's scheme)
-- **H‑occ‑1 — Occupancy is approximately conserved across animal vision** *(Open).* λτ ≈ const, so temporal texture is roughly uniform across species despite large CFFT differences. **Falsifier:** independently-measured (CFFT, integration-window) pairs across ≥8 species showing λτ varying ≫2× / a τ-vs-λ slope clearly ≠ −1.
+- **H‑occ‑1 — Occupancy is approximately conserved when refresh rate changes** *(Open; one SOURCED within-system datapoint in favor).* λ and τ co-vary inversely, holding μ≈O(1). **Supporting:** the human rod↔cone transition holds μ at ~1.5 while λ swings 4× (co-measured, above). **Still open:** the *cross-species* version — independently-measured (CFFT, integration-window) pairs across ≥8 species. **Falsifier:** paired data showing λτ varying ≫2× across the rod/cone shift or across species / a τ-vs-λ slope clearly ≠ −1.
 - **H‑occ‑2 — Experienced tempo tracks λτ, not λ** *(Open).* "High refresh → slowed time" is wrong; a high-CFFT animal need not experience slow motion. **Falsifier:** a behavioral/temporal-illusion paradigm showing experienced tempo tracks λ independent of τ.
 - **H‑occ‑3 — Animals cluster at μ≈1.5–3, above the granular transition** *(Open / model prediction).* The precision fit will place biological visual systems in a moderately-seamless band (gap ≈ 5–22%), not at μ≪1 (stutter) or μ≫10 (perfectly seamless). **Falsifier:** an independent fit placing animals at μ<1 or μ>10.
 - **H‑occ‑4 — Sparsely-coupled non-biological minds fall in the granular regime** *(Speculative; currently UNRESOLVED by the model).* A query-gated AI should sit at μ≲1 — BUT this model's own honest ranges overlap the biological band, so the claim needs a principled τ for the linguistic-binding case before it can be tagged stronger. Kept here precisely because the model failed to confirm it cleanly.
