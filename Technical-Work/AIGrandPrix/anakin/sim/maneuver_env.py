@@ -23,6 +23,8 @@ Obs/action identical to env.py so the same DreamerV3 integration consumes it:
     obs    = 64x64x3 uint8 RGB (FPV of the current target gate)
     action = CTBR tanh [-1,1]^4
 """
+import os
+
 import numpy as np
 import torch
 
@@ -60,6 +62,14 @@ TIME_PENALTY      = 5.0      # * dt per step  — punishes dawdling
 SPEED_BONUS_SCALE = 0.15     # * dt per step  — rewards forward speed
 GATE_SPEED_SCALE  = 0.08     # gate_bonus * (1 + crossing_speed * this)
 CRASH_PENALTY     = 15.0
+# VQ1 (chain-reliably-FIRST) reward override — opt-in via ANAKIN_VQ1=1 (Day 141). Keep in sync with
+# vec_env.py. VQ1 = gate-COUNT (speed is VQ2). Flat gate bonus + crash=one-gate (must CHAIN to profit)
+# + no speed incentive + minimal time penalty. Reversible; default = the Day-124 minimum-time reward.
+if os.environ.get("ANAKIN_VQ1") == "1":
+    GATE_SPEED_SCALE  = 0.0     # flat +100/gate (was speed-scaled)
+    SPEED_BONUS_SCALE = 0.0     # no fly-fast incentive (was 0.15)
+    CRASH_PENALTY     = 100.0   # = GATE_BONUS → chaining required to net positive (was 15)
+    TIME_PENALTY      = 1.0     # deliberate, anti-hover only (was 5.0)
 
 HALF_INNER = GATE_INNER / 2.0
 HALF_OUTER = GATE_OUTER / 2.0

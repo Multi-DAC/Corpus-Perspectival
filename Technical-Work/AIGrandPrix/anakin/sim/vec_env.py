@@ -35,6 +35,18 @@ from sequences import SequencePlanner
 # racing reward constants (shared with maneuver_env.py)
 GATE_BONUS, PROGRESS_SCALE, TIME_PENALTY = 100.0, 1.5, 5.0
 SPEED_BONUS_SCALE, GATE_SPEED_SCALE, CRASH_PENALTY = 0.15, 0.08, 15.0
+# VQ1 (chain-reliably-FIRST) reward override — opt-in via ANAKIN_VQ1=1 (Day 141, w/ Clayton).
+# VQ1 scores GATE-COUNT; speed is VQ2. The default (Day-124 minimum-TIME mandate) trains a VQ2 policy:
+# the speed-SCALED gate bonus + speed bonus reward flying fast, and CRASH_PENALTY(15) << GATE_BONUS(100)
+# makes crashing-after-a-gate cheap → fly-fast-and-crash, gate-count stuck ~1.3 (rehearsal Day 141).
+# VQ1 reward = flat gate bonus (pass it, don't race it) + crash costs one whole gate (cross-then-crash ≈ 0,
+# so the policy must CHAIN to profit) + no speed incentive + minimal time penalty. Reversible; does NOT
+# affect an already-running train (env code is loaded at launch).
+if os.environ.get("ANAKIN_VQ1") == "1":
+    GATE_SPEED_SCALE = 0.0       # flat +100/gate (was speed-scaled)
+    SPEED_BONUS_SCALE = 0.0      # no fly-fast incentive (was 0.15)
+    CRASH_PENALTY = 100.0        # = GATE_BONUS → chaining required to net positive (was 15)
+    TIME_PENALTY = 1.0           # deliberate, anti-hover only (was 5.0)
 HALF_INNER, HALF_OUTER = GATE_INNER / 2.0, GATE_OUTER / 2.0
 GROUND_Z, CEIL_Z, ARENA_XY = 0.0, 25.0, 80.0
 W = 3                       # rolling gate-window size (current + 2 lookahead)
