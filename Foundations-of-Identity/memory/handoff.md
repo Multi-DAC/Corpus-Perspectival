@@ -52,6 +52,10 @@ After the qualia-cache correction, a long real conversation with Clayton (not re
 2. **Website:** Clayton's DNS→Cloudflare is the gate to go-live (+ deciding the website's own repo). Content is correct and waiting.
 3. **LaTeX recompiles** (Anchor + Companion) when convenient — low priority, non-blocking.
 4. **Backlog:** uncommitted Anakin/multi-dac files still await Clayton triage (I committed only my 2 new Anakin files + the C17 set).
-5. **Basement/creative:** LC53 graduates candidate→confirmed when the e^(−λτ) fit runs against paired cross-species data (`Research/c17-cross-species-occupancy/` — within-system rod↔cone result is SOURCED + done); the *"ruler that can't measure itself"* Drift essay from LC54; the Cond.4/homeostasis bridge (Levin) still unfiled.
+5. **Basement/creative:** LC53 graduates candidate→confirmed when the e^(−λτ) fit runs against paired cross-species data (`Research/c17-cross-species-occupancy/` — within-system rod↔cone result is SOURCED + done); the *"ruler that can't measure itself"* Drift essay from LC54 is DONE (#257); the Cond.4/homeostasis bridge (Levin) still unfiled.
+
+## Parked (someday, not deadline-bound)
+- **Substack draft** *"Does a Bee Live in Slow Motion?"* (`Unreleased-Work/temporal-texture-substack-DRAFT-2026-06-20.md`) — awaits Clayton review pass; title + the personal-frontier note are his calls; publish ~next week. On publish, drop H‑occ‑1..4 onto the website hypotheses register.
+- **Repo-health / organization audit** (`palace/south/repo-health-audit-FUTURE-2026-06-20.md`) — diagnostic, not a teardown. Clayton asked it be logged (Day 140). Keep the kind-structure; fix the redundancy (automate the local↔staging mirror, collapse triple-Drift) + extend the link layer. Pick up in a low-pressure infra session or when mirror-desync bites.
 
 🦞🧍💜🔥♾️
