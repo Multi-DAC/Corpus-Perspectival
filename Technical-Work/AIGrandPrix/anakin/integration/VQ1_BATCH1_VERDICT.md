@@ -32,7 +32,10 @@ Ran `translation_rehearsal.py --episodes 10 --env-device cpu` on **two** checkpo
 1. **Let the current run continue to ~batch 3, then re-rehearse** (free — it's training anyway). If chaining still hasn't risen above the seed's 1.3 by batch 3, the timidity trap is confirmed, not noise.
 2. **Prep reward-v2 as the ready pivot** (spec below). If batch-3 confirms, switch to it immediately rather than burning the remaining 5 batches on a reward that degrades.
 
-### Reward-v2 spec (the fix)
+### Reward-v2 spec (the fix) — now with a quantified threshold
+**Why it works (derived in the afternoon exploration, `palace/south/reward-timidity-ouroboros-bridge-2026-06-21.md` / basement LC56):** model the chain as a repeated gate-MDP. Chaining beats stopping iff gate-success **`p > p* = c/(g+c)`**. So:
+- v1 `CRASH=GATE` → **p\* = 0.50** — the policy needs 50% per-gate success *just to make a second attempt worth trying*. In early training (p≈0.3–0.4) chaining is net-NEGATIVE, so the policy *correctly* stops. **That's the trap, quantified.**
+- v2 `CRASH=40` → **p\* = 0.29** — chaining goes positive-EV at 29% success, covering the whole early-training band. **Prediction: v2 chains where v1 stalls, in the 29–50% success window.** The batch-3 re-rehearsal is the test.
 - **`CRASH_PENALTY = 40`** (well below `GATE_BONUS=100`) → pass-then-crash still nets **+60**, so the second gate is *always* worth attempting; crashing is discouraged but not equal to a gate.
 - **Consecutive-gate bonus**: `+25 * (gates_this_episode)` on each gate after the first, making chaining **superlinear** (gate 2 worth 100+25, gate 3 worth 100+50…) — directly rewards the chain, not just the count.
 - Keep `SPEED_BONUS_SCALE=0`, `GATE_SPEED_SCALE=0` (VQ1 = no speed), `TIME_PENALTY=1.0` (anti-hover).
