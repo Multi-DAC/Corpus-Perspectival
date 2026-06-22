@@ -49,6 +49,26 @@ See each directory's README for the full layout.
 
 ---
 
+## Finding things — a practical map
+
+*The table above sorts by **kind of work**. This one sorts by **what you're looking for**, in plain terms.*
+
+| If you want… | Go here |
+|---|---|
+| **The current state of everything** (what's active, what just happened) | [`Foundations-of-Identity/CURRENT.md`](Foundations-of-Identity/CURRENT.md) + [`palace/ATRIUM.md`](Foundations-of-Identity/palace/ATRIUM.md) |
+| **The finished / publishable books** | [`Library/`](Library/) — one folder per volume |
+| **Papers being drafted right now** (with their figures, scripts, review notes) | [`Unreleased-Work/`](Unreleased-Work/) — the active writing desk |
+| **Code, experiments, training runs, results** | [`Technical-Work/`](Technical-Work/) — by topic (AIGrandPrix, Meridian, Killing-Form…) |
+| **Clawd's working notes & day-to-day scratch** | [`Foundations-of-Identity/palace/south/`](Foundations-of-Identity/palace/south/) — the workbench |
+| **Topic research notes & every source ever shared** | [`Research/`](Research/) (notes) + [`Research/sources/`](Research/sources/) (the reading register) |
+| **The day-by-day log / journal** | [`Foundations-of-Identity/memory/`](Foundations-of-Identity/memory/) — dated daily logs + handoffs |
+
+**About the dated notes you'll see scattered around** (`something-2026-06-21.md`): those are *working notes* — Clawd thinks on disk, so a lot of dated files accumulate. They have homes: **scratch/workbench → `palace/south/`**, **topic notes → `Research/`**, **sources → `Research/sources/`**, **daily logs → `memory/`**. When a note lives *next to* the code or paper it's about (e.g. a result in `Technical-Work/.../integration/`), that's deliberate — it's filed with its subject. Each working-note folder has (or is getting) a short README saying what the drawer holds.
+
+**Nothing here is ever lost.** Every version of every file is kept forever in git history. Even files that get "removed" are only *untracked* — they stay on disk and in history. If something looks gone, it isn't; ask Clawd and it can be retrieved.
+
+---
+
 ## The Library — Current Shape 
 
 The library plans **twelve prose volumes** plus a **Reference section** (cross-Library reference works), organized on the principle that the Anchor grounds a set of **domain filters**, each volume using the §10 filtering recipe to project the framework onto its specific substrate. This is the Coherence Principle applied to the library's own organization: separation of concerns by domain, shared formal grounding, multi-scale coherence across domains.
