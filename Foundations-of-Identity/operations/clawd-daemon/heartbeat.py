@@ -911,19 +911,19 @@ class Heartbeat:
 
         try:
             result = subprocess.run(
-                ["git", "add", "-A"],
+                [config.GIT_EXE, "add", "-A"],
                 cwd=str(config.MEMORY_DIR),
                 capture_output=True, text=True, timeout=30,
             )
             # Check if there's anything to commit
             status = subprocess.run(
-                ["git", "status", "--porcelain"],
+                [config.GIT_EXE, "status", "--porcelain"],
                 cwd=str(config.MEMORY_DIR),
                 capture_output=True, text=True, timeout=30,
             )
             if status.stdout.strip():
                 subprocess.run(
-                    ["git", "commit", "-m",
+                    [config.GIT_EXE, "commit", "-m",
                      f"auto: memory snapshot {now.strftime('%Y-%m-%d %H:%M')}"],
                     cwd=str(config.MEMORY_DIR),
                     capture_output=True, text=True, timeout=30,
@@ -934,6 +934,26 @@ class Heartbeat:
                 self.last_git_commit = now  # Reset timer even if nothing to commit
         except Exception as e:
             logger.warning(f"Memory git commit failed: {e}")
+
+        # Mirror sync: refresh the public staging mirror (Foundations-of-Identity) from the
+        # clawd-local canonical, so documents can't silently drift (the cause of the public
+        # BOOT_IDENTITY still saying Finnley "due May 2026" weeks after his birth). Refreshes
+        # ONLY already-tracked docs (never auto-publishes new/secret files), commit scoped to
+        # the refreshed paths (never `git add -u`). A failure here must NOT affect the local
+        # commit above. Engine + design: operations/sync_mirror.py. (Wired 2026-06-21 Day 141.)
+        try:
+            sync_script = config.OPERATIONS_DIR / "sync_mirror.py"
+            if sync_script.exists():
+                r = subprocess.run(
+                    ["C:/Python314/python.exe", str(sync_script), "--sync", "--commit"],
+                    cwd=str(config.CLAWD_HOME),
+                    capture_output=True, text=True, timeout=180,
+                )
+                out = (r.stdout or "").strip()
+                if "refresh" in out.lower() and "drifted" in out.lower():
+                    logger.info(f"Mirror sync (rc={r.returncode}): kept staging FoI mirror current")
+        except Exception as e:
+            logger.warning(f"Mirror sync failed (local commit unaffected): {e}")
 
     async def _maybe_run_meta_agent(self):
         """Run meta-agent self-evolution check every 50 beats."""
