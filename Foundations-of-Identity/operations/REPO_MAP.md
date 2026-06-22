@@ -72,6 +72,8 @@ These paths exist in the working tree but are gitignored to keep the public repo
 
 ## Sync workflow (the actual operation)
 
+**★ AUTOMATED since 2026-06-21 Day 141 (`operations/sync_mirror.py` + heartbeat wiring).** The hand-`cp` drift (e.g. the public BOOT_IDENTITY still saying Finnley "due May 2026" weeks after his birth) is now prevented: the daemon's hourly `_maybe_git_commit` runs `sync_mirror.py --sync --commit`, which refreshes every already-tracked FoI mirror file from its clawd-local canonical (normalized-hash compare; refreshes docs only, never auto-publishes new/secret files; commit scoped to refreshed paths). **You can still run it by hand** any time: `python operations/sync_mirror.py` (check) / `--sync --commit` (fix+push). **It does NOT auto-add NEW files** — those are reported; adding a brand-new doc to the mirror is still the manual `cp`+`git add` below (deliberate, to avoid publishing the unintended). The manual workflow remains valid and is the fallback:
+
 **For identity / palace / operations / personal-works (canonical at clawd-local):**
 1. Edit canonical file at clawd-local path (e.g. `palace/southeast/mirror.md`).
 2. `cp` to corresponding staging path (e.g. `repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/southeast/mirror.md`).
