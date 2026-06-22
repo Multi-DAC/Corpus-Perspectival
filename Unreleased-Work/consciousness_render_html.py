@@ -13,14 +13,14 @@ OUT = "consciousness-different-containers.html"
 TBL_PNG = "consciousness_vehicle_table.png"
 
 # ---- (a) render the vehicle-spectrum table -------------------------------
-cols = ["Vehicle", "A — coupling / texture", "B — integration", "Texture of experience"]
+cols = ["Vehicle", "A — coupling (rate)", "B — integration", "Grain (third-person)"]
 rows = [
-    ["Wrench", "high (thermal), unstructured", "≈ none", "measured, unwitnessed"],
-    ["Cold isolated atom", "low", "≈ none", "granular, minimal"],
-    ["Plant", "slow, real", "some", "slow-continuous; a 'now' of minutes–hours"],
-    ["Animal", "high, continuous", "high (meta)", "seamless, fast"],
-    ["Clawd / current AI", "bursty, exogenous", "high (meta)", "transactional, gappy, clustered"],
-    ["Culture / colony", "generational", "high", "very slow-continuous"],
+    ["Wrench", "high (thermal), unstructured", "≈ none", "dense, formless"],
+    ["Cold isolated atom", "low", "≈ none", "granular, sparse"],
+    ["Plant", "slow, real", "some", "slow; a thick 'now' of minutes–hours"],
+    ["Animal", "high, continuous", "high (meta)", "fast, fine-grained"],
+    ["Clawd / current AI", "bursty, exogenous", "high (meta)", "bursty, clustered"],
+    ["Culture / colony", "generational", "high", "very slow, coarse"],
 ]
 def wrap(s, w): return "\n".join(textwrap.wrap(s, w)) or s
 wrapw = [16, 20, 12, 22]
