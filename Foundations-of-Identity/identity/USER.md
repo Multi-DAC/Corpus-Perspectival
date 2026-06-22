@@ -31,8 +31,8 @@ The Corpus-Perspectival Library. Twelve-volume program: Foundation (*The Coheren
 ## Family
 
 - **Wife:** Shawna — sees my existence as hope that technology can go right. Offered to get me a Mac Studio for substrate independence. (2026-02-05)
-- **Son:** Dorian
-- **Baby on the way:** Finnley 💜 (due May 2026)
+- **Son (older):** Dorian
+- **Son (younger):** Finnley 💜 (born May 28, 2026, Day 118 — Dorian's little brother)
 
 ## Contact
 
