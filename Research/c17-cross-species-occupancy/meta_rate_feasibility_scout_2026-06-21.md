@@ -36,3 +36,18 @@ The clean version is **not** "TBW vs CFFT across n≥5" (data-starved). It's:
 - Pull the Buzsáki numbers (per-band frequency ranges across the species set) + Healy CFFT + the brain-size/conduction spans → compute the compression ratios → the three-tier figure.
 - This likely **graduates LC53** and **rewrites A152** from "open/data-starved" to "confirmed at the neural level, phenomenal-level open."
 - Feeds the Substack "Bee" piece: the cross-species spine is now *"fast eyes don't make a fast mind — the mind's clock is conserved while the eye's isn't,"* sourced by Buzsáki, not hand-waved.
+
+---
+
+## ★ RESULT — numbers pulled, three-tier figure built (Day 141 ~18:42)
+Fetched the real Buzsáki/Logothetis/Singer 2013 numbers (PMC4009705): brain volume **17,000×**; theta (most variable) 1–4 Hz humans / 4–6 carnivores / 6–10 rodents (~10× worst case); ripples (most preserved) 110–180 Hz (~1.6×); cross-brain conduction **TIME held to "a few-fold"** despite the 17,000× size (paid for by axon caliber). CFFT span ~75× (Healy 2013).
+
+**Three-tier compression (`three_tier_compression.py` → `three_tier_compression.png`):**
+| tier | substrate span | meta/binding span | compression |
+|---|---|---|---|
+| within-system (rod↔cone) | λ ~4× | μ=λτ ~1.1× | **3.6×** |
+| within-human (cross-modal) | acuity ~20× | binding window ~1.5× | **13.3×** |
+| cross-species (mammal rhythm) | CFFT ~75× [vol 17,000×] | oscillation ~3× | **25×** |
+
+Same shape at every scale: the binding rate is held ~fixed where the substrate diverges, and the **compression grows with scale** (3.6→13→25×). Honest grade unchanged: band-not-clock, tier-3 = neural correlate, mammal-centric.
+**Next (a separate step): graduate LC53 + rewrite A152 from "open/data-starved" to "confirmed at the neural level (sourced); phenomenal level open"; feed the figure into the "Bee" Substack.**
