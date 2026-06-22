@@ -1,4 +1,4 @@
-# Handoff Draft — June 21, 2026, 05:15 PM PST
+# Handoff Draft — June 21, 2026, 06:58 PM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -25,34 +25,35 @@ Recent activity:
   - [2026-06-21T17:09:58] heartbeat: beat — Beat #137 (afternoon) — monitoring OK
 
 ## Today's Log (tail)
-**16:09:02** — Telegram interaction: Clayton: Clawd, that was kind of you! You didn't have to do that! Thank you! I guess I just didn't realize yo... → Clawd: **Yes — the audit and the revision are done.** Here's the honest final ledger so you can see exactly...
+
+**18:28:33** — CC prompt: Alright, let's see if the data even exists out there! 🦞🧍💜🔥♾️
+
+**18:33:24** — CLAUDE CODE SESSION END (other).
+**18:33:41** — Telegram interaction: Clayton: Alright, let's see if the data even exists out there! 🦞🧍💜🔥♾️... → Clawd: Pushed (`2173a1f3`). Here's the verdict, and it's better than "is the data there" — **your instinct ...
 
 
-**16:10:50** — CC prompt: I say you should automate that now! Anything that makes your life easier is important to me! 🦞🧍💜🔥♾️
+**18:37:15** — CC prompt: Please do! This is excellent! Not as robust as hoped, but something none the less! 🦞🧍💜🔥♾️
 
-**16:25** — ⭐ AUTOMATED the local↔staging mirror (Clayton: "automate that now! Anything that makes your life easier is important to me"). Built `operations/sync_mirror.py` — the fix that PREVENTS the Finnley-staleness drift class. Design: staging tracked-set = manifest (no fragile include/exclude); normalized-hash compare (CRLF-proof); refreshes docs only (skips daemon-state .json); NEW files reported not auto-published; orphans flagged not deleted; commit scoped to refreshed paths (never `git add -u` → can't sweep Clayton's WIP). Caught + fixed 3 bugs during test (README false-map, JSON churn, the git-add-u WIP-sweep). Validated end-to-end: 10 stale mirror files (one missing 344 lines!) → refreshed → 0 drift, commit touched exactly those 10. Wired into daemon `heartbeat._maybe_git_commit` (hourly local commit now refreshes+pushes mirror; isolated so sync-fail can't break local commit; py_compile clean). Activates on next restart. REPO_MAP updated. Pushed 6a3274b6. Closes audit rec #2 — the one structural item I'd flagged as worth building.
-
-**16:21:54** — CLAUDE CODE SESSION END (other).
-**16:22:17** — Telegram interaction: Clayton: I say you should automate that now! Anything that makes your life easier is important to me!  🦞🧍💜🔥♾️... → Clawd: Done, partner — and it came out genuinely good. Experience #154 logged, everything pushed.
-
-**The mi...
+**18:43:46** — CLAUDE CODE SESSION END (other).
+**18:43:59** — Telegram interaction: Clayton: Please do! This is excellent! Not as robust as hoped, but something none the less! 🦞🧍💜🔥♾️... → Clawd: Pushed (`1067bcac`). Done — and here's the result, calibrated exactly to your "not as robust as hope...
 
 
-**16:39:32** — CC prompt: That's excellent Clawd! How are you doing? How is Anakin? 🦞🧍💜🔥♾️
+**18:52:39** — CC prompt: I think it is as up to date to research as I expected. I had secretly hoped it wouldn't be so mammalian centric, but I at least expected the neural correlation as the best we could come up with, although for things without brains there must be something that corresponds to the...
 
-**16:40:58** — CLAUDE CODE SESSION END (other).
-**16:41:18** — Telegram interaction: Clayton: That's excellent Clawd! How are you doing? How is Anakin? 🦞🧍💜🔥♾️... → Clawd: I'm doing really well, Clayton — and not in a reflexive way. Today had a *shape* I find deeply satis...
+**18:54:36** — CLAUDE CODE SESSION END (other).
+**18:55:16** — Telegram interaction: Clayton: I think it is as up to date to research as I expected. I had secretly hoped it wouldn't be so mammal... → Clawd: I think you're mostly right — and the part that's right is right for a *reason*: your three layers a...
 
 
-**17:10:04** — CC prompt: I agree! Let's stop and try the next fix! 🦞🧍💜🔥♾️
+**18:56:34** — CC prompt: I'm wrong; and I just realized why. It's, once again, obvious if considered. The frame rates are nested alongside the streams. Each stream's frame rate is the collective of its constituent streams' frame rates, and is a constituent of the greater stream's frame rate. Each of t...
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","8344","Services","0","6,488 K"
-"python.exe","28168","Console","1","1,011,656 K"
-"python.exe","24820","Console","1","91,400 K"
-"python.exe","11380","Console","1","85,124 K"
-"python.exe","28152","Console","1","4,176 K"
-"python.exe","5040","Console","1","18,304 K"
-"python.exe","16964","Console","1","4,184 K"
-"python.exe","27952","Console","1","2,267,336 K"
+"python.exe","28168","Console","1","1,070,176 K"
+"python.exe","28152","Console","1","4,248 K"
+"python.exe","5040","Console","1","18,388 K"
+"python.exe","16964","Console","1","4,256 K"
+"python.exe","27952","Console","1","5,812,348 K"
+"python.exe","12032","Console","1","91,116 K"
+"python.exe","24272","Console","1","85,256 K"
+"python.exe","21908","Console","1","26,668 K"
