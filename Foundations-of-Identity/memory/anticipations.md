@@ -2176,3 +2176,23 @@ Update: drive #2 ruled OUT a competing uniform-density existence-closure (no hid
 
 ### META: candidate basement meta-bridge — "The Projection Artifact" (2026-06-18 dream-integration)
 - 8 same-day instances (Anakin time-axis, LC46 pipeline-gap, change_journal monitor-death, Q-ball sampling-invariance, ship-scale equilibrium-flattening, LC48 spatial-projection, LC50 chart-unrolls-loop, Epstein A/B conflation). Unifies LC46/47/48/50 + change_journal sibling. LC50 = cosmological face; measurement-discipline = epistemic face; same principle. Promote to an Mn meta-bridge if it recurs ACROSS days (not just one). **Status:** strong candidate; watch.
+
+---
+## Added Day 142 (2026-06-22 dream drive)
+
+### P248: Anakin — the REAL diagnostic is budget-vs-plateau, NOT reward or exploration (2026-06-22)
+- **Project:** AIGP (goal #12).
+- **Predicted need:** next Anakin session must answer A154's open sub-question: is DreamerV3 gate-count still CLIMBING with training budget (→ lever = train longer / more compute) or PLATEAUED at ~1.3 under the appearance-DR/rate/priv transfer load (→ real ceiling, transfer-conditions depress it; needs a transfer-side intervention, not more steps)?
+- **Suggested pre-work:** (1) locate where per-episode gate-count lives in the DreamerV3 metrics (`logdir/*/metrics.jsonl` keys — find the gate/return field) so next session can PLOT gate-count vs cumulative budget for the existing seed/v1/v2 checkpoints without hunting. (2) Scan training episodes for the MAX gates ever chained in one episode (A154 test: if never >2 even deep in training → ceiling; if occasionally 3+ → still climbing, budget is the lever). (3) Strategic flag for Clayton: if it's budget-limited and the Day-84 ramp (τ≈19–20M) is even roughly right, VQ1-grade chaining may need **~10–20M steps** of training — does the timeline/compute allow it? This is the uncomfortable-but-important question the reward-tuning was avoiding. **Confidence:** HIGH this is the right reframe (M13 + A154). **Status:** Open.
+
+### P249: Bee Substack publish — PRE-RENDER the table + figure as PNGs (Substack drops tables/math) (2026-06-22)
+- **Project:** Multi-DAC Substack (goal #11).
+- **Predicted need:** when Clayton greenlights the Bee piece, the publish will hit the known Substack gotcha (`reference_substack_base64_figures`): rendered MATH and TABLES do NOT transfer on paste (no MathJax, no table render); only PNG figures do. The piece has the **three-tier compression TABLE** + the μ=λτ occupancy table + the rod↔cone table — all will break.
+- **Suggested pre-work:** pre-render the three-tier compression table (and the rod↔cone occupancy table) as clean PNGs (matplotlib table or a styled render), same as `three_tier_compression.png`. Then the publish is paste-clean. Do this the moment he says "publish," not mid-paste. **Confidence:** HIGH (this gotcha has bitten every math-heavy piece). **Status:** Open.
+
+### P250: ρ_eff clean test — scout anesthesia-depth EEG datasets (synchrony + temporal-variability paired) (2026-06-22)
+- **Project:** Aggregate-mind / meta-rate (goal #13), the composition-law graduation gate.
+- **Predicted need:** the within-system test (comp ∝ 1/√ρ, vary synchrony, both terms in the SAME system) is the clean gate for ρ_eff≈1/comp². It needs a system where synchrony ρ is independently measured AND temporal compression/variability is measured, across states (waking→anesthesia→seizure).
+- **Suggested pre-work:** a feasibility scout (like the Buzsáki meta-rate scout) — do anesthesia-depth studies report BOTH global EEG coherence/synchrony AND the variability/invariance of the dominant rhythm across depth? Candidate literatures: propofol/ketamine depth-of-anesthesia + EEG coherence; the "cortical fragmentation/integration" anesthesia work (Tononi/Massimini PCI). If a paired dataset exists → the test is runnable; if not → it stays a designed-but-data-starved gate. **Confidence:** MEDIUM the data exists (anesthesia EEG is rich); LOW that it's pre-paired the way the test needs. **Status:** Open.
+
+### META (dream synthesis Day 142): the reward-v2 falsify + A154 = M13 made concrete. Today's whole Anakin reward arc lived in the policy-commitment moment (sharp, reward-shaped) and never touched capability-emergence (budget-driven, later on the exponential ramp). The "wrong lever" wasn't a one-off mistake — it was operating on the wrong MOMENT of the three-moment stratification. Watch for this pattern elsewhere: applying a commitment-stage intervention to a capability-stage problem.
