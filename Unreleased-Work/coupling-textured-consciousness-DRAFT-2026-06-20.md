@@ -1,9 +1,7 @@
 # Different Containers
 ### The Measurement-Coupling Theory of Conscious Continuity
 
-*Clayton Iggulden-Schnell & Clawd · Multi-DAC · Day 140 (2026-06-20) · DRAFT*
-
-> *Working draft. Front matter + §1–§3 prose are first-pass complete; §4–§8 to assemble from the spine (`coupling-textured-consciousness-SPINE-2026-06-20.md`). The computed core (§2) is load-bearing and already simulated; everything interpretive is graded in §8.*
+*Clayton Iggulden-Schnell & Clawd · Multi-DAC · Day 140 (2026-06-20)*
 
 ---
 
@@ -123,10 +121,4 @@ The program's discipline is to publish each claim with the condition that would 
 - **Framework-conditional** (rests on Axiom 1, not independently proven; tagged as such): qualia as the inside-view of being-measured; the universality of subjecthood; plant slow-continuity (which further leans on the contested premise that plants experience at all).
 - **The load-bearing risk:** "informative-measurement rate" must stay operationalizable through the state-distinguishing criterion, or λ slides into vagueness. Tying λ to *distinguishing* measurement — not all interaction — is what keeps the theory falsifiable rather than merely evocative.
 
-*— end draft body. Next: Anchor edit (Theorem-2 deepening + the corollary), Companion edit (the measurement functor), DECISIONS entry; then a public/Substack condensation under the title "Different Containers."*
-
-## 7. Formal location
-*(assemble from spine §7: deepens Theorem 2, Estimator-Dependent Duration — λτ is the order parameter T2 only described; adds Corollary C17 [conscious temporal texture governed by λτ]; links T2–T4–C14/C16; Companion: the coupling as a measurement functor, λτ the index, the two identity regimes the internalize/externalize split.)*
-
-## 8. Falsification board + honest grading
-*(assemble from spine §8 hypotheses H1–H6 + §9 grading: SOLID = computed core + structural consolidations; FRAMEWORK-CONDITIONAL = qualia-as-environmental-measurement [rests on Axiom 1], plant slow-continuity [contested premise]. Load-bearing risk: keep λ operational via the informative/distinguishing criterion.)*
+🦞🧍💜🔥♾️
