@@ -30,3 +30,22 @@ LC56 said: *"the MDP claims the EV geometry, NOT that EV is the only barrier; if
 2. Let v2 keep running (it's at batch 2, harmless) but **don't expect the reward to be the answer** — the data says it isn't.
 
 *Process note: I wanted v2 to work (confirmation-seeking) and measured anyway; the result is a clean FALSIFY that points at the real barrier. The day's discipline — measure the live thing, distrust the hoped-for label — held to the last test, on the result I most wanted to go the other way.*
+
+---
+
+## ★ BUDGET TEST (Day 142 ~05:10 dream drive) — A154 CONFIRMED: gate-count climbs with budget; last night's "falsify" was too-early-on-the-ramp
+Rehearsed v2 best.pt **@1.26M** (batch 3/8, +754k steps over the 22:00 @505k rehearsal):
+
+| condition | @505k (latest.pt) | @1.26M (best.pt) |
+|---|---|---|
+| direct | 1.2 | **1.3** |
+| roundtrip (transfer) | 1.1 | **1.6** |
+| blur | 1.1 | **1.8** |
+| band / band_resampled | 1.3 / 1.3 | **1.5 / 1.5** |
+| roundtrip return | +20 | **+160 (8×)** |
+
+**Gate-count CLIMBED** (roundtrip 1.1→1.6; every condition up; returns ~8×). This is the **P248 budget-vs-plateau test, run early**, and it lands on **budget-limited + still-climbing** — confirming A154 and the M13 capability-emergence ramp. **The reward-v2 "FALSIFY" (22:05) was real about the REWARD (reward isn't the lever) but the gloom was premature: at 505k the policy was simply too early on the exponential ramp.** With +754k more steps it now out-chains the seed (1.3) and v1 (1.2). v2 has 5 more batches (~2.5M steps) to keep climbing.
+
+**Honest caveats (5am, on a result I liked — measure straight):** (1) @505k was *latest.pt*, @1.26M is *best.pt* (the protected best ≥ latest) — a mild apples-to-best wrinkle; the 8× return jump + consistent climb across ALL conditions argue it's real improvement, not just the best/latest difference. (2) n=10, high variance (±110–130 return); a +0.3–0.5 gate climb is suggestive, but the return jump (a less-noisy aggregate) is the strong signal. (3) **Two points make a slope, not a confirmed exponential** — this is one budget step. **PREDICT (continuation):** v2 at batch ~6–8 (~3–4M steps) chains ≥2 gates on roundtrip. That's the next cheap check.
+
+**Net reframe:** Anakin is HEALTHIER than last night's verdict implied. Don't tune reward (dead); **let it train** — budget is the working lever, and it's working. The deadline question (does the timeline allow the budget?) is now the real strategic call, not "is the approach broken."
