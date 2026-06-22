@@ -27,3 +27,18 @@
 
 ## Limits
 Toy Monte-Carlo with log-normal channels + a single shared-component correlation model; real coupling is structured (modular, hierarchical), so ρ_eff is an *effective* scalar, not literal pairwise correlation. The √N-falsification is robust (any independent linear pool gives √N); the correlated-saturation is the standard variance-of-correlated-mean result. Solid enough to **answer LC57's open joint** (composition = correlated pooling, correlation-limited) and to retire "is it sum or mean" (both √N in spread; they split on level).
+
+---
+
+## ★ First independent check of ρ_eff ≈ 1/comp²  (Day 141 ~19:45, w/ Clayton)
+The relation is equivalent to **comp² ≈ N_eff** (effective independent degrees of freedom). Cortex compression ~25 ⇒ predicted **N_eff ≈ 625**. Independent measure = the neural-dimensionality literature:
+- **Stringer et al.** (mouse visual cortex, 10k+ neurons): variance spectrum is a **power law ~1/n** (exp ≈1.14); effective dimensionality = **"hundreds of independent degrees of freedom"** (not millions, not tens). 〔sourced — Stringer et al., *Science* aav7893 / *Nature* high-dim geometry〕
+- **PASS at order-of-magnitude:** predicted ~625, measured "hundreds." Crucially **excludes both alternatives** the naive (independent-averaging) law forces: millions (→ comp ~1000×) and tens (→ comp ~5). The number landed in the right decade and ruled out its neighbors.
+
+**Honest grade (resist confirmation-seeking):**
+1. **Scale-dependence.** Under a 1/n spectrum, effective dimensionality is *scale-dependent* (grows with neurons recorded / cutoff) — "hundreds" is a band, not a point. So this is order-of-magnitude agreement, not a decimal match.
+2. **★ The load-bearing bridge:** my compression ~25 is a *cross-species* (between-mammal) rhythm-invariance; N_eff "hundreds" is a *within-system* (one cortex) dimensionality. comp²≈N_eff matching them assumes the cross-species-conserved structure IS the within-system effective-mode count. That bridge is an assumption, not yet justified — the real risk in the claim.
+3. **n=1 system** (mouse visual cortex); the relation is a *line* (comp² vs N_eff across many systems) and one point doesn't make a line.
+4. A 1/n "critical" spectrum is itself what *structured correlation* (not independence, not one mode) produces — consistent with the correlated-pooling law, a small bonus.
+
+**Verdict:** the new number survived its first contact with independent data at order-of-magnitude and excluded its naive alternatives — promising, not confirmed. **The clean graduation gate stays the within-system test:** vary synchrony (waking → anesthesia → seizure) in ONE system and check comp ∝ 1/√ρ, where both terms are measured in the same place and the cross-species↔within-system bridge isn't needed.
