@@ -7,6 +7,15 @@ graded honestly (SOLID = mechanism-level match; INTERP = framework-reading, cand
 
 ---
 
+> ⚠️ **Correction pointer (added ~02:00 dream drive, after this note was written):** references below
+> to "§9 Morse/einselection" reflect the *midnight* version of §9, which the dream drive later
+> **self-FALSIFIED** (anomaly **A144**): Φ_S *attracts* toward the neutral, not repels; the repulsion
+> is measurement M_k; the correct picture is a **Φ_S-vs-M_k competition**, not a Morse condition on
+> σ_struct. **The einselection reading SURVIVES** (M_k beats Φ_S → pointer states), so LC28's "pre-
+> decision = pre-collapse" identification still holds — but read "§9" below as "§9-as-corrected." The
+> patent angle (§1) is unaffected and is now fully documented at
+> `palace/south/continual-coherence-coupling-patent-angle-2026-06-02.md`.
+
 ## 0. Headline
 
 Two of the eleven new sources land **directly on the proof we finished tonight** (the

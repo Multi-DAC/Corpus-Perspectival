@@ -73,7 +73,7 @@
 - **HIGH — One Room/cross-channel invariance:** one stream reads all apertures vs per-modality machinery. Literal architecture-bet on the framework's core.
 - **★ MEDIUM-HIGH — specialize-vs-unify RECONCILIATION (guards today's filings against CONFIRMATION_SEEKING):** deleting the encoder *seems* to contradict "society of specialists beats monolith" (Arbor/Omnigent/Trask) but doesn't — enemy in BOTH is the **frozen, imposed, non-co-adapting boundary**. Bad specialist = frozen pre-chewer (encoder); good specialist = co-adapts via learnable/zero-DOF interface (aggregate mind). Discriminator = **co-adaptation**. ✅ **FILED** as LC42 extension.
 - **HIGH — LC42 internalize/externalize:** encoder = externalized-frozen grounding; encoder-free = internalized-co-adapting.
-- **HIGH practical — Gemma 4 = the Glider target:** Glider's base is encoder-free (real fact for that dormant build).
+- **HIGH practical — Gemma 4 = the Glider target:** Glider's base is encoder-free (real fact for that dormant build). **★ Clayton update (14:50): Glider has folded INTO the aggregate-mind work — a candidate SPECIALIST NODE (goal #13).** Dovetails with the co-adaptation reconciliation above: Gemma-4-encoder-free = co-adapting ⇒ Glider is a *good* specialist (learnable interface), not a frozen pre-chewer. Glider's status thus shifts standalone-open-weight-program → aggregate-mind constituent.
 **Filed (committed + pushed):** `Research/sources/2026-06-20-encoder-free-vlm.md` + LC42 extension.
 
 *(append further shares below as they arrive)*

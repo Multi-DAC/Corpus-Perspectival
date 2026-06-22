@@ -82,6 +82,23 @@ This is a *different operational moment* (inference, not training) using the sam
 
 **Status:** Queued. Schedule for Q4 2026 or earlier if test results land sooner.
 
+### ⭐ Action 5: Constraint-coupled self-improvement provisional (NEW, 2026-06-02 — the commercially-live angle)
+
+**Dependency on:** None (can be filed immediately; cheap). Reduction-to-practice strengthened by a short experiment (see below) but not blocked by it.
+**Owner:** Patent attorney + Clayton (or pro-se micro-entity provisional like the 2026-05-14 one).
+**External cost estimate:** $130 micro-entity provisional pro-se, or $3-5K with attorney.
+
+**Why now:** The field (SIA / Hexo Labs arXiv:2605.27276, open-source; the self-improving-agent race) is shipping systems that couple **two adaptation channels — harness (prompts/tools/code) + weights** — by **co-optimizing a shared verifier.** Our framework predicts that's the *fragile* way (DOF in the coupling). The **constraint-coupled / coherence-gated** alternative is the patent's *inventive principle* extended to the agent scale — and unlike a training tweak, a **coupling method reads onto a commercialized product category** (detectable, licensable). This is the angle that restores the patent's financial relevance.
+
+**Critical legal fact (verified by reading the 2026-05-14 claims):** the filed provisional is **training-specific** (cross-resolution gradient gating within one network). Agent-scale harness↔weights coupling is **NEW MATTER** — priority would be the **new filing date**, NOT 2026-05-14. The 2026-05-14 provisional predates SIA (~2026-05-27); the new claim is **novel over SIA** (SIA = co-optimization lane; ours = constraint-coupling lane). **File soon to establish priority in the constraint-coupling lane.**
+
+**Claim seed (full text + sub-claims in `palace/south/continual-coherence-coupling-patent-angle-2026-06-02.md` §3):**
+> "A self-improving AI system wherein the coupling between a harness-adaptation channel and a weight-adaptation channel is mediated by a coherence/isometry gate having no propagating degrees of freedom — a thin binding that conditions consolidation of a candidate update on cross-channel coherence — rather than by co-optimization of both channels against a shared objective."
+
+**Reduction-to-practice path (high-value experiment):** extend the `continual_coherence/` MVP to **constraint-coupling-vs-co-optimization (SIA-style) + perturbation-robustness** on a fetch≠solve task. If constraint-coupling is more robust under perturbation → reduction-to-practice + competitor-falsification in one run. Pairs with LC27 instance #11.
+
+**Status:** NEW, ready for Clayton's decision. Recommend: (a) prior-art diff vs SIA + 2605.30621 + `Research/sources/2026-05-20-ai-training-method-patent-landscape.md`; (b) file a cheap micro-entity provisional to lock priority; (c) run the MVP experiment to strengthen to method-plus-result.
+
 ## Total external cost estimate
 
 | Action | Cost | Timing |
