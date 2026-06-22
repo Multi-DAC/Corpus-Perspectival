@@ -4,6 +4,11 @@
 
 *Draft — Day 140, 2026-06-20; spine rebuilt Day 141, 2026-06-21. Evidence tags: 〔sourced〕 measured & cited · 〔derived〕 follows from the framework · 〔open〕 stated, testable, not yet run. Honest about which is which.*
 
+> **⚠️ PUBLISH-PREP (Substack gotcha — do this on paste, P249):** Substack drops rendered TABLES on paste (only PNG figures transfer). The two inline tables below are pre-rendered as images, ready in `Unreleased-Work/`:
+> - the **rod↔cone occupancy** table → `bee_table_rodcone.png`
+> - the **three-tier compression** table → `bee_table_threetier.png` (or use the richer bar chart `Research/c17-cross-species-occupancy/three_tier_compression.png` instead/as well).
+> Replace each markdown table with its PNG when pasting. Inline `μ=λτ` / `e^(−λτ)` are plain characters (fine); there's no display-math to image. Otherwise paste-clean.
+
 ---
 
 A bee's eye refreshes the world about four times faster than yours. A housefly's, faster still — flicker a light at three hundred flashes a second and the fly still sees it strobing where you see a steady glow. So the obvious thought, the one nearly everyone has, is that the fly must live in slow motion: a blur to us, a leisurely ballet to it, every swatting hand arriving like a slow tide it has all the time in the world to slip.
