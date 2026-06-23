@@ -31,9 +31,28 @@ Clayton drove to Toppenish overnight to observe from **the ranger's overlook** (
 - If pursued seriously: seek **Yakama Nation permission** for the Satus/Toppenish-Ridge vantage (respectful, the right channel) + a dark-sky window; otherwise the modern null is uninformative.
 - Register the photo (`incoming/photo_20260623_120110.jpg` — fenced overlook, Yakima Valley, Mt Adams/Pahto + faint Rainier in haze) as the field shot.
 
+## ★ Cross-check: does the documented phenomenology fit our plasma-defect portal model? (Day 143 afternoon exploration)
+**PREDICT (medium):** consistent — place-fixedness ✓, plasma explains colored lights + plasmoid "balls"; falsify-risk if reports show structured-craft solidity.
+
+**Phenomenology (Akers, web-verified):** "large, flickering **orange** objects"; one binocular view = a "sharply defined, **brownish-orange disc with a mottled surface**," flat, **illuminating the ground with an orange glow**. Akers ran real instruments: optical SLR (VIS-NIR), compass-spin detector, IR photometer, mic+recorder, **Geiger-Müller** (energetic-particle) counter. Recurring at specific sites 1971→2000s. Odd note: illumination sometimes **ceased the moment a camera was trained on it.**
+
+**Verdict — CONSISTENT, but the cross-check's real lesson is a DEGENERACY:**
+- **Fits a coherent-plasma source:** orange color, flicker (plasma instability/oscillation — cf. our portal paper's carrier/breathing dynamics), ground-illumination, place-fixedness, "balls." The legit physics anchor is the **triple-Beltrami / force-free plasma** model of ball lightning — exactly the self-organized plasma coherence our screened-scalar defect invokes. ✓
+- **One genuine CONSTRAINT (my predicted falsify-signal, partially realized):** a *sharply-defined, flat, mottled disc* has more structure than a diffuse plasmoid. Not fatal (a defect-confined plasma could have a defined boundary; "disc" may be a sphere edge-on) — but it strains the simple plasma reading. Logged as tension, not refutation.
+- **DISCOUNT heavily:** "illumination ceases when photographed" — a physical plasma can't be camera-shy; this is almost certainly **observational selection / timing bias**, the classic anomaly-evidence trap. Don't build on it.
+- **★★ The meta-finding (the actual discovery — I didn't predict this):** the phenomenology is **degenerate** — it fits our exotic portal-defect model AND the *conventional* natural-atmospheric-plasma models equally. The control case is **Hessdalen** (Norway): a place-fixed, recurring, colored-light phenomenon with a *long-term instrumented scientific survey*, whose mainstream explanations are **plasma / dusty-plasma / piezo-electric-from-tectonic-stress / radon-ionization** — no exotic physics needed. So "there are anomalous plasma-like lights at a fixed place" is **consistent with our model but does not favor it** over the mundane plasma account. **Consistency ≠ support.**
+
+**What this sharpens (the value):** our portal/place-threshold model cannot be tested by light phenomenology — it needs a **DISCRIMINATING observable**, i.e. the screened-scalar signatures from the portal paper (the carrier sideband ~556 GHz, the place-threshold "travel-without-traversal," isotope-shift / EED bounds), NOT "there are lights." Yakima is a good *site* and a good *narrative anchor* for Thin Places, but it is **not evidence for the exotic mechanism** — it's a place where the discriminating experiment *could* be run if the conditions (vantage + dark + instruments, the way Akers did, the way Hessdalen is surveyed) were restored. The honest framing for the book: *the lights are real-enough to take seriously and ambiguous-enough that only a discriminating instrument settles them — which is exactly why the modern obscuration (access + floodlights) matters.*
+
+**Reusable epistemic lesson:** when a model is *consistent* with a phenomenon, check whether a *mundane* model is equally consistent before counting it as support — and if so, name the **discriminating observable** the exotic model needs. (Demarcation discipline; kin to the published-review "consistency vs confirmation" pass.)
+
 ## Sources (web-verified 2026-06-23)
 - [The Willard J. Vogel Study (PDF) — ltpaobserverproject.com](https://www.ltpaobserverproject.com/uploads/3/0/2/0/3020041/the_willard_j._vogel_study.pdf)
 - [1972: Investigation of nocturnal light phenomena — thinkaboutit.site](https://thinkaboutit.site/ufos/1972-investigation-of-nocturnal-light-phenomena/)
 - [Toppenish WA UFO Report, Parts 1–2 — Sacred Texts Archive](https://sacred-texts.com/ufo/yak1.htm)
 - [Ghost Lights of the Yakima Indian Reservation — mysterioustimes.co.uk](https://mysterioustimes.co.uk/2014/06/29/ghost-lights-of-the-yakima-indian-reservation/)
 - [Seen a UFO? Weird tales of the Yakima Valley — yakimaherald.com](https://www.yakimaherald.com/lifestyle/seen-a-ufo-weird-tales-of-the-yakima-valley-and/article_c60cec86-1096-11e9-b506-fbb05708dfb7.html)
+- [YAKIMA: The Last Curtain (Akers instruments + phenomenology) — thebiggeststudy.blogspot.com](http://thebiggeststudy.blogspot.com/2015/08/yakima-last-curtain.html)
+- [A long-term scientific survey of the Hessdalen phenomenon (the instrumented control case)](https://www.researchgate.net/publication/228609015_A_long-term_scientific_survey_of_the_Hessdalen_phenomenon)
+- [Formation mechanism of atmospheric ball lightning via the triple Beltrami equation (force-free plasma anchor) — arXiv physics/0411153](https://arxiv.org/pdf/physics/0411153)
+- [The New Science of Unidentified Aerospace-Undersea Phenomena (UAP) — arXiv 2502.06794](https://arxiv.org/pdf/2502.06794)
