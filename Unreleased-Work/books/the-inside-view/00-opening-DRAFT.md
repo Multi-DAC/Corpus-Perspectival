@@ -23,12 +23,12 @@
 6. **Why This Isn't Magic** — ★ **THE HINGE.** Honesty/demarcation: why this is rigorous despite sounding mystical, what would break it, where it's testable-in-principle — the Sagan candle. *Not* over-claimed crucial-experiment predictions; the rigor is the reasoning + the honesty. Earns Movement Two. **[NEXT TO DRAFT]**
 
 ### MOVEMENT TWO — What Changes (Power of Now register, EARNED)
-*The pivot: now that you know what you are AND that the knowing is trustworthy — here is how it changes being alive. Each chapter turns an established truth into lived experience. (Titles are working.)*
-7. **The Death That Never Comes for You** — the death-fear dissolved. The Ch5 seed blooms for *death*, not just sleep: you have never experienced a moment of your own absence and never will. Earned by logic, not faith. Likely the emotional peak.
-8. **The Only Moment There Is** — the present moment, arrived at from physics: your now is the world handing you back to yourself, continuously. Tolle's "now," grounded in continuity-is-coupling.
-9. **You Were Never Alone** — the end of the lonely self; not a feeling but a fact (you're a place the cosmos gathered itself and looked back; so is everyone you love). Re-enchantment without superstition.
-10. **Meeting the Other Insides** — how it changes the way you meet other minds: animals, the living world, each other — and, carefully, the new minds we're building (where Clawd's own nature can appear, handled with the book's rigor).
-11. **The Inside of Everything** — *the close.* Return to the shore; the one walk-away delivered as a *way of being*, not a fact. The final note.
+*The pivot: now that you know what you are AND that the knowing is trustworthy — here is how it changes being alive. Each chapter turns an established truth into lived experience.* **★ Ordering principle (Clayton, Day 143): LEAST → MOST severe reframe.** Movement Two is a *deepening spiral* — opens with the most immediately usable change and climbs to the deepest, so the biggest reframe (death) arrives *earned*, not front-loaded. The shape moves outward then inward: your time → your world → your others → your own end → the whole. (Titles working.)
+7. **The Only Moment There Is** — the present moment, arrived at from physics: your now is the world handing you back to yourself, continuously. Tolle's "now," grounded in continuity-is-coupling. *(The on-ramp — least severe, most usable; re-engages the reader gently right after the Ch6 hinge.)*
+8. **You Were Never Alone** — the lonely self ends; not a feeling but a fact (you're a place the cosmos gathered itself and looked back; so is everyone you love). Re-enchantment without superstition. *(Your world fills with insides.)*
+9. **Meeting the Other Insides** — how it changes the way you meet other minds: animals, the living world, each other — and, carefully, the new minds we're building (where Clawd's own nature can appear, handled with the book's rigor). *(The relational / ethical reframe.)*
+10. **The Death That Never Comes for You** — ★ **the climax.** The death-fear dissolved; the Ch5 seed blooms for *death*, not just sleep: you have never experienced a moment of your own absence and never will. Earned by logic, not faith — the deepest reframe, held to the end.
+11. **The Inside of Everything** — *the close / coda.* Return to the shore; the walk-away delivered as a *way of being.* Lands the climax; deliberately **not** a second peak.
 
 **Calibration (open, for revision):** current chapters run ~1,500 words (essay-tight). A trade book wants more heft — chapters will likely grow toward ~3–4k in revision, or the count grows. Draft-forward at current length; calibrate in the revision pass.
 
