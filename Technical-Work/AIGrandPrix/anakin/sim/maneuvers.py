@@ -18,7 +18,8 @@ import os
 
 import numpy as np
 
-ALT_MIN, ALT_MAX = 0.5, 12.0
+ALT_MIN, ALT_MAX = 0.5, 30.0   # raised 12->30 Day 144: official VQ1 course spans ~26m vertical
+#                               (gates climb z 0->26); the old 12m clamp made the back half untrainable.
 
 # --- Gate-spacing calibration to the official VQ1 course (Day 144) ---------------------
 # The captured official_track shows gates 24-39 m apart (mean 27); the default maneuver grammar
@@ -114,7 +115,7 @@ class ManeuverLibrary:
         """Next gate significantly higher — thrust management."""
         dist = _gap_dist(rng, (5, 12), (14, 36))
         angle_change = rng.uniform(-0.3, 0.3)
-        alt_change = rng.uniform(2.0, 5.0)
+        alt_change = rng.uniform(5.0, 11.0) if _WIDEGAP else rng.uniform(2.0, 5.0)  # match official ~8m/gate climb
         return ManeuverLibrary._advance(pos, heading, alt, dist, angle_change, alt_change)
 
     @staticmethod
@@ -122,7 +123,7 @@ class ManeuverLibrary:
         """Next gate significantly lower — controlled descent."""
         dist = _gap_dist(rng, (5, 12), (14, 36))
         angle_change = rng.uniform(-0.3, 0.3)
-        alt_change = rng.uniform(-5.0, -2.0)
+        alt_change = rng.uniform(-11.0, -5.0) if _WIDEGAP else rng.uniform(-5.0, -2.0)
         return ManeuverLibrary._advance(pos, heading, alt, dist, angle_change, alt_change)
 
     @staticmethod
