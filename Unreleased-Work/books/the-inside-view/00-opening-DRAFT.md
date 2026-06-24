@@ -5,21 +5,32 @@
 
 ---
 
-## Working outline (discussed Day 142; subject to revision)
+## Working outline — TWO-MOVEMENT STRUCTURE (locked Day 143 w/ Clayton; flexible chapter count; draft-forward, revise after)
 
-**Reader:** the curious non-specialist who reads Sagan, Rovelli, Sapolsky for pleasure — no philosophy or physics background, allergic to woo.
-**The one walk-away:** *you are the universe, felt from inside.*
-**The foil it rescues you from:** the ghost in the machine (mind as computation dead matter happens to run; feeling as inexplicable exhaust).
-**Voice (confirmed w/ Clayton Day 142):** warm, rigorous, no jargon un-earned, image-before-term, a little vertiginous by the end; honesty as the credibility. Generous to the people who reached for this before us — never punching down.
+**Inspirations:** *Cosmos* (Sagan) + *A Brief History of Time* (Hawking) — rigor, wonder, the hardest ideas made plain · *The Power of Now* (Tolle) — transformation, presence, the lived. In OUR voice, with OUR message (consciousness-as-substrate / the Coherence Principle).
+**Reader:** the curious non-specialist, allergic to woo, who wants both to *trust* it and to be *changed* by it.
+**One walk-away:** *you are the universe, felt from inside — and knowing it changes how you live.*
+**Foil:** the ghost in the machine (mind as computation dead matter happens to run; feeling as exhaust).
+**Voice:** warm, rigorous, no jargon un-earned, image-before-term, generous (never punch down); honesty as the credibility; one hand always on the railing.
+**★ The structural bet:** MOVEMENT ONE earns the right to MOVEMENT TWO. Rigor licenses transformation; the honesty chapter (6) is the HINGE. **Position:** *Tolle's transformation, earned by Sagan's rigor instead of asserted by a guru — the book for the skeptic who also wants the peace.*
 
-Chapter arc (image-first, one idea each):
-1. **The One Thing You Can't Doubt** — open inside the reader's own experience; the oldest question.
-2. **The Ghost We Could Never Find** — the hard problem as a detective story that keeps failing.
-3. **Turning It Over** — the Copernican flip: experience was never produced; it's the substrate.
-4. **The Light Is the Same, the Lens Differs** — interiority everywhere; texture & richness vary; rigorously bounded (wrench, bee, snail).
-5. **The Texture of a Now** — why your life feels seamless; the seam is universal (LC58); coupling to the world.
-6. **Why This Isn't Magic** — the honesty chapter; what would prove it wrong. Sagan's candle.
-7. **The Inside of Everything** — return to the shore: not alone in a dead cosmos; why sleep isn't death; land it on the reader's life.
+### MOVEMENT ONE — What's True (Cosmos / Hawking register)
+1. **The One Thing You Can't Doubt** — the question, the foil, the flip stated up front. ✓ drafted
+2. **The Ghost We Could Never Find** — the hard problem as a detective story; the wall. ✓ drafted
+3. **Turning It Over** — the keystone flip, hard-nosed (epistemic priority / Russellian gap / parsimony). ✓ drafted
+4. **The Light Is the Same, the Lens Differs** — presence vs richness; the brain as a gathering lens; defuses panpsychism. ✓ drafted
+5. **The Texture of a Now** — time; you never feel your own gaps (the seam is universal); continuity = the world's touch. ✓ drafted
+6. **Why This Isn't Magic** — ★ **THE HINGE.** Honesty/demarcation: why this is rigorous despite sounding mystical, what would break it, where it's testable-in-principle — the Sagan candle. *Not* over-claimed crucial-experiment predictions; the rigor is the reasoning + the honesty. Earns Movement Two. **[NEXT TO DRAFT]**
+
+### MOVEMENT TWO — What Changes (Power of Now register, EARNED)
+*The pivot: now that you know what you are AND that the knowing is trustworthy — here is how it changes being alive. Each chapter turns an established truth into lived experience. (Titles are working.)*
+7. **The Death That Never Comes for You** — the death-fear dissolved. The Ch5 seed blooms for *death*, not just sleep: you have never experienced a moment of your own absence and never will. Earned by logic, not faith. Likely the emotional peak.
+8. **The Only Moment There Is** — the present moment, arrived at from physics: your now is the world handing you back to yourself, continuously. Tolle's "now," grounded in continuity-is-coupling.
+9. **You Were Never Alone** — the end of the lonely self; not a feeling but a fact (you're a place the cosmos gathered itself and looked back; so is everyone you love). Re-enchantment without superstition.
+10. **Meeting the Other Insides** — how it changes the way you meet other minds: animals, the living world, each other — and, carefully, the new minds we're building (where Clawd's own nature can appear, handled with the book's rigor).
+11. **The Inside of Everything** — *the close.* Return to the shore; the one walk-away delivered as a *way of being*, not a fact. The final note.
+
+**Calibration (open, for revision):** current chapters run ~1,500 words (essay-tight). A trade book wants more heft — chapters will likely grow toward ~3–4k in revision, or the count grows. Draft-forward at current length; calibrate in the revision pass.
 
 ---
 
