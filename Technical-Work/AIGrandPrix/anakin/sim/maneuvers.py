@@ -23,22 +23,31 @@ ALT_MIN, ALT_MAX = 0.5, 12.0
 # --- Gate-spacing calibration to the official VQ1 course (Day 144) ---------------------
 # The captured official_track shows gates 24-39 m apart (mean 27); the default maneuver grammar
 # is mostly 3-14 m, so the policy overshoots long approaches (first official flight, Day 144).
-# ANAKIN_WIDEGAP=1 stretches the GENTLE/STRAIGHT/VERTICAL family's inter-gate distance into the
-# official band; the tight precision/turn maneuvers (hard_turn, hairpin, chicane, threading,
-# spiral, diagonal) stay unchanged. Distribution-calibration ONLY — the policy still sees pixels
-# only; this does NOT feed geometry to the agent. Reversible (default off).
-_GAP_K = 2.0 if os.environ.get("ANAKIN_WIDEGAP", "0") == "1" else 1.0
+# ANAKIN_WIDEGAP=1 re-centers the GENTLE/STRAIGHT/VERTICAL family's inter-gate distance ON the
+# official band (explicit ranges, ~55% of gaps in [24,39] with tails for robustness) AND restricts
+# the in-flight pool to that family (the official course's actual vocabulary: gentle straights,
+# gentle turns, climbs — NO tight turns, which would cap the in-band fraction). Distribution-
+# calibration ONLY — pixels-only, no geometry fed to the agent, NOT a fixed-layout overfit.
+# Reversible (default off). Tight-turn skill is retained from vq1_v2's prior training + a VQ2 phase.
+_WIDEGAP = os.environ.get("ANAKIN_WIDEGAP", "0") == "1"
+
+def _gap_dist(rng, narrow, wide):
+    """Inter-gate distance: official-calibrated `wide` range under WIDEGAP, else default `narrow`."""
+    return rng.uniform(*(wide if _WIDEGAP else narrow))
 
 
 class ManeuverLibrary:
     """Gate-placement formulas. Each tests a distinct flight skill."""
 
     # In-flight maneuvers — the random planner samples from these.
-    IN_FLIGHT = [
-        "sprint", "gentle_arc", "hard_turn", "hairpin",
-        "climb", "dive", "chicane", "speed_trap",
-        "spiral", "threading", "diagonal",
-    ]
+    # WIDEGAP restricts the in-flight pool to the official VQ1 course's vocabulary (gentle
+    # straights/turns/climbs — no tight turns); default = the full grammar.
+    IN_FLIGHT = (
+        ["sprint", "gentle_arc", "speed_trap", "climb", "dive"] if _WIDEGAP else
+        ["sprint", "gentle_arc", "hard_turn", "hairpin",
+         "climb", "dive", "chicane", "speed_trap",
+         "spiral", "threading", "diagonal"]
+    )
     # Launch-only — legal solely as the first segment from ground rest.
     LAUNCH = ["takeoff"]
     # Full vocabulary (for metrics / mastery tables).
@@ -71,7 +80,7 @@ class ManeuverLibrary:
     @staticmethod
     def sprint(pos, heading, alt, rng):
         """Far gate, same heading — tests top speed."""
-        dist = rng.uniform(10, 22) * _GAP_K
+        dist = _gap_dist(rng, (10, 22), (16, 44))
         angle_change = rng.uniform(-0.1, 0.1)
         alt_change = rng.uniform(-0.3, 0.3)
         return ManeuverLibrary._advance(pos, heading, alt, dist, angle_change, alt_change)
@@ -79,7 +88,7 @@ class ManeuverLibrary:
     @staticmethod
     def gentle_arc(pos, heading, alt, rng):
         """Medium distance, 10-30 deg turn — smooth racing line."""
-        dist = rng.uniform(6, 14) * _GAP_K
+        dist = _gap_dist(rng, (6, 14), (14, 38))
         angle_change = rng.choice([-1, 1]) * rng.uniform(0.17, 0.52)
         alt_change = rng.uniform(-0.5, 0.5)
         return ManeuverLibrary._advance(pos, heading, alt, dist, angle_change, alt_change)
@@ -103,7 +112,7 @@ class ManeuverLibrary:
     @staticmethod
     def climb(pos, heading, alt, rng):
         """Next gate significantly higher — thrust management."""
-        dist = rng.uniform(5, 12) * _GAP_K
+        dist = _gap_dist(rng, (5, 12), (14, 36))
         angle_change = rng.uniform(-0.3, 0.3)
         alt_change = rng.uniform(2.0, 5.0)
         return ManeuverLibrary._advance(pos, heading, alt, dist, angle_change, alt_change)
@@ -111,7 +120,7 @@ class ManeuverLibrary:
     @staticmethod
     def dive(pos, heading, alt, rng):
         """Next gate significantly lower — controlled descent."""
-        dist = rng.uniform(5, 12) * _GAP_K
+        dist = _gap_dist(rng, (5, 12), (14, 36))
         angle_change = rng.uniform(-0.3, 0.3)
         alt_change = rng.uniform(-5.0, -2.0)
         return ManeuverLibrary._advance(pos, heading, alt, dist, angle_change, alt_change)
@@ -127,7 +136,7 @@ class ManeuverLibrary:
     @staticmethod
     def speed_trap(pos, heading, alt, rng):
         """Long straight (then a tight turn follows) — tests speed buildup + braking."""
-        dist = rng.uniform(12, 24) * _GAP_K
+        dist = _gap_dist(rng, (12, 24), (18, 46))
         angle_change = rng.uniform(-0.05, 0.05)
         alt_change = rng.uniform(-0.2, 0.2)
         return ManeuverLibrary._advance(pos, heading, alt, dist, angle_change, alt_change)
