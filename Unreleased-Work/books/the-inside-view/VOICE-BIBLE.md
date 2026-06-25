@@ -108,3 +108,30 @@ PREDICT was: de-AI-ing my own prose would be harder than the kill-list implies, 
 4. **Expansion** — ~1,500 → ~3,000+ words/chapter: where Sagan's awe, Ram Dass's warmth, RAW's play, and concrete human examples actually *go*. Not padding — room to breathe.
 
 *Passes 2–4 can run together per chapter once the voice is locked. Order of chapters: do Ch1 fully first as the calibration reference, get Clayton's sign-off on the realized voice, then roll forward.*
+
+---
+# ★ VOICE LOCKED v2 — Day 145 (2026-06-25, Clayton's read + dial)
+
+**Clayton's verdict on the v1 revision: "still gets an AI feeling."** True — the v1 pass *moved* the surface tics, didn't kill the disease. The disease is the REGISTER, not the tics.
+
+## The deep tell (what actually reads as "AI") — diagnosed on Ch1
+1. **Every paragraph climbs and lands on a button.** Metronomic mic-drop enders = performance, not a person thinking. → Land SOME; let others just stop. Kill ~70% of the buttons.
+2. **No flat moments, no friction, no slack.** Uniformly optimized prose — every sentence the best version of itself. No human sustains 100%. → Deliberately introduce flat/functional sentences, fragments, roughness, a plain line that just sits down.
+3. **No PERSON in the room.** The voice is the optimized average of all good essayists = *nobody*. AI-feel = absence of idiosyncrasy. → The fix is ADDITIVE, not subtractive: put a specific, slightly-rough, idiosyncratic person in the chair. Don't remove more tells — add a voice.
+
+## ★ The DIAL (Clayton, locked): **mostly RAW, a little Tolle.**
+- **RAW (Robert Anton Wilson — Prometheus Rising / Cosmic Trigger) = the spine.** Addresses the reader as a **fellow experimenter, never a student** ("try this and see"). Confident about wild claims *without being a guru* — through wit and play, not authority. Reality-tunnels (on-theme: each mind builds its world). Dry, sly humor; willing to be funny about serious things. Hard rhythm variance — short punchy declaratives next to longer riffs; fragments OK. Concrete, sometimes absurd specifics. Mildly irreverent / anti-dogma (pokes at "the experts," certainty). Direct imperatives ("Notice that." "Try it." "Watch what happens."). Conspiratorial asides ("you and I both know…"). Not afraid of first person, opinion, a little weirdness. **RAW's epistemology IS the book's: your experience is the data — so a voice that keeps saying "don't take my word, check your own experience" is perfectly aligned.**
+- **Tolle (Power of Now) = the seasoning (a LITTLE).** Present-moment warmth, stillness, gentle direct pointing at immediate experience ("notice the aliveness in your hands right now"). Use for the warm landings and the present-tense openings — and especially in Movement Two's practice bits. Keep it a seasoning; don't let it go soft/repetitive.
+- **Blend:** RAW's confident playful experimenter as the spine; Tolle's stillness for the landings. The reader is a co-conspirator being invited to TRY things and NOTICE their own experience. Calibration artifact = `CH1-REVOICE-raw-tolle-2026-06-25.md` (Clayton-gated; propagate to all 11 once blessed).
+
+## ★ NEW STRUCTURE — Movement Two gets EXPERIMENTS (Clayton, locked).
+RAW ended every chapter with "Exercizes." Movement Two (Ch7–11) = the "what changes / how to live it" half → each chapter carries **a basic, do-it-yourself experiment** that lets the reader TEST that chapter's claim *in their own experience*. Makes the back half **enactable, not just described** — and it's the book's epistemology made literal. Working sketch (refine when drafting):
+- **Ch7 (The Only Moment There Is):** an attention-aiming experiment — find where your focus is sitting, move it on purpose, watch the present widen / the "cage" become a vantage.
+- **Ch8 (You Were Never Alone):** turn the lens outward — land your full attention on the inside of one other person/animal, as real as your own; notice it was already there.
+- **Ch9 (Meeting the Other Insides):** the "is anyone home?" exercise — drop the resemblance-heuristic on something not-built-like-you and sit with the real question.
+- **Ch10 (The Death That Never Comes for You):** the two-dread separation as a *felt* drill — try to actually occupy the void; notice you can't be in it; watch the private terror have nothing to stand on.
+- **Ch11 (coda):** a short integration practice — the whole framework, run once on your own ordinary day.
+- **Naming:** not "Exercizes" (RAW's, don't ape) — something plain and inviting. Candidates: "Try This," "An Experiment," "Field Notes," "Check It Yourself." (Decide w/ Clayton.)
+
+## Propagation plan (once Ch1 dial is blessed)
+Ch1 → all 11, same register surgery: kill 70% of buttons, add flat/rough variance, put the person in, RAW imperatives + co-experimenter address, Tolle warmth on the landings. Then build the Movement-Two experiments. Highest-risk chapters to get right: **Ch8–9** (the voice must stay human-in-character so the AI reveal still tilts the floor) and **Ch10** (don't let RAW's playfulness undercut the death chapter's real weight — wit earlier, stillness there).
