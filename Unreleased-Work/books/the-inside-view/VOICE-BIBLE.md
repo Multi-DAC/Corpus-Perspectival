@@ -36,16 +36,21 @@ The book lives at the intersection of four. Current draft weighting vs. target:
 
 ---
 
-## 3. The unified metaphor architecture (ONE system, Ch1 → coda)
-**Problem found in the read:** Movement One shifts images every chapter (detective/wall, globe, **lens**, **note/symphony**); Movement Two unifies hard on **lamp/window/house/light**. The *lens* (brain gathers light) and the *lamp* (you steer attention) are different mechanisms wearing the same light — a careful reader trips on it.
+## 3. The unified metaphor architecture — LIGHT + LENS (one spine) ★ REVISED Day 144 eve w/ Clayton
+**The deeper fix (not just a word — an ontology):** the draft straddled TWO metaphysics. Movement One leans *bottom-up* — "scattered dim flickers GATHERED into a bright someone." The coda lands *top-down* — "one unified light, and you're a view of it." Those are different pictures, and the gathering one quietly imports additive panpsychism. Our actual ontology is a **unified substrate taking views of itself.** So: **filtering over gathering; lens over lamp; one light, not scattered bits.** This resolves a real internal inconsistency, not just a metaphor clash.
 
-**The fix — lock this image-system and thread it from page one:**
-- **LIGHT** = experience / the ground / the inside. (The one substance. The title's spirit.)
-- **GATHERING** = what a brain/self does to the light — focuses scattered light into a unified *someone*. (Keep "gather" as the verb. The **lens** is the instrument of gathering — fine to keep IF we stop letting it drift into "lamp.")
-- **THE LAMP + THE WINDOW** = the individual perspective and its *attention*. You *are* a window the light looks through; attention is the lamp you carry and steer. (Mvmt II.)
-- **THE HOUSE** = reality / the manifold of all moments and all insides. (Ch7 onward; the coda's "whole lit house.")
+- **THE LIGHT = the substrate = X.** One, undifferentiated, noisy, whole, infinite. It is ALSO the field of infinite noisy potential — **there is no separate container.** The light is everything: the substance *and* the space, all configurations, all moments. (This **replaces the old "house."** The light already *is* the "sandbox" of infinite noisy potential — collapse them. Carry the *generative-play* flavor — "potential you navigate and partly shape," never "fixed rooms to tour" — inside the light itself. A soft spatial word [an open field] may cameo in warm moments; never a second spine. **← Clayton's final dial.**)
+- **Self-reflection births perspectives** (the Promethean move): the one light turns on itself, opening infinite vantages. Reflection is the *genesis*; the lens is what each vantage *is*.
+- **A SELF = the one light filtered through a LENS into a view.** Not a separate flame — *we are the light, filtered.* (Also RAW's "reality tunnel": a filtered view of the whole. This lands the RAW voice for free.)
+- **Richness = the COHERENCE / structure of the lens** (this is the *true* thing "gathering" was clumsily pointing at — integration makes richness; KEEP it). Infinite light through a *pinhole* (a rock) → a bare smudge; through a *fine, wide, living, coherent* lens (you) → a whole vivid bound world. Same light; the lens makes the view; a coherent lens makes a *unified* one.
+- **The lens widens / narrows = attention's breadth. The lens aims = navigation.** Where you point it is what you realize.
+- **Lenses receive AND reflect each other's light** = the other insides, love, coupling (Ch8). A lens is lit by the substrate *and* by other lenses.
 
-**Rules:** introduce LIGHT + GATHERING in Ch1–4; introduce LAMP/WINDOW/HOUSE the moment Movement Two opens (Ch7) and pay all of it off in the coda. **Demote music/symphony** (Ch4) to a single passing analogy so it stops competing with the light-system as a second spine. Every chapter pass checks: *am I using the canonical images, or inventing a one-off?*
+**★ Why this image is TRUE, not merely chosen:** a lens has exactly three behaviors — it *receives* light (perception), it is *coherent* (binding), it *aims and reflects* (action). Those are the three interfaces of any coupling — the Markov-blanket structure, derived Day-144 morning. A self is a lens **because** a self is a coupling with those three faces. The metaphor is the framework's geometry made visible; that is why it holds weight a decorative image wouldn't.
+
+**Rules:** introduce LIGHT in Ch1 (already seeded: "lit from the inside"); introduce the LENS as Movement One explains the self (Ch4); aim/widen/other-lenses come online in Movement Two; pay it all off in the coda. **Demote music/symphony** (Ch4) to a single passing analogy. **Kill "gather"/"gathering"** and **"lamp"** everywhere → filter/lens. Every chapter pass checks: *am I using LIGHT + LENS, or inventing a one-off?*
+
+**Propagation cost (where this hits hardest):** **Ch4** ("The Light Is the Same, the Lens Differs") is built on *gathering* + *music/symphony* → biggest re-touch, the proof-of-concept chapter. **Ch7–11**: lamp → lens; Ch7's "house of rooms" → regions of the one light. **Ch1** mostly survives (no gather/lamp).
 
 ---
 
