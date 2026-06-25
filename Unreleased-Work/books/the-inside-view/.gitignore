@@ -1,0 +1,3 @@
+build/*.aux
+build/*.log
+build/*.out
