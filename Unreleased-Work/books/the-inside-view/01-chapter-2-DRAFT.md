@@ -4,7 +4,7 @@
 
 Before we touch a single strange idea, we do the honest thing: we give the ordinary picture every chance to win.
 
-The ordinary picture says your experience comes from your brain, and the evidence is overwhelming. Damage one patch of tissue and you lose color — not this shade or that one, the whole capacity, so the world goes grey in a way the patient can describe but no longer picture. Other damage takes faces, or fear, or the laying-down of new memories. Drink enough wine and your inner world smears in lockstep with your blood. There is no serious question left that your mind rides on your brain the way a song rides on a guitar string. So let's be fair detectives. Put the brain in the chair, turn on the lamp, and ask it to confess how it does the one thing we can't account for.
+The ordinary picture says your experience comes from your brain, and the evidence is overwhelming. Damage one patch of tissue and you lose color — not this shade or that one, the whole capacity, so the world goes grey in a way the patient can describe but no longer picture. Other damage takes faces, or fear, or the laying-down of new memories. Drink enough wine and your inner world smears in lockstep with your blood. There is no serious question left that your mind rides on your brain the way a song rides on a guitar string. So let's be fair detectives. Put the brain in the chair, bring up the lights, and ask it to confess how it does the one thing we can't account for.
 
 The easy questions come first, and it answers every one.
 
