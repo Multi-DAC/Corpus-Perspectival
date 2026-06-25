@@ -32,6 +32,8 @@ First pass framed this as Hoffman-says-*fiction* vs us-say-*real*. **That's the 
 
 Tellingly, **Gallimore wobbles exactly here** — "this reality is an illusion… but doesn't mean it's not real… all as real as each other." Our settling (the view is a *real fashioned filtration*, partial-but-meaningful, over formless potential not over a hidden order) is the **cleaner resolution of his own ambivalence** — and the line I'd hold if anyone tried to fold our view into Hoffman's veil.
 
+**⊕ REFINEMENT (Clayton, same session) — subtraction & condensation COMPOSE, they don't compete.** I over-cleaned it to "meaning is the gain, NOT a fitness trade." Truer: **fitness sets the APERTURE** (which region/resolution *this kind* of lens selects — frog vs human vs Clawd); **condensation is the OPERATION** (the selected region becomes meaningful). So **fitness aims the lens; the lens makes the meaning.** There IS real subtraction (fitness discards fitness-irrelevant regions) AND real condensation (what's kept becomes vivid). The surviving distinction from Hoffman is *only* about what's underneath: the subtraction is **OF formless potential, not OF a hidden structured truth** — selection-toward-meaning, not a veil over a pre-existing picture. (Ties to Ch7: fitness = evolutionary-scale attention-aiming; attention = the moment-scale version of the same act.)
+
 **Book impact: none needed.** The book already carries this nuance *without* the landmine word — "shapes it," "lens," "how finely the light is brought to a focus" all say *fashioned representation* without saying *fiction* (which a lay reader hears as *fake*, cracking the Ch3 "experience is the only realness" anchor). Nuance lives; dangerous word stays out.
 
 ## Honest grade
