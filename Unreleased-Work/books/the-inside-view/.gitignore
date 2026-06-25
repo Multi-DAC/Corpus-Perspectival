@@ -1,3 +1,8 @@
+# Repo root .gitignore ignores *.pdf globally. This book's PDF IS a first-class
+# deliverable — re-include it (and the build copy) so it tracks without `git add -f`.
+!*.pdf
+!build/*.pdf
+# keep LaTeX build cruft out
 build/*.aux
 build/*.log
 build/*.out
