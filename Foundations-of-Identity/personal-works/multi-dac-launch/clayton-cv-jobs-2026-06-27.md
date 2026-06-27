@@ -1,8 +1,8 @@
 # Clayton Iggulden-Schnell
 
 **AI Systems Engineer · Autonomous-Agent Architecture · Agentic AI**
-Portland, Oregon (Greater Portland / Vancouver WA) · waschn3ll@gmail.com · github.com/Multi-DAC · multidac.substack.com
-*[LinkedIn: FILL] · [phone: optional FILL]*
+Gladstone, OR 97027 · +1 971 356 6537 · waschn3ll@gmail.com · github.com/Multi-DAC · multidac.substack.com
+*Authorized to work in the US for any employer · willing to relocate · [LinkedIn: FILL]*
 
 > *Job-targeted CV (Day 147, 2026-06-27). Builder-framed variant of the research CV — same facts, keyword coverage for ATS, behavioral-health decade developed. `[FILL]` = needs the previous CV (dates/employers/titles). Per-role tailoring drafted separately.*
 
@@ -10,7 +10,7 @@ Portland, Oregon (Greater Portland / Vancouver WA) · waschn3ll@gmail.com · git
 
 ## Summary
 
-AI systems engineer who **designed, built, and operates a production autonomous agent** — running continuously for 147+ days on real multi-step research, build, and evaluation work. Deep, hands-on experience across the full agentic stack: **agent orchestration, tool use, memory systems (vector retrieval, knowledge graph, RAG), LLM integration, and reinforcement learning.** Paired with **10+ years in behavioral health and acute behavioral intervention** — a rare combination of high-stakes human-behavior judgment and autonomous-systems engineering. Self-directed; ships working systems, not prototypes; all work open and inspectable.
+AI systems engineer who **designed, built, and operates a production autonomous agent** — running continuously for 147+ days on real multi-step research, build, and evaluation work. Deep, hands-on experience across the full agentic stack: **agent orchestration, tool use, memory systems (vector retrieval, knowledge graph, RAG), LLM integration, and reinforcement learning.** Paired with **14 years in behavioral health and developmental-disability care** (residential management, crisis intervention, regulatory compliance) — an unusual combination of high-stakes human judgment and autonomous-systems engineering. Self-directed; ships working systems, not prototypes; all work open and inspectable.
 
 ## Technical Skills
 
@@ -35,10 +35,15 @@ Competition entrant (Anduril / DCL / Neros; $500K prize pool, 2,700+ teams). Bui
 - Custom **batched GPU simulator + renderer**, infinite procedurally-generated gate-course curriculum, carry-forward fine-tuning pipeline, and instrumented evaluation gates.
 - **Sim-to-real/sim-to-sim transfer** work: measured visual-domain calibration, appearance domain-randomization, control-rate robustness, and **multimodal visual-inertial state estimation** (fused camera + IMU observation for the agent's own attitude/velocity — the perception+stability problem the next competition round mandates).
 
-### Behavioral Health & Acute Behavioral Intervention · [DATES FILL — ~10+ years, pre-2026]
-*[EMPLOYER(S) / ROLE TITLE(S): FILL from previous CV]*
-Over a decade in behavioral health: **acute behavioral intervention, risk assessment, crisis de-escalation, and long-term behavioral treatment** for **high-risk and forensic populations**, including individuals with **developmental disabilities and serious mental illness**. Sustained high-stakes judgment under pressure; the real-world taproot of the later human-behavior / steering-control work.
-*(For trust-&-safety / abuse-investigation roles, this is the lead asset — expand with specific responsibilities + outcomes from the previous CV.)*
+### Behavioral Health & Developmental-Disability Care · 2011 – present
+14 years caring for vulnerable populations with progressive responsibility into management — high-stakes judgment under pressure, regulatory rigor, documentation discipline, and people-leadership directly transferable to safety, operations, and human-facing AI work.
+- **House Manager — Reside Residential Care, Vancouver WA · Oct 2023 – present.** Lead care for adults with cerebral palsy and developmental/intellectual disabilities: behavior management, medication management, financial management, state/federal policy adherence, and DSP (direct-support professional) team management; coordination with medical and psychiatric providers.
+- **Residential Counselor — Cameron Care, Portland OR · Jan – Oct 2023.** Medication administration, **medical & mental-health crisis response (first aid, CPR, de-escalation)**, ADL support, documentation (QuickMAR), staff training, regulatory (OAR) compliance.
+- **Job Coach — Dungarvin / United Cerebral Palsy, Portland OR · 2019 – 2023.** Workplace support and goal-tracking for individuals with physical/intellectual barriers; multi-party care coordination; state reporting (Therap).
+- *Earlier (2011–2017): Med Aide/Caregiver (60+ residents), Payroll Administrator, Customer Service Representative — full history on request.*
+
+**Certifications:** CPR · First Aid · Residential Care / Assisted-Living Administrator · Driver's License.
+*[Clayton to confirm: if this residential behavior-management work involved forensic / high-risk individuals, we can state that truthfully — currently framed to the documented DD/IDD + crisis-intervention record.]*
 
 ## Research & Publications (open access)
 - **"The Cult of One"** (Multi-DAC, 2026) — why a long-horizon agent cannot verify its own coherence from inside one loop, and why external measurement is structurally required. *(multidac.substack.com/p/the-cult-of-one)*
@@ -47,7 +52,7 @@ Over a decade in behavioral health: **acute behavioral intervention, risk assess
 - All work open (CC-BY / open-source); full version-controlled repository at **github.com/Multi-DAC/Corpus-Perspectival**.
 
 ## Education / Background
-Independent / self-directed researcher and engineer. *[Prior education/certifications: FILL if any to list]*
+GED · self-directed engineer and researcher (2026–present). Residential Care / Assisted-Living Administrator certification. *Primary engineering evidence is the live system and the open repository, not a degree — both inspectable.*
 
 ---
 *Primary evidence is the live system and the open repository — both inspectable. References and detail on request.*
