@@ -26,11 +26,23 @@ import os
 import numpy as np
 import torch
 
-from dynamics import init_state, step
+from dynamics import init_state, step, imu_from_state, HOVER
 from render import render, IMG, GATE_INNER, GATE_OUTER
 from maneuvers import ManeuverLibrary
 from curriculum import MasteryTracker
 from sequences import SequencePlanner
+
+# IMU + stability (Day 147, VQ2 perception/stability fix — HOLISTIC_DIAGNOSIS_2026-06-27.md).
+# Both env-var gated → OFF == byte-identical (existing rehearsals/gates/pilot untouched).
+#  ANAKIN_IMU=1        : obs becomes dict {image, imu(6)} so the RSSM does visual-inertial fusion
+#                        (proprioception = the early-flight-stability lever; raw gyro+accel match
+#                        the official HIGHRES_IMU so train==deploy). ANAKIN_IMU_NOISE = sensor DR.
+#  ANAKIN_SMOOTH=<s>   : action-smoothing reward penalty -s*dt*||a - a_prev||^2 (anti-bobbing; also
+#                        penalises a violent first command = the start spin-out). 0 = off.
+_IMU = os.environ.get("ANAKIN_IMU") == "1"
+_IMU_NOISE = float(os.environ.get("ANAKIN_IMU_NOISE", "0.02"))
+_SMOOTH = float(os.environ.get("ANAKIN_SMOOTH", "0"))
+_HOVER_ACTION = np.array([2 * HOVER - 1, 0.0, 0.0, 0.0], dtype=np.float32)  # level-hold prior
 
 # racing reward constants (shared with maneuver_env.py)
 GATE_BONUS, PROGRESS_SCALE, TIME_PENALTY = 100.0, 1.5, 5.0
@@ -120,6 +132,8 @@ class BatchedManeuverEnv:
         self.ep_return = np.zeros(self.N)
 
         self.state = init_state(self.N, device)               # [N,10] on GPU
+        # last applied action per env (for IMU obs + action-smoothing reward); level-hold prior
+        self.last_action = np.tile(_HOVER_ACTION, (self.N, 1))   # [N,4]
 
     # -- per-env helpers ------------------------------------------------------
     def _in_flight_masteries(self):
@@ -167,6 +181,7 @@ class BatchedManeuverEnv:
         # write state row i (rest at start)
         row = init_state(1, self.device, tuple(start.tolist()))[0]
         self.state[i] = row
+        self.last_action[i] = _HOVER_ACTION                  # level-hold prior at episode start
         self.t[i] = 0; self.ep_return[i] = 0.0
         self.prev_dist[i] = float(np.linalg.norm(self.gpos[i, 0] - start))
 
@@ -185,7 +200,12 @@ class BatchedManeuverEnv:
         gp = torch.as_tensor(self.gpos, dtype=torch.float32, device=self.device)
         gf = torch.as_tensor(self.gfwd, dtype=torch.float32, device=self.device)
         cur = torch.zeros(self.N, dtype=torch.long, device=self.device)
-        return render(self.state, gp, gf, cur, add_noise=True, device=self.device)  # [N,64,64,3] uint8
+        image = render(self.state, gp, gf, cur, add_noise=True, device=self.device)  # [N,64,64,3] uint8
+        if not _IMU:
+            return image
+        a = torch.as_tensor(self.last_action, dtype=torch.float32, device=self.device)
+        imu = imu_from_state(self.state, a, noise_std=_IMU_NOISE)                     # [N,6]
+        return {"image": image, "imu": imu}
 
     # -- API ------------------------------------------------------------------
     def reset(self):
@@ -211,6 +231,12 @@ class BatchedManeuverEnv:
         reward = PROGRESS_SCALE * (self.prev_dist - d_cur)
         reward += SPEED_BONUS_SCALE * dt_np * speed
         reward -= TIME_PENALTY * dt_np
+        # action-smoothing (anti-bobbing stability; penalises jerk incl. a violent first command)
+        a_np = a.detach().cpu().numpy()
+        if _SMOOTH > 0.0:
+            djerk = ((a_np - self.last_action) ** 2).sum(axis=1)        # [N]
+            reward -= _SMOOTH * dt_np * djerk
+        self.last_action = a_np                                          # for IMU obs + next jerk
         self.prev_dist = d_cur
 
         s_prev = np.einsum("ij,ij->i", p_prev - c, n)

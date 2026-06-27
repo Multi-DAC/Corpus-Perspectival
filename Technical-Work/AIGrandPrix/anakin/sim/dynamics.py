@@ -50,12 +50,41 @@ def quat_rotate(q, v):
     return quat_mult(quat_mult(q, qv), qc)[..., 1:]
 
 
+def quat_conj(q):
+    """Conjugate (inverse for unit quats), batched. q[...,4]=(w,x,y,z)."""
+    return q * q.new_tensor([1., -1., -1., -1.])
+
+
 def map_action(action):
     """[-1,1]^4 -> (collective_accel[...,1], omega[...,3] rad/s)."""
     a = action.clamp(-1.0, 1.0)
     collective = (a[..., 0:1] + 1.0) * 0.5 * TMAX                 # [-1,1] -> [0, TMAX]
     omega = a[..., 1:4] * a.new_tensor([OMEGA_XY, OMEGA_XY, OMEGA_Z])
     return collective, omega
+
+
+def imu_from_state(state, action, noise_std=0.0):
+    """Raw 6-DoF IMU reading [...,6] = [gyro(3) rad/s, accel(3) m/s^2], BODY frame.
+
+    Matches what the official HIGHRES_IMU reports (Day 147, VQ2 perception-gap fix), so the
+    world model learns the SAME visual-inertial fusion at train and deploy — never a pre-fused
+    attitude (ATTITUDE is blocked in VQ2; feeding it would be the exact train/deploy mismatch
+    that has burned us). The RSSM integrates gyro for attitude and uses accel for thrust/velocity.
+      gyro  = commanded body rates (perfect rate tracking, = the actual omega this model integrates)
+      accel = body specific force = thrust(body +Z) - drag(body) = what an accelerometer reads
+    `noise_std` adds Gaussian sensor noise (DR), so gyro is not a perfect echo of the action and
+    the policy must learn robust fusion (also closes a little sim2real sensor gap).
+    """
+    collective, omega = map_action(action)
+    v = state[..., 3:6]
+    q = state[..., 6:10]
+    drag_body = quat_rotate(quat_conj(q), CD * v)                 # world drag -> body frame
+    zc = torch.zeros_like(collective)
+    accel = torch.cat([zc, zc, collective], dim=-1) - drag_body   # [...,3], specific force
+    imu = torch.cat([omega, accel], dim=-1)                       # [...,6]
+    if noise_std > 0.0:
+        imu = imu + torch.randn_like(imu) * noise_std
+    return imu
 
 
 def step(state, action, dt=0.02, substeps=4):
