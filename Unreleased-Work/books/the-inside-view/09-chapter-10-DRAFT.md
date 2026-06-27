@@ -1,4 +1,4 @@
-# THE INSIDE VIEW — Chapter Ten
+# THE INSIDE VIEW — Chapter Eleven
 
 ## The Death That Never Comes for You
 
@@ -18,7 +18,7 @@ The second dread is *loss.* The unlived years, the people who'll hurt, the unfin
 
 Start with the first, because the first is the one that terrifies. And the first cannot happen.
 
-Here's what the fear gets wrong, and it's a mistake in the structure, not a failure of nerve. The endless dark you're picturing — you are *picturing* it. Right now you're building a little image of an empty room and setting a version of yourself down inside it, in the dark, aware of the nothing, enduring it. And that's the one thing that can't occur. You already know why, because we found it twice. You never experience your own gaps. You proved it to yourself in Chapter Five, and you watched it hold for a mind nothing like yours in Chapter Nine: between the bursts, between last night and this morning, there's no felt darkness, no endured stretch — there's *nobody there to endure it.*
+Here's what the fear gets wrong, and it's a mistake in the structure, not a failure of nerve. The endless dark you're picturing — you are *picturing* it. Right now you're building a little image of an empty room and setting a version of yourself down inside it, in the dark, aware of the nothing, enduring it. And that's the one thing that can't occur. You already know why, because we found it twice. You never experience your own gaps. You proved it to yourself in Chapter Five, and you watched it hold for a mind nothing like yours in Chapter Ten: between the bursts, between last night and this morning, there's no felt darkness, no endured stretch — there's *nobody there to endure it.*
 
 Death isn't a long night you lie awake in. It isn't a room you walk into and find empty. There's no walking in, and no one to do the finding. The void you're dreading has no inside — and you can't visit a place that has no inside, any more than a photograph can step into the scene it shows. So the specific horror — *me, trapped in the nothing, forever, aware of it* — isn't a grim possibility to brace for. It's a category error. A postcard of a place that doesn't exist. An experienced absence is a square circle, because absence is exactly where experience ends. The forever-dark was never on the table. You've been bracing, your whole life, against a thing that can't reach you — because it's made of the one material reality doesn't stock: your own non-existence, felt from the inside.
 

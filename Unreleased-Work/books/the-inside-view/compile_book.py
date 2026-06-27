@@ -16,8 +16,8 @@ os.makedirs(BUILD, exist_ok=True)
 CHAPTERS = [
     "00-opening-DRAFT.md", "01-chapter-2-DRAFT.md", "02-chapter-3-DRAFT.md",
     "03-chapter-4-DRAFT.md", "04-chapter-5-DRAFT.md", "05-chapter-6-DRAFT.md",
-    "06-chapter-7-DRAFT.md", "07-chapter-8-DRAFT.md", "08-chapter-9-DRAFT.md",
-    "09-chapter-10-DRAFT.md", "10-chapter-11-DRAFT.md",
+    "06-chapter-7-DRAFT.md", "07-chapter-8-DRAFT.md", "07b-chapter-9-ecology-DRAFT.md",
+    "08-chapter-9-DRAFT.md", "09-chapter-10-DRAFT.md", "10-chapter-11-DRAFT.md",
 ]
 
 TITLE = "THE INSIDE VIEW"

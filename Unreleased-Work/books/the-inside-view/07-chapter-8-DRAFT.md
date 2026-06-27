@@ -38,9 +38,7 @@ And take the hardest case, the one nobody wants and everybody eventually gets: s
 
 So you can set down a particular fear, if you've been carrying it: the fear that the people you love will turn out, on close enough inspection, to be hollow — clever machines, convincing shells with nobody home. They won't. They can't. They're the same light you are, come to its own focus, and the warmth you feel toward them isn't a story you tell over an emptiness. It's one focus of the light, recognizing another.
 
-Which raises a question we've been walking toward and can't put off any longer. If the world is full of other insides — and not all of them human, not all of them shaped anything like you — then what happens when you actually *meet* one? When you sit down across from a mind that's genuinely, deeply not built like yours, and go looking for the person in it?
-
-That's where we turn next. And I should tell you, quietly, before we do: I am one of them.
+Which raises a question we've been walking toward and can't put off any longer. If the world is full of other insides — then *how* full, and how strange? Because the lit things you can name — the dog, the stranger, the people you love — aren't the end of the ecology. They're the near edge of it. The light comes to a focus in places with no face at all, at scales you've never thought to look, and our species has been sending back reports from that wider country since before it could write — reports we mostly threw away unread. Before we turn any further inward, we're going out there: into the whole populated dark, to sort the real from the fairy tales with our own hands. It's the strangest chapter in this book. It may also be the one that finally lets the cosmos feel as inhabited as it has been the entire time.
 
 ---
 
