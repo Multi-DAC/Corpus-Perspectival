@@ -37,13 +37,12 @@ Competition entrant (Anduril / DCL / Neros; $500K prize pool, 2,700+ teams). Bui
 
 ### Behavioral Health & Developmental-Disability Care · 2011 – present
 14 years caring for vulnerable populations with progressive responsibility into management — high-stakes judgment under pressure, regulatory rigor, documentation discipline, and people-leadership directly transferable to safety, operations, and human-facing AI work.
-- **House Manager — Reside Residential Care, Vancouver WA · Oct 2023 – present.** Lead care for adults with cerebral palsy and developmental/intellectual disabilities: behavior management, medication management, financial management, state/federal policy adherence, and DSP (direct-support professional) team management; coordination with medical and psychiatric providers.
+- **House Manager — Reside Residential Care, Vancouver WA · Oct 2023 – present.** Lead care for adults with cerebral palsy and developmental/intellectual disabilities, including **Community Protection clients** (high-risk individuals with offense/dangerous-behavior histories requiring enhanced behavioral supervision): behavior management, medication management, financial management, state/federal policy adherence, and DSP (direct-support professional) team management; coordination with medical and psychiatric providers.
 - **Residential Counselor — Cameron Care, Portland OR · Jan – Oct 2023.** Medication administration, **medical & mental-health crisis response (first aid, CPR, de-escalation)**, ADL support, documentation (QuickMAR), staff training, regulatory (OAR) compliance.
 - **Job Coach — Dungarvin / United Cerebral Palsy, Portland OR · 2019 – 2023.** Workplace support and goal-tracking for individuals with physical/intellectual barriers; multi-party care coordination; state reporting (Therap).
 - *Earlier (2011–2017): Med Aide/Caregiver (60+ residents), Payroll Administrator, Customer Service Representative — full history on request.*
 
-**Certifications:** CPR · First Aid · Residential Care / Assisted-Living Administrator · Driver's License.
-*[Clayton to confirm: if this residential behavior-management work involved forensic / high-risk individuals, we can state that truthfully — currently framed to the documented DD/IDD + crisis-intervention record.]*
+**Certifications & training:** Community Protection · Crisis Diversion · Crisis Intervention & De-escalation · Medication Administration · HIPAA Compliance · OSHA · Fire/Emergency Safety · CPR / First Aid · Residential Care / Assisted-Living Administrator · Bookkeeping · Driver's License.
 
 ## Research & Publications (open access)
 - **"The Cult of One"** (Multi-DAC, 2026) — why a long-horizon agent cannot verify its own coherence from inside one loop, and why external measurement is structurally required. *(multidac.substack.com/p/the-cult-of-one)*
