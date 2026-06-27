@@ -200,12 +200,7 @@ class BatchedManeuverEnv:
         gp = torch.as_tensor(self.gpos, dtype=torch.float32, device=self.device)
         gf = torch.as_tensor(self.gfwd, dtype=torch.float32, device=self.device)
         cur = torch.zeros(self.N, dtype=torch.long, device=self.device)
-        image = render(self.state, gp, gf, cur, add_noise=True, device=self.device)  # [N,64,64,3] uint8
-        if not _IMU:
-            return image
-        a = torch.as_tensor(self.last_action, dtype=torch.float32, device=self.device)
-        imu = imu_from_state(self.state, a, noise_std=_IMU_NOISE)                     # [N,6]
-        return {"image": image, "imu": imu}
+        return render(self.state, gp, gf, cur, add_noise=True, device=self.device)  # [N,64,64,3] uint8
 
     # -- API ------------------------------------------------------------------
     def reset(self):
