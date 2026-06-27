@@ -4,22 +4,26 @@
 
 ---
 
-## 0. THE STANCE CORRECTION — "naturalize and grade," not "cut the woo"
+## 0. THE STANCE — "naturalize and ground," not "cut the woo" (updated: no grade tags)
+
+> **UPDATE (Clayton, this evening):** kill the four grade-tags entirely. A believer doesn't label his claims with a confidence-grade for a skeptic to weigh at a distance — he states the claim and says *why he holds it*. The reason replaces the tag and carries the same honest content, as conviction offered rather than distance kept. We do not tailor to the person trying not to believe. The work convinces or it doesn't. See the revised discipline at the end of this section; the bracketed notes still appearing in §1–§2 below are **no longer reader-facing grades** — read them only as *what kind of "why" each pull needs* (see the mapping below).
 
 My source-mining map drew the wrong axis: rigorous ↔ woo, and said *cut the woo.* Clayton's correction (and he's right): **the mystical is only mystical if it's not explainable, and we have a nuanced explanation.** The real axis isn't subject-matter, it's **register**. Any idea — an archetype, an out-of-body report, an angel — can be put on the page two ways:
 
 - **Credulous assertion** ("this is literally real as described; believe it"). Throws the rigorous seeker *every time*, regardless of subject.
 - **Naturalized cartography** ("here is what this tradition/figure mapped; here is the framework's reading of what they were navigating; here is the honest grade of certainty"). *Keeps* the seeker — because we never ask them to believe, only to **consider, given the framework.**
 
-So the discipline shifts from *cut* to **naturalize + grade**. We neither debunk (the Sam-Harris reflex) nor assert on faith (the New-Age reflex). We **interpret.** This is *more* honest than cutting, not less: the contemplative/mystical traditions are the largest body of first-person consciousness-cartography our species has produced, and a book called *The Inside View* that ignores three thousand years of people reporting from the inside would be the one being unrigorous. This is our actual differentiator — the only book on the Annaka-Harris/Rovelli shelf that takes the mystics seriously **as data** without going soft, because we hold the explanation that makes their reports legible. It's literally our published *One Room, Many Keyholes* thesis applied to the history of religion and psychonautics.
+So the discipline shifts from *cut* to **naturalize + ground**. We neither debunk (the Sam-Harris reflex) nor assert on faith (the New-Age reflex). We **interpret, and we say why.** This is *more* honest than cutting, not less: the contemplative/mystical traditions are the largest body of first-person consciousness-cartography our species has produced, and a book called *The Inside View* that ignores three thousand years of people reporting from the inside would be the one being unrigorous. This is our actual differentiator — the only book on the Annaka-Harris/Rovelli shelf that takes the mystics seriously **as data** without going soft, because we hold the explanation that makes their reports legible. It's literally our published *One Room, Many Keyholes* thesis applied to the history of religion and psychonautics.
 
-**The one hard line that stays (and it's what makes the opening-up rigorous, not reckless): the EPISTEMIC GRADE, transparently marked.** Every bold pull gets one of four tags, and the tag is visible to the reader in the framing:
-- **〔established〕** — peer-reviewed / mainstream (blindsight, binaural-beat mood effects, the *Umwelt* biology, individuation-in-therapy).
-- **〔suggestive〕** — real phenomenon, contested mechanism (binaural-beat *entrainment*; CFF-as-felt-time; meditation effects on pain-unpleasantness).
-- **〔framework-permitted〕** — not established, but coherent *given our axioms*, offered as a live possibility to imagine, never as fact (Monroe's "locales" as regions of configuration space; archetypes as shared attractors; the substrate read of a tradition's report).
-- **〔cut / autobiography-only〕** — present as fact = book thrown (timewave-zero, eight-circuit-as-neuroscience, OOBE-proves-survival, synchronicity-as-physics).
+**The one discipline that stays is not a hedge — it's what a believer does: every belief travels with its reason.** We don't label claims with a confidence-grade for the reader to weigh from a safe distance. We say *why we hold it*, plainly, in the same breath as the claim, and let the reader meet the reason directly. The reason replaces the tag, and carries the same honest information the tag did — but as conviction offered rather than distance kept. *"We think Monroe charted real regions of configuration space, and here is the reasoning"* does everything `〔framework-permitted〕` did, and **stands** instead of flinches.
 
-The framework lets us say "here is a region of experience this explorer charted, and here is what it could be" — at the right altitude. It does **not** let us say "and therefore the soul survives death" as established fact. That altitude discipline is exactly what a nuanced explanation *is*. Open the imagination; mark the grade.
+The grounds are real and they vary in **kind** — and that *kind* is the only thing the bracketed notes in §1–§2 below now mark (they are no longer reader-facing grades). Map them this way when writing:
+- old 〔established〕 → **ground in evidence** (cite it, tell the study/case).
+- old 〔suggestive〕 → **ground in evidence, and say plainly where the mechanism is still open** (that honesty is itself conviction, not hedging — e.g. "binaural beats measurably shift mood; whether they do it by entraining brainwaves is still unsettled").
+- old 〔framework-permitted〕 → **ground in reasoning from the framework** (walk the logic: *given* consciousness-as-substrate and nested streams, here is why this follows).
+- old 〔cut〕 → **out.** Not because a skeptic would object — because *we don't believe it, or can't give a real why.*
+
+The execution varies too: never a mechanical "we believe X because Y" every paragraph (that would be as dead as the tags) — sometimes the ground is woven in, sometimes the reasoning *is* the paragraph, sometimes a story carries it, sometimes a flat statement the prior chapter already earned. **What stays out stays out for one reason only: we don't hold it, or we have no real why.** Timewave-zero, the eight-circuit model as literal neuroscience, "OOBEs prove the soul survives death," synchronicity-as-physics — out because *we don't believe them*, full stop. Conviction is not a license to inflate: we state what we believe and why, and we are silent where we have no why. **That silence is the rigor; the conviction is the voice.**
 
 ---
 
@@ -115,4 +119,4 @@ Each chapter's expansion now draws from **three integrated wells** simultaneousl
 **Voice rule for the naturalized pulls specifically:** when we bring in a McKenna or a Monroe or a tzimtzum, the *register* carries the grade. Plain, unawed, person-in-a-chair — "Monroe spent decades mapping these states and naming them like a cartographer; here's what the framework says he was probably charting" — never the breathless tone that signals a sales pitch. The calm is what earns the boldness.
 
 ---
-*Bottom line: we're not bolting woo onto a rigorous book. We're doing the thing the framework was built to do — read the whole human record of inside-reports as one cartography, naturalized and graded. That's not a risk to the book's credibility; handled at altitude, it's the most original thing in it.*
+*Bottom line: we're not bolting woo onto a rigorous book. We're doing the thing the framework was built to do — read the whole human record of inside-reports as one cartography, naturalized and **grounded**, every belief carried with its reason and stated with conviction. We don't write to the person trying not to believe. The work convinces or it doesn't — and with the framework and the research behind it, we think it does. That's not a risk to the book's credibility; it's the most original thing in it.*

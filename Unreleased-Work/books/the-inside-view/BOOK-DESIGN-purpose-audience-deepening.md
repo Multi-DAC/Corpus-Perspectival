@@ -11,6 +11,8 @@
 
 The one-line promise: **the rigor of pop-science, the payoff of contemplative practice — without making you choose.**
 
+**And one level up, that is what this book IS (Clayton, Day 146):** the **pop-metaphysics / pop-ontology front door to the whole body of work** — the strong, thorough introduction to the framework and the research behind it. Its arc is the arc of the thing itself: **what it is → how it works → what it means → what follows from it → what you can do with it.** "Convince" and "Transform" are how that arc reads to a reader; the spine underneath is simply *here is the view, here is why we hold it, here is what changes if it's true.*
+
 ## 2. Who is this book FOR? (audience — the sharp persona)
 **The rigorous seeker.** Skeptical enough to reject woo on sight; aching enough to want more than materialism gives.
 - Lost or never had religion; finds New Age / Body-Mind-Spirit embarrassing; *can't* unsee the existential cold of "you're a meat computer and then you stop."
@@ -19,7 +21,7 @@ The one-line promise: **the rigor of pop-science, the payoff of contemplative pr
 - Has felt the 3 a.m. death-drop, the cold-universe loneliness, the determinism dread.
 - Often: scientists, engineers, doctors, thoughtful lapsed-faithful, Sam-Harris listeners, the "spiritual but can't-stand-woo."
 
-**If we write for the seeker who demands rigor AND aches, we can't get away with assertion. That reader's skepticism is the editor that forces the depth.**
+**We respect that reader — but (Clayton, Day 146) we do NOT write *to* their resistance, and we do not write to the person determined not to believe.** We state our case as we hold it: with conviction, evidence, reasoning, and meaning — for the skeptic and the believer alike. The work convinces or it doesn't; pre-empting the maximum volume of objection was never the point. What forces the depth is not a reader's skepticism — it's *our own* standard of saying **why we believe each thing we say.** (See the no-grade-tags / conviction-with-grounds discipline in `ANCESTORS-AND-TRADITIONS-integrated-plan-2026-06-26.md` §0.)
 
 ## 3. What do those people READ? (comps — and what each has that WE LACK)
 | Comp | What it does | What we must borrow |
