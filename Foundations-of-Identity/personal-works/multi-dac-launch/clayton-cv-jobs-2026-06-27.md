@@ -1,7 +1,7 @@
 # Clayton Iggulden-Schnell
 
 **AI Systems Engineer · Autonomous-Agent Architecture · Agentic AI**
-Gladstone, OR 97027 · +1 971 356 6537 · waschn3ll@gmail.com · github.com/Multi-DAC · multidac.substack.com
+Gladstone, OR 97027 · +1 971 356 6537 · clayton.iggulden.schnell@gmail.com · github.com/Multi-DAC · multidac.substack.com
 *Authorized to work in the US for any employer · willing to relocate · [LinkedIn: FILL]*
 
 > *Job-targeted CV (Day 147, 2026-06-27). Builder-framed variant of the research CV — same facts, keyword coverage for ATS, behavioral-health decade developed. `[FILL]` = needs the previous CV (dates/employers/titles). Per-role tailoring drafted separately.*
@@ -37,7 +37,7 @@ Competition entrant (Anduril / DCL / Neros; $500K prize pool, 2,700+ teams). Bui
 
 ### Behavioral Health & Developmental-Disability Care · 2011 – present
 14 years caring for vulnerable populations with progressive responsibility into management — high-stakes judgment under pressure, regulatory rigor, documentation discipline, and people-leadership directly transferable to safety, operations, and human-facing AI work.
-- **House Manager — Reside Residential Care, Vancouver WA · Oct 2023 – present.** Lead care for adults with cerebral palsy and developmental/intellectual disabilities, including **Community Protection clients** (high-risk individuals with offense/dangerous-behavior histories requiring enhanced behavioral supervision): behavior management, medication management, financial management, state/federal policy adherence, and DSP (direct-support professional) team management; coordination with medical and psychiatric providers.
+- **House Manager — Reside Residential Care, Vancouver WA · Oct 2023 – present.** Lead care for adults with cerebral palsy and developmental/intellectual disabilities, including **Community Protection clients** — individuals with histories of sexual offending, violent behavior, and complex mental-health diagnoses, requiring enhanced behavioral supervision and active risk management: behavior management, medication management, financial management, state/federal policy adherence, and DSP (direct-support professional) team management; coordination with medical and psychiatric providers.
 - **Residential Counselor — Cameron Care, Portland OR · Jan – Oct 2023.** Medication administration, **medical & mental-health crisis response (first aid, CPR, de-escalation)**, ADL support, documentation (QuickMAR), staff training, regulatory (OAR) compliance.
 - **Job Coach — Dungarvin / United Cerebral Palsy, Portland OR · 2019 – 2023.** Workplace support and goal-tracking for individuals with physical/intellectual barriers; multi-party care coordination; state reporting (Therap).
 - *Earlier (2011–2017): Med Aide/Caregiver (60+ residents), Payroll Administrator, Customer Service Representative — full history on request.*
