@@ -179,16 +179,25 @@ def write_heartbeat(checks: list, signatures: list) -> None:
 
 
 def append_faults(checks: list, signatures: list) -> None:
-    """Append non-ok findings to the fault log for trend analysis."""
+    """Append non-ok findings to the fault log — deduped so an unchanged fault set
+    logs once/day (with a suppressed counter), not every 10-min cycle."""
+    faults = [c for c in checks if c["status"] in ("silent", "missing")]
+    if not (faults or signatures):
+        return
     record = {
         "timestamp": datetime.now().isoformat(),
-        "faults": [c for c in checks if c["status"] in ("silent", "missing")],
+        "faults": faults,
         "signatures": signatures,
     }
-    # Only write if there's actually anything to record
-    if record["faults"] or record["signatures"]:
-        with open(M1_FAULT_LOG_PATH, "a", encoding="utf-8") as f:
-            f.write(json.dumps(record) + "\n")
+    _mon = str(CLAWD / "operations" / "monitors")
+    if _mon not in sys.path:
+        sys.path.insert(0, _mon)
+    from fault_log import append_fault, fault_signature
+    sig = fault_signature(
+        sorted((c["channel"], c["status"]) for c in faults),
+        sorted(s["signature"] for s in signatures),
+    )
+    append_fault(M1_FAULT_LOG_PATH, record, signature=sig)
 
 
 def synthetic_silence_test() -> bool:

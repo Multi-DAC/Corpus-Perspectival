@@ -40,7 +40,7 @@ from pathlib import Path
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-CLAWD = Path(r"C:\Users\mercu\clawd")
+CLAWD = Path(os.environ.get("CLAWD_HOME") or r"C:\Users\mercu\clawd")
 if str(CLAWD) not in sys.path:
     sys.path.insert(0, str(CLAWD))
 QUEUE_PATH = CLAWD / "memory" / "critical_fault_queue.jsonl"
@@ -48,8 +48,23 @@ SENT_PATH = CLAWD / "memory" / "critical_fault_sent.jsonl"
 POLLER_STATE = CLAWD / "memory" / "escalation_poller_state.json"
 POLLER_HEARTBEAT = CLAWD / "memory" / "escalation_poller_heartbeat.json"
 
+# Post-op B2/B12: the poller must be SELF-SUFFICIENT — it used to depend on
+# whoever spawned it having loaded the daemon .env (token + chat id), and in
+# contexts where that didn't happen every send silently became `failed += 1`
+# (observed live: total_sent=1 vs 22 pending). Load the .env here, idempotently;
+# a load failure is printed, not swallowed.
+try:
+    from dotenv import load_dotenv
+    _DAEMON_ENV = Path(os.environ.get("CLAWD_DAEMON", r"C:\Users\mercu\clawd-daemon")) / ".env"
+    if _DAEMON_ENV.exists():
+        load_dotenv(_DAEMON_ENV)
+except Exception as _e:
+    print(f"escalation_router: daemon .env load failed: {_e}", file=sys.stderr)
+
 RATE_LIMIT_SECONDS = 300  # 5 min minimum between sends
 POLL_INTERVAL_SECONDS = 60
+ENQUEUE_SUPPRESS_S = 21600  # same-signature fault re-enqueued at most once per 6h
+_DEDUP_STATE = CLAWD / "memory" / "escalation_enqueue_dedup.json"
 
 
 def enqueue_critical(monitor: str, tier: str, summary: str, details: dict = None) -> str:
@@ -58,6 +73,29 @@ def enqueue_critical(monitor: str, tier: str, summary: str, details: dict = None
     tier: 'critical' | 'high' | 'medium' | 'low'. Currently only 'critical'
     triggers Telegram delivery; lower tiers are queued for audit only.
     """
+    # Post-op dedup: persistent conditions used to re-enqueue every producer
+    # cycle (observed: 18 copies of one watchdog finding in 90 min) — with a
+    # working channel that is a page every 5 minutes until someone intervenes.
+    # Same-signature enqueues within ENQUEUE_SUPPRESS_S collapse into the first;
+    # digits are normalized out of the signature so ages/counts don't defeat it.
+    import hashlib
+    import re as _re
+    norm = _re.sub(r"[\d.]+", "#", f"{monitor}|{summary}")
+    sig = hashlib.sha1(norm.encode("utf-8")).hexdigest()[:16]
+    now_s = time.time()
+    try:
+        dedup = json.loads(_DEDUP_STATE.read_text(encoding="utf-8")) if _DEDUP_STATE.exists() else {}
+    except (json.JSONDecodeError, OSError):
+        dedup = {}
+    if now_s - dedup.get(sig, 0) < ENQUEUE_SUPPRESS_S:
+        return ""  # suppressed duplicate — first copy is already queued/sent
+    dedup[sig] = now_s
+    dedup = {k: v for k, v in dedup.items() if now_s - v < 7 * 86400}
+    try:
+        _DEDUP_STATE.write_text(json.dumps(dedup), encoding="utf-8")
+    except OSError:
+        pass
+
     record = {
         "ts": datetime.now().isoformat(),
         "monitor": monitor,
@@ -94,6 +132,7 @@ def _write_heartbeat(state: dict, pending: int) -> None:
         "last_sent_ts": state.get("last_sent_ts"),
         "total_sent": state.get("total_sent", 0),
         "pending_in_queue": pending,
+        "last_send_error": state.get("last_send_error"),
     }
     POLLER_HEARTBEAT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
@@ -140,7 +179,10 @@ def _mark_sent(record: dict) -> None:
 def send_telegram(text: str) -> dict:
     """Send a message via Telegram Bot API. Returns {success: bool, error: str?}."""
     token = os.environ.get("TELEGRAM_BOT_TOKEN") or os.environ.get("TG_BOT_TOKEN")
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID") or os.environ.get("TG_CHAT_ID")
+    # Fall back to the daemon's authorized user (a valid chat_id for the bot) when
+    # TELEGRAM_CHAT_ID isn't set — it never was, which broke delivery even when running.
+    chat_id = (os.environ.get("TELEGRAM_CHAT_ID") or os.environ.get("TG_CHAT_ID")
+               or os.environ.get("TELEGRAM_AUTHORIZED_USERS", "").split(",")[0].strip())
     if not token:
         return {"success": False, "error": "TELEGRAM_BOT_TOKEN env not set"}
     if not chat_id:
@@ -208,6 +250,13 @@ def poll_once() -> dict:
             last_sent = datetime.now()
         else:
             failed += 1
+            # B2: a failing alarm channel must itself be loud — persist the error
+            # (heartbeat + stderr, which the scheduler audit captures).
+            state["last_send_error"] = {
+                "ts": datetime.now().isoformat(),
+                "error": (result.get("error") or "")[:300],
+            }
+            print(f"escalation send FAILED: {result.get('error')}", file=sys.stderr)
 
     _save_state(state)
     _write_heartbeat(state, len(pending))

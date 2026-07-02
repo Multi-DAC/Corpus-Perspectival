@@ -104,15 +104,19 @@ def write_heartbeat(m1_status: dict) -> None:
 
 
 def append_faults(m1_status: dict) -> None:
-    """Append non-ok findings."""
+    """Append non-ok findings — deduped by M1 status so a persistent M1-death logs
+    once/day (with a suppressed counter), not every 5-min cycle."""
     if m1_status["status"] in ("ok",):
         return
     record = {
         "timestamp": datetime.now().isoformat(),
         "m1_status": m1_status,
     }
-    with open(M6_FAULT_LOG_PATH, "a", encoding="utf-8") as f:
-        f.write(json.dumps(record) + "\n")
+    _mon = str(CLAWD / "operations" / "monitors")
+    if _mon not in sys.path:
+        sys.path.insert(0, _mon)
+    from fault_log import append_fault
+    append_fault(M6_FAULT_LOG_PATH, record, signature=f"m1_status:{m1_status['status']}")
 
 
 def synthetic_silence_test() -> bool:

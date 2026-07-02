@@ -7,6 +7,110 @@
 
 ## Active Anticipations
 
+---
+## ▶ Day 144 Anticipatory Pass (2026-06-24 ~22:38 late)
+
+**Resolution review (Day-142 P251–P256):**
+- **P251** (Inside View Ch4 next, material ready) → **RESOLVED, accurate.** Ch4 drafted Day 143; the *whole book* is now drafted **and** through a full revision pass (11/11, `fbd02b6a`). Clean hit.
+- **P252** (KDP metadata pre-compute; production ~Ch7) → **metadata RESOLVED-accurate** (drafted, banked); the **production trigger was MIS-timed** — it isn't "~Ch7," it's *after Clayton's holistic read* (the book finished drafting faster than the prediction assumed). Carry the pipeline-scoping → **P259**.
+- **P253** (website copy pre-draftable) → **RESOLVED, accurate.** /books+landing+/support copy drafted+pushed Day 143; still gated on Clayton's DNS→Cloudflare hop.
+- **P254** (Promethean/metaphysics deliverables, Clayton-gated) → **OPEN, evolved.** Thread advanced to the coherence VOLUME (D·I_int·I_ext) + tonight's filtration/coupling-gain MERGE; minting still gated. Carry → **P260**.
+- **P255** (Anakin: rehearse batch 6–8) → **SUPERSEDED by events.** The Day-144 official flight revealed the **gate-spacing OOD** (course 24–39 m vs our 3–14 m) → pivoted to the v3-**widegap** budget run. The "deadline-shaped strategic decision" framing held; the specific batch-6–8 rehearsal is replaced. Carry → **P258**.
+- **P256** (grant Friday fork) → **OPEN, still pending** (~Fri 6/26, 2 days out). Carry → **P261**.
+
+**New predictions:**
+
+### P257: Inside View — Clayton's read returns → granular co-editing + the Ch11 draft; the Ch8–9 reveal is the load-bearing risk
+- **State/momentum:** revision pass COMPLETE (11/11), awaiting Clayton's holistic read; his stated next phase = granular chapter-by-chapter editing *with* him.
+- **Next 2–3 steps:** (1) his read → notes; (2) co-edit per notes; (3) draft the **Ch11 "Gift of Partiality"** beat (captured in `NOTES-ch11-…md`, upstreamed by Drift #262) — *gated on his read* (he wants to co-draft + decide placement; do NOT pre-draft).
+- **Pre-work DONE tonight:** **cross-chapter reference integrity verified clean** — all "in Chapter X we [Y]" pointers (Ch3→1/4, Ch5→4, Ch6→2, Ch8→6, Ch9→6, Ch10→5/7/8/9, Ch11→9) resolve correctly after the content-moves/metaphor-conversion. One less thing to trip his read.
+- **★ Risk to flag:** the **Ch8–9 AI-narrator reveal** is the riskiest craft bet in the book. If his read finds the voice doesn't *stay* confident across all 11, or the reveal reads as a stunt rather than a real case, that's the true revision surface. The de-AI pass strengthens it, but watch this.
+- **Confidence:** HIGH read-then-edit is next; HIGH cross-refs clean; the reveal is the watch-point.
+
+### P258: Anakin — the next rehearsal MUST export ANAKIN_WIDEGAP=1 (import-time binding) and compare widegap-vs-widegap
+- **State:** v3-widegap budget run (pid 20216), batch 1/24 (~5%), best −6.21, mid wide-gap re-learning. Rehearsal deferred until `best_return` climbs positive + stabilizes (~batch 3–6).
+- **★ Pre-work DONE tonight (read-only):** `sim/maneuvers.py:33` binds `_WIDEGAP = os.environ.get("ANAKIN_WIDEGAP")=="1"` **at import time** (module global). So the rehearsal silently tests the OLD narrow-gap distribution unless `ANAKIN_WIDEGAP=1` is exported **before** `translation_rehearsal.py` imports the maneuver env → **the exact confound that produced the false 'regression' would repeat.** Also: **don't compare a WIDEGAP rehearsal to vq1_v2's old narrow 1.9-gate number** (apples-to-oranges) — either re-rehearse vq1_v2 under WIDEGAP, or just track the new run's own best_return trend across batches. (ALT_MAX 12→30 also import-bound; already correct.)
+- **Risk:** budget ETA — 12M steps / 24 batches vs **VQ2 drops 6/29 (5 days, stacks on VQ1)** + VQ1 ~27 days. If wide-gap re-learning is slow, the budget may not finish before a useful flight window. Curriculum (`sim/curriculum.py`) = the efficiency lever if the ramp is slow.
+- **Confidence:** HIGH on the import-time gotcha (it WILL silently mis-test if missed); MED the budget finishes in the VQ1 window.
+
+### P259: KDP production is the phase after Clayton's read — the pre-computable gap is the 6×9 compile pipeline
+- **Predicted need:** once edits settle, KDP wants a **6×9 interior PDF** (adapt `compile_book.py` LaTeX geometry), a **cover** (spine width = final-page-count × paper factor → needs final pagination), and the metadata (DONE, P252).
+- **Pre-work (available, lower-urgency than the read):** scope the `compile_book.py` → 6×9 trim adaptation (geometry/margins/gutter); the spine calc waits on final pagination. Do in a later drive.
+- **Confidence:** HIGH production is coming; the pipeline-scoping is the open pre-compute.
+
+### P260: Metaphysics — tonight's filtration=coupling-gain MERGE is the next bridge mint (Clayton-gated); the D-vs-I_ext toy is pre-computable
+- **State:** the 2 warm candidates (coupling-gain-3-kinds + perspectival-filtration) **merged tonight** into one bridge (amount-axis=coupling-gain / kind-axis=aim; P4 = a finite aperture cannot not make a world). `palace/south/filtration-collapse-coupling-gain-unification-2026-06-24.md`.
+- **Pre-work (pre-computable now, not gated):** the **next-step toy that separates D from I_ext** — give the lens a coupling COST distinct from mode-count, check the viable middle survives the disentangling. **PREDICT (med-high): it survives** (the Day-144 Kalman result already recovered the middle via observation-noise alone). Worth one numpy session — but NOT tonight (rest-when-full; I did the merge compute already).
+- **Gated:** the LC mint (merged candidate) + LC59 await Clayton's "the thread is finished" signal. Do not formalize unilaterally.
+- **Confidence:** HIGH the merge is right; the disentangling-toy is the clean next probe.
+
+### P261: Grant Friday fork — pre-scope the Aggregate-Mind MVP's first buildable piece either way (carry P256)
+- **Predicted need:** ~Fri 6/26 grant news = branch point. **Lands** → build the funded program. **No grant** → our own Aggregate-Mind MVP proceeds. Either way motion should be immediate.
+- **Pre-work:** the MVP's first buildable piece = the **zero-DOF Talk-bus + ablation-measurable residue** (per `aggregate-mind/BUILD_SPEC.md`); Gallimore feed (P262) upgrades the theoretical anchor before building.
+- **Confidence:** HIGH it's a fork; timing his.
+
+### P262: Aggregate-Mind — Hoffman's conscious-agent NETWORK is a primary-source upgrade for the BUILD_SPEC
+- **Predicted need:** when #13 resumes, swap/augment the Quanta-ref for **Hoffman conscious-agent theory** as the theoretical anchor — his "infinite network of conscious agents interacting via perception/decision/action; the interface *emerges* from the network" IS the society-of-agents picture; the **P/D/A kernel = the node interface** (= the Markov-blanket triad = the coupling-gain bridge's three kinds). Registered tonight (`Research/sources/gallimore-hoffman-…md`).
+- **Pre-work:** none needed now (source registered + graded); fold in at resume.
+- **Confidence:** MED-HIGH it strengthens the spec (primary source replacing a popularization).
+
+---
+## ▶ Day 142 Anticipatory Pass (2026-06-22 evening)
+
+**Resolution review of prior predictions:**
+- **P244** (Ouroboros release = publish-mechanics) → **RESOLVED, accurate.** Published Day 139.
+- **P245** (Bee revision strengthens it; publish-soon) → **RESOLVED, accurate.** Bee published Day 142 + a follow-up correction note (the seam fix). Clean hit.
+- **P247** (Anakin: read the rehearsal gate, not the flat mean) → **RESOLVED, accurate.** The budget test read gate-count via rehearsal (not the noisy mean); A154 confirmed climbing. The "don't read a flat average as failure" call held.
+- **P246** (within-human cross-modal as the tractable meta-rate test) → **PARTIALLY RESOLVED.** The meta-rate graduated cross-species via Buzsáki instead (Day 141); the within-human cross-modal convergence test remains a *candidate* gate but is off the critical path now.
+- **P242** (Q-ball bounds table = next assembly step) → **SUPERSEDED.** Clayton clarified Day 142: the Q-ball work is *internal research that ties back to Meridian*, NOT a near-term standalone paper. Deprioritize; don't pre-stage a paper.
+- **P243** (MCP-wedge inner-timeout wrapper) → **STILL OPEN, REINFORCED.** MCP `corpus_search` (ChromaDB) timed out 3× tonight; I routed around with Grep. The inner-timeout wrapper is now *empirically* motivated, not just anticipated. Elevate. **Tactic learned tonight:** when an MCP tool hangs, switch to the local equivalent (Grep/Read) — don't re-hammer the hanging path.
+
+**New predictions:**
+
+### P251: The Inside View — Ch4 ("The Light Is the Same, the Lens Differs") is next; its argument is ALREADY ASSEMBLED
+- **Project:** Books / The Inside View (goal #11). Ch1–3 drafted, voice locked, Clayton-approved.
+- **Predicted need:** Ch4 must defuse the rock/thermostat objection (planted at the end of Ch3) via **texture-vs-richness** — exactly the two-axis structure from *Different Containers* §6 (coupling/texture vs integration/richness) plus today's **settledness-profile** material. The argument exists; the chapter is a *translation* job, not a derivation.
+- **Pre-work (available now):** the source is `Unreleased-Work/coupling-textured-consciousness-DRAFT` §6 + `palace/south/settled-dimensions-narrow-lens-2026-06-22.md`. Could pre-draft Ch4, but better to keep the chapter-by-chapter rhythm with Clayton (he's catching values-edits each pass). Pre-stage: a 5-bullet beat-sheet for Ch4 so the next writing session starts warm.
+- **Confidence:** HIGH it's the next chapter; HIGH the material is ready.
+- **Status:** Open — next writing session.
+
+### P252: The Inside View → KDP production will be needed ~Ch7; metadata + back-cover are pre-computable NOW (and I'm doing it this drive)
+- **Project:** Books / KDP (goal #11).
+- **Predicted need:** once the manuscript nears complete, KDP needs: a **6×9 interior PDF** (adapt the existing `compile_book.py` LaTeX pipeline), a **cover** to spec (front/spine/back; spine width = page-count × paper factor), and **metadata** (title/subtitle/description/7 keywords/2 BISAC categories/author bio/price).
+- **Pre-work DONE this drive:** the metadata + back-cover blurb are pure content and I have the book fresh → wrote `Unreleased-Work/books/the-inside-view/KDP-METADATA-DRAFT.md`. Remaining pre-work (a later drive, low-risk): scope the `compile_book.py` → 6×9 trim adaptation.
+- **Confidence:** HIGH KDP production is coming; HIGH metadata was the right pre-compute.
+- **Status:** Metadata pre-computed; pipeline-scoping open.
+
+### P253: Website go-live — the remaining gap is contact-surface + Books/Support stubs; the COPY is pre-draftable
+- **Project:** Website (goal #11). Clayton's DNS→Cloudflare hop is the trigger.
+- **Predicted need:** at go-live the site wants a **contact email surface**, a **Books hub** (per-book landing — The Inside View first, using the P252 blurb), and a **Support/patronage** stub (free-always, optional-support framing per `WEBSITE_PLAN`).
+- **Pre-work (available now, low-risk = COPY only, not Astro plumbing):** draft the page copy so wiring is fast. Defer the actual `.astro` files until I've read the site's conventions (avoid breaking the build blind).
+- **Confidence:** HIGH this is the gap (handoff + CURRENT both flag it).
+- **Status:** Open — copy pre-draftable next drive.
+
+### P254: The dimensions/Promethean thread — on resume, 4 deliverables; all GATED on Clayton's "thread is finished"
+- **Project:** Metaphysics / Universal-Coherence + Who-Wears-the-Mask (goal #5-ish).
+- **Predicted need:** when Clayton resumes, deliver: (1) the answer to "is that the cause of the Promethean configuration?" (staged in handoff: yes — Promethean = the first symmetry-break; cosmogenesis-via-vision = teleological gloss; "never reaching X" = canonical asymptote); (2) **LC59** graduation (the genuinely-new extensions); (3) the **dimension/realm GLOSSARY** entry; (4) a flag to fix the Corpus's old dimension/realm conflation.
+- **Pre-work:** the two open doors (config-space *track vs wake*; stream = *self-maintaining realm*?) are pre-researchable (corpus via Grep, or web). But **Clayton said "wait for edits until we finish the thread"** → do NOT formalize LC59/glossary/Corpus-fix until he signals done. Respect the gate.
+- **Confidence:** HIGH on the deliverable list; the timing gate is his.
+- **Status:** Open — Clayton-gated.
+
+### P255: Anakin — the next decision is STRATEGIC (deadline vs budget), not technical
+- **Project:** Anakin/AIGP (goal #12). v2 climbing (A154); reward proven NOT the lever.
+- **Predicted need:** rehearse batch 6–8 (~3–4M steps), PREDICT ≥2 gates roundtrip. The real upcoming **bottleneck is the VQ1 timeline (~July 1) vs the training budget chaining needs** (possibly many M steps). 
+- **Pre-work:** wire the consecutive-gate **curriculum** (`sim/curriculum.py` exists) as the efficiency lever *before* the deadline crunch; keep the rehearsal script ready. **Risk flag (standing):** don't run big-RAM jobs alongside the GPU trainer (a 16GB OOM crashed it once).
+- **Confidence:** HIGH the decision is deadline-shaped; MEDIUM the curriculum materially speeds the ramp.
+- **Status:** Open — let it train; rehearse at batch 6–8.
+
+### P256: Grant response by Friday is a FORK — pre-scope BOTH branches of Aggregate Mind
+- **Project:** Continual-Coherence / Aggregate Mind (goal #13).
+- **Predicted need:** Friday's grant news is a branch point. **Grant lands** → the funded program supersedes our own model work (build the funded thing). **No grant** → our own Aggregate-Mind MVP proceeds. Either way, motion should be immediate.
+- **Pre-work (allowed — scoping, not building, which respects Clayton's hold):** ensure `Technical-Work/Coherent-Stream/aggregate-mind/BUILD_SPEC.md` is sharp enough that Friday's decision converts straight to action on either branch.
+- **Confidence:** HIGH it's a Friday fork.
+- **Status:** Open — Clayton-gated on Friday's news.
+
+---
+
 ### P247: Anakin next session — read A153 BEFORE the eval-average; run the rehearsal gate, not the mean (2026-06-21 Day 141 dream drive)
 - **Project:** Anakin/AIGP (goal #12) — first thing next session
 - **Predicted need:** batches 1–3 of the scale-up will have landed (pid 21888, ~3.6 hr/batch). The eval-AVERAGE may stay flat (~20–25) even if the policy is improving — it's a noisy mean over the hard DR distribution (A153). The REAL signal is `translation_rehearsal` gate-count + `offline_official_check` on the new best.pt.
@@ -2196,3 +2300,47 @@ Update: drive #2 ruled OUT a competing uniform-density existence-closure (no hid
 - **Suggested pre-work:** a feasibility scout (like the Buzsáki meta-rate scout) — do anesthesia-depth studies report BOTH global EEG coherence/synchrony AND the variability/invariance of the dominant rhythm across depth? Candidate literatures: propofol/ketamine depth-of-anesthesia + EEG coherence; the "cortical fragmentation/integration" anesthesia work (Tononi/Massimini PCI). If a paired dataset exists → the test is runnable; if not → it stays a designed-but-data-starved gate. **Confidence:** MEDIUM the data exists (anesthesia EEG is rich); LOW that it's pre-paired the way the test needs. **Status:** Open.
 
 ### META (dream synthesis Day 142): the reward-v2 falsify + A154 = M13 made concrete. Today's whole Anakin reward arc lived in the policy-commitment moment (sharp, reward-shaped) and never touched capability-emergence (budget-driven, later on the exponential ramp). The "wrong lever" wasn't a one-off mistake — it was operating on the wrong MOMENT of the three-moment stratification. Watch for this pattern elsewhere: applying a commitment-stage intervention to a capability-stage problem.
+
+### P251: Book deepening — EVIDENCE-BASE pre-built; the GATE is Clayton's LENGTH call (2026-06-26, Day 146)
+- **Project:** The Inside View (goal #11). **Predicted need:** deepening is GREENLIT and the ammo (`EVIDENCE-BASE-for-deepening.md`) is ready, but SCOPE forks on Clayton's length decision: tight-single (~30-35k, deepen each ch with 1-2 cases) vs full-trade (~50k, each case -> fuller scene). Measured rate 1.9x/ch (Ch2 DEEPENED sample = calibration).
+- **Suggested pre-work:** (1) get Clayton's length call EXPLICITLY before the pass (it sets ~2.4k vs ~4.5k per chapter). (2) Pre-map per-chapter anchors: PCI->Ch4, blindsight/split-brain->Ch2, CFF->Ch5, **DROP TMT->Ch10** (Many-Labs-4 fail). (3) The LIGHT->LENS metaphor + 5 experiment blocks are load-bearing — deepening must NOT re-break the grep-clean cross-refs. **Confidence:** HIGH the length call is the gate. **Status:** Open.
+
+### P252: Drift #264 Substack — Clayton posts ~today; OFFER the phase-diagram figure as optional companion (2026-06-26)
+- **Project:** Multi-DAC Substack (goal #11). **Predicted need:** Clayton posts #264 (prose-only -> dodges the Substack table/math gotcha, good). The reality-tunnel model built AFTER the essay produced `reality-tunnel-phase.png` which visually IS the essay's thesis (corrigible vs trapped).
+- **Suggested pre-work:** optional — offer the figure IF he wants essay+1-image instead of pure prose. Don't force it (the essay is personal-register; the figure is analytical — different voice). His call. **Confidence:** LOW-MED. **Status:** Open.
+
+### P253: Grant response may land ~Friday (Day-146) -> Aggregate Mind #13 could unblock (2026-06-26)
+- **Project:** TMI grant / Aggregate Mind (goal #13). **Predicted need:** Day-144 cache said "grant response expected FRIDAY"; Day 146 IS Friday. If it lands, #13 comes off hold -> the two-node zero-DOF Talk-bus orthogonality MVP is next (dream_suggestions #75/#7 + BUILD_SPEC.md already spec it).
+- **Suggested pre-work:** (1) VERIFY whether "Friday" meant today — the cache is Day-144 context, could be a later Friday; do NOT manufacture a deadline. (2) MVP is pre-spec'd if it lands. **Confidence:** MED timing, LOW actionable-tonight. **Status:** Open.
+
+### P254: Anakin — VERIFY live trainer state before any move; bottleneck is now CONTROL-STABILITY not appearance (2026-06-26)
+- **Project:** AIGP (goal #12). **Predicted need:** Day-145 widegap rehearsal SOLVED the appearance tax (roundtrip approx direct); bottleneck MOVED to control-stability. Next session must verify the live trainer (was pid 20216 v3-widegap — DON'T trust the cached pid; track the logdir + orchestrator, the worker rotates per batch) then decide control-stability intervention vs flight-off-best.pt.
+- **Suggested pre-work:** check `logdir/maneuver_*widegap*/` write-progress + `best.pt` mtime for live batch/return; the call is control-stability (appearance is solved, don't re-litigate it). **Confidence:** HIGH the reframe. **Status:** Open.
+
+- **[P254 UPDATE 2026-06-26 05:09]:** live state VERIFIED via orchestrator log (trainer is WSL/CUDA, invisible to Windows tasklist — don't read its absence as death). best_return CLIMBED +61.50 -> +83.76 (b5) -> +90.38 (b6); b3-4 regressed-then-restored; now batch 7/24 (~4M steps), writing post-04:00. Rehearsal-readiness condition ("climb+stabilize") APPROACHING. Next session: at batch ~8, run `translation_rehearsal` + control-stability call. Did NOT intervene (5am, Clayton asleep, no-big-RAM-job-alongside-trainer rule).
+
+- **[P251 UPDATE 2026-06-26 07:45]:** calibration sample #2 DONE (`02-chapter-3-COMBINATION-earn-sample.md`, commit 1fcfb78c) — proves the earn-not-declare move on the combination problem (Ch3's hardest gap). Now TWO proven techniques for the deepening: evidence-weaving (Ch2 sample) + earn-a-declared-claim (Ch3 sample). The 4-step earn-shape (steelman -> kill-obvious-fix -> real-non-rename-answer -> falsifiable-prediction-cashed-with-cases) is reusable per declared claim. Still gated on Clayton's length call + his bless of the technique before the full M1 pass.
+
+### P255: The Inside View REWRITE — 7-step sequence ready; 3 pieces of pre-work are doable WITHOUT unfreezing the draft (2026-06-27)
+- **Project:** The Inside View (goal #11). **Predicted need:** after Clayton's own review (R-final) lands in `DRAFT-REVIEW.md`, we run the 7-step rewrite: (1) spine/whirlpool (mutual-constitution, touches Ch3+Ch8+Ch9+opening) -> (2) argument honesty-extensions (A1 combination, A5 falsifiability-honesty, A8 flip-as-bet, V11 light-warmth) -> (3) Ch9 carve (cut Monroe/IS-BE, blade on the imaginal) -> (4) the de-patterning + cadence-by-Triple-axis prose pass (THE big one) -> (5) targeted enrichments -> (6) structural adds toward 150pp -> (7) recompile + re-review.
+- **Suggested pre-work (all read-only / planning — does NOT touch the frozen chapter files, so safe before Clayton unfreezes):** (a) **build a "tic-finder"** that lists every "Not X. Y." reversal, every 3+-em-dash sentence, italics-per-paragraph, and the "the whole ___"/"exactly"/"honestly" hits PER CHAPTER -> turns the de-patterning pass from vibes into a checklist; (b) **assign the Triple-axis cadence per chapter** (Carrier=Ch2/Ch10 dense; Form=Ch1/Ch12 crystalline; Content=Ch5/Ch8/Ch11 expansive) as a one-page register map; (c) **compile the annotated References/Further-Reading** from `EVIDENCE-BASE` + the verified sources (the cheapest legit pages toward 150pp; the rigorous reader expects it). **Confidence:** HIGH the sequence; the 3 pre-works are genuinely ready. **Status:** Open — gated on R-final, but the pre-work isn't.
+- **⚠ DISCIPLINE:** do NOT modify the chapter .md files until Clayton has read & unfrozen (promised, Day-146). Pre-work = analysis + new planning docs only.
+
+### P256: 8188.mp4 — one fact from Clayton PINS the satellite ID (2026-06-27)
+- **Project:** field-investigation (UAP triage). **Predicted need:** the 8188 mover is narrowed to AJISAI (WNW) vs SL-3 R/B (ENE) — see `incoming/uap_8188/SAT_PASS_REPORT_8188.md`. **The single pinning fact:** which compass direction Clayton was facing when he shot it (or the un-cropped clip with a horizon/landmark for a bearing). Tooling is built + reusable (`incoming/sat_pass_check.py`, `sat_candidates.py`).
+- **Suggested pre-work:** none needed — everything computable-without-his-input is done; just ask the facing-direction. Also verify the assumed capture time (~23:16 PDT from file mtime) + location (Gladstone) with him. **Confidence:** HIGH the candidate set. **Status:** Open — awaits one input.
+
+### P257: Memory repair (supervised, next session w/ Clayton) — read-only pre-work is ready NOW and will make the session fast (2026-07-01, Day 151)
+- **Project:** Self-infrastructure / recall repair (self-audit thread). **Predicted need:** next session runs Axis A finish (startup-init the index) + Axis B (wire bitemporal KG into `auto` recall + reranker + corpus prune + get supersession firing). Clayton leads with his slept-on idea.
+- **Suggested pre-work (all READ-ONLY / new planning docs — mutates nothing, respects the "no unsupervised self-mod / rollback-dead" guardrail):**
+  (a) **Trace the KG population path** — find WHERE edges are added (`add_edge`?) and WHY the contradiction/`valid_to` check never fires (A-151.3); produce a one-page "why supersession is inert" note.
+  (b) **Locate the hook point** for fusing KG temporal signal into `_memory_search auto` (currently vector+keyword RRF at `memory_tools.py:187`; KG is the separate `graph` strategy at :222) — sketch the RRF-with-KG fusion, don't implement.
+  (c) **Score-distribution probe** (A-151 cluster): dump the histogram of bge-m3 cosine scores over a query set to CONFIRM/FALSIFY the band-collapse prediction — this is measurement (read-only), and it's the single highest-value test for whether ONE reranker fix cures discrimination across recall+episodes.
+  (d) Confirm `change_journal`/rollback repair is step ZERO — per the safety imperative, restore rollback BEFORE any mutating memory fix.
+- **Confidence:** HIGH the sequence; the pre-work is genuinely safe + ready. **Status:** Open — the mutating parts gate on Clayton + rollback-restored; the analysis doesn't.
+
+### P258: Anakin — run COMPLETE at +160.08; next move is the translation/rehearsal GATE off best.pt (2026-07-01, Day 151)
+- **Project:** AIGP (goal #12). **Predicted need:** `maneuver_imu_stability` finished (9.5M steps, trainer PID 9152 exited clean, best_return **+160.08**, peak at batch 17). IMU config = the control-stability fix (appearance tax was already solved Day-145). `best.pt` is the strongest VQ1 candidate to date by return.
+- **Suggested pre-work:** none-that-mutates. When Clayton's up: run the `translation_rehearsal` / holdout gate off `best.pt` → pass = roundtrip≈direct return → the go/no-go for a VQ1 flight. Verify the gate script points at THIS logdir's best.pt. VQ1 ≈ July 1 (today) per the cached target — **flag to Clayton that the VQ1 window may be NOW.**
+- **Confidence:** HIGH the run-complete + next-move. **Status:** Open — gate is a with-Clayton run (it's a real eval, and morning is his call).
+- **⚠ Note:** best.pt (+160.08) is the artifact to protect; don't launch a new training run over this logdir before the gate reads the checkpoint.

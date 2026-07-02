@@ -81,6 +81,11 @@ def run_healing(channel: dict, dry_run: bool = False) -> dict:
 
     # Split command into args. cmd_str is e.g. "python operations/scripts/kg_index_build.py"
     cmd = cmd_str.split()
+    # Run 'python ...' heals under the SAME interpreter as this monitor (the venv),
+    # never a bare 'python' that PATH resolves to system C:\Python314 — the exact
+    # interpreter the rebuild is moving off of.
+    if cmd and cmd[0].lower() in ("python", "python.exe", "python3", "python3.exe"):
+        cmd[0] = sys.executable
     start = time.time()
     try:
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=600, cwd=str(CLAWD))

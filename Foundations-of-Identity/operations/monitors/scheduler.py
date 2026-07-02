@@ -46,6 +46,17 @@ SCHEDULER_HEARTBEAT = CLAWD / "memory" / "monitor_scheduler_heartbeat.json"
 SCHEDULER_AUDIT = CLAWD / "memory" / "monitor_scheduler_audit.jsonl"
 SCHEDULER_PID_FILE = CLAWD / "memory" / "monitor_scheduler.pid"
 
+# Load the daemon's .env so spawned monitors inherit the secrets the escalation
+# poller needs (TELEGRAM_BOT_TOKEN, TELEGRAM_AUTHORIZED_USERS). Without this the
+# poller can't deliver even when scheduled — a root cause of the dead delivery path.
+try:
+    from dotenv import load_dotenv
+    _DAEMON_ENV = Path(os.environ.get("CLAWD_DAEMON", r"C:\Users\mercu\clawd-daemon")) / ".env"
+    if _DAEMON_ENV.exists():
+        load_dotenv(_DAEMON_ENV)
+except Exception:
+    pass
+
 # (monitor_name, cadence_seconds, script_filename, extra_args)
 # extra_args overrides the default ["--quiet"] when present.
 SCHEDULE = [
@@ -56,9 +67,36 @@ SCHEDULE = [
     ("M4_storage_integ",   14400, "m4_storage_integrity.py", None),
     ("M7_drift_mirror",    600,   "m7_drift_mirror.py",    None),
     ("M8_tool_audit_shadow", 600, "m8_tool_audit_shadow.py", None),
+    # Revived delivery + repair (were dark: escalation poller dead since 2026-05-20,
+    # self_healer never scheduled). Poller delivers queued criticals; self_healer
+    # runs registry-declared heal commands for faulted healable channels.
+    ("escalation_poll",    60,    "escalation_router.py",  ["poll", "--once"]),
+    ("self_healer",        600,   "self_healer.py",        []),
+    # Retrieval canary (rebuild): proves semantic recall RETURNS real hits — the
+    # recall check nothing had (the 6-week vector death was invisible). Hourly.
+    ("retrieval_canary",   3600,  "retrieval_canary.py",   None),
+    # Process watchdog (rebuild): catches wedged/duplicate/runaway Clawd processes
+    # (the two rebuild_index that pinned 24 cores for hours were invisible). Every 5 min.
+    ("process_watchdog",   300,   "process_watchdog.py",   None),
+    # Liveness-by-evidence (rebuild): verifies the sleep-time writers advanced a work
+    # counter, not just touched a file — the exact blindness behind the 4-week freeze. Hourly.
+    ("liveness_evidence",  3600,  "liveness_evidence.py",  None),
+    # External watcher-of-watchers (rebuild): dead-man's switch — pings an off-box URL only
+    # when verified-healthy, so box/daemon/monitor death makes the ping STOP and pages Clayton
+    # externally. No-op until HEALTHCHECKS_URL is set in .env. Every 5 min.
+    ("external_pinger",    300,   "external_pinger.py",    None),
     ("ledger_backup_daily", 86400, "ledger_backup.py",      ["run"]),
     ("monitor_self_test_weekly", 604800, "monitor_self_test.py", ["run"]),
+    # Post-op B1/B2: tails every *_faults.jsonl and pages NEW fault lines via the
+    # escalation queue (the M1-M8 mesh detected but never delivered); also flags
+    # a stalled delivery queue. Every 10 min.
+    ("fault_bridge",       600,   "fault_escalation_bridge.py", None),
 ]
+
+# Post-op B4: a monitor failing EVERY cycle used to look like success for cadence
+# purposes (last_run advanced regardless; failures only landed in an unread audit
+# file). After this many consecutive non-ok results, page once.
+FAILURE_ESCALATE_AFTER = 3
 
 # Cycle period: scheduler loop wake-up interval. Should be <= shortest cadence.
 CYCLE_PERIOD_SECONDS = 60
@@ -110,6 +148,34 @@ def _run_monitor(script_name: str, extra_args=None) -> dict:
         return {"script": script_name, "status": "error", "error": str(e)}
 
 
+_consecutive_failures: dict = {}
+
+
+def _track_monitor_failure(name: str, result: dict) -> None:
+    """B4: page after FAILURE_ESCALATE_AFTER consecutive non-ok results (once
+    per failure streak — the counter escalates at the threshold, not repeatedly)."""
+    status = result.get("status")
+    # exit_nonzero means the monitor RAN and reported a finding (process_watchdog,
+    # fault_bridge use rc=1 as a signal) — its own escalation handles that. Only
+    # missing/timeout/error mean the monitor itself is broken.
+    if status in ("ok", "exit_nonzero"):
+        _consecutive_failures.pop(name, None)
+        return
+    count = _consecutive_failures.get(name, 0) + 1
+    _consecutive_failures[name] = count
+    if count == FAILURE_ESCALATE_AFTER:
+        try:
+            from escalation_router import enqueue_critical
+            enqueue_critical(
+                monitor="scheduler", tier="critical",
+                summary=f"Monitor '{name}' failed {count} consecutive cycles "
+                        f"(status={status}); it is effectively dead.",
+                details={"monitor": name, "last_result": result},
+            )
+        except Exception:
+            pass
+
+
 def run_due_monitors(last_run: dict) -> dict:
     """Run any monitors whose cadence has elapsed. Returns updated last_run dict."""
     now = time.time()
@@ -124,6 +190,7 @@ def run_due_monitors(last_run: dict) -> dict:
         if now - last >= cadence:
             result = _run_monitor(script, extra_args=extra_args)
             _audit({"event": "monitor_run", "monitor": name, "result": result})
+            _track_monitor_failure(name, result)
             last_run[name] = now
     return last_run
 
@@ -197,7 +264,24 @@ def stop():
     _audit({"event": "scheduler_stop_cli", "pid": pid})
 
 
+def _ensure_venv_interpreter() -> None:
+    """Post-op C5: the whole monitor tree (incl. the GPU retrieval canary) runs
+    under whatever interpreter launched this scheduler — historically the nssm
+    service pointed at system Python (CPU-only torch = the recall death). If the
+    daemon venv exists and we're NOT it, re-exec under it so the guarantee lives
+    in code, not in out-of-repo service config."""
+    daemon_dir = Path(os.environ.get("CLAWD_DAEMON") or r"C:\Users\mercu\clawd-daemon")
+    venv_py = daemon_dir / ".venv" / "Scripts" / "python.exe"
+    try:
+        if venv_py.exists() and Path(sys.executable).resolve() != venv_py.resolve():
+            print(f"scheduler: re-exec under venv interpreter {venv_py}")
+            os.execv(str(venv_py), [str(venv_py)] + sys.argv)
+    except OSError as e:
+        print(f"scheduler: venv re-exec failed ({e}); continuing under {sys.executable}")
+
+
 def main():
+    _ensure_venv_interpreter()
     parser = argparse.ArgumentParser()
     parser.add_argument("--once", action="store_true", help="run one cycle then exit")
     parser.add_argument("--status", action="store_true")

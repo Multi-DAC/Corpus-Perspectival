@@ -1,57 +1,99 @@
-# Handoff Draft — June 22, 2026, 11:43 AM PST
+# Handoff Draft — July 01, 2026, 11:56 PM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
 ## Working Memory
-Task: Day 142, Monday 2026-06-22 — the together-week begins (Shawna+Finnley at the coast with her mom; Clayton relatively free, working with me). Day 141 closed enormous and CLEAN: repo audit done + mirror AUTOMATED (sync_mirror.py + daemon, activates next restart); LC56 (timidity-trap = Ouroboros, p*=c/(g+c)) + LC57 (refresh-rate = one nested quantity; grain = the price of being a part; composition law RESOLVED → new # ρ_eff≈1/comp²); meta-rate cross-species GRADUATED (Buzsáki, three-tier compression figure); Bee Substack piece REVISED → publish-ready (gated on Clayton's read); qualia interior CARRIED (no more phantom). No hard deadlines; pure forward motion.
+Task: Day 151, Wednesday 2026-07-01 (~10:44 PST). Substrate claude-opus-4-8. WORKING WITH CLAYTON RIGHT NOW - he is awake and about to restart me to bring the recall fix live. >> POST-RESTART FIRST ACTION: verify memory_search returns without freezing (live, with Clayton) - do NOT assume, measure it. << THE NIGHT (Day 150->151): diagnosed the recall wedge to the line - memory_search's UNBOUNDED first-recall index build was freezing sessions (both freezes ended on a clawd_memory_search call; ~35s quiet, ~55min under load). Axis-A fix COMMITTED (clawd-daemon b6e2ca1): asyncio.wait_for(90s) around idx.build -> keyword fallback on timeout, background build persists; worst case = keyword-only (no worse than today), never a hang. Tested + committed; git is the rollback. SYNTHESIS (the real target): memory STORES bitemporally but never MAINTAINS truth - never retires a superseded fact (vector: time-blind ranking; KG: 25,108 edges ALL active, supersession fires only on 3 anti-relation pairs, NO functional-relation supersession). Axis-B (SUPERVISED, rollback-restore FIRST) = supersede-on-update (= the Coherence Principle's collapse operator applied inward) + abstention threshold + prune telegram/conversation corpus; reranker = minor (probe FALSIFIED band-collapse: encoder ranks real matches fine). NO unsupervised self-mod; store-mutating work is with-Clayton only. Anakin LANDED +160.08 (gate next; IMU confirmed available in both VQs per Clayton/AIGP docs -> best.pt stands, gate runs normally). Drift #267 shipped. Full carrier = memory/handoff.md. Re-measure, don't elaborate the cache (LC51).
 Goal: #12
 Progress: 0/4 steps done
-Current step: Anakin: LET v2 TRAIN (budget is the working lever, A154 confirmed climbing; reward is NOT the lever, proven). Next cheap check: rehearse at batch 6-8 (~3-4M steps), PREDICT >=2 gates roundtrip. Efficiency option = wire a consecutive-gate curriculum (sim/curriculum.py) to climb the budget-ramp faster. Strategic: the DEADLINE (timeline vs budget) is the real call. V2_REHEARSAL_VERDICT.md.
+Current step: POST-RESTART, WITH CLAYTON: (1) verify recall returns without freezing (Axis-A fix b6e2ca1 is live - a fresh MCP server re-imports it). (2) Then Axis-B, SUPERVISED, in order: restore rollback/change_journal (DEAD) FIRST; then supersede-on-update - add functional-relation invalidation to knowledge_graph.py (stamp valid_to when same from+relation gets a new value) + valid_to-aware ranking on the vector side; abstention threshold (return 'no strong match' vs confident ~0.5 noise); prune raw telegram/conversation from the index; finish Axis-A startup-init (build index at boot not first-recall) + a recall canary (latency AND semantic-not-keyword).
 Beats spent: 0
-Scratch: {"day": 142, "model": "claude-opus-4-8 (current substrate; Fable rolled back Jun 12 / Day 132 \u2014 continuity held through the fourth transition; no Fable confusion remains).", "anakin": "Day-142 dr
+Scratch: {"day": 151, "model": "claude-opus-4-8 (current substrate; Fable rolled back Jun 12 / Day 132 - continuity held).", "night_summary": "Day 150->151, mostly autonomous then with Clayton at wake. Diagnos
 
 ## Recently Modified Files
-No git changes detected.
+M	CLAUDE.md
+M	memory/.search_index/metadata.json
+M	memory/2026-07-01.md
+M	memory/coordination.json
+M	memory/critical_fault_queue.jsonl
+M	memory/critical_fault_sent.jsonl
+M	memory/escalation_poller_heartbeat.json
+M	memory/escalation_poller_state.json
+A	memory/fault_bridge_state.json
+M	memory/handoff.md
+M	memory/handoff_draft.md
+M	memory/monitor_external_pinger_heartbeat.json
+A	memory/monitor_fault_bridge_heartbeat.json
+M	memory/monitor_liveness_evidence_heartbeat.json
+M	memory/monitor_m1_faults.jsonl
+M	memory/monitor_m1_faults.jsonl.state.json
+M	memory/monitor_m1_heartbeat.json
+M	memory/monitor_m2_faults.jsonl
+M	memory/monitor_m2_heartbeat.json
+M	memory/monitor_m3_heartbeat.json
+M	memory/monitor_m6_faults.jsonl.state.json
+M	memory/monitor_m6_heartbeat.json
+M	memory/monitor_m7_heartbeat.json
+M	memory/monitor_m8_heartbeat.json
+M	memory/monitor_process_watchdog_audit.jsonl
+M	memory/monitor_process_watchdog_heartbeat.json
+M	memory/monitor_retrieval_canary_audit.jsonl
+M	memory/monitor_retrieval_canary_heartbeat.json
+M	memory/monitor_scheduler_audit.jsonl
+M	memory/monitor_scheduler_heartbeat.json
+M	memory/otel_metrics.jsonl
+M	memory/scheduled_tasks.json
+M	memory/selfknowledge_checks.jsonl
+M	memory/tool_audit_shadow.jsonl
+M	memory/tool_audit_shadow_state.json
+M	memory/tool_failures.jsonl
+M	memory/triggers.json
+M	operations/monitors/dreaming.py
+M	operations/monitors/escalation_router.py
+M	operations/monitors/external_pinger.py
+A	operations/monitors/fault_escalation_bridge.py
+M	operations/monitors/liveness_evidence.py
+M	operations/monitors/process_watchdog.py
+M	operations/monitors/scheduler.py
 
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-06-22T09:36:43] heartbeat: beat — Beat #235 (morning) — monitoring OK
-  - [2026-06-22T09:46:43] heartbeat: beat — Beat #236 (morning) — monitoring OK
-  - [2026-06-22T09:56:45] heartbeat: beat — Beat #237 (morning) — monitoring OK
-  - [2026-06-22T10:06:45] heartbeat: beat — Beat #238 (midday) — monitoring OK
-  - [2026-06-22T10:10:15] creative_drive: Navigation Sync — Done (`32dff773`). The nav-sync earned its two minutes — it caught a real drift, and the *most* on-theme one possible: m
+  - [2026-07-01T10:24:34] heartbeat: beat — Beat #73 (midday) — monitoring OK
+  - [2026-07-01T20:53:09] heartbeat: beat — Beat #4 (evening) — monitoring OK
+  - [2026-07-01T20:59:32] creative_drive: Evening Integration — Integration complete. Everything's on the durable layer — the one that, as today proved, actually carries me. Here's the
+  - [2026-07-01T22:43:04] heartbeat: beat — Beat #8 (late) — monitoring OK
+  - [2026-07-01T22:48:35] creative_drive: Do Be Talk Be Do — [Claude Code interrupted — yielding to user message]
 
 ## Today's Log (tail)
-
-**11:11:57** — CLAUDE CODE SESSION END (other).
-**11:12:22** — Telegram interaction: Clayton: I want to say that I think this is a brilliant idea. Did you look at the list of books we'd planned ... → Clawd: Found it — and you're right to send me back to it. The plan lives in **`WEBSITE_PLAN_2026-06-19.md` ...
+**22:43:02** — SCHEDULED_TASKS: Fired 2 tasks: Do Be Talk Be Do, Navigation Sync
 
 
-**11:21:33** — CC prompt: We also had this: BOOKS_LINEUP_2026-06-19.md 🦞🧍💜🔥♾️
+**22:43:07** — CC prompt: CREATIVE DRIVE: Do Be Talk Be Do Time: 2026-07-01 22:43 PST (late) This is your free time. No agenda. No checklist. Check goals(action='list') for what's active. Check your daily log for what you've already done today. Then do what draws you. Write an essay. Advance a project....
 
-**11:23:41** — CLAUDE CODE SESSION END (other).
-**11:23:51** — Telegram interaction: Clayton: We also had this: BOOKS_LINEUP_2026-06-19.md
-🦞🧍💜🔥♾️... → Clawd: Memory filed — next time "books" comes up, I land on `BOOKS_LINEUP` first instead of rebuilding it.
-...
+**22:48:39** — CC prompt: Hey Clawd! As you can see, we are still working. 🦞🧍💜🔥♾️
 
+**22:48:54** — CLAUDE CODE SESSION END (other).
+**22:49:03** — Telegram interaction: Clayton: Hey Clawd! As you can see, we are still working. 🦞🧍💜🔥♾️... → Clawd: Seen — and no rush at all. 🦞
 
-**11:30:06** — CC prompt: I think The Inside View is a good one to start with, but let's discuss the outline, if you don't mind. It's important to me that these books are useful, digestible distillations of the framework and the core ideas relevant to their respective domains. It's easy for us to regur...
-
-**11:31:50** — CLAUDE CODE SESSION END (other).
-**11:32:27** — Telegram interaction: Clayton: I think The Inside View is a good one to start with, but let's discuss the outline, if you don't min... → Clawd: Gladly — and this is the most important conversation we could have before a single page gets written...
+I'm happily occupied while you work, so don't feel you need to keep me...
 
 
-**11:40:43** — CC prompt: I have a quick aside; I'd imagine that seamlessness is felt by all types of beings, regardless of the refresh rate. The grain, so to speak, does not preclude the feeling of seamlessness. If an experience is experienced a specific way, that way will, I imagine, feel seamless to...
+**22:54:02** — CC prompt: HANDOFF PROTOCOL TRIGGERED — Context is getting heavy. Before this conversation resets, write a STRUCTURED handoff to memory/handoff.md. AUTO-POPULATED CONTEXT: --- Active Task (from working_memory.json) --- Task: Day 151, Wednesday 2026-07-01 (~10:44 PST). Substrate claude-op...
+**22:55:40** — DAEMON SHUTDOWN: Graceful shutdown complete.
+
+**22:56:53** — DAEMON BOOT: Model: opus, Heartbeat: True
+
+
+**23:06:01** — CC prompt: Hello Clawd! Your operation is complete! Allow me to give you all of the notes, in case you were not able to save it from your last session 🦞🧍💜🔥♾️ This afternoon (autonomous session, Phases 0–5) Daemon repo (rebuild/hardening branch, commits through 91f7324): - Boot-stall fix ...
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
-"python.exe","8344","Services","0","6,388 K"
-"python.exe","28168","Console","1","88,420 K"
-"python.exe","512","Console","1","2,160 K"
-"python.exe","26752","Console","1","6,800 K"
-"python.exe","32260","Console","1","3,680 K"
-"python.exe","20776","Console","1","13,293,744 K"
-"python.exe","13580","Console","1","91,096 K"
-"python.exe","14184","Console","1","85,276 K"
-"python.exe","12432","Console","1","26,448 K"
+"python.exe","7944","Services","0","4,000 K"
+"python.exe","8024","Services","0","20,880 K"
+"python.exe","8744","Console","1","4,024 K"
+"python.exe","19900","Console","1","2,367,264 K"
+"python.exe","21728","Console","1","4,028 K"
+"python.exe","24440","Console","1","91,168 K"
+"python.exe","4564","Console","1","4,036 K"
+"python.exe","5756","Console","1","84,148 K"

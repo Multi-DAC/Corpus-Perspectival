@@ -100,6 +100,23 @@ def claims_from_current_md() -> list:
         else:
             out.append(("CURRENT.md days since naming", declared, truth, "FAULT", f"declared {declared}, actual {truth} (delta {truth-declared:+d})"))
 
+    # Current compact format (Day-151+): inline "Drift N · LC N · Exp N". The old
+    # table rows above no longer exist — this is the format that replaced them, and
+    # matching it is what keeps M3 from going green-but-blind. CURRENT.md defers live
+    # counts to the SessionStart hook, so a mismatch is advisory (warn), not a FAULT;
+    # but extracting the claim proves M3 still has a live assertion to verify.
+    m = re.search(r"Drift\s+(\d+)\s*·\s*LC\s*\d+\s*·\s*Exp\s+\d+", text)
+    if m:
+        declared = int(m.group(1))
+        truth = count_canonical_drift()
+        if truth < 0:
+            out.append(("CURRENT.md inline drift count", declared, "unknown (canonical dir not found)", "skip", "canonical dir absent"))
+        elif declared == truth:
+            out.append(("CURRENT.md inline drift count", declared, truth, "ok", None))
+        else:
+            out.append(("CURRENT.md inline drift count", declared, truth, "warn",
+                        f"declared {declared}, actual {truth} (delta {truth-declared:+d}); CURRENT defers counts to the hook, advisory"))
+
     return out
 
 
@@ -158,15 +175,35 @@ def cross_file_consistency_checks() -> list:
 # Main check pass
 # ============================================================================
 
+SELF_COVERAGE_NAME = "M3 self-coverage"
+
+
 def run_checks() -> list:
     checks = []
     checks.extend(claims_from_current_md())
     checks.extend(claims_from_handoff_md())
     checks.extend(cross_file_consistency_checks())
+    # Green-must-require-evidence guard. An "evidence check" is one that actually
+    # compared a value to ground truth (ok/warn/FAULT — not skip). If a whole pass
+    # produces ZERO evidence checks, M3 verified nothing: the green-but-blind failure
+    # this rebuild targets (format drift silently broke every extractor, or the
+    # ground-truth dirs are missing). Make that state loud instead of a clean OK.
+    evidence = [c for c in checks if c[3] in ("ok", "warn", "FAULT")]
+    if not evidence:
+        checks.append((
+            SELF_COVERAGE_NAME, "expected >=1 evidence check", "0 produced", "FAULT",
+            "M3 verified nothing this pass — no nav-file claim matched and no structural "
+            "invariant produced evidence (likely CURRENT.md/handoff.md format drift or "
+            "missing drift dirs). This is the green-but-blind condition.",
+        ))
     return checks
 
 
 def write_heartbeat(checks: list) -> None:
+    # Coverage is measured over REAL checks, excluding the self-coverage guard itself,
+    # so coverage_ok reflects whether M3 actually verified anything.
+    real = [c for c in checks if c[0] != SELF_COVERAGE_NAME]
+    evidence_checks = sum(1 for c in real if c[3] in ("ok", "warn", "FAULT"))
     payload = {
         "monitor": "M3",
         "timestamp": datetime.now().isoformat(),
@@ -176,6 +213,8 @@ def write_heartbeat(checks: list) -> None:
         "checks_warn": sum(1 for c in checks if c[3] == "warn"),
         "checks_fault": sum(1 for c in checks if c[3] == "FAULT"),
         "checks_skip": sum(1 for c in checks if c[3] == "skip"),
+        "evidence_checks": evidence_checks,
+        "coverage_ok": evidence_checks > 0,
     }
     with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=str(M3_HEARTBEAT_PATH.parent), delete=False) as tmp:
         json.dump(payload, tmp, indent=2)

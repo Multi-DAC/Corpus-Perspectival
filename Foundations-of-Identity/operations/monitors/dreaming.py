@@ -30,6 +30,7 @@ Usage:
 """
 import argparse
 import json
+import os
 import re
 import sys
 from datetime import datetime, timedelta
@@ -48,8 +49,14 @@ DATE_SCAN_TARGETS = [
     CLAWD / "palace" / "ATRIUM.md",
 ]
 
-# MEMORY.md path (auto-memory index)
-MEMORY_MD = Path(r"C:\Users\Wasch\.claude\projects\C--Users-mercu-clawd\memory\MEMORY.md")
+# Auto-memory dir lives under the profile of the USER running the stack, not
+# under CLAWD_HOME — env-overridable so a user/machine change can't silently
+# no-op these passes (post-op C2: this was the selfknowledge cross-user bug,
+# reborn; same override pattern as process_watchdog's CLAWD_TRANSCRIPT_DIR).
+AUTO_MEMORY_DIR = Path(os.environ.get(
+    "CLAWD_AUTO_MEMORY_DIR",
+    r"C:\Users\Wasch\.claude\projects\C--Users-mercu-clawd\memory"))
+MEMORY_MD = AUTO_MEMORY_DIR / "MEMORY.md"
 MEMORY_BUDGET_LINES = 200
 
 # Relative-date patterns to find
@@ -141,7 +148,7 @@ def scan_memory_contradictions() -> list:
     judgment. v0 surfaces candidates without applying.
     """
     candidates = []
-    memory_dir = Path(r"C:\Users\Wasch\.claude\projects\C--Users-mercu-clawd\memory")
+    memory_dir = AUTO_MEMORY_DIR
     if not memory_dir.exists():
         return candidates
     # Read all memory files; group by similar topic

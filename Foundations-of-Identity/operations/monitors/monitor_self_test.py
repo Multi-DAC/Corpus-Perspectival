@@ -51,6 +51,65 @@ TEST_INVOCATIONS = [
 ]
 
 
+# Heartbeat coverage assertions — the second half of "does it actually work". A
+# falsifiability test can PASS (it detects a synthetic fault) while the monitor
+# verifies nothing in production (the green-but-blind class M3 fell into: format
+# drift → 0 claims extracted → clean OK). These read each monitor's REAL heartbeat
+# and assert it shows evidence of work + isn't stale. (file, predicate(hb)->bool, why)
+STALE_THRESHOLD_SECONDS = 26 * 3600  # these monitors run <=hourly; >26h = stopped running
+COVERAGE_ASSERTIONS = [
+    ("monitor_m3_heartbeat.json",
+     lambda hb: bool(hb.get("coverage_ok")) and hb.get("evidence_checks", 0) > 0,
+     "M3 must verify >=1 real claim (coverage_ok); a blind pass now self-FAULTs"),
+    ("monitor_m1_heartbeat.json",
+     lambda hb: hb.get("channels_checked", hb.get("channels", 0)) > 0,
+     "M1 must compare >=1 channel"),
+    ("monitor_retrieval_canary_heartbeat.json",
+     lambda hb: hb.get("dim") == 1024 and hb.get("hits", 0) > 0,
+     "retrieval canary must load the 1024-dim index and return hits"),
+]
+
+
+def _hb_age_seconds(hb: dict, path: Path) -> float:
+    ts = hb.get("timestamp")
+    if ts:
+        try:
+            return (datetime.now() - datetime.fromisoformat(ts)).total_seconds()
+        except ValueError:
+            pass
+    return time.time() - path.stat().st_mtime
+
+
+def coverage_audit() -> list:
+    """Flag monitors that are heartbeating but no longer doing real work, or stale."""
+    out = []
+    mem = CLAWD / "memory"
+    for fname, predicate, desc in COVERAGE_ASSERTIONS:
+        path = mem / fname
+        if not path.exists():
+            out.append({"heartbeat": fname, "status": "MISSING",
+                        "detail": f"no heartbeat — monitor not running ({desc})"})
+            continue
+        try:
+            hb = json.loads(path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError) as e:
+            out.append({"heartbeat": fname, "status": "UNREADABLE", "detail": str(e)})
+            continue
+        age = _hb_age_seconds(hb, path)
+        if age > STALE_THRESHOLD_SECONDS:
+            out.append({"heartbeat": fname, "status": "STALE",
+                        "detail": f"last beat {age/3600:.1f}h ago (>{STALE_THRESHOLD_SECONDS/3600:.0f}h) — stopped running"})
+            continue
+        try:
+            covered = bool(predicate(hb))
+        except Exception as e:
+            covered = False
+            desc = f"{desc} (predicate error: {e})"
+        out.append({"heartbeat": fname, "status": "COVERED" if covered else "BLIND",
+                    "detail": None if covered else f"heartbeating but not verifying: {desc}"})
+    return out
+
+
 def _append_log(record: dict) -> None:
     record["ts"] = datetime.now().isoformat()
     REGRESSION_LOG.parent.mkdir(parents=True, exist_ok=True)
@@ -91,6 +150,9 @@ def run_all() -> dict:
     for name, script, args in TEST_INVOCATIONS:
         results.append(_run_one(name, script, args))
 
+    coverage = coverage_audit()
+    coverage_bad = [c for c in coverage if c["status"] != "COVERED"]
+
     summary = {
         "event": "self_test_run",
         "total": len(results),
@@ -99,19 +161,30 @@ def run_all() -> dict:
         "timeout": sum(1 for r in results if r["status"] == "TIMEOUT"),
         "error": sum(1 for r in results if r["status"] in ("ERROR", "script_missing")),
         "results": results,
+        "coverage": coverage,
+        "coverage_blind": len(coverage_bad),
     }
     _append_log(summary)
 
-    # Escalate any regression (FAIL/TIMEOUT) as critical fault
+    # Escalate any regression: a failed falsifiability test (monitor is broken) OR a
+    # coverage failure (monitor is alive but no longer verifying anything / stale).
     regressions = [r for r in results if r["status"] in ("FAIL", "TIMEOUT", "ERROR", "script_missing")]
-    if regressions:
+    if regressions or coverage_bad:
         try:
             from operations.monitors.escalation_router import enqueue_critical
+            parts = []
+            if regressions:
+                parts.append(f"{len(regressions)} falsifiability regressions")
+            if coverage_bad:
+                parts.append(f"{len(coverage_bad)} coverage failures (heartbeating but blind/stale)")
             enqueue_critical(
                 monitor="monitor_self_test",
                 tier="critical",
-                summary=f"{len(regressions)} monitor falsifiability tests regressed",
-                details={"regressions": [r["monitor"] for r in regressions]},
+                summary="; ".join(parts),
+                details={
+                    "regressions": [r["monitor"] for r in regressions],
+                    "coverage_failures": [{"hb": c["heartbeat"], "status": c["status"], "detail": c["detail"]} for c in coverage_bad],
+                },
             )
         except Exception:
             pass
@@ -169,14 +242,20 @@ def main():
 
     if args.command == "run":
         s = run_all()
-        print(f"=== Monitor Self-Test — {s['passed']}/{s['total']} PASS ===")
+        print(f"=== Monitor Self-Test — {s['passed']}/{s['total']} falsifiability PASS ===")
         for r in s["results"]:
             marker = "OK " if r["status"] == "PASS" else "** "
             print(f"  {marker}{r['monitor']:25} {r['status']}")
             if r["status"] != "PASS":
                 for line in r.get("stderr_tail", []):
                     print(f"        stderr: {line[:120]}")
-        if s["failed"] or s["error"] or s["timeout"]:
+        print(f"--- Coverage audit (heartbeating AND verifying?) ---")
+        for c in s.get("coverage", []):
+            marker = "OK " if c["status"] == "COVERED" else "** "
+            print(f"  {marker}{c['heartbeat']:42} {c['status']}")
+            if c["detail"]:
+                print(f"        {c['detail'][:120]}")
+        if s["failed"] or s["error"] or s["timeout"] or s.get("coverage_blind"):
             sys.exit(1)
     elif args.command == "status":
         s = status()
