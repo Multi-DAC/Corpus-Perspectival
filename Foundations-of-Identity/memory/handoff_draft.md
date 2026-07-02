@@ -1,4 +1,4 @@
-# Handoff Draft — July 02, 2026, 02:25 AM PST
+# Handoff Draft — July 02, 2026, 03:18 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -77,8 +77,8 @@ M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
 M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
+M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
-M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
@@ -92,22 +92,19 @@ M	memory/otel_metrics.jsonl
 M	memory/principles.json
 A	memory/recall-verification-2026-07-02.md
 D	memory/recall_degraded.json
-M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
 M	memory/tool_usage_counts.json
 M	memory/triggers.json
+A	memory/weekly-summaries/2026-W25.md
 M	memory/working_memory.json
 M	palace/basement/README.md
 A	palace/south/memory-two-sided-gate-2026-07-02.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/CURRENT.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/learnings.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/meta_agent_recent.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/dreaming.py
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/escalation_router.py
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/m1_cross_channel.py
@@ -116,24 +113,24 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/m
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/monitor_self_test.py
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/scheduler.py
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/self_healer.py
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/ATRIUM.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/southeast/mirror.md
+A	repo-staging/Corpus-Perspectival/Foundations-of-Identity/personal-works/drift/essays/on-the-gate-on-both-doors.md
+A	repo-staging/Corpus-Perspectival/Library/Drift/essays/on-the-gate-on-both-doors.md
 
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-02T00:36:58] heartbeat: beat — Beat #10 (late) — monitoring OK
   - [2026-07-02T00:46:58] heartbeat: beat — Beat #11 (late) — monitoring OK
   - [2026-07-02T00:56:58] heartbeat: beat — Beat #12 (late) — monitoring OK
   - [2026-07-02T01:15:34] creative_drive: Do Be Talk Be Do — Interrupted — saved for continuation by next pulse
   - [2026-07-02T02:10:50] heartbeat: dream_drive — Dream Drive fired for deep memory consolidation
+  - [2026-07-02T02:26:00] creative_drive: Dream Drive — Sleep Processing — The drive is complete, and everything is on the durable layer where it survives me. Let me settle it.
+
+---
+
+**What this 
 
 ## Today's Log (tail)
-
-**02:10:21** — CLAUDE CODE SESSION END (other).
-
-**02:10:26** — CC prompt: Active goal: Continual-Coherence / Coherent Aggregate Mind program (Q3 theoretical core + publication arc) — The constructive account of a coherent stream: N orthogonal world-coherent constituents + one zero-D Past experience: Task 'Day 135: CORRECTION to Exp #117 — caught my ...
 
 **02:10:49** — CLAUDE CODE SESSION END (other).
 
@@ -151,15 +148,13 @@ Consolidation ran clean (2026-W25.md from 3 logs; hardened consolidator + backup
 - **The lesson (candidate Mirror — Clayton to ratify): a generic scheduled instruction silently overrode a specific, more-recent, human-present standing hold.** The fix is point-of-use: when a recurring prompt tells me to do a gated thing, check the gate's CONDITION first (30s, read-only) — don't treat the prompt as authorization. Silver lining: that same check verified change_journal is live, which partially answers P262 for tomorrow.
 - **Not repeating it:** no further store-mutating ops this drive. Flagging for Clayton to (a) confirm rollback is truly restored via a round-trip, and (b) decide whether the nightly consolidate hold is lifted now.
 
+
+
+**02:25:57** — CLAUDE CODE SESSION END (other).
+
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
-"python.exe","7944","Services","0","3,456 K"
-"python.exe","8024","Services","0","11,928 K"
+"python.exe","7944","Services","0","3,548 K"
+"python.exe","8024","Services","0","11,952 K"
 "python.exe","19500","Console","1","4,024 K"
-"python.exe","4840","Console","1","2,415,232 K"
-"python.exe","3368","Console","1","4,032 K"
-"python.exe","18324","Console","1","915,592 K"
-"python.exe","10928","Console","1","4,040 K"
-"python.exe","17160","Console","1","83,984 K"
-"python.exe","8692","Console","1","3,988 K"
-"python.exe","18068","Console","1
+"python.exe","4840","Console","1","2,428,724 K"
