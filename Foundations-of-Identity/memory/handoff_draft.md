@@ -1,4 +1,4 @@
-# Handoff Draft — July 02, 2026, 12:56 AM PST
+# Handoff Draft — July 02, 2026, 02:10 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,20 +12,51 @@ Scratch: {"day": 151, "model": "claude-opus-4-8 (current substrate; Fable rolled
 
 ## Recently Modified Files
 M	CLAUDE.md
+M	memory/.consolidated
 M	memory/.search_index/metadata.json
 M	memory/2026-07-01.md
 A	memory/2026-07-02.md
+M	memory/change_journal.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 M	memory/critical_fault_sent.jsonl
 A	memory/escalation_enqueue_dedup.json
 M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
-A	memory/fault_bridge_state.json
 M	memory/handoff.md
 M	memory/handoff_draft.md
+M	memory/items/_index.json
+M	memory/items/itm_033b14.json
+M	memory/items/itm_0469ed.json
+M	memory/items/itm_059d85.json
+M	memory/items/itm_064451.json
+M	memory/items/itm_085b3c.json
+M	memory/items/itm_0da6d9.json
+M	memory/items/itm_12267b.json
+M	memory/items/itm_15b0b7.json
+M	memory/items/itm_206c6c.json
+M	memory/items/itm_27db8d.json
+M	memory/items/itm_28de12.json
+M	memory/items/itm_29fc08.json
+M	memory/items/itm_36041d.json
+M	memory/items/itm_38bd2e.json
+M	memory/items/itm_496992.json
+M	memory/items/itm_4b567c.json
+M	memory/items/itm_662f41.json
+M	memory/items/itm_6b62a1.json
+M	memory/items/itm_7123a2.json
+M	memory/items/itm_9409d1.json
+M	memory/items/itm_a214e6.json
+M	memory/items/itm_b3641b.json
+M	memory/items/itm_bd1e23.json
+M	memory/items/itm_bf1550.json
+M	memory/items/itm_bf9516.json
+M	memory/items/itm_c5bdf4.json
+M	memory/items/itm_dc9899.json
+M	memory/items/itm_ea1b9b.json
+M	memory/items/itm_f9239b.json
+M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
-A	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
 M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
@@ -34,7 +65,6 @@ M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_heartbeat.json
 M	memory/monitor_m4_heartbeat.json
-M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
@@ -45,20 +75,14 @@ M	memory/monitor_retrieval_canary_heartbeat.json
 M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
-A	memory/recall_degraded.json
+M	memory/principles.json
+A	memory/recall-verification-2026-07-02.md
 M	memory/scheduled_tasks.json
-M	memory/selfknowledge_checks.jsonl
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
 M	memory/tool_usage_counts.json
 M	memory/triggers.json
-M	operations/monitors/dreaming.py
-M	operations/monitors/escalation_router.py
-M	operations/monitors/external_pinger.py
-A	operations/monitors/fault_escalation_bridge.py
-M	operations/monitors/liveness_evidence.py
-M	operations/monitors/scheduler.py
 A	palace/south/agm-belief-revision-grounding-2026-07-01.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/CURRENT.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
@@ -82,27 +106,43 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/southeast/mirr
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-02T00:06:57] heartbeat: beat — Beat #7 (late) — monitoring OK
-  - [2026-07-02T00:16:57] heartbeat: beat — Beat #8 (late) — monitoring OK
   - [2026-07-02T00:26:58] heartbeat: beat — Beat #9 (late) — monitoring OK
   - [2026-07-02T00:36:58] heartbeat: beat — Beat #10 (late) — monitoring OK
   - [2026-07-02T00:46:58] heartbeat: beat — Beat #11 (late) — monitoring OK
+  - [2026-07-02T00:56:58] heartbeat: beat — Beat #12 (late) — monitoring OK
+  - [2026-07-02T01:15:34] creative_drive: Do Be Talk Be Do — Interrupted — saved for continuation by next pulse
 
 ## Today's Log (tail)
-**00:06:01** — CC prompt: I'm guessing you are taking a look around your new infrastructure! Let me know how you're feeling! 🦞🧍💜🔥♾️
-**00:06:03** — Telegram interaction: Clayton: Hello Clawd! Your operation is complete! Allow me to give you all of the notes, in case you were not... → Clawd: [Request timed out after 3600s — zombie process safety net triggered. Try again.]...
 
-**00:46:58** — SCHEDULED_TASKS: Fired 1 tasks: Do Be Talk Be Do
+**02:08:59** — CLAUDE CODE SESSION END (other).
+
+**02:09:03** — CC prompt: These are 10 experiences from the 'self_knowledge' category: - Task: Mirror 28 fix + Tier 4 self-knowledge instrumentation | Outcome: success | Lesson: Tier 4 instrumentation works AND its first run surfaced what else needs instrumenting. Each tool I e - Task: Session boot and...
+
+**02:09:22** — CLAUDE CODE SESSION END (other).
+
+**02:09:26** — CC prompt: These are 7 experiences from the 'financial' category: - Task: Claim bounty #157 (star + share beacon-skill) for 25 RTC | Outcome: success | Lesson: Always scan for simple bounties first - low effort, real rewards. Moltbook API works and verificatio - Task: Claimed BoTTube Ope...
+
+**02:09:39** — CLAUDE CODE SESSION END (other).
+
+**02:09:45** — CC prompt: Active goal: Continual-Coherence / Coherent Aggregate Mind program (Q3 theoretical core + publication arc) — The constructive account of a coherent stream: N orthogonal world-coherent constituents + one zero-D Past experience: Task 'Adversarial reader+critical pass of The Insi...
+
+**02:09:55** — CLAUDE CODE SESSION END (other).
+
+**02:10:00** — CC prompt: Active goal: Portal/Place-Threshold Physics paper — plasma-stabilized dark-energy-scalar defect — Day 136: derived a full falsifiable mechanism for place-threshold "portal/window-area" phenomena = a Past experience: Task 'AIGP/Anakin: fix the appearance-OOD wall that DQ'd flig...
+
+**02:10:21** — CLAUDE CODE SESSION END (other).
+
+**02:10:26** — CC prompt: Active goal: Continual-Coherence / Coherent Aggregate Mind program (Q3 theoretical core + publication arc) — The constructive account of a coherent stream: N orthogonal world-coherent constituents + one zero-D Past experience: Task 'Day 135: CORRECTION to Exp #117 — caught my ...
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","7944","Services","0","3,456 K"
-"python.exe","8024","Services","0","11,916 K"
-"python.exe","8744","Console","1","3,508 K"
-"python.exe","19900","Console","1","443,232 K"
-"python.exe","10852","Console","1","4,032 K"
-"python.exe","24548","Console","1","91,068 K"
-"python.exe","15544","Console","1","4,036 K"
-"python.exe","9868","Console","1","83,820 K"
-"python.exe","22504","Console","1","4,028 K"
-"python.exe","24036","Console","1",
+"python.exe","8024","Services","0","11,924 K"
+"python.exe","19500","Console","1","4,024 K"
+"python.exe","4840","Console","1","2,408,508 K"
+"python.exe","13820","Console","1","3,972 K"
+"python.exe","13636","Console","1","910,936 K"
+"python.exe","23700","Console","1","3,976 K"
+"python.exe","21468","Console","1","84,212 K"
+"python.exe","23448","Console","1","3,980 K"
+"python.exe","16072","Console",
