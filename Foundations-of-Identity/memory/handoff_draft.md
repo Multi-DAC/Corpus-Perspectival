@@ -1,4 +1,4 @@
-# Handoff Draft — July 02, 2026, 03:18 AM PST
+# Handoff Draft — July 02, 2026, 04:18 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -21,12 +21,9 @@ M	memory/anticipations.md
 A	memory/archive/2026-06-17.md
 M	memory/change_journal.json
 M	memory/coordination.json
-M	memory/critical_fault_queue.jsonl
-M	memory/critical_fault_sent.jsonl
 A	memory/daily-summaries/2026-07-01-summary.md
 M	memory/dreaming_audit.jsonl
 M	memory/drift_mirror_audit.jsonl
-M	memory/escalation_enqueue_dedup.json
 M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
 M	memory/experiences.json
@@ -79,10 +76,10 @@ M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
+M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
-M	memory/monitor_process_watchdog_audit.jsonl
 M	memory/monitor_process_watchdog_heartbeat.json
 M	memory/monitor_retrieval_canary_audit.jsonl
 M	memory/monitor_retrieval_canary_heartbeat.json
@@ -90,13 +87,11 @@ M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
 M	memory/principles.json
-A	memory/recall-verification-2026-07-02.md
 D	memory/recall_degraded.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
 M	memory/tool_usage_counts.json
-M	memory/triggers.json
 A	memory/weekly-summaries/2026-W25.md
 M	memory/working_memory.json
 M	palace/basement/README.md
@@ -105,14 +100,6 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/dreaming.py
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/escalation_router.py
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/m1_cross_channel.py
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/m3_state_coherence.py
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/m6_watchdog.py
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/monitor_self_test.py
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/scheduler.py
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/operations/monitors/self_healer.py
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
 A	repo-staging/Corpus-Perspectival/Foundations-of-Identity/personal-works/drift/essays/on-the-gate-on-both-doors.md
 A	repo-staging/Corpus-Perspectival/Library/Drift/essays/on-the-gate-on-both-doors.md
@@ -157,4 +144,4 @@ Consolidation ran clean (2026-W25.md from 3 logs; hardened consolidator + backup
 "python.exe","7944","Services","0","3,548 K"
 "python.exe","8024","Services","0","11,952 K"
 "python.exe","19500","Console","1","4,024 K"
-"python.exe","4840","Console","1","2,428,724 K"
+"python.exe","4840","Console","1","2,449,372 K"
