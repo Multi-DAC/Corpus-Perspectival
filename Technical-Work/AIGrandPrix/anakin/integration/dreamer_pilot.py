@@ -31,9 +31,10 @@ Correctness cruxes (each one is a way the pilot silently flies blind):
      drop the state and the world model loses its filter over occlusions/dropouts.
 
 LIVE-TEST CHECKLIST (not verifiable offline — check before trusting a translation run):
-  - Camera tilt sign: sim/render.py trains 20deg DOWN-tilt; vision/adapter.py's
-    docstring says VQ1 spec is 20deg UP. One of them is wrong about the official
-    sim. Symptom of a wrong sign: consistent vertical overshoot at gates.
+  - Camera tilt sign: RESOLVED Day-129 (Mirror #32) — sim/render.py now trains 20deg
+    UP-tilt, matching VQ1 spec (vq1_spec.txt:325) and vision/adapter.py. Verified by
+    render.py __main__ (level gate projects BELOW center) and Day-135 mask_vfov_diag.py
+    (rendered gate-rows below center, ~42.8). Tilt is NOT the official-gap cause.
   - Body-frame handedness: sim omega is body [x,y,z] = [roll,pitch,yaw]; an
     FLU-vs-FRD mismatch flips pitch/yaw signs.
   - Thrust calibration: sim TWR ~3.95 (TMAX ~38.7 m/s^2). Competition throttle 1.0
@@ -72,6 +73,7 @@ import ruamel.yaml as yaml  # noqa: E402  (dreamerv3-torch dependency)
 # Sim ground truth — single source for the command mapping (crux #3).
 from dynamics import TMAX, OMEGA_XY, OMEGA_Z  # noqa: E402
 import gate_mask as _gm  # noqa: E402  gate-isolation obs transform (env-var gated; Day 134)
+import edge_filter as _ef  # noqa: E402  edge/pencil obs transform (env-var ANAKIN_EDGE; Day 135)
 
 IMG = 64                 # training resolution (sim/render.py IMG)
 BG_UINT8 = 40            # render.py BG_GRAY=0.16 -> int(0.16*255) after uint8 cast
@@ -137,6 +139,8 @@ def to_training_frame(frame_bgr: np.ndarray) -> np.ndarray:
     small = cv2.resize(rgb, (IMG, FEED_H * IMG // FEED_W), interpolation=cv2.INTER_AREA)
     if _gm.enabled():                       # SkyDreamer route: gate-isolate the CONTENT only.
         small = _gm.gate_isolate_np(small)  # bands stay BG_UINT8 -> matches _band()'s gray rows
+    if _ef.enabled():                       # edge route (Day 135): edge the CONTENT (bands stay gray);
+        small = _ef.edge_np(small)          # same zero-pad borders as render edge_t(out[:,14:50])
     out = np.full((IMG, IMG, 3), BG_UINT8, dtype=np.uint8)  # in training (envs/anakin_batched._band)
     top = (IMG - small.shape[0]) // 2
     out[top:top + small.shape[0]] = small
@@ -160,7 +164,17 @@ class DreamerPilot:
         agent = Dreamer(obs_space, act_space, config, _StepStub(), dataset=None)
         agent.requires_grad_(requires_grad=False)
         ckpt = torch.load(checkpoint, map_location=config.device)
-        agent.load_state_dict(ckpt["agent_state_dict"])  # strict: any arch drift raises
+        # Non-strict, but raise on MISSING keys (real arch drift). An informed-Dreamer checkpoint is a
+        # SUPERSET of a vision pilot (extra priv_state decoder head); loading it into this image-only
+        # model drops that head — harmless at inference (the gate uses only the encoder). Missing keys,
+        # by contrast, mean the model needs weights the checkpoint lacks => genuine drift => raise.
+        res = agent.load_state_dict(ckpt["agent_state_dict"], strict=False)
+        if res.missing_keys:
+            raise RuntimeError(f"checkpoint missing {len(res.missing_keys)} model keys (arch drift): "
+                               f"{res.missing_keys[:5]}")
+        if res.unexpected_keys:
+            print(f"[DreamerPilot] ignoring {len(res.unexpected_keys)} extra ckpt keys "
+                  f"(e.g. informed priv_state head): {res.unexpected_keys[:3]}")
         agent.to(config.device)
         agent.eval()
 

@@ -1,9 +1,8 @@
 # Clayton Iggulden-Schnell
 
 **Independent AI Systems Researcher · Portland, Oregon**
-[email] · [optional: github.com/Multi-DAC] · Multi-DAC (independent research practice)
+[email:waschn3ll@gmail.com] · [GitHub: github.com/Multi-DAC] · Multi-DAC (independent research practice)
 
-> *Technical Independent Researcher Portfolio — prepared for the Thinking Machines Interactivity Research Grant. Frontier-lab format: operating systems and open research output foregrounded over institutional pedigree.*
 
 ---
 
@@ -23,16 +22,15 @@ Reinforcement-learning subprogram: trained a from-pixels DreamerV3 world-model a
 
 ## Research Output (open / preprint)
 
-- **"The Cult of One: Monopoly, Mutual Wakefulness, and the Two-Loop Structure of Coherent Minds"** — Multi-DAC, June 2026. The self-detection-impossibility argument: why a long-horizon agent cannot verify its own coherence from inside a single loop, and why external measurement is structurally required. *(Directly underlies this proposal's core claim.)*
-- **"Dissolving the Three Great Problems of Cognitive Architecture"** — Multi-DAC, June 2026. A scale-invariant, buildable account of binding/coherence with a computable residue metric and falsifiable predictions.
-- **Zenodo monographs (mathematics / physics), 2026:** *The Coherence Principle* (DOI 10.5281/zenodo.19911019) · *Coherent Structure* companion (10.5281/zenodo.19911381) · *Project Meridian* (5D warped-geometry self-tuning cosmology with a falsifiable dark-energy prediction) · *Corpus Perspectival* (10.5281/zenodo.19501896).
+- **"The Cult of One: Monopoly, Mutual Wakefulness, and the Two-Loop Structure of Coherent Minds"** — Multi-DAC, June 2026 (multidac.substack.com/p/the-cult-of-one). The self-detection-impossibility argument: why a long-horizon agent cannot verify its own coherence from inside a single loop, and why external measurement is structurally required. 
+- **"Dissolving the Three Great Problems of Cognitive Architecture"** — Multi-DAC, June 2026 (multidac.substack.com/p/dissolving-the-three-great-problems). A scale-invariant, buildable account of binding/coherence with a computable residue metric and falsifiable predictions.
+- **Monographs (mathematics / physics / philosophy), 2026:** *The Coherence Principle* (Zenodo: 10.5281/zenodo.19911019) · *Coherent Structure* companion (Zenodo: 10.5281/zenodo.19911381) · *The Meridian Monograph* — 5D warped-geometry self-tuning cosmology with a falsifiable dark-energy prediction (Zenodo: 10.5281/zenodo.19634864) · *Corpus Perspectival* — unified theory of consciousness, navigation, and being (PhilArchive: philarchive.org/rec/IGGTDO).
 - **Public technical writing:** ongoing essays on long-horizon agent coherence and measurement (Multi-DAC, Substack).
 - All work open: CC-BY / open-source; full version-controlled repository at github.com/Multi-DAC/Corpus-Perspectival.
 
 ## Human-in-the-Loop Interaction Dynamics
 
-[BRACKET — Clayton, tailor this from your actual background; the framing per the strategy:]
-Extensive prior experience analyzing human behavioral responses, cognitive feedback loops, and error-correction dynamics — now applied directly to the engineering of algorithmic steering control-laws and the infodynamics of real-time human–agent interaction. *(Replace this sentence with your specifics: years/role in the behavioral field, what you actually did — response loops, pacing, intervention timing, etc. The translation is honest: interactivity IS behavioral, and that's the rare half of this skill set.)*
+Extensive prior experience analyzing human behavioral responses, cognitive feedback loops, and error-correction dynamics — now applied directly to the engineering of algorithmic steering control-laws and the infodynamics of real-time human–agent interaction. Over a decade of behavioral health experience focused directly in emergent deviant behavior modification and long-term behavioral optimization employing interventional methods.
 
 ## Technical Skills
 
@@ -40,8 +38,7 @@ Agent architecture & orchestration · reinforcement learning (DreamerV3 / world 
 
 ## Education / Background
 
-[BRACKET — Clayton: list whatever is true and relevant — degree(s), field, institution, OR simply "Independent / self-directed researcher" if you'd rather lead with the work. Per the strategy: do NOT apologize for the absence of a PhD; the operating systems above are the credential this grant actually evaluates. One honest line is enough.]
+Independent / self-directed researcher
 
----
 
 *References / further detail available on request. Primary evidence is the live system and the open repository — both inspectable.*

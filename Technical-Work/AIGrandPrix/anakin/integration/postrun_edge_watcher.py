@@ -1,21 +1,23 @@
-"""postrun_mask_watcher.py — overnight relay for the SEGMENTATION (mask) fine-tune (Day 134).
+"""postrun_edge_watcher.py — overnight relay for the EDGE/PENCIL fine-tune (Day 135).
 
-Polls the mask-ft orchestrator log for "[carry] complete:", then runs the two pre-flight
-instruments WITH ANAKIN_GATE_MASK=1 (so official frames + renderer + encoder are all in
-mask-space) and writes integration/MASK_OVERNIGHT_RESULTS.md:
+Polls the edge-ft orchestrator log for "[carry] complete:", then runs the two pre-flight instruments
+WITH ANAKIN_EDGE=1 (official frames + renderer + encoder all in edge-space) and writes
+integration/EDGE_OVERNIGHT_RESULTS.md:
 
-  1. holdout_gate_v2.py --official-raw on the manual harvest, band-ft vs mask-ft. Under masking
-     the mask-ft encoder sees masked frames in-distribution; we want its official<->rendered
-     mean-term SMALL. (band-ft sees masks OOD, so treat the ratio as indicative, the mask-ft
-     absolute mean-term as the real signal.)
-  2. translation_rehearsal.py off maneuver_mask_ft/best.pt, masked — the cleanest go/no-go:
-     does it FLY on gate-isolated obs in our sim? Good returns => encoder re-adapted => fly #3.
+  1. holdout_gate_v2.py --official-raw on the manual harvest, --ckpt-new = edge-ft best. Under edge obs
+     the edge-ft encoder sees edge frames in-distribution; we want its official<->rendered mean-term
+     SMALL. (The default --ckpt-old baseline sees edges OOD, so treat the ratio as indicative, the
+     edge-ft absolute mean-term as the real signal.) NOTE: the harvest is a BIASED instrument (human
+     pilot flew around/above gates) — the gate here is indicative; the rehearsal + a real flight #4
+     are the true tests.
+  2. translation_rehearsal.py off maneuver_edge_ft/best.pt, edge obs — the cleaner go/no-go: does it
+     FLY on edge obs in our sim? Good returns => encoder re-adapted to edges => worth flight #4.
 
-If training DIED (stale log, no complete line): no gate; best.pt (seeded +2142.53, protected)
-stays; writes a STATUS block telling morning-me to relaunch launch_mask_ft_detached.py first.
+If training DIED (stale log, no complete line): no gate; seed (restyle-ft) protected; writes a STATUS
+block telling next-session to relaunch launch_edge_ft_detached.py first.
 
-Launch detached:  .venv/Scripts/python.exe launch_postrun_mask_watcher.py
-Dry-run:          .venv/Scripts/python.exe integration/postrun_mask_watcher.py --dry-run
+Launch detached:  .venv/Scripts/python.exe launch_postrun_edge_watcher.py
+Dry-run:          .venv/Scripts/python.exe integration/postrun_edge_watcher.py --dry-run
 """
 import argparse
 import datetime
@@ -27,19 +29,18 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 ANAKIN = os.path.dirname(_HERE)
 PY = os.path.join(ANAKIN, ".venv", "Scripts", "python.exe")
 LOGDIR = os.path.join(ANAKIN, "third_party", "dreamerv3-torch", "logdir")
-ORCH_LOG = os.path.join(LOGDIR, "mask_ft_orchestrator.log")
-RUNDIR = os.path.join(LOGDIR, "maneuver_mask_ft")
-MASK_BEST = os.path.join(RUNDIR, "best.pt")
-RESULTS = os.path.join(_HERE, "MASK_OVERNIGHT_RESULTS.md")
+ORCH_LOG = os.path.join(LOGDIR, "edge_ft_orchestrator.log")
+RUNDIR = os.path.join(LOGDIR, "maneuver_edge_ft")
+EDGE_BEST = os.path.join(RUNDIR, "best.pt")
+RESULTS = os.path.join(_HERE, "EDGE_OVERNIGHT_RESULTS.md")
 HARVEST = (r"C:\Users\Wasch\OneDrive\Desktop\AI-GP Simulator v1.0.3364"
            r"\PyAIPilotExample\official_frames\manual_20260614_114130")
 
 POLL_S = 120
 STALE_S = 30 * 60
-# Ceiling = wall-clock budget to wait for completion. Day-134 run hit an 8h ceiling at 20:24
-# while batch 3 of a 2M-step run was still HEALTHILY training -> false "dead" verdict (the run
-# actually takes >12h on this box). Make it generous + env-overridable so a slow-but-alive run
-# is never mislabeled dead again. Real death is still caught by STALE_S (30-min no-progress).
+# Ceiling = wall-clock budget to wait for completion (the Day-134 mask run was mislabeled "dead" at an
+# 8h ceiling while still healthily training a 2M-step run that takes >12h). Generous + env-overridable;
+# real death still caught by STALE_S (30-min no-progress).
 MAX_WAIT_S = int(float(os.environ.get("ANAKIN_WATCHER_MAX_H", "16")) * 3600)
 
 
@@ -73,7 +74,8 @@ def orch_state():
 def run_step(title, cmd):
     log(f"running: {title}")
     env = dict(os.environ)
-    env["ANAKIN_GATE_MASK"] = "1"
+    env["ANAKIN_EDGE"] = "1"
+    env["ANAKIN_GATE_MASK"] = "0"   # never both transforms at once
     t0 = time.time()
     try:
         r = subprocess.run(cmd, cwd=ANAKIN, capture_output=True, text=True,
@@ -85,7 +87,7 @@ def run_step(title, cmd):
         status = "TIMEOUT (45 min)"
     dt = time.time() - t0
     with open(RESULTS, "a") as f:
-        f.write(f"\n## {title}\n\n*{now()} — {status}, {dt/60:.1f} min (ANAKIN_GATE_MASK=1)*\n\n"
+        f.write(f"\n## {title}\n\n*{now()} — {status}, {dt/60:.1f} min (ANAKIN_EDGE=1)*\n\n"
                 f"```\n{out.strip()}\n```\n")
     log(f"done: {title} ({status}, {dt/60:.1f} min)")
     return status == "exit 0"
@@ -110,34 +112,36 @@ def main():
         state, detail = orch_state()
 
     with open(RESULTS, "a") as f:
-        f.write(f"\n# Mask fine-tune — overnight results — {now()}\n\n"
+        f.write(f"\n# Edge fine-tune — overnight results — {now()}\n\n"
                 f"**Outcome:** `{state}` — {detail}\n")
 
     if state != "complete":
         with open(RESULTS, "a") as f:
-            f.write("\n**Gate NOT run** (no completion signal). Seed best.pt (+2142.53) intact. "
-                    "Morning: relaunch `launch_mask_ft_detached.py` (resumes safe), gate after.\n")
+            f.write("\n**Gate NOT run** (no completion signal). Seed best.pt (restyle-ft) intact. "
+                    "Next: relaunch `launch_edge_ft_detached.py` (resumes safe), gate after.\n")
         log(f"exiting without gate: {state} — {detail}")
         return
 
     time.sleep(60)
 
     ok_gate = run_step(
-        "holdout_gate_v2.py (MASK) — official-harvest vs rendered, band-ft vs mask-ft",
+        "holdout_gate_v2.py (EDGE) — official-harvest vs rendered, baseline vs edge-ft",
         [PY, "-u", os.path.join("integration", "holdout_gate_v2.py"),
-         "--official-dir", HARVEST, "--official-raw", "--ckpt-new", MASK_BEST],
+         "--official-dir", HARVEST, "--official-raw", "--ckpt-new", EDGE_BEST],
     )
     run_step(
-        "translation_rehearsal.py (MASK) — 10 eps off maneuver_mask_ft/best.pt",
+        "translation_rehearsal.py (EDGE) — 10 eps off maneuver_edge_ft/best.pt",
         [PY, "-u", os.path.join("integration", "translation_rehearsal.py"),
-         "--checkpoint", MASK_BEST, "--episodes", "10"],
+         "--checkpoint", EDGE_BEST, "--episodes", "10"],
     )
 
     with open(RESULTS, "a") as f:
         f.write(f"\n---\n*Watcher finished {now()}. Gate step "
-                f"{'succeeded' if ok_gate else 'FAILED — read its block'}; the rehearsal RETURN is "
-                f"the go/no-go for flight #3. Decision belongs to the waking stream + Clayton.*\n")
-    log("all steps done; morning letter written")
+                f"{'succeeded' if ok_gate else 'FAILED — read its block'}; the rehearsal RETURN is the "
+                f"go/no-go for flight #4. Edges fix the gate-appearance axis; if rehearsal is weak the "
+                f"residual is background-texture edges -> add bg-randomization next. Decision = waking "
+                f"stream + Clayton.*\n")
+    log("all steps done; results written")
 
 
 if __name__ == "__main__":
