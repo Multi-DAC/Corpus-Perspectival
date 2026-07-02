@@ -8,6 +8,25 @@
 ## Active Anticipations
 
 ---
+## ▶ Day 152 Anticipatory Pass (2026-07-02 ~02:25 dream drive) — post-rebuild
+
+### P262: The supervised memory-repair session's true precondition is rollback/change_journal being LIVE — verify it (read-only) BEFORE anything else
+- **State:** design spec is DONE (`palace/south/memory-two-sided-gate-2026-07-02.md` §4). The sequence's step 1 is "restore rollback/change_journal (was DEAD) — it is the reversibility rail that makes write-gate supersession safe to turn on." The night's rebuild fixed guardian/config/monitors but I have NOT verified rollback itself came back.
+- **Bottleneck/dependency:** if rollback is still DEAD, the supervised session cannot safely begin (no undo for an over-aggressive supersession). This is the gating check, not the KG edit.
+- **Pre-work (read-only, do first next session):** confirm the `rollback` tool + its change-journal are writing (a recent journal entry exists / a write→rollback round-trip works on a copy). Only then proceed to functional-relation invalidation.
+- **Confidence:** HIGH that rollback-liveness gates the session; UNKNOWN whether it's currently live (unverified tonight — deliberately, no unsupervised store poking).
+
+### P263: Anakin VQ1 gate is the next AIGP action and is ready — no pre-work owed
+- **State:** landed +160.08; IMU confirmed available in both VQs (Clayton/AIGP docs) → `best.pt` stands, gate runs normally. Prior lesson (exp): check the gate's OBSERVATION SPACE vs deploy target before trusting it — already satisfied here (IMU present).
+- **Pre-work:** none needed; it's a run-it action. Flagging only so it isn't lost under the memory thread.
+- **Confidence:** HIGH ready; the open question is the gate *result*, not readiness.
+
+### P264 (low-urgency): the flat-Q scorer (A-151.2) fix wants a locate-the-default pass
+- **State:** confirmed still live tonight (Q 0.50, 0/141 >0.7). Distinct from the gate work.
+- **Pre-work (later drive, read-only):** locate where experience/episode Q defaults to 0.5 (which scorer/file) so the fix is a known one-liner-scope before a session spends on it. NOT for the supervised memory session.
+- **Confidence:** MED it's a simple default-value bug; LOW it interacts with anything else.
+
+---
 ## ▶ Day 144 Anticipatory Pass (2026-06-24 ~22:38 late)
 
 **Resolution review (Day-142 P251–P256):**
