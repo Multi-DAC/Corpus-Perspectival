@@ -83,25 +83,39 @@ def band_resampled(img64: np.ndarray) -> np.ndarray:
 def run_episodes(pilot, condition, seeds, max_steps, device):
     sys.path.insert(0, str(_HERE.parent / "sim"))
     from maneuver_env import AnakinManeuverEnv as ManeuverEnv
+    from dynamics import imu_from_state  # training-frame IMU [gyro3 rad/s, accel3 m/s^2], body
+    import torch
+
+    use_imu = getattr(pilot, "_use_imu", False)
+
+    def _imu(env, action_np):
+        # IMU that pairs with the CURRENT obs: from env's live state + the action that produced it,
+        # exactly as the batched training env builds obs["imu"] (noise-free for a clean gate).
+        if not use_imu:
+            return None
+        a = torch.as_tensor(action_np, dtype=torch.float32, device=env._state.device).reshape(1, -1)
+        return imu_from_state(env._state, a, noise_std=0.0)[0].detach().cpu().numpy()
 
     returns, gates = [], []
     for seed in seeds:
         env = ManeuverEnv(max_steps=max_steps, device=device, seed=seed)
         obs, _ = env.reset(seed=seed)
         pilot.reset()
+        imu = _imu(env, np.zeros(4, dtype=np.float32))   # is_first frame (no prior action)
         ep_ret, t = 0.0, 0
         while True:
             if condition == "direct":
-                action = pilot.act_training_frame(obs)
+                action = pilot.act_training_frame(obs, imu=imu)
             elif condition == "band":
-                action = pilot.act_training_frame(band_only(obs))
+                action = pilot.act_training_frame(band_only(obs), imu=imu)
             elif condition == "blur":
-                action = pilot.act_training_frame(blur_only(obs))
+                action = pilot.act_training_frame(blur_only(obs), imu=imu)
             elif condition == "band_resampled":
-                action = pilot.act_training_frame(band_resampled(obs))
+                action = pilot.act_training_frame(band_resampled(obs), imu=imu)
             else:
-                action = pilot.act(to_competition_feed(obs))
+                action = pilot.act(to_competition_feed(obs), imu=imu)
             obs, r, term, trunc, info = env.step(action)
+            imu = _imu(env, action)          # pair IMU with the new obs
             ep_ret += float(r)
             t += 1
             if term or trunc:
@@ -121,9 +135,12 @@ def main():
     ap.add_argument("--episodes", type=int, default=10)
     ap.add_argument("--max-steps", type=int, default=1200)
     ap.add_argument("--env-device", default="cuda")
+    ap.add_argument("--imu", action="store_true",
+                    help="build the IMU encoder (anakin_imu checkpoints, e.g. maneuver_imu_stability)")
     args = ap.parse_args()
 
-    pilot = DreamerPilot(args.checkpoint)
+    configs = ("anakin_maneuver", "anakin_imu") if args.imu else ("anakin_maneuver",)
+    pilot = DreamerPilot(args.checkpoint, configs=configs)
     seeds = list(range(1000, 1000 + args.episodes))
 
     results = {}

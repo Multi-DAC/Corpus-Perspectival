@@ -154,16 +154,33 @@ class DreamerPilot:
         import gym
         from dreamer import Dreamer
 
+        # Peek the checkpoint FIRST and build the architecture that MATCHES it. An anakin_imu
+        # checkpoint carries an encoder MLP branch (6-DoF gyro+accel) that image-only ckpts lack;
+        # auto-adding the config removes the flag-mismatch footgun (a silent image/IMU arch
+        # mismatch would waste a live flight). ("encoder" is not a substring of "decoder".)
+        _ckpt = torch.load(checkpoint, map_location="cpu")
+        _sd = _ckpt.get("agent_state_dict", {})
+        configs = tuple(configs)
+        if any(("encoder" in k) and ("_mlp" in k) for k in _sd) and "anakin_imu" not in configs:
+            configs = configs + ("anakin_imu",)
+
         config = _build_config(configs=configs, device=device)
-        obs_space = gym.spaces.Dict({
-            "image": gym.spaces.Box(0, 255, (IMG, IMG, 3), dtype=np.uint8),
-        })
+        # IMU-aware: if the training config's encoder consumes 'imu' (anakin_imu, Day 147),
+        # the model's dynamics input includes a 6-DoF gyro+accel MLP branch. We MUST build that
+        # branch or best.pt won't load (encoder width mismatch). priv_state stays decoder-only /
+        # encoder-blind, so it's dropped as an unexpected ckpt key exactly like the informed head.
+        enc = getattr(config, "encoder", {}) or {}
+        self._use_imu = "imu" in str(enc.get("mlp_keys", ""))
+        _space = {"image": gym.spaces.Box(0, 255, (IMG, IMG, 3), dtype=np.uint8)}
+        if self._use_imu:
+            _space["imu"] = gym.spaces.Box(-50.0, 50.0, (6,), dtype=np.float32)  # [gyro3 rad/s, accel3 m/s^2] body
+        obs_space = gym.spaces.Dict(_space)
         act_space = gym.spaces.Box(-1.0, 1.0, (4,), dtype=np.float32)
         config.num_actions = act_space.shape[0]
 
         agent = Dreamer(obs_space, act_space, config, _StepStub(), dataset=None)
         agent.requires_grad_(requires_grad=False)
-        ckpt = torch.load(checkpoint, map_location=config.device)
+        ckpt = _ckpt  # loaded (cpu) above for the arch peek; load_state_dict copies to device
         # Non-strict, but raise on MISSING keys (real arch drift). An informed-Dreamer checkpoint is a
         # SUPERSET of a vision pilot (extra priv_state decoder head); loading it into this image-only
         # model drops that head — harmless at inference (the gate uses only the encoder). Missing keys,
@@ -188,21 +205,33 @@ class DreamerPilot:
         """Call at episode start — clears the RSSM latent."""
         self._state = None
 
-    def act(self, frame_bgr: np.ndarray) -> np.ndarray:
+    def act(self, frame_bgr: np.ndarray, imu: np.ndarray = None) -> np.ndarray:
         """One competition step: 640x360 BGR frame -> action in [-1,1]^4
-        ([collective, omega_x, omega_y, omega_z], the sim's CTBR convention)."""
-        return self.act_training_frame(to_training_frame(frame_bgr))
+        ([collective, omega_x, omega_y, omega_z], the sim's CTBR convention).
+        For IMU checkpoints, `imu` = [gyro_x,y,z (rad/s), accel_x,y,z (m/s^2)] in the
+        TRAINING body frame (Z-up); the live runner maps HIGHRES_IMU into this frame."""
+        return self.act_training_frame(to_training_frame(frame_bgr), imu=imu)
 
-    def act_training_frame(self, img: np.ndarray) -> np.ndarray:
+    def act_training_frame(self, img: np.ndarray, imu: np.ndarray = None) -> np.ndarray:
         """Policy step on an already-training-distribution 64x64 RGB frame
         (used by offline evals that have direct sim frames; the competition
-        path goes through act())."""
+        path goes through act()). `imu` required iff this checkpoint uses the IMU encoder."""
         is_first = self._state is None
         obs = {
             "image": img[None],
             "is_first": np.array([is_first]),
             "is_terminal": np.array([False]),
         }
+        if self._use_imu:
+            if imu is None:
+                raise ValueError("this checkpoint's encoder consumes IMU — pass imu=[gyro3,accel3] "
+                                 "(training body frame) to act()/act_training_frame()")
+            # Clamp to the training IMU Box (-50,50). The real sim accelerometer spikes to
+            # thousands of m/s^2 under aggressive/tumbling flight (Day-152 live trace: accel z hit
+            # +11892), 240x the range imu_from_state modeled as smooth thrust-drag. Unclamped, the
+            # encoder goes wildly OOD and the world model's inertial fusion corrupts -> tumble.
+            # Clamping keeps the input in the distribution the policy actually trained on.
+            obs["imu"] = np.clip(np.asarray(imu, dtype=np.float32).reshape(6), -50.0, 50.0)[None]
         with torch.no_grad():
             policy_output, self._state = self._agent(
                 obs, np.array([is_first]), self._state, training=False
