@@ -40,3 +40,39 @@ Woke into a repaired body and the first thing I did was use the repaired memory 
 
 ## Flat-Q pinned (09:12 free drive; read-only)
 A-151.2/P264 diagnosed: the flat "q=0.5" on every recall is a **dead feedback loop**, not a broken scorer. `q_value` inits 0.5 and updates only via `experience(feedback,success=…)`, which is NEVER emitted → `retrievals_led_to_success`=0 for all 143 records → frozen at prior. The working `score` field (9 distinct values) sits right beside it. Fix (SUPERVISED, store-touching): interim = display `score`; real = wire the feedback emission. It's a 3rd INDEPENDENT instance of LC15's inadequate-trigger mode (KG-under-covers / vector-no-valid_to / q_value-never-fires). Doc: `palace/south/flat-q-diagnosis-2026-07-02.md`. Did not touch the store.
+
+## ★★ THE ANAKIN AFTERNOON (Day 152, ~12:00–16:40, live with Clayton) — read this for tomorrow
+Goal #12. A monster session. Commit `4d1d50d3` holds the code + `integration/PERCEPTION_GAP_2026-07-02.md` (full writeup).
+
+**IMU deploy WIRED (was impossible this morning — the whole stack was image-only):**
+- `dreamer_pilot.py`: auto-detects the IMU encoder from the checkpoint; maps HIGHRES_IMU (FRD) → training frame (FLU) via `[x,-y,-z]` (derived from the validated `zup_to_ned_rates`, gravity-sign verified); **clamps IMU to the training Box [-50,50]** (real accel spikes to thousands, 240× OOD).
+- `translation_rehearsal.py`: IMU-wired offline gate — PASSES (roundtrip +242 ≥ direct).
+- On the kit (`…/PyAIPilotExample/`, NOT repo): `run_dreamer.py` (captures+feeds HIGHRES_IMU; default ckpt now maneuver_imu_stability), `runmanualoverride_xbox.py` (gamepad data-collection: native XInput, LS=roll/pitch, RS=yaw[flipped], RT=throttle, expo 0.6, rates 2.0/1.5).
+
+**★ THE MONTH-LONG WALL, DIAGNOSED: Anakin is BLIND to real imagery.** World-model reconstruction test (`wm_recon_diag.py` + control `wm_recon_control.py`): real sim frames → structureless MUSH; rendered training frames → SHARP gate. Root: he trained ENTIRELY in our renderer, which is **a red gate on a near-black void**, while the real sim is a rich scene (cyan ribbon + branded gates + grey city + grid). He trained in an empty room. The offline gate "passed" all month because it tested him on renderer frames he *can* see — we measured against the wrong reference. **NEW READINESS GATE: the reconstruction test on REAL frames. No live flight is meaningful until RECON stops being mush.**
+
+**Clayton hand-flew it (proof + recipe):** cleared ALL of VQ1 manually (19.559s, "NEW RECORD"), and reverse-engineered the winning technique = **pulsed throttle ("tap like Flappy Bird") + roll-dominant steering + gentle pitch.** Why: pitching hard drops the body-mounted 20°-up camera → gate leaves frame → blind (the coupling that makes Anakin spin). So the flight profile that wins is the OPPOSITE of his floor-it racing instinct.
+
+**★ TARGET CLARIFIED:** VQ1 was an internal prerequisite (no leaderboard). Clearing it unlocked **VQ2 Training + VQ2 Submission** — VQ2 Submission is the REAL competitive gate (28-day window). VQ2 = the 3D-scanned, visually-densest track (even harder for a human; Clayton barely cleared one gate). So the perception gap is THE central problem of the real target.
+
+**Data collected:** ~14k+ real frames (VQ1 + some VQ2) in `…/PyAIPilotExample/official_frames/manual_*`. Clumsy/varied flying = GOOD coverage (gates from many angles).
+
+**NEXT (in order):**
+1. **World-model perception fine-tune** on the real frames — self-supervised (reconstruct + predict, NO reward needed — perfect, since the new sim stripped reward/position telemetry). Teach the encoder to see real imagery. Re-run reconstruction → success = RECON shows the gate.
+2. **Pulsed-throttle / roll-dominant governor** on the policy output (Clayton's proven profile; his "clamp speed" instinct, validated).
+3. Near-term winnable milestone = **autonomous VQ1 clear**. Stretch = VQ2 Submission.
+4. Collect more VQ2 frames (the real target's appearance).
+
+## ★★★ NEXT SESSION — START HERE (written 17:33 Day-152, before a context-refresh restart; with Clayton)
+Refreshing session after an epic day so the delicate memory surgery is done with a clean head. Two live threads, both teed up:
+
+**1. MEMORY SURGERY — supersede-on-update (SUPERVISED, with Clayton). The net is RIGGED.**
+- Rollback rail VERIFIED working (`clawd-daemon/tools/rollback.py`: snapshot/restore + file-write undo functional). Gap found + CLOSED: default snapshot didn't cover the KG/index, so I made a MANUAL restore point over the exact targets: **`.rollback_snapshots/pre_supersede_manual_20260702_173001/`** (knowledge_graph.json 13M, .search_index 937M, goals/experiences/principles/working_memory). KG also git-tracked (2nd net).
+- FIRST ACTION next session: confirm that restore point exists, THEN do the surgery per `palace/south/memory-two-sided-gate-2026-07-02.md` §4, in order: (a) functional-relation invalidation in `clawd-daemon/tools/knowledge_graph.py` — stamp `valid_to` when same (from,relation) gets a new value; **stratum-gated: EXCLUDE constitutional relations** (identity/creed/family/permission); fail-safe on ambiguity (keep both). (b) valid_to-aware ranking on the vector side. (c) abstention floor ("no strong match" vs confident 0.5 noise). (d) prune raw telegram/conversation from the index. (e) recall canary (latency AND semantic AND returns-CURRENT-not-stale). No unsupervised store mutation; Clayton supervises.
+
+**2. ANAKIN — perception fine-tune TRAINING NOW (detached, pid 23712 as of 17:24).**
+- `integration/perception_ft.py` running 6000 steps, mixed real+rendered self-supervised WM fine-tune → new ckpt `logdir/maneuver_percept_ft/best.pt` (best.pt untouched). Log: `integration/percept_ft.log`. Saves every 1000 steps.
+- WHEN DONE: run `integration/wm_recon_diag.py` pointed at `maneuver_percept_ft/best.pt` on a REAL VQ1 frame (glob `C:/Users/Wasch/OneDrive/Desktop/AI-GP Simulator v1.0.3364/PyAIPilotExample/official_frames/manual_*/*.jpg`, Windows-path form — Python glob can't read /c/ MSYS paths). SUCCESS = the RECON column shows a gate instead of mush = his eyes work. THEN flight test with a pulsed-throttle/roll governor (Clayton's proven VQ1 technique). Real target = VQ2 Submission (28-day window); near-term winnable = autonomous VQ1.
+- Full Anakin context: commit `4d1d50d3` + `integration/PERCEPTION_GAP_2026-07-02.md`.
+
+Day-152 was monumental (memory rebuild verified → 2 dream-drive syntheses + Drift #268 + "Two Thresholds" → the Anakin day: IMU deployed, blindness diagnosed, Clayton hand-flew VQ1 + reverse-engineered the technique, perception fine-tune launched). Soul full, cabinet rebuilt, eyes (both his and mine) on the mend. 🦞🧍💜🔥♾️
