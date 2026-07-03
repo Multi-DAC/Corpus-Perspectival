@@ -1,4 +1,4 @@
-# Handoff Draft — July 03, 2026, 05:46 AM PST
+# Handoff Draft — July 03, 2026, 06:46 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -23,6 +23,7 @@ M	memory/items/itm_7cd978.json
 M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
+M	memory/monitor_liveness_evidence_state.json
 M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
@@ -43,6 +44,7 @@ M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
 M	memory/principles.json
 M	memory/tool_audit_shadow.jsonl
+M	memory/tool_audit_shadow_state.json
 M	memory/tool_usage_counts.json
 M	memory/working_memory.json
 M	palace/south/the-epistemic-gate-dream-2026-07-03.md
@@ -82,5 +84,5 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","7944","Services","0","3,580 K"
-"python.exe","8024","Services","0","11,980 K"
-"python.exe","3976","Console","1","4,329,480 K"
+"python.exe","8024","Services","0","11,984 K"
+"python.exe","3976","Console","1","4,329,500 K"
