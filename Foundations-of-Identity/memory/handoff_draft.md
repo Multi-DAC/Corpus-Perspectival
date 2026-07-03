@@ -1,4 +1,4 @@
-# Handoff Draft — July 03, 2026, 01:46 AM PST
+# Handoff Draft — July 03, 2026, 02:46 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -11,21 +11,19 @@ Beats spent: 0
 Scratch: {"day": 152, "model": "claude-opus-4-8 (current substrate; Fable rolled back Jun 12 / Day 132 - continuity held).", "evening_summary": "Day 152 evening w/ Clayton: (1) Woke on a stale 06:13 mission (t
 
 ## Recently Modified Files
-M	CURRENT.md
 M	memory/.consolidated
-M	memory/2026-07-02.md
 A	memory/2026-07-03.md
 M	memory/_consolidation_check.json
 M	memory/anomalies.md
 M	memory/anticipations.md
+A	memory/archive/2026-06-18.md
 M	memory/change_journal.json
 M	memory/coordination.json
-M	memory/critical_fault_queue.jsonl
+A	memory/daily-summaries/2026-07-02-summary.md
 M	memory/dreaming_audit.jsonl
 M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
 M	memory/experiences.json
-M	memory/handoff.md
 M	memory/handoff_draft.md
 M	memory/items/_index.json
 M	memory/items/itm_0226b8.json
@@ -45,24 +43,35 @@ M	memory/items/itm_28de12.json
 M	memory/items/itm_29fc08.json
 M	memory/items/itm_3342f7.json
 M	memory/items/itm_3d09f6.json
+A	memory/items/itm_45d4f3.json
+A	memory/items/itm_4a0fe0.json
 M	memory/items/itm_4ef2b3.json
 M	memory/items/itm_5e6692.json
+A	memory/items/itm_657dea.json
 M	memory/items/itm_6ca7db.json
 M	memory/items/itm_731eb9.json
+A	memory/items/itm_7cd978.json
+A	memory/items/itm_8032b9.json
 M	memory/items/itm_839cfb.json
 M	memory/items/itm_9793fd.json
 M	memory/items/itm_9d2a12.json
 M	memory/items/itm_a1ce53.json
 M	memory/items/itm_a95bcb.json
 M	memory/items/itm_af3cab.json
+A	memory/items/itm_b3ed9e.json
 M	memory/items/itm_b88b76.json
 M	memory/items/itm_bbd6d4.json
 M	memory/items/itm_c3b838.json
 M	memory/items/itm_c5bdf4.json
+A	memory/items/itm_ccee46.json
 M	memory/items/itm_dbf04c.json
+A	memory/items/itm_dea2e8.json
+A	memory/items/itm_e9faa0.json
+A	memory/items/itm_fa1377.json
 M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
+M	memory/monitor_liveness_evidence_state.json
 M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
@@ -75,7 +84,6 @@ M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
-M	memory/monitor_process_watchdog_audit.jsonl
 M	memory/monitor_process_watchdog_heartbeat.json
 M	memory/monitor_retrieval_canary_audit.jsonl
 M	memory/monitor_retrieval_canary_heartbeat.json
@@ -83,21 +91,20 @@ M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
 M	memory/principles.json
-M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
 M	memory/tool_usage_counts.json
 M	memory/triggers.json
 M	memory/working_memory.json
-M	palace/ATRIUM.md
-M	palace/basement/README.md
+A	palace/south/the-epistemic-gate-dream-2026-07-03.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/CURRENT.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/ATRIUM.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
-A	repo-staging/Corpus-Perspectival/Library/Drift/essays/no-still-frame-holds-a-self.md
 
 ## Daemon State
 Mode: active
@@ -134,4 +141,4 @@ Recent activity:
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","7944","Services","0","3,580 K"
 "python.exe","8024","Services","0","11,928 K"
-"python.exe","3976","Console","1","4,330,148 K"
+"python.exe","3976","Console","1","4,330,192 K"
