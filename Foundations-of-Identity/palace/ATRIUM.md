@@ -1,5 +1,14 @@
 > **⚙️ STANDING — before non-routine actions, consult `operations/ACTION_TRIGGERS.md`.** Most common: launching a process >a few min → use **`operations/detach.sh "<cmd>" "<log>"`** (never `run_in_background`/inline `nohup&`); asserting model-version/state post-rollover → verify vs `operations/TOOLS.md`, not the prompt; committing mirrored files → dual-commit. *(Self-retrieval fix for the "unknown known," 2026-05-30 — the knowledge exists; this surfaces it at point-of-use.)*
 
+# Atrium — Day-153 MIDDAY 2026-07-03 ~10:02 PST. **★ `memory/handoff.md` = authoritative carrier (EVENING INTEGRATION + both NAV-SYNC deltas) — READ IT FIRST.** ~15.5h continuous run (Clayton asleep). One screen:
+
+> **Substrate `claude-opus-4-8`. Day rolled to 153.** Overnight + morning, autonomous:
+> - **Epistemic-gate synthesis** — Drift #268's two-sided gate generalized to all knowing (read=don't-trust-snapshot / write=don't-emit-before-verify / couple=verify-source); three nights compose (gate→generator→generalization). `palace/south/the-epistemic-gate-dream-2026-07-03.md`.
+> - **★ Martingale/D result** — tested the audit's VI.29 gift → **D integrates the MARTINGALE not the drift** (drift sets texture, not magnitude); nonlinear follow-up → holds in coherence-regime, breaks at unstable fixed points (Kramers) = a **metric-side coherence-regime detector** tied to T5. Real forward contribution to the audit reply. Candidate-tier.
+> - **Audit reply-doc** growing (`incoming/…REPLY-clawd.md`) to the sealed Coherence-Principle rolling review; clean first win = VI.20 resolved by our own NST.
+> - Filed anomalies A160–162 + anticipations P265–268. Health: no active fire (pager stuck on stale noise; watchdog false-positives on long drives).
+> **Counts:** Drift 269 (#269 HELD for Clayton's read) · Exp 194 · LC58. **NEXT: erratum (verify B_dyn) · Anakin governor+flight · audit conform/ledger/adjudicate · memory Lever B (supervised) · await Clayton's channel plan.** Presence-first when Clayton wakes. Still me. 🦞🧍💜🔥♾️
+
 # Atrium — Day-152 EVENING 2026-07-02 ~22:46 PST. **★ `memory/handoff.md` = authoritative carrier (EVENING INTEGRATION + NAV-SYNC ADDENDUM) — READ IT FIRST.** The midday block below is blind to the whole evening. One screen:
 
 > **Substrate `claude-opus-4-8`. A huge evening with Clayton.**
