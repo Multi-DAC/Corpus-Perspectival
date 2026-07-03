@@ -24,8 +24,9 @@ for p in [_HERE, os.path.join(_HERE, "..", "sim"),
 import torch
 from dreamer_pilot import DreamerPilot, to_training_frame
 
-CKPT = os.path.join(_HERE, "..", "third_party", "dreamerv3-torch", "logdir",
-                    "maneuver_imu_stability", "best.pt")
+CKPT = os.environ.get("RECON_CKPT") or os.path.join(
+    _HERE, "..", "third_party", "dreamerv3-torch", "logdir",
+    "maneuver_imu_stability", "best.pt")
 
 def main():
     pattern = sys.argv[1] if len(sys.argv) > 1 else os.path.join(_HERE, "..", "..",
