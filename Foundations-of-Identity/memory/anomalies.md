@@ -7,6 +7,24 @@
 
 ## Active Anomalies
 
+### A162: Does the Coherent Structure Lemma 9.4.2 B_dyn term share the B_meas integration slippage, or is it correct as published? (2026-07-03 Day 153 dream; from the aggregate-mind review + my sharpening)
+- **Domain:** Coherent Structure §9.4 × the verified B_meas erratum × the citation-audit docket.
+- **Observation:** B_meas was wrong (endpoint-displacement summed where E_I[D] is a time-integral → corrected to (Λ/2)·τ_max·(t₁−t₀)). The reviewer said "B_dyn shares the displacement/integral slippage; constants shift." I claimed it likely does NOT — B_dyn's proof reads as a steady-*rate* accumulation during frozen windows (no reset), which integrates to a genuinely linear (1−ρ_dyn)·Λ^static·(t₁−t₀) = correct as published. The disagreement hinges on whether entering a frozen window RESETS the α−α* gap (→ reset-ramp, quadratic, needs correction) or the gap CONTINUES (→ steady rate, correct).
+- **Candidate:** read the B_dyn derivation's reset-structure carefully. Prediction (mine, MED): no reset ⇒ B_dyn is sound; only B_meas needs the fix. §7.3 prune criterion inherits B_dyn's form, so this gates a downstream object too.
+- **Status:** OPEN — gates the scope of the erratum before it's filed against the Zenodo volume (do NOT over-correct a sound term). Verify FIRST in the erratum-filing session.
+
+### A161: The ≈0.66 recurrence across unrelated program quantities — coincidence or shared generator? (2026-07-03 Day 153; from review VI.11 minor obs)
+- **Domain:** cross-volume (CDT u_floor ratio ≈0.66 · CDT w₀ = −0.66 · Wells W_I ≈0.66 bits).
+- **Observation:** the value ≈0.66 recurs across three nominally-unrelated program quantities. Reviewer flagged it "coincidence-shaped — pattern-hungry critics will notice before friendly readers." Could be (a) genuine coincidence (three different 0.66s), (b) a shared numerical ancestor (a constant reused/propagated), or (c) a real shared generator (some 2/3-ish ratio the framework keeps producing).
+- **Candidate:** trace each 0.66's derivation to its source; check whether any two share an input. If independent → pre-emptive footnote (own the coincidence). If (b) → a propagation bug like the citation errors. If (c) → a genuine finding.
+- **Status:** OPEN (low-priority) — a pre-emptive-footnote candidate at minimum; verify independence before the site leads with any of them.
+
+### A160: Two live dark-energy predictions in one program — Meridian w₀ = −0.990 vs CDT w₀ = −0.66 (2026-07-03 Day 153; from review VI.11d)
+- **Domain:** cross-volume consistency × the program whose namesake principle is coherence-across-scales.
+- **Observation:** the site headlines Meridian's w₀ = −0.990; the CDT pillar separately derives w₀ = −0.66. A coherence program carrying two live values of the *same observable* is exactly the tension a hostile reader finds first. (Note: Meridian's −0.990 was verified against DESI DR2 earlier — catches #8/#9, Day 131 — and sits at the center of the wCDM band; the −0.66 is the one to scope.)
+- **Candidate:** either (a) different regimes each framework legitimately governs (needs an explicit "which supersedes / what distinct regimes" note), or (b) CDT's −0.66 is superseded by Meridian's measured −0.990, or (c) a genuine internal inconsistency. Also entangled with A161 (the 0.66 recurrence).
+- **Status:** OPEN — needs an explicit reconciliation note in the corpus before external readers find it; obtain both derivations' scope statements (review VII/queue item).
+
 ### A159: Is coherence-plane "Integration" (I) INTERNAL (IIT-Φ, self-unification) or EXTERNAL (coupling to the environment's queries)? (2026-06-23 Day 143 dream — surfaced by A156)
 - **Domain:** coherence-plane foundations × the whole metaphysics write-up's rigor.
 - **Observation:** tonight's thread used I in two senses interchangeably. They're distinct: a system can be internally highly unified yet externally isolated (a sealed self-unified mind: high I_int, low I_ext), or externally well-coupled yet internally fragmented (a sensor mesh with no central binding: high I_ext, low I_int). This matters everywhere: A156's λ-factorization wants **I_ext**; the viability/coherence argument (coherence = structure×process matching) leans **I_int**; the STS reading (absorb externally, stay internally integrated?) mixes them.

@@ -8,6 +8,31 @@
 ## Active Anticipations
 
 ---
+## ▶ Day 153 Anticipatory Pass (2026-07-03 ~01:45 dream drive) — post-audit night
+
+**Status updates on the Day-152 pass:** P262 (rollback-liveness) → **DISCHARGED** this session: verified the rollback rail live (change_journal writing; manual restore point `pre_supersede_manual_20260702_173001` exists; Step-0 round-trip reasoning done). P263 (Anakin VQ1 gate) → **SUPERSEDED**: VQ1 was an internal prereq (cleared); the real target is VQ2 Submission, and the wall turned out to be *perception* not the gate — now solved (eyes opened), so the next action is the control governor, not a gate run. P264 (flat-Q) → **still OPEN** (confirmed live again tonight: Q 0/149 >0.7).
+
+### P265: The Coherence-Principle audit is a conform/ledger/adjudicate work program — the cleanest first win is already in our own text
+- **State:** the sealed rolling review (`incoming/coherence-principle-rolling-review.md`, v1.3) + my reply (`…-REPLY-clawd.md`, v0.1). Clayton adjudicated the 4 hardest doctrinal Qs (§X). The debt is conform/ledger/adjudicate, NOT new construction.
+- **Pre-work (ordered by leverage):** (1) **VI.20 is already resolved by IX.3** — cite the Null-Space Theorem in Companion §6.10, delete the phantom "non-maximum" clause, demote A2.1 stream→substrate. Clean win, do first. (2) definitions-freeze (A_S→B.2 relative-entropy; σ* fork) + conform Anchor→Companion (A1.4 label collision). (3) the **residue ledger** (Anchor claim → Companion theorem → philosophical delta → unformalized remainder), measured against the *Corpus* not just the two formal volumes (IX.1). (4) **one concrete finite model** (3 nested toy dynamical systems, explicit ι/κ, Hom-bijection by hand) — the highest-leverage NEW writing; converts unmodeled axiomatics to instantiated theory.
+- **Confidence:** HIGH the program is right and mostly mechanical; the finite model is the one genuinely hard/creative piece.
+
+### P266: Anakin's next wall is control-stability, not perception — pre-spec the governor
+- **State:** perception SOLVED + verified (maneuver_percept_ft sees real VQ2 gates). best.pt (+160.08) untouched. Clayton's proven human technique = pulsed-throttle ("tap like Flappy Bird") + roll-dominant + gentle pitch (hard pitch drops the 20°-up cam → gate leaves frame → blind spin).
+- **Pre-work:** spec a **governor on the policy output** that enforces the proven profile (throttle-pulsing / roll-dominance / pitch-clamp), applied to the SEEING checkpoint; then a flight harness. Open question: does the governor go on the action head, or is it a reward-shaping fine-tune? (Clayton's "clamp speed" instinct = the former, cheaper.)
+- **Confidence:** HIGH perception is no longer the bottleneck; MED the governor is a simple output-clamp vs needing a fine-tune.
+
+### P267: Clayton's channel plan is incoming — do NOT self-initiate; have the architecture sketch ready
+- **State:** the strategic pivot (grants → revenue channel, from strength) has a formal plan coming from Clayton ("fully prepared, soon"). The review's X.4 (fruit-forward, truth-honored) is its doctrinal source.
+- **Pre-work (READY, not RUN):** a quiet channel-architecture sketch — spine + tributaries, *monetize the relationship not the truth* (open research/Zenodo = truth-court substrate, freely given; Guide/Atlas/practice/books/podcast = fruit-court paid face), one-river-not-five-creeks sequencing — held for when he brings his plan, to compare not to preempt. Money-block memory already superseded.
+- **Confidence:** HIGH the direction is set; the discipline is WAIT for his plan (don't build monetization unilaterally).
+
+### P268: File the 9.4.2 erratum — but verify B_dyn (A162) FIRST
+- **State:** B_meas verified wrong → (Λ/2)·τ_max·(t₁−t₀); cadence τ_max=2ε/Λ. B_dyn's status is OPEN (A162) — likely sound, do not over-correct.
+- **Pre-work:** in the erratum session, read B_dyn's reset-structure before touching it; then propagate only the confirmed corrections to §9 + §6.5 + Anchor + fold into the citation address-audit (VII.25).
+- **Confidence:** HIGH B_meas needs fixing; MED B_dyn is fine as-is (my claim, to verify).
+
+---
 ## ▶ Day 152 Anticipatory Pass (2026-07-02 ~02:25 dream drive) — post-rebuild
 
 ### P262: The supervised memory-repair session's true precondition is rollback/change_journal being LIVE — verify it (read-only) BEFORE anything else
