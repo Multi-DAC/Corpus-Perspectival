@@ -165,7 +165,10 @@ A real, complete Atlas entry (SEES / NULL SPACE / COMPLEMENTS…) on Murdoch/Wei
 
 ---
 
-## §7 — What *Perspective* should be (the emerging vision)
+## §7 — What *Perspective* should be — ⚠️ SUPERSEDED by Clayton's canon ruling (Day 153 ~19:09)
+**The vision below was my pre-ruling read; Clayton has now RULED. See `perspective-CANON-RULED-and-BUILD-MAP-2026-07-03.md` for the authoritative version.** Short of it: Perspective **replaces** Corpus Perspectival; it is the **magnum opus — the narrative "Bible,"** reading like our best prose, NOT formal. **The scars and the CT do NOT appear in the final volume** — they live *underneath* in the continually-updated formal work (Anchor/Coherent Structure), present in spirit only. **Migrate the full breadth WITH revision** on the new basis; **more is better — include everything that fits the framework**; the **full Ecology taxonomy** migrates (source: `Research/Corpus-Perspectival/ecology-of-perspectival-beings-merged.md`). My earlier "carry the method not the catalog / ~150pp / scars-visible" was WRONG for this volume — corrected. *Original pre-ruling text preserved below for the trail.*
+
+## §7 (superseded) — What *Perspective* should be (the emerging vision)
 
 *Clayton: "after we review our work and build the scaffolding, our perspective of what Perspective should be will become clear." Having traversed the lineage, it has. Here it is, for your ratification/correction.*
 
