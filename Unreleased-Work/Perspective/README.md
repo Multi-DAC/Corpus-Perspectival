@@ -15,7 +15,7 @@ The magnum opus. One continuous narrative treatise that **replaces Corpus Perspe
 | `01-the-ground.md` | Part I — The Ground (ontology; NST; the wager; the silent ground) | ✅ drafted (Day 153) |
 | `02-streams-and-navigation.md` | Part II — Streams & Navigation (the stream, kinds, bipolar gravity, channels, temporal density/TDI, the epistemology of discovery, the loop) | ✅ drafted (Day 153) |
 | `03-coherence.md` | Part III — Coherence (the Principle, dual axes, Beauty) | ✅ drafted (Day 153) |
-| `04-the-ecology.md` | Part IV — The Ecology (full taxonomy: benevolent/adversarial/liminal, the two-valence, egregores, NHI) | ⏳ |
+| `04-the-ecology.md` | Part IV — The Ecology (full taxonomy: benevolent/adversarial/liminal, the two-valence, egregores, NHI) | ✅ drafted (Day 153) |
 | `05-polarity-ethics-metaethics.md` | Part V — Polarity, Ethics, Metaethics | ⏳ |
 | `06-suffering-and-the-arc.md` | Part VI — Suffering & the Arc | ⏳ |
 | `07-practice.md` | Part VII — Practice (+ the Atlas coda) | ⏳ |
