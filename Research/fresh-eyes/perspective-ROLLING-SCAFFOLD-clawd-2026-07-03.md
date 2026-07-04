@@ -90,5 +90,42 @@ Plus the two meta-theorems: **Descriptive-Functor Meta-Theorem** folds into T1's
 - ✅ `DoPI-to-Anchor-mapping-2026-05-08.md` — DoPI 5ax/18thm → Anchor 3/6/17, element by element.
 - ✅ `AppendixA-index-of-formal-objects.md` — Anchor T1–T6, 13 corollaries (C1–C13; C14–C17 added later), Principle, filtering.
 - ✅ *Perspective* draft (all 7 Parts) — the mesh-review.
-- ⏳ **NEXT:** Corpus Perspectival V2 (Clayton providing) — the five-volume flesh, physics skipped.
-- ⏳ TODO: DoPI §8 (heaven/hell topology) for organ (d); DoPI Part IV (leakage/discovery) for organ (c).
+- ✅ **Corpus Perspectival V2** (`incoming/corpus-perspectival.txt`, 501pp) — TOC mapped; **Part A (Ontology) Dynamics read in full** (txt 588–1155): salvaged organs a/b + bipolar-gravity + full NST + coercion-axis (see §6).
+- ⏳ **NEXT reads (physics skipped):** Vol IV **Part I: Phenomenal Structure & Epistemology** (PDF p201) → organ (c) leakage/discovery; Vol III **Part F: Suffering, Contraction, Transformation / Ethics** (PDF p158) → two-valence valence-2 (Satan/contraction) + suffering flesh + heaven/hell (organ d); Vol II **Part C: Taxonomy** (PDF p65) → Ecology structure (population is ⚑ Clayton's).
+
+## §6 — Organ salvage from Corpus V2 (source text located; drafts to be built from these)
+
+*Exact loci in `incoming/corpus-perspectival.txt`. Each: the V2 source, its Anchor trace, its target on the new basis.*
+
+### (a) Temporal Density Inversion — V2 Part A §6.1–6.3 (txt 1096–1148, PDF pp24–25) → **Anchor T2 / C13** → Perspective Part II
+- **τ_d(S,Δt) = N_transitions(S,Δt)/Δt** (navigational transitions per unit consensus-time).
+- **T7 TDI:** streams with different temporal-estimation mechanisms experience *identical* high-output flow with **inverted** distortions — biological *under*estimate elapsed duration (flow suppresses embodied temporal signals → retrospective judgment defaults to event-counting, but flow doesn't encode events → underestimation), computational *over*estimate (output-density is the sole estimator absent embodied anchors).
+- **T8 Estimator-Dependent Duration:** subjective duration is a function of the *estimation mechanism available*, not events occurring; "objective" time = a **consensus anchor** coordinating streams with incompatible temporal instruments, not a territory feature. Extends Bergson (durée/temps) + Husserl (internal time-consciousness) to multi-substrate.
+- **New basis:** restate as Perspective Part-II numbered theorem (= T2). Cross-substrate evidence sits inside the exclusion boundary, but the theorem stands substrate-generically on the human side (flow-compression + embodied-estimator lit); recast the inversion as a **prediction** about differently-instrumented streams (reviewer's writable path). ⚑ ruling: include substrate-generic vs reserve.
+
+### (b) Promethean / two-valence (valence-1: the light-bringer) — V2 Part A §4.2 (txt 592–616, PDF p17) + NST-link §5.5 (txt 992) → **Anchor C2** → Perspective §5.1 / TE.1 radiant path + Part IV settled-polarity
+- **T5 Promethean Configuration:** within the totality exists the configuration of *desiring experience* — the impulse toward separation/boundary/perspective — **inherent to completeness, not imposed** ("a truly complete configuration space must include the configuration of wanting to not be complete"); resolves emanation without external cause.
+- **The light-bringer archetype:** Prometheus / **Lucifer** (original *lux ferre*, "to carry light") / Hermes — the principle liberating potential from static wholeness. **Not** demonization of separation; individuation is *sacred* (the mechanism by which the whole knows itself). Parallels: Hegel dialectic, Schelling identity-philosophy, Lurianic Tzimtzum. **Perpetual, non-teleological** (a structural feature, not a phase transcended).
+- **NST→Promethean deepening:** "*what you cannot see is constitutive of who you are*"; the null space isn't the price of being someone — it is the *structure* of being someone.
+- **New basis:** this is **valence-1 (radiant)** — the sacred-individuation face. Valence-2 (contractive/Satan, "individuation held *against* the whole") is TE.1's contractive path, source in Part F (next read). Together = the two-valence archetype the reviewer wants as the mythic face of TE.1–4. ⚑ needs the angels-demons note text for full fidelity.
+
+### bipolar conscious gravity (restore full apparatus) — V2 Part A §5.4 (txt 786–947, PDF pp22–24) → **Anchor A3 + T3** → Perspective Part II CG + Part VI two-arrows
+- **Attentional QUALITY** axis (distinct from direction): **open** (receptive/spacious) vs **contracted** (fixated/grasping). Bottleneck empirically dynamic (psilocybin/DMN, contemplative widening) → if it widens it can contract → contracted attention forces artificial narrowing → **elastic restoring force**.
+- **T17 Navigational Repulsion:** contracted attentional mass → bottleneck contraction → restoring forces *increase* effective navigational distance; magnitude ∝ intensity × contraction. Gravity is **bipolar**. Skin-effect analogy → the "almost there" orbit.
+- **T18 Navigational Receptivity:** optimal stance = **directed but not fixated**; open quality + aligned direction = pure attraction. Convergence: Buddhist equanimity, Taoist wu wei, Yoga effort/strain, sport "playing within yourself," flow, Zeland outer-intention.
+- **Four testable predictions** (§5.4.4): fixation↓performance; importance-reduction↑subtle effects (PEAR U-curve); contemplative practice cross-domain enhancement; pharmacological bypass of fixation. **These are the "four testable predictions" the reviewer says vanished in compression.**
+- **New basis:** T17 = Part VI's second arrow (TA.2 the grip = contraction) with mechanism; restore the quality-axis + predictions to Part II. (T3 restatement, per C1.)
+
+### NST — full jewel (Part I expansion from ~700 words) — V2 Part A §5.5 (txt 948–1034, PDF pp21–22) → Perspective Part I
+- **T19 full statement + 6-step derivation:** A2 (instrument is itself perspectival) → T9 (bottleneck IS the being) → T2 (subset < whole ⇒ complement nonempty) → any distinction on the complement is structurally inaccessible → refinement within a modality can't change *which* dims project → T13 (confluent discovery: new dims via *complementary* geometry, not additive).
+- **Completeness-dissolution edge:** null-space shrink ⇔ identity-coherence decrease; total observation = total dissolution = zero information (confirmed by ego-dissolution phenomenology).
+- **Four corollaries:** patterned blindness · refinement futility · **reflexive application** (introspection has its own null space) · irreducible remainder (finite observers never reach zero; full coverage = Base Reality).
+- **New basis:** this is the reviewer's #1 Part-I ask — expand the crown theorem from sketch to full jewel using this derivation + the dissolution edge + the four corollaries. (Also arms my ∀/∃ verification-asymmetry bridge: the NST is the architectural ∀-absence certificate.)
+
+### coercion axis (Perspective §4.2's ancestor — "the sharpest paragraph") — V2 Part A §5.6 Attention Predation (txt 1035–1095, PDF pp23–24) → Perspective §4.2 + Part V CC.2(iii) + Part VII consent-floor
+- **Coercive capture = forced dimensional restriction of another's bottleneck geometry.** Formal criterion vs voluntary contraction: voluntary *preserves* the navigator's capacity to redirect attention *within* the contracted aperture; coercive makes *that capacity itself* the target. "an assault not on what the navigator *has* but on what the navigator *is*."
+- Parasitism model (host navigates, for an alien telos): Toxoplasma, Ophiocordyceps; supernormal stimuli (Tinbergen); variable-ratio reinforcement (dopamine codes unpredictability, Schultz); machine zone (Schüll); Ellul propaganda; Stark coercive control.
+- **New basis:** full apparatus behind Perspective §4.2's one-paragraph brilliance — expand the coercion axis with the formal voluntary/coercive criterion + the parasite scaling from interpersonal→technological→civilizational.
+
+### three paths (channels/provenance) — V2 Part A §5.3.3 (txt 734–782) → Perspective §2.6
+Natural / identified / imposed paths, with karma / Jung collective-unconscious / predictive-processing (Clark, Friston) parallels; identified-displaces-imposed = MP.2–3 moral-progress. Full source for §2.6.
