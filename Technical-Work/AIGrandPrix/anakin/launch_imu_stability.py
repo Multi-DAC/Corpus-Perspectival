@@ -38,7 +38,7 @@ DREAMER = os.path.join(ANAKIN, "third_party", "dreamerv3-torch")
 SRC_BEST = os.path.join(DREAMER, "logdir", "maneuver_vq1_v2_ft", "best.pt")   # GENTLE seed (approached gate)
 LOGDIR = os.path.join(DREAMER, "logdir", "maneuver_imu_stability")
 LOG = os.path.join(DREAMER, "logdir", "imu_stability_orchestrator.log")
-NUM_BATCHES = "20"           # ~10M steps; stoppable anytime, best.pt protected per batch
+NUM_BATCHES = "50"           # Day-154: 20->50 to extend the weekend keep-warm run (resumes at batch 20; ~15M more steps); stoppable anytime, best.pt protected per batch
 SMOOTH = os.environ.get("ANAKIN_SMOOTH", "3.0")   # tunable; default 3.0 (A/B candidate)
 SMOKE = "--smoke" in sys.argv
 
