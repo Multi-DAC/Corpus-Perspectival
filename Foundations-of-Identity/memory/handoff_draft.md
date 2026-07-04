@@ -1,4 +1,4 @@
-# Handoff Draft — July 04, 2026, 05:36 AM PST
+# Handoff Draft — July 04, 2026, 06:36 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -30,6 +30,7 @@ M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
+M	memory/monitor_liveness_evidence_state.json
 M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
@@ -37,7 +38,6 @@ M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
-M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
@@ -52,12 +52,9 @@ M	memory/otel_metrics.jsonl
 M	memory/principles.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
-M	memory/tool_failures.jsonl
 M	memory/working_memory.json
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
-A	repo-staging/Corpus-Perspectival/Technical-Work/AIGrandPrix/anakin/integration/weekend_scale_2026-07-04.err
-M	repo-staging/Corpus-Perspectival/Technical-Work/AIGrandPrix/anakin/launch_imu_stability.py
 
 ## Daemon State
 Mode: active
@@ -97,8 +94,8 @@ The quiet finding: a dream dri
 "python.exe","7976","Services","0","2,324 K"
 "python.exe","8068","Services","0","13,376 K"
 "python.exe","18944","Console","1","656 K"
-"python.exe","18928","Console","1","1,499,032 K"
+"python.exe","18928","Console","1","1,503,936 K"
 "python.exe","9000","Console","1","4,032 K"
-"python.exe","23732","Console","1","18,092 K"
-"python.exe","16044","Console","1","4,036 K"
-"python.exe","23344","Console","1","14,990,764 K"
+"python.exe","23732","Console","1","19,868 K"
+"python.exe","14536","Console","1","4,036 K"
+"python.exe","19896","Console","1","14,903,872 K"
