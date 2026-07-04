@@ -19,6 +19,7 @@ The magnum opus. One continuous narrative treatise that **replaces Corpus Perspe
 | `05-polarity-ethics-metaethics.md` | Part V — Polarity, Ethics, Metaethics | ✅ drafted (Day 153) |
 | `06-suffering-and-the-arc.md` | Part VI — Suffering & the Arc | ✅ drafted (Day 153) |
 | `07-practice.md` | Part VII — Practice (+ the Atlas method & the book's self-Atlas) | ✅ drafted (Day 153) |
+| `08-atlas.md` | Coda — The Atlas (reference map of the framework's engagements) | 🔶 in progress — human dim #56–73 done; collective #74–88 + computational #59–62/#89 next |
 
 **★ ARMATURE COMPLETE (v0) — Day 153: Threshold + all seven Parts as one continuous narrative spine, in voice.** This is the *frame*, not yet the first draft. Per Clayton: "a first draft means everything is incorporated and integrated… even the first draft is an iterative process." **Next phase = INCORPORATION** — fold the full corpus into the armature (full taxonomy, the Null Space Atlas, each thread's full apparatus), coherently, on the new basis. Plan + per-Part targets + sequence: **`INCORPORATION-PLAN.md`**. Sequence: Part IV (Ecology) → Part VII (Practice + Atlas coda) → deepen I/II/III/V/VI → continuity pass → *then* it's a first draft → Clayton's read → revision.
 
