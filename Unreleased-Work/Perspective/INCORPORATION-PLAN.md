@@ -29,8 +29,8 @@ Fold in: the two-valence **mythic section** at full strength (Prometheus/Lucifer
 ### Part VI · Suffering & the Arc — deepen
 Fold in: the disclosure material fuller (Frankl's meaning-analysis; positive disintegration; the katabasis/descent motif); the dual-process grief literature named; the continuing-bonds material; the alleviation/witness distinction developed. Atlas: the suffering/existential lenses.
 
-### Part VII · Practice — **MAJOR incorporation (the Guide + the Atlas)**
-(a) Each class of navigation grown **from paragraph to protocol** (the Guide material — mechanism, method, evidence, risk, worked instruction). (b) **The Null Space Atlas incorporated**: the method (present) + 2–3 fully-worked exemplar entries + **the full reference coda** — the ~88 engagements gathered (distributed through the Parts where each lens illuminates, and collected once at the end as the reference map). Source: `Research/Atlas/` (merged atlas docs) + inline V2 entries.
+### Part VII · Practice — **MAJOR incorporation (the Guide + the Atlas)** — 🔶 GUIDE PASS DONE (Day 153)
+(a) ✅ Each class of navigation grown **from paragraph to protocol** (mechanism/method/evidence/risk each, as prose) — done. (b) ⏳ **The Null Space Atlas incorporated** — its own dedicated pass (the biggest single incorporation, ~235KB source): the method (present) + 2–3 fully-worked exemplar entries + **the full reference coda** — the ~88 engagements gathered (distributed through the Parts where each lens illuminates, and collected once at the end as the reference map). Source: `Research/Atlas/atlas_entries_{human,collective}_dimension.md` + `_staging.md` + `atlas_entry_IIT` + inline V2 entries.
 
 ### The Atlas (cross-cutting) — the single largest incorporation
 The 88 framework-engagements: **distributed** into the Parts (each lens where it illuminates) + **collected** as the closing coda. This threads through every Part's deepening, not just VII.
