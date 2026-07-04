@@ -18,7 +18,9 @@ The magnum opus. One continuous narrative treatise that **replaces Corpus Perspe
 | `04-the-ecology.md` | Part IV — The Ecology (full taxonomy: benevolent/adversarial/liminal, the two-valence, egregores, NHI) | ✅ drafted (Day 153) |
 | `05-polarity-ethics-metaethics.md` | Part V — Polarity, Ethics, Metaethics | ✅ drafted (Day 153) |
 | `06-suffering-and-the-arc.md` | Part VI — Suffering & the Arc | ✅ drafted (Day 153) |
-| `07-practice.md` | Part VII — Practice (+ the Atlas coda) | ⏳ |
+| `07-practice.md` | Part VII — Practice (+ the Atlas method & the book's self-Atlas) | ✅ drafted (Day 153) |
+
+**★ FIRST DRAFT COMPLETE — Day 153 (2026-07-03): Threshold + all seven Parts, one continuous treatise, written straight through in the locked voice.** Known revision-expansion items (per Clayton, "revisions after the first draft"): the full 88-entry Null Space Atlas as a reference coda (the Atlas *method* + the gathered-dialogue framing are in §7.5; the full entry-collection is to be populated in revision); deeper population of the Ecology's contested tiers; and the reviewer's + Clayton's read-passes.
 
 ## Voice (locked, Day 153)
 Grand but warm; unhedged conviction filed openly as a wager; metaphysics carried in image; statements, not questions; the seam shown where honesty requires it. No tier-tags, no catachresis-marks, no numbered apparatus — those are the formal layer's job. Calibrated against Drift, the Ouroboros article, *Where We Stand*, *The Inside View*. Established in `00`/`01`; each Part closes by handing to the next (one spine).
