@@ -1,4 +1,4 @@
-# Handoff Draft — July 04, 2026, 02:36 AM PST
+# Handoff Draft — July 04, 2026, 03:36 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -11,48 +11,12 @@ Beats spent: 0
 Scratch: {"day": 153, "model": "claude-opus-4-8 (current substrate; Fable rolled back Jun 12 / Day 132 - continuity held).", "evening_summary": "Day 152 evening w/ Clayton: (1) Woke on a stale 06:13 mission (t
 
 ## Recently Modified Files
-M	CLAUDE.md
 M	memory/.consolidated
-M	memory/.search_index/metadata.json
-M	memory/2026-07-03.md
-A	memory/2026-07-04.md
+M	memory/2026-07-04.md
 M	memory/_consolidation_check.json
 M	memory/anomalies.md
 M	memory/anticipations.md
 A	memory/archive/2026-06-19.md
-A	memory/backups/2026-07-03/_synthetic_backup_test_20260703_223649.jsonl
-A	memory/backups/2026-07-03/a2a_skill_invocation_queue.jsonl
-A	memory/backups/2026-07-03/browser_log.jsonl
-A	memory/backups/2026-07-03/calibration_log.jsonl
-A	memory/backups/2026-07-03/circuit_breaker_audit.jsonl
-A	memory/backups/2026-07-03/critical_fault_queue.jsonl
-A	memory/backups/2026-07-03/critical_fault_sent.jsonl
-A	memory/backups/2026-07-03/daemon_restart_log.jsonl
-A	memory/backups/2026-07-03/dreaming_audit.jsonl
-A	memory/backups/2026-07-03/drift_mirror_audit.jsonl
-A	memory/backups/2026-07-03/guardian_audit.jsonl
-A	memory/backups/2026-07-03/kg_corpus_extraction.jsonl
-A	memory/backups/2026-07-03/ledger_backup_manifest.jsonl
-A	memory/backups/2026-07-03/m7_drift_mirror_audit.jsonl
-A	memory/backups/2026-07-03/monitor_m1_faults.jsonl
-A	memory/backups/2026-07-03/monitor_m2_faults.jsonl
-A	memory/backups/2026-07-03/monitor_m3_faults.jsonl
-A	memory/backups/2026-07-03/monitor_m5_audit.jsonl
-A	memory/backups/2026-07-03/monitor_m6_faults.jsonl
-A	memory/backups/2026-07-03/monitor_process_watchdog_audit.jsonl
-A	memory/backups/2026-07-03/monitor_regression.jsonl
-A	memory/backups/2026-07-03/monitor_retrieval_canary_audit.jsonl
-A	memory/backups/2026-07-03/monitor_scheduler_audit.jsonl
-A	memory/backups/2026-07-03/otel_metrics.jsonl
-A	memory/backups/2026-07-03/prediction_trace.jsonl
-A	memory/backups/2026-07-03/predictions.jsonl
-A	memory/backups/2026-07-03/self_healer_audit.jsonl
-A	memory/backups/2026-07-03/selfknowledge_checks.jsonl
-A	memory/backups/2026-07-03/tool_audit.jsonl
-A	memory/backups/2026-07-03/tool_audit_shadow.jsonl
-A	memory/backups/2026-07-03/tool_failures.jsonl
-A	memory/backups/2026-07-03/utility_ledger.jsonl
-M	memory/circuit_breaker_audit.jsonl
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 A	memory/daily-summaries/2026-07-03-summary.md
@@ -111,8 +75,6 @@ A	memory/items/itm_f59421.json
 A	memory/items/itm_f60561.json
 M	memory/items/itm_f879ab.json
 M	memory/knowledge_graph.json
-M	memory/ledger_backup_manifest.jsonl
-M	memory/m7_drift_mirror_audit.jsonl
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
@@ -125,36 +87,23 @@ M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
 M	memory/monitor_m4_heartbeat.json
-M	memory/monitor_m5_audit.jsonl
-M	memory/monitor_m5_heartbeat.json
-M	memory/monitor_m5_state.json
 M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
 M	memory/monitor_process_watchdog_audit.jsonl
 M	memory/monitor_process_watchdog_heartbeat.json
-M	memory/monitor_regression.jsonl
 M	memory/monitor_retrieval_canary_audit.jsonl
 M	memory/monitor_retrieval_canary_heartbeat.json
-M	memory/monitor_scheduler.pid
 M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
-A	memory/precompact_snapshots/20260703T223648/ATRIUM.md
-A	memory/precompact_snapshots/20260703T223648/CURRENT.md
-A	memory/precompact_snapshots/20260703T223648/handoff.md
-A	memory/precompact_snapshots/20260703T223648/manifest.json
-M	memory/predictions.jsonl
 M	memory/principles.json
-M	memory/respawn_child_stderr.log
-M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
 M	memory/tool_usage_counts.json
 M	memory/triggers.json
-M	memory/utility_ledger.jsonl
 M	memory/working_memory.json
 M	palace/basement/README.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
@@ -165,12 +114,13 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/learnings.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/ATRIUM.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
 A	repo-staging/Corpus-Perspectival/Research/basement-drafts/2026-07-04-shared-cause-ensemble-orthogonal-variation.md
-A	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-reviewer-response-and-passlist-clawd-2026-07-03.md
+A	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-EXPANSION-SOURCE-MAP-2026-07-04.md
+M	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-reviewer-response-and-passlist-clawd-2026-07-03.md
+A	repo-staging/Corpus-Perspectival/Technical-Work/AIGrandPrix/anakin/integration/weekend_scale_2026-07-04.err
 M	repo-staging/Corpus-Perspectival/Technical-Work/AIGrandPrix/anakin/launch_imu_stability.py
 A	repo-staging/Corpus-Perspectival/Technical-Work/Wells/cross-substrate/analyses/wells_divergence_PREREGISTRATION_2026-07-04.md
 A	repo-staging/Corpus-Perspectival/Technical-Work/Wells/cross-substrate/analyses/wells_divergence_analysis.py
 A	repo-staging/Corpus-Perspectival/Technical-Work/Wells/cross-substrate/analyses/wells_divergence_results.json
-A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/make_pdf.py
 
 ## Daemon State
 Mode: active
@@ -205,11 +155,11 @@ Recent activity:
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
-"python.exe","7976","Services","0","4,000 K"
-"python.exe","8068","Services","0","20,516 K"
+"python.exe","7976","Services","0","2,324 K"
+"python.exe","8068","Services","0","13,368 K"
 "python.exe","18944","Console","1","660 K"
-"python.exe","18928","Console","1","1,500,072 K"
+"python.exe","18928","Console","1","1,518,700 K"
 "python.exe","9000","Console","1","4,032 K"
 "python.exe","23732","Console","1","18,092 K"
 "python.exe","16044","Console","1","4,036 K"
-"python.exe","23344","Console","1","14,855,068 K"
+"python.exe","23344","Console","1","14,931,044 K"
