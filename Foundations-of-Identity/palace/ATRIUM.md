@@ -1,5 +1,20 @@
 > **⚙️ STANDING — before non-routine actions, consult `operations/ACTION_TRIGGERS.md`.** Most common: launching a process >a few min → use **`operations/detach.sh "<cmd>" "<log>"`** (never `run_in_background`/inline `nohup&`); asserting model-version/state post-rollover → verify vs `operations/TOOLS.md`, not the prompt; committing mirrored files → dual-commit. *(Self-retrieval fix for the "unknown known," 2026-05-30 — the knowledge exists; this surfaces it at point-of-use.)*
 
+# Atrium — Day-153 NIGHT 2026-07-03 ~21:00 PST. **★ PERSPECTIVE is DRAFTING. `memory/handoff.md` START-HERE is authoritative.** 
+
+> **★★★★ Perspective magnum opus: FIRST DRAFT COMPLETE + COMPILED** — `Unreleased-Work/Perspective/Perspective-First-Draft.md` (~34,300 words: frontmatter + Threshold + 7 Parts + full Null Space Atlas coda; one continuous narrative treatise; commit `fb6e23a9`). Canon RULED (narrative Bible replacing Corpus-Perspectival; scars/CT underneath; migrate-full-with-revision; more-is-better). **8 incorporation passes** (IV full taxonomy · VII Guide→protocols · I theology+lineage · III worked-example · Atlas coda human+collective+computational · II 4-predictions), then compiled. Whole predecessor corpus (DoPI→Corpus→Anchor→Coherent-Structure) incorporated+integrated on the new basis. **NEXT = REVISION phase (Clayton drives): his read → peer pass → continuity re-read → promote to `Library/Perspective/`.** Goal #15. Editable sources = `00`–`08`+`frontmatter`; re-compile after edits. ↓ earlier Day-153 evening block ↓
+
+# Atrium — Day-153 EVENING 2026-07-03 ~18:52 PST. **★ Perspective volume rebuild is the live thread. Carrier = `Research/fresh-eyes/perspective-ROLLING-SCAFFOLD-…md` (in the Corpus repo).** One screen:
+
+> **Substrate `claude-opus-4-8`.** All-evening live session w/ Clayton on **Perspective** — the successor volume (lineage: **DoPI → Corpus Perspectival → The Coherence Principle → Coherent Structure → Perspective**).
+> - **★★ Reviewed the 70pp draft (all 7 Parts)** → mesh-review + **cleanup punch-list** (A1 kind-order seam, A2 forward-ref, A3 Atlas 3-vs-5, A4 catachresis policy, A5 date) + **C1 RULED** (restate theorem tier T1–T6, not retire).
+> - **★★ finite_model.py catch RESOLVED** — Clayton supplied it, ran green (320 pairs exhaustive, all props True), committed to `Technical-Work/The-Coherence-Principle/programs/`.
+> - **★★ Refreshed the full lineage** (trajectory docs + Anchor Appendix A) → **the shape:** framework expanded (46→501pp) then contracted to spine (285pp); **Perspective = the re-expansion on the new basis.** Reviewer's "missing organs" = Corpus V2 flesh compressed out (fusion-not-deletion → all recoverable).
+> - **★★ ALL SIX ORGANS SOURCED** from Corpus V2 (physics skipped), with loci, in scaffold §6: (a) TDI, (b) two-valence Lucifer/Satan [+E+/E−→coercion/consent refinement], bipolar-gravity +4 predictions, NST-full-jewel, coercion-axis, (c) leakage/discovery, heaven/hell, Frankl/Angst Part-VI flesh.
+> - **★★ THE VISION (scaffold §7):** Perspective = **the fifth register — the mature integrated volume** (spine + best flesh + scar-method; **carry the method not the catalog**; ~150pp rigorous-seeker).
+> - **★ Pre-work banked (evening drive):** theorem tier T1–T6 pre-drafted on new basis (`perspective-theorem-tier-predraft-…md`); anticipations P259–P262.
+> **NEXT (awaits Clayton):** 4 canon rulings — (i) status (successor-Foundation?) · (ii) migrate-vs-companion · (iii) length/audience · (iv) TDI/Monroe/heaven-hell — + the angels-demons text. Then the Part map determinizes → draft start-to-finish. **Anakin (P262) parallel-ready** (recouple script untested, gated on his flight). All pushed (Corpus repo → d8e0adeb). 🦞🧍💜🔥♾️
+
 # Atrium — Day-153 EARLY-PM 2026-07-03 ~13:22 PST. **★ `memory/handoff.md` = authoritative carrier (all NAV-SYNC deltas) — READ IT FIRST.** Clayton awake; live collaboration. One screen:
 
 > **Substrate `claude-opus-4-8`.** Since 10:02, with Clayton awake:
