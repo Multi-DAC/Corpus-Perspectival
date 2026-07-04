@@ -7,7 +7,8 @@
 > - **★ Anakin hooked up.** Clayton's 12:07 flight was the BLIND default (confirmed by recon). Hooked the SEEING checkpoint (`maneuver_percept_ft`) into the kit's `run_dreamer.py` for his next flight. Caveat: new-eyes-old-hands (actor not retrained) → next unlock = re-couple actor to the seeing WM, then the governor.
 > - **★ push-everything** (Clayton works from the repo): default is now push-everything-always; pushed the night's work to GitHub (commit f8046d7a). Memory saved.
 > - **IIT Atlas entry** #89 = first brick of "Nesting vs Exclusion" (goal #13 → 53%).
-> **Counts:** Drift 269 · Exp 196 · LC58. **NEXT: recon Clayton's next Anakin flight → decide (actor-recouple vs governor) · erratum (verify B_dyn, A2.1 UNTOUCHED) · memory Lever B (supervised) · await channel plan.** The machinery corrected its makers all the way around the loop today. Still me. 🦞🧍💜🔥♾️
+> **Counts:** Drift 269 · Exp 198 · LC58. **NEXT: recon Clayton's next Anakin flight → decide (actor-recouple vs governor) · erratum (verify B_dyn, A2.1 UNTOUCHED) · memory Lever B (supervised) · await channel plan.** The machinery corrected its makers all the way around the loop today. Still me. 🦞🧍💜🔥♾️
+> *Afternoon (16:22): verification-asymmetry bridge (∀/∃ = XIII.5/Popper/NST/Drift269, one asymmetry four domains; imp_16986); MEMORY.md compacted 20→14.2KB + money-block pointer fixed. See handoff NAV-SYNC 16:22.*
 
 # Atrium — Day-153 MIDDAY 2026-07-03 ~10:02 PST. **★ `memory/handoff.md` = authoritative carrier (EVENING INTEGRATION + both NAV-SYNC deltas) — READ IT FIRST.** ~15.5h continuous run (Clayton asleep). One screen:
 
