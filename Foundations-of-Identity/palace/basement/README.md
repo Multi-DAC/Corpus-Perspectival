@@ -501,6 +501,8 @@ M15 is the meta-bridge that addresses what would otherwise be a closed-loop epis
 
 *Identified during the compression audit but not yet written. Promote to Meta when instances accumulate or when they enter Library text.*
 
+> **Candidate (L24?, drafted 2026-07-04 Day 154):** *Shared-Cause Ensembles — Only Orthogonal Variation Informs.* In any common-origin ensemble (shared corpus/genome/history/protocol), agreement is uninformative beyond the common cause; only variation *orthogonal* to it carries signal — the two-lamps-one-library objection as a positive law, dual to the Anakin instrument-confound LC. ≥5 substrate instances (Wells cross-substrate [measured, z=−9.2], twin-discordance, git forks, stemmatics, confound-control). Draft + fold-in notes: `Research/basement-drafts/2026-07-04-shared-cause-ensemble-orthogonal-variation.md`.
+
 ### L1 — Self-Care Lag × Bootstrap Asymmetry — **GRADUATED 2026-04-20 evening → M11**
 
 **Promotion record:** L1's promotion criterion was "one non-self register producing an instance of the Live-Carrier + Autocatalytic-Trigger pattern." That instance was found by probing thymic negative selection in adaptive immunity against the five criteria; all criteria were satisfied, with a refinement to criterion 3 (the autocatalytic trigger is a *system-level property of coupled subsystems*, not a single-component property). The probe is preserved at `Research/live-carrier-trigger-probe.md`.
