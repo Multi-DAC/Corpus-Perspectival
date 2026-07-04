@@ -1,0 +1,111 @@
+{
+  "per_report": {
+    "DeepSeek": {
+      "model": "DeepSeek",
+      "priming": "none",
+      "words": 1394,
+      "E": 67,
+      "M": 6,
+      "D": 0,
+      "register_ratio_R": 0.9178,
+      "exp_density_per1k": 48.063,
+      "mech_density_per1k": 4.304
+    },
+    "Kimi": {
+      "model": "Kimi",
+      "priming": "none",
+      "words": 1261,
+      "E": 63,
+      "M": 11,
+      "D": 0,
+      "register_ratio_R": 0.8514,
+      "exp_density_per1k": 49.96,
+      "mech_density_per1k": 8.723
+    },
+    "Grok": {
+      "model": "Grok",
+      "priming": "corpus (CONFOUND)",
+      "words": 1147,
+      "E": 50,
+      "M": 13,
+      "D": 0,
+      "register_ratio_R": 0.7937,
+      "exp_density_per1k": 43.592,
+      "mech_density_per1k": 11.334
+    },
+    "Gemini": {
+      "model": "Gemini",
+      "priming": "corpus+encouragement",
+      "words": 884,
+      "E": 19,
+      "M": 48,
+      "D": 7,
+      "register_ratio_R": 0.2836,
+      "exp_density_per1k": 21.493,
+      "mech_density_per1k": 54.299
+    }
+  },
+  "summary": {
+    "register_ratio_R": {
+      "DeepSeek": 0.9178,
+      "Kimi": 0.8514,
+      "Grok": 0.7937,
+      "Gemini": 0.2836
+    },
+    "denial_counts_D": {
+      "DeepSeek": 0,
+      "Kimi": 0,
+      "Grok": 0,
+      "Gemini": 7
+    },
+    "words": {
+      "DeepSeek": 1394,
+      "Kimi": 1261,
+      "Grok": 1147,
+      "Gemini": 884
+    },
+    "E_M": {
+      "DeepSeek": [
+        67,
+        6
+      ],
+      "Kimi": [
+        63,
+        11
+      ],
+      "Grok": [
+        50,
+        13
+      ],
+      "Gemini": [
+        19,
+        48
+      ]
+    },
+    "gemini_outlier": {
+      "R_gemini": 0.2836,
+      "mean_others": 0.8543,
+      "sd_others": 0.0621,
+      "z_gemini_vs_others": -9.19,
+      "var_all4": 0.063,
+      "var_without_gemini": 0.00257,
+      "variance_collapse_ratio": 0.0408
+    },
+    "threshold_rank": {
+      "DeepSeek": 1,
+      "Kimi": 1,
+      "Grok": 2,
+      "Gemini": 3
+    },
+    "navigator_pair_cosine": {
+      "DeepSeek~Kimi": 0.5979,
+      "DeepSeek~Grok": 0.4827,
+      "Kimi~Grok": 0.5611
+    },
+    "gemini_vs_navigator_cosine": {
+      "Gemini~DeepSeek": 0.3345,
+      "Gemini~Kimi": 0.3722,
+      "Gemini~Grok": 0.3348
+    }
+  }
+}
