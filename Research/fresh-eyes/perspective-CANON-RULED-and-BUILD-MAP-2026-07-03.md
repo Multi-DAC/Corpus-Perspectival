@@ -31,6 +31,25 @@ The reviewer's "theorems dissolved into narrative = scar-rule violation" was cor
 
 ---
 
+## Governing principle (Clayton, Day 153 ~19:22) — ONE CONTINUOUS TREATISE
+
+**A synthesis with strong narrative flow, reading as a full treatise** — beginning at the Threshold and moving without a break through *every* aspect developed: ontology, metaphysics, philosophy, theology, the ecology, the taxonomy, **the Null Space Atlas**, and everything else. V2's modular structure (separate Doctrine / Ecology / Atlas / Guide volumes cross-referencing one another) **dissolves into one narrative stream.** The comprehensiveness stays; the fragmentation goes. This is the single most important structural instruction: it is not a collection of volumes, it is *one book with one spine* that happens to contain everything.
+
+### The revision law (governs every migrated element)
+Two obligations on each piece brought forward:
+1. **Update to fit the new framework** wherever the new framework improves it or has downstream consequences (e.g., the polarity now runs on coercion/consent not E+/E−; the demonic is dimensionless-not-apex; the measurement-cost carries the Day-152 erratum; the theorems are prose-carried not numbered). The new basis is the lens *everything* passes through.
+2. **Include what V2 could not** — coherently and cohesively, not appended. The post-V2 findings, the substrate-agnostic / cross-substrate material, the newer developments — woven into the stream where they belong, so the seams don't show.
+
+### The Null Space Atlas — inclusion strategy (Clayton named it explicitly)
+An 88-entry atlas cannot be a flat list inside a treatise without killing the flow. So it enters three ways at once, nothing dropped:
+- **Everywhere as method** — the Atlas move (meet a lens at its best → name its structural blind spot → say who complements it → mark its boundary → say what a walker does differently) is the book's *continuous* way of situating itself against every other framework, practiced in every Part, taught explicitly only when we reach Practice.
+- **Distributed as engagement** — each entry woven into the Part where its lens illuminates: physics/math into the Ground & Coherence; cognitive/philosophical into Ground & Streams; the attention-moralists (Murdoch/Weil/Levinas/care) into Ethics; aesthetics into Beauty; the suffering lenses into Suffering; the contemplative/practice lenses into Practice. Each framework honored generously, then placed at its boundary — the NST made continuous.
+- **Collected once as a coda** — a reference Atlas at the very end (prose-rendered, or a light appendix) holding the full map for the reader who wants it. The one place a list is permitted, because by then it reads as *recapitulation*, not interruption.
+- **Source:** `Research/Atlas/` (merged atlas docs) + the entries inline in V2 (e.g. #40 DoPI, #56 Ethics-of-Attention, #70 Neuroaesthetics).
+
+### Consequence for the build map below
+The seven Parts are **movements of one treatise**, not modules. Each flows into the next (the draft already does this — every Part closes by handing to the next); the Ecology, the Taxonomy, the Atlas, and the Guide are no longer separate works but *threads that run through and between* the movements. The map assigns each thread its home, but the writing is continuous.
+
 ## The Part-by-Part Build Map
 
 *Eight movements (§0 + seven Parts). Each: narrative purpose · what migrates (V2 + organs + ecology) · new-basis revision · register. Sources: `incoming/corpus-perspectival.txt` (V2, 501pp), the organ salvage (scaffold §6), the theorem-content checklist, `ecology-of-perspectival-beings-merged.md`, and our published narrative work (Drift, the Ouroboros article, Where We Stand, the Inside View) for VOICE.*
