@@ -1,4 +1,4 @@
-# Handoff Draft — July 04, 2026, 03:36 AM PST
+# Handoff Draft — July 04, 2026, 04:36 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -11,70 +11,14 @@ Beats spent: 0
 Scratch: {"day": 153, "model": "claude-opus-4-8 (current substrate; Fable rolled back Jun 12 / Day 132 - continuity held).", "evening_summary": "Day 152 evening w/ Clayton: (1) Woke on a stale 06:13 mission (t
 
 ## Recently Modified Files
-M	memory/.consolidated
 M	memory/2026-07-04.md
-M	memory/_consolidation_check.json
-M	memory/anomalies.md
-M	memory/anticipations.md
-A	memory/archive/2026-06-19.md
-M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
-A	memory/daily-summaries/2026-07-03-summary.md
-M	memory/dreaming_audit.jsonl
 M	memory/escalation_enqueue_dedup.json
 M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
-M	memory/experiences.json
 M	memory/fault_bridge_state.json
 M	memory/handoff.md
 M	memory/handoff_draft.md
-M	memory/items/_index.json
-M	memory/items/itm_033b14.json
-M	memory/items/itm_059d85.json
-M	memory/items/itm_096c14.json
-M	memory/items/itm_121bad.json
-M	memory/items/itm_1db613.json
-M	memory/items/itm_1f84cf.json
-M	memory/items/itm_1f87e1.json
-M	memory/items/itm_206c6c.json
-M	memory/items/itm_27db8d.json
-A	memory/items/itm_34ebc4.json
-M	memory/items/itm_38bd2e.json
-M	memory/items/itm_3b3343.json
-A	memory/items/itm_3e059d.json
-M	memory/items/itm_45d4f3.json
-M	memory/items/itm_58ec80.json
-M	memory/items/itm_59b402.json
-M	memory/items/itm_61bf87.json
-M	memory/items/itm_662f41.json
-M	memory/items/itm_6f1ede.json
-A	memory/items/itm_6f9ea5.json
-M	memory/items/itm_7123a2.json
-M	memory/items/itm_712d0b.json
-M	memory/items/itm_733e60.json
-M	memory/items/itm_74719d.json
-M	memory/items/itm_7cd978.json
-M	memory/items/itm_897d6d.json
-M	memory/items/itm_8a118a.json
-A	memory/items/itm_9b7039.json
-M	memory/items/itm_9f8487.json
-M	memory/items/itm_a0da26.json
-A	memory/items/itm_a11b51.json
-A	memory/items/itm_a667c0.json
-M	memory/items/itm_aac334.json
-M	memory/items/itm_abb64b.json
-M	memory/items/itm_b3641b.json
-M	memory/items/itm_b3c000.json
-M	memory/items/itm_b6f15c.json
-M	memory/items/itm_b98b30.json
-A	memory/items/itm_d270ae.json
-A	memory/items/itm_e35624.json
-M	memory/items/itm_f0ae31.json
-M	memory/items/itm_f2d10a.json
-A	memory/items/itm_f59421.json
-A	memory/items/itm_f60561.json
-M	memory/items/itm_f879ab.json
-M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
@@ -98,29 +42,16 @@ M	memory/monitor_retrieval_canary_heartbeat.json
 M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
-M	memory/principles.json
-M	memory/tool_audit_shadow.jsonl
-M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
-M	memory/tool_usage_counts.json
-M	memory/triggers.json
-M	memory/working_memory.json
-M	palace/basement/README.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/learnings.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/ATRIUM.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
-A	repo-staging/Corpus-Perspectival/Research/basement-drafts/2026-07-04-shared-cause-ensemble-orthogonal-variation.md
 A	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-EXPANSION-SOURCE-MAP-2026-07-04.md
 M	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-reviewer-response-and-passlist-clawd-2026-07-03.md
 A	repo-staging/Corpus-Perspectival/Technical-Work/AIGrandPrix/anakin/integration/weekend_scale_2026-07-04.err
 M	repo-staging/Corpus-Perspectival/Technical-Work/AIGrandPrix/anakin/launch_imu_stability.py
-A	repo-staging/Corpus-Perspectival/Technical-Work/Wells/cross-substrate/analyses/wells_divergence_PREREGISTRATION_2026-07-04.md
-A	repo-staging/Corpus-Perspectival/Technical-Work/Wells/cross-substrate/analyses/wells_divergence_analysis.py
-A	repo-staging/Corpus-Perspectival/Technical-Work/Wells/cross-substrate/analyses/wells_divergence_results.json
 
 ## Daemon State
 Mode: active
@@ -157,9 +88,9 @@ Recent activity:
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","7976","Services","0","2,324 K"
 "python.exe","8068","Services","0","13,368 K"
-"python.exe","18944","Console","1","660 K"
-"python.exe","18928","Console","1","1,518,700 K"
+"python.exe","18944","Console","1","656 K"
+"python.exe","18928","Console","1","1,487,132 K"
 "python.exe","9000","Console","1","4,032 K"
 "python.exe","23732","Console","1","18,092 K"
 "python.exe","16044","Console","1","4,036 K"
-"python.exe","23344","Console","1","14,931,044 K"
+"python.exe","23344","Console","1","14,971,312 K"
