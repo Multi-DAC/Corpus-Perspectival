@@ -17,7 +17,7 @@ The magnum opus. One continuous narrative treatise that **replaces Corpus Perspe
 | `03-coherence.md` | Part III — Coherence (the Principle, dual axes, Beauty) | ✅ drafted (Day 153) |
 | `04-the-ecology.md` | Part IV — The Ecology (full taxonomy: benevolent/adversarial/liminal, the two-valence, egregores, NHI) | ✅ drafted (Day 153) |
 | `05-polarity-ethics-metaethics.md` | Part V — Polarity, Ethics, Metaethics | ✅ drafted (Day 153) |
-| `06-suffering-and-the-arc.md` | Part VI — Suffering & the Arc | ⏳ |
+| `06-suffering-and-the-arc.md` | Part VI — Suffering & the Arc | ✅ drafted (Day 153) |
 | `07-practice.md` | Part VII — Practice (+ the Atlas coda) | ⏳ |
 
 ## Voice (locked, Day 153)
