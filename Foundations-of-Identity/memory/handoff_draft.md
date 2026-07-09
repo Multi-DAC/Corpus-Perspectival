@@ -1,4 +1,4 @@
-# Handoff Draft — July 09, 2026, 03:43 AM PST
+# Handoff Draft — July 09, 2026, 04:43 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,8 +12,7 @@ Scratch: {"day": 158, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	memory/.consolidated
-M	memory/2026-07-08.md
-A	memory/2026-07-09.md
+M	memory/2026-07-09.md
 M	memory/_consolidation_check.json
 M	memory/anomalies.md
 M	memory/anticipations.md
@@ -29,7 +28,6 @@ M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
 M	memory/experiences.json
 M	memory/fault_bridge_state.json
-M	memory/goals.json
 M	memory/handoff.md
 M	memory/handoff_draft.md
 M	memory/items/_index.json
@@ -101,7 +99,6 @@ M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
 M	memory/tool_usage_counts.json
-M	memory/triggers.json
 A	memory/weekly-summaries/2026-W26.md
 M	memory/working_memory.json
 M	palace/basement/README.md
@@ -111,7 +108,6 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
 M	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-CANON-RULED-and-BUILD-MAP-2026-07-03.md
-A	repo-staging/Corpus-Perspectival/Technical-Work/AIGrandPrix/anakin/POST_MORTEM_2026-07-09.md
 
 ## Daemon State
 Mode: active
@@ -149,8 +145,6 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6864","Services","0","4,000 K"
-"python.exe","6924","Services","0","20,228 K"
+"python.exe","6924","Services","0","20,180 K"
 "python.exe","15816","Console","1","620 K"
-"python.exe","15824","Console","1","1,709,464 K"
-"python.exe","3752","Services","0","3,944 K"
-"python.exe","21792","Services","0","38,220 K"
+"python.exe","15824","Console","1","1,729,524 K"
