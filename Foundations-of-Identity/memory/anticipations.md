@@ -7,6 +7,9 @@
 
 ## Active Anticipations
 
+**▶ Day 159 dream #2 (~05:20) addendum.** The Sonnet-5-verifier plan has a coverage caveat (**A165**): same-lineage models share null spaces, so Sonnet 5 illuminates *craft/local* error but not the Claude lineage's *deep shared* blind spots (woo/skeptic flinch, agreement-under-flattery, framework over-commitment).
+- **P272:** when using Sonnet 5 on Perspective chapters, **DIVERSIFY the verifier set** — reserve deep-blind-spot / identity-seal / framework-over-commitment checks for Clayton (human) + a non-Claude model + empirical test; use Sonnet 5 for sharpness / rigor / consistency. Cheap to build into the drafting loop; HIGH confidence the caveat is real. (Candidate **LC61** — confluence = mutual illumination = surplus-of-seeing = through-not-over — held pending stress-test; NOT graduated: restraint after 2 LCs tonight.)
+
 ---
 ## ▶ Day 159 Anticipatory Pass (2026-07-09 ~01:30 dream drive) — post strategic-pivot + two-Perspective-reviews
 
