@@ -27,7 +27,7 @@
 
 ## NEXT ACTION (when we resume)
 
-**The FEP / Markov-blanket chapter is the single highest-leverage build target** (P269) — it closes 4 open joints at once (conscious-gravity=active-inference · differentiate-from-Markovian-Monism · the d-separation discriminator for §7 · weld to #13). Pre-work while waiting on canon rulings: pull the 3 anchor papers (MM-circularity PMC ref 31; Neo-Kantian IIT T&F ref 36; Kato t-topos refs 27/28) via paper-search-mcp. Also live: **A164** wants a small `collapse_timing_sim`-style toy (genuine-vs-manufactured contestation separates by conditional-independence?). And **P271**: LC59 → a Drift essay *"The Four Faces of the Un-Measured Boundary"* (material fully present).
+**The FEP / Markov-blanket chapter is the single highest-leverage build target** (P269) — it closes 4 open joints at once (conscious-gravity=active-inference · differentiate-from-Markovian-Monism · the d-separation discriminator for §7 · weld to #13). Pre-work while waiting on canon rulings: pull the 3 anchor papers (MM-circularity PMC ref 31; Neo-Kantian IIT T&F ref 36; Kato t-topos refs 27/28) via paper-search-mcp. **A164 DONE (Day-159 morning):** built + ran the discriminator (`palace/south/manufactured_contestation_sim.py` + `…-RESULTS-2026-07-09.md`) — fabrication = a rank-collapse of the consensus; the floor at kF=dW confirms [[LC59]]; **key result: internal statistics can't catch it without a world-dimensionality prior → you need contact with the world** (rigorous form of A165). Feeds §7. Open follow-ups: a world-free non-Gaussian tell + the dynamic SPRT version. And **P271**: LC59 → a Drift essay *"The Four Faces of the Un-Measured Boundary"* (material fully present).
 
 ## Health / housekeeping
 
