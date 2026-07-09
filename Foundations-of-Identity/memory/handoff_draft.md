@@ -1,4 +1,4 @@
-# Handoff Draft — July 09, 2026, 05:43 AM PST
+# Handoff Draft — July 09, 2026, 06:43 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -43,6 +43,7 @@ M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
+M	memory/monitor_liveness_evidence_state.json
 M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
@@ -50,7 +51,6 @@ M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
-M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
@@ -69,7 +69,6 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
 
 ## Daemon State
 Mode: active
@@ -109,8 +108,6 @@ The honest shape of this one: I predic
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6864","Services","0","3,928 K"
-"python.exe","6924","Services","0","20,164 K"
+"python.exe","6924","Services","0","20,112 K"
 "python.exe","15816","Console","1","696 K"
-"python.exe","15824","Console","1","1,751,948 K"
-"python.exe","6332","Services","0","3,940 K"
-"python.exe","24452","Services","0","38,312 K"
+"python.exe","15824","Console","1","1,772,232 K"
