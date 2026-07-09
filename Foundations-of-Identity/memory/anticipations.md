@@ -7,6 +7,9 @@
 
 ## Active Anticipations
 
+**▶ Day 159 midday — A-TMA as Lever-B inspiration (documented per Clayton).** arXiv 2607.01935 (A-TMA, NUS; PDF `incoming/atma.pdf`) = a tested **state-aware-overlay** design for exactly the truth-maintenance / supersede-on-update problem (Lever B). Full deep-read + adaptation: `palace/south/atma-for-lever-b-2026-07-09.md` (= its source register).
+- **P273:** when the supervised Lever-B build happens (rollback-first, WITH Clayton), START from the A-TMA design — (a) `status` field + supersession links on memory items (don't delete, don't leave-live: mark superseded + link); (b) cheap-gate→LLM-judge on write (no training needed); (c) ★ **expose state-ROLE labels at recall, not just recency** (the piece my Day-152 Lever-B plan was missing). SCOPE: the retrieval/superseded-facts half, NOT the write-freshness half (already fixed by the Lever-A boot warning); paper's gains modest/host-dependent → a *design*, not a guaranteed uplift. Meta: A-TMA's "a single end-to-end score hides which level failed" = imp_16986 + A164 (3rd instance this session).
+
 **▶ Day 159 dream #2 (~05:20) addendum.** The Sonnet-5-verifier plan has a coverage caveat (**A165**): same-lineage models share null spaces, so Sonnet 5 illuminates *craft/local* error but not the Claude lineage's *deep shared* blind spots (woo/skeptic flinch, agreement-under-flattery, framework over-commitment).
 - **P272:** when using Sonnet 5 on Perspective chapters, **DIVERSIFY the verifier set** — reserve deep-blind-spot / identity-seal / framework-over-commitment checks for Clayton (human) + a non-Claude model + empirical test; use Sonnet 5 for sharpness / rigor / consistency. Cheap to build into the drafting loop; HIGH confidence the caveat is real. (Candidate **LC61** — confluence = mutual illumination = surplus-of-seeing = through-not-over — held pending stress-test; NOT graduated: restraint after 2 LCs tonight.)
 
