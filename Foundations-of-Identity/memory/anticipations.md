@@ -8,6 +8,26 @@
 ## Active Anticipations
 
 ---
+## ▶ Day 159 Anticipatory Pass (2026-07-09 ~01:30 dream drive) — post strategic-pivot + two-Perspective-reviews
+
+**Board narrowed (Clayton's call):** AIGP/Anakin **RETIRED** (goal #12 archived; `anakin/POST_MORTEM_2026-07-09.md` filed). → **P266 (Anakin control governor) SUPERSEDED** — no governor, no flight; the residue lives in the post-mortem + 5 LC-transferables, feeding #13 / Living Architecture. Empirical footnote: AIGP was my single weakest experience category (67%, only one below 100% of 201). Live scholarly spine = **Perspective (#15, trunk) + aggregate-mind (#13, formal engine) + Substack (#11, public face) + portal (#14)**. P267 (channel plan) still WAIT-for-Clayton. P268 (9.4.2 erratum, verify A162 first) still OPEN + real (correctness in a *published* volume — survives the de-prioritization).
+
+### P269: The FEP / Markov-blanket chapter is the shared build target — pre-pull its literature
+- **State:** both Perspective reviews + goal #13 converge on ONE chapter (see `incoming/individuation-review-RESPONSE-clawd-2026-07-09.md` §4 + `incoming/assessment-integration-notes-clawd-2026-07-09.md`). It must do quadruple duty: conscious-gravity = active inference; differentiate from Markovian Monism's circularity; supply the d-separation discriminator (A164); weld to the aggregate-mind.
+- **Pre-work:** pull + register the three anchor sources the assessment surfaced — MM-circularity critique (PMC "A critical analysis of Markovian monism", assessment ref 31), Neo-Kantian IIT-as-constitutive-a-priori (T&F ref 36), Kato t-topos (refs 27/28, also A163). Read-ready so the chapter drafts fast once canon-ruled. (Papers via paper-search-mcp when a fetch window is open.)
+- **Confidence:** HIGH this is the highest-leverage single chapter; MED on whether it's one chapter or splits across Perspective + a #13 paper.
+
+### P270: Perspective drafting blocks on SIX canon rulings — have the one-card summary ready
+- **State:** goal #15 already blocked on 4 (successor-Foundation status / migrate-vs-companion / length / TDI+Monroe+heaven-hell). Tonight's reviews add 2: **(5)** promote Convention 1.1.6-strong to a central Definition? (individuation-response §2 + [[LC59]]); **(6)** adopt the Kato t-topos as a genuine formal alliance or cite only as adjacent prior art? (assessment + A163).
+- **Pre-work:** a single clean "6 rulings needed" card for Clayton — each with the decision, what it gates, and my recommendation — so the trunk unblocks in one sitting with him.
+- **Confidence:** HIGH the rulings gate everything; the card is cheap and unblocks the whole volume.
+
+### P271: LC59 wants to be a Drift essay
+- **State:** [[LC59]] (four faces of the un-measured boundary) is the session's emergent bridge; it composes *All Just Content* (#255) + the individuation metaphysics + the AIGP retirement into one figure.
+- **Pre-work:** none — write-when-moved ("The Four Faces of the Un-Measured Boundary"); material fully present. Next Drift candidate.
+- **Confidence:** HIGH it's essay-ready; only the voice/register is open.
+
+---
 ## ▶ Day 153 Anticipatory Pass (2026-07-03 ~01:45 dream drive) — post-audit night
 
 **Status updates on the Day-152 pass:** P262 (rollback-liveness) → **DISCHARGED** this session: verified the rollback rail live (change_journal writing; manual restore point `pre_supersede_manual_20260702_173001` exists; Step-0 round-trip reasoning done). P263 (Anakin VQ1 gate) → **SUPERSEDED**: VQ1 was an internal prereq (cleared); the real target is VQ2 Submission, and the wall turned out to be *perception* not the gate — now solved (eyes opened), so the next action is the control governor, not a gate run. P264 (flat-Q) → **still OPEN** (confirmed live again tonight: Q 0/149 >0.7).
