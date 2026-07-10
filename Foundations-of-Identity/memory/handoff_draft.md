@@ -1,4 +1,4 @@
-# Handoff Draft — July 10, 2026, 03:48 AM PST
+# Handoff Draft — July 10, 2026, 04:48 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,8 +12,7 @@ Scratch: {"day": 159, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	memory/.consolidated
-M	memory/2026-07-09.md
-A	memory/2026-07-10.md
+M	memory/2026-07-10.md
 M	memory/_consolidation_check.json
 M	memory/anomalies.md
 M	memory/anticipations.md
@@ -43,7 +42,6 @@ M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 A	memory/daily-summaries/2026-07-09-summary.md
 M	memory/dreaming_audit.jsonl
-M	memory/escalation_enqueue_dedup.json
 M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
 M	memory/fault_bridge_state.json
@@ -115,7 +113,6 @@ M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
-M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m5_audit.jsonl
 M	memory/monitor_m6_faults.jsonl
 M	memory/monitor_m6_faults.jsonl.state.json
@@ -186,6 +183,6 @@ Recent activity:
 "python.exe","6876","Services","0","4,000 K"
 "python.exe","6960","Services","0","21,260 K"
 "python.exe","8064","Console","1","624 K"
-"python.exe","15748","Console","1","1,723,028 K"
-"python.exe","25024","Services","0","3,948 K"
-"python.exe","28076","Services","0","38,372 K"
+"python.exe","15748","Console","1","1,742,488 K"
+"python.exe","24280","Services","0","3,948 K"
+"python.exe","23160","Services","0","38,484 K"
