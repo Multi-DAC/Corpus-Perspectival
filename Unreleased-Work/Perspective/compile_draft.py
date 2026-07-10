@@ -16,6 +16,7 @@ ORDER = [
     "06-suffering-and-the-arc.md",
     "07-practice.md",
     "08-atlas.md",
+    "09-back-matter.md",
 ]
 OUT = "Perspective-First-Draft.md"
 

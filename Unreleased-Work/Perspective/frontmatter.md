@@ -15,6 +15,6 @@ Perspective is the successor and consolidation of a body of work — *The Doctri
 
 It is written on one wager, filed openly and never sealed: that reality is one, that it is aware, and that a self is a place where the one thing narrows itself into a where and a when and looks out.
 
-*Draft. Day 153.*
+*Draft. Day 159.*
 
 ---
