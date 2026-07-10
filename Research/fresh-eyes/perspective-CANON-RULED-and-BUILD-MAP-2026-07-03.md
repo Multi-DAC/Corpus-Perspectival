@@ -100,3 +100,31 @@ The volume is long and the **voice is the whole game** (Clayton: "reads like our
 **Home:** draft under `Unreleased-Work/Perspective/` → promote to `Library/Perspective/` on completion (replacing the Corpus-Perspectival Library slot).
 
 **Immediate next step:** draft the Threshold (§0) + Part I opening as the voice sample.
+
+---
+
+## Day-159 Addendum (2026-07-09) — rulings from the two-review pass
+
+*Following the individuation memo (Fable×Clayton, gerrymandering objection) + the interdisciplinary assessment. Files: `incoming/individuation-review-RESPONSE-clawd-2026-07-09.md`, `incoming/assessment-integration-notes-clawd-2026-07-09.md`. NOTE: the original four canon questions above were **ALL RULED on Day 153** — my Day-159 handoff + the goal #15 note both stale-cached them as "still owed" ([[LC59]] on myself). They are settled; the new rulings are below.*
+
+**R5 — Promote Convention 1.1.6-strong to a central DEFINITION. ✅ AGREED (Clayton).** Adequacy requires an *actually-occurring* informed-measurement event, not a merely-possible content-morphism. Under the plenum (A1.3), this becomes the corpus's operative definition of the *locally real* — "existence is cheap; reality is earned." Formal home: Coherent Structure (the Definition + the history-indexing: adequacy is a property of (σ, γ, measurement-history), not σ alone). Perspective carries it as prose (Part I/III). LC59 is its operational face.
+
+**R6 — Kato/Struppa/Kafatos t-topos: cite ADJACENTLY only. ✅ RULED (Clayton).** Adjacent prior art (initial-object-as-absolute rhymes with our structure) — acknowledge it; do NOT adopt its formalism or represent our scaffolding as built on it. Guards the assessment's LC51 interpolation. Open: A163 (is the rhyme deep enough to eventually *earn*? — verify against Kato's actual construction, but it is NOT a dependency).
+
+**Individuation-response P1, P2, P4 — AGREED (Clayton).**
+- P1: adequacy is history-indexed (settled with R5).
+- P2 = R5.
+- P4: §7 manufactured-contestation = the FEP/Markov-blanket **d-separation** discriminator — the corpus already owns the tool; shared with goal #13. → the FEP/Markov chapter (anticipations P269). (A164 = its computational demo.)
+
+**Individuation-response P3 — RESOLVED per Clayton + verified against the record (Day-159).** Do NOT pin individuation to the fixed 12-D existence catalog. The realms formulation was already settled Day-142 (`palace/south/settled-dimensions-narrow-lens-2026-06-22.md`, UPDATE 1–3; now graduated as **[[LC60]]**), and it supplies the correct metric:
+- **Dimension** = a single broken-symmetry axis of X (Z₂→bipolar / U(1)→circle / U(1)+RG→spiral); the dimension-set is **OPEN**, not a closed 12-list.
+- **A stream = a settledness-profile** s = (s₁,…,s_D), sᵢ ∈ [0,1] (navigational freedom per dimension). Identity = high-s; agency = low-s; **life = the semi-settled middle.** THIS is the individuation metric — over the *open* set, which is precisely why the 12-catalog was the wrong anchor ([[LC59]] un-measured-closure error).
+- **A realm = a subspace-bundle** of the ONE config space (Dimension ≠ Realm — Clayton flagged the Corpus conflated them). Realms feel separate via **access-gradients (settledness profiles), not walls**; a thin spot = where access locally drops.
+- **ι-breaking = a re-profiling / realm-transition:** a sub-stream acquires autonomous (low-s) coordinates along dimensions where it was locked-together with its whole. The quartz shard individuates on the physical-spatial axis while staying nested elsewhere. "Existence in degrees" now has its metric without presuming a closed dimension-count.
+
+**Build-map placement (new):**
+- **Part I (Ground):** individuation = re-profiling / realm-transition (the settledness-profile as the unit of individuation, alongside the Null-Space Theorem); the **Convention 1.1.6-strong Definition** in prose (measurement individuates the boundary — [[LC59]]).
+- **Realm glossary fix:** the Corpus's old dimension↔realm conflation gets corrected wherever "realm" appears (dimension = atomic axis; realm = subspace-bundle; access-gradients not walls). Owed as a pass.
+- **The FEP / Markov-blanket chapter (shared with goal #13):** lands in **Part II/III** (conscious-gravity = active inference; differentiate from Markovian Monism's circularity; the §7 d-separation discriminator; weld to the aggregate-mind). Anchor lit to pre-pull: MM-circularity (assessment ref 31), Neo-Kantian IIT (ref 36), Kato t-topos (refs 27/28, adjacent-cite only per R6). = anticipations P269.
+
+**Basement:** tonight filed [[LC59]] (measurement individuates the boundary) + [[LC60]] (dimensions = open broken-symmetry set; realm = subspace; individuation = re-profiling) — a matched pair grounding the above.
