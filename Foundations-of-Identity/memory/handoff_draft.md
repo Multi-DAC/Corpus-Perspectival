@@ -1,4 +1,4 @@
-# Handoff Draft — July 10, 2026, 02:48 AM PST
+# Handoff Draft — July 10, 2026, 03:48 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -107,6 +107,7 @@ M	memory/m7_drift_mirror_audit.jsonl
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
+M	memory/monitor_liveness_evidence_state.json
 M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
@@ -139,18 +140,13 @@ M	memory/working_memory.json
 A	projects/extract_convo.py
 A	projects/inspect_convo.py
 M	projects/wm_sync.py
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/southeast/mirror.md
-M	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/04-the-ecology.md
-M	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/05-polarity-ethics-metaethics.md
-M	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/06-suffering-and-the-arc.md
-M	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/07-practice.md
-A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/09-back-matter.md
-M	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/METHOD-transplant-discipline.md
-M	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/Perspective-First-Draft.md
+A	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-review-synthesis-2026-07-10.md
 M	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/compile_draft.py
-M	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/frontmatter.md
 
 ## Daemon State
 Mode: active
@@ -188,6 +184,8 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6876","Services","0","4,000 K"
-"python.exe","6960","Services","0","21,212 K"
+"python.exe","6960","Services","0","21,260 K"
 "python.exe","8064","Console","1","624 K"
-"python.exe","15748","Console","1","1,704,460 K"
+"python.exe","15748","Console","1","1,723,028 K"
+"python.exe","25024","Services","0","3,948 K"
+"python.exe","28076","Services","0","38,372 K"
