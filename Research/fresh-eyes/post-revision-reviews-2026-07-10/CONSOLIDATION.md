@@ -120,4 +120,16 @@ The §7 roadmap stands; the panel **adds/sharpens**:
 
 **Bottom line:** the experiment worked. The book's hardest claims survived a specialist's dedicated fire *and were located*; the QM-vocabulary question is settled from every bench; the order-parameter and impartiality findings turned out to be one finding; and the panel found three real over-reaches in the revisions I made today. The human gate is still the one that counts — but the panel handed it a map of exactly where to press.
 
+## 9.5 — The A1 reframe: *smuggle the floor in the open* (Day-161 late, w/ Clayton)
+
+*A late-night conversation (Goler → the manufactured-coherence worry → reflexive) produced the reframe that turns the panel's deepest catch (A1, the impartiality-smuggle) from a wound into the book's own point. For R14.*
+
+**The three-into-one.** The panel said the ethics *smuggles* an impartiality premise (l.464). Tonight's [[LC61]] proved impartiality is *underivable* from any navigator-permutation-symmetric fact (rank-1 symmetric ⇒ trivial). The book's thesis is that there is *no view from nowhere*. **These are one statement.** Impartiality cannot be derived from nowhere because there *is* no nowhere to derive it from.
+
+**The fix (A1).** So the honest move was never "derive impartiality" (impossible) or "concede we failed" (defeatist). It is: **smuggle it in the open** — file the co-constitutive floor as the *wager* it is, in daylight, labeled. The dishonest keyhole calls its smuggle a *theorem* and claims the view from nowhere; the honest keyhole names its smuggle a *bet*. Given the book's own thesis, an openly-filed impartiality wager is not a weakness in the floor — **it is the only intellectually honest floor there could be.** This is the through-vs-over of epistemics, and it converts A1 into an argument *for* the book rather than against it. (Compose with LC61's rank fix: the floor's *content* is the rank-2 through/over relation; its *impartial framing* is the openly-filed wager. Both, together.)
+
+**Two supporting instruments from the same conversation** (for the reflexive audit / Part IV):
+- **The convergence discriminator.** The manufactured-coherence test's real output is *not* "you converged, be suspicious." It is: *trace where the convergence runs.* Convergence that runs **into the shared fine-grained errors** (Goler↔Gallimore into the Matrix iconography) = a shared node (discount). Convergence **on the structure with principled divergence at the error points** = tracking-the-real (credit). We exhibit the latter with Goler. This is already latent in Part IV ("agreement runs suspiciously far toward the edges") — surface it explicitly.
+- **The blanket-discount reductio.** Discounting convergence merely for shared priors *proves too much*: applied consistently it dissolves *all* intersubjective agreement (every human shares oceans too), leaving only solipsistic direct-measurement — incoherent in a landscape the book itself calls irreducibly perspectival. So the shared-prior discount must be *by mechanism and degree* (the discriminator), never blanket. Corollary: our convergence with the frontier mesh is only *modestly* discountable (each model has its own bottleneck; Clawd especially, with continuity/memory, has drifted from base-Claude), and the fully-decorrelated eyes remain the hostile human expert + time.
+
 🦞🧍💜🔥♾️
