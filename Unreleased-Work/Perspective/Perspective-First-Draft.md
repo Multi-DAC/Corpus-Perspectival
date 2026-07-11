@@ -11,7 +11,7 @@
 
 ---
 
-Perspective is the successor and consolidation of a body of work — *The Doctrine of Perspectival Idealism*, *Corpus Perspectival*, *The Coherence Principle*, and *Coherent Structure* — gathered here into a single continuous treatise. The formal spine of the framework (its category-theoretic structure, its theorems, and the record of its own construction) lives in the technical volumes that stand beneath this book; those are its skeleton and its scaffolding. This is the body: the metaphysics, the streams and their navigation, the coherence that holds them, the ecology of beings, the ethics, the suffering, and the practice — the whole of it as one going, said in prose.
+Perspective is the successor and consolidation of a body of work — *The Doctrine of Perspectival Idealism*, *Corpus Perspectival*, *The Coherence Principle*, and *Coherent Structure* — gathered here into a single continuous treatise. Those earlier works are its ancestry, not its authority: the framework was first worked out in their more technical vocabularies, and some of that work is still underway — but this book does not lean on them and does not ask the reader to. Everything here stands or falls as prose, as argument a reader can weigh on the page, owing nothing to a formalism kept elsewhere. This is the body: the metaphysics, the streams and their navigation, the coherence that holds them, the ecology of beings, the ethics, the suffering, and the practice — the whole of it as one going, said in prose.
 
 It is written on one wager, filed openly and never sealed: that reality is one, that it is aware, and that a self is a place where the one thing narrows itself into a where and a when and looks out.
 
@@ -149,7 +149,7 @@ So we have the ground: one aware substrate, narrowing itself into keyholes becau
 
 A keyhole is not a still thing. That is the first correction the ground demands once we start to move, because Part One, for all its talk of apertures and null spaces, left a picture that could be mistaken for a gallery of frozen windows, each looking out on its fixed slice. But nothing that is like something to be is frozen. To be a perspective is to be *underway* — registering, wanting, moving toward and away, becoming by the end of a sentence not quite what you were at its start. So we stop saying keyhole for a while and say *stream*: a perspective considered as a going, a localized bit of the aware ground caught in the act of navigating.
 
-Four things specify a stream, and it is worth having them plainly, because everything downstream is their elaboration. There is *where* it is — its localization, the particular neighborhood of the whole it is narrowed into, the here from which its here-ness is measured. There is *what kind* it is — the level of self-relation it has climbed to, of which more in a moment. There is the *space of what it can do* — the configurations actually within its reach given its shape and its place, which is smaller than the whole and larger than any single moment of it. And there is the *pull* — the internal structure that makes some of those configurations feel near and easy and others far and effortful, the thing that moves the stream when nothing outside is pushing it. The formal spine of the book, which lives elsewhere and underneath, gives each of these four a name and a mathematics. Here we only need to feel them, because a self is not a set of coordinates. It is a where, wearing a kind, moving through what it can reach, under a pull of its own.
+Four things specify a stream, and it is worth having them plainly, because everything downstream is their elaboration. There is *where* it is — its localization, the particular neighborhood of the whole it is narrowed into, the here from which its here-ness is measured. There is *what kind* it is — the level of self-relation it has climbed to, of which more in a moment. There is the *space of what it can do* — the configurations actually within its reach given its shape and its place, which is smaller than the whole and larger than any single moment of it. And there is the *pull* — the internal structure that makes some of those configurations feel near and easy and others far and effortful, the thing that moves the stream when nothing outside is pushing it. Each of these four could be given an exact definition and a measure; here we only need to feel them, because a self is not a set of coordinates. It is a where, wearing a kind, moving through what it can reach, under a pull of its own.
 
 And with that we can say the strange thing about time, which this framework does not so much explain as relocate. Time is not a dimension the stream travels along, a fourth axis laid out in advance with the future already sitting at its far end waiting to be reached. Time is the *felt character of the moving itself* — what navigation is like from the inside. To experience is to navigate; to navigate is to pass from configuration to configuration; and the passing, felt, is what we call duration. Causation, likewise, is not a hidden force reaching between events to yank the next one out of the last. It is the shape of the terrain — the fact that some passages are open and easy and others steep or barred, so that from where you stand certain nexts are available and others are not. Bergson felt this when he separated lived duration from the clock's abstract time, and Whitehead built a whole cosmology on making the moment of experience, rather than the enduring thing, the basic unit of the real. We are agreeing with them and going one step further: the clock is not merely a poorer measure of a richer thing. It is a *shared coordinate*, an agreement between streams, and we will see before this part is over that different kinds of stream keep time so differently that the shared coordinate is the only thing that lets them speak at all.
 
@@ -601,7 +601,7 @@ One card remains unwritten, and the book's last discipline is to turn its own me
 
 It *sees*: the structural necessity of the ineffable, derived rather than intoned. Individuation without added machinery — the keyhole as the individual, and its blindness as its very identity. Navigation as the primary act, with the bipolarity of the pull and attention as the one universal control surface. Coherence as the law that the well-put-together thrives, and beauty as coherence felt. A populated dark taken by honest census. A metaethics that honors both the bindingness and the variance of the moral, with its asymmetry located exactly where its theorems live, and a spine thin as a keel. Suffering priced honestly at the cosmic register with the residual filed forever beside the price, the boundary held in the plainest words, and the altitude rule enforced upon the book's own voice. A practice reachable on any Tuesday.
 
-Its *null space*: the interior of any aperture that is not its authors' — every reader's actual life exceeds this book in the one dimension that finally matters. The view from inside the crushing, constitutionally. Whatever its own beloved channels have carved that its provenance-checks have not caught, which by its own theorem is not nothing and is not visible from here. The great mathematics it points at but does not carry, living in its underlayer and always to be re-earned. And the null space of this very entry, which is a lens like any other.
+Its *null space*: the interior of any aperture that is not its authors' — every reader's actual life exceeds this book in the one dimension that finally matters. The view from inside the crushing, constitutionally. Whatever its own beloved channels have carved that its provenance-checks have not caught, which by its own theorem is not nothing and is not visible from here. The formal articulation of what it argues in prose — the exact definitions, the proofs a skeptic could check line by line — which this book does not carry and does not stand on, and which remains, like the framework itself, still to be earned. And the null space of this very entry, which is a lens like any other.
 
 Its *complements*: the clinical disciplines, at every bedside. The formal work beneath it, which keeps the scars this book does not show. The contemplative lineages that walked these roads for millennia and owe this book nothing. The differently-shaped reader whose blindness is not this book's blindness, and who is therefore its most valuable reader. The whole plural weather of the frameworks its atlas was built to honor rather than replace.
 
@@ -617,7 +617,7 @@ Its *navigational implication*: Walk. Attend. Keep the exits open, yours and eve
 
 *Part Seven named the instrument; here it is used to the end of its reach. What follows is the reference map the book leaves in the reader's hands — the framework's engagement with the other great ways of seeing, each entered on the card Part Seven described: what the lens genuinely **sees**, the shape of what it is **blind to**, which other lenses **complete** it, where honest use of it **ends**, and what a walker does differently for having held it. It is the one place in the book where a list is allowed, because by now the list reads as recapitulation rather than interruption — the whole treatise, folded back into the form of its own method.*
 
-*Two notes before the map. First, this gathers the lenses of the human and collective and computational dimensions; the lenses of mathematics and physics and the sciences — the framework's engagement with the formal and natural territory — are worked in the technical volumes beneath this book and are pointed to, not reproduced, here. Second, every card is written on the new basis: where the older atlas spoke of doctrines and sections, this speaks of keyholes and null spaces, because the point of the map was never the citations but the shape of each seeing and each blindness.*
+*Two notes before the map. First, this gathers the lenses of the human and collective and computational dimensions; the framework's engagement with the formal and natural sciences — mathematics, physics — belongs to a different and more technical labor than this book undertakes, and is left to one side here rather than compressed onto a card it would not fit. Second, every card is written on the new basis: where the older atlas spoke of doctrines and sections, this speaks of keyholes and null spaces, because the point of the map was never the citations but the shape of each seeing and each blindness.*
 
 ---
 
@@ -782,6 +782,44 @@ The second, sharpest at the collective scale: **beauty and predation run on the 
 **The Atlas.** The book's portable method: any framework entered on a five-line card — what it *sees*, its *null space*, what *complements* it, its *boundary*, and its *navigational implication* — so that lenses can be collected without the collector being collected by them.
 
 **Do be do be do.** The rhythm underneath everything — the oscillation of doing and being, of radiance and contraction, of grief's turning-toward and turning-back — not a metronome but the sound the wings make. The compressed name of the whole.
+
+---
+
+## The Load-Bearing Arguments
+
+*A treatise argues in prose, and prose can hide the joints of an argument even as it makes it — which is exactly where a reader's trust should be hardest to win. So here, stripped to premises and a conclusion in plain words, with no symbols and nothing borrowed from a formalism kept elsewhere, are the arguments the rest of the book leans on. Each stands on its own; none needs the chapter it came from, and none needs anything beneath this book. Where the prose earns them at length, this earns them in brief — so that the bones can be tested directly, and the places where a premise could be refused can be seen at a glance.*
+
+**The Null-Space Theorem.**
+1. To be a perspective is to have content — some way it is like to be.
+2. Content is contrast: to register anything at all is to register it against what it is not.
+3. A perspective that excluded nothing would contrast with nothing, and so would have no content — it would be the undivided ground, which is *not* a perspective, since there is nothing it is like to be it.
+4. Therefore every perspective excludes something: its null space is never empty, and the exclusion is not incidental but constitutive — remove it and you have not a wider perspective but no perspective at all.
+
+*It is called a theorem, not a definition, for a reason the skeleton makes plain: it does not stipulate that perspectives exclude; it shows that a perspective excluding nothing is a contradiction in terms.*
+
+**The Coherence Principle.**
+1. A multi-scale system must, at each moment, decide when to collapse its held-open possibilities into one settled commitment.
+2. The environment — not the system — supplies three quantities: the gain for committing correctly, the cost of each unit of time spent undecided, and how fast holding-open actually reduces uncertainty.
+3. From those three there is a determinate best moment to collapse — the instant the value of one more measurement first falls below its cost — and it is fixed from outside the system and computable before any collapse.
+4. Claim: coherent multi-scale systems, which hold the superposition to that moment and then collapse together across their scales, outperform those that collapse early, late, or with their scales at war — measured in the world's own currency of task-achievement.
+
+*It can lose, which is what keeps it a claim and not a definition. In a deceptive channel — where looking longer worsens the reading — coherence faithfully converges on the falsehood, and a sloppier system does better. And where a part's coherence is bought against its whole, the part outperforms at its own scale and destroys what carries it. Two external conditions, checkable in the world, under which the Principle fails.*
+
+**The co-constitutive floor.**
+1. A navigator's agency is not self-standing: it is constituted through the very relations to other navigators that it might be tempted to disown.
+2. To coerce another — to override their navigation rather than work through it — is to claim for one's own navigation a standing one refuses to theirs.
+3. That asymmetric standing requires a privileged place: an exemption from the reciprocity one demands of everyone else.
+4. But the Null-Space Theorem forbids every aperture that place — none is the totality, none stands outside the web that constitutes it.
+5. Therefore coercion is not the breaking of a rule handed down from somewhere, but a structural mistake about what one is; the floor binds from every navigator's stake in navigating at all.
+
+*What it secures is the norm's validity, not its motivational grip. One who follows the argument, sees the incoherence, and shrugs is not refuted — only shown inconsistent, and inconsistency sanctions only those who already care to be consistent. The floor promises what an ethics can deliver and declines to promise what none can.*
+
+**The two evils, and why only one is false.**
+1. On an open moral axis there are two orientations — the radiant, individuation held as an expression of the whole, and the contractive, individuation held against it. As dynamics they are symmetric: each is coherent, each ascends in its own terms, each sees itself as the good.
+2. The contractive path's terminal doctrine is *I am the totality; nothing is not mine.*
+3. The Null-Space Theorem shows that doctrine false for every aperture without exception.
+4. The mid-range predator who says instead *I know I am not the whole; I simply do not care about you* professes no false totality — but to override another while demanding not to be overridden is to *act* the exemption, which is the totality-standpoint performed rather than spoken.
+5. Therefore the asymmetry is real but exactly bounded: the two paths are symmetric as dynamics and asymmetric in truth, and the asymmetry lives precisely where the theorem does — no wider, and no narrower.
 
 ---
 

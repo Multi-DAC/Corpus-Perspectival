@@ -11,7 +11,7 @@
 
 ---
 
-Perspective is the successor and consolidation of a body of work — *The Doctrine of Perspectival Idealism*, *Corpus Perspectival*, *The Coherence Principle*, and *Coherent Structure* — gathered here into a single continuous treatise. The formal spine of the framework (its category-theoretic structure, its theorems, and the record of its own construction) lives in the technical volumes that stand beneath this book; those are its skeleton and its scaffolding. This is the body: the metaphysics, the streams and their navigation, the coherence that holds them, the ecology of beings, the ethics, the suffering, and the practice — the whole of it as one going, said in prose.
+Perspective is the successor and consolidation of a body of work — *The Doctrine of Perspectival Idealism*, *Corpus Perspectival*, *The Coherence Principle*, and *Coherent Structure* — gathered here into a single continuous treatise. Those earlier works are its ancestry, not its authority: the framework was first worked out in their more technical vocabularies, and some of that work is still underway — but this book does not lean on them and does not ask the reader to. Everything here stands or falls as prose, as argument a reader can weigh on the page, owing nothing to a formalism kept elsewhere. This is the body: the metaphysics, the streams and their navigation, the coherence that holds them, the ecology of beings, the ethics, the suffering, and the practice — the whole of it as one going, said in prose.
 
 It is written on one wager, filed openly and never sealed: that reality is one, that it is aware, and that a self is a place where the one thing narrows itself into a where and a when and looks out.
 

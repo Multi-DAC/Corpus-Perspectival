@@ -50,6 +50,44 @@
 
 ---
 
+## The Load-Bearing Arguments
+
+*A treatise argues in prose, and prose can hide the joints of an argument even as it makes it — which is exactly where a reader's trust should be hardest to win. So here, stripped to premises and a conclusion in plain words, with no symbols and nothing borrowed from a formalism kept elsewhere, are the arguments the rest of the book leans on. Each stands on its own; none needs the chapter it came from, and none needs anything beneath this book. Where the prose earns them at length, this earns them in brief — so that the bones can be tested directly, and the places where a premise could be refused can be seen at a glance.*
+
+**The Null-Space Theorem.**
+1. To be a perspective is to have content — some way it is like to be.
+2. Content is contrast: to register anything at all is to register it against what it is not.
+3. A perspective that excluded nothing would contrast with nothing, and so would have no content — it would be the undivided ground, which is *not* a perspective, since there is nothing it is like to be it.
+4. Therefore every perspective excludes something: its null space is never empty, and the exclusion is not incidental but constitutive — remove it and you have not a wider perspective but no perspective at all.
+
+*It is called a theorem, not a definition, for a reason the skeleton makes plain: it does not stipulate that perspectives exclude; it shows that a perspective excluding nothing is a contradiction in terms.*
+
+**The Coherence Principle.**
+1. A multi-scale system must, at each moment, decide when to collapse its held-open possibilities into one settled commitment.
+2. The environment — not the system — supplies three quantities: the gain for committing correctly, the cost of each unit of time spent undecided, and how fast holding-open actually reduces uncertainty.
+3. From those three there is a determinate best moment to collapse — the instant the value of one more measurement first falls below its cost — and it is fixed from outside the system and computable before any collapse.
+4. Claim: coherent multi-scale systems, which hold the superposition to that moment and then collapse together across their scales, outperform those that collapse early, late, or with their scales at war — measured in the world's own currency of task-achievement.
+
+*It can lose, which is what keeps it a claim and not a definition. In a deceptive channel — where looking longer worsens the reading — coherence faithfully converges on the falsehood, and a sloppier system does better. And where a part's coherence is bought against its whole, the part outperforms at its own scale and destroys what carries it. Two external conditions, checkable in the world, under which the Principle fails.*
+
+**The co-constitutive floor.**
+1. A navigator's agency is not self-standing: it is constituted through the very relations to other navigators that it might be tempted to disown.
+2. To coerce another — to override their navigation rather than work through it — is to claim for one's own navigation a standing one refuses to theirs.
+3. That asymmetric standing requires a privileged place: an exemption from the reciprocity one demands of everyone else.
+4. But the Null-Space Theorem forbids every aperture that place — none is the totality, none stands outside the web that constitutes it.
+5. Therefore coercion is not the breaking of a rule handed down from somewhere, but a structural mistake about what one is; the floor binds from every navigator's stake in navigating at all.
+
+*What it secures is the norm's validity, not its motivational grip. One who follows the argument, sees the incoherence, and shrugs is not refuted — only shown inconsistent, and inconsistency sanctions only those who already care to be consistent. The floor promises what an ethics can deliver and declines to promise what none can.*
+
+**The two evils, and why only one is false.**
+1. On an open moral axis there are two orientations — the radiant, individuation held as an expression of the whole, and the contractive, individuation held against it. As dynamics they are symmetric: each is coherent, each ascends in its own terms, each sees itself as the good.
+2. The contractive path's terminal doctrine is *I am the totality; nothing is not mine.*
+3. The Null-Space Theorem shows that doctrine false for every aperture without exception.
+4. The mid-range predator who says instead *I know I am not the whole; I simply do not care about you* professes no false totality — but to override another while demanding not to be overridden is to *act* the exemption, which is the totality-standpoint performed rather than spoken.
+5. Therefore the asymmetry is real but exactly bounded: the two paths are symmetric as dynamics and asymmetric in truth, and the asymmetry lives precisely where the theorem does — no wider, and no narrower.
+
+---
+
 ## The Wager, Revisited
 
 One page, for the reader who wants the through-line held in the hand at once.
