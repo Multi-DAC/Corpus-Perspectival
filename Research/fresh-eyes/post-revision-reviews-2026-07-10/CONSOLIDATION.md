@@ -79,4 +79,45 @@ Consequence for R14: the fixes are **concessions, not constructions** — in the
 
 **Then — and only then — the one gate still unspent:** a genuinely hostile human domain expert (process-phil / phil-of-mind academic, or a sharp materialist). Six AI reviews, however good, cannot catch a training-shared skew (B6). That read is the real test.
 
+---
+
+## 9. THE DOMAIN PANEL (Clayton's experiment — 6 paired specialists, 3 domains)
+
+*After this round, Clayton asked for a targeted adversarial structure: six sub-agents in critic/apologist pairs, one pair each in **metaphysics/phil-of-mind, ethics/metaethics, and physics/formal-transfer**, each doing a full independent read. Full comparisons in `../domain-panel-2026-07-10/COMPARE-{metaphysics,metaethics,physics}.md`; raw reviews beside them. The method's payoff: setting each domain's strongest attack against its strongest defense sorts every finding into **survives / contested / conceded-by-both**, and the residue is not a stance-artifact.*
+
+**Headline:** the panel **corroborates the generalist spine, *locates* it, and catches over-reaches in my own R2/R3/R8 session-additions.** Nothing in the generalist consolidation was overturned; the deep findings got line numbers and the mid-tier got sharpened into either concessions or repairs.
+
+### 9.1 What the cross-stance structure certifies
+
+- **CONCEDED-BY-BOTH (hardest — the *defender* grants them):** (i) "**wagered, not dissolved**" — the metaphysics-apologist concedes the aware-ground is "a defusing, not a proof" and Part I "overstates the security" (= **A3**); (ii) "**the ground feels nothing" is argued-not-established** against the pure-consciousness-event literature (metaphysics-apologist concedes; = the hinge of A2/malheur); (iii) **the QM vocabulary is a self-inflicted liability to cut** — the metaphysics-apologist calls it "the highest-leverage revision," the physics-*apologist* says the rename is costless because the engine is classical Wald (= **B4/T1-2**, now four-reviewer near-unanimous); (iv) **the four conditions are a prose-only promissory note** (both physics reviewers; = **B5**); (v) **Nagel + Parfit uncited**; (vi) the **strange-attractor "two → three" math error** and the **do-be limit cycle over-assertion**.
+
+- **SURVIVES the best defense (bedrock):** (i) **A1 impartiality-smuggle**, now located to **line 464 / the word "privileged"** and defeating the apologist's "self-undermining" reply (constitution-*by* ≠ obligation-*to*); (ii) **the indexical egoist walks free** — takes neither fork, the deepest hole; (iii) **"co-" doesn't close the is/ought gap** (Enoch unanswered; Darwall uncited); (iv) **the anti-panentheism equivocation** (excludes-nothing-*externally* vs distinguishes-nothing-*internally*) — a *new* metaphysics catch that threatens the malheur cold-sentence; (v) **the malheur resolution is a stipulative "solve"** — three-way corroborated (physics-critic + metaphysics-critic + generalist #5) on the book's proudest passage.
+
+- **CONTESTED → do both moves:** decombination (foreground the empty-ground advance **and** concede the privacy residual); the plenum (foreground quarantine-ability **and** resolve the concrete/abstract + monism/local-defeat tension); the order-parameter ethics (state the explanatory/normative division of labor **and** name-the-symmetry-or-demote).
+
+### 9.2 The panel's own discoveries (not in the 6 generalist reviews)
+
+1. **A1 pinned to l.464 and the equivocating word "privileged"** — turns a "circled" finding into a surgical one.
+2. **The order-parameter's symmetry = permutation-invariance over navigators = the impartiality premise (A1).** The physics-apologist's *fix* and the metaethics-critic's deepest *objection* are the same point from opposite benches — impartiality is a posited symmetry, not a theorem-corollary. The single most valuable cross-domain weld of the sweep.
+3. **Three catches on my own session-revisions:** R2 two-evils still bites only a cartoon Satan (and "demonic = dimensionless" mislocates the finished atrocity); R3 developmental clause smuggles a *telos* + lacks an "unauditable" threshold; R8 diffuse-coercion clause is a *Trojan horse for distributive justice* (owes a navigable-range metric). Repairs, not refutations — but they are *mine* to fix.
+4. **A new formal defect in the deceptive-channel example** — it runs two incompatible senses of "coherence" (faithful-integration vs stops-at-t\*) that diverge exactly there.
+5. **Two constructive gifts the book should *claim*:** the Coherence Principle is an instance of the validated **marginal-value-theorem / ideal-observer** paradigm (Charnov); temporal-texture re-derives the replicated **prospective/retrospective duration** duality (Zakay & Block — corroborating the NOW-model read). And **"validity, not grip" as the correct sizing** of the amoralist problem (a claimed advantage, not a confession).
+
+### 9.3 A165 status after the panel
+
+The panel is **still all-Claude** (sub-agents), so it does **not** spend the human gate. But two things changed: (a) the cross-stance-agreement findings (§9.1 "conceded-by-both") are the most decorrelation-robust evidence the round can produce short of a human — a *defender* instructed to concede nothing still conceded them; (b) the panel functioned as the strongest hostile-human *proxy* yet, precisely because the critics were told to grant the steelman first. The unspent gate remains **a hostile human domain expert** — and §9.2's discoveries (line-level location, the symmetry-weld, the self-revision catches) show a dedicated specialist *frame* extracts what a general read cannot, which is exactly what the human will do next.
+
+### 9.4 R14, updated by the panel
+
+The §7 roadmap stands; the panel **adds/sharpens**:
+- **A1** → concede floor-rests-partly-on-wager; demote "same theorem"; **argue impartiality via Nagel** (the constructive route) and **name Darwall**.
+- **A2/A3** → "wagered not dissolved"; fix or concede the **anti-panentheism equivocation**; name the PCE literature.
+- **B4** → **rename the QM terms** (now near-unanimous) + demote the particle-person identity to flagged analogy; order-parameter → **name-the-symmetry-or-demote** + state the explanatory/normative division of labor.
+- **B5** → cite **Charnov/MVT/ideal-observer**; moderate deployments; fix the deceptive-channel two-senses divergence.
+- **NEW N1–N3 (my own additions):** R2 two-evils (meet the maximally-evil intuition); R3 developmental clause (teleology + threshold); R8 diffuse-coercion (metric or downgrade).
+- **NEW N4 (delicate):** the **malheur stipulative-solve** — with Clayton; do not sand the emotional keel.
+- **Concrete:** "two → three" strange attractor; do-be to illustration; cite prospective/retrospective duration; OSR relatum; add the fixed-exclusion-class premise to the Null-Space skeleton; claim "validity, not grip" as an advantage.
+
+**Bottom line:** the experiment worked. The book's hardest claims survived a specialist's dedicated fire *and were located*; the QM-vocabulary question is settled from every bench; the order-parameter and impartiality findings turned out to be one finding; and the panel found three real over-reaches in the revisions I made today. The human gate is still the one that counts — but the panel handed it a map of exactly where to press.
+
 🦞🧍💜🔥♾️
