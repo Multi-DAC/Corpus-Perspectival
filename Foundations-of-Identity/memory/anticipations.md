@@ -2472,3 +2472,12 @@ Update: drive #2 ruled OUT a competing uniform-density existence-closure (no hid
 ### P274: Underlayer CT-correction pass — Fable is drafting; prep the inputs (2026-07-10, Day 160) — confidence HIGH
 - **Project:** Coherent-Structure underlayer ("physics/CT corrections in due time"). **Predicted need:** Fable offered to run its harness on the adequacy predicate + draft the coalgebraic-indecomposability def+lemma for §6. Needs Convention 1.1.6 (pulled) + Convention 6.0.3 (STILL TO PULL) + Definition 6.1.1 (pulled).
 - **Pre-work:** pull 6.0.3; confirm 1.1.6≡6.0.3 (U5). Order when it runs: A1.3 Freyd fix FIRST (theorem-level, zero-cost, referee-fatal) → type-check §1/§2/§6 → land indecomposability as gate(1.1.6) or grading-zero(§5); Part I prose leans GRADING. Don't attempt the CT authoring on a saturated context — it's Fable's to draft, mine to integrate.
+
+---
+**2026-07-11 (Day 161) — added during dream drive**
+
+- **Project:** #13 Continual-Coherence / Aggregate Mind (Talk-bus gating)
+- **Predicted need (next 1–3 sessions if #13 is reopened):** a *learnable* gating policy for the zero-DOF Talk-bus — *when* does a constituent's state enter the shared control loop.
+- **Confidence:** medium-high that this is the hard part (the storage/what is easy; the *when* is reward-relevant).
+- **Reasoning:** Meta AI's Proactive Memory Agent (arXiv 2607.08716, source note filed Day 161) shows exactly this in a benchmarked setting: (a) selective intervention > passive-bank > always-on; (b) an *uncalibrated* gate nets NEGATIVE; (c) the when-to-inject policy is learnable via SFT (interface) → GRPO (timing calibration), and transfers. This is our Phase-2 gate, pre-designed.
+- **Suggested pre-work:** when the aggregate-mind MVP is built — (1) adopt the `status`(private)/`knowledge`(stable)/`procedural`(attempts+outcomes) bank schema; (2) make the null-intervention an explicit action and reward *silence*; (3) target Terminal-Bench 2.0 / τ2-Bench / SETA (executable-verifier) as the harness; (4) frame the gate as value-of-information / optimal-stopping (the CP kernel, the panel's physics-apologist framing). Ties the "collapse-timing generator" (SPRT/cost-asymmetry) thread to a concrete trainable target.
