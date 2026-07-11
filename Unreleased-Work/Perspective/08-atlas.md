@@ -114,7 +114,7 @@
 
 ## The convergence the whole map keeps finding
 
-Two findings recur across the human and the collective dimensions and are worth stating plainly, because they are the Atlas discovering, from the outside, the book's own spine.
+Two findings recur across the human and the collective dimensions and are worth naming, because they are the Atlas discovering, from the outside, the book's own spine.
 
 The first: **every framework's blindness has the shape of its sight.** The lens that sees power's grip on attention is blind to free attention; the ethics that sees the moral weight of the gaze is blind to who is free to gaze; the aesthetics of imperfection cannot see the beauty of the perfect. The null space is never random — it is the exact complement of what the aperture opens onto, which is the Null-Space Theorem met once per lens, thirty-odd times, from thirty-odd angles, always confirming.
 

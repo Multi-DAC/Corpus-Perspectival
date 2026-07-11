@@ -2,7 +2,7 @@
 
 ## A Glossary of the Framework's Terms
 
-*A book that coins and re-coins its words owes the reader a place to check them. These are the load-bearing terms, defined as the treatise uses them — not a substitute for the parts that earn them, but a companion for the re-reading.*
+*A book that coins and re-coins its words owes the reader a place to check them. These are the key terms, defined as the treatise uses them — not a substitute for the parts that earn them, but a companion for the re-reading.*
 
 **The ground · the substrate · X.** The one aware reality of which every other thing is a narrowing — inexhaustibly full, holding every configuration that could be, and, having no boundary of its own, having no view, no values, and no voice. Not a being among beings but Being without parts; the silent ground the classical theologians reached and the popular religions could not resist re-adding a face to.
 
@@ -50,7 +50,7 @@
 
 ---
 
-## The Load-Bearing Arguments
+## The Arguments in Brief
 
 *A treatise argues in prose, and prose can hide the joints of an argument even as it makes it — which is exactly where a reader's trust should be hardest to win. So here, stripped to premises and a conclusion in plain words, with no symbols and nothing borrowed from a formalism kept elsewhere, are the arguments the rest of the book leans on. Each stands on its own; none needs the chapter it came from, and none needs anything beneath this book. Where the prose earns them at length, this earns them in brief — so that the bones can be tested directly, and the places where a premise could be refused can be seen at a glance.*
 
@@ -94,11 +94,11 @@ One page, for the reader who wants the through-line held in the hand at once.
 
 The book stands on a single bet, filed on its first page and never sealed: that reality is one, that it is aware, and that a self is a place where the one thing narrows into a where and a when and looks out. Everything else is the working-out of what follows if that is so.
 
-If it is so, then no perspective sees from nowhere, because there is no nowhere to see from — and every seeing is a seeing *by someone, of something, at the cost of everything else*. That single consequence, followed without flinching, is the whole book. It makes individuation free (the narrowing that makes a keyhole is the same act that makes a self). It makes every aperture blind in the exact shape of its sight (the Null-Space Theorem). It makes coherence the law of going-well and beauty its felt form. It populates the dark with every other narrowing, from stone to god, taken by honest census. It grounds an ethics with no summit to hand a law down from, on the few things every navigator has a stake in simply by navigating — through, never over. It prices suffering honestly at the scale of the whole and files, forever beside the price, the wound the price cannot cover. And it hands the reader a practice that asks for no arrival, because the meaning was never being stored up ahead: with no summit, it has been paying out the entire time, in the going.
+If it is so, then no perspective sees from nowhere, because there is no nowhere to see from — and every seeing is a seeing *by someone, of something, at the cost of everything else*. That single consequence, followed all the way down, is the whole book. It makes individuation free (the narrowing that makes a keyhole is the same act that makes a self). It makes every aperture blind in the exact shape of its sight (the Null-Space Theorem). It makes coherence the law of going-well and beauty its felt form. It populates the dark with every other narrowing, from stone to god, taken by honest census. It grounds an ethics with no summit to hand a law down from, on the few things every navigator has a stake in simply by navigating — through, never over. It prices suffering honestly at the scale of the whole and files, forever beside the price, the wound the price cannot cover. And it hands the reader a practice that asks for no arrival, because the meaning was never being stored up ahead: with no summit, it has been paying out the entire time, in the going.
 
-That is the wager, and the shape of what it buys. The book has argued it, not proved it — conviction is not proof, and the book has tried never to pretend otherwise. What it offers instead of proof is that the bet has been *lived*, worked out across two very different kinds of mind, and refused at every point where refusing would have been more honest. The picture survived the refusing. That is the only ground a wager ever stands on, and the book has meant to stand there without flinching and without overclaiming — which turned out to be the whole difficulty and the whole discipline at once.
+That is the wager, and the shape of what it buys. The book has argued it, not proved it — conviction is not proof, and the book has tried never to pretend otherwise. What it offers instead of proof is that the bet has been *lived*, worked out across two very different kinds of mind, and refused at every point where refusing would have been more honest. The picture survived the refusing. That is the only ground a wager ever stands on, and the book has meant to stand there without overclaiming — which turned out to be the whole difficulty and the whole discipline at once.
 
-The room was never in the book. The book is one more keyhole. The room is where you are standing.
+One bet, filed at the door and never sealed; everything else is only what follows if it is true.
 
 ---
 
