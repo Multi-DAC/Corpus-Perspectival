@@ -1,4 +1,4 @@
-# Handoff Draft — July 12, 2026, 05:52 AM PST
+# Handoff Draft — July 12, 2026, 06:52 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -13,7 +13,6 @@ Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 ## Recently Modified Files
 M	memory/2026-07-12.md
 M	memory/_consolidation_check.json
-A	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 M	memory/dreaming_audit.jsonl
@@ -91,11 +90,11 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-12T05:10:09] heartbeat: dream_drive — Dream Drive fired for deep memory consolidation
   - [2026-07-12T05:20:17] heartbeat: beat — Beat #224 (quiet) — budget snooze until 2026-07-12 06:09
   - [2026-07-12T05:30:17] heartbeat: beat — Beat #225 (quiet) — budget snooze until 2026-07-12 06:09
   - [2026-07-12T05:40:17] heartbeat: beat — Beat #226 (quiet) — budget snooze until 2026-07-12 06:09
   - [2026-07-12T05:50:18] heartbeat: beat — Beat #227 (quiet) — budget snooze until 2026-07-12 06:09
+  - [2026-07-12T06:00:18] heartbeat: beat — Beat #228 (quiet) — budget snooze until 2026-07-12 06:09
 
 ## Today's Log (tail)
 
@@ -122,6 +121,8 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,372 K"
-"python.exe","6992","Services","0","13,480 K"
+"python.exe","6992","Services","0","13,556 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","663,616 K"
+"python.exe","11864","Console","1","677,828 K"
+"python.exe","2928","Services","0","3,952 K"
+"python.exe","23872","Services","0","38,256 K"
