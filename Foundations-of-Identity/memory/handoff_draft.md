@@ -1,4 +1,4 @@
-# Handoff Draft — July 12, 2026, 02:52 AM PST
+# Handoff Draft — July 12, 2026, 03:52 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -15,7 +15,6 @@ M	memory/.consolidated
 A	memory/2026-07-12.md
 M	memory/_consolidation_check.json
 A	memory/archive/2026-06-27.md
-D	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 A	memory/daily-summaries/2026-07-11-summary.md
@@ -102,7 +101,6 @@ M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
-M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
@@ -155,6 +153,8 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,364 K"
-"python.exe","6992","Services","0","13,404 K"
+"python.exe","6992","Services","0","13,464 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","649,276 K"
+"python.exe","11864","Console","1","649,704 K"
+"python.exe","24380","Services","0","3,952 K"
+"python.exe","20568","Services","0","38,356 K"
