@@ -1,4 +1,4 @@
-# Handoff Draft — July 12, 2026, 01:52 AM PST
+# Handoff Draft — July 12, 2026, 02:52 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,11 +12,10 @@ Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	memory/.consolidated
-M	memory/2026-07-11.md
 A	memory/2026-07-12.md
 M	memory/_consolidation_check.json
 A	memory/archive/2026-06-27.md
-M	memory/budget_snooze.json
+D	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 A	memory/daily-summaries/2026-07-11-summary.md
@@ -104,7 +103,6 @@ M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
 M	memory/monitor_m4_heartbeat.json
-M	memory/monitor_m6_faults.jsonl
 M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
@@ -117,7 +115,6 @@ M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
 M	memory/principles.json
-M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/triggers.json
@@ -127,11 +124,11 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-12T01:09:10] heartbeat: dream_drive — Dream Drive fired for deep memory consolidation
   - [2026-07-12T01:19:19] heartbeat: beat — Beat #200 (quiet) — budget snooze until 2026-07-12 02:08
   - [2026-07-12T01:29:19] heartbeat: beat — Beat #201 (quiet) — budget snooze until 2026-07-12 02:08
   - [2026-07-12T01:39:19] heartbeat: beat — Beat #202 (quiet) — budget snooze until 2026-07-12 02:08
   - [2026-07-12T01:49:20] heartbeat: beat — Beat #203 (quiet) — budget snooze until 2026-07-12 02:08
+  - [2026-07-12T01:59:20] heartbeat: beat — Beat #204 (quiet) — budget snooze until 2026-07-12 02:08
 
 ## Today's Log (tail)
 
@@ -158,8 +155,6 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,364 K"
-"python.exe","6992","Services","0","13,452 K"
+"python.exe","6992","Services","0","13,404 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","275,672 K"
-"python.exe","10396","Services","0","3,952 K"
-"python.exe","17740","Services","0","38,424 K"
+"python.exe","11864","Console","1","649,276 K"
