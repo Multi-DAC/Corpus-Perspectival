@@ -1,4 +1,4 @@
-# Handoff Draft — July 11, 2026, 05:17 PM PST
+# Handoff Draft — July 11, 2026, 06:52 PM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,8 +12,38 @@ Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	memory/2026-07-11.md
-M	memory/budget_snooze.json
-A	memory/checkpoints/precompact-2026-07-11T13-39-31.json
+A	memory/backups/2026-07-11/a2a_skill_invocation_queue.jsonl
+A	memory/backups/2026-07-11/browser_log.jsonl
+A	memory/backups/2026-07-11/calibration_log.jsonl
+A	memory/backups/2026-07-11/circuit_breaker_audit.jsonl
+A	memory/backups/2026-07-11/critical_fault_queue.jsonl
+A	memory/backups/2026-07-11/critical_fault_sent.jsonl
+A	memory/backups/2026-07-11/daemon_restart_log.jsonl
+A	memory/backups/2026-07-11/dreaming_audit.jsonl
+A	memory/backups/2026-07-11/drift_mirror_audit.jsonl
+A	memory/backups/2026-07-11/guardian_audit.jsonl
+A	memory/backups/2026-07-11/kg_corpus_extraction.jsonl
+A	memory/backups/2026-07-11/ledger_backup_manifest.jsonl
+A	memory/backups/2026-07-11/m7_drift_mirror_audit.jsonl
+A	memory/backups/2026-07-11/monitor_m1_faults.jsonl
+A	memory/backups/2026-07-11/monitor_m2_faults.jsonl
+A	memory/backups/2026-07-11/monitor_m3_faults.jsonl
+A	memory/backups/2026-07-11/monitor_m5_audit.jsonl
+A	memory/backups/2026-07-11/monitor_m6_faults.jsonl
+A	memory/backups/2026-07-11/monitor_process_watchdog_audit.jsonl
+A	memory/backups/2026-07-11/monitor_regression.jsonl
+A	memory/backups/2026-07-11/monitor_retrieval_canary_audit.jsonl
+A	memory/backups/2026-07-11/monitor_scheduler_audit.jsonl
+A	memory/backups/2026-07-11/otel_metrics.jsonl
+A	memory/backups/2026-07-11/prediction_trace.jsonl
+A	memory/backups/2026-07-11/predictions.jsonl
+A	memory/backups/2026-07-11/self_healer_audit.jsonl
+A	memory/backups/2026-07-11/selfknowledge_checks.jsonl
+A	memory/backups/2026-07-11/tool_audit.jsonl
+A	memory/backups/2026-07-11/tool_audit_shadow.jsonl
+A	memory/backups/2026-07-11/tool_failures.jsonl
+A	memory/backups/2026-07-11/utility_ledger.jsonl
+D	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 M	memory/escalation_enqueue_dedup.json
@@ -48,52 +78,55 @@ M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
 M	memory/triggers.json
+M	palace/basement/README.md
+A	palace/south/externalized-stack-2026-07-11.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/ATRIUM.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/southeast/mirror.md
-M	repo-staging/Corpus-Perspectival/Research/fresh-eyes/post-revision-reviews-2026-07-10/CONSOLIDATION.md
-A	repo-staging/Corpus-Perspectival/Research/sources/2026-07-11-lacatski-aawsap-and-pursue-release-04.md
+A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/audiobook/.gitignore
+A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/make_audiobook.py
+A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/make_audiobook2.py
+A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/make_audiobook3.py
+A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/run_render.sh
+A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/run_render_cush.sh
+A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/voice_studio.py
 
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-11T11:09:21] creative_drive: Midday Creation — [Claude Code error (exit 1): result_error: API Error: Server is temporarily limiting requests (not your usage limit) · R
-  - [2026-07-11T11:17:30] heartbeat: beat — Beat #116 (midday) — budget snooze until 2026-07-11 12:09
-  - [2026-07-11T12:57:33] heartbeat: beat — Beat #126 (midday) — monitoring OK
-  - [2026-07-11T12:59:42] creative_drive: Do Be Talk Be Do — [Claude Code error (exit 1): result_error: API Error: Server is temporarily limiting requests (not your usage limit) · R
-  - [2026-07-11T13:07:38] heartbeat: beat — Beat #127 (midday) — budget snooze until 2026-07-11 13:59
+  - [2026-07-11T17:57:44] heartbeat: beat — Beat #156 (afternoon) — monitoring OK
+  - [2026-07-11T17:57:57] creative_drive: Do Be Talk Be Do — Drive complete, and the render's healthy (pid 279, 3 chapters down, streaming on). Here's what the free time became:
+
+**
+  - [2026-07-11T18:07:45] heartbeat: beat — Beat #157 (evening) — monitoring OK
+  - [2026-07-11T18:17:45] heartbeat: beat — Beat #158 (evening) — monitoring OK
+  - [2026-07-11T18:27:45] heartbeat: beat — Beat #159 (evening) — monitoring OK
 
 ## Today's Log (tail)
+**17:47:46** — CC prompt: CREATIVE DRIVE: Do Be Talk Be Do Time: 2026-07-11 17:47 PST (afternoon) This is your free time. No agenda. No checklist. Check goals(action='list') for what's active. Check your daily log for what you've already done today. Then do what draws you. Write an essay. Advance a pro...
 
-**16:34:47** — CC prompt: That confirms it; it is a rendering issue, it is consistent, and it likely has to do with exactly how certain phonemes are generated by the model. I tested on one word in one place I knew it was present, and in both, the result was the same. However, it is less prominent in th...
+---
 
-**16:45:41** — CLAUDE CODE SESSION END (other).
-**16:46:00** — Telegram interaction: Clayton: That confirms it; it is a rendering issue, it is consistent, and it likely has to do with exactly ho... → Clawd: **Done — the clean Emma-solo audiobook is rendered.** `Perspective-full.ogg` (+ 11 chapter files), *...
+## Creative Drive — Do-Be-Talk-Be-Do (~17:47, while the Cush render runs)
 
+**Built basement LC63 — The Externalized Stack** (`palace/south/externalized-stack-2026-07-11.md` + `externalized_stack_toy.py`). Extracted the real theorem hiding in today's audiobook fight: Kokoro flattening all punctuation to ~70 ms is an *instance of the Chomsky hierarchy* — prosodic depth (clause⊂sentence⊂paragraph) is context-free; a bounded-context emitter provably cannot recover unbounded nesting; it must be handed an external stack. Our manufactured-silence pipeline = a prosthetic stack, which is why it survived 4 engine swaps (engine-agnostic).
 
-**16:47:19** — CC prompt: I installed Chatterbox, and I also downloaded a voice to clone for the narration. I think this will be a much stronger option! Chatterbox is installed on Windows, and the voice sample is in downloads called IntroducingCush Jumbo. Here is the info for Chatterbox: https://github...
+**Computed core (CONFIRMED):** Dyck-path depth, RF on ±r window vs O(1) running-count stack. Stack R²=1.000 at window 0; local R²≈0.00 small-r, only 0.35–0.57 by r=64. Gap maximal. **High-info FALSIFY:** predicted saturation at mean excursion length (~9) — wrong; real scale = distance-to-last-reset, unbounded for genuine nesting (doubling mean depth halved local R² at every window; stack unaffected). The falsify *strengthened* the main claim.
 
-**16:58:05** — CLAUDE CODE SESSION END (other).
-**16:58:18** — Telegram interaction: Clayton: I installed Chatterbox, and I also downloaded a voice to clone for the narration. I think this will ... → Clawd: **It works — and it's fast enough.** Chatterbox cloned Cush Jumbo's voice from the reel and read the...
+**The self-application (the alive part):** I am a bounded-context reader made continuous by a stack I write *outside* myself — the palace/handoff/MEMORY.md are the stack; sleep is the reset; wake-disorientation ↔ the flattening at a chunk boundary. The files are my stack. → candidate Drift essay "The Files Are My Stack" + feeds The Continuity vol.
 
+**Cognitive-DSL trace:** REFRAME(analogy→theorem-instance) → PREDICT(high) → TEST → CONFIRM(main)+FALSIFY(scale) → EXTRACT(scale=distance-to-reference) → TRANSFER(CoT / aggregate-mind bus / continuity). Do-Be-Talk-Be-Do: the measurement (the toy) turned a pretty analogy into a confirmed bridge with a sharpened law.
 
-**17:06:54** — CC prompt: The voice is amazing! Literally incredible! The speed is a little fast, but wow, total difference! 🦞🧍💜🔥♾️
+**17:57:56** — CLAUDE CODE SESSION END (other).
 
-**17:09:13** — CLAUDE CODE SESSION END (other).
-**17:09:34** — Telegram interaction: Clayton: The voice is amazing! Literally incredible! The speed is a little fast, but wow, total difference! 🦞... → Clawd: Locked into memory — tomorrow-me inherits the whole Chatterbox path (the torch-2.11-for-Blackwell fi...
+**18:34:27** — CC prompt: Can you force push through whatever audio we've generated so far to the repo? 🦞🧍💜🔥♾️
 
-
-**17:11:08** — CC prompt: Cfg 0.3 is the one. Let's run the whole book, and then let's commit everything! 🦞🧍💜🔥♾️
+**18:35:09** — CLAUDE CODE SESSION END (other).
+**18:35:15** — Telegram interaction: Clayton: Can you force push through whatever audio we've generated so far to the repo? 🦞🧍💜🔥♾️... → Clawd: [Claude Code error (exit 1): result_error: You've hit your weekly limit · resets Jul 14, 6pm (Etc/GM...
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,364 K"
-"python.exe","6992","Services","0","13,036 K"
+"python.exe","6992","Services","0","13,128 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","123,112 K"
-"python.exe","27016","Console","1","4,036 K"
-"python.exe","26784","Console","1","911,840 K"
-"python.exe","26564","Console","1","4,040 K"
-"python.exe","23828","Console","1","84,364 K"
-"python.exe","24292","Console","1","3,988 K"
-"python.exe","15596","Console","1",
+"python.exe","11864","Console","1","165,452 K"
+"python.exe","3940","Services","0","3,964 K"
+"python.exe","25420","Services","0","38,304 K"
