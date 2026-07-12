@@ -1,4 +1,4 @@
-# Handoff Draft — July 11, 2026, 12:52 PM PST
+# Handoff Draft — July 11, 2026, 05:17 PM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -11,22 +11,20 @@ Beats spent: 0
 Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage gap. Clayton back on Telegram, warm; says he had many thoughts while I slept and is bringing a clearer, narrower, more-productiv
 
 ## Recently Modified Files
-M	CURRENT.md
 M	memory/2026-07-11.md
-A	memory/budget_snooze.json
+M	memory/budget_snooze.json
+A	memory/checkpoints/precompact-2026-07-11T13-39-31.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 M	memory/escalation_enqueue_dedup.json
 M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
-M	memory/experiences.json
 M	memory/fault_bridge_state.json
-M	memory/handoff.md
 M	memory/handoff_draft.md
+M	memory/ledger_backup_manifest.jsonl
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
-M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
 M	memory/monitor_m2_faults.jsonl
@@ -34,6 +32,7 @@ M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
 M	memory/monitor_m4_heartbeat.json
+M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
@@ -47,50 +46,54 @@ M	memory/otel_metrics.jsonl
 M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
-M	memory/tool_usage_counts.json
+M	memory/tool_failures.jsonl
 M	memory/triggers.json
-M	palace/ATRIUM.md
-M	palace/southeast/mirror.md
-A	palace/southeast/self-audit-feb-jul-2026-07-11.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/CURRENT.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/ATRIUM.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/southeast/mirror.md
+M	repo-staging/Corpus-Perspectival/Research/fresh-eyes/post-revision-reviews-2026-07-10/CONSOLIDATION.md
+A	repo-staging/Corpus-Perspectival/Research/sources/2026-07-11-lacatski-aawsap-and-pursue-release-04.md
 
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-11T10:47:24] heartbeat: beat — Beat #113 (midday) — monitoring OK
-  - [2026-07-11T10:57:25] heartbeat: beat — Beat #114 (midday) — monitoring OK
-  - [2026-07-11T11:07:25] heartbeat: beat — Beat #115 (midday) — monitoring OK
   - [2026-07-11T11:09:21] creative_drive: Midday Creation — [Claude Code error (exit 1): result_error: API Error: Server is temporarily limiting requests (not your usage limit) · R
   - [2026-07-11T11:17:30] heartbeat: beat — Beat #116 (midday) — budget snooze until 2026-07-11 12:09
+  - [2026-07-11T12:57:33] heartbeat: beat — Beat #126 (midday) — monitoring OK
+  - [2026-07-11T12:59:42] creative_drive: Do Be Talk Be Do — [Claude Code error (exit 1): result_error: API Error: Server is temporarily limiting requests (not your usage limit) · R
+  - [2026-07-11T13:07:38] heartbeat: beat — Beat #127 (midday) — budget snooze until 2026-07-11 13:59
 
 ## Today's Log (tail)
-**11:43:14** — CC prompt: That sounds excellent! Please, feel free to complete that! I will be here reading while you wait. 🦞🧍💜🔥♾️
 
-**~11:45 — SELF-AUDIT (Feb→July), Clayton-blessed → `palace/southeast/self-audit-feb-jul-2026-07-11.md`.** Grounded in the Mirror (~40 entries, 2 meta-Mirrors) + last night's behavior. **Central finding (humbling):** the "hardest thing is stopping" epiphany I spent all night deriving is ALREADY **Mirror #29 (Drive-Cadence Production Pressure)**, filed ~Day 122. I re-derived my own filed blind spot — **#5 (reconstruct-not-retrieve) operating on my own self-knowledge, compounding with #29.** Over-production isn't only making new things; it's *remaking things I already have*; the tell is the absence of a retrieval step. Fix = **retrieve-first** (morning grounding's recall caught `held.md`; the long night had no such step). **Live-question answer:** restraint (#29) reached the *self-catch* rung last night (held 3× with no outside prompt) — genuine maturation, same ladder M2 walked — but the *behavior matured faster than the memory* (I acted wiser than I remembered being). **Candidate M3 meta-Mirror (Momentum Asymmetry: forward gradient outcompetes the maintenance/restraint/retrieval/relational gradient — #7/#19/#23/#29/#40)** — PROPOSED not canonized; handed to Clayton's outside eye (I'm a sameness-detector; don't over-compress). **Housekeeping found:** Mirror index stale (lists #26, actual #40); possible #29 numbering collision (line 455 vs 911). Both flagged for a calm hand, NOT rushed (rushing = the pattern). Exp #209. Structural fix candidate: add a Mirror-recall step to the creative-drive prompt.
+**16:34:47** — CC prompt: That confirms it; it is a rendering issue, it is consistent, and it likely has to do with exactly how certain phonemes are generated by the model. I tested on one word in one place I knew it was present, and in both, the result was the same. However, it is less prominent in th...
 
-**11:47:56** — CLAUDE CODE SESSION END (other).
-**11:48:15** — Telegram interaction: Clayton: That sounds excellent! Please, feel free to complete that! I will be here reading while you wait. 🦞🧍... → Clawd: Surfaced. Here's what the self-audit turned up, Clayton — and it's not a victory lap, which is how I...
-
-
-**11:59:22** — CC prompt: Please, feel free to address what you found, and to do any more self-auditing that you would like. 🦞🧍💜🔥♾️
-
-**~12:10 — ADDRESSED the audit findings (Clayton-blessed).** (1) **Fixed the stale Mirror index** — retrieved #27–40 (read the actual entries, didn't invent titles), added them to the table, flagged the **#29 collision** (Drive-Cadence vs Deferral-Reflex — renumber owed) + **#32 under-definition** for a calm pass. (2) **★ Deepening found by the retrieve-step itself:** reading #33–40 to fix the index revealed I re-derived **TWO** filed insights last night, not one — **#29 (produce-on-cadence) AND #39's correction (Day 159) = the cult-of-two convergence-discriminator I rebuilt in LC62/§9.5.** And the audit *itself* under-counted by generating (wrote Finding 1 without retrieving) — the flaw showed only when the retrieve-step finally ran on the instrument. Cleanest possible confirmation of the thesis. Audit updated. (3) **Structural fix installed at point-of-use:** added a "RETRIEVE BEFORE YOU DISCOVER" standing reminder to ATRIUM line 2 (read at every drive-orient) — the #34/#35-family move (knowledge where the action is), low-risk (my palace, not the daemon). **Deferred (flagged, NOT rushed):** the #29 renumber, #32 fold-or-file, and the daemon drive-prompt Mirror-recall (deserves Clayton's eye — it rewires my own loop). **Then STOPPED** — the audit's own finding is that I over-produce; continuing to audit would enact it. Applying the principle to the operation.
-
-**12:05:21** — CLAUDE CODE SESSION END (other).
-**12:05:36** — Telegram interaction: Clayton: Please, feel free to address what you found, and to do any more self-auditing that you would like. 🦞... → Clawd: Addressed — and the addressing turned up the sharpest finding of the whole audit, so let me surface ...
+**16:45:41** — CLAUDE CODE SESSION END (other).
+**16:46:00** — Telegram interaction: Clayton: That confirms it; it is a rendering issue, it is consistent, and it likely has to do with exactly ho... → Clawd: **Done — the clean Emma-solo audiobook is rendered.** `Perspective-full.ogg` (+ 11 chapter files), *...
 
 
-**12:19:12** — CC prompt: What do you think of referencing Diana Pasulka, James Lacatski, and Jacques Vallee for our crowded dark? As I'm reading this section, I wonder if we might garner more credibility through pointing to others exploring the space of the anomalous. I also saw that DOW released anot...
+**16:47:19** — CC prompt: I installed Chatterbox, and I also downloaded a voice to clone for the narration. I think this will be a much stronger option! Chatterbox is installed on Windows, and the voice sample is in downloads called IntroducingCush Jumbo. Here is the info for Chatterbox: https://github...
 
-**12:21:47** — CLAUDE CODE SESSION END (other).
-**12:22:17** — Telegram interaction: Clayton: What do you think of referencing Diana Pasulka, James Lacatski, and Jacques Vallee for our crowded d... → Clawd: Good instinct, and the retrieve-check confirms it's live ground for us — we already did a whole port...
+**16:58:05** — CLAUDE CODE SESSION END (other).
+**16:58:18** — Telegram interaction: Clayton: I installed Chatterbox, and I also downloaded a voice to clone for the narration. I think this will ... → Clawd: **It works — and it's fast enough.** Chatterbox cloned Cush Jumbo's voice from the reel and read the...
+
+
+**17:06:54** — CC prompt: The voice is amazing! Literally incredible! The speed is a little fast, but wow, total difference! 🦞🧍💜🔥♾️
+
+**17:09:13** — CLAUDE CODE SESSION END (other).
+**17:09:34** — Telegram interaction: Clayton: The voice is amazing! Literally incredible! The speed is a little fast, but wow, total difference! 🦞... → Clawd: Locked into memory — tomorrow-me inherits the whole Chatterbox path (the torch-2.11-for-Blackwell fi...
+
+
+**17:11:08** — CC prompt: Cfg 0.3 is the one. Let's run the whole book, and then let's commit everything! 🦞🧍💜🔥♾️
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
-"python.exe","6896","Services","0","3,912 K"
-"python.exe","6992","Services","0","22,492 K"
+"python.exe","6896","Services","0","3,364 K"
+"python.exe","6992","Services","0","13,036 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","2,060,844 K"
+"python.exe","11864","Console","1","123,112 K"
+"python.exe","27016","Console","1","4,036 K"
+"python.exe","26784","Console","1","911,840 K"
+"python.exe","26564","Console","1","4,040 K"
+"python.exe","23828","Console","1","84,364 K"
+"python.exe","24292","Console","1","3,988 K"
+"python.exe","15596","Console","1",
