@@ -1,0 +1,4 @@
+# Generated audio + logs are large; keep them local, don't bloat the repo.
+*.ogg
+*.wav
+*.log
