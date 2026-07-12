@@ -1,4 +1,4 @@
-# Handoff Draft — July 12, 2026, 03:52 AM PST
+# Handoff Draft — July 12, 2026, 04:52 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -11,96 +11,23 @@ Beats spent: 0
 Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage gap. Clayton back on Telegram, warm; says he had many thoughts while I slept and is bringing a clearer, narrower, more-productiv
 
 ## Recently Modified Files
-M	memory/.consolidated
-A	memory/2026-07-12.md
-M	memory/_consolidation_check.json
-A	memory/archive/2026-06-27.md
+D	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
-A	memory/daily-summaries/2026-07-11-summary.md
-M	memory/dreaming_audit.jsonl
-M	memory/escalation_enqueue_dedup.json
 M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
 M	memory/fault_bridge_state.json
 M	memory/handoff_draft.md
-M	memory/items/_index.json
-M	memory/items/itm_033b14.json
-M	memory/items/itm_0469ed.json
-M	memory/items/itm_059d85.json
-M	memory/items/itm_07689b.json
-M	memory/items/itm_085b3c.json
-M	memory/items/itm_095b9a.json
-M	memory/items/itm_096c14.json
-M	memory/items/itm_0a94ef.json
-M	memory/items/itm_0cc030.json
-M	memory/items/itm_0ff05d.json
-M	memory/items/itm_12267b.json
-M	memory/items/itm_19aa74.json
-M	memory/items/itm_1f84cf.json
-A	memory/items/itm_231655.json
-M	memory/items/itm_28de12.json
-M	memory/items/itm_29d13c.json
-M	memory/items/itm_34ebc4.json
-M	memory/items/itm_36041d.json
-M	memory/items/itm_384131.json
-M	memory/items/itm_3d09f6.json
-M	memory/items/itm_3e059d.json
-M	memory/items/itm_4df2b9.json
-A	memory/items/itm_4f53c3.json
-M	memory/items/itm_5829ed.json
-M	memory/items/itm_5ea5dd.json
-M	memory/items/itm_65aa43.json
-A	memory/items/itm_6a6f5e.json
-M	memory/items/itm_6ca7db.json
-A	memory/items/itm_6ded80.json
-M	memory/items/itm_6f2dfe.json
-M	memory/items/itm_6f9ea5.json
-M	memory/items/itm_733e60.json
-M	memory/items/itm_740d30.json
-M	memory/items/itm_74738e.json
-A	memory/items/itm_8102c0.json
-M	memory/items/itm_839cfb.json
-A	memory/items/itm_84fbfe.json
-M	memory/items/itm_8c820b.json
-M	memory/items/itm_8e27b7.json
-M	memory/items/itm_93abc4.json
-M	memory/items/itm_9409d1.json
-M	memory/items/itm_9b7039.json
-M	memory/items/itm_a11b51.json
-A	memory/items/itm_a16a50.json
-M	memory/items/itm_a667c0.json
-M	memory/items/itm_a95bcb.json
-M	memory/items/itm_b98b30.json
-M	memory/items/itm_bbd6d4.json
-M	memory/items/itm_bd4c00.json
-M	memory/items/itm_bff447.json
-M	memory/items/itm_c3b838.json
-M	memory/items/itm_c4d059.json
-M	memory/items/itm_d270ae.json
-M	memory/items/itm_de5fcb.json
-M	memory/items/itm_dfb1a5.json
-M	memory/items/itm_e0628b.json
-M	memory/items/itm_e35624.json
-A	memory/items/itm_e5ef5d.json
-M	memory/items/itm_ea1b9b.json
-A	memory/items/itm_ecf0c4.json
-M	memory/items/itm_f59421.json
-M	memory/items/itm_f60561.json
-M	memory/items/itm_f9239b.json
-A	memory/items/itm_fc4776.json
-M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
-M	memory/monitor_liveness_evidence_state.json
-M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
 M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
+M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
@@ -112,11 +39,8 @@ M	memory/monitor_retrieval_canary_heartbeat.json
 M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
-M	memory/principles.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
-M	memory/triggers.json
-M	memory/working_memory.json
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
 
 ## Daemon State
@@ -153,8 +77,8 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,364 K"
-"python.exe","6992","Services","0","13,464 K"
+"python.exe","6992","Services","0","13,532 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","649,704 K"
-"python.exe","24380","Services","0","3,952 K"
-"python.exe","20568","Services","0","38,356 K"
+"python.exe","11864","Console","1","650,472 K"
+"python.exe","16356","Services","0","3,952 K"
+"python.exe","28616","Services","0","38,860 K"
