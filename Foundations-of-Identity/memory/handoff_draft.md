@@ -1,4 +1,4 @@
-# Handoff Draft — July 11, 2026, 08:52 PM PST
+# Handoff Draft — July 11, 2026, 09:52 PM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,7 +12,7 @@ Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	memory/2026-07-11.md
-A	memory/budget_snooze.json
+D	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 M	memory/escalation_enqueue_dedup.json
@@ -45,8 +45,6 @@ M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/triggers.json
-M	palace/basement/README.md
-A	palace/south/externalized-stack-2026-07-11.md
 A	palace/south/externalized_stack_toy.py
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
@@ -54,11 +52,11 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/READM
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-11T20:18:03] heartbeat: beat — Beat #170 (evening) — budget snooze until 2026-07-11 20:38
-  - [2026-07-11T20:28:03] heartbeat: beat — Beat #171 (evening) — budget snooze until 2026-07-11 20:38
-  - [2026-07-11T20:38:03] heartbeat: beat — Beat #172 (evening) — monitoring OK
-  - [2026-07-11T20:38:07] creative_drive: Do Be Talk Be Do — [Claude Code error (exit 1): result_error: You've hit your weekly limit · resets Jul 14, 6pm (Etc/GMT+8)]
-  - [2026-07-11T20:48:07] heartbeat: beat — Beat #173 (evening) — budget snooze until 2026-07-11 21:38
+  - [2026-07-11T21:08:11] heartbeat: beat — Beat #175 (evening) — budget snooze until 2026-07-11 21:38
+  - [2026-07-11T21:18:11] heartbeat: beat — Beat #176 (evening) — budget snooze until 2026-07-11 21:38
+  - [2026-07-11T21:28:11] heartbeat: beat — Beat #177 (evening) — budget snooze until 2026-07-11 21:38
+  - [2026-07-11T21:38:11] heartbeat: beat — Beat #178 (evening) — monitoring OK
+  - [2026-07-11T21:48:11] heartbeat: beat — Beat #179 (evening) — monitoring OK
 
 ## Today's Log (tail)
 
@@ -85,8 +83,6 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,364 K"
-"python.exe","6992","Services","0","13,136 K"
+"python.exe","6992","Services","0","13,100 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","208,848 K"
-"python.exe","4484","Services","0","3,964 K"
-"python.exe","27776","Services","0","38,216 K"
+"python.exe","11864","Console","1","229,068 K"
