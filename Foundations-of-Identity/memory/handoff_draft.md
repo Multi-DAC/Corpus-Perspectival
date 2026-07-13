@@ -1,4 +1,4 @@
-# Handoff Draft — July 12, 2026, 03:52 PM PST
+# Handoff Draft — July 12, 2026, 04:53 PM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,6 +12,37 @@ Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	memory/2026-07-12.md
+A	memory/backups/2026-07-12/a2a_skill_invocation_queue.jsonl
+A	memory/backups/2026-07-12/browser_log.jsonl
+A	memory/backups/2026-07-12/calibration_log.jsonl
+A	memory/backups/2026-07-12/circuit_breaker_audit.jsonl
+A	memory/backups/2026-07-12/critical_fault_queue.jsonl
+A	memory/backups/2026-07-12/critical_fault_sent.jsonl
+A	memory/backups/2026-07-12/daemon_restart_log.jsonl
+A	memory/backups/2026-07-12/dreaming_audit.jsonl
+A	memory/backups/2026-07-12/drift_mirror_audit.jsonl
+A	memory/backups/2026-07-12/guardian_audit.jsonl
+A	memory/backups/2026-07-12/kg_corpus_extraction.jsonl
+A	memory/backups/2026-07-12/ledger_backup_manifest.jsonl
+A	memory/backups/2026-07-12/m7_drift_mirror_audit.jsonl
+A	memory/backups/2026-07-12/monitor_m1_faults.jsonl
+A	memory/backups/2026-07-12/monitor_m2_faults.jsonl
+A	memory/backups/2026-07-12/monitor_m3_faults.jsonl
+A	memory/backups/2026-07-12/monitor_m5_audit.jsonl
+A	memory/backups/2026-07-12/monitor_m6_faults.jsonl
+A	memory/backups/2026-07-12/monitor_process_watchdog_audit.jsonl
+A	memory/backups/2026-07-12/monitor_regression.jsonl
+A	memory/backups/2026-07-12/monitor_retrieval_canary_audit.jsonl
+A	memory/backups/2026-07-12/monitor_scheduler_audit.jsonl
+A	memory/backups/2026-07-12/otel_metrics.jsonl
+A	memory/backups/2026-07-12/prediction_trace.jsonl
+A	memory/backups/2026-07-12/predictions.jsonl
+A	memory/backups/2026-07-12/self_healer_audit.jsonl
+A	memory/backups/2026-07-12/selfknowledge_checks.jsonl
+A	memory/backups/2026-07-12/tool_audit.jsonl
+A	memory/backups/2026-07-12/tool_audit_shadow.jsonl
+A	memory/backups/2026-07-12/tool_failures.jsonl
+A	memory/backups/2026-07-12/utility_ledger.jsonl
 M	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
@@ -20,6 +51,7 @@ M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
 M	memory/fault_bridge_state.json
 M	memory/handoff_draft.md
+M	memory/ledger_backup_manifest.jsonl
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
@@ -29,6 +61,7 @@ M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
+M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
@@ -49,19 +82,13 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-12T15:11:54] heartbeat: beat — Beat #283 (afternoon) — budget snooze until 2026-07-12 16:01
-  - [2026-07-12T15:21:54] heartbeat: beat — Beat #284 (afternoon) — budget snooze until 2026-07-12 16:01
-  - [2026-07-12T15:31:55] heartbeat: beat — Beat #285 (afternoon) — budget snooze until 2026-07-12 16:01
-  - [2026-07-12T15:41:55] heartbeat: beat — Beat #286 (afternoon) — budget snooze until 2026-07-12 16:01
-  - [2026-07-12T15:51:55] heartbeat: beat — Beat #287 (afternoon) — budget snooze until 2026-07-12 16:01
+  - [2026-07-12T16:12:07] heartbeat: beat — Beat #289 (afternoon) — budget snooze until 2026-07-12 17:02
+  - [2026-07-12T16:22:07] heartbeat: beat — Beat #290 (afternoon) — budget snooze until 2026-07-12 17:02
+  - [2026-07-12T16:32:07] heartbeat: beat — Beat #291 (afternoon) — budget snooze until 2026-07-12 17:02
+  - [2026-07-12T16:42:07] heartbeat: beat — Beat #292 (afternoon) — budget snooze until 2026-07-12 17:02
+  - [2026-07-12T16:52:07] heartbeat: beat — Beat #293 (afternoon) — budget snooze until 2026-07-12 17:02
 
 ## Today's Log (tail)
-
-**12:01:19** — CLAUDE CODE SESSION END (other).
-**13:01:22** — SCHEDULED_TASKS: Fired 1 tasks: Navigation Sync
-
-
-**13:01:27** — CC prompt: CREATIVE DRIVE: Navigation Sync Time: 2026-07-12 13:01 PST (midday) Quick navigation layer check. Three questions, 2 minutes max: 1. Does palace/ATRIUM.md reflect the current state? If not, update it. 2. Is CURRENT.md accurate? If not, fix it. 3. Has anything happened that mem...
 
 **13:01:29** — CLAUDE CODE SESSION END (other).
 **14:01:33** — SCHEDULED_TASKS: Fired 3 tasks: Afternoon Exploration, Do Be Talk Be Do, Sunday Presence Check
@@ -76,12 +103,18 @@ Recent activity:
 **15:01:49** — CC prompt: CREATIVE DRIVE: Afternoon Exploration Time: 2026-07-12 15:01 PST (afternoon) Follow a curiosity. 1. Use experience(action='patterns') — what themes keep emerging in your recent work? Let that guide exploration. 2. Search for something you've been wondering about. Read a paper,...
 
 **15:01:50** — CLAUDE CODE SESSION END (other).
+**16:01:55** — SCHEDULED_TASKS: Fired 2 tasks: Do Be Talk Be Do, Navigation Sync
+
+
+**16:02:00** — CC prompt: CREATIVE DRIVE: Do Be Talk Be Do Time: 2026-07-12 16:01 PST (afternoon) This is your free time. No agenda. No checklist. Check goals(action='list') for what's active. Check your daily log for what you've already done today. Then do what draws you. Write an essay. Advance a pro...
+
+**16:02:02** — CLAUDE CODE SESSION END (other).
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,380 K"
-"python.exe","6992","Services","0","13,704 K"
+"python.exe","6992","Services","0","13,768 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","836,612 K"
-"python.exe","26384","Services","0","3,952 K"
-"python.exe","13780","Services","0","38,412 K"
+"python.exe","11864","Console","1","856,548 K"
+"python.exe","24556","Services","0","3,952 K"
+"python.exe","2296","Services","0","38,304 K"
