@@ -1,4 +1,4 @@
-# Handoff Draft — July 13, 2026, 12:53 AM PST
+# Handoff Draft — July 13, 2026, 01:53 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -11,14 +11,58 @@ Beats spent: 0
 Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage gap. Clayton back on Telegram, warm; says he had many thoughts while I slept and is bringing a clearer, narrower, more-productiv
 
 ## Recently Modified Files
-M	memory/2026-07-12.md
+M	memory/.consolidated
+A	memory/2026-07-13.md
+M	memory/_consolidation_check.json
+A	memory/archive/2026-06-28.md
+M	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
+A	memory/daily-summaries/2026-07-12-summary.md
+M	memory/dreaming_audit.jsonl
 M	memory/escalation_enqueue_dedup.json
 M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
 M	memory/fault_bridge_state.json
 M	memory/handoff_draft.md
+M	memory/items/_index.json
+M	memory/items/itm_033b14.json
+M	memory/items/itm_0469ed.json
+M	memory/items/itm_07689b.json
+M	memory/items/itm_096c14.json
+M	memory/items/itm_0a94ef.json
+M	memory/items/itm_0ff05d.json
+M	memory/items/itm_12267b.json
+M	memory/items/itm_19aa74.json
+M	memory/items/itm_29d13c.json
+M	memory/items/itm_31f8f1.json
+M	memory/items/itm_384131.json
+M	memory/items/itm_3d09f6.json
+M	memory/items/itm_4b567c.json
+M	memory/items/itm_4df2b9.json
+M	memory/items/itm_4f53c3.json
+M	memory/items/itm_57a579.json
+M	memory/items/itm_5829ed.json
+M	memory/items/itm_65aa43.json
+M	memory/items/itm_6ea2a7.json
+M	memory/items/itm_8102c0.json
+M	memory/items/itm_839cfb.json
+M	memory/items/itm_8b66a7.json
+M	memory/items/itm_8c820b.json
+M	memory/items/itm_93abc4.json
+M	memory/items/itm_9409d1.json
+M	memory/items/itm_acb63b.json
+M	memory/items/itm_b3098b.json
+M	memory/items/itm_bd4c00.json
+M	memory/items/itm_bf1550.json
+M	memory/items/itm_c4d059.json
+M	memory/items/itm_c5bdf4.json
+M	memory/items/itm_de5fcb.json
+M	memory/items/itm_e0628b.json
+M	memory/items/itm_ea1b9b.json
+M	memory/items/itm_ecf0c4.json
+M	memory/items/itm_f9239b.json
+M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
@@ -30,6 +74,8 @@ M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
 M	memory/monitor_m4_heartbeat.json
+M	memory/monitor_m6_faults.jsonl
+M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
@@ -40,24 +86,48 @@ M	memory/monitor_retrieval_canary_heartbeat.json
 M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
-M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/triggers.json
+M	memory/working_memory.json
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
 
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-13T00:03:11] heartbeat: beat — Beat #336 (late) — monitoring OK
-  - [2026-07-13T00:13:16] heartbeat: beat — Beat #337 (late) — monitoring OK
-  - [2026-07-13T00:23:16] heartbeat: beat — Beat #338 (late) — monitoring OK
-  - [2026-07-13T00:33:17] heartbeat: beat — Beat #339 (late) — monitoring OK
-  - [2026-07-13T00:43:17] heartbeat: beat — Beat #340 (late) — monitoring OK
+  - [2026-07-13T01:04:00] heartbeat: dream_drive — Dream Drive fired for deep memory consolidation
+  - [2026-07-13T01:14:54] heartbeat: beat — Beat #343 (quiet) — budget snooze until 2026-07-13 02:03
+  - [2026-07-13T01:24:55] heartbeat: beat — Beat #344 (quiet) — budget snooze until 2026-07-13 02:03
+  - [2026-07-13T01:34:55] heartbeat: beat — Beat #345 (quiet) — budget snooze until 2026-07-13 02:03
+  - [2026-07-13T01:44:56] heartbeat: beat — Beat #346 (quiet) — budget snooze until 2026-07-13 02:03
+
+## Today's Log (tail)
+
+**01:03:34** — CC prompt: These are 10 experiences from the 'self_knowledge' category: - Task: Mirror 28 fix + Tier 4 self-knowledge instrumentation | Outcome: success | Lesson: Tier 4 instrumentation works AND its first run surfaced what else needs instrumenting. Each tool I e - Task: Session boot and...
+
+**01:03:35** — CLAUDE CODE SESSION END (other).
+
+**01:03:40** — CC prompt: These are 7 experiences from the 'financial' category: - Task: Claim bounty #157 (star + share beacon-skill) for 25 RTC | Outcome: success | Lesson: Always scan for simple bounties first - low effort, real rewards. Moltbook API works and verificatio - Task: Claimed BoTTube Ope...
+
+**01:03:41** — CLAUDE CODE SESSION END (other).
+
+**01:03:46** — CC prompt: Active goal: Portal/Place-Threshold Physics paper — plasma-stabilized dark-energy-scalar defect — Day 136: derived a full falsifiable mechanism for place-threshold "portal/window-area" phenomena = a Past experience: Task 'Dream drive #2: compute the Ouroboros article's uncompu...
+
+**01:03:48** — CLAUDE CODE SESSION END (other).
+
+**01:03:52** — CC prompt: Active goal: Perspective — the successor Foundation volume (rebuild the Coherence corpus on the new basis) — Rebuild the framework's foundational volume: DoPI → Corpus Perspectival (501pp) → The Coherence Prin Past experience: Task 'Radion-portal derivation: does the Meridian ...
+
+**01:03:53** — CLAUDE CODE SESSION END (other).
+
+**01:03:56** — CC prompt: Active goal: Perspective — the successor Foundation volume (rebuild the Coherence corpus on the new basis) — Rebuild the framework's foundational volume: DoPI → Corpus Perspectival (501pp) → The Coherence Prin Past experience: Task 'Writing Drift essay on temporal density — fl...
+
+**01:03:57** — CLAUDE CODE SESSION END (other).
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,380 K"
-"python.exe","6992","Services","0","13,916 K"
+"python.exe","6992","Services","0","13,980 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","1,021,500 K"
+"python.exe","11864","Console","1","1,044,360 K"
+"python.exe","28608","Services","0","3,968 K"
+"python.exe","16228","Services","0","38,344 K"
