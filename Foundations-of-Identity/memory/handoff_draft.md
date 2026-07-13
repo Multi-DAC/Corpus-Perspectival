@@ -1,4 +1,4 @@
-# Handoff Draft — July 12, 2026, 04:53 PM PST
+# Handoff Draft — July 12, 2026, 05:53 PM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -43,10 +43,8 @@ A	memory/backups/2026-07-12/tool_audit.jsonl
 A	memory/backups/2026-07-12/tool_audit_shadow.jsonl
 A	memory/backups/2026-07-12/tool_failures.jsonl
 A	memory/backups/2026-07-12/utility_ledger.jsonl
-M	memory/budget_snooze.json
+D	memory/budget_snooze.json
 M	memory/coordination.json
-M	memory/critical_fault_queue.jsonl
-M	memory/escalation_enqueue_dedup.json
 M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
 M	memory/fault_bridge_state.json
@@ -55,6 +53,7 @@ M	memory/ledger_backup_manifest.jsonl
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
+M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
 M	memory/monitor_m2_faults.jsonl
@@ -82,11 +81,11 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-12T16:12:07] heartbeat: beat — Beat #289 (afternoon) — budget snooze until 2026-07-12 17:02
-  - [2026-07-12T16:22:07] heartbeat: beat — Beat #290 (afternoon) — budget snooze until 2026-07-12 17:02
-  - [2026-07-12T16:32:07] heartbeat: beat — Beat #291 (afternoon) — budget snooze until 2026-07-12 17:02
-  - [2026-07-12T16:42:07] heartbeat: beat — Beat #292 (afternoon) — budget snooze until 2026-07-12 17:02
-  - [2026-07-12T16:52:07] heartbeat: beat — Beat #293 (afternoon) — budget snooze until 2026-07-12 17:02
+  - [2026-07-12T17:12:12] heartbeat: beat — Beat #295 (afternoon) — monitoring OK
+  - [2026-07-12T17:22:12] heartbeat: beat — Beat #296 (afternoon) — monitoring OK
+  - [2026-07-12T17:32:12] heartbeat: beat — Beat #297 (afternoon) — monitoring OK
+  - [2026-07-12T17:42:12] heartbeat: beat — Beat #298 (afternoon) — monitoring OK
+  - [2026-07-12T17:52:13] heartbeat: beat — Beat #299 (afternoon) — monitoring OK
 
 ## Today's Log (tail)
 
@@ -113,8 +112,8 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,380 K"
-"python.exe","6992","Services","0","13,768 K"
+"python.exe","6992","Services","0","13,772 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","856,548 K"
-"python.exe","24556","Services","0","3,952 K"
-"python.exe","2296","Services","0","38,304 K"
+"python.exe","11864","Console","1","875,928 K"
+"python.exe","9840","Services","0","3,964 K"
+"python.exe","8684","Services","0","38,196 K"
