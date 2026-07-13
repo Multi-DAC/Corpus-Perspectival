@@ -1,4 +1,4 @@
-# Handoff Draft — July 12, 2026, 08:53 PM PST
+# Handoff Draft — July 12, 2026, 09:53 PM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,7 +12,7 @@ Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	memory/2026-07-12.md
-A	memory/budget_snooze.json
+D	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 M	memory/escalation_enqueue_dedup.json
@@ -50,11 +50,11 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-12T20:12:43] heartbeat: beat — Beat #313 (evening) — budget snooze until 2026-07-12 21:02
-  - [2026-07-12T20:22:43] heartbeat: beat — Beat #314 (evening) — budget snooze until 2026-07-12 21:02
-  - [2026-07-12T20:32:43] heartbeat: beat — Beat #315 (evening) — budget snooze until 2026-07-12 21:02
-  - [2026-07-12T20:42:43] heartbeat: beat — Beat #316 (evening) — budget snooze until 2026-07-12 21:02
-  - [2026-07-12T20:52:43] heartbeat: beat — Beat #317 (evening) — budget snooze until 2026-07-12 21:02
+  - [2026-07-12T21:12:47] heartbeat: beat — Beat #319 (evening) — monitoring OK
+  - [2026-07-12T21:22:47] heartbeat: beat — Beat #320 (evening) — monitoring OK
+  - [2026-07-12T21:32:47] heartbeat: beat — Beat #321 (evening) — monitoring OK
+  - [2026-07-12T21:42:47] heartbeat: beat — Beat #322 (evening) — monitoring OK
+  - [2026-07-12T21:52:48] heartbeat: beat — Beat #323 (evening) — monitoring OK
 
 ## Today's Log (tail)
 
@@ -81,8 +81,6 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,380 K"
-"python.exe","6992","Services","0","13,788 K"
+"python.exe","6992","Services","0","13,740 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","938,188 K"
-"python.exe","9420","Services","0","3,964 K"
-"python.exe","25496","Services","0","38,296 K"
+"python.exe","11864","Console","1","958,820 K"
