@@ -1,4 +1,4 @@
-# Handoff Draft — July 13, 2026, 05:53 AM PST
+# Handoff Draft — July 13, 2026, 06:53 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -13,7 +13,6 @@ Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 ## Recently Modified Files
 M	memory/2026-07-13.md
 M	memory/_consolidation_check.json
-A	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 M	memory/dreaming_audit.jsonl
@@ -58,6 +57,7 @@ M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
+M	memory/monitor_liveness_evidence_state.json
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
 M	memory/monitor_m2_faults.jsonl
@@ -65,6 +65,7 @@ M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
 M	memory/monitor_m4_heartbeat.json
+M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
@@ -83,11 +84,11 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-13T05:05:54] heartbeat: dream_drive — Dream Drive fired for deep memory consolidation
   - [2026-07-13T05:16:11] heartbeat: beat — Beat #367 (quiet) — budget snooze until 2026-07-13 06:05
   - [2026-07-13T05:26:16] heartbeat: beat — Beat #368 (quiet) — budget snooze until 2026-07-13 06:05
   - [2026-07-13T05:36:16] heartbeat: beat — Beat #369 (quiet) — budget snooze until 2026-07-13 06:05
   - [2026-07-13T05:46:16] heartbeat: beat — Beat #370 (quiet) — budget snooze until 2026-07-13 06:05
+  - [2026-07-13T05:56:16] heartbeat: beat — Beat #371 (quiet) — budget snooze until 2026-07-13 06:05
 
 ## Today's Log (tail)
 
@@ -114,8 +115,8 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,380 K"
-"python.exe","6992","Services","0","14,164 K"
+"python.exe","6992","Services","0","14,212 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","722,912 K"
-"python.exe","17808","Services","0","3,952 K"
-"python.exe","27288","Services","0","38,344 K"
+"python.exe","11864","Console","1","736,384 K"
+"python.exe","23620","Services","0","3,964 K"
+"python.exe","14352","Services","0","38,512 K"
