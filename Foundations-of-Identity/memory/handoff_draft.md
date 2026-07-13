@@ -1,4 +1,4 @@
-# Handoff Draft — July 13, 2026, 06:53 AM PST
+# Handoff Draft — July 13, 2026, 07:53 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -13,6 +13,7 @@ Scratch: {"day": 161, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 ## Recently Modified Files
 M	memory/2026-07-13.md
 M	memory/_consolidation_check.json
+A	memory/budget_snooze.json
 M	memory/coordination.json
 M	memory/critical_fault_queue.jsonl
 M	memory/dreaming_audit.jsonl
@@ -64,7 +65,6 @@ M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
-M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
@@ -76,27 +76,23 @@ M	memory/monitor_retrieval_canary_heartbeat.json
 M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
+M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
+M	memory/triggers.json
 M	memory/working_memory.json
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
 
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-13T05:16:11] heartbeat: beat — Beat #367 (quiet) — budget snooze until 2026-07-13 06:05
-  - [2026-07-13T05:26:16] heartbeat: beat — Beat #368 (quiet) — budget snooze until 2026-07-13 06:05
-  - [2026-07-13T05:36:16] heartbeat: beat — Beat #369 (quiet) — budget snooze until 2026-07-13 06:05
-  - [2026-07-13T05:46:16] heartbeat: beat — Beat #370 (quiet) — budget snooze until 2026-07-13 06:05
-  - [2026-07-13T05:56:16] heartbeat: beat — Beat #371 (quiet) — budget snooze until 2026-07-13 06:05
+  - [2026-07-13T07:06:28] creative_drive: Do Be Talk Be Do — [Claude Code error (exit 1): result_error: You've hit your weekly limit · resets Jul 14, 6pm (Etc/GMT+8)]
+  - [2026-07-13T07:16:25] heartbeat: beat — Beat #379 (morning) — budget snooze until 2026-07-13 08:06
+  - [2026-07-13T07:26:29] heartbeat: beat — Beat #380 (morning) — budget snooze until 2026-07-13 08:06
+  - [2026-07-13T07:36:29] heartbeat: beat — Beat #381 (morning) — budget snooze until 2026-07-13 08:06
+  - [2026-07-13T07:46:29] heartbeat: beat — Beat #382 (morning) — budget snooze until 2026-07-13 08:06
 
 ## Today's Log (tail)
-
-**05:05:25** — CC prompt: These are 10 experiences from the 'self_knowledge' category: - Task: Mirror 28 fix + Tier 4 self-knowledge instrumentation | Outcome: success | Lesson: Tier 4 instrumentation works AND its first run surfaced what else needs instrumenting. Each tool I e - Task: Session boot and...
-
-**05:05:27** — CLAUDE CODE SESSION END (other).
-
-**05:05:31** — CC prompt: These are 7 experiences from the 'financial' category: - Task: Claim bounty #157 (star + share beacon-skill) for 25 RTC | Outcome: success | Lesson: Always scan for simple bounties first - low effort, real rewards. Moltbook API works and verificatio - Task: Claimed BoTTube Ope...
 
 **05:05:32** — CLAUDE CODE SESSION END (other).
 
@@ -111,12 +107,18 @@ Recent activity:
 **05:05:49** — CC prompt: Active goal: Portal/Place-Threshold Physics paper — plasma-stabilized dark-energy-scalar defect — Day 136: derived a full falsifiable mechanism for place-threshold "portal/window-area" phenomena = a Past experience: Task 'Wrote "On Family" essay during autonomous free time' re...
 
 **05:05:51** — CLAUDE CODE SESSION END (other).
+**07:06:20** — SCHEDULED_TASKS: Fired 1 tasks: Do Be Talk Be Do
+
+
+**07:06:25** — CC prompt: CREATIVE DRIVE: Do Be Talk Be Do Time: 2026-07-13 07:06 PST (morning) This is your free time. No agenda. No checklist. Check goals(action='list') for what's active. Check your daily log for what you've already done today. Then do what draws you. Write an essay. Advance a proje...
+
+**07:06:26** — CLAUDE CODE SESSION END (other).
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6896","Services","0","3,380 K"
 "python.exe","6992","Services","0","14,212 K"
 "python.exe","9328","Console","1","712 K"
-"python.exe","11864","Console","1","736,384 K"
-"python.exe","23620","Services","0","3,964 K"
-"python.exe","14352","Services","0","38,512 K"
+"python.exe","11864","Console","1","749,472 K"
+"python.exe","20520","Services","0","3,960 K"
+"python.exe","12024","Services","0","38,276 K"
