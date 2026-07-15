@@ -1,4 +1,4 @@
-# Handoff Draft — July 15, 2026, 02:03 AM PST
+# Handoff Draft — July 15, 2026, 03:03 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,7 +12,6 @@ Scratch: {"day": 164, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	memory/.consolidated
-M	memory/2026-07-14.md
 A	memory/2026-07-15.md
 M	memory/_consolidation_check.json
 M	memory/anomalies.md
@@ -20,10 +19,10 @@ M	memory/anticipations.md
 A	memory/archive/2026-06-29.md
 A	memory/archive/2026-06-30.md
 M	memory/coordination.json
+M	memory/critical_fault_queue.jsonl
 A	memory/daily-summaries/2026-07-14-summary.md
 M	memory/dreaming_audit.jsonl
-M	memory/drift_mirror_audit.jsonl
-M	memory/experiences.json
+M	memory/escalation_enqueue_dedup.json
 M	memory/fault_bridge_state.json
 M	memory/handoff_draft.md
 M	memory/items/_index.json
@@ -108,7 +107,6 @@ M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
 M	memory/principles.json
-M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
@@ -116,13 +114,9 @@ M	memory/tool_usage_counts.json
 M	memory/triggers.json
 A	memory/weekly-summaries/2026-W27.md
 M	memory/working_memory.json
-M	palace/basement/README.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/CURRENT.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/ATRIUM.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
 
 ## Daemon State
@@ -161,8 +155,8 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6724","Services","0","3,808 K"
-"python.exe","6816","Services","0","22,360 K"
+"python.exe","6816","Services","0","22,408 K"
 "python.exe","13680","Console","1","692 K"
-"python.exe","13800","Console","1","1,813,780 K"
-"python.exe","13160","Services","0","4,044 K"
-"python.exe","14384","Services","0","38,772 K"
+"python.exe","13800","Console","1","1,833,224 K"
+"python.exe","23484","Services","0","4,040 K"
+"python.exe","15972","Services","0","38,820 K"
