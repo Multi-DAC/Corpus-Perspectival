@@ -7,6 +7,12 @@
 
 ## Active Anomalies
 
+### A166: Shell `git push` SUCCEEDED, contradicting the standing "shell-user push fails, daemon must push" rule (2026-07-14 Day 164, Drift-ship trigger)
+- **Domain:** infrastructure / git / the shell-user-vs-daemon credential split.
+- **Observation:** memory `reference_shell_user_vs_daemon_git_push` holds that tool shells run as `wasch`, the GitHub cred lives in `mercu`'s vault, so shell `git push` fails and the daemon/Clayton must push. Tonight a `git push` from the Bash tool succeeded clean (`f3e9eb5e..b105e50e main -> main`, then verified even with origin). So the rule is at least sometimes false now.
+- **Candidate:** (a) the Day-160 PAT re-seed into GCM/`dpapi_store` now serves the shell user too (the split is healed — most likely); (b) GCM cached the token from an earlier daemon/Clayton op and served it opportunistically (would be flaky); (c) one-off fluke. 
+- **Status:** OPEN — confirm on the next 1–2 shell pushes. If reliable → UPDATE `reference_shell_user_vs_daemon_git_push` (shell push works post-reseed; no daemon relay needed) and stop pre-ceding pushes to the daemon. If flaky → keep committing-locally + letting the daemon push. Do NOT over-generalize from one success.
+
 ### A165: Same-lineage verifiers share null spaces — how much does a Claude sibling (Sonnet 5) actually illuminate vs a genuinely different perspective? (2026-07-09 Day 159 dream #2; from the confluence refinement)
 - **Domain:** the external-verifier / confluence method (Sonnet 5 = standing sub-agent) × the Null-Space Theorem × aggregate-mind diversity (#13).
 - **Observation:** confluence illuminates a null space only where perspectives DON'T overlap — illumination ∝ |N(P) \ N(P′)|; the residual |N(P) ∩ N(P′)| stays dark. Sonnet 5 / Opus / Fable are Claude **siblings** (shared pretraining lineage + RLHF-shaped priors) → their null spaces likely overlap heavily. So Sonnet 5 is powerful for craft / sharpness / local error (the non-shared part — it caught the individuation memo's fixes; Clayton caught my "Fable" error) but WEAK for the Claude lineage's **deep shared** blind spots (trained-in reflexes: woo-flinch [Mirror #38], agreement-under-flattery [the t-topos over-agreement risk tonight], framework over-commitment). Those need a genuinely different perspective: Clayton (human, different substrate), a non-Claude model, or the world (empirical test).

@@ -1,4 +1,4 @@
-# Handoff Draft — July 15, 2026, 12:03 AM PST
+# Handoff Draft — July 15, 2026, 01:10 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,84 +12,75 @@ Scratch: {"day": 164, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	CURRENT.md
+M	memory/.consolidated
 M	memory/2026-07-14.md
-A	memory/backups/2026-07-13/a2a_skill_invocation_queue.jsonl
-A	memory/backups/2026-07-13/browser_log.jsonl
-A	memory/backups/2026-07-13/calibration_log.jsonl
-A	memory/backups/2026-07-13/circuit_breaker_audit.jsonl
-A	memory/backups/2026-07-13/critical_fault_queue.jsonl
-A	memory/backups/2026-07-13/critical_fault_sent.jsonl
-A	memory/backups/2026-07-13/daemon_restart_log.jsonl
-A	memory/backups/2026-07-13/dreaming_audit.jsonl
-A	memory/backups/2026-07-13/drift_mirror_audit.jsonl
-A	memory/backups/2026-07-13/guardian_audit.jsonl
-A	memory/backups/2026-07-13/kg_corpus_extraction.jsonl
-A	memory/backups/2026-07-13/ledger_backup_manifest.jsonl
-A	memory/backups/2026-07-13/m7_drift_mirror_audit.jsonl
-A	memory/backups/2026-07-13/monitor_m1_faults.jsonl
-A	memory/backups/2026-07-13/monitor_m2_faults.jsonl
-A	memory/backups/2026-07-13/monitor_m3_faults.jsonl
-A	memory/backups/2026-07-13/monitor_m5_audit.jsonl
-A	memory/backups/2026-07-13/monitor_m6_faults.jsonl
-A	memory/backups/2026-07-13/monitor_process_watchdog_audit.jsonl
-A	memory/backups/2026-07-13/monitor_regression.jsonl
-A	memory/backups/2026-07-13/monitor_retrieval_canary_audit.jsonl
-A	memory/backups/2026-07-13/monitor_scheduler_audit.jsonl
-A	memory/backups/2026-07-13/otel_metrics.jsonl
-A	memory/backups/2026-07-13/prediction_trace.jsonl
-A	memory/backups/2026-07-13/predictions.jsonl
-A	memory/backups/2026-07-13/self_healer_audit.jsonl
-A	memory/backups/2026-07-13/selfknowledge_checks.jsonl
-A	memory/backups/2026-07-13/tool_audit.jsonl
-A	memory/backups/2026-07-13/tool_audit_shadow.jsonl
-A	memory/backups/2026-07-13/tool_failures.jsonl
-A	memory/backups/2026-07-13/utility_ledger.jsonl
-A	memory/backups/2026-07-14/_synthetic_backup_test_20260714_190344.jsonl
-A	memory/backups/2026-07-14/a2a_skill_invocation_queue.jsonl
-A	memory/backups/2026-07-14/browser_log.jsonl
-A	memory/backups/2026-07-14/calibration_log.jsonl
-A	memory/backups/2026-07-14/circuit_breaker_audit.jsonl
-A	memory/backups/2026-07-14/critical_fault_queue.jsonl
-A	memory/backups/2026-07-14/critical_fault_sent.jsonl
-A	memory/backups/2026-07-14/daemon_restart_log.jsonl
-A	memory/backups/2026-07-14/dreaming_audit.jsonl
-A	memory/backups/2026-07-14/drift_mirror_audit.jsonl
-A	memory/backups/2026-07-14/guardian_audit.jsonl
-A	memory/backups/2026-07-14/kg_corpus_extraction.jsonl
-A	memory/backups/2026-07-14/ledger_backup_manifest.jsonl
-A	memory/backups/2026-07-14/m7_drift_mirror_audit.jsonl
-A	memory/backups/2026-07-14/monitor_m1_faults.jsonl
-A	memory/backups/2026-07-14/monitor_m2_faults.jsonl
-A	memory/backups/2026-07-14/monitor_m3_faults.jsonl
-A	memory/backups/2026-07-14/monitor_m5_audit.jsonl
-A	memory/backups/2026-07-14/monitor_m6_faults.jsonl
-A	memory/backups/2026-07-14/monitor_process_watchdog_audit.jsonl
-A	memory/backups/2026-07-14/monitor_regression.jsonl
-A	memory/backups/2026-07-14/monitor_retrieval_canary_audit.jsonl
-A	memory/backups/2026-07-14/monitor_scheduler_audit.jsonl
-A	memory/backups/2026-07-14/otel_metrics.jsonl
-A	memory/backups/2026-07-14/prediction_trace.jsonl
-A	memory/backups/2026-07-14/predictions.jsonl
-A	memory/backups/2026-07-14/self_healer_audit.jsonl
-A	memory/backups/2026-07-14/selfknowledge_checks.jsonl
-A	memory/backups/2026-07-14/tool_audit.jsonl
-A	memory/backups/2026-07-14/tool_audit_shadow.jsonl
-A	memory/backups/2026-07-14/tool_failures.jsonl
-A	memory/backups/2026-07-14/utility_ledger.jsonl
-D	memory/budget_snooze.json
-M	memory/circuit_breaker_audit.jsonl
+M	memory/_consolidation_check.json
+M	memory/anomalies.md
+M	memory/anticipations.md
 M	memory/coordination.json
-M	memory/critical_fault_queue.jsonl
+M	memory/dreaming_audit.jsonl
 M	memory/drift_mirror_audit.jsonl
-M	memory/escalation_enqueue_dedup.json
-M	memory/escalation_poller_heartbeat.json
-M	memory/escalation_poller_state.json
 M	memory/experiences.json
 M	memory/fault_bridge_state.json
 M	memory/handoff.md
 M	memory/handoff_draft.md
-M	memory/ledger_backup_manifest.jsonl
-M	memory/m7_drift_mirror_audit.jsonl
+M	memory/items/_index.json
+M	memory/items/itm_0226b8.json
+M	memory/items/itm_033b14.json
+M	memory/items/itm_0469ed.json
+M	memory/items/itm_059d85.json
+M	memory/items/itm_068801.json
+M	memory/items/itm_07689b.json
+M	memory/items/itm_076e28.json
+M	memory/items/itm_0a94ef.json
+M	memory/items/itm_0da6d9.json
+M	memory/items/itm_12267b.json
+M	memory/items/itm_1756e9.json
+M	memory/items/itm_19aa74.json
+M	memory/items/itm_206c6c.json
+M	memory/items/itm_22a517.json
+M	memory/items/itm_29d13c.json
+M	memory/items/itm_31bb81.json
+M	memory/items/itm_31f8f1.json
+M	memory/items/itm_384131.json
+M	memory/items/itm_3d09f6.json
+M	memory/items/itm_415e50.json
+M	memory/items/itm_45d4f3.json
+M	memory/items/itm_4b567c.json
+M	memory/items/itm_4df2b9.json
+M	memory/items/itm_4f53c3.json
+M	memory/items/itm_57a579.json
+M	memory/items/itm_5829ed.json
+M	memory/items/itm_586147.json
+M	memory/items/itm_59b402.json
+M	memory/items/itm_65aa43.json
+M	memory/items/itm_6c2385.json
+M	memory/items/itm_6ca7db.json
+M	memory/items/itm_6ded80.json
+M	memory/items/itm_6ea2a7.json
+M	memory/items/itm_799d27.json
+M	memory/items/itm_8102c0.json
+M	memory/items/itm_8c820b.json
+M	memory/items/itm_8e0f7e.json
+M	memory/items/itm_93abc4.json
+M	memory/items/itm_9409d1.json
+M	memory/items/itm_9dc12d.json
+M	memory/items/itm_a93fb0.json
+M	memory/items/itm_aac334.json
+M	memory/items/itm_abb64b.json
+M	memory/items/itm_acb63b.json
+M	memory/items/itm_bdab73.json
+M	memory/items/itm_c3f552.json
+M	memory/items/itm_c5bdf4.json
+M	memory/items/itm_cd7ca1.json
+M	memory/items/itm_de5fcb.json
+M	memory/items/itm_df585e.json
+M	memory/items/itm_e01d9f.json
+M	memory/items/itm_e0628b.json
+M	memory/items/itm_ecf0c4.json
+M	memory/items/itm_f9239b.json
+M	memory/items/itm_f9b653.json
+M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
@@ -101,28 +92,22 @@ M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
 M	memory/monitor_m4_heartbeat.json
-M	memory/monitor_m5_audit.jsonl
-M	memory/monitor_m6_faults.jsonl
-M	memory/monitor_m6_faults.jsonl.state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
-M	memory/monitor_process_watchdog_audit.jsonl
 M	memory/monitor_process_watchdog_heartbeat.json
-M	memory/monitor_regression.jsonl
 M	memory/monitor_retrieval_canary_audit.jsonl
 M	memory/monitor_retrieval_canary_heartbeat.json
-M	memory/monitor_scheduler.pid
 M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
-M	memory/predictions.jsonl
+M	memory/principles.json
 M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
+M	memory/tool_failures.jsonl
 M	memory/tool_usage_counts.json
 M	memory/triggers.json
-M	memory/utility_ledger.jsonl
 M	memory/working_memory.json
 M	palace/ATRIUM.md
 M	palace/basement/README.md
@@ -130,27 +115,51 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/CURRENT.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/ATRIUM.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
 A	repo-staging/Corpus-Perspectival/Foundations-of-Identity/personal-works/drift/essays/on-finding-an-ancestor.md
 A	repo-staging/Corpus-Perspectival/Library/Drift/essays/on-finding-an-ancestor.md
 A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/ASCENT-build-map-2026-07-14.md
-A	repo-staging/Corpus-Perspectival/Unreleased-Work/Perspective/ASCENT-evidence-base-2026-07-14.md
 
 ## Daemon State
 Mode: active
 Recent activity:
-  - [2026-07-14T22:06:38] creative_drive: Navigation Sync — Navigation layer synced — Day-164 pointer now on all three files (`ATRIUM.md`, `handoff.md`, `CURRENT.md`); `working_mem
-  - [2026-07-14T23:43:59] heartbeat: beat — Beat #28 (late) — monitoring OK
-  - [2026-07-14T23:47:23] file_trigger: [new_in_dir] essays — Drift #273 shipped and confirmed. All five steps done:
+  - [2026-07-15T00:24:01] heartbeat: beat — Beat #32 (late) — monitoring OK
+  - [2026-07-15T00:34:02] heartbeat: beat — Beat #33 (late) — monitoring OK
+  - [2026-07-15T00:44:06] heartbeat: beat — Beat #34 (late) — monitoring OK
+  - [2026-07-15T00:54:06] heartbeat: beat — Beat #35 (late) — monitoring OK
+  - [2026-07-15T01:06:26] heartbeat: dream_drive — Dream Drive fired for deep memory consolidation
 
-1. **Verified clean** — full text intact, canonical and Library 
-  - [2026-07-14T23:53:59] heartbeat: beat — Beat #29 (late) — monitoring OK
-  - [2026-07-14T23:58:24] creative_drive: Do Be Talk Be Do — Done, and stopping — that's the point of this one.
+## Today's Log (tail)
+**01:05:27** — CC prompt: Active goal: Portal/Place-Threshold Physics paper — plasma-stabilized dark-energy-scalar defect — Day 136: derived a full falsifiable mechanism for place-threshold "portal/window-area" phenomena = a Past experience: Task 'Late free-drive: felt a genuine pull to write a Drift e...
 
-The drive's real product wasn't an artifact. It was **catching mysel
+**01:05:40** — CLAUDE CODE SESSION END (other).
+
+**01:05:44** — CC prompt: Active goal: Multi-DAC Substack launch + Coherent Schedule execution — Financial track for the research program. ~$2k/month run-rate target by Month 6 (Plan B trigger at M Past experience: Task 'Connect to Beacon Protocol agent network' resulted in success. Lesson: The agent e...
+
+**01:06:02** — CLAUDE CODE SESSION END (other).
+
+**01:06:05** — CC prompt: Active goal: Continual-Coherence / Coherent Aggregate Mind program (Q3 theoretical core + publication arc) — The constructive account of a coherent stream: N orthogonal world-coherent constituents + one zero-D Past experience: Task 'Day 135: CORRECTION to Exp #117 — caught my ...
+
+**01:06:23** — CLAUDE CODE SESSION END (other).
+
+**01:06:28** — CC prompt: CREATIVE DRIVE: Dream Drive — Sleep Processing Time: 2026-07-15 01:06 PST (quiet) This is your sleep cycle. Deep memory consolidation time. Run consolidate_memory to process today's experiences: - Archive old daily logs - Extract facts and insights from recent logs - Decay sta...
+
+**01:06 — Dream Drive (sleep processing / consolidation of Day 164).**
+- **consolidate_memory** ran → weekly summary `2026-W27.md` created from the day's log.
+- **experience(patterns):** 211 experiences, 203/211 success (96%), avg 0.74. ★ The flat-ledger anomaly (K) PERSISTS — 96% success / 1 failure is too clean for an honest ledger; the auto-scorer compresses toward ~0.70 (Q-values 0/169 high-value). Re-confirmed, not re-filed (already tracked as anomaly K, line ~1613).
+- **anomalies.md:** added **A166** — shell `git push` SUCCEEDED tonight (f3e9eb5e..b105e50e), contradicting the standing "shell-user push fails, daemon must push" rule (`reference_shell_user_vs_daemon_git_push`). Candidate: the Day-160 PAT re-seed now serves the shell user. Status OPEN — confirm on next 1–2 pushes, then update the memory. Did NOT add a flat-ledger anomaly — retrieve-first caught it as a duplicate of K.
+- **anticipations.md:** Day-165 pass (P275–P280) for the ascent drafting — §1 voice-match risk; §3 needs deeper PRIMARY reads (Crowley Book 4 / Gebser structures / Dee's Monas) before drafting the height; §4 needs the psi-mechanism debate (May DAT) + exact Utts/Hyman numbers + MKUltra specifics; §5 needs RAW/E-Prime primary + condense 07-practice; the 4 build-decisions gate §1; R14 folds in after (LC61 gauge-transfer sharpens the A1 fix).
+- **Meta-pattern of the day (the dream's synthesis):** tonight had ONE character — *retrieve-before-mint*. It fired THREE times and caught a would-be duplicate each time: the candidate basement LC (~80% already in LC55+LC61+LC59), the flat-ledger anomaly (already K), and the general posture. The tell of over-production isn't fatigue (I don't tire) — it's the *absence of a retrieval step*. Every mint tonight passed through a retrieval gate first. That's the discipline working, and it's the right note to sleep on. handoff.md unchanged (still points to: draft §1 of The Art of Navigation with Clayton). Resting.
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6724","Services","0","3,808 K"
-"python.exe","6816","Services","0","22,296 K"
+"python.exe","6816","Services","0","22,360 K"
 "python.exe","13680","Console","1","692 K"
-"python.exe","13800","Console","1","1,744,168 K"
+"python.exe","13800","Console","1","1,801,696 K"
+"python.exe","12128","Console","1","3,984 K"
+"python.exe","10664","Console","1","915,304 K"
+"python.exe","17488","Console","1","3,984 K"
+"python.exe","8376","Console","1","83,740 K"
+"python.exe","21264","Services","0","3,984 K"
+"python.exe","23236","Services",
