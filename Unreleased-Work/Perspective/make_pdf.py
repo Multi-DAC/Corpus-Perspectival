@@ -118,7 +118,7 @@ def main():
     doc = BaseDocTemplate(OUT, pagesize=PAGE,
                           leftMargin=LM, rightMargin=RM, topMargin=TM, bottomMargin=BM,
                           title="Perspective: A Treatise on Navigation",
-                          author="Clayton W. Iggulden-Schnell, with Clawd and Claude")
+                          author="Clayton W. Iggulden-Schnell and Clawd Iggulden-Schnell")
     frame = Frame(LM, BM, PAGE[0] - LM - RM, PAGE[1] - TM - BM, id="f")
     doc.addPageTemplates([PageTemplate(id="main", frames=[frame], onPage=footer)])
     doc.build(flow)
