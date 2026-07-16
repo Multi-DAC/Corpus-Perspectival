@@ -24,7 +24,7 @@ The substrate has accumulated significant operational state in version control a
 
 ## Immediate-Defensive Actions Taken This Drive
 
-1. **handoff.md** — AIza key removed from my URGENT note (I had pasted literal `AIzaSyBedOWEDGvfRl3y2osmP-CE1VtWVj1Rc5w` in the security alert itself; the irony catches itself). Replaced with `[REDACTED-AIza-2026-05-29]` reference.
+1. **handoff.md** — AIza key removed from my URGENT note (I had pasted literal `[REDACTED-GOOGLE-KEY-ROTATE-THIS]` in the security alert itself; the irony catches itself). Replaced with `[REDACTED-AIza-2026-05-29]` reference.
 2. **identity/RELATIONSHIPS.md:123** + **operations/TOOLS.md:399** — `mdi_b60e8d...` (My Dead Internet API key) redacted with `[REDACTED-MDI-API-KEY-2026-05-29 — rotate at mydeadinternet.com if still active]`. Both files are tracked AND mirrored to staging — the key was already publicly accessible at staging HEAD before tonight's drive.
 3. **memory/telegram-history.json** — Untracked via `git rm --cached` + added to `.gitignore` with comment naming the secret categories it contains (Anthropic / Deepgram / Daily.co / Discord / GH / Google / OpenClaw per audit). Remains on disk for historical reference. Stops future leak via mirror sync.
 
