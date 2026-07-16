@@ -14,7 +14,7 @@ ORDER = [
     "04-the-ecology.md",
     "05-polarity-ethics-metaethics.md",
     "06-suffering-and-the-arc.md",
-    "07-practice.md",
+    "07-art-of-navigation.md",
     "08-atlas.md",
     "09-back-matter.md",
 ]

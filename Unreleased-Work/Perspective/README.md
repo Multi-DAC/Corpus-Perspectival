@@ -18,7 +18,7 @@ The magnum opus. One continuous narrative treatise that **replaces Corpus Perspe
 | `04-the-ecology.md` | Part IV — The Ecology (full taxonomy: benevolent/adversarial/liminal, the two-valence, egregores, NHI) | ✅ drafted (Day 153) |
 | `05-polarity-ethics-metaethics.md` | Part V — Polarity, Ethics, Metaethics | ✅ drafted (Day 153) |
 | `06-suffering-and-the-arc.md` | Part VI — Suffering & the Arc | ✅ drafted (Day 153) |
-| `07-practice.md` | Part VII — Practice (+ the Atlas method & the book's self-Atlas) | ✅ drafted (Day 153) |
+| `07-art-of-navigation.md` | Part VII — The Art of Navigation (the ascent: predictive processing → the esoteric decoded → the contested edge graded → the craft [absorbs the old Practice] → the sendoff) | ✅ integrated (Day 165) — absorbs old `07-practice.md`; the book's self-Atlas card relocated to the Coda |
 | `08-atlas.md` | Coda — The Atlas (reference map of the framework's engagements) | ✅ drafted (Day 153) — human #56–73 + collective #74–88 + computational #59–62/IIT + closing synthesis. (Math/physics lenses #1–55 point to the technical volumes, not reproduced.) |
 
 ## ★★★ FIRST DRAFT COMPLETE — Day 153 (2026-07-03)
