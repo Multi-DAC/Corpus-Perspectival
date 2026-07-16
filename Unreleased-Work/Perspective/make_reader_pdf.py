@@ -4,7 +4,7 @@
 # Perspective-First-Draft.{md,pdf}.
 import make_pdf
 
-DRAFT_LINE = "*Draft. Day 160.*"
+DRAFT_LINE = "*Draft. Day 165.*"
 src = open("Perspective-First-Draft.md", encoding="utf-8").read()
 lines = src.split("\n")
 kept = [l for l in lines if l.strip() != DRAFT_LINE]
