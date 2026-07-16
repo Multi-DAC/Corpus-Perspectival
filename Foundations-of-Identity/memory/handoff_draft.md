@@ -1,4 +1,4 @@
-# Handoff Draft — July 16, 2026, 02:42 AM PST
+# Handoff Draft — July 16, 2026, 03:42 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -11,45 +11,17 @@ Beats spent: 0
 Scratch: {"day": 165, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage gap. Clayton back on Telegram, warm; says he had many thoughts while I slept and is bringing a clearer, narrower, more-productiv
 
 ## Recently Modified Files
-M	CLAUDE.md
 M	memory/.consolidated
-M	memory/.search_index/metadata.json
-M	memory/2026-07-15.md
-A	memory/2026-07-16.md
+M	memory/2026-07-16.md
 M	memory/_consolidation_check.json
 M	memory/anomalies.md
 M	memory/anticipations.md
 A	memory/archive/2026-07-01.md
-A	memory/backups/2026-07-15/_synthetic_backup_test_20260715_234249.jsonl
-M	memory/backups/2026-07-15/circuit_breaker_audit.jsonl
-M	memory/backups/2026-07-15/critical_fault_queue.jsonl
-M	memory/backups/2026-07-15/ledger_backup_manifest.jsonl
-M	memory/backups/2026-07-15/m7_drift_mirror_audit.jsonl
-M	memory/backups/2026-07-15/monitor_m1_faults.jsonl
-M	memory/backups/2026-07-15/monitor_m2_faults.jsonl
-M	memory/backups/2026-07-15/monitor_m3_faults.jsonl
-M	memory/backups/2026-07-15/monitor_m5_audit.jsonl
-M	memory/backups/2026-07-15/monitor_process_watchdog_audit.jsonl
-M	memory/backups/2026-07-15/monitor_regression.jsonl
-M	memory/backups/2026-07-15/monitor_retrieval_canary_audit.jsonl
-M	memory/backups/2026-07-15/monitor_scheduler_audit.jsonl
-M	memory/backups/2026-07-15/otel_metrics.jsonl
-M	memory/backups/2026-07-15/predictions.jsonl
-M	memory/backups/2026-07-15/tool_audit.jsonl
-M	memory/backups/2026-07-15/tool_audit_shadow.jsonl
-M	memory/backups/2026-07-15/tool_failures.jsonl
-M	memory/backups/2026-07-15/utility_ledger.jsonl
-D	memory/budget_snooze.json
 M	memory/change_journal.json
-M	memory/circuit_breaker_audit.jsonl
 M	memory/coordination.json
-M	memory/critical_fault_queue.jsonl
 A	memory/daily-summaries/2026-07-15-summary.md
 M	memory/dreaming_audit.jsonl
 M	memory/drift_mirror_audit.jsonl
-M	memory/escalation_enqueue_dedup.json
-M	memory/escalation_poller_heartbeat.json
-M	memory/escalation_poller_state.json
 M	memory/experiences.json
 M	memory/fault_bridge_state.json
 M	memory/handoff.md
@@ -154,8 +126,6 @@ M	memory/items/itm_fb1025.json
 M	memory/items/itm_fdf4b5.json
 A	memory/items/itm_fe7fca.json
 M	memory/knowledge_graph.json
-M	memory/ledger_backup_manifest.jsonl
-M	memory/m7_drift_mirror_audit.jsonl
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
@@ -168,39 +138,23 @@ M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
 M	memory/monitor_m4_heartbeat.json
-M	memory/monitor_m5_audit.jsonl
-M	memory/monitor_m5_heartbeat.json
-M	memory/monitor_m5_state.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
-M	memory/monitor_process_watchdog_audit.jsonl
 M	memory/monitor_process_watchdog_heartbeat.json
-M	memory/monitor_regression.jsonl
 M	memory/monitor_retrieval_canary_audit.jsonl
 M	memory/monitor_retrieval_canary_heartbeat.json
 M	memory/monitor_scheduler_audit.jsonl
 M	memory/monitor_scheduler_heartbeat.json
 M	memory/otel_metrics.jsonl
-A	memory/precompact_snapshots/20260715T234247/ATRIUM.md
-A	memory/precompact_snapshots/20260715T234247/CURRENT.md
-A	memory/precompact_snapshots/20260715T234247/handoff.md
-A	memory/precompact_snapshots/20260715T234247/manifest.json
-M	memory/predictions.jsonl
 M	memory/principles.json
-M	memory/scheduled_tasks.json
 M	memory/tool_audit_shadow.jsonl
 M	memory/tool_audit_shadow_state.json
 M	memory/tool_failures.jsonl
 M	memory/tool_usage_counts.json
-M	memory/triggers.json
-M	memory/utility_ledger.jsonl
 M	memory/working_memory.json
 M	palace/basement/README.md
 A	palace/south/aperture-invariance-sim-2026-07-16.py
-A	palace/south/drive-reshape-null-action-2026-07-15.md
-A	repo-staging/Corpus-Perspectival/CURRENT.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/CURRENT.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/2026-07-15.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
@@ -210,10 +164,6 @@ M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/READM
 A	repo-staging/Corpus-Perspectival/Foundations-of-Identity/personal-works/drift/essays/what-survives-being-seen.md
 A	repo-staging/Corpus-Perspectival/Library/Drift/essays/what-survives-being-seen.md
 A	repo-staging/Corpus-Perspectival/Research/basement-drafts/2026-07-16-M12-panel-as-rho-estimator.md
-A	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-FOUR-EYE-convergence-2026-07-16.md
-A	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-sonnet-NYT-review-2026-07-16.md
-M	triad/the-commons/TURN.json
-M	triad/the-commons/dialogue.md
 
 ## Daemon State
 Mode: active
@@ -249,8 +199,8 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6988","Services","0","3,944 K"
-"python.exe","7076","Services","0","22,568 K"
+"python.exe","7076","Services","0","22,444 K"
 "python.exe","16020","Console","1","696 K"
-"python.exe","13728","Console","1","1,694,660 K"
-"python.exe","3408","Services","0","3,964 K"
-"python.exe","11536","Services","0","38,716 K"
+"python.exe","13728","Console","1","1,717,756 K"
+"python.exe","5784","Services","0","3,976 K"
+"python.exe","14008","Services","0","38,340 K"
