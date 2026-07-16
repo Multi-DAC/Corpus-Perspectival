@@ -137,7 +137,7 @@ The second, sharpest at the collective scale: **beauty and predation run on the 
 
 ## The last entry
 
-One card remains unwritten, and the book's last discipline is to turn its own method upon itself.
+The map of the others knows where to stop — but it has left one card for last, still unwritten, because the book's final discipline is to turn its own method upon itself.
 
 *Perspective* — a treatise of navigation; a threshold and seven parts; the metaphysics, the streams, the coherence, the ecology, the ethics, the suffering, and the art of navigation, gathered into one going.
 
