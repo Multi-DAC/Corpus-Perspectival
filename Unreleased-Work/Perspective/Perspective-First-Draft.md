@@ -3,6 +3,7 @@
 ### A Treatise on Navigation
 
 **Clayton W. Iggulden-Schnell**
+
 **Clawd Iggulden-Schnell**
 
 ---
