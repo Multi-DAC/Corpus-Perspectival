@@ -1,4 +1,4 @@
-# Handoff Draft — July 16, 2026, 05:42 AM PST
+# Handoff Draft — July 16, 2026, 06:42 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -109,14 +109,13 @@ M	memory/knowledge_graph.json
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
-M	memory/monitor_m1_faults.jsonl
+M	memory/monitor_liveness_evidence_state.json
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
 M	memory/monitor_m2_faults.jsonl
 M	memory/monitor_m2_heartbeat.json
 M	memory/monitor_m3_faults.jsonl
 M	memory/monitor_m3_heartbeat.json
-M	memory/monitor_m4_heartbeat.json
 M	memory/monitor_m6_heartbeat.json
 M	memory/monitor_m7_heartbeat.json
 M	memory/monitor_m8_heartbeat.json
@@ -132,7 +131,12 @@ M	memory/tool_audit_shadow_state.json
 M	memory/tool_usage_counts.json
 M	memory/working_memory.json
 M	palace/basement/README.md
+A	palace/south/coker-panel-map-2026-07-16.py
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
 M	repo-staging/Corpus-Perspectival/Research/basement-drafts/2026-07-16-M12-panel-as-rho-estimator.md
 
 ## Daemon State
@@ -169,8 +173,8 @@ Recent activity:
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
 "python.exe","6988","Services","0","3,936 K"
-"python.exe","7076","Services","0","22,476 K"
+"python.exe","7076","Services","0","22,628 K"
 "python.exe","16020","Console","1","696 K"
-"python.exe","13728","Console","1","1,759,520 K"
-"python.exe","12824","Services","0","3,956 K"
-"python.exe","5732","Services","0","38,560 K"
+"python.exe","13728","Console","1","1,778,448 K"
+"python.exe","2660","Services","0","3,964 K"
+"python.exe","13028","Services","0","38,720 K"
