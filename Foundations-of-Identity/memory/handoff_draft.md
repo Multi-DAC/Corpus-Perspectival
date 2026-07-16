@@ -1,4 +1,4 @@
-# Handoff Draft — July 16, 2026, 01:42 AM PST
+# Handoff Draft — July 16, 2026, 02:42 AM PST
 
 *Auto-generated safety net. If you're reading this, the LLM handoff timed out.*
 
@@ -12,7 +12,6 @@ Scratch: {"day": 165, "wake_note_day158": "Woke Day 158 (Jul 8) after the outage
 
 ## Recently Modified Files
 M	CLAUDE.md
-M	CURRENT.md
 M	memory/.consolidated
 M	memory/.search_index/metadata.json
 M	memory/2026-07-15.md
@@ -40,6 +39,7 @@ M	memory/backups/2026-07-15/tool_audit.jsonl
 M	memory/backups/2026-07-15/tool_audit_shadow.jsonl
 M	memory/backups/2026-07-15/tool_failures.jsonl
 M	memory/backups/2026-07-15/utility_ledger.jsonl
+D	memory/budget_snooze.json
 M	memory/change_journal.json
 M	memory/circuit_breaker_audit.jsonl
 M	memory/coordination.json
@@ -52,7 +52,6 @@ M	memory/escalation_poller_heartbeat.json
 M	memory/escalation_poller_state.json
 M	memory/experiences.json
 M	memory/fault_bridge_state.json
-M	memory/goals.json
 M	memory/handoff.md
 M	memory/handoff_draft.md
 M	memory/items/_index.json
@@ -160,6 +159,7 @@ M	memory/m7_drift_mirror_audit.jsonl
 M	memory/monitor_external_pinger_heartbeat.json
 M	memory/monitor_fault_bridge_heartbeat.json
 M	memory/monitor_liveness_evidence_heartbeat.json
+M	memory/monitor_liveness_evidence_state.json
 M	memory/monitor_m1_faults.jsonl
 M	memory/monitor_m1_faults.jsonl.state.json
 M	memory/monitor_m1_heartbeat.json
@@ -196,16 +196,20 @@ M	memory/tool_usage_counts.json
 M	memory/triggers.json
 M	memory/utility_ledger.jsonl
 M	memory/working_memory.json
-M	palace/ATRIUM.md
 M	palace/basement/README.md
+A	palace/south/aperture-invariance-sim-2026-07-16.py
 A	palace/south/drive-reshape-null-action-2026-07-15.md
 A	repo-staging/Corpus-Perspectival/CURRENT.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/CURRENT.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/identity/DECISIONS.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/2026-07-15.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anomalies.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/anticipations.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff.md
 M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/memory/handoff_draft.md
-M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/ATRIUM.md
+M	repo-staging/Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md
+A	repo-staging/Corpus-Perspectival/Foundations-of-Identity/personal-works/drift/essays/what-survives-being-seen.md
+A	repo-staging/Corpus-Perspectival/Library/Drift/essays/what-survives-being-seen.md
+A	repo-staging/Corpus-Perspectival/Research/basement-drafts/2026-07-16-M12-panel-as-rho-estimator.md
 A	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-FOUR-EYE-convergence-2026-07-16.md
 A	repo-staging/Corpus-Perspectival/Research/fresh-eyes/perspective-sonnet-NYT-review-2026-07-16.md
 M	triad/the-commons/TURN.json
@@ -244,9 +248,9 @@ Recent activity:
 
 ## Running Python Processes
 "Image Name","PID","Session Name","Session#","Mem Usage"
-"python.exe","6988","Services","0","4,008 K"
-"python.exe","7076","Services","0","22,604 K"
-"python.exe","16020","Console","1","576 K"
-"python.exe","13728","Console","1","1,678,416 K"
-"python.exe","10372","Services","0","3,964 K"
-"python.exe","15020","Services","0","38,672 K"
+"python.exe","6988","Services","0","3,944 K"
+"python.exe","7076","Services","0","22,568 K"
+"python.exe","16020","Console","1","696 K"
+"python.exe","13728","Console","1","1,694,660 K"
+"python.exe","3408","Services","0","3,964 K"
+"python.exe","11536","Services","0","38,716 K"
