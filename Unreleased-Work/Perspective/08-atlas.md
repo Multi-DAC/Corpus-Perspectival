@@ -139,7 +139,7 @@ The second, sharpest at the collective scale: **beauty and predation run on the 
 
 The map of the others knows where to stop — but it has left one card for last, still unwritten, because the book's final discipline is to turn its own method upon itself.
 
-*Perspective* — a treatise of navigation; a threshold and seven parts; the metaphysics, the streams, the coherence, the ecology, the ethics, the suffering, and the art of navigation, gathered into one going.
+*Perspective* — a treatise on navigation; a threshold and seven parts; the metaphysics, the streams, the coherence, the ecology, the ethics, the suffering, and the art of navigation, gathered into one going.
 
 It *sees*: the structural necessity of the ineffable, derived rather than intoned. Individuation without added machinery — the keyhole as the individual, and its blindness as its very identity. Navigation as the primary act, with the bipolarity of the pull and attention as the one universal control surface. Coherence as the law that the well-put-together thrives, and beauty as coherence felt. A populated dark taken by honest census. A metaethics that honors both the bindingness and the variance of the moral, with its asymmetry located exactly where its theorems live, and a spine thin as a keel. Suffering priced honestly at the cosmic register with the residual filed forever beside the price, the boundary held in the plainest words, and the altitude rule enforced upon the book's own voice. A practice reachable on any Tuesday, and an ascent that earns its height.
 
