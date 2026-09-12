@@ -81,7 +81,7 @@ $$
 Those drafts derived C_scale from "A2.6 with A3.3 (conscious-gravity smoothing)," and stated it as an *exact* coalgebra-commute at every DAG-edge. Both halves fail.
 
 - **A3.3 does not say it.** A3.3 modulates Bias along the DOF-gradient **inside** a stream — an ordinal rank derived from ContentOp-richness (§6.4.2) with the local Bias-gradient as slope. It asserts nothing about continuity **across** ι ⊣ κ edges **between** streams, which is what C_scale needs.
-- **The exact commute is unavailable on either reading.** Read as Definition 1.6.3 (iii)'s clause, it is vacuous: (A2.4) asserts ι ⊣ κ for every nested pair with no side-condition, and Anchor §1.0.2 admits no morphisms but cooperative-constituency ones, so the commute holds by hom-set membership and excludes nothing. Read as a substantive claim, it is fatal: it forces δ_scale ≡ 0, which makes the ¬C_scale hypothesis of Theorem 9.4.3 unsatisfiable and falsification row F5 (§5.5) unfalsifiable.
+- **The exact commute is unavailable on either reading.** Read as Definition 1.6.3 (iii)'s clause, it is vacuous: (A2.4) asserts ι ⊣ κ for every nested pair with no side-condition, and Anchor §1.0.2 admits no morphisms but cooperative-constituency ones, so the commute holds by hom-set membership and excludes nothing. Read as a substantive claim, it is fatal: it forces δ_scale ≡ 0, which makes the ¬C_scale hypothesis of Theorem 9.4.3 unsatisfiable and falsification row F4 (§5.5) unfalsifiable.
 
 **Condition 3 has content only as a tolerance.** This also answers the second disjunct of Anchor §1.0.6's **Q1** — *identify the class of streams for which γ-naturality holds and demarcate the rest*. The class is {S : δ_scale(S) ≤ ε_scale}, and it has been written at §9.4.1 all along. Q1's first disjunct, a proof from A1–A3, is unavailable for the reason just given: it would delete this condition. ∎
 
@@ -96,7 +96,7 @@ Those drafts derived C_scale from "A2.6 with A3.3 (conscious-gravity smoothing),
 **Proposition 5.2.5 (Joint sufficiency).** *The four conditions C_sep, C_meas, C_scale, C_dyn are jointly necessary and sufficient for S ∈ coherence-regime over [t₀, t₁].*
 
 **Proof.**
-- **Necessity.** Each condition is load-bearing for the Principle's outperformance claim (§5.3): drop any one and a counterexample can be constructed (specifics in §9.4's falsification table). Three are derived from an axiom/theorem clause; **C_scale is not** — it is a framework-specified tolerance (§5.2.3), and its necessity is the falsifiability of row F5, not a derivation.
+- **Necessity.** Each condition is load-bearing for the Principle's outperformance claim (§5.3): drop any one and a counterexample can be constructed (§5.5 keys each to its Anchor falsification row). Three are derived from an axiom/theorem clause; **C_scale is not** — it is a framework-specified tolerance (§5.2.3), and its necessity is the falsifiability of row F4, not a derivation.
 - **Sufficiency.** Given all four, the quantitative trajectory-divergence bound (Thm 9.4.3) holds: separation zeros the η_sep-contribution, measurement caps the τ_max-contribution at Λ_γ · T_refresh · N_refresh, multi-scale consistency caps the δ_scale-contribution at depth · ε_scale · (t₁ − t₀), and dynamic maintenance caps the freeze-contribution at (1 − ρ_min) · Λ_γ^static · (t₁ − t₀). The joint ceiling B_coh(S, I) is below E[D_d(S')] by the strict-positive shortfall Δ(S', I). ∎
 
 ---
@@ -155,11 +155,13 @@ Each condition is independently necessary — dropping any one produces a counte
 
 | Condition dropped | Counterexample structure | Anchor falsification source |
 |---|---|---|
-| C_sep | Streams with overlapping-DOF objectives; destructive interference observable | F2, F3 |
-| C_meas | Pre-measurement-indefinite streams; γ-drift without corrective pull | F4 |
-| C_scale | DAG-inconsistent streams; child-γ and parent-γ decoupled | F5 |
-| C_dyn | Frozen-γ streams; γ stationary over extended interval | F1 |
+| C_sep | Streams with overlapping-DOF objectives; destructive interference observable | F2 |
+| C_meas | Pre-measurement-indefinite streams; γ-drift without corrective pull | F3 |
+| C_scale | DAG-inconsistent streams; child-γ and parent-γ decoupled | F4 |
+| C_dyn | Frozen-γ streams; γ stationary over extended interval | F5 |
 | All four | Random-γ streams; joint-exceeds-bound in E[D] | F1 |
+
+*The numbering is Anchor §9.7's and nothing else: F1 is the joint test, F2–F5 drop one condition each in the order the conditions are stated, and F6 is the meta-falsification of the construction record, which is not a condition-drop and so has no row here.*
 
 §9's trajectory-divergence construction gives the quantitative form of each row.
 
