@@ -15,7 +15,7 @@
 | **Dyad** (§1.2.3) | Anchor §1.0, §3 (A2.4) | definition | The category of ι ⊣ κ-linked stream-pairs; called 𝒞_LDS (*linked-dynamic streams*) before 2026-09-12. It is the category the coupled pair lives in, not the adjunction itself |
 | 𝒞_DOF (§1.2.4) | Anchor §4 | definition | DOF-gradient-equipped streams |
 | 𝒞_Triple (§1.7.1) | Anchor §1 | definition | Triple target category |
-| Navigation functor N (§1.3.1) | Anchor §3 (A2.5, §3.6) | definition | Experience-as-navigation functor. A2.5 is *Experience is navigation*; A2.3 is *Kinds-as-perspectival* (settlement note N7) |
+| Navigation functor N (§1.3.1) | Anchor §3 (A2.5, §3.6) | definition | Experience-as-navigation functor. A2.5 is *Experience is navigation*; A2.3 is *Kinds-as-perspectival* |
 | Conscious-gravity structure ν (§1.4.1) | Anchor §4 | definition | DOF-gradient natural transformation |
 | Ground-completeness (§1.5, Def 1.5.1) | *no Anchor clause* | definition | Adequate-pair-implies-stream. Called *substrate-completeness* before 2026-09-12. **REFERENCE-NATIVE, not ALREADY-LANDED**: the Anchor's A1 carries no completeness clause, and its (A1.4) is the etymological clause (see Appendix A, §2 block) |
 | Endofunctor F (§1.6.1) | Anchor §1.0, §3 | definition | Mixed-variance σ ↦ σ^(C^op) |
@@ -31,11 +31,11 @@
 | A1.1 non-reducibility | Anchor §2.2 | axiom-clause | The Ground X is not derivable from F_i-images |
 | A1.2 non-factoring | Anchor §2.3 | axiom-clause | F_i's do not factor through each other |
 | A1.3 configurational completeness | Anchor §2.4 | axiom-clause | All potentials realized |
-| A1.4 Ground-completeness | *no Anchor clause* | axiom-clause | Every adequate pair is realized. The Anchor's own (A1.4) is the etymological clause and has no Companion counterpart; the two volumes' (A1.4) labels name different things (settlement note N1) |
+| A1.4 Ground-completeness | *no Anchor clause* | axiom-clause | Every adequate pair is realized. The Anchor's own (A1.4) is the etymological clause and has no Companion counterpart; the two volumes' (A1.4) labels name different things |
 | A2 Nested Streams (§2.2) | Anchor §3 | axiom | Full paired prose |
 | A2.1–A2.6 (**six** clauses) | Anchor §3.1 (statement), §3.2–§3.7 (paired prose, in clause order) | axiom-clauses | Each clause has its Anchor subsection; all six live in Companion §2.2.2 |
 | Theorem 2.2.8 (kind-stratification from ContentOp-richness) | Anchor §3.3 | theorem | Paragraph confirming derivation from C-richness |
-| Remark 2.2.10 + Proposition 2.2.12 (constitutive duality) | Anchor §3.5 (A2.4) | remark + proposition | Constitutive duality is absorbed into (A2.4). Earlier Companion drafts carried it as a seventh clause (A2.7), demoted 2026-09-12; the Anchor never had an A2.7 (settlement question 19) |
+| Remark 2.2.10 + Proposition 2.2.12 (constitutive duality) | Anchor §3.5 (A2.4) | remark + proposition | Constitutive duality is absorbed into (A2.4). Earlier Companion drafts carried it as a seventh clause (A2.7), demoted 2026-09-12; the Anchor never had an A2.7 |
 | A3 Conscious Gravity (§2.3) | Anchor §4 | axiom | Full paired prose |
 | A3.1–A3.5 (five clauses) | Anchor §4.1 (statement), §4.2–§4.6 (paired prose, in clause order) | axiom-clauses | Each clause has its Anchor subsection; all five live in Companion §2.3.2 |
 | Axiom-status summary table (§2.5) | Anchor §2/§3/§4 + §9 status remark | table | 10-of-15 axiomatic / 5 framework-derivable (was 10-of-16 / 6 while A2.7 was counted as a clause) |
@@ -80,14 +80,14 @@
 | C13 (Cor 4.3.3) | Anchor §8.3 C13 | corollary | Flow inversion |
 | C14 (Cor 4.4.1) | Anchor §8.4 C14 (added 2026-04-27) | corollary | Two-mode symmetry-breaking: resolution and generation modes of T4's measurement-event functor M : 𝒞_Streams^op × 𝒞_Streams → 𝒞_Form |
 | C15 (Cor 4.4.2) | Anchor §8.4 C15 (added 2026-04-27) | corollary | Intervention-at-symmetry-layer: a carrier-state's content cannot be constrained without changing its symmetries |
-| C16 (Cor 4.4.3) | Anchor §8.4 C16 (added 2026-04-28) | corollary | Symmetry-exhaustion and oscillation necessity: monotone symmetry-depletion forces a re-introduction operator R (row added 2026-09-12, settlement note N4) |
-| C17 (Cor 4.4.4) | Anchor §8.4 C17 (added 2026-06-20) | corollary | Coupling-rate governs conscious temporal texture: occupancy μ = λτ is the order parameter (row added 2026-09-12, settlement note N4) |
+| C16 (Cor 4.4.3) | Anchor §8.4 C16 (added 2026-04-28) | corollary | Symmetry-exhaustion and oscillation necessity: monotone symmetry-depletion forces a re-introduction operator R |
+| C17 (Cor 4.4.4) | Anchor §8.4 C17 (added 2026-06-20) | corollary | Coupling-rate governs conscious temporal texture: occupancy μ = λτ is the order parameter |
 
 ### §5 (Coherence Principle) objects
 
 | Companion object | Anchor location | Register | Description |
 |---|---|---|---|
-| Trajectories and trajectory-divergence (Def 5.1.0) | Anchor Appendix B §B.5 | definition | α_S (actual trajectory), α*_S (the γ_S-implied trajectory — the Anchor's σ*), D_d, and comparability. Numbered 2026-09-12; previously a bullet in the §5.1 orientation list (settlement note N5) |
+| Trajectories and trajectory-divergence (Def 5.1.0) | Anchor Appendix B §B.5 | definition | α_S (actual trajectory), α*_S (the γ_S-implied trajectory — the Anchor's σ*), D_d, and comparability |
 | Coherence-regime (Def 5.1.1) | Anchor §9.1 | definition | Four-conditions conjunction |
 | The Coherence Principle (Thm 5.1.2) | Anchor §9.1 | theorem | Outperformance inequality |
 | Condition C_sep (Def 5.2.1) | Anchor §9.2 Condition 1 | definition | DOF-separation |
@@ -115,7 +115,7 @@
 | Colax-limit form (Thm 6.6.2) | Anchor §1 | theorem | Under initial-object hypothesis |
 | Stream ≃ F-Coalg_ad (Thm 6.7.1) | Anchor §1.0 | theorem | Main equivalence |
 | Limits/colimits + adequacy-stability (Lem 6.8.β) | Anchor §1.0 five-properties | lemma | §6.8 summary table |
-| Terminal object 1_Stream (Prop 6.8.1 + Rem 6.8.1.1) | Anchor §1.0.4 Property 5 | proposition + remark | The trivial point stream (1, **1**_cat, id_1): terminal in **Stream**^{−K} — Definition 6.1.3's kind-respect clause (iv) dropped — and only weakly terminal in **Stream**. A total collapse, not an outer view; A2.6 and Anchor Property 5 stand unchanged (settlement question 5; related theorem attached to no door: proofs DAG `math.no_self_enumeration`) |
+| Terminal object 1_Stream (Prop 6.8.1 + Rem 6.8.1.1) | Anchor §1.0.4 Property 5 | proposition + remark | The trivial point stream (1, **1**_cat, id_1): terminal in **Stream**^{−K} — Definition 6.1.3's kind-respect clause (iv) dropped — and only weakly terminal in **Stream**. A total collapse, not an outer view; A2.6 and Anchor Property 5 stand unchanged (related theorem attached to no door: proofs DAG `math.no_self_enumeration`) |
 | Final F-coalgebra ω-depth (Thm 6.9.1) | Anchor §1.5 | theorem | Under H1+H2 |
 | Iterated adjunction coherence over Up(S) (Lem 6.10.2.1) | Anchor §1.10 | lemma | ι, κ compose covariantly / contravariantly; no extra DAG cells |
 | Outer(S) cocomplete as ι-Grothendieck construction (Lem 6.10.3.1) | Anchor §1.10 | lemma | κ-variant is complete-not-cocomplete; direction is load-bearing |

@@ -11,8 +11,8 @@
 | Anchor location | Companion target | Type | Description |
 |---|---|---|---|
 | §1.0 definition of 𝒞_Str | Companion §1.2.1, §6.1.1 | definition | Full CT definition of Stream as adequate F-coalgebra category |
-| §1.0 cooperative-constituency ι ⊣ κ | Companion §2.2.2, clause (A2.4) | axiom-clause | The Hom-isomorphism Hom(ι S_p, S_q) ≅ Hom(S_p, κ S_q). **Dyad** (Definition 1.2.3) is the category the coupled *pair* lives in, not the adjunction; the row pointed there until 2026-09-12 (settlement note N2) |
-| §1.0 unit/counit pair η, ε | Companion §6.10.4 (Thm 6.10.4.1) | theorem | The unit/counit pair belongs to the **indexed** adjunction ι_S ⊣ ω_S over Up(S), a different adjunction from ι ⊣ κ; the Anchor's η/ε had no row landing on the same pair of functors until 2026-09-12 |
+| §1.0 cooperative-constituency ι ⊣ κ | Companion §2.2.2, clause (A2.4) | axiom-clause | The Hom-isomorphism Hom(ι S_p, S_q) ≅ Hom(S_p, κ S_q). **Dyad** (Definition 1.2.3) is the category the coupled *pair* lives in, not the adjunction |
+| §1.0 unit/counit pair η, ε | Companion §6.10.4 (Thm 6.10.4.1) | theorem | The unit/counit pair belongs to the **indexed** adjunction ι_S ⊣ ω_S : **Inner**(S) ↔ **Outer**(S) over Up(S), a different adjunction from ι ⊣ κ |
 | §1.0 five structural properties | Companion §6.1.7 | proposition | Conservativity + limit/colimit list |
 | §1.0.4 Property 5 (no substantive terminal / initial object) | Companion §6.8 (Prop 6.8.1 + Remark 6.8.1.1; Prop 6.8.5), §6.10.4.2 | proposition + remark | The terminal object the Companion constructs is the **trivial point stream** 1_Stream = (1, **1**_cat, id_1) — terminal in **Stream**^{−K} (kind-respect dropped) and only weakly terminal in **Stream**. It is a total collapse, not an outer view; A2.6 and Property 5 stand — on A2.6's non-comparability clause, an axiom, not on a diagonal argument. Related theorem, attached to no door: proofs DAG `math.no_self_enumeration` (a terminal object and Cantor coexist) |
 | §1.0 γ-naturality | Companion §1.4.3 | proposition | Naturality-of-ν square |
@@ -33,7 +33,7 @@
 
 ### Anchor §2 (Axiom 1 — Consciousness as Ground) → Companion
 
-*All four A1 clauses live inside Companion §2.1.2 — "The axiom". §2.1.1 is setup, §2.1.3 is remarks, and there is no §2.1.4; the rows below cite clauses, not subsection numbers. Corrected 2026-09-12 (settlement note N1).*
+*All four A1 clauses live inside Companion §2.1.2 — "The axiom". §2.1.1 is setup, §2.1.3 is remarks, and there is no §2.1.4; the rows below cite clauses, not subsection numbers.*
 
 | Anchor location | Companion target | Type | Description |
 |---|---|---|---|
@@ -46,7 +46,7 @@
 
 ### Anchor §3 (Axiom 2 — Nested Streams and Navigation) → Companion
 
-*A2 has **six** clauses, (A2.1)–(A2.6), and all six live inside Companion §2.2.2 — "The axiom". The labels below are the Anchor's own; earlier revisions of this table relabelled A2.3 and A2.5 and listed a seventh clause the Anchor never had. Corrected 2026-09-12 (settlement note N7, question 19).*
+*A2 has **six** clauses, (A2.1)–(A2.6), and all six live inside Companion §2.2.2 — "The axiom". The labels below are the Anchor's own. The clause earlier drafts carried as (A2.7) is not a seventh axiom clause: it is demoted to Remark 2.2.10 and restated as Proposition 2.2.12.*
 
 | Anchor location | Companion target | Type | Description |
 |---|---|---|---|
@@ -62,12 +62,12 @@
 
 ### Anchor §4 (Axiom 3 — Conscious Gravity) → Companion
 
-*All five A3 clauses live inside Companion §2.3.2 — "The axiom"; §2.3.1 is setup and §2.3.3 is remarks. Clause labels are the Anchor's; this table carried A3.1 and A3.3 under each other's names until 2026-09-12 (same fault class as notes N1/N7).*
+*All five A3 clauses live inside Companion §2.3.2 — "The axiom"; §2.3.1 is setup and §2.3.3 is remarks. Clause labels below are the Anchor's own; the Companion words (A3.1) and (A3.3) differently — *coalgebraic gravity structure* and *DOF-gradient modulation* — for the same two clauses.*
 
 | Anchor location | Companion target | Type | Description |
 |---|---|---|---|
 | A3.1 Coalgebraic structure (Anchor §4.2) | Companion §2.3.2, clause (A3.1) | axiom-clause | γ_S : S → Bias(S) × S; Bias and state-within-Bias update together |
-| A3.2 Immune-response / internality (Anchor §4.3) | Companion §2.3.2, clause (A3.2); Remark 2.3.5 | axiom-clause | γ_S acts only on S's F_2-internal structure, never on the Ground. **F_2 itself is defined at Companion Definition 2.1.2** — the perspectival phenomenal projection (settlement note N3) |
+| A3.2 Immune-response / internality (Anchor §4.3) | Companion §2.3.2, clause (A3.2); Remark 2.3.5 | axiom-clause | γ_S acts only on S's F_2-internal structure, never on the Ground. **F_2 itself is defined at Companion Definition 2.1.2** — the perspectival phenomenal projection |
 | A3.3 DOF-gradient integration (Anchor §4.4) | Companion §2.3.2, clause (A3.3); §1.4.1 | axiom-clause | ν formal structure; a continuous DOF-gradient, not a three-way partition |
 | A3.4 Adaptivity (Anchor §4.5) | Companion §2.3.2, clause (A3.4); Proposition 2.3.6 | axiom-clause | γ is itself updated by navigation; adaptivity is encoded in F |
 | A3.5 Stream-universality (Anchor §4.6) | Companion §2.3.2, clause (A3.5); Remark 2.3.7 | axiom-clause | Every stream carries γ-data by Definition 6.1.1 |
@@ -108,8 +108,8 @@
 | §8.4 Cluster IV (C14–C17) | Companion §4.4 | corollaries | Mechanism-consequences CT-proof-completion (added 2026-04-27); four corollaries, not two |
 | §8.4 C14 Two-Mode Symmetry-Breaking | Companion §4.4 (Cor 4.4.1) | corollary | Resolution and generation modes of T4's measurement-event functor M : 𝒞_Streams^op × 𝒞_Streams → 𝒞_Form |
 | §8.4 C15 Intervention-at-Symmetry-Layer | Companion §4.4 (Cor 4.4.2) | corollary | Content cannot be constrained without changing the carrier-state's symmetries |
-| §8.4 C16 Symmetry-Exhaustion and Oscillation Necessity | Companion §4.4 (Cor 4.4.3) | corollary | Monotone symmetry-depletion forces a re-introduction operator R (added to the Anchor 2026-04-28; indexed here 2026-09-12, settlement note N4) |
-| §8.4 C17 Coupling-Rate Governs Conscious Temporal Texture | Companion §4.4 (Cor 4.4.4) | corollary | Occupancy μ = λτ is the order parameter of temporal texture (added to the Anchor 2026-06-20; indexed here 2026-09-12, settlement note N4) |
+| §8.4 C16 Symmetry-Exhaustion and Oscillation Necessity | Companion §4.4 (Cor 4.4.3) | corollary | Monotone symmetry-depletion forces a re-introduction operator R (added to the Anchor 2026-04-28) |
+| §8.4 C17 Coupling-Rate Governs Conscious Temporal Texture | Companion §4.4 (Cor 4.4.4) | corollary | Occupancy μ = λτ is the order parameter of temporal texture (added to the Anchor 2026-06-20) |
 
 ### Anchor §9 (Coherence Principle) → Companion
 
@@ -117,7 +117,7 @@
 |---|---|---|---|
 | §9.1 Principle CT statement | Companion §5.1 (Thm 5.1.2) | theorem | Outperformance inequality |
 | §9.2 four conditions | Companion §5.2 (Defs 5.2.1–5.2.4) | definitions | Each derived in one line |
-| §9.3 outperformance metric | Companion §9 (Def 9.1.1) + §5.1 (Def 5.1.0) | construction | Full D_d + Bias-consistency. α_S, α*_S and the divergence functional are numbered at Definition 5.1.0 (i)–(iii); §9 constructs the functional (settlement note N5) |
+| §9.3 outperformance metric | Companion §9 (Def 9.1.1) + §5.1 (Def 5.1.0) | construction | Full D_d + Bias-consistency. α_S, α*_S and the divergence functional are numbered at Definition 5.1.0 (i)–(iii); §9 constructs the functional |
 | §9.4 status | Companion §5.0 preamble | orientation | Derived operational principle |
 | §9.5 self-reference closure | Companion §8 + §5.4 | conjecture + audit register | Formal F_∞ construction; Conjectures 5.4.1/5.4.2 with the Anchor §9.5 Protocol, gated on §8.3.5 / Prop 8.5.2 |
 | §9.6 what Principle is *not* | Companion §5.6 (remark) | remark | Non-theorem, non-axiom |
@@ -141,12 +141,12 @@
 | Anchor location | Companion target | Type | Description |
 |---|---|---|---|
 | Appendix A entries | Companion Appendix B (this direction: Companion → Anchor) | index | Object-by-object pointers |
-| Appendix A F_2 entry | Companion Definition 2.1.2 | definition | The index's location for F_2 was a use-site, not a definition site. F_2 is the **perspectival phenomenal projection**, defined at Companion Definition 2.1.2; it is neither the Triple's Content projection (π_Content, Definition 6.2.2) nor the endofunctor F of the F-coalgebra (Definition 1.6.1). Corrected 2026-09-12 (settlement note N3) |
+| Appendix A F_2 entry | Companion Definition 2.1.2 | definition | F_2 is the **perspectival phenomenal projection**, defined at Companion Definition 2.1.2; it is neither the Triple's Content projection (π_Content, Definition 6.2.2) nor the endofunctor F of the F-coalgebra (Definition 1.6.1) |
 | Appendix A prop(S, D) — **propagation** | Companion §7.4 (Def 7.4.1, push_info) | definition | Normalized density of traces(S) ∩ positions(D): S's reach into D, a push operator on other streams' Bias. Called *trace-density* before 2026-09-12 and mistaken for a coherence axis; it is not one |
 
 #### Bridges cited by the Anchor
 
-*The Anchor's Appendix A carried six Bridge rows under a numbering the basement retired on 2026-04-20; four of them (#102, #107, #109, #110) occur in no Anchor chapter and are pre-compression entries for the Triple the Anchor already is. Replaced 2026-09-12 by the three live objects (settlement note N6, question 18). Definitions are quoted from `Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md`; the pre-compression full text is at `Corpus-Perspectival/Research/Corpus-Perspectival/basement-v1-2026-04-20-snapshot.md` (Bridge #104 at §104).*
+*The Anchor's Appendix A §A.7 carries Bridge #104 (Bootstrap Asymmetry), M2 (the Inspection-Depth Ceiling, absorbing #106) and M3 (the Identity-Trajectory Triple, absorbing #62, #85, #87, #102, #107, #108, #109, #110); #102, #107, #109 and #110 are pre-compression entries for the Triple the Anchor already is and occur in no Anchor chapter. Definitions are quoted from `Corpus-Perspectival/Foundations-of-Identity/palace/basement/README.md`; the pre-compression numbering the basement retired on 2026-04-20 is preserved in full at `Corpus-Perspectival/Research/Corpus-Perspectival/basement-v1-2026-04-20-snapshot.md` (Bridge #104 at §104).*
 
 | Bridge | Definition | Anchor use-sites | Companion target |
 |---|---|---|---|
@@ -185,9 +185,9 @@ Some Anchor sections cite "*Coherent Structure*" directly without location. Thes
 
 ---
 
-## A.3 — Book bindings (settlement 2026-09-12)
+## A.3 — Book bindings
 
-*The Book (*Truth and Consequences*) is not a citation-target of the Anchor, so it has no rows in A.1. Settlement question 2 bound two of its claims to formal objects; the bindings are recorded here so the three texts can be read against each other.*
+*The Book (*Truth and Consequences*) is not a citation-target of the Anchor, so it has no rows in A.1. Two of its claims are nonetheless bound to formal objects; the bindings are recorded here so the three texts can be read against each other.*
 
 | Book claim | Formal object | Type | Description |
 |---|---|---|---|
