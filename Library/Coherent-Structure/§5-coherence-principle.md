@@ -30,7 +30,7 @@ Companion §5 states the Principle in CT form with complete derivation-pointers.
 
 **Definition 5.1.1 (Coherence-regime).** *S is in **coherence-regime** over [t₀, t₁] iff the four conditions C_sep, C_meas, C_scale, C_dyn (Definitions 5.2.1–5.2.4) hold across the interval.*
 
-**The Coherence Principle (Theorem 5.1.2).** *For comparable streams S, S' over [t₀, t₁] with S in coherence-regime and S' not,*
+**Theorem 5.1.2 (The Coherence Principle).** *For comparable streams S, S' over [t₀, t₁] with S in coherence-regime and S' not,*
 
 $$
 \mathbb{E}_{[t_0, t_1]}[D(S, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D(S', \cdot)].

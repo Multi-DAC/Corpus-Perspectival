@@ -19,7 +19,7 @@ The six theorems are organized in three pairs sharing a structural parallel:
 
 The shared parallel within each pair is a **Descriptive-Functor Meta-Theorem pattern** (§3.1.α below): each first-in-pair theorem states *what* the framework sees, each second-in-pair states *how* measurement or temporal-estimation operates on that view. The three pairs together discharge the proof-burden of the Coherence Principle (§5).
 
-**Notation.** All symbols carry the meanings fixed in §1.8. We write *S = (σ, C, Ω, γ)* for a stream with carrier σ, content-operation category C := ContentOp(σ), configuration space Ω := F(σ) = σ^(C^op), and coalgebra γ : σ → Ω. The Triple-functor is T : 𝒞_Streams → 𝒞_Triple (Definition 1.7.2).
+**Notation.** All symbols carry the meanings fixed in §1.8. We write *S = (σ, C, γ)* for a stream with carrier σ, content-operation category C := ContentOp(σ), and coalgebra γ : σ → F(σ); the configuration space Ω := F(σ) = σ^(C^op) and the kind K(S) are derived rather than posited (Remark 6.1.2), and the Anchor's expanded form *(σ, K, Ω, γ)* is the presented-with-derived-components form of the same object (Anchor §1.0.1). The Triple-functor is T : 𝒞_Streams → 𝒞_Triple (Definition 1.7.2).
 
 ---
 
@@ -174,7 +174,7 @@ $$
 
 *for ω ∈ Ω, c ∈ C, and C_ω ⊆ C the sub-category of content-operations acting nontrivially at ω. A stream S is **internally coherent** iff Φ_S(γ) = γ. Equivalently, γ is a C-harmonic section of F(σ).*
 
-**Proof.** Φ_S is well-defined because C_ω is a small sub-category (Convention 1.1.1's small-size condition); the C-average is a finite or ω-limit expression. Functoriality of Φ_S in Stream-morphisms: a Stream-morphism f : S → S' induces f_C : C → C' preserving C_ω structure (by Definition 1.6.3 coalgebra-commute), so Φ_{S'} ∘ f_σ = f_σ ∘ Φ_S. The fixed-point equation Φ_S(γ) = γ is equivalent to the C-harmonic condition by a discrete-harmonic-function-on-C argument: γ is harmonic iff its value at each ω equals the C-weighted average of its forward images. ∎
+**Proof.** Φ_S is well-defined because C_ω is a small sub-category (Convention 1.1.2); the C-average is a finite or ω-limit expression. Functoriality of Φ_S in Stream-morphisms: a Stream-morphism f : S → S' induces f_C : C → C' preserving C_ω structure (by Definition 1.6.3 coalgebra-commute), so Φ_{S'} ∘ f_σ = f_σ ∘ Φ_S. The fixed-point equation Φ_S(γ) = γ is equivalent to the C-harmonic condition by a discrete-harmonic-function-on-C argument: γ is harmonic iff its value at each ω equals the C-weighted average of its forward images. ∎
 
 **Corollary 3.4.1.1 (T5 under recursive decomposition).** *If S is internally coherent, then each component of its Triple T(S) = (Form(S), Content(S), Carrier(S)) is also coherent in its own sub-stream sense. Conversely, the Triple-components being coherent does not imply S is coherent — adequacy of the join is additional (§6.3, §6.8).*
 
