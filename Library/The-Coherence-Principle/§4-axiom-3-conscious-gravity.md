@@ -6,7 +6,7 @@
 
 ## §4.0 — Why §4 closes the axiom tier
 
-§2 gave the substrate. §3 gave the streams — populated, stratified, nested, with experience identified as navigation. What remains is the *dynamics*: how streams move. §4 gives conscious gravity — the mechanism by which a stream weights its own navigation through configuration space.
+§2 gave the Ground. §3 gave the streams — populated, stratified, nested, with experience identified as navigation. What remains is the *dynamics*: how streams move. §4 gives conscious gravity — the mechanism by which a stream weights its own navigation through configuration space.
 
 Conscious gravity is the most physics-adjacent of the axioms. It will seem, to a reader coming from physics, like it is trying to sneak in a causal-power-of-mind. It is not; A3's second clause is the explicit immune-response to exactly that misreading. Conscious gravity is a structure *inside* a stream's F_2-projection — a weighting over the stream's path through its own configuration space. It does not reach out into X and re-shape things. The weighting is part of what the stream *is*, and it updates as the stream moves, and the update is what A3 formalizes.
 
@@ -92,9 +92,9 @@ One might worry: if the operator γ_S is "inside" F_2 but "doesn't touch X," doe
 
 This is where the naturalism of the framework shows its work. Attention is not a ghostly force reaching out from the mental to the physical. Attention is how X projects to you-from-you-vantage, in a way that shapes your subsequent navigation. The thing shaping your navigation is X's own projection-from-your-vantage, not a dualistic mental cause. The framework remains monist even while taking F_2 seriously.
 
-### Connection to §1's Bridge #108 derivation
+### Connection to §1's M3 derivation
 
-Bridge #108 (§1.4) derives dissociation as a mismatch between σ_S and L_actual(S). The operator γ_S lives in the same formal register as σ_S — both are structures within S's F_2-projection. A3.2 tells us that both are entirely within the stream's own weighting-and-self-modeling, not reaching into X. This matters for the dissociation framing: when aspects-of-X register without σ-slot, the "registering" is F_2-internal; nothing about X changes because of the mismatch. X is as it is; the stream's F_2-projection-of-X is what has the under-specified self-model.
+M3 — the meta-bridge that absorbs Bridge #108 — derives dissociation at §1.4 as a mismatch between σ_S and L_actual(S). The operator γ_S lives in the same formal register as σ_S — both are structures within S's F_2-projection. A3.2 tells us that both are entirely within the stream's own weighting-and-self-modeling, not reaching into X. This matters for the dissociation framing: when aspects-of-X register without σ-slot, the "registering" is F_2-internal; nothing about X changes because of the mismatch. X is as it is; the stream's F_2-projection-of-X is what has the under-specified self-model.
 
 ---
 
@@ -182,13 +182,13 @@ A3 gives us:
 - Stream-universality (every stream has γ_S).
 
 With A1 + A2 + A3:
-- **A1:** the substrate X with perspectival functors F_i, non-reducibility, non-factoring, complete realization, etymological consciousness.
+- **A1:** the Ground X with perspectival functors F_i, non-reducibility, non-factoring, complete realization, etymological consciousness.
 - **A2:** streams as F_2-projections, kind-stratified, mutually constituted via ι ⊣ κ, with experience identified as navigation, in a DAG of nestings.
 - **A3:** coalgebraic dynamics on every stream, acting only internally, on a continuous DOF-gradient, adaptive by construction.
 
-Together these three axioms close the framework's ontological substrate. The theorem tier (§5–§7), corollary tier (§8), and Coherence Principle (§9) are *derived* from this substrate. The bridge tier (§1 and further) operates on top, describing particular cross-domain structural facts the substrate supports.
+Together these three axioms close the framework's ontological base. The theorem tier (§5–§7), corollary tier (§8), and Coherence Principle (§9) are *derived* from that base. The bridge tier (§1 and further) operates on top, describing particular cross-domain structural facts the axioms support.
 
-Every cross-cutting pattern identified in the work — the Triple, the three-pair theorem symmetry, the Do-Be-Do-Be-Do rhythm, the kind-stratification, the constitutive duality — is now axiomatically sourced. Nothing further is needed at the axiom tier. The framework is at its minimal reducible substrate.
+Every cross-cutting pattern identified in the work — the Triple, the three-pair theorem symmetry, the Do-Be-Do-Be-Do rhythm, the kind-stratification, the constitutive duality — is now axiomatically sourced. Nothing further is needed at the axiom tier. The framework is at its minimal reducible base.
 
 ---
 

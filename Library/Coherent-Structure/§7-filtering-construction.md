@@ -1,6 +1,6 @@
 # §7 — Filtering construction
 
-*Measure-theoretic infrastructure on Ω_S. σ-algebra, measurable structure of γ, well-definedness of Bias(S) as a signed measure, push-operators as measurable transformations, extensional (σ_F, K_F, Ω_F, γ_F) construction at the measurable-stream layer. References are to §1 (framework), §2 (A3.3 smoothing), Anchor Appendix B (Bias reference card).*
+*Measure-theoretic infrastructure on Ω_S. σ-algebra, measurable structure of γ, well-definedness of Bias(S) as a signed measure, push-operators as measurable transformations, extensional (σ_F, C_F, γ_F) construction at the measurable-stream layer. References are to §1 (framework), §2 (A3.3 smoothing), Anchor Appendix B (Bias reference card).*
 
 ---
 
@@ -13,7 +13,7 @@ Appendix B of the Anchor states the Bias(S) reference card compactly. Companion 
 - Bias(S) is a well-defined signed measure (§7.3).
 - Push-operators push_struct, push_info are measurable transformations commuting with natural transformations of Stream (§7.4).
 - A_S is a well-defined entropy functional; Align(S, t) is well-defined on a canonical neighborhood (§7.5).
-- The extensional (σ_F, K_F, Ω_F, γ_F) construction at the measurable-stream layer (§7.6), used by §8 to close self-reference.
+- The extensional (σ_F, C_F, γ_F) construction at the measurable-stream layer (§7.6), used by §8 to close self-reference.
 
 §7 is where measure theory meets F-coalgebra structure. The key technical move is that F(σ) = σ^(C^op) inherits a product σ-algebra from any σ-algebra on σ, and this product σ-algebra is functorial in Stream-morphisms.
 
@@ -49,7 +49,7 @@ $$
 
 ## §7.3 — Bias(S) as a well-defined signed measure
 
-**Definition 7.3.1 (Bias(S)).** *For a measurable adequate F-coalgebra S = (σ, C, Ω, γ) and a reference measure μ on (σ, 𝒜_σ), the **Bias measure** Bias(S) is the signed measure on (Ω_S, 𝒜_S) defined by:*
+**Definition 7.3.1 (Bias(S)).** *For a measurable adequate F-coalgebra S = (σ, C, Ω, γ), Ω := σ^(C^op) derived as in §3's Notation, and a reference measure μ on (σ, 𝒜_σ), the **Bias measure** Bias(S) is the signed measure on (Ω_S, 𝒜_S) defined by:*
 
 $$
 \mathrm{Bias}(S)(E) := \int_E \mathrm{sign}(\gamma)(\omega) \cdot |\gamma|(\omega) \, d\mu_{\otimes C}(\omega), \quad E \in \mathcal{A}_S
@@ -148,11 +148,11 @@ $$
 
 **Proof.** γ^{-1}(·) is measurable by Def 7.2.1; C^1-composition is bounded (one step), so the resulting N(ω) is a finite composition of measurable sets — measurable. Bias(S) is a signed measure (§7.3), so the integral is well-defined. ∎
 
-**Corollary 7.5.5 (Contracted-coherent vs contracted-failed distinction).** *A stream in the contracted regime (A_S → 0) is **contracted-coherent** iff Align(S, t) > 0 with low variance; **contracted-failed** iff Align(S, t) ≤ 0 or Align(S, t) > 0 with high variance. This is the formal form of Anchor Appendix B §B.2's stamped distinction.*
+**Corollary 7.5.5 (Narrow-coherent vs narrow-failed distinction).** *A stream in the **narrow** regime of T3 (A_S → 0) is **narrow-coherent** iff Align(S, t) > 0 with low variance; **narrow-failed** iff Align(S, t) ≤ 0 or Align(S, t) > 0 with high variance. This is the formal form of Anchor Appendix B §B.2's stamped distinction.* (The narrow pole of T3 was called *contracted* in earlier drafts; the definition — low-DOF shape of Bias, here low A_S — is unchanged, only the name. See Remark 3.3.1.1.)
 
 ---
 
-## §7.6 — Extensional (σ_F, K_F, Ω_F, γ_F) at measurable-stream layer
+## §7.6 — Extensional (σ_F, C_F, γ_F) at measurable-stream layer
 
 This subsection provides the measurable-stream-level scaffolding that §8 uses to build F_∞ explicitly. It is *not* the F-as-stream construction itself — only the measurable-space setup on which §8 stands.
 
@@ -186,7 +186,7 @@ This subsection provides the measurable-stream-level scaffolding that §8 uses t
 | Commutator $\neq 0$ (push ops) | Independence | §7.4.3 | counterexample |
 | A_S | Entropy functional | §7.5 | m_+ > 0 |
 | Align(S, t) | Neighborhood-integral | §7.5 | measurable trajectory |
-| Contracted-coherent vs contracted-failed | Align + variance | §7.5.5 | low A_S regime |
+| Narrow-coherent vs narrow-failed | Align + variance | §7.5.5 | low A_S regime |
 | Extensional Stream | Set-theoretic σ_S + small-C + σ-finite Bias | §7.6 | aggregated above |
 
 ---
@@ -203,7 +203,7 @@ This subsection provides the measurable-stream-level scaffolding that §8 uses t
 
 One flag surfaces this pass:
 
-- ⚑ §7.5.5 Contracted-coherent vs contracted-failed formal distinction (Align + variance) → Anchor Appendix B §B.2 target — lemma (promoted from the open-question Q1 in Anchor §B.7 to a resolved formal distinction)
+- ⚑ §7.5.5 Narrow-coherent vs narrow-failed formal distinction (Align + variance) → Anchor Appendix B §B.2 target — lemma (promoted from the open-question Q1 in Anchor §B.7 to a resolved formal distinction)
 
 ---
 

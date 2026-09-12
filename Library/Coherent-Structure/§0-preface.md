@@ -38,13 +38,13 @@ Future drafting may surface new items; the same flag machinery and four-path lif
 ## Structure
 
 - **§0** — Preface (this section)
-- **§1** — Category framework: 𝒞_Streams, 𝒞_Form, 𝒞_LDS, 𝒞_DOF; navigation functor N; conscious-gravity structure ν; substrate-completeness; notation index
+- **§1** — Category framework: 𝒞_Streams, 𝒞_Form, **Dyad**, 𝒞_DOF; navigation functor N; conscious-gravity structure ν; Ground-completeness; notation index
 - **§2** — Axioms A1 / A2 / A3
 - **§3** — Theorems in three pairs: T1/T2 (descriptive), T3/T4 (dynamics), T5/T6 (coherence)
 - **§4** — Corollary clusters (seventeen corollaries in four clusters; Cluster IV mechanism-consequences added 2026-04-27 with C14 + C15, extended 2026-04-28 with C16 — Symmetry-Exhaustion and Oscillation Necessity, extended 2026-06-20 with C17 — Coupling-Rate Governs Conscious Temporal Texture)
 - **§5** — The Coherence Principle
 - **§6** — Identity-Trajectory Triple; TC1/TC2/TC3 intensional; colax-limit theorem
-- **§7** — Filtering construction: σ-algebra on Ω_S, extensional (σ_F, K_F, Ω_F, γ_F), Bias(S) well-definedness
+- **§7** — Filtering construction: σ-algebra on Ω_S, extensional (σ_F, C_F, γ_F), Bias(S) well-definedness
 - **§8** — F-as-stream (self-reference closure)
 - **§9** — D trajectory-divergence functional
 - **§10** — Reference figures (TikZ standard set)

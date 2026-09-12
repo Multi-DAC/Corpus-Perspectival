@@ -31,7 +31,7 @@ A1 substrate-internality requires that σ is *intrinsic to the substrate itself*
 | Register | Term-form | Notes |
 |---|---|---|
 | Framework (anchor) | σ, σ_S, σ*(t) | base; §1 §3 canonical |
-| Framework (companion / CT) | substrate-localization functor; section of fibration over base; *(σ_F, K_F, Ω_F, γ_F)* tuple | CT formalization |
+| Framework (companion / CT) | substrate-localization functor; section of fibration over base; *(σ_F, C_F, γ_F)* stream triple, K_F and Ω_F derived (Companion Remark 6.1.2) | CT formalization |
 | DoPI register | *the localization within X*; *the perspectival being's position* | proto-σ |
 | Corpus V1 register | *the configuration's place in X-region*; *generative contraction's output point* | early register |
 | Meridian / physics | *the field configuration value*; *the cosmological state at time t*; *the trajectory through moduli space* | physics scale |

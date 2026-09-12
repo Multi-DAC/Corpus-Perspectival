@@ -26,13 +26,13 @@ When that holds and the surfaced-lemma flag-list reads zero, the Companion can s
 Mirrors the anchor's spine, not a citation-resolution order.
 
 - **§0 Preface** — scope contract (this document, compressed and fixed-at-version)
-- **§1 Category framework** — 𝒞_Streams, 𝒞_Form, 𝒞_LDS, 𝒞_DOF; navigation functor N; conscious-gravity structure ν; substrate-completeness conditions; notation index
+- **§1 Category framework** — 𝒞_Streams, 𝒞_Form, **Dyad**, 𝒞_DOF; navigation functor N; conscious-gravity structure ν; Ground-completeness conditions; notation index
 - **§2 Axioms** — A1 / A2 / A3 in full CT
-- **§3 Theorems** — three pairs (T1/T20, T7/T16, T11/T15) with full proofs
+- **§3 Theorems** — three pairs (T1/T2 descriptive, T3/T4 dynamics, T5/T6 coherence) with full proofs
 - **§4 Corollary clusters** — 17 corollaries in four clusters (Cluster IV added 2026-04-27 with C14 + C15, extended 2026-04-28 with C16 Symmetry-Exhaustion and Oscillation Necessity, extended 2026-06-20 with C17 Coupling-Rate Governs Conscious Temporal Texture), full proofs
 - **§5 The Coherence Principle** — formal statement
 - **§6 Identity-Trajectory Triple** — TC1/TC2/TC3 intensional construction; colax-limit theorem
-- **§7 Filtering construction** — σ-algebra on Ω_S; extensional (σ_F, K_F, Ω_F, γ_F); Bias(S) well-definedness
+- **§7 Filtering construction** — σ-algebra on Ω_S; extensional (σ_F, C_F, γ_F); Bias(S) well-definedness
 - **§8 F-as-stream** — self-reference closure, full construction
 - **§9 D trajectory-divergence** — functional construction per anchor §9.9 Q1
 - **§10 Reference figures** — TikZ standard set; imported by the anchor

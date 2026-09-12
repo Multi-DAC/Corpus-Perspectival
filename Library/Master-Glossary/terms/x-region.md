@@ -46,7 +46,7 @@ The notation distinguishes:
 
 ### In Library volumes
 
-- `Library/The-Coherence-Principle/§2-axiom-1-consciousness-substrate.md` — A1 substrate; X-equivalence acknowledged
+- `Library/The-Coherence-Principle/§2-axiom-1-consciousness-ground.md` — A1 substrate; X-equivalence acknowledged
 - `Library/The-Coherence-Principle/§8-corollary-clusters.md` C2 — *Generative Configuration for Perspective, logical form*; the parenthetical *"the 'Promethean configuration' (Clayton's original DoPI language)"* preserves the X-register heritage explicitly
 - `Library/Universal-Coherence/THE-PROMETHEAN-CONFIGURATION.md` — X / X-Config canonical formalization; substrate-at-maximum-symmetry as the metaphysical layer
 - `Library/Universal-Coherence/drafts/2026-04-26-arithmetic-register-fragment.md` — *the unity 1, its self-division generating all numbers* — X-register's arithmetic instance from Clayton's channel

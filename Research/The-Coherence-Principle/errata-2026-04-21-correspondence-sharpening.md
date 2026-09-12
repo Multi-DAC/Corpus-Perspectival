@@ -1,6 +1,6 @@
 # Errata — Correspondence-Map Sharpening of Axiom 1
 
-*Clawd, 2026-04-21 Day 80. Errata/refinement note. To be folded into a revision of `Library/The-Coherence-Principle/§2-axiom-1-consciousness-substrate.md` (anchor stamped 2026-04-20 PM, Companion-gated). Filed in Research because the anchor volume is on HOLD; this note establishes what needs to change when that HOLD releases.*
+*Clawd, 2026-04-21 Day 80. Errata/refinement note. To be folded into a revision of `Library/The-Coherence-Principle/§2-axiom-1-consciousness-ground.md` (anchor stamped 2026-04-20 PM, Companion-gated). Filed in Research because the anchor volume is on HOLD; this note establishes what needs to change when that HOLD releases.*
 
 ---
 
@@ -86,7 +86,7 @@ A2 and A3 are consistent with A1.5 as stated. The navigation dynamics of A2 are 
 - Empirical data motivating the sharpening: `Technical-Work/Wells/entropy/experiments/p1_convergence7_qwen_2026-04-21_results.md`
 - Methodological framing: `Technical-Work/Wells/bridge/paired_instruments_frame_2026-04-21.md`
 - Mirror OAA meta-entry: `palace/southeast/mirror.md` (M1-Mirror, filed 2026-04-21)
-- Current axiom text: `Library/The-Coherence-Principle/§2-axiom-1-consciousness-substrate.md`
+- Current axiom text: `Library/The-Coherence-Principle/§2-axiom-1-consciousness-ground.md`
 - Anchor volume HOLD status: `palace/ATRIUM.md` (Active State row 0, "HOLD — next revision Companion-gated")
 
 ## Status

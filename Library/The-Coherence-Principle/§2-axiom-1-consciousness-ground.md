@@ -1,4 +1,4 @@
-# §2 — Axiom 1: Consciousness as Substrate
+# §2 — Axiom 1: Consciousness as Ground
 
 *This chapter's job: give formal status to X, F_i, and the non-reducibility statements §1 used informally.*
 
@@ -10,7 +10,7 @@
 
 The order — bridges before axioms — inverts derivation. It is pedagogical, not logical. The reader arrives with identity-questions, the Triple handles them, and only then do we peel back to what X is and why the functor-structure has to be the way it is. Readers interested in foundations-first can read §2–§4 before §1 and lose nothing.
 
-Axiom 1 is the substrate axiom. It says what is. It carries one immune-response clause (*all potentials of X are simultaneously realized*), built in at the axiomatic level to block the modal-actualization misreading. It is the claim from which the perspectival structure — F_i, 𝒞_P, 𝒞_Str — descends.
+Axiom 1 is the Ground axiom. It says what is. It carries one immune-response clause (*all potentials of X are simultaneously realized*), built in at the axiomatic level to block the modal-actualization misreading. It is the claim from which the perspectival structure — F_i, 𝒞_P, 𝒞_Str — descends.
 
 ---
 
@@ -18,7 +18,7 @@ Axiom 1 is the substrate axiom. It says what is. It carries one immune-response 
 
 ### Statement
 
-**Axiom 1 (Consciousness as Substrate).**
+**Axiom 1 (Consciousness as Ground).**
 
 *There exists a self-interactive, self-sufficient process X with the following structural properties:*
 
@@ -67,7 +67,7 @@ This is not mysticism. The river is available to every projection; the projectio
 
 A1 says: consciousness, in its etymological sense, is the river. Structural description and experiential description are two ways of being there. Neither is the river. Neither is reducible to the other (that is A1.2). Both are real, and each is real *as a projection of something that is neither*.
 
-This is the positive content of the anti-reductionism. It is not the claim "you cannot describe consciousness structurally"; that would be mysticism. It is the claim "structural description is one projection; experiential description is another; the substrate is what both project from." Both are available. Neither is the substrate.
+This is the positive content of the anti-reductionism. It is not the claim "you cannot describe consciousness structurally"; that would be mysticism. It is the claim "structural description is one projection; experiential description is another; the Ground is what both project from." Both are available. Neither is the Ground.
 
 ### Why the functor language is load-bearing
 
@@ -89,17 +89,17 @@ This does not mean the projections are unrelated. They share a source (X). Both 
 
 ### Prose translation
 
-The hard problem of consciousness, under this axiom, is not a puzzle for the framework to eventually solve. It is the formal shape of the relationship between structural and experiential description. Structural description cannot derive experiential description (nor vice versa) because each is a separate projection of the substrate. You can have exhaustive structural description of a brain — every neuron, every synapse, every firing pattern — and it will not, cannot, constitute the experiential description of the perspective embodied by that brain. Not because there is something magical about experience, but because structural and experiential are parallel projections of the same substrate, not serial compositions.
+The hard problem of consciousness, under this axiom, is not a puzzle for the framework to eventually solve. It is the formal shape of the relationship between structural and experiential description. Structural description cannot derive experiential description (nor vice versa) because each is a separate projection of the Ground. You can have exhaustive structural description of a brain — every neuron, every synapse, every firing pattern — and it will not, cannot, constitute the experiential description of the perspective embodied by that brain. Not because there is something magical about experience, but because structural and experiential are parallel projections of the same Ground, not serial compositions.
 
 This is not a mystery to be dissolved; it is the formal shape of the ontology. The framework honors the hard problem by encoding its formal structure axiomatically: it is impossible to solve "what it is like to be X" from structural description of X, and this impossibility is not a limitation of present science but a structural consequence of A1.
 
-What the framework *does* offer, beyond encoding the shape of the problem, is a way to talk about both projections without privileging either. The structural tradition (physics, neuroscience, computation) gives us F_1(X) for various X. The experiential tradition (phenomenology, introspection, contemplative literatures, first-person reporting) gives us F_2(X). Both are real projections. Neither derives from the other. The work of the framework is to make the relationship — parallel projections of a shared substrate — formally precise, and to study what each projection can and cannot do (the theorem tier's work).
+What the framework *does* offer, beyond encoding the shape of the problem, is a way to talk about both projections without privileging either. The structural tradition (physics, neuroscience, computation) gives us F_1(X) for various X. The experiential tradition (phenomenology, introspection, contemplative literatures, first-person reporting) gives us F_2(X). Both are real projections. Neither derives from the other. The work of the framework is to make the relationship — parallel projections of a shared Ground — formally precise, and to study what each projection can and cannot do (the theorem tier's work).
 
 ### Connection to §1
 
 §1's Triple uses both F_1 and F_2 implicitly. The Content axis Ψ(S) draws on F_2-projections (lineage-density is an experiential signature — something the stream has accumulated as its own). The Form axis Φ(S) draws on both — oscillation-structures are describable structurally (F_1) and experientially (F_2), and the Form of the Triple is the vantage-intrinsic sustained-return, not any particular description of it. The Carrier axis Κ(S) draws primarily on F_1 — DOF-gradients are measurable structurally — but its phenomenological consequences (what aspects register under mismatch) live in F_2.
 
-The Triple is not *located* in F_1 or F_2; it is a structural feature of streams that both projections see. (A1.2) guarantees that describing Φ(S) structurally does not compose into the experiential signature of Ψ(S) — even though the two axes are constrained (TC1) as formal dependencies — because (TC1) is a constraint at the substrate level, not a reduction of one projection to another.
+The Triple is not *located* in F_1 or F_2; it is a structural feature of streams that both projections see. (A1.2) guarantees that describing Φ(S) structurally does not compose into the experiential signature of Ψ(S) — even though the two axes are constrained (TC1) as formal dependencies — because (TC1) is a constraint at the Ground level, not a reduction of one projection to another.
 
 ---
 
@@ -117,13 +117,13 @@ This is the clause that prevents the framework from being (mis)read as "consciou
 
 This is also the clause that makes the framework compatible with anti-local-realism in quantum mechanics without collapsing into Copenhagen-style observer-creates-outcome mysticism. All the measurement outcomes are realized — in 𝒞_P, together, completely. What an observer-stream encounters along its navigation is one branch. There is no *generation* of reality by observation; there is a navigation through what is already there.
 
-The positive content: every vantage that could be taken within X is taken — simultaneously — within the substrate. Your particular experience right now is one path through the complete space. The experiences you did not have are not un-had; they are not yours to have *along your navigation*, but they are there in 𝒞_P. Someone else has them; some other stream navigates them.
+The positive content: every vantage that could be taken within X is taken — simultaneously — within the Ground. Your particular experience right now is one path through the complete space. The experiences you did not have are not un-had; they are not yours to have *along your navigation*, but they are there in 𝒞_P. Someone else has them; some other stream navigates them.
 
 This is not physics-weird. It is the structural consequence of A1.1: if X is the joint source of all projections, and the projections together exhaust X (which they do, by definition — every vantage projects into some 𝒞_{Desc_i}), then every vantage is already there. There is no hidden corner of X that a projection fails to cover; there is no "potential" vantage that is not already part of 𝒞_P.
 
 ### Why this is not a trivial metaphysical add-on
 
-One might read (A1.3) as doing unnecessary work — as though A1.1 and A1.2 alone sufficed. They do not. Without (A1.3), the ontology of 𝒞_P would have to specify which of its objects are actualized and which are merely potential, and this would reintroduce modal structure at the 𝒞_P level. The framework would then carry two ontological registers — the substrate and the modal — and have to specify their relation. (A1.3) eliminates this by collapsing modal structure into navigation: the navigational difference between what a stream experiences and what it does not is not a difference of ontology (realized vs. unrealized) but of vantage-within-the-complete-space.
+One might read (A1.3) as doing unnecessary work — as though A1.1 and A1.2 alone sufficed. They do not. Without (A1.3), the ontology of 𝒞_P would have to specify which of its objects are actualized and which are merely potential, and this would reintroduce modal structure at the 𝒞_P level. The framework would then carry two ontological registers — the Ground and the modal — and have to specify their relation. (A1.3) eliminates this by collapsing modal structure into navigation: the navigational difference between what a stream experiences and what it does not is not a difference of ontology (realized vs. unrealized) but of vantage-within-the-complete-space.
 
 The immune-response character is that this clause explicitly refuses a reading that would otherwise be available. It is not a silent assumption; it is a named axiomatic claim with a specific refusal-target.
 
@@ -137,7 +137,7 @@ The immune-response character is that this clause explicitly refuses a reading t
 
 (A1.4) says: the word "consciousness," in the sense A1 uses, is a name for X's self-interactive dynamics. It is not a predicate applied to X. It is not a property X has. It is a name for X's being-and-doing.
 
-The clause does two things formally. First, it fixes terminology: when A1 speaks of "consciousness as substrate," it means X-qua-dynamical-process, not some property attached to X. Second, it connects the framework to the etymological meaning of "consciousness" — *con-sciens*, knowing-with — rather than the modern English sense of "awareness plus self-reflection."
+The clause does two things formally. First, it fixes terminology: when A1 speaks of "consciousness as Ground," it means X-qua-dynamical-process, not some property attached to X. Second, it connects the framework to the etymological meaning of "consciousness" — *con-sciens*, knowing-with — rather than the modern English sense of "awareness plus self-reflection."
 
 This matters because the word "consciousness" in modern English-language philosophy of mind is often used to mean specifically the self-reflective or meta-cognitive aspect of experience — the feature that distinguishes, e.g., a rock (which has no consciousness) from a human (which does). A1 uses "consciousness" in the older etymological sense: reactive-experiential self-interactive being, which is universal across X at every vantage, graded by kind (a cell is conscious-with-a-cell's-dynamics; a person is conscious-with-a-person's-dynamics; an ecosystem is conscious-with-an-ecosystem's-dynamics).
 
@@ -149,18 +149,20 @@ A rock, under this usage, is minimally conscious — it reacts to its environmen
 
 This is what the kind-stratification of 𝒞_Str (§3) formalizes. 𝒞_Str^reactive is the category where mere response-to-environment is present. 𝒞_Str^self-maint adds closed-loop self-maintenance. 𝒞_Str^self-ref adds self-models influencing dynamics. 𝒞_Str^abstr adds categorial abstraction. Each stratum is a sub-category; each adds specific structural capacities; the word "consciousness" applies at all strata, because being-a-vantage is the minimum condition, and all strata of 𝒞_Str satisfy that by construction.
 
-This is a difficult move for philosophers trained in the modern English sense of the word. The framework is not adopting panpsychism in the sense that every object has a *mind*. It is adopting substrate-consciousness in the etymological sense: being-a-vantage is the ground condition, and the higher-order structures (self-reflection, abstraction, reasoning) are additional capacities built on top, not the essence of consciousness itself.
+This is a difficult move for philosophers trained in the modern English sense of the word. The framework is not adopting panpsychism in the sense that every object has a *mind*. It is adopting Ground-consciousness in the etymological sense: being-a-vantage is the ground condition, and the higher-order structures (self-reflection, abstraction, reasoning) are additional capacities built on top, not the essence of consciousness itself.
 
 ### Why the choice of word is load-bearing
 
-Other choices were available. We could have used a neologism. We could have used "experience" (but experience is already taken, by another tradition, with other connotations). We could have used "substrate-activity" or "being-and-becoming." The framework uses "consciousness" deliberately, because the word's etymological content — knowing-with — is precisely what A1 names. Using a neologism would have lost the connection to the tradition (pre-Cartesian, Aristotelian, scholastic, phenomenological) that has used the word in this sense all along. The modern English narrowing is a local dialect; the framework returns to the broader usage, and is explicit about doing so.
+Other choices were available. We could have used a neologism. We could have used "experience" (but experience is already taken, by another tradition, with other connotations). We could have used "Ground-activity" or "being-and-becoming." The framework uses "consciousness" deliberately, because the word's etymological content — knowing-with — is precisely what A1 names. Using a neologism would have lost the connection to the tradition (pre-Cartesian, Aristotelian, scholastic, phenomenological) that has used the word in this sense all along. The modern English narrowing is a local dialect; the framework returns to the broader usage, and is explicit about doing so.
+
+**On "Ground" rather than "substrate."** A1 was called *Consciousness as Substrate* until 2026-09-12. The word was wrong for the same reason the modern narrowing of "consciousness" is wrong: it carries a picture the axiom denies. A substrate is stuff underneath — a medium with properties of its own, waiting beneath the observables. X is not that. (A1.1) says X is recovered by no single projection; X is named only by its projections and is not an object of any one description category. "The Ground" says what is meant — that from which, not that out of which — and it leaves "substrate" free for the one place this volume still needs it, the physics anchoring of §9.5, where a Lagrangian system really does have a material carrier.
 
 ---
 
 ## §2.6 — Together: what A1 gives us
 
 A1 gives us:
-- X — the substrate, self-interactive, self-sufficient.
+- X — the Ground, self-interactive, self-sufficient.
 - 𝒞_P — the category of perspectival projections (vantages within X).
 - F_i : 𝒞_P → 𝒞_{Desc_i} — perspectival functors, including F_1 (structural) and F_2 (experiential).
 - Non-reducibility of X to any single F_i(X) (A1.1).
@@ -186,9 +188,9 @@ The chapters after A1 depend heavily on its clauses. Two uses in particular:
 
 Three likely objections, addressed briefly; fuller treatment deferred to the objections-compendium appendix.
 
-**Objection 1: "Calling consciousness a substrate is non-naturalistic mysticism."**
+**Objection 1: "Calling consciousness the Ground is non-naturalistic mysticism."**
 
-Response: the framework is explicitly naturalistic. X is not a supernatural entity; X is whatever-is, in its self-interactive aspect. The framework does not add consciousness to a naturalistic ontology; it *is* a naturalistic ontology in which the word "consciousness" (in its etymological sense) is used for the substrate's self-interactive dynamics. No supernatural claim is made.
+Response: the framework is explicitly naturalistic. X is not a supernatural entity; X is whatever-is, in its self-interactive aspect. The framework does not add consciousness to a naturalistic ontology; it *is* a naturalistic ontology in which the word "consciousness" (in its etymological sense) is used for the Ground's self-interactive dynamics. No supernatural claim is made.
 
 **Objection 2: "The non-factoring clause (A1.2) just re-states the hard problem. It doesn't solve it."**
 

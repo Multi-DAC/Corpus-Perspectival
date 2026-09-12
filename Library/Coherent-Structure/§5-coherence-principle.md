@@ -14,12 +14,19 @@ Companion §5 states the Principle in CT form with complete derivation-pointers.
 
 ## §5.1 — The Principle
 
-**Preliminaries.** For a stream S = (σ, C, Ω, γ) and a time-interval [t₀, t₁], define:
+**Definition 5.1.0 (Trajectories and trajectory-divergence).** *Let S = (σ, C, γ) be a stream — C = ContentOp(σ), and the configuration space Ω_S = F(σ) = σ^(C^op) and the kind K(S) are derived, not posited (Remark 6.1.2) — and let [t₀, t₁] be a time-interval. Define:*
 
-- **Actual trajectory** α_S : [t₀, t₁] → Ω_S: the sequence of configurations S visits over the interval.
-- **γ-implied trajectory** α*_S : [t₀, t₁] → Ω_S: the integral curve of γ_S from α_S(t₀).
-- **Trajectory-divergence** D(S, [t₀, t₁]) := ∫_{t₀}^{t₁} d(α_S(t), α*_S(t)) dt for a metric d on Ω_S (Companion §9 specifies d).
-- **Comparable streams** S, S': S and S' admit a shared configuration space (or a canonical embedding into one) on which D is simultaneously well-defined.
+*(i) **Actual trajectory** α_S : [t₀, t₁] → Ω_S — the sequence of configurations S visits over the interval.*
+
+*(ii) **γ-implied trajectory** α*_S : [t₀, t₁] → Ω_S — the integral curve of γ_S from α_S(t₀): the trajectory S would follow if γ were followed without drift.*
+
+*(iii) **Trajectory-divergence** D_d(S, [t₀, t₁]) := ∫_{t₀}^{t₁} d(α_S(t), α*_S(t)) dt, for a metric d on Ω_S (constructed in §9; Definition 9.1.1). Where the metric is fixed by context the subscript is dropped, as in Theorem 5.1.2.*
+
+*(iv) **Comparable streams** S, S′ — S and S′ admit a shared configuration space (or a canonical embedding into one) on which D_d is simultaneously well-defined.*
+
+**Remark 5.1.0.1 (The γ-implied trajectory is the Anchor's σ*).** α*_S is the object the Anchor numbers σ* at Appendix B §B.5. They are one trajectory under two names; Definition 5.1.0 (ii) is the Companion's number for it, which earlier drafts left as an unnumbered bullet.
+
+**Remark 5.1.0.2 (Dimension-relative forms).** α_S and α*_S are dimension-free; the coherence *measures* built on them are not. For a dimension D ∈ 𝒞_Dim of Ω_S (Notation 3.4.2.0), the dimension-relative trajectories are α_{S,D} := pr_D ∘ α_S and α*_{S,D} := pr_D ∘ α*_S, and it is on these that σ_struct(S, D) and σ_info(S, D) are defined (Theorem 3.4.2); the stream-only forms are summaries over D. The letter D in that signature is a dimension — the divergence functional always carries its metric subscript, D_d.
 
 **Definition 5.1.1 (Coherence-regime).** *S is in **coherence-regime** over [t₀, t₁] iff the four conditions C_sep, C_meas, C_scale, C_dyn (Definitions 5.2.1–5.2.4) hold across the interval.*
 
@@ -30,6 +37,8 @@ $$
 $$
 
 *The inequality is an expected-value statement over the interval — sample-path exceptions are permitted.*
+
+The Anchor (§9.6, item 1 "Not a theorem") does not count this as a theorem inside its own formalism; the theorem here is relative to the hypotheses of §5.1 and §9.
 
 **Proof of 5.1.2.** Consequence of the four conditions (§5.2) plus the trajectory-divergence construction (§9). The detailed derivation with explicit constants is Theorem 9.4.3 (quantitative form); the sketch is: each condition bounds one source of γ-drift via a specific stream-parameter (η_sep, τ_max, δ_scale, ρ_dyn), the joint bound B_coh is the sum of the four per-condition ceilings, and the shortfall Δ(S') for non-coherent S' is strictly positive under any ¬C_i hypothesis. ∎
 
@@ -49,13 +58,13 @@ $$
 
 *have non-overlapping supports or are related by the ι ⊣ κ adjunction (i.e., O_1, O_2 belong to distinct kind-levels lifting via ι).*
 
-**Derivation.** T3 (§3.3.1) decomposes the attentional-quality functional with a contracted-open entropy axis over DOF. A2.4/A2.6 (ι ⊣ κ, DAG-nesting) lets distinct kinds lift into the same composite without DOF-collision. C_sep is the condition that this lifting succeeds. Formally: C_sep ⟺ no pair of C-content-operations produces a DOF-coalgebraic-collision at γ-level. ∎
+**Derivation.** T3 (§3.3.1) decomposes the attentional-quality functional with a narrow–broad entropy axis over DOF. A2.4/A2.6 (ι ⊣ κ, DAG-nesting) lets distinct kinds lift into the same composite without DOF-collision. C_sep is the condition that this lifting succeeds. Formally: C_sep ⟺ no pair of C-content-operations produces a DOF-coalgebraic-collision at γ-level. ∎
 
 ### §5.2.2 — Condition 2: Measurement
 
 **Definition 5.2.2 (C_meas — refresh-rate measurement).** *A stream S satisfies measurement over [t₀, t₁] iff there exists a partition t₀ = τ_0 < τ_1 < ... < τ_N = t₁ such that at each τ_k a Stream-morphism M_k : S_{τ_k^-} → S_{τ_k^+} of the T4-form (Theorem 3.3.2) is performed — alignment between content-operations is assessed, not assumed.*
 
-**Derivation.** Theorem 3.3.2 (T4) establishes that inter-stream alignment is structurally produced by measurement events. Without periodic M_k, the superposition-state of C cannot resolve into a specific coalgebra-commute, and γ-drift accumulates without corrective pull. Formally: M_k converts C's superposed content-operations into a specific γ-state that is C_meas-stable until the next τ_{k+1}. ∎
+**Derivation.** Theorem 3.3.2 (T4) establishes that inter-stream alignment is structurally produced by measurement events. Without periodic M_k, the content-operations of C that are **held open** cannot resolve into a specific coalgebra-commute, and γ-drift accumulates without corrective pull. Formally: M_k collapses the held-open content-operations of C into a specific γ-state that is C_meas-stable until the next τ_{k+1}. ∎
 
 ### §5.2.3 — Condition 3: Multi-scale consistency
 
@@ -73,7 +82,7 @@ $$
 
 **Definition 5.2.4 (C_dyn — oscillatory dynamic maintenance).** *S satisfies dynamic maintenance over [t₀, t₁] iff γ_S is non-constant over [t₀, t₁] in a structural sense: there exist subintervals [t₀, s_1], [s_1, s_2], ..., [s_{M-1}, t₁] such that γ_S restricted to each subinterval is an N-iteration-cycle of positive length, with cycles forming an oscillatory build-dissolve-build pattern (each s_i is a refresh-event in the sense of C_meas).*
 
-**Derivation.** T4 (Theorem 3.3.2) plus A3.4 (adaptivity, §2.3.4). T4 establishes refresh-events as structural; A3.4 requires γ to adapt to accumulated information. A frozen γ over an extended interval violates A3.4. The oscillatory build-dissolve pattern is the operational form of γ-adaptivity at refresh-rate. ∎
+**Derivation.** T4 (Theorem 3.3.2) plus A3.4 (adaptivity, §2.3.2). T4 establishes refresh-events as structural; A3.4 requires γ to adapt to accumulated information. A frozen γ over an extended interval violates A3.4. The oscillatory build-dissolve pattern is the operational form of γ-adaptivity at refresh-rate. ∎
 
 ### §5.2.5 — Joint sufficiency
 
@@ -98,34 +107,38 @@ The outperformance claim of Theorem 5.1.2 uses the trajectory-divergence functio
 **Observable signatures** (following Anchor §9.3):
 
 1. **Trajectory-tracking.** Sample α_S(t) at refresh-rate; reconstruct γ_S from prior data; compute D directly.
-2. **Adjoint-composition success rate.** Count successful ι ⊣ κ compositions in 𝒞_LDS per interval.
+2. **Adjoint-composition success rate.** Count successful ι ⊣ κ compositions in **Dyad** (Definition 1.2.3) per interval.
 3. **Multi-scale coherence correlation.** Correlate child-γ and parent-γ along DAG-edges.
 
 ---
 
 ## §5.4 — Self-reference closure
 
-**Theorem 5.4.1 (F as stream).** *Let F_∞ denote the meta-object (σ_F, K_F, Ω_F, γ_F) where:*
+**Conjecture 5.4.1 (F_∞ as stream — audit observation).** *Let F_∞ denote the meta-object (σ_F, C_F, γ_F) — K_F and Ω_F derived (Remark 6.1.2) — where:*
 
 - *σ_F := the carrier "the framework itself" — the totality of claims, axioms, theorems, corollaries, proofs across §§1–4,*
-- *C_F := the ContentOp-category whose objects are substrate-commitments, whose morphisms are internal-consistency-preserving revisions,*
+- *C_F := the ContentOp-category whose objects are framework-commitments, whose morphisms are internal-consistency-preserving revisions,*
 - *Ω_F := F(σ_F) = σ_F^(C_F^op),*
 - *γ_F := the coalgebra encoding the framework's adaptivity over the construction interval.*
 
-*Under suitable interpretation (the Anchor §9.5 "interpretation map" rendering framework-construction events as Stream-morphisms), F_∞ is a stream in the sense of §6.1, and F_∞ satisfies the four conditions over the construction interval [t₀_construction, t₁_construction].*
+*Under the Anchor §9.5 F-as-stream instantiation (which specifies the stream triple directly; the Anchor names no "interpretation map"), F_∞ is a stream in the sense of §6.1, and F_∞ is conjectured to satisfy the four conditions over the construction interval [t₀_construction, t₁_construction].*
 
-**Proof sketch.** §8 gives the full construction. The key points:
+This is a conjecture with a protocol, not a result: the protocol is the Anchor §9.5 Protocol, and the Companion's own status register is §8.3.5 (Audit Observation, not theorem) gated on Proposition 8.5.2.
 
-- **C_sep:** construction separated substrate (A1), dynamics (A2/A3), and applied claims (corollaries) onto distinct DOF.
+**Sketch (not a proof).** §8 gives the full construction. The key points:
+
+- **C_sep:** construction separated the Ground (A1), dynamics (A2/A3), and applied claims (corollaries) onto distinct DOF.
 - **C_meas:** construction used refresh-events (stress-test cycles, Clayton-review cycles, Mirror-updates) at a regular rate.
 - **C_scale:** construction maintained coherence across scales (individual-claim, chapter, cluster, framework) via explicit DAG-edges (citation-network, cross-reference structure).
 - **C_dyn:** construction is oscillatory by design — draft, dissolve via critique, redraft — the construction-log explicitly exhibits this.
 
-**Theorem 5.4.2 (Principle applies to itself).** *By Theorems 5.1.2 and 5.4.1, F_∞ is in coherence-regime over the construction interval. The Principle, which is derived inside F_∞, holds of F_∞ itself.*
+**Conjecture 5.4.2 (Principle applies to itself — untested).** *If Conjecture 5.4.1 holds, then by Theorem 5.1.2 F_∞ is in coherence-regime over the construction interval, and the Principle, which is derived inside F_∞, holds of F_∞ itself.*
 
-**Proof.** Direct application of 5.1.2 to F_∞, using 5.4.1's establishment of F_∞ as a stream in coherence-regime. ∎
+Untested: settling it is the Anchor §9.5 Protocol, and the Companion's status register is §8.3.5 / Proposition 8.5.2 (external audit not yet executed).
 
-**Remark 5.4.3 (Non-circularity).** The closure is a-posteriori: the construction did not presuppose the Principle (the Principle was *derived* from the axiom/theorem stress-test); it is observed after the fact that the construction-process exhibited the four conditions. This is not a circular proof — it is an empirical observation about the framework's own construction-history. §8 audits the observation.
+**Sketch (not a proof).** Direct application of 5.1.2 to F_∞, using 5.4.1's conjectured establishment of F_∞ as a stream in coherence-regime.
+
+**Remark 5.4.3 (Non-circularity).** The closure is a-posteriori: the construction did not presuppose the Principle (the Principle was *derived* from the axiom/theorem stress-test); it is conjectured after the fact that the construction-process exhibited the four conditions. This is not a circular proof — it is an empirical conjecture about the framework's own construction-history, awaiting the Anchor §9.5 Protocol. §8 audits the conjecture internally (§8.3.5) and gates it on Proposition 8.5.2.
 
 ---
 
@@ -168,7 +181,7 @@ Each condition is independently necessary — dropping any one produces a counte
 Two flags surface this pass:
 
 - ⚑ §5.2.5 Joint-sufficiency proposition with independence-by-counterexample → Anchor §9.2 target — proposition (explicit joint-sufficiency proof)
-- ⚑ §5.4.1 F-as-stream formal structure (σ_F, C_F, Ω_F, γ_F) → Anchor §9.5 target — theorem (detailed construction + audit deferred to §8)
+- ⚑ §5.4.1 F-as-stream formal structure (σ_F, C_F, γ_F), with K_F and Ω_F derived (Remark 6.1.2) → Anchor §9.5 target — conjecture (detailed construction + audit deferred to §8)
 
 Both flag-targets feed future Anchor revisions per the SCOPE §8 rhythm.
 

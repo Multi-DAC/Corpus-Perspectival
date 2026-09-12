@@ -10,10 +10,10 @@
 
 The chapter is organized by **type family**:
 - §1.1 ambient conventions and notation blocks
-- §1.2 the ambient category and sub-categories (𝒞_Streams, 𝒞_Form, 𝒞_LDS, 𝒞_DOF)
+- §1.2 the ambient category and sub-categories (𝒞_Streams, 𝒞_Form, **Dyad**, 𝒞_DOF)
 - §1.3 the navigation functor N
 - §1.4 the conscious-gravity structure ν
-- §1.5 substrate-completeness
+- §1.5 Ground-completeness
 - §1.6 the endofunctor F and Stream-as-F-coalgebra
 - §1.7 the Triple and its target categories
 - §1.8 notation quick-reference table
@@ -60,13 +60,13 @@ The canonical choice is 𝒜 = **Set** itself. For constructions involving topol
 
 𝒞_Form is the target of the Form-projection functor (§1.7.2).
 
-### §1.2.3 — 𝒞_LDS
+### §1.2.3 — Dyad
 
-**Definition 1.2.3.** **𝒞_LDS** (Linked-Dynamic-Streams) is the category of stream-pairs under coupling-compatible morphisms:
+**Definition 1.2.3.** **Dyad** — the category of *coupled dyads*, written 𝒞_LDS ("linked dynamic streams") in earlier drafts — is the category of stream-pairs under coupling-compatible morphisms:
 - Objects: pairs (S_1, S_2) ∈ 𝒞_Streams × 𝒞_Streams.
 - Morphisms: (f, g) : (S_1, S_2) → (S'_1, S'_2) such that f, g are Stream-morphisms and the induced carrier-maps commute with any present ι ⊣ κ adjunction (cooperative-constituency).
 
-𝒞_LDS is where the coupled-dyad theorems of §3.2 (A2 coupling clause) live. Bias(S) push-operators (Anchor §6.2; Companion §7) act through 𝒞_LDS.
+**Dyad** is where the coupled-dyad theorems of §3.2 (A2 coupling clause) live. Bias(S) push-operators (Anchor §6.2; Companion §7) act through **Dyad**. The name **Dyad** is reserved for this pair-category; the Anchor's *lineage* category, formerly also written 𝒞_LDS, is 𝒞_Lineage and is a different object (Anchor §1, the Lineage Triple L).
 
 ### §1.2.4 — 𝒞_DOF
 
@@ -78,7 +78,7 @@ The canonical choice is 𝒜 = **Set** itself. For constructions involving topol
 
 ### §1.2.5 — 𝒞_Triple
 
-**Definition 1.2.5.** **𝒞_Triple** := 𝒞_Form × **Cat**_small × **Carrier**, where **Carrier** is the category of coalgebra-structure-maps. See §1.7.1 for the full definition and §6.2 for the Triple functor T : 𝒞_Streams → 𝒞_Triple.
+**Definition 1.2.5.** **𝒞_Triple** := 𝒞_Form × **Content** × **Carrier**, where **Content** is the full subcategory of **Cat**_small spanned by the ContentOp-categories that are adequate for some carrier (Convention 1.1.6), and **Carrier** is the category of coalgebra-structure-maps. See §1.7.1 for the full definition and §6.2 for the Triple functor T : 𝒞_Streams → 𝒞_Triple. 𝒞_Triple is the same category as **Triple** of Definition 6.2.1; the two names are used interchangeably.
 
 ---
 
@@ -98,7 +98,7 @@ $$
 
 with N(f) = F(f) componentwise. N is the functor whose iterated orbits are the **trajectories** of the stream through configuration space Ω.
 
-**Remark 1.3.2.** N-orbit structure is the formal content of Anchor §3's "experience = navigation" clause (A2.3). A stream *being alive* is γ carrying the state one step forward along N; a stream's *experiential history* is the N-orbit up to the present moment.
+**Remark 1.3.2.** N-orbit structure is the formal content of Anchor §3's "experience = navigation" clause (A2.5; A2.3 is *kinds-are-perspectival*). A stream *being alive* is γ carrying the state one step forward along N; a stream's *experiential history* is the N-orbit up to the present moment.
 
 **Proposition 1.3.3 (Navigation functoriality).** *N preserves Stream-morphisms, kind-respect, and adequacy.*
 
@@ -137,9 +137,9 @@ $$
 
 ---
 
-## §1.5 — Substrate-completeness
+## §1.5 — Ground-completeness
 
-**Definition 1.5.1.** The **substrate-completeness condition** is the requirement that for every pair (σ, content-operation-class) consistent with the framework's adequacy, there exists a stream instantiating it. Formally:
+**Definition 1.5.1.** The **Ground-completeness condition** (*substrate-completeness* in earlier drafts and in Anchor cross-citations) is the requirement that for every pair (σ, content-operation-class) consistent with the framework's adequacy, there exists a stream instantiating it. Formally:
 
 $$
 \begin{aligned}
@@ -148,9 +148,9 @@ $$
 \end{aligned}
 $$
 
-**Remark 1.5.2.** This is the categorical content of Axiom A1 (Consciousness as Substrate): every vantage that could bear a content-operation-class does bear one. §2 (A1 chapter) gives the full formal content; §1.5 states the condition as a reference.
+**Remark 1.5.2.** This is the categorical content of Axiom A1 (Consciousness as Ground): every vantage that could bear a content-operation-class does bear one. §2 (A1 chapter) gives the full formal content; §1.5 states the condition as a reference.
 
-**Consequence 1.5.3.** Substrate-completeness is what lets the framework reason "every vantage is a stream" (Anchor §3.2). Without it, the framework would need to distinguish vantages that are streams from vantages that merely could be — a distinction the framework refuses.
+**Consequence 1.5.3.** Ground-completeness is what lets the framework reason "every vantage is a stream" (Anchor §3.2). Without it, the framework would need to distinguish vantages that are streams from vantages that merely could be — a distinction the framework refuses.
 
 ---
 
@@ -185,10 +185,12 @@ $$
 **Definition 1.7.1.** The Triple target category is
 
 $$
-\mathcal{C}_\mathrm{Triple} := \mathcal{C}_\mathrm{Form} \times \mathbf{Cat}_\mathrm{small} \times \mathbf{Carrier}
+\mathcal{C}_\mathrm{Triple} := \mathcal{C}_\mathrm{Form} \times \mathbf{Content} \times \mathbf{Carrier}
 $$
 
-where **Carrier** is the category whose objects are coalgebra-structure-maps γ : σ → F(σ) and whose morphisms are coalgebra-commute squares.
+where **Content** is the full subcategory of **Cat**_small spanned by those small categories that are adequate content-operation categories for some carrier (Convention 1.1.6), and **Carrier** is the category whose objects are coalgebra-structure-maps γ : σ → F(σ) and whose morphisms are coalgebra-commute squares.
+
+**Remark 1.7.1.1 (Agreement with §6.2).** Definition 1.7.1 and Definition 6.2.1 define the same category: 𝒞_Triple = **Triple** = **Form** × **Content** × **Carrier**, with 𝒞_Form = **Form**. Earlier drafts wrote the middle factor as all of **Cat**_small; the restriction to adequate content-operation categories is what makes the Triple functor T : **Stream** → **Triple** (Definition 6.2.2) land in the stated codomain, and it changes no theorem of §6, since every ContentOp(σ) occurring in a Stream-object is adequate by Convention 6.0.3.
 
 ### §1.7.2 — The Triple functor T
 
@@ -217,9 +219,9 @@ See §6.3 for finite-depth factorability; §6.9 for depth-ω structure.
 | 𝒜 | Ambient category (Set by default) | §1.1.1 |
 | 𝒞_Streams, 𝒞_Str, Stream | Category of streams | §1.2.1, §6.1.1 |
 | 𝒞_Form | Bare carrier-objects category | §1.2.2 |
-| 𝒞_LDS | Linked-dynamic-streams category (pairs + ι⊣κ) | §1.2.3 |
+| **Dyad** | Category of coupled dyads (stream-pairs + ι⊣κ); formerly 𝒞_LDS | §1.2.3 |
 | 𝒞_DOF | DOF-gradient-equipped streams | §1.2.4 |
-| 𝒞_Triple | Form × Cat_small × Carrier | §1.2.5, §1.7.1 |
+| 𝒞_Triple, **Triple** | Form × Content × Carrier (Content ⊆ Cat_small full) | §1.2.5, §1.7.1, §6.2.1 |
 | σ | Carrier object (stream-internal) | §1.6.1 |
 | ContentOp(σ) | Small category of content-operations on σ | §1.6.1 |
 | γ | Coalgebra-structure map σ → F(σ) | §1.6.4 |

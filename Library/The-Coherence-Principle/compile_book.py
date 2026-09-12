@@ -21,7 +21,7 @@ CHAPTERS = [
     "README.md",  # used as preface
     "§1.0-category-of-streams.md",
     "§1-identity-trajectory-triple.md",
-    "§2-axiom-1-consciousness-substrate.md",
+    "§2-axiom-1-consciousness-ground.md",
     "§3-axiom-2-nested-streams-navigation.md",
     "§4-axiom-3-conscious-gravity.md",
     "§5-descriptive-pair-t1-t2.md",

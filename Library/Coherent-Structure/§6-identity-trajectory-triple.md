@@ -22,9 +22,9 @@ The op-category on the exponent matches the presheaf convention: content-operati
 
 **Convention 6.0.4 (Initial objects in ContentOp).** Existence of an initial object in ContentOp(σ) is **not** an axiom of Stream. Theorems that require it carry the hypothesis explicitly (notably the colax-limit form of the Triple in §6.6).
 
-**Convention 6.0.5 (Kind structure).** A2's kind structure is a **preorder** in general (reactive ⊑ self-maintaining ⊑ self-referential ⊑ abstractional). When ContentOp-structure admits meets/joins, the preorder strengthens to a lattice. Theorems stated at preorder-level are strictly weaker but more general; lattice-level corollaries are marked.
+**Convention 6.0.5 (Kind structure).** A2's kind structure is a **preorder** in general (reactive ⊑ self-maintaining ⊑ self-referential ⊑ abstractive). When ContentOp-structure admits meets/joins, the preorder strengthens to a lattice. Theorems stated at preorder-level are strictly weaker but more general; lattice-level corollaries are marked.
 
-**Convention 6.0.6 (Recursive decomposability).** Each Triple-component (Form, Content, Carrier) of a stream σ is itself a stream, hence admits its own Triple. This is a theorem of the framework (§6.3), not an axiom.
+**Convention 6.0.6 (Recursive decomposability).** Each Triple-component (Form, Content, Carrier) of a stream σ is itself a stream, hence admits its own Triple. This is a theorem of the framework (§6.3), not an axiom. Depth ω is conditional on the C-size regime (Remark 6.3.5, §6.9: Corollary 6.9.4, Theorem 6.9.5).
 
 **Notation block.** Fixed throughout §§6–9:
 
@@ -118,19 +118,19 @@ $$
 where:
 
 - **Form** is the category of bare carriers (objects: carrier sets σ; morphisms: carrier-maps σ → σ' in the ambient category).
-- **Content** is Cat_small — objects: small categories; morphisms: functors.
+- **Content** is the full subcategory of **Cat**_small spanned by those small categories that are adequate content-operation categories for some carrier (Convention 6.0.3) — objects: such small categories; morphisms: functors. (It is *not* all of **Cat**_small; §1.7.1 states the same restriction, and Remark 1.7.1.1 records the agreement of the two definitions.)
 - **Carrier** is the category whose objects are coalgebra-structure-maps γ : σ → F(σ) and whose morphisms are coalgebra-commute squares.
 
-**Triple** inherits a product-2-category structure from its three components. When §6 treats Triple strictly as a 1-category, 2-cells are discarded; where 2-cell data is load-bearing (notably §6.2.5 and the middle-regime texture of §6.5), the bicategorical structure is invoked explicitly.
+**Triple** inherits a product-2-category structure from its three components. When §6 treats Triple strictly as a 1-category, 2-cells are discarded; where 2-cell data is load-bearing (notably Corollary 6.2.5 and the bicategorical kind-classifier fibration of §6.4 — Theorem 6.4.6, Corollary 6.4.13), the bicategorical structure is invoked explicitly. The middle-regime texture that used to carry the other 2-cell load is migrated out of §6.5 (see that slot).
 
 **Definition 6.2.2 (The Triple functor).** T : **Stream** → **Triple** is defined by:
 
-- On objects: T(σ, ContentOp(σ), γ) = (σ, ContentOp(σ), γ). The three projections are the three aspects — Form takes σ, Content takes ContentOp(σ), Carrier takes γ.
+- On objects: T(σ, ContentOp(σ), γ) = (σ, ContentOp(σ), γ). The three projections out of **Triple** are written π_Form, π_Content, π_Carrier: π_Form takes σ, π_Content takes ContentOp(σ), π_Carrier takes γ. (These are the Triple's factor projections. They are *not* perspectival projections of the Ground; the symbol F_2 is reserved for the perspectival phenomenal projection of Definition 2.1.2 and is never used for π_Form, π_Content or π_Carrier.)
 - On morphisms: T(f) = (f_σ, f_C, f_γ), where f_γ is the coalgebra-commute-square data of f.
 
 **Proposition 6.2.3 (T is a functor).** T preserves composition and identities.
 
-**Proof.** Each of the three projections is separately functorial by inspection. Composition in Triple is componentwise (Definition 6.2.1), matching composition in Stream (Proposition 6.1.4). ∎
+**Proof.** Each of π_Form, π_Content, π_Carrier is separately functorial by inspection. Composition in Triple is componentwise (Definition 6.2.1), matching composition in Stream (Proposition 6.1.4). ∎
 
 **Lemma 6.2.4 (T is forgetful — F-coalgebra data factors the Triple).** *The data T(S) = (σ, ContentOp(σ), γ) of the Triple is exactly the F-coalgebra data of the Stream-object S. No additional stream-data is required to reconstruct T(S); no Stream-data is lost in T(S) except derived components (K, Ω).*
 
@@ -146,9 +146,9 @@ where:
 
 **Remark 6.2.6.** The Triple is sometimes summarized paired-prose-style as "Form / Content / Carrier as orthogonal-but-constrained axes with recursive decomposability." The formal content of this summary is:
 
-- **Orthogonal:** T factors Stream-data into three independent projections (Definition 6.2.2).
+- **Orthogonal:** T factors Stream-data into the three projections π_Form, π_Content, π_Carrier (Definition 6.2.2).
 - **Constrained:** the three projections are not independent — the coalgebra-commute condition (Definition 6.1.3 (iii)) couples them at the morphism level.
-- **Recursive decomposability:** each projection-image is itself a stream (§6.3).
+- **Recursive decomposability:** each projection-image is itself a stream (§6.3), at every finite depth (Convention 6.0.6).
 
 **Proposition 6.2.7 (T reflects isomorphisms).** *If f : S → S' is a Stream-morphism whose three Triple-components T(f) = (f_σ, f_C, f_γ) are all isomorphisms in their respective component categories, then f is an isomorphism in Stream.*
 
@@ -195,7 +195,7 @@ The target Triple^(n) is a 3^n-fold product of Triple.
 
 Assembling the three branches gives T^(n+1)(S) as F-reconstructible. ∎
 
-**Remark 6.3.3 (The Cat-valued promotion earns its keep here).** The Content-branch is the load-bearing step. If ContentOp were set-valued (as in the foundation-doc pre-M12 proposal), the Content-branch would terminate at n = 1 — Content(S) would be a bare set with no further ContentOp to apply T to. Category-valued ContentOp provides the recursion substrate. This is a structural — not merely technical — fact about the framework.
+**Remark 6.3.3 (The Cat-valued promotion earns its keep here).** The Content-branch is the load-bearing step. If ContentOp were set-valued (as in the foundation-doc pre-M12 proposal), the Content-branch would terminate at n = 1 — Content(S) would be a bare set with no further ContentOp to apply T to. Category-valued ContentOp is what the recursion runs on at every level. This is a structural — not merely technical — fact about the framework.
 
 **Corollary 6.3.4 (Recursive decomposability is a theorem, not an axiom).** *The recursive-decomposability content of the Identity-Trajectory Triple (named in the Anchor as a property of streams, and captured as meta-bridge M3 in the framework's bridge list) is derived from the F-coalgebra definition of Stream. It is not an independent axiom.*
 
@@ -284,14 +284,14 @@ $$
 
 ## §6.6 — The Triple as colax-limit (conditional)
 
-**Motivation.** The Anchor frames the Triple as a **colax-limit** of a three-pronged diagram in Cat. This is a sharpening of Theorem 6.2.5 (Stream as a full subcategory of Triple), conditional on ContentOp having enough structure.
+**Motivation.** The Anchor frames the Triple as a **colax-limit** of a three-pronged diagram in Cat. This is a sharpening of Corollary 6.2.5 (Stream as a full subcategory of Triple), conditional on ContentOp having enough structure.
 
 **Hypothesis 6.6.0.** *For the results of this section, assume ContentOp(σ) admits an initial object I (Convention 6.0.4 — carried as hypothesis per-theorem).*
 
 **Definition 6.6.1 (The colax-limit diagram).** Define a three-object diagram D : J → Cat as follows:
 
 - J is the walking span-category: three objects {•_F, •_C, •_Cr} and two morphisms •_F → • ← •_C, •_Cr → •, where • is an auxiliary apex object representing the coalgebra-commute condition.
-- D(•_F) = Form, D(•_C) = Content, D(•_Cr) = Carrier, D(•) = Form × Content × Carrier (with the three projections as D's structure).
+- D(•_F) = Form, D(•_C) = Content, D(•_Cr) = Carrier, D(•) = Form × Content × Carrier (with π_Form, π_Content, π_Carrier as D's structure).
 
 **Theorem 6.6.2 (Triple as colax-limit, under Hypothesis 6.6.0).** *Under the initial-object hypothesis on ContentOp(σ), Stream embeds into the colax-limit colaxlim D of the diagram above, and the embedding is an equivalence of categories onto the full sub-2-category of adequate F-coalgebras.*
 
@@ -301,7 +301,7 @@ The embedding Stream ↪ colaxlim D is fully faithful by Proposition 6.2.7 (T re
 
 **Remark 6.6.3 (Why this requires initial objects).** Without an initial object in ContentOp(σ), the colax cone has no anchor-point, and the colax-limit construction produces a larger object than Stream — one that includes "ungrounded" Triple-tuples without a canonical base content-operation. The initial-object hypothesis makes the cone well-pointed and the colax-limit equivalent to Stream.
 
-**Remark 6.6.4 (General case without initial objects).** For streams without initial ContentOp, Theorem 6.2.5 (Stream as a full subcategory of Triple) is the correct structural description. The colax-limit form is a sharpening available under the additional hypothesis. Both are drafting-valid; the paired-prose Anchor uses the colax-limit form wherever it is applicable, with the un-conditioned statement as fallback.
+**Remark 6.6.4 (General case without initial objects).** For streams without initial ContentOp, Corollary 6.2.5 (Stream as a full subcategory of Triple) is the correct structural description. The colax-limit form is a sharpening available under the additional hypothesis. Both are drafting-valid; the paired-prose Anchor uses the colax-limit form wherever it is applicable, with the un-conditioned statement as fallback.
 
 **Corollary 6.6.5 (The Triple's "canonical base" is the initial content-operation).** *When Hypothesis 6.6.0 holds, the initial object I ∈ ContentOp(σ) is the distinguished "ground" content-operation from which all stream-internal content-operations are reachable. This formalizes the paired-prose notion of a stream's "ground state" or "base coherence."*
 
@@ -311,7 +311,7 @@ The embedding Stream ↪ colaxlim D is fully faithful by Proposition 6.2.7 (T re
 
 ## §6.7 — Stream as the category of F-coalgebras (closure)
 
-**Motivation.** Theorem 6.2.5 stated that Stream is a full subcategory of Triple cut out by three conditions (adequacy, F-coalgebra identity, kind-respecting morphisms). Theorem 6.6.2 refined this (under a hypothesis) to a colax-limit equivalence. This section closes the structural characterization by stating the main equivalence.
+**Motivation.** Corollary 6.2.5 stated that Stream is a full subcategory of Triple cut out by three conditions (adequacy, F-coalgebra identity, kind-respecting morphisms). Theorem 6.6.2 refined this (under a hypothesis) to a colax-limit equivalence. This section closes the structural characterization by stating the main equivalence.
 
 **Theorem 6.7.1 (Stream = F-Coalg_ad).** *Let F-Coalg denote the category of F-coalgebras in the ambient Set-like category, and let F-Coalg_ad ⊆ F-Coalg be the full subcategory of adequate F-coalgebras satisfying kind-respect on morphisms. Then:*
 
@@ -337,9 +337,13 @@ $$
 
 ### §6.8.1 — Limits
 
-**Proposition 6.8.1 (Terminal object).** *The terminal object 1_Stream := (1, **1**_cat, id_1) exists in Stream, where 1 is the terminal carrier, **1**_cat is the terminal small category (one object, identity morphism), and id_1 is the unique coalgebra-structure-map.*
+**Proposition 6.8.1 (Terminal object — the trivial point stream).** *Let 1_Stream := (1, **1**_cat, id_1), where 1 is the terminal carrier, **1**_cat is the terminal small category (one object and its identity), and id_1 is the unique coalgebra-structure-map. 1_Stream is a Stream-object, and it is the terminal object of **Stream**^{−K} — the category obtained from **Stream** by dropping the kind-respect clause (iv) of Definition 6.1.3. The unique morphism !_S : S → 1_Stream is the total collapse of S: it forgets every state and every content-operation. In **Stream** itself, !_S is kind-respecting only when K(S) ⊑ [**1**_cat], so 1_Stream is weakly terminal there and terminal in **Stream**^{−K}.*
 
-**Proof.** Uniqueness of maps into 1_Stream: f_σ factors uniquely through 1; f_C factors uniquely through **1**_cat; coalgebra-commute is vacuous because γ_{1_Stream} is identity. Kind-respect is trivial because K(1_Stream) is the top of the preorder. ∎
+**Proof.** 1_Stream is a Stream-object: adequacy (Convention 6.0.3) is vacuous, since the carrier 1 has no pair of distinguishable aspects. Terminality in **Stream**^{−K}: f_σ factors uniquely through the terminal carrier 1; f_C factors uniquely through **1**_cat; coalgebra-commute is vacuous because γ_{1_Stream} = id_1. The kind-respect clause is the one thing that does not come for free, and it is not asserted here; see Remark 6.8.1.1. ∎
+
+**Remark 6.8.1.1 (Collapse, not an outer view).** π(1_Stream) = [**1**_cat] is the *least* class of **ContentIndex**, not the greatest: the trivial point stream distinguishes nothing. An earlier draft discharged kind-respect by declaring K(1_Stream) the top of the kind-preorder. That clause is struck: it says that the stream with one state and one content-operation is the richest stream there is, which is false on its face. What is left is the honest statement — 1_Stream is terminal under *collapse*, and collapse is a forgetting, not a seeing.
+
+Nothing here contradicts the Anchor. Anchor A2.6 (DAG nesting, no maximum) and Anchor §1.0 Property 5 (no universal stream into which every other embeds) are claims about the **constituency** order Up(S), whose morphisms are part-to-whole inclusions ι; the absence of a supremum there is Corollary 6.10.4.2, "No view from nowhere". The two categories carry the same objects under different morphism classes, and a terminal object under collapse is not a supremum under constituency: the first sees nothing, the second would see everything. The Companion asserts the first and denies the second. The denial is an axiom clause (A2.6, non-comparability), as Corollary 6.10.4.2 records; it is not a consequence of Cantor or Lawvere. The related theorem that no carrier enumerates its own powerset is proofs DAG node `math.no_self_enumeration` (with `math.lawvere_fixed_point`), recorded there as a disanalogy: it holds of the one-point carrier of 1_Stream too.
 
 **Proposition 6.8.2 (Products, conditional on kind-join).** *Given Stream-objects S_1, S_2 with K(S_1), K(S_2) admitting a join K_∨ in the A2 preorder, the product S_1 × S_2 exists in Stream with:*
 
@@ -363,9 +367,9 @@ $$
 
 ### §6.8.2 — Colimits
 
-**Proposition 6.8.5 (Initial object).** *The initial object 0_Stream := (∅, **0**_cat, !) exists, where ∅ is the empty carrier, **0**_cat is the empty category, and ! is the unique map from ∅.*
+**Proposition 6.8.5 (Initial object).** *The initial object 0_Stream := (∅, **0**_cat, !) exists in **Stream**, where ∅ is the empty carrier, **0**_cat is the empty category, and ! is the unique map from ∅.*
 
-**Proof.** Vacuous satisfaction of all Stream conditions. ∎
+**Proof.** Vacuous satisfaction of all Stream conditions. Kind-respect is the one clause that is not vacuous, and it holds: π(0_Stream) = [**0**_cat] is the least class of **ContentIndex**, so K(0_Stream) ⊑ K(S) for every S, which is the direction Definition 6.1.3 (iv) requires of a morphism *out of* 0_Stream. The initial object therefore needs no analogue of Remark 6.8.1.1; the error corrected there was specific to the terminal case. ∎
 
 **Proposition 6.8.6 (Coproducts, conditional on kind-meet).** *Given S_1, S_2 with K(S_1), K(S_2) admitting a meet K_∧, the coproduct S_1 + S_2 exists with disjoint-union carriers, disjoint-union ContentOp, and componentwise coalgebra.*
 
@@ -387,7 +391,7 @@ $$
 
 | Limit/colimit | Existence | Condition |
 |---|---|---|
-| Terminal 1_Stream | yes | — |
+| Terminal 1_Stream | yes in **Stream**^{−K}; weakly in **Stream** | kind-respect clause (Def 6.1.3 (iv)) dropped; Remark 6.8.1.1 |
 | Initial 0_Stream | yes | — |
 | Products S_1 × S_2 | conditional | kind-join exists (Q7 lattice case) |
 | Coproducts S_1 + S_2 | conditional | kind-meet exists (Q7 lattice case) |
@@ -416,7 +420,7 @@ For a stream S = (σ, C, γ), the **size regime** of S is determined by the card
 | **B — small-but-infinite-C** | C is small (set-many), admits infinitely many objects | σ-finite under countable-C with concrete reference measure | holds under local-presentability | **generically fails** (Prop 6.9.2 below) |
 | **C — large-C** | C is a proper class | σ-finiteness breaks | fails | fails |
 
-**Declared scope.** The Companion's declared scope is Regimes A and B. Regime C is excluded by Convention 1.1.5 (smallness of ContentOp).
+**Declared scope.** The Companion's declared scope is Regimes A and B. Regime C is excluded by Convention 1.1.2 (smallness of ContentOp).
 
 **Why C-size is the governing parameter.** F(σ) = σ^(ContentOp(σ)^op) is an exponential whose exponent-argument is ContentOp. Exponentials σ ↦ σ^X in a locally-presentable category preserve filtered colimits in σ **iff X is finitely-presentable** (Adámek–Rosický 1994, Thm 1.56 + Cor 1.57). Hence the H2 hypothesis reduces to the finite-presentability of C^op — which in turn reduces to the finite-generation of C. This single fact ties H1, H2, §7 σ-finiteness, and §8 depth-stability to a single parameter.
 
@@ -458,7 +462,7 @@ is not in general an isomorphism: a functor C^op → σ_∞ may send infinitely 
 
 **Proof.** By Prop 6.9.1, H1 and H2 both hold on 𝒞_Streams^{fin}. Standard terminal-coalgebra construction (Adámek 1974, Barr 1993): iterate F transfinitely from 1:
 
-- σ_0 := 1 (terminal object, which exists by Lemma 6.8.α in Regime A),
+- σ_0 := 1 (terminal object, which exists by Proposition 6.8.1 — terminal in **Stream**^{−K} — in Regime A),
 - σ_{α+1} := F(σ_α),
 - σ_λ := lim_{α<λ} σ_α at limit ordinals λ.
 
@@ -474,7 +478,7 @@ H1 ensures the iteration stabilizes at some ordinal ≤ ℵ_1 (first uncountable
 
 **Proposition 6.9.6 (F_∞'s regime trajectory).** *Per §8.1.2, C_{F, t} is finite at every fixed construction-time t. Hence F_∞ |_{t} ∈ 𝒞_Streams^{fin} at every t; F_∞ |_{t} is in Regime A. The colimit C_{F, ∞} := colim_t C_{F, t} as t → ∞ is at most countable and generically not finitely-generated; hence F_∞ over [t_0, ∞) is in Regime B with undetermined H2 status.*
 
-**Proof.** Finite-at-each-t from §8.1.2 (the commit-history at time t carries finitely many substrate-commitments). Countability of the limit from the commit-history being a countable sequence of snapshots. Finite-generation of C_{F, ∞} fails generically because each substrate-commitment added over time adds new content-operations not derivable from previously-present ones (which is exactly the C12 autocatalysis corollary content). ∎
+**Proof.** Finite-at-each-t from §8.1.2 (the commit-history at time t carries finitely many framework-commitments). Countability of the limit from the commit-history being a countable sequence of snapshots. Finite-generation of C_{F, ∞} fails generically because each framework-commitment added over time adds new content-operations not derivable from previously-present ones (which is exactly the C12 autocatalysis corollary content). ∎
 
 **Consequence.** Audit Observation 8.3.5's self-reference claim over a *finite* construction interval [t_0, t_1] lands in Regime A (via the finite-slice 𝒞_Streams^{fin}); the H2-hypothesis of the depth-ω theorem is not invoked. This is why the §8 finite-interval audit is well-founded even without H2 verification at the colimit. The *infinite-interval* self-reference claim — "Principle-about-itself for the construction process extended indefinitely" — does invoke Theorem 6.9.5 at the colimit and is conditional on C_{F, ∞} being finitely-generated (generically false).
 
@@ -524,7 +528,7 @@ $$
 \iota_{S \subset S_q} \;\dashv\; \kappa_{S \subset S_q}
 \quad : \quad \mathrm{Form}(S) \longleftrightarrow \mathrm{Form}(S_q)
 $$
-with $\iota$ the left-adjoint embedding and $\kappa$ the right-adjoint restriction. This is stated at anchor §2.4 and in the Companion at §2.
+with $\iota$ the left-adjoint embedding and $\kappa$ the right-adjoint restriction. This is stated at Anchor A2.4 (§3.5) and in the Companion at §2.
 
 **(A2.6, DAG of wholes.)** $\mathrm{Up}(S)$ is a poset under whole-containment. $\mathrm{Up}(S)$ has no maximum element — the "totality" term is not an object of the framework.
 
@@ -710,9 +714,9 @@ when the cokernel exists in $\mathbf{Inner}(S)$. It measures the amount of outer
 
 ### §6.11.2 — Forward-pointers
 
-**§7 (Filtering construction):** the σ-algebra on Ω_S, the extensional (σ_F, K_F, Ω_F, γ_F), and Bias(S) well-definedness all live downstream of §6's Stream-as-F-coalgebra foundation. §7 uses the Triple (§6.2) directly and the fibration (§6.4) for kind-respecting filters.
+**§7 (Filtering construction):** the σ-algebra on Ω_S, the extensional (σ_F, C_F, γ_F) with K_F and Ω_F derived (Remark 6.1.2), and Bias(S) well-definedness all live downstream of §6's Stream-as-F-coalgebra foundation. §7 uses the Triple (§6.2) directly and the fibration (§6.4) for kind-respecting filters.
 
-**§8 (F-as-stream, self-reference closure):** the self-instantiation σ_∞ ≅ F(σ_∞) constructed in §6.9 (Theorem 6.9.3, Regime A) is the formal content of F-as-stream. §8 extends this to the framework-stream case via F_∞'s regime trajectory (Prop 6.9.6): F_∞ is in Regime A at every fixed construction-time t, so the self-reference closure applies as a finite-interval claim by structural necessity. §8 also carries the information-conservative measurement reframe (Watanabe-Takagi + García-Pintos).
+**§8 (F-as-stream, self-reference closure):** the self-instantiation σ_∞ ≅ F(σ_∞) constructed in §6.9 (Theorem 6.9.3, Regime A) is the formal content of F-as-stream. §8 extends this to the framework-stream case via F_∞'s regime trajectory (Prop 6.9.6): F_∞ is in Regime A at every fixed construction-time t, so the self-reference closure is posed as a finite-interval conjecture (Anchor §9.5 Protocol; §8.3.5). §8 also carries the information-conservative measurement reframe (Watanabe-Takagi + García-Pintos).
 
 **§9 (D trajectory-divergence):** Anchor §9.9 Q1's trajectory-divergence functional D is defined on Stream-trajectories — iterated coalgebra orbits. §6.3's finite-depth factorization and §6.9's ω-depth result provide the depth-uniform structure §9 needs.
 
@@ -721,7 +725,7 @@ when the cokernel exists in $\mathbf{Inner}(S)$. It measures the amount of outer
 - **ALREADY-LANDED in anchor §1.10 + §3.8 (landed 2026-04-23):** inner/outer adjunction + "no view from nowhere" (Theorems 6.10.4.1, 6.10.5.2, 6.10.6.2; Corollary 6.10.4.2; Lemmas 6.10.2.1, 6.10.3.1).
 - **REFERENCE-NATIVE (Companion-native CT machinery; anchor §1, §3, §3.3, §6 carry the prose at coarser grain):** Triple forgetful + conservativity (Lemmas 6.2.4, 6.2.7); recursive decomposability theorem (Lemma 6.3.2, Corollary 6.3.4); kind-classifier fibration (Theorem 6.4.6); Cartesian-lift and admissibility lemmas (6.4.5, 6.4.11, 6.4.13); colax-limit form (Theorem 6.6.2, Corollary 6.6.5); closure theorem Stream ≃ F-Coalg_ad (Theorem 6.7.1); adequacy-stability (Lemma 6.8.β); size-regime apparatus (§6.9.0–§6.9.7); Content-capacity residue definition (6.10.6.4).
 - **SCOPE-EXCLUDED to Universal Coherence volume:** middle-regime class theorem + cross-tradition translation corollary (Theorem 6.5.4, Corollary 6.5.6); see `Library/Universal-Coherence/drafts/2026-04-24-middle-regime-morphism-structure.md`.
-- **BACK-PORT:** none. The anchor stays stamped at 267pp.
+- **BACK-PORT:** none. The anchor stays stamped at 267pp (its v0.1 page count; the README now records 285pp).
 
 ### §6.11.3 — Open items (not blocking)
 

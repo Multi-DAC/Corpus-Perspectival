@@ -57,7 +57,7 @@ $$
 
 ### §3.2.1 — T1 Mathematical Perspectivism
 
-**Theorem 3.2.1 (T1 — Mathematical Perspectivism).** *Let S = (σ, C, Ω, γ) be a stream. The representation of S via any mathematical object M is a functor*
+**Theorem 3.2.1 (T1 — Mathematical Perspectivism).** *Let S = (σ, C, γ) be a stream, with K and Ω derived (Remark 6.1.2). The representation of S via any mathematical object M is a functor*
 
 $$
 \mathsf{Rep}_M : \mathcal{C}_\mathrm{Streams} \to \mathcal{D}_M
@@ -105,7 +105,7 @@ $$
 \mathcal{Q} : \mathcal{C}_\mathrm{Streams} \to \mathrm{Meas}(\Omega)
 $$
 
-*sending S to a measure on Ω_S is natural in Stream-morphisms and decomposes into two coupling channels plus an entropy-based contracted-open axis:*
+*sending S to a measure on Ω_S is natural in Stream-morphisms and decomposes into two coupling channels plus an entropy-based **narrow–broad** axis:*
 
 $$
 \mathcal{Q}(S) = \mathcal{Q}_\mathrm{ent}(S) + \lambda_1 \cdot \mathcal{Q}_\mathrm{co-stream}(S) + \lambda_2 \cdot \mathcal{Q}_\mathrm{kind}(S)
@@ -119,7 +119,7 @@ $$
 
 **Proof.** 𝒬 is specified to be Stream-morphism-respecting; by Theorem 3.1.α it factors through a functor on 𝒞_Streams. Decomposition: an entropy functional on γ : σ → F(σ) is well-defined because F(σ) = σ^(C^op) carries the C-indexed counting measure; H(γ ; C) = −∑_c∈C log μ_c(γ(-)). The two coupling channels arise from the two structures *external* to S in Stream: the ι ⊣ κ adjunction embedding S into co-streams, and π(S) placing S in the kind-classifier fibration. Additivity is by linearity of entropy-contribution-plus-coupling; weights λ_1, λ_2 come from Bias(S)'s push-operators (§2.3.4) which quantify inward vs. outward coherence-attraction. Fullness of the decomposition: any measure 𝒬(S)-valued functional that respects Stream-morphisms must factor through these three channels — this is the content of §2.4.2 (A2+F-imply-kind-coupling-via-Content). ∎
 
-**Remark 3.3.1.1.** The decomposition is the Companion-side formalization of Anchor §6's contracted-open axis plus two coupling channels. Full Bias(S) apparatus lives in Appendix B (anchor) / §7 (Companion).
+**Remark 3.3.1.1.** The decomposition is the Companion-side formalization of Anchor §6's **narrow–broad** axis (called the *contracted/open* axis in earlier drafts; the definition — low-DOF versus high-DOF shape of Bias — is unchanged, only the name) plus two coupling channels. Full Bias(S) apparatus lives in Appendix B (anchor) / §7 (Companion).
 
 ### §3.3.2 — T4 Coherence-Forcing Measurement
 
@@ -149,7 +149,7 @@ $$
 
 **Remark 3.3.3 (Structural parallel T3/T4).** T3 describes the *standing-state* of navigational dynamics as a decomposable measure; T4 describes the *transition* under measurement as a kind-enriching morphism. Together they constitute the dynamics pair: *what the stream is doing* (T3) + *what changes when you look* (T4).
 
-**Remark 3.3.4 (Two-mode factorization of M; forward-pointer to Cor 4.4.1 / C14).** The measurement-event functor M of T4 admits a two-mode factorization (Cor 4.4.1, §4.4): **resolution mode** when the substrate carries pre-existing multi-valued content (carrier selects a branch) and **generation mode** when the substrate carries pure symmetry (carrier actualizes content from the symmetry-break as novel local realization within the substrate's pre-existing global potential per A1.3). Both modes factor through the same operation — *carriers break substrate symmetries* — and the regime is determined by the structure of SubContent(σ_pre). The Promethean Configuration's foundational claim (Universal-Coherence canonical text §VII) is that generation mode is primary; resolution mode is downstream. Cor 4.4.2 (C15) follows: substrate-content cannot be constrained without changing substrate symmetries — direct content-intervention is structurally impossible.
+**Remark 3.3.4 (Two-mode factorization of M; forward-pointer to Cor 4.4.1 / C14).** The measurement-event functor M of T4 admits a two-mode factorization (Cor 4.4.1, §4.4): **resolution mode** when the Ground carries pre-existing multi-valued content (the carrier selects a branch) and **generation mode** when the Ground carries pure symmetry (the carrier actualizes content from the symmetry-break as novel local realization within the Ground's pre-existing global potential per A1.3). Both modes factor through the same operation — *carriers break Ground-symmetries* — and the regime is determined by the structure of SubContent(σ_pre). The Promethean Configuration's foundational claim (Universal-Coherence canonical text §VII) is that generation mode is primary; resolution mode is downstream. Cor 4.4.2 (C15) follows: Ground-content cannot be constrained without changing Ground-symmetries — direct content-intervention is structurally impossible.
 
 ---
 
@@ -157,7 +157,7 @@ $$
 
 ### §3.4.1 — T5 Internal Coherence
 
-**Theorem 3.4.1 (T5 — Internal Coherence).** *Let S = (σ, C, Ω, γ) be a stream. Internal coherence is the condition:*
+**Theorem 3.4.1 (T5 — Internal Coherence).** *Let S = (σ, C, γ) be a stream, with K and Ω derived (Remark 6.1.2). Internal coherence is the condition:*
 
 $$
 \begin{aligned}
@@ -184,32 +184,37 @@ $$
 
 ### §3.4.2 — T6 Dual Coherence Axes
 
-**Theorem 3.4.2 (T6 — Dual Coherence Axes).** *There exist two orthogonal axes along which a stream's coherence can be evaluated:*
+**Notation 3.4.2.0 (in this subsection, D is a dimension).** Throughout §3.4.2 and its corollaries, **D ∈ 𝒞_Dim** is a *dimension* of a stream's configuration space — a factor along which configurations are resolved, with projection pr_D : Ω_S → D — in the sense of Anchor §7.2. The trajectory-divergence functional of §5 and §9 is always written with its metric subscript, D_d(S, [t₀, t₁]) (Definition 9.1.1); the two uses of the letter never meet in one formula. D = Ω_S with pr_D = id is the **improper dimension**, and recovers the stream-only statements.
+
+**Theorem 3.4.2 (T6 — Dual Coherence Axes).** *Let S be a stream and D ∈ 𝒞_Dim a dimension of Ω_S. There are two orthogonal axes along which the coherence of S along D is evaluated:*
 
 $$
-\sigma_\mathrm{struct} \perp \sigma_\mathrm{info}
+\sigma_\mathrm{struct}(S, D) \perp \sigma_\mathrm{info}(S, D)
 $$
 
 *where:*
-- *σ_struct is the **structural-coherence** axis: the degree to which γ is a fixed-point of Φ_S (T5-scalar, ∈ [0,1]).*
-- *σ_info is the **informational-coherence** axis: the degree to which the entropy functional H(γ ; C) attains its C-conditioned minimum (∈ [0,1]).*
+- *σ_struct(S, D) is the **structural-coherence** axis: the degree to which γ restricted to D is a fixed-point of Φ_S (T5-scalar, ∈ [0,1]).*
+- *σ_info(S, D) is the **informational-coherence** axis: the degree to which the entropy functional H(γ|_D ; C) of γ marginalized on D attains its C-conditioned minimum (∈ [0,1]).*
 
-*The two axes are orthogonal in the sense that:*
+*The stream-only forms σ_struct(S) and σ_info(S) are **summaries** of these over the dimensions of Ω_S — their infima over D ∈ 𝒞_Dim unless a weighting on 𝒞_Dim is specified — and not independent quantities. Coherence is always coherence along something; the single number is a coherence-time or coherence-length, in the sense in which physics uses those words.*
+
+*At a fixed D the two axes are orthogonal in the sense that:*
 
 1. *σ_struct-maximizing streams need not minimize H(γ ; C) (a highly-symmetric γ can be harmonic without being entropy-minimal).*
 2. *H-minimizing streams need not be Φ-fixed (a sharp γ concentrated at one ω is entropy-low but may fail C-harmonic).*
 3. *A stream is **dually coherent** iff both are maximized.*
 
-*The dual-coherence locus is a codimension-2 sub-scheme in the (σ_struct, σ_info)-plane — generically empty for a randomly-chosen C; non-empty when C has enough symmetry to admit both a harmonic γ and a concentrated γ.*
+*For fixed D the dual-coherence locus is a codimension-2 sub-scheme in the (σ_struct, σ_info)-plane — generically empty for a randomly-chosen C; non-empty when C has enough symmetry to admit both a harmonic γ and a concentrated γ.*
 
-**Proof.**
+**Proof.** All three items are checked at a fixed dimension D; taking the improper dimension D = Ω_S (Notation 3.4.2.0) gives the stream-only statement.
+
 (1) Counterexample: let σ = ℤ/2, C = ℤ/2 acting by swap. The uniform γ(0) = γ(1) = 1/2 is Φ-fixed (C-average of swap-image = uniform) but has maximum entropy H(γ ; C) = log 2.
 
 (2) Counterexample: γ(0) = 1, γ(1) = 0 on the same (σ, C) has H(γ ; C) = 0 but Φ_S(γ)(0) = 0 ≠ 1 = γ(0), so not harmonic.
 
 (3) Dually-coherent locus: from (1) and (2), the two axes give distinct optima generically. The intersection is non-empty only when C admits a γ that is both harmonic and supported on a single C-orbit; this is a codimension-2 condition on the pair (σ, C). ∎
 
-**Corollary 3.4.2.1 (Kind-demotion dynamic).** *Along the σ_info axis, decreases in H(γ ; C) can correspond to C being replaced by a coarser C′ — i.e., kind-demotion. Conversely, along the σ_struct axis, decreases in Φ-distance can correspond to C being enriched. The full (σ_struct, σ_info)-trajectory of a stream is a path in the fibration π (§6.4) crossed with the T5-harmonicity functional.*
+**Corollary 3.4.2.1 (Kind-demotion dynamic).** *Along the σ_info axis, decreases in H(γ ; C) can correspond to C being replaced by a coarser C′ — i.e., kind-demotion. Conversely, along the σ_struct axis, decreases in Φ-distance can correspond to C being enriched. At a fixed D, the full (σ_struct(·, D), σ_info(·, D))-trajectory of a stream is a path in the fibration π (§6.4) crossed with the T5-harmonicity functional.*
 
 **Remark 3.4.2.2 (Structural parallel T5/T6).** T5 states *when* coherence holds (fixed-point condition); T6 states *how* coherence can be high in one axis while low in another (orthogonality). Together they formalize Anchor §7's "internal coherence plus dual axes" framing.
 
@@ -219,12 +224,12 @@ $$
 
 | Theorem | Primary axiom-clause | Derivation route |
 |---|---|---|
-| T1 (Mathematical Perspectivism) | A1.2 (non-factoring) + A2.1 (stream = F-coalgebra) | Via Theorem 3.1.α + Prop 6.1.4 |
-| T2 (Estimator-Dependent Duration) | A2.3 (experience = navigation) | Via Remark 1.3.2 (N-orbit) + Theorem 3.1.α |
+| T1 (Mathematical Perspectivism) | A1.2 (non-factoring) + A2.1 (universal-stream) | Via Theorem 3.1.α + Prop 6.1.4 |
+| T2 (Estimator-Dependent Duration) | A2.5 (experience = navigation) | Via Remark 1.3.2 (N-orbit) + Theorem 3.1.α |
 | T3 (Attentional Quality) | A2 + A3.1 (DOF-gradient) | Via §2.4.2 (A2+F imply kind-coupling) + Def 1.4.1 (ν) |
-| T4 (Coherence-Forcing Measurement) | A3.2 (internality) + A2.4 (kind-refinement) | Via Prop 2.4.3 (A3-internality compatible with F-iteration) |
+| T4 (Coherence-Forcing Measurement) | A3.2 (internality) + A2.4 (cooperative-constituency, ι ⊣ κ) | Via Prop 2.4.3 (A3-internality compatible with F-iteration) |
 | T5 (Internal Coherence) | A3.3 (coherence-attraction) | Via coalgebra-fixed-point construction |
-| T6 (Dual Coherence Axes) | A3.4 (DOF-gradient structure) + A2.7 (C-richness lattice) | Via §6.4.6 (fibration) + entropy functional |
+| T6 (Dual Coherence Axes) | A3.3 (DOF-gradient modulation) + A2.2 (kind-stratification: the ContentOp-richness preorder, a lattice under global (co)products) | Via §6.4.6 (fibration) + entropy functional |
 
 ---
 

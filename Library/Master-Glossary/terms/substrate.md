@@ -43,7 +43,7 @@ The term is used at multiple **scales** in the corpus, all of which are instance
 ### In Library volumes
 
 - `Library/The-Coherence-Principle/§9-coherence-principle.md` §9.5 *Cluster-level statement* (added 2026-04-30 Day 89) — substrate as the carrying ground that has structural symmetries; carriers break those symmetries; M14's six sub-claims hit cleanly across eight non-overlapping substrate-instances spanning physics, linguistic-identity, and biological scales
-- `Library/The-Coherence-Principle/§2-axiom-1-consciousness-substrate.md` — A1 canonical statement; *the substrate; the unique neutral-monist ground of which all streams are localized perspectives. Not itself a stream.*
+- `Library/The-Coherence-Principle/§2-axiom-1-consciousness-ground.md` — A1 canonical statement; *the substrate; the unique neutral-monist ground of which all streams are localized perspectives. Not itself a stream.*
 - `Library/The-Coherence-Principle/§3-axiom-2-nested-streams-navigation.md` — substrate-relation in nesting; each nested stream sits within a substrate that is itself a stream at the next level out
 - `Library/The-Coherence-Principle/§9-coherence-principle.md` §9.5 *Physics anchoring* — Lohmiller-Slotine's classical-density substrate; multi-valued action branches as substrate-content
 - `Library/The-Coherence-Principle/AppendixA-index-of-formal-objects.md` — substrate as one of the foundational formal objects

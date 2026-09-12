@@ -42,32 +42,32 @@ graph TD
 
 ---
 
-## Fig 1.1 — The Identity-Trajectory Triple as a functor
+## Fig 1.1 — The Lineage Triple as a functor
 
-**Illustrates.** T : 𝒞_Str → 𝒞_Form × 𝒞_LDS × 𝒞_DOF projecting a stream to its three orthogonal-but-constrained components.
+**Illustrates.** L : 𝒞_Str → 𝒞_Form × 𝒞_Lineage × 𝒞_DOF projecting a stream to its three orthogonal-but-constrained components. L is the Identity-Trajectory Triple of §1, a *derived observable* on the Companion's Triple functor T : Stream → Form × Content × Carrier (Companion Definition 6.2.2; its target category is Definition 6.2.1), not a rival decomposition of the stream.
 
 **Chapter.** §1 (Identity-Trajectory Triple), with formal grounding in §1.0.5.
 
 ```mermaid
 graph LR
-    S["Stream S<br/>(σ, K, Ω, γ)<br/>in 𝒞_Str"]
+    S["Stream S<br/>(σ, ContentOp(σ), γ)<br/>in 𝒞_Str"]
 
-    Form["Form(S)<br/>in 𝒞_Form<br/>= kind + constraints"]
-    LDS["Content/Carrier(S)<br/>in 𝒞_LDS<br/>= localization + dynamics"]
-    DOF["DOF(S)<br/>in 𝒞_DOF<br/>= Ω_S with trajectory"]
+    Form["Form(S)<br/>in 𝒞_Form<br/>= oscillatory persistence-structure"]
+    Lineage["Content(S)<br/>in 𝒞_Lineage<br/>= lineage-density signature (κ, β, λ, ρ)"]
+    DOF["Carrier(S)<br/>in 𝒞_DOF<br/>= Ω_S with trajectory"]
 
-    S -->|F_1 = π_Form ∘ T| Form
-    S -->|F_2 = π_LDS ∘ T| LDS
-    S -->|F_3 = π_DOF ∘ T| DOF
+    S -->|Φ| Form
+    S -->|Ψ| Lineage
+    S -->|Κ| DOF
 
     Consistency{{"consistency conditions<br/>(§1: orthogonal-but-constrained)"}}
     Form -.-> Consistency
-    LDS -.-> Consistency
+    Lineage -.-> Consistency
     DOF -.-> Consistency
 
     style S fill:#d8e4f9
     style Form fill:#f9d8d8
-    style LDS fill:#f9f0d8
+    style Lineage fill:#f9f0d8
     style DOF fill:#e4f9d8
     style Consistency fill:#ffffff,stroke:#888,stroke-dasharray: 5 5
 ```
@@ -77,18 +77,18 @@ graph LR
 ```tikz
 \begin{tikzcd}[column sep=large, row sep=large]
     & \mathcal{C}_{\mathrm{Form}} \\
-    \mathcal{C}_{\mathrm{Str}} \arrow[ur, "F_1"] \arrow[r, "F_2"] \arrow[dr, "F_3"'] & \mathcal{C}_{\mathrm{LDS}} \\
+    \mathcal{C}_{\mathrm{Str}} \arrow[ur, "\Phi"] \arrow[r, "\Psi"] \arrow[dr, "\mathrm{K}"'] & \mathcal{C}_{\mathrm{Lineage}} \\
     & \mathcal{C}_{\mathrm{DOF}}
 \end{tikzcd}
 ```
 
-**Reading note.** The three projections are orthogonal (no one is a function of the others alone) but constrained (not every triple in the product is the image of an actual stream — only those satisfying the consistency conditions of §1).
+**Reading note.** The three factor functors are orthogonal (no one is a function of the others alone) but constrained (not every triple in the product is the image of an actual stream — only those satisfying the consistency conditions of §1). The symbols Φ, Ψ, Κ belong to L; the Companion Triple's own projections are π_Form, π_Content, π_Carrier, and the two sets are not interchangeable (AppendixA §A.9).
 
 ---
 
 ## Fig 1.2 — Recursive decomposability
 
-**Illustrates.** Each component of T(S) — Form, Content, Carrier — can itself be decomposed into its own (Form, Content, Carrier) triple. Decomposition is available at every scale the stream admits.
+**Illustrates.** Each component of T(S) — Form, Content, Carrier — can itself be decomposed into its own (Form, Content, Carrier) triple (Companion Corollary 6.3.4, a theorem of the Companion §6.3; depth ω is conditional on the C-size regime, §6.9). Decomposition is available at every scale the stream admits.
 
 **Chapter.** §1.
 
@@ -134,7 +134,7 @@ graph TD
     style Ca fill:#e4f9d8
 ```
 
-**Reading note.** The recursion bottoms out at the substrate (A1): Carrier(Carrier(... Carrier(S))) eventually reaches X, at which point further decomposition is not stream-decomposition but substrate analysis. The bottoming-out depth depends on the domain — in Biology it's at molecular level; in Physics at fields; in Philosophy at neutral-monist X directly.
+**Reading note.** The recursion bottoms out at the Ground (A1): Carrier(Carrier(... Carrier(S))) eventually reaches X, at which point further decomposition is not stream-decomposition but analysis of the Ground. The bottoming-out depth depends on the domain — in Biology it's at molecular level; in Physics at fields; in Philosophy at neutral-monist X directly.
 
 ---
 
@@ -149,7 +149,7 @@ graph LR
     subgraph Consistent["Consistent (realizable stream)"]
         F1["Form: self-referential<br/>kind-structure"]
         C1["Content: meta-cognitive<br/>reasoning pattern"]
-        Ca1["Carrier: human brain<br/>or equivalent substrate"]
+        Ca1["Carrier: human brain<br/>or equivalent physical carrier"]
         F1 -.->|consistent| C1
         C1 -.->|consistent| Ca1
         Ca1 -.->|consistent| F1
@@ -243,7 +243,7 @@ graph LR
 
 ## Fig 6.1 — Bias(S) as signed measure over Ω_S
 
-**Illustrates.** Signed-measure structure of Bias(S) with A_S entropy (contracted-open axis) and Align(S, t) showing contracted-coherent vs contracted-failed.
+**Illustrates.** Signed-measure structure of Bias(S) with A_S entropy (narrow-broad axis) and Align(S, t) showing narrow-coherent vs narrow-failed.
 
 **Chapter.** §6.4, Appendix B.
 
@@ -270,8 +270,8 @@ Bias(S) mass ^
 
 A_S = entropy of Bias(S)_+ → low in this picture (concentrated)
                                                     
-Contracted-coherent:   σ(t) ∈ support(Bias(S)_+)    → Align > 0
-Contracted-failed:     σ(t) ∉ support(Bias(S)_+)    → Align ≤ 0
+Narrow-coherent:       σ(t) ∈ support(Bias(S)_+)    → Align > 0
+Narrow-failed:         σ(t) ∉ support(Bias(S)_+)    → Align ≤ 0
 ```
 
 **TikZ source:**
@@ -294,11 +294,11 @@ Contracted-failed:     σ(t) ∉ support(Bias(S)_+)    → Align ≤ 0
     \node[blue!70!black] at (3.5, 1.3) {$+$};
     \node[red!70!black] at (7, -0.8) {$-$};
     
-    \node[align=center] at (5, -2.8) {Low $A_S$: concentrated positive mass $\Rightarrow$ contracted regime};
+    \node[align=center] at (5, -2.8) {Low $A_S$: concentrated positive mass $\Rightarrow$ narrow regime};
 \end{tikzpicture}
 ```
 
-**Reading note.** The positive lobe (●, blue) is where γ attracts; its peak is at σ*. The negative lobe (○, red) is where γ repels. A_S measures how concentrated vs. spread the positive part is — low A_S here because mass is concentrated near σ*. Align(S, t) is positive if σ(t) is in or near the positive lobe; negative if σ(t) is in the negative lobe; the contracted-coherent vs contracted-failed distinction depends on *where in this landscape the actual trajectory is*, not on A_S alone.
+**Reading note.** The positive lobe (●, blue) is where γ attracts; its peak is at σ*. The negative lobe (○, red) is where γ repels. A_S measures how concentrated vs. spread the positive part is — low A_S here because mass is concentrated near σ*. Align(S, t) is positive if σ(t) is in or near the positive lobe; negative if σ(t) is in the negative lobe; the narrow-coherent vs narrow-failed distinction depends on *where in this landscape the actual trajectory is*, not on A_S alone.
 
 ---
 
@@ -351,15 +351,15 @@ graph TD
                  σ_info (high)
                      |
                      |
- Disembodied ideas   |    Full coherence
- (σ_struct low,      |    (both high)
+ Fixated stream      |    Dual coherence
+ (σ_struct low,      |    (both high — rare)
   σ_info high)       |
                      |
                      |  ☀ ← healthy stream
  ─────────────────────────────────── σ_struct (high)
                      |
                      |
- Collapsed stream    |    Isolated structure
+ Collapsed stream    |    Diffuse competence
  (both low)          |    (σ_struct high,
                      |     σ_info low)
                      |
@@ -367,7 +367,7 @@ graph TD
                  σ_info (low)
 ```
 
-**Reading note.** The upper-left region is T6's "ideas travel further than they live" regime — structural coherence has decayed but informational trace continues to propagate (transcendentals, dead philosophers' ideas, orphaned memes). The lower-right is isolated structure with no trace-propagation (a stream that operates well internally but is not communicatively connected to others). Full coherence lives in the upper-right; collapsed streams in the lower-left. Health (☀) is somewhere in the upper-right, but not strictly at (max, max) — that would imply infinite trace-propagation and no bounded-structure, also pathological.
+**Reading note.** The upper-left is a stream whose weight along the dimension is sharply concentrated but sustained by nothing internal — fixation, rumination, a position none of the stream's own operations hold it at. The lower-right is harmonic-but-spread: real competence with no focus. Dual coherence lives in the upper-right and is rare (the Companion shows the locus is codimension-2); collapsed streams sit in the lower-left. Health (☀) sits inside the upper-right but not at (max, max): a γ pinned at the exact entropy minimum has nowhere left to move, which is its own pathology. The old "ideas travel further than they live" regime is *not* on this plane — that is the engagement × propagation plane of §7.6.
 
 ---
 
@@ -517,7 +517,7 @@ graph TD
     style Source_C4 fill:#ffffff,stroke:#888,stroke-dasharray: 5 5
 ```
 
-**Reading note.** All four must hold for coherence-regime; the outperformance claim is then what the framework predicts. Each condition is derived from the axiomatic/theorem substrate (dashed lines). None are posited independently.
+**Reading note.** All four must hold for coherence-regime; the outperformance claim is then what the framework predicts. Each condition is derived from the axiom and theorem tiers (dashed lines). None are posited independently.
 
 ---
 
@@ -617,7 +617,7 @@ graph TD
 | # | Figure | Chapter | Type |
 |---|---|---|---|
 | 1 | 𝒞_Str as DAG | §1.0 | Mermaid |
-| 2 | Triple functor | §1 | Mermaid + TikZ |
+| 2 | Lineage Triple functor L | §1 | Mermaid + TikZ |
 | 3 | Recursive decomposability | §1 | Mermaid |
 | 4 | Mismatch condition | §1 | Mermaid |
 | 5 | Kind stratification | §3 | Mermaid |

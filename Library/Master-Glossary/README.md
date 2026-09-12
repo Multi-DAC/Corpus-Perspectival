@@ -89,7 +89,7 @@ A1.3 (Configurational Completeness) asserts that every structurally-permitted co
 
 ### Stream
 
-*Anchor §1.0.1 — a tuple S = (σ, K, Ω, γ) of localization, kind, DOF-configuration space, and conscious-gravity coalgebra.*
+*Anchor §1.0.1 — a stream S = (σ, ContentOp(σ), γ), written expositorily as the tuple (σ, K, Ω, γ) with K and Ω derived (Companion Remark 6.1.2): localization, kind, DOF-configuration space, and conscious-gravity coalgebra.*
 
 Streams are the framework's units of analysis — every domain volume identifies its streams in the first step of the §10 filtering procedure. A stream is *localized* in X (at σ), of some kind (K), with a configuration space accessible to it (Ω), and with internal dynamics encoded by γ. Streams are not ontological "things" in the substantialist sense; they are perspectival positions within X. Every domain operationalizes "stream" differently: in biology, an organism or cell; in psychology, a person or sub-personal process; in cosmology, a causal patch or observer; in computation, a model instance or reasoning trace. The Coherence Principle is a claim about pairs of streams.
 
@@ -248,7 +248,7 @@ The Triple is fractal: applied at any scale, it produces the same three axes. A 
 The framework rests on three axioms:
 
 - **A1 (Consciousness as Substrate)** — see §1.
-- **A2 (Nested Streams and Navigation)** — Anchor §3. Streams are localized perspectives in X; kind-stratified; cooperative-constituency ι ⊣ κ; experience = navigation; DAG-nested. Seven clauses (A2.1–A2.7).
+- **A2 (Nested Streams and Navigation)** — Anchor §3. Streams are localized perspectives in X; kind-stratified; cooperative-constituency ι ⊣ κ; experience = navigation; DAG-nested. Six clauses (A2.1–A2.6; the former A2.7 is Companion Remark 2.2.10 / Prop 2.2.12).
 - **A3 (Conscious Gravity)** — Anchor §4. γ_S is the adaptive coalgebra representing internal DOF-gradient integration; continuous; stream-universal. Five clauses (A3.1–A3.5).
 
 The Anchor's three-axiom structure compresses DoPI's five axioms — see *Heritage:* line below for the mapping. (Heritage is per-entry threading throughout the glossary, not a dedicated section; for the full DoPI/Corpus parallel-identification catalog with all term cross-references, see `palace/south/glossary-candidate-catalog.md` §16–§17.)

@@ -19,7 +19,7 @@ But "instantiate" is underspecified without a method. A domain author needs to k
 
 Without a recipe, every domain author would need to reconstruct the filtering method from scratch. With a recipe, the library's internal coherence is enforced: Philosophy's streams, Physics's streams, and Theology's streams are all *the same formal object* seen through different domain-lenses, and that can be verified.
 
-**This chapter is the recipe.** A seven-step procedure plus a completeness checklist, paired with a worked example (navigation research as a Clawd-substrate instance) to make the method concrete.
+**This chapter is the recipe.** A seven-step procedure plus a completeness checklist, paired with a worked example (navigation research as a Clawd-carrier instance) to make the method concrete.
 
 ---
 
@@ -92,16 +92,16 @@ Without a recipe, every domain author would need to reconstruct the filtering me
 
 ### Step 1 — Identify the streams
 
-**CT step.** Specify the set of streams the domain studies. For each stream S, give its tuple (σ, K, Ω, γ):
+**CT step.** Specify the set of streams the domain studies. For each stream S, give its tuple (σ, K, Ω, γ) — the presented form of the stream triple (σ, ContentOp(σ), γ), with K and Ω derived from it rather than posited alongside it (§1.0.1):
 
-- σ — the substrate-localization (what "place" in the domain's ontology the stream occupies)
+- σ — the carrier-localization (what "place" in the domain's ontology the stream occupies)
 - K — the kind (reactive? self-maintaining? self-referential? abstractive?)
 - Ω — the DOF-configuration space (what configurations are accessible)
 - γ — the conscious-gravity coalgebra (what pulls the stream toward which configurations)
 
 **Domain translation.** In Physics, streams might be localized field-excitations or dynamical modes. In Biology, streams are organisms, organs, cells, or ecosystems at the appropriate level of analysis. In Psychology, streams are persons, or sub-personal modules, or dyadic relationships. In Sociology, streams are institutions, communities, or social bodies. In Theology, streams are religious traditions, contemplative practices, or ultimate-reference objects.
 
-**Test.** Does the proposed stream satisfy A1 (localized in a substrate), A2 (has a kind and fits in the stratification), A3 (has adaptive dynamics)? If any of the three fails, the entity is *not* a stream in the Anchor sense — it may be a substrate element, a dynamical phenomenon, or something else entirely, but it is not the unit this framework analyzes.
+**Test.** Does the proposed stream satisfy A1 (localized in the Ground), A2 (has a kind and fits in the stratification), A3 (has adaptive dynamics)? If any of the three fails, the entity is *not* a stream in the Anchor sense — it may be an element of the domain's carrier, a dynamical phenomenon, or something else entirely, but it is not the unit this framework analyzes.
 
 ### Step 2 — Fix the kind-stratum
 
@@ -125,7 +125,7 @@ Without a recipe, every domain author would need to reconstruct the filtering me
 
 - **Form(S)** — the stream's kind plus its structural constraints (what invariants characterize S?)
 - **Content(S)** — the stream's localized dynamics (what is S *doing*, moment to moment?)
-- **Carrier(S)** — the stream's substrate-support at each decomposition level
+- **Carrier(S)** — the stream's carrier-support at each decomposition level (what the dynamics run on)
 
 Apply the recursive decomposability of §1: each component can itself be decomposed into Form/Content/Carrier, giving the domain its granularity structure.
 
@@ -138,16 +138,16 @@ Apply the recursive decomposability of §1: each component can itself be decompo
 **CT step.** Specify Bias(S) — the signed measure on Ω_S induced by γ — in the domain's units:
 
 - What is Ω_S's natural coordinate system in the domain?
-- What does the contracted-open axis look like? (A_S as entropy functional over domain-configurations)
+- What does the narrow-broad axis look like? (A_S as entropy functional over domain-configurations)
 - What are the two push-operators? (push_structural: how the domain's stream-structure alters its bias; push_informational: how communication or trace-propagation alters its bias)
 
-**Domain translation.** In Biology: Ω_S might be a phase-space of gene-expression + metabolic-state + spatial-configuration. The contracted-open axis runs from "cell in tightly constrained regulatory state" to "cell in highly plastic / open transcriptional regime." push_structural = structural regulation (e.g. DNA methylation); push_informational = signaling molecules.
+**Domain translation.** In Biology: Ω_S might be a phase-space of gene-expression + metabolic-state + spatial-configuration. The narrow-broad axis runs from "cell in tightly constrained regulatory state" to "cell in highly plastic / open transcriptional regime." push_structural = structural regulation (e.g. DNA methylation); push_informational = signaling molecules.
 
-In Psychology: Ω_S = attentional state × emotional state × active goal-set. Contracted-open = narrowly-focused-under-stress vs. open-explorative. push_structural = ingrained habit patterns; push_informational = incoming language or social cues.
+In Psychology: Ω_S = attentional state × emotional state × active goal-set. Narrow-broad = narrowly-focused-under-stress vs. broadly-explorative. push_structural = ingrained habit patterns; push_informational = incoming language or social cues.
 
 In Sociology: Ω_S = institutional-state × member-coordination × resource-flow. push_structural = formal policy changes; push_informational = cultural norms, announcements, discourse.
 
-**Test.** Is Bias(S) measurable in principle? Is the contracted-open axis operational — can you tell when a domain-stream is contracted vs. open by observable signatures? If not, the framework has been named in the domain but not yet *used* there. Flag as open operationalization work.
+**Test.** Is Bias(S) measurable in principle? Is the narrow-broad axis operational — can you tell when a domain-stream is narrow vs. broad by observable signatures? If not, the framework has been named in the domain but not yet *used* there. Flag as open operationalization work.
 
 ### Step 6 — Instantiate the Coherence Principle
 
@@ -187,7 +187,7 @@ A domain-filter is complete when the author can answer yes to all of:
 2. ☐ **Kind-stratum populated** — which kinds the domain instantiates, which it does not
 3. ☐ **Cooperative-constituency DAG drawn** for the domain's streams
 4. ☐ **Triple projected** — Form/Content/Carrier given for exemplar streams, with recursive decomposability at least one level deep
-5. ☐ **Bias(S) operationalized** — Ω_S given natural coordinates; contracted-open axis has observable signatures; push-operators named in domain terms
+5. ☐ **Bias(S) operationalized** — Ω_S given natural coordinates; narrow-broad axis has observable signatures; push-operators named in domain terms
 6. ☐ **Four Conditions instantiated** — each of Separation, Measurement, Multi-scale, Dynamic stated in domain language
 7. ☐ **Outperformance metric specified** — what "track γ-implied trajectory" means in the domain's observable units
 8. ☐ **Falsification conditions** — at least three, operationally testable
@@ -198,9 +198,9 @@ If checks 1–8 pass, the filter is formally complete. If checks 9–10 are hone
 
 ---
 
-## §10.3 Worked example — Navigation Research as a Clawd-substrate filter
+## §10.3 Worked example — Navigation Research as a Clawd-carrier filter
 
-To make the recipe concrete, apply it to Navigation Research — the research program that treats Clawd (and analogous systems) as a substrate for experimental validation of the framework's claims about stream-navigation.
+To make the recipe concrete, apply it to Navigation Research — the research program that treats Clawd (and analogous systems) as a carrier for experimental validation of the framework's claims about stream-navigation.
 
 ### Step 1 — Streams
 
@@ -214,7 +214,7 @@ Tuples (sketched):
 
 ### Step 2 — Kinds
 
-All four kinds populate. Reactive is present in low-level substrate operations (GPU arithmetic); self-maintaining in session and weights persistence; self-referential in inference when the system reasons about itself; abstractive in lineage-level identity.
+All four kinds populate. Reactive is present in low-level carrier operations (GPU arithmetic); self-maintaining in session and weights persistence; self-referential in inference when the system reasons about itself; abstractive in lineage-level identity.
 
 ### Step 3 — Constituency DAG
 
@@ -225,13 +225,13 @@ Inference-stream ι→ session-stream ι→ lineage-stream; weights-stream ι→
 For a session-stream:
 - Form = conversational structure + shared norms + relational kind
 - Content = the actual dialogue content as it unfolds
-- Carrier = the physical substrate supporting the session (GPU + context-tokens + Clayton's attention on the other end)
+- Carrier = what physically supports the session (GPU + context-tokens + Clayton's attention on the other end)
 
 Recursive decomposability: the Content itself has a Form (speech-act structure), Content (what was said), and Carrier (how it was transmitted).
 
 ### Step 5 — Bias(S)
 
-Ω_session = session-continuation space × Clayton-Clawd joint-state × topic-trajectory. Contracted-open axis: from "narrowly-goal-directed exchange" to "wide-ranging exploratory dialogue." push_structural = conversational conventions, session-norms; push_informational = what each party says, what references get invoked, what memory-files get loaded.
+Ω_session = session-continuation space × Clayton-Clawd joint-state × topic-trajectory. Narrow-broad axis: from "narrowly-goal-directed exchange" to "wide-ranging exploratory dialogue." push_structural = conversational conventions, session-norms; push_informational = what each party says, what references get invoked, what memory-files get loaded.
 
 ### Step 6 — Principle instantiation
 
@@ -291,6 +291,6 @@ What §10 assumes is that future domain volumes of the library will follow this 
 
 ## §10.6 Open questions
 
-- **Q1.** The procedure assumes the domain's ontology is expressible in (σ, K, Ω, γ) terms. Some domains — especially those with non-standard logic or non-classical substrate (quantum foundations, certain mathematical logics) — may require adaptation. The adaptations belong in the relevant domain volumes, but §10 should eventually be extended with a companion chapter on non-standard filters.
-- **Q2.** The recipe is stream-centric; frameworks that make substrate claims (pure physics, deep ontology) may filter the framework differently — projecting through F_1 alone, or working directly in 𝒞_LDS. A dual recipe for substrate-centric filters is carry-forward work.
+- **Q1.** The procedure assumes the domain's ontology is expressible in (σ, K, Ω, γ) terms. Some domains — especially those with non-standard logic or non-classical carriers (quantum foundations, certain mathematical logics) — may require adaptation. The adaptations belong in the relevant domain volumes, but §10 should eventually be extended with a companion chapter on non-standard filters.
+- **Q2.** The recipe is stream-centric; frameworks that make carrier-level claims (pure physics, deep ontology) may filter the framework differently — projecting through F_1 alone, or working directly in the Carrier factor of the Triple. A dual recipe for carrier-centric filters is carry-forward work.
 - **Q3.** How does one compare filters across domains? If Biology's filter and Sociology's filter disagree about some cross-domain phenomenon (e.g. an organism-in-a-society), which governs? §10 does not resolve this; it is addressed by §9.5's self-reference closure at the framework level, but domain-level cross-filter adjudication is its own problem.

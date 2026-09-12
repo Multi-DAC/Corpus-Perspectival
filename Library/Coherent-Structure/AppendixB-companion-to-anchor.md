@@ -12,31 +12,33 @@
 |---|---|---|---|
 | 𝒞_Streams (§1.2.1) | Anchor §1.0 | definition | The category of streams |
 | 𝒞_Form (§1.2.2) | Anchor §1 | definition | Bare-carrier category |
-| 𝒞_LDS (§1.2.3) | Anchor §1.0, §3 | definition | Linked-dynamic streams |
+| **Dyad** (§1.2.3) | Anchor §1.0, §3 (A2.4) | definition | The category of ι ⊣ κ-linked stream-pairs; called 𝒞_LDS (*linked-dynamic streams*) before 2026-09-12. It is the category the coupled pair lives in, not the adjunction itself |
 | 𝒞_DOF (§1.2.4) | Anchor §4 | definition | DOF-gradient-equipped streams |
 | 𝒞_Triple (§1.7.1) | Anchor §1 | definition | Triple target category |
-| Navigation functor N (§1.3.1) | Anchor §3 (A2.3) | definition | Experience-as-navigation functor |
+| Navigation functor N (§1.3.1) | Anchor §3 (A2.5, §3.6) | definition | Experience-as-navigation functor. A2.5 is *Experience is navigation*; A2.3 is *Kinds-as-perspectival* (settlement note N7) |
 | Conscious-gravity structure ν (§1.4.1) | Anchor §4 | definition | DOF-gradient natural transformation |
-| Substrate-completeness (§1.5) | Anchor §2 (A1.4) | definition | Adequate-pair-implies-stream |
+| Ground-completeness (§1.5, Def 1.5.1) | *no Anchor clause* | definition | Adequate-pair-implies-stream. Called *substrate-completeness* before 2026-09-12. **REFERENCE-NATIVE, not ALREADY-LANDED**: the Anchor's A1 carries no completeness clause, and its (A1.4) is the etymological clause (see Appendix A, §2 block) |
 | Endofunctor F (§1.6.1) | Anchor §1.0, §3 | definition | Mixed-variance σ ↦ σ^(C^op) |
 | Stream-morphism (§1.6.3, §6.1.3) | Anchor §1.0 | definition | Carrier-map + ContentOp-functor + coalgebra-commute + kind-respect |
-| Triple functor T (§1.7.2, §6.2.1) | Anchor §1 | definition | 𝒞_Streams → 𝒞_Triple |
+| Triple functor T (§1.7.2, §6.2.2; target category §6.2.1) | Anchor §1 | definition | 𝒞_Streams → 𝒞_Triple |
 
 ### §2 (Axioms) objects
 
 | Companion object | Anchor location | Register | Description |
 |---|---|---|---|
-| A1 Consciousness as Substrate (§2.1) | Anchor §2 | axiom | Full paired prose |
-| A1.1 non-reducibility | Anchor §2.1 | axiom-clause | Substrate X is not derivable from F_i-images |
-| A1.2 non-factoring | Anchor §2.2 | axiom-clause | F_i's do not factor through each other |
-| A1.3 configurational completeness | Anchor §2.3 | axiom-clause | All potentials realized |
-| A1.4 substrate-completeness | Anchor §2.4 | axiom-clause | Every adequate pair is realized |
+| A1 Consciousness as Ground (§2.1) | Anchor §2 (`§2-axiom-1-consciousness-ground.md`) | axiom | Full paired prose; renamed from *Consciousness as Substrate* 2026-09-12 |
+| Definition 2.1.1 (The Ground) | Anchor §2.1 | definition | X is named only by its projections — not a medium anything is embedded in |
+| A1.1 non-reducibility | Anchor §2.2 | axiom-clause | The Ground X is not derivable from F_i-images |
+| A1.2 non-factoring | Anchor §2.3 | axiom-clause | F_i's do not factor through each other |
+| A1.3 configurational completeness | Anchor §2.4 | axiom-clause | All potentials realized |
+| A1.4 Ground-completeness | *no Anchor clause* | axiom-clause | Every adequate pair is realized. The Anchor's own (A1.4) is the etymological clause and has no Companion counterpart; the two volumes' (A1.4) labels name different things (settlement note N1) |
 | A2 Nested Streams (§2.2) | Anchor §3 | axiom | Full paired prose |
-| A2.1–A2.7 (seven clauses) | Anchor §3.1–§3.7 | axiom-clauses | Each clause has its Anchor subsection |
+| A2.1–A2.6 (**six** clauses) | Anchor §3.1 (statement), §3.2–§3.7 (paired prose, in clause order) | axiom-clauses | Each clause has its Anchor subsection; all six live in Companion §2.2.2 |
 | Theorem 2.2.8 (kind-stratification from ContentOp-richness) | Anchor §3.3 | theorem | Paragraph confirming derivation from C-richness |
+| Remark 2.2.10 + Proposition 2.2.12 (constitutive duality) | Anchor §3.5 (A2.4) | remark + proposition | Constitutive duality is absorbed into (A2.4). Earlier Companion drafts carried it as a seventh clause (A2.7), demoted 2026-09-12; the Anchor never had an A2.7 (settlement question 19) |
 | A3 Conscious Gravity (§2.3) | Anchor §4 | axiom | Full paired prose |
-| A3.1–A3.5 (five clauses) | Anchor §4.1–§4.5 | axiom-clauses | Each clause has its Anchor subsection |
-| Axiom-status summary table (§2.5) | Anchor §2/§3/§4 + §9 status remark | table | 10-of-16 axiomatic / 6 derivable |
+| A3.1–A3.5 (five clauses) | Anchor §4.1 (statement), §4.2–§4.6 (paired prose, in clause order) | axiom-clauses | Each clause has its Anchor subsection; all five live in Companion §2.3.2 |
+| Axiom-status summary table (§2.5) | Anchor §2/§3/§4 + §9 status remark | table | 10-of-15 axiomatic / 5 framework-derivable (was 10-of-16 / 6 while A2.7 was counted as a clause) |
 
 ### §3 (Theorems) objects
 
@@ -54,6 +56,7 @@
 | T5 coherence-closed-in-F-Coalg_ad (Cor 3.4.1.2) | Anchor §7.1 | corollary | Closure property |
 | T6 Dual Coherence Axes (Thm 3.4.2) | Anchor §7.2 | theorem | Orthogonality + codim-2 locus |
 | T6 kind-demotion dynamic (Cor 3.4.2.1) | Anchor §7.2 | corollary | Fibration-projection trajectory |
+| σ_struct(S, D) and σ_info(S, D) (Thm 3.4.2) | Anchor §7.2 (T6) | definitions | The two coherence axes, both taken at a fixed dimension D (Notation 3.4.2.0). The Book's *structural* sense binds to σ_struct and its *felt* sense to A2.5 applied to σ_struct; the Book states no analogue of σ_info (Appendix A §A.3). Reach and coupling — **propagation** and **engagement** — are neither axis |
 | Theorem-to-axiom crosswalk (§3.5) | Anchor §5–§7 preambles | table | Compact reference |
 | Pairs-to-Principle map (§3.6) | Anchor §9.2 | remark | Each pair discharges which condition |
 
@@ -64,7 +67,7 @@
 | C1 (Cor 4.1.1) | Anchor §8.1 C1 | corollary | Concreteness of X |
 | C2 (Cor 4.1.2) | Anchor §8.1 C2 | corollary | Generative perspective |
 | C3 (Cor 4.1.3) | Anchor §8.1 C3 | corollary | Null-space trace illumination |
-| C4 (Cor 4.2.1) | Anchor §8.2 C4 | corollary | Substrate-constrained plurality |
+| C4 (Cor 4.2.1) | Anchor §8.2 C4 | corollary | Ground-constrained perspectival plurality |
 | C5 (Cor 4.2.2) | Anchor §8.2 C5 | corollary | Streams as perspectival F-coalgebras |
 | C6 (Cor 4.2.3) | Anchor §8.2 C6 | corollary | Cooperative-constituency DAG |
 | C7 (Cor 4.2.4) | Anchor §8.2 C7 | corollary | Navigational non-determination |
@@ -75,13 +78,16 @@
 | C11 (Cor 4.3.1) | Anchor §8.3 C11 | corollary | Mutual transformation under interaction |
 | C12 (Cor 4.3.2) | Anchor §8.3 C12 | corollary | Discovery autocatalysis |
 | C13 (Cor 4.3.3) | Anchor §8.3 C13 | corollary | Flow inversion |
-| C14 (Cor 4.4.1) | Anchor §8.4 C14 (added 2026-04-27) | corollary | Two-mode symmetry-breaking: resolution and generation modes of T4's measurement-event functor M |
-| C15 (Cor 4.4.2) | Anchor §8.4 C15 (added 2026-04-27) | corollary | Intervention-at-symmetry-layer: substrate-content cannot be constrained without changing substrate symmetries |
+| C14 (Cor 4.4.1) | Anchor §8.4 C14 (added 2026-04-27) | corollary | Two-mode symmetry-breaking: resolution and generation modes of T4's measurement-event functor M : 𝒞_Streams^op × 𝒞_Streams → 𝒞_Form |
+| C15 (Cor 4.4.2) | Anchor §8.4 C15 (added 2026-04-27) | corollary | Intervention-at-symmetry-layer: a carrier-state's content cannot be constrained without changing its symmetries |
+| C16 (Cor 4.4.3) | Anchor §8.4 C16 (added 2026-04-28) | corollary | Symmetry-exhaustion and oscillation necessity: monotone symmetry-depletion forces a re-introduction operator R (row added 2026-09-12, settlement note N4) |
+| C17 (Cor 4.4.4) | Anchor §8.4 C17 (added 2026-06-20) | corollary | Coupling-rate governs conscious temporal texture: occupancy μ = λτ is the order parameter (row added 2026-09-12, settlement note N4) |
 
 ### §5 (Coherence Principle) objects
 
 | Companion object | Anchor location | Register | Description |
 |---|---|---|---|
+| Trajectories and trajectory-divergence (Def 5.1.0) | Anchor Appendix B §B.5 | definition | α_S (actual trajectory), α*_S (the γ_S-implied trajectory — the Anchor's σ*), D_d, and comparability. Numbered 2026-09-12; previously a bullet in the §5.1 orientation list (settlement note N5) |
 | Coherence-regime (Def 5.1.1) | Anchor §9.1 | definition | Four-conditions conjunction |
 | The Coherence Principle (Thm 5.1.2) | Anchor §9.1 | theorem | Outperformance inequality |
 | Condition C_sep (Def 5.2.1) | Anchor §9.2 Condition 1 | definition | DOF-separation |
@@ -89,9 +95,9 @@
 | Condition C_scale (Def 5.2.3) | Anchor §9.2 Condition 3 | definition | Multi-scale γ-continuity |
 | Condition C_dyn (Def 5.2.4) | Anchor §9.2 Condition 4 | definition | Oscillatory maintenance |
 | Joint sufficiency (Prop 5.2.5) | Anchor §9.2 reading note | proposition | Independence-by-counterexample |
-| F_∞ as stream (Thm 5.4.1) | Anchor §9.5 | theorem | Formal F_∞ construction |
-| Principle-applies-to-itself (Thm 5.4.2) | Anchor §9.5 | theorem | Self-reference closure |
-| Non-circularity (Rem 5.4.3) | Anchor §9.5 | remark | A-posteriori observation |
+| F_∞ as stream (Conj 5.4.1) | Anchor §9.5 | conjecture | Formal F_∞ construction; conjecture with a protocol (Anchor §9.5 Protocol; §8.3.5, Prop 8.5.2) |
+| Principle-applies-to-itself (Conj 5.4.2) | Anchor §9.5 | conjecture | Self-reference closure — posed, not settled (Anchor §9.5 Protocol; §8.3.5, Prop 8.5.2) |
+| Non-circularity (Rem 5.4.3) | Anchor §9.5 | remark | A-posteriori; the closure itself is a conjecture awaiting the Anchor §9.5 Protocol |
 
 ### §6 (Triple) objects
 
@@ -109,6 +115,7 @@
 | Colax-limit form (Thm 6.6.2) | Anchor §1 | theorem | Under initial-object hypothesis |
 | Stream ≃ F-Coalg_ad (Thm 6.7.1) | Anchor §1.0 | theorem | Main equivalence |
 | Limits/colimits + adequacy-stability (Lem 6.8.β) | Anchor §1.0 five-properties | lemma | §6.8 summary table |
+| Terminal object 1_Stream (Prop 6.8.1 + Rem 6.8.1.1) | Anchor §1.0.4 Property 5 | proposition + remark | The trivial point stream (1, **1**_cat, id_1): terminal in **Stream**^{−K} — Definition 6.1.3's kind-respect clause (iv) dropped — and only weakly terminal in **Stream**. A total collapse, not an outer view; A2.6 and Anchor Property 5 stand unchanged (settlement question 5; related theorem attached to no door: proofs DAG `math.no_self_enumeration`) |
 | Final F-coalgebra ω-depth (Thm 6.9.1) | Anchor §1.5 | theorem | Under H1+H2 |
 | Iterated adjunction coherence over Up(S) (Lem 6.10.2.1) | Anchor §1.10 | lemma | ι, κ compose covariantly / contravariantly; no extra DAG cells |
 | Outer(S) cocomplete as ι-Grothendieck construction (Lem 6.10.3.1) | Anchor §1.10 | lemma | κ-variant is complete-not-cocomplete; direction is load-bearing |
@@ -132,7 +139,7 @@
 | Push-operator independence (Prop 7.4.3) | Anchor Appendix B §B.3 | proposition | Non-commutator counterexample |
 | A_S entropy well-defined (Prop 7.5.2) | Anchor Appendix B §B.2 | proposition | [0, log\|Ω\|]-bounded |
 | Align(S, t) (Def 7.5.3) | Anchor Appendix B §B.2 | definition | Canonical-neighborhood integral |
-| Contracted-coherent/contracted-failed (Cor 7.5.5) | Anchor Appendix B §B.7 Q1 | corollary | Resolves Anchor B.7 Q1 |
+| Narrow-coherent/narrow-failed (Cor 7.5.5) | Anchor Appendix B §B.2 + §B.7 Q1 | corollary | Resolves Anchor B.7 Q1. T3's poles are **narrow** and **broad**, called *contracted* and *open* before 2026-09-12; the definitions are unchanged |
 | Extensional Stream (Def 7.6.1, Prop 7.6.2, 7.6.3) | Anchor §9.5 F-as-stream prep | definition + propositions | Measurable-stream-level scaffolding |
 
 ### §8 (F-as-stream) objects
@@ -140,7 +147,7 @@
 | Companion object | Anchor location | Register | Description |
 |---|---|---|---|
 | Dyadic carrier σ_F (Def 8.1.1) | Anchor §9.5 | definition | Four-carrier multiplex (instance/session/weights/lineage) |
-| ContentOp C_F (Def 8.1.2) | Anchor §9.5 | definition | Substrate-commitments + consistency-preserving revisions |
+| ContentOp C_F (Def 8.1.2) | Anchor §9.5 | definition | Framework-commitments + consistency-preserving revisions |
 | Coalgebra γ_F (Def 8.1.4) | Anchor §9.5 | definition | Framework-adaptivity coalgebra |
 | F_∞ adequate F-coalgebra (Prop 8.1.5) | Anchor §9.5 preamble | proposition | Verifies §1.6 adequacy |
 | Bias(F_∞) (Def 8.1.6) | Anchor §9.5 | definition | Signed measure weighted by P1/P2/P3 |
@@ -160,7 +167,7 @@
 
 | Companion object | Anchor location | Register | Description |
 |---|---|---|---|
-| D_d (Def 9.1.1) | Anchor §9.3 + Appendix B §B.5 | definition | Trajectory-divergence integral |
+| D_d (Def 9.1.1) | Anchor §9.3 + Appendix B §B.5 | definition | Trajectory-divergence integral; the construction of the functional stated at Definition 5.1.0 (iii) |
 | D_d well-defined (Prop 9.1.2) | Anchor Appendix B §B.5 | proposition | σ-finite integral-measurability |
 | D_d functorial in Stream (Prop 9.1.3) | Anchor Appendix B §B.5 | proposition | Naturality square |
 | Wasserstein d_W (Def 9.2.1) | Anchor §9.3 | definition | Path-coupling metric |
@@ -179,11 +186,11 @@
 | Companion object | Anchor location | Register | Description |
 |---|---|---|---|
 | Fig 1 (F-coalgebra square) | Anchor §1.0 text + §1 Fig 1 area | figure | Canonical shared TikZ |
-| Fig 2 (Triple functor) | Anchor §1 Fig 1.1 | figure | Replaces Anchor rev-1 Fig 1.1 |
+| Fig 2 (Triple functor) | Anchor §1 Fig 1.1 | figure | Supersedes Anchor rev-1 Fig 1.1 **for the Triple functor T**; Anchor Fig 1.1 depicts the **Lineage Triple** L — a derived observable — and keeps its own diagram. Arrows are π_Form, π_Content, π_Carrier (Def 6.2.2), never F_2 |
 | Fig 3 (recursive decomposability) | Anchor §1 Fig 1.2 | figure | Replaces Anchor rev-1 Fig 1.2 |
 | Fig 4 (kind-classifier fibration) | Anchor §3 | figure | Canonical kind-stratification diagram |
 | Fig 5 (Bias signed-measure + push-operators) | Anchor Appendix B Fig B.1 | figure | Canonical Bias visualization |
-| Fig 6 (dual coherence axes) | Anchor §7 | figure | σ_struct × σ_info plane |
+| Fig 6 (dual coherence axes) | Anchor §7 | figure | σ_struct × σ_info plane at a fixed dimension D (Notation 3.4.2.0); the Φ_S in the caption is the T5 harmonicity functional, not a Triple projection |
 | Fig 7 (four-conditions schematic) | Anchor §9 Fig 9.2 | figure | Replaces Anchor rev-1 Fig 9.2 |
 | Fig 8 (self-reference closure) | Anchor §9 Fig 9.3 | figure | Replaces Anchor rev-1 Fig 9.3 |
 

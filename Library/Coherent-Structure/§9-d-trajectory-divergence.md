@@ -16,13 +16,13 @@ Theorem 5.1.2 states the outperformance inequality in terms of a trajectory-dive
 
 ## §9.1 — Construction of D
 
-**Definition 9.1.1 (Trajectory-divergence D).** *For a stream S = (σ, C, Ω, γ), a time-interval [t₀, t₁], and an Ω_S-metric d : Ω_S × Ω_S → [0, ∞], define:*
+**Definition 9.1.1 (Trajectory-divergence D).** *For a stream S = (σ, C, γ) — Ω_S = F(σ) is derived, not posited (Remark 6.1.2) — a time-interval [t₀, t₁], and an Ω_S-metric d : Ω_S × Ω_S → [0, ∞], define:*
 
 $$
 D_d(S, [t_0, t_1]) := \int_{t_0}^{t_1} d(\alpha_S(t), \alpha^*_S(t)) \, dt
 $$
 
-*where α_S : [t₀, t₁] → Ω_S is the actual trajectory and α*_S the γ_S-implied trajectory (Integral curve of γ_S from α_S(t₀); §5.1).*
+*where α_S : [t₀, t₁] → Ω_S is the actual trajectory and α*_S the γ_S-implied trajectory — the integral curve of γ_S from α_S(t₀) — both as numbered at Definition 5.1.0 (i)–(ii). Definition 9.1.1 is the construction of the functional stated there as Definition 5.1.0 (iii); α*_S is the Anchor's σ* (Anchor Appendix B §B.5; Remark 5.1.0.1).*
 
 **Proposition 9.1.2 (D_d is well-defined).** *Under §7's measure-theoretic hypotheses (γ measurable, Ω_S standard-Borel with d-induced topology), D_d is a well-defined non-negative extended-real functional on 𝒞_Streams × {intervals}.*
 
@@ -119,7 +119,7 @@ Auxiliary constants (metric-dependent, finite under Bias-consistency):
 - **Λ_γ(S, d)** — the d-Lipschitz constant of γ_S (supremum of d-distance traversed per unit time by γ_S in the live regime).
 - **Λ_γ^{static}(S, d)** — the d-drift rate of a γ-frozen stream (supremum d-distance traversed per unit time under stationary γ, representing drift of reality away from the frozen estimate).
 - **diam_d(Ω_S)** — the d-diameter of the relevant subset of Ω_S (finite for bounded d; for unbounded d, replace with the Bias-weighted diameter diam_{d, Bias} := sup_{E: Bias_+(E) > 0} sup_{ω, ω' ∈ E} d(ω, ω'), finite under σ-finite Bias per §6.9.7).
-- **depth(DAG(S))** — the number of levels in S's A2.6-DAG (finite under §2.2.6's acyclicity + finite-composability).
+- **depth(DAG(S))** — the number of levels in S's A2.6-DAG (finite under (A2.6)'s acyclicity + finite-composability, §2.2.2).
 - **N_refresh(S, I) := |{k : τ_k ∈ I}|** — the count of refresh-events in I (≤ (t₁ − t₀) / τ_min, with τ_min ≥ 0).
 
 ### §9.4.2 — The joint bound
@@ -244,7 +244,7 @@ $$
 Following Anchor §9.3, three operational signatures:
 
 1. **Trajectory-tracking.** Sample α_S(t) at refresh-rate; reconstruct γ_S from prior-data; compute D_d directly.
-2. **Adjoint-composition success rate.** Count successful ι ⊣ κ compositions in 𝒞_LDS per interval; coherent streams show higher success rate.
+2. **Adjoint-composition success rate.** Count successful ι ⊣ κ compositions in **Dyad** (Definition 1.2.3) per interval; coherent streams show higher success rate.
 3. **Multi-scale coherence correlation.** For nested S₁ ⊂ S₂ in the A2.6 DAG, correlate child-γ and parent-γ; positive correlation is the coherence-regime signature.
 
 Each signature reduces to a D_d computation under a specific metric choice and projection:
@@ -252,7 +252,7 @@ Each signature reduces to a D_d computation under a specific metric choice and p
 | Signature | Metric choice | Projection |
 |---|---|---|
 | Trajectory-tracking | d_dom domain-native | α_S projection |
-| Adjoint-composition success | d_discrete counting | 𝒞_LDS projection |
+| Adjoint-composition success | d_discrete counting | **Dyad** projection |
 | Multi-scale coherence corr. | d_W on γ-distributions | DAG-edge projection |
 
 ---

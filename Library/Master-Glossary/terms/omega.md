@@ -30,7 +30,7 @@ The **measurable space of configurations a stream S can occupy.** Every stream h
 | Register | Term-form | Notes |
 |---|---|---|
 | Framework (anchor) | Ω, Ω_S | base; §1.4 §3.5 canonical |
-| Framework (companion / CT) | measurable space; σ-algebra on Ω; *(σ_F, K_F, Ω_F, γ_F)* tuple | CT formalization §1.10 inner/outer adjunction; §6.4 fibration territory |
+| Framework (companion / CT) | measurable space; σ-algebra on Ω; *(σ_F, C_F, γ_F)* stream triple, K_F and Ω_F derived (Companion Remark 6.1.2) | CT formalization §1.10 inner/outer adjunction; §6.4 fibration territory |
 | DoPI register | *the configuration space of perspectival being*; *X-Config* (at metaphysical scale) | proto-Ω; less sharpened |
 | Corpus V1 register | *the configuration totality*; *X-region* | physics-bridge passages |
 | Universal-Coherence / Promethean | *X-Config*; *the totality of what X realizes* | metaphysical Ω at substrate scale |

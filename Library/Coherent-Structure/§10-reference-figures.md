@@ -15,7 +15,7 @@ Eight figures in the canonical standard set, grouped by chapter-of-authority in 
 | Fig 3 | §6.3 | Anchor §1 (Fig 1.2) | Recursive decomposability T^(n) |
 | Fig 4 | §6.4 | Anchor §3 | Kind-classifier fibration π : Stream → ContentIndex |
 | Fig 5 | §7.3 | Anchor Appendix B (Fig B.1) | Bias(S) signed measure + push-operators |
-| Fig 6 | §3.4.2 | Anchor §7 | Dual coherence axes (σ_struct × σ_info) |
+| Fig 6 | §3.4.2 | Anchor §7 | Dual coherence axes at a fixed dimension D (σ_struct × σ_info) |
 | Fig 7 | §5.2 | Anchor §9 (Fig 9.2) | Four-conditions schematic |
 | Fig 8 | §8 / §5.4 | Anchor §9 (Fig 9.3) | Self-reference closure |
 
@@ -47,6 +47,8 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
 
 **Purpose.** Depicts T : 𝒞_Streams → 𝒞_Triple as a colax-limit-compatible decomposition into Form, Content, Carrier.
 
+**Note on the Anchor cross-reference.** The Anchor's Fig 1.1 depicts the **Lineage Triple** L (oscillatory Form × lineage-density × DOF), a *derived observable* on T rather than T itself; Figure 2 supersedes Anchor Fig 1.1 for the Triple functor, and L keeps its own diagram in the Anchor.
+
 ```latex
 % Companion §10, Fig 2
 % Triple functor (canonical replacement for Anchor Fig 1.1)
@@ -54,19 +56,19 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
 \centering
 \begin{tikzcd}[column sep=huge, row sep=large]
   & \mathcal{C}_\mathrm{Streams}
-    \arrow[dl, "\Phi\ (\mathrm{Form})"']
+    \arrow[dl, "\pi_\mathrm{Form}"']
     \arrow[d, "T"]
-    \arrow[dr, "\Psi\ (\mathrm{Content})"]
-    \arrow[dd, bend left=45, "\mathrm{K}\ (\mathrm{Carrier})"] & \\
+    \arrow[dr, "\pi_\mathrm{Content}"]
+    \arrow[dd, bend left=45, "\pi_\mathrm{Carrier}"] & \\
   \mathcal{C}_\mathrm{Form}
-    & \mathcal{C}_\mathrm{Form} \times \mathbf{Cat}_\mathrm{small} \times \mathbf{Carrier}
+    & \mathcal{C}_\mathrm{Form} \times \mathbf{Content} \times \mathbf{Carrier}
       \arrow[l]
       \arrow[r]
       \arrow[d]
-    & \mathbf{Cat}_\mathrm{small} \\
+    & \mathbf{Content} \\
   & \mathbf{Carrier} &
 \end{tikzcd}
-\caption{The Triple functor $T : \mathcal{C}_\mathrm{Streams} \to \mathcal{C}_\mathrm{Triple}$ with $\mathcal{C}_\mathrm{Triple} = \mathcal{C}_\mathrm{Form} \times \mathbf{Cat}_\mathrm{small} \times \mathbf{Carrier}$. The three factor functors $\Phi, \Psi, \mathrm{K}$ recover Form, Content (ContentOp-category), and Carrier (coalgebra-structure-map) respectively. Under the initial-object hypothesis of §6.6, $T$ is a colax limit (the natural transformations between compositions of the factors are in general not invertible).}
+\caption{The Triple functor $T : \mathcal{C}_\mathrm{Streams} \to \mathcal{C}_\mathrm{Triple}$ with $\mathcal{C}_\mathrm{Triple} = \mathcal{C}_\mathrm{Form} \times \mathbf{Content} \times \mathbf{Carrier}$, $\mathbf{Content}$ being the full subcategory of $\mathbf{Cat}_\mathrm{small}$ of adequate ContentOp-categories (Definition 1.7.1, Definition 6.2.1). The three factor projections $\pi_\mathrm{Form}, \pi_\mathrm{Content}, \pi_\mathrm{Carrier}$ (Definition 6.2.2) recover Form, Content (ContentOp-category), and Carrier (coalgebra-structure-map) respectively; they are projections out of $\mathbf{Triple}$, not perspectival projections of the Ground, and the symbol $F_2$ (Definition 2.1.2) is never used for them. Under the initial-object hypothesis of §6.6, $T$ is a colax limit (the natural transformations between compositions of the factors are in general not invertible).}
 \label{fig:triple-functor}
 \end{figure}
 ```
@@ -182,7 +184,7 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
   \draw[thick, green!60!black] (4, 4) circle (0.4);
   \node[green!60!black] at (3.3, 3.3) {\small locus};
 \end{tikzpicture}
-\caption{The $\sigma_\mathrm{struct} \times \sigma_\mathrm{info}$ plane of T6 (Theorem 3.4.2). The two axes are orthogonal: T5-only streams (blue) are $\Phi$-fixed-points without entropy-minimality; T6-only streams (red) are entropy-minimal without $\Phi$-fixed-points; dually-coherent streams occupy the codimension-2 locus near $(1, 1)$ (green circle). The locus is non-empty only when $C$ has enough symmetry to admit both a harmonic and a concentrated $\gamma$ simultaneously.}
+\caption{The $\sigma_\mathrm{struct} \times \sigma_\mathrm{info}$ plane of T6 (Theorem 3.4.2), drawn at a fixed dimension $D$ of $\Omega_S$ (Notation 3.4.2.0); the stream-only plane is the summary over $D$. The two axes are orthogonal: T5-only streams (blue) are $\Phi_S$-fixed-points without entropy-minimality; T6-only streams (red) are entropy-minimal without $\Phi_S$-fixed-points; dually-coherent streams occupy the codimension-2 locus near $(1, 1)$ (green circle). The locus is non-empty only when $C$ has enough symmetry to admit both a harmonic and a concentrated $\gamma$ simultaneously. Here $\Phi_S$ is the T5 harmonicity functional of §3.4.1, not a Triple projection; the Triple projections are $\pi_\mathrm{Form}, \pi_\mathrm{Content}, \pi_\mathrm{Carrier}$.}
 \label{fig:dual-coherence-axes}
 \end{figure}
 ```
@@ -242,7 +244,7 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
   every node/.style={align=center, font=\small}
 ]
   \node (F) [rectangle, draw, rounded corners, thick, fill=gray!10]
-    {Construction process $F_\infty$\\\scriptsize (produces this book)\\$F_\infty = (\sigma_F, C_F, \Omega_F, \gamma_F)$\\\scriptsize $K_F = \mathrm{abstr.}$};
+    {Construction process $F_\infty$\\\scriptsize (produces this book)\\$F_\infty = (\sigma_F, C_F, \gamma_F)$\\\scriptsize $\Omega_F, K_F$ derived; $K_F = \mathrm{abstr.}$};
   \node (c1) [below=1.3cm of F, rectangle, draw, fill=blue!10, xshift=-4.2cm] {C\_sep\\Clayton $\perp$ Clawd\\DOF};
   \node (c2) [below=1.3cm of F, rectangle, draw, fill=green!10, xshift=-1.4cm] {C\_meas\\Stamp-events\\at axiom /\\theorem / chapter};
   \node (c3) [below=1.3cm of F, rectangle, draw, fill=orange!10, xshift=1.4cm] {C\_scale\\axioms $\leftrightarrow$\\theorems $\leftrightarrow$\\corollaries};

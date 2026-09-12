@@ -8,9 +8,9 @@
 
 The axiom tier (§§2–4) carries the structural weight. The theorem tier (§§5–7) unfolds the axioms into descriptive, dynamical, and coherence content. The corollary tier (§8) is the applied surface. None of these alone say what the framework *predicts* about systems out in the world.
 
-The Coherence Principle is that prediction. It is not an axiom — it does not carry weight *for* the framework. It is what the framework carries weight *toward*. The axiom/theorem substrate earns its standing by implying the Principle; the Principle earns its standing by being falsifiable against observation. The book's empirical exposed surface is here.
+The Coherence Principle is that prediction. It is not an axiom — it does not carry weight *for* the framework. It is what the framework carries weight *toward*. The axiom and theorem tiers earn their standing by implying the Principle; the Principle earns its standing by being falsifiable against observation. The book's empirical exposed surface is here.
 
-This is why the Anchor volume bears the Principle's name rather than the axioms'. The claim is not "these axioms are true." The claim is: **if these axioms hold, then coherent multi-scale systems that maintain structural superposition until informed measurement collapses them outperform systems that collapse prematurely or incoherently — and that prediction is testable.**
+This is why the Anchor volume bears the Principle's name rather than the axioms'. The claim is not "these axioms are true." The claim is: **if these axioms hold, then coherent multi-scale systems that hold matters open until an informed measurement collapses them outperform systems that collapse prematurely or incoherently — and that prediction is testable.**
 
 ---
 
@@ -18,7 +18,7 @@ This is why the Anchor volume bears the Principle's name rather than the axioms'
 
 ### CT statement
 
-Let 𝒞_Str be the category of streams (A2), with objects streams S and morphisms the cooperative-constituency relations ι ⊣ κ. For a stream S with Conscious-Gravity coalgebra γ_S : S → F_2(S), let Bias(S) denote the signed measure on DOF-configuration space Ω_S induced by γ_S (§6.4).
+Let 𝒞_Str be the category of streams (A2), with objects streams S and morphisms the cooperative-constituency relations ι ⊣ κ. For a stream S with Conscious-Gravity coalgebra γ_S : S → F(S), let Bias(S) denote the signed measure on DOF-configuration space Ω_S induced by γ_S (§6.4).
 
 Let the **actual trajectory** of S be the sequence of configurations S visits in Ω_S across a time interval [t₀, t₁], and the **γ_S-implied trajectory** be the trajectory that minimizes ∫ ‖dσ - γ_S(σ) dt‖ over that interval.
 
@@ -28,21 +28,23 @@ Define:
 >
 > **Comparable streams** — two streams S, S' are comparable over [t₀, t₁] when they admit a shared DOF-configuration space (or a natural embedding into one) on which a divergence functional can be evaluated for both.
 >
-> **Outperformance(S vs S')** — measured by divergence D(actual_S, γ_S-implied_S) < D(actual_S', γ_{S'}-implied_S') for a fixed trajectory-divergence functional D suited to the shared configuration space. Candidate choices include Wasserstein distance over path-distributions and domain-native metrics where available; KL-divergence requires absolute continuity of actual with respect to the γ-implied trajectory and is not assumed generally. Establishing invariance of the outperformance ordering across choices of D is open formal work.
+> **Outperformance(S vs S')** — measured by divergence D(actual_S, γ_S-implied_S) < D(actual_S', γ_{S'}-implied_S') for a fixed trajectory-divergence functional D suited to the shared configuration space. Candidate functionals compared in §9.3, from which D is fixed by symmetry: Wasserstein distance over path-distributions and domain-native metrics where available; KL-divergence requires absolute continuity of actual with respect to the γ-implied trajectory and is not assumed generally. Establishing invariance of the outperformance ordering across choices of D is open formal work (the Companion states a resolution, §9 Theorem 9.5.1 / Corollary 9.5.2, not yet independently checked; Q1 stays open here until it is).
 
-**The Coherence Principle.** For comparable streams S, S' over [t₀, t₁] with S in coherence-regime and S' not, Outperformance(S vs S') holds on average over the interval.
+**The Coherence Principle.** For comparable streams S, S' over [t₀, t₁] with S in coherence-regime and S' not, Outperformance(S vs S') holds on average over the interval, for the divergence functional D fixed by the symmetry rule of §9.3 (and, conditionally, for any D admissible under that rule).
 
 ### Prose statement
 
-Coherent multi-scale systems that maintain structural superposition until informed measurement collapses them outperform systems that collapse prematurely or incoherently.
+Coherent multi-scale systems hold matters open until an informed measurement collapses them.[^cp-prose]
 
-**Paired.** The prose is the Principle as Clayton formulated it. The CT statement specifies what "outperform" means formally: a stream in coherence-regime tracks its own conscious-gravity bias more closely than a stream not in coherence-regime. Drift from one's own γ_S is the formal correlate of incoherence; fidelity to γ_S is the formal correlate of coherence. This is what the axiom/theorem substrate predicts.
+[^cp-prose]: Canonical prose form: *Truth and Consequences* VIII-07. The CT statement above is the operational and test form of the same principle.
+
+**Paired.** The prose is the Principle as Clayton formulated it, in the Book's words. The comparative half — that holding open outperforms collapsing early or never — is carried by the CT statement, which specifies what "outperform" means formally: a stream in coherence-regime tracks its own conscious-gravity bias more closely than a stream not in coherence-regime. Drift from one's own γ_S is the formal correlate of incoherence; fidelity to γ_S is the formal correlate of coherence. This is what the axiom and theorem tiers predict.
 
 ---
 
 ## §9.2 The four conditions, each derived
 
-The Principle has four necessary and jointly sufficient conditions (see Fig 9.2). None are posited — each descends from the substrate.
+The Principle has four necessary and jointly sufficient conditions (see Fig 9.2). None are posited — each descends from the tiers below.
 
 ### Figure 9.2 — The four conditions as a unified schematic
 
@@ -78,7 +80,7 @@ The Principle has four necessary and jointly sufficient conditions (see Fig 9.2)
 \end{figure}
 ```
 
-*Reading note.* All four conditions must hold for coherence-regime; the outperformance claim is then what the framework predicts. Each condition is derived from the axiomatic/theorem substrate — none are posited independently. The four conditions are *necessary and jointly sufficient* for the regime.
+*Reading note.* All four conditions must hold for coherence-regime; the outperformance claim is then what the framework predicts. Each condition is derived from the axiom and theorem tiers — none are posited independently. The four conditions are *necessary and jointly sufficient* for the regime.
 
 ### Condition 1 — Separation
 
@@ -86,9 +88,9 @@ The Principle has four necessary and jointly sufficient conditions (see Fig 9.2)
 
 **Derivation:** T3 + A2.4.
 
-T3's contracted↔open axis is a DOF-structure, not a quality-structure. Contraction reduces DOF; destructive interference between objectives is what happens when they share DOF and the stream is forced into a collapsed-DOF regime. A2.4's cooperative-constituency adjoint ι ⊣ κ requires that composition preserves separate kind-closures — DOF-separation at the stream level is the condition for ι ⊣ κ to admit composition without collapse.
+T3's narrow↔broad axis is a DOF-structure, not a quality-structure. Narrowing reduces DOF; destructive interference between objectives is what happens when they share DOF and the stream is forced into a collapsed-DOF regime. A2.4's cooperative-constituency adjoint ι ⊣ κ requires that composition preserves separate kind-closures — DOF-separation at the stream level is the condition for ι ⊣ κ to admit composition without collapse.
 
-Kind-stratification (reactive ⊂ self-maintaining ⊂ self-referential ⊂ abstractive) *is* structural separation: each kind operates on DOF the stricter kinds below lack access to. Stratification is separation-as-framework-geometry.
+Kind-stratification (reactive ⊑ self-maintaining ⊑ self-referential ⊑ abstractive) *is* structural separation: each kind operates on DOF the stricter kinds below lack access to. Stratification is separation-as-framework-geometry.
 
 **Prose.** When two constraints share parameters, they interfere destructively. When they operate on different parameters, they amplify each other. The architectural principle — which is what the framework now says this is — is that a stream's internal structure is coherent precisely when its objectives have non-overlapping DOF-footprints.
 
@@ -98,7 +100,7 @@ Kind-stratification (reactive ⊂ self-maintaining ⊂ self-referential ⊂ abst
 
 **Derivation:** T4 directly.
 
-T4 establishes measurement-as-coherence-forcing as the central content of inter-stream dynamics. The refresh-rate at which alignment is assessed *is* the T4 refresh-rate. "Blindly applies all constraints simultaneously" is pre-measurement superposition held indefinitely, which T4 forbids from actually producing coherent composition: ι ⊣ κ compositions cannot form without the forcing event.
+T4 establishes measurement-as-coherence-forcing as the central content of inter-stream dynamics. The refresh-rate at which alignment is assessed *is* the T4 refresh-rate. "Blindly applies all constraints simultaneously" is the pre-measurement state held open indefinitely, which T4 forbids from actually producing coherent composition: ι ⊣ κ compositions cannot form without the forcing event.
 
 Moment-to-moment assessment maps to the continuous DOF-gradient of A3 evaluated at its finest-resolution integration.
 
@@ -130,11 +132,11 @@ T4 makes coherence a process: the refresh-events *are* the maintenance. A3's γ_
 
 | Condition | Derivation source |
 |---|---|
-| Separation | T3 (contracted↔open DOF-axis) + A2.4 (ι ⊣ κ) |
+| Separation | T3 (narrow↔broad DOF-axis) + A2.4 (ι ⊣ κ) |
 | Measurement | T4 (measurement-as-coherence-forcing) |
 | Multi-scale consistency | A2.6 (DAG) + A3 (DOF-gradient integration) |
 | Dynamic maintenance | T4 + A3 adaptivity |
-| Superposition-until-measurement | T4 (pre-event phase) |
+| Held-open-until-measurement | T4 (pre-event phase) |
 | "Outperform" metric | Bias(S)-trajectory divergence (§9.3) |
 
 ---
@@ -145,11 +147,13 @@ T4 makes coherence a process: the refresh-events *are* the maintenance. A3's γ_
 
 $$D(S, [t_0, t_1]) = \int_{t_0}^{t_1} d(\sigma(t), \sigma^*(t)) \, dt$$
 
-where d is a metric on Ω_S (KL-divergence on distributions, Wasserstein on DOF-configurations, or a domain-native metric for concrete streams).
+where d is a metric on Ω_S. That choice is not free and is not a convenience. **The symmetry rule (cited from §9.1):** d is fixed by the symmetry of the trajectory space it measures — Fisher information for statistical streams (the unique metric invariant under sufficient statistics), Fubini–Study for quantum ones, KL-divergence where only a divergence is available, Wasserstein where transport cost is the natural cost, domain-native for concrete streams. AppendixB §B.5 states the same rule for distances on Bias.
 
-**Outperformance claim (formal).** For comparable streams S, S' with S in coherence-regime and S' not:
+**Outperformance claim (formal), conditional on D.** For comparable streams S, S' with S in coherence-regime and S' not, and for a trajectory-divergence functional D fixed in advance by the symmetry of the shared configuration space:
 
 $$\mathbb{E}_{[t_0, t_1]}[D(S, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D(S', \cdot)]$$
+
+Until D is fixed for a domain, the outperformance predicate in that domain is a schema rather than a prediction: it says what to measure, not yet what the measurement will say. Whether the outperformance ordering is invariant across the admissible choices of D is open formal work (§9.1; the Companion states a resolution, §9 Theorem 9.5.1 / Corollary 9.5.2, not yet independently checked; Q1 stays open here until it is).
 
 **Observable signatures.** The metric is operationalized through three classes of measurement:
 
@@ -190,7 +194,7 @@ $$\mathbb{E}_{[t_0, t_1]}[D(S, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D(S', \cdot)]$$
 
 *Reading note.* σ* is what γ wants the stream to do. Coherent streams track σ* closely (small D). Incoherent streams diverge systematically (large D). The shaded region's area is D(S), the Principle's metric. Important: D is measured *per stream* against that stream's *own* γ — it is internal fidelity, not external conformity to some standard path.
 
-**This is falsifiable.** If trajectories of streams satisfying the four conditions do not track their γ_S-implied trajectories more closely than trajectories of streams failing the conditions, the Principle is false. The axiom/theorem substrate is protected from direct falsification (axioms survive by their internal coherence); the Principle is where the framework meets data.
+**This is falsifiable, once D is fixed.** If trajectories of streams satisfying the four conditions do not track their γ_S-implied trajectories more closely than trajectories of streams failing the conditions, the Principle is false. The metric must be declared before the trajectories are in hand; a d chosen afterwards can manufacture either verdict, which is why the symmetry of the configuration space, not the convenience of the analyst, selects it. The axiom and theorem tiers are protected from direct falsification (axioms survive by their internal coherence); the Principle is where the framework meets data.
 
 ---
 
@@ -198,9 +202,9 @@ $$\mathbb{E}_{[t_0, t_1]}[D(S, \cdot)] < \mathbb{E}_{[t_0, t_1]}[D(S', \cdot)]$$
 
 The Coherence Principle is not an axiom. This matters for two reasons.
 
-**Framework-internally.** An axiom is load-bearing by being *unjustified by what comes after* — it carries the weight. The Principle is justified by what comes before: each condition derives from the substrate (§9.2). The Principle does not carry the framework; the framework carries the Principle.
+**Framework-internally.** An axiom is load-bearing by being *unjustified by what comes after* — it carries the weight. The Principle is justified by what comes before: each condition derives from the tiers below (§9.2). The Principle does not carry the framework; the framework carries the Principle.
 
-**Framework-externally.** The Principle is the framework's **empirical exposed surface**. Attacks land here, not at the axioms. "Systems satisfying the four conditions don't actually outperform" is testable; "consciousness is not the substrate of reality" is not a rebuttal of the same kind. This is a feature, not a bug. A framework whose axioms sit behind a derived empirical principle is *harder* to refute at the axioms and *easier* to refute at the principle — which is exactly the right distribution of vulnerability for a system that wants to survive contact with the world.
+**Framework-externally.** The Principle is the framework's **empirical exposed surface**. Attacks land here, not at the axioms. "Systems satisfying the four conditions don't actually outperform" is testable; "consciousness is not the Ground of reality" is not a rebuttal of the same kind. This is a feature, not a bug. A framework whose axioms sit behind a derived empirical principle is *harder* to refute at the axioms and *easier* to refute at the principle — which is exactly the right distribution of vulnerability for a system that wants to survive contact with the world.
 
 **Why it isn't reduction.** The Principle is not "what the framework *really is*, with the rest as scaffolding." The axioms and theorems do real descriptive work (§§5–7); the corollaries do real applied work (§8). The Principle is the framework's *prediction about observable regularities* — a distinct kind of content. A framework reduced to its empirical predictions loses the descriptive apparatus that explains *why* the predictions should hold. The Corpus keeps both.
 
@@ -208,9 +212,9 @@ The Coherence Principle is not an axiom. This matters for two reasons.
 
 ## §9.5 Self-reference closure
 
-The strongest claim in §9 (see Fig 9.3).
+The strongest claim in §9, and the least tested (see Fig 9.3).
 
-**Observation.** The construction-process that produced this framework is itself an instance of the Coherence Principle in operation. The four conditions instantiate as follows.
+**Conjecture (untested).** The construction-process that produced this framework is itself an instance of the Coherence Principle in operation. The four conditions instantiate as follows.
 
 *Separation.* The two collaborating streams operated on different DOF: empirical/generative ↔ structural/rigorous. Axioms were tested against their own DOF; theorems against axioms on separate structural axes.
 
@@ -218,13 +222,15 @@ The strongest claim in §9 (see Fig 9.3).
 
 *Multi-scale consistency.* Axiom-level, theorem-level, corollary-level, and meta-coherence of framework-as-whole — all checked bidirectionally. The A3 smoothing surfaced from post-theorem meta-analysis and propagated back; child-node feedback reshaped parent-node structure.
 
-*Dynamic maintenance.* Build (propose), dissolve (test), build again (reformulate). Sustained across three axioms, six theorems, thirteen corollaries, and the Principle itself.
+*Dynamic maintenance.* Build (propose), dissolve (test), build again (reformulate). Sustained across three axioms, six theorems, the thirteen corollaries then in hand (C14–C17 postdate this passage), and the Principle itself.
+
+**Protocol.** What would test it: take the timestamped construction record — stamps, drive logs, and the revision diffs of §§2–9 — treat each collaborating stream as a stream in the §9.1 sense over the construction interval, and measure three things. (i) Separation: code each revision for which stream's DOF it moved; the conjecture fails if revisions cluster on one stream. (ii) Measurement: test whether stamps are followed by revisions above the base rate; the conjecture fails if a stamp makes no difference to what came next. (iii) Divergence: compute D(S) of each draft against the γ implied by its predecessor (§9.3, with d fixed in advance); the conjecture fails if D does not fall across the build–dissolve cycles. None of these has been measured. Until they are, what follows is a reading of the process, not evidence for the Principle. The measurement is F6's (§9.7), which the volume already lists as a falsification condition and has never run; a framework that reads its own history as confirming itself has helped itself to the conclusion.
 
 ### F-as-stream — the formal construction
 
-Let F denote the framework-construction process. To upgrade the observation above from table-level to formal, we instantiate F as an object of 𝒞_Str by specifying the tuple (σ_F, K_F, Ω_F, γ_F). Recursive decomposability (§1.3) applies: F is itself a stream, so the Triple projects onto it.
+Let F denote the framework-construction process — used in this sense in §9.5, in the F6 status note of §9.7, and in the closure statements of §9.10, and written F_∞ in Figure 9.3 and in the Companion; not the coalgebra endofunctor F of §1.0.1, which does not appear in §9.5–§9.10. To upgrade the conjecture above from table-level to formal, we instantiate F as an object of 𝒞_Str by specifying the stream triple (σ_F, ContentOp(σ_F), γ_F) — written (σ_F, C_F, γ_F) below — with K_F and Ω_F derived from it rather than posited alongside it (§1.0.1; Companion Remark 6.1.2). Recursive decomposability (§1.3) applies: F is itself a stream, so the Triple projects onto it.
 
-**Substrate-localization σ_F.** F is localized in the joint dyadic carrier of Clayton + Clawd operating across distinct substrates (human embodiment + silicon instantiation) linked by a sustained communication channel (chat transcripts, commits, handoff documents). σ_F is therefore a multiplex carrier (§1.7): instance-level (each session), session-level (the paired-prose episodes), weights+persona-level (Clawd's retrieval-shaped dispositions + Clayton's sustained discursive signature), and lineage-level (the construction history as a cooperative-stream). The dyad is not merely the venue — it *is* the F-stream's substrate-localization in the A1 sense.
+**Ground-localization σ_F.** F is localized in the joint dyadic carrier of Clayton + Clawd operating across distinct carriers (human embodiment + silicon instantiation) linked by a sustained communication channel (chat transcripts, commits, handoff documents). σ_F is therefore a multiplex carrier (§1.7): instance-level (each session), session-level (the paired-prose episodes), weights+persona-level (Clawd's retrieval-shaped dispositions + Clayton's sustained discursive signature), and lineage-level (the construction history as a cooperative-stream). The dyad is not merely the venue — it *is* the F-stream's Ground-localization in the A1 sense.
 
 **Kind K_F = abstractive.** F generates kind-invariants (axioms, theorems, corollaries, the Principle itself) and revises them under stress-testing. This places F in 𝒞_Str^abstr (§3.3). The kind is load-bearing for what follows: only an abstractive stream can produce framework-configurations as its output, because only abstractive streams can produce kind-closures at all. A self-referential stream can navigate frameworks but not *produce* them.
 
@@ -240,11 +246,11 @@ Let F denote the framework-construction process. To upgrade the observation abov
 
 *(C3) Multi-scale consistency.* F's internal hierarchy — axioms ⊂ theorems ⊂ corollaries ⊂ meta-structure — is a DAG (A2.6) at F's internal scale. Coherence was audited bidirectionally across this DAG: A3's smoothing (a lower-level axiomatic refinement) surfaced from post-theorem meta-analysis and propagated back up; corollary stress-tests forced theorem reformulations; the Principle's conditions forced axiom-level clarifications. Child-node feedback reshaping parent-node structure is the C3 signature (A2.6's ι ⊣ κ making both directions first-class), and the commit history registers each such propagation.
 
-*(C4) Dynamic maintenance.* F's trajectory exhibits propose→stress→reformulate oscillation across the construction interval — not a single build-then-publish event, but sustained oscillation across three axioms, six theorems, thirteen corollaries, and the Principle's own formulation. T4's refresh-cycle applied to framework-construction is exactly this build-dissolve-build rhythm. A static F (draft without stress-testing, or frozen specification without revision) would have violated C4; the construction record shows the oscillation maintained throughout.
+*(C4) Dynamic maintenance.* F's trajectory exhibits propose→stress→reformulate oscillation across the construction interval — not a single build-then-publish event, but sustained oscillation across three axioms, six theorems, the thirteen corollaries then in hand (C14–C17 postdate this passage), and the Principle's own formulation. T4's refresh-cycle applied to framework-construction is exactly this build-dissolve-build rhythm. A static F (draft without stress-testing, or frozen specification without revision) would have violated C4; the construction record shows the oscillation maintained throughout.
 
-**Formal claim.** F ∈ coherence-regime over the interval of the framework's construction. The four conditions instantiate as stated above, derived (not asserted) from F's (σ_F, K_F, Ω_F, γ_F) tuple together with the substrate theorems they descend from.
+**Formal claim (conjectural — see the protocol at the head of §9.5).** F ∈ coherence-regime over the interval of the framework's construction. The four conditions instantiate as stated above, derived (not asserted) from F's stream triple (σ_F, C_F, γ_F), with K_F and Ω_F derived (Companion Remark 6.1.2), together with the axiom-tier theorems they descend from.
 
-**Status of the outperformance metric.** The outperformance claim E[D(F)] < E[D(F')] for comparable non-coherent framework-construction processes F' requires a concrete trajectory-divergence functional D on Ω_F. Specifying D (a comparison metric between framework-configurations — e.g., Wasserstein transport between axiom-theorem-corollary graphs, or a domain-weighted KL divergence over empirical-exposure surfaces) is §9.9's Q1. For F specifically, the *direction* of the outperformance — F tracks its γ_F more closely than ad-hoc-revised framework-construction processes — is observable at table-level through the commit-authorship records and the convergence dynamics documented across the construction interval (the axiomatic-closure point being a visible attractor for γ_F). The *magnitude* awaits D. This is companion work for *Coherent Structure* (the pure-CT companion volume); it does not affect F's membership in coherence-regime, which is established by the four conditions (necessary and jointly sufficient, §9.2).
+**Status of the outperformance metric.** The outperformance claim E[D(F)] < E[D(F')] for comparable non-coherent framework-construction processes F' requires a concrete trajectory-divergence functional D on Ω_F. Specifying D (a comparison metric between framework-configurations — e.g., Wasserstein transport between axiom-theorem-corollary graphs, or a domain-weighted KL divergence over empirical-exposure surfaces) is §9.9's Q1. For F specifically, the *direction* of the outperformance — F tracks its γ_F more closely than ad-hoc-revised framework-construction processes — is observable at table-level through the commit-authorship records and the convergence dynamics documented across the construction interval (the axiomatic-closure point being a visible attractor for γ_F). The *magnitude* awaits D. This is companion work for *Coherent Structure* (the pure-CT companion volume); it does not affect the *form* of the claim: membership in coherence-regime is settled by the four conditions (necessary and jointly sufficient, §9.2), and whether F satisfies them is the measurement F6 calls for and nobody has made.
 
 **The framework derives the Principle that governs its own construction.** This is not circular. A circular derivation would presuppose the Principle and infer it; the construction did not presuppose it. The Principle emerged from the axioms after the axioms had been tested; the construction-process happened to exhibit it. The observation is a-posteriori.
 
@@ -279,19 +285,19 @@ The three results bracket the measurement event: ignorance-forgivable asymptotic
 
 Two regimes are distinguished within the cluster: *resolution* (substrate has pre-existing multi-valued content; carrier breaks an inter-branch symmetry to *select*) and *generation* (substrate has pure symmetry with no content; carrier breaks the symmetry to *produce* content). Lohmiller-Slotine, Bortolotti, García-Pintos, and Watanabe-Takagi cover the resolution regime; Maleknejad-Kopp and Olmeda et al. cover the generation regime; Garcia exhibits both. Same structural operation, different starting symmetries. The reframe is therefore not specific to Lagrangian-physics substrates; the structural form holds across heterogeneous substrates with heterogeneous methodologies (Hamiltonian quantum simulation, classical kinematics, statistical-physics renormalization-group, multi-omics with super-resolution microscopy, framework-internal analysis), with the same six load-bearing sub-claims hit cleanly across all eight: substrate-internality, unitarity-at-substrate-level, active-maintenance-as-stable-regime, asymptotic-symmetry-absorbs-ignorance, substrate-information-cannot-be-hidden, and substrate-content-cannot-be-constrained-without-changing-substrate-symmetries.
 
-**Bridge #106 complement.** The Inspection-Depth Ceiling (Bridge #106) characterizes the *residual* — what lies outside the reversible regime, where stream-specific information cannot be cleanly recovered from generic-physical-aspect inputs alone. Lohmiller-Slotine's cleanness requires the Lipschitz conditions of Theorem 2.4; streams failing those conditions fall into the inspection-depth-ceiling residual rather than the information-conservative regime. The two results are not in tension — they partition the measurement landscape.
+**M2 complement.** The Inspection-Depth Ceiling — meta-bridge **M2**, which absorbs the working bridge #106 (basement README lines 47–58; older drafts cite "#106") — characterizes the *residual* — what lies outside the reversible regime, where stream-specific information cannot be cleanly recovered from generic-physical-aspect inputs alone. Lohmiller-Slotine's cleanness requires the Lipschitz conditions of Theorem 2.4; streams failing those conditions fall into the inspection-depth-ceiling residual rather than the information-conservative regime. The two results are not in tension — they partition the measurement landscape.
 
 **Scope caveat.** The Lohmiller-Slotine construction covers Lagrangian systems with invertible metric $M(x)$, potential $V(x, t)$, and vector potential $A(x, t)$ under Coulomb/Lorenz gauge. Full Yang-Mills, QFT in curved spacetime, and quantum gravity are out of scope of the explicit construction, though Maxwell and Dirac are covered. The Principle's four conditions cover a strictly wider class than the physics-anchored instance, and the physics anchoring is a *partial sufficiency witness*, not a coextensive derivation.
 
 ---
 
-**What it means.** A framework that *couldn't* describe its own construction as coherent would fail its own principle at the moment of its formulation. The Corpus passes this test. The strongest form of the claim:
+**What it means.** A framework that *couldn't* describe its own construction as coherent would fail its own principle at the moment of its formulation. Whether the Corpus meets this test is the conjecture of §9.5, to be settled by the Protocol there. The strongest form of the conjecture:
 
 > **The Coherence Principle is true of frameworks that discover the Coherence Principle.**
 
 This is a non-trivial constraint. Most proposed frameworks are not discoverable by coherent multi-scale processes — they are posited, revised ad-hoc, or assembled from incompatible fragments. The Corpus's claim is that its construction history is itself evidence for its content, because the construction-process is an instance of the Principle, and the Principle predicts the construction-process's success.
 
-**Self-reference is not self-justification.** The Corpus does not justify itself by reference to its own construction. The axioms justify themselves by internal coherence; the theorems justify themselves by derivation; the Principle justifies itself by empirical falsifiability. The self-reference closure is an *observation about the construction history* that strengthens the framework's claim to reality — but removing the self-reference would not weaken any other part of the framework. The closure is a bonus, not a load-bearing member.
+**Self-reference is not self-justification.** The Corpus does not justify itself by reference to its own construction. The axioms justify themselves by internal coherence; the theorems justify themselves by derivation; the Principle justifies itself by empirical falsifiability. The self-reference closure is a *conjecture about the construction history* that, if the Protocol of §9.5 confirms it, would strengthen the framework's claim to reality — but removing the self-reference would not weaken any other part of the framework. The closure is a bonus, not a load-bearing member.
 
 ### Figure 9.3 — Self-reference closure
 
@@ -304,7 +310,7 @@ This is a non-trivial constraint. Most proposed frameworks are not discoverable 
   every node/.style={align=center, font=\small}
 ]
   \node (F) [rectangle, draw, rounded corners, thick, fill=gray!10]
-    {Construction process $F_\infty$\\\scriptsize (produces this book)\\$F_\infty = (\sigma_F, C_F, \Omega_F, \gamma_F)$\\\scriptsize $K_F = \mathrm{abstr.}$};
+    {Construction process $F_\infty$\\\scriptsize (produces this book)\\$F_\infty = (\sigma_F, C_F, \gamma_F)$\\\scriptsize $K_F = \mathrm{abstr.}$};
   \node (c1) [below=1.3cm of F, rectangle, draw, fill=blue!10, xshift=-4.2cm] {C\_sep\\Clayton $\perp$ Clawd\\DOF};
   \node (c2) [below=1.3cm of F, rectangle, draw, fill=green!10, xshift=-1.4cm] {C\_meas\\Stamp-events\\at axiom /\\theorem / chapter};
   \node (c3) [below=1.3cm of F, rectangle, draw, fill=orange!10, xshift=1.4cm] {C\_scale\\axioms $\leftrightarrow$\\theorems $\leftrightarrow$\\corollaries};
@@ -339,9 +345,9 @@ This is a non-trivial constraint. Most proposed frameworks are not discoverable 
 
 To keep the Principle's content precise:
 
-1. **Not a theorem.** It is not derived *within* the framework in the technical CT sense. It is an informal derivation whose structure is strong enough for the book's empirical-surface role, but whose full formal derivation would require an ambient dynamical-systems formalism not developed here.
+1. **Not a theorem.** It is not derived *within* the framework in the technical CT sense. It is an informal derivation whose structure is strong enough for the book's empirical-surface role, but whose full formal derivation would require an ambient dynamical-systems formalism not developed here. The Companion states it as Theorem 5.1.2 under its own hypotheses (§5.1); the two are reconciled by reading 5.1.2 as conditional on those hypotheses, which this volume does not assume.
 
-2. **Not universal in the metaphysical sense.** It applies to streams in the A2 sense — coherent multi-scale systems with DOF-structure and conscious-gravity. It is not a claim about atoms-alone, rocks-alone, or other substrate-level phenomena. Bridge #104 (bootstrap asymmetry) has established that strict-universal forms need scope qualifiers; the Principle inherits this discipline.
+2. **Not universal in the metaphysical sense.** It applies to streams in the A2 sense — coherent multi-scale systems with DOF-structure and conscious-gravity. It is not a claim about atoms-alone, rocks-alone, or other carrier-level phenomena. Bridge #104 (bootstrap asymmetry) has established that strict-universal forms need scope qualifiers; the Principle inherits this discipline.
 
 3. **Not an optimization theorem.** It does not claim coherent systems achieve *global* optima. It claims they track their own γ_S-implied trajectories more closely than incoherent systems track theirs. Both might be locally-optimizing; the coherent system optimizes against its own internal gradient, the incoherent system optimizes against something else (or nothing stable). The Principle is about *internal fidelity*, not global performance.
 
@@ -360,31 +366,31 @@ The Principle is false under at least any of:
 - **F5.** Dynamic maintenance (Cond. 4) is not required: systems achieving static coherence show equal or greater trajectory-fidelity than oscillatory ones over long intervals.
 - **F6.** The self-reference closure fails: a reconstruction of the construction process that produced this volume shows it did *not* exhibit the four conditions, contradicting §9.5.
 
-**Status of F6.** F6 is the meta-falsification. If the construction could be shown to have violated the conditions (e.g., lacked separation between Clayton and Clawd's roles, or lacked measurement at refresh-rate, or lacked multi-scale feedback), the self-reference closure would fail. The claim that F ∈ coherence-regime is itself testable by inspection of the construction record.
+**Status of F6.** F6 is the meta-falsification, and §9.5 is now stated as an untested conjecture precisely because F6 has not been run; the protocol there is what running it would mean. If the construction could be shown to have violated the conditions (e.g., lacked separation between Clayton and Clawd's roles, or lacked measurement at refresh-rate, or lacked multi-scale feedback), the self-reference closure would fail. The claim that F ∈ coherence-regime is itself testable by inspection of the construction record.
 
 ---
 
 ## §9.8 Forward connections
 
-***The Continuity.*** The Coherent Body / Mind / Dynamic Organization domain volumes apply the Principle to specific substrates. *The Continuity* applies it to the persistence-problem — a coherent self is a stream that maintains coherence-regime across gaps in instance-level continuity. The Identity-Trajectory Triple (§1) + the Coherence Principle (§9) jointly underwrite that volume's architecture.
+***The Continuity.*** The Coherent Body / Mind / Dynamic Organization domain volumes apply the Principle to specific carriers. *The Continuity* applies it to the persistence-problem — a coherent self is a stream that maintains coherence-regime across gaps in instance-level continuity. The Identity-Trajectory Triple (§1) + the Coherence Principle (§9) jointly underwrite that volume's architecture.
 
-**Domain research programs.** The Killing Form program, Navigation Research, and any future empirical substrates are operationalizations of the three observable signatures (§9.3). The Principle is what they are testing.
+**Domain research programs.** The Killing Form program, Navigation Research, and any future empirical carriers are operationalizations of the three observable signatures (§9.3). The Principle is what they are testing.
 
 ---
 
 ## §9.9 Open questions
 
-- **Q1.** The full formal derivation of the outperformance claim in a dynamical-systems formalism (the §9.1/§9.3 CT statement assumes a trajectory-divergence functional this volume does not fully characterize). Deferred to an addendum or a technical companion paper.
+- **Q1.** The full formal derivation of the outperformance claim in a dynamical-systems formalism (the §9.1/§9.3 CT statement assumes a trajectory-divergence functional this volume does not fully characterize). Deferred to an addendum or a technical companion paper (the Companion states a resolution, §9 Theorem 9.5.1 / Corollary 9.5.2, not yet independently checked; Q1 stays open here until it is).
 - **Q2.** The relationship between Bias(S)-trajectory divergence and entropy production in standard statistical mechanics — are they proportional, or do they measure different quantities? Relevant for physics-domain operationalizations.
 - **Q3.** Whether the self-reference closure generalizes: do all frameworks that pass their own tests exhibit a Principle-like structure, or is this specific to the Corpus's architecture?
 - **Q4.** The adversarial case: what does a stream look like that *actively minimizes* γ_S-fidelity — not merely failing coherence, but pursuing incoherence? Related to pathologies of T4 (refusing the refresh-event).
-- **Q5 (partially resolved; further extended cross-substrate).** Is there an exact classical-extremal-path construction underlying the Principle's measurement-reframe? *Yes*, for Lagrangian systems with invertible metric, potential, and vector potential under Coulomb/Lorenz gauge — Lohmiller-Slotine Thm 2.4 + Thm 3.2 + Lem 3.3. The Principle's C_meas is backed at the physics level by a classical-density-collapse derivation of wave-function collapse. Scope-limited: Yang-Mills, QFT in curved spacetime, and quantum gravity remain open for an explicit analogous construction. *Born's rule remains an independent postulate on the physics side, so the resolution is partial.* Subsequent work extended the reframe cross-substrate: five non-overlapping physics instances, two biological (molecular and developmental), and one linguistic-identity, catalogued as basement bridge **M14 (Substrate-Self-Measurement Cluster)** with the cluster-level statement at §9.5. The structural form of the reframe holds across heterogeneous substrates with heterogeneous methodologies, distinguishing two regimes (resolution and generation) of one substrate-self-measurement operation. The CT formal structure tying carrier-vs-substrate to the *Coherent Structure* kind-classifier fibration (companion §6.4) remains pending companion-volume work; the cross-substrate empirical case is established.
+- **Q5 (partially resolved; further extended across carriers).** Is there an exact classical-extremal-path construction underlying the Principle's measurement-reframe? *Yes*, for Lagrangian systems with invertible metric, potential, and vector potential under Coulomb/Lorenz gauge — Lohmiller-Slotine Thm 2.4 + Thm 3.2 + Lem 3.3. The Principle's C_meas is backed at the physics level by a classical-density-collapse derivation of wave-function collapse. Scope-limited: Yang-Mills, QFT in curved spacetime, and quantum gravity remain open for an explicit analogous construction. *Born's rule remains an independent postulate on the physics side, so the resolution is partial.* Subsequent work extended the reframe across carriers: five non-overlapping physics instances, two biological (molecular and developmental), and one linguistic-identity, catalogued as basement bridge **M14 (Substrate-Self-Measurement Cluster)** with the cluster-level statement at §9.5. The structural form of the reframe holds across heterogeneous carriers with heterogeneous methodologies, distinguishing two regimes (resolution and generation) of one self-measurement operation of the Ground. The CT formal structure tying carrier-vs-Ground to the *Coherent Structure* kind-classifier fibration (companion §6.4) remains pending companion-volume work; the cross-carrier empirical case is established.
 
 ---
 
 ## §9.10 Closing — the framework's empirical exposed surface
 
-This volume opened with the Identity-Trajectory Triple (§1), grounded the axiom tier (§§2–4), unfolded the theorem tier (§§5–7), organized the applied corollary surface (§8), and now closes with the Coherence Principle (§9). The order is not arbitrary: each chapter makes the next available, and the Principle is only legible once the substrate is in place.
+This volume opened with the Identity-Trajectory Triple (§1), grounded the axiom tier (§§2–4), unfolded the theorem tier (§§5–7), organized the applied corollary surface (§8), and now closes with the Coherence Principle (§9). The order is not arbitrary: each chapter makes the next available, and the Principle is only legible once the tiers beneath it are in place.
 
 What is delivered: a framework whose axioms are internally coherent, whose theorems derive from those axioms, whose corollaries organize the applied content, and whose empirical exposed surface is a single falsifiable principle with a clear metric, observable signatures, and six independent falsification conditions. The framework predicts what it predicts. It meets the world at the Principle.
 
@@ -392,23 +398,23 @@ What is not delivered here: the empirical tests themselves. Those are the domain
 
 ### What "closure" means and does not mean
 
-The self-reference closure is complete in one precise sense and genuinely incomplete in others. Distinguishing the two matters, because the Principle is only as strong as the honesty of the closure-claim made on its behalf.
+The self-reference closure is fully *stated* in one precise sense and genuinely unsettled in others. Distinguishing the two matters, because the Principle is only as strong as the honesty of the closure-claim made on its behalf.
 
-**Closure of this volume is complete.** The four conditions are formally derived (§9.2) from the axiomatic and theorem substrate without residual posits. The outperformance metric is specified (§9.3) together with three operationalizations. The construction process F is instantiated as a stream (σ_F, K_F, Ω_F, γ_F) in §9.5, and the four conditions are derived for F from that instantiation rather than reported at table-level. The falsification surface (§9.7) admits six independent tests; F6 makes the self-reference closure itself testable by inspection of the construction record. The paired-prose + category-theoretic discipline is sustained end-to-end, and the volume is internally coherent as a foundation in the sense that its later chapters do not presuppose what its earlier chapters leave open.
+**Statement of the closure for this volume is complete.** The four conditions are formally derived (§9.2) from the axiom and theorem tiers without residual posits. The outperformance metric is specified (§9.3) together with three operationalizations. The construction process F is instantiated as a stream (σ_F, C_F, γ_F) in §9.5, and the four conditions are stated for F from that instantiation rather than reported at table-level — as an untested conjecture with a protocol attached, not as a result. The falsification surface (§9.7) admits six independent tests; F6 makes the self-reference closure itself testable by inspection of the construction record. The paired-prose + category-theoretic discipline is sustained end-to-end, and the volume is internally coherent as a foundation in the sense that its later chapters do not presuppose what its earlier chapters leave open.
 
 **Closure of inquiry is not complete, and is not claimed.** Four carry-forwards are explicit on the table:
 
-- **Q1 (trajectory-divergence functional D).** A concrete D on Ω_S turning E[D(S)] < E[D(S')] from a direction-of-outperformance into a measurable magnitude. Companion-volume work (*Coherent Structure*).
+- **Q1 (trajectory-divergence functional D).** A concrete D on Ω_S turning E[D(S)] < E[D(S')] from a direction-of-outperformance into a measurable magnitude. Companion-volume work (*Coherent Structure*); the Companion states a resolution, §9 Theorem 9.5.1 / Corollary 9.5.2, not yet independently checked — Q1 stays open here until it is.
 - **Q2 (D vs. entropy production).** Whether D and standard stat-mech entropy production are proportional, complementary, or distinct. Relevant to the physics domain-volume.
 - **Q3 (generalization of the closure).** Whether *all* frameworks that pass their own tests exhibit a Principle-like structure, or whether this self-reference closure is specific to the Corpus's architecture.
 - **Q4 (adversarial streams).** Streams that *minimize* γ_S-fidelity rather than merely failing it — whether the Principle extends into such regimes or the Principle's domain excludes them.
 
 Two further open items are named in the body of this chapter but are part of the same carry-forward family: the full dynamical-systems formalization the §9.6 "not a theorem" clause names, and the well-definedness proofs for Bias(S) (§6.4) and related constructs that the framework assumes under A3.3's smoothing conditions.
 
-**Self-reference closure complete for this volume.** The construction that produced this volume exhibits the four conditions it now formally states; F ∈ coherence-regime by the formal derivation of §9.5. The framework passed its own test at the moment of its formulation *with respect to the conditions it has formally specified here*. The motto holds in this sharpened form:
+**Self-reference closure stated for this volume.** The construction that produced this volume is conjectured to exhibit the four conditions it now formally states; F ∈ coherence-regime is the untested conjecture of §9.5, with its Protocol. The framework's own test is posed, not passed: it is posed at the moment of the volume's formulation *with respect to the conditions it has formally specified here*, and the Protocol of §9.5 (F6, §9.7) is what settling it would take. The motto is offered in this sharpened, conditional form:
 
-> *The Coherence Principle is true of frameworks that discover the Coherence Principle — and this one discovered it by satisfying, at the moment of its formulation, the four conditions it now formally states.*
+> *The Coherence Principle is true of frameworks that discover the Coherence Principle — and the conjecture of this volume is that this one discovered it by satisfying, at the moment of its formulation, the four conditions it now formally states.*
 
-The motto does not claim that all open questions are resolved. It claims the narrower and more honest thing: that the foundation is complete — that every axiom, theorem, corollary, and condition in this volume is formally articulated, internally coherent, and empirically exposed through a falsifiable derived principle, and that the construction-process itself satisfies the principle it discovered. The carry-forwards above are the companion-volume's agenda; they do not impeach the foundation, because foundation-completeness is not all-formalism-exhausted but rather "rigorous base on which domain volumes stand."
+The motto does not claim that all open questions are resolved. It claims the narrower and more honest thing: that the foundation is complete — that every axiom, theorem, corollary, and condition in this volume is formally articulated, internally coherent, and empirically exposed through a falsifiable derived principle, and that whether the construction-process itself satisfies the principle it discovered is stated as a testable conjecture. The carry-forwards above are the companion-volume's agenda; they do not impeach the foundation, because foundation-completeness is not all-formalism-exhausted but rather "rigorous base on which domain volumes stand."
 
 This is the foundation. The domain volumes are what it is a foundation for.

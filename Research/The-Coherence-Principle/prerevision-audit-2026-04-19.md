@@ -128,7 +128,7 @@ The header of `V4-figures.md` says twelve; the footer and README say fourteen. U
 
 - `§1-identity-trajectory-triple.md:198` — Clawd's four carrier-levels (§1.7): no "illustrative only; full treatment in V7 (The Continuity)" callout.
 - `§1-identity-trajectory-triple.md:366` — Deeply-coupled dyad partner-death (§1.8): no "full treatment in The Coherent Mind" callout.
-- `§2-axiom-1-consciousness-substrate.md` §2.5 (etymological consciousness): no "full treatment in Philosophy volume" callout.
+- `§2-axiom-1-consciousness-ground.md` §2.5 (etymological consciousness): no "full treatment in Philosophy volume" callout.
 - `§6-dynamics-pair-t7-t16.md` §6.5 (Do Be Talk Be Do): no "full treatment in The Coherent Mind" callout.
 - `§7-coherence-pair-t11-t15.md` §7.5 (transcendentals as cooperative-streams): no "full treatment in Theology volume" callout.
 - `§7-coherence-pair-t11-t15.md` §7.6 (Wittgenstein Tractatus): no "full treatment in Philosophy volume" callout.
