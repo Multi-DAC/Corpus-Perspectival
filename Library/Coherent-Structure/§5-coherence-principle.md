@@ -68,15 +68,22 @@ $$
 
 ### §5.2.3 — Condition 3: Multi-scale consistency
 
-**Definition 5.2.3 (C_scale — multi-scale-coherence).** *Let S be a stream embedded in an ι ⊣ κ cooperative-DAG (A2.6). Let S⇧ denote an ι-parent and S⇩ a κ-child in the DAG. S satisfies multi-scale consistency over [t₀, t₁] iff*
+**Definition 5.2.3 (C_scale — multi-scale-coherence).** *Let S be a stream embedded in an ι ⊣ κ cooperative-DAG (A2.6), and let d be a Bias-consistent metric (§9.3). S satisfies multi-scale consistency over I = [t₀, t₁] iff its scale-discontinuity across the DAG's edges stays within the framework's smoothness tolerance:*
 
 $$
-\forall t \in [t_0, t_1]:\ \gamma_S(t)\ \mathrm{coh.}\ \gamma_{S^{\Uparrow}}(t)\ \mathrm{and}\ \gamma_S(t)\ \mathrm{coh.}\ \gamma_{S^{\Downarrow}}(t)
+\delta_\mathrm{scale}(S) := \sup_{e \in E(\mathrm{DAG}(S))} d\bigl(\gamma_{\mathrm{child}(e)},\ \gamma_{\mathrm{parent}(e)}\bigr) \;\leq\; \varepsilon_\mathrm{scale}
 $$
 
-*where "coh." means the coalgebra-commute induced by ι ⊣ κ holds at t (Def 1.6.3's coalgebra-commute clause, extended along the DAG-edge).*
+*This is Definition 9.4.1's parameter. §9.4.1 is the operative statement; this section cites it rather than restating it, because the two must not be allowed to drift apart.*
 
-**Derivation.** A2.6 (DAG-nesting) with A3 (smoothed DOF-gradient). DAG-nesting places S in a multi-scale lattice; bidirectional ι ⊣ κ makes both lift and restrict first-class. A3.3 (conscious-gravity smoothing) requires γ to remain continuous across DAG-edges — discontinuities break the continuous DOF-gradient. C_scale is the condition that γ remain continuous across all DAG-edges incident on S over the interval. ∎
+**Status — a tolerance, not a derivation.** C_scale is a **framework-specified tolerance**, the same status as C_meas's `T_refresh` and C_dyn's `ρ_min`, beside which §9.4.1 lists it. It is not an axiom consequence, and earlier drafts of this section were wrong to present one.
+
+Those drafts derived C_scale from "A2.6 with A3.3 (conscious-gravity smoothing)," and stated it as an *exact* coalgebra-commute at every DAG-edge. Both halves fail.
+
+- **A3.3 does not say it.** A3.3 modulates Bias along the DOF-gradient **inside** a stream — an ordinal rank derived from ContentOp-richness (§6.4.2) with the local Bias-gradient as slope. It asserts nothing about continuity **across** ι ⊣ κ edges **between** streams, which is what C_scale needs.
+- **The exact commute is unavailable on either reading.** Read as Definition 1.6.3 (iii)'s clause, it is vacuous: (A2.4) asserts ι ⊣ κ for every nested pair with no side-condition, and Anchor §1.0.2 admits no morphisms but cooperative-constituency ones, so the commute holds by hom-set membership and excludes nothing. Read as a substantive claim, it is fatal: it forces δ_scale ≡ 0, which makes the ¬C_scale hypothesis of Theorem 9.4.3 unsatisfiable and falsification row F5 (§5.5) unfalsifiable.
+
+**Condition 3 has content only as a tolerance.** This also answers the second disjunct of Anchor §1.0.6's **Q1** — *identify the class of streams for which γ-naturality holds and demarcate the rest*. The class is {S : δ_scale(S) ≤ ε_scale}, and it has been written at §9.4.1 all along. Q1's first disjunct, a proof from A1–A3, is unavailable for the reason just given: it would delete this condition. ∎
 
 ### §5.2.4 — Condition 4: Dynamic maintenance
 
@@ -89,7 +96,7 @@ $$
 **Proposition 5.2.5 (Joint sufficiency).** *The four conditions C_sep, C_meas, C_scale, C_dyn are jointly necessary and sufficient for S ∈ coherence-regime over [t₀, t₁].*
 
 **Proof.**
-- **Necessity.** Each condition has been derived from an axiom/theorem clause that is load-bearing for the Principle's outperformance claim (§5.3): drop any one condition and a counterexample can be constructed (specifics in §9.4's falsification table).
+- **Necessity.** Each condition is load-bearing for the Principle's outperformance claim (§5.3): drop any one and a counterexample can be constructed (specifics in §9.4's falsification table). Three are derived from an axiom/theorem clause; **C_scale is not** — it is a framework-specified tolerance (§5.2.3), and its necessity is the falsifiability of row F5, not a derivation.
 - **Sufficiency.** Given all four, the quantitative trajectory-divergence bound (Thm 9.4.3) holds: separation zeros the η_sep-contribution, measurement caps the τ_max-contribution at Λ_γ · T_refresh · N_refresh, multi-scale consistency caps the δ_scale-contribution at depth · ε_scale · (t₁ − t₀), and dynamic maintenance caps the freeze-contribution at (1 − ρ_min) · Λ_γ^static · (t₁ − t₀). The joint ceiling B_coh(S, I) is below E[D_d(S')] by the strict-positive shortfall Δ(S', I). ∎
 
 ---
