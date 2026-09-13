@@ -35,7 +35,7 @@
 | A2 Nested Streams (§2.2) | Anchor §3 | axiom | Full paired prose |
 | A2.1–A2.6 (**six** clauses) | Anchor §3.1 (statement), §3.2–§3.7 (paired prose, in clause order) | axiom-clauses | Each clause has its Anchor subsection; all six live in Companion §2.2.2 |
 | Theorem 2.2.8 (kind-stratification from ContentOp-richness) | Anchor §3.3 | theorem | Paragraph confirming derivation from C-richness |
-| Remark 2.2.10 + Proposition 2.2.12 (constitutive duality) | Anchor §3.5 (A2.4) | remark + proposition | Constitutive duality is absorbed into (A2.4). Earlier Companion drafts carried it as a seventh clause (A2.7), demoted 2026-09-12; the Anchor never had an A2.7 |
+| Remark 2.2.10 + Proposition 2.2.12 (constitutive duality) | Anchor §3.5 (A2.4) | remark + proposition | Constitutive duality is absorbed into (A2.4). Earlier Companion drafts carried it as a seventh clause (A2.7), demoted 2026-09-12. The Anchor did once carry an (A2.7) of its own — the T21 fold, with a §3.8 to match — introduced at 571e143 (2026-04-20 11:04) and removed at 5a45dc0 (2026-04-20 13:20) the same day; it is a different clause from this one, and the Anchor has had no A2.7 since |
 | A3 Conscious Gravity (§2.3) | Anchor §4 | axiom | Full paired prose |
 | A3.1–A3.5 (five clauses) | Anchor §4.1 (statement), §4.2–§4.6 (paired prose, in clause order) | axiom-clauses | Each clause has its Anchor subsection; all five live in Companion §2.3.2 |
 | Axiom-status summary table (§2.5) | Anchor §2/§3/§4 + §9 status remark | table | 10-of-15 axiomatic / 5 framework-derivable (was 10-of-16 / 6 while A2.7 was counted as a clause) |

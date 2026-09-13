@@ -164,7 +164,20 @@ $$
 
 — the presheaf-power of σ indexed contravariantly by ContentOp(σ).
 
-**Remark 1.6.2.** Mixed-variance: σ ↦ ContentOp(σ) is covariant on carriers (content-operations pull back along carrier-maps); σ ↦ σ^(-) is covariant in σ; the combined F is well-defined as a functor on Stream (see §6.1 for the lift of F to Stream-morphisms).
+**Remark 1.6.2 (Mixed-variance; and the lift to morphisms is open).** On objects the variance is unambiguous, and Convention 1.1.3 requires it stated at the definition-point: F is covariant in σ and contravariant in the index ContentOp(σ). This remark previously carried the parenthesis *"content-operations pull back along carrier-maps"*, which was wrong about f_C. Definition 1.6.3 below, Definition 6.1.3 (ii), Construction 6.4.4 and the proof of Proposition 6.1.7 all take it **covariant**, f_C : ContentOp(σ) → ContentOp(σ'). What pulls back is the index-transport, not the content-functor.
+
+The two transports do not compose. Post-composition with f_σ maps σ^(C^op) → σ'^(C^op); pullback along f_C maps σ'^(C'^op) → σ'^(C^op). They form a **cospan** into σ'^(ContentOp(σ)^op), and there is no arrow F(σ) → F(σ') between the two ends. (Nor one back the other way: that would need f_σ inverted.)
+
+**This is enough for Definition 6.1.3 (iii).** Coalgebra-commute is a commuting *condition* comparing two legs in the common object, not an assertion that a composite exists, and Construction 6.4.4 step 2 is that condition instantiated: for the Cartesian lift f̄ = (id_σ, ι), γ|_{C'} is γ post-composed with the restriction σ^(ContentOp(σ)^op) → σ^(C'^op). Clause (iii) is sound as written, and so is the Anchor's γ-naturality (Property 4), which is the same equation.
+
+**It is not enough for Definition 6.1.5.** *"On morphisms, F acts by F(f)_σ = F(f_σ, f_C)"* asks for an arrow F(σ) → F(σ'), and a cospan supplies none. That is the open point, and it is load-bearing rather than cosmetic: §1.5's trajectory functor sets N(f) = F(f) componentwise, Theorem 3.3.2 (1) writes F(M) ∘ γ for a Stream-morphism M, and Proposition 6.1.4's composition clause needs F(g ∘ f) = F(g) ∘ F(f), which is nowhere proved. Proposition 1.6.5 and Theorem 6.7.1 inherit the gap. Declining to define F on morphisms is therefore not one of the options; something must replace N.
+
+Two repairs are available, and they are not interchangeable:
+
+1. **Restrict F's functoriality** to those Stream-morphisms whose f_C admits a left adjoint. An equivalence suffices, and Theorem 3.3.2 (3) already assumes exactly that at the one place it needs the arrow concretely. Cost: N, and with it the trajectories, are defined only on a subcategory, and §1.5 must say which.
+2. **Left Kan extension along f_C^op** in place of pullback. Cost: colimits in the *carrier* σ. Convention 1.1.1 (a) gives cocompleteness of the ambient category ᴀ, not of its objects, and under the canonical choice ᴀ = **Set** a carrier is a bare set with none.
+
+Until one is chosen, *"F is an endofunctor on **Stream**"* is discharged on objects only. (See §6.1 for the lift as currently written.)
 
 **Definition 1.6.3 (Stream-morphism — reference).** For details see Definition 6.1.3. A Stream-morphism f : S → S' consists of:
 - Carrier-map f_σ : σ → σ' in 𝒜

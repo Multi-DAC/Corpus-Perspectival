@@ -132,7 +132,7 @@ $$
 A_S := -\int_{\Omega_S} \frac{d\mathrm{Bias}(S)_+}{m_+} \log \frac{d\mathrm{Bias}(S)_+}{m_+} \cdot dm_+
 $$
 
-**Proposition 7.5.2 (A_S is well-defined).** *When m_+ > 0 and Bias(S)_+ ≪ μ_{⊗C} (absolute continuity, which §7.3 establishes under σ-finiteness), A_S ∈ [0, log|Ω_S,acc|] is finite.*
+**Proposition 7.5.2 (A_S is well-defined).** *When m_+ > 0 and Bias(S)_+ ≪ μ_{⊗C} (absolute continuity, immediate from Definition 7.3.1 rather than from σ-finiteness: Bias(S) is by definition an indefinite integral against μ_{⊗C}, so Bias(S) ≪ μ_{⊗C}, and Hahn–Jordan concentrates Bias(S)_+ on a Hahn set, whence Bias(S)_+ ≪ μ_{⊗C} also. Theorem 7.3.2's σ-finite *type* is a separate property and is not what is used here), A_S ∈ [0, log|Ω_S,acc|] is finite.*
 
 **Proof.** The integrand is a Radon-Nikodym derivative of Bias(S)_+/m_+ against itself; Jensen's inequality and positivity bound A_S. Upper bound: A_S ≤ log|Ω_S,acc| with equality iff Bias(S)_+ is uniform over the accessibility-support. ∎
 

@@ -27,6 +27,8 @@ The Anchor README lists fourteen figures — the remaining six (mismatch conditi
 
 **Purpose.** Depicts F : σ ↦ σ^(C^op) as a mixed-variance endofunctor on adequate F-coalgebra-carriers, with γ as a coalgebra-structure map.
 
+**Status of the right-hand arrow.** The *equation* in the caption is Definition 6.1.3 (iii) and is sound: it compares two legs in the common object $\sigma'^{\mathrm{ContentOp}(\sigma)^{\mathrm{op}}}$, which both post-composition with $f_\sigma$ and pullback along $f_C$ reach. What is open is drawing it as a single **vertical arrow** $F(f_\sigma, f_C) : F(\sigma) \to F(\sigma')$: no such morphism is constructed anywhere, for a covariant $f_C$ (Remark 1.6.2). Strictly, Figure 1 should be redrawn as the cospan, with the commuting condition stated on the two legs. It is kept in square form for now because it is the figure the Anchor and the domain volumes already cite by number, and because the redraw is the *same* decision as Remark 1.6.2's — under repair 1 the arrow exists on a subcategory and the square stands as drawn. The caption's variance claim about $F$ itself (covariant in $\sigma$, contravariant in $C$) is correct as it stands.
+
 ```latex
 % Companion §10, Fig 1
 % F endofunctor and Stream-as-F-coalgebra
