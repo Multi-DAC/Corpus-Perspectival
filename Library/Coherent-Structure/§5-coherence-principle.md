@@ -97,7 +97,7 @@ Those drafts derived C_scale from "A2.6 with A3.3 (conscious-gravity smoothing),
 
 **Proof.**
 - **Necessity.** Each condition is load-bearing for the Principle's outperformance claim (§5.3): drop any one and a counterexample can be constructed (§5.5 keys each to its Anchor falsification row). Three are derived from an axiom/theorem clause; **C_scale is not** — it is a framework-specified tolerance (§5.2.3), and its necessity is the falsifiability of row F4, not a derivation.
-- **Sufficiency.** Given all four, the quantitative trajectory-divergence bound (Thm 9.4.3) holds: separation zeros the η_sep-contribution, measurement caps the τ_max-contribution at Λ_γ · T_refresh · N_refresh, multi-scale consistency caps the δ_scale-contribution at depth · ε_scale · (t₁ − t₀), and dynamic maintenance caps the freeze-contribution at (1 − ρ_min) · Λ_γ^static · (t₁ − t₀). The joint ceiling B_coh(S, I) is below E[D_d(S')] by the strict-positive shortfall Δ(S', I). ∎
+- **Sufficiency.** Given all four, the quantitative trajectory-divergence bound (Thm 9.4.3) holds: separation zeros the η_sep-contribution, measurement caps the τ_max-contribution at ½ Λ_γ · T_refresh · (t₁ − t₀), multi-scale consistency caps the δ_scale-contribution at depth · ε_scale · (t₁ − t₀), and dynamic maintenance caps the freeze-contribution at ½ (1 − ρ_min) · Λ_γ^static · τ_dyn · (t₁ − t₀) (Remark 9.4.2.1). The joint ceiling B_coh(S, I) is below E[D_d(S')] by the strict-positive shortfall Δ(S', I). ∎
 
 ---
 

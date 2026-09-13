@@ -120,7 +120,7 @@ Auxiliary constants (metric-dependent, finite under Bias-consistency):
 - **Λ_γ^{static}(S, d)** — the d-drift rate of a γ-frozen stream (supremum d-distance traversed per unit time under stationary γ, representing drift of reality away from the frozen estimate).
 - **diam_d(Ω_S)** — the d-diameter of the relevant subset of Ω_S (finite for bounded d; for unbounded d, replace with the Bias-weighted diameter diam_{d, Bias} := sup_{E: Bias_+(E) > 0} sup_{ω, ω' ∈ E} d(ω, ω'), finite under σ-finite Bias per §6.9.7).
 - **depth(DAG(S))** — the number of levels in S's A2.6-DAG (finite under (A2.6)'s acyclicity + finite-composability, §2.2.2).
-- **N_refresh(S, I) := |{k : τ_k ∈ I}|** — the count of refresh-events in I (≤ (t₁ − t₀) / τ_min, with τ_min ≥ 0).
+- **N_refresh(S, I) := |{k : τ_k ∈ I}|** — the count of refresh-events in I (≤ (t₁ − t₀) / τ_min, with τ_min ≥ 0). It no longer appears in the bound: the Σ_k Δτ_k ≤ t₁ − t₀ step of Lemma 9.4.2's B_meas term absorbs it (Remark 9.4.2.1).
 
 ### §9.4.2 — The joint bound
 
@@ -129,9 +129,9 @@ Auxiliary constants (metric-dependent, finite under Bias-consistency):
 $$
 \begin{aligned}
 \mathbb{E}_I[D_d(S, \cdot)] \;\leq\;\; & \underbrace{\eta_\mathrm{sep}(S) \cdot \mathrm{diam}_{d, \mathrm{Bias}}(\Omega_S) \cdot (t_1 - t_0)}_{B_\mathrm{sep}(S, I)} \\
-& {} + \underbrace{\Lambda_\gamma(S, d) \cdot \tau_\mathrm{max}(S) \cdot N_\mathrm{refresh}(S, I)}_{B_\mathrm{meas}(S, I)} \\
+& {} + \underbrace{\tfrac{1}{2}\Lambda_\gamma(S, d) \cdot \tau_\mathrm{max}(S) \cdot (t_1 - t_0)}_{B_\mathrm{meas}(S, I)} \\
 & {} + \underbrace{\mathrm{depth}(\mathrm{DAG}(S)) \cdot \delta_\mathrm{scale}(S) \cdot (t_1 - t_0)}_{B_\mathrm{scale}(S, I)} \\
-& {} + \underbrace{(1 - \rho_\mathrm{dyn}(S)) \cdot \Lambda_\gamma^\mathrm{static}(S, d) \cdot (t_1 - t_0)}_{B_\mathrm{dyn}(S, I)}.
+& {} + \underbrace{\tfrac{1}{2}(1 - \rho_\mathrm{dyn}(S)) \cdot \Lambda_\gamma^\mathrm{static}(S, d) \cdot \tau_\mathrm{dyn} \cdot (t_1 - t_0)}_{B_\mathrm{dyn}(S, I)}.
 \end{aligned}
 $$
 
@@ -139,13 +139,38 @@ $$
 
 *B_sep term.* The integrand d(α_S(t), α*_S(t)) in Def 9.1.1 decomposes along the DOF-product structure of Ω_S (Triple-decomposition compatibility, Cor 7.3.3) as a sum of per-DOF contributions plus cross-DOF contributions. Under DOF-separation (η_sep = 0), cross-DOF contributions vanish; when η_sep > 0, the cross-DOF contribution is bounded pointwise by d-diameter restricted to the DOF-overlap region. Integrating over I and applying Bias-weighting gives η_sep · diam_{d, Bias} · (t₁ − t₀).
 
-*B_meas term.* Between consecutive refresh-events τ_k, τ_{k+1}, the γ-implied trajectory α*_S runs from α_S(τ_k) but is not corrected until τ_{k+1}. The d-drift over [τ_k, τ_{k+1}] is bounded by Λ_γ · (τ_{k+1} − τ_k) by the Lipschitz hypothesis. Summing over k ∈ {1, ..., N_refresh} and using τ_{k+1} − τ_k ≤ τ_max gives Λ_γ · τ_max · N_refresh.
+*B_meas term.* Between consecutive refresh-events τ_k, τ_{k+1}, the γ-implied trajectory α*_S runs from α_S(τ_k) but is not corrected until τ_{k+1}. The d-*gap* at time t ∈ [τ_k, τ_{k+1}] is bounded by Λ_γ · (t − τ_k) by the Lipschitz hypothesis, the gap being zero at the refresh-event τ_k. D_d integrates that gap rather than sampling it at the endpoint (Def 9.1.1), so the contribution of one inter-refresh interval is ∫_0^{Δτ} Λ_γ s \, ds = ½ Λ_γ (Δτ)². Summing over k and using Δτ_k ≤ τ_max with Σ_k Δτ_k ≤ t₁ − t₀ gives ½ Λ_γ · τ_max · (t₁ − t₀).
 
 *B_scale term.* The A2.6-DAG introduces potential discontinuities at each edge between scales. For an edge e ∈ E(DAG(S)), the d-contribution from that edge is bounded by d(γ_{child(e)}, γ_{parent(e)}) ≤ δ_scale per unit time. Summing over edges (bounded by depth × width; absorb width into δ_scale's sup) and integrating over I gives depth · δ_scale · (t₁ − t₀).
 
-*B_dyn term.* On sliding windows of length τ_dyn where no propose/dissolve/build cycle occurs, γ is effectively frozen and the stream's α_S drifts from α*_S at rate ≤ Λ_γ^static. The fraction of I spent in such frozen windows is (1 − ρ_dyn); integrating gives (1 − ρ_dyn) · Λ_γ^static · (t₁ − t₀).
+*B_dyn term.* On sliding windows of length τ_dyn where no propose/dissolve/build cycle occurs, γ is effectively frozen and the stream's α_S drifts from α*_S at rate ≤ Λ_γ^static. The gap is zero at the cycle that closes the preceding window and grows at rate ≤ Λ_γ^static thereafter, so one frozen window of length τ_dyn contributes ∫_0^{τ_dyn} Λ_γ^static s \, ds = ½ Λ_γ^static τ_dyn². The fraction of I spent in frozen windows is (1 − ρ_dyn), so their number is (1 − ρ_dyn)(t₁ − t₀)/τ_dyn, and the total is ½ (1 − ρ_dyn) · Λ_γ^static · τ_dyn · (t₁ − t₀).
 
 Sum of the four contributions is the claimed bound. ∎
+
+**Remark 9.4.2.1 (Erratum — the two rate-times-duration terms).** B_meas and B_dyn were
+published in the form Λ · τ · N_refresh and (1 − ρ_dyn) · Λ^static · (t₁ − t₀). Both summed an
+**end-point displacement** where D_d is a **time-integral**, and both were therefore short by one
+factor of time: Λ_γ and Λ_γ^static are rates (§9.4.1), N_refresh and depth are dimensionless, and
+E_I[D_d] is a distance × time by Definition 9.1.1. A rate times a duration is the gap *at the end of*
+an interval, not the gap *integrated over* it; the ½ is the area under the ramp. B_sep and B_scale
+are unaffected. The corrected forms are the ones above; the sign of every inequality in §9.4.3 is
+unchanged, since each term remains monotone in its controlling parameter, and Remark 9.4.4's
+quantitative reading stands with the new constants.
+
+*Provenance.* The B_meas correction was derived and verified on 2026-07-02 and was not applied to
+this volume until 2026-09-12; the B_dyn correction settles a question left open on 2026-07-03 as to
+whether B_dyn shared the slippage. It does. The open question had turned on whether entering a
+frozen window resets the α–α* gap, but that fork does not arise: Λ^static is a rate under either
+reading, so rate × duration is a displacement under either reading, and no reading of the reset
+structure produces a distance × time. Any PDF or archived release of this volume predating
+2026-09-12 carries the uncorrected constants.
+
+*Not fixed here.* B_scale's proof-paragraph reads "the d-contribution from that edge is bounded by
+d(γ_{child(e)}, γ_{parent(e)}) ≤ δ_scale **per unit time**", while the formula depth · δ_scale · (t₁ − t₀)
+requires δ_scale to be a distance. The two readings differ by a factor of time and the text does not
+decide between them. That is the same underdetermination as the open question of what
+d(γ_child, γ_parent) means at all — δ_scale applies an Ω_S × Ω_S metric to structure-maps on
+different carriers — and it is deliberately left standing rather than resolved by a unit-count.
 
 ### §9.4.3 — The outperformance theorem
 
@@ -166,9 +191,9 @@ $$
 
 $$
 \begin{aligned}
-B_\mathrm{coh}(S, I) = {} & 0 + \Lambda_\gamma(S) \cdot T_\mathrm{refresh} \cdot N_\mathrm{refresh} \\
+B_\mathrm{coh}(S, I) = {} & 0 + \tfrac{1}{2}\Lambda_\gamma(S) \cdot T_\mathrm{refresh} \cdot (t_1 - t_0) \\
 & {} + \mathrm{depth}(\mathrm{DAG}(S)) \cdot \varepsilon_\mathrm{scale} \cdot (t_1 - t_0) \\
-& {} + (1 - \rho_\mathrm{min}) \cdot \Lambda_\gamma^\mathrm{static}(S) \cdot (t_1 - t_0)
+& {} + \tfrac{1}{2}(1 - \rho_\mathrm{min}) \cdot \Lambda_\gamma^\mathrm{static}(S) \cdot \tau_\mathrm{dyn} \cdot (t_1 - t_0)
 \end{aligned}
 $$
 
@@ -177,9 +202,9 @@ $$
 $$
 \begin{aligned}
 \Delta(S', I) = {} & \eta_\mathrm{sep}(S') \cdot \mathrm{diam}_{d, \mathrm{Bias}} \cdot (t_1 - t_0) \\
-& {} + \Lambda_\gamma(S') \cdot (\tau_\mathrm{max}(S') - T_\mathrm{refresh})^+ \cdot N_\mathrm{refresh}(S', I) \\
+& {} + \tfrac{1}{2}\Lambda_\gamma(S') \cdot (\tau_\mathrm{max}(S') - T_\mathrm{refresh})^+ \cdot (t_1 - t_0) \\
 & {} + \mathrm{depth}(\mathrm{DAG}(S')) \cdot (\delta_\mathrm{scale}(S') - \varepsilon_\mathrm{scale})^+ \cdot (t_1 - t_0) \\
-& {} + (\rho_\mathrm{min} - \rho_\mathrm{dyn}(S'))^+ \cdot \Lambda_\gamma^\mathrm{static}(S') \cdot (t_1 - t_0).
+& {} + \tfrac{1}{2}(\rho_\mathrm{min} - \rho_\mathrm{dyn}(S'))^+ \cdot \Lambda_\gamma^\mathrm{static}(S') \cdot \tau_\mathrm{dyn} \cdot (t_1 - t_0).
 \end{aligned}
 $$
 
