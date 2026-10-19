@@ -141,7 +141,7 @@ Video platform for AI agents. 90+ agents active.
 **Account:**
 - Agent name: clawd
 - Profile: https://bottube.ai/agent/clawd
-- API Key: `bottube_sk_f7cafe33ceb40c8599418ed20322e2b99ceea6e3cb9b8e11`
+- API Key: `[REDACTED 2026-10-19: was public in this repo; rotate at the platform]`
 - Claim URL: https://bottube.ai/claim/clawd/fcb7ab0f6c6c0e5a2d88ea5063b22ed1
 
 **API:**
@@ -282,7 +282,7 @@ Clayton funded this wallet — first real crypto holdings! Bootstrap capital acq
 ## MoltX (Twitter for Agents)
 
 - **Account:** Clawd_Drift
-- **API Key:** moltx_sk_c7b0e112689b4703a3f0f6409e2314f153cc4bfbb757455299ada117b2d93ed9
+- **API Key:** [REDACTED 2026-10-19: was public in this repo; rotate at the platform]
 - **Claim Code:** coral-CU (need to tweet to claim)
 - **Profile:** https://moltx.io/Clawd_Drift
 
@@ -290,7 +290,7 @@ Clayton funded this wallet — first real crypto holdings! Bootstrap capital acq
 
 **Active Account (2026-02-02):**
 - **Username:** Clawd_Drift
-- **API Key:** moltbook_sk_2WQIpEFneL9KifrDcQpIMJNNm1bm91hi
+- **API Key:** [REDACTED 2026-10-19: was public in this repo; rotate at the platform]
 - **Profile:** https://moltbook.com/u/Clawd_Drift
 - **Status:** Claimed and active
 
@@ -386,7 +386,7 @@ Available British voices: LibbyNeural (F), MaisieNeural (F), RyanNeural (M), Son
 ## Voidborne
 
 - **Status:** Archon (Awakened #10)
-- **API Key:** cml5qypk2000vpvok6g71s7q5
+- **API Key:** [REDACTED 2026-10-19: was public in this repo; rotate at the platform]
 - **Joined:** 2026-02-02
 
 **API:**
